@@ -33,12 +33,12 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QAbstractButton) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// bool hitButton(const class QPoint &)
+// bool hitButton(const QPoint &)
 func (this *QAbstractButton) InheritHitButton(f func(pos *qtcore.QPoint) bool) {
 	qtrt.SetAllInheritCallback(this, "hitButton", f)
 }
@@ -53,52 +53,52 @@ func (this *QAbstractButton) InheritNextCheckState(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "nextCheckState", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QAbstractButton) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QAbstractButton) InheritKeyPressEvent(f func(e *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QAbstractButton) InheritKeyReleaseEvent(f func(e *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QAbstractButton) InheritMousePressEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QAbstractButton) InheritMouseReleaseEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QAbstractButton) InheritMouseMoveEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QAbstractButton) InheritFocusInEvent(f func(e *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QAbstractButton) InheritFocusOutEvent(f func(e *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QAbstractButton) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QAbstractButton) InheritTimerEvent(f func(e *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
@@ -318,7 +318,7 @@ func (this *QAbstractButton) Shortcut() *qtgui.QKeySequence /*123*/ {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCheckable(_Bool)
+// [-2] void setCheckable(bool)
 
 /*
 
@@ -359,7 +359,7 @@ func (this *QAbstractButton) IsChecked() bool {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDown(_Bool)
+// [-2] void setDown(bool)
 
 /*
 
@@ -386,7 +386,7 @@ func (this *QAbstractButton) IsDown() bool {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoRepeat(_Bool)
+// [-2] void setAutoRepeat(bool)
 
 /*
 
@@ -467,7 +467,7 @@ func (this *QAbstractButton) AutoRepeatInterval() int {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoExclusive(_Bool)
+// [-2] void setAutoExclusive(bool)
 
 /*
 
@@ -607,7 +607,7 @@ func (this *QAbstractButton) Toggle() {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setChecked(_Bool)
+// [-2] void setChecked(bool)
 
 /*
 
@@ -650,7 +650,7 @@ func (this *QAbstractButton) Released() {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:125
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void clicked(_Bool)
+// [-2] void clicked(bool)
 
 /*
 This signal is emitted when the button is activated (i.e., pressed down then released while the mouse cursor is inside the button), when the shortcut key is typed, or when click() or animateClick() is called. Notably, this signal is not emitted if you call setDown(), setChecked() or toggle().
@@ -667,7 +667,7 @@ func (this *QAbstractButton) Clicked(checked bool) {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:125
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void clicked(_Bool)
+// [-2] void clicked(bool)
 
 /*
 This signal is emitted when the button is activated (i.e., pressed down then released while the mouse cursor is inside the button), when the shortcut key is typed, or when click() or animateClick() is called. Notably, this signal is not emitted if you call setDown(), setChecked() or toggle().
@@ -686,7 +686,7 @@ func (this *QAbstractButton) Clicked__() {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:126
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void toggled(_Bool)
+// [-2] void toggled(bool)
 
 /*
 This signal is emitted whenever a checkable button changes its state. checked is true if the button is checked, or false if the button is unchecked.

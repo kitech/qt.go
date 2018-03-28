@@ -322,7 +322,7 @@ func (this *QQmlError) MessageType() int {
 // /usr/include/qt/QtQml/qqmlerror.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMessageType(enum QtMsgType)
+// [-2] void setMessageType(QtMsgType)
 
 /*
 Sets the messageType for this message. The message type determines which QDebug handlers are responsible for recieving the message.

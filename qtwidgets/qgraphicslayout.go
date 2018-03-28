@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void addChildLayoutItem(class QGraphicsLayoutItem *)
+// void addChildLayoutItem(QGraphicsLayoutItem *)
 func (this *QGraphicsLayout) InheritAddChildLayoutItem(f func(layoutItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "addChildLayoutItem", f)
 }
@@ -308,7 +308,7 @@ func (this *QGraphicsLayout) RemoveAt(index int) {
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:74
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setInstantInvalidatePropagation(_Bool)
+// [-2] void setInstantInvalidatePropagation(bool)
 
 /*
 

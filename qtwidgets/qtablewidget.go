@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QTableWidget) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -43,7 +43,7 @@ func (this *QTableWidget) InheritMimeTypes(f func() unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "mimeTypes", f)
 }
 
-// bool dropMimeData(int, int, const class QMimeData *, Qt::DropAction)
+// bool dropMimeData(int, int, const QMimeData *, Qt::DropAction)
 func (this *QTableWidget) InheritDropMimeData(f func(row int, column int, data *qtcore.QMimeData /*777 const QMimeData **/, action int) bool) {
 	qtrt.SetAllInheritCallback(this, "dropMimeData", f)
 }
@@ -53,17 +53,17 @@ func (this *QTableWidget) InheritSupportedDropActions(f func() int) {
 	qtrt.SetAllInheritCallback(this, "supportedDropActions", f)
 }
 
-// QModelIndex indexFromItem(class QTableWidgetItem *)
+// QModelIndex indexFromItem(QTableWidgetItem *)
 func (this *QTableWidget) InheritIndexFromItem(f func(item *QTableWidgetItem /*777 QTableWidgetItem **/) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "indexFromItem", f)
 }
 
-// QTableWidgetItem * itemFromIndex(const class QModelIndex &)
+// QTableWidgetItem * itemFromIndex(const QModelIndex &)
 func (this *QTableWidget) InheritItemFromIndex(f func(index *qtcore.QModelIndex) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "itemFromIndex", f)
 }
 
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QTableWidget) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
@@ -660,7 +660,7 @@ func (this *QTableWidget) SortItems__(column int) {
 // /usr/include/qt/QtWidgets/qtablewidget.h:258
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSortingEnabled(_Bool)
+// [-2] void setSortingEnabled(bool)
 
 /*
 
@@ -847,7 +847,7 @@ func (this *QTableWidget) IsItemSelected(item QTableWidgetItem_ITF /*777 const Q
 // /usr/include/qt/QtWidgets/qtablewidget.h:272
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setItemSelected(const QTableWidgetItem *, _Bool)
+// [-2] void setItemSelected(const QTableWidgetItem *, bool)
 
 /*
 
@@ -864,7 +864,7 @@ func (this *QTableWidget) SetItemSelected(item QTableWidgetItem_ITF /*777 const 
 // /usr/include/qt/QtWidgets/qtablewidget.h:273
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRangeSelected(const QTableWidgetSelectionRange &, _Bool)
+// [-2] void setRangeSelected(const QTableWidgetSelectionRange &, bool)
 
 /*
 Selects or deselects the range depending on select.

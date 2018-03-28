@@ -133,7 +133,7 @@ func (this *QPaintEngine) IsActive() bool {
 // /usr/include/qt/QtGui/qpaintengine.h:151
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setActive(_Bool)
+// [-2] void setActive(bool)
 
 /*
 Sets the active state of the paint engine to state.
@@ -362,7 +362,7 @@ func (this *QPaintEngine) DrawPoints_1(points qtcore.QPoint_ITF /*777 const QPoi
 // /usr/include/qt/QtGui/qpaintengine.h:172
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawPolygon(const QPointF *, int, enum QPaintEngine::PolygonDrawMode)
+// [-2] void drawPolygon(const QPointF *, int, QPaintEngine::PolygonDrawMode)
 
 /*
 Reimplement this virtual function to draw the polygon defined by the pointCount first points in points, using mode mode.
@@ -381,7 +381,7 @@ func (this *QPaintEngine) DrawPolygon(points qtcore.QPointF_ITF /*777 const QPoi
 // /usr/include/qt/QtGui/qpaintengine.h:173
 // index:1
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawPolygon(const QPoint *, int, enum QPaintEngine::PolygonDrawMode)
+// [-2] void drawPolygon(const QPoint *, int, QPaintEngine::PolygonDrawMode)
 
 /*
 Reimplement this virtual function to draw the polygon defined by the pointCount first points in points, using mode mode.

@@ -66,7 +66,7 @@ func (*QShortcutEvent) NewFromPointer(cthis unsafe.Pointer) *QShortcutEvent {
 // /usr/include/qt/QtGui/qevent.h:767
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QShortcutEvent(const QKeySequence &, int, _Bool)
+// [-2] void QShortcutEvent(const QKeySequence &, int, bool)
 
 /*
 
@@ -86,7 +86,7 @@ func NewQShortcutEvent(key QKeySequence_ITF, id int, ambiguous bool) *QShortcutE
 // /usr/include/qt/QtGui/qevent.h:767
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QShortcutEvent(const QKeySequence &, int, _Bool)
+// [-2] void QShortcutEvent(const QKeySequence &, int, bool)
 
 /*
 

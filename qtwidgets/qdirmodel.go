@@ -796,7 +796,7 @@ func (this *QDirModel) Sorting() int {
 // /usr/include/qt/QtWidgets/qdirmodel.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setResolveSymlinks(_Bool)
+// [-2] void setResolveSymlinks(bool)
 
 /*
 
@@ -823,7 +823,7 @@ func (this *QDirModel) ResolveSymlinks() bool {
 // /usr/include/qt/QtWidgets/qdirmodel.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setReadOnly(_Bool)
+// [-2] void setReadOnly(bool)
 
 /*
 
@@ -850,7 +850,7 @@ func (this *QDirModel) IsReadOnly() bool {
 // /usr/include/qt/QtWidgets/qdirmodel.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setLazyChildCount(_Bool)
+// [-2] void setLazyChildCount(bool)
 
 /*
 

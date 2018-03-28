@@ -83,7 +83,7 @@ func NewQUrl() *QUrl {
 // /usr/include/qt/QtCore/qurl.h:182
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QUrl(const QString &, enum QUrl::ParsingMode)
+// [-2] void QUrl(const QString &, QUrl::ParsingMode)
 
 /*
 Constructs an empty QUrl object.
@@ -101,7 +101,7 @@ func NewQUrl_1(url string, mode int) *QUrl {
 // /usr/include/qt/QtCore/qurl.h:182
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QUrl(const QString &, enum QUrl::ParsingMode)
+// [-2] void QUrl(const QString &, QUrl::ParsingMode)
 
 /*
 Constructs an empty QUrl object.
@@ -209,7 +209,7 @@ func (this *QUrl) Swap(other QUrl_ITF) {
 // /usr/include/qt/QtCore/qurl.h:195
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUrl(const QString &, enum QUrl::ParsingMode)
+// [-2] void setUrl(const QString &, QUrl::ParsingMode)
 
 /*
 Parses url and sets this object to that value. QUrl will automatically percent encode all characters that are not allowed in a URL and decode the percent-encoded sequences that represent an unreserved character (letters, digits, hyphens, undercores, dots and tildes). All other characters are left in their original forms.
@@ -228,7 +228,7 @@ func (this *QUrl) SetUrl(url string, mode int) {
 // /usr/include/qt/QtCore/qurl.h:195
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUrl(const QString &, enum QUrl::ParsingMode)
+// [-2] void setUrl(const QString &, QUrl::ParsingMode)
 
 /*
 Parses url and sets this object to that value. QUrl will automatically percent encode all characters that are not allowed in a URL and decode the percent-encoded sequences that represent an unreserved character (letters, digits, hyphens, undercores, dots and tildes). All other characters are left in their original forms.
@@ -249,7 +249,7 @@ func (this *QUrl) SetUrl__(url string) {
 // /usr/include/qt/QtCore/qurl.h:202
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QUrl fromEncoded(const QByteArray &, enum QUrl::ParsingMode)
+// [8] QUrl fromEncoded(const QByteArray &, QUrl::ParsingMode)
 
 /*
 Parses input and returns the corresponding QUrl. input is assumed to be in encoded form, containing only ASCII characters.
@@ -278,7 +278,7 @@ func QUrl_FromEncoded(url QByteArray_ITF, mode int) *QUrl /*123*/ {
 // /usr/include/qt/QtCore/qurl.h:202
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QUrl fromEncoded(const QByteArray &, enum QUrl::ParsingMode)
+// [8] QUrl fromEncoded(const QByteArray &, QUrl::ParsingMode)
 
 /*
 Parses input and returns the corresponding QUrl. input is assumed to be in encoded form, containing only ASCII characters.
@@ -534,7 +534,7 @@ func (this *QUrl) Scheme() string {
 // /usr/include/qt/QtCore/qurl.h:224
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAuthority(const QString &, enum QUrl::ParsingMode)
+// [-2] void setAuthority(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the authority of the URL to authority.
@@ -563,7 +563,7 @@ func (this *QUrl) SetAuthority(authority string, mode int) {
 // /usr/include/qt/QtCore/qurl.h:224
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAuthority(const QString &, enum QUrl::ParsingMode)
+// [-2] void setAuthority(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the authority of the URL to authority.
@@ -594,7 +594,7 @@ func (this *QUrl) SetAuthority__(authority string) {
 // /usr/include/qt/QtCore/qurl.h:227
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUserInfo(const QString &, enum QUrl::ParsingMode)
+// [-2] void setUserInfo(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the user info of the URL to userInfo. The user info is an optional part of the authority of the URL, as described in setAuthority().
@@ -619,7 +619,7 @@ func (this *QUrl) SetUserInfo(userInfo string, mode int) {
 // /usr/include/qt/QtCore/qurl.h:227
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUserInfo(const QString &, enum QUrl::ParsingMode)
+// [-2] void setUserInfo(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the user info of the URL to userInfo. The user info is an optional part of the authority of the URL, as described in setAuthority().
@@ -646,7 +646,7 @@ func (this *QUrl) SetUserInfo__(userInfo string) {
 // /usr/include/qt/QtCore/qurl.h:230
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUserName(const QString &, enum QUrl::ParsingMode)
+// [-2] void setUserName(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the URL's user name to userName. The userName is part of the user info element in the authority of the URL, as described in setUserInfo().
@@ -667,7 +667,7 @@ func (this *QUrl) SetUserName(userName string, mode int) {
 // /usr/include/qt/QtCore/qurl.h:230
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUserName(const QString &, enum QUrl::ParsingMode)
+// [-2] void setUserName(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the URL's user name to userName. The userName is part of the user info element in the authority of the URL, as described in setUserInfo().
@@ -690,7 +690,7 @@ func (this *QUrl) SetUserName__(userName string) {
 // /usr/include/qt/QtCore/qurl.h:233
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPassword(const QString &, enum QUrl::ParsingMode)
+// [-2] void setPassword(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the URL's password to password. The password is part of the user info element in the authority of the URL, as described in setUserInfo().
@@ -711,7 +711,7 @@ func (this *QUrl) SetPassword(password string, mode int) {
 // /usr/include/qt/QtCore/qurl.h:233
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPassword(const QString &, enum QUrl::ParsingMode)
+// [-2] void setPassword(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the URL's password to password. The password is part of the user info element in the authority of the URL, as described in setUserInfo().
@@ -734,7 +734,7 @@ func (this *QUrl) SetPassword__(password string) {
 // /usr/include/qt/QtCore/qurl.h:236
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHost(const QString &, enum QUrl::ParsingMode)
+// [-2] void setHost(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the host of the URL to host. The host is part of the authority.
@@ -755,7 +755,7 @@ func (this *QUrl) SetHost(host string, mode int) {
 // /usr/include/qt/QtCore/qurl.h:236
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHost(const QString &, enum QUrl::ParsingMode)
+// [-2] void setHost(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the host of the URL to host. The host is part of the authority.
@@ -849,7 +849,7 @@ func (this *QUrl) Port__() int {
 // /usr/include/qt/QtCore/qurl.h:245
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPath(const QString &, enum QUrl::ParsingMode)
+// [-2] void setPath(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the path of the URL to path. The path is the part of the URL that comes after the authority but before the query string.
@@ -876,7 +876,7 @@ func (this *QUrl) SetPath(path string, mode int) {
 // /usr/include/qt/QtCore/qurl.h:245
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPath(const QString &, enum QUrl::ParsingMode)
+// [-2] void setPath(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the path of the URL to path. The path is the part of the URL that comes after the authority but before the query string.
@@ -923,7 +923,7 @@ func (this *QUrl) HasQuery() bool {
 // /usr/include/qt/QtCore/qurl.h:250
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setQuery(const QString &, enum QUrl::ParsingMode)
+// [-2] void setQuery(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the query string of the URL to query.
@@ -948,7 +948,7 @@ func (this *QUrl) SetQuery(query string, mode int) {
 // /usr/include/qt/QtCore/qurl.h:250
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setQuery(const QString &, enum QUrl::ParsingMode)
+// [-2] void setQuery(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the query string of the URL to query.
@@ -1020,7 +1020,7 @@ func (this *QUrl) HasFragment() bool {
 // /usr/include/qt/QtCore/qurl.h:256
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFragment(const QString &, enum QUrl::ParsingMode)
+// [-2] void setFragment(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the fragment of the URL to fragment. The fragment is the last part of the URL, represented by a '#' followed by a string of characters. It is typically used in HTTP for referring to a certain link or point on a page:
@@ -1047,7 +1047,7 @@ func (this *QUrl) SetFragment(fragment string, mode int) {
 // /usr/include/qt/QtCore/qurl.h:256
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFragment(const QString &, enum QUrl::ParsingMode)
+// [-2] void setFragment(const QString &, QUrl::ParsingMode)
 
 /*
 Sets the fragment of the URL to fragment. The fragment is the last part of the URL, represented by a '#' followed by a string of characters. It is typically used in HTTP for referring to a certain link or point on a page:

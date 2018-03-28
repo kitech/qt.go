@@ -818,7 +818,7 @@ func (this *QMatrix) Determinant() float64 {
 // /usr/include/qt/QtGui/qmatrix.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [48] QMatrix inverted(_Bool *) const
+// [48] QMatrix inverted(bool *) const
 
 /*
 Returns an inverted copy of this matrix.
@@ -838,7 +838,7 @@ func (this *QMatrix) Inverted(invertible *bool) *QMatrix /*123*/ {
 // /usr/include/qt/QtGui/qmatrix.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [48] QMatrix inverted(_Bool *) const
+// [48] QMatrix inverted(bool *) const
 
 /*
 Returns an inverted copy of this matrix.

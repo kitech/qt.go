@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QVariantAnimation) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -41,17 +41,17 @@ func (this *QVariantAnimation) InheritUpdateCurrentTime(f func(arg0 int) /*void*
 	qtrt.SetAllInheritCallback(this, "updateCurrentTime", f)
 }
 
-// void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
+// void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QVariantAnimation) InheritUpdateState(f func(newState int, oldState int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateState", f)
 }
 
-// void updateCurrentValue(const class QVariant &)
+// void updateCurrentValue(const QVariant &)
 func (this *QVariantAnimation) InheritUpdateCurrentValue(f func(value *QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateCurrentValue", f)
 }
 
-// QVariant interpolated(const class QVariant &, const class QVariant &, qreal)
+// QVariant interpolated(const QVariant &, const QVariant &, qreal)
 func (this *QVariantAnimation) InheritInterpolated(f func(from *QVariant, to *QVariant, progress float64) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "interpolated", f)
 }

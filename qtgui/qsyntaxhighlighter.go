@@ -32,12 +32,12 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// void highlightBlock(const class QString &)
+// void highlightBlock(const QString &)
 func (this *QSyntaxHighlighter) InheritHighlightBlock(f func(text string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "highlightBlock", f)
 }
 
-// void setFormat(int, int, const class QTextCharFormat &)
+// void setFormat(int, int, const QTextCharFormat &)
 func (this *QSyntaxHighlighter) InheritSetFormat(f func(start int, count int, format *QTextCharFormat) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setFormat", f)
 }
@@ -62,7 +62,7 @@ func (this *QSyntaxHighlighter) InheritSetCurrentBlockState(f func(newState int)
 	qtrt.SetAllInheritCallback(this, "setCurrentBlockState", f)
 }
 
-// void setCurrentBlockUserData(class QTextBlockUserData *)
+// void setCurrentBlockUserData(QTextBlockUserData *)
 func (this *QSyntaxHighlighter) InheritSetCurrentBlockUserData(f func(data *QTextBlockUserData /*777 QTextBlockUserData **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setCurrentBlockUserData", f)
 }

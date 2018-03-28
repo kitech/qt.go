@@ -259,7 +259,7 @@ func (this *QGlyphRun) Operator_not_equal(other QGlyphRun_ITF) bool {
 // /usr/include/qt/QtGui/qglyphrun.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOverline(_Bool)
+// [-2] void setOverline(bool)
 
 /*
 Indicates that this QGlyphRun should be painted with an overline decoration if overline is true. Otherwise the QGlyphRun should be painted with no overline decoration.
@@ -290,7 +290,7 @@ func (this *QGlyphRun) Overline() bool {
 // /usr/include/qt/QtGui/qglyphrun.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUnderline(_Bool)
+// [-2] void setUnderline(bool)
 
 /*
 Indicates that this QGlyphRun should be painted with an underline decoration if underline is true. Otherwise the QGlyphRun should be painted with no underline decoration.
@@ -321,7 +321,7 @@ func (this *QGlyphRun) Underline() bool {
 // /usr/include/qt/QtGui/qglyphrun.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStrikeOut(_Bool)
+// [-2] void setStrikeOut(bool)
 
 /*
 Indicates that this QGlyphRun should be painted with an strike out decoration if strikeOut is true. Otherwise the QGlyphRun should be painted with no strike out decoration.
@@ -352,7 +352,7 @@ func (this *QGlyphRun) StrikeOut() bool {
 // /usr/include/qt/QtGui/qglyphrun.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRightToLeft(_Bool)
+// [-2] void setRightToLeft(bool)
 
 /*
 Indicates that this QGlyphRun contains glyphs that should be ordered from the right to left if rightToLeft is true. Otherwise the order of the glyphs is assumed to be left to right.
@@ -387,7 +387,7 @@ func (this *QGlyphRun) IsRightToLeft() bool {
 // /usr/include/qt/QtGui/qglyphrun.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(enum QGlyphRun::GlyphRunFlag, _Bool)
+// [-2] void setFlag(QGlyphRun::GlyphRunFlag, bool)
 
 /*
 If enabled is true, then flag is enabled; otherwise, it is disabled.
@@ -404,7 +404,7 @@ func (this *QGlyphRun) SetFlag(flag int, enabled bool) {
 // /usr/include/qt/QtGui/qglyphrun.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(enum QGlyphRun::GlyphRunFlag, _Bool)
+// [-2] void setFlag(QGlyphRun::GlyphRunFlag, bool)
 
 /*
 If enabled is true, then flag is enabled; otherwise, it is disabled.

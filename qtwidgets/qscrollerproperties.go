@@ -202,7 +202,7 @@ func QScrollerProperties_UnsetDefaultScrollerProperties() {
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant scrollMetric(enum QScrollerProperties::ScrollMetric) const
+// [16] QVariant scrollMetric(QScrollerProperties::ScrollMetric) const
 
 /*
 Query the metric value of the scroller properties.
@@ -220,7 +220,7 @@ func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setScrollMetric(enum QScrollerProperties::ScrollMetric, const QVariant &)
+// [-2] void setScrollMetric(QScrollerProperties::ScrollMetric, const QVariant &)
 
 /*
 Set a specific value of the metric ScrollerMetric to value.

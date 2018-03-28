@@ -66,7 +66,7 @@ func (*QWindowStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWindowSta
 // /usr/include/qt/QtGui/qevent.h:783
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QWindowStateChangeEvent(Qt::WindowStates, _Bool)
+// [-2] void QWindowStateChangeEvent(Qt::WindowStates, bool)
 
 /*
 
@@ -82,7 +82,7 @@ func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateCha
 // /usr/include/qt/QtGui/qevent.h:783
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QWindowStateChangeEvent(Qt::WindowStates, _Bool)
+// [-2] void QWindowStateChangeEvent(Qt::WindowStates, bool)
 
 /*
 

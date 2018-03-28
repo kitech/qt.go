@@ -209,7 +209,6 @@ func (this *QAnimationDriver) Elapsed() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver7elapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:152
@@ -237,7 +236,6 @@ func (this *QAnimationDriver) StartTime() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver9startTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:156

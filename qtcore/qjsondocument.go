@@ -193,7 +193,7 @@ func (this *QJsonDocument) Swap(other QJsonDocument_ITF) {
 // /usr/include/qt/QtCore/qjsondocument.h:118
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QJsonDocument fromRawData(const char *, int, enum QJsonDocument::DataValidation)
+// [8] QJsonDocument fromRawData(const char *, int, QJsonDocument::DataValidation)
 
 /*
 Creates a QJsonDocument that uses the first size bytes from data. It assumes data contains a binary encoded JSON document. The created document does not take ownership of data and the caller has to guarantee that data will not be deleted or modified as long as any QJsonDocument, QJsonObject or QJsonArray still references the data.
@@ -224,7 +224,7 @@ func QJsonDocument_FromRawData(data string, size int, validation int) *QJsonDocu
 // /usr/include/qt/QtCore/qjsondocument.h:118
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QJsonDocument fromRawData(const char *, int, enum QJsonDocument::DataValidation)
+// [8] QJsonDocument fromRawData(const char *, int, QJsonDocument::DataValidation)
 
 /*
 Creates a QJsonDocument that uses the first size bytes from data. It assumes data contains a binary encoded JSON document. The created document does not take ownership of data and the caller has to guarantee that data will not be deleted or modified as long as any QJsonDocument, QJsonObject or QJsonArray still references the data.
@@ -268,7 +268,7 @@ func (this *QJsonDocument) RawData(size unsafe.Pointer /*666*/) string {
 // /usr/include/qt/QtCore/qjsondocument.h:121
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QJsonDocument fromBinaryData(const QByteArray &, enum QJsonDocument::DataValidation)
+// [8] QJsonDocument fromBinaryData(const QByteArray &, QJsonDocument::DataValidation)
 
 /*
 Creates a QJsonDocument from data.
@@ -297,7 +297,7 @@ func QJsonDocument_FromBinaryData(data QByteArray_ITF, validation int) *QJsonDoc
 // /usr/include/qt/QtCore/qjsondocument.h:121
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QJsonDocument fromBinaryData(const QByteArray &, enum QJsonDocument::DataValidation)
+// [8] QJsonDocument fromBinaryData(const QByteArray &, QJsonDocument::DataValidation)
 
 /*
 Creates a QJsonDocument from data.
@@ -412,7 +412,7 @@ func (this *QJsonDocument) ToJson() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qjsondocument.h:138
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toJson(enum QJsonDocument::JsonFormat) const
+// [8] QByteArray toJson(QJsonDocument::JsonFormat) const
 
 /*
 Converts the QJsonDocument to a UTF-8 encoded JSON document in the provided format.

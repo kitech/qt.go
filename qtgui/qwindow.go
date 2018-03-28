@@ -32,92 +32,92 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// void exposeEvent(class QExposeEvent *)
+// void exposeEvent(QExposeEvent *)
 func (this *QWindow) InheritExposeEvent(f func(arg0 *QExposeEvent /*777 QExposeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "exposeEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QWindow) InheritResizeEvent(f func(arg0 *QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void moveEvent(class QMoveEvent *)
+// void moveEvent(QMoveEvent *)
 func (this *QWindow) InheritMoveEvent(f func(arg0 *QMoveEvent /*777 QMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "moveEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QWindow) InheritFocusInEvent(f func(arg0 *QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QWindow) InheritFocusOutEvent(f func(arg0 *QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QWindow) InheritShowEvent(f func(arg0 *QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QWindow) InheritHideEvent(f func(arg0 *QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QWindow) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QWindow) InheritKeyPressEvent(f func(arg0 *QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QWindow) InheritKeyReleaseEvent(f func(arg0 *QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QWindow) InheritMousePressEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QWindow) InheritMouseReleaseEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QWindow) InheritMouseDoubleClickEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QWindow) InheritMouseMoveEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QWindow) InheritWheelEvent(f func(arg0 *QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void touchEvent(class QTouchEvent *)
+// void touchEvent(QTouchEvent *)
 func (this *QWindow) InheritTouchEvent(f func(arg0 *QTouchEvent /*777 QTouchEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "touchEvent", f)
 }
 
-// void tabletEvent(class QTabletEvent *)
+// void tabletEvent(QTabletEvent *)
 func (this *QWindow) InheritTabletEvent(f func(arg0 *QTabletEvent /*777 QTabletEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "tabletEvent", f)
 }
 
-// bool nativeEvent(const class QByteArray &, void *, long *)
+// bool nativeEvent(const QByteArray &, void *, long *)
 func (this *QWindow) InheritNativeEvent(f func(eventType *qtcore.QByteArray, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool) {
 	qtrt.SetAllInheritCallback(this, "nativeEvent", f)
 }
@@ -259,7 +259,7 @@ func DeleteQWindow(this *QWindow) {
 // /usr/include/qt/QtGui/qwindow.h:148
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSurfaceType(enum QSurface::SurfaceType)
+// [-2] void setSurfaceType(QSurface::SurfaceType)
 
 /*
 Sets the surfaceType of the window.
@@ -324,7 +324,7 @@ func (this *QWindow) Visibility() int {
 // /usr/include/qt/QtGui/qwindow.h:154
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisibility(enum QWindow::Visibility)
+// [-2] void setVisibility(QWindow::Visibility)
 
 /*
 
@@ -371,13 +371,12 @@ func (this *QWindow) WinId() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow5winIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtGui/qwindow.h:160
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWindow * parent(enum QWindow::AncestorMode) const
+// [8] QWindow * parent(QWindow::AncestorMode) const
 
 /*
 Returns the parent window, if any.
@@ -608,7 +607,7 @@ func (this *QWindow) Flags() int {
 // /usr/include/qt/QtGui/qwindow.h:176
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(Qt::WindowType, _Bool)
+// [-2] void setFlag(Qt::WindowType, bool)
 
 /*
 Sets the window flag flag on this window if on is true; otherwise clears the flag.
@@ -625,7 +624,7 @@ func (this *QWindow) SetFlag(arg0 int, on bool) {
 // /usr/include/qt/QtGui/qwindow.h:176
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(Qt::WindowType, _Bool)
+// [-2] void setFlag(Qt::WindowType, bool)
 
 /*
 Sets the window flag flag on this window if on is true; otherwise clears the flag.
@@ -933,7 +932,7 @@ func (this *QWindow) TransientParent() *QWindow /*777 QWindow **/ {
 // /usr/include/qt/QtGui/qwindow.h:202
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isAncestorOf(const QWindow *, enum QWindow::AncestorMode) const
+// [1] bool isAncestorOf(const QWindow *, QWindow::AncestorMode) const
 
 /*
 Returns true if the window is an ancestor of the given child. If mode is IncludeTransients, then transient parents are also considered ancestors.
@@ -951,7 +950,7 @@ func (this *QWindow) IsAncestorOf(child QWindow_ITF /*777 const QWindow **/, mod
 // /usr/include/qt/QtGui/qwindow.h:202
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isAncestorOf(const QWindow *, enum QWindow::AncestorMode) const
+// [1] bool isAncestorOf(const QWindow *, QWindow::AncestorMode) const
 
 /*
 Returns true if the window is an ancestor of the given child. If mode is IncludeTransients, then transient parents are also considered ancestors.
@@ -1566,7 +1565,7 @@ func (this *QWindow) Destroy() {
 // /usr/include/qt/QtGui/qwindow.h:253
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool setKeyboardGrabEnabled(_Bool)
+// [1] bool setKeyboardGrabEnabled(bool)
 
 /*
 Sets whether keyboard grab should be enabled or not (grab).
@@ -1584,7 +1583,7 @@ func (this *QWindow) SetKeyboardGrabEnabled(grab bool) bool {
 // /usr/include/qt/QtGui/qwindow.h:254
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool setMouseGrabEnabled(_Bool)
+// [1] bool setMouseGrabEnabled(bool)
 
 /*
 Sets whether mouse grab should be enabled or not (grab).
@@ -1819,7 +1818,7 @@ func (this *QWindow) RequestActivate() {
 // /usr/include/qt/QtGui/qwindow.h:281
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 
@@ -2343,7 +2342,7 @@ func (this *QWindow) MaximumHeightChanged(arg int) {
 // /usr/include/qt/QtGui/qwindow.h:330
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void visibleChanged(_Bool)
+// [-2] void visibleChanged(bool)
 
 /*
 

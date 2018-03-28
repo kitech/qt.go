@@ -68,7 +68,7 @@ func (*QAccessibleTableModelChangeEvent) NewFromPointer(cthis unsafe.Pointer) *Q
 // /usr/include/qt/QtGui/qaccessible.h:932
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void QAccessibleTableModelChangeEvent(QObject *, enum QAccessibleTableModelChangeEvent::ModelChangeType)
+// [-2] void QAccessibleTableModelChangeEvent(QObject *, QAccessibleTableModelChangeEvent::ModelChangeType)
 
 /*
 
@@ -88,7 +88,7 @@ func NewQAccessibleTableModelChangeEvent(obj qtcore.QObject_ITF /*777 QObject **
 // /usr/include/qt/QtGui/qaccessible.h:939
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void QAccessibleTableModelChangeEvent(QAccessibleInterface *, enum QAccessibleTableModelChangeEvent::ModelChangeType)
+// [-2] void QAccessibleTableModelChangeEvent(QAccessibleInterface *, QAccessibleTableModelChangeEvent::ModelChangeType)
 
 /*
 
@@ -123,7 +123,7 @@ func DeleteQAccessibleTableModelChangeEvent(this *QAccessibleTableModelChangeEve
 // /usr/include/qt/QtGui/qaccessible.h:949
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setModelChangeType(enum QAccessibleTableModelChangeEvent::ModelChangeType)
+// [-2] void setModelChangeType(QAccessibleTableModelChangeEvent::ModelChangeType)
 
 /*
 

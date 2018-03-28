@@ -70,7 +70,7 @@ func (*QAndroidJniExceptionCleaner) NewFromPointer(cthis unsafe.Pointer) *QAndro
 // /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QAndroidJniExceptionCleaner(enum QAndroidJniExceptionCleaner::OutputMode)
+// [-2] void QAndroidJniExceptionCleaner(QAndroidJniExceptionCleaner::OutputMode)
 
 /*
 
@@ -86,7 +86,7 @@ func NewQAndroidJniExceptionCleaner(outputMode int) *QAndroidJniExceptionCleaner
 // /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QAndroidJniExceptionCleaner(enum QAndroidJniExceptionCleaner::OutputMode)
+// [-2] void QAndroidJniExceptionCleaner(QAndroidJniExceptionCleaner::OutputMode)
 
 /*
 

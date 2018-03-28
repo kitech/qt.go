@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// QVariant retrieveData(const class QString &, class QVariant::Type)
+// QVariant retrieveData(const QString &, QVariant::Type)
 func (this *QMimeData) InheritRetrieveData(f func(mimetype string, preferredType int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "retrieveData", f)
 }

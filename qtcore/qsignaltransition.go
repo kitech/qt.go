@@ -31,17 +31,17 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// bool eventTest(class QEvent *)
+// bool eventTest(QEvent *)
 func (this *QSignalTransition) InheritEventTest(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventTest", f)
 }
 
-// void onTransition(class QEvent *)
+// void onTransition(QEvent *)
 func (this *QSignalTransition) InheritOnTransition(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onTransition", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QSignalTransition) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }

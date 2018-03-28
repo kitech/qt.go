@@ -33,27 +33,27 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QRadioButton) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// bool hitButton(const class QPoint &)
+// bool hitButton(const QPoint &)
 func (this *QRadioButton) InheritHitButton(f func(arg0 *qtcore.QPoint) bool) {
 	qtrt.SetAllInheritCallback(this, "hitButton", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QRadioButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QRadioButton) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionButton *)
+// void initStyleOption(QStyleOptionButton *)
 func (this *QRadioButton) InheritInitStyleOption(f func(button *QStyleOptionButton /*777 QStyleOptionButton **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }

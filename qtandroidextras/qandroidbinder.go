@@ -123,7 +123,7 @@ func DeleteQAndroidBinder(this *QAndroidBinder) {
 // /usr/include/qt/QtAndroidExtras/qandroidbinder.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool onTransact(int, const QAndroidParcel &, const QAndroidParcel &, enum QAndroidBinder::CallType)
+// [1] bool onTransact(int, const QAndroidParcel &, const QAndroidParcel &, QAndroidBinder::CallType)
 
 /*
 Default implementation is a stub that returns false. The user should override this method to get the transact data from the caller.
@@ -154,7 +154,7 @@ func (this *QAndroidBinder) OnTransact(code int, data QAndroidParcel_ITF, reply 
 // /usr/include/qt/QtAndroidExtras/qandroidbinder.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType) const
+// [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, QAndroidBinder::CallType) const
 
 /*
 Performs an IPC call
@@ -184,7 +184,7 @@ func (this *QAndroidBinder) Transact(code int, data QAndroidParcel_ITF, reply QA
 // /usr/include/qt/QtAndroidExtras/qandroidbinder.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType) const
+// [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, QAndroidBinder::CallType) const
 
 /*
 Performs an IPC call
@@ -214,7 +214,7 @@ func (this *QAndroidBinder) Transact__(code int, data QAndroidParcel_ITF) bool {
 // /usr/include/qt/QtAndroidExtras/qandroidbinder.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType) const
+// [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, QAndroidBinder::CallType) const
 
 /*
 Performs an IPC call

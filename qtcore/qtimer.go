@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QTimer) InheritTimerEvent(f func(arg0 *QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
@@ -235,7 +235,7 @@ func (this *QTimer) TimerType() int {
 // /usr/include/qt/QtCore/qtimer.h:80
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setSingleShot(_Bool)
+// [-2] void setSingleShot(bool)
 
 /*
 

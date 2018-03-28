@@ -35,72 +35,72 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
-// void exposeEvent(class QExposeEvent *)
+// void exposeEvent(QExposeEvent *)
 func (this *QQuickWindow) InheritExposeEvent(f func(arg0 *qtgui.QExposeEvent /*777 QExposeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "exposeEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QQuickWindow) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QQuickWindow) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QQuickWindow) InheritHideEvent(f func(arg0 *qtgui.QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QQuickWindow) InheritFocusInEvent(f func(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QQuickWindow) InheritFocusOutEvent(f func(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QQuickWindow) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QQuickWindow) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QQuickWindow) InheritKeyReleaseEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QQuickWindow) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QQuickWindow) InheritMouseReleaseEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QQuickWindow) InheritMouseDoubleClickEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QQuickWindow) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QQuickWindow) InheritWheelEvent(f func(arg0 *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
@@ -360,7 +360,6 @@ func (this *QQuickWindow) RenderTargetId() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow14renderTargetIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtQuick/qquickwindow.h:132
@@ -571,7 +570,7 @@ func (this *QQuickWindow) CreateTextureFromId__(id uint, size qtcore.QSize_ITF) 
 // /usr/include/qt/QtQuick/qquickwindow.h:147
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setClearBeforeRendering(_Bool)
+// [-2] void setClearBeforeRendering(bool)
 
 /*
 Sets whether the scene graph rendering of QML should clear the color buffer before it starts rendering to enabled.
@@ -662,7 +661,7 @@ func QQuickWindow_HasDefaultAlphaBuffer() bool {
 // /usr/include/qt/QtQuick/qquickwindow.h:154
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setDefaultAlphaBuffer(_Bool)
+// [-2] void setDefaultAlphaBuffer(bool)
 
 /*
 useAlpha specifies whether to use alpha transparency on newly created windows.
@@ -685,7 +684,7 @@ func QQuickWindow_SetDefaultAlphaBuffer(useAlpha bool) {
 // /usr/include/qt/QtQuick/qquickwindow.h:156
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPersistentOpenGLContext(_Bool)
+// [-2] void setPersistentOpenGLContext(bool)
 
 /*
 Sets whether the OpenGL context should be preserved, and cannot be released until the last window is deleted, to persistent. The default value is true.
@@ -724,7 +723,7 @@ func (this *QQuickWindow) IsPersistentOpenGLContext() bool {
 // /usr/include/qt/QtQuick/qquickwindow.h:159
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPersistentSceneGraph(_Bool)
+// [-2] void setPersistentSceneGraph(bool)
 
 /*
 Sets whether the scene graph nodes and resources can be released to persistent. The default value is true.
@@ -775,7 +774,7 @@ func (this *QQuickWindow) IsSceneGraphInitialized() bool {
 // /usr/include/qt/QtQuick/qquickwindow.h:165
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void scheduleRenderJob(QRunnable *, enum QQuickWindow::RenderStage)
+// [-2] void scheduleRenderJob(QRunnable *, QQuickWindow::RenderStage)
 
 /*
 Schedules job to run when the rendering of this window reaches the given stage.
@@ -1007,7 +1006,7 @@ func QQuickWindow_TextRenderType() int {
 // /usr/include/qt/QtQuick/qquickwindow.h:180
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setTextRenderType(enum QQuickWindow::TextRenderType)
+// [-2] void setTextRenderType(QQuickWindow::TextRenderType)
 
 /*
 Sets the default render type of text-like elements in Qt Quick to renderType.

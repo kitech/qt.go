@@ -315,7 +315,7 @@ func (this *QNetworkCacheMetaData) SaveToDisk() bool {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSaveToDisk(_Bool)
+// [-2] void setSaveToDisk(bool)
 
 /*
 

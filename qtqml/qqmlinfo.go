@@ -104,7 +104,7 @@ func (this *QQmlInfo) Operator_left_shift(t qtcore.QChar_ITF /*123*/) *QQmlInfo 
 // /usr/include/qt/QtQml/qqmlinfo.h:79
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [16] QQmlInfo & operator<<(_Bool)
+// [16] QQmlInfo & operator<<(bool)
 
 /*
 

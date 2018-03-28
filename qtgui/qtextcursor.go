@@ -228,7 +228,7 @@ func (this *QTextCursor) IsNull() bool {
 // /usr/include/qt/QtGui/qtextcursor.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPosition(int, enum QTextCursor::MoveMode)
+// [-2] void setPosition(int, QTextCursor::MoveMode)
 
 /*
 Moves the cursor to the absolute position in the document specified by pos using a MoveMode specified by m. The cursor is positioned between characters.
@@ -243,7 +243,7 @@ func (this *QTextCursor) SetPosition(pos int, mode int) {
 // /usr/include/qt/QtGui/qtextcursor.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPosition(int, enum QTextCursor::MoveMode)
+// [-2] void setPosition(int, QTextCursor::MoveMode)
 
 /*
 Moves the cursor to the absolute position in the document specified by pos using a MoveMode specified by m. The cursor is positioned between characters.
@@ -376,7 +376,7 @@ func (this *QTextCursor) InsertText_1(text string, format QTextCharFormat_ITF) {
 // /usr/include/qt/QtGui/qtextcursor.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool movePosition(enum QTextCursor::MoveOperation, enum QTextCursor::MoveMode, int)
+// [1] bool movePosition(QTextCursor::MoveOperation, QTextCursor::MoveMode, int)
 
 /*
 Moves the cursor by performing the given operation n times, using the specified mode, and returns true if all operations were completed successfully; otherwise returns false.
@@ -398,7 +398,7 @@ func (this *QTextCursor) MovePosition(op int, arg1 int, n int) bool {
 // /usr/include/qt/QtGui/qtextcursor.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool movePosition(enum QTextCursor::MoveOperation, enum QTextCursor::MoveMode, int)
+// [1] bool movePosition(QTextCursor::MoveOperation, QTextCursor::MoveMode, int)
 
 /*
 Moves the cursor by performing the given operation n times, using the specified mode, and returns true if all operations were completed successfully; otherwise returns false.
@@ -424,7 +424,7 @@ func (this *QTextCursor) MovePosition__(op int) bool {
 // /usr/include/qt/QtGui/qtextcursor.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool movePosition(enum QTextCursor::MoveOperation, enum QTextCursor::MoveMode, int)
+// [1] bool movePosition(QTextCursor::MoveOperation, QTextCursor::MoveMode, int)
 
 /*
 Moves the cursor by performing the given operation n times, using the specified mode, and returns true if all operations were completed successfully; otherwise returns false.
@@ -468,7 +468,7 @@ func (this *QTextCursor) VisualNavigation() bool {
 // /usr/include/qt/QtGui/qtextcursor.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisualNavigation(_Bool)
+// [-2] void setVisualNavigation(bool)
 
 /*
 Sets visual navigation to b.
@@ -528,7 +528,7 @@ func (this *QTextCursor) VerticalMovementX() int {
 // /usr/include/qt/QtGui/qtextcursor.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setKeepPositionOnInsert(_Bool)
+// [-2] void setKeepPositionOnInsert(bool)
 
 /*
 Defines whether the cursor should keep its current position when text gets inserted at the current position of the cursor.
@@ -601,7 +601,7 @@ func (this *QTextCursor) DeletePreviousChar() {
 // /usr/include/qt/QtGui/qtextcursor.h:151
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void select(enum QTextCursor::SelectionType)
+// [-2] void select(QTextCursor::SelectionType)
 
 /*
 Selects text in the document according to the given selection.

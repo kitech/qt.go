@@ -33,47 +33,47 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QSizeGrip) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QSizeGrip) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QSizeGrip) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QSizeGrip) InheritMouseReleaseEvent(f func(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void moveEvent(class QMoveEvent *)
+// void moveEvent(QMoveEvent *)
 func (this *QSizeGrip) InheritMoveEvent(f func(moveEvent *qtgui.QMoveEvent /*777 QMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "moveEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QSizeGrip) InheritShowEvent(f func(showEvent *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QSizeGrip) InheritHideEvent(f func(hideEvent *qtgui.QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QSizeGrip) InheritEventFilter(f func(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QSizeGrip) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -177,7 +177,7 @@ func (this *QSizeGrip) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qsizegrip.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 Reimplemented from QWidget::setVisible().

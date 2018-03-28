@@ -271,7 +271,7 @@ func (this *QHstsPolicy) Expiry() *qtcore.QDateTime /*123*/ {
 // /usr/include/qt/QtNetwork/qhstspolicy.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setIncludesSubDomains(_Bool)
+// [-2] void setIncludesSubDomains(bool)
 
 /*
 Sets whether subdomains are included for this policy to include.

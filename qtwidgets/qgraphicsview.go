@@ -33,102 +33,102 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void setupViewport(class QWidget *)
+// void setupViewport(QWidget *)
 func (this *QGraphicsView) InheritSetupViewport(f func(widget *QWidget /*777 QWidget **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setupViewport", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QGraphicsView) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// bool viewportEvent(class QEvent *)
+// bool viewportEvent(QEvent *)
 func (this *QGraphicsView) InheritViewportEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "viewportEvent", f)
 }
 
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QGraphicsView) InheritContextMenuEvent(f func(event *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// void dragEnterEvent(class QDragEnterEvent *)
+// void dragEnterEvent(QDragEnterEvent *)
 func (this *QGraphicsView) InheritDragEnterEvent(f func(event *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragEnterEvent", f)
 }
 
-// void dragLeaveEvent(class QDragLeaveEvent *)
+// void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QGraphicsView) InheritDragLeaveEvent(f func(event *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragLeaveEvent", f)
 }
 
-// void dragMoveEvent(class QDragMoveEvent *)
+// void dragMoveEvent(QDragMoveEvent *)
 func (this *QGraphicsView) InheritDragMoveEvent(f func(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QGraphicsView) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QGraphicsView) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QGraphicsView) InheritFocusNextPrevChild(f func(next bool) bool) {
 	qtrt.SetAllInheritCallback(this, "focusNextPrevChild", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QGraphicsView) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QGraphicsView) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QGraphicsView) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QGraphicsView) InheritMouseDoubleClickEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QGraphicsView) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QGraphicsView) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QGraphicsView) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QGraphicsView) InheritWheelEvent(f func(event *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QGraphicsView) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QGraphicsView) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
@@ -138,27 +138,27 @@ func (this *QGraphicsView) InheritScrollContentsBy(f func(dx int, dy int) /*void
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QGraphicsView) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QGraphicsView) InheritInputMethodEvent(f func(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
 
-// void drawBackground(class QPainter *, const class QRectF &)
+// void drawBackground(QPainter *, const QRectF &)
 func (this *QGraphicsView) InheritDrawBackground(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRectF) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawBackground", f)
 }
 
-// void drawForeground(class QPainter *, const class QRectF &)
+// void drawForeground(QPainter *, const QRectF &)
 func (this *QGraphicsView) InheritDrawForeground(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRectF) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawForeground", f)
 }
 
-// void drawItems(class QPainter *, int, class QGraphicsItem **, const class QStyleOptionGraphicsItem *)
+// void drawItems(QPainter *, int, QGraphicsItem **, const QStyleOptionGraphicsItem *)
 func (this *QGraphicsView) InheritDrawItems(f func(painter *qtgui.QPainter /*777 QPainter **/, numItems int, items []interface{}, options []interface{}) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawItems", f)
 }
@@ -340,7 +340,7 @@ func (this *QGraphicsView) RenderHints() int {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:124
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRenderHint(QPainter::RenderHint, _Bool)
+// [-2] void setRenderHint(QPainter::RenderHint, bool)
 
 /*
 If enabled is true, the render hint hint is enabled; otherwise it is disabled.
@@ -355,7 +355,7 @@ func (this *QGraphicsView) SetRenderHint(hint int, enabled bool) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:124
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRenderHint(QPainter::RenderHint, _Bool)
+// [-2] void setRenderHint(QPainter::RenderHint, bool)
 
 /*
 If enabled is true, the render hint hint is enabled; otherwise it is disabled.
@@ -426,7 +426,7 @@ func (this *QGraphicsView) TransformationAnchor() int {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTransformationAnchor(enum QGraphicsView::ViewportAnchor)
+// [-2] void setTransformationAnchor(QGraphicsView::ViewportAnchor)
 
 /*
 
@@ -453,7 +453,7 @@ func (this *QGraphicsView) ResizeAnchor() int {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setResizeAnchor(enum QGraphicsView::ViewportAnchor)
+// [-2] void setResizeAnchor(QGraphicsView::ViewportAnchor)
 
 /*
 
@@ -480,7 +480,7 @@ func (this *QGraphicsView) ViewportUpdateMode() int {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setViewportUpdateMode(enum QGraphicsView::ViewportUpdateMode)
+// [-2] void setViewportUpdateMode(QGraphicsView::ViewportUpdateMode)
 
 /*
 
@@ -507,7 +507,7 @@ func (this *QGraphicsView) OptimizationFlags() int {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOptimizationFlag(enum QGraphicsView::OptimizationFlag, _Bool)
+// [-2] void setOptimizationFlag(QGraphicsView::OptimizationFlag, bool)
 
 /*
 Enables flag if enabled is true; otherwise disables flag.
@@ -522,7 +522,7 @@ func (this *QGraphicsView) SetOptimizationFlag(flag int, enabled bool) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOptimizationFlag(enum QGraphicsView::OptimizationFlag, _Bool)
+// [-2] void setOptimizationFlag(QGraphicsView::OptimizationFlag, bool)
 
 /*
 Enables flag if enabled is true; otherwise disables flag.
@@ -566,7 +566,7 @@ func (this *QGraphicsView) DragMode() int {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDragMode(enum QGraphicsView::DragMode)
+// [-2] void setDragMode(QGraphicsView::DragMode)
 
 /*
 
@@ -686,7 +686,7 @@ func (this *QGraphicsView) IsInteractive() bool {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:157
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setInteractive(_Bool)
+// [-2] void setInteractive(bool)
 
 /*
 
@@ -802,7 +802,7 @@ func (this *QGraphicsView) Matrix() *qtgui.QMatrix /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:167
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMatrix(const QMatrix &, _Bool)
+// [-2] void setMatrix(const QMatrix &, bool)
 
 /*
 Sets the view's current transformation matrix to matrix.
@@ -839,7 +839,7 @@ func (this *QGraphicsView) SetMatrix(matrix qtgui.QMatrix_ITF, combine bool) {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:167
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMatrix(const QMatrix &, _Bool)
+// [-2] void setMatrix(const QMatrix &, bool)
 
 /*
 Sets the view's current transformation matrix to matrix.
@@ -947,7 +947,7 @@ func (this *QGraphicsView) IsTransformed() bool {
 // /usr/include/qt/QtWidgets/qgraphicsview.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTransform(const QTransform &, _Bool)
+// [-2] void setTransform(const QTransform &, bool)
 
 /*
 Sets the view's current transformation matrix to matrix.
@@ -984,7 +984,7 @@ func (this *QGraphicsView) SetTransform(matrix qtgui.QTransform_ITF, combine boo
 // /usr/include/qt/QtWidgets/qgraphicsview.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTransform(const QTransform &, _Bool)
+// [-2] void setTransform(const QTransform &, bool)
 
 /*
 Sets the view's current transformation matrix to matrix.
@@ -2402,7 +2402,7 @@ func (this *QGraphicsView) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocus
 // /usr/include/qt/QtWidgets/qgraphicsview.h:253
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool focusNextPrevChild(_Bool)
+// [1] bool focusNextPrevChild(bool)
 
 /*
 Reimplemented from QWidget::focusNextPrevChild().

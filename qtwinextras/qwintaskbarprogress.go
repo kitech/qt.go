@@ -311,7 +311,7 @@ func (this *QWinTaskbarProgress) Hide() {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 
@@ -354,7 +354,7 @@ func (this *QWinTaskbarProgress) Resume() {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPaused(_Bool)
+// [-2] void setPaused(bool)
 
 /*
 
@@ -421,7 +421,7 @@ func (this *QWinTaskbarProgress) MaximumChanged(maximum int) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void visibilityChanged(_Bool)
+// [-2] void visibilityChanged(bool)
 
 /*
 
@@ -434,7 +434,7 @@ func (this *QWinTaskbarProgress) VisibilityChanged(visible bool) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void pausedChanged(_Bool)
+// [-2] void pausedChanged(bool)
 
 /*
 
@@ -447,7 +447,7 @@ func (this *QWinTaskbarProgress) PausedChanged(paused bool) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void stoppedChanged(_Bool)
+// [-2] void stoppedChanged(bool)
 
 /*
 

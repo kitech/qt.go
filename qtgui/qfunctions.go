@@ -76,7 +76,6 @@ func QRgba(r int, g int, b int, a int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qRgbaiiii", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qrgb.h:75
@@ -133,7 +132,6 @@ func QRgb(r int, g int, b int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z4qRgbiii", qtrt.FFI_TYPE_POINTER, r, g, b)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qrgb.h:54
@@ -228,7 +226,6 @@ func QUnpremultiply(p uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z14qUnpremultiplyj", qtrt.FFI_TYPE_POINTER, p)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qquaternion.h:323
@@ -265,7 +262,6 @@ func QPremultiply(x uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z12qPremultiplyj", qtrt.FFI_TYPE_POINTER, x)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 //  body block end

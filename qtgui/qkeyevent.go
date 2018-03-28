@@ -66,7 +66,7 @@ func (*QKeyEvent) NewFromPointer(cthis unsafe.Pointer) *QKeyEvent {
 // /usr/include/qt/QtGui/qevent.h:338
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QKeyEvent(enum QEvent::Type, int, Qt::KeyboardModifiers, const QString &, _Bool, ushort)
+// [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, const QString &, bool, ushort)
 
 /*
 
@@ -84,7 +84,7 @@ func NewQKeyEvent(type_ int, key int, modifiers int, text string, autorep bool, 
 // /usr/include/qt/QtGui/qevent.h:338
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QKeyEvent(enum QEvent::Type, int, Qt::KeyboardModifiers, const QString &, _Bool, ushort)
+// [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, const QString &, bool, ushort)
 
 /*
 
@@ -106,7 +106,7 @@ func NewQKeyEvent__(type_ int, key int, modifiers int) *QKeyEvent {
 // /usr/include/qt/QtGui/qevent.h:338
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QKeyEvent(enum QEvent::Type, int, Qt::KeyboardModifiers, const QString &, _Bool, ushort)
+// [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, const QString &, bool, ushort)
 
 /*
 
@@ -128,7 +128,7 @@ func NewQKeyEvent__1(type_ int, key int, modifiers int, text string) *QKeyEvent 
 // /usr/include/qt/QtGui/qevent.h:338
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QKeyEvent(enum QEvent::Type, int, Qt::KeyboardModifiers, const QString &, _Bool, ushort)
+// [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, const QString &, bool, ushort)
 
 /*
 
@@ -148,7 +148,7 @@ func NewQKeyEvent__2(type_ int, key int, modifiers int, text string, autorep boo
 // /usr/include/qt/QtGui/qevent.h:340
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QKeyEvent(enum QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, _Bool, ushort)
+// [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, bool, ushort)
 
 /*
 
@@ -166,7 +166,7 @@ func NewQKeyEvent_1(type_ int, key int, modifiers int, nativeScanCode uint, nati
 // /usr/include/qt/QtGui/qevent.h:340
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QKeyEvent(enum QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, _Bool, ushort)
+// [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, bool, ushort)
 
 /*
 
@@ -188,7 +188,7 @@ func NewQKeyEvent_1_(type_ int, key int, modifiers int, nativeScanCode uint, nat
 // /usr/include/qt/QtGui/qevent.h:340
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QKeyEvent(enum QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, _Bool, ushort)
+// [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, bool, ushort)
 
 /*
 
@@ -210,7 +210,7 @@ func NewQKeyEvent_1_1(type_ int, key int, modifiers int, nativeScanCode uint, na
 // /usr/include/qt/QtGui/qevent.h:340
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QKeyEvent(enum QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, _Bool, ushort)
+// [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, bool, ushort)
 
 /*
 
@@ -341,7 +341,6 @@ func (this *QKeyEvent) NativeScanCode() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent14nativeScanCodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:355
@@ -356,7 +355,6 @@ func (this *QKeyEvent) NativeVirtualKey() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent16nativeVirtualKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:356
@@ -371,7 +369,6 @@ func (this *QKeyEvent) NativeModifiers() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QKeyEvent15nativeModifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 //  body block end

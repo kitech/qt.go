@@ -360,7 +360,7 @@ func (this *QTextBlockFormat) LineHeightType() int {
 // /usr/include/qt/QtGui/qtextformat.h:635
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setNonBreakableLines(_Bool)
+// [-2] void setNonBreakableLines(bool)
 
 /*
 

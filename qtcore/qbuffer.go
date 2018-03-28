@@ -31,12 +31,12 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void connectNotify(const class QMetaMethod &)
+// void connectNotify(const QMetaMethod &)
 func (this *QBuffer) InheritConnectNotify(f func(arg0 *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "connectNotify", f)
 }
 
-// void disconnectNotify(const class QMetaMethod &)
+// void disconnectNotify(const QMetaMethod &)
 func (this *QBuffer) InheritDisconnectNotify(f func(arg0 *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "disconnectNotify", f)
 }
@@ -377,7 +377,6 @@ func (this *QBuffer) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:80
@@ -392,7 +391,6 @@ func (this *QBuffer) Pos() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:81
@@ -485,7 +483,6 @@ func (this *QBuffer) ReadData(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer8readDataEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:91
@@ -502,7 +499,6 @@ func (this *QBuffer) WriteData(data string, len_ int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 //  body block end

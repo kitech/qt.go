@@ -242,7 +242,7 @@ func (this *QImageReader) Format() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtGui/qimagereader.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoDetectImageFormat(_Bool)
+// [-2] void setAutoDetectImageFormat(bool)
 
 /*
 If enabled is true, image format autodetection is enabled; otherwise, it is disabled. By default, autodetection is enabled.
@@ -285,7 +285,7 @@ func (this *QImageReader) AutoDetectImageFormat() bool {
 // /usr/include/qt/QtGui/qimagereader.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDecideFormatFromContent(_Bool)
+// [-2] void setDecideFormatFromContent(bool)
 
 /*
 If ignored is set to true, then the image reader will ignore specified formats or file extensions and decide which plugin to use only based on the contents in the datastream.
@@ -771,7 +771,7 @@ func (this *QImageReader) Transformation() int {
 // /usr/include/qt/QtGui/qimagereader.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoTransform(_Bool)
+// [-2] void setAutoTransform(bool)
 
 /*
 Determines that images returned by read() should have transformation metadata automatically applied if enabled is true.

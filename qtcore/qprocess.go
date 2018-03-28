@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void setProcessState(enum QProcess::ProcessState)
+// void setProcessState(QProcess::ProcessState)
 func (this *QProcess) InheritSetProcessState(f func(state int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setProcessState", f)
 }
@@ -768,7 +768,7 @@ func (this *QProcess) ReadChannelMode() int {
 // /usr/include/qt/QtCore/qprocess.h:176
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setReadChannelMode(enum QProcess::ProcessChannelMode)
+// [-2] void setReadChannelMode(QProcess::ProcessChannelMode)
 
 /*
 
@@ -799,7 +799,7 @@ func (this *QProcess) ProcessChannelMode() int {
 // /usr/include/qt/QtCore/qprocess.h:178
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setProcessChannelMode(enum QProcess::ProcessChannelMode)
+// [-2] void setProcessChannelMode(QProcess::ProcessChannelMode)
 
 /*
 Sets the channel mode of the QProcess standard output and standard error channels to the mode specified. This mode will be used the next time start() is called. For example:
@@ -846,7 +846,7 @@ func (this *QProcess) InputChannelMode() int {
 // /usr/include/qt/QtCore/qprocess.h:180
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setInputChannelMode(enum QProcess::InputChannelMode)
+// [-2] void setInputChannelMode(QProcess::InputChannelMode)
 
 /*
 Sets the channel mode of the QProcess standard input channel to the mode specified. This mode will be used the next time start() is called.
@@ -879,7 +879,7 @@ func (this *QProcess) ReadChannel() int {
 // /usr/include/qt/QtCore/qprocess.h:183
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setReadChannel(enum QProcess::ProcessChannel)
+// [-2] void setReadChannel(QProcess::ProcessChannel)
 
 /*
 Sets the current read channel of the QProcess to the given channel. The current input channel is used by the functions read(), readAll(), readLine(), and getChar(). It also determines which channel triggers QProcess to emit readyRead().
@@ -894,7 +894,7 @@ func (this *QProcess) SetReadChannel(channel int) {
 // /usr/include/qt/QtCore/qprocess.h:185
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void closeReadChannel(enum QProcess::ProcessChannel)
+// [-2] void closeReadChannel(QProcess::ProcessChannel)
 
 /*
 Closes the read channel channel. After calling this function, QProcess will no longer receive data on the channel. Any data that has already been received is still available for reading.
@@ -1288,7 +1288,6 @@ func (this *QProcess) Pid() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess3pidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qprocess.h:227
@@ -1305,7 +1304,6 @@ func (this *QProcess) ProcessId() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess9processIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qprocess.h:229
@@ -1554,7 +1552,6 @@ func (this *QProcess) BytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess14bytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qprocess.h:242
@@ -1569,7 +1566,6 @@ func (this *QProcess) BytesToWrite() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess12bytesToWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qprocess.h:243
@@ -1865,7 +1861,7 @@ func (this *QProcess) ErrorOccurred(error int) {
 // /usr/include/qt/QtCore/qprocess.h:284
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void setProcessState(enum QProcess::ProcessState)
+// [-2] void setProcessState(QProcess::ProcessState)
 
 /*
 Sets the current state of the QProcess to the state specified.
@@ -1933,7 +1929,6 @@ func (this *QProcess) ReadData(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess8readDataEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qprocess.h:290
@@ -1950,7 +1945,6 @@ func (this *QProcess) WriteData(data string, len_ int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 /*

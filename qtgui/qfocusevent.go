@@ -66,7 +66,7 @@ func (*QFocusEvent) NewFromPointer(cthis unsafe.Pointer) *QFocusEvent {
 // /usr/include/qt/QtGui/qevent.h:389
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QFocusEvent(enum QEvent::Type, Qt::FocusReason)
+// [-2] void QFocusEvent(QEvent::Type, Qt::FocusReason)
 
 /*
 
@@ -82,7 +82,7 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 // /usr/include/qt/QtGui/qevent.h:389
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QFocusEvent(enum QEvent::Type, Qt::FocusReason)
+// [-2] void QFocusEvent(QEvent::Type, Qt::FocusReason)
 
 /*
 

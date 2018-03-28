@@ -284,7 +284,7 @@ func (this *QDate) WeekNumber__() int {
 // /usr/include/qt/QtCore/qdatetime.h:86
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString shortMonthName(int, enum QDate::MonthNameType)
+// [8] QString shortMonthName(int, QDate::MonthNameType)
 
 /*
 
@@ -306,7 +306,7 @@ func QDate_ShortMonthName(month int, type_ int) string {
 // /usr/include/qt/QtCore/qdatetime.h:86
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString shortMonthName(int, enum QDate::MonthNameType)
+// [8] QString shortMonthName(int, QDate::MonthNameType)
 
 /*
 
@@ -325,7 +325,7 @@ func (this *QDate) ShortMonthName__(month int) string {
 // /usr/include/qt/QtCore/qdatetime.h:88
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString shortDayName(int, enum QDate::MonthNameType)
+// [8] QString shortDayName(int, QDate::MonthNameType)
 
 /*
 
@@ -347,7 +347,7 @@ func QDate_ShortDayName(weekday int, type_ int) string {
 // /usr/include/qt/QtCore/qdatetime.h:88
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString shortDayName(int, enum QDate::MonthNameType)
+// [8] QString shortDayName(int, QDate::MonthNameType)
 
 /*
 
@@ -366,7 +366,7 @@ func (this *QDate) ShortDayName__(weekday int) string {
 // /usr/include/qt/QtCore/qdatetime.h:90
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString longMonthName(int, enum QDate::MonthNameType)
+// [8] QString longMonthName(int, QDate::MonthNameType)
 
 /*
 
@@ -388,7 +388,7 @@ func QDate_LongMonthName(month int, type_ int) string {
 // /usr/include/qt/QtCore/qdatetime.h:90
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString longMonthName(int, enum QDate::MonthNameType)
+// [8] QString longMonthName(int, QDate::MonthNameType)
 
 /*
 
@@ -407,7 +407,7 @@ func (this *QDate) LongMonthName__(month int) string {
 // /usr/include/qt/QtCore/qdatetime.h:92
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString longDayName(int, enum QDate::MonthNameType)
+// [8] QString longDayName(int, QDate::MonthNameType)
 
 /*
 
@@ -429,7 +429,7 @@ func QDate_LongDayName(weekday int, type_ int) string {
 // /usr/include/qt/QtCore/qdatetime.h:92
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString longDayName(int, enum QDate::MonthNameType)
+// [8] QString longDayName(int, QDate::MonthNameType)
 
 /*
 
@@ -867,7 +867,6 @@ func (this *QDate) DaysTo(arg0 QDate_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate6daysToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:118
@@ -1131,7 +1130,6 @@ func (this *QDate) ToJulianDay() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate11toJulianDayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 func DeleteQDate(this *QDate) {

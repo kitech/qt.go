@@ -84,7 +84,7 @@ func NewQTextLength() *QTextLength {
 // /usr/include/qt/QtGui/qtextformat.h:91
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void QTextLength(enum QTextLength::Type, qreal)
+// [-2] void QTextLength(QTextLength::Type, qreal)
 
 /*
 

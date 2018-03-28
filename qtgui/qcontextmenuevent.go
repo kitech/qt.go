@@ -66,7 +66,7 @@ func (*QContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QContextMenuEven
 // /usr/include/qt/QtGui/qevent.h:511
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &, const QPoint &, Qt::KeyboardModifiers)
+// [-2] void QContextMenuEvent(QContextMenuEvent::Reason, const QPoint &, const QPoint &, Qt::KeyboardModifiers)
 
 /*
 
@@ -90,7 +90,7 @@ func NewQContextMenuEvent(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QP
 // /usr/include/qt/QtGui/qevent.h:513
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &, const QPoint &)
+// [-2] void QContextMenuEvent(QContextMenuEvent::Reason, const QPoint &, const QPoint &)
 
 /*
 
@@ -114,7 +114,7 @@ func NewQContextMenuEvent_1(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.
 // /usr/include/qt/QtGui/qevent.h:514
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &)
+// [-2] void QContextMenuEvent(QContextMenuEvent::Reason, const QPoint &)
 
 /*
 

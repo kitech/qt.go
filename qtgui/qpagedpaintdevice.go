@@ -170,7 +170,7 @@ func (this *QPagedPaintDevice) SetPageSize(pageSize QPageSize_ITF) bool {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:226
 // index:1
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setPageSize(enum QPagedPaintDevice::PageSize)
+// [-2] void setPageSize(QPagedPaintDevice::PageSize)
 
 /*
 Sets the page size to pageSize.

@@ -69,7 +69,7 @@ func (*QWinColorizationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWinCo
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinevent.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QWinColorizationChangeEvent(QRgb, _Bool)
+// [-2] void QWinColorizationChangeEvent(QRgb, bool)
 
 /*
 
@@ -109,7 +109,6 @@ func (this *QWinColorizationChangeEvent) Color() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QWinColorizationChangeEvent5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinevent.h:69

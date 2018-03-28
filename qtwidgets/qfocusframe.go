@@ -33,22 +33,22 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QFocusFrame) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QFocusFrame) InheritEventFilter(f func(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QFocusFrame) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void initStyleOption(class QStyleOption *)
+// void initStyleOption(QStyleOption *)
 func (this *QFocusFrame) InheritInitStyleOption(f func(option *QStyleOption /*777 QStyleOption **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }

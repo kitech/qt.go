@@ -159,7 +159,7 @@ func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qsurface.h:85
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void QSurface(enum QSurface::SurfaceClass)
+// [-2] void QSurface(QSurface::SurfaceClass)
 
 /*
 Creates a surface with the given type.

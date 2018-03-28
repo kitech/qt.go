@@ -253,7 +253,7 @@ func (this *QSGTexture) Bind() {
 // /usr/include/qt/QtQuick/qsgtexture.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void updateBindOptions(_Bool)
+// [-2] void updateBindOptions(bool)
 
 /*
 Update the texture state to match the filtering, mipmap and wrap options currently set.
@@ -268,7 +268,7 @@ func (this *QSGTexture) UpdateBindOptions(force bool) {
 // /usr/include/qt/QtQuick/qsgtexture.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void updateBindOptions(_Bool)
+// [-2] void updateBindOptions(bool)
 
 /*
 Update the texture state to match the filtering, mipmap and wrap options currently set.
@@ -285,7 +285,7 @@ func (this *QSGTexture) UpdateBindOptions__() {
 // /usr/include/qt/QtQuick/qsgtexture.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMipmapFiltering(enum QSGTexture::Filtering)
+// [-2] void setMipmapFiltering(QSGTexture::Filtering)
 
 /*
 Sets the mipmap sampling mode to be used for the upcoming bind() call to filter.
@@ -318,7 +318,7 @@ func (this *QSGTexture) MipmapFiltering() int {
 // /usr/include/qt/QtQuick/qsgtexture.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFiltering(enum QSGTexture::Filtering)
+// [-2] void setFiltering(QSGTexture::Filtering)
 
 /*
 Sets the sampling mode to be used for the upcoming bind() call to filter.
@@ -349,7 +349,7 @@ func (this *QSGTexture) Filtering() int {
 // /usr/include/qt/QtQuick/qsgtexture.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAnisotropyLevel(enum QSGTexture::AnisotropyLevel)
+// [-2] void setAnisotropyLevel(QSGTexture::AnisotropyLevel)
 
 /*
 Sets the level of anisotropic filtering to be used for the upcoming bind() call to level. The default value is QSGTexture::AnisotropyNone, which means no anisotropic filtering is enabled.
@@ -384,7 +384,7 @@ func (this *QSGTexture) AnisotropyLevel() int {
 // /usr/include/qt/QtQuick/qsgtexture.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHorizontalWrapMode(enum QSGTexture::WrapMode)
+// [-2] void setHorizontalWrapMode(QSGTexture::WrapMode)
 
 /*
 Sets the horizontal wrap mode to be used for the upcoming bind() call to hwrap
@@ -415,7 +415,7 @@ func (this *QSGTexture) HorizontalWrapMode() int {
 // /usr/include/qt/QtQuick/qsgtexture.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVerticalWrapMode(enum QSGTexture::WrapMode)
+// [-2] void setVerticalWrapMode(QSGTexture::WrapMode)
 
 /*
 Sets the vertical wrap mode to be used for the upcoming bind() call to vwrap

@@ -416,7 +416,7 @@ func (this *QRawFont) AdvancesForGlyphIndexes_1(glyphIndexes unsafe.Pointer /*66
 // /usr/include/qt/QtGui/qrawfont.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QImage alphaMapForGlyph(quint32, enum QRawFont::AntialiasingType, const QTransform &) const
+// [32] QImage alphaMapForGlyph(quint32, QRawFont::AntialiasingType, const QTransform &) const
 
 /*
 This function returns a rasterized image of the glyph at the given glyphIndex in the underlying font, using the transform specified. If the QRawFont is not valid, this function will return an invalid QImage.
@@ -442,7 +442,7 @@ func (this *QRawFont) AlphaMapForGlyph(glyphIndex uint, antialiasingType int, tr
 // /usr/include/qt/QtGui/qrawfont.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QImage alphaMapForGlyph(quint32, enum QRawFont::AntialiasingType, const QTransform &) const
+// [32] QImage alphaMapForGlyph(quint32, QRawFont::AntialiasingType, const QTransform &) const
 
 /*
 This function returns a rasterized image of the glyph at the given glyphIndex in the underlying font, using the transform specified. If the QRawFont is not valid, this function will return an invalid QImage.
@@ -468,7 +468,7 @@ func (this *QRawFont) AlphaMapForGlyph__(glyphIndex uint) *QImage /*123*/ {
 // /usr/include/qt/QtGui/qrawfont.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QImage alphaMapForGlyph(quint32, enum QRawFont::AntialiasingType, const QTransform &) const
+// [32] QImage alphaMapForGlyph(quint32, QRawFont::AntialiasingType, const QTransform &) const
 
 /*
 This function returns a rasterized image of the glyph at the given glyphIndex in the underlying font, using the transform specified. If the QRawFont is not valid, this function will return an invalid QImage.

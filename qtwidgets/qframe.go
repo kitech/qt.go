@@ -33,27 +33,27 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QFrame) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QFrame) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QFrame) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void drawFrame(class QPainter *)
+// void drawFrame(QPainter *)
 func (this *QFrame) InheritDrawFrame(f func(arg0 *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawFrame", f)
 }
 
-// void initStyleOption(class QStyleOptionFrame *)
+// void initStyleOption(QStyleOptionFrame *)
 func (this *QFrame) InheritInitStyleOption(f func(option *QStyleOptionFrame /*777 QStyleOptionFrame **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -272,7 +272,7 @@ func (this *QFrame) FrameShape() int {
 // /usr/include/qt/QtWidgets/qframe.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFrameShape(enum QFrame::Shape)
+// [-2] void setFrameShape(QFrame::Shape)
 
 /*
 
@@ -299,7 +299,7 @@ func (this *QFrame) FrameShadow() int {
 // /usr/include/qt/QtWidgets/qframe.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFrameShadow(enum QFrame::Shadow)
+// [-2] void setFrameShadow(QFrame::Shadow)
 
 /*
 

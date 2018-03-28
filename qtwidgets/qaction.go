@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QAction) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -473,7 +473,7 @@ func (this *QAction) WhatsThis() string {
 // /usr/include/qt/QtWidgets/qaction.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPriority(enum QAction::Priority)
+// [-2] void setPriority(QAction::Priority)
 
 /*
 
@@ -535,7 +535,7 @@ func (this *QAction) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
 // /usr/include/qt/QtWidgets/qaction.h:129
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSeparator(_Bool)
+// [-2] void setSeparator(bool)
 
 /*
 If b is true then this action will be considered a separator.
@@ -649,7 +649,7 @@ func (this *QAction) ShortcutContext() int {
 // /usr/include/qt/QtWidgets/qaction.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoRepeat(_Bool)
+// [-2] void setAutoRepeat(bool)
 
 /*
 
@@ -709,7 +709,7 @@ func (this *QAction) Font() *qtgui.QFont /*123*/ {
 // /usr/include/qt/QtWidgets/qaction.h:150
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCheckable(_Bool)
+// [-2] void setCheckable(bool)
 
 /*
 
@@ -815,7 +815,7 @@ func (this *QAction) IsVisible() bool {
 // /usr/include/qt/QtWidgets/qaction.h:163
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void activate(enum QAction::ActionEvent)
+// [-2] void activate(QAction::ActionEvent)
 
 /*
 Sends the relevant signals for ActionEvent event.
@@ -872,7 +872,7 @@ func (this *QAction) ShowStatusText__() bool {
 // /usr/include/qt/QtWidgets/qaction.h:166
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMenuRole(enum QAction::MenuRole)
+// [-2] void setMenuRole(QAction::MenuRole)
 
 /*
 
@@ -899,7 +899,7 @@ func (this *QAction) MenuRole() int {
 // /usr/include/qt/QtWidgets/qaction.h:169
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setIconVisibleInMenu(_Bool)
+// [-2] void setIconVisibleInMenu(bool)
 
 /*
 
@@ -926,7 +926,7 @@ func (this *QAction) IsIconVisibleInMenu() bool {
 // /usr/include/qt/QtWidgets/qaction.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShortcutVisibleInContextMenu(_Bool)
+// [-2] void setShortcutVisibleInContextMenu(bool)
 
 /*
 
@@ -1011,7 +1011,7 @@ func (this *QAction) Hover() {
 // /usr/include/qt/QtWidgets/qaction.h:189
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setChecked(_Bool)
+// [-2] void setChecked(bool)
 
 /*
 
@@ -1037,7 +1037,7 @@ func (this *QAction) Toggle() {
 // /usr/include/qt/QtWidgets/qaction.h:191
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(_Bool)
+// [-2] void setEnabled(bool)
 
 /*
 
@@ -1050,7 +1050,7 @@ func (this *QAction) SetEnabled(arg0 bool) {
 // /usr/include/qt/QtWidgets/qaction.h:192
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setDisabled(_Bool)
+// [-2] void setDisabled(bool)
 
 /*
 This is a convenience function for the enabled property, that is useful for signals--slots connections. If b is true the action is disabled; otherwise it is enabled.
@@ -1063,7 +1063,7 @@ func (this *QAction) SetDisabled(b bool) {
 // /usr/include/qt/QtWidgets/qaction.h:193
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 
@@ -1093,7 +1093,7 @@ func (this *QAction) Changed() {
 // /usr/include/qt/QtWidgets/qaction.h:197
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void triggered(_Bool)
+// [-2] void triggered(bool)
 
 /*
 This signal is emitted when an action is activated by the user; for example, when the user clicks a menu option, toolbar button, or presses an action's shortcut key combination, or when trigger() was called. Notably, it is not emitted when setChecked() or toggle() is called.
@@ -1110,7 +1110,7 @@ func (this *QAction) Triggered(checked bool) {
 // /usr/include/qt/QtWidgets/qaction.h:197
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void triggered(_Bool)
+// [-2] void triggered(bool)
 
 /*
 This signal is emitted when an action is activated by the user; for example, when the user clicks a menu option, toolbar button, or presses an action's shortcut key combination, or when trigger() was called. Notably, it is not emitted when setChecked() or toggle() is called.
@@ -1144,7 +1144,7 @@ func (this *QAction) Hovered() {
 // /usr/include/qt/QtWidgets/qaction.h:199
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void toggled(_Bool)
+// [-2] void toggled(bool)
 
 /*
 This signal is emitted whenever a checkable action changes its isChecked() status. This can be the result of a user interaction, or because setChecked() was called.

@@ -33,72 +33,72 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void drawDisplay(class QPainter *, const class QStyleOptionViewItem &, const class QRect &, const class QString &)
+// void drawDisplay(QPainter *, const QStyleOptionViewItem &, const QRect &, const QString &)
 func (this *QItemDelegate) InheritDrawDisplay(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, text string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawDisplay", f)
 }
 
-// void drawDecoration(class QPainter *, const class QStyleOptionViewItem &, const class QRect &, const class QPixmap &)
+// void drawDecoration(QPainter *, const QStyleOptionViewItem &, const QRect &, const QPixmap &)
 func (this *QItemDelegate) InheritDrawDecoration(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, pixmap *qtgui.QPixmap) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawDecoration", f)
 }
 
-// void drawFocus(class QPainter *, const class QStyleOptionViewItem &, const class QRect &)
+// void drawFocus(QPainter *, const QStyleOptionViewItem &, const QRect &)
 func (this *QItemDelegate) InheritDrawFocus(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawFocus", f)
 }
 
-// void drawCheck(class QPainter *, const class QStyleOptionViewItem &, const class QRect &, Qt::CheckState)
+// void drawCheck(QPainter *, const QStyleOptionViewItem &, const QRect &, Qt::CheckState)
 func (this *QItemDelegate) InheritDrawCheck(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, state int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawCheck", f)
 }
 
-// void drawBackground(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
+// void drawBackground(QPainter *, const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QItemDelegate) InheritDrawBackground(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawBackground", f)
 }
 
-// void doLayout(const class QStyleOptionViewItem &, class QRect *, class QRect *, class QRect *, _Bool)
+// void doLayout(const QStyleOptionViewItem &, QRect *, QRect *, QRect *, bool)
 func (this *QItemDelegate) InheritDoLayout(f func(option *QStyleOptionViewItem, checkRect *qtcore.QRect /*777 QRect **/, iconRect *qtcore.QRect /*777 QRect **/, textRect *qtcore.QRect /*777 QRect **/, hint bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "doLayout", f)
 }
 
-// QRect rect(const class QStyleOptionViewItem &, const class QModelIndex &, int)
+// QRect rect(const QStyleOptionViewItem &, const QModelIndex &, int)
 func (this *QItemDelegate) InheritRect(f func(option *QStyleOptionViewItem, index *qtcore.QModelIndex, role int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "rect", f)
 }
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QItemDelegate) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// bool editorEvent(class QEvent *, class QAbstractItemModel *, const class QStyleOptionViewItem &, const class QModelIndex &)
+// bool editorEvent(QEvent *, QAbstractItemModel *, const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QItemDelegate) InheritEditorEvent(f func(event *qtcore.QEvent /*777 QEvent **/, model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex) bool) {
 	qtrt.SetAllInheritCallback(this, "editorEvent", f)
 }
 
-// QStyleOptionViewItem setOptions(const class QModelIndex &, const class QStyleOptionViewItem &)
+// QStyleOptionViewItem setOptions(const QModelIndex &, const QStyleOptionViewItem &)
 func (this *QItemDelegate) InheritSetOptions(f func(index *qtcore.QModelIndex, option *QStyleOptionViewItem) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "setOptions", f)
 }
 
-// QPixmap decoration(const class QStyleOptionViewItem &, const class QVariant &)
+// QPixmap decoration(const QStyleOptionViewItem &, const QVariant &)
 func (this *QItemDelegate) InheritDecoration(f func(option *QStyleOptionViewItem, variant *qtcore.QVariant) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "decoration", f)
 }
 
-// QPixmap * selected(const class QPixmap &, const class QPalette &, _Bool)
+// QPixmap * selected(const QPixmap &, const QPalette &, bool)
 func (this *QItemDelegate) InheritSelected(f func(pixmap *qtgui.QPixmap, palette *qtgui.QPalette, enabled bool) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "selected", f)
 }
 
-// QRect doCheck(const class QStyleOptionViewItem &, const class QRect &, const class QVariant &)
+// QRect doCheck(const QStyleOptionViewItem &, const QRect &, const QVariant &)
 func (this *QItemDelegate) InheritDoCheck(f func(option *QStyleOptionViewItem, bounding *qtcore.QRect, variant *qtcore.QVariant) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "doCheck", f)
 }
 
-// QRect textRectangle(class QPainter *, const class QRect &, const class QFont &, const class QString &)
+// QRect textRectangle(QPainter *, const QRect &, const QFont &, const QString &)
 func (this *QItemDelegate) InheritTextRectangle(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, font *qtgui.QFont, text string) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "textRectangle", f)
 }
@@ -218,7 +218,7 @@ func (this *QItemDelegate) HasClipping() bool {
 // /usr/include/qt/QtWidgets/qitemdelegate.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setClipping(_Bool)
+// [-2] void setClipping(bool)
 
 /*
 
@@ -597,7 +597,7 @@ func (this *QItemDelegate) DrawBackground(painter qtgui.QPainter_ITF /*777 QPain
 // /usr/include/qt/QtWidgets/qitemdelegate.h:103
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void doLayout(const QStyleOptionViewItem &, QRect *, QRect *, QRect *, _Bool) const
+// [-2] void doLayout(const QStyleOptionViewItem &, QRect *, QRect *, QRect *, bool) const
 
 /*
 
@@ -766,7 +766,7 @@ func (this *QItemDelegate) Decoration(option QStyleOptionViewItem_ITF, variant q
 // /usr/include/qt/QtWidgets/qitemdelegate.h:116
 // index:0
 // Protected Visibility=Default Availability=Available
-// [8] QPixmap * selected(const QPixmap &, const QPalette &, _Bool) const
+// [8] QPixmap * selected(const QPixmap &, const QPalette &, bool) const
 
 /*
 

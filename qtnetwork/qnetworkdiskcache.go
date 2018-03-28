@@ -189,7 +189,6 @@ func (this *QNetworkDiskCache) MaximumCacheSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache16maximumCacheSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:63
@@ -221,7 +220,6 @@ func (this *QNetworkDiskCache) CacheSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache9cacheSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:66
@@ -368,7 +366,6 @@ func (this *QNetworkDiskCache) Expire() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache6expireEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 //  body block end

@@ -94,7 +94,7 @@ func (this *QHashData) FreeNode(node unsafe.Pointer /*666*/) {
 // /usr/include/qt/QtCore/qhash.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QHashData * detach_helper(void (*)(struct QHashData::Node *, void *), void (*)(struct QHashData::Node *), int, int)
+// [8] QHashData * detach_helper(void (*)(QHashData::Node *, void *), void (*)(QHashData::Node *), int, int)
 
 /*
 
@@ -148,7 +148,7 @@ func (this *QHashData) Rehash(hint int) {
 // /usr/include/qt/QtCore/qhash.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void free_helper(void (*)(struct QHashData::Node *))
+// [-2] void free_helper(void (*)(QHashData::Node *))
 
 /*
 

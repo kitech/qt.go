@@ -33,107 +33,107 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QTextEdit) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QTextEdit) InheritTimerEvent(f func(e *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QTextEdit) InheritKeyPressEvent(f func(e *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QTextEdit) InheritKeyReleaseEvent(f func(e *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QTextEdit) InheritResizeEvent(f func(e *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QTextEdit) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QTextEdit) InheritMousePressEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QTextEdit) InheritMouseMoveEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QTextEdit) InheritMouseReleaseEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QTextEdit) InheritMouseDoubleClickEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QTextEdit) InheritFocusNextPrevChild(f func(next bool) bool) {
 	qtrt.SetAllInheritCallback(this, "focusNextPrevChild", f)
 }
 
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QTextEdit) InheritContextMenuEvent(f func(e *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// void dragEnterEvent(class QDragEnterEvent *)
+// void dragEnterEvent(QDragEnterEvent *)
 func (this *QTextEdit) InheritDragEnterEvent(f func(e *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragEnterEvent", f)
 }
 
-// void dragLeaveEvent(class QDragLeaveEvent *)
+// void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QTextEdit) InheritDragLeaveEvent(f func(e *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragLeaveEvent", f)
 }
 
-// void dragMoveEvent(class QDragMoveEvent *)
+// void dragMoveEvent(QDragMoveEvent *)
 func (this *QTextEdit) InheritDragMoveEvent(f func(e *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QTextEdit) InheritDropEvent(f func(e *qtgui.QDropEvent /*777 QDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QTextEdit) InheritFocusInEvent(f func(e *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QTextEdit) InheritFocusOutEvent(f func(e *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QTextEdit) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QTextEdit) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QTextEdit) InheritWheelEvent(f func(e *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
@@ -143,17 +143,17 @@ func (this *QTextEdit) InheritCreateMimeDataFromSelection(f func() unsafe.Pointe
 	qtrt.SetAllInheritCallback(this, "createMimeDataFromSelection", f)
 }
 
-// bool canInsertFromMimeData(const class QMimeData *)
+// bool canInsertFromMimeData(const QMimeData *)
 func (this *QTextEdit) InheritCanInsertFromMimeData(f func(source *qtcore.QMimeData /*777 const QMimeData **/) bool) {
 	qtrt.SetAllInheritCallback(this, "canInsertFromMimeData", f)
 }
 
-// void insertFromMimeData(const class QMimeData *)
+// void insertFromMimeData(const QMimeData *)
 func (this *QTextEdit) InheritInsertFromMimeData(f func(source *qtcore.QMimeData /*777 const QMimeData **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "insertFromMimeData", f)
 }
 
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QTextEdit) InheritInputMethodEvent(f func(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
@@ -163,7 +163,7 @@ func (this *QTextEdit) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) 
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 
-// void doSetTextCursor(const class QTextCursor &)
+// void doSetTextCursor(const QTextCursor &)
 func (this *QTextEdit) InheritDoSetTextCursor(f func(cursor *qtgui.QTextCursor) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "doSetTextCursor", f)
 }
@@ -430,7 +430,7 @@ func (this *QTextEdit) IsReadOnly() bool {
 // /usr/include/qt/QtWidgets/qtextedit.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setReadOnly(_Bool)
+// [-2] void setReadOnly(bool)
 
 /*
 
@@ -722,7 +722,7 @@ func (this *QTextEdit) TabChangesFocus() bool {
 // /usr/include/qt/QtWidgets/qtextedit.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabChangesFocus(_Bool)
+// [-2] void setTabChangesFocus(bool)
 
 /*
 
@@ -781,7 +781,7 @@ func (this *QTextEdit) IsUndoRedoEnabled() bool {
 // /usr/include/qt/QtWidgets/qtextedit.h:152
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setUndoRedoEnabled(_Bool)
+// [-2] void setUndoRedoEnabled(bool)
 
 /*
 
@@ -808,7 +808,7 @@ func (this *QTextEdit) LineWrapMode() int {
 // /usr/include/qt/QtWidgets/qtextedit.h:156
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setLineWrapMode(enum QTextEdit::LineWrapMode)
+// [-2] void setLineWrapMode(QTextEdit::LineWrapMode)
 
 /*
 
@@ -1151,7 +1151,7 @@ func (this *QTextEdit) OverwriteMode() bool {
 // /usr/include/qt/QtWidgets/qtextedit.h:189
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOverwriteMode(_Bool)
+// [-2] void setOverwriteMode(bool)
 
 /*
 
@@ -1259,7 +1259,7 @@ func (this *QTextEdit) AcceptRichText() bool {
 // /usr/include/qt/QtWidgets/qtextedit.h:203
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAcceptRichText(_Bool)
+// [-2] void setAcceptRichText(bool)
 
 /*
 
@@ -1434,7 +1434,7 @@ func (this *QTextEdit) SetFontWeight(w int) {
 // /usr/include/qt/QtWidgets/qtextedit.h:226
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFontUnderline(_Bool)
+// [-2] void setFontUnderline(bool)
 
 /*
 If underline is true, sets the current format to underline; otherwise sets the current format to non-underline.
@@ -1449,7 +1449,7 @@ func (this *QTextEdit) SetFontUnderline(b bool) {
 // /usr/include/qt/QtWidgets/qtextedit.h:227
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFontItalic(_Bool)
+// [-2] void setFontItalic(bool)
 
 /*
 If italic is true, sets the current format to italic; otherwise sets the current format to non-italic.
@@ -1860,7 +1860,7 @@ func (this *QTextEdit) TextChanged() {
 // /usr/include/qt/QtWidgets/qtextedit.h:265
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void undoAvailable(_Bool)
+// [-2] void undoAvailable(bool)
 
 /*
 This signal is emitted whenever undo operations become available (available is true) or unavailable (available is false).
@@ -1873,7 +1873,7 @@ func (this *QTextEdit) UndoAvailable(b bool) {
 // /usr/include/qt/QtWidgets/qtextedit.h:266
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void redoAvailable(_Bool)
+// [-2] void redoAvailable(bool)
 
 /*
 This signal is emitted whenever redo operations become available (available is true) or unavailable (available is false).
@@ -1907,7 +1907,7 @@ func (this *QTextEdit) CurrentCharFormatChanged(format qtgui.QTextCharFormat_ITF
 // /usr/include/qt/QtWidgets/qtextedit.h:268
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void copyAvailable(_Bool)
+// [-2] void copyAvailable(bool)
 
 /*
 This signal is emitted when text is selected or de-selected in the text edit.
@@ -2129,7 +2129,7 @@ func (this *QTextEdit) MouseDoubleClickEvent(e qtgui.QMouseEvent_ITF /*777 QMous
 // /usr/include/qt/QtWidgets/qtextedit.h:283
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool focusNextPrevChild(_Bool)
+// [1] bool focusNextPrevChild(bool)
 
 /*
 Reimplemented from QWidget::focusNextPrevChild().

@@ -84,7 +84,7 @@ func NewQKeySequence() *QKeySequence {
 // /usr/include/qt/QtGui/qkeysequence.h:157
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QKeySequence(const QString &, enum QKeySequence::SequenceFormat)
+// [-2] void QKeySequence(const QString &, QKeySequence::SequenceFormat)
 
 /*
 Constructs an empty key sequence.
@@ -102,7 +102,7 @@ func NewQKeySequence_1(key string, format int) *QKeySequence {
 // /usr/include/qt/QtGui/qkeysequence.h:157
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QKeySequence(const QString &, enum QKeySequence::SequenceFormat)
+// [-2] void QKeySequence(const QString &, QKeySequence::SequenceFormat)
 
 /*
 Constructs an empty key sequence.
@@ -198,7 +198,7 @@ func NewQKeySequence_2_2(k1 int, k2 int, k3 int) *QKeySequence {
 // /usr/include/qt/QtGui/qkeysequence.h:160
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QKeySequence(enum QKeySequence::StandardKey)
+// [-2] void QKeySequence(QKeySequence::StandardKey)
 
 /*
 Constructs an empty key sequence.
@@ -257,7 +257,7 @@ func (this *QKeySequence) IsEmpty() bool {
 // /usr/include/qt/QtGui/qkeysequence.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toString(enum QKeySequence::SequenceFormat) const
+// [8] QString toString(QKeySequence::SequenceFormat) const
 
 /*
 Return a string representation of the key sequence, based on format.
@@ -284,7 +284,7 @@ func (this *QKeySequence) ToString(format int) string {
 // /usr/include/qt/QtGui/qkeysequence.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString toString(enum QKeySequence::SequenceFormat) const
+// [8] QString toString(QKeySequence::SequenceFormat) const
 
 /*
 Return a string representation of the key sequence, based on format.
@@ -313,7 +313,7 @@ func (this *QKeySequence) ToString__() string {
 // /usr/include/qt/QtGui/qkeysequence.h:173
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QKeySequence fromString(const QString &, enum QKeySequence::SequenceFormat)
+// [8] QKeySequence fromString(const QString &, QKeySequence::SequenceFormat)
 
 /*
 Return a QKeySequence from the string str based on format.
@@ -340,7 +340,7 @@ func QKeySequence_FromString(str string, format int) *QKeySequence /*123*/ {
 // /usr/include/qt/QtGui/qkeysequence.h:173
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QKeySequence fromString(const QString &, enum QKeySequence::SequenceFormat)
+// [8] QKeySequence fromString(const QString &, QKeySequence::SequenceFormat)
 
 /*
 Return a QKeySequence from the string str based on format.

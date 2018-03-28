@@ -118,7 +118,6 @@ func (this *QArrayData) DetachCapacity(newSize uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData14detachCapacityEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newSize)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned long // 222
 }
 
 // /usr/include/qt/QtCore/qarraydata.h:99

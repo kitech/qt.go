@@ -256,7 +256,7 @@ func (this *QDoubleValidator) SetDecimals(arg0 int) {
 // /usr/include/qt/QtGui/qvalidator.h:148
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setNotation(enum QDoubleValidator::Notation)
+// [-2] void setNotation(QDoubleValidator::Notation)
 
 /*
 

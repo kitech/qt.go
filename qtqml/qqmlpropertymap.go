@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
-// QVariant updateValue(const class QString &, const class QVariant &)
+// QVariant updateValue(const QString &, const QVariant &)
 func (this *QQmlPropertyMap) InheritUpdateValue(f func(key string, input *qtcore.QVariant) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "updateValue", f)
 }

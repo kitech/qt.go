@@ -36,12 +36,12 @@ func (this *QVariant) InheritCreate(f func(type_ int, copy unsafe.Pointer /*666*
 	qtrt.SetAllInheritCallback(this, "create", f)
 }
 
-// bool cmp(const class QVariant &)
+// bool cmp(const QVariant &)
 func (this *QVariant) InheritCmp(f func(other *QVariant) bool) {
 	qtrt.SetAllInheritCallback(this, "cmp", f)
 }
 
-// int compare(const class QVariant &)
+// int compare(const QVariant &)
 func (this *QVariant) InheritCompare(f func(other *QVariant) int) {
 	qtrt.SetAllInheritCallback(this, "compare", f)
 }
@@ -103,7 +103,7 @@ func NewQVariant() *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:201
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QVariant(enum QVariant::Type)
+// [-2] void QVariant(QVariant::Type)
 
 /*
 Constructs an invalid variant.
@@ -235,7 +235,7 @@ func NewQVariant_8(ull uint64) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:214
 // index:9
 // Public Visibility=Default Availability=Available
-// [-2] void QVariant(_Bool)
+// [-2] void QVariant(bool)
 
 /*
 Constructs an invalid variant.
@@ -1220,7 +1220,7 @@ func (this *QVariant) IsDetached() bool {
 // /usr/include/qt/QtCore/qvariant.h:287
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *) const
+// [4] int toInt(bool *) const
 
 /*
 Returns the variant as an int if the variant has userType() QMetaType::Int, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.
@@ -1240,7 +1240,7 @@ func (this *QVariant) ToInt(ok *bool) int {
 // /usr/include/qt/QtCore/qvariant.h:287
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *) const
+// [4] int toInt(bool *) const
 
 /*
 Returns the variant as an int if the variant has userType() QMetaType::Int, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.
@@ -1262,7 +1262,7 @@ func (this *QVariant) ToInt__() int {
 // /usr/include/qt/QtCore/qvariant.h:288
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *) const
+// [4] uint toUInt(bool *) const
 
 /*
 Returns the variant as an unsigned int if the variant has userType() QMetaType::UInt, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, or QMetaType::ULongLong; otherwise returns 0.
@@ -1277,13 +1277,12 @@ func (this *QVariant) ToUInt(ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qvariant.h:288
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *) const
+// [4] uint toUInt(bool *) const
 
 /*
 Returns the variant as an unsigned int if the variant has userType() QMetaType::UInt, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, or QMetaType::ULongLong; otherwise returns 0.
@@ -1300,13 +1299,12 @@ func (this *QVariant) ToUInt__() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qvariant.h:289
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *) const
+// [8] qlonglong toLongLong(bool *) const
 
 /*
 Returns the variant as a long long int if the variant has userType() QMetaType::LongLong, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.
@@ -1319,13 +1317,12 @@ func (this *QVariant) ToLongLong(ok *bool) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qvariant.h:289
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *) const
+// [8] qlonglong toLongLong(bool *) const
 
 /*
 Returns the variant as a long long int if the variant has userType() QMetaType::LongLong, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.
@@ -1340,13 +1337,12 @@ func (this *QVariant) ToLongLong__() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qvariant.h:290
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *) const
+// [8] qulonglong toULongLong(bool *) const
 
 /*
 Returns the variant as an unsigned long long int if the variant has type() QMetaType::ULongLong, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, or QMetaType::UInt; otherwise returns 0.
@@ -1359,13 +1355,12 @@ func (this *QVariant) ToULongLong(ok *bool) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qvariant.h:290
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *) const
+// [8] qulonglong toULongLong(bool *) const
 
 /*
 Returns the variant as an unsigned long long int if the variant has type() QMetaType::ULongLong, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, or QMetaType::UInt; otherwise returns 0.
@@ -1380,7 +1375,6 @@ func (this *QVariant) ToULongLong__() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qvariant.h:291
@@ -1404,7 +1398,7 @@ func (this *QVariant) ToBool() bool {
 // /usr/include/qt/QtCore/qvariant.h:292
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(_Bool *) const
+// [8] double toDouble(bool *) const
 
 /*
 Returns the variant as a double if the variant has userType() QMetaType::Double, QMetaType::Float, QMetaType::Bool, QMetaType::QByteArray, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.0.
@@ -1422,7 +1416,7 @@ func (this *QVariant) ToDouble(ok *bool) float64 {
 // /usr/include/qt/QtCore/qvariant.h:292
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(_Bool *) const
+// [8] double toDouble(bool *) const
 
 /*
 Returns the variant as a double if the variant has userType() QMetaType::Double, QMetaType::Float, QMetaType::Bool, QMetaType::QByteArray, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.0.
@@ -1442,7 +1436,7 @@ func (this *QVariant) ToDouble__() float64 {
 // /usr/include/qt/QtCore/qvariant.h:293
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(_Bool *) const
+// [4] float toFloat(bool *) const
 
 /*
 Returns the variant as a float if the variant has userType() QMetaType::Double, QMetaType::Float, QMetaType::Bool, QMetaType::QByteArray, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.0.
@@ -1462,7 +1456,7 @@ func (this *QVariant) ToFloat(ok *bool) float32 {
 // /usr/include/qt/QtCore/qvariant.h:293
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(_Bool *) const
+// [4] float toFloat(bool *) const
 
 /*
 Returns the variant as a float if the variant has userType() QMetaType::Double, QMetaType::Float, QMetaType::Bool, QMetaType::QByteArray, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.0.
@@ -1484,7 +1478,7 @@ func (this *QVariant) ToFloat__() float32 {
 // /usr/include/qt/QtCore/qvariant.h:294
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal toReal(_Bool *) const
+// [8] qreal toReal(bool *) const
 
 /*
 Returns the variant as a qreal if the variant has userType() QMetaType::Double, QMetaType::Float, QMetaType::Bool, QMetaType::QByteArray, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.0.
@@ -1504,7 +1498,7 @@ func (this *QVariant) ToReal(ok *bool) float64 {
 // /usr/include/qt/QtCore/qvariant.h:294
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal toReal(_Bool *) const
+// [8] qreal toReal(bool *) const
 
 /*
 Returns the variant as a qreal if the variant has userType() QMetaType::Double, QMetaType::Float, QMetaType::Bool, QMetaType::QByteArray, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.0.

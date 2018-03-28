@@ -33,32 +33,32 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QMessageBox) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QMessageBox) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QMessageBox) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void closeEvent(class QCloseEvent *)
+// void closeEvent(QCloseEvent *)
 func (this *QMessageBox) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QMessageBox) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QMessageBox) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
@@ -153,7 +153,7 @@ func NewQMessageBox__() *QMessageBox {
 // /usr/include/qt/QtWidgets/qmessagebox.h:136
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QMessageBox(enum QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
+// [-2] void QMessageBox(QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
 
 /*
 Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
@@ -179,7 +179,7 @@ func NewQMessageBox_1(icon int, title string, text string, buttons int, parent Q
 // /usr/include/qt/QtWidgets/qmessagebox.h:136
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QMessageBox(enum QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
+// [-2] void QMessageBox(QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
 
 /*
 Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
@@ -207,7 +207,7 @@ func NewQMessageBox_1_(icon int, title string, text string) *QMessageBox {
 // /usr/include/qt/QtWidgets/qmessagebox.h:136
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QMessageBox(enum QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
+// [-2] void QMessageBox(QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
 
 /*
 Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
@@ -233,7 +233,7 @@ func NewQMessageBox_1_1(icon int, title string, text string, buttons int) *QMess
 // /usr/include/qt/QtWidgets/qmessagebox.h:136
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QMessageBox(enum QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
+// [-2] void QMessageBox(QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
 
 /*
 Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
@@ -261,7 +261,7 @@ func NewQMessageBox_1_2(icon int, title string, text string, buttons int, parent
 // /usr/include/qt/QtWidgets/qmessagebox.h:202
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QMessageBox(const QString &, const QString &, enum QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
+// [-2] void QMessageBox(const QString &, const QString &, QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
 
 /*
 Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
@@ -287,7 +287,7 @@ func NewQMessageBox_2(title string, text string, icon int, button0 int, button1 
 // /usr/include/qt/QtWidgets/qmessagebox.h:202
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QMessageBox(const QString &, const QString &, enum QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
+// [-2] void QMessageBox(const QString &, const QString &, QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
 
 /*
 Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
@@ -313,7 +313,7 @@ func NewQMessageBox_2_(title string, text string, icon int, button0 int, button1
 // /usr/include/qt/QtWidgets/qmessagebox.h:202
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QMessageBox(const QString &, const QString &, enum QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
+// [-2] void QMessageBox(const QString &, const QString &, QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
 
 /*
 Constructs a message box with no text and no buttons. parent is passed to the QDialog constructor.
@@ -356,7 +356,7 @@ func DeleteQMessageBox(this *QMessageBox) {
 // /usr/include/qt/QtWidgets/qmessagebox.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void addButton(QAbstractButton *, enum QMessageBox::ButtonRole)
+// [-2] void addButton(QAbstractButton *, QMessageBox::ButtonRole)
 
 /*
 Adds the given button to the message box with the specified role.
@@ -377,7 +377,7 @@ func (this *QMessageBox) AddButton(button QAbstractButton_ITF /*777 QAbstractBut
 // /usr/include/qt/QtWidgets/qmessagebox.h:142
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QPushButton * addButton(const QString &, enum QMessageBox::ButtonRole)
+// [8] QPushButton * addButton(const QString &, QMessageBox::ButtonRole)
 
 /*
 Adds the given button to the message box with the specified role.
@@ -397,7 +397,7 @@ func (this *QMessageBox) AddButton_1(text string, role int) *QPushButton /*777 Q
 // /usr/include/qt/QtWidgets/qmessagebox.h:143
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] QPushButton * addButton(enum QMessageBox::StandardButton)
+// [8] QPushButton * addButton(QMessageBox::StandardButton)
 
 /*
 Adds the given button to the message box with the specified role.
@@ -530,7 +530,7 @@ func (this *QMessageBox) StandardButton(button QAbstractButton_ITF /*777 QAbstra
 // /usr/include/qt/QtWidgets/qmessagebox.h:155
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractButton * button(enum QMessageBox::StandardButton) const
+// [8] QAbstractButton * button(QMessageBox::StandardButton) const
 
 /*
 Returns a pointer corresponding to the standard button which, or 0 if the standard button doesn't exist in this message box.
@@ -587,7 +587,7 @@ func (this *QMessageBox) SetDefaultButton(button QPushButton_ITF /*777 QPushButt
 // /usr/include/qt/QtWidgets/qmessagebox.h:159
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void setDefaultButton(enum QMessageBox::StandardButton)
+// [-2] void setDefaultButton(QMessageBox::StandardButton)
 
 /*
 Sets the message box's default button to button.
@@ -641,7 +641,7 @@ func (this *QMessageBox) SetEscapeButton(button QAbstractButton_ITF /*777 QAbstr
 // /usr/include/qt/QtWidgets/qmessagebox.h:163
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void setEscapeButton(enum QMessageBox::StandardButton)
+// [-2] void setEscapeButton(QMessageBox::StandardButton)
 
 /*
 Sets the button that gets activated when the Escape key is pressed to button.
@@ -738,7 +738,7 @@ func (this *QMessageBox) Icon() int {
 // /usr/include/qt/QtWidgets/qmessagebox.h:171
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setIcon(enum QMessageBox::Icon)
+// [-2] void setIcon(QMessageBox::Icon)
 
 /*
 
@@ -877,7 +877,7 @@ func (this *QMessageBox) CheckBox() *QCheckBox /*777 QCheckBox **/ {
 // /usr/include/qt/QtWidgets/qmessagebox.h:185
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens an information message box with the given title and text in front of the specified parent widget.
@@ -916,7 +916,7 @@ func QMessageBox_Information(parent QWidget_ITF /*777 QWidget **/, title string,
 // /usr/include/qt/QtWidgets/qmessagebox.h:185
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens an information message box with the given title and text in front of the specified parent widget.
@@ -954,7 +954,7 @@ func (this *QMessageBox) Information__(parent QWidget_ITF /*777 QWidget **/, tit
 // /usr/include/qt/QtWidgets/qmessagebox.h:185
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens an information message box with the given title and text in front of the specified parent widget.
@@ -1322,7 +1322,7 @@ func (this *QMessageBox) Information_2_3(parent QWidget_ITF /*777 QWidget **/, t
 // /usr/include/qt/QtWidgets/qmessagebox.h:217
 // index:3
 // Public static inline Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButton, QMessageBox::StandardButton)
 
 /*
 Opens an information message box with the given title and text in front of the specified parent widget.
@@ -1361,7 +1361,7 @@ func QMessageBox_Information_3(parent QWidget_ITF /*777 QWidget **/, title strin
 // /usr/include/qt/QtWidgets/qmessagebox.h:217
 // index:3
 // Public static inline Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButton, QMessageBox::StandardButton)
 
 /*
 Opens an information message box with the given title and text in front of the specified parent widget.
@@ -1397,7 +1397,7 @@ func (this *QMessageBox) Information_3_(parent QWidget_ITF /*777 QWidget **/, ti
 // /usr/include/qt/QtWidgets/qmessagebox.h:188
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens a question message box with the given title and text in front of the specified parent widget.
@@ -1436,7 +1436,7 @@ func QMessageBox_Question(parent QWidget_ITF /*777 QWidget **/, title string, te
 // /usr/include/qt/QtWidgets/qmessagebox.h:188
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens a question message box with the given title and text in front of the specified parent widget.
@@ -1474,7 +1474,7 @@ func (this *QMessageBox) Question__(parent QWidget_ITF /*777 QWidget **/, title 
 // /usr/include/qt/QtWidgets/qmessagebox.h:188
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens a question message box with the given title and text in front of the specified parent widget.
@@ -1842,7 +1842,7 @@ func (this *QMessageBox) Question_2_3(parent QWidget_ITF /*777 QWidget **/, titl
 // /usr/include/qt/QtWidgets/qmessagebox.h:232
 // index:3
 // Public static inline Visibility=Default Availability=Available
-// [4] int question(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+// [4] int question(QWidget *, const QString &, const QString &, QMessageBox::StandardButton, QMessageBox::StandardButton)
 
 /*
 Opens a question message box with the given title and text in front of the specified parent widget.
@@ -1881,7 +1881,7 @@ func QMessageBox_Question_3(parent QWidget_ITF /*777 QWidget **/, title string, 
 // /usr/include/qt/QtWidgets/qmessagebox.h:191
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens a warning message box with the given title and text in front of the specified parent widget.
@@ -1920,7 +1920,7 @@ func QMessageBox_Warning(parent QWidget_ITF /*777 QWidget **/, title string, tex
 // /usr/include/qt/QtWidgets/qmessagebox.h:191
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens a warning message box with the given title and text in front of the specified parent widget.
@@ -1958,7 +1958,7 @@ func (this *QMessageBox) Warning__(parent QWidget_ITF /*777 QWidget **/, title s
 // /usr/include/qt/QtWidgets/qmessagebox.h:191
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens a warning message box with the given title and text in front of the specified parent widget.
@@ -2288,7 +2288,7 @@ func (this *QMessageBox) Warning_2_3(parent QWidget_ITF /*777 QWidget **/, title
 // /usr/include/qt/QtWidgets/qmessagebox.h:247
 // index:3
 // Public static inline Visibility=Default Availability=Available
-// [4] int warning(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+// [4] int warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButton, QMessageBox::StandardButton)
 
 /*
 Opens a warning message box with the given title and text in front of the specified parent widget.
@@ -2327,7 +2327,7 @@ func QMessageBox_Warning_3(parent QWidget_ITF /*777 QWidget **/, title string, t
 // /usr/include/qt/QtWidgets/qmessagebox.h:194
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens a critical message box with the given title and text in front of the specified parent widget.
@@ -2366,7 +2366,7 @@ func QMessageBox_Critical(parent QWidget_ITF /*777 QWidget **/, title string, te
 // /usr/include/qt/QtWidgets/qmessagebox.h:194
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens a critical message box with the given title and text in front of the specified parent widget.
@@ -2404,7 +2404,7 @@ func (this *QMessageBox) Critical__(parent QWidget_ITF /*777 QWidget **/, title 
 // /usr/include/qt/QtWidgets/qmessagebox.h:194
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+// [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
 
 /*
 Opens a critical message box with the given title and text in front of the specified parent widget.
@@ -2734,7 +2734,7 @@ func (this *QMessageBox) Critical_2_3(parent QWidget_ITF /*777 QWidget **/, titl
 // /usr/include/qt/QtWidgets/qmessagebox.h:262
 // index:3
 // Public static inline Visibility=Default Availability=Available
-// [4] int critical(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+// [4] int critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButton, QMessageBox::StandardButton)
 
 /*
 Opens a critical message box with the given title and text in front of the specified parent widget.
@@ -2992,7 +2992,7 @@ func (this *QMessageBox) SetWindowModality(windowModality int) {
 // /usr/include/qt/QtWidgets/qmessagebox.h:282
 // index:0
 // Public static Visibility=Default Availability=Available
-// [32] QPixmap standardIcon(enum QMessageBox::Icon)
+// [32] QPixmap standardIcon(QMessageBox::Icon)
 
 /*
 

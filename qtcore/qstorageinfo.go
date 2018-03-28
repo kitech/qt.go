@@ -360,7 +360,6 @@ func (this *QStorageInfo) BytesTotal() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo10bytesTotalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:82
@@ -379,7 +378,6 @@ func (this *QStorageInfo) BytesFree() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo9bytesFreeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:83
@@ -400,7 +398,6 @@ func (this *QStorageInfo) BytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStorageInfo14bytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:84

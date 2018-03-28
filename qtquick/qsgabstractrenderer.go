@@ -35,7 +35,7 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
-// void nodeChanged(class QSGNode *, class QSGNode::DirtyState)
+// void nodeChanged(QSGNode *, QSGNode::DirtyState)
 func (this *QSGAbstractRenderer) InheritNodeChanged(f func(node *QSGNode /*777 QSGNode **/, state int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "nodeChanged", f)
 }

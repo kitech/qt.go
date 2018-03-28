@@ -67,7 +67,7 @@ func (*QEvent) NewFromPointer(cthis unsafe.Pointer) *QEvent {
 // /usr/include/qt/QtCore/qcoreevent.h:297
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QEvent(enum QEvent::Type)
+// [-2] void QEvent(QEvent::Type)
 
 /*
 
@@ -146,7 +146,7 @@ func (this *QEvent) Spontaneous() bool {
 // /usr/include/qt/QtCore/qcoreevent.h:304
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setAccepted(_Bool)
+// [-2] void setAccepted(bool)
 
 /*
 

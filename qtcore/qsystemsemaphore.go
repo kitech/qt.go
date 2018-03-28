@@ -67,7 +67,7 @@ func (*QSystemSemaphore) NewFromPointer(cthis unsafe.Pointer) *QSystemSemaphore 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QSystemSemaphore(const QString &, int, enum QSystemSemaphore::AccessMode)
+// [-2] void QSystemSemaphore(const QString &, int, QSystemSemaphore::AccessMode)
 
 /*
 Requests a system semaphore for the specified key. The parameters initialValue and mode are used according to the following rules, which are system dependent.
@@ -95,7 +95,7 @@ func NewQSystemSemaphore(key string, initialValue int, mode int) *QSystemSemapho
 // /usr/include/qt/QtCore/qsystemsemaphore.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QSystemSemaphore(const QString &, int, enum QSystemSemaphore::AccessMode)
+// [-2] void QSystemSemaphore(const QString &, int, QSystemSemaphore::AccessMode)
 
 /*
 Requests a system semaphore for the specified key. The parameters initialValue and mode are used according to the following rules, which are system dependent.
@@ -127,7 +127,7 @@ func NewQSystemSemaphore__(key string) *QSystemSemaphore {
 // /usr/include/qt/QtCore/qsystemsemaphore.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QSystemSemaphore(const QString &, int, enum QSystemSemaphore::AccessMode)
+// [-2] void QSystemSemaphore(const QString &, int, QSystemSemaphore::AccessMode)
 
 /*
 Requests a system semaphore for the specified key. The parameters initialValue and mode are used according to the following rules, which are system dependent.
@@ -172,7 +172,7 @@ func DeleteQSystemSemaphore(this *QSystemSemaphore) {
 // /usr/include/qt/QtCore/qsystemsemaphore.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setKey(const QString &, int, enum QSystemSemaphore::AccessMode)
+// [-2] void setKey(const QString &, int, QSystemSemaphore::AccessMode)
 
 /*
 This function works the same as the constructor. It reconstructs this QSystemSemaphore object. If the new key is different from the old key, calling this function is like calling the destructor of the semaphore with the old key, then calling the constructor to create a new semaphore with the new key. The initialValue and mode parameters are as defined for the constructor.
@@ -189,7 +189,7 @@ func (this *QSystemSemaphore) SetKey(key string, initialValue int, mode int) {
 // /usr/include/qt/QtCore/qsystemsemaphore.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setKey(const QString &, int, enum QSystemSemaphore::AccessMode)
+// [-2] void setKey(const QString &, int, QSystemSemaphore::AccessMode)
 
 /*
 This function works the same as the constructor. It reconstructs this QSystemSemaphore object. If the new key is different from the old key, calling this function is like calling the destructor of the semaphore with the old key, then calling the constructor to create a new semaphore with the new key. The initialValue and mode parameters are as defined for the constructor.
@@ -210,7 +210,7 @@ func (this *QSystemSemaphore) SetKey__(key string) {
 // /usr/include/qt/QtCore/qsystemsemaphore.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setKey(const QString &, int, enum QSystemSemaphore::AccessMode)
+// [-2] void setKey(const QString &, int, QSystemSemaphore::AccessMode)
 
 /*
 This function works the same as the constructor. It reconstructs this QSystemSemaphore object. If the new key is different from the old key, calling this function is like calling the destructor of the semaphore with the old key, then calling the constructor to create a new semaphore with the new key. The initialValue and mode parameters are as defined for the constructor.

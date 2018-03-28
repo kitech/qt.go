@@ -338,7 +338,7 @@ func (this *QPalette) CurrentColorGroup() int {
 // /usr/include/qt/QtGui/qpalette.h:105
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setCurrentColorGroup(enum QPalette::ColorGroup)
+// [-2] void setCurrentColorGroup(QPalette::ColorGroup)
 
 /*
 Set the palette's current color group to cg.
@@ -353,7 +353,7 @@ func (this *QPalette) SetCurrentColorGroup(cg int) {
 // /usr/include/qt/QtGui/qpalette.h:107
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [16] const QColor & color(enum QPalette::ColorGroup, enum QPalette::ColorRole) const
+// [16] const QColor & color(QPalette::ColorGroup, QPalette::ColorRole) const
 
 /*
 Returns the color in the specified color group, used for the given color role.
@@ -371,7 +371,7 @@ func (this *QPalette) Color(cg int, cr int) *QColor {
 // /usr/include/qt/QtGui/qpalette.h:121
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [16] const QColor & color(enum QPalette::ColorRole) const
+// [16] const QColor & color(QPalette::ColorRole) const
 
 /*
 Returns the color in the specified color group, used for the given color role.
@@ -389,7 +389,7 @@ func (this *QPalette) Color_1(cr int) *QColor {
 // /usr/include/qt/QtGui/qpalette.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const QBrush & brush(enum QPalette::ColorGroup, enum QPalette::ColorRole) const
+// [8] const QBrush & brush(QPalette::ColorGroup, QPalette::ColorRole) const
 
 /*
 Returns the brush in the specified color group, used for the given color role.
@@ -407,7 +407,7 @@ func (this *QPalette) Brush(cg int, cr int) *QBrush {
 // /usr/include/qt/QtGui/qpalette.h:122
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [8] const QBrush & brush(enum QPalette::ColorRole) const
+// [8] const QBrush & brush(QPalette::ColorRole) const
 
 /*
 Returns the brush in the specified color group, used for the given color role.
@@ -425,7 +425,7 @@ func (this *QPalette) Brush_1(cr int) *QBrush {
 // /usr/include/qt/QtGui/qpalette.h:110
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setColor(enum QPalette::ColorGroup, enum QPalette::ColorRole, const QColor &)
+// [-2] void setColor(QPalette::ColorGroup, QPalette::ColorRole, const QColor &)
 
 /*
 Sets the color in the specified color group, used for the given color role, to the specified solid color.
@@ -444,7 +444,7 @@ func (this *QPalette) SetColor(cg int, cr int, color QColor_ITF) {
 // /usr/include/qt/QtGui/qpalette.h:111
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void setColor(enum QPalette::ColorRole, const QColor &)
+// [-2] void setColor(QPalette::ColorRole, const QColor &)
 
 /*
 Sets the color in the specified color group, used for the given color role, to the specified solid color.
@@ -463,7 +463,7 @@ func (this *QPalette) SetColor_1(cr int, color QColor_ITF) {
 // /usr/include/qt/QtGui/qpalette.h:112
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setBrush(enum QPalette::ColorRole, const QBrush &)
+// [-2] void setBrush(QPalette::ColorRole, const QBrush &)
 
 /*
 Sets the brush for the given color role to the specified brush for all groups in the palette.
@@ -482,7 +482,7 @@ func (this *QPalette) SetBrush(cr int, brush QBrush_ITF) {
 // /usr/include/qt/QtGui/qpalette.h:114
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void setBrush(enum QPalette::ColorGroup, enum QPalette::ColorRole, const QBrush &)
+// [-2] void setBrush(QPalette::ColorGroup, QPalette::ColorRole, const QBrush &)
 
 /*
 Sets the brush for the given color role to the specified brush for all groups in the palette.
@@ -501,7 +501,7 @@ func (this *QPalette) SetBrush_1(cg int, cr int, brush QBrush_ITF) {
 // /usr/include/qt/QtGui/qpalette.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isBrushSet(enum QPalette::ColorGroup, enum QPalette::ColorRole) const
+// [1] bool isBrushSet(QPalette::ColorGroup, QPalette::ColorRole) const
 
 /*
 Returns true if the ColorGroup cg and ColorRole cr has been set previously on this palette; otherwise returns false.
@@ -519,7 +519,7 @@ func (this *QPalette) IsBrushSet(cg int, cr int) bool {
 // /usr/include/qt/QtGui/qpalette.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setColorGroup(enum QPalette::ColorGroup, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &)
+// [-2] void setColorGroup(QPalette::ColorGroup, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &)
 
 /*
 Sets a the group at cg. You can pass either brushes, pixmaps or plain colors for windowText, button, light, dark, mid, text, bright_text, base and window.
@@ -570,7 +570,7 @@ func (this *QPalette) SetColorGroup(cr int, windowText QBrush_ITF, button QBrush
 // /usr/include/qt/QtGui/qpalette.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEqual(enum QPalette::ColorGroup, enum QPalette::ColorGroup) const
+// [1] bool isEqual(QPalette::ColorGroup, QPalette::ColorGroup) const
 
 /*
 Returns true (usually quickly) if color group cg1 is equal to cg2; otherwise returns false.
@@ -1033,7 +1033,6 @@ func (this *QPalette) CacheKey() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette8cacheKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtGui/qpalette.h:154
@@ -1068,7 +1067,6 @@ func (this *QPalette) Resolve_1() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette7resolveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qpalette.h:156

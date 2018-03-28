@@ -489,7 +489,7 @@ func (this *QUndoGroup) IndexChanged(idx int) {
 // /usr/include/qt/QtWidgets/qundogroup.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void cleanChanged(_Bool)
+// [-2] void cleanChanged(bool)
 
 /*
 This signal is emitted whenever the active stack emits QUndoStack::cleanChanged() or the active stack changes.
@@ -506,7 +506,7 @@ func (this *QUndoGroup) CleanChanged(clean bool) {
 // /usr/include/qt/QtWidgets/qundogroup.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void canUndoChanged(_Bool)
+// [-2] void canUndoChanged(bool)
 
 /*
 This signal is emitted whenever the active stack emits QUndoStack::canUndoChanged() or the active stack changes.
@@ -523,7 +523,7 @@ func (this *QUndoGroup) CanUndoChanged(canUndo bool) {
 // /usr/include/qt/QtWidgets/qundogroup.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void canRedoChanged(_Bool)
+// [-2] void canRedoChanged(bool)
 
 /*
 This signal is emitted whenever the active stack emits QUndoStack::canRedoChanged() or the active stack changes.

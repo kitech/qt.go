@@ -46,32 +46,32 @@ func (this *QObject) InheritReceivers(f func(signal string) int) {
 	qtrt.SetAllInheritCallback(this, "receivers", f)
 }
 
-// bool isSignalConnected(const class QMetaMethod &)
+// bool isSignalConnected(const QMetaMethod &)
 func (this *QObject) InheritIsSignalConnected(f func(signal *QMetaMethod) bool) {
 	qtrt.SetAllInheritCallback(this, "isSignalConnected", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QObject) InheritTimerEvent(f func(event *QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// void childEvent(class QChildEvent *)
+// void childEvent(QChildEvent *)
 func (this *QObject) InheritChildEvent(f func(event *QChildEvent /*777 QChildEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "childEvent", f)
 }
 
-// void customEvent(class QEvent *)
+// void customEvent(QEvent *)
 func (this *QObject) InheritCustomEvent(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "customEvent", f)
 }
 
-// void connectNotify(const class QMetaMethod &)
+// void connectNotify(const QMetaMethod &)
 func (this *QObject) InheritConnectNotify(f func(signal *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "connectNotify", f)
 }
 
-// void disconnectNotify(const class QMetaMethod &)
+// void disconnectNotify(const QMetaMethod &)
 func (this *QObject) InheritDisconnectNotify(f func(signal *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "disconnectNotify", f)
 }
@@ -420,7 +420,7 @@ func (this *QObject) SignalsBlocked() bool {
 // /usr/include/qt/QtCore/qobject.h:152
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool blockSignals(_Bool)
+// [1] bool blockSignals(bool)
 
 /*
 If block is true, signals emitted by this object are blocked (i.e., emitting a signal will not invoke anything connected to it). If block is false, no such blocking will occur.
@@ -1735,7 +1735,6 @@ func (this *QObject) RegisterUserData() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject16registerUserDataEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QObject_RegisterUserData() uint {
 	var nilthis *QObject

@@ -33,12 +33,12 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QMainWindow) InheritContextMenuEvent(f func(event *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QMainWindow) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -276,7 +276,7 @@ func (this *QMainWindow) DocumentMode() bool {
 // /usr/include/qt/QtWidgets/qmainwindow.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDocumentMode(_Bool)
+// [-2] void setDocumentMode(bool)
 
 /*
 
@@ -1121,7 +1121,7 @@ func (this *QMainWindow) CreatePopupMenu() *QMenu /*777 QMenu **/ {
 // /usr/include/qt/QtWidgets/qmainwindow.h:190
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAnimated(_Bool)
+// [-2] void setAnimated(bool)
 
 /*
 
@@ -1134,7 +1134,7 @@ func (this *QMainWindow) SetAnimated(enabled bool) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:191
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDockNestingEnabled(_Bool)
+// [-2] void setDockNestingEnabled(bool)
 
 /*
 
@@ -1147,7 +1147,7 @@ func (this *QMainWindow) SetDockNestingEnabled(enabled bool) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:194
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUnifiedTitleAndToolBarOnMac(_Bool)
+// [-2] void setUnifiedTitleAndToolBarOnMac(bool)
 
 /*
 

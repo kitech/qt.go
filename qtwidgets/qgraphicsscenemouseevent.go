@@ -69,7 +69,7 @@ func (*QGraphicsSceneMouseEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsSceneMouseEvent(enum QEvent::Type)
+// [-2] void QGraphicsSceneMouseEvent(QEvent::Type)
 
 /*
 
@@ -85,7 +85,7 @@ func NewQGraphicsSceneMouseEvent(type_ int) *QGraphicsSceneMouseEvent {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsSceneMouseEvent(enum QEvent::Type)
+// [-2] void QGraphicsSceneMouseEvent(QEvent::Type)
 
 /*
 

@@ -316,7 +316,7 @@ func (this *QTextStream) Codec() *QTextCodec /*777 QTextCodec **/ {
 // /usr/include/qt/QtCore/qtextstream.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoDetectUnicode(_Bool)
+// [-2] void setAutoDetectUnicode(bool)
 
 /*
 If enabled is true, QTextStream will attempt to detect Unicode encoding by peeking into the stream data to see if it can find the UTF-16 or UTF-32 BOM (Byte Order Mark). If this mark is found, QTextStream will replace the current codec with the UTF codec.
@@ -349,7 +349,7 @@ func (this *QTextStream) AutoDetectUnicode() bool {
 // /usr/include/qt/QtCore/qtextstream.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setGenerateByteOrderMark(_Bool)
+// [-2] void setGenerateByteOrderMark(bool)
 
 /*
 If generate is true and a UTF codec is used, QTextStream will insert the BOM (Byte Order Mark) before any data has been written to the device. If generate is false, no BOM will be inserted. This function must be called before any data is written. Otherwise, it does nothing.
@@ -531,7 +531,7 @@ func (this *QTextStream) Status() int {
 // /usr/include/qt/QtCore/qtextstream.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStatus(enum QTextStream::Status)
+// [-2] void setStatus(QTextStream::Status)
 
 /*
 Sets the status of the text stream to the status given.
@@ -638,7 +638,6 @@ func (this *QTextStream) Pos() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:130
@@ -817,7 +816,7 @@ func (this *QTextStream) Read(maxlen int64) string {
 // /usr/include/qt/QtCore/qtextstream.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFieldAlignment(enum QTextStream::FieldAlignment)
+// [-2] void setFieldAlignment(QTextStream::FieldAlignment)
 
 /*
 Sets the field alignment to mode. When used together with setFieldWidth(), this function allows you to generate formatted output with text aligned to the left, to the right or center aligned.
@@ -999,7 +998,7 @@ func (this *QTextStream) IntegerBase() int {
 // /usr/include/qt/QtCore/qtextstream.h:152
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRealNumberNotation(enum QTextStream::RealNumberNotation)
+// [-2] void setRealNumberNotation(QTextStream::RealNumberNotation)
 
 /*
 Sets the real number notation to notation (SmartNotation, FixedNotation, ScientificNotation). When reading and generating numbers, QTextStream uses this value to detect the formatting of real numbers.

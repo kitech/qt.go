@@ -322,7 +322,7 @@ func (this *QListWidgetItem) ListWidget() *QListWidget /*777 QListWidget **/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:75
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setSelected(_Bool)
+// [-2] void setSelected(bool)
 
 /*
 
@@ -349,7 +349,7 @@ func (this *QListWidgetItem) IsSelected() bool {
 // /usr/include/qt/QtWidgets/qlistwidget.h:78
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setHidden(_Bool)
+// [-2] void setHidden(bool)
 
 /*
 

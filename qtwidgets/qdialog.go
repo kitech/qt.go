@@ -33,37 +33,37 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QDialog) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void closeEvent(class QCloseEvent *)
+// void closeEvent(QCloseEvent *)
 func (this *QDialog) InheritCloseEvent(f func(arg0 *qtgui.QCloseEvent /*777 QCloseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QDialog) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QDialog) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QDialog) InheritContextMenuEvent(f func(arg0 *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QDialog) InheritEventFilter(f func(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// void adjustPosition(class QWidget *)
+// void adjustPosition(QWidget *)
 func (this *QDialog) InheritAdjustPosition(f func(arg0 *QWidget /*777 QWidget **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "adjustPosition", f)
 }
@@ -231,7 +231,7 @@ func (this *QDialog) Result() int {
 // /usr/include/qt/QtWidgets/qdialog.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 Reimplemented from QWidget::setVisible().
@@ -334,7 +334,7 @@ func (this *QDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qdialog.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSizeGripEnabled(_Bool)
+// [-2] void setSizeGripEnabled(bool)
 
 /*
 
@@ -361,7 +361,7 @@ func (this *QDialog) IsSizeGripEnabled() bool {
 // /usr/include/qt/QtWidgets/qdialog.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setModal(_Bool)
+// [-2] void setModal(bool)
 
 /*
 
@@ -530,7 +530,7 @@ func (this *QDialog) Reject() {
 // /usr/include/qt/QtWidgets/qdialog.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void showExtension(_Bool)
+// [-2] void showExtension(bool)
 
 /*
 

@@ -268,7 +268,7 @@ func (this *QImageIOHandler) Write(image QImage_ITF) bool {
 // /usr/include/qt/QtGui/qimageiohandler.h:115
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QVariant option(enum QImageIOHandler::ImageOption) const
+// [16] QVariant option(QImageIOHandler::ImageOption) const
 
 /*
 Returns the value assigned to option as a QVariant. The type of the value depends on the option. For example, option(Size) returns a QSize variant.
@@ -286,7 +286,7 @@ func (this *QImageIOHandler) Option(option int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtGui/qimageiohandler.h:116
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setOption(enum QImageIOHandler::ImageOption, const QVariant &)
+// [-2] void setOption(QImageIOHandler::ImageOption, const QVariant &)
 
 /*
 Sets the option option with the value value.
@@ -305,7 +305,7 @@ func (this *QImageIOHandler) SetOption(option int, value qtcore.QVariant_ITF) {
 // /usr/include/qt/QtGui/qimageiohandler.h:117
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool supportsOption(enum QImageIOHandler::ImageOption) const
+// [1] bool supportsOption(QImageIOHandler::ImageOption) const
 
 /*
 Returns true if the QImageIOHandler supports the option option; otherwise returns false. For example, if the QImageIOHandler supports the Size option, supportsOption(Size) must return true.

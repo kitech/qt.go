@@ -33,12 +33,12 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QFileSystemModel) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QFileSystemModel) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -851,7 +851,7 @@ func (this *QFileSystemModel) Filter() int {
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setResolveSymlinks(_Bool)
+// [-2] void setResolveSymlinks(bool)
 
 /*
 
@@ -878,7 +878,7 @@ func (this *QFileSystemModel) ResolveSymlinks() bool {
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setReadOnly(_Bool)
+// [-2] void setReadOnly(bool)
 
 /*
 
@@ -905,7 +905,7 @@ func (this *QFileSystemModel) IsReadOnly() bool {
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:126
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setNameFilterDisables(_Bool)
+// [-2] void setNameFilterDisables(bool)
 
 /*
 
@@ -1021,7 +1021,6 @@ func (this *QFileSystemModel) Size(index qtcore.QModelIndex_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel4sizeERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:135

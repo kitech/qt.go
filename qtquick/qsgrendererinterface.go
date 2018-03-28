@@ -102,7 +102,7 @@ func (this *QSGRendererInterface) GraphicsApi() int {
 // /usr/include/qt/QtQuick/qsgrendererinterface.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] void * getResource(QQuickWindow *, enum QSGRendererInterface::Resource) const
+// [8] void * getResource(QQuickWindow *, QSGRendererInterface::Resource) const
 
 /*
 Queries a graphics resource in window. Returns null when the resource in question is not supported or not available.

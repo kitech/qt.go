@@ -369,7 +369,7 @@ func (this *QRegularExpression) NamedCaptureGroups() *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qregularexpression.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatch match(const QString &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatch match(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to match the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -391,7 +391,7 @@ func (this *QRegularExpression) Match(subject string, offset int, matchType int,
 // /usr/include/qt/QtCore/qregularexpression.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatch match(const QString &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatch match(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to match the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -419,7 +419,7 @@ func (this *QRegularExpression) Match__(subject string) *QRegularExpressionMatch
 // /usr/include/qt/QtCore/qregularexpression.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatch match(const QString &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatch match(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to match the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -445,7 +445,7 @@ func (this *QRegularExpression) Match__1(subject string, offset int) *QRegularEx
 // /usr/include/qt/QtCore/qregularexpression.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatch match(const QString &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatch match(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to match the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -469,7 +469,7 @@ func (this *QRegularExpression) Match__2(subject string, offset int, matchType i
 // /usr/include/qt/QtCore/qregularexpression.h:126
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatch match(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatch match(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to match the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -493,7 +493,7 @@ func (this *QRegularExpression) Match_1(subjectRef QStringRef_ITF, offset int, m
 // /usr/include/qt/QtCore/qregularexpression.h:126
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatch match(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatch match(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to match the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -523,7 +523,7 @@ func (this *QRegularExpression) Match_1_(subjectRef QStringRef_ITF) *QRegularExp
 // /usr/include/qt/QtCore/qregularexpression.h:126
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatch match(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatch match(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to match the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -551,7 +551,7 @@ func (this *QRegularExpression) Match_1_1(subjectRef QStringRef_ITF, offset int)
 // /usr/include/qt/QtCore/qregularexpression.h:126
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatch match(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatch match(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to match the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -577,7 +577,7 @@ func (this *QRegularExpression) Match_1_2(subjectRef QStringRef_ITF, offset int,
 // /usr/include/qt/QtCore/qregularexpression.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to perform a global match of the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -599,7 +599,7 @@ func (this *QRegularExpression) GlobalMatch(subject string, offset int, matchTyp
 // /usr/include/qt/QtCore/qregularexpression.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to perform a global match of the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -627,7 +627,7 @@ func (this *QRegularExpression) GlobalMatch__(subject string) *QRegularExpressio
 // /usr/include/qt/QtCore/qregularexpression.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to perform a global match of the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -653,7 +653,7 @@ func (this *QRegularExpression) GlobalMatch__1(subject string, offset int) *QReg
 // /usr/include/qt/QtCore/qregularexpression.h:131
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to perform a global match of the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -677,7 +677,7 @@ func (this *QRegularExpression) GlobalMatch__2(subject string, offset int, match
 // /usr/include/qt/QtCore/qregularexpression.h:136
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to perform a global match of the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -701,7 +701,7 @@ func (this *QRegularExpression) GlobalMatch_1(subjectRef QStringRef_ITF, offset 
 // /usr/include/qt/QtCore/qregularexpression.h:136
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to perform a global match of the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -731,7 +731,7 @@ func (this *QRegularExpression) GlobalMatch_1_(subjectRef QStringRef_ITF) *QRegu
 // /usr/include/qt/QtCore/qregularexpression.h:136
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to perform a global match of the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
@@ -759,7 +759,7 @@ func (this *QRegularExpression) GlobalMatch_1_1(subjectRef QStringRef_ITF, offse
 // /usr/include/qt/QtCore/qregularexpression.h:136
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, enum QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+// [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
 
 /*
 Attempts to perform a global match of the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.

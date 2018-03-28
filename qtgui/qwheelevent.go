@@ -254,7 +254,7 @@ func NewQWheelEvent_4(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixe
 // /usr/include/qt/QtGui/qevent.h:193
 // index:5
 // Public Visibility=Default Availability=Available
-// [-2] void QWheelEvent(const QPointF &, const QPointF &, QPoint, QPoint, int, Qt::Orientation, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::ScrollPhase, Qt::MouseEventSource, _Bool)
+// [-2] void QWheelEvent(const QPointF &, const QPointF &, QPoint, QPoint, int, Qt::Orientation, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::ScrollPhase, Qt::MouseEventSource, bool)
 
 /*
 

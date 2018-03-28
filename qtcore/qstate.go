@@ -31,17 +31,17 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void onEntry(class QEvent *)
+// void onEntry(QEvent *)
 func (this *QState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onEntry", f)
 }
 
-// void onExit(class QEvent *)
+// void onExit(QEvent *)
 func (this *QState) InheritOnExit(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onExit", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -132,7 +132,7 @@ func NewQState__() *QState {
 // /usr/include/qt/QtCore/qstate.h:75
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QState(enum QState::ChildMode, QState *)
+// [-2] void QState(QState::ChildMode, QState *)
 
 /*
 Constructs a new state with the given parent state.
@@ -152,7 +152,7 @@ func NewQState_1(childMode int, parent QState_ITF /*777 QState **/) *QState {
 // /usr/include/qt/QtCore/qstate.h:75
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QState(enum QState::ChildMode, QState *)
+// [-2] void QState(QState::ChildMode, QState *)
 
 /*
 Constructs a new state with the given parent state.
@@ -359,7 +359,7 @@ func (this *QState) ChildMode() int {
 // /usr/include/qt/QtCore/qstate.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setChildMode(enum QState::ChildMode)
+// [-2] void setChildMode(QState::ChildMode)
 
 /*
 Sets the child mode of this state.

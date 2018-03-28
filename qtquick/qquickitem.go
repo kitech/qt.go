@@ -35,7 +35,7 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QQuickItem) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -75,47 +75,47 @@ func (this *QQuickItem) InheritComponentComplete(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "componentComplete", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QQuickItem) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QQuickItem) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QQuickItem) InheritInputMethodEvent(f func(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QQuickItem) InheritFocusInEvent(f func(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QQuickItem) InheritFocusOutEvent(f func(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QQuickItem) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QQuickItem) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QQuickItem) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QQuickItem) InheritMouseDoubleClickEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
@@ -130,52 +130,52 @@ func (this *QQuickItem) InheritTouchUngrabEvent(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "touchUngrabEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QQuickItem) InheritWheelEvent(f func(event *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void touchEvent(class QTouchEvent *)
+// void touchEvent(QTouchEvent *)
 func (this *QQuickItem) InheritTouchEvent(f func(event *qtgui.QTouchEvent /*777 QTouchEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "touchEvent", f)
 }
 
-// void hoverEnterEvent(class QHoverEvent *)
+// void hoverEnterEvent(QHoverEvent *)
 func (this *QQuickItem) InheritHoverEnterEvent(f func(event *qtgui.QHoverEvent /*777 QHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverEnterEvent", f)
 }
 
-// void hoverMoveEvent(class QHoverEvent *)
+// void hoverMoveEvent(QHoverEvent *)
 func (this *QQuickItem) InheritHoverMoveEvent(f func(event *qtgui.QHoverEvent /*777 QHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverMoveEvent", f)
 }
 
-// void hoverLeaveEvent(class QHoverEvent *)
+// void hoverLeaveEvent(QHoverEvent *)
 func (this *QQuickItem) InheritHoverLeaveEvent(f func(event *qtgui.QHoverEvent /*777 QHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverLeaveEvent", f)
 }
 
-// void dragEnterEvent(class QDragEnterEvent *)
+// void dragEnterEvent(QDragEnterEvent *)
 func (this *QQuickItem) InheritDragEnterEvent(f func(arg0 *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragEnterEvent", f)
 }
 
-// void dragMoveEvent(class QDragMoveEvent *)
+// void dragMoveEvent(QDragMoveEvent *)
 func (this *QQuickItem) InheritDragMoveEvent(f func(arg0 *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
-// void dragLeaveEvent(class QDragLeaveEvent *)
+// void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QQuickItem) InheritDragLeaveEvent(f func(arg0 *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragLeaveEvent", f)
 }
 
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QQuickItem) InheritDropEvent(f func(arg0 *qtgui.QDropEvent /*777 QDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
 
-// bool childMouseEventFilter(class QQuickItem *, class QEvent *)
+// bool childMouseEventFilter(QQuickItem *, QEvent *)
 func (this *QQuickItem) InheritChildMouseEventFilter(f func(arg0 *QQuickItem /*777 QQuickItem **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "childMouseEventFilter", f)
 }
@@ -185,7 +185,7 @@ func (this *QQuickItem) InheritWindowDeactivateEvent(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "windowDeactivateEvent", f)
 }
 
-// void geometryChanged(const class QRectF &, const class QRectF &)
+// void geometryChanged(const QRectF &, const QRectF &)
 func (this *QQuickItem) InheritGeometryChanged(f func(newGeometry *qtcore.QRectF, oldGeometry *qtcore.QRectF) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "geometryChanged", f)
 }
@@ -432,7 +432,7 @@ func (this *QQuickItem) Clip() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:212
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setClip(_Bool)
+// [-2] void setClip(bool)
 
 /*
 
@@ -784,7 +784,7 @@ func (this *QQuickItem) TransformOrigin() int {
 // /usr/include/qt/QtQuick/qquickitem.h:245
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTransformOrigin(enum QQuickItem::TransformOrigin)
+// [-2] void setTransformOrigin(QQuickItem::TransformOrigin)
 
 /*
 
@@ -952,7 +952,7 @@ func (this *QQuickItem) IsVisible() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:261
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 
@@ -979,7 +979,7 @@ func (this *QQuickItem) IsEnabled() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:264
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(_Bool)
+// [-2] void setEnabled(bool)
 
 /*
 
@@ -1006,7 +1006,7 @@ func (this *QQuickItem) Smooth() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:267
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSmooth(_Bool)
+// [-2] void setSmooth(bool)
 
 /*
 
@@ -1033,7 +1033,7 @@ func (this *QQuickItem) ActiveFocusOnTab() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:270
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setActiveFocusOnTab(_Bool)
+// [-2] void setActiveFocusOnTab(bool)
 
 /*
 
@@ -1060,7 +1060,7 @@ func (this *QQuickItem) Antialiasing() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:273
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAntialiasing(_Bool)
+// [-2] void setAntialiasing(bool)
 
 /*
 
@@ -1102,7 +1102,7 @@ func (this *QQuickItem) Flags() int {
 // /usr/include/qt/QtQuick/qquickitem.h:277
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(enum QQuickItem::Flag, _Bool)
+// [-2] void setFlag(QQuickItem::Flag, bool)
 
 /*
 Enables the specified flag for this item if enabled is true; if enabled is false, the flag is disabled.
@@ -1117,7 +1117,7 @@ func (this *QQuickItem) SetFlag(flag int, enabled bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:277
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(enum QQuickItem::Flag, _Bool)
+// [-2] void setFlag(QQuickItem::Flag, bool)
 
 /*
 Enables the specified flag for this item if enabled is true; if enabled is false, the flag is disabled.
@@ -1209,7 +1209,7 @@ func (this *QQuickItem) HasFocus() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:285
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFocus(_Bool)
+// [-2] void setFocus(bool)
 
 /*
 
@@ -1222,7 +1222,7 @@ func (this *QQuickItem) SetFocus(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:286
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void setFocus(_Bool, Qt::FocusReason)
+// [-2] void setFocus(bool, Qt::FocusReason)
 
 /*
 
@@ -1342,7 +1342,7 @@ func (this *QQuickItem) AcceptHoverEvents() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:295
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAcceptHoverEvents(_Bool)
+// [-2] void setAcceptHoverEvents(bool)
 
 /*
 If enabled is true, this sets the item to accept hover events; otherwise, hover events are not accepted by this item.
@@ -1379,7 +1379,7 @@ func (this *QQuickItem) AcceptTouchEvents() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:297
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAcceptTouchEvents(_Bool)
+// [-2] void setAcceptTouchEvents(bool)
 
 /*
 If enabled is true, this sets the item to accept touch events; otherwise, touch events are not accepted by this item.
@@ -1514,7 +1514,7 @@ func (this *QQuickItem) KeepMouseGrab() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:309
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setKeepMouseGrab(_Bool)
+// [-2] void setKeepMouseGrab(bool)
 
 /*
 Sets whether the mouse input should remain exclusively with this item.
@@ -1549,7 +1549,7 @@ func (this *QQuickItem) FiltersChildMouseEvents() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:311
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFiltersChildMouseEvents(_Bool)
+// [-2] void setFiltersChildMouseEvents(bool)
 
 /*
 Sets whether mouse and touch events of this item's children should be filtered through this item.
@@ -1599,7 +1599,7 @@ func (this *QQuickItem) KeepTouchGrab() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:316
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setKeepTouchGrab(_Bool)
+// [-2] void setKeepTouchGrab(bool)
 
 /*
 Sets whether the touch points grabbed by this item should remain exclusively with this item.
@@ -1702,7 +1702,7 @@ func (this *QQuickItem) Contains(point qtcore.QPointF_ITF) bool {
 // /usr/include/qt/QtQuick/qquickitem.h:324
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform itemTransform(QQuickItem *, _Bool *) const
+// [88] QTransform itemTransform(QQuickItem *, bool *) const
 
 /*
 
@@ -2031,7 +2031,7 @@ func (this *QQuickItem) ForceActiveFocus_1(reason int) {
 // /usr/include/qt/QtQuick/qquickitem.h:344
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQuickItem * nextItemInFocusChain(_Bool)
+// [8] QQuickItem * nextItemInFocusChain(bool)
 
 /*
 Returns the item in the focus chain which is next to this item. If forward is true, or not supplied, it is the next item in the forwards direction. If forward is false, it is the next item in the backwards direction.
@@ -2045,7 +2045,7 @@ func (this *QQuickItem) NextItemInFocusChain(forward bool) *QQuickItem /*777 QQu
 // /usr/include/qt/QtQuick/qquickitem.h:344
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QQuickItem * nextItemInFocusChain(_Bool)
+// [8] QQuickItem * nextItemInFocusChain(bool)
 
 /*
 Returns the item in the focus chain which is next to this item. If forward is true, or not supplied, it is the next item in the forwards direction. If forward is false, it is the next item in the backwards direction.
@@ -2191,7 +2191,7 @@ func (this *QQuickItem) StateChanged(arg0 string) {
 // /usr/include/qt/QtQuick/qquickitem.h:368
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void focusChanged(_Bool)
+// [-2] void focusChanged(bool)
 
 /*
 
@@ -2204,7 +2204,7 @@ func (this *QQuickItem) FocusChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:369
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void activeFocusChanged(_Bool)
+// [-2] void activeFocusChanged(bool)
 
 /*
 
@@ -2217,7 +2217,7 @@ func (this *QQuickItem) ActiveFocusChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:370
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void activeFocusOnTabChanged(_Bool)
+// [-2] void activeFocusOnTabChanged(bool)
 
 /*
 
@@ -2247,7 +2247,7 @@ func (this *QQuickItem) ParentChanged(arg0 QQuickItem_ITF /*777 QQuickItem **/) 
 // /usr/include/qt/QtQuick/qquickitem.h:372
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void transformOriginChanged(enum QQuickItem::TransformOrigin)
+// [-2] void transformOriginChanged(QQuickItem::TransformOrigin)
 
 /*
 
@@ -2260,7 +2260,7 @@ func (this *QQuickItem) TransformOriginChanged(arg0 int) {
 // /usr/include/qt/QtQuick/qquickitem.h:373
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void smoothChanged(_Bool)
+// [-2] void smoothChanged(bool)
 
 /*
 
@@ -2273,7 +2273,7 @@ func (this *QQuickItem) SmoothChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:374
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void antialiasingChanged(_Bool)
+// [-2] void antialiasingChanged(bool)
 
 /*
 
@@ -2286,7 +2286,7 @@ func (this *QQuickItem) AntialiasingChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:375
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void clipChanged(_Bool)
+// [-2] void clipChanged(bool)
 
 /*
 

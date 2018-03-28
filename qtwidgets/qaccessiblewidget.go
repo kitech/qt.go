@@ -43,7 +43,7 @@ func (this *QAccessibleWidget) InheritParentObject(f func() unsafe.Pointer /*666
 	qtrt.SetAllInheritCallback(this, "parentObject", f)
 }
 
-// void addControllingSignal(const class QString &)
+// void addControllingSignal(const QString &)
 func (this *QAccessibleWidget) InheritAddControllingSignal(f func(signal string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "addControllingSignal", f)
 }

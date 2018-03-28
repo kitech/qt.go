@@ -261,7 +261,7 @@ func (this *QNetworkConfigurationManager) ConfigurationChanged(config QNetworkCo
 // /usr/include/qt/QtNetwork/qnetworkconfigmanager.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void onlineStateChanged(_Bool)
+// [-2] void onlineStateChanged(bool)
 
 /*
 

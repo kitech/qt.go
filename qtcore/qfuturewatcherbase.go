@@ -31,12 +31,12 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void connectNotify(const class QMetaMethod &)
+// void connectNotify(const QMetaMethod &)
 func (this *QFutureWatcherBase) InheritConnectNotify(f func(signal *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "connectNotify", f)
 }
 
-// void disconnectNotify(const class QMetaMethod &)
+// void disconnectNotify(const QMetaMethod &)
 func (this *QFutureWatcherBase) InheritDisconnectNotify(f func(signal *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "disconnectNotify", f)
 }
@@ -46,7 +46,7 @@ func (this *QFutureWatcherBase) InheritConnectOutputInterface(f func() /*void*/)
 	qtrt.SetAllInheritCallback(this, "connectOutputInterface", f)
 }
 
-// void disconnectOutputInterface(_Bool)
+// void disconnectOutputInterface(bool)
 func (this *QFutureWatcherBase) InheritDisconnectOutputInterface(f func(pendingAssignment bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "disconnectOutputInterface", f)
 }
@@ -475,7 +475,7 @@ func (this *QFutureWatcherBase) Cancel() {
 // /usr/include/qt/QtCore/qfuturewatcher.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPaused(_Bool)
+// [-2] void setPaused(bool)
 
 /*
 If paused is true, this function pauses the asynchronous computation represented by the future(). If the computation is already paused, this function does nothing. This QFutureWatcher will stop delivering progress and result ready signals while the future is paused. Signal delivery will continue once the computation is resumed.
@@ -586,7 +586,7 @@ func (this *QFutureWatcherBase) ConnectOutputInterface() {
 // /usr/include/qt/QtCore/qfuturewatcher.h:106
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void disconnectOutputInterface(_Bool)
+// [-2] void disconnectOutputInterface(bool)
 
 /*
 
@@ -599,7 +599,7 @@ func (this *QFutureWatcherBase) DisconnectOutputInterface(pendingAssignment bool
 // /usr/include/qt/QtCore/qfuturewatcher.h:106
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void disconnectOutputInterface(_Bool)
+// [-2] void disconnectOutputInterface(bool)
 
 /*
 

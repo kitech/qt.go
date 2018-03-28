@@ -67,7 +67,7 @@ func (*QOperatingSystemVersion) NewFromPointer(cthis unsafe.Pointer) *QOperating
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:85
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void QOperatingSystemVersion(enum QOperatingSystemVersion::OSType, int, int, int)
+// [-2] void QOperatingSystemVersion(QOperatingSystemVersion::OSType, int, int, int)
 
 /*
 Constructs a QOperatingSystemVersion consisting of the OS type osType, and major, minor, and micro version numbers vmajor, vminor and vmicro, respectively.
@@ -83,7 +83,7 @@ func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:85
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void QOperatingSystemVersion(enum QOperatingSystemVersion::OSType, int, int, int)
+// [-2] void QOperatingSystemVersion(QOperatingSystemVersion::OSType, int, int, int)
 
 /*
 Constructs a QOperatingSystemVersion consisting of the OS type osType, and major, minor, and micro version numbers vmajor, vminor and vmicro, respectively.
@@ -103,7 +103,7 @@ func NewQOperatingSystemVersion__(osType int, vmajor int) *QOperatingSystemVersi
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:85
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void QOperatingSystemVersion(enum QOperatingSystemVersion::OSType, int, int, int)
+// [-2] void QOperatingSystemVersion(QOperatingSystemVersion::OSType, int, int, int)
 
 /*
 Constructs a QOperatingSystemVersion consisting of the OS type osType, and major, minor, and micro version numbers vmajor, vminor and vmicro, respectively.

@@ -86,7 +86,7 @@ func NewQNetworkProxy() *QNetworkProxy {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:161
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxy(enum QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
+// [-2] void QNetworkProxy(QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
 
 /*
 Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined by applicationProxy(), which defaults to NoProxy.
@@ -110,7 +110,7 @@ func NewQNetworkProxy_1(type_ int, hostName string, port uint16, user string, pa
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:161
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxy(enum QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
+// [-2] void QNetworkProxy(QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
 
 /*
 Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined by applicationProxy(), which defaults to NoProxy.
@@ -136,7 +136,7 @@ func NewQNetworkProxy_1_(type_ int) *QNetworkProxy {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:161
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxy(enum QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
+// [-2] void QNetworkProxy(QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
 
 /*
 Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined by applicationProxy(), which defaults to NoProxy.
@@ -162,7 +162,7 @@ func NewQNetworkProxy_1_1(type_ int, hostName string) *QNetworkProxy {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:161
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxy(enum QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
+// [-2] void QNetworkProxy(QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
 
 /*
 Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined by applicationProxy(), which defaults to NoProxy.
@@ -186,7 +186,7 @@ func NewQNetworkProxy_1_2(type_ int, hostName string, port uint16) *QNetworkProx
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:161
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxy(enum QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
+// [-2] void QNetworkProxy(QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
 
 /*
 Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined by applicationProxy(), which defaults to NoProxy.
@@ -558,7 +558,6 @@ func (this *QNetworkProxy) Port() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkProxy4portEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:196

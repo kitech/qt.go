@@ -84,7 +84,7 @@ func NewQPageSize() *QPageSize {
 // /usr/include/qt/QtGui/qpagesize.h:231
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QPageSize(enum QPageSize::PageSizeId)
+// [-2] void QPageSize(QPageSize::PageSizeId)
 
 /*
 Creates a null QPageSize.
@@ -100,7 +100,7 @@ func NewQPageSize_1(pageSizeId int) *QPageSize {
 // /usr/include/qt/QtGui/qpagesize.h:232
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QPageSize(const QSize &, const QString &, enum QPageSize::SizeMatchPolicy)
+// [-2] void QPageSize(const QSize &, const QString &, QPageSize::SizeMatchPolicy)
 
 /*
 Creates a null QPageSize.
@@ -122,7 +122,7 @@ func NewQPageSize_2(pointSize qtcore.QSize_ITF, name string, matchPolicy int) *Q
 // /usr/include/qt/QtGui/qpagesize.h:232
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QPageSize(const QSize &, const QString &, enum QPageSize::SizeMatchPolicy)
+// [-2] void QPageSize(const QSize &, const QString &, QPageSize::SizeMatchPolicy)
 
 /*
 Creates a null QPageSize.
@@ -146,7 +146,7 @@ func NewQPageSize_2_(pointSize qtcore.QSize_ITF) *QPageSize {
 // /usr/include/qt/QtGui/qpagesize.h:232
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QPageSize(const QSize &, const QString &, enum QPageSize::SizeMatchPolicy)
+// [-2] void QPageSize(const QSize &, const QString &, QPageSize::SizeMatchPolicy)
 
 /*
 Creates a null QPageSize.
@@ -170,7 +170,7 @@ func NewQPageSize_2_1(pointSize qtcore.QSize_ITF, name string) *QPageSize {
 // /usr/include/qt/QtGui/qpagesize.h:235
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QPageSize(const QSizeF &, enum QPageSize::Unit, const QString &, enum QPageSize::SizeMatchPolicy)
+// [-2] void QPageSize(const QSizeF &, QPageSize::Unit, const QString &, QPageSize::SizeMatchPolicy)
 
 /*
 Creates a null QPageSize.
@@ -192,7 +192,7 @@ func NewQPageSize_3(size qtcore.QSizeF_ITF, units int, name string, matchPolicy 
 // /usr/include/qt/QtGui/qpagesize.h:235
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QPageSize(const QSizeF &, enum QPageSize::Unit, const QString &, enum QPageSize::SizeMatchPolicy)
+// [-2] void QPageSize(const QSizeF &, QPageSize::Unit, const QString &, QPageSize::SizeMatchPolicy)
 
 /*
 Creates a null QPageSize.
@@ -216,7 +216,7 @@ func NewQPageSize_3_(size qtcore.QSizeF_ITF, units int) *QPageSize {
 // /usr/include/qt/QtGui/qpagesize.h:235
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QPageSize(const QSizeF &, enum QPageSize::Unit, const QString &, enum QPageSize::SizeMatchPolicy)
+// [-2] void QPageSize(const QSizeF &, QPageSize::Unit, const QString &, QPageSize::SizeMatchPolicy)
 
 /*
 Creates a null QPageSize.
@@ -367,7 +367,7 @@ func (this *QPageSize) Key() string {
 // /usr/include/qt/QtGui/qpagesize.h:271
 // index:1
 // Public static Visibility=Default Availability=Available
-// [8] QString key(enum QPageSize::PageSizeId)
+// [8] QString key(QPageSize::PageSizeId)
 
 /*
 Returns the unique key of the page size.
@@ -418,7 +418,7 @@ func (this *QPageSize) Name() string {
 // /usr/include/qt/QtGui/qpagesize.h:272
 // index:1
 // Public static Visibility=Default Availability=Available
-// [8] QString name(enum QPageSize::PageSizeId)
+// [8] QString name(QPageSize::PageSizeId)
 
 /*
 Returns a localized human-readable name for the page size.
@@ -460,7 +460,7 @@ func (this *QPageSize) Id() int {
 // /usr/include/qt/QtGui/qpagesize.h:274
 // index:1
 // Public static Visibility=Default Availability=Available
-// [4] QPageSize::PageSizeId id(const QSize &, enum QPageSize::SizeMatchPolicy)
+// [4] QPageSize::PageSizeId id(const QSize &, QPageSize::SizeMatchPolicy)
 
 /*
 Returns the standard QPageSize::PageSizeId of the page, or QPageSize::Custom.
@@ -485,7 +485,7 @@ func QPageSize_Id_1(pointSize qtcore.QSize_ITF, matchPolicy int) int {
 // /usr/include/qt/QtGui/qpagesize.h:274
 // index:1
 // Public static Visibility=Default Availability=Available
-// [4] QPageSize::PageSizeId id(const QSize &, enum QPageSize::SizeMatchPolicy)
+// [4] QPageSize::PageSizeId id(const QSize &, QPageSize::SizeMatchPolicy)
 
 /*
 Returns the standard QPageSize::PageSizeId of the page, or QPageSize::Custom.
@@ -507,7 +507,7 @@ func (this *QPageSize) Id_1_(pointSize qtcore.QSize_ITF) int {
 // /usr/include/qt/QtGui/qpagesize.h:276
 // index:2
 // Public static Visibility=Default Availability=Available
-// [4] QPageSize::PageSizeId id(const QSizeF &, enum QPageSize::Unit, enum QPageSize::SizeMatchPolicy)
+// [4] QPageSize::PageSizeId id(const QSizeF &, QPageSize::Unit, QPageSize::SizeMatchPolicy)
 
 /*
 Returns the standard QPageSize::PageSizeId of the page, or QPageSize::Custom.
@@ -532,7 +532,7 @@ func QPageSize_Id_2(size qtcore.QSizeF_ITF, units int, matchPolicy int) int {
 // /usr/include/qt/QtGui/qpagesize.h:276
 // index:2
 // Public static Visibility=Default Availability=Available
-// [4] QPageSize::PageSizeId id(const QSizeF &, enum QPageSize::Unit, enum QPageSize::SizeMatchPolicy)
+// [4] QPageSize::PageSizeId id(const QSizeF &, QPageSize::Unit, QPageSize::SizeMatchPolicy)
 
 /*
 Returns the standard QPageSize::PageSizeId of the page, or QPageSize::Custom.
@@ -595,7 +595,7 @@ func (this *QPageSize) WindowsId() int {
 // /usr/include/qt/QtGui/qpagesize.h:280
 // index:1
 // Public static Visibility=Default Availability=Available
-// [4] int windowsId(enum QPageSize::PageSizeId)
+// [4] int windowsId(QPageSize::PageSizeId)
 
 /*
 Returns the Windows DMPAPER enum value for the page size.
@@ -644,7 +644,7 @@ func (this *QPageSize) DefinitionSize() *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:282
 // index:1
 // Public static Visibility=Default Availability=Available
-// [16] QSizeF definitionSize(enum QPageSize::PageSizeId)
+// [16] QSizeF definitionSize(QPageSize::PageSizeId)
 
 /*
 Returns the definition size of the page size.
@@ -695,7 +695,7 @@ func (this *QPageSize) DefinitionUnits() int {
 // /usr/include/qt/QtGui/qpagesize.h:283
 // index:1
 // Public static Visibility=Default Availability=Available
-// [4] QPageSize::Unit definitionUnits(enum QPageSize::PageSizeId)
+// [4] QPageSize::Unit definitionUnits(QPageSize::PageSizeId)
 
 /*
 Returns the definition units of the page size.
@@ -722,7 +722,7 @@ func QPageSize_DefinitionUnits_1(pageSizeId int) int {
 // /usr/include/qt/QtGui/qpagesize.h:263
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QSizeF size(enum QPageSize::Unit) const
+// [16] QSizeF size(QPageSize::Unit) const
 
 /*
 Returns the size of the page in the required units.
@@ -740,7 +740,7 @@ func (this *QPageSize) Size(units int) *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:285
 // index:1
 // Public static Visibility=Default Availability=Available
-// [16] QSizeF size(enum QPageSize::PageSizeId, enum QPageSize::Unit)
+// [16] QSizeF size(QPageSize::PageSizeId, QPageSize::Unit)
 
 /*
 Returns the size of the page in the required units.
@@ -781,7 +781,7 @@ func (this *QPageSize) SizePoints() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:286
 // index:1
 // Public static Visibility=Default Availability=Available
-// [8] QSize sizePoints(enum QPageSize::PageSizeId)
+// [8] QSize sizePoints(QPageSize::PageSizeId)
 
 /*
 Returns the size of the page in Postscript Points (1/72 of an inch).
@@ -822,7 +822,7 @@ func (this *QPageSize) SizePixels(resolution int) *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:287
 // index:1
 // Public static Visibility=Default Availability=Available
-// [8] QSize sizePixels(enum QPageSize::PageSizeId, int)
+// [8] QSize sizePixels(QPageSize::PageSizeId, int)
 
 /*
 Returns the size of the page in Device Pixels at the given resolution.
@@ -845,7 +845,7 @@ func QPageSize_SizePixels_1(pageSizeId int, resolution int) *qtcore.QSize /*123*
 // /usr/include/qt/QtGui/qpagesize.h:267
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QRectF rect(enum QPageSize::Unit) const
+// [32] QRectF rect(QPageSize::Unit) const
 
 /*
 Returns the page rectangle in the required units.

@@ -33,37 +33,37 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QCalendarWidget) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QCalendarWidget) InheritEventFilter(f func(watched *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QCalendarWidget) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QCalendarWidget) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QCalendarWidget) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void paintCell(class QPainter *, const class QRect &, const class QDate &)
+// void paintCell(QPainter *, const QRect &, const QDate &)
 func (this *QCalendarWidget) InheritPaintCell(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, date *qtcore.QDate) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintCell", f)
 }
 
-// void updateCell(const class QDate &)
+// void updateCell(const QDate &)
 func (this *QCalendarWidget) InheritUpdateCell(f func(date *qtcore.QDate) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateCell", f)
 }
@@ -397,7 +397,7 @@ func (this *QCalendarWidget) SelectionMode() int {
 // /usr/include/qt/QtWidgets/qcalendarwidget.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSelectionMode(enum QCalendarWidget::SelectionMode)
+// [-2] void setSelectionMode(QCalendarWidget::SelectionMode)
 
 /*
 
@@ -424,7 +424,7 @@ func (this *QCalendarWidget) HorizontalHeaderFormat() int {
 // /usr/include/qt/QtWidgets/qcalendarwidget.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHorizontalHeaderFormat(enum QCalendarWidget::HorizontalHeaderFormat)
+// [-2] void setHorizontalHeaderFormat(QCalendarWidget::HorizontalHeaderFormat)
 
 /*
 
@@ -451,7 +451,7 @@ func (this *QCalendarWidget) VerticalHeaderFormat() int {
 // /usr/include/qt/QtWidgets/qcalendarwidget.h:122
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVerticalHeaderFormat(enum QCalendarWidget::VerticalHeaderFormat)
+// [-2] void setVerticalHeaderFormat(QCalendarWidget::VerticalHeaderFormat)
 
 /*
 
@@ -599,7 +599,7 @@ func (this *QCalendarWidget) IsDateEditEnabled() bool {
 // /usr/include/qt/QtWidgets/qcalendarwidget.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDateEditEnabled(_Bool)
+// [-2] void setDateEditEnabled(bool)
 
 /*
 
@@ -871,7 +871,7 @@ func (this *QCalendarWidget) SetCurrentPage(year int, month int) {
 // /usr/include/qt/QtWidgets/qcalendarwidget.h:155
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setGridVisible(_Bool)
+// [-2] void setGridVisible(bool)
 
 /*
 
@@ -884,7 +884,7 @@ func (this *QCalendarWidget) SetGridVisible(show bool) {
 // /usr/include/qt/QtWidgets/qcalendarwidget.h:156
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setNavigationBarVisible(_Bool)
+// [-2] void setNavigationBarVisible(bool)
 
 /*
 

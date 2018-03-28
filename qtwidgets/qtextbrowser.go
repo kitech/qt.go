@@ -33,42 +33,42 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QTextBrowser) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QTextBrowser) InheritKeyPressEvent(f func(ev *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QTextBrowser) InheritMouseMoveEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QTextBrowser) InheritMousePressEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QTextBrowser) InheritMouseReleaseEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QTextBrowser) InheritFocusOutEvent(f func(ev *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QTextBrowser) InheritFocusNextPrevChild(f func(next bool) bool) {
 	qtrt.SetAllInheritCallback(this, "focusNextPrevChild", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QTextBrowser) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
@@ -411,7 +411,7 @@ func (this *QTextBrowser) OpenExternalLinks() bool {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOpenExternalLinks(_Bool)
+// [-2] void setOpenExternalLinks(bool)
 
 /*
 
@@ -438,7 +438,7 @@ func (this *QTextBrowser) OpenLinks() bool {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOpenLinks(_Bool)
+// [-2] void setOpenLinks(bool)
 
 /*
 
@@ -524,7 +524,7 @@ func (this *QTextBrowser) Reload() {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void backwardAvailable(_Bool)
+// [-2] void backwardAvailable(bool)
 
 /*
 This signal is emitted when the availability of backward() changes. available is false when the user is at home(); otherwise it is true.
@@ -537,7 +537,7 @@ func (this *QTextBrowser) BackwardAvailable(arg0 bool) {
 // /usr/include/qt/QtWidgets/qtextbrowser.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void forwardAvailable(_Bool)
+// [-2] void forwardAvailable(bool)
 
 /*
 This signal is emitted when the availability of forward() changes. available is true after the user navigates backward() and false when the user navigates or goes forward().
@@ -760,7 +760,7 @@ func (this *QTextBrowser) FocusOutEvent(ev qtgui.QFocusEvent_ITF /*777 QFocusEve
 // /usr/include/qt/QtWidgets/qtextbrowser.h:113
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool focusNextPrevChild(_Bool)
+// [1] bool focusNextPrevChild(bool)
 
 /*
 Reimplemented from QWidget::focusNextPrevChild().

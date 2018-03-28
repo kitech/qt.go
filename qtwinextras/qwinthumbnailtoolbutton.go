@@ -199,7 +199,7 @@ func (this *QWinThumbnailToolButton) Icon() *qtgui.QIcon /*123*/ {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(_Bool)
+// [-2] void setEnabled(bool)
 
 /*
 
@@ -226,7 +226,7 @@ func (this *QWinThumbnailToolButton) IsEnabled() bool {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setInteractive(_Bool)
+// [-2] void setInteractive(bool)
 
 /*
 
@@ -253,7 +253,7 @@ func (this *QWinThumbnailToolButton) IsInteractive() bool {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 
@@ -280,7 +280,7 @@ func (this *QWinThumbnailToolButton) IsVisible() bool {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDismissOnClick(_Bool)
+// [-2] void setDismissOnClick(bool)
 
 /*
 
@@ -307,7 +307,7 @@ func (this *QWinThumbnailToolButton) DismissOnClick() bool {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlat(_Bool)
+// [-2] void setFlat(bool)
 
 /*
 

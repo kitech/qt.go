@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QQmlEngine) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -636,7 +636,7 @@ func (this *QQmlEngine) OutputWarningsToStandardError() bool {
 // /usr/include/qt/QtQml/qqmlengine.h:145
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOutputWarningsToStandardError(_Bool)
+// [-2] void setOutputWarningsToStandardError(bool)
 
 /*
 Set whether warning messages will be output to stderr to enabled.
@@ -730,7 +730,7 @@ func QQmlEngine_SetContextForObject(arg0 qtcore.QObject_ITF /*777 QObject **/, a
 // /usr/include/qt/QtQml/qqmlengine.h:155
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setObjectOwnership(QObject *, enum QQmlEngine::ObjectOwnership)
+// [-2] void setObjectOwnership(QObject *, QQmlEngine::ObjectOwnership)
 
 /*
 Sets the ownership of object.

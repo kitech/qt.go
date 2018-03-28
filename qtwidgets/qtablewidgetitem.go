@@ -258,7 +258,7 @@ func (this *QTableWidgetItem) Column() int {
 // /usr/include/qt/QtWidgets/qtablewidget.h:95
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setSelected(_Bool)
+// [-2] void setSelected(bool)
 
 /*
 

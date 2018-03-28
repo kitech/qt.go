@@ -35,7 +35,7 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
-// void geometryChanged(const class QRectF &, const class QRectF &)
+// void geometryChanged(const QRectF &, const QRectF &)
 func (this *QQuickFramebufferObject) InheritGeometryChanged(f func(newGeometry *qtcore.QRectF, oldGeometry *qtcore.QRectF) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "geometryChanged", f)
 }
@@ -140,7 +140,7 @@ func (this *QQuickFramebufferObject) TextureFollowsItemSize() bool {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTextureFollowsItemSize(_Bool)
+// [-2] void setTextureFollowsItemSize(bool)
 
 /*
 
@@ -167,7 +167,7 @@ func (this *QQuickFramebufferObject) MirrorVertically() bool {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMirrorVertically(_Bool)
+// [-2] void setMirrorVertically(bool)
 
 /*
 
@@ -258,7 +258,7 @@ func (this *QQuickFramebufferObject) GeometryChanged(newGeometry qtcore.QRectF_I
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void textureFollowsItemSizeChanged(_Bool)
+// [-2] void textureFollowsItemSizeChanged(bool)
 
 /*
 
@@ -271,7 +271,7 @@ func (this *QQuickFramebufferObject) TextureFollowsItemSizeChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void mirrorVerticallyChanged(_Bool)
+// [-2] void mirrorVerticallyChanged(bool)
 
 /*
 

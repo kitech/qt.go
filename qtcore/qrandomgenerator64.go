@@ -74,7 +74,6 @@ func (this *QRandomGenerator64) Generate() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator648generateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:219
@@ -89,7 +88,6 @@ func (this *QRandomGenerator64) Operator_fncall() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64clEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:222
@@ -203,7 +201,6 @@ func (this *QRandomGenerator64) Min() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator643minEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 func QRandomGenerator64_Min() uint64 {
 	var nilthis *QRandomGenerator64
@@ -223,7 +220,6 @@ func (this *QRandomGenerator64) Max() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator643maxEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 func QRandomGenerator64_Max() uint64 {
 	var nilthis *QRandomGenerator64

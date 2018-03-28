@@ -235,7 +235,7 @@ func (this *QSessionManager) Cancel() {
 // /usr/include/qt/QtGui/qsessionmanager.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRestartHint(enum QSessionManager::RestartHint)
+// [-2] void setRestartHint(QSessionManager::RestartHint)
 
 /*
 Sets the application's restart hint to hint. On application startup, the hint is set to RestartIfRunning.

@@ -33,17 +33,17 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QWizard) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QWizard) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QWizard) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
@@ -436,7 +436,7 @@ func (this *QWizard) Field(name string) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtWidgets/qwizard.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWizardStyle(enum QWizard::WizardStyle)
+// [-2] void setWizardStyle(QWizard::WizardStyle)
 
 /*
 
@@ -463,7 +463,7 @@ func (this *QWizard) WizardStyle() int {
 // /usr/include/qt/QtWidgets/qwizard.h:147
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QWizard::WizardOption, _Bool)
+// [-2] void setOption(QWizard::WizardOption, bool)
 
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
@@ -478,7 +478,7 @@ func (this *QWizard) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qwizard.h:147
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QWizard::WizardOption, _Bool)
+// [-2] void setOption(QWizard::WizardOption, bool)
 
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
@@ -495,7 +495,7 @@ func (this *QWizard) SetOption__(option int) {
 // /usr/include/qt/QtWidgets/qwizard.h:148
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool testOption(enum QWizard::WizardOption) const
+// [1] bool testOption(QWizard::WizardOption) const
 
 /*
 Returns true if the given option is enabled; otherwise, returns false.
@@ -538,7 +538,7 @@ func (this *QWizard) Options() int {
 // /usr/include/qt/QtWidgets/qwizard.h:152
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setButtonText(enum QWizard::WizardButton, const QString &)
+// [-2] void setButtonText(QWizard::WizardButton, const QString &)
 
 /*
 Sets the text on button which to be text.
@@ -561,7 +561,7 @@ func (this *QWizard) SetButtonText(which int, text string) {
 // /usr/include/qt/QtWidgets/qwizard.h:153
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString buttonText(enum QWizard::WizardButton) const
+// [8] QString buttonText(QWizard::WizardButton) const
 
 /*
 Returns the text on button which.
@@ -584,7 +584,7 @@ func (this *QWizard) ButtonText(which int) string {
 // /usr/include/qt/QtWidgets/qwizard.h:155
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setButton(enum QWizard::WizardButton, QAbstractButton *)
+// [-2] void setButton(QWizard::WizardButton, QAbstractButton *)
 
 /*
 Sets the button corresponding to role which to button.
@@ -605,7 +605,7 @@ func (this *QWizard) SetButton(which int, button QAbstractButton_ITF /*777 QAbst
 // /usr/include/qt/QtWidgets/qwizard.h:156
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QAbstractButton * button(enum QWizard::WizardButton) const
+// [8] QAbstractButton * button(QWizard::WizardButton) const
 
 /*
 Returns the button corresponding to role which.
@@ -675,7 +675,7 @@ func (this *QWizard) SubTitleFormat() int {
 // /usr/include/qt/QtWidgets/qwizard.h:162
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPixmap(enum QWizard::WizardPixmap, const QPixmap &)
+// [-2] void setPixmap(QWizard::WizardPixmap, const QPixmap &)
 
 /*
 Sets the pixmap for role which to pixmap.
@@ -698,7 +698,7 @@ func (this *QWizard) SetPixmap(which int, pixmap qtgui.QPixmap_ITF) {
 // /usr/include/qt/QtWidgets/qwizard.h:163
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QPixmap pixmap(enum QWizard::WizardPixmap) const
+// [32] QPixmap pixmap(QWizard::WizardPixmap) const
 
 /*
 Returns the pixmap set for role which.
@@ -807,7 +807,7 @@ func (this *QWizard) SetDefaultProperty(className string, property string, chang
 // /usr/include/qt/QtWidgets/qwizard.h:171
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 Reimplemented from QWidget::setVisible().

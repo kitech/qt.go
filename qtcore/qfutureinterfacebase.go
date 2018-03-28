@@ -77,7 +77,7 @@ func (*QFutureInterfaceBase) NewFromPointer(cthis unsafe.Pointer) *QFutureInterf
 // /usr/include/qt/QtCore/qfutureinterface.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QFutureInterfaceBase(enum QFutureInterfaceBase::State)
+// [-2] void QFutureInterfaceBase(QFutureInterfaceBase::State)
 
 /*
 
@@ -93,7 +93,7 @@ func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
 // /usr/include/qt/QtCore/qfutureinterface.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QFutureInterfaceBase(enum QFutureInterfaceBase::State)
+// [-2] void QFutureInterfaceBase(QFutureInterfaceBase::State)
 
 /*
 
@@ -212,7 +212,7 @@ func (this *QFutureInterfaceBase) SetThreadPool(pool QThreadPool_ITF /*777 QThre
 // /usr/include/qt/QtCore/qfutureinterface.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFilterMode(_Bool)
+// [-2] void setFilterMode(bool)
 
 /*
 
@@ -380,7 +380,7 @@ func (this *QFutureInterfaceBase) ResultCount() int {
 // /usr/include/qt/QtCore/qfutureinterface.h:102
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool queryState(enum QFutureInterfaceBase::State) const
+// [1] bool queryState(QFutureInterfaceBase::State) const
 
 /*
 
@@ -505,7 +505,7 @@ func (this *QFutureInterfaceBase) Cancel() {
 // /usr/include/qt/QtCore/qfutureinterface.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPaused(_Bool)
+// [-2] void setPaused(bool)
 
 /*
 
@@ -531,7 +531,7 @@ func (this *QFutureInterfaceBase) TogglePaused() {
 // /usr/include/qt/QtCore/qfutureinterface.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setThrottled(_Bool)
+// [-2] void setThrottled(bool)
 
 /*
 

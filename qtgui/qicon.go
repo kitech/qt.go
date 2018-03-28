@@ -212,7 +212,7 @@ func (this *QIcon) Swap(other QIcon_ITF) {
 // /usr/include/qt/QtGui/qicon.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QPixmap pixmap(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -236,7 +236,7 @@ func (this *QIcon) Pixmap(size qtcore.QSize_ITF, mode int, state int) *QPixmap /
 // /usr/include/qt/QtGui/qicon.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QPixmap pixmap(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -264,7 +264,7 @@ func (this *QIcon) Pixmap__(size qtcore.QSize_ITF) *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QPixmap pixmap(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -290,7 +290,7 @@ func (this *QIcon) Pixmap__1(size qtcore.QSize_ITF, mode int) *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:82
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [32] QPixmap pixmap(int, int, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(int, int, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -310,7 +310,7 @@ func (this *QIcon) Pixmap_1(w int, h int, mode int, state int) *QPixmap /*123*/ 
 // /usr/include/qt/QtGui/qicon.h:82
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [32] QPixmap pixmap(int, int, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(int, int, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -334,7 +334,7 @@ func (this *QIcon) Pixmap_1_(w int, h int) *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:82
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [32] QPixmap pixmap(int, int, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(int, int, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -356,7 +356,7 @@ func (this *QIcon) Pixmap_1_1(w int, h int, mode int) *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:84
 // index:2
 // Public inline Visibility=Default Availability=Available
-// [32] QPixmap pixmap(int, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(int, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -376,7 +376,7 @@ func (this *QIcon) Pixmap_2(extent int, mode int, state int) *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:84
 // index:2
 // Public inline Visibility=Default Availability=Available
-// [32] QPixmap pixmap(int, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(int, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -400,7 +400,7 @@ func (this *QIcon) Pixmap_2_(extent int) *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:84
 // index:2
 // Public inline Visibility=Default Availability=Available
-// [32] QPixmap pixmap(int, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(int, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -422,7 +422,7 @@ func (this *QIcon) Pixmap_2_1(extent int, mode int) *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:86
 // index:3
 // Public Visibility=Default Availability=Available
-// [32] QPixmap pixmap(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(QWindow *, const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -450,7 +450,7 @@ func (this *QIcon) Pixmap_3(window QWindow_ITF /*777 QWindow **/, size qtcore.QS
 // /usr/include/qt/QtGui/qicon.h:86
 // index:3
 // Public Visibility=Default Availability=Available
-// [32] QPixmap pixmap(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(QWindow *, const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -482,7 +482,7 @@ func (this *QIcon) Pixmap_3_(window QWindow_ITF /*777 QWindow **/, size qtcore.Q
 // /usr/include/qt/QtGui/qicon.h:86
 // index:3
 // Public Visibility=Default Availability=Available
-// [32] QPixmap pixmap(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [32] QPixmap pixmap(QWindow *, const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns a pixmap with the requested size, mode, and state, generating one if necessary. The pixmap might be smaller than requested, but never larger.
@@ -512,7 +512,7 @@ func (this *QIcon) Pixmap_3_1(window QWindow_ITF /*777 QWindow **/, size qtcore.
 // /usr/include/qt/QtGui/qicon.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize actualSize(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [8] QSize actualSize(const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
@@ -534,7 +534,7 @@ func (this *QIcon) ActualSize(size qtcore.QSize_ITF, mode int, state int) *qtcor
 // /usr/include/qt/QtGui/qicon.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize actualSize(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [8] QSize actualSize(const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
@@ -560,7 +560,7 @@ func (this *QIcon) ActualSize__(size qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QSize actualSize(const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [8] QSize actualSize(const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
@@ -584,7 +584,7 @@ func (this *QIcon) ActualSize__1(size qtcore.QSize_ITF, mode int) *qtcore.QSize 
 // /usr/include/qt/QtGui/qicon.h:89
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QSize actualSize(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [8] QSize actualSize(QWindow *, const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
@@ -610,7 +610,7 @@ func (this *QIcon) ActualSize_1(window QWindow_ITF /*777 QWindow **/, size qtcor
 // /usr/include/qt/QtGui/qicon.h:89
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QSize actualSize(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [8] QSize actualSize(QWindow *, const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
@@ -640,7 +640,7 @@ func (this *QIcon) ActualSize_1_(window QWindow_ITF /*777 QWindow **/, size qtco
 // /usr/include/qt/QtGui/qicon.h:89
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QSize actualSize(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State) const
+// [8] QSize actualSize(QWindow *, const QSize &, QIcon::Mode, QIcon::State) const
 
 /*
 Returns the actual size of the icon for the requested size, mode, and state. The result might be smaller than requested, but never larger. The returned size is in device-independent pixels (This is relevant for high-dpi pixmaps.)
@@ -691,7 +691,7 @@ func (this *QIcon) Name() string {
 // /usr/include/qt/QtGui/qicon.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void paint(QPainter *, const QRect &, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+// [-2] void paint(QPainter *, const QRect &, Qt::Alignment, QIcon::Mode, QIcon::State) const
 
 /*
 Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
@@ -714,7 +714,7 @@ func (this *QIcon) Paint(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QR
 // /usr/include/qt/QtGui/qicon.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void paint(QPainter *, const QRect &, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+// [-2] void paint(QPainter *, const QRect &, Qt::Alignment, QIcon::Mode, QIcon::State) const
 
 /*
 Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
@@ -743,7 +743,7 @@ func (this *QIcon) Paint__(painter QPainter_ITF /*777 QPainter **/, rect qtcore.
 // /usr/include/qt/QtGui/qicon.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void paint(QPainter *, const QRect &, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+// [-2] void paint(QPainter *, const QRect &, Qt::Alignment, QIcon::Mode, QIcon::State) const
 
 /*
 Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
@@ -770,7 +770,7 @@ func (this *QIcon) Paint__1(painter QPainter_ITF /*777 QPainter **/, rect qtcore
 // /usr/include/qt/QtGui/qicon.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void paint(QPainter *, const QRect &, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+// [-2] void paint(QPainter *, const QRect &, Qt::Alignment, QIcon::Mode, QIcon::State) const
 
 /*
 Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
@@ -795,7 +795,7 @@ func (this *QIcon) Paint__2(painter QPainter_ITF /*777 QPainter **/, rect qtcore
 // /usr/include/qt/QtGui/qicon.h:94
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+// [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, QIcon::Mode, QIcon::State) const
 
 /*
 Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
@@ -814,7 +814,7 @@ func (this *QIcon) Paint_1(painter QPainter_ITF /*777 QPainter **/, x int, y int
 // /usr/include/qt/QtGui/qicon.h:94
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+// [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, QIcon::Mode, QIcon::State) const
 
 /*
 Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
@@ -839,7 +839,7 @@ func (this *QIcon) Paint_1_(painter QPainter_ITF /*777 QPainter **/, x int, y in
 // /usr/include/qt/QtGui/qicon.h:94
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+// [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, QIcon::Mode, QIcon::State) const
 
 /*
 Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
@@ -862,7 +862,7 @@ func (this *QIcon) Paint_1_1(painter QPainter_ITF /*777 QPainter **/, x int, y i
 // /usr/include/qt/QtGui/qicon.h:94
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, enum QIcon::Mode, enum QIcon::State) const
+// [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, QIcon::Mode, QIcon::State) const
 
 /*
 Uses the painter to paint the icon with specified alignment, required mode, and state into the rectangle rect.
@@ -945,13 +945,12 @@ func (this *QIcon) CacheKey() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon8cacheKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtGui/qicon.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void addPixmap(const QPixmap &, enum QIcon::Mode, enum QIcon::State)
+// [-2] void addPixmap(const QPixmap &, QIcon::Mode, QIcon::State)
 
 /*
 Adds pixmap to the icon, as a specialization for mode and state.
@@ -972,7 +971,7 @@ func (this *QIcon) AddPixmap(pixmap QPixmap_ITF, mode int, state int) {
 // /usr/include/qt/QtGui/qicon.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void addPixmap(const QPixmap &, enum QIcon::Mode, enum QIcon::State)
+// [-2] void addPixmap(const QPixmap &, QIcon::Mode, QIcon::State)
 
 /*
 Adds pixmap to the icon, as a specialization for mode and state.
@@ -997,7 +996,7 @@ func (this *QIcon) AddPixmap__(pixmap QPixmap_ITF) {
 // /usr/include/qt/QtGui/qicon.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void addPixmap(const QPixmap &, enum QIcon::Mode, enum QIcon::State)
+// [-2] void addPixmap(const QPixmap &, QIcon::Mode, QIcon::State)
 
 /*
 Adds pixmap to the icon, as a specialization for mode and state.
@@ -1020,7 +1019,7 @@ func (this *QIcon) AddPixmap__1(pixmap QPixmap_ITF, mode int) {
 // /usr/include/qt/QtGui/qicon.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void addFile(const QString &, const QSize &, enum QIcon::Mode, enum QIcon::State)
+// [-2] void addFile(const QString &, const QSize &, QIcon::Mode, QIcon::State)
 
 /*
 Adds an image from the file with the given fileName to the icon, as a specialization for size, mode and state. The file will be loaded on demand. Note: custom icon engines are free to ignore additionally added pixmaps.
@@ -1051,7 +1050,7 @@ func (this *QIcon) AddFile(fileName string, size qtcore.QSize_ITF, mode int, sta
 // /usr/include/qt/QtGui/qicon.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void addFile(const QString &, const QSize &, enum QIcon::Mode, enum QIcon::State)
+// [-2] void addFile(const QString &, const QSize &, QIcon::Mode, QIcon::State)
 
 /*
 Adds an image from the file with the given fileName to the icon, as a specialization for size, mode and state. The file will be loaded on demand. Note: custom icon engines are free to ignore additionally added pixmaps.
@@ -1084,7 +1083,7 @@ func (this *QIcon) AddFile__(fileName string) {
 // /usr/include/qt/QtGui/qicon.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void addFile(const QString &, const QSize &, enum QIcon::Mode, enum QIcon::State)
+// [-2] void addFile(const QString &, const QSize &, QIcon::Mode, QIcon::State)
 
 /*
 Adds an image from the file with the given fileName to the icon, as a specialization for size, mode and state. The file will be loaded on demand. Note: custom icon engines are free to ignore additionally added pixmaps.
@@ -1119,7 +1118,7 @@ func (this *QIcon) AddFile__1(fileName string, size qtcore.QSize_ITF) {
 // /usr/include/qt/QtGui/qicon.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void addFile(const QString &, const QSize &, enum QIcon::Mode, enum QIcon::State)
+// [-2] void addFile(const QString &, const QSize &, QIcon::Mode, QIcon::State)
 
 /*
 Adds an image from the file with the given fileName to the icon, as a specialization for size, mode and state. The file will be loaded on demand. Note: custom icon engines are free to ignore additionally added pixmaps.
@@ -1152,7 +1151,7 @@ func (this *QIcon) AddFile__2(fileName string, size qtcore.QSize_ITF, mode int) 
 // /usr/include/qt/QtGui/qicon.h:111
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setIsMask(_Bool)
+// [-2] void setIsMask(bool)
 
 /*
 Indicate that this icon is a mask image(boolean isMask), and hence can potentially be modified based on where it's displayed.

@@ -116,7 +116,7 @@ func (this *QTextCharFormat) IsValid() bool {
 // /usr/include/qt/QtGui/qtextformat.h:420
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFont(const QFont &, enum QTextCharFormat::FontPropertiesInheritanceBehavior)
+// [-2] void setFont(const QFont &, QTextCharFormat::FontPropertiesInheritanceBehavior)
 
 /*
 
@@ -252,7 +252,7 @@ func (this *QTextCharFormat) FontWeight() int {
 // /usr/include/qt/QtGui/qtextformat.h:438
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setFontItalic(_Bool)
+// [-2] void setFontItalic(bool)
 
 /*
 
@@ -387,7 +387,7 @@ func (this *QTextCharFormat) FontWordSpacing() float64 {
 // /usr/include/qt/QtGui/qtextformat.h:459
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setFontUnderline(_Bool)
+// [-2] void setFontUnderline(bool)
 
 /*
 
@@ -414,7 +414,7 @@ func (this *QTextCharFormat) FontUnderline() bool {
 // /usr/include/qt/QtGui/qtextformat.h:463
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setFontOverline(_Bool)
+// [-2] void setFontOverline(bool)
 
 /*
 
@@ -441,7 +441,7 @@ func (this *QTextCharFormat) FontOverline() bool {
 // /usr/include/qt/QtGui/qtextformat.h:468
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setFontStrikeOut(_Bool)
+// [-2] void setFontStrikeOut(bool)
 
 /*
 
@@ -501,7 +501,7 @@ func (this *QTextCharFormat) UnderlineColor() *QColor /*123*/ {
 // /usr/include/qt/QtGui/qtextformat.h:478
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setFontFixedPitch(_Bool)
+// [-2] void setFontFixedPitch(bool)
 
 /*
 
@@ -651,7 +651,7 @@ func (this *QTextCharFormat) FontHintingPreference() int {
 // /usr/include/qt/QtGui/qtextformat.h:507
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setFontKerning(_Bool)
+// [-2] void setFontKerning(bool)
 
 /*
 
@@ -678,7 +678,7 @@ func (this *QTextCharFormat) FontKerning() bool {
 // /usr/include/qt/QtGui/qtextformat.h:512
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUnderlineStyle(enum QTextCharFormat::UnderlineStyle)
+// [-2] void setUnderlineStyle(QTextCharFormat::UnderlineStyle)
 
 /*
 
@@ -705,7 +705,7 @@ func (this *QTextCharFormat) UnderlineStyle() int {
 // /usr/include/qt/QtGui/qtextformat.h:516
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setVerticalAlignment(enum QTextCharFormat::VerticalAlignment)
+// [-2] void setVerticalAlignment(QTextCharFormat::VerticalAlignment)
 
 /*
 
@@ -797,7 +797,7 @@ func (this *QTextCharFormat) ToolTip() string {
 // /usr/include/qt/QtGui/qtextformat.h:531
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setAnchor(_Bool)
+// [-2] void setAnchor(bool)
 
 /*
 

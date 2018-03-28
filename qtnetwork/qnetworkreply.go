@@ -37,52 +37,52 @@ func (this *QNetworkReply) InheritWriteData(f func(data string, len_ int64) int6
 	qtrt.SetAllInheritCallback(this, "writeData", f)
 }
 
-// void setOperation(class QNetworkAccessManager::Operation)
+// void setOperation(QNetworkAccessManager::Operation)
 func (this *QNetworkReply) InheritSetOperation(f func(operation int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setOperation", f)
 }
 
-// void setRequest(const class QNetworkRequest &)
+// void setRequest(const QNetworkRequest &)
 func (this *QNetworkReply) InheritSetRequest(f func(request *QNetworkRequest) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setRequest", f)
 }
 
-// void setError(enum QNetworkReply::NetworkError, const class QString &)
+// void setError(QNetworkReply::NetworkError, const QString &)
 func (this *QNetworkReply) InheritSetError(f func(errorCode int, errorString string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setError", f)
 }
 
-// void setFinished(_Bool)
+// void setFinished(bool)
 func (this *QNetworkReply) InheritSetFinished(f func(arg0 bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setFinished", f)
 }
 
-// void setUrl(const class QUrl &)
+// void setUrl(const QUrl &)
 func (this *QNetworkReply) InheritSetUrl(f func(url *qtcore.QUrl) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setUrl", f)
 }
 
-// void setHeader(class QNetworkRequest::KnownHeaders, const class QVariant &)
+// void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
 func (this *QNetworkReply) InheritSetHeader(f func(header int, value *qtcore.QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setHeader", f)
 }
 
-// void setRawHeader(const class QByteArray &, const class QByteArray &)
+// void setRawHeader(const QByteArray &, const QByteArray &)
 func (this *QNetworkReply) InheritSetRawHeader(f func(headerName *qtcore.QByteArray, value *qtcore.QByteArray) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setRawHeader", f)
 }
 
-// void setAttribute(class QNetworkRequest::Attribute, const class QVariant &)
+// void setAttribute(QNetworkRequest::Attribute, const QVariant &)
 func (this *QNetworkReply) InheritSetAttribute(f func(code int, value *qtcore.QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setAttribute", f)
 }
 
-// void sslConfigurationImplementation(class QSslConfiguration &)
+// void sslConfigurationImplementation(QSslConfiguration &)
 func (this *QNetworkReply) InheritSslConfigurationImplementation(f func(arg0 *QSslConfiguration) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "sslConfigurationImplementation", f)
 }
 
-// void setSslConfigurationImplementation(const class QSslConfiguration &)
+// void setSslConfigurationImplementation(const QSslConfiguration &)
 func (this *QNetworkReply) InheritSetSslConfigurationImplementation(f func(arg0 *QSslConfiguration) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setSslConfigurationImplementation", f)
 }
@@ -194,7 +194,6 @@ func (this *QNetworkReply) ReadBufferSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QNetworkReply14readBufferSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qnetworkreply.h:122
@@ -724,7 +723,6 @@ func (this *QNetworkReply) WriteData(data string, len_ int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qnetworkreply.h:176
@@ -768,7 +766,7 @@ func (this *QNetworkReply) SetRequest(request QNetworkRequest_ITF) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:178
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void setError(enum QNetworkReply::NetworkError, const QString &)
+// [-2] void setError(QNetworkReply::NetworkError, const QString &)
 
 /*
 Sets the error condition to be errorCode. The human-readable message is set with errorString.
@@ -787,7 +785,7 @@ func (this *QNetworkReply) SetError(errorCode int, errorString string) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:179
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void setFinished(_Bool)
+// [-2] void setFinished(bool)
 
 /*
 Sets the reply as finished.

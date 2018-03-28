@@ -91,7 +91,6 @@ func (this *QIPv6Address) Operator_get_index_1(index int) byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QIPv6AddressixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 func DeleteQIPv6Address(this *QIPv6Address) {

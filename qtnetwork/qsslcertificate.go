@@ -411,7 +411,7 @@ func (this *QSslCertificate) Digest__() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList issuerInfo(enum QSslCertificate::SubjectInfo) const
+// [8] QStringList issuerInfo(QSslCertificate::SubjectInfo) const
 
 /*
 Returns the issuer information for the subject from the certificate, or an empty list if there is no information for subject in the certificate. There can be more than one entry of each type.
@@ -451,7 +451,7 @@ func (this *QSslCertificate) IssuerInfo_1(attribute qtcore.QByteArray_ITF) *qtco
 // /usr/include/qt/QtNetwork/qsslcertificate.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList subjectInfo(enum QSslCertificate::SubjectInfo) const
+// [8] QStringList subjectInfo(QSslCertificate::SubjectInfo) const
 
 /*
 Returns the information for the subject, or an empty list if there is no information for subject in the certificate. There can be more than one entry of each type.

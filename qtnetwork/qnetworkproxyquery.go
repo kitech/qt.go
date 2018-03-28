@@ -84,7 +84,7 @@ func NewQNetworkProxyQuery() *QNetworkProxyQuery {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:73
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxyQuery(const QUrl &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QUrl &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -104,7 +104,7 @@ func NewQNetworkProxyQuery_1(requestUrl qtcore.QUrl_ITF, queryType int) *QNetwor
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:73
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxyQuery(const QUrl &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QUrl &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -126,7 +126,7 @@ func NewQNetworkProxyQuery_1_(requestUrl qtcore.QUrl_ITF) *QNetworkProxyQuery {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:74
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxyQuery(const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -146,7 +146,7 @@ func NewQNetworkProxyQuery_2(hostname string, port int, protocolTag string, quer
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:74
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxyQuery(const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -168,7 +168,7 @@ func NewQNetworkProxyQuery_2_(hostname string, port int) *QNetworkProxyQuery {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:74
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxyQuery(const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -190,7 +190,7 @@ func NewQNetworkProxyQuery_2_1(hostname string, port int, protocolTag string) *Q
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:76
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxyQuery(quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(quint16, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -208,7 +208,7 @@ func NewQNetworkProxyQuery_3(bindPort uint16, protocolTag string, queryType int)
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:76
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxyQuery(quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(quint16, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -228,7 +228,7 @@ func NewQNetworkProxyQuery_3_(bindPort uint16) *QNetworkProxyQuery {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:76
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QNetworkProxyQuery(quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(quint16, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -248,7 +248,7 @@ func NewQNetworkProxyQuery_3_1(bindPort uint16, protocolTag string) *QNetworkPro
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:80
 // index:4
 // Public Visibility=Default Availability=Deprecated
-// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QUrl &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QUrl &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -272,7 +272,7 @@ func NewQNetworkProxyQuery_4(networkConfiguration QNetworkConfiguration_ITF, req
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:80
 // index:4
 // Public Visibility=Default Availability=Deprecated
-// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QUrl &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QUrl &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -298,7 +298,7 @@ func NewQNetworkProxyQuery_4_(networkConfiguration QNetworkConfiguration_ITF, re
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:83
 // index:5
 // Public Visibility=Default Availability=Deprecated
-// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -322,7 +322,7 @@ func NewQNetworkProxyQuery_5(networkConfiguration QNetworkConfiguration_ITF, hos
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:83
 // index:5
 // Public Visibility=Default Availability=Deprecated
-// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -348,7 +348,7 @@ func NewQNetworkProxyQuery_5_(networkConfiguration QNetworkConfiguration_ITF, ho
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:83
 // index:5
 // Public Visibility=Default Availability=Deprecated
-// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -374,7 +374,7 @@ func NewQNetworkProxyQuery_5_1(networkConfiguration QNetworkConfiguration_ITF, h
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:87
 // index:6
 // Public Visibility=Default Availability=Deprecated
-// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -396,7 +396,7 @@ func NewQNetworkProxyQuery_6(networkConfiguration QNetworkConfiguration_ITF, bin
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:87
 // index:6
 // Public Visibility=Default Availability=Deprecated
-// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -420,7 +420,7 @@ func NewQNetworkProxyQuery_6_(networkConfiguration QNetworkConfiguration_ITF, bi
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:87
 // index:6
 // Public Visibility=Default Availability=Deprecated
-// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, enum QNetworkProxyQuery::QueryType)
+// [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
 
@@ -564,7 +564,7 @@ func (this *QNetworkProxyQuery) QueryType() int {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setQueryType(enum QNetworkProxyQuery::QueryType)
+// [-2] void setQueryType(QNetworkProxyQuery::QueryType)
 
 /*
 

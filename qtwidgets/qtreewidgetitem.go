@@ -477,7 +477,7 @@ func (this *QTreeWidgetItem) TreeWidget() *QTreeWidget /*777 QTreeWidget **/ {
 // /usr/include/qt/QtWidgets/qtreewidget.h:82
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setSelected(_Bool)
+// [-2] void setSelected(bool)
 
 /*
 
@@ -504,7 +504,7 @@ func (this *QTreeWidgetItem) IsSelected() bool {
 // /usr/include/qt/QtWidgets/qtreewidget.h:85
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setHidden(_Bool)
+// [-2] void setHidden(bool)
 
 /*
 
@@ -531,7 +531,7 @@ func (this *QTreeWidgetItem) IsHidden() bool {
 // /usr/include/qt/QtWidgets/qtreewidget.h:88
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setExpanded(_Bool)
+// [-2] void setExpanded(bool)
 
 /*
 
@@ -558,7 +558,7 @@ func (this *QTreeWidgetItem) IsExpanded() bool {
 // /usr/include/qt/QtWidgets/qtreewidget.h:91
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setFirstColumnSpanned(_Bool)
+// [-2] void setFirstColumnSpanned(bool)
 
 /*
 
@@ -585,7 +585,7 @@ func (this *QTreeWidgetItem) IsFirstColumnSpanned() bool {
 // /usr/include/qt/QtWidgets/qtreewidget.h:94
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setDisabled(_Bool)
+// [-2] void setDisabled(bool)
 
 /*
 

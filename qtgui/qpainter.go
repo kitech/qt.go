@@ -231,7 +231,7 @@ func (this *QPainter) InitFrom(device QPaintDevice_ITF /*777 const QPaintDevice 
 // /usr/include/qt/QtGui/qpainter.h:180
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCompositionMode(enum QPainter::CompositionMode)
+// [-2] void setCompositionMode(QPainter::CompositionMode)
 
 /*
 Sets the composition mode to the given mode.
@@ -920,7 +920,7 @@ func (this *QPainter) SetClipPath__(path QPainterPath_ITF) {
 // /usr/include/qt/QtGui/qpainter.h:225
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setClipping(_Bool)
+// [-2] void setClipping(bool)
 
 /*
 Enables clipping if enable is true, or disables clipping if enable is false.
@@ -1003,7 +1003,7 @@ func (this *QPainter) Restore() {
 // /usr/include/qt/QtGui/qpainter.h:234
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMatrix(const QMatrix &, _Bool)
+// [-2] void setMatrix(const QMatrix &, bool)
 
 /*
 
@@ -1020,7 +1020,7 @@ func (this *QPainter) SetMatrix(matrix QMatrix_ITF, combine bool) {
 // /usr/include/qt/QtGui/qpainter.h:234
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMatrix(const QMatrix &, _Bool)
+// [-2] void setMatrix(const QMatrix &, bool)
 
 /*
 
@@ -1084,7 +1084,7 @@ func (this *QPainter) ResetMatrix() {
 // /usr/include/qt/QtGui/qpainter.h:239
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTransform(const QTransform &, _Bool)
+// [-2] void setTransform(const QTransform &, bool)
 
 /*
 Sets the world transformation matrix. If combine is true, the specified transform is combined with the current matrix; otherwise it replaces the current matrix.
@@ -1105,7 +1105,7 @@ func (this *QPainter) SetTransform(transform QTransform_ITF, combine bool) {
 // /usr/include/qt/QtGui/qpainter.h:239
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTransform(const QTransform &, _Bool)
+// [-2] void setTransform(const QTransform &, bool)
 
 /*
 Sets the world transformation matrix. If combine is true, the specified transform is combined with the current matrix; otherwise it replaces the current matrix.
@@ -1183,7 +1183,7 @@ func (this *QPainter) ResetTransform() {
 // /usr/include/qt/QtGui/qpainter.h:244
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWorldMatrix(const QMatrix &, _Bool)
+// [-2] void setWorldMatrix(const QMatrix &, bool)
 
 /*
 
@@ -1200,7 +1200,7 @@ func (this *QPainter) SetWorldMatrix(matrix QMatrix_ITF, combine bool) {
 // /usr/include/qt/QtGui/qpainter.h:244
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWorldMatrix(const QMatrix &, _Bool)
+// [-2] void setWorldMatrix(const QMatrix &, bool)
 
 /*
 
@@ -1235,7 +1235,7 @@ func (this *QPainter) WorldMatrix() *QMatrix {
 // /usr/include/qt/QtGui/qpainter.h:247
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWorldTransform(const QTransform &, _Bool)
+// [-2] void setWorldTransform(const QTransform &, bool)
 
 /*
 Sets the world transformation matrix. If combine is true, the specified matrix is combined with the current matrix; otherwise it replaces the current matrix.
@@ -1254,7 +1254,7 @@ func (this *QPainter) SetWorldTransform(matrix QTransform_ITF, combine bool) {
 // /usr/include/qt/QtGui/qpainter.h:247
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWorldTransform(const QTransform &, _Bool)
+// [-2] void setWorldTransform(const QTransform &, bool)
 
 /*
 Sets the world transformation matrix. If combine is true, the specified matrix is combined with the current matrix; otherwise it replaces the current matrix.
@@ -1327,7 +1327,7 @@ func (this *QPainter) CombinedTransform() *QTransform /*123*/ {
 // /usr/include/qt/QtGui/qpainter.h:253
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMatrixEnabled(_Bool)
+// [-2] void setMatrixEnabled(bool)
 
 /*
 
@@ -1354,7 +1354,7 @@ func (this *QPainter) MatrixEnabled() bool {
 // /usr/include/qt/QtGui/qpainter.h:256
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWorldMatrixEnabled(_Bool)
+// [-2] void setWorldMatrixEnabled(bool)
 
 /*
 Enables transformations if enable is true, or disables transformations if enable is false. The world transformation matrix is not changed.
@@ -1607,7 +1607,7 @@ func (this *QPainter) SetViewport_1(x int, y int, w int, h int) {
 // /usr/include/qt/QtGui/qpainter.h:275
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setViewTransformEnabled(_Bool)
+// [-2] void setViewTransformEnabled(bool)
 
 /*
 Enables view transformations if enable is true, or disables view transformations if enable is false.
@@ -6321,7 +6321,7 @@ func (this *QPainter) EraseRect_2(arg0 qtcore.QRect_ITF) {
 // /usr/include/qt/QtGui/qpainter.h:455
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRenderHint(enum QPainter::RenderHint, _Bool)
+// [-2] void setRenderHint(QPainter::RenderHint, bool)
 
 /*
 Sets the given render hint on the painter if on is true; otherwise clears the render hint.
@@ -6336,7 +6336,7 @@ func (this *QPainter) SetRenderHint(hint int, on bool) {
 // /usr/include/qt/QtGui/qpainter.h:455
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRenderHint(enum QPainter::RenderHint, _Bool)
+// [-2] void setRenderHint(QPainter::RenderHint, bool)
 
 /*
 Sets the given render hint on the painter if on is true; otherwise clears the render hint.
@@ -6353,7 +6353,7 @@ func (this *QPainter) SetRenderHint__(hint int) {
 // /usr/include/qt/QtGui/qpainter.h:456
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRenderHints(QPainter::RenderHints, _Bool)
+// [-2] void setRenderHints(QPainter::RenderHints, bool)
 
 /*
 Sets the given render hints on the painter if on is true; otherwise clears the render hints.
@@ -6370,7 +6370,7 @@ func (this *QPainter) SetRenderHints(hints int, on bool) {
 // /usr/include/qt/QtGui/qpainter.h:456
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRenderHints(QPainter::RenderHints, _Bool)
+// [-2] void setRenderHints(QPainter::RenderHints, bool)
 
 /*
 Sets the given render hints on the painter if on is true; otherwise clears the render hints.
@@ -6405,7 +6405,7 @@ func (this *QPainter) RenderHints() int {
 // /usr/include/qt/QtGui/qpainter.h:458
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool testRenderHint(enum QPainter::RenderHint) const
+// [1] bool testRenderHint(QPainter::RenderHint) const
 
 /*
 Returns true if hint is set; otherwise returns false.

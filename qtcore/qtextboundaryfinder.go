@@ -83,7 +83,7 @@ func NewQTextBoundaryFinder() *QTextBoundaryFinder {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:76
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QString &)
+// [-2] void QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType, const QString &)
 
 /*
 Constructs an invalid QTextBoundaryFinder object.
@@ -101,7 +101,7 @@ func NewQTextBoundaryFinder_1(type_ int, string string) *QTextBoundaryFinder {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:77
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
+// [-2] void QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
 
 /*
 Constructs an invalid QTextBoundaryFinder object.
@@ -121,7 +121,7 @@ func NewQTextBoundaryFinder_2(type_ int, chars QChar_ITF /*777 const QChar **/, 
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:77
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
+// [-2] void QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
 
 /*
 Constructs an invalid QTextBoundaryFinder object.
@@ -145,7 +145,7 @@ func NewQTextBoundaryFinder_2_(type_ int, chars QChar_ITF /*777 const QChar **/,
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:77
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
+// [-2] void QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
 
 /*
 Constructs an invalid QTextBoundaryFinder object.

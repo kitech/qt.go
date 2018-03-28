@@ -41,7 +41,7 @@ func (this *QThread) InheritExec(f func() int) {
 	qtrt.SetAllInheritCallback(this, "exec", f)
 }
 
-// void setTerminationEnabled(_Bool)
+// void setTerminationEnabled(bool)
 func (this *QThread) InheritSetTerminationEnabled(f func(enabled bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setTerminationEnabled", f)
 }
@@ -229,7 +229,7 @@ func DeleteQThread(this *QThread) {
 // /usr/include/qt/QtCore/qthread.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPriority(enum QThread::Priority)
+// [-2] void setPriority(QThread::Priority)
 
 /*
 This function sets the priority for a running thread. If the thread is not running, this function does nothing and returns immediately. Use start() to start a thread with a specific priority.
@@ -376,7 +376,6 @@ func (this *QThread) StackSize() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread9stackSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qthread.h:108
@@ -505,7 +504,7 @@ func (this *QThread) LoopLevel() int {
 // /usr/include/qt/QtCore/qthread.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void start(enum QThread::Priority)
+// [-2] void start(QThread::Priority)
 
 /*
 Begins execution of the thread by calling run(). The operating system will schedule the thread according to the priority parameter. If the thread is already running, this function does nothing.
@@ -522,7 +521,7 @@ func (this *QThread) Start(arg0 int) {
 // /usr/include/qt/QtCore/qthread.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void start(enum QThread::Priority)
+// [-2] void start(QThread::Priority)
 
 /*
 Begins execution of the thread by calling run(). The operating system will schedule the thread according to the priority parameter. If the thread is already running, this function does nothing.
@@ -719,7 +718,7 @@ func (this *QThread) Exec() int {
 // /usr/include/qt/QtCore/qthread.h:154
 // index:0
 // Protected static Visibility=Default Availability=Available
-// [-2] void setTerminationEnabled(_Bool)
+// [-2] void setTerminationEnabled(bool)
 
 /*
 Enables or disables termination of the current thread based on the enabled parameter. The thread must have been started by QThread.
@@ -742,7 +741,7 @@ func QThread_SetTerminationEnabled(enabled bool) {
 // /usr/include/qt/QtCore/qthread.h:154
 // index:0
 // Protected static Visibility=Default Availability=Available
-// [-2] void setTerminationEnabled(_Bool)
+// [-2] void setTerminationEnabled(bool)
 
 /*
 Enables or disables termination of the current thread based on the enabled parameter. The thread must have been started by QThread.

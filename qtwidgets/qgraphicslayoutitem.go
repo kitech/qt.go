@@ -33,17 +33,17 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void setGraphicsItem(class QGraphicsItem *)
+// void setGraphicsItem(QGraphicsItem *)
 func (this *QGraphicsLayoutItem) InheritSetGraphicsItem(f func(item *QGraphicsItem /*777 QGraphicsItem **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setGraphicsItem", f)
 }
 
-// void setOwnedByLayout(_Bool)
+// void setOwnedByLayout(bool)
 func (this *QGraphicsLayoutItem) InheritSetOwnedByLayout(f func(ownedByLayout bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setOwnedByLayout", f)
 }
 
-// QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
+// QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsLayoutItem) InheritSizeHint(f func(which int, constraint *qtcore.QSizeF) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "sizeHint", f)
 }
@@ -84,7 +84,7 @@ func (*QGraphicsLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayou
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:57
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, _Bool)
+// [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, bool)
 
 /*
 Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
@@ -104,7 +104,7 @@ func NewQGraphicsLayoutItem(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayout
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:57
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, _Bool)
+// [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, bool)
 
 /*
 Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
@@ -124,7 +124,7 @@ func NewQGraphicsLayoutItem__() *QGraphicsLayoutItem {
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:57
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, _Bool)
+// [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, bool)
 
 /*
 Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
@@ -839,7 +839,7 @@ func (this *QGraphicsLayoutItem) SetGraphicsItem(item QGraphicsItem_ITF /*777 QG
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:106
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void setOwnedByLayout(_Bool)
+// [-2] void setOwnedByLayout(bool)
 
 /*
 Sets whether a layout should delete this item in its destructor or not. ownership must be true to in order for the layout to delete it.

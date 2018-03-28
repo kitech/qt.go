@@ -43,12 +43,12 @@ func (this *QHeaderView) InheritResizeSections(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeSections", f)
 }
 
-// void sectionsInserted(const class QModelIndex &, int, int)
+// void sectionsInserted(const QModelIndex &, int, int)
 func (this *QHeaderView) InheritSectionsInserted(f func(parent *qtcore.QModelIndex, logicalFirst int, logicalLast int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "sectionsInserted", f)
 }
 
-// void sectionsAboutToBeRemoved(const class QModelIndex &, int, int)
+// void sectionsAboutToBeRemoved(const QModelIndex &, int, int)
 func (this *QHeaderView) InheritSectionsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, logicalFirst int, logicalLast int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "sectionsAboutToBeRemoved", f)
 }
@@ -63,47 +63,47 @@ func (this *QHeaderView) InheritInitializeSections(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initializeSections", f)
 }
 
-// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+// void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QHeaderView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, old *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "currentChanged", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QHeaderView) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QHeaderView) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QHeaderView) InheritMousePressEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QHeaderView) InheritMouseMoveEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QHeaderView) InheritMouseReleaseEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QHeaderView) InheritMouseDoubleClickEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// bool viewportEvent(class QEvent *)
+// bool viewportEvent(QEvent *)
 func (this *QHeaderView) InheritViewportEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "viewportEvent", f)
 }
 
-// void paintSection(class QPainter *, const class QRect &, int)
+// void paintSection(QPainter *, const QRect &, int)
 func (this *QHeaderView) InheritPaintSection(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, logicalIndex int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintSection", f)
 }
@@ -133,47 +133,47 @@ func (this *QHeaderView) InheritScrollContentsBy(f func(dx int, dy int) /*void*/
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 
-// void rowsInserted(const class QModelIndex &, int, int)
+// void rowsInserted(const QModelIndex &, int, int)
 func (this *QHeaderView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
-// QRect visualRect(const class QModelIndex &)
+// QRect visualRect(const QModelIndex &)
 func (this *QHeaderView) InheritVisualRect(f func(index *qtcore.QModelIndex) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "visualRect", f)
 }
 
-// void scrollTo(const class QModelIndex &, enum QAbstractItemView::ScrollHint)
+// void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 func (this *QHeaderView) InheritScrollTo(f func(index *qtcore.QModelIndex, hint int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scrollTo", f)
 }
 
-// QModelIndex indexAt(const class QPoint &)
+// QModelIndex indexAt(const QPoint &)
 func (this *QHeaderView) InheritIndexAt(f func(p *qtcore.QPoint) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "indexAt", f)
 }
 
-// bool isIndexHidden(const class QModelIndex &)
+// bool isIndexHidden(const QModelIndex &)
 func (this *QHeaderView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bool) {
 	qtrt.SetAllInheritCallback(this, "isIndexHidden", f)
 }
 
-// QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+// QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
 func (this *QHeaderView) InheritMoveCursor(f func(arg0 int, arg1 int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "moveCursor", f)
 }
 
-// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+// void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QHeaderView) InheritSetSelection(f func(rect *qtcore.QRect, flags int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setSelection", f)
 }
 
-// QRegion visualRegionForSelection(const class QItemSelection &)
+// QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QHeaderView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "visualRegionForSelection", f)
 }
 
-// void initStyleOption(class QStyleOptionHeader *)
+// void initStyleOption(QStyleOptionHeader *)
 func (this *QHeaderView) InheritInitStyleOption(f func(option *QStyleOptionHeader /*777 QStyleOptionHeader **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -364,7 +364,7 @@ func (this *QHeaderView) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qheaderview.h:86
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 Reimplemented from QWidget::setVisible().
@@ -606,7 +606,7 @@ func (this *QHeaderView) IsSectionHidden(logicalIndex int) bool {
 // /usr/include/qt/QtWidgets/qheaderview.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSectionHidden(int, _Bool)
+// [-2] void setSectionHidden(int, bool)
 
 /*
 If hide is true the section specified by logicalIndex is hidden; otherwise the section is shown.
@@ -721,7 +721,7 @@ func (this *QHeaderView) LogicalIndex(visualIndex int) int {
 // /usr/include/qt/QtWidgets/qheaderview.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSectionsMovable(_Bool)
+// [-2] void setSectionsMovable(bool)
 
 /*
 If movable is true, the header may be moved by the user; otherwise it is fixed in place.
@@ -756,7 +756,7 @@ func (this *QHeaderView) SectionsMovable() bool {
 // /usr/include/qt/QtWidgets/qheaderview.h:122
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSectionsClickable(_Bool)
+// [-2] void setSectionsClickable(bool)
 
 /*
 If clickable is true, the header will respond to single clicks.
@@ -791,7 +791,7 @@ func (this *QHeaderView) SectionsClickable() bool {
 // /usr/include/qt/QtWidgets/qheaderview.h:129
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHighlightSections(_Bool)
+// [-2] void setHighlightSections(bool)
 
 /*
 
@@ -836,7 +836,7 @@ func (this *QHeaderView) SectionResizeMode(logicalIndex int) int {
 // /usr/include/qt/QtWidgets/qheaderview.h:133
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSectionResizeMode(enum QHeaderView::ResizeMode)
+// [-2] void setSectionResizeMode(QHeaderView::ResizeMode)
 
 /*
 Sets the constraints on how the header can be resized to those described by the given mode.
@@ -853,7 +853,7 @@ func (this *QHeaderView) SetSectionResizeMode(mode int) {
 // /usr/include/qt/QtWidgets/qheaderview.h:134
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void setSectionResizeMode(int, enum QHeaderView::ResizeMode)
+// [-2] void setSectionResizeMode(int, QHeaderView::ResizeMode)
 
 /*
 Sets the constraints on how the header can be resized to those described by the given mode.
@@ -931,7 +931,7 @@ func (this *QHeaderView) StretchSectionCount() int {
 // /usr/include/qt/QtWidgets/qheaderview.h:150
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSortIndicatorShown(_Bool)
+// [-2] void setSortIndicatorShown(bool)
 
 /*
 
@@ -1021,7 +1021,7 @@ func (this *QHeaderView) StretchLastSection() bool {
 // /usr/include/qt/QtWidgets/qheaderview.h:158
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStretchLastSection(_Bool)
+// [-2] void setStretchLastSection(bool)
 
 /*
 
@@ -1048,7 +1048,7 @@ func (this *QHeaderView) CascadingSectionResizes() bool {
 // /usr/include/qt/QtWidgets/qheaderview.h:161
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCascadingSectionResizes(_Bool)
+// [-2] void setCascadingSectionResizes(bool)
 
 /*
 
@@ -1876,7 +1876,7 @@ func (this *QHeaderView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect 
 // /usr/include/qt/QtWidgets/qheaderview.h:238
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+// [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 
 /*
 
@@ -1931,7 +1931,7 @@ func (this *QHeaderView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
 // /usr/include/qt/QtWidgets/qheaderview.h:243
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [24] QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+// [24] QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
 
 /*
 

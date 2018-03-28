@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QSystemTrayIcon) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -383,7 +383,7 @@ func (this *QSystemTrayIcon) IsVisible() bool {
 // /usr/include/qt/QtWidgets/qsystemtrayicon.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 

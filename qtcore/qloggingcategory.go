@@ -87,7 +87,7 @@ func NewQLoggingCategory(category string) *QLoggingCategory {
 // /usr/include/qt/QtCore/qloggingcategory.h:54
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QLoggingCategory(const char *, enum QtMsgType)
+// [-2] void QLoggingCategory(const char *, QtMsgType)
 
 /*
 Constructs a QLoggingCategory object with the provided category name. All message types for this category are enabled by default.
@@ -122,7 +122,7 @@ func DeleteQLoggingCategory(this *QLoggingCategory) {
 // /usr/include/qt/QtCore/qloggingcategory.h:57
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool isEnabled(enum QtMsgType) const
+// [1] bool isEnabled(QtMsgType) const
 
 /*
 Returns true if a message of type msgtype for the category should be shown. Returns false otherwise.
@@ -136,7 +136,7 @@ func (this *QLoggingCategory) IsEnabled(type_ int) bool {
 // /usr/include/qt/QtCore/qloggingcategory.h:58
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(enum QtMsgType, _Bool)
+// [-2] void setEnabled(QtMsgType, bool)
 
 /*
 Changes the message type type for the category to enable.

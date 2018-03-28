@@ -66,7 +66,7 @@ func (*QPlatformSurfaceEvent) NewFromPointer(cthis unsafe.Pointer) *QPlatformSur
 // /usr/include/qt/QtGui/qevent.h:451
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QPlatformSurfaceEvent(enum QPlatformSurfaceEvent::SurfaceEventType)
+// [-2] void QPlatformSurfaceEvent(QPlatformSurfaceEvent::SurfaceEventType)
 
 /*
 

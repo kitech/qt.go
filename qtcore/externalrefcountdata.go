@@ -134,7 +134,7 @@ func ExternalRefCountData_GetAndRef(arg0 QObject_ITF /*777 const QObject **/) un
 // /usr/include/qt/QtCore/qsharedpointer_impl.h:161
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setQObjectShared(const QObject *, _Bool)
+// [-2] void setQObjectShared(const QObject *, bool)
 
 /*
 

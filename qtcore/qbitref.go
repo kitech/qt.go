@@ -101,7 +101,7 @@ func (this *QBitRef) Operator_equal(val QBitRef_ITF) *QBitRef {
 // /usr/include/qt/QtCore/qbitarray.h:154
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [16] QBitRef & operator=(_Bool)
+// [16] QBitRef & operator=(bool)
 
 /*
 

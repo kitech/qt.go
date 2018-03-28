@@ -32,7 +32,7 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// bool validateCookie(const class QNetworkCookie &, const class QUrl &)
+// bool validateCookie(const QNetworkCookie &, const QUrl &)
 func (this *QNetworkCookieJar) InheritValidateCookie(f func(cookie *QNetworkCookie, url *qtcore.QUrl) bool) {
 	qtrt.SetAllInheritCallback(this, "validateCookie", f)
 }

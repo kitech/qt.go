@@ -84,7 +84,7 @@ func NewQSslError() *QSslError {
 // /usr/include/qt/QtNetwork/qsslerror.h:89
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QSslError(enum QSslError::SslError)
+// [-2] void QSslError(QSslError::SslError)
 
 /*
 Constructs a QSslError object with no error and default certificate.
@@ -100,7 +100,7 @@ func NewQSslError_1(error int) *QSslError {
 // /usr/include/qt/QtNetwork/qsslerror.h:90
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QSslError(enum QSslError::SslError, const QSslCertificate &)
+// [-2] void QSslError(QSslError::SslError, const QSslCertificate &)
 
 /*
 Constructs a QSslError object with no error and default certificate.

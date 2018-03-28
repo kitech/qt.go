@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QColorDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
@@ -249,7 +249,7 @@ func (this *QColorDialog) SelectedColor() *qtgui.QColor /*123*/ {
 // /usr/include/qt/QtWidgets/qcolordialog.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QColorDialog::ColorDialogOption, _Bool)
+// [-2] void setOption(QColorDialog::ColorDialogOption, bool)
 
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
@@ -264,7 +264,7 @@ func (this *QColorDialog) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qcolordialog.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QColorDialog::ColorDialogOption, _Bool)
+// [-2] void setOption(QColorDialog::ColorDialogOption, bool)
 
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
@@ -281,7 +281,7 @@ func (this *QColorDialog) SetOption__(option int) {
 // /usr/include/qt/QtWidgets/qcolordialog.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool testOption(enum QColorDialog::ColorDialogOption) const
+// [1] bool testOption(QColorDialog::ColorDialogOption) const
 
 /*
 Returns true if the given option is enabled; otherwise, returns false.
@@ -351,7 +351,7 @@ func (this *QColorDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, me
 // /usr/include/qt/QtWidgets/qcolordialog.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 Reimplemented from QWidget::setVisible().
@@ -523,7 +523,7 @@ func (this *QColorDialog) GetColor__3(initial qtgui.QColor_ITF, parent QWidget_I
 // /usr/include/qt/QtWidgets/qcolordialog.h:96
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QRgb getRgba(QRgb, _Bool *, QWidget *)
+// [4] QRgb getRgba(QRgb, bool *, QWidget *)
 
 /*
 
@@ -536,7 +536,6 @@ func (this *QColorDialog) GetRgba(rgba uint, ok *bool, parent QWidget_ITF /*777 
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog7getRgbaEjPbP7QWidget", qtrt.FFI_TYPE_POINTER, rgba, ok, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QColorDialog_GetRgba(rgba uint, ok *bool, parent QWidget_ITF /*777 QWidget **/) uint {
 	var nilthis *QColorDialog
@@ -547,7 +546,7 @@ func QColorDialog_GetRgba(rgba uint, ok *bool, parent QWidget_ITF /*777 QWidget 
 // /usr/include/qt/QtWidgets/qcolordialog.h:96
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QRgb getRgba(QRgb, _Bool *, QWidget *)
+// [4] QRgb getRgba(QRgb, bool *, QWidget *)
 
 /*
 
@@ -562,13 +561,12 @@ func (this *QColorDialog) GetRgba__() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog7getRgbaEjPbP7QWidget", qtrt.FFI_TYPE_POINTER, rgba, ok, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:96
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QRgb getRgba(QRgb, _Bool *, QWidget *)
+// [4] QRgb getRgba(QRgb, bool *, QWidget *)
 
 /*
 
@@ -581,13 +579,12 @@ func (this *QColorDialog) GetRgba__1(rgba uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog7getRgbaEjPbP7QWidget", qtrt.FFI_TYPE_POINTER, rgba, ok, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:96
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] QRgb getRgba(QRgb, _Bool *, QWidget *)
+// [4] QRgb getRgba(QRgb, bool *, QWidget *)
 
 /*
 
@@ -598,7 +595,6 @@ func (this *QColorDialog) GetRgba__2(rgba uint, ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog7getRgbaEjPbP7QWidget", qtrt.FFI_TYPE_POINTER, rgba, ok, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:98

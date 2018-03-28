@@ -33,17 +33,17 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool supportsExtension(enum QGraphicsItem::Extension)
+// bool supportsExtension(QGraphicsItem::Extension)
 func (this *QGraphicsPolygonItem) InheritSupportsExtension(f func(extension int) bool) {
 	qtrt.SetAllInheritCallback(this, "supportsExtension", f)
 }
 
-// void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
+// void setExtension(QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsPolygonItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setExtension", f)
 }
 
-// QVariant extension(const class QVariant &)
+// QVariant extension(const QVariant &)
 func (this *QGraphicsPolygonItem) InheritExtension(f func(variant *qtcore.QVariant) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "extension", f)
 }
@@ -515,7 +515,7 @@ func (this *QGraphicsPolygonItem) Type() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:767
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool supportsExtension(enum QGraphicsItem::Extension) const
+// [1] bool supportsExtension(QGraphicsItem::Extension) const
 
 /*
 
@@ -529,7 +529,7 @@ func (this *QGraphicsPolygonItem) SupportsExtension(extension int) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:768
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void setExtension(enum QGraphicsItem::Extension, const QVariant &)
+// [-2] void setExtension(QGraphicsItem::Extension, const QVariant &)
 
 /*
 

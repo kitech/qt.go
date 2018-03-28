@@ -187,7 +187,6 @@ func (this *QElapsedTimer) Restart() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer7restartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:70
@@ -243,7 +242,6 @@ func (this *QElapsedTimer) NsecsElapsed() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer12nsecsElapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:74
@@ -262,7 +260,6 @@ func (this *QElapsedTimer) Elapsed() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7elapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:75
@@ -299,7 +296,6 @@ func (this *QElapsedTimer) MsecsSinceReference() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer19msecsSinceReferenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:78
@@ -322,7 +318,6 @@ func (this *QElapsedTimer) MsecsTo(other QElapsedTimer_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7msecsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:79
@@ -345,7 +340,6 @@ func (this *QElapsedTimer) SecsTo(other QElapsedTimer_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer6secsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:81

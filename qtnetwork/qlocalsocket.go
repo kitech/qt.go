@@ -349,7 +349,6 @@ func (this *QLocalSocket) BytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalSocket14bytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:96
@@ -364,7 +363,6 @@ func (this *QLocalSocket) BytesToWrite() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalSocket12bytesToWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:97
@@ -517,7 +515,6 @@ func (this *QLocalSocket) ReadBufferSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalSocket14readBufferSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:104
@@ -542,7 +539,7 @@ func (this *QLocalSocket) SetReadBufferSize(size int64) {
 // /usr/include/qt/QtNetwork/qlocalsocket.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool setSocketDescriptor(qintptr, enum QLocalSocket::LocalSocketState, QIODevice::OpenMode)
+// [1] bool setSocketDescriptor(qintptr, QLocalSocket::LocalSocketState, QIODevice::OpenMode)
 
 /*
 Initializes QLocalSocket with the native socket descriptor socketDescriptor. Returns true if socketDescriptor is accepted as a valid socket descriptor; otherwise returns false. The socket is opened in the mode specified by openMode, and enters the socket state specified by socketState.
@@ -560,7 +557,7 @@ func (this *QLocalSocket) SetSocketDescriptor(socketDescriptor int64, socketStat
 // /usr/include/qt/QtNetwork/qlocalsocket.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool setSocketDescriptor(qintptr, enum QLocalSocket::LocalSocketState, QIODevice::OpenMode)
+// [1] bool setSocketDescriptor(qintptr, QLocalSocket::LocalSocketState, QIODevice::OpenMode)
 
 /*
 Initializes QLocalSocket with the native socket descriptor socketDescriptor. Returns true if socketDescriptor is accepted as a valid socket descriptor; otherwise returns false. The socket is opened in the mode specified by openMode, and enters the socket state specified by socketState.
@@ -582,7 +579,7 @@ func (this *QLocalSocket) SetSocketDescriptor__(socketDescriptor int64) bool {
 // /usr/include/qt/QtNetwork/qlocalsocket.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool setSocketDescriptor(qintptr, enum QLocalSocket::LocalSocketState, QIODevice::OpenMode)
+// [1] bool setSocketDescriptor(qintptr, QLocalSocket::LocalSocketState, QIODevice::OpenMode)
 
 /*
 Initializes QLocalSocket with the native socket descriptor socketDescriptor. Returns true if socketDescriptor is accepted as a valid socket descriptor; otherwise returns false. The socket is opened in the mode specified by openMode, and enters the socket state specified by socketState.
@@ -621,7 +618,6 @@ func (this *QLocalSocket) SocketDescriptor() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalSocket16socketDescriptorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:111
@@ -885,7 +881,6 @@ func (this *QLocalSocket) ReadData(arg0 string, arg1 int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket8readDataEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:125
@@ -902,7 +897,6 @@ func (this *QLocalSocket) WriteData(arg0 string, arg1 int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 /*

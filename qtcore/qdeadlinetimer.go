@@ -109,7 +109,7 @@ func NewQDeadlineTimer__() *QDeadlineTimer {
 // /usr/include/qt/QtCore/qdeadlinetimer.h:67
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void QDeadlineTimer(enum QDeadlineTimer::ForeverConstant, Qt::TimerType)
+// [-2] void QDeadlineTimer(QDeadlineTimer::ForeverConstant, Qt::TimerType)
 
 /*
 Constructs an expired QDeadlineTimer object. For this object, remainingTime() will return 0.
@@ -129,7 +129,7 @@ func NewQDeadlineTimer_1(arg0 int, type_ int) *QDeadlineTimer {
 // /usr/include/qt/QtCore/qdeadlinetimer.h:67
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void QDeadlineTimer(enum QDeadlineTimer::ForeverConstant, Qt::TimerType)
+// [-2] void QDeadlineTimer(QDeadlineTimer::ForeverConstant, Qt::TimerType)
 
 /*
 Constructs an expired QDeadlineTimer object. For this object, remainingTime() will return 0.
@@ -295,7 +295,6 @@ func (this *QDeadlineTimer) RemainingTime() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDeadlineTimer13remainingTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:83
@@ -312,7 +311,6 @@ func (this *QDeadlineTimer) RemainingTimeNSecs() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDeadlineTimer18remainingTimeNSecsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:84
@@ -440,7 +438,6 @@ func (this *QDeadlineTimer) Deadline() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDeadlineTimer8deadlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:89
@@ -470,7 +467,6 @@ func (this *QDeadlineTimer) DeadlineNSecs() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDeadlineTimer13deadlineNSecsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:90

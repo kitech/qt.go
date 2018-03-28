@@ -197,7 +197,7 @@ func (this *QTextOption) TextDirection() int {
 // /usr/include/qt/QtGui/qtextoption.h:105
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setWrapMode(enum QTextOption::WrapMode)
+// [-2] void setWrapMode(QTextOption::WrapMode)
 
 /*
 Sets the option's text wrap mode to the given mode.
@@ -321,7 +321,7 @@ func (this *QTextOption) TabStopDistance() float64 {
 // /usr/include/qt/QtGui/qtextoption.h:134
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setUseDesignMetrics(_Bool)
+// [-2] void setUseDesignMetrics(bool)
 
 /*
 If enable is true then the layout will use design metrics; otherwise it will use the metrics of the paint device (which is the default behavior).

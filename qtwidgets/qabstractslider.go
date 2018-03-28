@@ -33,12 +33,12 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QAbstractSlider) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void setRepeatAction(enum QAbstractSlider::SliderAction, int, int)
+// void setRepeatAction(QAbstractSlider::SliderAction, int, int)
 func (this *QAbstractSlider) InheritSetRepeatAction(f func(action int, thresholdTime int, repeatTime int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setRepeatAction", f)
 }
@@ -48,27 +48,27 @@ func (this *QAbstractSlider) InheritRepeatAction(f func() int) {
 	qtrt.SetAllInheritCallback(this, "repeatAction", f)
 }
 
-// void sliderChange(enum QAbstractSlider::SliderChange)
+// void sliderChange(QAbstractSlider::SliderChange)
 func (this *QAbstractSlider) InheritSliderChange(f func(change int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "sliderChange", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QAbstractSlider) InheritKeyPressEvent(f func(ev *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QAbstractSlider) InheritTimerEvent(f func(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QAbstractSlider) InheritWheelEvent(f func(e *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QAbstractSlider) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
@@ -304,7 +304,7 @@ func (this *QAbstractSlider) PageStep() int {
 // /usr/include/qt/QtWidgets/qabstractslider.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTracking(_Bool)
+// [-2] void setTracking(bool)
 
 /*
 
@@ -331,7 +331,7 @@ func (this *QAbstractSlider) HasTracking() bool {
 // /usr/include/qt/QtWidgets/qabstractslider.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSliderDown(_Bool)
+// [-2] void setSliderDown(bool)
 
 /*
 
@@ -385,7 +385,7 @@ func (this *QAbstractSlider) SliderPosition() int {
 // /usr/include/qt/QtWidgets/qabstractslider.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setInvertedAppearance(_Bool)
+// [-2] void setInvertedAppearance(bool)
 
 /*
 
@@ -412,7 +412,7 @@ func (this *QAbstractSlider) InvertedAppearance() bool {
 // /usr/include/qt/QtWidgets/qabstractslider.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setInvertedControls(_Bool)
+// [-2] void setInvertedControls(bool)
 
 /*
 
@@ -453,7 +453,7 @@ func (this *QAbstractSlider) Value() int {
 // /usr/include/qt/QtWidgets/qabstractslider.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void triggerAction(enum QAbstractSlider::SliderAction)
+// [-2] void triggerAction(QAbstractSlider::SliderAction)
 
 /*
 Triggers a slider action. Possible actions are SliderSingleStepAdd, SliderSingleStepSub, SliderPageStepAdd, SliderPageStepSub, SliderToMinimum, SliderToMaximum, and SliderMove.
@@ -625,7 +625,7 @@ func (this *QAbstractSlider) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qabstractslider.h:136
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void setRepeatAction(enum QAbstractSlider::SliderAction, int, int)
+// [-2] void setRepeatAction(QAbstractSlider::SliderAction, int, int)
 
 /*
 Sets action action to be triggered repetitively in intervals of repeatTime, after an initial delay of thresholdTime.
@@ -640,7 +640,7 @@ func (this *QAbstractSlider) SetRepeatAction(action int, thresholdTime int, repe
 // /usr/include/qt/QtWidgets/qabstractslider.h:136
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void setRepeatAction(enum QAbstractSlider::SliderAction, int, int)
+// [-2] void setRepeatAction(QAbstractSlider::SliderAction, int, int)
 
 /*
 Sets action action to be triggered repetitively in intervals of repeatTime, after an initial delay of thresholdTime.
@@ -659,7 +659,7 @@ func (this *QAbstractSlider) SetRepeatAction__(action int) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:136
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void setRepeatAction(enum QAbstractSlider::SliderAction, int, int)
+// [-2] void setRepeatAction(QAbstractSlider::SliderAction, int, int)
 
 /*
 Sets action action to be triggered repetitively in intervals of repeatTime, after an initial delay of thresholdTime.
@@ -692,7 +692,7 @@ func (this *QAbstractSlider) RepeatAction() int {
 // /usr/include/qt/QtWidgets/qabstractslider.h:145
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void sliderChange(enum QAbstractSlider::SliderChange)
+// [-2] void sliderChange(QAbstractSlider::SliderChange)
 
 /*
 Reimplement this virtual function to track slider changes such as SliderRangeChange, SliderOrientationChange, SliderStepsChange, or SliderValueChange. The default implementation only updates the display and ignores the change parameter.

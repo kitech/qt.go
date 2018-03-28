@@ -32,12 +32,12 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QRasterWindow) InheritMetric(f func(metric int) int) {
 	qtrt.SetAllInheritCallback(this, "metric", f)
 }
 
-// QPaintDevice * redirected(class QPoint *)
+// QPaintDevice * redirected(QPoint *)
 func (this *QRasterWindow) InheritRedirected(f func(arg0 *qtcore.QPoint /*777 QPoint **/) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "redirected", f)
 }
@@ -143,7 +143,7 @@ func DeleteQRasterWindow(this *QRasterWindow) {
 // /usr/include/qt/QtGui/qrasterwindow.h:60
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
+// [4] int metric(QPaintDevice::PaintDeviceMetric) const
 
 /*
 

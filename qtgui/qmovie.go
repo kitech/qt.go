@@ -710,7 +710,7 @@ func (this *QMovie) CacheMode() int {
 // /usr/include/qt/QtGui/qmovie.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCacheMode(enum QMovie::CacheMode)
+// [-2] void setCacheMode(QMovie::CacheMode)
 
 /*
 
@@ -861,7 +861,7 @@ func (this *QMovie) JumpToNextFrame() bool {
 // /usr/include/qt/QtGui/qmovie.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPaused(_Bool)
+// [-2] void setPaused(bool)
 
 /*
 If paused is true, QMovie will enter Paused state and emit stateChanged(Paused); otherwise it will enter Running state and emit stateChanged(Running).

@@ -67,7 +67,7 @@ func (*QGraphicsSceneEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScene
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:67
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsSceneEvent(enum QEvent::Type)
+// [-2] void QGraphicsSceneEvent(QEvent::Type)
 
 /*
 

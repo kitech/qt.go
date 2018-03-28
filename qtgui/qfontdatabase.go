@@ -84,7 +84,7 @@ func NewQFontDatabase() *QFontDatabase {
 // /usr/include/qt/QtGui/qfontdatabase.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList families(enum QFontDatabase::WritingSystem) const
+// [8] QStringList families(QFontDatabase::WritingSystem) const
 
 /*
 Returns a sorted list of the available font families which support the writingSystem.
@@ -104,7 +104,7 @@ func (this *QFontDatabase) Families(writingSystem int) *qtcore.QStringList /*123
 // /usr/include/qt/QtGui/qfontdatabase.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList families(enum QFontDatabase::WritingSystem) const
+// [8] QStringList families(QFontDatabase::WritingSystem) const
 
 /*
 Returns a sorted list of the available font families which support the writingSystem.
@@ -462,7 +462,7 @@ func (this *QFontDatabase) IsPrivateFamily(family string) bool {
 // /usr/include/qt/QtGui/qfontdatabase.h:144
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString writingSystemName(enum QFontDatabase::WritingSystem)
+// [8] QString writingSystemName(QFontDatabase::WritingSystem)
 
 /*
 Returns the names the writingSystem (e.g. for displaying to the user in a dialog).
@@ -484,7 +484,7 @@ func QFontDatabase_WritingSystemName(writingSystem int) string {
 // /usr/include/qt/QtGui/qfontdatabase.h:145
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString writingSystemSample(enum QFontDatabase::WritingSystem)
+// [8] QString writingSystemSample(QFontDatabase::WritingSystem)
 
 /*
 Returns a string with sample characters from writingSystem.
@@ -662,7 +662,7 @@ func QFontDatabase_SupportsThreadedFontRendering() bool {
 // /usr/include/qt/QtGui/qfontdatabase.h:157
 // index:0
 // Public static Visibility=Default Availability=Available
-// [16] QFont systemFont(enum QFontDatabase::SystemFont)
+// [16] QFont systemFont(QFontDatabase::SystemFont)
 
 /*
 Returns the most adequate font for a given type case for proper integration with the system's look and feel.

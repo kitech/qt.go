@@ -380,7 +380,7 @@ func (this *QQmlExpression) NotifyOnValueChanged() bool {
 // /usr/include/qt/QtQml/qqmlexpression.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setNotifyOnValueChanged(_Bool)
+// [-2] void setNotifyOnValueChanged(bool)
 
 /*
 Sets whether the valueChanged() signal is emitted when the expression's evaluated value changes.
@@ -541,7 +541,7 @@ func (this *QQmlExpression) Error() *QQmlError /*123*/ {
 // /usr/include/qt/QtQml/qqmlexpression.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant evaluate(_Bool *)
+// [16] QVariant evaluate(bool *)
 
 /*
 Evaulates the expression, returning the result of the evaluation, or an invalid QVariant if the expression is invalid or has an error.
@@ -561,7 +561,7 @@ func (this *QQmlExpression) Evaluate(valueIsUndefined *bool) *qtcore.QVariant /*
 // /usr/include/qt/QtQml/qqmlexpression.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant evaluate(_Bool *)
+// [16] QVariant evaluate(bool *)
 
 /*
 Evaulates the expression, returning the result of the evaluation, or an invalid QVariant if the expression is invalid or has an error.

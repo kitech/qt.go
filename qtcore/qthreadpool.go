@@ -303,7 +303,6 @@ func (this *QThreadPool) StackSize() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool9stackSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:84

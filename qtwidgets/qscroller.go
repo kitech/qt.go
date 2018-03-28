@@ -156,7 +156,7 @@ func QScroller_Scroller_1(target qtcore.QObject_ITF /*777 const QObject **/) *QS
 // /usr/include/qt/QtWidgets/qscroller.h:98
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] Qt::GestureType grabGesture(QObject *, enum QScroller::ScrollerGestureType)
+// [4] Qt::GestureType grabGesture(QObject *, QScroller::ScrollerGestureType)
 
 /*
 Registers a custom scroll gesture recognizer, grabs it for the target and returns the resulting gesture type. If scrollGestureType is set to TouchGesture the gesture triggers on touch events. If it is set to one of LeftMouseButtonGesture, RightMouseButtonGesture or MiddleMouseButtonGesture it triggers on mouse events of the corresponding button.
@@ -185,7 +185,7 @@ func QScroller_GrabGesture(target qtcore.QObject_ITF /*777 QObject **/, gestureT
 // /usr/include/qt/QtWidgets/qscroller.h:98
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] Qt::GestureType grabGesture(QObject *, enum QScroller::ScrollerGestureType)
+// [4] Qt::GestureType grabGesture(QObject *, QScroller::ScrollerGestureType)
 
 /*
 Registers a custom scroll gesture recognizer, grabs it for the target and returns the resulting gesture type. If scrollGestureType is set to TouchGesture the gesture triggers on touch events. If it is set to one of LeftMouseButtonGesture, RightMouseButtonGesture or MiddleMouseButtonGesture it triggers on mouse events of the corresponding button.
@@ -289,7 +289,7 @@ func (this *QScroller) State() int {
 // /usr/include/qt/QtWidgets/qscroller.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool handleInput(enum QScroller::Input, const QPointF &, qint64)
+// [1] bool handleInput(QScroller::Input, const QPointF &, qint64)
 
 /*
 This function is used by gesture recognizers to inform the scroller about a new input event. The scroller changes its internal state() according to the input event and its attached scroller properties. The scroller doesn't distinguish between the kind of input device the event came from. Therefore the event needs to be split into the input type, a position and a milli-second timestamp. The position needs to be in the target's coordinate system.
@@ -311,7 +311,7 @@ func (this *QScroller) HandleInput(input int, position qtcore.QPointF_ITF, times
 // /usr/include/qt/QtWidgets/qscroller.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool handleInput(enum QScroller::Input, const QPointF &, qint64)
+// [1] bool handleInput(QScroller::Input, const QPointF &, qint64)
 
 /*
 This function is used by gesture recognizers to inform the scroller about a new input event. The scroller changes its internal state() according to the input event and its attached scroller properties. The scroller doesn't distinguish between the kind of input device the event came from. Therefore the event needs to be split into the input type, a position and a milli-second timestamp. The position needs to be in the target's coordinate system.

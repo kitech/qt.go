@@ -33,12 +33,12 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  body block begin
 
-// void statusChanged(enum QQmlIncubator::Status)
+// void statusChanged(QQmlIncubator::Status)
 func (this *QQmlIncubator) InheritStatusChanged(f func(arg0 int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "statusChanged", f)
 }
 
-// void setInitialState(class QObject *)
+// void setInitialState(QObject *)
 func (this *QQmlIncubator) InheritSetInitialState(f func(arg0 *qtcore.QObject /*777 QObject **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setInitialState", f)
 }
@@ -79,7 +79,7 @@ func (*QQmlIncubator) NewFromPointer(cthis unsafe.Pointer) *QQmlIncubator {
 // /usr/include/qt/QtQml/qqmlincubator.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QQmlIncubator(enum QQmlIncubator::IncubationMode)
+// [-2] void QQmlIncubator(QQmlIncubator::IncubationMode)
 
 /*
 Create a new incubator with the specified mode
@@ -95,7 +95,7 @@ func NewQQmlIncubator(arg0 int) *QQmlIncubator {
 // /usr/include/qt/QtQml/qqmlincubator.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QQmlIncubator(enum QQmlIncubator::IncubationMode)
+// [-2] void QQmlIncubator(QQmlIncubator::IncubationMode)
 
 /*
 Create a new incubator with the specified mode
@@ -252,7 +252,7 @@ func (this *QQmlIncubator) Object() *qtcore.QObject /*777 QObject **/ {
 // /usr/include/qt/QtQml/qqmlincubator.h:88
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void statusChanged(enum QQmlIncubator::Status)
+// [-2] void statusChanged(QQmlIncubator::Status)
 
 /*
 Called when the status of the incubator changes. status is the new status.

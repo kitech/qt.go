@@ -362,7 +362,7 @@ func (this *QSurfaceFormat) Samples() int {
 // /usr/include/qt/QtGui/qsurfaceformat.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSwapBehavior(enum QSurfaceFormat::SwapBehavior)
+// [-2] void setSwapBehavior(QSurfaceFormat::SwapBehavior)
 
 /*
 Set the swap behavior of the surface.
@@ -411,7 +411,7 @@ func (this *QSurfaceFormat) HasAlpha() bool {
 // /usr/include/qt/QtGui/qsurfaceformat.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setProfile(enum QSurfaceFormat::OpenGLContextProfile)
+// [-2] void setProfile(QSurfaceFormat::OpenGLContextProfile)
 
 /*
 Sets the desired OpenGL context profile.
@@ -446,7 +446,7 @@ func (this *QSurfaceFormat) Profile() int {
 // /usr/include/qt/QtGui/qsurfaceformat.h:126
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRenderableType(enum QSurfaceFormat::RenderableType)
+// [-2] void setRenderableType(QSurfaceFormat::RenderableType)
 
 /*
 Sets the desired renderable type.
@@ -580,7 +580,7 @@ func (this *QSurfaceFormat) Stereo() bool {
 // /usr/include/qt/QtGui/qsurfaceformat.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStereo(_Bool)
+// [-2] void setStereo(bool)
 
 /*
 If enable is true enables stereo buffering; otherwise disables stereo buffering.
@@ -616,7 +616,7 @@ func (this *QSurfaceFormat) SetOption(opt int) {
 // /usr/include/qt/QtGui/qsurfaceformat.h:147
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QSurfaceFormat::FormatOption, _Bool)
+// [-2] void setOption(QSurfaceFormat::FormatOption, bool)
 
 /*
 Sets the format option option if on is true; otherwise, clears the option.
@@ -633,7 +633,7 @@ func (this *QSurfaceFormat) SetOption_1(option int, on bool) {
 // /usr/include/qt/QtGui/qsurfaceformat.h:147
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QSurfaceFormat::FormatOption, _Bool)
+// [-2] void setOption(QSurfaceFormat::FormatOption, bool)
 
 /*
 Sets the format option option if on is true; otherwise, clears the option.
@@ -670,7 +670,7 @@ func (this *QSurfaceFormat) TestOption(opt int) bool {
 // /usr/include/qt/QtGui/qsurfaceformat.h:148
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool testOption(enum QSurfaceFormat::FormatOption) const
+// [1] bool testOption(QSurfaceFormat::FormatOption) const
 
 /*
 Returns true if the format option option is set; otherwise returns false.
@@ -782,7 +782,7 @@ func (this *QSurfaceFormat) ColorSpace() int {
 // /usr/include/qt/QtGui/qsurfaceformat.h:155
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setColorSpace(enum QSurfaceFormat::ColorSpace)
+// [-2] void setColorSpace(QSurfaceFormat::ColorSpace)
 
 /*
 Sets the preferred colorSpace.

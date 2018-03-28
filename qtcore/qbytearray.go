@@ -2000,7 +2000,7 @@ func (this *QByteArray) Simplified_1() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:285
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray leftJustified(int, char, _Bool) const
+// [8] QByteArray leftJustified(int, char, bool) const
 
 /*
 Returns a byte array of size width that contains this byte array padded by the fill character.
@@ -2030,7 +2030,7 @@ func (this *QByteArray) LeftJustified(width int, fill byte, truncate bool) *QByt
 // /usr/include/qt/QtCore/qbytearray.h:285
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray leftJustified(int, char, _Bool) const
+// [8] QByteArray leftJustified(int, char, bool) const
 
 /*
 Returns a byte array of size width that contains this byte array padded by the fill character.
@@ -2064,7 +2064,7 @@ func (this *QByteArray) LeftJustified__(width int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:285
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray leftJustified(int, char, _Bool) const
+// [8] QByteArray leftJustified(int, char, bool) const
 
 /*
 Returns a byte array of size width that contains this byte array padded by the fill character.
@@ -2096,7 +2096,7 @@ func (this *QByteArray) LeftJustified__1(width int, fill byte) *QByteArray /*123
 // /usr/include/qt/QtCore/qbytearray.h:286
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray rightJustified(int, char, _Bool) const
+// [8] QByteArray rightJustified(int, char, bool) const
 
 /*
 Returns a byte array of size width that contains the fill character followed by this byte array.
@@ -2126,7 +2126,7 @@ func (this *QByteArray) RightJustified(width int, fill byte, truncate bool) *QBy
 // /usr/include/qt/QtCore/qbytearray.h:286
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray rightJustified(int, char, _Bool) const
+// [8] QByteArray rightJustified(int, char, bool) const
 
 /*
 Returns a byte array of size width that contains the fill character followed by this byte array.
@@ -2160,7 +2160,7 @@ func (this *QByteArray) RightJustified__(width int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:286
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray rightJustified(int, char, _Bool) const
+// [8] QByteArray rightJustified(int, char, bool) const
 
 /*
 Returns a byte array of size width that contains the fill character followed by this byte array.
@@ -2863,7 +2863,7 @@ func (this *QByteArray) Operator_greater_than_equal(s2 string) bool {
 // /usr/include/qt/QtCore/qbytearray.h:343
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(_Bool *, int) const
+// [2] short toShort(bool *, int) const
 
 /*
 Returns the byte array converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -2887,7 +2887,7 @@ func (this *QByteArray) ToShort(ok *bool, base int) int16 {
 // /usr/include/qt/QtCore/qbytearray.h:343
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(_Bool *, int) const
+// [2] short toShort(bool *, int) const
 
 /*
 Returns the byte array converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -2915,7 +2915,7 @@ func (this *QByteArray) ToShort__() int16 {
 // /usr/include/qt/QtCore/qbytearray.h:343
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(_Bool *, int) const
+// [2] short toShort(bool *, int) const
 
 /*
 Returns the byte array converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -2941,7 +2941,7 @@ func (this *QByteArray) ToShort__1(ok *bool) int16 {
 // /usr/include/qt/QtCore/qbytearray.h:344
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(_Bool *, int) const
+// [2] ushort toUShort(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -2960,13 +2960,12 @@ func (this *QByteArray) ToUShort(ok *bool, base int) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:344
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(_Bool *, int) const
+// [2] ushort toUShort(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -2989,13 +2988,12 @@ func (this *QByteArray) ToUShort__() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:344
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(_Bool *, int) const
+// [2] ushort toUShort(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3016,13 +3014,12 @@ func (this *QByteArray) ToUShort__1(ok *bool) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:345
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *, int) const
+// [4] int toInt(bool *, int) const
 
 /*
 Returns the byte array converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3054,7 +3051,7 @@ func (this *QByteArray) ToInt(ok *bool, base int) int {
 // /usr/include/qt/QtCore/qbytearray.h:345
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *, int) const
+// [4] int toInt(bool *, int) const
 
 /*
 Returns the byte array converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3090,7 +3087,7 @@ func (this *QByteArray) ToInt__() int {
 // /usr/include/qt/QtCore/qbytearray.h:345
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *, int) const
+// [4] int toInt(bool *, int) const
 
 /*
 Returns the byte array converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3124,7 +3121,7 @@ func (this *QByteArray) ToInt__1(ok *bool) int {
 // /usr/include/qt/QtCore/qbytearray.h:346
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *, int) const
+// [4] uint toUInt(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3143,13 +3140,12 @@ func (this *QByteArray) ToUInt(ok *bool, base int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:346
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *, int) const
+// [4] uint toUInt(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3172,13 +3168,12 @@ func (this *QByteArray) ToUInt__() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:346
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *, int) const
+// [4] uint toUInt(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3199,13 +3194,12 @@ func (this *QByteArray) ToUInt__1(ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:347
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] long toLong(_Bool *, int) const
+// [8] long toLong(bool *, int) const
 
 /*
 Returns the byte array converted to a long int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3239,7 +3233,7 @@ func (this *QByteArray) ToLong(ok *bool, base int) int {
 // /usr/include/qt/QtCore/qbytearray.h:347
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] long toLong(_Bool *, int) const
+// [8] long toLong(bool *, int) const
 
 /*
 Returns the byte array converted to a long int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3277,7 +3271,7 @@ func (this *QByteArray) ToLong__() int {
 // /usr/include/qt/QtCore/qbytearray.h:347
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] long toLong(_Bool *, int) const
+// [8] long toLong(bool *, int) const
 
 /*
 Returns the byte array converted to a long int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3313,7 +3307,7 @@ func (this *QByteArray) ToLong__1(ok *bool) int {
 // /usr/include/qt/QtCore/qbytearray.h:348
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] ulong toULong(_Bool *, int) const
+// [8] ulong toULong(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned long int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3334,13 +3328,12 @@ func (this *QByteArray) ToULong(ok *bool, base int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned long // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:348
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] ulong toULong(_Bool *, int) const
+// [8] ulong toULong(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned long int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3365,13 +3358,12 @@ func (this *QByteArray) ToULong__() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned long // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:348
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] ulong toULong(_Bool *, int) const
+// [8] ulong toULong(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned long int using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3394,13 +3386,12 @@ func (this *QByteArray) ToULong__1(ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned long // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:349
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *, int) const
+// [8] qlonglong toLongLong(bool *, int) const
 
 /*
 Returns the byte array converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3419,13 +3410,12 @@ func (this *QByteArray) ToLongLong(ok *bool, base int) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:349
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *, int) const
+// [8] qlonglong toLongLong(bool *, int) const
 
 /*
 Returns the byte array converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3448,13 +3438,12 @@ func (this *QByteArray) ToLongLong__() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:349
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *, int) const
+// [8] qlonglong toLongLong(bool *, int) const
 
 /*
 Returns the byte array converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3475,13 +3464,12 @@ func (this *QByteArray) ToLongLong__1(ok *bool) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:350
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *, int) const
+// [8] qulonglong toULongLong(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3500,13 +3488,12 @@ func (this *QByteArray) ToULongLong(ok *bool, base int) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:350
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *, int) const
+// [8] qulonglong toULongLong(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3529,13 +3516,12 @@ func (this *QByteArray) ToULongLong__() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:350
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *, int) const
+// [8] qulonglong toULongLong(bool *, int) const
 
 /*
 Returns the byte array converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0.
@@ -3556,13 +3542,12 @@ func (this *QByteArray) ToULongLong__1(ok *bool) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:351
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(_Bool *) const
+// [4] float toFloat(bool *) const
 
 /*
 Returns the byte array converted to a float value.
@@ -3584,7 +3569,7 @@ func (this *QByteArray) ToFloat(ok *bool) float32 {
 // /usr/include/qt/QtCore/qbytearray.h:351
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(_Bool *) const
+// [4] float toFloat(bool *) const
 
 /*
 Returns the byte array converted to a float value.
@@ -3608,7 +3593,7 @@ func (this *QByteArray) ToFloat__() float32 {
 // /usr/include/qt/QtCore/qbytearray.h:352
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(_Bool *) const
+// [8] double toDouble(bool *) const
 
 /*
 Returns the byte array converted to a double value.
@@ -3636,7 +3621,7 @@ func (this *QByteArray) ToDouble(ok *bool) float64 {
 // /usr/include/qt/QtCore/qbytearray.h:352
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(_Bool *) const
+// [8] double toDouble(bool *) const
 
 /*
 Returns the byte array converted to a double value.

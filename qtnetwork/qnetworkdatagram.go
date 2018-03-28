@@ -298,7 +298,6 @@ func (this *QNetworkDatagram) InterfaceIndex() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QNetworkDatagram14interfaceIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:79

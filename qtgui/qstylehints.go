@@ -439,7 +439,7 @@ func (this *QStyleHints) UseHoverEffects() bool {
 // /usr/include/qt/QtGui/qstylehints.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUseHoverEffects(_Bool)
+// [-2] void setUseHoverEffects(bool)
 
 /*
 
@@ -570,7 +570,7 @@ func (this *QStyleHints) TabFocusBehaviorChanged(tabFocusBehavior int) {
 // /usr/include/qt/QtGui/qstylehints.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void useHoverEffectsChanged(_Bool)
+// [-2] void useHoverEffectsChanged(bool)
 
 /*
 

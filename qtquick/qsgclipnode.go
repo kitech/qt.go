@@ -100,7 +100,7 @@ func DeleteQSGClipNode(this *QSGClipNode) {
 // /usr/include/qt/QtQuick/qsgnode.h:267
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setIsRectangular(_Bool)
+// [-2] void setIsRectangular(bool)
 
 /*
 

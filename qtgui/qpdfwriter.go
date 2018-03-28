@@ -37,7 +37,7 @@ func (this *QPdfWriter) InheritPaintEngine(f func() unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "paintEngine", f)
 }
 
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QPdfWriter) InheritMetric(f func(id int) int) {
 	qtrt.SetAllInheritCallback(this, "metric", f)
 }
@@ -147,7 +147,7 @@ func DeleteQPdfWriter(this *QPdfWriter) {
 // /usr/include/qt/QtGui/qpdfwriter.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPdfVersion(enum QPagedPaintDevice::PdfVersion)
+// [-2] void setPdfVersion(QPagedPaintDevice::PdfVersion)
 
 /*
 Sets the PDF version for this writer to version.
@@ -307,7 +307,7 @@ func (this *QPdfWriter) Resolution() int {
 // /usr/include/qt/QtGui/qpdfwriter.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setPageSize(enum QPagedPaintDevice::PageSize)
+// [-2] void setPageSize(QPagedPaintDevice::PageSize)
 
 /*
 Sets the PDF page size to pageSize.
@@ -361,7 +361,7 @@ func (this *QPdfWriter) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 // /usr/include/qt/QtGui/qpdfwriter.h:96
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
+// [4] int metric(QPaintDevice::PaintDeviceMetric) const
 
 /*
 

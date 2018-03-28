@@ -122,7 +122,7 @@ func NewQDnsLookup__() *QDnsLookup {
 // /usr/include/qt/QtNetwork/qdnslookup.h:222
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, QObject *)
+// [-2] void QDnsLookup(QDnsLookup::Type, const QString &, QObject *)
 
 /*
 Constructs a QDnsLookup object and sets parent as the parent object.
@@ -146,7 +146,7 @@ func NewQDnsLookup_1(type_ int, name string, parent qtcore.QObject_ITF /*777 QOb
 // /usr/include/qt/QtNetwork/qdnslookup.h:222
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, QObject *)
+// [-2] void QDnsLookup(QDnsLookup::Type, const QString &, QObject *)
 
 /*
 Constructs a QDnsLookup object and sets parent as the parent object.
@@ -168,7 +168,7 @@ func NewQDnsLookup_1_(type_ int, name string) *QDnsLookup {
 // /usr/include/qt/QtNetwork/qdnslookup.h:223
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
+// [-2] void QDnsLookup(QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
 
 /*
 Constructs a QDnsLookup object and sets parent as the parent object.
@@ -196,7 +196,7 @@ func NewQDnsLookup_2(type_ int, name string, nameserver QHostAddress_ITF, parent
 // /usr/include/qt/QtNetwork/qdnslookup.h:223
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QDnsLookup(enum QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
+// [-2] void QDnsLookup(QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
 
 /*
 Constructs a QDnsLookup object and sets parent as the parent object.
@@ -436,7 +436,7 @@ func (this *QDnsLookup) NameChanged(name string) {
 // /usr/include/qt/QtNetwork/qdnslookup.h:255
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void typeChanged(enum QDnsLookup::Type)
+// [-2] void typeChanged(QDnsLookup::Type)
 
 /*
 This signal is emitted when the lookup type changes. type is the new lookup type.

@@ -1109,7 +1109,6 @@ func (this *QFileInfo) OwnerId() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo7ownerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qfileinfo.h:124
@@ -1149,7 +1148,6 @@ func (this *QFileInfo) GroupId() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo7groupIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qfileinfo.h:127
@@ -1213,7 +1211,6 @@ func (this *QFileInfo) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qfileinfo.h:135
@@ -1351,7 +1348,7 @@ func (this *QFileInfo) Caching() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCaching(_Bool)
+// [-2] void setCaching(bool)
 
 /*
 If enable is true, enables caching of file information. If enable is false caching is disabled.

@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void draw(class QPainter *)
+// void draw(QPainter *)
 func (this *QGraphicsOpacityEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "draw", f)
 }

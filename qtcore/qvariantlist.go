@@ -117,7 +117,7 @@ func (this *QVariantList) IsDetached_0() bool {
 	return 0 == 0
 }
 
-// void setSharable(_Bool)
+// void setSharable(bool)
 func (this *QVariantList) SetSharable_0() {
 	// QVariantList_setSharable_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_setSharable_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -404,21 +404,21 @@ func (this *QVariantList) Crend_0() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// QList::iterator insert(class QList::iterator, const T &)
+// QList::iterator insert(QList::iterator, const T &)
 func (this *QVariantList) Insert_1() {
 	// QVariantList_insert_1()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_insert_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// QList::iterator erase(class QList::iterator)
+// QList::iterator erase(QList::iterator)
 func (this *QVariantList) Erase_0() {
 	// QVariantList_erase_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_erase_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// QList::iterator erase(class QList::iterator, class QList::iterator)
+// QList::iterator erase(QList::iterator, QList::iterator)
 func (this *QVariantList) Erase_1() {
 	// QVariantList_erase_1()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_erase_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -717,42 +717,42 @@ func (this *QVariantList) Detach_helper_1() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// void dealloc(struct QListData::Data *)
+// void dealloc(QListData::Data *)
 func (this *QVariantList) Dealloc_0() {
 	// QVariantList_dealloc_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_dealloc_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// void node_construct(struct QList::Node *, const T &)
+// void node_construct(QList::Node *, const T &)
 func (this *QVariantList) Node_construct_0() {
 	// QVariantList_node_construct_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_node_construct_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// void node_destruct(struct QList::Node *)
+// void node_destruct(QList::Node *)
 func (this *QVariantList) Node_destruct_0() {
 	// QVariantList_node_destruct_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_node_destruct_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// void node_copy(struct QList::Node *, struct QList::Node *, struct QList::Node *)
+// void node_copy(QList::Node *, QList::Node *, QList::Node *)
 func (this *QVariantList) Node_copy_0() {
 	// QVariantList_node_copy_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_node_copy_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// void node_destruct(struct QList::Node *, struct QList::Node *)
+// void node_destruct(QList::Node *, QList::Node *)
 func (this *QVariantList) Node_destruct_1() {
 	// QVariantList_node_destruct_1()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_node_destruct_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// bool isValidIterator(const class QList::iterator &)
+// bool isValidIterator(const QList::iterator &)
 func (this *QVariantList) IsValidIterator_0() bool {
 	// QVariantList_isValidIterator_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_isValidIterator_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -760,7 +760,7 @@ func (this *QVariantList) IsValidIterator_0() bool {
 	return 0 == 0
 }
 
-// bool op_eq_impl(const QList<T> &, struct QListData::NotArrayCompatibleLayout)
+// bool op_eq_impl(const QList<T> &, QListData::NotArrayCompatibleLayout)
 func (this *QVariantList) Op_eq_impl_0() bool {
 	// QVariantList_op_eq_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_op_eq_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -768,7 +768,7 @@ func (this *QVariantList) Op_eq_impl_0() bool {
 	return 0 == 0
 }
 
-// bool op_eq_impl(const QList<T> &, struct QListData::ArrayCompatibleLayout)
+// bool op_eq_impl(const QList<T> &, QListData::ArrayCompatibleLayout)
 func (this *QVariantList) Op_eq_impl_1() bool {
 	// QVariantList_op_eq_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_op_eq_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -776,7 +776,7 @@ func (this *QVariantList) Op_eq_impl_1() bool {
 	return 0 == 0
 }
 
-// bool contains_impl(const T &, struct QListData::NotArrayCompatibleLayout)
+// bool contains_impl(const T &, QListData::NotArrayCompatibleLayout)
 func (this *QVariantList) Contains_impl_0() bool {
 	// QVariantList_contains_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_contains_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -784,7 +784,7 @@ func (this *QVariantList) Contains_impl_0() bool {
 	return 0 == 0
 }
 
-// bool contains_impl(const T &, struct QListData::ArrayCompatibleLayout)
+// bool contains_impl(const T &, QListData::ArrayCompatibleLayout)
 func (this *QVariantList) Contains_impl_1() bool {
 	// QVariantList_contains_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_contains_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -792,7 +792,7 @@ func (this *QVariantList) Contains_impl_1() bool {
 	return 0 == 0
 }
 
-// int count_impl(const T &, struct QListData::NotArrayCompatibleLayout)
+// int count_impl(const T &, QListData::NotArrayCompatibleLayout)
 func (this *QVariantList) Count_impl_0() int {
 	// QVariantList_count_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_count_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -800,7 +800,7 @@ func (this *QVariantList) Count_impl_0() int {
 	return 0
 }
 
-// int count_impl(const T &, struct QListData::ArrayCompatibleLayout)
+// int count_impl(const T &, QListData::ArrayCompatibleLayout)
 func (this *QVariantList) Count_impl_1() int {
 	// QVariantList_count_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("QVariantList_count_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)

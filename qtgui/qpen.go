@@ -634,7 +634,7 @@ func (this *QPen) IsCosmetic() bool {
 // /usr/include/qt/QtGui/qpen.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCosmetic(_Bool)
+// [-2] void setCosmetic(bool)
 
 /*
 Sets this pen to cosmetic or non-cosmetic, depending on the value of cosmetic.

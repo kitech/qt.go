@@ -233,7 +233,7 @@ func (this *QStyle) Unpolish_1(application QApplication_ITF /*777 QApplication *
 // /usr/include/qt/QtWidgets/qstyle.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect itemTextRect(const QFontMetrics &, const QRect &, int, _Bool, const QString &) const
+// [16] QRect itemTextRect(const QFontMetrics &, const QRect &, int, bool, const QString &) const
 
 /*
 Returns the area within the given rectangle in which to draw the provided text according to the specified font metrics and alignment. The enabled parameter indicates whether or not the associated item is enabled.
@@ -287,7 +287,7 @@ func (this *QStyle) ItemPixmapRect(r qtcore.QRect_ITF, flags int, pixmap qtgui.Q
 // /usr/include/qt/QtWidgets/qstyle.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawItemText(QPainter *, const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole) const
+// [-2] void drawItemText(QPainter *, const QRect &, int, const QPalette &, bool, const QString &, QPalette::ColorRole) const
 
 /*
 Draws the given text in the specified rectangle using the provided painter and palette.
@@ -318,7 +318,7 @@ func (this *QStyle) DrawItemText(painter qtgui.QPainter_ITF /*777 QPainter **/, 
 // /usr/include/qt/QtWidgets/qstyle.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawItemText(QPainter *, const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole) const
+// [-2] void drawItemText(QPainter *, const QRect &, int, const QPalette &, bool, const QString &, QPalette::ColorRole) const
 
 /*
 Draws the given text in the specified rectangle using the provided painter and palette.
@@ -398,7 +398,7 @@ func (this *QStyle) StandardPalette() *qtgui.QPalette /*123*/ {
 // /usr/include/qt/QtWidgets/qstyle.h:204
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [-2] void drawPrimitive(enum QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
+// [-2] void drawPrimitive(QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
 Draws the given primitive element with the provided painter using the style options specified by option.
@@ -454,7 +454,7 @@ func (this *QStyle) DrawPrimitive(pe int, opt QStyleOption_ITF /*777 const QStyl
 // /usr/include/qt/QtWidgets/qstyle.h:204
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [-2] void drawPrimitive(enum QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
+// [-2] void drawPrimitive(QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
 Draws the given primitive element with the provided painter using the style options specified by option.
@@ -508,7 +508,7 @@ func (this *QStyle) DrawPrimitive__(pe int, opt QStyleOption_ITF /*777 const QSt
 // /usr/include/qt/QtWidgets/qstyle.h:275
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [-2] void drawControl(enum QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
+// [-2] void drawControl(QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
 Draws the given element with the provided painter with the style options specified by option.
@@ -578,7 +578,7 @@ func (this *QStyle) DrawControl(element int, opt QStyleOption_ITF /*777 const QS
 // /usr/include/qt/QtWidgets/qstyle.h:275
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [-2] void drawControl(enum QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
+// [-2] void drawControl(QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
 Draws the given element with the provided painter with the style options specified by option.
@@ -646,7 +646,7 @@ func (this *QStyle) DrawControl__(element int, opt QStyleOption_ITF /*777 const 
 // /usr/include/qt/QtWidgets/qstyle.h:364
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [16] QRect subElementRect(enum QStyle::SubElement, const QStyleOption *, const QWidget *) const
+// [16] QRect subElementRect(QStyle::SubElement, const QStyleOption *, const QWidget *) const
 
 /*
 Returns the sub-area for the given element as described in the provided style option. The returned rectangle is defined in screen coordinates.
@@ -687,7 +687,7 @@ func (this *QStyle) SubElementRect(subElement int, option QStyleOption_ITF /*777
 // /usr/include/qt/QtWidgets/qstyle.h:364
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [16] QRect subElementRect(enum QStyle::SubElement, const QStyleOption *, const QWidget *) const
+// [16] QRect subElementRect(QStyle::SubElement, const QStyleOption *, const QWidget *) const
 
 /*
 Returns the sub-area for the given element as described in the provided style option. The returned rectangle is defined in screen coordinates.
@@ -726,7 +726,7 @@ func (this *QStyle) SubElementRect__(subElement int, option QStyleOption_ITF /*7
 // /usr/include/qt/QtWidgets/qstyle.h:443
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [-2] void drawComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
+// [-2] void drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
 
 /*
 Draws the given control using the provided painter with the style options specified by option.
@@ -780,7 +780,7 @@ func (this *QStyle) DrawComplexControl(cc int, opt QStyleOptionComplex_ITF /*777
 // /usr/include/qt/QtWidgets/qstyle.h:443
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [-2] void drawComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
+// [-2] void drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
 
 /*
 Draws the given control using the provided painter with the style options specified by option.
@@ -832,7 +832,7 @@ func (this *QStyle) DrawComplexControl__(cc int, opt QStyleOptionComplex_ITF /*7
 // /usr/include/qt/QtWidgets/qstyle.h:445
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] QStyle::SubControl hitTestComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
+// [4] QStyle::SubControl hitTestComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
 
 /*
 Returns the sub control at the given position in the given complex control (with the style options specified by option).
@@ -864,7 +864,7 @@ func (this *QStyle) HitTestComplexControl(cc int, opt QStyleOptionComplex_ITF /*
 // /usr/include/qt/QtWidgets/qstyle.h:445
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] QStyle::SubControl hitTestComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
+// [4] QStyle::SubControl hitTestComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
 
 /*
 Returns the sub control at the given position in the given complex control (with the style options specified by option).
@@ -894,7 +894,7 @@ func (this *QStyle) HitTestComplexControl__(cc int, opt QStyleOptionComplex_ITF 
 // /usr/include/qt/QtWidgets/qstyle.h:447
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [16] QRect subControlRect(enum QStyle::ComplexControl, const QStyleOptionComplex *, enum QStyle::SubControl, const QWidget *) const
+// [16] QRect subControlRect(QStyle::ComplexControl, const QStyleOptionComplex *, QStyle::SubControl, const QWidget *) const
 
 /*
 Returns the rectangle containing the specified subControl of the given complex control (with the style specified by option). The rectangle is defined in screen coordinates.
@@ -922,7 +922,7 @@ func (this *QStyle) SubControlRect(cc int, opt QStyleOptionComplex_ITF /*777 con
 // /usr/include/qt/QtWidgets/qstyle.h:447
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [16] QRect subControlRect(enum QStyle::ComplexControl, const QStyleOptionComplex *, enum QStyle::SubControl, const QWidget *) const
+// [16] QRect subControlRect(QStyle::ComplexControl, const QStyleOptionComplex *, QStyle::SubControl, const QWidget *) const
 
 /*
 Returns the rectangle containing the specified subControl of the given complex control (with the style specified by option). The rectangle is defined in screen coordinates.
@@ -948,7 +948,7 @@ func (this *QStyle) SubControlRect__(cc int, opt QStyleOptionComplex_ITF /*777 c
 // /usr/include/qt/QtWidgets/qstyle.h:582
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
+// [4] int pixelMetric(QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
 
 /*
 Returns the value of the given pixel metric.
@@ -988,7 +988,7 @@ func (this *QStyle) PixelMetric(metric int, option QStyleOption_ITF /*777 const 
 // /usr/include/qt/QtWidgets/qstyle.h:582
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
+// [4] int pixelMetric(QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
 
 /*
 Returns the value of the given pixel metric.
@@ -1024,7 +1024,7 @@ func (this *QStyle) PixelMetric__(metric int) int {
 // /usr/include/qt/QtWidgets/qstyle.h:582
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
+// [4] int pixelMetric(QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
 
 /*
 Returns the value of the given pixel metric.
@@ -1062,7 +1062,7 @@ func (this *QStyle) PixelMetric__1(metric int, option QStyleOption_ITF /*777 con
 // /usr/include/qt/QtWidgets/qstyle.h:614
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSize sizeFromContents(enum QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *) const
+// [8] QSize sizeFromContents(QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *) const
 
 /*
 Returns the size of the element described by the specified option and type, based on the provided contentsSize.
@@ -1122,7 +1122,7 @@ func (this *QStyle) SizeFromContents(ct int, opt QStyleOption_ITF /*777 const QS
 // /usr/include/qt/QtWidgets/qstyle.h:614
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QSize sizeFromContents(enum QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *) const
+// [8] QSize sizeFromContents(QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *) const
 
 /*
 Returns the size of the element described by the specified option and type, based on the provided contentsSize.
@@ -1180,7 +1180,7 @@ func (this *QStyle) SizeFromContents__(ct int, opt QStyleOption_ITF /*777 const 
 // /usr/include/qt/QtWidgets/qstyle.h:748
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+// [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
 Returns an integer representing the specified style hint for the given widget described by the provided style option.
@@ -1208,7 +1208,7 @@ func (this *QStyle) StyleHint(stylehint int, opt QStyleOption_ITF /*777 const QS
 // /usr/include/qt/QtWidgets/qstyle.h:748
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+// [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
 Returns an integer representing the specified style hint for the given widget described by the provided style option.
@@ -1230,7 +1230,7 @@ func (this *QStyle) StyleHint__(stylehint int) int {
 // /usr/include/qt/QtWidgets/qstyle.h:748
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+// [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
 Returns an integer representing the specified style hint for the given widget described by the provided style option.
@@ -1254,7 +1254,7 @@ func (this *QStyle) StyleHint__1(stylehint int, opt QStyleOption_ITF /*777 const
 // /usr/include/qt/QtWidgets/qstyle.h:748
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+// [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
 Returns an integer representing the specified style hint for the given widget described by the provided style option.
@@ -1280,7 +1280,7 @@ func (this *QStyle) StyleHint__2(stylehint int, opt QStyleOption_ITF /*777 const
 // /usr/include/qt/QtWidgets/qstyle.h:828
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [32] QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+// [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
 
@@ -1304,7 +1304,7 @@ func (this *QStyle) StandardPixmap(standardPixmap int, opt QStyleOption_ITF /*77
 // /usr/include/qt/QtWidgets/qstyle.h:828
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [32] QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+// [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
 
@@ -1324,7 +1324,7 @@ func (this *QStyle) StandardPixmap__(standardPixmap int) *qtgui.QPixmap /*123*/ 
 // /usr/include/qt/QtWidgets/qstyle.h:828
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [32] QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+// [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
 
@@ -1346,7 +1346,7 @@ func (this *QStyle) StandardPixmap__1(standardPixmap int, opt QStyleOption_ITF /
 // /usr/include/qt/QtWidgets/qstyle.h:831
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+// [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
 Returns an icon for the given standardIcon.
@@ -1374,7 +1374,7 @@ func (this *QStyle) StandardIcon(standardIcon int, option QStyleOption_ITF /*777
 // /usr/include/qt/QtWidgets/qstyle.h:831
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+// [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
 Returns an icon for the given standardIcon.
@@ -1398,7 +1398,7 @@ func (this *QStyle) StandardIcon__(standardIcon int) *qtgui.QIcon /*123*/ {
 // /usr/include/qt/QtWidgets/qstyle.h:831
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+// [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
 Returns an icon for the given standardIcon.
@@ -1518,7 +1518,7 @@ func QStyle_VisualPos(direction int, boundingRect qtcore.QRect_ITF, logicalPos q
 // /usr/include/qt/QtWidgets/qstyle.h:841
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int sliderPositionFromValue(int, int, int, int, _Bool)
+// [4] int sliderPositionFromValue(int, int, int, int, bool)
 
 /*
 Converts the given logicalValue to a pixel position. The min parameter maps to 0, max maps to span and other values are distributed evenly in-between.
@@ -1543,7 +1543,7 @@ func QStyle_SliderPositionFromValue(min int, max int, val int, space int, upside
 // /usr/include/qt/QtWidgets/qstyle.h:841
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int sliderPositionFromValue(int, int, int, int, _Bool)
+// [4] int sliderPositionFromValue(int, int, int, int, bool)
 
 /*
 Converts the given logicalValue to a pixel position. The min parameter maps to 0, max maps to span and other values are distributed evenly in-between.
@@ -1565,7 +1565,7 @@ func (this *QStyle) SliderPositionFromValue__(min int, max int, val int, space i
 // /usr/include/qt/QtWidgets/qstyle.h:843
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int sliderValueFromPosition(int, int, int, int, _Bool)
+// [4] int sliderValueFromPosition(int, int, int, int, bool)
 
 /*
 Converts the given pixel position to a logical value. 0 maps to the min parameter, span maps to max and other values are distributed evenly in-between.
@@ -1590,7 +1590,7 @@ func QStyle_SliderValueFromPosition(min int, max int, pos int, space int, upside
 // /usr/include/qt/QtWidgets/qstyle.h:843
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int sliderValueFromPosition(int, int, int, int, _Bool)
+// [4] int sliderValueFromPosition(int, int, int, int, bool)
 
 /*
 Converts the given pixel position to a logical value. 0 maps to the min parameter, span maps to max and other values are distributed evenly in-between.

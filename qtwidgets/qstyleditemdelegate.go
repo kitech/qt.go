@@ -33,17 +33,17 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void initStyleOption(class QStyleOptionViewItem *, const class QModelIndex &)
+// void initStyleOption(QStyleOptionViewItem *, const QModelIndex &)
 func (this *QStyledItemDelegate) InheritInitStyleOption(f func(option *QStyleOptionViewItem /*777 QStyleOptionViewItem **/, index *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QStyledItemDelegate) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// bool editorEvent(class QEvent *, class QAbstractItemModel *, const class QStyleOptionViewItem &, const class QModelIndex &)
+// bool editorEvent(QEvent *, QAbstractItemModel *, const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QStyledItemDelegate) InheritEditorEvent(f func(event *qtcore.QEvent /*777 QEvent **/, model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex) bool) {
 	qtrt.SetAllInheritCallback(this, "editorEvent", f)
 }

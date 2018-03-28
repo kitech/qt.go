@@ -33,127 +33,127 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// QVariant itemChange(enum QGraphicsItem::GraphicsItemChange, const class QVariant &)
+// QVariant itemChange(QGraphicsItem::GraphicsItemChange, const QVariant &)
 func (this *QGraphicsProxyWidget) InheritItemChange(f func(change int, value *qtcore.QVariant) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "itemChange", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QGraphicsProxyWidget) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QGraphicsProxyWidget) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QGraphicsProxyWidget) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QGraphicsProxyWidget) InheritHideEvent(f func(event *qtgui.QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
-// void contextMenuEvent(class QGraphicsSceneContextMenuEvent *)
+// void contextMenuEvent(QGraphicsSceneContextMenuEvent *)
 func (this *QGraphicsProxyWidget) InheritContextMenuEvent(f func(event *QGraphicsSceneContextMenuEvent /*777 QGraphicsSceneContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// void dragEnterEvent(class QGraphicsSceneDragDropEvent *)
+// void dragEnterEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsProxyWidget) InheritDragEnterEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragEnterEvent", f)
 }
 
-// void dragLeaveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragLeaveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsProxyWidget) InheritDragLeaveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragLeaveEvent", f)
 }
 
-// void dragMoveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragMoveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsProxyWidget) InheritDragMoveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
-// void dropEvent(class QGraphicsSceneDragDropEvent *)
+// void dropEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsProxyWidget) InheritDropEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
 
-// void hoverEnterEvent(class QGraphicsSceneHoverEvent *)
+// void hoverEnterEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsProxyWidget) InheritHoverEnterEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverEnterEvent", f)
 }
 
-// void hoverLeaveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverLeaveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsProxyWidget) InheritHoverLeaveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverLeaveEvent", f)
 }
 
-// void hoverMoveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverMoveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsProxyWidget) InheritHoverMoveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverMoveEvent", f)
 }
 
-// void grabMouseEvent(class QEvent *)
+// void grabMouseEvent(QEvent *)
 func (this *QGraphicsProxyWidget) InheritGrabMouseEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "grabMouseEvent", f)
 }
 
-// void ungrabMouseEvent(class QEvent *)
+// void ungrabMouseEvent(QEvent *)
 func (this *QGraphicsProxyWidget) InheritUngrabMouseEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "ungrabMouseEvent", f)
 }
 
-// void mouseMoveEvent(class QGraphicsSceneMouseEvent *)
+// void mouseMoveEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsProxyWidget) InheritMouseMoveEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mousePressEvent(class QGraphicsSceneMouseEvent *)
+// void mousePressEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsProxyWidget) InheritMousePressEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QGraphicsSceneMouseEvent *)
+// void mouseReleaseEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsProxyWidget) InheritMouseReleaseEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QGraphicsSceneMouseEvent *)
+// void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsProxyWidget) InheritMouseDoubleClickEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// void wheelEvent(class QGraphicsSceneWheelEvent *)
+// void wheelEvent(QGraphicsSceneWheelEvent *)
 func (this *QGraphicsProxyWidget) InheritWheelEvent(f func(event *QGraphicsSceneWheelEvent /*777 QGraphicsSceneWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QGraphicsProxyWidget) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QGraphicsProxyWidget) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QGraphicsProxyWidget) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QGraphicsProxyWidget) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QGraphicsProxyWidget) InheritFocusNextPrevChild(f func(next bool) bool) {
 	qtrt.SetAllInheritCallback(this, "focusNextPrevChild", f)
 }
@@ -163,22 +163,22 @@ func (this *QGraphicsProxyWidget) InheritInputMethodQuery(f func(query int) unsa
 	qtrt.SetAllInheritCallback(this, "inputMethodQuery", f)
 }
 
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QGraphicsProxyWidget) InheritInputMethodEvent(f func(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
 
-// QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
+// QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsProxyWidget) InheritSizeHint(f func(which int, constraint *qtcore.QSizeF) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "sizeHint", f)
 }
 
-// void resizeEvent(class QGraphicsSceneResizeEvent *)
+// void resizeEvent(QGraphicsSceneResizeEvent *)
 func (this *QGraphicsProxyWidget) InheritResizeEvent(f func(event *QGraphicsSceneResizeEvent /*777 QGraphicsSceneResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// QGraphicsProxyWidget * newProxyWidget(const class QWidget *)
+// QGraphicsProxyWidget * newProxyWidget(const QWidget *)
 func (this *QGraphicsProxyWidget) InheritNewProxyWidget(f func(arg0 *QWidget /*777 const QWidget **/) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "newProxyWidget", f)
 }
@@ -461,7 +461,7 @@ func (this *QGraphicsProxyWidget) CreateProxyForChildWidget(child QWidget_ITF /*
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:76
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [16] QVariant itemChange(enum QGraphicsItem::GraphicsItemChange, const QVariant &)
+// [16] QVariant itemChange(QGraphicsItem::GraphicsItemChange, const QVariant &)
 
 /*
 Reimplemented from QGraphicsItem::itemChange().
@@ -878,7 +878,7 @@ func (this *QGraphicsProxyWidget) FocusOutEvent(event qtgui.QFocusEvent_ITF /*77
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:114
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool focusNextPrevChild(_Bool)
+// [1] bool focusNextPrevChild(bool)
 
 /*
 Reimplemented from QGraphicsWidget::focusNextPrevChild().

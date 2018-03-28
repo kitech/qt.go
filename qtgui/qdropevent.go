@@ -66,7 +66,7 @@ func (*QDropEvent) NewFromPointer(cthis unsafe.Pointer) *QDropEvent {
 // /usr/include/qt/QtGui/qevent.h:608
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QDropEvent(const QPointF &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
+// [-2] void QDropEvent(const QPointF &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, QEvent::Type)
 
 /*
 
@@ -90,7 +90,7 @@ func NewQDropEvent(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_IT
 // /usr/include/qt/QtGui/qevent.h:608
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QDropEvent(const QPointF &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
+// [-2] void QDropEvent(const QPointF &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, QEvent::Type)
 
 /*
 

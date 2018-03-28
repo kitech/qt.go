@@ -215,7 +215,7 @@ func NewQQmlComponent_2_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName stri
 // /usr/include/qt/QtQml/qqmlcomponent.h:83
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QQmlComponent(QQmlEngine *, const QString &, enum QQmlComponent::CompilationMode, QObject *)
+// [-2] void QQmlComponent(QQmlEngine *, const QString &, QQmlComponent::CompilationMode, QObject *)
 
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
@@ -241,7 +241,7 @@ func NewQQmlComponent_3(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName strin
 // /usr/include/qt/QtQml/qqmlcomponent.h:83
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QQmlComponent(QQmlEngine *, const QString &, enum QQmlComponent::CompilationMode, QObject *)
+// [-2] void QQmlComponent(QQmlEngine *, const QString &, QQmlComponent::CompilationMode, QObject *)
 
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
@@ -319,7 +319,7 @@ func NewQQmlComponent_4_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QU
 // /usr/include/qt/QtQml/qqmlcomponent.h:85
 // index:5
 // Public Visibility=Default Availability=Available
-// [-2] void QQmlComponent(QQmlEngine *, const QUrl &, enum QQmlComponent::CompilationMode, QObject *)
+// [-2] void QQmlComponent(QQmlEngine *, const QUrl &, QQmlComponent::CompilationMode, QObject *)
 
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
@@ -347,7 +347,7 @@ func NewQQmlComponent_5(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUr
 // /usr/include/qt/QtQml/qqmlcomponent.h:85
 // index:5
 // Public Visibility=Default Availability=Available
-// [-2] void QQmlComponent(QQmlEngine *, const QUrl &, enum QQmlComponent::CompilationMode, QObject *)
+// [-2] void QQmlComponent(QQmlEngine *, const QUrl &, QQmlComponent::CompilationMode, QObject *)
 
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
@@ -745,7 +745,7 @@ func (this *QQmlComponent) LoadUrl(url qtcore.QUrl_ITF) {
 // /usr/include/qt/QtQml/qqmlcomponent.h:117
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void loadUrl(const QUrl &, enum QQmlComponent::CompilationMode)
+// [-2] void loadUrl(const QUrl &, QQmlComponent::CompilationMode)
 
 /*
 Load the QQmlComponent from the provided url.

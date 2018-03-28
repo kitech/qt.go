@@ -66,7 +66,7 @@ func (*QTabletEvent) NewFromPointer(cthis unsafe.Pointer) *QTabletEvent {
 // /usr/include/qt/QtGui/qevent.h:250
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QTabletEvent(enum QEvent::Type, const QPointF &, const QPointF &, int, int, qreal, int, int, qreal, qreal, int, Qt::KeyboardModifiers, qint64)
+// [-2] void QTabletEvent(QEvent::Type, const QPointF &, const QPointF &, int, int, qreal, int, int, qreal, qreal, int, Qt::KeyboardModifiers, qint64)
 
 /*
 
@@ -90,7 +90,7 @@ func NewQTabletEvent(t int, pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF
 // /usr/include/qt/QtGui/qevent.h:254
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QTabletEvent(enum QEvent::Type, const QPointF &, const QPointF &, int, int, qreal, int, int, qreal, qreal, int, Qt::KeyboardModifiers, qint64, Qt::MouseButton, Qt::MouseButtons)
+// [-2] void QTabletEvent(QEvent::Type, const QPointF &, const QPointF &, int, int, qreal, int, int, qreal, qreal, int, Qt::KeyboardModifiers, qint64, Qt::MouseButton, Qt::MouseButtons)
 
 /*
 
@@ -314,7 +314,6 @@ func (this *QTabletEvent) UniqueId() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent8uniqueIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:279

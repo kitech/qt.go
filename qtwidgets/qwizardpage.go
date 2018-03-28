@@ -33,17 +33,17 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void setField(const class QString &, const class QVariant &)
+// void setField(const QString &, const QVariant &)
 func (this *QWizardPage) InheritSetField(f func(name string, value *qtcore.QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setField", f)
 }
 
-// QVariant field(const class QString &)
+// QVariant field(const QString &)
 func (this *QWizardPage) InheritField(f func(name string) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "field", f)
 }
 
-// void registerField(const class QString &, class QWidget *, const char *, const char *)
+// void registerField(const QString &, QWidget *, const char *, const char *)
 func (this *QWizardPage) InheritRegisterField(f func(name string, widget *QWidget /*777 QWidget **/, property string, changedSignal string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "registerField", f)
 }
@@ -261,7 +261,7 @@ func (this *QWizardPage) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 // /usr/include/qt/QtWidgets/qwizard.h:227
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFinalPage(_Bool)
+// [-2] void setFinalPage(bool)
 
 /*
 
@@ -288,7 +288,7 @@ func (this *QWizardPage) IsFinalPage() bool {
 // /usr/include/qt/QtWidgets/qwizard.h:229
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCommitPage(_Bool)
+// [-2] void setCommitPage(bool)
 
 /*
 

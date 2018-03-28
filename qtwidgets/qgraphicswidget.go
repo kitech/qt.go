@@ -33,12 +33,12 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void initStyleOption(class QStyleOption *)
+// void initStyleOption(QStyleOption *)
 func (this *QGraphicsWidget) InheritInitStyleOption(f func(option *QStyleOption /*777 QStyleOption **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
-// QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
+// QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsWidget) InheritSizeHint(f func(which int, constraint *qtcore.QSizeF) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "sizeHint", f)
 }
@@ -48,67 +48,67 @@ func (this *QGraphicsWidget) InheritUpdateGeometry(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateGeometry", f)
 }
 
-// QVariant itemChange(enum QGraphicsItem::GraphicsItemChange, const class QVariant &)
+// QVariant itemChange(QGraphicsItem::GraphicsItemChange, const QVariant &)
 func (this *QGraphicsWidget) InheritItemChange(f func(change int, value *qtcore.QVariant) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "itemChange", f)
 }
 
-// QVariant propertyChange(const class QString &, const class QVariant &)
+// QVariant propertyChange(const QString &, const QVariant &)
 func (this *QGraphicsWidget) InheritPropertyChange(f func(propertyName string, value *qtcore.QVariant) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "propertyChange", f)
 }
 
-// bool sceneEvent(class QEvent *)
+// bool sceneEvent(QEvent *)
 func (this *QGraphicsWidget) InheritSceneEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "sceneEvent", f)
 }
 
-// bool windowFrameEvent(class QEvent *)
+// bool windowFrameEvent(QEvent *)
 func (this *QGraphicsWidget) InheritWindowFrameEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "windowFrameEvent", f)
 }
 
-// Qt::WindowFrameSection windowFrameSectionAt(const class QPointF &)
+// Qt::WindowFrameSection windowFrameSectionAt(const QPointF &)
 func (this *QGraphicsWidget) InheritWindowFrameSectionAt(f func(pos *qtcore.QPointF) int) {
 	qtrt.SetAllInheritCallback(this, "windowFrameSectionAt", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QGraphicsWidget) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QGraphicsWidget) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void closeEvent(class QCloseEvent *)
+// void closeEvent(QCloseEvent *)
 func (this *QGraphicsWidget) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QGraphicsWidget) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QGraphicsWidget) InheritFocusNextPrevChild(f func(next bool) bool) {
 	qtrt.SetAllInheritCallback(this, "focusNextPrevChild", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QGraphicsWidget) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QGraphicsWidget) InheritHideEvent(f func(event *qtgui.QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
-// void moveEvent(class QGraphicsSceneMoveEvent *)
+// void moveEvent(QGraphicsSceneMoveEvent *)
 func (this *QGraphicsWidget) InheritMoveEvent(f func(event *QGraphicsSceneMoveEvent /*777 QGraphicsSceneMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "moveEvent", f)
 }
@@ -118,42 +118,42 @@ func (this *QGraphicsWidget) InheritPolishEvent(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "polishEvent", f)
 }
 
-// void resizeEvent(class QGraphicsSceneResizeEvent *)
+// void resizeEvent(QGraphicsSceneResizeEvent *)
 func (this *QGraphicsWidget) InheritResizeEvent(f func(event *QGraphicsSceneResizeEvent /*777 QGraphicsSceneResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QGraphicsWidget) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void hoverMoveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverMoveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsWidget) InheritHoverMoveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverMoveEvent", f)
 }
 
-// void hoverLeaveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverLeaveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsWidget) InheritHoverLeaveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverLeaveEvent", f)
 }
 
-// void grabMouseEvent(class QEvent *)
+// void grabMouseEvent(QEvent *)
 func (this *QGraphicsWidget) InheritGrabMouseEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "grabMouseEvent", f)
 }
 
-// void ungrabMouseEvent(class QEvent *)
+// void ungrabMouseEvent(QEvent *)
 func (this *QGraphicsWidget) InheritUngrabMouseEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "ungrabMouseEvent", f)
 }
 
-// void grabKeyboardEvent(class QEvent *)
+// void grabKeyboardEvent(QEvent *)
 func (this *QGraphicsWidget) InheritGrabKeyboardEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "grabKeyboardEvent", f)
 }
 
-// void ungrabKeyboardEvent(class QEvent *)
+// void ungrabKeyboardEvent(QEvent *)
 func (this *QGraphicsWidget) InheritUngrabKeyboardEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "ungrabKeyboardEvent", f)
 }
@@ -502,7 +502,7 @@ func (this *QGraphicsWidget) AutoFillBackground() bool {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoFillBackground(_Bool)
+// [-2] void setAutoFillBackground(bool)
 
 /*
 
@@ -987,7 +987,7 @@ func (this *QGraphicsWidget) ReleaseShortcut(id int) {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShortcutEnabled(int, _Bool)
+// [-2] void setShortcutEnabled(int, bool)
 
 /*
 If enabled is true, the shortcut with the given id is enabled; otherwise the shortcut is disabled.
@@ -1006,7 +1006,7 @@ func (this *QGraphicsWidget) SetShortcutEnabled(id int, enabled bool) {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShortcutEnabled(int, _Bool)
+// [-2] void setShortcutEnabled(int, bool)
 
 /*
 If enabled is true, the shortcut with the given id is enabled; otherwise the shortcut is disabled.
@@ -1027,7 +1027,7 @@ func (this *QGraphicsWidget) SetShortcutEnabled__(id int) {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShortcutAutoRepeat(int, _Bool)
+// [-2] void setShortcutAutoRepeat(int, bool)
 
 /*
 If enabled is true, auto repeat of the shortcut with the given id is enabled; otherwise it is disabled.
@@ -1044,7 +1044,7 @@ func (this *QGraphicsWidget) SetShortcutAutoRepeat(id int, enabled bool) {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShortcutAutoRepeat(int, _Bool)
+// [-2] void setShortcutAutoRepeat(int, bool)
 
 /*
 If enabled is true, auto repeat of the shortcut with the given id is enabled; otherwise it is disabled.
@@ -1136,7 +1136,7 @@ func (this *QGraphicsWidget) RemoveAction(action QAction_ITF /*777 QAction **/) 
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:158
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAttribute(Qt::WidgetAttribute, _Bool)
+// [-2] void setAttribute(Qt::WidgetAttribute, bool)
 
 /*
 If on is true, this function enables attribute; otherwise attribute is disabled.
@@ -1153,7 +1153,7 @@ func (this *QGraphicsWidget) SetAttribute(attribute int, on bool) {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:158
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAttribute(Qt::WidgetAttribute, _Bool)
+// [-2] void setAttribute(Qt::WidgetAttribute, bool)
 
 /*
 If on is true, this function enables attribute; otherwise attribute is disabled.
@@ -1488,7 +1488,7 @@ func (this *QGraphicsWidget) UpdateGeometry() {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:191
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [16] QVariant itemChange(enum QGraphicsItem::GraphicsItemChange, const QVariant &)
+// [16] QVariant itemChange(QGraphicsItem::GraphicsItemChange, const QVariant &)
 
 /*
 Reimplemented from QGraphicsItem::itemChange().
@@ -1703,7 +1703,7 @@ func (this *QGraphicsWidget) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFoc
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:207
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool focusNextPrevChild(_Bool)
+// [1] bool focusNextPrevChild(bool)
 
 /*
 Finds a new widget to give the keyboard focus to, as appropriate for Tab and Shift+Tab, and returns true if it can find a new widget; returns false otherwise. If next is true, this function searches forward; if next is false, it searches backward.

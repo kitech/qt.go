@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QProxyStyle) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -202,7 +202,7 @@ func (this *QProxyStyle) SetBaseStyle(style QStyle_ITF /*777 QStyle **/) {
 // /usr/include/qt/QtWidgets/qproxystyle.h:64
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawPrimitive(enum QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
+// [-2] void drawPrimitive(QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::drawPrimitive().
@@ -227,7 +227,7 @@ func (this *QProxyStyle) DrawPrimitive(element int, option QStyleOption_ITF /*77
 // /usr/include/qt/QtWidgets/qproxystyle.h:64
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawPrimitive(enum QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
+// [-2] void drawPrimitive(QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::drawPrimitive().
@@ -250,7 +250,7 @@ func (this *QProxyStyle) DrawPrimitive__(element int, option QStyleOption_ITF /*
 // /usr/include/qt/QtWidgets/qproxystyle.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawControl(enum QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
+// [-2] void drawControl(QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::drawControl().
@@ -275,7 +275,7 @@ func (this *QProxyStyle) DrawControl(element int, option QStyleOption_ITF /*777 
 // /usr/include/qt/QtWidgets/qproxystyle.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawControl(enum QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
+// [-2] void drawControl(QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::drawControl().
@@ -298,7 +298,7 @@ func (this *QProxyStyle) DrawControl__(element int, option QStyleOption_ITF /*77
 // /usr/include/qt/QtWidgets/qproxystyle.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
+// [-2] void drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::drawComplexControl().
@@ -323,7 +323,7 @@ func (this *QProxyStyle) DrawComplexControl(control int, option QStyleOptionComp
 // /usr/include/qt/QtWidgets/qproxystyle.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
+// [-2] void drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::drawComplexControl().
@@ -346,7 +346,7 @@ func (this *QProxyStyle) DrawComplexControl__(control int, option QStyleOptionCo
 // /usr/include/qt/QtWidgets/qproxystyle.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawItemText(QPainter *, const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole) const
+// [-2] void drawItemText(QPainter *, const QRect &, int, const QPalette &, bool, const QString &, QPalette::ColorRole) const
 
 /*
 Reimplemented from QStyle::drawItemText().
@@ -373,7 +373,7 @@ func (this *QProxyStyle) DrawItemText(painter qtgui.QPainter_ITF /*777 QPainter 
 // /usr/include/qt/QtWidgets/qproxystyle.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void drawItemText(QPainter *, const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole) const
+// [-2] void drawItemText(QPainter *, const QRect &, int, const QPalette &, bool, const QString &, QPalette::ColorRole) const
 
 /*
 Reimplemented from QStyle::drawItemText().
@@ -427,7 +427,7 @@ func (this *QProxyStyle) DrawItemPixmap(painter qtgui.QPainter_ITF /*777 QPainte
 // /usr/include/qt/QtWidgets/qproxystyle.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QSize sizeFromContents(enum QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *) const
+// [8] QSize sizeFromContents(QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *) const
 
 /*
 Reimplemented from QStyle::sizeFromContents().
@@ -455,7 +455,7 @@ func (this *QProxyStyle) SizeFromContents(type_ int, option QStyleOption_ITF /*7
 // /usr/include/qt/QtWidgets/qproxystyle.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect subElementRect(enum QStyle::SubElement, const QStyleOption *, const QWidget *) const
+// [16] QRect subElementRect(QStyle::SubElement, const QStyleOption *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::subElementRect().
@@ -479,7 +479,7 @@ func (this *QProxyStyle) SubElementRect(element int, option QStyleOption_ITF /*7
 // /usr/include/qt/QtWidgets/qproxystyle.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect subControlRect(enum QStyle::ComplexControl, const QStyleOptionComplex *, enum QStyle::SubControl, const QWidget *) const
+// [16] QRect subControlRect(QStyle::ComplexControl, const QStyleOptionComplex *, QStyle::SubControl, const QWidget *) const
 
 /*
 Reimplemented from QStyle::subControlRect().
@@ -503,7 +503,7 @@ func (this *QProxyStyle) SubControlRect(cc int, opt QStyleOptionComplex_ITF /*77
 // /usr/include/qt/QtWidgets/qproxystyle.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [16] QRect itemTextRect(const QFontMetrics &, const QRect &, int, _Bool, const QString &) const
+// [16] QRect itemTextRect(const QFontMetrics &, const QRect &, int, bool, const QString &) const
 
 /*
 Reimplemented from QStyle::itemTextRect().
@@ -553,7 +553,7 @@ func (this *QProxyStyle) ItemPixmapRect(r qtcore.QRect_ITF, flags int, pixmap qt
 // /usr/include/qt/QtWidgets/qproxystyle.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QStyle::SubControl hitTestComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
+// [4] QStyle::SubControl hitTestComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
 
 /*
 Reimplemented from QStyle::hitTestComplexControl().
@@ -579,7 +579,7 @@ func (this *QProxyStyle) HitTestComplexControl(control int, option QStyleOptionC
 // /usr/include/qt/QtWidgets/qproxystyle.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] QStyle::SubControl hitTestComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
+// [4] QStyle::SubControl hitTestComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
 
 /*
 Reimplemented from QStyle::hitTestComplexControl().
@@ -603,7 +603,7 @@ func (this *QProxyStyle) HitTestComplexControl__(control int, option QStyleOptio
 // /usr/include/qt/QtWidgets/qproxystyle.h:79
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+// [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
 Reimplemented from QStyle::styleHint().
@@ -629,7 +629,7 @@ func (this *QProxyStyle) StyleHint(hint int, option QStyleOption_ITF /*777 const
 // /usr/include/qt/QtWidgets/qproxystyle.h:79
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+// [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
 Reimplemented from QStyle::styleHint().
@@ -649,7 +649,7 @@ func (this *QProxyStyle) StyleHint__(hint int) int {
 // /usr/include/qt/QtWidgets/qproxystyle.h:79
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+// [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
 Reimplemented from QStyle::styleHint().
@@ -671,7 +671,7 @@ func (this *QProxyStyle) StyleHint__1(hint int, option QStyleOption_ITF /*777 co
 // /usr/include/qt/QtWidgets/qproxystyle.h:79
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
+// [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
 Reimplemented from QStyle::styleHint().
@@ -695,7 +695,7 @@ func (this *QProxyStyle) StyleHint__2(hint int, option QStyleOption_ITF /*777 co
 // /usr/include/qt/QtWidgets/qproxystyle.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
+// [4] int pixelMetric(QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::pixelMetric().
@@ -717,7 +717,7 @@ func (this *QProxyStyle) PixelMetric(metric int, option QStyleOption_ITF /*777 c
 // /usr/include/qt/QtWidgets/qproxystyle.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
+// [4] int pixelMetric(QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::pixelMetric().
@@ -735,7 +735,7 @@ func (this *QProxyStyle) PixelMetric__(metric int) int {
 // /usr/include/qt/QtWidgets/qproxystyle.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [4] int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
+// [4] int pixelMetric(QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::pixelMetric().
@@ -833,7 +833,7 @@ func (this *QProxyStyle) LayoutSpacing__1(control1 int, control2 int, orientatio
 // /usr/include/qt/QtWidgets/qproxystyle.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+// [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::standardIcon().
@@ -861,7 +861,7 @@ func (this *QProxyStyle) StandardIcon(standardIcon int, option QStyleOption_ITF 
 // /usr/include/qt/QtWidgets/qproxystyle.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+// [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::standardIcon().
@@ -885,7 +885,7 @@ func (this *QProxyStyle) StandardIcon__(standardIcon int) *qtgui.QIcon /*123*/ {
 // /usr/include/qt/QtWidgets/qproxystyle.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+// [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::standardIcon().
@@ -911,7 +911,7 @@ func (this *QProxyStyle) StandardIcon__1(standardIcon int, option QStyleOption_I
 // /usr/include/qt/QtWidgets/qproxystyle.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+// [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::standardPixmap().
@@ -935,7 +935,7 @@ func (this *QProxyStyle) StandardPixmap(standardPixmap int, opt QStyleOption_ITF
 // /usr/include/qt/QtWidgets/qproxystyle.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [32] QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
+// [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
 Reimplemented from QStyle::standardPixmap().

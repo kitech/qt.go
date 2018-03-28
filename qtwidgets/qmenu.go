@@ -38,77 +38,77 @@ func (this *QMenu) InheritColumnCount(f func() int) {
 	qtrt.SetAllInheritCallback(this, "columnCount", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QMenu) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QMenu) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QMenu) InheritMouseReleaseEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QMenu) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QMenu) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QMenu) InheritWheelEvent(f func(arg0 *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void enterEvent(class QEvent *)
+// void enterEvent(QEvent *)
 func (this *QMenu) InheritEnterEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "enterEvent", f)
 }
 
-// void leaveEvent(class QEvent *)
+// void leaveEvent(QEvent *)
 func (this *QMenu) InheritLeaveEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "leaveEvent", f)
 }
 
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QMenu) InheritHideEvent(f func(arg0 *qtgui.QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QMenu) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void actionEvent(class QActionEvent *)
+// void actionEvent(QActionEvent *)
 func (this *QMenu) InheritActionEvent(f func(arg0 *qtgui.QActionEvent /*777 QActionEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "actionEvent", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QMenu) InheritTimerEvent(f func(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QMenu) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QMenu) InheritFocusNextPrevChild(f func(next bool) bool) {
 	qtrt.SetAllInheritCallback(this, "focusNextPrevChild", f)
 }
 
-// void initStyleOption(class QStyleOptionMenuItem *, const class QAction *)
+// void initStyleOption(QStyleOptionMenuItem *, const QAction *)
 func (this *QMenu) InheritInitStyleOption(f func(option *QStyleOptionMenuItem /*777 QStyleOptionMenuItem **/, action *QAction /*777 const QAction **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -713,7 +713,7 @@ func (this *QMenu) Clear() {
 // /usr/include/qt/QtWidgets/qmenu.h:173
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTearOffEnabled(_Bool)
+// [-2] void setTearOffEnabled(bool)
 
 /*
 
@@ -1216,7 +1216,7 @@ func (this *QMenu) SeparatorsCollapsible() bool {
 // /usr/include/qt/QtWidgets/qmenu.h:220
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSeparatorsCollapsible(_Bool)
+// [-2] void setSeparatorsCollapsible(bool)
 
 /*
 
@@ -1243,7 +1243,7 @@ func (this *QMenu) ToolTipsVisible() bool {
 // /usr/include/qt/QtWidgets/qmenu.h:223
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setToolTipsVisible(_Bool)
+// [-2] void setToolTipsVisible(bool)
 
 /*
 
@@ -1572,7 +1572,7 @@ func (this *QMenu) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qmenu.h:249
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool focusNextPrevChild(_Bool)
+// [1] bool focusNextPrevChild(bool)
 
 /*
 Reimplemented from QWidget::focusNextPrevChild().

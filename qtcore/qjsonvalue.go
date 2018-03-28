@@ -67,7 +67,7 @@ func (*QJsonValue) NewFromPointer(cthis unsafe.Pointer) *QJsonValue {
 // /usr/include/qt/QtCore/qjsonvalue.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QJsonValue(enum QJsonValue::Type)
+// [-2] void QJsonValue(QJsonValue::Type)
 
 /*
 Creates a QJsonValue of type type.
@@ -85,7 +85,7 @@ func NewQJsonValue(arg0 int) *QJsonValue {
 // /usr/include/qt/QtCore/qjsonvalue.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QJsonValue(enum QJsonValue::Type)
+// [-2] void QJsonValue(QJsonValue::Type)
 
 /*
 Creates a QJsonValue of type type.
@@ -105,7 +105,7 @@ func NewQJsonValue__() *QJsonValue {
 // /usr/include/qt/QtCore/qjsonvalue.h:77
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QJsonValue(_Bool)
+// [-2] void QJsonValue(bool)
 
 /*
 Creates a QJsonValue of type type.
@@ -573,7 +573,7 @@ func (this *QJsonValue) IsUndefined() bool {
 // /usr/include/qt/QtCore/qjsonvalue.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool toBool(_Bool) const
+// [1] bool toBool(bool) const
 
 /*
 Converts the value to a bool and returns it.
@@ -589,7 +589,7 @@ func (this *QJsonValue) ToBool(defaultValue bool) bool {
 // /usr/include/qt/QtCore/qjsonvalue.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool toBool(_Bool) const
+// [1] bool toBool(bool) const
 
 /*
 Converts the value to a bool and returns it.

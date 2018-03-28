@@ -195,7 +195,6 @@ func (this *QDnsMailExchangeRecord) Preference() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord10preferenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:124
@@ -210,7 +209,6 @@ func (this *QDnsMailExchangeRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 //  body block end

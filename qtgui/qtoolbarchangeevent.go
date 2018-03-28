@@ -66,7 +66,7 @@ func (*QToolBarChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QToolBarChange
 // /usr/include/qt/QtGui/qevent.h:754
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QToolBarChangeEvent(_Bool)
+// [-2] void QToolBarChangeEvent(bool)
 
 /*
 

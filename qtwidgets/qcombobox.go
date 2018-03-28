@@ -33,77 +33,77 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QComboBox) InheritFocusInEvent(f func(e *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QComboBox) InheritFocusOutEvent(f func(e *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QComboBox) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QComboBox) InheritResizeEvent(f func(e *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QComboBox) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QComboBox) InheritShowEvent(f func(e *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QComboBox) InheritHideEvent(f func(e *qtgui.QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QComboBox) InheritMousePressEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QComboBox) InheritMouseReleaseEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QComboBox) InheritKeyPressEvent(f func(e *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QComboBox) InheritKeyReleaseEvent(f func(e *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QComboBox) InheritWheelEvent(f func(e *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QComboBox) InheritContextMenuEvent(f func(e *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QComboBox) InheritInputMethodEvent(f func(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionComboBox *)
+// void initStyleOption(QStyleOptionComboBox *)
 func (this *QComboBox) InheritInitStyleOption(f func(option *QStyleOptionComboBox /*777 QStyleOptionComboBox **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -291,7 +291,7 @@ func (this *QComboBox) AutoCompletion() bool {
 // /usr/include/qt/QtWidgets/qcombobox.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoCompletion(_Bool)
+// [-2] void setAutoCompletion(bool)
 
 /*
 
@@ -345,7 +345,7 @@ func (this *QComboBox) DuplicatesEnabled() bool {
 // /usr/include/qt/QtWidgets/qcombobox.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDuplicatesEnabled(_Bool)
+// [-2] void setDuplicatesEnabled(bool)
 
 /*
 
@@ -358,7 +358,7 @@ func (this *QComboBox) SetDuplicatesEnabled(enable bool) {
 // /usr/include/qt/QtWidgets/qcombobox.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFrame(_Bool)
+// [-2] void setFrame(bool)
 
 /*
 
@@ -503,7 +503,7 @@ func (this *QComboBox) InsertPolicy() int {
 // /usr/include/qt/QtWidgets/qcombobox.h:127
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setInsertPolicy(enum QComboBox::InsertPolicy)
+// [-2] void setInsertPolicy(QComboBox::InsertPolicy)
 
 /*
 
@@ -530,7 +530,7 @@ func (this *QComboBox) SizeAdjustPolicy() int {
 // /usr/include/qt/QtWidgets/qcombobox.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSizeAdjustPolicy(enum QComboBox::SizeAdjustPolicy)
+// [-2] void setSizeAdjustPolicy(QComboBox::SizeAdjustPolicy)
 
 /*
 
@@ -617,7 +617,7 @@ func (this *QComboBox) IsEditable() bool {
 // /usr/include/qt/QtWidgets/qcombobox.h:145
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEditable(_Bool)
+// [-2] void setEditable(bool)
 
 /*
 

@@ -110,7 +110,6 @@ func (this *QLatin1Char) Unicode() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLatin1Char7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 func DeleteQLatin1Char(this *QLatin1Char) {

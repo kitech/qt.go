@@ -264,7 +264,7 @@ func (this *QNetworkCookie) IsSecure() bool {
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSecure(_Bool)
+// [-2] void setSecure(bool)
 
 /*
 Sets the secure flag of this cookie to enable.
@@ -301,7 +301,7 @@ func (this *QNetworkCookie) IsHttpOnly() bool {
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHttpOnly(_Bool)
+// [-2] void setHttpOnly(bool)
 
 /*
 Sets this cookie's "HttpOnly" flag to enable.
@@ -523,7 +523,7 @@ func (this *QNetworkCookie) SetValue(value qtcore.QByteArray_ITF) {
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toRawForm(enum QNetworkCookie::RawForm) const
+// [8] QByteArray toRawForm(QNetworkCookie::RawForm) const
 
 /*
 Returns the raw form of this QNetworkCookie. The QByteArray returned by this function is suitable for an HTTP header, either in a server response (the Set-Cookie header) or the client request (the Cookie header). You can choose from one of two formats, using form.
@@ -541,7 +541,7 @@ func (this *QNetworkCookie) ToRawForm(form int) *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QByteArray toRawForm(enum QNetworkCookie::RawForm) const
+// [8] QByteArray toRawForm(QNetworkCookie::RawForm) const
 
 /*
 Returns the raw form of this QNetworkCookie. The QByteArray returned by this function is suitable for an HTTP header, either in a server response (the Set-Cookie header) or the client request (the Cookie header). You can choose from one of two formats, using form.

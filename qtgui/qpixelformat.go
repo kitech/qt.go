@@ -84,7 +84,7 @@ func NewQPixelFormat() *QPixelFormat {
 // /usr/include/qt/QtGui/qpixelformat.h:164
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void QPixelFormat(enum QPixelFormat::ColorModel, uchar, uchar, uchar, uchar, uchar, uchar, enum QPixelFormat::AlphaUsage, enum QPixelFormat::AlphaPosition, enum QPixelFormat::AlphaPremultiplied, enum QPixelFormat::TypeInterpretation, enum QPixelFormat::ByteOrder, uchar)
+// [-2] void QPixelFormat(QPixelFormat::ColorModel, uchar, uchar, uchar, uchar, uchar, uchar, QPixelFormat::AlphaUsage, QPixelFormat::AlphaPosition, QPixelFormat::AlphaPremultiplied, QPixelFormat::TypeInterpretation, QPixelFormat::ByteOrder, uchar)
 
 /*
 Creates a null pixelformat. This format maps to QImage::Format_Invalid.
@@ -100,7 +100,7 @@ func NewQPixelFormat_1(colorModel int, firstSize byte, secondSize byte, thirdSiz
 // /usr/include/qt/QtGui/qpixelformat.h:164
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void QPixelFormat(enum QPixelFormat::ColorModel, uchar, uchar, uchar, uchar, uchar, uchar, enum QPixelFormat::AlphaUsage, enum QPixelFormat::AlphaPosition, enum QPixelFormat::AlphaPremultiplied, enum QPixelFormat::TypeInterpretation, enum QPixelFormat::ByteOrder, uchar)
+// [-2] void QPixelFormat(QPixelFormat::ColorModel, uchar, uchar, uchar, uchar, uchar, uchar, QPixelFormat::AlphaUsage, QPixelFormat::AlphaPosition, QPixelFormat::AlphaPremultiplied, QPixelFormat::TypeInterpretation, QPixelFormat::ByteOrder, uchar)
 
 /*
 Creates a null pixelformat. This format maps to QImage::Format_Invalid.
@@ -120,7 +120,7 @@ func NewQPixelFormat_1_(colorModel int, firstSize byte, secondSize byte, thirdSi
 // /usr/include/qt/QtGui/qpixelformat.h:164
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void QPixelFormat(enum QPixelFormat::ColorModel, uchar, uchar, uchar, uchar, uchar, uchar, enum QPixelFormat::AlphaUsage, enum QPixelFormat::AlphaPosition, enum QPixelFormat::AlphaPremultiplied, enum QPixelFormat::TypeInterpretation, enum QPixelFormat::ByteOrder, uchar)
+// [-2] void QPixelFormat(QPixelFormat::ColorModel, uchar, uchar, uchar, uchar, uchar, uchar, QPixelFormat::AlphaUsage, QPixelFormat::AlphaPosition, QPixelFormat::AlphaPremultiplied, QPixelFormat::TypeInterpretation, QPixelFormat::ByteOrder, uchar)
 
 /*
 Creates a null pixelformat. This format maps to QImage::Format_Invalid.
@@ -161,7 +161,6 @@ func (this *QPixelFormat) ChannelCount() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat12channelCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:186
@@ -176,7 +175,6 @@ func (this *QPixelFormat) RedSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat7redSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:187
@@ -191,7 +189,6 @@ func (this *QPixelFormat) GreenSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat9greenSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:188
@@ -206,7 +203,6 @@ func (this *QPixelFormat) BlueSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat8blueSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:190
@@ -221,7 +217,6 @@ func (this *QPixelFormat) CyanSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat8cyanSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:191
@@ -236,7 +231,6 @@ func (this *QPixelFormat) MagentaSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat11magentaSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:192
@@ -251,7 +245,6 @@ func (this *QPixelFormat) YellowSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat10yellowSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:193
@@ -266,7 +259,6 @@ func (this *QPixelFormat) BlackSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat9blackSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:195
@@ -281,7 +273,6 @@ func (this *QPixelFormat) HueSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat7hueSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:196
@@ -296,7 +287,6 @@ func (this *QPixelFormat) SaturationSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat14saturationSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:197
@@ -311,7 +301,6 @@ func (this *QPixelFormat) LightnessSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat13lightnessSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:198
@@ -326,7 +315,6 @@ func (this *QPixelFormat) BrightnessSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat14brightnessSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:200
@@ -341,7 +329,6 @@ func (this *QPixelFormat) AlphaSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat9alphaSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:202
@@ -356,7 +343,6 @@ func (this *QPixelFormat) BitsPerPixel() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat12bitsPerPixelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:209
@@ -457,7 +443,6 @@ func (this *QPixelFormat) SubEnum() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat7subEnumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 func DeleteQPixelFormat(this *QPixelFormat) {

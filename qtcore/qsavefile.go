@@ -280,7 +280,7 @@ func (this *QSaveFile) CancelWriting() {
 // /usr/include/qt/QtCore/qsavefile.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDirectWriteFallback(_Bool)
+// [-2] void setDirectWriteFallback(bool)
 
 /*
 Allows writing over the existing file if necessary.
@@ -328,7 +328,6 @@ func (this *QSaveFile) WriteData(data string, len_ int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFile9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 //  body block end

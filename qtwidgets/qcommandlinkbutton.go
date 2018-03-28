@@ -48,12 +48,12 @@ func (this *QCommandLinkButton) InheritMinimumSizeHint(f func() unsafe.Pointer) 
 	qtrt.SetAllInheritCallback(this, "minimumSizeHint", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QCommandLinkButton) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QCommandLinkButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }

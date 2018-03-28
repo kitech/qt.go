@@ -226,7 +226,7 @@ func (this *QGesture) UnsetHotSpot() {
 // /usr/include/qt/QtWidgets/qgesture.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setGestureCancelPolicy(enum QGesture::GestureCancelPolicy)
+// [-2] void setGestureCancelPolicy(QGesture::GestureCancelPolicy)
 
 /*
 

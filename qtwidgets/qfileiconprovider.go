@@ -100,7 +100,7 @@ func DeleteQFileIconProvider(this *QFileIconProvider) {
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [8] QIcon icon(enum QFileIconProvider::IconType) const
+// [8] QIcon icon(QFileIconProvider::IconType) const
 
 /*
 Returns an icon set for the given type.

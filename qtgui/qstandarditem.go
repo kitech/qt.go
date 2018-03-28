@@ -32,7 +32,7 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// QStandardItem & operator=(const class QStandardItem &)
+// QStandardItem & operator=(const QStandardItem &)
 func (this *QStandardItem) InheritOperator_equal(f func(other *QStandardItem) unsafe.Pointer /*555*/) {
 	qtrt.SetAllInheritCallback(this, "operator=", f)
 }
@@ -713,7 +713,7 @@ func (this *QStandardItem) IsEnabled() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:151
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(_Bool)
+// [-2] void setEnabled(bool)
 
 /*
 
@@ -740,7 +740,7 @@ func (this *QStandardItem) IsEditable() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:156
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEditable(_Bool)
+// [-2] void setEditable(bool)
 
 /*
 
@@ -767,7 +767,7 @@ func (this *QStandardItem) IsSelectable() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:161
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSelectable(_Bool)
+// [-2] void setSelectable(bool)
 
 /*
 
@@ -794,7 +794,7 @@ func (this *QStandardItem) IsCheckable() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:166
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCheckable(_Bool)
+// [-2] void setCheckable(bool)
 
 /*
 
@@ -821,7 +821,7 @@ func (this *QStandardItem) IsAutoTristate() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:171
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoTristate(_Bool)
+// [-2] void setAutoTristate(bool)
 
 /*
 
@@ -848,7 +848,7 @@ func (this *QStandardItem) IsUserTristate() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:176
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUserTristate(_Bool)
+// [-2] void setUserTristate(bool)
 
 /*
 
@@ -875,7 +875,7 @@ func (this *QStandardItem) IsTristate() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:180
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTristate(_Bool)
+// [-2] void setTristate(bool)
 
 /*
 
@@ -902,7 +902,7 @@ func (this *QStandardItem) IsDragEnabled() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:187
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDragEnabled(_Bool)
+// [-2] void setDragEnabled(bool)
 
 /*
 
@@ -929,7 +929,7 @@ func (this *QStandardItem) IsDropEnabled() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:192
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDropEnabled(_Bool)
+// [-2] void setDropEnabled(bool)
 
 /*
 

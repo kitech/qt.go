@@ -33,102 +33,102 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QMdiSubWindow) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QMdiSubWindow) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QMdiSubWindow) InheritShowEvent(f func(showEvent *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QMdiSubWindow) InheritHideEvent(f func(hideEvent *qtgui.QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QMdiSubWindow) InheritChangeEvent(f func(changeEvent *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void closeEvent(class QCloseEvent *)
+// void closeEvent(QCloseEvent *)
 func (this *QMdiSubWindow) InheritCloseEvent(f func(closeEvent *qtgui.QCloseEvent /*777 QCloseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEvent", f)
 }
 
-// void leaveEvent(class QEvent *)
+// void leaveEvent(QEvent *)
 func (this *QMdiSubWindow) InheritLeaveEvent(f func(leaveEvent *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "leaveEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QMdiSubWindow) InheritResizeEvent(f func(resizeEvent *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QMdiSubWindow) InheritTimerEvent(f func(timerEvent *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// void moveEvent(class QMoveEvent *)
+// void moveEvent(QMoveEvent *)
 func (this *QMdiSubWindow) InheritMoveEvent(f func(moveEvent *qtgui.QMoveEvent /*777 QMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "moveEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QMdiSubWindow) InheritPaintEvent(f func(paintEvent *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QMdiSubWindow) InheritMousePressEvent(f func(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QMdiSubWindow) InheritMouseDoubleClickEvent(f func(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QMdiSubWindow) InheritMouseReleaseEvent(f func(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QMdiSubWindow) InheritMouseMoveEvent(f func(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QMdiSubWindow) InheritKeyPressEvent(f func(keyEvent *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QMdiSubWindow) InheritContextMenuEvent(f func(contextMenuEvent *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QMdiSubWindow) InheritFocusInEvent(f func(focusInEvent *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QMdiSubWindow) InheritFocusOutEvent(f func(focusOutEvent *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void childEvent(class QChildEvent *)
+// void childEvent(QChildEvent *)
 func (this *QMdiSubWindow) InheritChildEvent(f func(childEvent *qtcore.QChildEvent /*777 QChildEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "childEvent", f)
 }
@@ -410,7 +410,7 @@ func (this *QMdiSubWindow) IsShaded() bool {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QMdiSubWindow::SubWindowOption, _Bool)
+// [-2] void setOption(QMdiSubWindow::SubWindowOption, bool)
 
 /*
 If on is true, option is enabled on the subwindow; otherwise it is disabled. See SubWindowOption for the effect of each option.
@@ -425,7 +425,7 @@ func (this *QMdiSubWindow) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QMdiSubWindow::SubWindowOption, _Bool)
+// [-2] void setOption(QMdiSubWindow::SubWindowOption, bool)
 
 /*
 If on is true, option is enabled on the subwindow; otherwise it is disabled. See SubWindowOption for the effect of each option.
@@ -442,7 +442,7 @@ func (this *QMdiSubWindow) SetOption__(option int) {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool testOption(enum QMdiSubWindow::SubWindowOption) const
+// [1] bool testOption(QMdiSubWindow::SubWindowOption) const
 
 /*
 Returns true if option is enabled; otherwise returns false.

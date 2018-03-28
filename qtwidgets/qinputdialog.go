@@ -164,7 +164,7 @@ func DeleteQInputDialog(this *QInputDialog) {
 // /usr/include/qt/QtWidgets/qinputdialog.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setInputMode(enum QInputDialog::InputMode)
+// [-2] void setInputMode(QInputDialog::InputMode)
 
 /*
 
@@ -223,7 +223,7 @@ func (this *QInputDialog) LabelText() string {
 // /usr/include/qt/QtWidgets/qinputdialog.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QInputDialog::InputDialogOption, _Bool)
+// [-2] void setOption(QInputDialog::InputDialogOption, bool)
 
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
@@ -238,7 +238,7 @@ func (this *QInputDialog) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qinputdialog.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QInputDialog::InputDialogOption, _Bool)
+// [-2] void setOption(QInputDialog::InputDialogOption, bool)
 
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
@@ -255,7 +255,7 @@ func (this *QInputDialog) SetOption__(option int) {
 // /usr/include/qt/QtWidgets/qinputdialog.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool testOption(enum QInputDialog::InputDialogOption) const
+// [1] bool testOption(QInputDialog::InputDialogOption) const
 
 /*
 Returns true if the given option is enabled; otherwise, returns false.
@@ -357,7 +357,7 @@ func (this *QInputDialog) TextEchoMode() int {
 // /usr/include/qt/QtWidgets/qinputdialog.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setComboBoxEditable(_Bool)
+// [-2] void setComboBoxEditable(bool)
 
 /*
 
@@ -787,7 +787,7 @@ func (this *QInputDialog) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qinputdialog.h:160
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 Reimplemented from QWidget::setVisible().
@@ -800,7 +800,7 @@ func (this *QInputDialog) SetVisible(visible bool) {
 // /usr/include/qt/QtWidgets/qinputdialog.h:162
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to get a string from the user.
@@ -852,7 +852,7 @@ func QInputDialog_GetText(parent QWidget_ITF /*777 QWidget **/, title string, la
 // /usr/include/qt/QtWidgets/qinputdialog.h:162
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to get a string from the user.
@@ -907,7 +907,7 @@ func (this *QInputDialog) GetText__(parent QWidget_ITF /*777 QWidget **/, title 
 // /usr/include/qt/QtWidgets/qinputdialog.h:162
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to get a string from the user.
@@ -960,7 +960,7 @@ func (this *QInputDialog) GetText__1(parent QWidget_ITF /*777 QWidget **/, title
 // /usr/include/qt/QtWidgets/qinputdialog.h:162
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to get a string from the user.
@@ -1013,7 +1013,7 @@ func (this *QInputDialog) GetText__2(parent QWidget_ITF /*777 QWidget **/, title
 // /usr/include/qt/QtWidgets/qinputdialog.h:162
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to get a string from the user.
@@ -1064,7 +1064,7 @@ func (this *QInputDialog) GetText__3(parent QWidget_ITF /*777 QWidget **/, title
 // /usr/include/qt/QtWidgets/qinputdialog.h:162
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to get a string from the user.
@@ -1113,7 +1113,7 @@ func (this *QInputDialog) GetText__4(parent QWidget_ITF /*777 QWidget **/, title
 // /usr/include/qt/QtWidgets/qinputdialog.h:167
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to get a multiline string from the user.
@@ -1166,7 +1166,7 @@ func QInputDialog_GetMultiLineText(parent QWidget_ITF /*777 QWidget **/, title s
 // /usr/include/qt/QtWidgets/qinputdialog.h:167
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to get a multiline string from the user.
@@ -1220,7 +1220,7 @@ func (this *QInputDialog) GetMultiLineText__(parent QWidget_ITF /*777 QWidget **
 // /usr/include/qt/QtWidgets/qinputdialog.h:167
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to get a multiline string from the user.
@@ -1274,7 +1274,7 @@ func (this *QInputDialog) GetMultiLineText__1(parent QWidget_ITF /*777 QWidget *
 // /usr/include/qt/QtWidgets/qinputdialog.h:167
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to get a multiline string from the user.
@@ -1326,7 +1326,7 @@ func (this *QInputDialog) GetMultiLineText__2(parent QWidget_ITF /*777 QWidget *
 // /usr/include/qt/QtWidgets/qinputdialog.h:167
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to get a multiline string from the user.
@@ -1376,7 +1376,7 @@ func (this *QInputDialog) GetMultiLineText__3(parent QWidget_ITF /*777 QWidget *
 // /usr/include/qt/QtWidgets/qinputdialog.h:171
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, bool, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to let the user select an item from a string list.
@@ -1434,7 +1434,7 @@ func QInputDialog_GetItem(parent QWidget_ITF /*777 QWidget **/, title string, la
 // /usr/include/qt/QtWidgets/qinputdialog.h:171
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, bool, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to let the user select an item from a string list.
@@ -1497,7 +1497,7 @@ func (this *QInputDialog) GetItem__(parent QWidget_ITF /*777 QWidget **/, title 
 // /usr/include/qt/QtWidgets/qinputdialog.h:171
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, bool, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to let the user select an item from a string list.
@@ -1558,7 +1558,7 @@ func (this *QInputDialog) GetItem__1(parent QWidget_ITF /*777 QWidget **/, title
 // /usr/include/qt/QtWidgets/qinputdialog.h:171
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, bool, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to let the user select an item from a string list.
@@ -1617,7 +1617,7 @@ func (this *QInputDialog) GetItem__2(parent QWidget_ITF /*777 QWidget **/, title
 // /usr/include/qt/QtWidgets/qinputdialog.h:171
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, bool, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to let the user select an item from a string list.
@@ -1674,7 +1674,7 @@ func (this *QInputDialog) GetItem__3(parent QWidget_ITF /*777 QWidget **/, title
 // /usr/include/qt/QtWidgets/qinputdialog.h:171
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, bool, bool *, Qt::WindowFlags, Qt::InputMethodHints)
 
 /*
 Static convenience function to let the user select an item from a string list.
@@ -1729,7 +1729,7 @@ func (this *QInputDialog) GetItem__4(parent QWidget_ITF /*777 QWidget **/, title
 // /usr/include/qt/QtWidgets/qinputdialog.h:176
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get an integer input from the user.
@@ -1777,7 +1777,7 @@ func QInputDialog_GetInt(parent QWidget_ITF /*777 QWidget **/, title string, lab
 // /usr/include/qt/QtWidgets/qinputdialog.h:176
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get an integer input from the user.
@@ -1832,7 +1832,7 @@ func (this *QInputDialog) GetInt__(parent QWidget_ITF /*777 QWidget **/, title s
 // /usr/include/qt/QtWidgets/qinputdialog.h:176
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get an integer input from the user.
@@ -1885,7 +1885,7 @@ func (this *QInputDialog) GetInt__1(parent QWidget_ITF /*777 QWidget **/, title 
 // /usr/include/qt/QtWidgets/qinputdialog.h:176
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get an integer input from the user.
@@ -1936,7 +1936,7 @@ func (this *QInputDialog) GetInt__2(parent QWidget_ITF /*777 QWidget **/, title 
 // /usr/include/qt/QtWidgets/qinputdialog.h:176
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get an integer input from the user.
@@ -1985,7 +1985,7 @@ func (this *QInputDialog) GetInt__3(parent QWidget_ITF /*777 QWidget **/, title 
 // /usr/include/qt/QtWidgets/qinputdialog.h:176
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get an integer input from the user.
@@ -2032,7 +2032,7 @@ func (this *QInputDialog) GetInt__4(parent QWidget_ITF /*777 QWidget **/, title 
 // /usr/include/qt/QtWidgets/qinputdialog.h:176
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+// [4] int getInt(QWidget *, const QString &, const QString &, int, int, int, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get an integer input from the user.
@@ -2077,7 +2077,7 @@ func (this *QInputDialog) GetInt__5(parent QWidget_ITF /*777 QWidget **/, title 
 // /usr/include/qt/QtWidgets/qinputdialog.h:179
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get a floating point number from the user.
@@ -2123,7 +2123,7 @@ func QInputDialog_GetDouble(parent QWidget_ITF /*777 QWidget **/, title string, 
 // /usr/include/qt/QtWidgets/qinputdialog.h:179
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get a floating point number from the user.
@@ -2176,7 +2176,7 @@ func (this *QInputDialog) GetDouble__(parent QWidget_ITF /*777 QWidget **/, titl
 // /usr/include/qt/QtWidgets/qinputdialog.h:179
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get a floating point number from the user.
@@ -2227,7 +2227,7 @@ func (this *QInputDialog) GetDouble__1(parent QWidget_ITF /*777 QWidget **/, tit
 // /usr/include/qt/QtWidgets/qinputdialog.h:179
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get a floating point number from the user.
@@ -2276,7 +2276,7 @@ func (this *QInputDialog) GetDouble__2(parent QWidget_ITF /*777 QWidget **/, tit
 // /usr/include/qt/QtWidgets/qinputdialog.h:179
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get a floating point number from the user.
@@ -2323,7 +2323,7 @@ func (this *QInputDialog) GetDouble__3(parent QWidget_ITF /*777 QWidget **/, tit
 // /usr/include/qt/QtWidgets/qinputdialog.h:179
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get a floating point number from the user.
@@ -2368,7 +2368,7 @@ func (this *QInputDialog) GetDouble__4(parent QWidget_ITF /*777 QWidget **/, tit
 // /usr/include/qt/QtWidgets/qinputdialog.h:179
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, bool *, Qt::WindowFlags)
 
 /*
 Static convenience function to get a floating point number from the user.
@@ -2411,7 +2411,7 @@ func (this *QInputDialog) GetDouble__5(parent QWidget_ITF /*777 QWidget **/, tit
 // /usr/include/qt/QtWidgets/qinputdialog.h:183
 // index:1
 // Public static Visibility=Default Availability=Available
-// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags, double)
+// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, bool *, Qt::WindowFlags, double)
 
 /*
 Static convenience function to get a floating point number from the user.

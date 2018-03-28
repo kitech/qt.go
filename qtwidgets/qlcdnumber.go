@@ -33,12 +33,12 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QLCDNumber) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QLCDNumber) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
@@ -293,7 +293,7 @@ func (this *QLCDNumber) Mode() int {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMode(enum QLCDNumber::Mode)
+// [-2] void setMode(QLCDNumber::Mode)
 
 /*
 
@@ -320,7 +320,7 @@ func (this *QLCDNumber) SegmentStyle() int {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSegmentStyle(enum QLCDNumber::SegmentStyle)
+// [-2] void setSegmentStyle(QLCDNumber::SegmentStyle)
 
 /*
 
@@ -496,7 +496,7 @@ func (this *QLCDNumber) SetBinMode() {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSmallDecimalPoint(_Bool)
+// [-2] void setSmallDecimalPoint(bool)
 
 /*
 

@@ -191,7 +191,7 @@ func (this *QSGBasicGeometryNode) SetRendererClipList(c QSGClipNode_ITF /*777 co
 // /usr/include/qt/QtQuick/qsgnode.h:211
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void QSGBasicGeometryNode(enum QSGNode::NodeType)
+// [-2] void QSGBasicGeometryNode(QSGNode::NodeType)
 
 /*
 

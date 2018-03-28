@@ -122,7 +122,7 @@ func NewQHttpMultiPart__() *QHttpMultiPart {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:102
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QHttpMultiPart(enum QHttpMultiPart::ContentType, QObject *)
+// [-2] void QHttpMultiPart(QHttpMultiPart::ContentType, QObject *)
 
 /*
 Constructs a QHttpMultiPart with content type MixedType and sets parent as the parent object.
@@ -144,7 +144,7 @@ func NewQHttpMultiPart_1(contentType int, parent qtcore.QObject_ITF /*777 QObjec
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:102
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QHttpMultiPart(enum QHttpMultiPart::ContentType, QObject *)
+// [-2] void QHttpMultiPart(QHttpMultiPart::ContentType, QObject *)
 
 /*
 Constructs a QHttpMultiPart with content type MixedType and sets parent as the parent object.
@@ -179,7 +179,7 @@ func DeleteQHttpMultiPart(this *QHttpMultiPart) {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setContentType(enum QHttpMultiPart::ContentType)
+// [-2] void setContentType(QHttpMultiPart::ContentType)
 
 /*
 Sets the content type to contentType. The content type will be used in the HTTP header section when sending the multipart message via QNetworkAccessManager::post(). In case you want to use a multipart subtype not contained in QHttpMultiPart::ContentType, you can add the "Content-Type" header field to the QNetworkRequest by hand, and then use this request together with the multipart message for posting.

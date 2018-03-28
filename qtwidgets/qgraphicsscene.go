@@ -33,112 +33,112 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QGraphicsScene) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QGraphicsScene) InheritEventFilter(f func(watched *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// void contextMenuEvent(class QGraphicsSceneContextMenuEvent *)
+// void contextMenuEvent(QGraphicsSceneContextMenuEvent *)
 func (this *QGraphicsScene) InheritContextMenuEvent(f func(event *QGraphicsSceneContextMenuEvent /*777 QGraphicsSceneContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// void dragEnterEvent(class QGraphicsSceneDragDropEvent *)
+// void dragEnterEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsScene) InheritDragEnterEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragEnterEvent", f)
 }
 
-// void dragMoveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragMoveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsScene) InheritDragMoveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
-// void dragLeaveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragLeaveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsScene) InheritDragLeaveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragLeaveEvent", f)
 }
 
-// void dropEvent(class QGraphicsSceneDragDropEvent *)
+// void dropEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsScene) InheritDropEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QGraphicsScene) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QGraphicsScene) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void helpEvent(class QGraphicsSceneHelpEvent *)
+// void helpEvent(QGraphicsSceneHelpEvent *)
 func (this *QGraphicsScene) InheritHelpEvent(f func(event *QGraphicsSceneHelpEvent /*777 QGraphicsSceneHelpEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "helpEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QGraphicsScene) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QGraphicsScene) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void mousePressEvent(class QGraphicsSceneMouseEvent *)
+// void mousePressEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsScene) InheritMousePressEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QGraphicsSceneMouseEvent *)
+// void mouseMoveEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsScene) InheritMouseMoveEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QGraphicsSceneMouseEvent *)
+// void mouseReleaseEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsScene) InheritMouseReleaseEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QGraphicsSceneMouseEvent *)
+// void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsScene) InheritMouseDoubleClickEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// void wheelEvent(class QGraphicsSceneWheelEvent *)
+// void wheelEvent(QGraphicsSceneWheelEvent *)
 func (this *QGraphicsScene) InheritWheelEvent(f func(event *QGraphicsSceneWheelEvent /*777 QGraphicsSceneWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QGraphicsScene) InheritInputMethodEvent(f func(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
 
-// void drawBackground(class QPainter *, const class QRectF &)
+// void drawBackground(QPainter *, const QRectF &)
 func (this *QGraphicsScene) InheritDrawBackground(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRectF) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawBackground", f)
 }
 
-// void drawForeground(class QPainter *, const class QRectF &)
+// void drawForeground(QPainter *, const QRectF &)
 func (this *QGraphicsScene) InheritDrawForeground(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRectF) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawForeground", f)
 }
 
-// void drawItems(class QPainter *, int, class QGraphicsItem **, const class QStyleOptionGraphicsItem *, class QWidget *)
+// void drawItems(QPainter *, int, QGraphicsItem **, const QStyleOptionGraphicsItem *, QWidget *)
 func (this *QGraphicsScene) InheritDrawItems(f func(painter *qtgui.QPainter /*777 QPainter **/, numItems int, items []interface{}, options []interface{}, widget *QWidget /*777 QWidget **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawItems", f)
 }
 
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QGraphicsScene) InheritFocusNextPrevChild(f func(next bool) bool) {
 	qtrt.SetAllInheritCallback(this, "focusNextPrevChild", f)
 }
@@ -592,7 +592,7 @@ func (this *QGraphicsScene) ItemIndexMethod() int {
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setItemIndexMethod(enum QGraphicsScene::ItemIndexMethod)
+// [-2] void setItemIndexMethod(QGraphicsScene::ItemIndexMethod)
 
 /*
 
@@ -619,7 +619,7 @@ func (this *QGraphicsScene) IsSortCacheEnabled() bool {
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSortCacheEnabled(_Bool)
+// [-2] void setSortCacheEnabled(bool)
 
 /*
 
@@ -1944,7 +1944,7 @@ func (this *QGraphicsScene) ClearFocus() {
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:216
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStickyFocus(_Bool)
+// [-2] void setStickyFocus(bool)
 
 /*
 
@@ -3200,7 +3200,7 @@ func (this *QGraphicsScene) DrawItems__(painter qtgui.QPainter_ITF /*777 QPainte
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:295
 // index:0
 // Protected Visibility=Default Availability=Available
-// [1] bool focusNextPrevChild(_Bool)
+// [1] bool focusNextPrevChild(bool)
 
 /*
 Finds a new widget to give the keyboard focus to, as appropriate for Tab and Shift+Tab, and returns true if it can find a new widget, or false if it cannot. If next is true, this function searches forward; if next is false, it searches backward.

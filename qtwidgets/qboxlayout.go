@@ -81,7 +81,7 @@ func (this *QBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtWidgets/qboxlayout.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QBoxLayout(enum QBoxLayout::Direction, QWidget *)
+// [-2] void QBoxLayout(QBoxLayout::Direction, QWidget *)
 
 /*
 Constructs a new QBoxLayout with direction dir and parent widget parent.
@@ -103,7 +103,7 @@ func NewQBoxLayout(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QBoxLayout {
 // /usr/include/qt/QtWidgets/qboxlayout.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QBoxLayout(enum QBoxLayout::Direction, QWidget *)
+// [-2] void QBoxLayout(QBoxLayout::Direction, QWidget *)
 
 /*
 Constructs a new QBoxLayout with direction dir and parent widget parent.
@@ -154,7 +154,7 @@ func (this *QBoxLayout) Direction() int {
 // /usr/include/qt/QtWidgets/qboxlayout.h:69
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDirection(enum QBoxLayout::Direction)
+// [-2] void setDirection(QBoxLayout::Direction)
 
 /*
 Sets the direction of this layout to direction.

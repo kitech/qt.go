@@ -489,7 +489,6 @@ func (this *QDateTime) ToMSecsSinceEpoch() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime17toMSecsSinceEpochEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:294
@@ -512,7 +511,6 @@ func (this *QDateTime) ToSecsSinceEpoch() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime16toSecsSinceEpochEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:296
@@ -1229,7 +1227,6 @@ func (this *QDateTime) DaysTo(arg0 QDateTime_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime6daysToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:328
@@ -1263,7 +1260,6 @@ func (this *QDateTime) SecsTo(arg0 QDateTime_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime6secsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:329
@@ -1288,7 +1284,6 @@ func (this *QDateTime) MsecsTo(arg0 QDateTime_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime7msecsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:331
@@ -1566,7 +1561,6 @@ func (this *QDateTime) ToTime_t() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime8toTime_tEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:352
@@ -1916,7 +1910,6 @@ func (this *QDateTime) CurrentMSecsSinceEpoch() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime22currentMSecsSinceEpochEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 func QDateTime_CurrentMSecsSinceEpoch() int64 {
 	var nilthis *QDateTime
@@ -1940,7 +1933,6 @@ func (this *QDateTime) CurrentSecsSinceEpoch() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime21currentSecsSinceEpochEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 func QDateTime_CurrentSecsSinceEpoch() int64 {
 	var nilthis *QDateTime

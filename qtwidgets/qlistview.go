@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QListView) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -53,52 +53,52 @@ func (this *QListView) InheritContentsSize(f func() unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "contentsSize", f)
 }
 
-// void rowsInserted(const class QModelIndex &, int, int)
+// void rowsInserted(const QModelIndex &, int, int)
 func (this *QListView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
-// void rowsAboutToBeRemoved(const class QModelIndex &, int, int)
+// void rowsAboutToBeRemoved(const QModelIndex &, int, int)
 func (this *QListView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsAboutToBeRemoved", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QListView) InheritMouseMoveEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QListView) InheritMouseReleaseEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QListView) InheritWheelEvent(f func(e *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QListView) InheritTimerEvent(f func(e *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QListView) InheritResizeEvent(f func(e *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void dragMoveEvent(class QDragMoveEvent *)
+// void dragMoveEvent(QDragMoveEvent *)
 func (this *QListView) InheritDragMoveEvent(f func(e *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
-// void dragLeaveEvent(class QDragLeaveEvent *)
+// void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QListView) InheritDragLeaveEvent(f func(e *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragLeaveEvent", f)
 }
 
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QListView) InheritDropEvent(f func(e *qtgui.QDropEvent /*777 QDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
@@ -113,7 +113,7 @@ func (this *QListView) InheritViewOptions(f func() unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "viewOptions", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QListView) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
@@ -128,27 +128,27 @@ func (this *QListView) InheritVerticalOffset(f func() int) {
 	qtrt.SetAllInheritCallback(this, "verticalOffset", f)
 }
 
-// QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+// QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
 func (this *QListView) InheritMoveCursor(f func(cursorAction int, modifiers int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "moveCursor", f)
 }
 
-// QRect rectForIndex(const class QModelIndex &)
+// QRect rectForIndex(const QModelIndex &)
 func (this *QListView) InheritRectForIndex(f func(index *qtcore.QModelIndex) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "rectForIndex", f)
 }
 
-// void setPositionForIndex(const class QPoint &, const class QModelIndex &)
+// void setPositionForIndex(const QPoint &, const QModelIndex &)
 func (this *QListView) InheritSetPositionForIndex(f func(position *qtcore.QPoint, index *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setPositionForIndex", f)
 }
 
-// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+// void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QListView) InheritSetSelection(f func(rect *qtcore.QRect, command int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setSelection", f)
 }
 
-// QRegion visualRegionForSelection(const class QItemSelection &)
+// QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QListView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "visualRegionForSelection", f)
 }
@@ -163,17 +163,17 @@ func (this *QListView) InheritUpdateGeometries(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateGeometries", f)
 }
 
-// bool isIndexHidden(const class QModelIndex &)
+// bool isIndexHidden(const QModelIndex &)
 func (this *QListView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bool) {
 	qtrt.SetAllInheritCallback(this, "isIndexHidden", f)
 }
 
-// void selectionChanged(const class QItemSelection &, const class QItemSelection &)
+// void selectionChanged(const QItemSelection &, const QItemSelection &)
 func (this *QListView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "selectionChanged", f)
 }
 
-// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+// void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QListView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "currentChanged", f)
 }
@@ -284,7 +284,7 @@ func DeleteQListView(this *QListView) {
 // /usr/include/qt/QtWidgets/qlistview.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMovement(enum QListView::Movement)
+// [-2] void setMovement(QListView::Movement)
 
 /*
 
@@ -311,7 +311,7 @@ func (this *QListView) Movement() int {
 // /usr/include/qt/QtWidgets/qlistview.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlow(enum QListView::Flow)
+// [-2] void setFlow(QListView::Flow)
 
 /*
 
@@ -338,7 +338,7 @@ func (this *QListView) Flow() int {
 // /usr/include/qt/QtWidgets/qlistview.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWrapping(_Bool)
+// [-2] void setWrapping(bool)
 
 /*
 
@@ -365,7 +365,7 @@ func (this *QListView) IsWrapping() bool {
 // /usr/include/qt/QtWidgets/qlistview.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setResizeMode(enum QListView::ResizeMode)
+// [-2] void setResizeMode(QListView::ResizeMode)
 
 /*
 
@@ -392,7 +392,7 @@ func (this *QListView) ResizeMode() int {
 // /usr/include/qt/QtWidgets/qlistview.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setLayoutMode(enum QListView::LayoutMode)
+// [-2] void setLayoutMode(QListView::LayoutMode)
 
 /*
 
@@ -506,7 +506,7 @@ func (this *QListView) GridSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlistview.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setViewMode(enum QListView::ViewMode)
+// [-2] void setViewMode(QListView::ViewMode)
 
 /*
 
@@ -562,7 +562,7 @@ func (this *QListView) IsRowHidden(row int) bool {
 // /usr/include/qt/QtWidgets/qlistview.h:114
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRowHidden(int, _Bool)
+// [-2] void setRowHidden(int, bool)
 
 /*
 If hide is true, the given row will be hidden; otherwise the row will be shown.
@@ -604,7 +604,7 @@ func (this *QListView) ModelColumn() int {
 // /usr/include/qt/QtWidgets/qlistview.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUniformItemSizes(_Bool)
+// [-2] void setUniformItemSizes(bool)
 
 /*
 
@@ -631,7 +631,7 @@ func (this *QListView) UniformItemSizes() bool {
 // /usr/include/qt/QtWidgets/qlistview.h:122
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWordWrap(_Bool)
+// [-2] void setWordWrap(bool)
 
 /*
 
@@ -658,7 +658,7 @@ func (this *QListView) WordWrap() bool {
 // /usr/include/qt/QtWidgets/qlistview.h:125
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSelectionRectVisible(_Bool)
+// [-2] void setSelectionRectVisible(bool)
 
 /*
 
@@ -705,7 +705,7 @@ func (this *QListView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /*
 // /usr/include/qt/QtWidgets/qlistview.h:129
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+// [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 
 /*
 Reimplemented from QAbstractItemView::scrollTo().
@@ -722,7 +722,7 @@ func (this *QListView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 // /usr/include/qt/QtWidgets/qlistview.h:129
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+// [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 
 /*
 Reimplemented from QAbstractItemView::scrollTo().
@@ -1108,7 +1108,7 @@ func (this *QListView) VerticalOffset() int {
 // /usr/include/qt/QtWidgets/qlistview.h:173
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [24] QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+// [24] QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
 
 /*
 Reimplemented from QAbstractItemView::moveCursor().

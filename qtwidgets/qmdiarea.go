@@ -33,47 +33,47 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void setupViewport(class QWidget *)
+// void setupViewport(QWidget *)
 func (this *QMdiArea) InheritSetupViewport(f func(viewport *QWidget /*777 QWidget **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setupViewport", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QMdiArea) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QMdiArea) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QMdiArea) InheritPaintEvent(f func(paintEvent *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void childEvent(class QChildEvent *)
+// void childEvent(QChildEvent *)
 func (this *QMdiArea) InheritChildEvent(f func(childEvent *qtcore.QChildEvent /*777 QChildEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "childEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QMdiArea) InheritResizeEvent(f func(resizeEvent *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QMdiArea) InheritTimerEvent(f func(timerEvent *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QMdiArea) InheritShowEvent(f func(showEvent *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// bool viewportEvent(class QEvent *)
+// bool viewportEvent(QEvent *)
 func (this *QMdiArea) InheritViewportEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "viewportEvent", f)
 }
@@ -400,7 +400,7 @@ func (this *QMdiArea) ActivationOrder() int {
 // /usr/include/qt/QtWidgets/qmdiarea.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setActivationOrder(enum QMdiArea::WindowOrder)
+// [-2] void setActivationOrder(QMdiArea::WindowOrder)
 
 /*
 
@@ -413,7 +413,7 @@ func (this *QMdiArea) SetActivationOrder(order int) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QMdiArea::AreaOption, _Bool)
+// [-2] void setOption(QMdiArea::AreaOption, bool)
 
 /*
 If on is true, option is enabled on the MDI area; otherwise it is disabled. See AreaOption for the effect of each option.
@@ -428,7 +428,7 @@ func (this *QMdiArea) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QMdiArea::AreaOption, _Bool)
+// [-2] void setOption(QMdiArea::AreaOption, bool)
 
 /*
 If on is true, option is enabled on the MDI area; otherwise it is disabled. See AreaOption for the effect of each option.
@@ -445,7 +445,7 @@ func (this *QMdiArea) SetOption__(option int) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool testOption(enum QMdiArea::AreaOption) const
+// [1] bool testOption(QMdiArea::AreaOption) const
 
 /*
 Returns true if option is enabled; otherwise returns false.
@@ -461,7 +461,7 @@ func (this *QMdiArea) TestOption(opton int) bool {
 // /usr/include/qt/QtWidgets/qmdiarea.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setViewMode(enum QMdiArea::ViewMode)
+// [-2] void setViewMode(QMdiArea::ViewMode)
 
 /*
 
@@ -502,7 +502,7 @@ func (this *QMdiArea) DocumentMode() bool {
 // /usr/include/qt/QtWidgets/qmdiarea.h:117
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDocumentMode(_Bool)
+// [-2] void setDocumentMode(bool)
 
 /*
 
@@ -515,7 +515,7 @@ func (this *QMdiArea) SetDocumentMode(enabled bool) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabsClosable(_Bool)
+// [-2] void setTabsClosable(bool)
 
 /*
 
@@ -542,7 +542,7 @@ func (this *QMdiArea) TabsClosable() bool {
 // /usr/include/qt/QtWidgets/qmdiarea.h:122
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabsMovable(_Bool)
+// [-2] void setTabsMovable(bool)
 
 /*
 

@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QApplication) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -1290,7 +1290,7 @@ func QApplication_IsEffectEnabled(arg0 int) bool {
 // /usr/include/qt/QtWidgets/qapplication.h:170
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setEffectEnabled(Qt::UIEffect, _Bool)
+// [-2] void setEffectEnabled(Qt::UIEffect, bool)
 
 /*
 Enables the UI effect effect if enable is true, otherwise the effect will not be used.
@@ -1311,7 +1311,7 @@ func QApplication_SetEffectEnabled(arg0 int, enable bool) {
 // /usr/include/qt/QtWidgets/qapplication.h:170
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setEffectEnabled(Qt::UIEffect, _Bool)
+// [-2] void setEffectEnabled(Qt::UIEffect, bool)
 
 /*
 Enables the UI effect effect if enable is true, otherwise the effect will not be used.
@@ -1440,7 +1440,7 @@ func (this *QApplication) SetStyleSheet(sheet string) {
 // /usr/include/qt/QtWidgets/qapplication.h:198
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoSipEnabled(const _Bool)
+// [-2] void setAutoSipEnabled(const bool)
 
 /*
 

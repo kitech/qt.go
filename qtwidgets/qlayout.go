@@ -33,32 +33,32 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void widgetEvent(class QEvent *)
+// void widgetEvent(QEvent *)
 func (this *QLayout) InheritWidgetEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "widgetEvent", f)
 }
 
-// void childEvent(class QChildEvent *)
+// void childEvent(QChildEvent *)
 func (this *QLayout) InheritChildEvent(f func(e *qtcore.QChildEvent /*777 QChildEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "childEvent", f)
 }
 
-// void addChildLayout(class QLayout *)
+// void addChildLayout(QLayout *)
 func (this *QLayout) InheritAddChildLayout(f func(l *QLayout /*777 QLayout **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "addChildLayout", f)
 }
 
-// void addChildWidget(class QWidget *)
+// void addChildWidget(QWidget *)
 func (this *QLayout) InheritAddChildWidget(f func(w *QWidget /*777 QWidget **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "addChildWidget", f)
 }
 
-// bool adoptLayout(class QLayout *)
+// bool adoptLayout(QLayout *)
 func (this *QLayout) InheritAdoptLayout(f func(layout *QLayout /*777 QLayout **/) bool) {
 	qtrt.SetAllInheritCallback(this, "adoptLayout", f)
 }
 
-// QRect alignmentRect(const class QRect &)
+// QRect alignmentRect(const QRect &)
 func (this *QLayout) InheritAlignmentRect(f func(arg0 *qtcore.QRect) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "alignmentRect", f)
 }
@@ -363,7 +363,7 @@ func (this *QLayout) SetAlignment_1(l QLayout_ITF /*777 QLayout **/, alignment i
 // /usr/include/qt/QtWidgets/qlayout.h:100
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSizeConstraint(enum QLayout::SizeConstraint)
+// [-2] void setSizeConstraint(QLayout::SizeConstraint)
 
 /*
 
@@ -947,7 +947,7 @@ func (this *QLayout) Layout() *QLayout /*777 QLayout **/ {
 // /usr/include/qt/QtWidgets/qlayout.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(_Bool)
+// [-2] void setEnabled(bool)
 
 /*
 Enables this layout if enable is true, otherwise disables it.

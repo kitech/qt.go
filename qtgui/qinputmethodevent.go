@@ -145,20 +145,6 @@ func (this *QInputMethodEvent) SetCommitString__1(commitString string, replaceFr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:560
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [8] const QList<QInputMethodEvent::Attribute> & attributes() const
-
-/*
-
- */
-func (this *QInputMethodEvent) Attributes() unsafe.Pointer /*555*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK17QInputMethodEvent10attributesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return unsafe.Pointer(uintptr(rv))
-}
-
 // /usr/include/qt/QtGui/qevent.h:561
 // index:0
 // Public inline Visibility=Default Availability=Available

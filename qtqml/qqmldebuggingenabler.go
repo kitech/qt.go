@@ -69,7 +69,7 @@ func (*QQmlDebuggingEnabler) NewFromPointer(cthis unsafe.Pointer) *QQmlDebugging
 // /usr/include/qt/QtQml/qqmldebug.h:58
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QQmlDebuggingEnabler(_Bool)
+// [-2] void QQmlDebuggingEnabler(bool)
 
 /*
 
@@ -85,7 +85,7 @@ func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 // /usr/include/qt/QtQml/qqmldebug.h:58
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QQmlDebuggingEnabler(_Bool)
+// [-2] void QQmlDebuggingEnabler(bool)
 
 /*
 
@@ -208,7 +208,7 @@ func QQmlDebuggingEnabler_SetServices(services qtcore.QStringList_ITF) {
 // /usr/include/qt/QtQml/qqmldebug.h:67
 // index:0
 // Public static Visibility=Default Availability=Available
-// [1] bool startTcpDebugServer(int, enum QQmlDebuggingEnabler::StartMode, const QString &)
+// [1] bool startTcpDebugServer(int, QQmlDebuggingEnabler::StartMode, const QString &)
 
 /*
 
@@ -229,7 +229,7 @@ func QQmlDebuggingEnabler_StartTcpDebugServer(port int, mode int, hostName strin
 // /usr/include/qt/QtQml/qqmldebug.h:67
 // index:0
 // Public static Visibility=Default Availability=Available
-// [1] bool startTcpDebugServer(int, enum QQmlDebuggingEnabler::StartMode, const QString &)
+// [1] bool startTcpDebugServer(int, QQmlDebuggingEnabler::StartMode, const QString &)
 
 /*
 
@@ -247,7 +247,7 @@ func (this *QQmlDebuggingEnabler) StartTcpDebugServer__(port int) bool {
 // /usr/include/qt/QtQml/qqmldebug.h:67
 // index:0
 // Public static Visibility=Default Availability=Available
-// [1] bool startTcpDebugServer(int, enum QQmlDebuggingEnabler::StartMode, const QString &)
+// [1] bool startTcpDebugServer(int, QQmlDebuggingEnabler::StartMode, const QString &)
 
 /*
 
@@ -263,7 +263,7 @@ func (this *QQmlDebuggingEnabler) StartTcpDebugServer__1(port int, mode int) boo
 // /usr/include/qt/QtQml/qqmldebug.h:69
 // index:0
 // Public static Visibility=Default Availability=Available
-// [1] bool connectToLocalDebugger(const QString &, enum QQmlDebuggingEnabler::StartMode)
+// [1] bool connectToLocalDebugger(const QString &, QQmlDebuggingEnabler::StartMode)
 
 /*
 
@@ -284,7 +284,7 @@ func QQmlDebuggingEnabler_ConnectToLocalDebugger(socketFileName string, mode int
 // /usr/include/qt/QtQml/qqmldebug.h:69
 // index:0
 // Public static Visibility=Default Availability=Available
-// [1] bool connectToLocalDebugger(const QString &, enum QQmlDebuggingEnabler::StartMode)
+// [1] bool connectToLocalDebugger(const QString &, QQmlDebuggingEnabler::StartMode)
 
 /*
 

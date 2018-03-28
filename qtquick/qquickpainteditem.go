@@ -199,7 +199,7 @@ func (this *QQuickPaintedItem) OpaquePainting() bool {
 // /usr/include/qt/QtQuick/qquickpainteditem.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOpaquePainting(_Bool)
+// [-2] void setOpaquePainting(bool)
 
 /*
 If opaque is true, the item is opaque; otherwise, it is considered as translucent.
@@ -236,7 +236,7 @@ func (this *QQuickPaintedItem) Antialiasing() bool {
 // /usr/include/qt/QtQuick/qquickpainteditem.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAntialiasing(_Bool)
+// [-2] void setAntialiasing(bool)
 
 /*
 If enable is true, antialiased painting is enabled.
@@ -271,7 +271,7 @@ func (this *QQuickPaintedItem) Mipmap() bool {
 // /usr/include/qt/QtQuick/qquickpainteditem.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMipmap(_Bool)
+// [-2] void setMipmap(bool)
 
 /*
 If enable is true, mipmapping is enabled on the associated texture.
@@ -308,7 +308,7 @@ func (this *QQuickPaintedItem) PerformanceHints() int {
 // /usr/include/qt/QtQuick/qquickpainteditem.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPerformanceHint(enum QQuickPaintedItem::PerformanceHint, _Bool)
+// [-2] void setPerformanceHint(QQuickPaintedItem::PerformanceHint, bool)
 
 /*
 Sets the given performance hint on the item if enabled is true; otherwise clears the performance hint.
@@ -325,7 +325,7 @@ func (this *QQuickPaintedItem) SetPerformanceHint(hint int, enabled bool) {
 // /usr/include/qt/QtQuick/qquickpainteditem.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPerformanceHint(enum QQuickPaintedItem::PerformanceHint, _Bool)
+// [-2] void setPerformanceHint(QQuickPaintedItem::PerformanceHint, bool)
 
 /*
 Sets the given performance hint on the item if enabled is true; otherwise clears the performance hint.
@@ -530,7 +530,7 @@ func (this *QQuickPaintedItem) RenderTarget() int {
 // /usr/include/qt/QtQuick/qquickpainteditem.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRenderTarget(enum QQuickPaintedItem::RenderTarget)
+// [-2] void setRenderTarget(QQuickPaintedItem::RenderTarget)
 
 /*
 

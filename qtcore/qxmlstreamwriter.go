@@ -233,7 +233,7 @@ func (this *QXmlStreamWriter) Codec() *QTextCodec /*777 QTextCodec **/ {
 // /usr/include/qt/QtCore/qxmlstream.h:487
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoFormatting(_Bool)
+// [-2] void setAutoFormatting(bool)
 
 /*
 
@@ -637,7 +637,7 @@ func (this *QXmlStreamWriter) WriteStartDocument_1(version string) {
 // /usr/include/qt/QtCore/qxmlstream.h:520
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void writeStartDocument(const QString &, _Bool)
+// [-2] void writeStartDocument(const QString &, bool)
 
 /*
 

@@ -286,7 +286,7 @@ func NewQColor_8(name qtcore.QLatin1String_ITF /*123*/) *QColor {
 // /usr/include/qt/QtGui/qcolor.h:81
 // index:9
 // Public Visibility=Default Availability=Available
-// [-2] void QColor(enum QColor::Spec)
+// [-2] void QColor(QColor::Spec)
 
 /*
 Constructs an invalid color with the RGB value (0, 0, 0). An invalid color is a color that is not properly set up for the underlying window system.
@@ -391,7 +391,7 @@ func (this *QColor) Name() string {
 // /usr/include/qt/QtGui/qcolor.h:99
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QString name(enum QColor::NameFormat) const
+// [8] QString name(QColor::NameFormat) const
 
 /*
 Returns the name of the color in the format "#RRGGBB"; i.e. a "#" character followed by three two-digit hexadecimal numbers.
@@ -1005,7 +1005,6 @@ func (this *QColor) Rgba() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4rgbaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qcolor.h:142
@@ -1037,7 +1036,6 @@ func (this *QColor) Rgb() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor3rgbEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qcolor.h:147
@@ -1971,7 +1969,7 @@ func (this *QColor) ToHsl() *QColor /*123*/ {
 // /usr/include/qt/QtGui/qcolor.h:200
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QColor convertTo(enum QColor::Spec) const
+// [16] QColor convertTo(QColor::Spec) const
 
 /*
 Creates a copy of this color in the format specified by colorSpec.

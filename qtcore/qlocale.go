@@ -105,7 +105,7 @@ func NewQLocale_1(name string) *QLocale {
 // /usr/include/qt/QtCore/qlocale.h:931
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QLocale(enum QLocale::Language, enum QLocale::Country)
+// [-2] void QLocale(QLocale::Language, QLocale::Country)
 
 /*
 Constructs a QLocale object initialized with the default locale. If no default locale was set using setDefault(), this locale will be the same as the one returned by system().
@@ -123,7 +123,7 @@ func NewQLocale_2(language int, country int) *QLocale {
 // /usr/include/qt/QtCore/qlocale.h:931
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QLocale(enum QLocale::Language, enum QLocale::Country)
+// [-2] void QLocale(QLocale::Language, QLocale::Country)
 
 /*
 Constructs a QLocale object initialized with the default locale. If no default locale was set using setDefault(), this locale will be the same as the one returned by system().
@@ -143,7 +143,7 @@ func NewQLocale_2_(language int) *QLocale {
 // /usr/include/qt/QtCore/qlocale.h:932
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QLocale(enum QLocale::Language, enum QLocale::Script, enum QLocale::Country)
+// [-2] void QLocale(QLocale::Language, QLocale::Script, QLocale::Country)
 
 /*
 Constructs a QLocale object initialized with the default locale. If no default locale was set using setDefault(), this locale will be the same as the one returned by system().
@@ -369,7 +369,7 @@ func (this *QLocale) NativeCountryName() string {
 // /usr/include/qt/QtCore/qlocale.h:952
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(const QString &, _Bool *) const
+// [2] short toShort(const QString &, bool *) const
 
 /*
 Returns the short int represented by the localized string s.
@@ -393,7 +393,7 @@ func (this *QLocale) ToShort(s string, ok *bool) int16 {
 // /usr/include/qt/QtCore/qlocale.h:952
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(const QString &, _Bool *) const
+// [2] short toShort(const QString &, bool *) const
 
 /*
 Returns the short int represented by the localized string s.
@@ -419,7 +419,7 @@ func (this *QLocale) ToShort__(s string) int16 {
 // /usr/include/qt/QtCore/qlocale.h:961
 // index:1
 // Public Visibility=Default Availability=Available
-// [2] short toShort(const QStringRef &, _Bool *) const
+// [2] short toShort(const QStringRef &, bool *) const
 
 /*
 Returns the short int represented by the localized string s.
@@ -445,7 +445,7 @@ func (this *QLocale) ToShort_1(s QStringRef_ITF, ok *bool) int16 {
 // /usr/include/qt/QtCore/qlocale.h:961
 // index:1
 // Public Visibility=Default Availability=Available
-// [2] short toShort(const QStringRef &, _Bool *) const
+// [2] short toShort(const QStringRef &, bool *) const
 
 /*
 Returns the short int represented by the localized string s.
@@ -473,7 +473,7 @@ func (this *QLocale) ToShort_1_(s QStringRef_ITF) int16 {
 // /usr/include/qt/QtCore/qlocale.h:971
 // index:2
 // Public Visibility=Default Availability=Available
-// [2] short toShort(QStringView, _Bool *) const
+// [2] short toShort(QStringView, bool *) const
 
 /*
 Returns the short int represented by the localized string s.
@@ -499,7 +499,7 @@ func (this *QLocale) ToShort_2(s QStringView_ITF /*123*/, ok *bool) int16 {
 // /usr/include/qt/QtCore/qlocale.h:971
 // index:2
 // Public Visibility=Default Availability=Available
-// [2] short toShort(QStringView, _Bool *) const
+// [2] short toShort(QStringView, bool *) const
 
 /*
 Returns the short int represented by the localized string s.
@@ -527,7 +527,7 @@ func (this *QLocale) ToShort_2_(s QStringView_ITF /*123*/) int16 {
 // /usr/include/qt/QtCore/qlocale.h:953
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(const QString &, _Bool *) const
+// [2] ushort toUShort(const QString &, bool *) const
 
 /*
 Returns the unsigned short int represented by the localized string s.
@@ -546,13 +546,12 @@ func (this *QLocale) ToUShort(s string, ok *bool) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:953
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(const QString &, _Bool *) const
+// [2] ushort toUShort(const QString &, bool *) const
 
 /*
 Returns the unsigned short int represented by the localized string s.
@@ -573,13 +572,12 @@ func (this *QLocale) ToUShort__(s string) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:962
 // index:1
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(const QStringRef &, _Bool *) const
+// [2] ushort toUShort(const QStringRef &, bool *) const
 
 /*
 Returns the unsigned short int represented by the localized string s.
@@ -600,13 +598,12 @@ func (this *QLocale) ToUShort_1(s QStringRef_ITF, ok *bool) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:962
 // index:1
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(const QStringRef &, _Bool *) const
+// [2] ushort toUShort(const QStringRef &, bool *) const
 
 /*
 Returns the unsigned short int represented by the localized string s.
@@ -629,13 +626,12 @@ func (this *QLocale) ToUShort_1_(s QStringRef_ITF) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:972
 // index:2
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(QStringView, _Bool *) const
+// [2] ushort toUShort(QStringView, bool *) const
 
 /*
 Returns the unsigned short int represented by the localized string s.
@@ -656,13 +652,12 @@ func (this *QLocale) ToUShort_2(s QStringView_ITF /*123*/, ok *bool) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:972
 // index:2
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(QStringView, _Bool *) const
+// [2] ushort toUShort(QStringView, bool *) const
 
 /*
 Returns the unsigned short int represented by the localized string s.
@@ -685,13 +680,12 @@ func (this *QLocale) ToUShort_2_(s QStringView_ITF /*123*/) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:954
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(const QString &, _Bool *) const
+// [4] int toInt(const QString &, bool *) const
 
 /*
 Returns the int represented by the localized string s.
@@ -715,7 +709,7 @@ func (this *QLocale) ToInt(s string, ok *bool) int {
 // /usr/include/qt/QtCore/qlocale.h:954
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(const QString &, _Bool *) const
+// [4] int toInt(const QString &, bool *) const
 
 /*
 Returns the int represented by the localized string s.
@@ -741,7 +735,7 @@ func (this *QLocale) ToInt__(s string) int {
 // /usr/include/qt/QtCore/qlocale.h:963
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] int toInt(const QStringRef &, _Bool *) const
+// [4] int toInt(const QStringRef &, bool *) const
 
 /*
 Returns the int represented by the localized string s.
@@ -767,7 +761,7 @@ func (this *QLocale) ToInt_1(s QStringRef_ITF, ok *bool) int {
 // /usr/include/qt/QtCore/qlocale.h:963
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] int toInt(const QStringRef &, _Bool *) const
+// [4] int toInt(const QStringRef &, bool *) const
 
 /*
 Returns the int represented by the localized string s.
@@ -795,7 +789,7 @@ func (this *QLocale) ToInt_1_(s QStringRef_ITF) int {
 // /usr/include/qt/QtCore/qlocale.h:973
 // index:2
 // Public Visibility=Default Availability=Available
-// [4] int toInt(QStringView, _Bool *) const
+// [4] int toInt(QStringView, bool *) const
 
 /*
 Returns the int represented by the localized string s.
@@ -821,7 +815,7 @@ func (this *QLocale) ToInt_2(s QStringView_ITF /*123*/, ok *bool) int {
 // /usr/include/qt/QtCore/qlocale.h:973
 // index:2
 // Public Visibility=Default Availability=Available
-// [4] int toInt(QStringView, _Bool *) const
+// [4] int toInt(QStringView, bool *) const
 
 /*
 Returns the int represented by the localized string s.
@@ -849,7 +843,7 @@ func (this *QLocale) ToInt_2_(s QStringView_ITF /*123*/) int {
 // /usr/include/qt/QtCore/qlocale.h:955
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(const QString &, _Bool *) const
+// [4] uint toUInt(const QString &, bool *) const
 
 /*
 Returns the unsigned int represented by the localized string s.
@@ -868,13 +862,12 @@ func (this *QLocale) ToUInt(s string, ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:955
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(const QString &, _Bool *) const
+// [4] uint toUInt(const QString &, bool *) const
 
 /*
 Returns the unsigned int represented by the localized string s.
@@ -895,13 +888,12 @@ func (this *QLocale) ToUInt__(s string) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:964
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(const QStringRef &, _Bool *) const
+// [4] uint toUInt(const QStringRef &, bool *) const
 
 /*
 Returns the unsigned int represented by the localized string s.
@@ -922,13 +914,12 @@ func (this *QLocale) ToUInt_1(s QStringRef_ITF, ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:964
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(const QStringRef &, _Bool *) const
+// [4] uint toUInt(const QStringRef &, bool *) const
 
 /*
 Returns the unsigned int represented by the localized string s.
@@ -951,13 +942,12 @@ func (this *QLocale) ToUInt_1_(s QStringRef_ITF) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:974
 // index:2
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(QStringView, _Bool *) const
+// [4] uint toUInt(QStringView, bool *) const
 
 /*
 Returns the unsigned int represented by the localized string s.
@@ -978,13 +968,12 @@ func (this *QLocale) ToUInt_2(s QStringView_ITF /*123*/, ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:974
 // index:2
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(QStringView, _Bool *) const
+// [4] uint toUInt(QStringView, bool *) const
 
 /*
 Returns the unsigned int represented by the localized string s.
@@ -1007,13 +996,12 @@ func (this *QLocale) ToUInt_2_(s QStringView_ITF /*123*/) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:956
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(const QString &, _Bool *) const
+// [8] qlonglong toLongLong(const QString &, bool *) const
 
 /*
 Returns the long long int represented by the localized string s.
@@ -1032,13 +1020,12 @@ func (this *QLocale) ToLongLong(s string, ok *bool) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:956
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(const QString &, _Bool *) const
+// [8] qlonglong toLongLong(const QString &, bool *) const
 
 /*
 Returns the long long int represented by the localized string s.
@@ -1059,13 +1046,12 @@ func (this *QLocale) ToLongLong__(s string) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:965
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(const QStringRef &, _Bool *) const
+// [8] qlonglong toLongLong(const QStringRef &, bool *) const
 
 /*
 Returns the long long int represented by the localized string s.
@@ -1086,13 +1072,12 @@ func (this *QLocale) ToLongLong_1(s QStringRef_ITF, ok *bool) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:965
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(const QStringRef &, _Bool *) const
+// [8] qlonglong toLongLong(const QStringRef &, bool *) const
 
 /*
 Returns the long long int represented by the localized string s.
@@ -1115,13 +1100,12 @@ func (this *QLocale) ToLongLong_1_(s QStringRef_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:975
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(QStringView, _Bool *) const
+// [8] qlonglong toLongLong(QStringView, bool *) const
 
 /*
 Returns the long long int represented by the localized string s.
@@ -1142,13 +1126,12 @@ func (this *QLocale) ToLongLong_2(s QStringView_ITF /*123*/, ok *bool) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:975
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(QStringView, _Bool *) const
+// [8] qlonglong toLongLong(QStringView, bool *) const
 
 /*
 Returns the long long int represented by the localized string s.
@@ -1171,13 +1154,12 @@ func (this *QLocale) ToLongLong_2_(s QStringView_ITF /*123*/) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:957
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(const QString &, _Bool *) const
+// [8] qulonglong toULongLong(const QString &, bool *) const
 
 /*
 Returns the unsigned long long int represented by the localized string s.
@@ -1196,13 +1178,12 @@ func (this *QLocale) ToULongLong(s string, ok *bool) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:957
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(const QString &, _Bool *) const
+// [8] qulonglong toULongLong(const QString &, bool *) const
 
 /*
 Returns the unsigned long long int represented by the localized string s.
@@ -1223,13 +1204,12 @@ func (this *QLocale) ToULongLong__(s string) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:966
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(const QStringRef &, _Bool *) const
+// [8] qulonglong toULongLong(const QStringRef &, bool *) const
 
 /*
 Returns the unsigned long long int represented by the localized string s.
@@ -1250,13 +1230,12 @@ func (this *QLocale) ToULongLong_1(s QStringRef_ITF, ok *bool) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:966
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(const QStringRef &, _Bool *) const
+// [8] qulonglong toULongLong(const QStringRef &, bool *) const
 
 /*
 Returns the unsigned long long int represented by the localized string s.
@@ -1279,13 +1258,12 @@ func (this *QLocale) ToULongLong_1_(s QStringRef_ITF) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:976
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(QStringView, _Bool *) const
+// [8] qulonglong toULongLong(QStringView, bool *) const
 
 /*
 Returns the unsigned long long int represented by the localized string s.
@@ -1306,13 +1284,12 @@ func (this *QLocale) ToULongLong_2(s QStringView_ITF /*123*/, ok *bool) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:976
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(QStringView, _Bool *) const
+// [8] qulonglong toULongLong(QStringView, bool *) const
 
 /*
 Returns the unsigned long long int represented by the localized string s.
@@ -1335,13 +1312,12 @@ func (this *QLocale) ToULongLong_2_(s QStringView_ITF /*123*/) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qlocale.h:958
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(const QString &, _Bool *) const
+// [4] float toFloat(const QString &, bool *) const
 
 /*
 Returns the float represented by the localized string s, or 0.0 if the conversion failed.
@@ -1363,7 +1339,7 @@ func (this *QLocale) ToFloat(s string, ok *bool) float32 {
 // /usr/include/qt/QtCore/qlocale.h:958
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(const QString &, _Bool *) const
+// [4] float toFloat(const QString &, bool *) const
 
 /*
 Returns the float represented by the localized string s, or 0.0 if the conversion failed.
@@ -1387,7 +1363,7 @@ func (this *QLocale) ToFloat__(s string) float32 {
 // /usr/include/qt/QtCore/qlocale.h:967
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(const QStringRef &, _Bool *) const
+// [4] float toFloat(const QStringRef &, bool *) const
 
 /*
 Returns the float represented by the localized string s, or 0.0 if the conversion failed.
@@ -1411,7 +1387,7 @@ func (this *QLocale) ToFloat_1(s QStringRef_ITF, ok *bool) float32 {
 // /usr/include/qt/QtCore/qlocale.h:967
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(const QStringRef &, _Bool *) const
+// [4] float toFloat(const QStringRef &, bool *) const
 
 /*
 Returns the float represented by the localized string s, or 0.0 if the conversion failed.
@@ -1437,7 +1413,7 @@ func (this *QLocale) ToFloat_1_(s QStringRef_ITF) float32 {
 // /usr/include/qt/QtCore/qlocale.h:977
 // index:2
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(QStringView, _Bool *) const
+// [4] float toFloat(QStringView, bool *) const
 
 /*
 Returns the float represented by the localized string s, or 0.0 if the conversion failed.
@@ -1461,7 +1437,7 @@ func (this *QLocale) ToFloat_2(s QStringView_ITF /*123*/, ok *bool) float32 {
 // /usr/include/qt/QtCore/qlocale.h:977
 // index:2
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(QStringView, _Bool *) const
+// [4] float toFloat(QStringView, bool *) const
 
 /*
 Returns the float represented by the localized string s, or 0.0 if the conversion failed.
@@ -1487,7 +1463,7 @@ func (this *QLocale) ToFloat_2_(s QStringView_ITF /*123*/) float32 {
 // /usr/include/qt/QtCore/qlocale.h:959
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(const QString &, _Bool *) const
+// [8] double toDouble(const QString &, bool *) const
 
 /*
 Returns the double represented by the localized string s, or 0.0 if the conversion failed.
@@ -1531,7 +1507,7 @@ func (this *QLocale) ToDouble(s string, ok *bool) float64 {
 // /usr/include/qt/QtCore/qlocale.h:959
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(const QString &, _Bool *) const
+// [8] double toDouble(const QString &, bool *) const
 
 /*
 Returns the double represented by the localized string s, or 0.0 if the conversion failed.
@@ -1577,7 +1553,7 @@ func (this *QLocale) ToDouble__(s string) float64 {
 // /usr/include/qt/QtCore/qlocale.h:968
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(const QStringRef &, _Bool *) const
+// [8] double toDouble(const QStringRef &, bool *) const
 
 /*
 Returns the double represented by the localized string s, or 0.0 if the conversion failed.
@@ -1623,7 +1599,7 @@ func (this *QLocale) ToDouble_1(s QStringRef_ITF, ok *bool) float64 {
 // /usr/include/qt/QtCore/qlocale.h:968
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(const QStringRef &, _Bool *) const
+// [8] double toDouble(const QStringRef &, bool *) const
 
 /*
 Returns the double represented by the localized string s, or 0.0 if the conversion failed.
@@ -1671,7 +1647,7 @@ func (this *QLocale) ToDouble_1_(s QStringRef_ITF) float64 {
 // /usr/include/qt/QtCore/qlocale.h:978
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(QStringView, _Bool *) const
+// [8] double toDouble(QStringView, bool *) const
 
 /*
 Returns the double represented by the localized string s, or 0.0 if the conversion failed.
@@ -1717,7 +1693,7 @@ func (this *QLocale) ToDouble_2(s QStringView_ITF /*123*/, ok *bool) float64 {
 // /usr/include/qt/QtCore/qlocale.h:978
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(QStringView, _Bool *) const
+// [8] double toDouble(QStringView, bool *) const
 
 /*
 Returns the double represented by the localized string s, or 0.0 if the conversion failed.
@@ -2161,7 +2137,7 @@ func (this *QLocale) ToString_13(dateTime QDateTime_ITF, format QStringView_ITF 
 // /usr/include/qt/QtCore/qlocale.h:997
 // index:14
 // Public Visibility=Default Availability=Available
-// [8] QString toString(const QDate &, enum QLocale::FormatType) const
+// [8] QString toString(const QDate &, QLocale::FormatType) const
 
 /*
 Returns a localized string representation of i.
@@ -2184,7 +2160,7 @@ func (this *QLocale) ToString_14(date QDate_ITF, format int) string {
 // /usr/include/qt/QtCore/qlocale.h:997
 // index:14
 // Public Visibility=Default Availability=Available
-// [8] QString toString(const QDate &, enum QLocale::FormatType) const
+// [8] QString toString(const QDate &, QLocale::FormatType) const
 
 /*
 Returns a localized string representation of i.
@@ -2209,7 +2185,7 @@ func (this *QLocale) ToString_14_(date QDate_ITF) string {
 // /usr/include/qt/QtCore/qlocale.h:998
 // index:15
 // Public Visibility=Default Availability=Available
-// [8] QString toString(const QTime &, enum QLocale::FormatType) const
+// [8] QString toString(const QTime &, QLocale::FormatType) const
 
 /*
 Returns a localized string representation of i.
@@ -2232,7 +2208,7 @@ func (this *QLocale) ToString_15(time QTime_ITF, format int) string {
 // /usr/include/qt/QtCore/qlocale.h:998
 // index:15
 // Public Visibility=Default Availability=Available
-// [8] QString toString(const QTime &, enum QLocale::FormatType) const
+// [8] QString toString(const QTime &, QLocale::FormatType) const
 
 /*
 Returns a localized string representation of i.
@@ -2257,7 +2233,7 @@ func (this *QLocale) ToString_15_(time QTime_ITF) string {
 // /usr/include/qt/QtCore/qlocale.h:999
 // index:16
 // Public Visibility=Default Availability=Available
-// [8] QString toString(const QDateTime &, enum QLocale::FormatType) const
+// [8] QString toString(const QDateTime &, QLocale::FormatType) const
 
 /*
 Returns a localized string representation of i.
@@ -2280,7 +2256,7 @@ func (this *QLocale) ToString_16(dateTime QDateTime_ITF, format int) string {
 // /usr/include/qt/QtCore/qlocale.h:999
 // index:16
 // Public Visibility=Default Availability=Available
-// [8] QString toString(const QDateTime &, enum QLocale::FormatType) const
+// [8] QString toString(const QDateTime &, QLocale::FormatType) const
 
 /*
 Returns a localized string representation of i.
@@ -2305,7 +2281,7 @@ func (this *QLocale) ToString_16_(dateTime QDateTime_ITF) string {
 // /usr/include/qt/QtCore/qlocale.h:1001
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString dateFormat(enum QLocale::FormatType) const
+// [8] QString dateFormat(QLocale::FormatType) const
 
 /*
 Returns the date format used for the current locale.
@@ -2328,7 +2304,7 @@ func (this *QLocale) DateFormat(format int) string {
 // /usr/include/qt/QtCore/qlocale.h:1001
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString dateFormat(enum QLocale::FormatType) const
+// [8] QString dateFormat(QLocale::FormatType) const
 
 /*
 Returns the date format used for the current locale.
@@ -2353,7 +2329,7 @@ func (this *QLocale) DateFormat__() string {
 // /usr/include/qt/QtCore/qlocale.h:1002
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString timeFormat(enum QLocale::FormatType) const
+// [8] QString timeFormat(QLocale::FormatType) const
 
 /*
 Returns the time format used for the current locale.
@@ -2376,7 +2352,7 @@ func (this *QLocale) TimeFormat(format int) string {
 // /usr/include/qt/QtCore/qlocale.h:1002
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString timeFormat(enum QLocale::FormatType) const
+// [8] QString timeFormat(QLocale::FormatType) const
 
 /*
 Returns the time format used for the current locale.
@@ -2401,7 +2377,7 @@ func (this *QLocale) TimeFormat__() string {
 // /usr/include/qt/QtCore/qlocale.h:1003
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString dateTimeFormat(enum QLocale::FormatType) const
+// [8] QString dateTimeFormat(QLocale::FormatType) const
 
 /*
 Returns the date time format used for the current locale.
@@ -2424,7 +2400,7 @@ func (this *QLocale) DateTimeFormat(format int) string {
 // /usr/include/qt/QtCore/qlocale.h:1003
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString dateTimeFormat(enum QLocale::FormatType) const
+// [8] QString dateTimeFormat(QLocale::FormatType) const
 
 /*
 Returns the date time format used for the current locale.
@@ -2449,7 +2425,7 @@ func (this *QLocale) DateTimeFormat__() string {
 // /usr/include/qt/QtCore/qlocale.h:1005
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDate toDate(const QString &, enum QLocale::FormatType) const
+// [8] QDate toDate(const QString &, QLocale::FormatType) const
 
 /*
 Parses the date string given in string and returns the date. The format of the date string is chosen according to the format parameter (see dateFormat()).
@@ -2473,7 +2449,7 @@ func (this *QLocale) ToDate(string string, arg1 int) *QDate /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1005
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDate toDate(const QString &, enum QLocale::FormatType) const
+// [8] QDate toDate(const QString &, QLocale::FormatType) const
 
 /*
 Parses the date string given in string and returns the date. The format of the date string is chosen according to the format parameter (see dateFormat()).
@@ -2525,7 +2501,7 @@ func (this *QLocale) ToDate_1(string string, format string) *QDate /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1006
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTime toTime(const QString &, enum QLocale::FormatType) const
+// [4] QTime toTime(const QString &, QLocale::FormatType) const
 
 /*
 Parses the time string given in string and returns the time. The format of the time string is chosen according to the format parameter (see timeFormat()).
@@ -2549,7 +2525,7 @@ func (this *QLocale) ToTime(string string, arg1 int) *QTime /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1006
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] QTime toTime(const QString &, enum QLocale::FormatType) const
+// [4] QTime toTime(const QString &, QLocale::FormatType) const
 
 /*
 Parses the time string given in string and returns the time. The format of the time string is chosen according to the format parameter (see timeFormat()).
@@ -2601,7 +2577,7 @@ func (this *QLocale) ToTime_1(string string, format string) *QTime /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1007
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime toDateTime(const QString &, enum QLocale::FormatType) const
+// [8] QDateTime toDateTime(const QString &, QLocale::FormatType) const
 
 /*
 Parses the date/time string given in string and returns the time. The format of the date/time string is chosen according to the format parameter (see dateTimeFormat()).
@@ -2625,7 +2601,7 @@ func (this *QLocale) ToDateTime(string string, format int) *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1007
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QDateTime toDateTime(const QString &, enum QLocale::FormatType) const
+// [8] QDateTime toDateTime(const QString &, QLocale::FormatType) const
 
 /*
 Parses the date/time string given in string and returns the time. The format of the date/time string is chosen according to the format parameter (see dateTimeFormat()).
@@ -2803,7 +2779,7 @@ func (this *QLocale) Exponential() *QChar /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1023
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString monthName(int, enum QLocale::FormatType) const
+// [8] QString monthName(int, QLocale::FormatType) const
 
 /*
 Returns the localized name of month, in the format specified by type.
@@ -2824,7 +2800,7 @@ func (this *QLocale) MonthName(arg0 int, format int) string {
 // /usr/include/qt/QtCore/qlocale.h:1023
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString monthName(int, enum QLocale::FormatType) const
+// [8] QString monthName(int, QLocale::FormatType) const
 
 /*
 Returns the localized name of month, in the format specified by type.
@@ -2847,7 +2823,7 @@ func (this *QLocale) MonthName__(arg0 int) string {
 // /usr/include/qt/QtCore/qlocale.h:1024
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString standaloneMonthName(int, enum QLocale::FormatType) const
+// [8] QString standaloneMonthName(int, QLocale::FormatType) const
 
 /*
 Returns the localized name of month that is used as a standalone text, in the format specified by type.
@@ -2870,7 +2846,7 @@ func (this *QLocale) StandaloneMonthName(arg0 int, format int) string {
 // /usr/include/qt/QtCore/qlocale.h:1024
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString standaloneMonthName(int, enum QLocale::FormatType) const
+// [8] QString standaloneMonthName(int, QLocale::FormatType) const
 
 /*
 Returns the localized name of month that is used as a standalone text, in the format specified by type.
@@ -2895,7 +2871,7 @@ func (this *QLocale) StandaloneMonthName__(arg0 int) string {
 // /usr/include/qt/QtCore/qlocale.h:1025
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString dayName(int, enum QLocale::FormatType) const
+// [8] QString dayName(int, QLocale::FormatType) const
 
 /*
 Returns the localized name of the day (where 1 represents Monday, 2 represents Tuesday and so on), in the format specified by type.
@@ -2916,7 +2892,7 @@ func (this *QLocale) DayName(arg0 int, format int) string {
 // /usr/include/qt/QtCore/qlocale.h:1025
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString dayName(int, enum QLocale::FormatType) const
+// [8] QString dayName(int, QLocale::FormatType) const
 
 /*
 Returns the localized name of the day (where 1 represents Monday, 2 represents Tuesday and so on), in the format specified by type.
@@ -2939,7 +2915,7 @@ func (this *QLocale) DayName__(arg0 int) string {
 // /usr/include/qt/QtCore/qlocale.h:1026
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString standaloneDayName(int, enum QLocale::FormatType) const
+// [8] QString standaloneDayName(int, QLocale::FormatType) const
 
 /*
 Returns the localized name of the day (where 1 represents Monday, 2 represents Tuesday and so on) that is used as a standalone text, in the format specified by type.
@@ -2962,7 +2938,7 @@ func (this *QLocale) StandaloneDayName(arg0 int, format int) string {
 // /usr/include/qt/QtCore/qlocale.h:1026
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString standaloneDayName(int, enum QLocale::FormatType) const
+// [8] QString standaloneDayName(int, QLocale::FormatType) const
 
 /*
 Returns the localized name of the day (where 1 represents Monday, 2 represents Tuesday and so on) that is used as a standalone text, in the format specified by type.
@@ -3127,7 +3103,7 @@ func (this *QLocale) ToLower(str string) string {
 // /usr/include/qt/QtCore/qlocale.h:1041
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString currencySymbol(enum QLocale::CurrencySymbolFormat) const
+// [8] QString currencySymbol(QLocale::CurrencySymbolFormat) const
 
 /*
 Returns a currency symbol according to the format.
@@ -3146,7 +3122,7 @@ func (this *QLocale) CurrencySymbol(arg0 int) string {
 // /usr/include/qt/QtCore/qlocale.h:1041
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString currencySymbol(enum QLocale::CurrencySymbolFormat) const
+// [8] QString currencySymbol(QLocale::CurrencySymbolFormat) const
 
 /*
 Returns a currency symbol according to the format.
@@ -3706,7 +3682,7 @@ func (this *QLocale) Operator_not_equal(other QLocale_ITF) bool {
 // /usr/include/qt/QtCore/qlocale.h:1068
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString languageToString(enum QLocale::Language)
+// [8] QString languageToString(QLocale::Language)
 
 /*
 Returns a QString containing the name of language.
@@ -3730,7 +3706,7 @@ func QLocale_LanguageToString(language int) string {
 // /usr/include/qt/QtCore/qlocale.h:1069
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString countryToString(enum QLocale::Country)
+// [8] QString countryToString(QLocale::Country)
 
 /*
 Returns a QString containing the name of country.
@@ -3754,7 +3730,7 @@ func QLocale_CountryToString(country int) string {
 // /usr/include/qt/QtCore/qlocale.h:1070
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString scriptToString(enum QLocale::Script)
+// [8] QString scriptToString(QLocale::Script)
 
 /*
 Returns a QString containing the name of script.
@@ -3892,7 +3868,7 @@ func (this *QLocale) NumberOptions() int {
 // /usr/include/qt/QtCore/qlocale.h:1083
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString quoteString(const QString &, enum QLocale::QuotationStyle) const
+// [8] QString quoteString(const QString &, QLocale::QuotationStyle) const
 
 /*
 Returns str quoted according to the current locale using the given quotation style.
@@ -3913,7 +3889,7 @@ func (this *QLocale) QuoteString(str string, style int) string {
 // /usr/include/qt/QtCore/qlocale.h:1083
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString quoteString(const QString &, enum QLocale::QuotationStyle) const
+// [8] QString quoteString(const QString &, QLocale::QuotationStyle) const
 
 /*
 Returns str quoted according to the current locale using the given quotation style.
@@ -3936,7 +3912,7 @@ func (this *QLocale) QuoteString__(str string) string {
 // /usr/include/qt/QtCore/qlocale.h:1084
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QString quoteString(const QStringRef &, enum QLocale::QuotationStyle) const
+// [8] QString quoteString(const QStringRef &, QLocale::QuotationStyle) const
 
 /*
 Returns str quoted according to the current locale using the given quotation style.
@@ -3959,7 +3935,7 @@ func (this *QLocale) QuoteString_1(str QStringRef_ITF, style int) string {
 // /usr/include/qt/QtCore/qlocale.h:1084
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QString quoteString(const QStringRef &, enum QLocale::QuotationStyle) const
+// [8] QString quoteString(const QStringRef &, QLocale::QuotationStyle) const
 
 /*
 Returns str quoted according to the current locale using the given quotation style.

@@ -178,7 +178,6 @@ func (this *QDnsHostAddressRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QDnsHostAddressRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:99

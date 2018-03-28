@@ -121,7 +121,7 @@ func (this *QWindowList) IsDetached_0() bool {
 	return 0 == 0
 }
 
-// void setSharable(_Bool)
+// void setSharable(bool)
 func (this *QWindowList) SetSharable_0() {
 	// QWindowList_setSharable_0()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_setSharable_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -408,21 +408,21 @@ func (this *QWindowList) Crend_0() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// QList::iterator insert(class QList::iterator, const T &)
+// QList::iterator insert(QList::iterator, const T &)
 func (this *QWindowList) Insert_1() {
 	// QWindowList_insert_1()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_insert_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// QList::iterator erase(class QList::iterator)
+// QList::iterator erase(QList::iterator)
 func (this *QWindowList) Erase_0() {
 	// QWindowList_erase_0()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_erase_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// QList::iterator erase(class QList::iterator, class QList::iterator)
+// QList::iterator erase(QList::iterator, QList::iterator)
 func (this *QWindowList) Erase_1() {
 	// QWindowList_erase_1()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_erase_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -721,42 +721,42 @@ func (this *QWindowList) Detach_helper_1() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// void dealloc(struct QListData::Data *)
+// void dealloc(QListData::Data *)
 func (this *QWindowList) Dealloc_0() {
 	// QWindowList_dealloc_0()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_dealloc_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// void node_construct(struct QList::Node *, const T &)
+// void node_construct(QList::Node *, const T &)
 func (this *QWindowList) Node_construct_0() {
 	// QWindowList_node_construct_0()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_node_construct_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// void node_destruct(struct QList::Node *)
+// void node_destruct(QList::Node *)
 func (this *QWindowList) Node_destruct_0() {
 	// QWindowList_node_destruct_0()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_node_destruct_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// void node_copy(struct QList::Node *, struct QList::Node *, struct QList::Node *)
+// void node_copy(QList::Node *, QList::Node *, QList::Node *)
 func (this *QWindowList) Node_copy_0() {
 	// QWindowList_node_copy_0()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_node_copy_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// void node_destruct(struct QList::Node *, struct QList::Node *)
+// void node_destruct(QList::Node *, QList::Node *)
 func (this *QWindowList) Node_destruct_1() {
 	// QWindowList_node_destruct_1()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_node_destruct_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// bool isValidIterator(const class QList::iterator &)
+// bool isValidIterator(const QList::iterator &)
 func (this *QWindowList) IsValidIterator_0() bool {
 	// QWindowList_isValidIterator_0()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_isValidIterator_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -764,7 +764,7 @@ func (this *QWindowList) IsValidIterator_0() bool {
 	return 0 == 0
 }
 
-// bool op_eq_impl(const QList<T> &, struct QListData::NotArrayCompatibleLayout)
+// bool op_eq_impl(const QList<T> &, QListData::NotArrayCompatibleLayout)
 func (this *QWindowList) Op_eq_impl_0() bool {
 	// QWindowList_op_eq_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_op_eq_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -772,7 +772,7 @@ func (this *QWindowList) Op_eq_impl_0() bool {
 	return 0 == 0
 }
 
-// bool op_eq_impl(const QList<T> &, struct QListData::ArrayCompatibleLayout)
+// bool op_eq_impl(const QList<T> &, QListData::ArrayCompatibleLayout)
 func (this *QWindowList) Op_eq_impl_1() bool {
 	// QWindowList_op_eq_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_op_eq_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -780,7 +780,7 @@ func (this *QWindowList) Op_eq_impl_1() bool {
 	return 0 == 0
 }
 
-// bool contains_impl(const T &, struct QListData::NotArrayCompatibleLayout)
+// bool contains_impl(const T &, QListData::NotArrayCompatibleLayout)
 func (this *QWindowList) Contains_impl_0() bool {
 	// QWindowList_contains_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_contains_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -788,7 +788,7 @@ func (this *QWindowList) Contains_impl_0() bool {
 	return 0 == 0
 }
 
-// bool contains_impl(const T &, struct QListData::ArrayCompatibleLayout)
+// bool contains_impl(const T &, QListData::ArrayCompatibleLayout)
 func (this *QWindowList) Contains_impl_1() bool {
 	// QWindowList_contains_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_contains_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -796,7 +796,7 @@ func (this *QWindowList) Contains_impl_1() bool {
 	return 0 == 0
 }
 
-// int count_impl(const T &, struct QListData::NotArrayCompatibleLayout)
+// int count_impl(const T &, QListData::NotArrayCompatibleLayout)
 func (this *QWindowList) Count_impl_0() int {
 	// QWindowList_count_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_count_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -804,7 +804,7 @@ func (this *QWindowList) Count_impl_0() int {
 	return 0
 }
 
-// int count_impl(const T &, struct QListData::ArrayCompatibleLayout)
+// int count_impl(const T &, QListData::ArrayCompatibleLayout)
 func (this *QWindowList) Count_impl_1() int {
 	// QWindowList_count_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("QWindowList_count_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)

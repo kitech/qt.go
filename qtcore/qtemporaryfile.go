@@ -201,7 +201,7 @@ func (this *QTemporaryFile) AutoRemove() bool {
 // /usr/include/qt/QtCore/qtemporaryfile.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoRemove(_Bool)
+// [-2] void setAutoRemove(bool)
 
 /*
 Sets the QTemporaryFile into auto-remove mode if b is true.

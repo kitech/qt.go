@@ -69,7 +69,7 @@ func (*QGraphicsSceneContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QGr
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:174
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsSceneContextMenuEvent(enum QEvent::Type)
+// [-2] void QGraphicsSceneContextMenuEvent(QEvent::Type)
 
 /*
 
@@ -85,7 +85,7 @@ func NewQGraphicsSceneContextMenuEvent(type_ int) *QGraphicsSceneContextMenuEven
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:174
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsSceneContextMenuEvent(enum QEvent::Type)
+// [-2] void QGraphicsSceneContextMenuEvent(QEvent::Type)
 
 /*
 
@@ -258,7 +258,7 @@ func (this *QGraphicsSceneContextMenuEvent) Reason() int {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:190
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setReason(enum QGraphicsSceneContextMenuEvent::Reason)
+// [-2] void setReason(QGraphicsSceneContextMenuEvent::Reason)
 
 /*
 

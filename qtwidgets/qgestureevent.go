@@ -96,7 +96,7 @@ func (this *QGestureEvent) Gesture(type_ int) *QGesture /*777 QGesture **/ {
 // /usr/include/qt/QtWidgets/qgesture.h:291
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAccepted(QGesture *, _Bool)
+// [-2] void setAccepted(QGesture *, bool)
 
 /*
 
@@ -113,7 +113,7 @@ func (this *QGestureEvent) SetAccepted(arg0 QGesture_ITF /*777 QGesture **/, arg
 // /usr/include/qt/QtWidgets/qgesture.h:296
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void setAccepted(Qt::GestureType, _Bool)
+// [-2] void setAccepted(Qt::GestureType, bool)
 
 /*
 

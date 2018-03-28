@@ -410,7 +410,7 @@ func (this *QStaticText) Prepare__1(matrix QTransform_ITF) {
 // /usr/include/qt/QtGui/qstatictext.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPerformanceHint(enum QStaticText::PerformanceHint)
+// [-2] void setPerformanceHint(QStaticText::PerformanceHint)
 
 /*
 Sets the performance hint of the QStaticText according to the performanceHint provided. The performanceHint is used to customize how much caching is done internally to improve performance.

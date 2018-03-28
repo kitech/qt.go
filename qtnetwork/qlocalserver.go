@@ -405,7 +405,7 @@ func (this *QLocalServer) SetMaxPendingConnections(numConnections int) {
 // /usr/include/qt/QtNetwork/qlocalserver.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool waitForNewConnection(int, _Bool *)
+// [1] bool waitForNewConnection(int, bool *)
 
 /*
 Waits for at most msec milliseconds or until an incoming connection is available. Returns true if a connection is available; otherwise returns false. If the operation timed out and timedOut is not 0, *timedOut will be set to true.
@@ -427,7 +427,7 @@ func (this *QLocalServer) WaitForNewConnection(msec int, timedOut *bool) bool {
 // /usr/include/qt/QtNetwork/qlocalserver.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool waitForNewConnection(int, _Bool *)
+// [1] bool waitForNewConnection(int, bool *)
 
 /*
 Waits for at most msec milliseconds or until an incoming connection is available. Returns true if a connection is available; otherwise returns false. If the operation timed out and timedOut is not 0, *timedOut will be set to true.
@@ -453,7 +453,7 @@ func (this *QLocalServer) WaitForNewConnection__() bool {
 // /usr/include/qt/QtNetwork/qlocalserver.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool waitForNewConnection(int, _Bool *)
+// [1] bool waitForNewConnection(int, bool *)
 
 /*
 Waits for at most msec milliseconds or until an incoming connection is available. Returns true if a connection is available; otherwise returns false. If the operation timed out and timedOut is not 0, *timedOut will be set to true.
@@ -531,7 +531,6 @@ func (this *QLocalServer) SocketDescriptor() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer16socketDescriptorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qlocalserver.h:98

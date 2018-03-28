@@ -118,7 +118,7 @@ func QNetworkProxyFactory_UsesSystemConfiguration() bool {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:225
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setUseSystemConfiguration(_Bool)
+// [-2] void setUseSystemConfiguration(bool)
 
 /*
 

@@ -33,42 +33,42 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QDial) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QDial) InheritResizeEvent(f func(re *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QDial) InheritPaintEvent(f func(pe *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QDial) InheritMousePressEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QDial) InheritMouseReleaseEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QDial) InheritMouseMoveEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void sliderChange(enum QAbstractSlider::SliderChange)
+// void sliderChange(QAbstractSlider::SliderChange)
 func (this *QDial) InheritSliderChange(f func(change int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "sliderChange", f)
 }
 
-// void initStyleOption(class QStyleOptionSlider *)
+// void initStyleOption(QStyleOptionSlider *)
 func (this *QDial) InheritInitStyleOption(f func(option *QStyleOptionSlider /*777 QStyleOptionSlider **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -279,7 +279,7 @@ func (this *QDial) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qdial.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setNotchesVisible(_Bool)
+// [-2] void setNotchesVisible(bool)
 
 /*
 
@@ -292,7 +292,7 @@ func (this *QDial) SetNotchesVisible(visible bool) {
 // /usr/include/qt/QtWidgets/qdial.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWrapping(_Bool)
+// [-2] void setWrapping(bool)
 
 /*
 
@@ -408,7 +408,7 @@ func (this *QDial) MouseMoveEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent **/
 // /usr/include/qt/QtWidgets/qdial.h:92
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void sliderChange(enum QAbstractSlider::SliderChange)
+// [-2] void sliderChange(QAbstractSlider::SliderChange)
 
 /*
 Reimplemented from QAbstractSlider::sliderChange().

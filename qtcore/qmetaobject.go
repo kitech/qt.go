@@ -3547,7 +3547,7 @@ func (this *QMetaObject) NewInstance__9(val0 QGenericArgument_ITF /*123*/, val1 
 // /usr/include/qt/QtCore/qobjectdefs.h:581
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int static_metacall(enum QMetaObject::Call, int, void **) const
+// [4] int static_metacall(QMetaObject::Call, int, void **) const
 
 /*
 
@@ -3561,7 +3561,7 @@ func (this *QMetaObject) Static_metacall(arg0 int, arg1 int, arg2 unsafe.Pointer
 // /usr/include/qt/QtCore/qobjectdefs.h:582
 // index:0
 // Public static Visibility=Default Availability=Available
-// [4] int metacall(QObject *, enum QMetaObject::Call, int, void **)
+// [4] int metacall(QObject *, QMetaObject::Call, int, void **)
 
 /*
 

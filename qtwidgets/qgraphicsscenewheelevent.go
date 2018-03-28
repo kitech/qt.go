@@ -69,7 +69,7 @@ func (*QGraphicsSceneWheelEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsSceneWheelEvent(enum QEvent::Type)
+// [-2] void QGraphicsSceneWheelEvent(QEvent::Type)
 
 /*
 
@@ -85,7 +85,7 @@ func NewQGraphicsSceneWheelEvent(type_ int) *QGraphicsSceneWheelEvent {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsSceneWheelEvent(enum QEvent::Type)
+// [-2] void QGraphicsSceneWheelEvent(QEvent::Type)
 
 /*
 

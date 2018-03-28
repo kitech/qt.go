@@ -33,82 +33,82 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QLineEdit) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QLineEdit) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QLineEdit) InheritMouseReleaseEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QLineEdit) InheritMouseDoubleClickEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QLineEdit) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QLineEdit) InheritFocusInEvent(f func(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QLineEdit) InheritFocusOutEvent(f func(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QLineEdit) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void dragEnterEvent(class QDragEnterEvent *)
+// void dragEnterEvent(QDragEnterEvent *)
 func (this *QLineEdit) InheritDragEnterEvent(f func(arg0 *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragEnterEvent", f)
 }
 
-// void dragMoveEvent(class QDragMoveEvent *)
+// void dragMoveEvent(QDragMoveEvent *)
 func (this *QLineEdit) InheritDragMoveEvent(f func(e *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
-// void dragLeaveEvent(class QDragLeaveEvent *)
+// void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QLineEdit) InheritDragLeaveEvent(f func(e *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragLeaveEvent", f)
 }
 
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QLineEdit) InheritDropEvent(f func(arg0 *qtgui.QDropEvent /*777 QDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QLineEdit) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QLineEdit) InheritContextMenuEvent(f func(arg0 *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QLineEdit) InheritInputMethodEvent(f func(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionFrame *)
+// void initStyleOption(QStyleOptionFrame *)
 func (this *QLineEdit) InheritInitStyleOption(f func(option *QStyleOptionFrame /*777 QStyleOptionFrame **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -378,7 +378,7 @@ func (this *QLineEdit) SetMaxLength(arg0 int) {
 // /usr/include/qt/QtWidgets/qlineedit.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFrame(_Bool)
+// [-2] void setFrame(bool)
 
 /*
 
@@ -405,7 +405,7 @@ func (this *QLineEdit) HasFrame() bool {
 // /usr/include/qt/QtWidgets/qlineedit.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setClearButtonEnabled(_Bool)
+// [-2] void setClearButtonEnabled(bool)
 
 /*
 
@@ -446,7 +446,7 @@ func (this *QLineEdit) EchoMode() int {
 // /usr/include/qt/QtWidgets/qlineedit.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEchoMode(enum QLineEdit::EchoMode)
+// [-2] void setEchoMode(QLineEdit::EchoMode)
 
 /*
 
@@ -473,7 +473,7 @@ func (this *QLineEdit) IsReadOnly() bool {
 // /usr/include/qt/QtWidgets/qlineedit.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setReadOnly(_Bool)
+// [-2] void setReadOnly(bool)
 
 /*
 
@@ -678,7 +678,7 @@ func (this *QLineEdit) Alignment() int {
 // /usr/include/qt/QtWidgets/qlineedit.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void cursorForward(_Bool, int)
+// [-2] void cursorForward(bool, int)
 
 /*
 Moves the cursor forward steps characters. If mark is true each character moved over is added to the selection; if mark is false the selection is cleared.
@@ -693,7 +693,7 @@ func (this *QLineEdit) CursorForward(mark bool, steps int) {
 // /usr/include/qt/QtWidgets/qlineedit.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void cursorForward(_Bool, int)
+// [-2] void cursorForward(bool, int)
 
 /*
 Moves the cursor forward steps characters. If mark is true each character moved over is added to the selection; if mark is false the selection is cleared.
@@ -710,7 +710,7 @@ func (this *QLineEdit) CursorForward__(mark bool) {
 // /usr/include/qt/QtWidgets/qlineedit.h:142
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void cursorBackward(_Bool, int)
+// [-2] void cursorBackward(bool, int)
 
 /*
 Moves the cursor back steps characters. If mark is true each character moved over is added to the selection; if mark is false the selection is cleared.
@@ -725,7 +725,7 @@ func (this *QLineEdit) CursorBackward(mark bool, steps int) {
 // /usr/include/qt/QtWidgets/qlineedit.h:142
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void cursorBackward(_Bool, int)
+// [-2] void cursorBackward(bool, int)
 
 /*
 Moves the cursor back steps characters. If mark is true each character moved over is added to the selection; if mark is false the selection is cleared.
@@ -742,7 +742,7 @@ func (this *QLineEdit) CursorBackward__(mark bool) {
 // /usr/include/qt/QtWidgets/qlineedit.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void cursorWordForward(_Bool)
+// [-2] void cursorWordForward(bool)
 
 /*
 Moves the cursor one word forward. If mark is true, the word is also selected.
@@ -757,7 +757,7 @@ func (this *QLineEdit) CursorWordForward(mark bool) {
 // /usr/include/qt/QtWidgets/qlineedit.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void cursorWordBackward(_Bool)
+// [-2] void cursorWordBackward(bool)
 
 /*
 Moves the cursor one word backward. If mark is true, the word is also selected.
@@ -802,7 +802,7 @@ func (this *QLineEdit) Del() {
 // /usr/include/qt/QtWidgets/qlineedit.h:147
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void home(_Bool)
+// [-2] void home(bool)
 
 /*
 Moves the text cursor to the beginning of the line unless it is already there. If mark is true, text is selected towards the first position; otherwise, any selected text is unselected if the cursor is moved.
@@ -817,7 +817,7 @@ func (this *QLineEdit) Home(mark bool) {
 // /usr/include/qt/QtWidgets/qlineedit.h:148
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void end(_Bool)
+// [-2] void end(bool)
 
 /*
 Moves the text cursor to the end of the line unless it is already there. If mark is true, text is selected towards the last position; otherwise, any selected text is unselected if the cursor is moved.
@@ -846,7 +846,7 @@ func (this *QLineEdit) IsModified() bool {
 // /usr/include/qt/QtWidgets/qlineedit.h:151
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setModified(_Bool)
+// [-2] void setModified(bool)
 
 /*
 
@@ -985,7 +985,7 @@ func (this *QLineEdit) IsRedoAvailable() bool {
 // /usr/include/qt/QtWidgets/qlineedit.h:163
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDragEnabled(_Bool)
+// [-2] void setDragEnabled(bool)
 
 /*
 
@@ -1164,7 +1164,7 @@ func (this *QLineEdit) TextMargins() *qtcore.QMargins /*123*/ {
 // /usr/include/qt/QtWidgets/qlineedit.h:180
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void addAction(QAction *, enum QLineEdit::ActionPosition)
+// [-2] void addAction(QAction *, QLineEdit::ActionPosition)
 
 /*
 This is an overloaded function.
@@ -1185,7 +1185,7 @@ func (this *QLineEdit) AddAction(action QAction_ITF /*777 QAction **/, position 
 // /usr/include/qt/QtWidgets/qlineedit.h:181
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QAction * addAction(const QIcon &, enum QLineEdit::ActionPosition)
+// [8] QAction * addAction(const QIcon &, QLineEdit::ActionPosition)
 
 /*
 This is an overloaded function.

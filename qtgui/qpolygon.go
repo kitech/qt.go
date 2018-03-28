@@ -104,7 +104,7 @@ func NewQPolygon_1(size int) *QPolygon {
 // /usr/include/qt/QtGui/qpolygon.h:66
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QPolygon(const QRect &, _Bool)
+// [-2] void QPolygon(const QRect &, bool)
 
 /*
 Constructs a polygon with no points.
@@ -126,7 +126,7 @@ func NewQPolygon_2(r qtcore.QRect_ITF, closed bool) *QPolygon {
 // /usr/include/qt/QtGui/qpolygon.h:66
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QPolygon(const QRect &, _Bool)
+// [-2] void QPolygon(const QRect &, bool)
 
 /*
 Constructs a polygon with no points.

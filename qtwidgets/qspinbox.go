@@ -33,17 +33,17 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QSpinBox) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// QValidator::State validate(class QString &, int &)
+// QValidator::State validate(QString &, int &)
 func (this *QSpinBox) InheritValidate(f func(input string, pos int) int) {
 	qtrt.SetAllInheritCallback(this, "validate", f)
 }
 
-// int valueFromText(const class QString &)
+// int valueFromText(const QString &)
 func (this *QSpinBox) InheritValueFromText(f func(text string) int) {
 	qtrt.SetAllInheritCallback(this, "valueFromText", f)
 }
@@ -53,7 +53,7 @@ func (this *QSpinBox) InheritTextFromValue(f func(val int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "textFromValue", f)
 }
 
-// void fixup(class QString &)
+// void fixup(QString &)
 func (this *QSpinBox) InheritFixup(f func(str string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "fixup", f)
 }

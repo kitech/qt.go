@@ -27,7 +27,7 @@ func init() {
 
 //  body block begin
 // /usr/include/qt/QtWidgets/qsizepolicy.h:68
-// index:43
+// index:44
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(QSizePolicy, uint)
 
@@ -36,7 +36,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash_43(key QSizePolicy_ITF /*123*/, seed uint) uint {
+func QHash_44(key QSizePolicy_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QSizePolicy_PTR() != nil {
 		convArg0 = key.QSizePolicy_PTR().GetCthis()
@@ -44,13 +44,12 @@ func QHash_43(key QSizePolicy_ITF /*123*/, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash11QSizePolicyj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:147
 // index:0
 // Invalid Visibility=Default Availability=Available
-// [-2] void qDrawBorderPixmap(QPainter *, const QRect &, const QMargins &, const QPixmap &, const QRect &, const QMargins &, const struct QTileRules &, QDrawBorderPixmap::DrawingHints)
+// [-2] void qDrawBorderPixmap(QPainter *, const QRect &, const QMargins &, const QPixmap &, const QRect &, const QMargins &, const QTileRules &, QDrawBorderPixmap::DrawingHints)
 
 /*
 
@@ -120,7 +119,7 @@ func QDrawBorderPixmap_1(painter qtgui.QPainter_ITF /*777 QPainter **/, target q
 // /usr/include/qt/QtWidgets/qdrawutil.h:80
 // index:0
 // Invalid Visibility=Default Availability=Available
-// [-2] void qDrawShadePanel(QPainter *, int, int, int, int, const QPalette &, _Bool, int, const QBrush *)
+// [-2] void qDrawShadePanel(QPainter *, int, int, int, int, const QPalette &, bool, int, const QBrush *)
 
 /*
 
@@ -145,7 +144,7 @@ func QDrawShadePanel(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w in
 // /usr/include/qt/QtWidgets/qdrawutil.h:84
 // index:1
 // Invalid Visibility=Default Availability=Available
-// [-2] void qDrawShadePanel(QPainter *, const QRect &, const QPalette &, _Bool, int, const QBrush *)
+// [-2] void qDrawShadePanel(QPainter *, const QRect &, const QPalette &, bool, int, const QBrush *)
 
 /*
 
@@ -174,7 +173,7 @@ func QDrawShadePanel_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_I
 // /usr/include/qt/QtWidgets/qdrawutil.h:88
 // index:0
 // Invalid Visibility=Default Availability=Available
-// [-2] void qDrawWinButton(QPainter *, int, int, int, int, const QPalette &, _Bool, const QBrush *)
+// [-2] void qDrawWinButton(QPainter *, int, int, int, int, const QPalette &, bool, const QBrush *)
 
 /*
 
@@ -199,7 +198,7 @@ func QDrawWinButton(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int
 // /usr/include/qt/QtWidgets/qdrawutil.h:92
 // index:1
 // Invalid Visibility=Default Availability=Available
-// [-2] void qDrawWinButton(QPainter *, const QRect &, const QPalette &, _Bool, const QBrush *)
+// [-2] void qDrawWinButton(QPainter *, const QRect &, const QPalette &, bool, const QBrush *)
 
 /*
 
@@ -228,7 +227,7 @@ func QDrawWinButton_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_IT
 // /usr/include/qt/QtWidgets/qdrawutil.h:70
 // index:0
 // Invalid Visibility=Default Availability=Available
-// [-2] void qDrawShadeRect(QPainter *, int, int, int, int, const QPalette &, _Bool, int, int, const QBrush *)
+// [-2] void qDrawShadeRect(QPainter *, int, int, int, int, const QPalette &, bool, int, int, const QBrush *)
 
 /*
 
@@ -253,7 +252,7 @@ func QDrawShadeRect(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int
 // /usr/include/qt/QtWidgets/qdrawutil.h:75
 // index:1
 // Invalid Visibility=Default Availability=Available
-// [-2] void qDrawShadeRect(QPainter *, const QRect &, const QPalette &, _Bool, int, int, const QBrush *)
+// [-2] void qDrawShadeRect(QPainter *, const QRect &, const QPalette &, bool, int, int, const QBrush *)
 
 /*
 
@@ -282,7 +281,7 @@ func QDrawShadeRect_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_IT
 // /usr/include/qt/QtWidgets/qdrawutil.h:62
 // index:0
 // Invalid Visibility=Default Availability=Available
-// [-2] void qDrawShadeLine(QPainter *, int, int, int, int, const QPalette &, _Bool, int, int)
+// [-2] void qDrawShadeLine(QPainter *, int, int, int, int, const QPalette &, bool, int, int)
 
 /*
 
@@ -303,7 +302,7 @@ func QDrawShadeLine(p qtgui.QPainter_ITF /*777 QPainter **/, x1 int, y1 int, x2 
 // /usr/include/qt/QtWidgets/qdrawutil.h:66
 // index:1
 // Invalid Visibility=Default Availability=Available
-// [-2] void qDrawShadeLine(QPainter *, const QPoint &, const QPoint &, const QPalette &, _Bool, int, int)
+// [-2] void qDrawShadeLine(QPainter *, const QPoint &, const QPoint &, const QPalette &, bool, int, int)
 
 /*
 
@@ -386,7 +385,7 @@ func QDrawPlainRect_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_IT
 // /usr/include/qt/QtWidgets/qdrawutil.h:96
 // index:0
 // Invalid Visibility=Default Availability=Available
-// [-2] void qDrawWinPanel(QPainter *, int, int, int, int, const QPalette &, _Bool, const QBrush *)
+// [-2] void qDrawWinPanel(QPainter *, int, int, int, int, const QPalette &, bool, const QBrush *)
 
 /*
 
@@ -411,7 +410,7 @@ func QDrawWinPanel(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int,
 // /usr/include/qt/QtWidgets/qdrawutil.h:100
 // index:1
 // Invalid Visibility=Default Availability=Available
-// [-2] void qDrawWinPanel(QPainter *, const QRect &, const QPalette &, _Bool, const QBrush *)
+// [-2] void qDrawWinPanel(QPainter *, const QRect &, const QPalette &, bool, const QBrush *)
 
 /*
 

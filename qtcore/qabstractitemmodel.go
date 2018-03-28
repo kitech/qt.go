@@ -41,12 +41,12 @@ func (this *QAbstractItemModel) InheritCreateIndex(f func(row int, column int, d
 	qtrt.SetAllInheritCallback(this, "createIndex", f)
 }
 
-// bool decodeData(int, int, const class QModelIndex &, class QDataStream &)
+// bool decodeData(int, int, const QModelIndex &, QDataStream &)
 func (this *QAbstractItemModel) InheritDecodeData(f func(row int, column int, parent *QModelIndex, stream *QDataStream) bool) {
 	qtrt.SetAllInheritCallback(this, "decodeData", f)
 }
 
-// void beginInsertRows(const class QModelIndex &, int, int)
+// void beginInsertRows(const QModelIndex &, int, int)
 func (this *QAbstractItemModel) InheritBeginInsertRows(f func(parent *QModelIndex, first int, last int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "beginInsertRows", f)
 }
@@ -56,7 +56,7 @@ func (this *QAbstractItemModel) InheritEndInsertRows(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "endInsertRows", f)
 }
 
-// void beginRemoveRows(const class QModelIndex &, int, int)
+// void beginRemoveRows(const QModelIndex &, int, int)
 func (this *QAbstractItemModel) InheritBeginRemoveRows(f func(parent *QModelIndex, first int, last int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "beginRemoveRows", f)
 }
@@ -66,7 +66,7 @@ func (this *QAbstractItemModel) InheritEndRemoveRows(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "endRemoveRows", f)
 }
 
-// bool beginMoveRows(const class QModelIndex &, int, int, const class QModelIndex &, int)
+// bool beginMoveRows(const QModelIndex &, int, int, const QModelIndex &, int)
 func (this *QAbstractItemModel) InheritBeginMoveRows(f func(sourceParent *QModelIndex, sourceFirst int, sourceLast int, destinationParent *QModelIndex, destinationRow int) bool) {
 	qtrt.SetAllInheritCallback(this, "beginMoveRows", f)
 }
@@ -76,7 +76,7 @@ func (this *QAbstractItemModel) InheritEndMoveRows(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "endMoveRows", f)
 }
 
-// void beginInsertColumns(const class QModelIndex &, int, int)
+// void beginInsertColumns(const QModelIndex &, int, int)
 func (this *QAbstractItemModel) InheritBeginInsertColumns(f func(parent *QModelIndex, first int, last int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "beginInsertColumns", f)
 }
@@ -86,7 +86,7 @@ func (this *QAbstractItemModel) InheritEndInsertColumns(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "endInsertColumns", f)
 }
 
-// void beginRemoveColumns(const class QModelIndex &, int, int)
+// void beginRemoveColumns(const QModelIndex &, int, int)
 func (this *QAbstractItemModel) InheritBeginRemoveColumns(f func(parent *QModelIndex, first int, last int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "beginRemoveColumns", f)
 }
@@ -96,7 +96,7 @@ func (this *QAbstractItemModel) InheritEndRemoveColumns(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "endRemoveColumns", f)
 }
 
-// bool beginMoveColumns(const class QModelIndex &, int, int, const class QModelIndex &, int)
+// bool beginMoveColumns(const QModelIndex &, int, int, const QModelIndex &, int)
 func (this *QAbstractItemModel) InheritBeginMoveColumns(f func(sourceParent *QModelIndex, sourceFirst int, sourceLast int, destinationParent *QModelIndex, destinationColumn int) bool) {
 	qtrt.SetAllInheritCallback(this, "beginMoveColumns", f)
 }
@@ -116,7 +116,7 @@ func (this *QAbstractItemModel) InheritEndResetModel(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "endResetModel", f)
 }
 
-// void changePersistentIndex(const class QModelIndex &, const class QModelIndex &)
+// void changePersistentIndex(const QModelIndex &, const QModelIndex &)
 func (this *QAbstractItemModel) InheritChangePersistentIndex(f func(from *QModelIndex, to *QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changePersistentIndex", f)
 }

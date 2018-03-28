@@ -33,22 +33,22 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QWidgetAction) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QWidgetAction) InheritEventFilter(f func(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// QWidget * createWidget(class QWidget *)
+// QWidget * createWidget(QWidget *)
 func (this *QWidgetAction) InheritCreateWidget(f func(parent *QWidget /*777 QWidget **/) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "createWidget", f)
 }
 
-// void deleteWidget(class QWidget *)
+// void deleteWidget(QWidget *)
 func (this *QWidgetAction) InheritDeleteWidget(f func(widget *QWidget /*777 QWidget **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "deleteWidget", f)
 }

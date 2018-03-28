@@ -31,17 +31,17 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void onEntry(class QEvent *)
+// void onEntry(QEvent *)
 func (this *QAbstractState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onEntry", f)
 }
 
-// void onExit(class QEvent *)
+// void onExit(QEvent *)
 func (this *QAbstractState) InheritOnExit(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onExit", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QAbstractState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -155,7 +155,7 @@ func (this *QAbstractState) Active() bool {
 // /usr/include/qt/QtCore/qabstractstate.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void activeChanged(_Bool)
+// [-2] void activeChanged(bool)
 
 /*
 This signal is emitted when the active property is changed with active as argument.

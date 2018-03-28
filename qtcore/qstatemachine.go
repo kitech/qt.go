@@ -31,37 +31,37 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void onEntry(class QEvent *)
+// void onEntry(QEvent *)
 func (this *QStateMachine) InheritOnEntry(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onEntry", f)
 }
 
-// void onExit(class QEvent *)
+// void onExit(QEvent *)
 func (this *QStateMachine) InheritOnExit(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onExit", f)
 }
 
-// void beginSelectTransitions(class QEvent *)
+// void beginSelectTransitions(QEvent *)
 func (this *QStateMachine) InheritBeginSelectTransitions(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "beginSelectTransitions", f)
 }
 
-// void endSelectTransitions(class QEvent *)
+// void endSelectTransitions(QEvent *)
 func (this *QStateMachine) InheritEndSelectTransitions(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "endSelectTransitions", f)
 }
 
-// void beginMicrostep(class QEvent *)
+// void beginMicrostep(QEvent *)
 func (this *QStateMachine) InheritBeginMicrostep(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "beginMicrostep", f)
 }
 
-// void endMicrostep(class QEvent *)
+// void endMicrostep(QEvent *)
 func (this *QStateMachine) InheritEndMicrostep(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "endMicrostep", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QStateMachine) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -321,7 +321,7 @@ func (this *QStateMachine) IsAnimated() bool {
 // /usr/include/qt/QtCore/qstatemachine.h:127
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAnimated(_Bool)
+// [-2] void setAnimated(bool)
 
 /*
 Sets whether animations are enabled for this state machine.
@@ -407,7 +407,7 @@ func (this *QStateMachine) SetGlobalRestorePolicy(restorePolicy int) {
 // /usr/include/qt/QtCore/qstatemachine.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void postEvent(QEvent *, enum QStateMachine::EventPriority)
+// [-2] void postEvent(QEvent *, QStateMachine::EventPriority)
 
 /*
 Posts the given event of the given priority for processing by this state machine.
@@ -432,7 +432,7 @@ func (this *QStateMachine) PostEvent(event QEvent_ITF /*777 QEvent **/, priority
 // /usr/include/qt/QtCore/qstatemachine.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void postEvent(QEvent *, enum QStateMachine::EventPriority)
+// [-2] void postEvent(QEvent *, QStateMachine::EventPriority)
 
 /*
 Posts the given event of the given priority for processing by this state machine.
@@ -557,7 +557,7 @@ func (this *QStateMachine) Stop() {
 // /usr/include/qt/QtCore/qstatemachine.h:150
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRunning(_Bool)
+// [-2] void setRunning(bool)
 
 /*
 
@@ -570,7 +570,7 @@ func (this *QStateMachine) SetRunning(running bool) {
 // /usr/include/qt/QtCore/qstatemachine.h:155
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void runningChanged(_Bool)
+// [-2] void runningChanged(bool)
 
 /*
 This signal is emitted when the running property is changed with running as argument.

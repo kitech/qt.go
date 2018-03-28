@@ -187,7 +187,7 @@ func (this *QTouchDevice) SetName(name string) {
 // /usr/include/qt/QtGui/qtouchdevice.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setType(enum QTouchDevice::DeviceType)
+// [-2] void setType(QTouchDevice::DeviceType)
 
 /*
 Sets the device type devType.

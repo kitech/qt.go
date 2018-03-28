@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void emitSelectionChanged(const class QItemSelection &, const class QItemSelection &)
+// void emitSelectionChanged(const QItemSelection &, const QItemSelection &)
 func (this *QItemSelectionModel) InheritEmitSelectionChanged(f func(newSelection *QItemSelection, oldSelection *QItemSelection) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "emitSelectionChanged", f)
 }

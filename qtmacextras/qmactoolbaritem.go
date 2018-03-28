@@ -148,7 +148,7 @@ func (this *QMacToolBarItem) Selectable() bool {
 // /usr/include/qt/QtMacExtras/../../src/macextras/qmactoolbaritem.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSelectable(_Bool)
+// [-2] void setSelectable(bool)
 
 /*
 
@@ -175,7 +175,7 @@ func (this *QMacToolBarItem) StandardItem() int {
 // /usr/include/qt/QtMacExtras/../../src/macextras/qmactoolbaritem.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStandardItem(enum QMacToolBarItem::StandardItem)
+// [-2] void setStandardItem(QMacToolBarItem::StandardItem)
 
 /*
 

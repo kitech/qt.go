@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QTimeLine) InheritTimerEvent(f func(event *QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
@@ -214,7 +214,7 @@ func (this *QTimeLine) Direction() int {
 // /usr/include/qt/QtCore/qtimeline.h:88
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDirection(enum QTimeLine::Direction)
+// [-2] void setDirection(QTimeLine::Direction)
 
 /*
 
@@ -374,7 +374,7 @@ func (this *QTimeLine) CurveShape() int {
 // /usr/include/qt/QtCore/qtimeline.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCurveShape(enum QTimeLine::CurveShape)
+// [-2] void setCurveShape(QTimeLine::CurveShape)
 
 /*
 
@@ -549,7 +549,7 @@ func (this *QTimeLine) Stop() {
 // /usr/include/qt/QtCore/qtimeline.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPaused(_Bool)
+// [-2] void setPaused(bool)
 
 /*
 If paused is true, the timeline is paused, causing QTimeLine to enter Paused state. No updates will be signaled until either start() or setPaused(false) is called. If paused is false, the timeline is resumed and continues where it left.

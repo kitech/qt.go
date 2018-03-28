@@ -120,20 +120,6 @@ func (this *QTouchEvent) TouchPointStates() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:955
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [8] const QList<QTouchEvent::TouchPoint> & touchPoints() const
-
-/*
-
- */
-func (this *QTouchEvent) TouchPoints() unsafe.Pointer /*555*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent11touchPointsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return unsafe.Pointer(uintptr(rv))
-}
-
 // /usr/include/qt/QtGui/qevent.h:956
 // index:0
 // Public inline Visibility=Default Availability=Available

@@ -51,7 +51,7 @@ func (this *QIODevice) InheritSetOpenMode(f func(openMode int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setOpenMode", f)
 }
 
-// void setErrorString(const class QString &)
+// void setErrorString(const QString &)
 func (this *QIODevice) InheritSetErrorString(f func(errorString string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setErrorString", f)
 }
@@ -171,7 +171,7 @@ func (this *QIODevice) OpenMode() int {
 // /usr/include/qt/QtCore/qiodevice.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTextModeEnabled(_Bool)
+// [-2] void setTextModeEnabled(bool)
 
 /*
 If enabled is true, this function sets the Text flag on the device; otherwise the Text flag is removed. This feature is useful for classes that provide custom end-of-line handling on a QIODevice.
@@ -426,7 +426,6 @@ func (this *QIODevice) Pos() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QIODevice3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:112
@@ -445,7 +444,6 @@ func (this *QIODevice) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QIODevice4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:113
@@ -526,7 +524,6 @@ func (this *QIODevice) BytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QIODevice14bytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:118
@@ -545,7 +542,6 @@ func (this *QIODevice) BytesToWrite() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QIODevice12bytesToWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:120
@@ -566,7 +562,6 @@ func (this *QIODevice) Read(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice4readEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:121
@@ -651,7 +646,6 @@ func (this *QIODevice) ReadLine(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice8readLineEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:124
@@ -871,7 +865,6 @@ func (this *QIODevice) Write(data string, len_ int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice5writeEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:133
@@ -890,7 +883,6 @@ func (this *QIODevice) Write_1(data string) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice5writeEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:134
@@ -911,7 +903,6 @@ func (this *QIODevice) Write_2(data QByteArray_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice5writeERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:137
@@ -947,7 +938,6 @@ func (this *QIODevice) Peek(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice4peekEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:138
@@ -1009,7 +999,6 @@ func (this *QIODevice) Skip(maxSize int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice4skipEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxSize)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:141
@@ -1262,7 +1251,6 @@ func (this *QIODevice) ReadData(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice8readDataEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:167
@@ -1285,7 +1273,6 @@ func (this *QIODevice) ReadLineData(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice12readLineDataEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:168
@@ -1308,7 +1295,6 @@ func (this *QIODevice) WriteData(data string, len_ int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:170

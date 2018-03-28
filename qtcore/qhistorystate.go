@@ -31,17 +31,17 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void onEntry(class QEvent *)
+// void onEntry(QEvent *)
 func (this *QHistoryState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onEntry", f)
 }
 
-// void onExit(class QEvent *)
+// void onExit(QEvent *)
 func (this *QHistoryState) InheritOnExit(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onExit", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QHistoryState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -132,7 +132,7 @@ func NewQHistoryState__() *QHistoryState {
 // /usr/include/qt/QtCore/qhistorystate.h:65
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QHistoryState(enum QHistoryState::HistoryType, QState *)
+// [-2] void QHistoryState(QHistoryState::HistoryType, QState *)
 
 /*
 Constructs a new shallow history state with the given parent state.
@@ -152,7 +152,7 @@ func NewQHistoryState_1(type_ int, parent QState_ITF /*777 QState **/) *QHistory
 // /usr/include/qt/QtCore/qhistorystate.h:65
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QHistoryState(enum QHistoryState::HistoryType, QState *)
+// [-2] void QHistoryState(QHistoryState::HistoryType, QState *)
 
 /*
 Constructs a new shallow history state with the given parent state.
@@ -289,7 +289,7 @@ func (this *QHistoryState) HistoryType() int {
 // /usr/include/qt/QtCore/qhistorystate.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHistoryType(enum QHistoryState::HistoryType)
+// [-2] void setHistoryType(QHistoryState::HistoryType)
 
 /*
 Sets the type of history that this history state records.

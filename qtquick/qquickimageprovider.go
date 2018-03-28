@@ -71,7 +71,7 @@ func (*QQuickImageProvider) NewFromPointer(cthis unsafe.Pointer) *QQuickImagePro
 // /usr/include/qt/QtQuick/qquickimageprovider.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QQuickImageProvider(enum QQmlImageProviderBase::ImageType, QQmlImageProviderBase::Flags)
+// [-2] void QQuickImageProvider(QQmlImageProviderBase::ImageType, QQmlImageProviderBase::Flags)
 
 /*
 Creates an image provider that will provide images of the given type and behave according to the given flags.
@@ -87,7 +87,7 @@ func NewQQuickImageProvider(type_ int, flags int) *QQuickImageProvider {
 // /usr/include/qt/QtQuick/qquickimageprovider.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QQuickImageProvider(enum QQmlImageProviderBase::ImageType, QQmlImageProviderBase::Flags)
+// [-2] void QQuickImageProvider(QQmlImageProviderBase::ImageType, QQmlImageProviderBase::Flags)
 
 /*
 Creates an image provider that will provide images of the given type and behave according to the given flags.

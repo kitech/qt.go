@@ -248,7 +248,7 @@ func (this *QDataStream) Status() int {
 // /usr/include/qt/QtCore/qdatastream.h:136
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStatus(enum QDataStream::Status)
+// [-2] void setStatus(QDataStream::Status)
 
 /*
 Sets the status of the data stream to the status given.
@@ -298,7 +298,7 @@ func (this *QDataStream) FloatingPointPrecision() int {
 // /usr/include/qt/QtCore/qdatastream.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFloatingPointPrecision(enum QDataStream::FloatingPointPrecision)
+// [-2] void setFloatingPointPrecision(QDataStream::FloatingPointPrecision)
 
 /*
 Sets the floating point precision of the data stream to precision. If the floating point precision is DoublePrecision and the version of the data stream is Qt_4_6 or higher, all floating point numbers will be written and read with 64-bit precision. If the floating point precision is SinglePrecision and the version is Qt_4_6 or higher, all floating point numbers will be written and read with 32-bit precision.
@@ -339,7 +339,7 @@ func (this *QDataStream) ByteOrder() int {
 // /usr/include/qt/QtCore/qdatastream.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setByteOrder(enum QDataStream::ByteOrder)
+// [-2] void setByteOrder(QDataStream::ByteOrder)
 
 /*
 Sets the serialization byte order to bo.
@@ -513,7 +513,7 @@ func (this *QDataStream) Operator_right_shift_6(i uint64) *QDataStream {
 // /usr/include/qt/QtCore/qdatastream.h:158
 // index:7
 // Public Visibility=Default Availability=Available
-// [32] QDataStream & operator>>(_Bool &)
+// [32] QDataStream & operator>>(bool &)
 
 /*
 
@@ -689,7 +689,7 @@ func (this *QDataStream) Operator_left_shift_6(i uint64) *QDataStream {
 // /usr/include/qt/QtCore/qdatastream.h:173
 // index:7
 // Public Visibility=Default Availability=Available
-// [32] QDataStream & operator<<(_Bool)
+// [32] QDataStream & operator<<(bool)
 
 /*
 

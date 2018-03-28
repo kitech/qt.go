@@ -69,7 +69,7 @@ func (*QJSValue) NewFromPointer(cthis unsafe.Pointer) *QJSValue {
 // /usr/include/qt/QtQml/qjsvalue.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QJSValue(enum QJSValue::SpecialValue)
+// [-2] void QJSValue(QJSValue::SpecialValue)
 
 /*
 Constructs a new QJSValue with a special value.
@@ -85,7 +85,7 @@ func NewQJSValue(value int) *QJSValue {
 // /usr/include/qt/QtQml/qjsvalue.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QJSValue(enum QJSValue::SpecialValue)
+// [-2] void QJSValue(QJSValue::SpecialValue)
 
 /*
 Constructs a new QJSValue with a special value.
@@ -103,7 +103,7 @@ func NewQJSValue__() *QJSValue {
 // /usr/include/qt/QtQml/qjsvalue.h:82
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QJSValue(_Bool)
+// [-2] void QJSValue(bool)
 
 /*
 Constructs a new QJSValue with a special value.
@@ -532,7 +532,6 @@ func (this *QJSValue) ToInt() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue5toIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int(rv) // 222
-	// int // 222
 }
 
 // /usr/include/qt/QtQml/qjsvalue.h:111
@@ -551,7 +550,6 @@ func (this *QJSValue) ToUInt() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue6toUIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtQml/qjsvalue.h:112

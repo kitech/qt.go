@@ -32,22 +32,22 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QPaintDeviceWindow) InheritPaintEvent(f func(event *QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QPaintDeviceWindow) InheritMetric(f func(metric int) int) {
 	qtrt.SetAllInheritCallback(this, "metric", f)
 }
 
-// void exposeEvent(class QExposeEvent *)
+// void exposeEvent(QExposeEvent *)
 func (this *QPaintDeviceWindow) InheritExposeEvent(f func(arg0 *QExposeEvent /*777 QExposeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "exposeEvent", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QPaintDeviceWindow) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -182,7 +182,7 @@ func (this *QPaintDeviceWindow) PaintEvent(event QPaintEvent_ITF /*777 QPaintEve
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:71
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
+// [4] int metric(QPaintDevice::PaintDeviceMetric) const
 
 /*
 

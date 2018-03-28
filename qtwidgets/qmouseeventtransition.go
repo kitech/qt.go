@@ -33,12 +33,12 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void onTransition(class QEvent *)
+// void onTransition(QEvent *)
 func (this *QMouseEventTransition) InheritOnTransition(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onTransition", f)
 }
 
-// bool eventTest(class QEvent *)
+// bool eventTest(QEvent *)
 func (this *QMouseEventTransition) InheritEventTest(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventTest", f)
 }

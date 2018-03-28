@@ -33,27 +33,27 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QSlider) InheritPaintEvent(f func(ev *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QSlider) InheritMousePressEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QSlider) InheritMouseReleaseEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QSlider) InheritMouseMoveEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionSlider *)
+// void initStyleOption(QStyleOptionSlider *)
 func (this *QSlider) InheritInitStyleOption(f func(option *QStyleOptionSlider /*777 QStyleOptionSlider **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -229,7 +229,7 @@ func (this *QSlider) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qslider.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTickPosition(enum QSlider::TickPosition)
+// [-2] void setTickPosition(QSlider::TickPosition)
 
 /*
 

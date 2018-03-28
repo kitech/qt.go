@@ -461,7 +461,7 @@ func (this *QTextBlock) IsVisible() bool {
 // /usr/include/qt/QtGui/qtextobject.h:247
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 

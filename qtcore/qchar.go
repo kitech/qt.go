@@ -175,7 +175,7 @@ func NewQChar_5(rc int) *QChar {
 // /usr/include/qt/QtCore/qchar.h:87
 // index:6
 // Public inline Visibility=Default Availability=Available
-// [-2] void QChar(enum QChar::SpecialCharacter)
+// [-2] void QChar(QChar::SpecialCharacter)
 
 /*
 Constructs a null QChar ('\0').
@@ -449,7 +449,6 @@ func (this *QChar) MirroredChar_1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar12mirroredCharEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QChar_MirroredChar_1(ucs4 uint) uint {
 	var nilthis *QChar
@@ -631,7 +630,6 @@ func (this *QChar) ToLower_1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7toLowerEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QChar_ToLower_1(ucs4 uint) uint {
 	var nilthis *QChar
@@ -667,7 +665,6 @@ func (this *QChar) ToUpper_1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7toUpperEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QChar_ToUpper_1(ucs4 uint) uint {
 	var nilthis *QChar
@@ -703,7 +700,6 @@ func (this *QChar) ToTitleCase_1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar11toTitleCaseEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QChar_ToTitleCase_1(ucs4 uint) uint {
 	var nilthis *QChar
@@ -739,7 +735,6 @@ func (this *QChar) ToCaseFolded_1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar12toCaseFoldedEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QChar_ToCaseFolded_1(ucs4 uint) uint {
 	var nilthis *QChar
@@ -847,7 +842,6 @@ func (this *QChar) Unicode() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qchar.h:434
@@ -1485,7 +1479,6 @@ func (this *QChar) Cell() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar4cellEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtCore/qchar.h:463
@@ -1502,7 +1495,6 @@ func (this *QChar) Row() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QChar3rowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtCore/qchar.h:464
@@ -1562,7 +1554,6 @@ func (this *QChar) SurrogateToUcs4(high uint16, low uint16) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4Ett", qtrt.FFI_TYPE_POINTER, high, low)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QChar_SurrogateToUcs4(high uint16, low uint16) uint {
 	var nilthis *QChar
@@ -1590,7 +1581,6 @@ func (this *QChar) SurrogateToUcs4_1(high QChar_ITF /*123*/, low QChar_ITF /*123
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4ES_S_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QChar_SurrogateToUcs4_1(high QChar_ITF /*123*/, low QChar_ITF /*123*/) uint {
 	var nilthis *QChar
@@ -1610,7 +1600,6 @@ func (this *QChar) HighSurrogate(ucs4 uint) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar13highSurrogateEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 func QChar_HighSurrogate(ucs4 uint) uint16 {
 	var nilthis *QChar
@@ -1630,7 +1619,6 @@ func (this *QChar) LowSurrogate(ucs4 uint) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar12lowSurrogateEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 func QChar_LowSurrogate(ucs4 uint) uint16 {
 	var nilthis *QChar

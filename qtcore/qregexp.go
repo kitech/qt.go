@@ -85,7 +85,7 @@ func NewQRegExp() *QRegExp {
 // /usr/include/qt/QtCore/qregexp.h:71
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QRegExp(const QString &, Qt::CaseSensitivity, enum QRegExp::PatternSyntax)
+// [-2] void QRegExp(const QString &, Qt::CaseSensitivity, QRegExp::PatternSyntax)
 
 /*
 Constructs an empty regexp.
@@ -105,7 +105,7 @@ func NewQRegExp_1(pattern string, cs int, syntax int) *QRegExp {
 // /usr/include/qt/QtCore/qregexp.h:71
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QRegExp(const QString &, Qt::CaseSensitivity, enum QRegExp::PatternSyntax)
+// [-2] void QRegExp(const QString &, Qt::CaseSensitivity, QRegExp::PatternSyntax)
 
 /*
 Constructs an empty regexp.
@@ -129,7 +129,7 @@ func NewQRegExp_1_(pattern string) *QRegExp {
 // /usr/include/qt/QtCore/qregexp.h:71
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QRegExp(const QString &, Qt::CaseSensitivity, enum QRegExp::PatternSyntax)
+// [-2] void QRegExp(const QString &, Qt::CaseSensitivity, QRegExp::PatternSyntax)
 
 /*
 Constructs an empty regexp.
@@ -380,7 +380,7 @@ func (this *QRegExp) PatternSyntax() int {
 // /usr/include/qt/QtCore/qregexp.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPatternSyntax(enum QRegExp::PatternSyntax)
+// [-2] void setPatternSyntax(QRegExp::PatternSyntax)
 
 /*
 Sets the syntax mode for the regular expression. The default is QRegExp::RegExp.
@@ -415,7 +415,7 @@ func (this *QRegExp) IsMinimal() bool {
 // /usr/include/qt/QtCore/qregexp.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMinimal(_Bool)
+// [-2] void setMinimal(bool)
 
 /*
 Enables or disables minimal matching. If minimal is false, matching is greedy (maximal) which is the default.
@@ -456,7 +456,7 @@ func (this *QRegExp) ExactMatch(str string) bool {
 // /usr/include/qt/QtCore/qregexp.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int indexIn(const QString &, int, enum QRegExp::CaretMode) const
+// [4] int indexIn(const QString &, int, QRegExp::CaretMode) const
 
 /*
 Attempts to find a match in str from position offset (0 by default). If offset is -1, the search starts at the last character; if -2, at the next to last character; etc.
@@ -499,7 +499,7 @@ func (this *QRegExp) IndexIn(str string, offset int, caretMode int) int {
 // /usr/include/qt/QtCore/qregexp.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int indexIn(const QString &, int, enum QRegExp::CaretMode) const
+// [4] int indexIn(const QString &, int, QRegExp::CaretMode) const
 
 /*
 Attempts to find a match in str from position offset (0 by default). If offset is -1, the search starts at the last character; if -2, at the next to last character; etc.
@@ -546,7 +546,7 @@ func (this *QRegExp) IndexIn__(str string) int {
 // /usr/include/qt/QtCore/qregexp.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int indexIn(const QString &, int, enum QRegExp::CaretMode) const
+// [4] int indexIn(const QString &, int, QRegExp::CaretMode) const
 
 /*
 Attempts to find a match in str from position offset (0 by default). If offset is -1, the search starts at the last character; if -2, at the next to last character; etc.
@@ -591,7 +591,7 @@ func (this *QRegExp) IndexIn__1(str string, offset int) int {
 // /usr/include/qt/QtCore/qregexp.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int lastIndexIn(const QString &, int, enum QRegExp::CaretMode) const
+// [4] int lastIndexIn(const QString &, int, QRegExp::CaretMode) const
 
 /*
 Attempts to find a match backwards in str from position offset. If offset is -1 (the default), the search starts at the last character; if -2, at the next to last character; etc.
@@ -617,7 +617,7 @@ func (this *QRegExp) LastIndexIn(str string, offset int, caretMode int) int {
 // /usr/include/qt/QtCore/qregexp.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int lastIndexIn(const QString &, int, enum QRegExp::CaretMode) const
+// [4] int lastIndexIn(const QString &, int, QRegExp::CaretMode) const
 
 /*
 Attempts to find a match backwards in str from position offset. If offset is -1 (the default), the search starts at the last character; if -2, at the next to last character; etc.
@@ -647,7 +647,7 @@ func (this *QRegExp) LastIndexIn__(str string) int {
 // /usr/include/qt/QtCore/qregexp.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int lastIndexIn(const QString &, int, enum QRegExp::CaretMode) const
+// [4] int lastIndexIn(const QString &, int, QRegExp::CaretMode) const
 
 /*
 Attempts to find a match backwards in str from position offset. If offset is -1 (the default), the search starts at the last character; if -2, at the next to last character; etc.

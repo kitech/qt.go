@@ -31,17 +31,17 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// bool filterAcceptsRow(int, const class QModelIndex &)
+// bool filterAcceptsRow(int, const QModelIndex &)
 func (this *QSortFilterProxyModel) InheritFilterAcceptsRow(f func(source_row int, source_parent *QModelIndex) bool) {
 	qtrt.SetAllInheritCallback(this, "filterAcceptsRow", f)
 }
 
-// bool filterAcceptsColumn(int, const class QModelIndex &)
+// bool filterAcceptsColumn(int, const QModelIndex &)
 func (this *QSortFilterProxyModel) InheritFilterAcceptsColumn(f func(source_column int, source_parent *QModelIndex) bool) {
 	qtrt.SetAllInheritCallback(this, "filterAcceptsColumn", f)
 }
 
-// bool lessThan(const class QModelIndex &, const class QModelIndex &)
+// bool lessThan(const QModelIndex &, const QModelIndex &)
 func (this *QSortFilterProxyModel) InheritLessThan(f func(source_left *QModelIndex, source_right *QModelIndex) bool) {
 	qtrt.SetAllInheritCallback(this, "lessThan", f)
 }
@@ -405,7 +405,7 @@ func (this *QSortFilterProxyModel) IsSortLocaleAware() bool {
 // /usr/include/qt/QtCore/qsortfilterproxymodel.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSortLocaleAware(_Bool)
+// [-2] void setSortLocaleAware(bool)
 
 /*
 
@@ -468,7 +468,7 @@ func (this *QSortFilterProxyModel) DynamicSortFilter() bool {
 // /usr/include/qt/QtCore/qsortfilterproxymodel.h:103
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDynamicSortFilter(_Bool)
+// [-2] void setDynamicSortFilter(bool)
 
 /*
 
@@ -549,7 +549,7 @@ func (this *QSortFilterProxyModel) IsRecursiveFilteringEnabled() bool {
 // /usr/include/qt/QtCore/qsortfilterproxymodel.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRecursiveFilteringEnabled(_Bool)
+// [-2] void setRecursiveFilteringEnabled(bool)
 
 /*
 

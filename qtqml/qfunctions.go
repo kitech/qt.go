@@ -135,7 +135,7 @@ func QmlInfo_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ 
 // /usr/include/qt/QtQml/qqml.h:550
 // index:0
 // Invalid Visibility=Default Availability=Available
-// [8] QObject * qmlAttachedPropertiesObjectById(int, const QObject *, _Bool)
+// [8] QObject * qmlAttachedPropertiesObjectById(int, const QObject *, bool)
 
 /*
 
@@ -153,7 +153,7 @@ func QmlAttachedPropertiesObjectById(arg0 int, arg1 qtcore.QObject_ITF /*777 con
 // /usr/include/qt/QtQml/qqml.h:551
 // index:0
 // Invalid Visibility=Default Availability=Available
-// [8] QObject * qmlAttachedPropertiesObject(int *, const QObject *, const struct QMetaObject *, _Bool)
+// [8] QObject * qmlAttachedPropertiesObject(int *, const QObject *, const QMetaObject *, bool)
 
 /*
 
@@ -254,7 +254,7 @@ func QmlContext(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QQmlContext /*
 // /usr/include/qt/QtQml/qqmlprivate.h:307
 // index:0
 // Invalid Visibility=Default Availability=Available
-// [4] int qmlregister(enum QQmlPrivate::RegistrationType, void *)
+// [4] int qmlregister(QQmlPrivate::RegistrationType, void *)
 
 /*
 
@@ -284,14 +284,14 @@ func QjsEngine(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QJSEngine /*777
 }
 
 // /usr/include/qt/QtQml/qqmlproperty.h:130
-// index:42
+// index:43
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QQmlProperty &)
 
 /*
 
  */
-func QHash_42(key QQmlProperty_ITF) uint {
+func QHash_43(key QQmlProperty_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QQmlProperty_PTR() != nil {
 		convArg0 = key.QQmlProperty_PTR().GetCthis()
@@ -299,13 +299,12 @@ func QHash_42(key QQmlProperty_ITF) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK12QQmlProperty", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtQml/qqml.h:280
 // index:0
 // Invalid Visibility=Default Availability=Available
-// [4] int qmlRegisterUncreatableMetaObject(const struct QMetaObject &, const char *, int, int, const char *, const QString &)
+// [4] int qmlRegisterUncreatableMetaObject(const QMetaObject &, const char *, int, int, const char *, const QString &)
 
 /*
 

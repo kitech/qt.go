@@ -123,7 +123,7 @@ func (this *QVariantMap) IsDetached_0() bool {
 	return 0 == 0
 }
 
-// void setSharable(_Bool)
+// void setSharable(bool)
 func (this *QVariantMap) SetSharable_0() {
 	// QVariantMap_setSharable_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantMap_setSharable_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -401,7 +401,7 @@ func (this *QVariantMap) ConstKeyValueEnd_0() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// QMap::iterator erase(class QMap::iterator)
+// QMap::iterator erase(QMap::iterator)
 func (this *QVariantMap) Erase_0() {
 	// QVariantMap_erase_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantMap_erase_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -472,7 +472,7 @@ func (this *QVariantMap) Insert_0() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// QMap::iterator insert(class QMap::const_iterator, const Key &, const T &)
+// QMap::iterator insert(QMap::const_iterator, const Key &, const T &)
 func (this *QVariantMap) Insert_1() {
 	// QVariantMap_insert_1()
 	rv, err := qtrt.InvokeQtFunc6("QVariantMap_insert_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -486,7 +486,7 @@ func (this *QVariantMap) InsertMulti_0() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// QMap::iterator insertMulti(class QMap::const_iterator, const Key &, const T &)
+// QMap::iterator insertMulti(QMap::const_iterator, const Key &, const T &)
 func (this *QVariantMap) InsertMulti_1() {
 	// QVariantMap_insertMulti_1()
 	rv, err := qtrt.InvokeQtFunc6("QVariantMap_insertMulti_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -529,7 +529,7 @@ func (this *QVariantMap) Detach_helper_0() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// bool isValidIterator(const class QMap::const_iterator &)
+// bool isValidIterator(const QMap::const_iterator &)
 func (this *QVariantMap) IsValidIterator_0() bool {
 	// QVariantMap_isValidIterator_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantMap_isValidIterator_0", qtrt.FFI_TYPE_POINTER, this.Cthis)

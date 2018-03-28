@@ -48,7 +48,7 @@ type QVariantHash struct {
 	*qtrt.CObject
 }
 
-// QHash::Node * concrete(struct QHashData::Node *)
+// QHash::Node * concrete(QHashData::Node *)
 func (this *QVariantHash) Concrete_0() {
 	// QVariantHash_concrete_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantHash_concrete_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -153,7 +153,7 @@ func (this *QVariantHash) IsDetached_0() bool {
 	return 0 == 0
 }
 
-// void setSharable(_Bool)
+// void setSharable(bool)
 func (this *QVariantHash) SetSharable_0() {
 	// QVariantHash_setSharable_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantHash_setSharable_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -414,14 +414,14 @@ func (this *QVariantHash) Equal_range_1() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// QHash::iterator erase(class QHash::iterator)
+// QHash::iterator erase(QHash::iterator)
 func (this *QVariantHash) Erase_0() {
 	// QVariantHash_erase_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantHash_erase_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// QHash::iterator erase(class QHash::const_iterator)
+// QHash::iterator erase(QHash::const_iterator)
 func (this *QVariantHash) Erase_1() {
 	// QVariantHash_erase_1()
 	rv, err := qtrt.InvokeQtFunc6("QVariantHash_erase_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -493,7 +493,7 @@ func (this *QVariantHash) Detach_helper_0() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// void freeData(struct QHashData *)
+// void freeData(QHashData *)
 func (this *QVariantHash) FreeData_0() {
 	// QVariantHash_freeData_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantHash_freeData_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -528,21 +528,21 @@ func (this *QVariantHash) DeleteNode_0() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// void deleteNode2(struct QHashData::Node *)
+// void deleteNode2(QHashData::Node *)
 func (this *QVariantHash) DeleteNode2_0() {
 	// QVariantHash_deleteNode2_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantHash_deleteNode2_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// void duplicateNode(struct QHashData::Node *, void *)
+// void duplicateNode(QHashData::Node *, void *)
 func (this *QVariantHash) DuplicateNode_0() {
 	// QVariantHash_duplicateNode_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantHash_duplicateNode_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
-// bool isValidIterator(const class QHash::iterator &)
+// bool isValidIterator(const QHash::iterator &)
 func (this *QVariantHash) IsValidIterator_0() bool {
 	// QVariantHash_isValidIterator_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantHash_isValidIterator_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -550,7 +550,7 @@ func (this *QVariantHash) IsValidIterator_0() bool {
 	return 0 == 0
 }
 
-// bool isValidIterator(const class QHash::const_iterator &)
+// bool isValidIterator(const QHash::const_iterator &)
 func (this *QVariantHash) IsValidIterator_1() bool {
 	// QVariantHash_isValidIterator_1()
 	rv, err := qtrt.InvokeQtFunc6("QVariantHash_isValidIterator_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
@@ -558,7 +558,7 @@ func (this *QVariantHash) IsValidIterator_1() bool {
 	return 0 == 0
 }
 
-// bool isValidNode(struct QHashData::Node *)
+// bool isValidNode(QHashData::Node *)
 func (this *QVariantHash) IsValidNode_0() bool {
 	// QVariantHash_isValidNode_0()
 	rv, err := qtrt.InvokeQtFunc6("QVariantHash_isValidNode_0", qtrt.FFI_TYPE_POINTER, this.Cthis)

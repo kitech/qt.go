@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void draw(class QPainter *)
+// void draw(QPainter *)
 func (this *QGraphicsEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "draw", f)
 }
@@ -58,12 +58,12 @@ func (this *QGraphicsEffect) InheritSourceBoundingRect(f func(system int) unsafe
 	qtrt.SetAllInheritCallback(this, "sourceBoundingRect", f)
 }
 
-// void drawSource(class QPainter *)
+// void drawSource(QPainter *)
 func (this *QGraphicsEffect) InheritDrawSource(f func(painter *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawSource", f)
 }
 
-// QPixmap sourcePixmap(Qt::CoordinateSystem, class QPoint *, enum QGraphicsEffect::PixmapPadMode)
+// QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, QGraphicsEffect::PixmapPadMode)
 func (this *QGraphicsEffect) InheritSourcePixmap(f func(system int, offset *qtcore.QPoint /*777 QPoint **/, mode int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "sourcePixmap", f)
 }
@@ -223,7 +223,7 @@ func (this *QGraphicsEffect) IsEnabled() bool {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(_Bool)
+// [-2] void setEnabled(bool)
 
 /*
 
@@ -251,7 +251,7 @@ func (this *QGraphicsEffect) Update() {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void enabledChanged(_Bool)
+// [-2] void enabledChanged(bool)
 
 /*
 This signal is emitted whenever the effect is enabled or disabled. The enabled parameter holds the effects's new enabled state.
@@ -439,7 +439,7 @@ func (this *QGraphicsEffect) DrawSource(painter qtgui.QPainter_ITF /*777 QPainte
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:106
 // index:0
 // Protected Visibility=Default Availability=Available
-// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
+// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, QGraphicsEffect::PixmapPadMode) const
 
 /*
 Returns a pixmap with the source painted into it.
@@ -467,7 +467,7 @@ func (this *QGraphicsEffect) SourcePixmap(system int, offset qtcore.QPoint_ITF /
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:106
 // index:0
 // Protected Visibility=Default Availability=Available
-// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
+// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, QGraphicsEffect::PixmapPadMode) const
 
 /*
 Returns a pixmap with the source painted into it.
@@ -497,7 +497,7 @@ func (this *QGraphicsEffect) SourcePixmap__() *qtgui.QPixmap /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:106
 // index:0
 // Protected Visibility=Default Availability=Available
-// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
+// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, QGraphicsEffect::PixmapPadMode) const
 
 /*
 Returns a pixmap with the source painted into it.
@@ -525,7 +525,7 @@ func (this *QGraphicsEffect) SourcePixmap__1(system int) *qtgui.QPixmap /*123*/ 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:106
 // index:0
 // Protected Visibility=Default Availability=Available
-// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode) const
+// [32] QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, QGraphicsEffect::PixmapPadMode) const
 
 /*
 Returns a pixmap with the source painted into it.

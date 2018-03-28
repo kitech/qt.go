@@ -225,7 +225,6 @@ func (this *QFileDevice) Pos() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qfiledevice.h:111
@@ -294,7 +293,6 @@ func (this *QFileDevice) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qfiledevice.h:117
@@ -352,7 +350,7 @@ func (this *QFileDevice) SetPermissions(permissionSpec int) bool {
 // /usr/include/qt/QtCore/qfiledevice.h:127
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] uchar * map(qint64, qint64, enum QFileDevice::MemoryMapFlags)
+// [8] uchar * map(qint64, qint64, QFileDevice::MemoryMapFlags)
 
 /*
 Maps size bytes of the file into memory starting at offset. A file should be open for a map to succeed but the file does not need to stay open after the memory has been mapped. When the QFile is destroyed or a new file is opened with this object, any maps that have not been unmapped will automatically be unmapped.
@@ -374,7 +372,7 @@ func (this *QFileDevice) Map(offset int64, size int64, flags int) unsafe.Pointer
 // /usr/include/qt/QtCore/qfiledevice.h:127
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] uchar * map(qint64, qint64, enum QFileDevice::MemoryMapFlags)
+// [8] uchar * map(qint64, qint64, QFileDevice::MemoryMapFlags)
 
 /*
 Maps size bytes of the file into memory starting at offset. A file should be open for a map to succeed but the file does not need to stay open after the memory has been mapped. When the QFile is destroyed or a new file is opened with this object, any maps that have not been unmapped will automatically be unmapped.
@@ -507,7 +505,6 @@ func (this *QFileDevice) ReadData(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDevice8readDataEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qfiledevice.h:143
@@ -524,7 +521,6 @@ func (this *QFileDevice) WriteData(data string, len_ int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDevice9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qfiledevice.h:144
@@ -541,7 +537,6 @@ func (this *QFileDevice) ReadLineData(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDevice12readLineDataEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 /*

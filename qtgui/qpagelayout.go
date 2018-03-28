@@ -84,7 +84,7 @@ func NewQPageLayout() *QPageLayout {
 // /usr/include/qt/QtGui/qpagelayout.h:81
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QPageLayout(const QPageSize &, enum QPageLayout::Orientation, const QMarginsF &, enum QPageLayout::Unit, const QMarginsF &)
+// [-2] void QPageLayout(const QPageSize &, QPageLayout::Orientation, const QMarginsF &, QPageLayout::Unit, const QMarginsF &)
 
 /*
 Creates an invalid QPageLayout.
@@ -112,7 +112,7 @@ func NewQPageLayout_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QM
 // /usr/include/qt/QtGui/qpagelayout.h:81
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QPageLayout(const QPageSize &, enum QPageLayout::Orientation, const QMarginsF &, enum QPageLayout::Unit, const QMarginsF &)
+// [-2] void QPageLayout(const QPageSize &, QPageLayout::Orientation, const QMarginsF &, QPageLayout::Unit, const QMarginsF &)
 
 /*
 Creates an invalid QPageLayout.
@@ -140,7 +140,7 @@ func NewQPageLayout_1_(pageSize QPageSize_ITF, orientation int, margins qtcore.Q
 // /usr/include/qt/QtGui/qpagelayout.h:81
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QPageLayout(const QPageSize &, enum QPageLayout::Orientation, const QMarginsF &, enum QPageLayout::Unit, const QMarginsF &)
+// [-2] void QPageLayout(const QPageSize &, QPageLayout::Orientation, const QMarginsF &, QPageLayout::Unit, const QMarginsF &)
 
 /*
 Creates an invalid QPageLayout.
@@ -266,7 +266,7 @@ func (this *QPageLayout) IsValid() bool {
 // /usr/include/qt/QtGui/qpagelayout.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMode(enum QPageLayout::Mode)
+// [-2] void setMode(QPageLayout::Mode)
 
 /*
 Sets a page layout mode to mode.
@@ -369,7 +369,7 @@ func (this *QPageLayout) PageSize() *QPageSize /*123*/ {
 // /usr/include/qt/QtGui/qpagelayout.h:105
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOrientation(enum QPageLayout::Orientation)
+// [-2] void setOrientation(QPageLayout::Orientation)
 
 /*
 Sets the page orientation of the page layout to orientation.
@@ -402,7 +402,7 @@ func (this *QPageLayout) Orientation() int {
 // /usr/include/qt/QtGui/qpagelayout.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUnits(enum QPageLayout::Unit)
+// [-2] void setUnits(QPageLayout::Unit)
 
 /*
 Sets the units used to define the page layout.
@@ -565,7 +565,7 @@ func (this *QPageLayout) Margins() *qtcore.QMarginsF /*123*/ {
 // /usr/include/qt/QtGui/qpagelayout.h:118
 // index:1
 // Public Visibility=Default Availability=Available
-// [32] QMarginsF margins(enum QPageLayout::Unit) const
+// [32] QMarginsF margins(QPageLayout::Unit) const
 
 /*
 Returns the margins of the page layout using the currently set units.
@@ -700,7 +700,7 @@ func (this *QPageLayout) FullRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qpagelayout.h:127
 // index:1
 // Public Visibility=Default Availability=Available
-// [32] QRectF fullRect(enum QPageLayout::Unit) const
+// [32] QRectF fullRect(QPageLayout::Unit) const
 
 /*
 Returns the full page rectangle in the current layout units.
@@ -780,7 +780,7 @@ func (this *QPageLayout) PaintRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qpagelayout.h:132
 // index:1
 // Public Visibility=Default Availability=Available
-// [32] QRectF paintRect(enum QPageLayout::Unit) const
+// [32] QRectF paintRect(QPageLayout::Unit) const
 
 /*
 Returns the page rectangle in the current layout units.

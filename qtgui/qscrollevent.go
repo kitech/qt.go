@@ -66,7 +66,7 @@ func (*QScrollEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollEvent {
 // /usr/include/qt/QtGui/qevent.h:1022
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QScrollEvent(const QPointF &, const QPointF &, enum QScrollEvent::ScrollState)
+// [-2] void QScrollEvent(const QPointF &, const QPointF &, QScrollEvent::ScrollState)
 
 /*
 

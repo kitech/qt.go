@@ -228,7 +228,7 @@ func (this *QHostInfo) Error() int {
 // /usr/include/qt/QtNetwork/qhostinfo.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setError(enum QHostInfo::HostInfoError)
+// [-2] void setError(QHostInfo::HostInfoError)
 
 /*
 Sets the error type of this QHostInfo to error.

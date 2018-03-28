@@ -7062,7 +7062,7 @@ func (this *QString) EndsWith_4_(c QChar_ITF /*123*/) bool {
 // /usr/include/qt/QtCore/qstring.h:406
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString leftJustified(int, QChar, _Bool) const
+// [8] QString leftJustified(int, QChar, bool) const
 
 /*
 Returns a string of size width that contains this string padded by the fill character.
@@ -7101,7 +7101,7 @@ func (this *QString) LeftJustified(width int, fill QChar_ITF /*123*/, trunc bool
 // /usr/include/qt/QtCore/qstring.h:406
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString leftJustified(int, QChar, _Bool) const
+// [8] QString leftJustified(int, QChar, bool) const
 
 /*
 Returns a string of size width that contains this string padded by the fill character.
@@ -7140,7 +7140,7 @@ func (this *QString) LeftJustified__(width int) string {
 // /usr/include/qt/QtCore/qstring.h:406
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString leftJustified(int, QChar, _Bool) const
+// [8] QString leftJustified(int, QChar, bool) const
 
 /*
 Returns a string of size width that contains this string padded by the fill character.
@@ -7181,7 +7181,7 @@ func (this *QString) LeftJustified__1(width int, fill QChar_ITF /*123*/) string 
 // /usr/include/qt/QtCore/qstring.h:407
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString rightJustified(int, QChar, _Bool) const
+// [8] QString rightJustified(int, QChar, bool) const
 
 /*
 Returns a string of size() width that contains the fill character followed by the string. For example:
@@ -7220,7 +7220,7 @@ func (this *QString) RightJustified(width int, fill QChar_ITF /*123*/, trunc boo
 // /usr/include/qt/QtCore/qstring.h:407
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString rightJustified(int, QChar, _Bool) const
+// [8] QString rightJustified(int, QChar, bool) const
 
 /*
 Returns a string of size() width that contains the fill character followed by the string. For example:
@@ -7259,7 +7259,7 @@ func (this *QString) RightJustified__(width int) string {
 // /usr/include/qt/QtCore/qstring.h:407
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString rightJustified(int, QChar, _Bool) const
+// [8] QString rightJustified(int, QChar, bool) const
 
 /*
 Returns a string of size() width that contains the fill character followed by the string. For example:
@@ -8767,7 +8767,7 @@ func (this *QString) Replace_12(re QRegularExpression_ITF, after string) string 
 // /usr/include/qt/QtCore/qstring.h:506
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList split(const QString &, enum QString::SplitBehavior, Qt::CaseSensitivity) const
+// [8] QStringList split(const QString &, QString::SplitBehavior, Qt::CaseSensitivity) const
 
 /*
 Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
@@ -8822,7 +8822,7 @@ func (this *QString) Split(sep string, behavior int, cs int) *QStringList /*123*
 // /usr/include/qt/QtCore/qstring.h:506
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList split(const QString &, enum QString::SplitBehavior, Qt::CaseSensitivity) const
+// [8] QStringList split(const QString &, QString::SplitBehavior, Qt::CaseSensitivity) const
 
 /*
 Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
@@ -8881,7 +8881,7 @@ func (this *QString) Split__(sep string) *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qstring.h:506
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QStringList split(const QString &, enum QString::SplitBehavior, Qt::CaseSensitivity) const
+// [8] QStringList split(const QString &, QString::SplitBehavior, Qt::CaseSensitivity) const
 
 /*
 Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
@@ -8938,7 +8938,7 @@ func (this *QString) Split__1(sep string, behavior int) *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qstring.h:510
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QStringList split(QChar, enum QString::SplitBehavior, Qt::CaseSensitivity) const
+// [8] QStringList split(QChar, QString::SplitBehavior, Qt::CaseSensitivity) const
 
 /*
 Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
@@ -8995,7 +8995,7 @@ func (this *QString) Split_1(sep QChar_ITF /*123*/, behavior int, cs int) *QStri
 // /usr/include/qt/QtCore/qstring.h:510
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QStringList split(QChar, enum QString::SplitBehavior, Qt::CaseSensitivity) const
+// [8] QStringList split(QChar, QString::SplitBehavior, Qt::CaseSensitivity) const
 
 /*
 Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
@@ -9056,7 +9056,7 @@ func (this *QString) Split_1_(sep QChar_ITF /*123*/) *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qstring.h:510
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QStringList split(QChar, enum QString::SplitBehavior, Qt::CaseSensitivity) const
+// [8] QStringList split(QChar, QString::SplitBehavior, Qt::CaseSensitivity) const
 
 /*
 Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
@@ -9115,7 +9115,7 @@ func (this *QString) Split_1_1(sep QChar_ITF /*123*/, behavior int) *QStringList
 // /usr/include/qt/QtCore/qstring.h:515
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] QStringList split(const QRegExp &, enum QString::SplitBehavior) const
+// [8] QStringList split(const QRegExp &, QString::SplitBehavior) const
 
 /*
 Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
@@ -9172,7 +9172,7 @@ func (this *QString) Split_2(sep QRegExp_ITF, behavior int) *QStringList /*123*/
 // /usr/include/qt/QtCore/qstring.h:515
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] QStringList split(const QRegExp &, enum QString::SplitBehavior) const
+// [8] QStringList split(const QRegExp &, QString::SplitBehavior) const
 
 /*
 Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
@@ -9231,7 +9231,7 @@ func (this *QString) Split_2_(sep QRegExp_ITF) *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qstring.h:519
 // index:3
 // Public Visibility=Default Availability=Available
-// [8] QStringList split(const QRegularExpression &, enum QString::SplitBehavior) const
+// [8] QStringList split(const QRegularExpression &, QString::SplitBehavior) const
 
 /*
 Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
@@ -9288,7 +9288,7 @@ func (this *QString) Split_3(sep QRegularExpression_ITF, behavior int) *QStringL
 // /usr/include/qt/QtCore/qstring.h:519
 // index:3
 // Public Visibility=Default Availability=Available
-// [8] QStringList split(const QRegularExpression &, enum QString::SplitBehavior) const
+// [8] QStringList split(const QRegularExpression &, QString::SplitBehavior) const
 
 /*
 Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
@@ -9347,7 +9347,7 @@ func (this *QString) Split_3_(sep QRegularExpression_ITF) *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qstring.h:528
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString normalized(enum QString::NormalizationForm, QChar::UnicodeVersion) const
+// [8] QString normalized(QString::NormalizationForm, QChar::UnicodeVersion) const
 
 /*
 Returns the string in the given Unicode normalization mode, according to the given version of the Unicode standard.
@@ -9364,7 +9364,7 @@ func (this *QString) Normalized(mode int, version int) string {
 // /usr/include/qt/QtCore/qstring.h:528
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString normalized(enum QString::NormalizationForm, QChar::UnicodeVersion) const
+// [8] QString normalized(QString::NormalizationForm, QChar::UnicodeVersion) const
 
 /*
 Returns the string in the given Unicode normalization mode, according to the given version of the Unicode standard.
@@ -10859,7 +10859,7 @@ func QString_LocaleAwareCompare_3(s1 string, s2 QStringRef_ITF) int {
 // /usr/include/qt/QtCore/qstring.h:627
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(_Bool *, int) const
+// [2] short toShort(bool *, int) const
 
 /*
 Returns the string converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -10892,7 +10892,7 @@ func (this *QString) ToShort(ok *bool, base int) int16 {
 // /usr/include/qt/QtCore/qstring.h:627
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(_Bool *, int) const
+// [2] short toShort(bool *, int) const
 
 /*
 Returns the string converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -10929,7 +10929,7 @@ func (this *QString) ToShort__() int16 {
 // /usr/include/qt/QtCore/qstring.h:627
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(_Bool *, int) const
+// [2] short toShort(bool *, int) const
 
 /*
 Returns the string converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -10964,7 +10964,7 @@ func (this *QString) ToShort__1(ok *bool) int16 {
 // /usr/include/qt/QtCore/qstring.h:628
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(_Bool *, int) const
+// [2] ushort toUShort(bool *, int) const
 
 /*
 Returns the string converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -10992,13 +10992,12 @@ func (this *QString) ToUShort(ok *bool, base int) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:628
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(_Bool *, int) const
+// [2] ushort toUShort(bool *, int) const
 
 /*
 Returns the string converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11030,13 +11029,12 @@ func (this *QString) ToUShort__() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:628
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(_Bool *, int) const
+// [2] ushort toUShort(bool *, int) const
 
 /*
 Returns the string converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11066,13 +11064,12 @@ func (this *QString) ToUShort__1(ok *bool) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:629
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *, int) const
+// [4] int toInt(bool *, int) const
 
 /*
 Returns the string converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11104,7 +11101,7 @@ func (this *QString) ToInt(ok *bool, base int) int {
 // /usr/include/qt/QtCore/qstring.h:629
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *, int) const
+// [4] int toInt(bool *, int) const
 
 /*
 Returns the string converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11140,7 +11137,7 @@ func (this *QString) ToInt__() int {
 // /usr/include/qt/QtCore/qstring.h:629
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *, int) const
+// [4] int toInt(bool *, int) const
 
 /*
 Returns the string converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11174,7 +11171,7 @@ func (this *QString) ToInt__1(ok *bool) int {
 // /usr/include/qt/QtCore/qstring.h:630
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *, int) const
+// [4] uint toUInt(bool *, int) const
 
 /*
 Returns the string converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11202,13 +11199,12 @@ func (this *QString) ToUInt(ok *bool, base int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:630
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *, int) const
+// [4] uint toUInt(bool *, int) const
 
 /*
 Returns the string converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11240,13 +11236,12 @@ func (this *QString) ToUInt__() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:630
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *, int) const
+// [4] uint toUInt(bool *, int) const
 
 /*
 Returns the string converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11276,13 +11271,12 @@ func (this *QString) ToUInt__1(ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:631
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] long toLong(_Bool *, int) const
+// [8] long toLong(bool *, int) const
 
 /*
 Returns the string converted to a long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11315,7 +11309,7 @@ func (this *QString) ToLong(ok *bool, base int) int {
 // /usr/include/qt/QtCore/qstring.h:631
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] long toLong(_Bool *, int) const
+// [8] long toLong(bool *, int) const
 
 /*
 Returns the string converted to a long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11352,7 +11346,7 @@ func (this *QString) ToLong__() int {
 // /usr/include/qt/QtCore/qstring.h:631
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] long toLong(_Bool *, int) const
+// [8] long toLong(bool *, int) const
 
 /*
 Returns the string converted to a long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11387,7 +11381,7 @@ func (this *QString) ToLong__1(ok *bool) int {
 // /usr/include/qt/QtCore/qstring.h:632
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] ulong toULong(_Bool *, int) const
+// [8] ulong toULong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11415,13 +11409,12 @@ func (this *QString) ToULong(ok *bool, base int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:632
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] ulong toULong(_Bool *, int) const
+// [8] ulong toULong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11453,13 +11446,12 @@ func (this *QString) ToULong__() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:632
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] ulong toULong(_Bool *, int) const
+// [8] ulong toULong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11489,13 +11481,12 @@ func (this *QString) ToULong__1(ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:633
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *, int) const
+// [8] qlonglong toLongLong(bool *, int) const
 
 /*
 Returns the string converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11523,13 +11514,12 @@ func (this *QString) ToLongLong(ok *bool, base int) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:633
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *, int) const
+// [8] qlonglong toLongLong(bool *, int) const
 
 /*
 Returns the string converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11561,13 +11551,12 @@ func (this *QString) ToLongLong__() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:633
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *, int) const
+// [8] qlonglong toLongLong(bool *, int) const
 
 /*
 Returns the string converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11597,13 +11586,12 @@ func (this *QString) ToLongLong__1(ok *bool) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:634
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *, int) const
+// [8] qulonglong toULongLong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11631,13 +11619,12 @@ func (this *QString) ToULongLong(ok *bool, base int) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:634
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *, int) const
+// [8] qulonglong toULongLong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11669,13 +11656,12 @@ func (this *QString) ToULongLong__() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:634
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *, int) const
+// [8] qulonglong toULongLong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -11705,13 +11691,12 @@ func (this *QString) ToULongLong__1(ok *bool) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:635
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(_Bool *) const
+// [4] float toFloat(bool *) const
 
 /*
 Returns the string converted to a float value.
@@ -11743,7 +11728,7 @@ func (this *QString) ToFloat(ok *bool) float32 {
 // /usr/include/qt/QtCore/qstring.h:635
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(_Bool *) const
+// [4] float toFloat(bool *) const
 
 /*
 Returns the string converted to a float value.
@@ -11777,7 +11762,7 @@ func (this *QString) ToFloat__() float32 {
 // /usr/include/qt/QtCore/qstring.h:636
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(_Bool *) const
+// [8] double toDouble(bool *) const
 
 /*
 Returns the string converted to a double value.
@@ -11829,7 +11814,7 @@ func (this *QString) ToDouble(ok *bool) float64 {
 // /usr/include/qt/QtCore/qstring.h:636
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(_Bool *) const
+// [8] double toDouble(bool *) const
 
 /*
 Returns the string converted to a double value.

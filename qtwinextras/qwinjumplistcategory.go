@@ -148,7 +148,7 @@ func (this *QWinJumpListCategory) IsVisible() bool {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistcategory.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 Sets the category visible.

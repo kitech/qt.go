@@ -253,7 +253,7 @@ func (this *QNetworkRequest) SetUrl(url qtcore.QUrl_ITF) {
 // /usr/include/qt/QtNetwork/qnetworkrequest.h:142
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant header(enum QNetworkRequest::KnownHeaders) const
+// [16] QVariant header(QNetworkRequest::KnownHeaders) const
 
 /*
 Returns the value of the known network header header if it is present in this request. If it is not present, returns QVariant() (i.e., an invalid variant).
@@ -271,7 +271,7 @@ func (this *QNetworkRequest) Header(header int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkrequest.h:143
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHeader(enum QNetworkRequest::KnownHeaders, const QVariant &)
+// [-2] void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
 
 /*
 Sets the value of the known header header to be value, overriding any previously set headers. This operation also sets the equivalent raw HTTP header.
@@ -368,7 +368,7 @@ func (this *QNetworkRequest) SetRawHeader(headerName qtcore.QByteArray_ITF, valu
 // /usr/include/qt/QtNetwork/qnetworkrequest.h:152
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant attribute(enum QNetworkRequest::Attribute, const QVariant &) const
+// [16] QVariant attribute(QNetworkRequest::Attribute, const QVariant &) const
 
 /*
 Returns the attribute associated with the code code. If the attribute has not been set, it returns defaultValue.
@@ -392,7 +392,7 @@ func (this *QNetworkRequest) Attribute(code int, defaultValue qtcore.QVariant_IT
 // /usr/include/qt/QtNetwork/qnetworkrequest.h:152
 // index:0
 // Public Visibility=Default Availability=Available
-// [16] QVariant attribute(enum QNetworkRequest::Attribute, const QVariant &) const
+// [16] QVariant attribute(QNetworkRequest::Attribute, const QVariant &) const
 
 /*
 Returns the attribute associated with the code code. If the attribute has not been set, it returns defaultValue.
@@ -414,7 +414,7 @@ func (this *QNetworkRequest) Attribute__(code int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkrequest.h:153
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAttribute(enum QNetworkRequest::Attribute, const QVariant &)
+// [-2] void setAttribute(QNetworkRequest::Attribute, const QVariant &)
 
 /*
 Sets the attribute associated with code code to be value value. If the attribute is already set, the previous value is discarded. In special, if value is an invalid QVariant, the attribute is unset.
@@ -531,7 +531,7 @@ func (this *QNetworkRequest) Priority() int {
 // /usr/include/qt/QtNetwork/qnetworkrequest.h:164
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPriority(enum QNetworkRequest::Priority)
+// [-2] void setPriority(QNetworkRequest::Priority)
 
 /*
 Set the priority of this request to priority.

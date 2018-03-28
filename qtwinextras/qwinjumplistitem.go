@@ -69,7 +69,7 @@ func (*QWinJumpListItem) NewFromPointer(cthis unsafe.Pointer) *QWinJumpListItem 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QWinJumpListItem(enum QWinJumpListItem::Type)
+// [-2] void QWinJumpListItem(QWinJumpListItem::Type)
 
 /*
 Constructs a QWinJumpListItem with the specified type.
@@ -100,7 +100,7 @@ func DeleteQWinJumpListItem(this *QWinJumpListItem) {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setType(enum QWinJumpListItem::Type)
+// [-2] void setType(QWinJumpListItem::Type)
 
 /*
 Sets the item type.

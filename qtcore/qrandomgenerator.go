@@ -133,7 +133,7 @@ func NewQRandomGenerator_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*66
 // /usr/include/qt/QtCore/qrandom.h:179
 // index:3
 // Protected Visibility=Default Availability=Available
-// [-2] void QRandomGenerator(enum QRandomGenerator::System)
+// [-2] void QRandomGenerator(QRandomGenerator::System)
 
 /*
 
@@ -178,7 +178,6 @@ func (this *QRandomGenerator) Generate() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator8generateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:159
@@ -206,7 +205,6 @@ func (this *QRandomGenerator) Generate64() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator10generate64Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:98
@@ -249,7 +247,6 @@ func (this *QRandomGenerator) Bounded_1(highest uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), highest)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:125
@@ -278,7 +275,6 @@ func (this *QRandomGenerator) Bounded_3(lowest uint, highest uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEjj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), lowest, highest)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:135
@@ -307,7 +303,6 @@ func (this *QRandomGenerator) Operator_fncall() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorclEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qrandom.h:167
@@ -363,7 +358,6 @@ func (this *QRandomGenerator) Min() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator3minEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QRandomGenerator_Min() uint {
 	var nilthis *QRandomGenerator
@@ -383,7 +377,6 @@ func (this *QRandomGenerator) Max() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator3maxEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QRandomGenerator_Max() uint {
 	var nilthis *QRandomGenerator

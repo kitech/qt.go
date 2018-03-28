@@ -351,7 +351,7 @@ func (this *QXmlStreamReader) TokenString() string {
 // /usr/include/qt/QtCore/qxmlstream.h:384
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setNamespaceProcessing(_Bool)
+// [-2] void setNamespaceProcessing(bool)
 
 /*
 
@@ -587,7 +587,6 @@ func (this *QXmlStreamReader) LineNumber() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader10lineNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:404
@@ -602,7 +601,6 @@ func (this *QXmlStreamReader) ColumnNumber() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader12columnNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:405
@@ -617,7 +615,6 @@ func (this *QXmlStreamReader) CharacterOffset() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QXmlStreamReader15characterOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:407
@@ -639,7 +636,7 @@ func (this *QXmlStreamReader) Attributes() *QXmlStreamAttributes /*123*/ {
 // /usr/include/qt/QtCore/qxmlstream.h:414
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString readElementText(enum QXmlStreamReader::ReadElementTextBehaviour)
+// [8] QString readElementText(QXmlStreamReader::ReadElementTextBehaviour)
 
 /*
 
@@ -656,7 +653,7 @@ func (this *QXmlStreamReader) ReadElementText(behaviour int) string {
 // /usr/include/qt/QtCore/qxmlstream.h:414
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString readElementText(enum QXmlStreamReader::ReadElementTextBehaviour)
+// [8] QString readElementText(QXmlStreamReader::ReadElementTextBehaviour)
 
 /*
 

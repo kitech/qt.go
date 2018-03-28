@@ -33,27 +33,27 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool isIndexHidden(const class QModelIndex &)
+// bool isIndexHidden(const QModelIndex &)
 func (this *QColumnView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bool) {
 	qtrt.SetAllInheritCallback(this, "isIndexHidden", f)
 }
 
-// QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+// QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
 func (this *QColumnView) InheritMoveCursor(f func(cursorAction int, modifiers int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "moveCursor", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QColumnView) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+// void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QColumnView) InheritSetSelection(f func(rect *qtcore.QRect, command int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setSelection", f)
 }
 
-// QRegion visualRegionForSelection(const class QItemSelection &)
+// QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QColumnView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "visualRegionForSelection", f)
 }
@@ -68,12 +68,12 @@ func (this *QColumnView) InheritVerticalOffset(f func() int) {
 	qtrt.SetAllInheritCallback(this, "verticalOffset", f)
 }
 
-// void rowsInserted(const class QModelIndex &, int, int)
+// void rowsInserted(const QModelIndex &, int, int)
 func (this *QColumnView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
-// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+// void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QColumnView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "currentChanged", f)
 }
@@ -83,12 +83,12 @@ func (this *QColumnView) InheritScrollContentsBy(f func(dx int, dy int) /*void*/
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 
-// QAbstractItemView * createColumn(const class QModelIndex &)
+// QAbstractItemView * createColumn(const QModelIndex &)
 func (this *QColumnView) InheritCreateColumn(f func(rootIndex *qtcore.QModelIndex) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "createColumn", f)
 }
 
-// void initializeColumn(class QAbstractItemView *)
+// void initializeColumn(QAbstractItemView *)
 func (this *QColumnView) InheritInitializeColumn(f func(column *QAbstractItemView /*777 QAbstractItemView **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initializeColumn", f)
 }
@@ -237,7 +237,7 @@ func (this *QColumnView) IndexAt(point qtcore.QPoint_ITF) *qtcore.QModelIndex /*
 // /usr/include/qt/QtWidgets/qcolumnview.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+// [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 
 /*
 Reimplemented from QAbstractItemView::scrollTo().
@@ -254,7 +254,7 @@ func (this *QColumnView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 // /usr/include/qt/QtWidgets/qcolumnview.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+// [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 
 /*
 Reimplemented from QAbstractItemView::scrollTo().
@@ -373,7 +373,7 @@ func (this *QColumnView) SelectAll() {
 // /usr/include/qt/QtWidgets/qcolumnview.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setResizeGripsVisible(_Bool)
+// [-2] void setResizeGripsVisible(bool)
 
 /*
 
@@ -455,7 +455,7 @@ func (this *QColumnView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
 // /usr/include/qt/QtWidgets/qcolumnview.h:89
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [24] QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+// [24] QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
 
 /*
 Reimplemented from QAbstractItemView::moveCursor().

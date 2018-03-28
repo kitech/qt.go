@@ -160,7 +160,7 @@ func NewQHostAddress_4(address string) *QHostAddress {
 // /usr/include/qt/QtNetwork/qhostaddress.h:102
 // index:5
 // Public Visibility=Default Availability=Available
-// [-2] void QHostAddress(enum QHostAddress::SpecialAddress)
+// [-2] void QHostAddress(QHostAddress::SpecialAddress)
 
 /*
 Constructs a null host address object, i.e. an address which is not valid for any host or interface.
@@ -247,7 +247,7 @@ func (this *QHostAddress) Operator_equal_2(address string) *QHostAddress {
 // /usr/include/qt/QtNetwork/qhostaddress.h:115
 // index:3
 // Public Visibility=Default Availability=Available
-// [8] QHostAddress & operator=(enum QHostAddress::SpecialAddress)
+// [8] QHostAddress & operator=(QHostAddress::SpecialAddress)
 
 /*
 
@@ -337,7 +337,7 @@ func (this *QHostAddress) SetAddress_3(address string) bool {
 // /usr/include/qt/QtNetwork/qhostaddress.h:125
 // index:4
 // Public Visibility=Default Availability=Available
-// [-2] void setAddress(enum QHostAddress::SpecialAddress)
+// [-2] void setAddress(QHostAddress::SpecialAddress)
 
 /*
 Set the IPv4 address specified by ip4Addr.
@@ -379,13 +379,12 @@ func (this *QHostAddress) ToIPv4Address() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress13toIPv4AddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtNetwork/qhostaddress.h:129
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] quint32 toIPv4Address(_Bool *) const
+// [4] quint32 toIPv4Address(bool *) const
 
 /*
 Returns the IPv4 address as a number.
@@ -400,7 +399,6 @@ func (this *QHostAddress) ToIPv4Address_1(ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress13toIPv4AddressEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtNetwork/qhostaddress.h:130
@@ -576,7 +574,7 @@ func (this *QHostAddress) Operator_equal_equal(address QHostAddress_ITF) bool {
 // /usr/include/qt/QtNetwork/qhostaddress.h:139
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool operator==(enum QHostAddress::SpecialAddress) const
+// [1] bool operator==(QHostAddress::SpecialAddress) const
 
 /*
 
@@ -608,7 +606,7 @@ func (this *QHostAddress) Operator_not_equal(address QHostAddress_ITF) bool {
 // /usr/include/qt/QtNetwork/qhostaddress.h:142
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [1] bool operator!=(enum QHostAddress::SpecialAddress) const
+// [1] bool operator!=(QHostAddress::SpecialAddress) const
 
 /*
 

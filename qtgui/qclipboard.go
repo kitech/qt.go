@@ -80,7 +80,7 @@ func (this *QClipboard) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtGui/qclipboard.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void clear(enum QClipboard::Mode)
+// [-2] void clear(QClipboard::Mode)
 
 /*
 Clear the clipboard contents.
@@ -97,7 +97,7 @@ func (this *QClipboard) Clear(mode int) {
 // /usr/include/qt/QtGui/qclipboard.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void clear(enum QClipboard::Mode)
+// [-2] void clear(QClipboard::Mode)
 
 /*
 Clear the clipboard contents.
@@ -188,7 +188,7 @@ func (this *QClipboard) OwnsFindBuffer() bool {
 // /usr/include/qt/QtGui/qclipboard.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString text(enum QClipboard::Mode) const
+// [8] QString text(QClipboard::Mode) const
 
 /*
 Returns the clipboard text as plain text, or an empty string if the clipboard does not contain any text.
@@ -209,7 +209,7 @@ func (this *QClipboard) Text(mode int) string {
 // /usr/include/qt/QtGui/qclipboard.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString text(enum QClipboard::Mode) const
+// [8] QString text(QClipboard::Mode) const
 
 /*
 Returns the clipboard text as plain text, or an empty string if the clipboard does not contain any text.
@@ -232,7 +232,7 @@ func (this *QClipboard) Text__() string {
 // /usr/include/qt/QtGui/qclipboard.h:75
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QString text(QString &, enum QClipboard::Mode) const
+// [8] QString text(QString &, QClipboard::Mode) const
 
 /*
 Returns the clipboard text as plain text, or an empty string if the clipboard does not contain any text.
@@ -255,7 +255,7 @@ func (this *QClipboard) Text_1(subtype string, mode int) string {
 // /usr/include/qt/QtGui/qclipboard.h:75
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QString text(QString &, enum QClipboard::Mode) const
+// [8] QString text(QString &, QClipboard::Mode) const
 
 /*
 Returns the clipboard text as plain text, or an empty string if the clipboard does not contain any text.
@@ -280,7 +280,7 @@ func (this *QClipboard) Text_1_(subtype string) string {
 // /usr/include/qt/QtGui/qclipboard.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setText(const QString &, enum QClipboard::Mode)
+// [-2] void setText(const QString &, QClipboard::Mode)
 
 /*
 Copies text into the clipboard as plain text.
@@ -299,7 +299,7 @@ func (this *QClipboard) SetText(arg0 string, mode int) {
 // /usr/include/qt/QtGui/qclipboard.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setText(const QString &, enum QClipboard::Mode)
+// [-2] void setText(const QString &, QClipboard::Mode)
 
 /*
 Copies text into the clipboard as plain text.
@@ -320,7 +320,7 @@ func (this *QClipboard) SetText__(arg0 string) {
 // /usr/include/qt/QtGui/qclipboard.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const QMimeData * mimeData(enum QClipboard::Mode) const
+// [8] const QMimeData * mimeData(QClipboard::Mode) const
 
 /*
 Returns a pointer to a QMimeData representation of the current clipboard data (can be NULL if the given mode is not supported by the platform).
@@ -342,7 +342,7 @@ func (this *QClipboard) MimeData(mode int) *qtcore.QMimeData /*777 const QMimeDa
 // /usr/include/qt/QtGui/qclipboard.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] const QMimeData * mimeData(enum QClipboard::Mode) const
+// [8] const QMimeData * mimeData(QClipboard::Mode) const
 
 /*
 Returns a pointer to a QMimeData representation of the current clipboard data (can be NULL if the given mode is not supported by the platform).
@@ -366,7 +366,7 @@ func (this *QClipboard) MimeData__() *qtcore.QMimeData /*777 const QMimeData **/
 // /usr/include/qt/QtGui/qclipboard.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMimeData(QMimeData *, enum QClipboard::Mode)
+// [-2] void setMimeData(QMimeData *, QClipboard::Mode)
 
 /*
 Sets the clipboard data to src. Ownership of the data is transferred to the clipboard. If you want to remove the data either call clear() or call setMimeData() again with new data.
@@ -389,7 +389,7 @@ func (this *QClipboard) SetMimeData(data qtcore.QMimeData_ITF /*777 QMimeData **
 // /usr/include/qt/QtGui/qclipboard.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMimeData(QMimeData *, enum QClipboard::Mode)
+// [-2] void setMimeData(QMimeData *, QClipboard::Mode)
 
 /*
 Sets the clipboard data to src. Ownership of the data is transferred to the clipboard. If you want to remove the data either call clear() or call setMimeData() again with new data.
@@ -414,7 +414,7 @@ func (this *QClipboard) SetMimeData__(data qtcore.QMimeData_ITF /*777 QMimeData 
 // /usr/include/qt/QtGui/qclipboard.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QImage image(enum QClipboard::Mode) const
+// [32] QImage image(QClipboard::Mode) const
 
 /*
 Returns the clipboard image, or returns a null image if the clipboard does not contain an image or if it contains an image in an unsupported image format.
@@ -434,7 +434,7 @@ func (this *QClipboard) Image(mode int) *QImage /*123*/ {
 // /usr/include/qt/QtGui/qclipboard.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QImage image(enum QClipboard::Mode) const
+// [32] QImage image(QClipboard::Mode) const
 
 /*
 Returns the clipboard image, or returns a null image if the clipboard does not contain an image or if it contains an image in an unsupported image format.
@@ -456,7 +456,7 @@ func (this *QClipboard) Image__() *QImage /*123*/ {
 // /usr/include/qt/QtGui/qclipboard.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QPixmap pixmap(enum QClipboard::Mode) const
+// [32] QPixmap pixmap(QClipboard::Mode) const
 
 /*
 Returns the clipboard pixmap, or null if the clipboard does not contain a pixmap. Note that this can lose information. For example, if the image is 24-bit and the display is 8-bit, the result is converted to 8 bits, and if the image has an alpha channel, the result just has a mask.
@@ -476,7 +476,7 @@ func (this *QClipboard) Pixmap(mode int) *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qclipboard.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QPixmap pixmap(enum QClipboard::Mode) const
+// [32] QPixmap pixmap(QClipboard::Mode) const
 
 /*
 Returns the clipboard pixmap, or null if the clipboard does not contain a pixmap. Note that this can lose information. For example, if the image is 24-bit and the display is 8-bit, the result is converted to 8 bits, and if the image has an alpha channel, the result just has a mask.
@@ -498,7 +498,7 @@ func (this *QClipboard) Pixmap__() *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qclipboard.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setImage(const QImage &, enum QClipboard::Mode)
+// [-2] void setImage(const QImage &, QClipboard::Mode)
 
 /*
 Copies the image into the clipboard.
@@ -528,7 +528,7 @@ func (this *QClipboard) SetImage(arg0 QImage_ITF, mode int) {
 // /usr/include/qt/QtGui/qclipboard.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setImage(const QImage &, enum QClipboard::Mode)
+// [-2] void setImage(const QImage &, QClipboard::Mode)
 
 /*
 Copies the image into the clipboard.
@@ -560,7 +560,7 @@ func (this *QClipboard) SetImage__(arg0 QImage_ITF) {
 // /usr/include/qt/QtGui/qclipboard.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPixmap(const QPixmap &, enum QClipboard::Mode)
+// [-2] void setPixmap(const QPixmap &, QClipboard::Mode)
 
 /*
 Copies pixmap into the clipboard. Note that this is slower than setImage() because it needs to convert the QPixmap to a QImage first.
@@ -581,7 +581,7 @@ func (this *QClipboard) SetPixmap(arg0 QPixmap_ITF, mode int) {
 // /usr/include/qt/QtGui/qclipboard.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPixmap(const QPixmap &, enum QClipboard::Mode)
+// [-2] void setPixmap(const QPixmap &, QClipboard::Mode)
 
 /*
 Copies pixmap into the clipboard. Note that this is slower than setImage() because it needs to convert the QPixmap to a QImage first.

@@ -33,27 +33,27 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QDockWidget) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void closeEvent(class QCloseEvent *)
+// void closeEvent(QCloseEvent *)
 func (this *QDockWidget) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QDockWidget) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QDockWidget) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void initStyleOption(class QStyleOptionDockWidget *)
+// void initStyleOption(QStyleOptionDockWidget *)
 func (this *QDockWidget) InheritInitStyleOption(f func(option *QStyleOptionDockWidget /*777 QStyleOptionDockWidget **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -341,7 +341,7 @@ func (this *QDockWidget) Features() int {
 // /usr/include/qt/QtWidgets/qdockwidget.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFloating(_Bool)
+// [-2] void setFloating(bool)
 
 /*
 
@@ -503,7 +503,7 @@ func (this *QDockWidget) FeaturesChanged(features int) {
 // /usr/include/qt/QtWidgets/qdockwidget.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void topLevelChanged(_Bool)
+// [-2] void topLevelChanged(bool)
 
 /*
 This signal is emitted when the floating property changes. The topLevel parameter is true if the dock widget is now floating; otherwise it is false.
@@ -533,7 +533,7 @@ func (this *QDockWidget) AllowedAreasChanged(allowedAreas int) {
 // /usr/include/qt/QtWidgets/qdockwidget.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void visibilityChanged(_Bool)
+// [-2] void visibilityChanged(bool)
 
 /*
 This signal is emitted when the dock widget becomes visible (or invisible). This happens when the widget is hidden or shown, as well as when it is docked in a tabbed dock area and its tab becomes selected or unselected.

@@ -137,7 +137,7 @@ func (this *QMapNodeBase) Color() int {
 // /usr/include/qt/QtCore/qmap.h:97
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setColor(enum QMapNodeBase::Color)
+// [-2] void setColor(QMapNodeBase::Color)
 
 /*
 

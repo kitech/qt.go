@@ -240,7 +240,6 @@ func (this *QColormap) Pixel(color qtgui.QColor_ITF) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QColormap5pixelERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtWidgets/qcolormap.h:76

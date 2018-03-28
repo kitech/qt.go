@@ -66,7 +66,7 @@ func (*QDragMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 // /usr/include/qt/QtGui/qevent.h:642
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QDragMoveEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
+// [-2] void QDragMoveEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, QEvent::Type)
 
 /*
 
@@ -90,7 +90,7 @@ func NewQDragMoveEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData
 // /usr/include/qt/QtGui/qevent.h:642
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QDragMoveEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
+// [-2] void QDragMoveEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, QEvent::Type)
 
 /*
 

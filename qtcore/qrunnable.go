@@ -131,7 +131,7 @@ func (this *QRunnable) AutoDelete() bool {
 // /usr/include/qt/QtCore/qrunnable.h:64
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setAutoDelete(_Bool)
+// [-2] void setAutoDelete(bool)
 
 /*
 Enables auto-deletion if autoDelete is true; otherwise auto-deletion is disabled.

@@ -98,7 +98,7 @@ func (this *QGradient) Type() int {
 // /usr/include/qt/QtGui/qbrush.h:210
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setSpread(enum QGradient::Spread)
+// [-2] void setSpread(QGradient::Spread)
 
 /*
 
@@ -156,7 +156,7 @@ func (this *QGradient) CoordinateMode() int {
 // /usr/include/qt/QtGui/qbrush.h:219
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCoordinateMode(enum QGradient::CoordinateMode)
+// [-2] void setCoordinateMode(QGradient::CoordinateMode)
 
 /*
 
@@ -183,7 +183,7 @@ func (this *QGradient) InterpolationMode() int {
 // /usr/include/qt/QtGui/qbrush.h:222
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setInterpolationMode(enum QGradient::InterpolationMode)
+// [-2] void setInterpolationMode(QGradient::InterpolationMode)
 
 /*
 

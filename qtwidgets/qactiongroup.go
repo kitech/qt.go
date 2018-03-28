@@ -259,7 +259,7 @@ func (this *QActionGroup) IsVisible() bool {
 // /usr/include/qt/QtWidgets/qactiongroup.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(_Bool)
+// [-2] void setEnabled(bool)
 
 /*
 
@@ -272,7 +272,7 @@ func (this *QActionGroup) SetEnabled(arg0 bool) {
 // /usr/include/qt/QtWidgets/qactiongroup.h:80
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setDisabled(_Bool)
+// [-2] void setDisabled(bool)
 
 /*
 This is a convenience function for the enabled property, that is useful for signals--slots connections. If b is true the action group is disabled; otherwise it is enabled.
@@ -285,7 +285,7 @@ func (this *QActionGroup) SetDisabled(b bool) {
 // /usr/include/qt/QtWidgets/qactiongroup.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 
@@ -298,7 +298,7 @@ func (this *QActionGroup) SetVisible(arg0 bool) {
 // /usr/include/qt/QtWidgets/qactiongroup.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setExclusive(_Bool)
+// [-2] void setExclusive(bool)
 
 /*
 

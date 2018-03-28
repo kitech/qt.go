@@ -332,7 +332,6 @@ func (this *QPersistentModelIndex) InternalId() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex10internalIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:131

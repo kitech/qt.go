@@ -31,12 +31,12 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void convertFromAscii(const char *, int, class QChar *&)
+// void convertFromAscii(const char *, int, QChar *&)
 func (this *QAbstractConcatenable) InheritConvertFromAscii(f func(a string, len_ int, out *QChar) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "convertFromAscii", f)
 }
 
-// void appendLatin1To(const char *, int, class QChar *)
+// void appendLatin1To(const char *, int, QChar *)
 func (this *QAbstractConcatenable) InheritAppendLatin1To(f func(a string, len_ int, out *QChar /*777 QChar **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "appendLatin1To", f)
 }

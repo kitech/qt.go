@@ -563,7 +563,7 @@ func (this *QTransform) SetMatrix(m11 float64, m12 float64, m13 float64, m21 flo
 // /usr/include/qt/QtGui/qtransform.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform inverted(_Bool *) const
+// [88] QTransform inverted(bool *) const
 
 /*
 Returns an inverted copy of this matrix.
@@ -583,7 +583,7 @@ func (this *QTransform) Inverted(invertible *bool) *QTransform /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:119
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform inverted(_Bool *) const
+// [88] QTransform inverted(bool *) const
 
 /*
 Returns an inverted copy of this matrix.

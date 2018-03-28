@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QParallelAnimationGroup) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -41,12 +41,12 @@ func (this *QParallelAnimationGroup) InheritUpdateCurrentTime(f func(currentTime
 	qtrt.SetAllInheritCallback(this, "updateCurrentTime", f)
 }
 
-// void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
+// void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QParallelAnimationGroup) InheritUpdateState(f func(newState int, oldState int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateState", f)
 }
 
-// void updateDirection(class QAbstractAnimation::Direction)
+// void updateDirection(QAbstractAnimation::Direction)
 func (this *QParallelAnimationGroup) InheritUpdateDirection(f func(direction int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateDirection", f)
 }

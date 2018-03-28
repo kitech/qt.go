@@ -43,42 +43,42 @@ func (this *QTabWidget) InheritTabRemoved(f func(index int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "tabRemoved", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QTabWidget) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QTabWidget) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QTabWidget) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QTabWidget) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void setTabBar(class QTabBar *)
+// void setTabBar(QTabBar *)
 func (this *QTabWidget) InheritSetTabBar(f func(arg0 *QTabBar /*777 QTabBar **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setTabBar", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QTabWidget) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QTabWidget) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void initStyleOption(class QStyleOptionTabWidgetFrame *)
+// void initStyleOption(QStyleOptionTabWidgetFrame *)
 func (this *QTabWidget) InheritInitStyleOption(f func(option *QStyleOptionTabWidgetFrame /*777 QStyleOptionTabWidgetFrame **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -339,7 +339,7 @@ func (this *QTabWidget) IsTabEnabled(index int) bool {
 // /usr/include/qt/QtWidgets/qtabwidget.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabEnabled(int, _Bool)
+// [-2] void setTabEnabled(int, bool)
 
 /*
 If enable is true, the page at position index is enabled; otherwise the page at position index is disabled. The page's tab is redrawn appropriately.
@@ -601,7 +601,7 @@ func (this *QTabWidget) TabPosition() int {
 // /usr/include/qt/QtWidgets/qtabwidget.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabPosition(enum QTabWidget::TabPosition)
+// [-2] void setTabPosition(QTabWidget::TabPosition)
 
 /*
 
@@ -628,7 +628,7 @@ func (this *QTabWidget) TabsClosable() bool {
 // /usr/include/qt/QtWidgets/qtabwidget.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabsClosable(_Bool)
+// [-2] void setTabsClosable(bool)
 
 /*
 
@@ -655,7 +655,7 @@ func (this *QTabWidget) IsMovable() bool {
 // /usr/include/qt/QtWidgets/qtabwidget.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMovable(_Bool)
+// [-2] void setMovable(bool)
 
 /*
 
@@ -682,7 +682,7 @@ func (this *QTabWidget) TabShape() int {
 // /usr/include/qt/QtWidgets/qtabwidget.h:121
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabShape(enum QTabWidget::TabShape)
+// [-2] void setTabShape(QTabWidget::TabShape)
 
 /*
 
@@ -925,7 +925,7 @@ func (this *QTabWidget) UsesScrollButtons() bool {
 // /usr/include/qt/QtWidgets/qtabwidget.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUsesScrollButtons(_Bool)
+// [-2] void setUsesScrollButtons(bool)
 
 /*
 
@@ -952,7 +952,7 @@ func (this *QTabWidget) DocumentMode() bool {
 // /usr/include/qt/QtWidgets/qtabwidget.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDocumentMode(_Bool)
+// [-2] void setDocumentMode(bool)
 
 /*
 
@@ -979,7 +979,7 @@ func (this *QTabWidget) TabBarAutoHide() bool {
 // /usr/include/qt/QtWidgets/qtabwidget.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabBarAutoHide(_Bool)
+// [-2] void setTabBarAutoHide(bool)
 
 /*
 

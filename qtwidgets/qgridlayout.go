@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void addItem(class QLayoutItem *)
+// void addItem(QLayoutItem *)
 func (this *QGridLayout) InheritAddItem(f func(arg0 *QLayoutItem /*777 QLayoutItem **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "addItem", f)
 }

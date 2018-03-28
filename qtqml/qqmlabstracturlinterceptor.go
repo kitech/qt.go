@@ -102,7 +102,7 @@ func DeleteQQmlAbstractUrlInterceptor(this *QQmlAbstractUrlInterceptor) {
 // /usr/include/qt/QtQml/qqmlabstracturlinterceptor.h:60
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QUrl intercept(const QUrl &, enum QQmlAbstractUrlInterceptor::DataType)
+// [8] QUrl intercept(const QUrl &, QQmlAbstractUrlInterceptor::DataType)
 
 /*
 A pure virtual function where you can intercept the url. The returned value is taken as the new value for the url. The type of url being intercepted is given by the type variable.

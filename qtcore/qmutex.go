@@ -65,7 +65,7 @@ func (*QMutex) NewFromPointer(cthis unsafe.Pointer) *QMutex {
 // /usr/include/qt/QtCore/qmutex.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QMutex(enum QMutex::RecursionMode)
+// [-2] void QMutex(QMutex::RecursionMode)
 
 /*
 Constructs a new mutex. The mutex is created in an unlocked state.
@@ -87,7 +87,7 @@ func NewQMutex(mode int) *QMutex {
 // /usr/include/qt/QtCore/qmutex.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QMutex(enum QMutex::RecursionMode)
+// [-2] void QMutex(QMutex::RecursionMode)
 
 /*
 Constructs a new mutex. The mutex is created in an unlocked state.

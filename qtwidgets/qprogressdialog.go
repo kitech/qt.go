@@ -33,22 +33,22 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QProgressDialog) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void closeEvent(class QCloseEvent *)
+// void closeEvent(QCloseEvent *)
 func (this *QProgressDialog) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QProgressDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QProgressDialog) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
@@ -495,7 +495,7 @@ func (this *QProgressDialog) MinimumDuration() int {
 // /usr/include/qt/QtWidgets/qprogressdialog.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoReset(_Bool)
+// [-2] void setAutoReset(bool)
 
 /*
 
@@ -522,7 +522,7 @@ func (this *QProgressDialog) AutoReset() bool {
 // /usr/include/qt/QtWidgets/qprogressdialog.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoClose(_Bool)
+// [-2] void setAutoClose(bool)
 
 /*
 

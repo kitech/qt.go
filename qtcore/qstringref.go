@@ -3502,7 +3502,7 @@ func (this *QStringRef) Trimmed() *QStringRef /*123*/ {
 // /usr/include/qt/QtCore/qstring.h:1579
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(_Bool *, int) const
+// [2] short toShort(bool *, int) const
 
 /*
 Returns the string converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3535,7 +3535,7 @@ func (this *QStringRef) ToShort(ok *bool, base int) int16 {
 // /usr/include/qt/QtCore/qstring.h:1579
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(_Bool *, int) const
+// [2] short toShort(bool *, int) const
 
 /*
 Returns the string converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3572,7 +3572,7 @@ func (this *QStringRef) ToShort__() int16 {
 // /usr/include/qt/QtCore/qstring.h:1579
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] short toShort(_Bool *, int) const
+// [2] short toShort(bool *, int) const
 
 /*
 Returns the string converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3607,7 +3607,7 @@ func (this *QStringRef) ToShort__1(ok *bool) int16 {
 // /usr/include/qt/QtCore/qstring.h:1580
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(_Bool *, int) const
+// [2] ushort toUShort(bool *, int) const
 
 /*
 Returns the string converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3635,13 +3635,12 @@ func (this *QStringRef) ToUShort(ok *bool, base int) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1580
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(_Bool *, int) const
+// [2] ushort toUShort(bool *, int) const
 
 /*
 Returns the string converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3673,13 +3672,12 @@ func (this *QStringRef) ToUShort__() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1580
 // index:0
 // Public Visibility=Default Availability=Available
-// [2] ushort toUShort(_Bool *, int) const
+// [2] ushort toUShort(bool *, int) const
 
 /*
 Returns the string converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3709,13 +3707,12 @@ func (this *QStringRef) ToUShort__1(ok *bool) uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1581
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *, int) const
+// [4] int toInt(bool *, int) const
 
 /*
 Returns the string converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3747,7 +3744,7 @@ func (this *QStringRef) ToInt(ok *bool, base int) int {
 // /usr/include/qt/QtCore/qstring.h:1581
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *, int) const
+// [4] int toInt(bool *, int) const
 
 /*
 Returns the string converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3783,7 +3780,7 @@ func (this *QStringRef) ToInt__() int {
 // /usr/include/qt/QtCore/qstring.h:1581
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int toInt(_Bool *, int) const
+// [4] int toInt(bool *, int) const
 
 /*
 Returns the string converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3817,7 +3814,7 @@ func (this *QStringRef) ToInt__1(ok *bool) int {
 // /usr/include/qt/QtCore/qstring.h:1582
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *, int) const
+// [4] uint toUInt(bool *, int) const
 
 /*
 Returns the string converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3845,13 +3842,12 @@ func (this *QStringRef) ToUInt(ok *bool, base int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1582
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *, int) const
+// [4] uint toUInt(bool *, int) const
 
 /*
 Returns the string converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3883,13 +3879,12 @@ func (this *QStringRef) ToUInt__() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1582
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] uint toUInt(_Bool *, int) const
+// [4] uint toUInt(bool *, int) const
 
 /*
 Returns the string converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3919,13 +3914,12 @@ func (this *QStringRef) ToUInt__1(ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1583
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] long toLong(_Bool *, int) const
+// [8] long toLong(bool *, int) const
 
 /*
 Returns the string converted to a long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3958,7 +3952,7 @@ func (this *QStringRef) ToLong(ok *bool, base int) int {
 // /usr/include/qt/QtCore/qstring.h:1583
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] long toLong(_Bool *, int) const
+// [8] long toLong(bool *, int) const
 
 /*
 Returns the string converted to a long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -3995,7 +3989,7 @@ func (this *QStringRef) ToLong__() int {
 // /usr/include/qt/QtCore/qstring.h:1583
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] long toLong(_Bool *, int) const
+// [8] long toLong(bool *, int) const
 
 /*
 Returns the string converted to a long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -4030,7 +4024,7 @@ func (this *QStringRef) ToLong__1(ok *bool) int {
 // /usr/include/qt/QtCore/qstring.h:1584
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] ulong toULong(_Bool *, int) const
+// [8] ulong toULong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -4058,13 +4052,12 @@ func (this *QStringRef) ToULong(ok *bool, base int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1584
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] ulong toULong(_Bool *, int) const
+// [8] ulong toULong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -4096,13 +4089,12 @@ func (this *QStringRef) ToULong__() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1584
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] ulong toULong(_Bool *, int) const
+// [8] ulong toULong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -4132,13 +4124,12 @@ func (this *QStringRef) ToULong__1(ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1585
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *, int) const
+// [8] qlonglong toLongLong(bool *, int) const
 
 /*
 Returns the string converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -4166,13 +4157,12 @@ func (this *QStringRef) ToLongLong(ok *bool, base int) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1585
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *, int) const
+// [8] qlonglong toLongLong(bool *, int) const
 
 /*
 Returns the string converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -4204,13 +4194,12 @@ func (this *QStringRef) ToLongLong__() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1585
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(_Bool *, int) const
+// [8] qlonglong toLongLong(bool *, int) const
 
 /*
 Returns the string converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -4240,13 +4229,12 @@ func (this *QStringRef) ToLongLong__1(ok *bool) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1586
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *, int) const
+// [8] qulonglong toULongLong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -4274,13 +4262,12 @@ func (this *QStringRef) ToULongLong(ok *bool, base int) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1586
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *, int) const
+// [8] qulonglong toULongLong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -4312,13 +4299,12 @@ func (this *QStringRef) ToULongLong__() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1586
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(_Bool *, int) const
+// [8] qulonglong toULongLong(bool *, int) const
 
 /*
 Returns the string converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
@@ -4348,13 +4334,12 @@ func (this *QStringRef) ToULongLong__1(ok *bool) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1587
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(_Bool *) const
+// [4] float toFloat(bool *) const
 
 /*
 Returns the string converted to a float value.
@@ -4386,7 +4371,7 @@ func (this *QStringRef) ToFloat(ok *bool) float32 {
 // /usr/include/qt/QtCore/qstring.h:1587
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] float toFloat(_Bool *) const
+// [4] float toFloat(bool *) const
 
 /*
 Returns the string converted to a float value.
@@ -4420,7 +4405,7 @@ func (this *QStringRef) ToFloat__() float32 {
 // /usr/include/qt/QtCore/qstring.h:1588
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(_Bool *) const
+// [8] double toDouble(bool *) const
 
 /*
 Returns the string converted to a double value.
@@ -4472,7 +4457,7 @@ func (this *QStringRef) ToDouble(ok *bool) float64 {
 // /usr/include/qt/QtCore/qstring.h:1588
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] double toDouble(_Bool *) const
+// [8] double toDouble(bool *) const
 
 /*
 Returns the string converted to a double value.

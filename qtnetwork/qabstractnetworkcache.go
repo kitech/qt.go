@@ -205,7 +205,6 @@ func (this *QAbstractNetworkCache) CacheSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAbstractNetworkCache9cacheSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:127

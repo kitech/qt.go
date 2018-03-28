@@ -212,7 +212,7 @@ func (this *QTextLine) Leading() float64 {
 // /usr/include/qt/QtGui/qtextlayout.h:225
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setLeadingIncluded(_Bool)
+// [-2] void setLeadingIncluded(bool)
 
 /*
 
@@ -283,7 +283,7 @@ func (this *QTextLine) NaturalTextRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qtextlayout.h:242
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal cursorToX(int *, enum QTextLine::Edge) const
+// [8] qreal cursorToX(int *, QTextLine::Edge) const
 
 /*
 
@@ -297,7 +297,7 @@ func (this *QTextLine) CursorToX(cursorPos unsafe.Pointer /*666*/, edge int) flo
 // /usr/include/qt/QtGui/qtextlayout.h:242
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal cursorToX(int *, enum QTextLine::Edge) const
+// [8] qreal cursorToX(int *, QTextLine::Edge) const
 
 /*
 
@@ -313,7 +313,7 @@ func (this *QTextLine) CursorToX__(cursorPos unsafe.Pointer /*666*/) float64 {
 // /usr/include/qt/QtGui/qtextlayout.h:243
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [8] qreal cursorToX(int, enum QTextLine::Edge) const
+// [8] qreal cursorToX(int, QTextLine::Edge) const
 
 /*
 
@@ -327,7 +327,7 @@ func (this *QTextLine) CursorToX_1(cursorPos int, edge int) float64 {
 // /usr/include/qt/QtGui/qtextlayout.h:243
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [8] qreal cursorToX(int, enum QTextLine::Edge) const
+// [8] qreal cursorToX(int, QTextLine::Edge) const
 
 /*
 
@@ -343,7 +343,7 @@ func (this *QTextLine) CursorToX_1_(cursorPos int) float64 {
 // /usr/include/qt/QtGui/qtextlayout.h:244
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int xToCursor(qreal, enum QTextLine::CursorPosition) const
+// [4] int xToCursor(qreal, QTextLine::CursorPosition) const
 
 /*
 
@@ -357,7 +357,7 @@ func (this *QTextLine) XToCursor(x float64, arg1 int) int {
 // /usr/include/qt/QtGui/qtextlayout.h:244
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int xToCursor(qreal, enum QTextLine::CursorPosition) const
+// [4] int xToCursor(qreal, QTextLine::CursorPosition) const
 
 /*
 

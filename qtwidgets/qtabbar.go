@@ -58,67 +58,67 @@ func (this *QTabBar) InheritTabLayoutChange(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "tabLayoutChange", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QTabBar) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QTabBar) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QTabBar) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QTabBar) InheritHideEvent(f func(arg0 *qtgui.QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QTabBar) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QTabBar) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QTabBar) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QTabBar) InheritMouseReleaseEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QTabBar) InheritWheelEvent(f func(event *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QTabBar) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QTabBar) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QTabBar) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionTab *, int)
+// void initStyleOption(QStyleOptionTab *, int)
 func (this *QTabBar) InheritInitStyleOption(f func(option *QStyleOptionTab /*777 QStyleOptionTab **/, tabIndex int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -238,7 +238,7 @@ func (this *QTabBar) Shape() int {
 // /usr/include/qt/QtWidgets/qtabbar.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShape(enum QTabBar::Shape)
+// [-2] void setShape(QTabBar::Shape)
 
 /*
 
@@ -369,7 +369,7 @@ func (this *QTabBar) IsTabEnabled(index int) bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabEnabled(int, _Bool)
+// [-2] void setTabEnabled(int, bool)
 
 /*
 If enabled is true then the tab at position index is enabled; otherwise the item at position index is disabled.
@@ -732,7 +732,7 @@ func (this *QTabBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qtabbar.h:142
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDrawBase(_Bool)
+// [-2] void setDrawBase(bool)
 
 /*
 
@@ -806,7 +806,7 @@ func (this *QTabBar) UsesScrollButtons() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:149
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUsesScrollButtons(_Bool)
+// [-2] void setUsesScrollButtons(bool)
 
 /*
 
@@ -833,7 +833,7 @@ func (this *QTabBar) TabsClosable() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:152
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabsClosable(_Bool)
+// [-2] void setTabsClosable(bool)
 
 /*
 
@@ -846,7 +846,7 @@ func (this *QTabBar) SetTabsClosable(closable bool) {
 // /usr/include/qt/QtWidgets/qtabbar.h:154
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabButton(int, enum QTabBar::ButtonPosition, QWidget *)
+// [-2] void setTabButton(int, QTabBar::ButtonPosition, QWidget *)
 
 /*
 Sets widget on the tab index. The widget is placed on the left or right hand side depending upon the position.
@@ -871,7 +871,7 @@ func (this *QTabBar) SetTabButton(index int, position int, widget QWidget_ITF /*
 // /usr/include/qt/QtWidgets/qtabbar.h:155
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QWidget * tabButton(int, enum QTabBar::ButtonPosition) const
+// [8] QWidget * tabButton(int, QTabBar::ButtonPosition) const
 
 /*
 Returns the widget set a tab index and position or 0 if one is not set.
@@ -901,7 +901,7 @@ func (this *QTabBar) SelectionBehaviorOnRemove() int {
 // /usr/include/qt/QtWidgets/qtabbar.h:158
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSelectionBehaviorOnRemove(enum QTabBar::SelectionBehavior)
+// [-2] void setSelectionBehaviorOnRemove(QTabBar::SelectionBehavior)
 
 /*
 
@@ -928,7 +928,7 @@ func (this *QTabBar) Expanding() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:161
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setExpanding(_Bool)
+// [-2] void setExpanding(bool)
 
 /*
 
@@ -955,7 +955,7 @@ func (this *QTabBar) IsMovable() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:164
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMovable(_Bool)
+// [-2] void setMovable(bool)
 
 /*
 
@@ -982,7 +982,7 @@ func (this *QTabBar) DocumentMode() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:167
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDocumentMode(_Bool)
+// [-2] void setDocumentMode(bool)
 
 /*
 
@@ -1009,7 +1009,7 @@ func (this *QTabBar) AutoHide() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:170
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoHide(_Bool)
+// [-2] void setAutoHide(bool)
 
 /*
 
@@ -1036,7 +1036,7 @@ func (this *QTabBar) ChangeCurrentOnDrag() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:173
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setChangeCurrentOnDrag(_Bool)
+// [-2] void setChangeCurrentOnDrag(bool)
 
 /*
 

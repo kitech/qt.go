@@ -31,17 +31,17 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// void onEntry(class QEvent *)
+// void onEntry(QEvent *)
 func (this *QFinalState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onEntry", f)
 }
 
-// void onExit(class QEvent *)
+// void onExit(QEvent *)
 func (this *QFinalState) InheritOnExit(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onExit", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QFinalState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }

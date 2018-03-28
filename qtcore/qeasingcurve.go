@@ -67,7 +67,7 @@ func (*QEasingCurve) NewFromPointer(cthis unsafe.Pointer) *QEasingCurve {
 // /usr/include/qt/QtCore/qeasingcurve.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QEasingCurve(enum QEasingCurve::Type)
+// [-2] void QEasingCurve(QEasingCurve::Type)
 
 /*
 Constructs an easing curve of the given type.
@@ -83,7 +83,7 @@ func NewQEasingCurve(type_ int) *QEasingCurve {
 // /usr/include/qt/QtCore/qeasingcurve.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QEasingCurve(enum QEasingCurve::Type)
+// [-2] void QEasingCurve(QEasingCurve::Type)
 
 /*
 Constructs an easing curve of the given type.
@@ -362,7 +362,7 @@ func (this *QEasingCurve) Type() int {
 // /usr/include/qt/QtCore/qeasingcurve.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setType(enum QEasingCurve::Type)
+// [-2] void setType(QEasingCurve::Type)
 
 /*
 Sets the type of the easing curve to type.

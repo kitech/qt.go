@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QTreeWidget) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -43,7 +43,7 @@ func (this *QTreeWidget) InheritMimeTypes(f func() unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "mimeTypes", f)
 }
 
-// bool dropMimeData(class QTreeWidgetItem *, int, const class QMimeData *, Qt::DropAction)
+// bool dropMimeData(QTreeWidgetItem *, int, const QMimeData *, Qt::DropAction)
 func (this *QTreeWidget) InheritDropMimeData(f func(parent *QTreeWidgetItem /*777 QTreeWidgetItem **/, index int, data *qtcore.QMimeData /*777 const QMimeData **/, action int) bool) {
 	qtrt.SetAllInheritCallback(this, "dropMimeData", f)
 }
@@ -53,17 +53,17 @@ func (this *QTreeWidget) InheritSupportedDropActions(f func() int) {
 	qtrt.SetAllInheritCallback(this, "supportedDropActions", f)
 }
 
-// QModelIndex indexFromItem(const class QTreeWidgetItem *, int)
+// QModelIndex indexFromItem(const QTreeWidgetItem *, int)
 func (this *QTreeWidget) InheritIndexFromItem(f func(item *QTreeWidgetItem /*777 const QTreeWidgetItem **/, column int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "indexFromItem", f)
 }
 
-// QTreeWidgetItem * itemFromIndex(const class QModelIndex &)
+// QTreeWidgetItem * itemFromIndex(const QModelIndex &)
 func (this *QTreeWidget) InheritItemFromIndex(f func(index *qtcore.QModelIndex) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "itemFromIndex", f)
 }
 
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QTreeWidget) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
@@ -843,7 +843,7 @@ func (this *QTreeWidget) IsItemSelected(item QTreeWidgetItem_ITF /*777 const QTr
 // /usr/include/qt/QtWidgets/qtreewidget.h:310
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setItemSelected(const QTreeWidgetItem *, _Bool)
+// [-2] void setItemSelected(const QTreeWidgetItem *, bool)
 
 /*
 
@@ -878,7 +878,7 @@ func (this *QTreeWidget) IsItemHidden(item QTreeWidgetItem_ITF /*777 const QTree
 // /usr/include/qt/QtWidgets/qtreewidget.h:316
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setItemHidden(const QTreeWidgetItem *, _Bool)
+// [-2] void setItemHidden(const QTreeWidgetItem *, bool)
 
 /*
 
@@ -913,7 +913,7 @@ func (this *QTreeWidget) IsItemExpanded(item QTreeWidgetItem_ITF /*777 const QTr
 // /usr/include/qt/QtWidgets/qtreewidget.h:319
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setItemExpanded(const QTreeWidgetItem *, _Bool)
+// [-2] void setItemExpanded(const QTreeWidgetItem *, bool)
 
 /*
 
@@ -952,7 +952,7 @@ func (this *QTreeWidget) IsFirstItemColumnSpanned(item QTreeWidgetItem_ITF /*777
 // /usr/include/qt/QtWidgets/qtreewidget.h:322
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFirstItemColumnSpanned(const QTreeWidgetItem *, _Bool)
+// [-2] void setFirstItemColumnSpanned(const QTreeWidgetItem *, bool)
 
 /*
 Sets the given item to only show one section for all columns if span is true; otherwise the item will show one section per column.

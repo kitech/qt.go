@@ -148,7 +148,7 @@ func (this *QQmlIncubationController) IncubateFor(msecs int) {
 // /usr/include/qt/QtQml/qqmlincubator.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void incubateWhile(volatile _Bool *, int)
+// [-2] void incubateWhile(volatile bool *, int)
 
 /*
 
@@ -161,7 +161,7 @@ func (this *QQmlIncubationController) IncubateWhile(flag *bool, msecs int) {
 // /usr/include/qt/QtQml/qqmlincubator.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void incubateWhile(volatile _Bool *, int)
+// [-2] void incubateWhile(volatile bool *, int)
 
 /*
 

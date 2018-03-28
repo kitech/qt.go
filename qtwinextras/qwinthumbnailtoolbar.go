@@ -233,7 +233,7 @@ func (this *QWinThumbnailToolBar) IconicPixmapNotificationsEnabled() bool {
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbar.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setIconicPixmapNotificationsEnabled(_Bool)
+// [-2] void setIconicPixmapNotificationsEnabled(bool)
 
 /*
 

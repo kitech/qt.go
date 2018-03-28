@@ -33,32 +33,32 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QPushButton) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QPushButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QPushButton) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QPushButton) InheritFocusInEvent(f func(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QPushButton) InheritFocusOutEvent(f func(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionButton *)
+// void initStyleOption(QStyleOptionButton *)
 func (this *QPushButton) InheritInitStyleOption(f func(option *QStyleOptionButton /*777 QStyleOptionButton **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -302,7 +302,7 @@ func (this *QPushButton) AutoDefault() bool {
 // /usr/include/qt/QtWidgets/qpushbutton.h:73
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoDefault(_Bool)
+// [-2] void setAutoDefault(bool)
 
 /*
 
@@ -329,7 +329,7 @@ func (this *QPushButton) IsDefault() bool {
 // /usr/include/qt/QtWidgets/qpushbutton.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDefault(_Bool)
+// [-2] void setDefault(bool)
 
 /*
 
@@ -383,7 +383,7 @@ func (this *QPushButton) Menu() *QMenu /*777 QMenu **/ {
 // /usr/include/qt/QtWidgets/qpushbutton.h:82
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlat(_Bool)
+// [-2] void setFlat(bool)
 
 /*
 

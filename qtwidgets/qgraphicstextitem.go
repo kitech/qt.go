@@ -33,92 +33,92 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool sceneEvent(class QEvent *)
+// bool sceneEvent(QEvent *)
 func (this *QGraphicsTextItem) InheritSceneEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "sceneEvent", f)
 }
 
-// void mousePressEvent(class QGraphicsSceneMouseEvent *)
+// void mousePressEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsTextItem) InheritMousePressEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QGraphicsSceneMouseEvent *)
+// void mouseMoveEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsTextItem) InheritMouseMoveEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QGraphicsSceneMouseEvent *)
+// void mouseReleaseEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsTextItem) InheritMouseReleaseEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QGraphicsSceneMouseEvent *)
+// void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsTextItem) InheritMouseDoubleClickEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// void contextMenuEvent(class QGraphicsSceneContextMenuEvent *)
+// void contextMenuEvent(QGraphicsSceneContextMenuEvent *)
 func (this *QGraphicsTextItem) InheritContextMenuEvent(f func(event *QGraphicsSceneContextMenuEvent /*777 QGraphicsSceneContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QGraphicsTextItem) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QGraphicsTextItem) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QGraphicsTextItem) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QGraphicsTextItem) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void dragEnterEvent(class QGraphicsSceneDragDropEvent *)
+// void dragEnterEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsTextItem) InheritDragEnterEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragEnterEvent", f)
 }
 
-// void dragLeaveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragLeaveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsTextItem) InheritDragLeaveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragLeaveEvent", f)
 }
 
-// void dragMoveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragMoveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsTextItem) InheritDragMoveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
-// void dropEvent(class QGraphicsSceneDragDropEvent *)
+// void dropEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsTextItem) InheritDropEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
 
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QGraphicsTextItem) InheritInputMethodEvent(f func(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
 
-// void hoverEnterEvent(class QGraphicsSceneHoverEvent *)
+// void hoverEnterEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsTextItem) InheritHoverEnterEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverEnterEvent", f)
 }
 
-// void hoverMoveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverMoveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsTextItem) InheritHoverMoveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverMoveEvent", f)
 }
 
-// void hoverLeaveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverLeaveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsTextItem) InheritHoverLeaveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverLeaveEvent", f)
 }
@@ -128,17 +128,17 @@ func (this *QGraphicsTextItem) InheritInputMethodQuery(f func(query int) unsafe.
 	qtrt.SetAllInheritCallback(this, "inputMethodQuery", f)
 }
 
-// bool supportsExtension(enum QGraphicsItem::Extension)
+// bool supportsExtension(QGraphicsItem::Extension)
 func (this *QGraphicsTextItem) InheritSupportsExtension(f func(extension int) bool) {
 	qtrt.SetAllInheritCallback(this, "supportsExtension", f)
 }
 
-// void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
+// void setExtension(QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsTextItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setExtension", f)
 }
 
-// QVariant extension(const class QVariant &)
+// QVariant extension(const QVariant &)
 func (this *QGraphicsTextItem) InheritExtension(f func(variant *qtcore.QVariant) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "extension", f)
 }
@@ -743,7 +743,7 @@ func (this *QGraphicsTextItem) TextInteractionFlags() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:916
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabChangesFocus(_Bool)
+// [-2] void setTabChangesFocus(bool)
 
 /*
 
@@ -770,7 +770,7 @@ func (this *QGraphicsTextItem) TabChangesFocus() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:919
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOpenExternalLinks(_Bool)
+// [-2] void setOpenExternalLinks(bool)
 
 /*
 
@@ -1319,7 +1319,7 @@ func (this *QGraphicsTextItem) InputMethodQuery(query int) *qtcore.QVariant /*12
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:951
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool supportsExtension(enum QGraphicsItem::Extension) const
+// [1] bool supportsExtension(QGraphicsItem::Extension) const
 
 /*
 
@@ -1333,7 +1333,7 @@ func (this *QGraphicsTextItem) SupportsExtension(extension int) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:952
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void setExtension(enum QGraphicsItem::Extension, const QVariant &)
+// [-2] void setExtension(QGraphicsItem::Extension, const QVariant &)
 
 /*
 

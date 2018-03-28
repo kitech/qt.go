@@ -35,52 +35,52 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
-// void enterTransformNode(class QSGTransformNode *)
+// void enterTransformNode(QSGTransformNode *)
 func (this *QSGNodeVisitor) InheritEnterTransformNode(f func(arg0 *QSGTransformNode /*777 QSGTransformNode **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "enterTransformNode", f)
 }
 
-// void leaveTransformNode(class QSGTransformNode *)
+// void leaveTransformNode(QSGTransformNode *)
 func (this *QSGNodeVisitor) InheritLeaveTransformNode(f func(arg0 *QSGTransformNode /*777 QSGTransformNode **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "leaveTransformNode", f)
 }
 
-// void enterClipNode(class QSGClipNode *)
+// void enterClipNode(QSGClipNode *)
 func (this *QSGNodeVisitor) InheritEnterClipNode(f func(arg0 *QSGClipNode /*777 QSGClipNode **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "enterClipNode", f)
 }
 
-// void leaveClipNode(class QSGClipNode *)
+// void leaveClipNode(QSGClipNode *)
 func (this *QSGNodeVisitor) InheritLeaveClipNode(f func(arg0 *QSGClipNode /*777 QSGClipNode **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "leaveClipNode", f)
 }
 
-// void enterGeometryNode(class QSGGeometryNode *)
+// void enterGeometryNode(QSGGeometryNode *)
 func (this *QSGNodeVisitor) InheritEnterGeometryNode(f func(arg0 *QSGGeometryNode /*777 QSGGeometryNode **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "enterGeometryNode", f)
 }
 
-// void leaveGeometryNode(class QSGGeometryNode *)
+// void leaveGeometryNode(QSGGeometryNode *)
 func (this *QSGNodeVisitor) InheritLeaveGeometryNode(f func(arg0 *QSGGeometryNode /*777 QSGGeometryNode **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "leaveGeometryNode", f)
 }
 
-// void enterOpacityNode(class QSGOpacityNode *)
+// void enterOpacityNode(QSGOpacityNode *)
 func (this *QSGNodeVisitor) InheritEnterOpacityNode(f func(arg0 *QSGOpacityNode /*777 QSGOpacityNode **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "enterOpacityNode", f)
 }
 
-// void leaveOpacityNode(class QSGOpacityNode *)
+// void leaveOpacityNode(QSGOpacityNode *)
 func (this *QSGNodeVisitor) InheritLeaveOpacityNode(f func(arg0 *QSGOpacityNode /*777 QSGOpacityNode **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "leaveOpacityNode", f)
 }
 
-// void visitNode(class QSGNode *)
+// void visitNode(QSGNode *)
 func (this *QSGNodeVisitor) InheritVisitNode(f func(n *QSGNode /*777 QSGNode **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "visitNode", f)
 }
 
-// void visitChildren(class QSGNode *)
+// void visitChildren(QSGNode *)
 func (this *QSGNodeVisitor) InheritVisitChildren(f func(n *QSGNode /*777 QSGNode **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "visitChildren", f)
 }

@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QToolBox) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -48,12 +48,12 @@ func (this *QToolBox) InheritItemRemoved(f func(index int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "itemRemoved", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QToolBox) InheritShowEvent(f func(e *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QToolBox) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
@@ -284,7 +284,7 @@ func (this *QToolBox) RemoveItem(index int) {
 // /usr/include/qt/QtWidgets/qtoolbox.h:70
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setItemEnabled(int, _Bool)
+// [-2] void setItemEnabled(int, bool)
 
 /*
 If enabled is true then the item at position index is enabled; otherwise the item at position index is disabled.

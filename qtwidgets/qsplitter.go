@@ -38,22 +38,22 @@ func (this *QSplitter) InheritCreateHandle(f func() unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "createHandle", f)
 }
 
-// void childEvent(class QChildEvent *)
+// void childEvent(QChildEvent *)
 func (this *QSplitter) InheritChildEvent(f func(arg0 *qtcore.QChildEvent /*777 QChildEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "childEvent", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QSplitter) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QSplitter) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QSplitter) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
@@ -325,7 +325,7 @@ func (this *QSplitter) Orientation() int {
 // /usr/include/qt/QtWidgets/qsplitter.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setChildrenCollapsible(_Bool)
+// [-2] void setChildrenCollapsible(bool)
 
 /*
 
@@ -352,7 +352,7 @@ func (this *QSplitter) ChildrenCollapsible() bool {
 // /usr/include/qt/QtWidgets/qsplitter.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCollapsible(int, _Bool)
+// [-2] void setCollapsible(int, bool)
 
 /*
 Sets whether the child widget at index is collapsible to collapse.
@@ -383,7 +383,7 @@ func (this *QSplitter) IsCollapsible(index int) bool {
 // /usr/include/qt/QtWidgets/qsplitter.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOpaqueResize(_Bool)
+// [-2] void setOpaqueResize(bool)
 
 /*
 
@@ -396,7 +396,7 @@ func (this *QSplitter) SetOpaqueResize(opaque bool) {
 // /usr/include/qt/QtWidgets/qsplitter.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOpaqueResize(_Bool)
+// [-2] void setOpaqueResize(bool)
 
 /*
 

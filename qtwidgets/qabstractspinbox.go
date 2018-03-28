@@ -33,87 +33,87 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QAbstractSpinBox) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QAbstractSpinBox) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QAbstractSpinBox) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QAbstractSpinBox) InheritWheelEvent(f func(event *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QAbstractSpinBox) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QAbstractSpinBox) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QAbstractSpinBox) InheritContextMenuEvent(f func(event *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QAbstractSpinBox) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void closeEvent(class QCloseEvent *)
+// void closeEvent(QCloseEvent *)
 func (this *QAbstractSpinBox) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEvent", f)
 }
 
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QAbstractSpinBox) InheritHideEvent(f func(event *qtgui.QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QAbstractSpinBox) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QAbstractSpinBox) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QAbstractSpinBox) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QAbstractSpinBox) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QAbstractSpinBox) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QAbstractSpinBox) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionSpinBox *)
+// void initStyleOption(QStyleOptionSpinBox *)
 func (this *QAbstractSpinBox) InheritInitStyleOption(f func(option *QStyleOptionSpinBox /*777 QStyleOptionSpinBox **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -123,7 +123,7 @@ func (this *QAbstractSpinBox) InheritLineEdit(f func() unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "lineEdit", f)
 }
 
-// void setLineEdit(class QLineEdit *)
+// void setLineEdit(QLineEdit *)
 func (this *QAbstractSpinBox) InheritSetLineEdit(f func(edit *QLineEdit /*777 QLineEdit **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setLineEdit", f)
 }
@@ -248,7 +248,7 @@ func (this *QAbstractSpinBox) ButtonSymbols() int {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setButtonSymbols(enum QAbstractSpinBox::ButtonSymbols)
+// [-2] void setButtonSymbols(QAbstractSpinBox::ButtonSymbols)
 
 /*
 
@@ -261,7 +261,7 @@ func (this *QAbstractSpinBox) SetButtonSymbols(bs int) {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCorrectionMode(enum QAbstractSpinBox::CorrectionMode)
+// [-2] void setCorrectionMode(QAbstractSpinBox::CorrectionMode)
 
 /*
 
@@ -365,7 +365,7 @@ func (this *QAbstractSpinBox) Wrapping() bool {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:99
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWrapping(_Bool)
+// [-2] void setWrapping(bool)
 
 /*
 
@@ -378,7 +378,7 @@ func (this *QAbstractSpinBox) SetWrapping(w bool) {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:101
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setReadOnly(_Bool)
+// [-2] void setReadOnly(bool)
 
 /*
 
@@ -405,7 +405,7 @@ func (this *QAbstractSpinBox) IsReadOnly() bool {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setKeyboardTracking(_Bool)
+// [-2] void setKeyboardTracking(bool)
 
 /*
 
@@ -459,7 +459,7 @@ func (this *QAbstractSpinBox) Alignment() int {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFrame(_Bool)
+// [-2] void setFrame(bool)
 
 /*
 
@@ -486,7 +486,7 @@ func (this *QAbstractSpinBox) HasFrame() bool {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:113
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAccelerated(_Bool)
+// [-2] void setAccelerated(bool)
 
 /*
 
@@ -513,7 +513,7 @@ func (this *QAbstractSpinBox) IsAccelerated() bool {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:116
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setGroupSeparatorShown(_Bool)
+// [-2] void setGroupSeparatorShown(bool)
 
 /*
 

@@ -33,17 +33,17 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QProgressBar) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QProgressBar) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionProgressBar *)
+// void initStyleOption(QStyleOptionProgressBar *)
 func (this *QProgressBar) InheritInitStyleOption(f func(option *QStyleOptionProgressBar /*777 QStyleOptionProgressBar **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -216,7 +216,7 @@ func (this *QProgressBar) Text() string {
 // /usr/include/qt/QtWidgets/qprogressbar.h:80
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTextVisible(_Bool)
+// [-2] void setTextVisible(bool)
 
 /*
 
@@ -316,7 +316,7 @@ func (this *QProgressBar) Orientation() int {
 // /usr/include/qt/QtWidgets/qprogressbar.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setInvertedAppearance(_Bool)
+// [-2] void setInvertedAppearance(bool)
 
 /*
 

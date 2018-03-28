@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QAbstractAnimation) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -41,12 +41,12 @@ func (this *QAbstractAnimation) InheritUpdateCurrentTime(f func(currentTime int)
 	qtrt.SetAllInheritCallback(this, "updateCurrentTime", f)
 }
 
-// void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
+// void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QAbstractAnimation) InheritUpdateState(f func(newState int, oldState int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateState", f)
 }
 
-// void updateDirection(class QAbstractAnimation::Direction)
+// void updateDirection(QAbstractAnimation::Direction)
 func (this *QAbstractAnimation) InheritUpdateDirection(f func(direction int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateDirection", f)
 }
@@ -200,7 +200,7 @@ func (this *QAbstractAnimation) Direction() int {
 // /usr/include/qt/QtCore/qabstractanimation.h:93
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDirection(enum QAbstractAnimation::Direction)
+// [-2] void setDirection(QAbstractAnimation::Direction)
 
 /*
 
@@ -460,7 +460,7 @@ func (this *QAbstractAnimation) Resume() {
 // /usr/include/qt/QtCore/qabstractanimation.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPaused(_Bool)
+// [-2] void setPaused(bool)
 
 /*
 If paused is true, the animation is paused. If paused is false, the animation is resumed.

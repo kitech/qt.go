@@ -313,7 +313,7 @@ func (this *QSGSimpleTextureNode) TextureCoordinatesTransform() int {
 // /usr/include/qt/QtQuick/qsgsimpletexturenode.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOwnsTexture(_Bool)
+// [-2] void setOwnsTexture(bool)
 
 /*
 Sets whether the node takes ownership of the texture to owns.

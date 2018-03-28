@@ -67,7 +67,7 @@ func (*QCryptographicHash) NewFromPointer(cthis unsafe.Pointer) *QCryptographicH
 // /usr/include/qt/QtCore/qcryptographichash.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QCryptographicHash(enum QCryptographicHash::Algorithm)
+// [-2] void QCryptographicHash(QCryptographicHash::Algorithm)
 
 /*
 Constructs an object that can be used to create a cryptographic hash from data using method.
@@ -179,7 +179,7 @@ func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qcryptographichash.h:103
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QByteArray hash(const QByteArray &, enum QCryptographicHash::Algorithm)
+// [8] QByteArray hash(const QByteArray &, QCryptographicHash::Algorithm)
 
 /*
 Returns the hash of data using method.

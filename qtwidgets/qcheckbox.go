@@ -33,12 +33,12 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QCheckBox) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// bool hitButton(const class QPoint &)
+// bool hitButton(const QPoint &)
 func (this *QCheckBox) InheritHitButton(f func(pos *qtcore.QPoint) bool) {
 	qtrt.SetAllInheritCallback(this, "hitButton", f)
 }
@@ -53,17 +53,17 @@ func (this *QCheckBox) InheritNextCheckState(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "nextCheckState", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QCheckBox) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QCheckBox) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionButton *)
+// void initStyleOption(QStyleOptionButton *)
 func (this *QCheckBox) InheritInitStyleOption(f func(option *QStyleOptionButton /*777 QStyleOptionButton **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -251,7 +251,7 @@ func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qcheckbox.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTristate(_Bool)
+// [-2] void setTristate(bool)
 
 /*
 
@@ -264,7 +264,7 @@ func (this *QCheckBox) SetTristate(y bool) {
 // /usr/include/qt/QtWidgets/qcheckbox.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTristate(_Bool)
+// [-2] void setTristate(bool)
 
 /*
 

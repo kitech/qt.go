@@ -457,7 +457,7 @@ func (this *QSslConfiguration) SetPrivateKey(key QSslKey_ITF) {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:132
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSslOption(QSsl::SslOption, _Bool)
+// [-2] void setSslOption(QSsl::SslOption, bool)
 
 /*
 Enables or disables an SSL compatibility option. If on is true, the option is enabled. If on is false, the option is disabled.

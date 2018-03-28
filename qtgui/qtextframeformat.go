@@ -116,7 +116,7 @@ func (this *QTextFrameFormat) IsValid() bool {
 // /usr/include/qt/QtGui/qtextformat.h:796
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setPosition(enum QTextFrameFormat::Position)
+// [-2] void setPosition(QTextFrameFormat::Position)
 
 /*
 
@@ -203,7 +203,7 @@ func (this *QTextFrameFormat) BorderBrush() *QBrush /*123*/ {
 // /usr/include/qt/QtGui/qtextformat.h:810
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setBorderStyle(enum QTextFrameFormat::BorderStyle)
+// [-2] void setBorderStyle(QTextFrameFormat::BorderStyle)
 
 /*
 

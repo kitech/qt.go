@@ -32,12 +32,12 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// QTextObject * createObject(const class QTextFormat &)
+// QTextObject * createObject(const QTextFormat &)
 func (this *QTextDocument) InheritCreateObject(f func(f *QTextFormat) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "createObject", f)
 }
 
-// QVariant loadResource(int, const class QUrl &)
+// QVariant loadResource(int, const QUrl &)
 func (this *QTextDocument) InheritLoadResource(f func(type_ int, name *qtcore.QUrl) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "loadResource", f)
 }
@@ -246,7 +246,7 @@ func (this *QTextDocument) Clear() {
 // /usr/include/qt/QtGui/qtextdocument.h:128
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUndoRedoEnabled(_Bool)
+// [-2] void setUndoRedoEnabled(bool)
 
 /*
 
@@ -396,7 +396,7 @@ func (this *QTextDocument) DocumentLayout() *QAbstractTextDocumentLayout /*777 Q
 // /usr/include/qt/QtGui/qtextdocument.h:146
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMetaInformation(enum QTextDocument::MetaInformation, const QString &)
+// [-2] void setMetaInformation(QTextDocument::MetaInformation, const QString &)
 
 /*
 Sets the document's meta information of the type specified by info to the given string.
@@ -413,7 +413,7 @@ func (this *QTextDocument) SetMetaInformation(info int, arg1 string) {
 // /usr/include/qt/QtGui/qtextdocument.h:147
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString metaInformation(enum QTextDocument::MetaInformation) const
+// [8] QString metaInformation(QTextDocument::MetaInformation) const
 
 /*
 Returns meta information about the document of the type specified by info.
@@ -1433,7 +1433,7 @@ func (this *QTextDocument) MarkContentsDirty(from int, length int) {
 // /usr/include/qt/QtGui/qtextdocument.h:223
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUseDesignMetrics(_Bool)
+// [-2] void setUseDesignMetrics(bool)
 
 /*
 
@@ -1806,7 +1806,7 @@ func (this *QTextDocument) Redo_1() {
 // /usr/include/qt/QtGui/qtextdocument.h:259
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void clearUndoRedoStacks(enum QTextDocument::Stacks)
+// [-2] void clearUndoRedoStacks(QTextDocument::Stacks)
 
 /*
 Clears the stacks specified by stacksToClear.
@@ -1825,7 +1825,7 @@ func (this *QTextDocument) ClearUndoRedoStacks(historyToClear int) {
 // /usr/include/qt/QtGui/qtextdocument.h:259
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void clearUndoRedoStacks(enum QTextDocument::Stacks)
+// [-2] void clearUndoRedoStacks(QTextDocument::Stacks)
 
 /*
 Clears the stacks specified by stacksToClear.
@@ -2020,7 +2020,7 @@ func (this *QTextDocument) ContentsChanged() {
 // /usr/include/qt/QtGui/qtextdocument.h:276
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void undoAvailable(_Bool)
+// [-2] void undoAvailable(bool)
 
 /*
 This signal is emitted whenever undo operations become available (available is true) or unavailable (available is false).
@@ -2037,7 +2037,7 @@ func (this *QTextDocument) UndoAvailable(arg0 bool) {
 // /usr/include/qt/QtGui/qtextdocument.h:277
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void redoAvailable(_Bool)
+// [-2] void redoAvailable(bool)
 
 /*
 This signal is emitted whenever redo operations become available (available is true) or unavailable (available is false).
@@ -2065,7 +2065,7 @@ func (this *QTextDocument) UndoCommandAdded() {
 // /usr/include/qt/QtGui/qtextdocument.h:279
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void modificationChanged(_Bool)
+// [-2] void modificationChanged(bool)
 
 /*
 This signal is emitted whenever the content of the document changes in a way that affects the modification state. If changed is true, the document has been modified; otherwise it is false.
@@ -2163,7 +2163,7 @@ func (this *QTextDocument) AppendUndoItem(arg0 QAbstractUndoItem_ITF /*777 QAbst
 // /usr/include/qt/QtGui/qtextdocument.h:289
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setModified(_Bool)
+// [-2] void setModified(bool)
 
 /*
 
@@ -2176,7 +2176,7 @@ func (this *QTextDocument) SetModified(m bool) {
 // /usr/include/qt/QtGui/qtextdocument.h:289
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setModified(_Bool)
+// [-2] void setModified(bool)
 
 /*
 

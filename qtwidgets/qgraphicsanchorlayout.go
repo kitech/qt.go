@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
+// QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsAnchorLayout) InheritSizeHint(f func(which int, constraint *qtcore.QSizeF) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "sizeHint", f)
 }

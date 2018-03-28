@@ -66,7 +66,7 @@ func (*QHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QHoverEvent {
 // /usr/include/qt/QtGui/qevent.h:157
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QHoverEvent(enum QEvent::Type, const QPointF &, const QPointF &, Qt::KeyboardModifiers)
+// [-2] void QHoverEvent(QEvent::Type, const QPointF &, const QPointF &, Qt::KeyboardModifiers)
 
 /*
 
@@ -90,7 +90,7 @@ func NewQHoverEvent(type_ int, pos qtcore.QPointF_ITF, oldPos qtcore.QPointF_ITF
 // /usr/include/qt/QtGui/qevent.h:157
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QHoverEvent(enum QEvent::Type, const QPointF &, const QPointF &, Qt::KeyboardModifiers)
+// [-2] void QHoverEvent(QEvent::Type, const QPointF &, const QPointF &, Qt::KeyboardModifiers)
 
 /*
 

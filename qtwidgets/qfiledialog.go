@@ -43,7 +43,7 @@ func (this *QFileDialog) InheritAccept(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "accept", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QFileDialog) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
@@ -420,7 +420,7 @@ func (this *QFileDialog) SelectUrl(url qtcore.QUrl_ITF) {
 // /usr/include/qt/QtWidgets/qfiledialog.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setNameFilterDetailsVisible(_Bool)
+// [-2] void setNameFilterDetailsVisible(bool)
 
 /*
 
@@ -701,7 +701,7 @@ func (this *QFileDialog) SetFilter(filters int) {
 // /usr/include/qt/QtWidgets/qfiledialog.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setViewMode(enum QFileDialog::ViewMode)
+// [-2] void setViewMode(QFileDialog::ViewMode)
 
 /*
 
@@ -728,7 +728,7 @@ func (this *QFileDialog) ViewMode() int {
 // /usr/include/qt/QtWidgets/qfiledialog.h:142
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFileMode(enum QFileDialog::FileMode)
+// [-2] void setFileMode(QFileDialog::FileMode)
 
 /*
 
@@ -755,7 +755,7 @@ func (this *QFileDialog) FileMode() int {
 // /usr/include/qt/QtWidgets/qfiledialog.h:145
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAcceptMode(enum QFileDialog::AcceptMode)
+// [-2] void setAcceptMode(QFileDialog::AcceptMode)
 
 /*
 
@@ -782,7 +782,7 @@ func (this *QFileDialog) AcceptMode() int {
 // /usr/include/qt/QtWidgets/qfiledialog.h:148
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setReadOnly(_Bool)
+// [-2] void setReadOnly(bool)
 
 /*
 
@@ -809,7 +809,7 @@ func (this *QFileDialog) IsReadOnly() bool {
 // /usr/include/qt/QtWidgets/qfiledialog.h:151
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setResolveSymlinks(_Bool)
+// [-2] void setResolveSymlinks(bool)
 
 /*
 
@@ -880,7 +880,7 @@ func (this *QFileDialog) RestoreState(state qtcore.QByteArray_ITF) bool {
 // /usr/include/qt/QtWidgets/qfiledialog.h:160
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setConfirmOverwrite(_Bool)
+// [-2] void setConfirmOverwrite(bool)
 
 /*
 
@@ -1050,7 +1050,7 @@ func (this *QFileDialog) IconProvider() *QFileIconProvider /*777 QFileIconProvid
 // /usr/include/qt/QtWidgets/qfiledialog.h:175
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setLabelText(enum QFileDialog::DialogLabel, const QString &)
+// [-2] void setLabelText(QFileDialog::DialogLabel, const QString &)
 
 /*
 Sets the text shown in the filedialog in the specified label.
@@ -1067,7 +1067,7 @@ func (this *QFileDialog) SetLabelText(label int, text string) {
 // /usr/include/qt/QtWidgets/qfiledialog.h:176
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString labelText(enum QFileDialog::DialogLabel) const
+// [8] QString labelText(QFileDialog::DialogLabel) const
 
 /*
 Returns the text shown in the filedialog in the specified label.
@@ -1158,7 +1158,7 @@ func (this *QFileDialog) ProxyModel() *qtcore.QAbstractProxyModel /*777 QAbstrac
 // /usr/include/qt/QtWidgets/qfiledialog.h:186
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QFileDialog::Option, _Bool)
+// [-2] void setOption(QFileDialog::Option, bool)
 
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
@@ -1175,7 +1175,7 @@ func (this *QFileDialog) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qfiledialog.h:186
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QFileDialog::Option, _Bool)
+// [-2] void setOption(QFileDialog::Option, bool)
 
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
@@ -1194,7 +1194,7 @@ func (this *QFileDialog) SetOption__(option int) {
 // /usr/include/qt/QtWidgets/qfiledialog.h:187
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool testOption(enum QFileDialog::Option) const
+// [1] bool testOption(QFileDialog::Option) const
 
 /*
 Returns true if the given option is enabled; otherwise, returns false.
@@ -1264,7 +1264,7 @@ func (this *QFileDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, mem
 // /usr/include/qt/QtWidgets/qfiledialog.h:193
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 Reimplemented from QWidget::setVisible().

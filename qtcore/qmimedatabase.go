@@ -118,7 +118,7 @@ func (this *QMimeDatabase) MimeTypeForName(nameOrAlias string) *QMimeType /*123*
 // /usr/include/qt/QtCore/qmimedatabase.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QMimeType mimeTypeForFile(const QString &, enum QMimeDatabase::MatchMode) const
+// [8] QMimeType mimeTypeForFile(const QString &, QMimeDatabase::MatchMode) const
 
 /*
 Returns a MIME type for fileInfo.
@@ -148,7 +148,7 @@ func (this *QMimeDatabase) MimeTypeForFile(fileName string, mode int) *QMimeType
 // /usr/include/qt/QtCore/qmimedatabase.h:74
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QMimeType mimeTypeForFile(const QString &, enum QMimeDatabase::MatchMode) const
+// [8] QMimeType mimeTypeForFile(const QString &, QMimeDatabase::MatchMode) const
 
 /*
 Returns a MIME type for fileInfo.
@@ -180,7 +180,7 @@ func (this *QMimeDatabase) MimeTypeForFile__(fileName string) *QMimeType /*123*/
 // /usr/include/qt/QtCore/qmimedatabase.h:75
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QMimeType mimeTypeForFile(const QFileInfo &, enum QMimeDatabase::MatchMode) const
+// [8] QMimeType mimeTypeForFile(const QFileInfo &, QMimeDatabase::MatchMode) const
 
 /*
 Returns a MIME type for fileInfo.
@@ -212,7 +212,7 @@ func (this *QMimeDatabase) MimeTypeForFile_1(fileInfo QFileInfo_ITF, mode int) *
 // /usr/include/qt/QtCore/qmimedatabase.h:75
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QMimeType mimeTypeForFile(const QFileInfo &, enum QMimeDatabase::MatchMode) const
+// [8] QMimeType mimeTypeForFile(const QFileInfo &, QMimeDatabase::MatchMode) const
 
 /*
 Returns a MIME type for fileInfo.

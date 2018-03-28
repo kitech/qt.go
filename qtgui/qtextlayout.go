@@ -408,7 +408,7 @@ func (this *QTextLayout) ClearFormats() {
 // /usr/include/qt/QtGui/qtextlayout.h:150
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCacheEnabled(_Bool)
+// [-2] void setCacheEnabled(bool)
 
 /*
 Enables caching of the complete layout information if enable is true; otherwise disables layout caching. Usually QTextLayout throws most of the layouting information away after a call to endLayout() to reduce memory consumption. If you however want to draw the laid out text directly afterwards enabling caching might speed up drawing significantly.
@@ -609,7 +609,7 @@ func (this *QTextLayout) IsValidCursorPosition(pos int) bool {
 // /usr/include/qt/QtGui/qtextlayout.h:171
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int nextCursorPosition(int, enum QTextLayout::CursorMode) const
+// [4] int nextCursorPosition(int, QTextLayout::CursorMode) const
 
 /*
 Returns the next valid cursor position after oldPos that respects the given cursor mode. Returns value of oldPos, if oldPos is not a valid cursor position.
@@ -625,7 +625,7 @@ func (this *QTextLayout) NextCursorPosition(oldPos int, mode int) int {
 // /usr/include/qt/QtGui/qtextlayout.h:171
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int nextCursorPosition(int, enum QTextLayout::CursorMode) const
+// [4] int nextCursorPosition(int, QTextLayout::CursorMode) const
 
 /*
 Returns the next valid cursor position after oldPos that respects the given cursor mode. Returns value of oldPos, if oldPos is not a valid cursor position.
@@ -643,7 +643,7 @@ func (this *QTextLayout) NextCursorPosition__(oldPos int) int {
 // /usr/include/qt/QtGui/qtextlayout.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int previousCursorPosition(int, enum QTextLayout::CursorMode) const
+// [4] int previousCursorPosition(int, QTextLayout::CursorMode) const
 
 /*
 Returns the first valid cursor position before oldPos that respects the given cursor mode. Returns value of oldPos, if oldPos is not a valid cursor position.
@@ -659,7 +659,7 @@ func (this *QTextLayout) PreviousCursorPosition(oldPos int, mode int) int {
 // /usr/include/qt/QtGui/qtextlayout.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int previousCursorPosition(int, enum QTextLayout::CursorMode) const
+// [4] int previousCursorPosition(int, QTextLayout::CursorMode) const
 
 /*
 Returns the first valid cursor position before oldPos that respects the given cursor mode. Returns value of oldPos, if oldPos is not a valid cursor position.

@@ -138,7 +138,7 @@ func DeleteQButtonGroup(this *QButtonGroup) {
 // /usr/include/qt/QtWidgets/qbuttongroup.h:63
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setExclusive(_Bool)
+// [-2] void setExclusive(bool)
 
 /*
 
@@ -475,7 +475,7 @@ func (this *QButtonGroup) ButtonReleased_1(arg0 int) {
 // /usr/include/qt/QtWidgets/qbuttongroup.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void buttonToggled(QAbstractButton *, _Bool)
+// [-2] void buttonToggled(QAbstractButton *, bool)
 
 /*
 This signal is emitted when the given button is toggled. checked is true if the button is checked, or false if the button is unchecked.
@@ -504,7 +504,7 @@ func (this *QButtonGroup) ButtonToggled(arg0 QAbstractButton_ITF /*777 QAbstract
 // /usr/include/qt/QtWidgets/qbuttongroup.h:87
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void buttonToggled(int, _Bool)
+// [-2] void buttonToggled(int, bool)
 
 /*
 This signal is emitted when the given button is toggled. checked is true if the button is checked, or false if the button is unchecked.

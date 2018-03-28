@@ -368,7 +368,7 @@ func (this *QMatrix4x4) Determinant() float64 {
 // /usr/include/qt/QtGui/qmatrix4x4.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [68] QMatrix4x4 inverted(_Bool *) const
+// [68] QMatrix4x4 inverted(bool *) const
 
 /*
 Returns the inverse of this matrix. Returns the identity if this matrix cannot be inverted; i.e. determinant() is zero. If invertible is not null, then true will be written to that location if the matrix can be inverted; false otherwise.
@@ -388,7 +388,7 @@ func (this *QMatrix4x4) Inverted(invertible *bool) *QMatrix4x4 /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [68] QMatrix4x4 inverted(_Bool *) const
+// [68] QMatrix4x4 inverted(bool *) const
 
 /*
 Returns the inverse of this matrix. Returns the identity if this matrix cannot be inverted; i.e. determinant() is zero. If invertible is not null, then true will be written to that location if the matrix can be inverted; false otherwise.

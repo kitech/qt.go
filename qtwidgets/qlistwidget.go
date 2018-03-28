@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QListWidget) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -43,7 +43,7 @@ func (this *QListWidget) InheritMimeTypes(f func() unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "mimeTypes", f)
 }
 
-// bool dropMimeData(int, const class QMimeData *, Qt::DropAction)
+// bool dropMimeData(int, const QMimeData *, Qt::DropAction)
 func (this *QListWidget) InheritDropMimeData(f func(index int, data *qtcore.QMimeData /*777 const QMimeData **/, action int) bool) {
 	qtrt.SetAllInheritCallback(this, "dropMimeData", f)
 }
@@ -53,12 +53,12 @@ func (this *QListWidget) InheritSupportedDropActions(f func() int) {
 	qtrt.SetAllInheritCallback(this, "supportedDropActions", f)
 }
 
-// QModelIndex indexFromItem(class QListWidgetItem *)
+// QModelIndex indexFromItem(QListWidgetItem *)
 func (this *QListWidget) InheritIndexFromItem(f func(item *QListWidgetItem /*777 QListWidgetItem **/) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "indexFromItem", f)
 }
 
-// QListWidgetItem * itemFromIndex(const class QModelIndex &)
+// QListWidgetItem * itemFromIndex(const QModelIndex &)
 func (this *QListWidget) InheritItemFromIndex(f func(index *qtcore.QModelIndex) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "itemFromIndex", f)
 }
@@ -533,7 +533,7 @@ func (this *QListWidget) SortItems__() {
 // /usr/include/qt/QtWidgets/qlistwidget.h:236
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSortingEnabled(_Bool)
+// [-2] void setSortingEnabled(bool)
 
 /*
 
@@ -727,7 +727,7 @@ func (this *QListWidget) IsItemSelected(item QListWidgetItem_ITF /*777 const QLi
 // /usr/include/qt/QtWidgets/qlistwidget.h:250
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setItemSelected(const QListWidgetItem *, _Bool)
+// [-2] void setItemSelected(const QListWidgetItem *, bool)
 
 /*
 
@@ -762,7 +762,7 @@ func (this *QListWidget) IsItemHidden(item QListWidgetItem_ITF /*777 const QList
 // /usr/include/qt/QtWidgets/qlistwidget.h:255
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setItemHidden(const QListWidgetItem *, _Bool)
+// [-2] void setItemHidden(const QListWidgetItem *, bool)
 
 /*
 

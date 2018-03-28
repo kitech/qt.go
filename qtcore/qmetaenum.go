@@ -181,7 +181,7 @@ func (this *QMetaEnum) Scope() string {
 // /usr/include/qt/QtCore/qmetaobject.h:221
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int keyToValue(const char *, _Bool *) const
+// [4] int keyToValue(const char *, bool *) const
 
 /*
 
@@ -197,7 +197,7 @@ func (this *QMetaEnum) KeyToValue(key string, ok *bool) int {
 // /usr/include/qt/QtCore/qmetaobject.h:221
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int keyToValue(const char *, _Bool *) const
+// [4] int keyToValue(const char *, bool *) const
 
 /*
 
@@ -229,7 +229,7 @@ func (this *QMetaEnum) ValueToKey(value int) string {
 // /usr/include/qt/QtCore/qmetaobject.h:223
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int keysToValue(const char *, _Bool *) const
+// [4] int keysToValue(const char *, bool *) const
 
 /*
 
@@ -245,7 +245,7 @@ func (this *QMetaEnum) KeysToValue(keys string, ok *bool) int {
 // /usr/include/qt/QtCore/qmetaobject.h:223
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int keysToValue(const char *, _Bool *) const
+// [4] int keysToValue(const char *, bool *) const
 
 /*
 

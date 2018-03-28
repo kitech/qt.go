@@ -797,7 +797,6 @@ func (this *QDir) Count() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtCore/qdir.h:147

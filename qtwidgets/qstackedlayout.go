@@ -284,7 +284,7 @@ func (this *QStackedLayout) StackingMode() int {
 // /usr/include/qt/QtWidgets/qstackedlayout.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStackingMode(enum QStackedLayout::StackingMode)
+// [-2] void setStackingMode(QStackedLayout::StackingMode)
 
 /*
 

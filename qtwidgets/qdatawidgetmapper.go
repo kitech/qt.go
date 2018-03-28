@@ -276,7 +276,7 @@ func (this *QDataWidgetMapper) Orientation() int {
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSubmitPolicy(enum QDataWidgetMapper::SubmitPolicy)
+// [-2] void setSubmitPolicy(QDataWidgetMapper::SubmitPolicy)
 
 /*
 

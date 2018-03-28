@@ -33,27 +33,27 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void actionEvent(class QActionEvent *)
+// void actionEvent(QActionEvent *)
 func (this *QToolBar) InheritActionEvent(f func(event *qtgui.QActionEvent /*777 QActionEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "actionEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QToolBar) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QToolBar) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QToolBar) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void initStyleOption(class QStyleOptionToolBar *)
+// void initStyleOption(QStyleOptionToolBar *)
 func (this *QToolBar) InheritInitStyleOption(f func(option *QStyleOptionToolBar /*777 QStyleOptionToolBar **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -217,7 +217,7 @@ func DeleteQToolBar(this *QToolBar) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:83
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMovable(_Bool)
+// [-2] void setMovable(bool)
 
 /*
 
@@ -647,7 +647,7 @@ func (this *QToolBar) IsFloatable() bool {
 // /usr/include/qt/QtWidgets/qtoolbar.h:173
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFloatable(_Bool)
+// [-2] void setFloatable(bool)
 
 /*
 
@@ -721,7 +721,7 @@ func (this *QToolBar) ActionTriggered(action QAction_ITF /*777 QAction **/) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:182
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void movableChanged(_Bool)
+// [-2] void movableChanged(bool)
 
 /*
 This signal is emitted when the toolbar becomes movable or fixed. If the toolbar can be moved, movable is true; otherwise it is false.
@@ -810,7 +810,7 @@ func (this *QToolBar) ToolButtonStyleChanged(toolButtonStyle int) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:187
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void topLevelChanged(_Bool)
+// [-2] void topLevelChanged(bool)
 
 /*
 This signal is emitted when the floating property changes. The topLevel parameter is true if the toolbar is now floating; otherwise it is false.
@@ -827,7 +827,7 @@ func (this *QToolBar) TopLevelChanged(topLevel bool) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:188
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void visibilityChanged(_Bool)
+// [-2] void visibilityChanged(bool)
 
 /*
 This signal is emitted when the toolbar becomes visible (or invisible). This happens when the widget is hidden or shown.

@@ -53,7 +53,7 @@ func (this *QTreeView) InheritReexpand(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "reexpand", f)
 }
 
-// void rowsRemoved(const class QModelIndex &, int, int)
+// void rowsRemoved(const QModelIndex &, int, int)
 func (this *QTreeView) InheritRowsRemoved(f func(parent *qtcore.QModelIndex, first int, last int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsRemoved", f)
 }
@@ -63,17 +63,17 @@ func (this *QTreeView) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) 
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 
-// void rowsInserted(const class QModelIndex &, int, int)
+// void rowsInserted(const QModelIndex &, int, int)
 func (this *QTreeView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
-// void rowsAboutToBeRemoved(const class QModelIndex &, int, int)
+// void rowsAboutToBeRemoved(const QModelIndex &, int, int)
 func (this *QTreeView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsAboutToBeRemoved", f)
 }
 
-// QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+// QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
 func (this *QTreeView) InheritMoveCursor(f func(cursorAction int, modifiers int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "moveCursor", f)
 }
@@ -88,12 +88,12 @@ func (this *QTreeView) InheritVerticalOffset(f func() int) {
 	qtrt.SetAllInheritCallback(this, "verticalOffset", f)
 }
 
-// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+// void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QTreeView) InheritSetSelection(f func(rect *qtcore.QRect, command int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setSelection", f)
 }
 
-// QRegion visualRegionForSelection(const class QItemSelection &)
+// QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QTreeView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "visualRegionForSelection", f)
 }
@@ -103,62 +103,62 @@ func (this *QTreeView) InheritSelectedIndexes(f func() *qtcore.QModelIndexList /
 	qtrt.SetAllInheritCallback(this, "selectedIndexes", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QTreeView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QTreeView) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void drawTree(class QPainter *, const class QRegion &)
+// void drawTree(QPainter *, const QRegion &)
 func (this *QTreeView) InheritDrawTree(f func(painter *qtgui.QPainter /*777 QPainter **/, region *qtgui.QRegion) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawTree", f)
 }
 
-// void drawRow(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
+// void drawRow(QPainter *, const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QTreeView) InheritDrawRow(f func(painter *qtgui.QPainter /*777 QPainter **/, options *QStyleOptionViewItem, index *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawRow", f)
 }
 
-// void drawBranches(class QPainter *, const class QRect &, const class QModelIndex &)
+// void drawBranches(QPainter *, const QRect &, const QModelIndex &)
 func (this *QTreeView) InheritDrawBranches(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, index *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawBranches", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QTreeView) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QTreeView) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QTreeView) InheritMouseDoubleClickEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QTreeView) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QTreeView) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void dragMoveEvent(class QDragMoveEvent *)
+// void dragMoveEvent(QDragMoveEvent *)
 func (this *QTreeView) InheritDragMoveEvent(f func(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
-// bool viewportEvent(class QEvent *)
+// bool viewportEvent(QEvent *)
 func (this *QTreeView) InheritViewportEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "viewportEvent", f)
 }
@@ -178,12 +178,12 @@ func (this *QTreeView) InheritSizeHintForColumn(f func(column int) int) {
 	qtrt.SetAllInheritCallback(this, "sizeHintForColumn", f)
 }
 
-// int indexRowSizeHint(const class QModelIndex &)
+// int indexRowSizeHint(const QModelIndex &)
 func (this *QTreeView) InheritIndexRowSizeHint(f func(index *qtcore.QModelIndex) int) {
 	qtrt.SetAllInheritCallback(this, "indexRowSizeHint", f)
 }
 
-// int rowHeight(const class QModelIndex &)
+// int rowHeight(const QModelIndex &)
 func (this *QTreeView) InheritRowHeight(f func(index *qtcore.QModelIndex) int) {
 	qtrt.SetAllInheritCallback(this, "rowHeight", f)
 }
@@ -193,17 +193,17 @@ func (this *QTreeView) InheritHorizontalScrollbarAction(f func(action int) /*voi
 	qtrt.SetAllInheritCallback(this, "horizontalScrollbarAction", f)
 }
 
-// bool isIndexHidden(const class QModelIndex &)
+// bool isIndexHidden(const QModelIndex &)
 func (this *QTreeView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bool) {
 	qtrt.SetAllInheritCallback(this, "isIndexHidden", f)
 }
 
-// void selectionChanged(const class QItemSelection &, const class QItemSelection &)
+// void selectionChanged(const QItemSelection &, const QItemSelection &)
 func (this *QTreeView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "selectionChanged", f)
 }
 
-// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+// void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QTreeView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "currentChanged", f)
 }
@@ -482,7 +482,7 @@ func (this *QTreeView) RootIsDecorated() bool {
 // /usr/include/qt/QtWidgets/qtreeview.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRootIsDecorated(_Bool)
+// [-2] void setRootIsDecorated(bool)
 
 /*
 
@@ -509,7 +509,7 @@ func (this *QTreeView) UniformRowHeights() bool {
 // /usr/include/qt/QtWidgets/qtreeview.h:92
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUniformRowHeights(_Bool)
+// [-2] void setUniformRowHeights(bool)
 
 /*
 
@@ -536,7 +536,7 @@ func (this *QTreeView) ItemsExpandable() bool {
 // /usr/include/qt/QtWidgets/qtreeview.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setItemsExpandable(_Bool)
+// [-2] void setItemsExpandable(bool)
 
 /*
 
@@ -563,7 +563,7 @@ func (this *QTreeView) ExpandsOnDoubleClick() bool {
 // /usr/include/qt/QtWidgets/qtreeview.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setExpandsOnDoubleClick(_Bool)
+// [-2] void setExpandsOnDoubleClick(bool)
 
 /*
 
@@ -653,7 +653,7 @@ func (this *QTreeView) IsColumnHidden(column int) bool {
 // /usr/include/qt/QtWidgets/qtreeview.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setColumnHidden(int, _Bool)
+// [-2] void setColumnHidden(int, bool)
 
 /*
 If hide is true the column is hidden, otherwise the column is shown.
@@ -682,7 +682,7 @@ func (this *QTreeView) IsHeaderHidden() bool {
 // /usr/include/qt/QtWidgets/qtreeview.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHeaderHidden(_Bool)
+// [-2] void setHeaderHidden(bool)
 
 /*
 
@@ -715,7 +715,7 @@ func (this *QTreeView) IsRowHidden(row int, parent qtcore.QModelIndex_ITF) bool 
 // /usr/include/qt/QtWidgets/qtreeview.h:112
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRowHidden(int, const QModelIndex &, _Bool)
+// [-2] void setRowHidden(int, const QModelIndex &, bool)
 
 /*
 If hide is true the row with the given parent is hidden, otherwise the row is shown.
@@ -756,7 +756,7 @@ func (this *QTreeView) IsFirstColumnSpanned(row int, parent qtcore.QModelIndex_I
 // /usr/include/qt/QtWidgets/qtreeview.h:115
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFirstColumnSpanned(int, const QModelIndex &, _Bool)
+// [-2] void setFirstColumnSpanned(int, const QModelIndex &, bool)
 
 /*
 If span is true the item in the first column in the row with the given parent is set to span all columns, otherwise all items on the row are shown.
@@ -797,7 +797,7 @@ func (this *QTreeView) IsExpanded(index qtcore.QModelIndex_ITF) bool {
 // /usr/include/qt/QtWidgets/qtreeview.h:118
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setExpanded(const QModelIndex &, _Bool)
+// [-2] void setExpanded(const QModelIndex &, bool)
 
 /*
 Sets the item referred to by index to either collapse or expanded, depending on the value of expanded.
@@ -816,7 +816,7 @@ func (this *QTreeView) SetExpanded(index qtcore.QModelIndex_ITF, expand bool) {
 // /usr/include/qt/QtWidgets/qtreeview.h:120
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSortingEnabled(_Bool)
+// [-2] void setSortingEnabled(bool)
 
 /*
 
@@ -843,7 +843,7 @@ func (this *QTreeView) IsSortingEnabled() bool {
 // /usr/include/qt/QtWidgets/qtreeview.h:123
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAnimated(_Bool)
+// [-2] void setAnimated(bool)
 
 /*
 
@@ -870,7 +870,7 @@ func (this *QTreeView) IsAnimated() bool {
 // /usr/include/qt/QtWidgets/qtreeview.h:126
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAllColumnsShowFocus(_Bool)
+// [-2] void setAllColumnsShowFocus(bool)
 
 /*
 
@@ -897,7 +897,7 @@ func (this *QTreeView) AllColumnsShowFocus() bool {
 // /usr/include/qt/QtWidgets/qtreeview.h:129
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWordWrap(_Bool)
+// [-2] void setWordWrap(bool)
 
 /*
 
@@ -996,7 +996,7 @@ func (this *QTreeView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /*
 // /usr/include/qt/QtWidgets/qtreeview.h:138
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+// [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 
 /*
 Reimplemented from QAbstractItemView::scrollTo().
@@ -1015,7 +1015,7 @@ func (this *QTreeView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 // /usr/include/qt/QtWidgets/qtreeview.h:138
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+// [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 
 /*
 Reimplemented from QAbstractItemView::scrollTo().
@@ -1473,7 +1473,7 @@ func (this *QTreeView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_ITF, start
 // /usr/include/qt/QtWidgets/qtreeview.h:179
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [24] QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+// [24] QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
 
 /*
 Reimplemented from QAbstractItemView::moveCursor().

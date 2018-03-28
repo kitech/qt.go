@@ -245,7 +245,7 @@ func (this *QCollator) SetCaseSensitivity(cs int) {
 // /usr/include/qt/QtCore/qcollator.h:106
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setNumericMode(_Bool)
+// [-2] void setNumericMode(bool)
 
 /*
 Enables numeric sorting mode when on is set to true.
@@ -282,7 +282,7 @@ func (this *QCollator) NumericMode() bool {
 // /usr/include/qt/QtCore/qcollator.h:109
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setIgnorePunctuation(_Bool)
+// [-2] void setIgnorePunctuation(bool)
 
 /*
 If on is set to true, punctuation characters and symbols are ignored when determining sort order.

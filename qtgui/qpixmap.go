@@ -32,12 +32,12 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QPixmap) InheritMetric(f func(arg0 int) int) {
 	qtrt.SetAllInheritCallback(this, "metric", f)
 }
 
-// QPixmap fromImageInPlace(class QImage &, Qt::ImageConversionFlags)
+// QPixmap fromImageInPlace(QImage &, Qt::ImageConversionFlags)
 func (this *QPixmap) InheritFromImageInPlace(f func(image *QImage, flags int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "fromImageInPlace", f)
 }
@@ -636,7 +636,7 @@ func (this *QPixmap) HasAlphaChannel() bool {
 // /usr/include/qt/QtGui/qpixmap.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QBitmap createHeuristicMask(_Bool) const
+// [32] QBitmap createHeuristicMask(bool) const
 
 /*
 Creates and returns a heuristic mask for this pixmap.
@@ -666,7 +666,7 @@ func (this *QPixmap) CreateHeuristicMask(clipTight bool) *QBitmap /*123*/ {
 // /usr/include/qt/QtGui/qpixmap.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QBitmap createHeuristicMask(_Bool) const
+// [32] QBitmap createHeuristicMask(bool) const
 
 /*
 Creates and returns a heuristic mask for this pixmap.
@@ -2253,7 +2253,6 @@ func (this *QPixmap) CacheKey() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap8cacheKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtGui/qpixmap.h:160
@@ -2334,7 +2333,7 @@ func (this *QPixmap) Operator_not() bool {
 // /usr/include/qt/QtGui/qpixmap.h:175
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
+// [4] int metric(QPaintDevice::PaintDeviceMetric) const
 
 /*
 

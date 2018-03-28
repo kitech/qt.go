@@ -33,17 +33,17 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QStatusBar) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QStatusBar) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QStatusBar) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
@@ -58,7 +58,7 @@ func (this *QStatusBar) InheritHideOrShow(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideOrShow", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QStatusBar) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -385,7 +385,7 @@ func (this *QStatusBar) RemoveWidget(widget QWidget_ITF /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qstatusbar.h:68
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSizeGripEnabled(_Bool)
+// [-2] void setSizeGripEnabled(bool)
 
 /*
 

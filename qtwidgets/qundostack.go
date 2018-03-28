@@ -681,7 +681,7 @@ func (this *QUndoStack) Redo() {
 // /usr/include/qt/QtWidgets/qundostack.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setActive(_Bool)
+// [-2] void setActive(bool)
 
 /*
 
@@ -694,7 +694,7 @@ func (this *QUndoStack) SetActive(active bool) {
 // /usr/include/qt/QtWidgets/qundostack.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setActive(_Bool)
+// [-2] void setActive(bool)
 
 /*
 
@@ -726,7 +726,7 @@ func (this *QUndoStack) IndexChanged(idx int) {
 // /usr/include/qt/QtWidgets/qundostack.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void cleanChanged(_Bool)
+// [-2] void cleanChanged(bool)
 
 /*
 This signal is emitted whenever the stack enters or leaves the clean state. If clean is true, the stack is in a clean state; otherwise this signal indicates that it has left the clean state.
@@ -741,7 +741,7 @@ func (this *QUndoStack) CleanChanged(clean bool) {
 // /usr/include/qt/QtWidgets/qundostack.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void canUndoChanged(_Bool)
+// [-2] void canUndoChanged(bool)
 
 /*
 This signal is emitted whenever the value of canUndo() changes. It is used to enable or disable the undo action returned by createUndoAction(). canUndo specifies the new value.
@@ -754,7 +754,7 @@ func (this *QUndoStack) CanUndoChanged(canUndo bool) {
 // /usr/include/qt/QtWidgets/qundostack.h:141
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void canRedoChanged(_Bool)
+// [-2] void canRedoChanged(bool)
 
 /*
 This signal is emitted whenever the value of canRedo() changes. It is used to enable or disable the redo action returned by createRedoAction(). canRedo specifies the new value.

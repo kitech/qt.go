@@ -89,7 +89,7 @@ func NewQSizePolicy() *QSizePolicy {
 // /usr/include/qt/QtWidgets/qsizepolicy.h:116
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void QSizePolicy(enum QSizePolicy::Policy, enum QSizePolicy::Policy, enum QSizePolicy::ControlType)
+// [-2] void QSizePolicy(QSizePolicy::Policy, QSizePolicy::Policy, QSizePolicy::ControlType)
 
 /*
 Constructs a QSizePolicy object with Fixed as its horizontal and vertical policies.
@@ -109,7 +109,7 @@ func NewQSizePolicy_1(horizontal int, vertical int, type_ int) *QSizePolicy {
 // /usr/include/qt/QtWidgets/qsizepolicy.h:116
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [-2] void QSizePolicy(enum QSizePolicy::Policy, enum QSizePolicy::Policy, enum QSizePolicy::ControlType)
+// [-2] void QSizePolicy(QSizePolicy::Policy, QSizePolicy::Policy, QSizePolicy::ControlType)
 
 /*
 Constructs a QSizePolicy object with Fixed as its horizontal and vertical policies.
@@ -181,7 +181,7 @@ func (this *QSizePolicy) ControlType() int {
 // /usr/include/qt/QtWidgets/qsizepolicy.h:132
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setHorizontalPolicy(enum QSizePolicy::Policy)
+// [-2] void setHorizontalPolicy(QSizePolicy::Policy)
 
 /*
 Sets the horizontal component to the given policy.
@@ -196,7 +196,7 @@ func (this *QSizePolicy) SetHorizontalPolicy(d int) {
 // /usr/include/qt/QtWidgets/qsizepolicy.h:133
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setVerticalPolicy(enum QSizePolicy::Policy)
+// [-2] void setVerticalPolicy(QSizePolicy::Policy)
 
 /*
 Sets the vertical component to the given policy.
@@ -211,7 +211,7 @@ func (this *QSizePolicy) SetVerticalPolicy(d int) {
 // /usr/include/qt/QtWidgets/qsizepolicy.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setControlType(enum QSizePolicy::ControlType)
+// [-2] void setControlType(QSizePolicy::ControlType)
 
 /*
 Sets the control type associated with the widget for which this size policy applies to type.
@@ -248,7 +248,7 @@ func (this *QSizePolicy) ExpandingDirections() int {
 // /usr/include/qt/QtWidgets/qsizepolicy.h:141
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setHeightForWidth(_Bool)
+// [-2] void setHeightForWidth(bool)
 
 /*
 Sets the flag determining whether the widget's preferred height depends on its width, to dependent.
@@ -279,7 +279,7 @@ func (this *QSizePolicy) HasHeightForWidth() bool {
 // /usr/include/qt/QtWidgets/qsizepolicy.h:143
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setWidthForHeight(_Bool)
+// [-2] void setWidthForHeight(bool)
 
 /*
 Sets the flag determining whether the widget's width depends on its height, to dependent.
@@ -432,7 +432,7 @@ func (this *QSizePolicy) RetainSizeWhenHidden() bool {
 // /usr/include/qt/QtWidgets/qsizepolicy.h:159
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setRetainSizeWhenHidden(_Bool)
+// [-2] void setRetainSizeWhenHidden(bool)
 
 /*
 Sets whether a layout should retain the widget's size when it is hidden. If retainSize is true, the layout will not be changed by hiding the widget.

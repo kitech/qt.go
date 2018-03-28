@@ -215,7 +215,7 @@ func (this *QQmlScriptString) StringLiteral() string {
 // /usr/include/qt/QtQml/qqmlscriptstring.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] qreal numberLiteral(_Bool *) const
+// [8] qreal numberLiteral(bool *) const
 
 /*
 If the content of the QQmlScriptString is a number literal, returns that number and sets ok to true. Otherwise returns 0.0 and sets ok to false.
@@ -229,7 +229,7 @@ func (this *QQmlScriptString) NumberLiteral(ok *bool) float64 {
 // /usr/include/qt/QtQml/qqmlscriptstring.h:76
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool booleanLiteral(_Bool *) const
+// [1] bool booleanLiteral(bool *) const
 
 /*
 If the content of the QQmlScriptString is a boolean literal, returns the boolean value and sets ok to true. Otherwise returns false and sets ok to false.

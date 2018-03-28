@@ -66,7 +66,7 @@ func (*QInputEvent) NewFromPointer(cthis unsafe.Pointer) *QInputEvent {
 // /usr/include/qt/QtGui/qevent.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QInputEvent(enum QEvent::Type, Qt::KeyboardModifiers)
+// [-2] void QInputEvent(QEvent::Type, Qt::KeyboardModifiers)
 
 /*
 
@@ -82,7 +82,7 @@ func NewQInputEvent(type_ int, modifiers int) *QInputEvent {
 // /usr/include/qt/QtGui/qevent.h:71
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QInputEvent(enum QEvent::Type, Qt::KeyboardModifiers)
+// [-2] void QInputEvent(QEvent::Type, Qt::KeyboardModifiers)
 
 /*
 
@@ -151,7 +151,6 @@ func (this *QInputEvent) Timestamp() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QInputEvent9timestampEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned long // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:76

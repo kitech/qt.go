@@ -592,7 +592,6 @@ func (this *QCharRef) CombiningClass() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef14combiningClassEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1095
@@ -635,7 +634,6 @@ func (this *QCharRef) Cell() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef4cellEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1100
@@ -650,7 +648,6 @@ func (this *QCharRef) Row() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef3rowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1101
@@ -713,7 +710,6 @@ func (this *QCharRef) Unicode() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtCore/qstring.h:1109

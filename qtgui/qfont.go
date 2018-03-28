@@ -86,7 +86,7 @@ func NewQFont() *QFont {
 // /usr/include/qt/QtGui/qfont.h:171
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QFont(const QString &, int, int, _Bool)
+// [-2] void QFont(const QString &, int, int, bool)
 
 /*
 Constructs a font object that uses the application's default font.
@@ -106,7 +106,7 @@ func NewQFont_1(family string, pointSize int, weight int, italic bool) *QFont {
 // /usr/include/qt/QtGui/qfont.h:171
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QFont(const QString &, int, int, _Bool)
+// [-2] void QFont(const QString &, int, int, bool)
 
 /*
 Constructs a font object that uses the application's default font.
@@ -132,7 +132,7 @@ func NewQFont_1_(family string) *QFont {
 // /usr/include/qt/QtGui/qfont.h:171
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QFont(const QString &, int, int, _Bool)
+// [-2] void QFont(const QString &, int, int, bool)
 
 /*
 Constructs a font object that uses the application's default font.
@@ -156,7 +156,7 @@ func NewQFont_1_1(family string, pointSize int) *QFont {
 // /usr/include/qt/QtGui/qfont.h:171
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QFont(const QString &, int, int, _Bool)
+// [-2] void QFont(const QString &, int, int, bool)
 
 /*
 Constructs a font object that uses the application's default font.
@@ -462,7 +462,7 @@ func (this *QFont) Bold() bool {
 // /usr/include/qt/QtGui/qfont.h:197
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setBold(_Bool)
+// [-2] void setBold(bool)
 
 /*
 If enable is true sets the font's weight to QFont::Bold; otherwise sets the weight to QFont::Normal.
@@ -481,7 +481,7 @@ func (this *QFont) SetBold(arg0 bool) {
 // /usr/include/qt/QtGui/qfont.h:199
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStyle(enum QFont::Style)
+// [-2] void setStyle(QFont::Style)
 
 /*
 Sets the style of the font to style.
@@ -528,7 +528,7 @@ func (this *QFont) Italic() bool {
 // /usr/include/qt/QtGui/qfont.h:203
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setItalic(_Bool)
+// [-2] void setItalic(bool)
 
 /*
 Sets the style() of the font to QFont::StyleItalic if enable is true; otherwise the style is set to QFont::StyleNormal.
@@ -561,7 +561,7 @@ func (this *QFont) Underline() bool {
 // /usr/include/qt/QtGui/qfont.h:206
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUnderline(_Bool)
+// [-2] void setUnderline(bool)
 
 /*
 If enable is true, sets underline on; otherwise sets underline off.
@@ -592,7 +592,7 @@ func (this *QFont) Overline() bool {
 // /usr/include/qt/QtGui/qfont.h:209
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOverline(_Bool)
+// [-2] void setOverline(bool)
 
 /*
 If enable is true, sets overline on; otherwise sets overline off.
@@ -623,7 +623,7 @@ func (this *QFont) StrikeOut() bool {
 // /usr/include/qt/QtGui/qfont.h:212
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStrikeOut(_Bool)
+// [-2] void setStrikeOut(bool)
 
 /*
 If enable is true, sets strikeout on; otherwise sets strikeout off.
@@ -654,7 +654,7 @@ func (this *QFont) FixedPitch() bool {
 // /usr/include/qt/QtGui/qfont.h:215
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFixedPitch(_Bool)
+// [-2] void setFixedPitch(bool)
 
 /*
 If enable is true, sets fixed pitch on; otherwise sets fixed pitch off.
@@ -685,7 +685,7 @@ func (this *QFont) Kerning() bool {
 // /usr/include/qt/QtGui/qfont.h:218
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setKerning(_Bool)
+// [-2] void setKerning(bool)
 
 /*
 Enables kerning for this font if enable is true; otherwise disables it. By default, kerning is enabled.
@@ -738,7 +738,7 @@ func (this *QFont) StyleStrategy() int {
 // /usr/include/qt/QtGui/qfont.h:222
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStyleHint(enum QFont::StyleHint, enum QFont::StyleStrategy)
+// [-2] void setStyleHint(QFont::StyleHint, QFont::StyleStrategy)
 
 /*
 Sets the style hint and strategy to hint and strategy, respectively.
@@ -757,7 +757,7 @@ func (this *QFont) SetStyleHint(arg0 int, arg1 int) {
 // /usr/include/qt/QtGui/qfont.h:222
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStyleHint(enum QFont::StyleHint, enum QFont::StyleStrategy)
+// [-2] void setStyleHint(QFont::StyleHint, QFont::StyleStrategy)
 
 /*
 Sets the style hint and strategy to hint and strategy, respectively.
@@ -778,7 +778,7 @@ func (this *QFont) SetStyleHint__(arg0 int) {
 // /usr/include/qt/QtGui/qfont.h:223
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStyleStrategy(enum QFont::StyleStrategy)
+// [-2] void setStyleStrategy(QFont::StyleStrategy)
 
 /*
 Sets the style strategy for the font to s.
@@ -866,7 +866,7 @@ func (this *QFont) LetterSpacingType() int {
 // /usr/include/qt/QtGui/qfont.h:230
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setLetterSpacing(enum QFont::SpacingType, qreal)
+// [-2] void setLetterSpacing(QFont::SpacingType, qreal)
 
 /*
 Sets the letter spacing for the font to spacing and the type of spacing to type.
@@ -924,7 +924,7 @@ func (this *QFont) SetWordSpacing(spacing float64) {
 // /usr/include/qt/QtGui/qfont.h:235
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCapitalization(enum QFont::Capitalization)
+// [-2] void setCapitalization(QFont::Capitalization)
 
 /*
 Sets the capitalization of the text in this font to caps.
@@ -961,7 +961,7 @@ func (this *QFont) Capitalization() int {
 // /usr/include/qt/QtGui/qfont.h:238
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHintingPreference(enum QFont::HintingPreference)
+// [-2] void setHintingPreference(QFont::HintingPreference)
 
 /*
 Set the preference for the hinting level of the glyphs to hintingPreference. This is a hint to the underlying font rendering system to use a certain level of hinting, and has varying support across platforms. See the table in the documentation for QFont::HintingPreference for more details.
@@ -1012,7 +1012,7 @@ func (this *QFont) RawMode() bool {
 // /usr/include/qt/QtGui/qfont.h:243
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRawMode(_Bool)
+// [-2] void setRawMode(bool)
 
 /*
 
@@ -1533,7 +1533,6 @@ func (this *QFont) Resolve_1() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFont7resolveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qfont.h:290

@@ -38,102 +38,102 @@ func (this *QGraphicsItem) InheritUpdateMicroFocus(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateMicroFocus", f)
 }
 
-// bool sceneEventFilter(class QGraphicsItem *, class QEvent *)
+// bool sceneEventFilter(QGraphicsItem *, QEvent *)
 func (this *QGraphicsItem) InheritSceneEventFilter(f func(watched *QGraphicsItem /*777 QGraphicsItem **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "sceneEventFilter", f)
 }
 
-// bool sceneEvent(class QEvent *)
+// bool sceneEvent(QEvent *)
 func (this *QGraphicsItem) InheritSceneEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "sceneEvent", f)
 }
 
-// void contextMenuEvent(class QGraphicsSceneContextMenuEvent *)
+// void contextMenuEvent(QGraphicsSceneContextMenuEvent *)
 func (this *QGraphicsItem) InheritContextMenuEvent(f func(event *QGraphicsSceneContextMenuEvent /*777 QGraphicsSceneContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// void dragEnterEvent(class QGraphicsSceneDragDropEvent *)
+// void dragEnterEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsItem) InheritDragEnterEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragEnterEvent", f)
 }
 
-// void dragLeaveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragLeaveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsItem) InheritDragLeaveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragLeaveEvent", f)
 }
 
-// void dragMoveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragMoveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsItem) InheritDragMoveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
-// void dropEvent(class QGraphicsSceneDragDropEvent *)
+// void dropEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsItem) InheritDropEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QGraphicsItem) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QGraphicsItem) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void hoverEnterEvent(class QGraphicsSceneHoverEvent *)
+// void hoverEnterEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsItem) InheritHoverEnterEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverEnterEvent", f)
 }
 
-// void hoverMoveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverMoveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsItem) InheritHoverMoveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverMoveEvent", f)
 }
 
-// void hoverLeaveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverLeaveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsItem) InheritHoverLeaveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverLeaveEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QGraphicsItem) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QGraphicsItem) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void mousePressEvent(class QGraphicsSceneMouseEvent *)
+// void mousePressEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsItem) InheritMousePressEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QGraphicsSceneMouseEvent *)
+// void mouseMoveEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsItem) InheritMouseMoveEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QGraphicsSceneMouseEvent *)
+// void mouseReleaseEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsItem) InheritMouseReleaseEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QGraphicsSceneMouseEvent *)
+// void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsItem) InheritMouseDoubleClickEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// void wheelEvent(class QGraphicsSceneWheelEvent *)
+// void wheelEvent(QGraphicsSceneWheelEvent *)
 func (this *QGraphicsItem) InheritWheelEvent(f func(event *QGraphicsSceneWheelEvent /*777 QGraphicsSceneWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QGraphicsItem) InheritInputMethodEvent(f func(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
@@ -143,22 +143,22 @@ func (this *QGraphicsItem) InheritInputMethodQuery(f func(query int) unsafe.Poin
 	qtrt.SetAllInheritCallback(this, "inputMethodQuery", f)
 }
 
-// QVariant itemChange(enum QGraphicsItem::GraphicsItemChange, const class QVariant &)
+// QVariant itemChange(QGraphicsItem::GraphicsItemChange, const QVariant &)
 func (this *QGraphicsItem) InheritItemChange(f func(change int, value *qtcore.QVariant) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "itemChange", f)
 }
 
-// bool supportsExtension(enum QGraphicsItem::Extension)
+// bool supportsExtension(QGraphicsItem::Extension)
 func (this *QGraphicsItem) InheritSupportsExtension(f func(extension int) bool) {
 	qtrt.SetAllInheritCallback(this, "supportsExtension", f)
 }
 
-// void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
+// void setExtension(QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setExtension", f)
 }
 
-// QVariant extension(const class QVariant &)
+// QVariant extension(const QVariant &)
 func (this *QGraphicsItem) InheritExtension(f func(variant *qtcore.QVariant) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "extension", f)
 }
@@ -521,7 +521,7 @@ func (this *QGraphicsItem) Flags() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:189
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(enum QGraphicsItem::GraphicsItemFlag, _Bool)
+// [-2] void setFlag(QGraphicsItem::GraphicsItemFlag, bool)
 
 /*
 If enabled is true, the item flag flag is enabled; otherwise, it is disabled.
@@ -536,7 +536,7 @@ func (this *QGraphicsItem) SetFlag(flag int, enabled bool) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:189
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(enum QGraphicsItem::GraphicsItemFlag, _Bool)
+// [-2] void setFlag(QGraphicsItem::GraphicsItemFlag, bool)
 
 /*
 If enabled is true, the item flag flag is enabled; otherwise, it is disabled.
@@ -590,7 +590,7 @@ func (this *QGraphicsItem) CacheMode() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:193
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCacheMode(enum QGraphicsItem::CacheMode, const QSize &)
+// [-2] void setCacheMode(QGraphicsItem::CacheMode, const QSize &)
 
 /*
 Sets the item's cache mode to mode.
@@ -623,7 +623,7 @@ func (this *QGraphicsItem) SetCacheMode(mode int, cacheSize qtcore.QSize_ITF) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:193
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCacheMode(enum QGraphicsItem::CacheMode, const QSize &)
+// [-2] void setCacheMode(QGraphicsItem::CacheMode, const QSize &)
 
 /*
 Sets the item's cache mode to mode.
@@ -672,7 +672,7 @@ func (this *QGraphicsItem) PanelModality() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:196
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPanelModality(enum QGraphicsItem::PanelModality)
+// [-2] void setPanelModality(QGraphicsItem::PanelModality)
 
 /*
 Sets the modality for this item to panelModality.
@@ -903,7 +903,7 @@ func (this *QGraphicsItem) IsVisibleTo(parent QGraphicsItem_ITF /*777 const QGra
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:213
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 If visible is true, the item is made visible. Otherwise, the item is made invisible. Invisible items are not painted, nor do they receive any events. In particular, mouse events pass right through invisible items, and are delivered to any item that may be behind. Invisible items are also unselectable, they cannot take input focus, and are not detected by QGraphicsScene's item location functions.
@@ -978,7 +978,7 @@ func (this *QGraphicsItem) IsEnabled() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:218
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(_Bool)
+// [-2] void setEnabled(bool)
 
 /*
 If enabled is true, the item is enabled; otherwise, it is disabled.
@@ -1023,7 +1023,7 @@ func (this *QGraphicsItem) IsSelected() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:221
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSelected(_Bool)
+// [-2] void setSelected(bool)
 
 /*
 If selected is true and this item is selectable, this item is selected; otherwise, it is unselected.
@@ -1062,7 +1062,7 @@ func (this *QGraphicsItem) AcceptDrops() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:224
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAcceptDrops(_Bool)
+// [-2] void setAcceptDrops(bool)
 
 /*
 If on is true, this item will accept drag and drop events; otherwise, it is transparent for drag and drop events. By default, items do not accept drag and drop events.
@@ -1242,7 +1242,7 @@ func (this *QGraphicsItem) AcceptHoverEvents() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:243
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAcceptHoverEvents(_Bool)
+// [-2] void setAcceptHoverEvents(bool)
 
 /*
 If enabled is true, this item will accept hover events; otherwise, it will ignore them. By default, items do not accept hover events.
@@ -1285,7 +1285,7 @@ func (this *QGraphicsItem) AcceptTouchEvents() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:245
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAcceptTouchEvents(_Bool)
+// [-2] void setAcceptTouchEvents(bool)
 
 /*
 If enabled is true, this item will accept touch events; otherwise, it will ignore them. By default, items do not accept touch events.
@@ -1322,7 +1322,7 @@ func (this *QGraphicsItem) FiltersChildEvents() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:248
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFiltersChildEvents(_Bool)
+// [-2] void setFiltersChildEvents(bool)
 
 /*
 If enabled is true, this item is set to filter all events for all its children (i.e., all events intented for any of its children are instead sent to this item); otherwise, if enabled is false, this item will only handle its own events. The default value is false.
@@ -1353,7 +1353,7 @@ func (this *QGraphicsItem) HandlesChildEvents() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:251
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHandlesChildEvents(_Bool)
+// [-2] void setHandlesChildEvents(bool)
 
 /*
 
@@ -1390,7 +1390,7 @@ func (this *QGraphicsItem) IsActive() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:254
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setActive(_Bool)
+// [-2] void setActive(bool)
 
 /*
 If active is true, and the scene is active, this item's panel will be activated. Otherwise, the panel is deactivated.
@@ -2021,7 +2021,7 @@ func (this *QGraphicsItem) SceneMatrix() *qtgui.QMatrix /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:288
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMatrix(const QMatrix &, _Bool)
+// [-2] void setMatrix(const QMatrix &, bool)
 
 /*
 
@@ -2038,7 +2038,7 @@ func (this *QGraphicsItem) SetMatrix(matrix qtgui.QMatrix_ITF, combine bool) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:288
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMatrix(const QMatrix &, _Bool)
+// [-2] void setMatrix(const QMatrix &, bool)
 
 /*
 
@@ -2170,7 +2170,7 @@ func (this *QGraphicsItem) DeviceTransform(viewportTransform qtgui.QTransform_IT
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:293
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform itemTransform(const QGraphicsItem *, _Bool *) const
+// [88] QTransform itemTransform(const QGraphicsItem *, bool *) const
 
 /*
 Returns a QTransform that maps coordinates from this item to other. If ok is not null, and if there is no such transform, the boolean pointed to by ok will be set to false; otherwise it will be set to true.
@@ -2198,7 +2198,7 @@ func (this *QGraphicsItem) ItemTransform(other QGraphicsItem_ITF /*777 const QGr
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:293
 // index:0
 // Public Visibility=Default Availability=Available
-// [88] QTransform itemTransform(const QGraphicsItem *, _Bool *) const
+// [88] QTransform itemTransform(const QGraphicsItem *, bool *) const
 
 /*
 Returns a QTransform that maps coordinates from this item to other. If ok is not null, and if there is no such transform, the boolean pointed to by ok will be set to false; otherwise it will be set to true.
@@ -2228,7 +2228,7 @@ func (this *QGraphicsItem) ItemTransform__(other QGraphicsItem_ITF /*777 const Q
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:294
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTransform(const QTransform &, _Bool)
+// [-2] void setTransform(const QTransform &, bool)
 
 /*
 Sets the item's current transformation matrix to matrix.
@@ -2255,7 +2255,7 @@ func (this *QGraphicsItem) SetTransform(matrix qtgui.QTransform_ITF, combine boo
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:294
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTransform(const QTransform &, _Bool)
+// [-2] void setTransform(const QTransform &, bool)
 
 /*
 Sets the item's current transformation matrix to matrix.
@@ -5091,7 +5091,7 @@ func (this *QGraphicsItem) InputMethodQuery(query int) *qtcore.QVariant /*123*/ 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:444
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [16] QVariant itemChange(enum QGraphicsItem::GraphicsItemChange, const QVariant &)
+// [16] QVariant itemChange(QGraphicsItem::GraphicsItemChange, const QVariant &)
 
 /*
 This virtual function is called by QGraphicsItem to notify custom items that some part of the item's state changes. By reimplementing this function, you can react to a change, and in some cases (depending on change), adjustments can be made.
@@ -5140,7 +5140,7 @@ func (this *QGraphicsItem) ItemChange(change int, value qtcore.QVariant_ITF) *qt
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:449
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool supportsExtension(enum QGraphicsItem::Extension) const
+// [1] bool supportsExtension(QGraphicsItem::Extension) const
 
 /*
 
@@ -5154,7 +5154,7 @@ func (this *QGraphicsItem) SupportsExtension(extension int) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:450
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [-2] void setExtension(enum QGraphicsItem::Extension, const QVariant &)
+// [-2] void setExtension(QGraphicsItem::Extension, const QVariant &)
 
 /*
 

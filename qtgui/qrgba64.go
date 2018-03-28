@@ -219,7 +219,6 @@ func (this *QRgba64) Red() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba643redEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtGui/qrgba64.h:107
@@ -236,7 +235,6 @@ func (this *QRgba64) Green() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba645greenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtGui/qrgba64.h:108
@@ -253,7 +251,6 @@ func (this *QRgba64) Blue() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba644blueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtGui/qrgba64.h:109
@@ -270,7 +267,6 @@ func (this *QRgba64) Alpha() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba645alphaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtGui/qrgba64.h:110
@@ -345,7 +341,6 @@ func (this *QRgba64) Red8() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba644red8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qrgba64.h:116
@@ -360,7 +355,6 @@ func (this *QRgba64) Green8() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba646green8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qrgba64.h:117
@@ -375,7 +369,6 @@ func (this *QRgba64) Blue8() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba645blue8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qrgba64.h:118
@@ -390,7 +383,6 @@ func (this *QRgba64) Alpha8() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba646alpha8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return byte(rv) // 222
-	// unsigned char // 222
 }
 
 // /usr/include/qt/QtGui/qrgba64.h:119
@@ -407,7 +399,6 @@ func (this *QRgba64) ToArgb32() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba648toArgb32Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qrgba64.h:123
@@ -424,7 +415,6 @@ func (this *QRgba64) ToRgb16() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRgba647toRgb16Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtGui/qrgba64.h:128

@@ -162,7 +162,7 @@ func (this *QSslSocket) Resume() {
 // /usr/include/qt/QtNetwork/qsslsocket.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void connectToHostEncrypted(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+// [-2] void connectToHostEncrypted(const QString &, quint16, QIODevice::OpenMode, QAbstractSocket::NetworkLayerProtocol)
 
 /*
 Starts an encrypted connection to the device hostName on port, using mode as the OpenMode. This is equivalent to calling connectToHost() to establish the connection, followed by a call to startClientEncryption(). The protocol parameter can be used to specify which network protocol to use (eg. IPv4 or IPv6).
@@ -200,7 +200,7 @@ func (this *QSslSocket) ConnectToHostEncrypted(hostName string, port uint16, mod
 // /usr/include/qt/QtNetwork/qsslsocket.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void connectToHostEncrypted(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+// [-2] void connectToHostEncrypted(const QString &, quint16, QIODevice::OpenMode, QAbstractSocket::NetworkLayerProtocol)
 
 /*
 Starts an encrypted connection to the device hostName on port, using mode as the OpenMode. This is equivalent to calling connectToHost() to establish the connection, followed by a call to startClientEncryption(). The protocol parameter can be used to specify which network protocol to use (eg. IPv4 or IPv6).
@@ -242,7 +242,7 @@ func (this *QSslSocket) ConnectToHostEncrypted__(hostName string, port uint16) {
 // /usr/include/qt/QtNetwork/qsslsocket.h:87
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void connectToHostEncrypted(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+// [-2] void connectToHostEncrypted(const QString &, quint16, QIODevice::OpenMode, QAbstractSocket::NetworkLayerProtocol)
 
 /*
 Starts an encrypted connection to the device hostName on port, using mode as the OpenMode. This is equivalent to calling connectToHost() to establish the connection, followed by a call to startClientEncryption(). The protocol parameter can be used to specify which network protocol to use (eg. IPv4 or IPv6).
@@ -282,7 +282,7 @@ func (this *QSslSocket) ConnectToHostEncrypted__1(hostName string, port uint16, 
 // /usr/include/qt/QtNetwork/qsslsocket.h:88
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void connectToHostEncrypted(const QString &, quint16, const QString &, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+// [-2] void connectToHostEncrypted(const QString &, quint16, const QString &, QIODevice::OpenMode, QAbstractSocket::NetworkLayerProtocol)
 
 /*
 Starts an encrypted connection to the device hostName on port, using mode as the OpenMode. This is equivalent to calling connectToHost() to establish the connection, followed by a call to startClientEncryption(). The protocol parameter can be used to specify which network protocol to use (eg. IPv4 or IPv6).
@@ -322,7 +322,7 @@ func (this *QSslSocket) ConnectToHostEncrypted_1(hostName string, port uint16, s
 // /usr/include/qt/QtNetwork/qsslsocket.h:88
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void connectToHostEncrypted(const QString &, quint16, const QString &, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+// [-2] void connectToHostEncrypted(const QString &, quint16, const QString &, QIODevice::OpenMode, QAbstractSocket::NetworkLayerProtocol)
 
 /*
 Starts an encrypted connection to the device hostName on port, using mode as the OpenMode. This is equivalent to calling connectToHost() to establish the connection, followed by a call to startClientEncryption(). The protocol parameter can be used to specify which network protocol to use (eg. IPv4 or IPv6).
@@ -366,7 +366,7 @@ func (this *QSslSocket) ConnectToHostEncrypted_1_(hostName string, port uint16, 
 // /usr/include/qt/QtNetwork/qsslsocket.h:88
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void connectToHostEncrypted(const QString &, quint16, const QString &, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+// [-2] void connectToHostEncrypted(const QString &, quint16, const QString &, QIODevice::OpenMode, QAbstractSocket::NetworkLayerProtocol)
 
 /*
 Starts an encrypted connection to the device hostName on port, using mode as the OpenMode. This is equivalent to calling connectToHost() to establish the connection, followed by a call to startClientEncryption(). The protocol parameter can be used to specify which network protocol to use (eg. IPv4 or IPv6).
@@ -408,7 +408,7 @@ func (this *QSslSocket) ConnectToHostEncrypted_1_1(hostName string, port uint16,
 // /usr/include/qt/QtNetwork/qsslsocket.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool setSocketDescriptor(qintptr, enum QAbstractSocket::SocketState, QIODevice::OpenMode)
+// [1] bool setSocketDescriptor(qintptr, QAbstractSocket::SocketState, QIODevice::OpenMode)
 
 /*
 Reimplemented from QAbstractSocket::setSocketDescriptor().
@@ -428,7 +428,7 @@ func (this *QSslSocket) SetSocketDescriptor(socketDescriptor int64, state int, o
 // /usr/include/qt/QtNetwork/qsslsocket.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool setSocketDescriptor(qintptr, enum QAbstractSocket::SocketState, QIODevice::OpenMode)
+// [1] bool setSocketDescriptor(qintptr, QAbstractSocket::SocketState, QIODevice::OpenMode)
 
 /*
 Reimplemented from QAbstractSocket::setSocketDescriptor().
@@ -452,7 +452,7 @@ func (this *QSslSocket) SetSocketDescriptor__(socketDescriptor int64) bool {
 // /usr/include/qt/QtNetwork/qsslsocket.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [1] bool setSocketDescriptor(qintptr, enum QAbstractSocket::SocketState, QIODevice::OpenMode)
+// [1] bool setSocketDescriptor(qintptr, QAbstractSocket::SocketState, QIODevice::OpenMode)
 
 /*
 Reimplemented from QAbstractSocket::setSocketDescriptor().
@@ -474,7 +474,7 @@ func (this *QSslSocket) SetSocketDescriptor__1(socketDescriptor int64, state int
 // /usr/include/qt/QtNetwork/qsslsocket.h:93
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void connectToHost(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+// [-2] void connectToHost(const QString &, quint16, QIODevice::OpenMode, QAbstractSocket::NetworkLayerProtocol)
 
 /*
 
@@ -489,7 +489,7 @@ func (this *QSslSocket) ConnectToHost(hostName string, port uint16, openMode int
 // /usr/include/qt/QtNetwork/qsslsocket.h:93
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void connectToHost(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+// [-2] void connectToHost(const QString &, quint16, QIODevice::OpenMode, QAbstractSocket::NetworkLayerProtocol)
 
 /*
 
@@ -508,7 +508,7 @@ func (this *QSslSocket) ConnectToHost__(hostName string, port uint16) {
 // /usr/include/qt/QtNetwork/qsslsocket.h:93
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void connectToHost(const QString &, quint16, QIODevice::OpenMode, enum QAbstractSocket::NetworkLayerProtocol)
+// [-2] void connectToHost(const QString &, quint16, QIODevice::OpenMode, QAbstractSocket::NetworkLayerProtocol)
 
 /*
 
@@ -785,7 +785,6 @@ func (this *QSslSocket) BytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket14bytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qsslsocket.h:116
@@ -802,7 +801,6 @@ func (this *QSslSocket) BytesToWrite() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket12bytesToWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qsslsocket.h:117
@@ -912,7 +910,6 @@ func (this *QSslSocket) EncryptedBytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket23encryptedBytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qsslsocket.h:128
@@ -929,7 +926,6 @@ func (this *QSslSocket) EncryptedBytesToWrite() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket21encryptedBytesToWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qsslsocket.h:131
@@ -1930,7 +1926,6 @@ func (this *QSslSocket) ReadData(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket8readDataEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qsslsocket.h:213
@@ -1947,7 +1942,6 @@ func (this *QSslSocket) WriteData(data string, len_ int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 /*

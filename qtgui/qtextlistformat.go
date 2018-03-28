@@ -116,7 +116,7 @@ func (this *QTextListFormat) IsValid() bool {
 // /usr/include/qt/QtGui/qtextformat.h:697
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void setStyle(enum QTextListFormat::Style)
+// [-2] void setStyle(QTextListFormat::Style)
 
 /*
 

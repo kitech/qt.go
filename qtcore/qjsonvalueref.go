@@ -317,7 +317,7 @@ func (this *QJsonValueRef) ToBool() bool {
 // /usr/include/qt/QtCore/qjsonvalue.h:201
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [1] bool toBool(_Bool) const
+// [1] bool toBool(bool) const
 
 /*
 Converts the value to a bool and returns it.

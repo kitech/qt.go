@@ -32,7 +32,7 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QPicture) InheritMetric(f func(m int) int) {
 	qtrt.SetAllInheritCallback(this, "metric", f)
 }
@@ -171,7 +171,6 @@ func (this *QPicture) Size() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPicture4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qpicture.h:67
@@ -610,7 +609,7 @@ func (this *QPicture) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 // /usr/include/qt/QtGui/qpicture.h:106
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
+// [4] int metric(QPaintDevice::PaintDeviceMetric) const
 
 /*
 

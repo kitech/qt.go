@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QShortcut) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -282,7 +282,7 @@ func (this *QShortcut) Key() *qtgui.QKeySequence /*123*/ {
 // /usr/include/qt/QtWidgets/qshortcut.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(_Bool)
+// [-2] void setEnabled(bool)
 
 /*
 
@@ -368,7 +368,7 @@ func (this *QShortcut) WhatsThis() string {
 // /usr/include/qt/QtWidgets/qshortcut.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoRepeat(_Bool)
+// [-2] void setAutoRepeat(bool)
 
 /*
 

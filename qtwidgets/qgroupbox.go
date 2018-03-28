@@ -33,52 +33,52 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QGroupBox) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void childEvent(class QChildEvent *)
+// void childEvent(QChildEvent *)
 func (this *QGroupBox) InheritChildEvent(f func(event *qtcore.QChildEvent /*777 QChildEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "childEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QGroupBox) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QGroupBox) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QGroupBox) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QGroupBox) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QGroupBox) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QGroupBox) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QGroupBox) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionGroupBox *)
+// void initStyleOption(QStyleOptionGroupBox *)
 func (this *QGroupBox) InheritInitStyleOption(f func(option *QStyleOptionGroupBox /*777 QStyleOptionGroupBox **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -315,7 +315,7 @@ func (this *QGroupBox) IsFlat() bool {
 // /usr/include/qt/QtWidgets/qgroupbox.h:75
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlat(_Bool)
+// [-2] void setFlat(bool)
 
 /*
 
@@ -342,7 +342,7 @@ func (this *QGroupBox) IsCheckable() bool {
 // /usr/include/qt/QtWidgets/qgroupbox.h:77
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCheckable(_Bool)
+// [-2] void setCheckable(bool)
 
 /*
 
@@ -369,7 +369,7 @@ func (this *QGroupBox) IsChecked() bool {
 // /usr/include/qt/QtWidgets/qgroupbox.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setChecked(_Bool)
+// [-2] void setChecked(bool)
 
 /*
 
@@ -382,7 +382,7 @@ func (this *QGroupBox) SetChecked(checked bool) {
 // /usr/include/qt/QtWidgets/qgroupbox.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void clicked(_Bool)
+// [-2] void clicked(bool)
 
 /*
 This signal is emitted when the check box is activated (i.e., pressed down then released while the mouse cursor is inside the button), or when the shortcut key is typed. Notably, this signal is not emitted if you call setChecked().
@@ -401,7 +401,7 @@ func (this *QGroupBox) Clicked(checked bool) {
 // /usr/include/qt/QtWidgets/qgroupbox.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void clicked(_Bool)
+// [-2] void clicked(bool)
 
 /*
 This signal is emitted when the check box is activated (i.e., pressed down then released while the mouse cursor is inside the button), or when the shortcut key is typed. Notably, this signal is not emitted if you call setChecked().
@@ -422,7 +422,7 @@ func (this *QGroupBox) Clicked__() {
 // /usr/include/qt/QtWidgets/qgroupbox.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void toggled(_Bool)
+// [-2] void toggled(bool)
 
 /*
 If the group box is checkable, this signal is emitted when the check box is toggled. on is true if the check box is checked; otherwise, it is false.

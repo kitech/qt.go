@@ -33,7 +33,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QFontDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
@@ -43,7 +43,7 @@ func (this *QFontDialog) InheritDone(f func(result int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "done", f)
 }
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QFontDialog) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
@@ -290,7 +290,7 @@ func (this *QFontDialog) SelectedFont() *qtgui.QFont /*123*/ {
 // /usr/include/qt/QtWidgets/qfontdialog.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QFontDialog::FontDialogOption, _Bool)
+// [-2] void setOption(QFontDialog::FontDialogOption, bool)
 
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
@@ -305,7 +305,7 @@ func (this *QFontDialog) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qfontdialog.h:84
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOption(enum QFontDialog::FontDialogOption, _Bool)
+// [-2] void setOption(QFontDialog::FontDialogOption, bool)
 
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
@@ -322,7 +322,7 @@ func (this *QFontDialog) SetOption__(option int) {
 // /usr/include/qt/QtWidgets/qfontdialog.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool testOption(enum QFontDialog::FontDialogOption) const
+// [1] bool testOption(QFontDialog::FontDialogOption) const
 
 /*
 Returns true if the given option is enabled; otherwise, returns false.
@@ -390,7 +390,7 @@ func (this *QFontDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, mem
 // /usr/include/qt/QtWidgets/qfontdialog.h:92
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 Reimplemented from QWidget::setVisible().
@@ -403,7 +403,7 @@ func (this *QFontDialog) SetVisible(visible bool) {
 // /usr/include/qt/QtWidgets/qfontdialog.h:94
 // index:0
 // Public static Visibility=Default Availability=Available
-// [16] QFont getFont(_Bool *, QWidget *)
+// [16] QFont getFont(bool *, QWidget *)
 
 /*
 Executes a modal font dialog and returns a font.
@@ -457,7 +457,7 @@ func QFontDialog_GetFont(ok *bool, parent QWidget_ITF /*777 QWidget **/) *qtgui.
 // /usr/include/qt/QtWidgets/qfontdialog.h:94
 // index:0
 // Public static Visibility=Default Availability=Available
-// [16] QFont getFont(_Bool *, QWidget *)
+// [16] QFont getFont(bool *, QWidget *)
 
 /*
 Executes a modal font dialog and returns a font.
@@ -504,7 +504,7 @@ func (this *QFontDialog) GetFont__(ok *bool) *qtgui.QFont /*123*/ {
 // /usr/include/qt/QtWidgets/qfontdialog.h:95
 // index:1
 // Public static Visibility=Default Availability=Available
-// [16] QFont getFont(_Bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
+// [16] QFont getFont(bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
 
 /*
 Executes a modal font dialog and returns a font.
@@ -564,7 +564,7 @@ func QFontDialog_GetFont_1(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF
 // /usr/include/qt/QtWidgets/qfontdialog.h:95
 // index:1
 // Public static Visibility=Default Availability=Available
-// [16] QFont getFont(_Bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
+// [16] QFont getFont(bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
 
 /*
 Executes a modal font dialog and returns a font.
@@ -619,7 +619,7 @@ func (this *QFontDialog) GetFont_1_(ok *bool, initial qtgui.QFont_ITF) *qtgui.QF
 // /usr/include/qt/QtWidgets/qfontdialog.h:95
 // index:1
 // Public static Visibility=Default Availability=Available
-// [16] QFont getFont(_Bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
+// [16] QFont getFont(bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
 
 /*
 Executes a modal font dialog and returns a font.
@@ -676,7 +676,7 @@ func (this *QFontDialog) GetFont_1_1(ok *bool, initial qtgui.QFont_ITF, parent Q
 // /usr/include/qt/QtWidgets/qfontdialog.h:95
 // index:1
 // Public static Visibility=Default Availability=Available
-// [16] QFont getFont(_Bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
+// [16] QFont getFont(bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
 
 /*
 Executes a modal font dialog and returns a font.

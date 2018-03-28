@@ -67,7 +67,7 @@ func (*QStandardPaths) NewFromPointer(cthis unsafe.Pointer) *QStandardPaths {
 // /usr/include/qt/QtCore/qstandardpaths.h:81
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString writableLocation(enum QStandardPaths::StandardLocation)
+// [8] QString writableLocation(QStandardPaths::StandardLocation)
 
 /*
 Returns the directory where files of type should be written to, or an empty string if the location cannot be determined.
@@ -91,7 +91,7 @@ func QStandardPaths_WritableLocation(type_ int) string {
 // /usr/include/qt/QtCore/qstandardpaths.h:82
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QStringList standardLocations(enum QStandardPaths::StandardLocation)
+// [8] QStringList standardLocations(QStandardPaths::StandardLocation)
 
 /*
 Returns all the directories where files of type belong.
@@ -116,7 +116,7 @@ func QStandardPaths_StandardLocations(type_ int) *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qstandardpaths.h:91
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString locate(enum QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
+// [8] QString locate(QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
 
 /*
 Tries to find a file or directory called fileName in the standard locations for type.
@@ -142,7 +142,7 @@ func QStandardPaths_Locate(type_ int, fileName string, options int) string {
 // /usr/include/qt/QtCore/qstandardpaths.h:91
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString locate(enum QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
+// [8] QString locate(QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
 
 /*
 Tries to find a file or directory called fileName in the standard locations for type.
@@ -165,7 +165,7 @@ func (this *QStandardPaths) Locate__(type_ int, fileName string) string {
 // /usr/include/qt/QtCore/qstandardpaths.h:92
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QStringList locateAll(enum QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
+// [8] QStringList locateAll(QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
 
 /*
 Tries to find all files or directories called fileName in the standard locations for type.
@@ -192,7 +192,7 @@ func QStandardPaths_LocateAll(type_ int, fileName string, options int) *QStringL
 // /usr/include/qt/QtCore/qstandardpaths.h:92
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QStringList locateAll(enum QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
+// [8] QStringList locateAll(QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
 
 /*
 Tries to find all files or directories called fileName in the standard locations for type.
@@ -216,7 +216,7 @@ func (this *QStandardPaths) LocateAll__(type_ int, fileName string) *QStringList
 // /usr/include/qt/QtCore/qstandardpaths.h:94
 // index:0
 // Public static Visibility=Default Availability=Available
-// [8] QString displayName(enum QStandardPaths::StandardLocation)
+// [8] QString displayName(QStandardPaths::StandardLocation)
 
 /*
 Returns a localized display name for the given location type or an empty QString if no relevant location can be found.
@@ -307,7 +307,7 @@ func (this *QStandardPaths) FindExecutable__(executableName string) string {
 // /usr/include/qt/QtCore/qstandardpaths.h:100
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void enableTestMode(_Bool)
+// [-2] void enableTestMode(bool)
 
 /*
 
@@ -324,7 +324,7 @@ func QStandardPaths_EnableTestMode(testMode bool) {
 // /usr/include/qt/QtCore/qstandardpaths.h:102
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setTestModeEnabled(_Bool)
+// [-2] void setTestModeEnabled(bool)
 
 /*
 If testMode is true, this enables a special "test mode" in QStandardPaths, which changes writable locations to point to test directories, in order to prevent auto tests from reading from or writing to the current user's configuration.

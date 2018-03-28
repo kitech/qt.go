@@ -110,7 +110,6 @@ func (this *QAccessible) UniqueId(iface QAccessibleInterface_ITF /*777 QAccessib
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible8uniqueIdEP20QAccessibleInterface", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QAccessible_UniqueId(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/) uint {
 	var nilthis *QAccessible
@@ -159,7 +158,6 @@ func (this *QAccessible) RegisterAccessibleInterface(iface QAccessibleInterface_
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 func QAccessible_RegisterAccessibleInterface(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/) uint {
 	var nilthis *QAccessible
@@ -239,7 +237,7 @@ func QAccessible_IsActive() bool {
 // /usr/include/qt/QtGui/qaccessible.h:427
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setActive(_Bool)
+// [-2] void setActive(bool)
 
 /*
 

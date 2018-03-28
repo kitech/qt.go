@@ -550,7 +550,7 @@ func (this *QCommandLineOption) SetFlags(aflags int) {
 // /usr/include/qt/QtCore/qcommandlineoption.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHidden(_Bool)
+// [-2] void setHidden(bool)
 
 /*
 

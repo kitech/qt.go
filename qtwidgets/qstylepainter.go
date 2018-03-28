@@ -228,7 +228,7 @@ func (this *QStylePainter) DrawComplexControl(cc int, opt QStyleOptionComplex_IT
 // /usr/include/qt/QtWidgets/qstylepainter.h:67
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void drawItemText(const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole)
+// [-2] void drawItemText(const QRect &, int, const QPalette &, bool, const QString &, QPalette::ColorRole)
 
 /*
 Draws the text in rectangle rect and palette pal. The text is aligned and wrapped according to flags.
@@ -255,7 +255,7 @@ func (this *QStylePainter) DrawItemText(r qtcore.QRect_ITF, flags int, pal qtgui
 // /usr/include/qt/QtWidgets/qstylepainter.h:67
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void drawItemText(const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole)
+// [-2] void drawItemText(const QRect &, int, const QPalette &, bool, const QString &, QPalette::ColorRole)
 
 /*
 Draws the text in rectangle rect and palette pal. The text is aligned and wrapped according to flags.

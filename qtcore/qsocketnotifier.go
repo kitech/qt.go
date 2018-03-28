@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QSocketNotifier) InheritEvent(f func(arg0 *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -84,7 +84,7 @@ func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject *
 // /usr/include/qt/QtCore/qsocketnotifier.h:56
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QSocketNotifier(qintptr, enum QSocketNotifier::Type, QObject *)
+// [-2] void QSocketNotifier(qintptr, QSocketNotifier::Type, QObject *)
 
 /*
 Constructs a socket notifier with the given parent. It enables the socket, and watches for events of the given type.
@@ -110,7 +110,7 @@ func NewQSocketNotifier(socket int64, arg1 int, parent QObject_ITF /*777 QObject
 // /usr/include/qt/QtCore/qsocketnotifier.h:56
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QSocketNotifier(qintptr, enum QSocketNotifier::Type, QObject *)
+// [-2] void QSocketNotifier(qintptr, QSocketNotifier::Type, QObject *)
 
 /*
 Constructs a socket notifier with the given parent. It enables the socket, and watches for events of the given type.
@@ -160,7 +160,6 @@ func (this *QSocketNotifier) Socket() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier6socketEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:60
@@ -198,7 +197,7 @@ func (this *QSocketNotifier) IsEnabled() bool {
 // /usr/include/qt/QtCore/qsocketnotifier.h:65
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(_Bool)
+// [-2] void setEnabled(bool)
 
 /*
 If enable is true, the notifier is enabled; otherwise the notifier is disabled.

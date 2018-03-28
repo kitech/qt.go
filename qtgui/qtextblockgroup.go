@@ -32,17 +32,17 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// void blockInserted(const class QTextBlock &)
+// void blockInserted(const QTextBlock &)
 func (this *QTextBlockGroup) InheritBlockInserted(f func(block *QTextBlock) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "blockInserted", f)
 }
 
-// void blockRemoved(const class QTextBlock &)
+// void blockRemoved(const QTextBlock &)
 func (this *QTextBlockGroup) InheritBlockRemoved(f func(block *QTextBlock) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "blockRemoved", f)
 }
 
-// void blockFormatChanged(const class QTextBlock &)
+// void blockFormatChanged(const QTextBlock &)
 func (this *QTextBlockGroup) InheritBlockFormatChanged(f func(block *QTextBlock) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "blockFormatChanged", f)
 }

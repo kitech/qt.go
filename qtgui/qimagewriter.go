@@ -435,7 +435,7 @@ func (this *QImageWriter) SubType() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtGui/qimagewriter.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOptimizedWrite(_Bool)
+// [-2] void setOptimizedWrite(bool)
 
 /*
 This is an image format-specific function which sets the optimize flags when writing images. For image formats that do not support setting an optimize flag, this value is ignored.
@@ -472,7 +472,7 @@ func (this *QImageWriter) OptimizedWrite() bool {
 // /usr/include/qt/QtGui/qimagewriter.h:97
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setProgressiveScanWrite(_Bool)
+// [-2] void setProgressiveScanWrite(bool)
 
 /*
 This is an image format-specific function which turns on progressive scanning when writing images. For image formats that do not support setting a progressive scan flag, this value is ignored.

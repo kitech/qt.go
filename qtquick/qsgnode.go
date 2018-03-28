@@ -87,7 +87,7 @@ func NewQSGNode() *QSGNode {
 // /usr/include/qt/QtQuick/qsgnode.h:165
 // index:1
 // Protected Visibility=Default Availability=Available
-// [-2] void QSGNode(enum QSGNode::NodeType)
+// [-2] void QSGNode(QSGNode::NodeType)
 
 /*
 Constructs a new node
@@ -445,7 +445,7 @@ func (this *QSGNode) Flags() int {
 // /usr/include/qt/QtQuick/qsgnode.h:159
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(enum QSGNode::Flag, _Bool)
+// [-2] void setFlag(QSGNode::Flag, bool)
 
 /*
 Sets the flag f on this node if enabled is true; otherwise clears the flag.
@@ -460,7 +460,7 @@ func (this *QSGNode) SetFlag(arg0 int, arg1 bool) {
 // /usr/include/qt/QtQuick/qsgnode.h:159
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(enum QSGNode::Flag, _Bool)
+// [-2] void setFlag(QSGNode::Flag, bool)
 
 /*
 Sets the flag f on this node if enabled is true; otherwise clears the flag.
@@ -477,7 +477,7 @@ func (this *QSGNode) SetFlag__(arg0 int) {
 // /usr/include/qt/QtQuick/qsgnode.h:160
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlags(QSGNode::Flags, _Bool)
+// [-2] void setFlags(QSGNode::Flags, bool)
 
 /*
 Sets the flags f on this node if enabled is true; otherwise clears the flags.
@@ -492,7 +492,7 @@ func (this *QSGNode) SetFlags(arg0 int, arg1 bool) {
 // /usr/include/qt/QtQuick/qsgnode.h:160
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlags(QSGNode::Flags, _Bool)
+// [-2] void setFlags(QSGNode::Flags, bool)
 
 /*
 Sets the flags f on this node if enabled is true; otherwise clears the flags.

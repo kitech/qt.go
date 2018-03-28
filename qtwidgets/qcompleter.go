@@ -33,12 +33,12 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QCompleter) InheritEventFilter(f func(o *qtcore.QObject /*777 QObject **/, e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventFilter", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QCompleter) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -308,7 +308,7 @@ func (this *QCompleter) Model() *qtcore.QAbstractItemModel /*777 QAbstractItemMo
 // /usr/include/qt/QtWidgets/qcompleter.h:98
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCompletionMode(enum QCompleter::CompletionMode)
+// [-2] void setCompletionMode(QCompleter::CompletionMode)
 
 /*
 
@@ -428,7 +428,7 @@ func (this *QCompleter) CaseSensitivity() int {
 // /usr/include/qt/QtWidgets/qcompleter.h:110
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setModelSorting(enum QCompleter::ModelSorting)
+// [-2] void setModelSorting(QCompleter::ModelSorting)
 
 /*
 
@@ -721,7 +721,7 @@ func (this *QCompleter) Complete__() {
 // /usr/include/qt/QtWidgets/qcompleter.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWrapAround(_Bool)
+// [-2] void setWrapAround(bool)
 
 /*
 

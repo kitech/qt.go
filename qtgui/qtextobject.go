@@ -32,7 +32,7 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// void setFormat(const class QTextFormat &)
+// void setFormat(const QTextFormat &)
 func (this *QTextObject) InheritSetFormat(f func(format *QTextFormat) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setFormat", f)
 }

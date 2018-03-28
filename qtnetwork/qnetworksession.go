@@ -32,12 +32,12 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// void connectNotify(const class QMetaMethod &)
+// void connectNotify(const QMetaMethod &)
 func (this *QNetworkSession) InheritConnectNotify(f func(signal *qtcore.QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "connectNotify", f)
 }
 
-// void disconnectNotify(const class QMetaMethod &)
+// void disconnectNotify(const QMetaMethod &)
 func (this *QNetworkSession) InheritDisconnectNotify(f func(signal *qtcore.QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "disconnectNotify", f)
 }
@@ -373,7 +373,6 @@ func (this *QNetworkSession) BytesWritten() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession12bytesWrittenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qnetworksession.h:106
@@ -396,7 +395,6 @@ func (this *QNetworkSession) BytesReceived() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession13bytesReceivedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qnetworksession.h:107
@@ -411,7 +409,6 @@ func (this *QNetworkSession) ActiveTime() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession10activeTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qnetworksession.h:109
@@ -647,7 +644,7 @@ func (this *QNetworkSession) Closed() {
 // /usr/include/qt/QtNetwork/qnetworksession.h:129
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void preferredConfigurationChanged(const QNetworkConfiguration &, _Bool)
+// [-2] void preferredConfigurationChanged(const QNetworkConfiguration &, bool)
 
 /*
 This signal is emitted when the preferred configuration/access point for the session changes. Only sessions which are based on service network configurations may emit this signal. config can be used to determine access point specific details such as proxy settings and isSeamless indicates whether roaming will break the sessions IP address.

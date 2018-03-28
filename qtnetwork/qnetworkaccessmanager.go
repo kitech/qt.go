@@ -32,7 +32,7 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// QNetworkReply * createRequest(enum QNetworkAccessManager::Operation, const class QNetworkRequest &, class QIODevice *)
+// QNetworkReply * createRequest(QNetworkAccessManager::Operation, const QNetworkRequest &, QIODevice *)
 func (this *QNetworkAccessManager) InheritCreateRequest(f func(op int, request *QNetworkRequest, outgoingData *qtcore.QIODevice /*777 QIODevice **/) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "createRequest", f)
 }
@@ -382,7 +382,7 @@ func (this *QNetworkAccessManager) SetCookieJar(cookieJar QNetworkCookieJar_ITF 
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:126
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setStrictTransportSecurityEnabled(_Bool)
+// [-2] void setStrictTransportSecurityEnabled(bool)
 
 /*
 If enabled is true, QNetworkAccessManager follows the HTTP Strict Transport Security policy (HSTS, RFC6797). When processing a request, QNetworkAccessManager automatically replaces the "http" scheme with "https" and uses a secure transport for HSTS hosts. If it's set explicitly, port 80 is replaced by port 443.
@@ -419,7 +419,7 @@ func (this *QNetworkAccessManager) IsStrictTransportSecurityEnabled() bool {
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:128
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void enableStrictTransportSecurityStore(_Bool, const QString &)
+// [-2] void enableStrictTransportSecurityStore(bool, const QString &)
 
 /*
 If enabled is true, the internal HSTS cache will use a persistent store to read and write HSTS policies. storeDir defines where this store will be located. The default location is defined by QStandardPaths::CacheLocation. If there is no writable QStandartPaths::CacheLocation and storeDir is an empty string, the store will be located in the program's working directory.
@@ -440,7 +440,7 @@ func (this *QNetworkAccessManager) EnableStrictTransportSecurityStore(enabled bo
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:128
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void enableStrictTransportSecurityStore(_Bool, const QString &)
+// [-2] void enableStrictTransportSecurityStore(bool, const QString &)
 
 /*
 If enabled is true, the internal HSTS cache will use a persistent store to read and write HSTS policies. storeDir defines where this store will be located. The default location is defined by QStandardPaths::CacheLocation. If there is no writable QStandartPaths::CacheLocation and storeDir is an empty string, the store will be located in the program's working directory.
@@ -953,7 +953,7 @@ func (this *QNetworkAccessManager) ActiveConfiguration() *QNetworkConfiguration 
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:151
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setNetworkAccessible(enum QNetworkAccessManager::NetworkAccessibility)
+// [-2] void setNetworkAccessible(QNetworkAccessManager::NetworkAccessibility)
 
 /*
 Overrides the reported network accessibility. If accessible is NotAccessible the reported network accessiblity will always be NotAccessible. Otherwise the reported network accessibility will reflect the actual device state.
@@ -1317,7 +1317,7 @@ func (this *QNetworkAccessManager) NetworkAccessibleChanged(accessible int) {
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:183
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QNetworkReply * createRequest(enum QNetworkAccessManager::Operation, const QNetworkRequest &, QIODevice *)
+// [8] QNetworkReply * createRequest(QNetworkAccessManager::Operation, const QNetworkRequest &, QIODevice *)
 
 /*
 Returns a new QNetworkReply object to handle the operation op and request originalReq. The device outgoingData is always 0 for Get and Head requests, but is the value passed to post() and put() in those operations (the QByteArray variants will pass a QBuffer object).
@@ -1343,7 +1343,7 @@ func (this *QNetworkAccessManager) CreateRequest(op int, request QNetworkRequest
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:183
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [8] QNetworkReply * createRequest(enum QNetworkAccessManager::Operation, const QNetworkRequest &, QIODevice *)
+// [8] QNetworkReply * createRequest(QNetworkAccessManager::Operation, const QNetworkRequest &, QIODevice *)
 
 /*
 Returns a new QNetworkReply object to handle the operation op and request originalReq. The device outgoingData is always 0 for Get and Head requests, but is the value passed to post() and put() in those operations (the QByteArray variants will pass a QBuffer object).

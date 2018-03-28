@@ -66,7 +66,7 @@ func (*QHelpEvent) NewFromPointer(cthis unsafe.Pointer) *QHelpEvent {
 // /usr/include/qt/QtGui/qevent.h:680
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QHelpEvent(enum QEvent::Type, const QPoint &, const QPoint &)
+// [-2] void QHelpEvent(QEvent::Type, const QPoint &, const QPoint &)
 
 /*
 

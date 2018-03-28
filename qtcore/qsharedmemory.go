@@ -272,7 +272,7 @@ func (this *QSharedMemory) NativeKey() string {
 // /usr/include/qt/QtCore/qsharedmemory.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool create(int, enum QSharedMemory::AccessMode)
+// [1] bool create(int, QSharedMemory::AccessMode)
 
 /*
 Creates a shared memory segment of size bytes with the key passed to the constructor, set with setKey() or set with setNativeKey(), then attaches to the new shared memory segment with the given access mode and returns true. If a shared memory segment identified by the key already exists, the attach operation is not performed and false is returned. When the return value is false, call error() to determine which error occurred.
@@ -288,7 +288,7 @@ func (this *QSharedMemory) Create(size int, mode int) bool {
 // /usr/include/qt/QtCore/qsharedmemory.h:86
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool create(int, enum QSharedMemory::AccessMode)
+// [1] bool create(int, QSharedMemory::AccessMode)
 
 /*
 Creates a shared memory segment of size bytes with the key passed to the constructor, set with setKey() or set with setNativeKey(), then attaches to the new shared memory segment with the given access mode and returns true. If a shared memory segment identified by the key already exists, the attach operation is not performed and false is returned. When the return value is false, call error() to determine which error occurred.
@@ -324,7 +324,7 @@ func (this *QSharedMemory) Size() int {
 // /usr/include/qt/QtCore/qsharedmemory.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool attach(enum QSharedMemory::AccessMode)
+// [1] bool attach(QSharedMemory::AccessMode)
 
 /*
 Attempts to attach the process to the shared memory segment identified by the key that was passed to the constructor or to a call to setKey() or setNativeKey(). The access mode is ReadWrite by default. It can also be ReadOnly. Returns true if the attach operation is successful. If false is returned, call error() to determine which error occurred. After attaching the shared memory segment, a pointer to the shared memory can be obtained by calling data().
@@ -340,7 +340,7 @@ func (this *QSharedMemory) Attach(mode int) bool {
 // /usr/include/qt/QtCore/qsharedmemory.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool attach(enum QSharedMemory::AccessMode)
+// [1] bool attach(QSharedMemory::AccessMode)
 
 /*
 Attempts to attach the process to the shared memory segment identified by the key that was passed to the constructor or to a call to setKey() or setNativeKey(). The access mode is ReadWrite by default. It can also be ReadOnly. Returns true if the attach operation is successful. If false is returned, call error() to determine which error occurred. After attaching the shared memory segment, a pointer to the shared memory can be obtained by calling data().

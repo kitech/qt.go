@@ -69,7 +69,7 @@ func (*QGraphicsSceneHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:201
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsSceneHoverEvent(enum QEvent::Type)
+// [-2] void QGraphicsSceneHoverEvent(QEvent::Type)
 
 /*
 
@@ -85,7 +85,7 @@ func NewQGraphicsSceneHoverEvent(type_ int) *QGraphicsSceneHoverEvent {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:201
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsSceneHoverEvent(enum QEvent::Type)
+// [-2] void QGraphicsSceneHoverEvent(QEvent::Type)
 
 /*
 

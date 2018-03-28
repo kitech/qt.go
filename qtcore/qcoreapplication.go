@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QCoreApplication) InheritEvent(f func(arg0 *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -178,7 +178,7 @@ func QCoreApplication_Arguments() *QStringList /*123*/ {
 // /usr/include/qt/QtCore/qcoreapplication.h:101
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setAttribute(Qt::ApplicationAttribute, _Bool)
+// [-2] void setAttribute(Qt::ApplicationAttribute, bool)
 
 /*
 Sets the attribute attribute if on is true; otherwise clears the attribute.
@@ -197,7 +197,7 @@ func QCoreApplication_SetAttribute(attribute int, on bool) {
 // /usr/include/qt/QtCore/qcoreapplication.h:101
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setAttribute(Qt::ApplicationAttribute, _Bool)
+// [-2] void setAttribute(Qt::ApplicationAttribute, bool)
 
 /*
 Sets the attribute attribute if on is true; otherwise clears the attribute.
@@ -399,7 +399,7 @@ func QCoreApplication_ApplicationVersion() string {
 // /usr/include/qt/QtCore/qcoreapplication.h:113
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setSetuidAllowed(_Bool)
+// [-2] void setSetuidAllowed(bool)
 
 /*
 Allows the application to run setuid on UNIX platforms if allow is true.
@@ -1070,7 +1070,6 @@ func (this *QCoreApplication) ApplicationPid() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication14applicationPidEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 func QCoreApplication_ApplicationPid() int64 {
 	var nilthis *QCoreApplication
@@ -1475,7 +1474,7 @@ func QCoreApplication_IsQuitLockEnabled() bool {
 // /usr/include/qt/QtCore/qcoreapplication.h:176
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setQuitLockEnabled(_Bool)
+// [-2] void setQuitLockEnabled(bool)
 
 /*
 

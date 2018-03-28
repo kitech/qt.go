@@ -168,7 +168,7 @@ func (this *QSGMaterial) Flags() int {
 // /usr/include/qt/QtQuick/qsgmaterial.h:154
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(QSGMaterial::Flags, _Bool)
+// [-2] void setFlag(QSGMaterial::Flags, bool)
 
 /*
 Sets the flags flags on this material if on is true; otherwise clears the attribute.
@@ -181,7 +181,7 @@ func (this *QSGMaterial) SetFlag(flags int, on bool) {
 // /usr/include/qt/QtQuick/qsgmaterial.h:154
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFlag(QSGMaterial::Flags, _Bool)
+// [-2] void setFlag(QSGMaterial::Flags, bool)
 
 /*
 Sets the flags flags on this material if on is true; otherwise clears the attribute.

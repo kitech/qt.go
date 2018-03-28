@@ -178,7 +178,6 @@ func (this *QDnsServiceRecord) Port() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord4portEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:148
@@ -193,7 +192,6 @@ func (this *QDnsServiceRecord) Priority() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord8priorityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:149
@@ -225,7 +223,6 @@ func (this *QDnsServiceRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:151
@@ -240,7 +237,6 @@ func (this *QDnsServiceRecord) Weight() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord6weightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 //  body block end

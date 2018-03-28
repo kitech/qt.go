@@ -33,52 +33,52 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QToolButton) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QToolButton) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QToolButton) InheritMouseReleaseEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QToolButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void actionEvent(class QActionEvent *)
+// void actionEvent(QActionEvent *)
 func (this *QToolButton) InheritActionEvent(f func(arg0 *qtgui.QActionEvent /*777 QActionEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "actionEvent", f)
 }
 
-// void enterEvent(class QEvent *)
+// void enterEvent(QEvent *)
 func (this *QToolButton) InheritEnterEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "enterEvent", f)
 }
 
-// void leaveEvent(class QEvent *)
+// void leaveEvent(QEvent *)
 func (this *QToolButton) InheritLeaveEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "leaveEvent", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QToolButton) InheritTimerEvent(f func(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QToolButton) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// bool hitButton(const class QPoint &)
+// bool hitButton(const QPoint &)
 func (this *QToolButton) InheritHitButton(f func(pos *qtcore.QPoint) bool) {
 	qtrt.SetAllInheritCallback(this, "hitButton", f)
 }
@@ -88,7 +88,7 @@ func (this *QToolButton) InheritNextCheckState(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "nextCheckState", f)
 }
 
-// void initStyleOption(class QStyleOptionToolButton *)
+// void initStyleOption(QStyleOptionToolButton *)
 func (this *QToolButton) InheritInitStyleOption(f func(option *QStyleOptionToolButton /*777 QStyleOptionToolButton **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -306,7 +306,7 @@ func (this *QToolButton) Menu() *QMenu /*777 QMenu **/ {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:89
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPopupMode(enum QToolButton::ToolButtonPopupMode)
+// [-2] void setPopupMode(QToolButton::ToolButtonPopupMode)
 
 /*
 
@@ -349,7 +349,7 @@ func (this *QToolButton) DefaultAction() *QAction /*777 QAction **/ {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:95
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoRaise(_Bool)
+// [-2] void setAutoRaise(bool)
 
 /*
 

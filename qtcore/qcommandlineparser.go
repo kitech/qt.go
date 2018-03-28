@@ -98,7 +98,7 @@ func DeleteQCommandLineParser(this *QCommandLineParser) {
 // /usr/include/qt/QtCore/qcommandlineparser.h:66
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSingleDashWordOptionMode(enum QCommandLineParser::SingleDashWordOptionMode)
+// [-2] void setSingleDashWordOptionMode(QCommandLineParser::SingleDashWordOptionMode)
 
 /*
 Sets the parsing mode to singleDashWordOptionMode. This must be called before process() or parse().
@@ -111,7 +111,7 @@ func (this *QCommandLineParser) SetSingleDashWordOptionMode(parsingMode int) {
 // /usr/include/qt/QtCore/qcommandlineparser.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setOptionsAfterPositionalArgumentsMode(enum QCommandLineParser::OptionsAfterPositionalArgumentsMode)
+// [-2] void setOptionsAfterPositionalArgumentsMode(QCommandLineParser::OptionsAfterPositionalArgumentsMode)
 
 /*
 Sets the parsing mode to parsingMode. This must be called before process() or parse().

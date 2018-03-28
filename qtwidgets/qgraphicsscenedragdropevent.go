@@ -69,7 +69,7 @@ func (*QGraphicsSceneDragDropEvent) NewFromPointer(cthis unsafe.Pointer) *QGraph
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:252
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsSceneDragDropEvent(enum QEvent::Type)
+// [-2] void QGraphicsSceneDragDropEvent(QEvent::Type)
 
 /*
 
@@ -85,7 +85,7 @@ func NewQGraphicsSceneDragDropEvent(type_ int) *QGraphicsSceneDragDropEvent {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:252
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QGraphicsSceneDragDropEvent(enum QEvent::Type)
+// [-2] void QGraphicsSceneDragDropEvent(QEvent::Type)
 
 /*
 

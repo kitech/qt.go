@@ -38,7 +38,6 @@ func QHash_36(key QSslError_ITF, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK9QSslErrorj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:59
@@ -59,7 +58,6 @@ func QHash_37(dhparam QSslDiffieHellmanParameters_ITF, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK27QSslDiffieHellmanParametersj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtNetwork/qsslcertificate.h:71
@@ -78,7 +76,6 @@ func QHash_38(key QSslCertificate_ITF, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK15QSslCertificatej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtNetwork/qhostaddress.h:69
@@ -99,7 +96,6 @@ func QHash_39(key QHostAddress_ITF, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK12QHostAddressj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:55
@@ -118,7 +114,6 @@ func QHash_40(curve QSslEllipticCurve_ITF /*123*/, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash17QSslEllipticCurvej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:90
@@ -137,7 +132,6 @@ func QHash_41(curve QSslEllipticCurve_ITF /*123*/, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash17QSslEllipticCurvej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 //  body block end

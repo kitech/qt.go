@@ -236,7 +236,7 @@ func (this *QInputMethod) IsVisible() bool {
 // /usr/include/qt/QtGui/qinputmethod.h:90
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 Controls the keyboard visibility. Equivalent to calling show() (if visible is true) or hide() (if visible is false).
@@ -393,7 +393,7 @@ func (this *QInputMethod) Commit() {
 // /usr/include/qt/QtGui/qinputmethod.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void invokeAction(enum QInputMethod::Action, int)
+// [-2] void invokeAction(QInputMethod::Action, int)
 
 /*
 Called by the input item when the word currently being composed is tapped by the user, as indicated by the action a and the given cursorPosition. Input methods often use this information to offer more word suggestions to the user.

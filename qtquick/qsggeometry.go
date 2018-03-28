@@ -603,7 +603,7 @@ func QSGGeometry_UpdateColoredRectGeometry(g QSGGeometry_ITF /*777 QSGGeometry *
 // /usr/include/qt/QtQuick/qsggeometry.h:188
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setIndexDataPattern(enum QSGGeometry::DataPattern)
+// [-2] void setIndexDataPattern(QSGGeometry::DataPattern)
 
 /*
 Sets the usage pattern for indices to p.
@@ -636,7 +636,7 @@ func (this *QSGGeometry) IndexDataPattern() int {
 // /usr/include/qt/QtQuick/qsggeometry.h:191
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setVertexDataPattern(enum QSGGeometry::DataPattern)
+// [-2] void setVertexDataPattern(QSGGeometry::DataPattern)
 
 /*
 Sets the usage pattern for vertices to p.

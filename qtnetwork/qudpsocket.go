@@ -325,7 +325,6 @@ func (this *QUdpSocket) PendingDatagramSize() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUdpSocket19pendingDatagramSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:77
@@ -398,7 +397,6 @@ func (this *QUdpSocket) ReadDatagram(data string, maxlen int64, host QHostAddres
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen, convArg2, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:78
@@ -425,7 +423,6 @@ func (this *QUdpSocket) ReadDatagram__(data string, maxlen int64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen, convArg2, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:78
@@ -454,7 +451,6 @@ func (this *QUdpSocket) ReadDatagram__1(data string, maxlen int64, host QHostAdd
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen, convArg2, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:80
@@ -481,7 +477,6 @@ func (this *QUdpSocket) WriteDatagram(datagram QNetworkDatagram_ITF) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket13writeDatagramERK16QNetworkDatagram", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:81
@@ -510,7 +505,6 @@ func (this *QUdpSocket) WriteDatagram_1(data string, len_ int64, host QHostAddre
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket13writeDatagramEPKcxRK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_, convArg2, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qudpsocket.h:82
@@ -541,7 +535,6 @@ func (this *QUdpSocket) WriteDatagram_2(datagram qtcore.QByteArray_ITF, host QHo
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket13writeDatagramERK10QByteArrayRK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, port)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 //  body block end

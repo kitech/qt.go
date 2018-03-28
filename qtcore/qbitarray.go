@@ -85,7 +85,7 @@ func NewQBitArray() *QBitArray {
 // /usr/include/qt/QtCore/qbitarray.h:58
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QBitArray(int, _Bool)
+// [-2] void QBitArray(int, bool)
 
 /*
 Constructs an empty bit array.
@@ -103,7 +103,7 @@ func NewQBitArray_1(size int, val bool) *QBitArray {
 // /usr/include/qt/QtCore/qbitarray.h:58
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QBitArray(int, _Bool)
+// [-2] void QBitArray(int, bool)
 
 /*
 Constructs an empty bit array.
@@ -208,7 +208,7 @@ func (this *QBitArray) Count() int {
 // /usr/include/qt/QtCore/qbitarray.h:71
 // index:1
 // Public Visibility=Default Availability=Available
-// [4] int count(_Bool) const
+// [4] int count(bool) const
 
 /*
 Same as size().
@@ -361,7 +361,7 @@ func (this *QBitArray) SetBit(i int) {
 // /usr/include/qt/QtCore/qbitarray.h:84
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void setBit(int, _Bool)
+// [-2] void setBit(int, bool)
 
 /*
 Sets the bit at index position i to 1.
@@ -605,7 +605,7 @@ func (this *QBitArray) Operator_not_equal(other QBitArray_ITF) bool {
 // /usr/include/qt/QtCore/qbitarray.h:102
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool fill(_Bool, int)
+// [1] bool fill(bool, int)
 
 /*
 Sets every bit in the bit array to value, returning true if successful; otherwise returns false. If size is different from -1 (the default), the bit array is resized to size beforehand.
@@ -633,7 +633,7 @@ func (this *QBitArray) Fill(val bool, size int) bool {
 // /usr/include/qt/QtCore/qbitarray.h:102
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [1] bool fill(_Bool, int)
+// [1] bool fill(bool, int)
 
 /*
 Sets every bit in the bit array to value, returning true if successful; otherwise returns false. If size is different from -1 (the default), the bit array is resized to size beforehand.
@@ -663,7 +663,7 @@ func (this *QBitArray) Fill__(val bool) bool {
 // /usr/include/qt/QtCore/qbitarray.h:103
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void fill(_Bool, int, int)
+// [-2] void fill(bool, int, int)
 
 /*
 Sets every bit in the bit array to value, returning true if successful; otherwise returns false. If size is different from -1 (the default), the bit array is resized to size beforehand.

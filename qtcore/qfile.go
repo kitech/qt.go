@@ -710,7 +710,6 @@ func (this *QFile) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtCore/qfile.h:133

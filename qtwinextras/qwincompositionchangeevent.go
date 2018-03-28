@@ -69,7 +69,7 @@ func (*QWinCompositionChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWinCom
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinevent.h:79
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QWinCompositionChangeEvent(_Bool)
+// [-2] void QWinCompositionChangeEvent(bool)
 
 /*
 

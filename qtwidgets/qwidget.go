@@ -33,152 +33,152 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QWidget) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QWidget) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QWidget) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QWidget) InheritMouseDoubleClickEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QWidget) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QWidget) InheritWheelEvent(f func(event *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QWidget) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QWidget) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QWidget) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QWidget) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
-// void enterEvent(class QEvent *)
+// void enterEvent(QEvent *)
 func (this *QWidget) InheritEnterEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "enterEvent", f)
 }
 
-// void leaveEvent(class QEvent *)
+// void leaveEvent(QEvent *)
 func (this *QWidget) InheritLeaveEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "leaveEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QWidget) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void moveEvent(class QMoveEvent *)
+// void moveEvent(QMoveEvent *)
 func (this *QWidget) InheritMoveEvent(f func(event *qtgui.QMoveEvent /*777 QMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "moveEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QWidget) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void closeEvent(class QCloseEvent *)
+// void closeEvent(QCloseEvent *)
 func (this *QWidget) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEvent", f)
 }
 
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QWidget) InheritContextMenuEvent(f func(event *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "contextMenuEvent", f)
 }
 
-// void tabletEvent(class QTabletEvent *)
+// void tabletEvent(QTabletEvent *)
 func (this *QWidget) InheritTabletEvent(f func(event *qtgui.QTabletEvent /*777 QTabletEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "tabletEvent", f)
 }
 
-// void actionEvent(class QActionEvent *)
+// void actionEvent(QActionEvent *)
 func (this *QWidget) InheritActionEvent(f func(event *qtgui.QActionEvent /*777 QActionEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "actionEvent", f)
 }
 
-// void dragEnterEvent(class QDragEnterEvent *)
+// void dragEnterEvent(QDragEnterEvent *)
 func (this *QWidget) InheritDragEnterEvent(f func(event *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragEnterEvent", f)
 }
 
-// void dragMoveEvent(class QDragMoveEvent *)
+// void dragMoveEvent(QDragMoveEvent *)
 func (this *QWidget) InheritDragMoveEvent(f func(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
-// void dragLeaveEvent(class QDragLeaveEvent *)
+// void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QWidget) InheritDragLeaveEvent(f func(event *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragLeaveEvent", f)
 }
 
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QWidget) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QWidget) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QWidget) InheritHideEvent(f func(event *qtgui.QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
-// bool nativeEvent(const class QByteArray &, void *, long *)
+// bool nativeEvent(const QByteArray &, void *, long *)
 func (this *QWidget) InheritNativeEvent(f func(eventType *qtcore.QByteArray, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool) {
 	qtrt.SetAllInheritCallback(this, "nativeEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QWidget) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QWidget) InheritMetric(f func(arg0 int) int) {
 	qtrt.SetAllInheritCallback(this, "metric", f)
 }
 
-// void initPainter(class QPainter *)
+// void initPainter(QPainter *)
 func (this *QWidget) InheritInitPainter(f func(painter *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initPainter", f)
 }
 
-// QPaintDevice * redirected(class QPoint *)
+// QPaintDevice * redirected(QPoint *)
 func (this *QWidget) InheritRedirected(f func(offset *qtcore.QPoint /*777 QPoint **/) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "redirected", f)
 }
@@ -188,7 +188,7 @@ func (this *QWidget) InheritSharedPainter(f func() unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "sharedPainter", f)
 }
 
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QWidget) InheritInputMethodEvent(f func(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
@@ -198,17 +198,17 @@ func (this *QWidget) InheritUpdateMicroFocus(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateMicroFocus", f)
 }
 
-// void create(WId, _Bool, _Bool)
+// void create(WId, bool, bool)
 func (this *QWidget) InheritCreate(f func(arg0 uint64, initializeWindow bool, destroyOldWindow bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "create", f)
 }
 
-// void destroy(_Bool, _Bool)
+// void destroy(bool, bool)
 func (this *QWidget) InheritDestroy(f func(destroyWindow bool, destroySubWindows bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "destroy", f)
 }
 
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QWidget) InheritFocusNextPrevChild(f func(next bool) bool) {
 	qtrt.SetAllInheritCallback(this, "focusNextPrevChild", f)
 }
@@ -413,7 +413,6 @@ func (this *QWidget) WinId() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget5winIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtWidgets/qwidget.h:220
@@ -441,7 +440,6 @@ func (this *QWidget) InternalWinId() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget13internalWinIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtWidgets/qwidget.h:222
@@ -464,7 +462,6 @@ func (this *QWidget) EffectiveWinId() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWidget14effectiveWinIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
-	// unsigned long long // 222
 }
 
 // /usr/include/qt/QtWidgets/qwidget.h:225
@@ -644,7 +641,7 @@ func (this *QWidget) IsEnabledToTLW() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:241
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setEnabled(_Bool)
+// [-2] void setEnabled(bool)
 
 /*
 
@@ -657,7 +654,7 @@ func (this *QWidget) SetEnabled(arg0 bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:242
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setDisabled(_Bool)
+// [-2] void setDisabled(bool)
 
 /*
 Disables widget input events if disable is true; otherwise enables input events.
@@ -674,7 +671,7 @@ func (this *QWidget) SetDisabled(arg0 bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:243
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWindowModified(_Bool)
+// [-2] void setWindowModified(bool)
 
 /*
 
@@ -1686,7 +1683,7 @@ func (this *QWidget) UnsetCursor() {
 // /usr/include/qt/QtWidgets/qwidget.h:328
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setMouseTracking(_Bool)
+// [-2] void setMouseTracking(bool)
 
 /*
 
@@ -1731,7 +1728,7 @@ func (this *QWidget) UnderMouse() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:332
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTabletTracking(_Bool)
+// [-2] void setTabletTracking(bool)
 
 /*
 
@@ -3381,7 +3378,7 @@ func (this *QWidget) ReleaseShortcut(id int) {
 // /usr/include/qt/QtWidgets/qwidget.h:444
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShortcutEnabled(int, _Bool)
+// [-2] void setShortcutEnabled(int, bool)
 
 /*
 If enable is true, the shortcut with the given id is enabled; otherwise the shortcut is disabled.
@@ -3398,7 +3395,7 @@ func (this *QWidget) SetShortcutEnabled(id int, enable bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:444
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShortcutEnabled(int, _Bool)
+// [-2] void setShortcutEnabled(int, bool)
 
 /*
 If enable is true, the shortcut with the given id is enabled; otherwise the shortcut is disabled.
@@ -3417,7 +3414,7 @@ func (this *QWidget) SetShortcutEnabled__(id int) {
 // /usr/include/qt/QtWidgets/qwidget.h:445
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShortcutAutoRepeat(int, _Bool)
+// [-2] void setShortcutAutoRepeat(int, bool)
 
 /*
 If enable is true, auto repeat of the shortcut with the given id is enabled; otherwise it is disabled.
@@ -3434,7 +3431,7 @@ func (this *QWidget) SetShortcutAutoRepeat(id int, enable bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:445
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShortcutAutoRepeat(int, _Bool)
+// [-2] void setShortcutAutoRepeat(int, bool)
 
 /*
 If enable is true, auto repeat of the shortcut with the given id is enabled; otherwise it is disabled.
@@ -3513,7 +3510,7 @@ func (this *QWidget) UpdatesEnabled() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:452
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setUpdatesEnabled(_Bool)
+// [-2] void setUpdatesEnabled(bool)
 
 /*
 
@@ -3720,7 +3717,7 @@ func (this *QWidget) Repaint_3(arg0 qtgui.QRegion_ITF) {
 // /usr/include/qt/QtWidgets/qwidget.h:474
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void setVisible(_Bool)
+// [-2] void setVisible(bool)
 
 /*
 
@@ -3733,7 +3730,7 @@ func (this *QWidget) SetVisible(visible bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:475
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setHidden(_Bool)
+// [-2] void setHidden(bool)
 
 /*
 Convenience function, equivalent to setVisible(!hidden).
@@ -4751,7 +4748,7 @@ func (this *QWidget) AcceptDrops() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:548
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAcceptDrops(_Bool)
+// [-2] void setAcceptDrops(bool)
 
 /*
 
@@ -4874,7 +4871,7 @@ func (this *QWidget) WindowFlags() int {
 // /usr/include/qt/QtWidgets/qwidget.h:569
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWindowFlag(Qt::WindowType, _Bool)
+// [-2] void setWindowFlag(Qt::WindowType, bool)
 
 /*
 Sets the window flag flag on this widget if on is true; otherwise clears the flag.
@@ -4891,7 +4888,7 @@ func (this *QWidget) SetWindowFlag(arg0 int, on bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:569
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWindowFlag(Qt::WindowType, _Bool)
+// [-2] void setWindowFlag(Qt::WindowType, bool)
 
 /*
 Sets the window flag flag on this widget if on is true; otherwise clears the flag.
@@ -4996,7 +4993,7 @@ func (this *QWidget) ChildAt_1(p qtcore.QPoint_ITF) *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qwidget.h:578
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAttribute(Qt::WidgetAttribute, _Bool)
+// [-2] void setAttribute(Qt::WidgetAttribute, bool)
 
 /*
 Sets the attribute attribute on this widget if on is true; otherwise clears the attribute.
@@ -5011,7 +5008,7 @@ func (this *QWidget) SetAttribute(arg0 int, on bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:578
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAttribute(Qt::WidgetAttribute, _Bool)
+// [-2] void setAttribute(Qt::WidgetAttribute, bool)
 
 /*
 Sets the attribute attribute on this widget if on is true; otherwise clears the attribute.
@@ -5117,7 +5114,7 @@ func (this *QWidget) AutoFillBackground() bool {
 // /usr/include/qt/QtWidgets/qwidget.h:593
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoFillBackground(_Bool)
+// [-2] void setAutoFillBackground(bool)
 
 /*
 
@@ -6012,7 +6009,7 @@ func (this *QWidget) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qwidget.h:653
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
+// [4] int metric(QPaintDevice::PaintDeviceMetric) const
 
 /*
 Reimplemented from QPaintDevice::metric().
@@ -6162,7 +6159,7 @@ func (this *QWidget) UpdateMicroFocus() {
 // /usr/include/qt/QtWidgets/qwidget.h:669
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void create(WId, _Bool, _Bool)
+// [-2] void create(WId, bool, bool)
 
 /*
 Creates a new widget window.
@@ -6185,7 +6182,7 @@ func (this *QWidget) Create(arg0 uint64, initializeWindow bool, destroyOldWindow
 // /usr/include/qt/QtWidgets/qwidget.h:669
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void create(WId, _Bool, _Bool)
+// [-2] void create(WId, bool, bool)
 
 /*
 Creates a new widget window.
@@ -6214,7 +6211,7 @@ func (this *QWidget) Create__() {
 // /usr/include/qt/QtWidgets/qwidget.h:669
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void create(WId, _Bool, _Bool)
+// [-2] void create(WId, bool, bool)
 
 /*
 Creates a new widget window.
@@ -6241,7 +6238,7 @@ func (this *QWidget) Create__1(arg0 uint64) {
 // /usr/include/qt/QtWidgets/qwidget.h:669
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void create(WId, _Bool, _Bool)
+// [-2] void create(WId, bool, bool)
 
 /*
 Creates a new widget window.
@@ -6266,7 +6263,7 @@ func (this *QWidget) Create__2(arg0 uint64, initializeWindow bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:671
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void destroy(_Bool, _Bool)
+// [-2] void destroy(bool, bool)
 
 /*
 Frees up window system resources. Destroys the widget window if destroyWindow is true.
@@ -6283,7 +6280,7 @@ func (this *QWidget) Destroy(destroyWindow bool, destroySubWindows bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:671
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void destroy(_Bool, _Bool)
+// [-2] void destroy(bool, bool)
 
 /*
 Frees up window system resources. Destroys the widget window if destroyWindow is true.
@@ -6304,7 +6301,7 @@ func (this *QWidget) Destroy__() {
 // /usr/include/qt/QtWidgets/qwidget.h:671
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void destroy(_Bool, _Bool)
+// [-2] void destroy(bool, bool)
 
 /*
 Frees up window system resources. Destroys the widget window if destroyWindow is true.
@@ -6323,7 +6320,7 @@ func (this *QWidget) Destroy__1(destroyWindow bool) {
 // /usr/include/qt/QtWidgets/qwidget.h:675
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool focusNextPrevChild(_Bool)
+// [1] bool focusNextPrevChild(bool)
 
 /*
 Finds a new widget to give the keyboard focus to, as appropriate for Tab and Shift+Tab, and returns true if it can find a new widget, or false if it can't.

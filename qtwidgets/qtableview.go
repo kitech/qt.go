@@ -73,12 +73,12 @@ func (this *QTableView) InheritViewOptions(f func() unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "viewOptions", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QTableView) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QTableView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
@@ -93,17 +93,17 @@ func (this *QTableView) InheritVerticalOffset(f func() int) {
 	qtrt.SetAllInheritCallback(this, "verticalOffset", f)
 }
 
-// QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+// QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
 func (this *QTableView) InheritMoveCursor(f func(cursorAction int, modifiers int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "moveCursor", f)
 }
 
-// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+// void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QTableView) InheritSetSelection(f func(rect *qtcore.QRect, command int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setSelection", f)
 }
 
-// QRegion visualRegionForSelection(const class QItemSelection &)
+// QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QTableView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "visualRegionForSelection", f)
 }
@@ -143,17 +143,17 @@ func (this *QTableView) InheritHorizontalScrollbarAction(f func(action int) /*vo
 	qtrt.SetAllInheritCallback(this, "horizontalScrollbarAction", f)
 }
 
-// bool isIndexHidden(const class QModelIndex &)
+// bool isIndexHidden(const QModelIndex &)
 func (this *QTableView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bool) {
 	qtrt.SetAllInheritCallback(this, "isIndexHidden", f)
 }
 
-// void selectionChanged(const class QItemSelection &, const class QItemSelection &)
+// void selectionChanged(const QItemSelection &, const QItemSelection &)
 func (this *QTableView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "selectionChanged", f)
 }
 
-// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+// void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QTableView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "currentChanged", f)
 }
@@ -543,7 +543,7 @@ func (this *QTableView) IsRowHidden(row int) bool {
 // /usr/include/qt/QtWidgets/qtableview.h:91
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRowHidden(int, _Bool)
+// [-2] void setRowHidden(int, bool)
 
 /*
 If hide is true row will be hidden, otherwise it will be shown.
@@ -574,7 +574,7 @@ func (this *QTableView) IsColumnHidden(column int) bool {
 // /usr/include/qt/QtWidgets/qtableview.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setColumnHidden(int, _Bool)
+// [-2] void setColumnHidden(int, bool)
 
 /*
 If hide is true the given column will be hidden; otherwise it will be shown.
@@ -589,7 +589,7 @@ func (this *QTableView) SetColumnHidden(column int, hide bool) {
 // /usr/include/qt/QtWidgets/qtableview.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSortingEnabled(_Bool)
+// [-2] void setSortingEnabled(bool)
 
 /*
 If enable is true, enables sorting for the table and immediately trigger a call to sortByColumn() with the current sort section and order
@@ -661,7 +661,7 @@ func (this *QTableView) SetGridStyle(style int) {
 // /usr/include/qt/QtWidgets/qtableview.h:104
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWordWrap(_Bool)
+// [-2] void setWordWrap(bool)
 
 /*
 
@@ -688,7 +688,7 @@ func (this *QTableView) WordWrap() bool {
 // /usr/include/qt/QtWidgets/qtableview.h:108
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCornerButtonEnabled(_Bool)
+// [-2] void setCornerButtonEnabled(bool)
 
 /*
 
@@ -735,7 +735,7 @@ func (this *QTableView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /
 // /usr/include/qt/QtWidgets/qtableview.h:113
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+// [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 
 /*
 
@@ -752,7 +752,7 @@ func (this *QTableView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 // /usr/include/qt/QtWidgets/qtableview.h:113
 // index:0
 // Public virtual Visibility=Default Availability=Available
-// [-2] void scrollTo(const QModelIndex &, enum QAbstractItemView::ScrollHint)
+// [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 
 /*
 
@@ -1049,7 +1049,7 @@ func (this *QTableView) ResizeColumnsToContents() {
 // /usr/include/qt/QtWidgets/qtableview.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShowGrid(_Bool)
+// [-2] void setShowGrid(bool)
 
 /*
 
@@ -1253,7 +1253,7 @@ func (this *QTableView) VerticalOffset() int {
 // /usr/include/qt/QtWidgets/qtableview.h:156
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [24] QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+// [24] QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
 
 /*
 Reimplemented from QAbstractItemView::moveCursor().

@@ -32,12 +32,12 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QImage) InheritMetric(f func(metric int) int) {
 	qtrt.SetAllInheritCallback(this, "metric", f)
 }
 
-// QImage mirrored_helper(_Bool, _Bool)
+// QImage mirrored_helper(bool, bool)
 func (this *QImage) InheritMirrored_helper(f func(horizontal bool, vertical bool) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "mirrored_helper", f)
 }
@@ -47,7 +47,7 @@ func (this *QImage) InheritRgbSwapped_helper(f func() unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "rgbSwapped_helper", f)
 }
 
-// void mirrored_inplace(_Bool, _Bool)
+// void mirrored_inplace(bool, bool)
 func (this *QImage) InheritMirrored_inplace(f func(horizontal bool, vertical bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mirrored_inplace", f)
 }
@@ -57,12 +57,12 @@ func (this *QImage) InheritRgbSwapped_inplace(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rgbSwapped_inplace", f)
 }
 
-// QImage convertToFormat_helper(enum QImage::Format, Qt::ImageConversionFlags)
+// QImage convertToFormat_helper(QImage::Format, Qt::ImageConversionFlags)
 func (this *QImage) InheritConvertToFormat_helper(f func(format int, flags int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "convertToFormat_helper", f)
 }
 
-// bool convertToFormat_inplace(enum QImage::Format, Qt::ImageConversionFlags)
+// bool convertToFormat_inplace(QImage::Format, Qt::ImageConversionFlags)
 func (this *QImage) InheritConvertToFormat_inplace(f func(format int, flags int) bool) {
 	qtrt.SetAllInheritCallback(this, "convertToFormat_inplace", f)
 }
@@ -124,7 +124,7 @@ func NewQImage() *QImage {
 // /usr/include/qt/QtGui/qimage.h:137
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QImage(const QSize &, enum QImage::Format)
+// [-2] void QImage(const QSize &, QImage::Format)
 
 /*
 Constructs a null image.
@@ -146,7 +146,7 @@ func NewQImage_1(size qtcore.QSize_ITF, format int) *QImage {
 // /usr/include/qt/QtGui/qimage.h:138
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QImage(int, int, enum QImage::Format)
+// [-2] void QImage(int, int, QImage::Format)
 
 /*
 Constructs a null image.
@@ -484,7 +484,7 @@ func (this *QImage) Format() int {
 // /usr/include/qt/QtGui/qimage.h:182
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QImage convertToFormat(enum QImage::Format, Qt::ImageConversionFlags) const
+// [32] QImage convertToFormat(QImage::Format, Qt::ImageConversionFlags) const
 
 /*
 Returns a copy of the image in the given format.
@@ -504,7 +504,7 @@ func (this *QImage) ConvertToFormat(f int, flags int) *QImage /*123*/ {
 // /usr/include/qt/QtGui/qimage.h:182
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QImage convertToFormat(enum QImage::Format, Qt::ImageConversionFlags) const
+// [32] QImage convertToFormat(QImage::Format, Qt::ImageConversionFlags) const
 
 /*
 Returns a copy of the image in the given format.
@@ -526,7 +526,7 @@ func (this *QImage) ConvertToFormat__(f int) *QImage /*123*/ {
 // /usr/include/qt/QtGui/qimage.h:184
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [32] QImage convertToFormat(enum QImage::Format, Qt::ImageConversionFlags)
+// [32] QImage convertToFormat(QImage::Format, Qt::ImageConversionFlags)
 
 /*
 Returns a copy of the image in the given format.
@@ -546,7 +546,7 @@ func (this *QImage) ConvertToFormat_1(f int, flags int) *QImage /*123*/ {
 // /usr/include/qt/QtGui/qimage.h:184
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [32] QImage convertToFormat(enum QImage::Format, Qt::ImageConversionFlags)
+// [32] QImage convertToFormat(QImage::Format, Qt::ImageConversionFlags)
 
 /*
 Returns a copy of the image in the given format.
@@ -568,7 +568,7 @@ func (this *QImage) ConvertToFormat_1_(f int) *QImage /*123*/ {
 // /usr/include/qt/QtGui/qimage.h:195
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool reinterpretAsFormat(enum QImage::Format)
+// [1] bool reinterpretAsFormat(QImage::Format)
 
 /*
 Changes the format of the image without changing the data. Only works between formats of the same depth.
@@ -735,7 +735,6 @@ func (this *QImage) Color(i int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage5colorEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qimage.h:207
@@ -898,7 +897,6 @@ func (this *QImage) SizeInBytes() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage11sizeInBytesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtGui/qimage.h:222
@@ -1075,7 +1073,6 @@ func (this *QImage) Pixel(x int, y int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage5pixelEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qimage.h:234
@@ -1100,7 +1097,6 @@ func (this *QImage) Pixel_1(pt qtcore.QPoint_ITF) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage5pixelERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
-	// unsigned int // 222
 }
 
 // /usr/include/qt/QtGui/qimage.h:236
@@ -1455,7 +1451,7 @@ func (this *QImage) CreateAlphaMask__() *QImage /*123*/ {
 // /usr/include/qt/QtGui/qimage.h:265
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QImage createHeuristicMask(_Bool) const
+// [32] QImage createHeuristicMask(bool) const
 
 /*
 Creates and returns a 1-bpp heuristic mask for this image.
@@ -1481,7 +1477,7 @@ func (this *QImage) CreateHeuristicMask(clipTight bool) *QImage /*123*/ {
 // /usr/include/qt/QtGui/qimage.h:265
 // index:0
 // Public Visibility=Default Availability=Available
-// [32] QImage createHeuristicMask(_Bool) const
+// [32] QImage createHeuristicMask(bool) const
 
 /*
 Creates and returns a 1-bpp heuristic mask for this image.
@@ -1989,7 +1985,7 @@ func QImage_TrueMatrix_1(arg0 QTransform_ITF, w int, h int) *QTransform /*123*/ 
 // /usr/include/qt/QtGui/qimage.h:281
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QImage mirrored(_Bool, _Bool) const
+// [32] QImage mirrored(bool, bool) const
 
 /*
 Returns a mirror of the image, mirrored in the horizontal and/or the vertical direction depending on whether horizontal and vertical are set to true or false.
@@ -2009,7 +2005,7 @@ func (this *QImage) Mirrored(horizontally bool, vertically bool) *QImage /*123*/
 // /usr/include/qt/QtGui/qimage.h:281
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QImage mirrored(_Bool, _Bool) const
+// [32] QImage mirrored(bool, bool) const
 
 /*
 Returns a mirror of the image, mirrored in the horizontal and/or the vertical direction depending on whether horizontal and vertical are set to true or false.
@@ -2033,7 +2029,7 @@ func (this *QImage) Mirrored__() *QImage /*123*/ {
 // /usr/include/qt/QtGui/qimage.h:281
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [32] QImage mirrored(_Bool, _Bool) const
+// [32] QImage mirrored(bool, bool) const
 
 /*
 Returns a mirror of the image, mirrored in the horizontal and/or the vertical direction depending on whether horizontal and vertical are set to true or false.
@@ -2055,7 +2051,7 @@ func (this *QImage) Mirrored__1(horizontally bool) *QImage /*123*/ {
 // /usr/include/qt/QtGui/qimage.h:283
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [32] QImage && mirrored(_Bool, _Bool)
+// [32] QImage && mirrored(bool, bool)
 
 /*
 Returns a mirror of the image, mirrored in the horizontal and/or the vertical direction depending on whether horizontal and vertical are set to true or false.
@@ -2073,7 +2069,7 @@ func (this *QImage) Mirrored_1(horizontally bool, vertically bool) unsafe.Pointe
 // /usr/include/qt/QtGui/qimage.h:283
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [32] QImage && mirrored(_Bool, _Bool)
+// [32] QImage && mirrored(bool, bool)
 
 /*
 Returns a mirror of the image, mirrored in the horizontal and/or the vertical direction depending on whether horizontal and vertical are set to true or false.
@@ -2095,7 +2091,7 @@ func (this *QImage) Mirrored_1_() unsafe.Pointer /*333*/ {
 // /usr/include/qt/QtGui/qimage.h:283
 // index:1
 // Public inline Visibility=Default Availability=Available
-// [32] QImage && mirrored(_Bool, _Bool)
+// [32] QImage && mirrored(bool, bool)
 
 /*
 Returns a mirror of the image, mirrored in the horizontal and/or the vertical direction depending on whether horizontal and vertical are set to true or false.
@@ -2153,7 +2149,7 @@ func (this *QImage) RgbSwapped_1() unsafe.Pointer /*333*/ {
 // /usr/include/qt/QtGui/qimage.h:293
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void invertPixels(enum QImage::InvertMode)
+// [-2] void invertPixels(QImage::InvertMode)
 
 /*
 Inverts all pixel values in the image.
@@ -2174,7 +2170,7 @@ func (this *QImage) InvertPixels(arg0 int) {
 // /usr/include/qt/QtGui/qimage.h:293
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void invertPixels(enum QImage::InvertMode)
+// [-2] void invertPixels(QImage::InvertMode)
 
 /*
 Inverts all pixel values in the image.
@@ -2642,7 +2638,6 @@ func (this *QImage) CacheKey() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage8cacheKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtGui/qimage.h:314
@@ -2922,7 +2917,7 @@ func QImage_ToImageFormat(format QPixelFormat_ITF /*123*/) int {
 // /usr/include/qt/QtGui/qimage.h:352
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
+// [4] int metric(QPaintDevice::PaintDeviceMetric) const
 
 /*
 
@@ -2936,7 +2931,7 @@ func (this *QImage) Metric(metric int) int {
 // /usr/include/qt/QtGui/qimage.h:353
 // index:0
 // Protected Visibility=Default Availability=Available
-// [32] QImage mirrored_helper(_Bool, _Bool) const
+// [32] QImage mirrored_helper(bool, bool) const
 
 /*
 
@@ -2968,7 +2963,7 @@ func (this *QImage) RgbSwapped_helper() *QImage /*123*/ {
 // /usr/include/qt/QtGui/qimage.h:355
 // index:0
 // Protected Visibility=Default Availability=Available
-// [-2] void mirrored_inplace(_Bool, _Bool)
+// [-2] void mirrored_inplace(bool, bool)
 
 /*
 
@@ -2994,7 +2989,7 @@ func (this *QImage) RgbSwapped_inplace() {
 // /usr/include/qt/QtGui/qimage.h:357
 // index:0
 // Protected Visibility=Default Availability=Available
-// [32] QImage convertToFormat_helper(enum QImage::Format, Qt::ImageConversionFlags) const
+// [32] QImage convertToFormat_helper(QImage::Format, Qt::ImageConversionFlags) const
 
 /*
 
@@ -3010,7 +3005,7 @@ func (this *QImage) ConvertToFormat_helper(format int, flags int) *QImage /*123*
 // /usr/include/qt/QtGui/qimage.h:358
 // index:0
 // Protected Visibility=Default Availability=Available
-// [1] bool convertToFormat_inplace(enum QImage::Format, Qt::ImageConversionFlags)
+// [1] bool convertToFormat_inplace(QImage::Format, Qt::ImageConversionFlags)
 
 /*
 

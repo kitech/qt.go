@@ -32,17 +32,17 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QPaintDevice) InheritMetric(f func(metric int) int) {
 	qtrt.SetAllInheritCallback(this, "metric", f)
 }
 
-// void initPainter(class QPainter *)
+// void initPainter(QPainter *)
 func (this *QPaintDevice) InheritInitPainter(f func(painter *QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initPainter", f)
 }
 
-// QPaintDevice * redirected(class QPoint *)
+// QPaintDevice * redirected(QPoint *)
 func (this *QPaintDevice) InheritRedirected(f func(offset *qtcore.QPoint /*777 QPoint **/) unsafe.Pointer /*666*/) {
 	qtrt.SetAllInheritCallback(this, "redirected", f)
 }
@@ -398,7 +398,7 @@ func NewQPaintDevice_1(arg0 QPaintDevice_ITF) *QPaintDevice {
 // /usr/include/qt/QtGui/qpaintdevice.h:94
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [4] int metric(enum QPaintDevice::PaintDeviceMetric) const
+// [4] int metric(QPaintDevice::PaintDeviceMetric) const
 
 /*
 Returns the metric information for the given paint device metric.

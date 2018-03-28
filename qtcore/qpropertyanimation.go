@@ -31,17 +31,17 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QPropertyAnimation) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void updateCurrentValue(const class QVariant &)
+// void updateCurrentValue(const QVariant &)
 func (this *QPropertyAnimation) InheritUpdateCurrentValue(f func(value *QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateCurrentValue", f)
 }
 
-// void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
+// void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QPropertyAnimation) InheritUpdateState(f func(newState int, oldState int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateState", f)
 }

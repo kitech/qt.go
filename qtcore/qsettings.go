@@ -31,7 +31,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QSettings) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -185,7 +185,7 @@ func NewQSettings__1(organization string, application string) *QSettings {
 // /usr/include/qt/QtCore/qsettings.h:129
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QSettings(enum QSettings::Scope, const QString &, const QString &, QObject *)
+// [-2] void QSettings(QSettings::Scope, const QString &, const QString &, QObject *)
 
 /*
 Constructs a QSettings object for accessing settings of the application called application from the organization called organization, and with parent parent.
@@ -220,7 +220,7 @@ func NewQSettings_1(scope int, organization string, application string, parent Q
 // /usr/include/qt/QtCore/qsettings.h:129
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QSettings(enum QSettings::Scope, const QString &, const QString &, QObject *)
+// [-2] void QSettings(QSettings::Scope, const QString &, const QString &, QObject *)
 
 /*
 Constructs a QSettings object for accessing settings of the application called application from the organization called organization, and with parent parent.
@@ -253,7 +253,7 @@ func NewQSettings_1_(scope int, organization string) *QSettings {
 // /usr/include/qt/QtCore/qsettings.h:129
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QSettings(enum QSettings::Scope, const QString &, const QString &, QObject *)
+// [-2] void QSettings(QSettings::Scope, const QString &, const QString &, QObject *)
 
 /*
 Constructs a QSettings object for accessing settings of the application called application from the organization called organization, and with parent parent.
@@ -286,7 +286,7 @@ func NewQSettings_1_1(scope int, organization string, application string) *QSett
 // /usr/include/qt/QtCore/qsettings.h:131
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QSettings(enum QSettings::Format, enum QSettings::Scope, const QString &, const QString &, QObject *)
+// [-2] void QSettings(QSettings::Format, QSettings::Scope, const QString &, const QString &, QObject *)
 
 /*
 Constructs a QSettings object for accessing settings of the application called application from the organization called organization, and with parent parent.
@@ -321,7 +321,7 @@ func NewQSettings_2(format int, scope int, organization string, application stri
 // /usr/include/qt/QtCore/qsettings.h:131
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QSettings(enum QSettings::Format, enum QSettings::Scope, const QString &, const QString &, QObject *)
+// [-2] void QSettings(QSettings::Format, QSettings::Scope, const QString &, const QString &, QObject *)
 
 /*
 Constructs a QSettings object for accessing settings of the application called application from the organization called organization, and with parent parent.
@@ -354,7 +354,7 @@ func NewQSettings_2_(format int, scope int, organization string) *QSettings {
 // /usr/include/qt/QtCore/qsettings.h:131
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QSettings(enum QSettings::Format, enum QSettings::Scope, const QString &, const QString &, QObject *)
+// [-2] void QSettings(QSettings::Format, QSettings::Scope, const QString &, const QString &, QObject *)
 
 /*
 Constructs a QSettings object for accessing settings of the application called application from the organization called organization, and with parent parent.
@@ -387,7 +387,7 @@ func NewQSettings_2_1(format int, scope int, organization string, application st
 // /usr/include/qt/QtCore/qsettings.h:133
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QSettings(const QString &, enum QSettings::Format, QObject *)
+// [-2] void QSettings(const QString &, QSettings::Format, QObject *)
 
 /*
 Constructs a QSettings object for accessing settings of the application called application from the organization called organization, and with parent parent.
@@ -420,7 +420,7 @@ func NewQSettings_3(fileName string, format int, parent QObject_ITF /*777 QObjec
 // /usr/include/qt/QtCore/qsettings.h:133
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QSettings(const QString &, enum QSettings::Format, QObject *)
+// [-2] void QSettings(const QString &, QSettings::Format, QObject *)
 
 /*
 Constructs a QSettings object for accessing settings of the application called application from the organization called organization, and with parent parent.
@@ -600,7 +600,7 @@ func (this *QSettings) IsAtomicSyncRequired() bool {
 // /usr/include/qt/QtCore/qsettings.h:150
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAtomicSyncRequired(_Bool)
+// [-2] void setAtomicSyncRequired(bool)
 
 /*
 Configures whether QSettings is required to perform atomic saving and reloading (synchronization) of the settings. If the enable argument is true (the default), sync() will only perform synchronization operations that are atomic. If this is not possible, sync() will fail and status() will be an error condition.
@@ -1230,7 +1230,7 @@ func (this *QSettings) Contains(key string) bool {
 // /usr/include/qt/QtCore/qsettings.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFallbacksEnabled(_Bool)
+// [-2] void setFallbacksEnabled(bool)
 
 /*
 Sets whether fallbacks are enabled to b.
@@ -1426,7 +1426,7 @@ func (this *QSettings) IniCodec() *QTextCodec /*777 QTextCodec **/ {
 // /usr/include/qt/QtCore/qsettings.h:187
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setDefaultFormat(enum QSettings::Format)
+// [-2] void setDefaultFormat(QSettings::Format)
 
 /*
 Sets the default file format to the given format, which is used for storing settings for the QSettings(QObject *) constructor.
@@ -1510,7 +1510,7 @@ func QSettings_SetUserIniPath(dir string) {
 // /usr/include/qt/QtCore/qsettings.h:191
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setPath(enum QSettings::Format, enum QSettings::Scope, const QString &)
+// [-2] void setPath(QSettings::Format, QSettings::Scope, const QString &)
 
 /*
 Sets the path used for storing settings for the given format and scope, to path. The format can be a custom format.

@@ -33,12 +33,12 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QDialogButtonBox) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QDialogButtonBox) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -301,7 +301,7 @@ func (this *QDialogButtonBox) Orientation() int {
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:130
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void addButton(QAbstractButton *, enum QDialogButtonBox::ButtonRole)
+// [-2] void addButton(QAbstractButton *, QDialogButtonBox::ButtonRole)
 
 /*
 Adds the given button to the button box with the specified role. If the role is invalid, the button is not added.
@@ -324,7 +324,7 @@ func (this *QDialogButtonBox) AddButton(button QAbstractButton_ITF /*777 QAbstra
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:131
 // index:1
 // Public Visibility=Default Availability=Available
-// [8] QPushButton * addButton(const QString &, enum QDialogButtonBox::ButtonRole)
+// [8] QPushButton * addButton(const QString &, QDialogButtonBox::ButtonRole)
 
 /*
 Adds the given button to the button box with the specified role. If the role is invalid, the button is not added.
@@ -346,7 +346,7 @@ func (this *QDialogButtonBox) AddButton_1(text string, role int) *QPushButton /*
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:132
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] QPushButton * addButton(enum QDialogButtonBox::StandardButton)
+// [8] QPushButton * addButton(QDialogButtonBox::StandardButton)
 
 /*
 Adds the given button to the button box with the specified role. If the role is invalid, the button is not added.
@@ -467,7 +467,7 @@ func (this *QDialogButtonBox) StandardButton(button QAbstractButton_ITF /*777 QA
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:142
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QPushButton * button(enum QDialogButtonBox::StandardButton) const
+// [8] QPushButton * button(QDialogButtonBox::StandardButton) const
 
 /*
 Returns the QPushButton corresponding to the standard button which, or 0 if the standard button doesn't exist in this button box.
@@ -483,7 +483,7 @@ func (this *QDialogButtonBox) Button(which int) *QPushButton /*777 QPushButton *
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:144
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCenterButtons(_Bool)
+// [-2] void setCenterButtons(bool)
 
 /*
 

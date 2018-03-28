@@ -128,7 +128,6 @@ func (this *QPointingDeviceUniqueId) NumericId() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId9numericIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 func DeleteQPointingDeviceUniqueId(this *QPointingDeviceUniqueId) {

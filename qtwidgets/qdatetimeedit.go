@@ -33,42 +33,42 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QDateTimeEdit) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QDateTimeEdit) InheritWheelEvent(f func(event *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QDateTimeEdit) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QDateTimeEdit) InheritFocusNextPrevChild(f func(next bool) bool) {
 	qtrt.SetAllInheritCallback(this, "focusNextPrevChild", f)
 }
 
-// QValidator::State validate(class QString &, int &)
+// QValidator::State validate(QString &, int &)
 func (this *QDateTimeEdit) InheritValidate(f func(input string, pos int) int) {
 	qtrt.SetAllInheritCallback(this, "validate", f)
 }
 
-// void fixup(class QString &)
+// void fixup(QString &)
 func (this *QDateTimeEdit) InheritFixup(f func(input string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "fixup", f)
 }
 
-// QDateTime dateTimeFromText(const class QString &)
+// QDateTime dateTimeFromText(const QString &)
 func (this *QDateTimeEdit) InheritDateTimeFromText(f func(text string) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "dateTimeFromText", f)
 }
 
-// QString textFromDateTime(const class QDateTime &)
+// QString textFromDateTime(const QDateTime &)
 func (this *QDateTimeEdit) InheritTextFromDateTime(f func(dt *qtcore.QDateTime) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "textFromDateTime", f)
 }
@@ -78,17 +78,17 @@ func (this *QDateTimeEdit) InheritStepEnabled(f func() int) {
 	qtrt.SetAllInheritCallback(this, "stepEnabled", f)
 }
 
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QDateTimeEdit) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QDateTimeEdit) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionSpinBox *)
+// void initStyleOption(QStyleOptionSpinBox *)
 func (this *QDateTimeEdit) InheritInitStyleOption(f func(option *QStyleOptionSpinBox /*777 QStyleOptionSpinBox **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -872,7 +872,7 @@ func (this *QDateTimeEdit) SectionAt(index int) int {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCurrentSection(enum QDateTimeEdit::Section)
+// [-2] void setCurrentSection(QDateTimeEdit::Section)
 
 /*
 
@@ -969,7 +969,7 @@ func (this *QDateTimeEdit) SectionCount() int {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:148
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setSelectedSection(enum QDateTimeEdit::Section)
+// [-2] void setSelectedSection(QDateTimeEdit::Section)
 
 /*
 Selects section. If section doesn't exist in the currently displayed sections, this function does nothing. If section is NoSection, this function will unselect all text in the editor. Otherwise, this function will move the cursor and the current section to the selected section.
@@ -986,7 +986,7 @@ func (this *QDateTimeEdit) SetSelectedSection(section int) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:150
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QString sectionText(enum QDateTimeEdit::Section) const
+// [8] QString sectionText(QDateTimeEdit::Section) const
 
 /*
 Returns the text from the given section.
@@ -1051,7 +1051,7 @@ func (this *QDateTimeEdit) CalendarPopup() bool {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:156
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setCalendarPopup(_Bool)
+// [-2] void setCalendarPopup(bool)
 
 /*
 
@@ -1310,7 +1310,7 @@ func (this *QDateTimeEdit) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocus
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:183
 // index:0
 // Protected virtual Visibility=Default Availability=Available
-// [1] bool focusNextPrevChild(_Bool)
+// [1] bool focusNextPrevChild(bool)
 
 /*
 Reimplemented from QWidget::focusNextPrevChild().

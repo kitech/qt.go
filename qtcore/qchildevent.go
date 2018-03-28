@@ -65,7 +65,7 @@ func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
 // /usr/include/qt/QtCore/qcoreevent.h:352
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QChildEvent(enum QEvent::Type, QObject *)
+// [-2] void QChildEvent(QEvent::Type, QObject *)
 
 /*
 

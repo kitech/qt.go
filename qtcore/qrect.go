@@ -1160,7 +1160,7 @@ func (this *QRect) Operator_and_equal(r QRect_ITF) *QRect {
 // /usr/include/qt/QtCore/qrect.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QRect &, _Bool) const
+// [1] bool contains(const QRect &, bool) const
 
 /*
 Returns true if the given point is inside or on the edge of the rectangle, otherwise returns false. If proper is true, this function only returns true if the given point is inside the rectangle (i.e., not on the edge).
@@ -1180,7 +1180,7 @@ func (this *QRect) Contains(r QRect_ITF, proper bool) bool {
 // /usr/include/qt/QtCore/qrect.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QRect &, _Bool) const
+// [1] bool contains(const QRect &, bool) const
 
 /*
 Returns true if the given point is inside or on the edge of the rectangle, otherwise returns false. If proper is true, this function only returns true if the given point is inside the rectangle (i.e., not on the edge).
@@ -1202,7 +1202,7 @@ func (this *QRect) Contains__(r QRect_ITF) bool {
 // /usr/include/qt/QtCore/qrect.h:136
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QPoint &, _Bool) const
+// [1] bool contains(const QPoint &, bool) const
 
 /*
 Returns true if the given point is inside or on the edge of the rectangle, otherwise returns false. If proper is true, this function only returns true if the given point is inside the rectangle (i.e., not on the edge).
@@ -1222,7 +1222,7 @@ func (this *QRect) Contains_1(p QPoint_ITF, proper bool) bool {
 // /usr/include/qt/QtCore/qrect.h:136
 // index:1
 // Public Visibility=Default Availability=Available
-// [1] bool contains(const QPoint &, _Bool) const
+// [1] bool contains(const QPoint &, bool) const
 
 /*
 Returns true if the given point is inside or on the edge of the rectangle, otherwise returns false. If proper is true, this function only returns true if the given point is inside the rectangle (i.e., not on the edge).
@@ -1260,7 +1260,7 @@ func (this *QRect) Contains_2(x int, y int) bool {
 // /usr/include/qt/QtCore/qrect.h:138
 // index:3
 // Public inline Visibility=Default Availability=Available
-// [1] bool contains(int, int, _Bool) const
+// [1] bool contains(int, int, bool) const
 
 /*
 Returns true if the given point is inside or on the edge of the rectangle, otherwise returns false. If proper is true, this function only returns true if the given point is inside the rectangle (i.e., not on the edge).

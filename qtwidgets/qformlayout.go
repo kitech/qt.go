@@ -138,7 +138,7 @@ func DeleteQFormLayout(this *QFormLayout) {
 // /usr/include/qt/QtWidgets/qformlayout.h:94
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setFieldGrowthPolicy(enum QFormLayout::FieldGrowthPolicy)
+// [-2] void setFieldGrowthPolicy(QFormLayout::FieldGrowthPolicy)
 
 /*
 
@@ -165,7 +165,7 @@ func (this *QFormLayout) FieldGrowthPolicy() int {
 // /usr/include/qt/QtWidgets/qformlayout.h:96
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setRowWrapPolicy(enum QFormLayout::RowWrapPolicy)
+// [-2] void setRowWrapPolicy(QFormLayout::RowWrapPolicy)
 
 /*
 
@@ -818,7 +818,7 @@ func (this *QFormLayout) TakeRow_2(layout QLayout_ITF /*777 QLayout **/) unsafe.
 // /usr/include/qt/QtWidgets/qformlayout.h:133
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setItem(int, enum QFormLayout::ItemRole, QLayoutItem *)
+// [-2] void setItem(int, QFormLayout::ItemRole, QLayoutItem *)
 
 /*
 Sets the item in the given row for the given role to item, extending the layout with empty rows if necessary.
@@ -841,7 +841,7 @@ func (this *QFormLayout) SetItem(row int, role int, item QLayoutItem_ITF /*777 Q
 // /usr/include/qt/QtWidgets/qformlayout.h:134
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setWidget(int, enum QFormLayout::ItemRole, QWidget *)
+// [-2] void setWidget(int, QFormLayout::ItemRole, QWidget *)
 
 /*
 Sets the widget in the given row for the given role to widget, extending the layout with empty rows if necessary.
@@ -864,7 +864,7 @@ func (this *QFormLayout) SetWidget(row int, role int, widget QWidget_ITF /*777 Q
 // /usr/include/qt/QtWidgets/qformlayout.h:135
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setLayout(int, enum QFormLayout::ItemRole, QLayout *)
+// [-2] void setLayout(int, QFormLayout::ItemRole, QLayout *)
 
 /*
 Sets the sub-layout in the given row for the given role to layout, extending the form layout with empty rows if necessary.
@@ -887,7 +887,7 @@ func (this *QFormLayout) SetLayout(row int, role int, layout QLayout_ITF /*777 Q
 // /usr/include/qt/QtWidgets/qformlayout.h:137
 // index:0
 // Public Visibility=Default Availability=Available
-// [8] QLayoutItem * itemAt(int, enum QFormLayout::ItemRole) const
+// [8] QLayoutItem * itemAt(int, QFormLayout::ItemRole) const
 
 /*
 Returns the layout item in the given row with the specified role (column). Returns 0 if there is no such item.
@@ -919,7 +919,7 @@ func (this *QFormLayout) ItemAt_1(index int) *QLayoutItem /*777 QLayoutItem **/ 
 // /usr/include/qt/QtWidgets/qformlayout.h:138
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void getItemPosition(int, int *, enum QFormLayout::ItemRole *) const
+// [-2] void getItemPosition(int, int *, QFormLayout::ItemRole *) const
 
 /*
 Retrieves the row and role (column) of the item at the specified index. If index is out of bounds, *rowPtr is set to -1; otherwise the row is stored in *rowPtr and the role is stored in *rolePtr.
@@ -934,7 +934,7 @@ func (this *QFormLayout) GetItemPosition(index int, rowPtr unsafe.Pointer /*666*
 // /usr/include/qt/QtWidgets/qformlayout.h:139
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void getWidgetPosition(QWidget *, int *, enum QFormLayout::ItemRole *) const
+// [-2] void getWidgetPosition(QWidget *, int *, QFormLayout::ItemRole *) const
 
 /*
 Retrieves the row and role (column) of the specified widget in the layout. If widget is not in the layout, *rowPtr is set to -1; otherwise the row is stored in *rowPtr and the role is stored in *rolePtr.
@@ -953,7 +953,7 @@ func (this *QFormLayout) GetWidgetPosition(widget QWidget_ITF /*777 QWidget **/,
 // /usr/include/qt/QtWidgets/qformlayout.h:140
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void getLayoutPosition(QLayout *, int *, enum QFormLayout::ItemRole *) const
+// [-2] void getLayoutPosition(QLayout *, int *, QFormLayout::ItemRole *) const
 
 /*
 Retrieves the row and role (column) of the specified child layout. If layout is not in the form layout, *rowPtr is set to -1; otherwise the row is stored in *rowPtr and the role is stored in *rolePtr.

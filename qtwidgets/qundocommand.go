@@ -267,7 +267,7 @@ func (this *QUndoCommand) IsObsolete() bool {
 // /usr/include/qt/QtWidgets/qundostack.h:72
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setObsolete(_Bool)
+// [-2] void setObsolete(bool)
 
 /*
 

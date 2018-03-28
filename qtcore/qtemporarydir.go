@@ -171,7 +171,7 @@ func (this *QTemporaryDir) AutoRemove() bool {
 // /usr/include/qt/QtCore/qtemporarydir.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setAutoRemove(_Bool)
+// [-2] void setAutoRemove(bool)
 
 /*
 Sets the QTemporaryDir into auto-remove mode if b is true.

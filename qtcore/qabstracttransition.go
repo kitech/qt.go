@@ -31,17 +31,17 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  body block begin
 
-// bool eventTest(class QEvent *)
+// bool eventTest(QEvent *)
 func (this *QAbstractTransition) InheritEventTest(f func(event *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "eventTest", f)
 }
 
-// void onTransition(class QEvent *)
+// void onTransition(QEvent *)
 func (this *QAbstractTransition) InheritOnTransition(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onTransition", f)
 }
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QAbstractTransition) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -220,7 +220,7 @@ func (this *QAbstractTransition) TransitionType() int {
 // /usr/include/qt/QtCore/qabstracttransition.h:85
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setTransitionType(enum QAbstractTransition::TransitionType)
+// [-2] void setTransitionType(QAbstractTransition::TransitionType)
 
 /*
 Sets the type of the transition to type.

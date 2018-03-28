@@ -33,37 +33,37 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QRubberBand) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QRubberBand) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QRubberBand) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QRubberBand) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QRubberBand) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
-// void moveEvent(class QMoveEvent *)
+// void moveEvent(QMoveEvent *)
 func (this *QRubberBand) InheritMoveEvent(f func(arg0 *qtgui.QMoveEvent /*777 QMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "moveEvent", f)
 }
 
-// void initStyleOption(class QStyleOptionRubberBand *)
+// void initStyleOption(QStyleOptionRubberBand *)
 func (this *QRubberBand) InheritInitStyleOption(f func(option *QStyleOptionRubberBand /*777 QStyleOptionRubberBand **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
@@ -116,7 +116,7 @@ func (this *QRubberBand) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtWidgets/qrubberband.h:59
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QRubberBand(enum QRubberBand::Shape, QWidget *)
+// [-2] void QRubberBand(QRubberBand::Shape, QWidget *)
 
 /*
 Constructs a rubber band of shape s, with parent p.
@@ -138,7 +138,7 @@ func NewQRubberBand(arg0 int, arg1 QWidget_ITF /*777 QWidget **/) *QRubberBand {
 // /usr/include/qt/QtWidgets/qrubberband.h:59
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QRubberBand(enum QRubberBand::Shape, QWidget *)
+// [-2] void QRubberBand(QRubberBand::Shape, QWidget *)
 
 /*
 Constructs a rubber band of shape s, with parent p.

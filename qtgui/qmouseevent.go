@@ -66,7 +66,7 @@ func (*QMouseEvent) NewFromPointer(cthis unsafe.Pointer) *QMouseEvent {
 // /usr/include/qt/QtGui/qevent.h:107
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QMouseEvent(enum QEvent::Type, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers)
+// [-2] void QMouseEvent(QEvent::Type, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers)
 
 /*
 
@@ -86,7 +86,7 @@ func NewQMouseEvent(type_ int, localPos qtcore.QPointF_ITF, button int, buttons 
 // /usr/include/qt/QtGui/qevent.h:109
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QMouseEvent(enum QEvent::Type, const QPointF &, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers)
+// [-2] void QMouseEvent(QEvent::Type, const QPointF &, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers)
 
 /*
 
@@ -110,7 +110,7 @@ func NewQMouseEvent_1(type_ int, localPos qtcore.QPointF_ITF, screenPos qtcore.Q
 // /usr/include/qt/QtGui/qevent.h:112
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QMouseEvent(enum QEvent::Type, const QPointF &, const QPointF &, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers)
+// [-2] void QMouseEvent(QEvent::Type, const QPointF &, const QPointF &, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers)
 
 /*
 
@@ -138,7 +138,7 @@ func NewQMouseEvent_2(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.Q
 // /usr/include/qt/QtGui/qevent.h:115
 // index:3
 // Public Visibility=Default Availability=Available
-// [-2] void QMouseEvent(enum QEvent::Type, const QPointF &, const QPointF &, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::MouseEventSource)
+// [-2] void QMouseEvent(QEvent::Type, const QPointF &, const QPointF &, const QPointF &, Qt::MouseButton, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::MouseEventSource)
 
 /*
 

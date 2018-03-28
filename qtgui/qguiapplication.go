@@ -32,7 +32,7 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  body block begin
 
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QGuiApplication) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
@@ -886,7 +886,7 @@ func QGuiApplication_StyleHints() *QStyleHints /*777 QStyleHints **/ {
 // /usr/include/qt/QtGui/qguiapplication.h:145
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setDesktopSettingsAware(_Bool)
+// [-2] void setDesktopSettingsAware(bool)
 
 /*
 Sets whether Qt should use the system's standard colors, fonts, etc., to on. By default, this is true.
@@ -985,7 +985,7 @@ func QGuiApplication_PlatformFunction(function qtcore.QByteArray_ITF) unsafe.Poi
 // /usr/include/qt/QtGui/qguiapplication.h:154
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setQuitOnLastWindowClosed(_Bool)
+// [-2] void setQuitOnLastWindowClosed(bool)
 
 /*
 
@@ -1206,7 +1206,7 @@ func QGuiApplication_IsFallbackSessionManagementEnabled() bool {
 // /usr/include/qt/QtGui/qguiapplication.h:170
 // index:0
 // Public static Visibility=Default Availability=Available
-// [-2] void setFallbackSessionManagementEnabled(_Bool)
+// [-2] void setFallbackSessionManagementEnabled(bool)
 
 /*
 Sets whether QGuiApplication will use fallback session management to enabled.

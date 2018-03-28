@@ -35,12 +35,12 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  body block begin
 
-// void setShaderSourceFile(class QOpenGLShader::ShaderType, const class QString &)
+// void setShaderSourceFile(QOpenGLShader::ShaderType, const QString &)
 func (this *QSGMaterialShader) InheritSetShaderSourceFile(f func(type_ int, sourceFile string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setShaderSourceFile", f)
 }
 
-// void setShaderSourceFiles(class QOpenGLShader::ShaderType, const class QStringList &)
+// void setShaderSourceFiles(QOpenGLShader::ShaderType, const QStringList &)
 func (this *QSGMaterialShader) InheritSetShaderSourceFiles(f func(type_ int, sourceFiles *qtcore.QStringList) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setShaderSourceFiles", f)
 }

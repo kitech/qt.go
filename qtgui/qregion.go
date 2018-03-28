@@ -86,7 +86,7 @@ func NewQRegion() *QRegion {
 // /usr/include/qt/QtGui/qregion.h:68
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QRegion(int, int, int, int, enum QRegion::RegionType)
+// [-2] void QRegion(int, int, int, int, QRegion::RegionType)
 
 /*
 Constructs an empty region.
@@ -104,7 +104,7 @@ func NewQRegion_1(x int, y int, w int, h int, t int) *QRegion {
 // /usr/include/qt/QtGui/qregion.h:68
 // index:1
 // Public Visibility=Default Availability=Available
-// [-2] void QRegion(int, int, int, int, enum QRegion::RegionType)
+// [-2] void QRegion(int, int, int, int, QRegion::RegionType)
 
 /*
 Constructs an empty region.
@@ -124,7 +124,7 @@ func NewQRegion_1_(x int, y int, w int, h int) *QRegion {
 // /usr/include/qt/QtGui/qregion.h:69
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QRegion(const QRect &, enum QRegion::RegionType)
+// [-2] void QRegion(const QRect &, QRegion::RegionType)
 
 /*
 Constructs an empty region.
@@ -146,7 +146,7 @@ func NewQRegion_2(r qtcore.QRect_ITF, t int) *QRegion {
 // /usr/include/qt/QtGui/qregion.h:69
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void QRegion(const QRect &, enum QRegion::RegionType)
+// [-2] void QRegion(const QRect &, QRegion::RegionType)
 
 /*
 Constructs an empty region.

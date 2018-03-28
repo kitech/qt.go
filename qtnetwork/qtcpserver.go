@@ -37,7 +37,7 @@ func (this *QTcpServer) InheritIncomingConnection(f func(handle int64) /*void*/)
 	qtrt.SetAllInheritCallback(this, "incomingConnection", f)
 }
 
-// void addPendingConnection(class QTcpSocket *)
+// void addPendingConnection(QTcpSocket *)
 func (this *QTcpServer) InheritAddPendingConnection(f func(socket *QTcpSocket /*777 QTcpSocket **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "addPendingConnection", f)
 }
@@ -294,7 +294,6 @@ func (this *QTcpServer) ServerPort() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer10serverPortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv) // 222
-	// unsigned short // 222
 }
 
 // /usr/include/qt/QtNetwork/qtcpserver.h:73
@@ -331,7 +330,6 @@ func (this *QTcpServer) SocketDescriptor() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer16socketDescriptorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
-	// long long // 222
 }
 
 // /usr/include/qt/QtNetwork/qtcpserver.h:76
@@ -355,7 +353,7 @@ func (this *QTcpServer) SetSocketDescriptor(socketDescriptor int64) bool {
 // /usr/include/qt/QtNetwork/qtcpserver.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool waitForNewConnection(int, _Bool *)
+// [1] bool waitForNewConnection(int, bool *)
 
 /*
 Waits for at most msec milliseconds or until an incoming connection is available. Returns true if a connection is available; otherwise returns false. If the operation timed out and timedOut is not 0, *timedOut will be set to true.
@@ -377,7 +375,7 @@ func (this *QTcpServer) WaitForNewConnection(msec int, timedOut *bool) bool {
 // /usr/include/qt/QtNetwork/qtcpserver.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool waitForNewConnection(int, _Bool *)
+// [1] bool waitForNewConnection(int, bool *)
 
 /*
 Waits for at most msec milliseconds or until an incoming connection is available. Returns true if a connection is available; otherwise returns false. If the operation timed out and timedOut is not 0, *timedOut will be set to true.
@@ -403,7 +401,7 @@ func (this *QTcpServer) WaitForNewConnection__() bool {
 // /usr/include/qt/QtNetwork/qtcpserver.h:78
 // index:0
 // Public Visibility=Default Availability=Available
-// [1] bool waitForNewConnection(int, _Bool *)
+// [1] bool waitForNewConnection(int, bool *)
 
 /*
 Waits for at most msec milliseconds or until an incoming connection is available. Returns true if a connection is available; otherwise returns false. If the operation timed out and timedOut is not 0, *timedOut will be set to true.
