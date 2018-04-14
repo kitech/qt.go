@@ -73,6 +73,8 @@ Arch based:
         app.Exec()
     }
 
+More complex examples: https://github.com/qtchina/qt.go.demos/
+
 ### Internals
 
 Qt.Go uses FFI to call wrapped Qt functions and methods, so there is no compile/link time dependency on Qt, only a run time dependency.

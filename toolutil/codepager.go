@@ -24,6 +24,7 @@ type CodePager struct {
 	lines         map[string][]string
 	export_times  int
 	newline       string
+	skip_comment  bool
 }
 
 func NewCodePager() *CodePager {
@@ -31,6 +32,12 @@ func NewCodePager() *CodePager {
 	this.insert_points = make([]string, 0)
 	this.lines = make(map[string][]string, 0)
 	this.newline = "\n"
+	return this
+}
+
+func NewCodePagerNoComment() *CodePager {
+	this := NewCodePager()
+	this.skip_comment = true
 	return this
 }
 
@@ -162,6 +169,9 @@ func (this *CodePager) RemoveLine(name, code string) {
 func (this *CodePager) ExportCode(names []string) string {
 	comment := "// "
 	blocks := gopp.Domap(names, func(name interface{}) interface{} {
+		if this.skip_comment {
+			return strings.Join(this.lines[name.(string)], this.newline)
+		}
 		return fmt.Sprintf("%s %s block begin\n%s\n%s %s block end\n",
 			comment, name.(string),
 			strings.Join(this.lines[name.(string)], this.newline),

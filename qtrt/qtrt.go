@@ -78,6 +78,8 @@ func SetFinalizer(obj interface{}, finalizer interface{}) {
 		objectFinalAfter(o)
 	})
 }
+func UnsetFinalizer(obj interface{})   { runtime.SetFinalizer(obj, nil) }
+func ReleaseOwnerToQt(obj interface{}) { UnsetFinalizer(obj) }
 
 // 返回true表示确定
 var finalizerObjectFilterFn func(reflect.Value) bool = func(ov reflect.Value) bool { return true }

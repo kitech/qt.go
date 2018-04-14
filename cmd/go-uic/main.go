@@ -258,7 +258,7 @@ func onSetupUi(line string) {
 			case "Spacing", "HorizontalStretch", "VerticalStretch":
 			case "PointSize", "Weight", "ColumnCount": // do nothing
 			case "ContentsMargins", "CurrentIndex", "LineWidth":
-			case "Orientation":
+			case "Orientation", "TextFormat":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "TextInteractionFlags":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
@@ -267,14 +267,14 @@ func onSetupUi(line string) {
 				"AutoRepeat", "AutoExclusive", "DocumentMode",
 				"Checked", "Flat", "AutoFillBackground":
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
-			case "Bold", "OpenExternalLinks", "WordWrap", "Frame", "Editable":
+			case "Bold", "OpenExternalLinks", "WordWrap", "Frame", "Editable", "DragDropOverwriteMode":
 				refmtval = untitle(refmtval) // True => true
 			case "ToolButtonStyle":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "Alignment", "FocusPolicy":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 				refmtval = strings.Replace(refmtval, "|", "|qtcore.", -1)
-			case "EditTriggers", "StandardButtons":
+			case "EditTriggers", "StandardButtons", "PopupMode":
 				refmtval = "qtwidgets." + strings.Replace(refmtval, ":", "_", -1)
 				refmtval = strings.Replace(refmtval, "|", "|qtwidgets.", -1)
 			case "Geometry":
@@ -304,12 +304,20 @@ func onSetupUi(line string) {
 				// refmtval = "false" // TODO label_x.SizePolicy().HasHeightForWidth() crash
 			// case "SizePolicy": // TODO 可能值有点问题，过滤掉设置setSizePolicy
 			// break
+			case "Property":
+				refmtval = mats[0][3]
+				if strings.Contains(refmtval, "(false)") || strings.Contains(refmtval, "(true)") {
+					refmtval = strings.Replace(refmtval, "QVariant", "qtcore.NewQVariant_9", -1)
+				}
 			default:
 				log.Println(line, refmtname)
 				refmtval = "this." + refmtval
 			}
+
+			// cp.APf("setupUi", "// %s", line)
 			cp.APf("setupUi", "this.%s.Set%s%s(%s) // 114",
 				strings.Title(mats[0][1]), refmtname, refmtsuf, refmtval)
+
 		} else if reg5.MatchString(line) {
 			mats := reg5.FindAllStringSubmatch(line, -1)
 			log.Println(mats)
