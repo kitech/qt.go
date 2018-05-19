@@ -49,6 +49,7 @@ static void ffi_call_0(void*fn) {
 }
 
 extern void ffi_call_ex(void*fn, int retype, uint64_t *rc, int argc, uint8_t* argtys, uint64_t* argvals);
+extern void ffi_call_var_ex(void*fn, int retype, uint64_t *rc, int fixedargc, int totalargc, uint8_t* argtys, uint64_t* argvals);
 
 static void ffi_call_1(void*fn) {
 
@@ -266,6 +267,26 @@ func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, e
 	return uint64(retval), nil
 }
 
+// for variadic function call
+func InvokeQtFunc6Var(symname string, retype byte, fixedargc int, args ...interface{}) (VRetype, error) {
+	addr := GetQtSymAddr(symname)
+	if debugFFICall {
+		log.Println("FFI Call:", symname, addr, "retype=", retype, "fixedargc=", fixedargc, "totalargc=", len(args))
+	}
+
+	argtys, argvals, argrefps := convArgs(args...)
+	_ = argrefps
+	var retval C.uint64_t = 0
+	_, cok := C.ffi_call_var_ex(addr, C.int(retype), &retval, C.int(fixedargc), C.int(len(args)),
+		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0]))
+	if debugFFICall {
+		ErrPrint(cok, symname, retype, len(args))
+	}
+
+	onCtorAlloc(symname)
+	return uint64(retval), nil
+}
+
 // fix return QSize like pure record, RVO
 func InvokeQtFunc7(symname string, args ...interface{}) (VRetype, error) {
 	addr := GetQtSymAddr(symname)
@@ -395,6 +416,14 @@ func convArg(idx int, argx interface{}) (argty byte, argval uint64, argrefp refl
 		argrefp = reflect.New(VoidpTy())
 		argrefp.Elem().Set(av)
 		argval = refvaluint64(&argrefp)
+
+	case reflect.String:
+		argty = FFI_TYPE_POINTER
+		argpv := unsafe.Pointer(C.CString(argx.(string))) // TODO free memory
+		argrefp = reflect.New(VoidpTy())
+		argrefp.Elem().Set(reflect.ValueOf(argpv))
+		argval = refvaluint64(&argrefp)
+		//
 
 	default:
 		log.Println("Unknown type:", argty, argval, aty.String(), argx)

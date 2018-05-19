@@ -1,5 +1,6 @@
 package qtandroidextras
 
+// this file is write by hand, don't delete
 import (
 	"unsafe"
 

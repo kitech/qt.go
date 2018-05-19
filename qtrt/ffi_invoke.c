@@ -42,8 +42,8 @@ static ffi_type* itype2stype(int itype){
  */
 void ffi_call_ex(void*fn, int retype, uint64_t* retval, int argc, uint8_t* argtys, uint64_t* argvals) {
     ffi_cif cif;
-    ffi_type *ffitys[20];
-    void *ffivals[20];
+    ffi_type *ffitys[20] = {0};
+    void *ffivals[20] = {0};
 
     for (int i = 0; i < argc; i++) {
         ffitys[i] = itype2stype(argtys[i]);
@@ -52,6 +52,28 @@ void ffi_call_ex(void*fn, int retype, uint64_t* retval, int argc, uint8_t* argty
 
     ffi_type* retyp = itype2stype(retype);
     if (ffi_prep_cif(&cif, FFI_DEFAULT_ABI, argc, retyp, ffitys) == FFI_OK) {
+        ffi_call(&cif, fn, retval, ffivals);
+    }
+}
+
+/*
+  for variadic function call
+  argtypes int[20]
+  argvals uint64_t[20] it's should be arguments's address but store in uint64_t
+*/
+void ffi_call_var_ex(void*fn, int retype, uint64_t* retval, int fixedargc, int totalargc,
+                     uint8_t* argtys, uint64_t* argvals) {
+    ffi_cif cif;
+    ffi_type *ffitys[20] = {0};
+    void *ffivals[20] = {0};
+
+    for (int i = 0; i < totalargc; i++) {
+        ffitys[i] = itype2stype(argtys[i]);
+        ffivals[i] = (void*)argvals[i];
+    }
+
+    ffi_type* retyp = itype2stype(retype);
+    if (ffi_prep_cif_var(&cif, FFI_DEFAULT_ABI, fixedargc, totalargc, retyp, ffitys) == FFI_OK) {
         ffi_call(&cif, fn, retval, ffivals);
     }
 }
