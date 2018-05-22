@@ -302,6 +302,12 @@ func InvokeQtFunc7(symname string, args ...interface{}) (VRetype, error) {
 	return uint64(uintptr(retval)), nil
 }
 
+// TODO resolve ffi parameters and then forward to C scope execute
+// C scope receiver func: void(void*fnptr, uint64_t*retval, void* argtys, void* argvals)
+func ForwardFFIFunc(pxysymname string, symname string, args ...interface{}) (VRetype, error) {
+	return 0, nil
+}
+
 func isUndefinedSymbolErr(err error) bool {
 	return err != nil && strings.Contains(err.Error(), ": undefined symbol: ")
 }

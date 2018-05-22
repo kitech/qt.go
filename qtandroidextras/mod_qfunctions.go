@@ -76,6 +76,7 @@ func RunOnAndroidThread(runnable unsafe.Pointer) {
 	qtrt.ErrPrint(err, rv)
 }
 */
+// Note: can not callback to go scope, or it's will crash or blocked
 func RunOnAndroidThread(runnable func()) {
 	if runnable == nil {
 		return
@@ -83,6 +84,12 @@ func RunOnAndroidThread(runnable func()) {
 	cbno, cbfn := cmemory.AddOnceRunner(runnable)
 	var convArg0 = cbfn
 	rv, err := qtrt.InvokeQtFunc6("QtAndroid_runOnAndroidThread", qtrt.FFI_TYPE_POINTER, cbno, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+func RunOnAndroidThread2(symname string, a0 uint64, a1 uint64) {
+	symptr := qtrt.GetQtSymAddr(symname)
+	rv, err := qtrt.InvokeQtFunc6("QtAndroid_runOnAndroidThread2", qtrt.FFI_TYPE_POINTER, symptr, a0, a1)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -128,4 +135,15 @@ func StartIntentSender(intentSender *QAndroidJniObject, receiverRequestCode int,
 	var convArg2 = resultReceiver.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("QtAndroid_startIntentSender", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
+}
+
+///////// heavy wrapper, not just binding
+func KeepScreenOn(on bool) {
+	ion := qtrt.IfElseInt(on, 1, 0)
+	RunOnAndroidThread2("C_AndroidKeepScreenOnRaw", uint64(ion), 0)
+}
+
+func ShowToast(message string, duration uint64) {
+	msgp := qtrt.CString(message) // memory free by callee
+	RunOnAndroidThread2("C_AndroidShowToast", uint64(uintptr(msgp)), duration)
 }
