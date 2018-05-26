@@ -71,6 +71,11 @@ type callbackSlotInvoker func(argvals /* **C.uchar*/ unsafe.Pointer, sigobj inte
 真正回调函数的调用执行
 f 函数
 sigobj 是一个Qxxx的go实例，可以通过这个实例查询到signal的参数个数与参数类型信息
+params:
+  Ptr: caller should be Qxxx* qt class pointer
+  string: caller should be QString&
+  bool: caller should be C++'s bool or int8 or char that have 1B length
+  unsafe.Pointer: caller should be a raw pointer
 */
 func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, sigobj interface{}) {
 	sigobjv := reflect.ValueOf(sigobj)
@@ -95,8 +100,8 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 		switch argty.Kind() {
 		case reflect.Int:
 			in = append(in, reflect.ValueOf(*(*int)(argvals[i+1])))
-		case reflect.Bool:
-			prmval := IfElse(*(*int)(argvals[i+1]) == 0, false, true).(bool)
+		case reflect.Bool: // it's come from qt's *bool, only 1B
+			prmval := IfElse(*(*int8)(argvals[i+1]) == 0, false, true).(bool)
 			in = append(in, reflect.ValueOf(prmval))
 		case reflect.Ptr:
 			argd1ty := argty.Elem()
@@ -116,6 +121,31 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 			}
 		case reflect.UnsafePointer:
 			in = append(in, reflect.ValueOf(argvals[i+1]))
+		case reflect.String: // think caller supply a QString*
+			var this_ unsafe.Pointer = argvals[i+1]
+			ret1, err := InvokeQtFunc6("_ZNKR7QString6toUtf8Ev", FFI_TYPE_POINTER, this_)
+			ErrPrint(err, this_)
+			ret2, err := InvokeQtFunc6("_ZN10QByteArray4dataEv", FFI_TYPE_POINTER, unsafe.Pointer(uintptr(ret1)))
+			ErrPrint(err, ret1)
+			prmval := reflect.ValueOf(GoStringI(uint64(ret2)))
+			in = append(in, prmval)
+			InvokeQtFunc6("_ZN10QByteArrayD2Ev", FFI_TYPE_VOID, unsafe.Pointer(uintptr(ret1)))
+		case reflect.Float64:
+			in = append(in, reflect.ValueOf(*(*float64)(argvals[i+1])))
+		case reflect.Float32:
+			in = append(in, reflect.ValueOf(*(*float32)(argvals[i+1])))
+		case reflect.Uint16:
+			in = append(in, reflect.ValueOf(*(*uint16)(argvals[i+1])))
+		case reflect.Int16:
+			in = append(in, reflect.ValueOf(*(*int16)(argvals[i+1])))
+		case reflect.Uint32:
+			in = append(in, reflect.ValueOf(*(*uint32)(argvals[i+1])))
+		case reflect.Int32:
+			in = append(in, reflect.ValueOf(*(*int32)(argvals[i+1])))
+		case reflect.Uint64:
+			in = append(in, reflect.ValueOf(*(*uint64)(argvals[i+1])))
+		case reflect.Int64:
+			in = append(in, reflect.ValueOf(*(*int64)(argvals[i+1])))
 		default:
 			log.Println("Unsupported:", argty.Kind().String(), argty.String())
 		}
@@ -125,7 +155,7 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 		log.Println(len(in), in)
 	}
 	if len(in) != fv.Type().NumIn() {
-		log.Println("can not fill enough parameters,", len(in), fv.Type().NumIn())
+		log.Printf("Can not fill enough parameters, have:%d, want:%d\n", len(in), fv.Type().NumIn())
 	}
 	Assert(len(in) == fv.Type().NumIn(), "no engouth parameters")
 	if true {

@@ -141,7 +141,9 @@ func callbackAllInherits(cbobj unsafe.Pointer, iname *C.char, handled *C.int, ar
 
 func callbackAllInheritsGo(cbobj unsafe.Pointer, name string, handled *int, argc int, pargs ...uint64) uint64 {
 	if !strings.Contains(strings.ToLower(name), "event") {
-		log.Println(cbobj, name, handled, argc, pargs)
+		if debugFFICall {
+			log.Println(cbobj, name, handled, argc, pargs)
+		}
 	}
 
 	if signal := qt.GetSignal(cbobj, name); signal != nil {
