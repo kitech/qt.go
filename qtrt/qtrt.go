@@ -2,6 +2,7 @@ package qtrt
 
 /*
 #cgo CFLAGS: -std=c11
+#cgo pkg-config: libffi
 
 #include <stdlib.h>
 #include <string.h>
