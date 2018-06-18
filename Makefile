@@ -12,48 +12,52 @@ realall: rts bases qmls extras webengines tools
 
 rts: qtrt- mock-
 qtrt-:
-	go install -v -x ./qtqt
-	go install -v -x ./qtrt
+	go install -v -i -x ./qtqt
+	go install -v -i -x ./qtrt
 mock-:
-	go install -v -x ./qtmock
+	go install -v -i -x ./qtmock
 
 bases: qtrt- core- gui- widgets-
 core-:
-	go install -v -x ./qtcore
+	go install -v -i -x ./qtcore
 gui-:
-	go install -v -x ./qtgui
+	go install -v -i -x ./qtgui
 widgets-:
-	go install -v -x ./qtwidgets
+	go install -v -i -x ./qtwidgets
 
 network-:
-	go install -v -x ./qtnetwork
+	go install -v -i -x ./qtnetwork
 
 qmls: qml- quick- quickctrl- quickwgt-
 qml-:
-	go install -v -x ./qtqml
+	go install -v -i -x ./qtqml
 quick-:
-	go install -v -x ./qtquick
+	go install -v -i -x ./qtquick
 quickctrl-:
-	go install -v -x ./qtquicktemplates2
-	go install -v -x ./qtquickcontrols2
+	go install -v -i -x ./qtquicktemplates2
+	go install -v -i -x ./qtquickcontrols2
 quickwgt-:
-	go install -v -x ./qtquickwidgets
+	go install -v -i -x ./qtquickwidgets
 
 extras:
-	go install -v -x ./qtandroidextras
-	go install -v -x ./qtmacextras
-	go install -v -x ./qtwinextras
+	go install -v -i -x ./qtandroidextras
+	go install -v -i -x ./qtmacextras
+	go install -v -i -x ./qtwinextras
 
 webengines:
-	go install -v -x ./qtpositioning
-	go install -v -x ./qtprintsupport
-	go install -v -x ./qtwebchannel
-	go install -v -x ./qtwebenginecore
-	go install -v -x ./qtwebengine
-	go install -v -x ./qtwebenginewidgets
+	go install -v -i -x ./qtpositioning
+	go install -v -i -x ./qtprintsupport
+	go install -v -i -x ./qtwebchannel
+	go install -v -i -x ./qtwebenginecore
+	go install -v -i -x ./qtwebengine
+	go install -v -i -x ./qtwebenginewidgets
+
+multimedias:
+	go install -v -i -x ./qtsvg
+	go install -v -i -x ./qtmultimedia
 
 eg-:
-	# go build -v -x eg/coreapp.go
+	go build -v -x eg/coreapp.go
 	# go build -v -x eg/guiapp.go
 	# go build -v -x eg/signal.go
 	# go build -v -x eg/pmthor.go
@@ -87,6 +91,8 @@ updoc:
 	curl -POST -d "path=github.com/kitech/qt.go/qtwebenginecore" "https://godoc.org/-/refresh"
 	curl -POST -d "path=github.com/kitech/qt.go/qtwebengine" "https://godoc.org/-/refresh"
 	curl -POST -d "path=github.com/kitech/qt.go/qtwebenginewidgets" "https://godoc.org/-/refresh"
+	curl -POST -d "path=github.com/kitech/qt.go/qtsvg" "https://godoc.org/-/refresh"
+	curl -POST -d "path=github.com/kitech/qt.go/qtmultimedia" "https://godoc.org/-/refresh"
 
 wcs: wcbases wcqmls wcextras wcwebengines
 wcbases:

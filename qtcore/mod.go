@@ -373,3 +373,74 @@ func (this *QUrlListx) ConvertToSlice() (lst []*QUrl) {
 func (*QUrlListx) ConvertFromSlice(lst []*QUrl) *QUrlListx {
 	return nil
 }
+
+/////
+type QSizeListx struct {
+	*qtrt.CObject
+}
+
+func (this *QSizeListx) GetCthis() unsafe.Pointer {
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
+}
+func (this *QSizeListx) SetCthis(cthis unsafe.Pointer) {
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
+}
+func NewQSizeListxFromPointer(cthis unsafe.Pointer) *QSizeListx {
+	return &QSizeListx{&qtrt.CObject{cthis}}
+}
+func NewQSizeListFromPointer(cthis unsafe.Pointer) *QSizeList {
+	return &QSizeList{&qtrt.CObject{cthis}}
+}
+func (*QSizeListx) NewFromPointer(cthis unsafe.Pointer) *QSizeListx {
+	return NewQSizeListxFromPointer(cthis)
+}
+func DeleteQSizeListx(this *QSizeListx) {
+	qtrt.InvokeQtFunc6("C_QSizeList_dtor", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+}
+func (this *QSizeListx) Release() { this.CObject = nil }
+
+func (this *QSizeListx) At(i int) *QSize {
+	rv, err := qtrt.InvokeQtFunc6("C_QSizeList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	qtrt.ErrPrint(err, rv)
+	urlo := NewQSizeFromPointer(unsafe.Pointer(uintptr(rv)))
+	return urlo
+}
+
+func (this *QSizeListx) Count(s string) int {
+	var convArg0 = qtrt.CString(s)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("C_QSizeList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+
+func (this *QSizeListx) Count_1() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QSizeList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+
+func (this *QSizeListx) Size() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QSizeList_size_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+
+func (this *QSizeListx) ConvertToSlice() (lst []*QSize) {
+	for i := 0; i < this.Size(); i++ {
+		lst = append(lst, this.At(i))
+	}
+	return
+}
+
+func (*QSizeListx) ConvertFromSlice(lst []*QSize) *QSizeListx {
+	return nil
+}
