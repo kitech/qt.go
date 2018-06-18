@@ -207,19 +207,169 @@ func (this *QVariantListx) At(i int) *QVariant {
 	return NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
-func (this *QVariantListx) Count() int {
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+func (this *QVariantListx) Count_1() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QVariantList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+
+func (this *QVariantListx) Size() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QVariantList_size_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QVariantListx) ConvertToSlice() (lst []*QVariant) {
-	for i := 0; i < this.Count(); i++ {
+	for i := 0; i < this.Size(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return
 }
 
 func (*QVariantListx) ConvertFromSlice(lst []*QVariant) *QVariantListx {
+	return nil
+}
+
+/////
+type QStringListx struct {
+	*qtrt.CObject
+}
+
+func (this *QStringListx) GetCthis() unsafe.Pointer {
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
+}
+func (this *QStringListx) SetCthis(cthis unsafe.Pointer) {
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
+}
+func NewQStringListxFromPointer(cthis unsafe.Pointer) *QStringListx {
+	return &QStringListx{&qtrt.CObject{cthis}}
+}
+func _NewQStringListFromPointer(cthis unsafe.Pointer) *QStringList {
+	return &QStringList{&qtrt.CObject{cthis}}
+}
+func (*QStringListx) NewFromPointer(cthis unsafe.Pointer) *QStringListx {
+	return NewQStringListxFromPointer(cthis)
+}
+func DeleteQStringListx(this *QStringListx) {
+	qtrt.InvokeQtFunc6("C_QStringList_dtor", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+}
+func (this *QStringListx) Release() { this.CObject = nil }
+
+func (this *QStringListx) At(i int) string {
+	rv, err := qtrt.InvokeQtFunc6("C_QStringList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	qtrt.ErrPrint(err, rv)
+	qstr := NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	ret := qstr.ToUtf8().Data()
+	DeleteQString(qstr)
+	return ret
+}
+
+func (this *QStringListx) Count(s string) int {
+	var convArg0 = qtrt.CString(s)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("C_QStringList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+
+func (this *QStringListx) Count_1() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QStringList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+
+func (this *QStringListx) Size() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QStringList_size_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+
+func (this *QStringListx) ConvertToSlice() (lst []string) {
+	for i := 0; i < this.Size(); i++ {
+		lst = append(lst, this.At(i))
+	}
+	return
+}
+
+func (*QStringListx) ConvertFromSlice(lst []string) *QStringListx {
+	return nil
+}
+
+/////
+type QUrlListx struct {
+	*qtrt.CObject
+}
+
+func (this *QUrlListx) GetCthis() unsafe.Pointer {
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
+}
+func (this *QUrlListx) SetCthis(cthis unsafe.Pointer) {
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
+}
+func NewQUrlListxFromPointer(cthis unsafe.Pointer) *QUrlListx {
+	return &QUrlListx{&qtrt.CObject{cthis}}
+}
+func NewQUrlListFromPointer(cthis unsafe.Pointer) *QUrlList {
+	return &QUrlList{&qtrt.CObject{cthis}}
+}
+func (*QUrlListx) NewFromPointer(cthis unsafe.Pointer) *QUrlListx {
+	return NewQUrlListxFromPointer(cthis)
+}
+func DeleteQUrlListx(this *QUrlListx) {
+	qtrt.InvokeQtFunc6("C_QUrlList_dtor", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+}
+func (this *QUrlListx) Release() { this.CObject = nil }
+
+func (this *QUrlListx) At(i int) *QUrl {
+	rv, err := qtrt.InvokeQtFunc6("C_QUrlList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	qtrt.ErrPrint(err, rv)
+	urlo := NewQUrlFromPointer(unsafe.Pointer(uintptr(rv)))
+	return urlo
+}
+
+func (this *QUrlListx) Count(s string) int {
+	var convArg0 = qtrt.CString(s)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("C_QUrlList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+
+func (this *QUrlListx) Count_1() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QUrlList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+
+func (this *QUrlListx) Size() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QUrlList_size_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+
+func (this *QUrlListx) ConvertToSlice() (lst []*QUrl) {
+	for i := 0; i < this.Size(); i++ {
+		lst = append(lst, this.At(i))
+	}
+	return
+}
+
+func (*QUrlListx) ConvertFromSlice(lst []*QUrl) *QUrlListx {
 	return nil
 }

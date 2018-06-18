@@ -161,8 +161,248 @@ func NewQImage_2(width int, height int, format int) *QImage {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qimage.h:145
+// /usr/include/qt/QtGui/qimage.h:139
 // index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(uchar *, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_3(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:139
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(uchar *, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_3_(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
+	// arg: 4, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
+	var cleanupFunction unsafe.Pointer
+	// arg: 5, void *=Pointer, =Invalid, , Invalid
+	var cleanupInfo unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:139
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(uchar *, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_3_1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	// arg: 5, void *=Pointer, =Invalid, , Invalid
+	var cleanupInfo unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:140
+// index:4
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(const uchar *, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_4(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:140
+// index:4
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(const uchar *, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_4_(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
+	// arg: 4, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
+	var cleanupFunction unsafe.Pointer
+	// arg: 5, void *=Pointer, =Invalid, , Invalid
+	var cleanupInfo unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:140
+// index:4
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(const uchar *, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_4_1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	// arg: 5, void *=Pointer, =Invalid, , Invalid
+	var cleanupInfo unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:141
+// index:5
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(uchar *, int, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_5(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:141
+// index:5
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(uchar *, int, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_5_(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
+	// arg: 5, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
+	var cleanupFunction unsafe.Pointer
+	// arg: 6, void *=Pointer, =Invalid, , Invalid
+	var cleanupInfo unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:141
+// index:5
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(uchar *, int, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_5_1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	// arg: 6, void *=Pointer, =Invalid, , Invalid
+	var cleanupInfo unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:142
+// index:6
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(const uchar *, int, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_6(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:142
+// index:6
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(const uchar *, int, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_6_(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
+	// arg: 5, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
+	var cleanupFunction unsafe.Pointer
+	// arg: 6, void *=Pointer, =Invalid, , Invalid
+	var cleanupInfo unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:142
+// index:6
+// Public Visibility=Default Availability=Available
+// [-2] void QImage(const uchar *, int, int, int, QImage::Format, QImageCleanupFunction, void *)
+
+/*
+Constructs a null image.
+
+See also isNull().
+*/
+func NewQImage_6_1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	// arg: 6, void *=Pointer, =Invalid, , Invalid
+	var cleanupInfo unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImage)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qimage.h:145
+// index:7
 // Public Visibility=Default Availability=Available
 // [-2] void QImage(const char *const *)
 
@@ -171,7 +411,7 @@ Constructs a null image.
 
 See also isNull().
 */
-func NewQImage_3(xpm []string) *QImage {
+func NewQImage_7(xpm []string) *QImage {
 	var convArg0 = qtrt.StringSliceToCCharPP(xpm)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKPKc", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -181,7 +421,7 @@ func NewQImage_3(xpm []string) *QImage {
 }
 
 // /usr/include/qt/QtGui/qimage.h:147
-// index:4
+// index:8
 // Public Visibility=Default Availability=Available
 // [-2] void QImage(const QString &, const char *)
 
@@ -190,7 +430,7 @@ Constructs a null image.
 
 See also isNull().
 */
-func NewQImage_4(fileName string, format string) *QImage {
+func NewQImage_8(fileName string, format string) *QImage {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
@@ -203,7 +443,7 @@ func NewQImage_4(fileName string, format string) *QImage {
 }
 
 // /usr/include/qt/QtGui/qimage.h:147
-// index:4
+// index:8
 // Public Visibility=Default Availability=Available
 // [-2] void QImage(const QString &, const char *)
 
@@ -212,10 +452,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func NewQImage_4_(fileName string) *QImage {
+func NewQImage_8_(fileName string) *QImage {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2ERK7QStringPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -432,7 +672,7 @@ If the given rectangle is a null rectangle the entire image is copied.
 See also QImage().
 */
 func (this *QImage) Copy__() *QImage /*123*/ {
-	// arg: 0, const QRect &=LValueReference, QRect=Record,
+	// arg: 0, const QRect &=LValueReference, QRect=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4copyERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -514,7 +754,7 @@ The specified image conversion flags control how the image data is handled durin
 See also Image Formats.
 */
 func (this *QImage) ConvertToFormat__(f int) *QImage /*123*/ {
-	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR6QImage15convertToFormatENS_6FormatE6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f, flags)
 	qtrt.ErrPrint(err, rv)
@@ -556,7 +796,7 @@ The specified image conversion flags control how the image data is handled durin
 See also Image Formats.
 */
 func (this *QImage) ConvertToFormat_1_(f int) *QImage /*123*/ {
-	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNO6QImage15convertToFormatENS_6FormatE6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1439,7 +1679,7 @@ The returned image has little-endian bit order (i.e. the image's format is QImag
 See also createHeuristicMask() and Image Transformations.
 */
 func (this *QImage) CreateAlphaMask__() *QImage /*123*/ {
-	// arg: 0, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 0, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage15createAlphaMaskE6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)
@@ -1493,7 +1733,7 @@ Note that this function disregards the alpha buffer.
 See also createAlphaMask() and Image Transformations.
 */
 func (this *QImage) CreateHeuristicMask__() *QImage /*123*/ {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	clipTight := true
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage19createHeuristicMaskEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), clipTight)
 	qtrt.ErrPrint(err, rv)
@@ -1531,7 +1771,7 @@ Creates and returns a mask for this image based on the given color value. If the
 See also createAlphaMask() and createHeuristicMask().
 */
 func (this *QImage) CreateMaskFromColor__(color uint) *QImage /*123*/ {
-	// arg: 1, Qt::MaskMode=Elaborated, Qt::MaskMode=Enum,
+	// arg: 1, Qt::MaskMode=Elaborated, Qt::MaskMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage19createMaskFromColorEjN2Qt8MaskModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), color, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1589,9 +1829,9 @@ If the given size is empty, this function returns a null image.
 See also isNull() and Image Transformations.
 */
 func (this *QImage) Scaled__(w int, h int) *QImage /*123*/ {
-	// arg: 2, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 2, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectMode := 0
-	// arg: 3, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 3, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage6scaledEiiN2Qt15AspectRatioModeENS0_18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, aspectMode, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1621,7 +1861,7 @@ If the given size is empty, this function returns a null image.
 See also isNull() and Image Transformations.
 */
 func (this *QImage) Scaled__1(w int, h int, aspectMode int) *QImage /*123*/ {
-	// arg: 3, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 3, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage6scaledEiiN2Qt15AspectRatioModeENS0_18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, aspectMode, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1687,9 +1927,9 @@ func (this *QImage) Scaled_1_(s qtcore.QSize_ITF) *QImage /*123*/ {
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
 	}
-	// arg: 1, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 1, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectMode := 0
-	// arg: 2, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 2, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage6scaledERK5QSizeN2Qt15AspectRatioModeENS3_18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, aspectMode, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1723,7 +1963,7 @@ func (this *QImage) Scaled_1_1(s qtcore.QSize_ITF, aspectMode int) *QImage /*123
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
 	}
-	// arg: 2, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 2, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage6scaledERK5QSizeN2Qt15AspectRatioModeENS3_18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, aspectMode, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1769,7 +2009,7 @@ If the given width is 0 or negative, a null image is returned.
 See also Image Transformations.
 */
 func (this *QImage) ScaledToWidth__(w int) *QImage /*123*/ {
-	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage13scaledToWidthEiN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1815,7 +2055,7 @@ If the given height is 0 or negative, a null image is returned.
 See also Image Transformations.
 */
 func (this *QImage) ScaledToHeight__(h int) *QImage /*123*/ {
-	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage14scaledToHeightEiN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1865,7 +2105,7 @@ func (this *QImage) Transformed__(matrix QMatrix_ITF) *QImage /*123*/ {
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
 		convArg0 = matrix.QMatrix_PTR().GetCthis()
 	}
-	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage11transformedERK7QMatrixN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1915,7 +2155,7 @@ func (this *QImage) Transformed_1_(matrix QTransform_ITF) *QImage /*123*/ {
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()
 	}
-	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage11transformedERK10QTransformN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -2015,9 +2255,9 @@ Note that the original image is not changed.
 See also Image Transformations.
 */
 func (this *QImage) Mirrored__() *QImage /*123*/ {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	horizontally := false
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	vertically := true
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR6QImage8mirroredEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), horizontally, vertically)
 	qtrt.ErrPrint(err, rv)
@@ -2039,7 +2279,7 @@ Note that the original image is not changed.
 See also Image Transformations.
 */
 func (this *QImage) Mirrored__1(horizontally bool) *QImage /*123*/ {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	vertically := true
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR6QImage8mirroredEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), horizontally, vertically)
 	qtrt.ErrPrint(err, rv)
@@ -2079,9 +2319,9 @@ Note that the original image is not changed.
 See also Image Transformations.
 */
 func (this *QImage) Mirrored_1_() unsafe.Pointer /*333*/ {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	horizontally := false
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	vertically := true
 	rv, err := qtrt.InvokeQtFunc6("_ZNO6QImage8mirroredEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), horizontally, vertically)
 	qtrt.ErrPrint(err, rv)
@@ -2101,7 +2341,7 @@ Note that the original image is not changed.
 See also Image Transformations.
 */
 func (this *QImage) Mirrored_1_1(horizontally bool) unsafe.Pointer /*333*/ {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	vertically := true
 	rv, err := qtrt.InvokeQtFunc6("_ZNO6QImage8mirroredEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), horizontally, vertically)
 	qtrt.ErrPrint(err, rv)
@@ -2184,7 +2424,7 @@ If the image has a premultiplied alpha channel, the image is first converted to 
 See also Image Transformations.
 */
 func (this *QImage) InvertPixels__() {
-	// arg: 0, QImage::InvertMode=Enum, QImage::InvertMode=Enum,
+	// arg: 0, QImage::InvertMode=Enum, QImage::InvertMode=Enum, , Invalid
 	arg0 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage12invertPixelsENS_10InvertModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -2257,7 +2497,7 @@ See also Reading and Writing Image Files.
 func (this *QImage) Load_1_(fileName string) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage4loadERK7QStringPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2297,7 +2537,7 @@ The loader attempts to read the image using the specified format, e.g., PNG or J
 See also Reading and Writing Image Files.
 */
 func (this *QImage) LoadFromData__(buf unsafe.Pointer /*666*/, len_ int) bool {
-	// arg: 2, const char *=Pointer, =Invalid,
+	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage12loadFromDataEPKhiPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), buf, len_, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -2345,7 +2585,7 @@ func (this *QImage) LoadFromData_1_(data qtcore.QByteArray_ITF) bool {
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage12loadFromDataERK10QByteArrayPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2393,9 +2633,9 @@ See also Reading and Writing Image Files.
 func (this *QImage) Save__(fileName string) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4saveERK7QStringPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
@@ -2421,7 +2661,7 @@ func (this *QImage) Save__1(fileName string, format string) bool {
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4saveERK7QStringPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
@@ -2473,9 +2713,9 @@ func (this *QImage) Save_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) boo
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
 	}
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4saveEP9QIODevicePKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
@@ -2503,7 +2743,7 @@ func (this *QImage) Save_1_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, fo
 	}
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4saveEP9QIODevicePKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
@@ -2554,7 +2794,7 @@ If the loading of the image fails, the image returned will be a null image.
 See also load(), save(), and Reading and Writing Image Files.
 */
 func (this *QImage) FromData__(data unsafe.Pointer /*666*/, size int) *QImage /*123*/ {
-	// arg: 2, const char *=Pointer, =Invalid,
+	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage8fromDataEPKhiPKc", qtrt.FFI_TYPE_POINTER, data, size, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -2615,7 +2855,7 @@ func (this *QImage) FromData_1_(data qtcore.QByteArray_ITF) *QImage /*123*/ {
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage8fromDataERK10QByteArrayPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2809,7 +3049,7 @@ Returns the image text associated with the given key. If the specified key is an
 See also setText() and textKeys().
 */
 func (this *QImage) Text__() string {
-	// arg: 0, const QString &=LValueReference, QString=Record,
+	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4textERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

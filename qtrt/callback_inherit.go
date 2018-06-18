@@ -28,6 +28,10 @@ func SetInheritCallback2c(name string, fnptr unsafe.Pointer) {
 }
 
 func SetAllInheritCallback(cbobj CObjectITF, name string, f interface{}) {
+	if cbobj.GetCthis() == nil {
+		log.Println("obj is nil", name)
+	}
+
 	if cbobj.GetCthis() != nil {
 
 		if signal := qt.LendSignal(cbobj.GetCthis(), name); signal != nil {
@@ -139,8 +143,26 @@ func callbackAllInherits(cbobj unsafe.Pointer, iname *C.char, handled *C.int, ar
 	return C.uint64_t(rv)
 }
 
+// return true to show inherit debug info
+/*
+Example:
+debugAllInheritsFilterFunc = func(name string) bool {
+    return name != "event"
+}
+*/
+var debugAllInheritsFilterFunc func(name string) bool
+
+func SetDebugAllinheritsFilterFunc(f func(name string) bool) {
+	debugAllInheritsFilterFunc = f
+}
+
 func callbackAllInheritsGo(cbobj unsafe.Pointer, name string, handled *int, argc int, pargs ...uint64) uint64 {
 	if !strings.Contains(strings.ToLower(name), "event") {
+		if debugFFICall {
+			log.Println(cbobj, name, handled, argc, pargs)
+		}
+	}
+	if debugAllInheritsFilterFunc != nil && debugAllInheritsFilterFunc(name) {
 		if debugFFICall {
 			log.Println(cbobj, name, handled, argc, pargs)
 		}

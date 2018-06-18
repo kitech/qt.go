@@ -40,8 +40,8 @@ static void ffi_call_0(void*fn) {
    if (ffi_prep_cif(&cif, FFI_DEFAULT_ABI, 4, &ffi_type_void, args) == FFI_OK) {
        printf("hehehhee: %p\n", fn);
        int64_t n = 0;
-       printf("finish: %d, %ld, %p, \n", (int)rc, n, a2);
-       printf("finish: %d, %ld, %p, %s\n", (int)rc, n, a2, a2[0]);
+       printf("finish: %d, %lld, %p, \n", (int)rc, n, a2);
+       printf("finish: %d, %lld, %p, %s\n", (int)rc, n, a2, a2[0]);
        // n = ((int (*)(int, int, int, int))(fn))(s, a1, &a2, a1); // ok
        ffi_call(&cif, fn, &rc, values);
        printf("finish: %d, %p\n", (int)rc, (void*)n);

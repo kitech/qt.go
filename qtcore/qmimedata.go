@@ -112,6 +112,25 @@ func DeleteQMimeData(this *QMimeData) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qmimedata.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] QList<QUrl> urls() const
+
+/*
+Returns a list of URLs contained within the MIME data object.
+
+URLs correspond to the MIME type text/uri-list.
+
+See also setUrls(), hasUrls(), and data().
+*/
+func (this *QMimeData) Urls() *QUrlList {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData4urlsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qmimedata.h:61
 // index:0
 // Public Visibility=Default Availability=Available

@@ -258,7 +258,7 @@ func onSetupUi(line string) {
 			case "Spacing", "HorizontalStretch", "VerticalStretch":
 			case "PointSize", "Weight", "ColumnCount": // do nothing
 			case "ContentsMargins", "CurrentIndex", "LineWidth":
-			case "MaxVisibleItems", "ModelColumn":
+			case "MaxVisibleItems", "ModelColumn", "VerticalSpacing":
 			case "Orientation", "TextFormat":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "TextInteractionFlags":
@@ -269,11 +269,11 @@ func onSetupUi(line string) {
 				"Checked", "Flat", "AutoFillBackground":
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
 			case "Bold", "OpenExternalLinks", "WordWrap", "Frame", "Editable", "DragDropOverwriteMode",
-				"AcceptRichText", "Checkable":
+				"AcceptRichText", "Checkable", "MouseTracking", "Enabled":
 				refmtval = untitle(refmtval) // True => true
 			case "ToolButtonStyle":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
-			case "Alignment", "FocusPolicy":
+			case "Alignment", "FocusPolicy", "ArrowType":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 				refmtval = strings.Replace(refmtval, "|", "|qtcore.", -1)
 			case "EditTriggers", "StandardButtons", "PopupMode":
