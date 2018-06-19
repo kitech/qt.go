@@ -106,9 +106,9 @@ func NewQPixelFormat_1(colorModel int, firstSize byte, secondSize byte, thirdSiz
 Creates a null pixelformat. This format maps to QImage::Format_Invalid.
 */
 func NewQPixelFormat_1_(colorModel int, firstSize byte, secondSize byte, thirdSize byte, fourthSize byte, fifthSize byte, alphaSize byte, alphaUsage int, alphaPosition int, premultiplied int, typeInterpretation int) *QPixelFormat {
-	// arg: 11, QPixelFormat::ByteOrder=Enum, QPixelFormat::ByteOrder=Enum,
+	// arg: 11, QPixelFormat::ByteOrder=Enum, QPixelFormat::ByteOrder=Enum, , Invalid
 	byteOrder := 0
-	// arg: 12, uchar=Typedef, uchar=Typedef, unsigned char
+	// arg: 12, uchar=Typedef, uchar=Typedef, unsigned char, UChar
 	subEnum := byte(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixelFormatC2ENS_10ColorModelEhhhhhhNS_10AlphaUsageENS_13AlphaPositionENS_18AlphaPremultipliedENS_18TypeInterpretationENS_9ByteOrderEh", qtrt.FFI_TYPE_POINTER, colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation, byteOrder, subEnum)
 	qtrt.ErrPrint(err, rv)
@@ -126,7 +126,7 @@ func NewQPixelFormat_1_(colorModel int, firstSize byte, secondSize byte, thirdSi
 Creates a null pixelformat. This format maps to QImage::Format_Invalid.
 */
 func NewQPixelFormat_1_1(colorModel int, firstSize byte, secondSize byte, thirdSize byte, fourthSize byte, fifthSize byte, alphaSize byte, alphaUsage int, alphaPosition int, premultiplied int, typeInterpretation int, byteOrder int) *QPixelFormat {
-	// arg: 12, uchar=Typedef, uchar=Typedef, unsigned char
+	// arg: 12, uchar=Typedef, uchar=Typedef, unsigned char, UChar
 	subEnum := byte(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixelFormatC2ENS_10ColorModelEhhhhhhNS_10AlphaUsageENS_13AlphaPositionENS_18AlphaPremultipliedENS_18TypeInterpretationENS_9ByteOrderEh", qtrt.FFI_TYPE_POINTER, colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation, byteOrder, subEnum)
 	qtrt.ErrPrint(err, rv)

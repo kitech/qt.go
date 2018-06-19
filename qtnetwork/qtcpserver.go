@@ -124,7 +124,7 @@ parent is passed to the QObject constructor.
 See also listen() and setSocketDescriptor().
 */
 func NewQTcpServer__() *QTcpServer {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -183,9 +183,9 @@ Returns true on success; otherwise returns false.
 See also isListening().
 */
 func (this *QTcpServer) Listen__() bool {
-	// arg: 0, const QHostAddress &=LValueReference, QHostAddress=Record,
+	// arg: 0, const QHostAddress &=LValueReference, QHostAddress=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
+	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer6listenERK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	qtrt.ErrPrint(err, rv)
@@ -209,7 +209,7 @@ func (this *QTcpServer) Listen__1(address QHostAddress_ITF) bool {
 	if address != nil && address.QHostAddress_PTR() != nil {
 		convArg0 = address.QHostAddress_PTR().GetCthis()
 	}
-	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
+	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer6listenERK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	qtrt.ErrPrint(err, rv)
@@ -389,9 +389,9 @@ If msec is -1, this function will not time out.
 See also hasPendingConnections() and nextPendingConnection().
 */
 func (this *QTcpServer) WaitForNewConnection__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msec := int(0)
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var timedOut unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timedOut)
 	qtrt.ErrPrint(err, rv)
@@ -415,7 +415,7 @@ If msec is -1, this function will not time out.
 See also hasPendingConnections() and nextPendingConnection().
 */
 func (this *QTcpServer) WaitForNewConnection__1(msec int) bool {
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var timedOut unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timedOut)
 	qtrt.ErrPrint(err, rv)

@@ -98,7 +98,7 @@ Constructs a QNetworkRequest object with url as the URL to be requested.
 See also url() and setUrl().
 */
 func NewQNetworkRequest__() *QNetworkRequest {
-	// arg: 0, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 0, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg0 = qtcore.NewQUrl()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkRequestC2ERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -402,7 +402,7 @@ Note: This function does not apply the defaults listed in QNetworkRequest::Attri
 See also setAttribute() and QNetworkRequest::Attribute.
 */
 func (this *QNetworkRequest) Attribute__(code int) *qtcore.QVariant /*123*/ {
-	// arg: 1, const QVariant &=LValueReference, QVariant=Record,
+	// arg: 1, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg1 = qtcore.NewQVariant()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest9attributeENS_9AttributeERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1)
 	qtrt.ErrPrint(err, rv)

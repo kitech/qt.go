@@ -464,7 +464,7 @@ The caller is responsible for deleting the returned object.
 This function was introduced in  Qt 4.7.
 */
 func (this *QTextCodec) MakeDecoder__() *QTextDecoder /*777 QTextDecoder **/ {
-	// arg: 0, QTextCodec::ConversionFlags=Typedef, QTextCodec::ConversionFlags=Typedef, QFlags<QTextCodec::ConversionFlag>
+	// arg: 0, QTextCodec::ConversionFlags=Typedef, QTextCodec::ConversionFlags=Typedef, QFlags<QTextCodec::ConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextCodec11makeDecoderE6QFlagsINS_14ConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)
@@ -502,7 +502,7 @@ The caller is responsible for deleting the returned object.
 This function was introduced in  Qt 4.7.
 */
 func (this *QTextCodec) MakeEncoder__() *QTextEncoder /*777 QTextEncoder **/ {
-	// arg: 0, QTextCodec::ConversionFlags=Typedef, QTextCodec::ConversionFlags=Typedef, QFlags<QTextCodec::ConversionFlag>
+	// arg: 0, QTextCodec::ConversionFlags=Typedef, QTextCodec::ConversionFlags=Typedef, QFlags<QTextCodec::ConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextCodec11makeEncoderE6QFlagsINS_14ConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)

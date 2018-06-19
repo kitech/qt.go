@@ -95,7 +95,7 @@ func NewQAbstractGraphicsShapeItem(parent QGraphicsItem_ITF /*777 QGraphicsItem 
 
  */
 func NewQAbstractGraphicsShapeItem__() *QAbstractGraphicsShapeItem {
-	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

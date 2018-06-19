@@ -111,7 +111,7 @@ Constructs a new, empty button group with the given parent.
 See also addButton() and setExclusive().
 */
 func NewQButtonGroup__() *QButtonGroup {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -196,7 +196,7 @@ func (this *QButtonGroup) AddButton__(arg0 QAbstractButton_ITF /*777 QAbstractBu
 	if arg0 != nil && arg0.QAbstractButton_PTR() != nil {
 		convArg0 = arg0.QAbstractButton_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	id := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroup9addButtonEP15QAbstractButtoni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, id)
 	qtrt.ErrPrint(err, rv)

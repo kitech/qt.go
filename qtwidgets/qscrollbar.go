@@ -160,7 +160,7 @@ The parent argument is sent to the QWidget constructor.
 The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
 */
 func NewQScrollBar__() *QScrollBar {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -206,7 +206,7 @@ The parent argument is sent to the QWidget constructor.
 The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
 */
 func NewQScrollBar_1_(arg0 int) *QScrollBar {
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBarC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)

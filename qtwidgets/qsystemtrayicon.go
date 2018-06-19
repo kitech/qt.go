@@ -120,7 +120,7 @@ The icon is initially invisible.
 See also visible.
 */
 func NewQSystemTrayIcon__() *QSystemTrayIcon {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIconC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +174,7 @@ func NewQSystemTrayIcon_1_(icon qtgui.QIcon_ITF) *QSystemTrayIcon {
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIconC2ERK5QIconP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -485,7 +485,7 @@ func (this *QSystemTrayIcon) ShowMessage__(title string, msg string, icon qtgui.
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg2 = icon.QIcon_PTR().GetCthis()
 	}
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	msecs := int(10000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_RK5QIconi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, msecs)
 	qtrt.ErrPrint(err, rv)
@@ -545,9 +545,9 @@ func (this *QSystemTrayIcon) ShowMessage_1_(title string, msg string) {
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(msg)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QSystemTrayIcon::MessageIcon=Elaborated, QSystemTrayIcon::MessageIcon=Enum,
+	// arg: 2, QSystemTrayIcon::MessageIcon=Elaborated, QSystemTrayIcon::MessageIcon=Enum, , Invalid
 	icon := 0
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	msecs := int(10000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_NS_11MessageIconEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, icon, msecs)
 	qtrt.ErrPrint(err, rv)
@@ -578,7 +578,7 @@ func (this *QSystemTrayIcon) ShowMessage_1_1(title string, msg string, icon int)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(msg)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	msecs := int(10000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_NS_11MessageIconEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, icon, msecs)
 	qtrt.ErrPrint(err, rv)

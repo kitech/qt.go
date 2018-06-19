@@ -861,7 +861,7 @@ func (this *QLayout) ReplaceWidget__(from QWidget_ITF /*777 QWidget **/, to QWid
 	if to != nil && to.QWidget_PTR() != nil {
 		convArg1 = to.QWidget_PTR().GetCthis()
 	}
-	// arg: 2, Qt::FindChildOptions=Elaborated, Qt::FindChildOptions=Typedef, QFlags<Qt::FindChildOption>
+	// arg: 2, Qt::FindChildOptions=Elaborated, Qt::FindChildOptions=Typedef, QFlags<Qt::FindChildOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayout13replaceWidgetEP7QWidgetS1_6QFlagsIN2Qt15FindChildOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, options)
 	qtrt.ErrPrint(err, rv)

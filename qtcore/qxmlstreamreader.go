@@ -659,7 +659,7 @@ func (this *QXmlStreamReader) ReadElementText(behaviour int) string {
 
  */
 func (this *QXmlStreamReader) ReadElementText__() string {
-	// arg: 0, QXmlStreamReader::ReadElementTextBehaviour=Enum, QXmlStreamReader::ReadElementTextBehaviour=Enum,
+	// arg: 0, QXmlStreamReader::ReadElementTextBehaviour=Enum, QXmlStreamReader::ReadElementTextBehaviour=Enum, , Invalid
 	behaviour := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader15readElementTextENS_24ReadElementTextBehaviourE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), behaviour)
 	qtrt.ErrPrint(err, rv)
@@ -870,7 +870,7 @@ func (this *QXmlStreamReader) RaiseError(message string) {
 
  */
 func (this *QXmlStreamReader) RaiseError__() {
-	// arg: 0, const QString &=LValueReference, QString=Record,
+	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader10raiseErrorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

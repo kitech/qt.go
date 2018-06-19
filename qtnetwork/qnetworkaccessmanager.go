@@ -116,7 +116,7 @@ func NewQNetworkAccessManager(parent qtcore.QObject_ITF /*777 QObject **/) *QNet
 Constructs a QNetworkAccessManager object that is the center of the Network Access API and sets parent as the parent object.
 */
 func NewQNetworkAccessManager__() *QNetworkAccessManager {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManagerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -452,7 +452,7 @@ This function was introduced in  Qt 5.10.
 See also isStrictTransportSecurityStoreEnabled(), setStrictTransportSecurityEnabled(), and QStandardPaths::standardLocations().
 */
 func (this *QNetworkAccessManager) EnableStrictTransportSecurityStore__(enabled bool) {
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager34enableStrictTransportSecurityStoreEbRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -783,7 +783,7 @@ func (this *QNetworkAccessManager) SendCustomRequest__(request QNetworkRequest_I
 	if verb != nil && verb.QByteArray_PTR() != nil {
 		convArg1 = verb.QByteArray_PTR().GetCthis()
 	}
-	// arg: 2, QIODevice *=Pointer, QIODevice=Record,
+	// arg: 2, QIODevice *=Pointer, QIODevice=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager17sendCustomRequestERK15QNetworkRequestRK10QByteArrayP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1035,9 +1035,9 @@ See also connectToHost(), get(), post(), put(), and deleteResource().
 func (this *QNetworkAccessManager) ConnectToHostEncrypted__(hostName string) {
 	var tmpArg0 = qtcore.NewQString_5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
+	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(443)
-	// arg: 2, const QSslConfiguration &=LValueReference, QSslConfiguration=Record,
+	// arg: 2, const QSslConfiguration &=LValueReference, QSslConfiguration=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager22connectToHostEncryptedERK7QStringtRK17QSslConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1062,7 +1062,7 @@ See also connectToHost(), get(), post(), put(), and deleteResource().
 func (this *QNetworkAccessManager) ConnectToHostEncrypted__1(hostName string, port uint16) {
 	var tmpArg0 = qtcore.NewQString_5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, const QSslConfiguration &=LValueReference, QSslConfiguration=Record,
+	// arg: 2, const QSslConfiguration &=LValueReference, QSslConfiguration=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager22connectToHostEncryptedERK7QStringtRK17QSslConfiguration", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1106,7 +1106,7 @@ See also connectToHostEncrypted(), get(), post(), put(), and deleteResource().
 func (this *QNetworkAccessManager) ConnectToHost__(hostName string) {
 	var tmpArg0 = qtcore.NewQString_5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
+	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(80)
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager13connectToHostERK7QStringt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	qtrt.ErrPrint(err, rv)
@@ -1357,7 +1357,7 @@ func (this *QNetworkAccessManager) CreateRequest__(op int, request QNetworkReque
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg1 = request.QNetworkRequest_PTR().GetCthis()
 	}
-	// arg: 2, QIODevice *=Pointer, QIODevice=Record,
+	// arg: 2, QIODevice *=Pointer, QIODevice=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager13createRequestENS_9OperationERK15QNetworkRequestP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), op, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

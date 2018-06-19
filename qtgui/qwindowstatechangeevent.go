@@ -88,7 +88,7 @@ func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateCha
 
  */
 func NewQWindowStateChangeEvent__(aOldState int) *QWindowStateChangeEvent {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	isOverride := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWindowStateChangeEventC2E6QFlagsIN2Qt11WindowStateEEb", qtrt.FFI_TYPE_POINTER, aOldState, isOverride)
 	qtrt.ErrPrint(err, rv)

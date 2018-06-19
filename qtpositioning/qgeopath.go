@@ -259,9 +259,9 @@ func (this *QGeoPath) Length(indexFrom int, indexTo int) float64 {
 Returns the length of the path, in meters, from the element indexFrom to the element indexTo. The length is intended to be the sum of the shortest distances for each pair of adjacent points.
 */
 func (this *QGeoPath) Length__() float64 {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	indexFrom := int(0)
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	indexTo := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGeoPath6lengthEii", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), indexFrom, indexTo)
 	qtrt.ErrPrint(err, rv)
@@ -277,7 +277,7 @@ func (this *QGeoPath) Length__() float64 {
 Returns the length of the path, in meters, from the element indexFrom to the element indexTo. The length is intended to be the sum of the shortest distances for each pair of adjacent points.
 */
 func (this *QGeoPath) Length__1(indexFrom int) float64 {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	indexTo := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGeoPath6lengthEii", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), indexFrom, indexTo)
 	qtrt.ErrPrint(err, rv)

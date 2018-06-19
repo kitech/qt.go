@@ -274,7 +274,7 @@ func (this *QDrag) Start(supportedActions int) int {
 
  */
 func (this *QDrag) Start__() int {
-	// arg: 0, Qt::DropActions=Elaborated, Qt::DropActions=Typedef, QFlags<Qt::DropAction>
+	// arg: 0, Qt::DropActions=Elaborated, Qt::DropActions=Typedef, QFlags<Qt::DropAction>, Unexposed
 	supportedActions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag5startE6QFlagsIN2Qt10DropActionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions)
 	qtrt.ErrPrint(err, rv)
@@ -316,7 +316,7 @@ This function was introduced in  Qt 4.3.
 See also cancel().
 */
 func (this *QDrag) Exec__() int {
-	// arg: 0, Qt::DropActions=Elaborated, Qt::DropActions=Typedef, QFlags<Qt::DropAction>
+	// arg: 0, Qt::DropActions=Elaborated, Qt::DropActions=Typedef, QFlags<Qt::DropAction>, Unexposed
 	supportedActions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag4execE6QFlagsIN2Qt10DropActionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions)
 	qtrt.ErrPrint(err, rv)

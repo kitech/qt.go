@@ -107,7 +107,7 @@ func NewQQmlApplicationEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QQml
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
 func NewQQmlApplicationEngine__() *QQmlApplicationEngine {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func NewQQmlApplicationEngine_1_(url qtcore.QUrl_ITF) *QQmlApplicationEngine {
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
 	}
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngineC2ERK4QUrlP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -195,7 +195,7 @@ Create a new QQmlApplicationEngine with the given parent. You will have to call 
 func NewQQmlApplicationEngine_2_(filePath string) *QQmlApplicationEngine {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngineC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -297,7 +297,7 @@ func (this *QQmlApplicationEngine) LoadData__(data qtcore.QByteArray_ITF) {
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 1, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg1 = qtcore.NewQUrl()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngine8loadDataERK10QByteArrayRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

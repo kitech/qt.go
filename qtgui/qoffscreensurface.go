@@ -152,7 +152,7 @@ This function was introduced in  Qt 5.10.
 See also setScreen() and create().
 */
 func NewQOffscreenSurface_1_() *QOffscreenSurface {
-	// arg: 0, QScreen *=Pointer, QScreen=Record,
+	// arg: 0, QScreen *=Pointer, QScreen=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QOffscreenSurfaceC2EP7QScreen", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

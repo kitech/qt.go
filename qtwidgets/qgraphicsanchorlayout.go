@@ -98,7 +98,7 @@ func NewQGraphicsAnchorLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayo
 Constructs a QGraphicsAnchorLayout instance. parent is passed to QGraphicsLayout's constructor.
 */
 func NewQGraphicsAnchorLayout__() *QGraphicsAnchorLayout {
-	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record,
+	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -290,7 +290,7 @@ func (this *QGraphicsAnchorLayout) AddAnchors__(firstItem QGraphicsLayoutItem_IT
 	if secondItem != nil && secondItem.QGraphicsLayoutItem_PTR() != nil {
 		convArg1 = secondItem.QGraphicsLayoutItem_PTR().GetCthis()
 	}
-	// arg: 2, Qt::Orientations=Elaborated, Qt::Orientations=Typedef, QFlags<Qt::Orientation>
+	// arg: 2, Qt::Orientations=Elaborated, Qt::Orientations=Typedef, QFlags<Qt::Orientation>, Unexposed
 	orientations := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout10addAnchorsEP19QGraphicsLayoutItemS1_6QFlagsIN2Qt11OrientationEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, orientations)
 	qtrt.ErrPrint(err, rv)
@@ -483,7 +483,7 @@ func (this *QGraphicsAnchorLayout) SizeHint(which int, constraint qtcore.QSizeF_
 Reimplemented from QGraphicsLayoutItem::sizeHint().
 */
 func (this *QGraphicsAnchorLayout) SizeHint__(which int) *qtcore.QSizeF /*123*/ {
-	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record,
+	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)

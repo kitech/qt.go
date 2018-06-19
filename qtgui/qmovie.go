@@ -110,7 +110,7 @@ Constructs a QMovie object, passing the parent object to QObject's constructor.
 See also setFileName(), setDevice(), and setFormat().
 */
 func NewQMovie__() *QMovie {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -164,9 +164,9 @@ func NewQMovie_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QMovie {
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
 	}
-	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = qtcore.NewQByteArray()
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -194,7 +194,7 @@ func NewQMovie_1_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcor
 	if format != nil && format.QByteArray_PTR() != nil {
 		convArg1 = format.QByteArray_PTR().GetCthis()
 	}
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -244,9 +244,9 @@ See also setFileName(), setDevice(), and setFormat().
 func NewQMovie_2_(fileName string) *QMovie {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = qtcore.NewQByteArray()
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -272,7 +272,7 @@ func NewQMovie_2_1(fileName string, format qtcore.QByteArray_ITF) *QMovie {
 	if format != nil && format.QByteArray_PTR() != nil {
 		convArg1 = format.QByteArray_PTR().GetCthis()
 	}
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

@@ -116,9 +116,9 @@ func NewQAccessibleWidget__(o QWidget_ITF /*777 QWidget **/) *QAccessibleWidget 
 	if o != nil && o.QWidget_PTR() != nil {
 		convArg0 = o.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, QAccessible::Role=Elaborated, QAccessible::Role=Enum,
+	// arg: 1, QAccessible::Role=Elaborated, QAccessible::Role=Enum, , Invalid
 	r := 0
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleWidgetC2EP7QWidgetN11QAccessible4RoleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0, r, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -140,7 +140,7 @@ func NewQAccessibleWidget__1(o QWidget_ITF /*777 QWidget **/, r int) *QAccessibl
 	if o != nil && o.QWidget_PTR() != nil {
 		convArg0 = o.QWidget_PTR().GetCthis()
 	}
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleWidgetC2EP7QWidgetN11QAccessible4RoleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0, r, convArg2)
 	qtrt.ErrPrint(err, rv)

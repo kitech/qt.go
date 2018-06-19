@@ -144,7 +144,7 @@ func NewQQuickView(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
 Constructs a QQuickView with the given parent. The default value of parent is 0.
 */
 func NewQQuickView__() *QQuickView {
-	// arg: 0, QWindow *=Pointer, QWindow=Record,
+	// arg: 0, QWindow *=Pointer, QWindow=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -214,7 +214,7 @@ func NewQQuickView_2_(source qtcore.QUrl_ITF) *QQuickView {
 	if source != nil && source.QUrl_PTR() != nil {
 		convArg0 = source.QUrl_PTR().GetCthis()
 	}
-	// arg: 1, QWindow *=Pointer, QWindow=Record,
+	// arg: 1, QWindow *=Pointer, QWindow=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewC2ERK4QUrlP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

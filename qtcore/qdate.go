@@ -274,7 +274,7 @@ func (this *QDate) WeekNumber(yearNum unsafe.Pointer /*666*/) int {
 
  */
 func (this *QDate) WeekNumber__() int {
-	// arg: 0, int *=Pointer, =Invalid,
+	// arg: 0, int *=Pointer, =Invalid, , Invalid
 	var yearNum unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate10weekNumberEPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), yearNum)
 	qtrt.ErrPrint(err, rv)
@@ -312,7 +312,7 @@ func QDate_ShortMonthName(month int, type_ int) string {
 
  */
 func (this *QDate) ShortMonthName__(month int) string {
-	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
+	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate14shortMonthNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, month, type_)
 	qtrt.ErrPrint(err, rv)
@@ -353,7 +353,7 @@ func QDate_ShortDayName(weekday int, type_ int) string {
 
  */
 func (this *QDate) ShortDayName__(weekday int) string {
-	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
+	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate12shortDayNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, weekday, type_)
 	qtrt.ErrPrint(err, rv)
@@ -394,7 +394,7 @@ func QDate_LongMonthName(month int, type_ int) string {
 
  */
 func (this *QDate) LongMonthName__(month int) string {
-	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
+	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate13longMonthNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, month, type_)
 	qtrt.ErrPrint(err, rv)
@@ -435,7 +435,7 @@ func QDate_LongDayName(weekday int, type_ int) string {
 
  */
 func (this *QDate) LongDayName__(weekday int) string {
-	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum,
+	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate11longDayNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, weekday, type_)
 	qtrt.ErrPrint(err, rv)
@@ -575,7 +575,7 @@ If the datetime is invalid, an empty string will be returned.
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
 func (this *QDate) ToString__() string {
-	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum,
+	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
@@ -1040,7 +1040,7 @@ See also toString() and QLocale::toDateTime().
 func (this *QDate) FromString__(s string) *QDate /*123*/ {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum,
+	// arg: 1, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate10fromStringERK7QStringN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)

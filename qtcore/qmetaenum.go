@@ -205,7 +205,7 @@ func (this *QMetaEnum) KeyToValue(key string, ok *bool) int {
 func (this *QMetaEnum) KeyToValue__(key string) int {
 	var convArg0 = qtrt.CString(key)
 	defer qtrt.FreeMem(convArg0)
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum10keyToValueEPKcPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func (this *QMetaEnum) KeysToValue(keys string, ok *bool) int {
 func (this *QMetaEnum) KeysToValue__(keys string) int {
 	var convArg0 = qtrt.CString(keys)
 	defer qtrt.FreeMem(convArg0)
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum11keysToValueEPKcPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)

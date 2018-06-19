@@ -116,7 +116,7 @@ func NewQLocalSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalSocket 
 Creates a new local socket. The parent argument is passed to QObject's constructor.
 */
 func NewQLocalSocket__() *QLocalSocket {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -178,7 +178,7 @@ This function was introduced in  Qt 5.1.
 See also state(), serverName(), and waitForConnected().
 */
 func (this *QLocalSocket) ConnectToServer__() {
-	// arg: 0, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 0, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket15connectToServerE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), openMode)
 	qtrt.ErrPrint(err, rv)
@@ -226,7 +226,7 @@ See also state(), serverName(), and waitForConnected().
 func (this *QLocalSocket) ConnectToServer_1_(name string) {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 1, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket15connectToServerERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, openMode)
 	qtrt.ErrPrint(err, rv)
@@ -414,7 +414,7 @@ Note that unlike in most other QIODevice subclasses, open() may not open the dev
 See connectToServer() for more details.
 */
 func (this *QLocalSocket) Open__() bool {
-	// arg: 0, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 0, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket4openE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), openMode)
 	qtrt.ErrPrint(err, rv)
@@ -567,9 +567,9 @@ Note: It is not possible to initialize two local sockets with the same native so
 See also socketDescriptor(), state(), and openMode().
 */
 func (this *QLocalSocket) SetSocketDescriptor__(socketDescriptor int64) bool {
-	// arg: 1, QLocalSocket::LocalSocketState=Enum, QLocalSocket::LocalSocketState=Enum,
+	// arg: 1, QLocalSocket::LocalSocketState=Enum, QLocalSocket::LocalSocketState=Enum, , Invalid
 	socketState := 0
-	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket19setSocketDescriptorExNS_16LocalSocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor, socketState, openMode)
 	qtrt.ErrPrint(err, rv)
@@ -589,7 +589,7 @@ Note: It is not possible to initialize two local sockets with the same native so
 See also socketDescriptor(), state(), and openMode().
 */
 func (this *QLocalSocket) SetSocketDescriptor__1(socketDescriptor int64, socketState int) bool {
-	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket19setSocketDescriptorExNS_16LocalSocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor, socketState, openMode)
 	qtrt.ErrPrint(err, rv)
@@ -659,7 +659,7 @@ func (this *QLocalSocket) WaitForBytesWritten(msecs int) bool {
 Reimplemented from QIODevice::waitForBytesWritten().
 */
 func (this *QLocalSocket) WaitForBytesWritten__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket19waitForBytesWrittenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
@@ -715,7 +715,7 @@ If msecs is -1, this function will not time out.
 See also connectToServer() and connected().
 */
 func (this *QLocalSocket) WaitForConnected__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket16waitForConnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
@@ -771,7 +771,7 @@ If msecs is -1, this function will not time out.
 See also disconnectFromServer() and close().
 */
 func (this *QLocalSocket) WaitForDisconnected__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket19waitForDisconnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
@@ -813,7 +813,7 @@ The function returns true if data is available for reading; otherwise it returns
 See also waitForBytesWritten().
 */
 func (this *QLocalSocket) WaitForReadyRead__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalSocket16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)

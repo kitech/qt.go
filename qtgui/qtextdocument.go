@@ -116,7 +116,7 @@ func NewQTextDocument(parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocumen
 Constructs an empty QTextDocument with the given parent.
 */
 func NewQTextDocument__() *QTextDocument {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocumentC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ Constructs an empty QTextDocument with the given parent.
 func NewQTextDocument_1_(text string) *QTextDocument {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocumentC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -209,7 +209,7 @@ func (this *QTextDocument) Clone(parent qtcore.QObject_ITF /*777 QObject **/) *Q
 Creates a new QTextDocument that is a copy of this text document. parent is the parent of the returned text document.
 */
 func (this *QTextDocument) Clone__() *QTextDocument /*777 QTextDocument **/ {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument5cloneEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -485,7 +485,7 @@ If you later on convert the returned html string into a byte array for transmiss
 See also Supported HTML Subset.
 */
 func (this *QTextDocument) ToHtml__() string {
-	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument6toHtmlERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -638,9 +638,9 @@ By default the search is case-sensitive, and can match text anywhere in the docu
 func (this *QTextDocument) Find__(subString string) *QTextCursor /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(subString)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
-	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
+	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QStringi6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)
 	qtrt.ErrPrint(err, rv)
@@ -666,7 +666,7 @@ By default the search is case-sensitive, and can match text anywhere in the docu
 func (this *QTextDocument) Find__1(subString string, from int) *QTextCursor /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(subString)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
+	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QStringi6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)
 	qtrt.ErrPrint(err, rv)
@@ -724,7 +724,7 @@ func (this *QTextDocument) Find_1_(subString string, cursor QTextCursor_ITF) *QT
 	if cursor != nil && cursor.QTextCursor_PTR() != nil {
 		convArg1 = cursor.QTextCursor_PTR().GetCthis()
 	}
-	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
+	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QStringRK11QTextCursor6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, options)
 	qtrt.ErrPrint(err, rv)
@@ -778,9 +778,9 @@ func (this *QTextDocument) Find_2_(expr qtcore.QRegExp_ITF) *QTextCursor /*123*/
 	if expr != nil && expr.QRegExp_PTR() != nil {
 		convArg0 = expr.QRegExp_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
-	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
+	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QRegExpi6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)
 	qtrt.ErrPrint(err, rv)
@@ -808,7 +808,7 @@ func (this *QTextDocument) Find_2_1(expr qtcore.QRegExp_ITF, from int) *QTextCur
 	if expr != nil && expr.QRegExp_PTR() != nil {
 		convArg0 = expr.QRegExp_PTR().GetCthis()
 	}
-	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
+	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QRegExpi6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)
 	qtrt.ErrPrint(err, rv)
@@ -870,7 +870,7 @@ func (this *QTextDocument) Find_3_(expr qtcore.QRegExp_ITF, cursor QTextCursor_I
 	if cursor != nil && cursor.QTextCursor_PTR() != nil {
 		convArg1 = cursor.QTextCursor_PTR().GetCthis()
 	}
-	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
+	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QRegExpRK11QTextCursor6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, options)
 	qtrt.ErrPrint(err, rv)
@@ -924,9 +924,9 @@ func (this *QTextDocument) Find_4_(expr qtcore.QRegularExpression_ITF) *QTextCur
 	if expr != nil && expr.QRegularExpression_PTR() != nil {
 		convArg0 = expr.QRegularExpression_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
-	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
+	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK18QRegularExpressioni6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)
 	qtrt.ErrPrint(err, rv)
@@ -954,7 +954,7 @@ func (this *QTextDocument) Find_4_1(expr qtcore.QRegularExpression_ITF, from int
 	if expr != nil && expr.QRegularExpression_PTR() != nil {
 		convArg0 = expr.QRegularExpression_PTR().GetCthis()
 	}
-	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
+	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK18QRegularExpressioni6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)
 	qtrt.ErrPrint(err, rv)
@@ -1016,7 +1016,7 @@ func (this *QTextDocument) Find_5_(expr qtcore.QRegularExpression_ITF, cursor QT
 	if cursor != nil && cursor.QTextCursor_PTR() != nil {
 		convArg1 = cursor.QTextCursor_PTR().GetCthis()
 	}
-	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
+	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK18QRegularExpressionRK11QTextCursor6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, options)
 	qtrt.ErrPrint(err, rv)
@@ -1495,7 +1495,7 @@ func (this *QTextDocument) DrawContents__(painter QPainter_ITF /*777 QPainter **
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
 	}
-	// arg: 1, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 1, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1837,7 +1837,7 @@ This function was introduced in  Qt 4.7.
 See also QTextDocument::undoAvailable() and QTextDocument::redoAvailable().
 */
 func (this *QTextDocument) ClearUndoRedoStacks__() {
-	// arg: 0, QTextDocument::Stacks=Enum, QTextDocument::Stacks=Enum,
+	// arg: 0, QTextDocument::Stacks=Enum, QTextDocument::Stacks=Enum, , Invalid
 	historyToClear := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument19clearUndoRedoStacksENS_6StacksE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), historyToClear)
 	qtrt.ErrPrint(err, rv)
@@ -2182,7 +2182,7 @@ func (this *QTextDocument) SetModified(m bool) {
 
  */
 func (this *QTextDocument) SetModified__() {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	m := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument11setModifiedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), m)
 	qtrt.ErrPrint(err, rv)

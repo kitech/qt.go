@@ -112,7 +112,7 @@ Constructs an empty region.
 See also isEmpty().
 */
 func NewQRegion_1_(x int, y int, w int, h int) *QRegion {
-	// arg: 4, QRegion::RegionType=Enum, QRegion::RegionType=Enum,
+	// arg: 4, QRegion::RegionType=Enum, QRegion::RegionType=Enum, , Invalid
 	t := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegionC2EiiiiNS_10RegionTypeE", qtrt.FFI_TYPE_POINTER, x, y, w, h, t)
 	qtrt.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ func NewQRegion_2_(r qtcore.QRect_ITF) *QRegion {
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
-	// arg: 1, QRegion::RegionType=Enum, QRegion::RegionType=Enum,
+	// arg: 1, QRegion::RegionType=Enum, QRegion::RegionType=Enum, , Invalid
 	t := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegionC2ERK5QRectNS_10RegionTypeE", qtrt.FFI_TYPE_POINTER, convArg0, t)
 	qtrt.ErrPrint(err, rv)
@@ -204,7 +204,7 @@ func NewQRegion_3_(pa QPolygon_ITF) *QRegion {
 	if pa != nil && pa.QPolygon_PTR() != nil {
 		convArg0 = pa.QPolygon_PTR().GetCthis()
 	}
-	// arg: 1, Qt::FillRule=Elaborated, Qt::FillRule=Enum,
+	// arg: 1, Qt::FillRule=Elaborated, Qt::FillRule=Enum, , Invalid
 	fillRule := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegionC2ERK8QPolygonN2Qt8FillRuleE", qtrt.FFI_TYPE_POINTER, convArg0, fillRule)
 	qtrt.ErrPrint(err, rv)

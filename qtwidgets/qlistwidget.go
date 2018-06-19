@@ -137,7 +137,7 @@ func NewQListWidget(parent QWidget_ITF /*777 QWidget **/) *QListWidget {
 Constructs an empty QListWidget with the given parent.
 */
 func NewQListWidget__() *QListWidget {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -524,7 +524,7 @@ func (this *QListWidget) SortItems(order int) {
 Sorts all the items in the list widget according to the specified order.
 */
 func (this *QListWidget) SortItems__() {
-	// arg: 0, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
+	// arg: 0, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget9sortItemsEN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), order)
 	qtrt.ErrPrint(err, rv)
@@ -827,7 +827,7 @@ func (this *QListWidget) ScrollToItem__(item QListWidgetItem_ITF /*777 const QLi
 	if item != nil && item.QListWidgetItem_PTR() != nil {
 		convArg0 = item.QListWidgetItem_PTR().GetCthis()
 	}
-	// arg: 1, QAbstractItemView::ScrollHint=Elaborated, QAbstractItemView::ScrollHint=Enum,
+	// arg: 1, QAbstractItemView::ScrollHint=Elaborated, QAbstractItemView::ScrollHint=Enum, , Invalid
 	hint := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget12scrollToItemEPK15QListWidgetItemN17QAbstractItemView10ScrollHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	qtrt.ErrPrint(err, rv)

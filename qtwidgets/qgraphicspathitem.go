@@ -108,7 +108,7 @@ func NewQGraphicsPathItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 
  */
 func NewQGraphicsPathItem__() *QGraphicsPathItem {
-	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsPathItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -154,7 +154,7 @@ func NewQGraphicsPathItem_1_(path qtgui.QPainterPath_ITF) *QGraphicsPathItem {
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
 	}
-	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsPathItemC2ERK12QPainterPathP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -395,7 +395,7 @@ func (this *QGraphicsPathItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter
 	if option != nil && option.QStyleOptionGraphicsItem_PTR() != nil {
 		convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
 	}
-	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

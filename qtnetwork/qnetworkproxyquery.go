@@ -114,7 +114,7 @@ func NewQNetworkProxyQuery_1_(requestUrl qtcore.QUrl_ITF) *QNetworkProxyQuery {
 	if requestUrl != nil && requestUrl.QUrl_PTR() != nil {
 		convArg0 = requestUrl.QUrl_PTR().GetCthis()
 	}
-	// arg: 1, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum,
+	// arg: 1, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum, , Invalid
 	queryType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2ERK4QUrlNS_9QueryTypeE", qtrt.FFI_TYPE_POINTER, convArg0, queryType)
 	qtrt.ErrPrint(err, rv)
@@ -154,9 +154,9 @@ func NewQNetworkProxyQuery_2(hostname string, port int, protocolTag string, quer
 func NewQNetworkProxyQuery_2_(hostname string, port int) *QNetworkProxyQuery {
 	var tmpArg0 = qtcore.NewQString_5(hostname)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum,
+	// arg: 3, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum, , Invalid
 	queryType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2ERK7QStringiS2_NS_9QueryTypeE", qtrt.FFI_TYPE_POINTER, convArg0, port, convArg2, queryType)
 	qtrt.ErrPrint(err, rv)
@@ -178,7 +178,7 @@ func NewQNetworkProxyQuery_2_1(hostname string, port int, protocolTag string) *Q
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(protocolTag)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum,
+	// arg: 3, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum, , Invalid
 	queryType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2ERK7QStringiS2_NS_9QueryTypeE", qtrt.FFI_TYPE_POINTER, convArg0, port, convArg2, queryType)
 	qtrt.ErrPrint(err, rv)
@@ -214,9 +214,9 @@ func NewQNetworkProxyQuery_3(bindPort uint16, protocolTag string, queryType int)
 
  */
 func NewQNetworkProxyQuery_3_(bindPort uint16) *QNetworkProxyQuery {
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum,
+	// arg: 2, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum, , Invalid
 	queryType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2EtRK7QStringNS_9QueryTypeE", qtrt.FFI_TYPE_POINTER, bindPort, convArg1, queryType)
 	qtrt.ErrPrint(err, rv)
@@ -236,7 +236,7 @@ func NewQNetworkProxyQuery_3_(bindPort uint16) *QNetworkProxyQuery {
 func NewQNetworkProxyQuery_3_1(bindPort uint16, protocolTag string) *QNetworkProxyQuery {
 	var tmpArg1 = qtcore.NewQString_5(protocolTag)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum,
+	// arg: 2, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum, , Invalid
 	queryType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2EtRK7QStringNS_9QueryTypeE", qtrt.FFI_TYPE_POINTER, bindPort, convArg1, queryType)
 	qtrt.ErrPrint(err, rv)
@@ -286,7 +286,7 @@ func NewQNetworkProxyQuery_4_(networkConfiguration QNetworkConfiguration_ITF, re
 	if requestUrl != nil && requestUrl.QUrl_PTR() != nil {
 		convArg1 = requestUrl.QUrl_PTR().GetCthis()
 	}
-	// arg: 2, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum,
+	// arg: 2, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum, , Invalid
 	queryType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2ERK21QNetworkConfigurationRK4QUrlNS_9QueryTypeE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, queryType)
 	qtrt.ErrPrint(err, rv)
@@ -334,9 +334,9 @@ func NewQNetworkProxyQuery_5_(networkConfiguration QNetworkConfiguration_ITF, ho
 	}
 	var tmpArg1 = qtcore.NewQString_5(hostname)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum,
+	// arg: 4, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum, , Invalid
 	queryType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2ERK21QNetworkConfigurationRK7QStringiS5_NS_9QueryTypeE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, port, convArg3, queryType)
 	qtrt.ErrPrint(err, rv)
@@ -362,7 +362,7 @@ func NewQNetworkProxyQuery_5_1(networkConfiguration QNetworkConfiguration_ITF, h
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(protocolTag)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum,
+	// arg: 4, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum, , Invalid
 	queryType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2ERK21QNetworkConfigurationRK7QStringiS5_NS_9QueryTypeE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, port, convArg3, queryType)
 	qtrt.ErrPrint(err, rv)
@@ -406,9 +406,9 @@ func NewQNetworkProxyQuery_6_(networkConfiguration QNetworkConfiguration_ITF, bi
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
 		convArg0 = networkConfiguration.QNetworkConfiguration_PTR().GetCthis()
 	}
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum,
+	// arg: 3, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum, , Invalid
 	queryType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2ERK21QNetworkConfigurationtRK7QStringNS_9QueryTypeE", qtrt.FFI_TYPE_POINTER, convArg0, bindPort, convArg2, queryType)
 	qtrt.ErrPrint(err, rv)
@@ -432,7 +432,7 @@ func NewQNetworkProxyQuery_6_1(networkConfiguration QNetworkConfiguration_ITF, b
 	}
 	var tmpArg2 = qtcore.NewQString_5(protocolTag)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum,
+	// arg: 3, QNetworkProxyQuery::QueryType=Enum, QNetworkProxyQuery::QueryType=Enum, , Invalid
 	queryType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2ERK21QNetworkConfigurationtRK7QStringNS_9QueryTypeE", qtrt.FFI_TYPE_POINTER, convArg0, bindPort, convArg2, queryType)
 	qtrt.ErrPrint(err, rv)

@@ -358,7 +358,7 @@ func (this *QCommandLineParser) AddPositionalArgument__(name string, description
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(description)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -783,7 +783,7 @@ Displays the help information, and exits the application. This is automatically 
 See also helpText().
 */
 func (this *QCommandLineParser) ShowHelp__() {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	exitCode := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser8showHelpEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), exitCode)
 	qtrt.ErrPrint(err, rv)

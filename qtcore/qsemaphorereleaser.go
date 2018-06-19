@@ -113,7 +113,7 @@ func NewQSemaphoreReleaser_1_(sem QSemaphore_ITF) *QSemaphoreReleaser {
 	if sem != nil && sem.QSemaphore_PTR() != nil {
 		convArg0 = sem.QSemaphore_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", qtrt.FFI_TYPE_POINTER, convArg0, n)
 	qtrt.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func NewQSemaphoreReleaser_2_(sem QSemaphore_ITF /*777 QSemaphore **/) *QSemapho
 	if sem != nil && sem.QSemaphore_PTR() != nil {
 		convArg0 = sem.QSemaphore_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", qtrt.FFI_TYPE_POINTER, convArg0, n)
 	qtrt.ErrPrint(err, rv)

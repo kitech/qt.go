@@ -107,7 +107,7 @@ func NewQDateEdit(parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
 
  */
 func NewQDateEdit__() *QDateEdit {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func NewQDateEdit_1_(date qtcore.QDate_ITF) *QDateEdit {
 	if date != nil && date.QDate_PTR() != nil {
 		convArg0 = date.QDate_PTR().GetCthis()
 	}
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateEditC2ERK5QDateP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

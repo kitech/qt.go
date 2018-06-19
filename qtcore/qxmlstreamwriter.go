@@ -551,7 +551,7 @@ func (this *QXmlStreamWriter) WriteNamespace(namespaceUri string, prefix string)
 func (this *QXmlStreamWriter) WriteNamespace__(namespaceUri string) {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -600,7 +600,7 @@ func (this *QXmlStreamWriter) WriteProcessingInstruction(target string, data str
 func (this *QXmlStreamWriter) WriteProcessingInstruction__(target string) {
 	var tmpArg0 = NewQString_5(target)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

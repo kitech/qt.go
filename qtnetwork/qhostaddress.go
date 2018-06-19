@@ -546,7 +546,7 @@ func (this *QHostAddress) IsEqual__(address QHostAddress_ITF) bool {
 	if address != nil && address.QHostAddress_PTR() != nil {
 		convArg0 = address.QHostAddress_PTR().GetCthis()
 	}
-	// arg: 1, QHostAddress::ConversionMode=Typedef, QHostAddress::ConversionMode=Typedef, QFlags<QHostAddress::ConversionModeFlag>
+	// arg: 1, QHostAddress::ConversionMode=Typedef, QHostAddress::ConversionMode=Typedef, QFlags<QHostAddress::ConversionModeFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress7isEqualERKS_6QFlagsINS_18ConversionModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)

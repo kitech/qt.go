@@ -128,7 +128,7 @@ func NewQSaveFile_1(parent QObject_ITF /*777 QObject **/) *QSaveFile {
 Constructs a new file object to represent the file with the given name.
 */
 func NewQSaveFile_1_() *QSaveFile {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

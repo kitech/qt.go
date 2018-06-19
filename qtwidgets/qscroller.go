@@ -201,7 +201,7 @@ func (this *QScroller) GrabGesture__(target qtcore.QObject_ITF /*777 QObject **/
 	if target != nil && target.QObject_PTR() != nil {
 		convArg0 = target.QObject_PTR().GetCthis()
 	}
-	// arg: 1, QScroller::ScrollerGestureType=Enum, QScroller::ScrollerGestureType=Enum,
+	// arg: 1, QScroller::ScrollerGestureType=Enum, QScroller::ScrollerGestureType=Enum, , Invalid
 	gestureType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller11grabGestureEP7QObjectNS_19ScrollerGestureTypeE", qtrt.FFI_TYPE_POINTER, convArg0, gestureType)
 	qtrt.ErrPrint(err, rv)
@@ -325,7 +325,7 @@ func (this *QScroller) HandleInput__(input int, position qtcore.QPointF_ITF) boo
 	if position != nil && position.QPointF_PTR() != nil {
 		convArg1 = position.QPointF_PTR().GetCthis()
 	}
-	// arg: 2, qint64=Typedef, qint64=Typedef, long long
+	// arg: 2, qint64=Typedef, qint64=Typedef, long long, LongLong
 	timestamp := int64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QScroller11handleInputENS_5InputERK7QPointFx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), input, convArg1, timestamp)
 	qtrt.ErrPrint(err, rv)

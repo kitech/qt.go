@@ -114,7 +114,7 @@ parent is passed to the QObject constructor.
 See also socketType().
 */
 func NewQUdpSocket__() *QUdpSocket {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -364,7 +364,7 @@ If maxSize is too small, the rest of the datagram will be lost. If maxSize is 0,
 See also writeDatagram(), hasPendingDatagrams(), and pendingDatagramSize().
 */
 func (this *QUdpSocket) ReceiveDatagram__() *QNetworkDatagram /*123*/ {
-	// arg: 0, qint64=Typedef, qint64=Typedef, long long
+	// arg: 0, qint64=Typedef, qint64=Typedef, long long, LongLong
 	maxSize := int64(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket15receiveDatagramEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxSize)
 	qtrt.ErrPrint(err, rv)
@@ -416,9 +416,9 @@ See also writeDatagram(), hasPendingDatagrams(), and pendingDatagramSize().
 func (this *QUdpSocket) ReadDatagram__(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	// arg: 2, QHostAddress *=Pointer, QHostAddress=Record,
+	// arg: 2, QHostAddress *=Pointer, QHostAddress=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, quint16 *=Pointer, quint16=Typedef, unsigned short
+	// arg: 3, quint16 *=Pointer, quint16=Typedef, unsigned short, UShort
 	port := unsafe.Pointer(nil)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen, convArg2, port)
 	qtrt.ErrPrint(err, rv)
@@ -446,7 +446,7 @@ func (this *QUdpSocket) ReadDatagram__1(data string, maxlen int64, host QHostAdd
 	if host != nil && host.QHostAddress_PTR() != nil {
 		convArg2 = host.QHostAddress_PTR().GetCthis()
 	}
-	// arg: 3, quint16 *=Pointer, quint16=Typedef, unsigned short
+	// arg: 3, quint16 *=Pointer, quint16=Typedef, unsigned short, UShort
 	port := unsafe.Pointer(nil)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen, convArg2, port)
 	qtrt.ErrPrint(err, rv)

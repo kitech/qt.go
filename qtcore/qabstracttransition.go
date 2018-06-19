@@ -120,7 +120,7 @@ func NewQAbstractTransition(sourceState QState_ITF /*777 QState **/) *QAbstractT
 Constructs a new QAbstractTransition object with the given sourceState.
 */
 func NewQAbstractTransition__() *QAbstractTransition {
-	// arg: 0, QState *=Pointer, QState=Record,
+	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

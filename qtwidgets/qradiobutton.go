@@ -136,7 +136,7 @@ Constructs a radio button with the given parent, but with no text or pixmap.
 The parent argument is passed on to the QAbstractButton constructor.
 */
 func NewQRadioButton__() *QRadioButton {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -182,7 +182,7 @@ The parent argument is passed on to the QAbstractButton constructor.
 func NewQRadioButton_1_(text string) *QRadioButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButtonC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

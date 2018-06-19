@@ -743,7 +743,7 @@ func (this *QPainter) SetClipRect__(arg0 qtcore.QRectF_ITF) {
 	if arg0 != nil && arg0.QRectF_PTR() != nil {
 		convArg0 = arg0.QRectF_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ClipOperation=Elaborated, Qt::ClipOperation=Enum,
+	// arg: 1, Qt::ClipOperation=Elaborated, Qt::ClipOperation=Enum, , Invalid
 	op := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11setClipRectERK6QRectFN2Qt13ClipOperationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, op)
 	qtrt.ErrPrint(err, rv)
@@ -787,7 +787,7 @@ func (this *QPainter) SetClipRect_1_(arg0 qtcore.QRect_ITF) {
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ClipOperation=Elaborated, Qt::ClipOperation=Enum,
+	// arg: 1, Qt::ClipOperation=Elaborated, Qt::ClipOperation=Enum, , Invalid
 	op := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11setClipRectERK5QRectN2Qt13ClipOperationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, op)
 	qtrt.ErrPrint(err, rv)
@@ -823,7 +823,7 @@ Note that the clip rectangle is specified in logical (painter) coordinates.
 See also clipRegion(), setClipping(), and Clipping.
 */
 func (this *QPainter) SetClipRect_2_(x int, y int, w int, h int) {
-	// arg: 4, Qt::ClipOperation=Elaborated, Qt::ClipOperation=Enum,
+	// arg: 4, Qt::ClipOperation=Elaborated, Qt::ClipOperation=Enum, , Invalid
 	op := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11setClipRectEiiiiN2Qt13ClipOperationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, op)
 	qtrt.ErrPrint(err, rv)
@@ -867,7 +867,7 @@ func (this *QPainter) SetClipRegion__(arg0 QRegion_ITF) {
 	if arg0 != nil && arg0.QRegion_PTR() != nil {
 		convArg0 = arg0.QRegion_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ClipOperation=Elaborated, Qt::ClipOperation=Enum,
+	// arg: 1, Qt::ClipOperation=Elaborated, Qt::ClipOperation=Enum, , Invalid
 	op := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13setClipRegionERK7QRegionN2Qt13ClipOperationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, op)
 	qtrt.ErrPrint(err, rv)
@@ -911,7 +911,7 @@ func (this *QPainter) SetClipPath__(path QPainterPath_ITF) {
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ClipOperation=Elaborated, Qt::ClipOperation=Enum,
+	// arg: 1, Qt::ClipOperation=Elaborated, Qt::ClipOperation=Enum, , Invalid
 	op := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11setClipPathERK12QPainterPathN2Qt13ClipOperationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, op)
 	qtrt.ErrPrint(err, rv)
@@ -1030,7 +1030,7 @@ func (this *QPainter) SetMatrix__(matrix QMatrix_ITF) {
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
 		convArg0 = matrix.QMatrix_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	combine := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9setMatrixERK7QMatrixb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, combine)
 	qtrt.ErrPrint(err, rv)
@@ -1119,7 +1119,7 @@ func (this *QPainter) SetTransform__(transform QTransform_ITF) {
 	if transform != nil && transform.QTransform_PTR() != nil {
 		convArg0 = transform.QTransform_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	combine := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter12setTransformERK10QTransformb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, combine)
 	qtrt.ErrPrint(err, rv)
@@ -1210,7 +1210,7 @@ func (this *QPainter) SetWorldMatrix__(matrix QMatrix_ITF) {
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
 		convArg0 = matrix.QMatrix_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	combine := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter14setWorldMatrixERK7QMatrixb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, combine)
 	qtrt.ErrPrint(err, rv)
@@ -1266,7 +1266,7 @@ func (this *QPainter) SetWorldTransform__(matrix QTransform_ITF) {
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	combine := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter17setWorldTransformERK10QTransformb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, combine)
 	qtrt.ErrPrint(err, rv)
@@ -2579,7 +2579,7 @@ func (this *QPainter) DrawPolygon__(points qtcore.QPointF_ITF /*777 const QPoint
 	if points != nil && points.QPointF_PTR() != nil {
 		convArg0 = points.QPointF_PTR().GetCthis()
 	}
-	// arg: 2, Qt::FillRule=Elaborated, Qt::FillRule=Enum,
+	// arg: 2, Qt::FillRule=Elaborated, Qt::FillRule=Enum, , Invalid
 	fillRule := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11drawPolygonEPK7QPointFiN2Qt8FillRuleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount, fillRule)
 	qtrt.ErrPrint(err, rv)
@@ -2659,7 +2659,7 @@ func (this *QPainter) DrawPolygon_1_(polygon QPolygonF_ITF) {
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
 	}
-	// arg: 1, Qt::FillRule=Elaborated, Qt::FillRule=Enum,
+	// arg: 1, Qt::FillRule=Elaborated, Qt::FillRule=Enum, , Invalid
 	fillRule := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11drawPolygonERK9QPolygonFN2Qt8FillRuleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fillRule)
 	qtrt.ErrPrint(err, rv)
@@ -2739,7 +2739,7 @@ func (this *QPainter) DrawPolygon_2_(points qtcore.QPoint_ITF /*777 const QPoint
 	if points != nil && points.QPoint_PTR() != nil {
 		convArg0 = points.QPoint_PTR().GetCthis()
 	}
-	// arg: 2, Qt::FillRule=Elaborated, Qt::FillRule=Enum,
+	// arg: 2, Qt::FillRule=Elaborated, Qt::FillRule=Enum, , Invalid
 	fillRule := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11drawPolygonEPK6QPointiN2Qt8FillRuleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount, fillRule)
 	qtrt.ErrPrint(err, rv)
@@ -2819,7 +2819,7 @@ func (this *QPainter) DrawPolygon_3_(polygon QPolygon_ITF) {
 	if polygon != nil && polygon.QPolygon_PTR() != nil {
 		convArg0 = polygon.QPolygon_PTR().GetCthis()
 	}
-	// arg: 1, Qt::FillRule=Elaborated, Qt::FillRule=Enum,
+	// arg: 1, Qt::FillRule=Elaborated, Qt::FillRule=Enum, , Invalid
 	fillRule := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11drawPolygonERK8QPolygonN2Qt8FillRuleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fillRule)
 	qtrt.ErrPrint(err, rv)
@@ -3349,7 +3349,7 @@ func (this *QPainter) DrawRoundedRect__(rect qtcore.QRectF_ITF, xRadius float64,
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 3, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum,
+	// arg: 3, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter15drawRoundedRectERK6QRectFddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xRadius, yRadius, mode)
 	qtrt.ErrPrint(err, rv)
@@ -3415,7 +3415,7 @@ This function was introduced in  Qt 4.4.
 See also drawRect() and QPen.
 */
 func (this *QPainter) DrawRoundedRect_1_(x int, y int, w int, h int, xRadius float64, yRadius float64) {
-	// arg: 6, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum,
+	// arg: 6, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter15drawRoundedRectEiiiiddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xRadius, yRadius, mode)
 	qtrt.ErrPrint(err, rv)
@@ -3489,7 +3489,7 @@ func (this *QPainter) DrawRoundedRect_2_(rect qtcore.QRect_ITF, xRadius float64,
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg0 = rect.QRect_PTR().GetCthis()
 	}
-	// arg: 3, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum,
+	// arg: 3, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter15drawRoundedRectERK5QRectddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xRadius, yRadius, mode)
 	qtrt.ErrPrint(err, rv)
@@ -3525,9 +3525,9 @@ func (this *QPainter) DrawRoundRect__(r qtcore.QRectF_ITF) {
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	xround := int(25)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	yround := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xround, yround)
 	qtrt.ErrPrint(err, rv)
@@ -3546,7 +3546,7 @@ func (this *QPainter) DrawRoundRect__1(r qtcore.QRectF_ITF, xround int) {
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	yround := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xround, yround)
 	qtrt.ErrPrint(err, rv)
@@ -3574,9 +3574,9 @@ func (this *QPainter) DrawRoundRect_1(x int, y int, w int, h int, arg4 int, arg5
 
  */
 func (this *QPainter) DrawRoundRect_1_(x int, y int, w int, h int) {
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	arg4 := int(25)
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	arg5 := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectEiiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, arg4, arg5)
 	qtrt.ErrPrint(err, rv)
@@ -3591,7 +3591,7 @@ func (this *QPainter) DrawRoundRect_1_(x int, y int, w int, h int) {
 
  */
 func (this *QPainter) DrawRoundRect_1_1(x int, y int, w int, h int, arg4 int) {
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	arg5 := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectEiiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, arg4, arg5)
 	qtrt.ErrPrint(err, rv)
@@ -3627,9 +3627,9 @@ func (this *QPainter) DrawRoundRect_2_(r qtcore.QRect_ITF) {
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	xround := int(25)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	yround := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectERK5QRectii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xround, yround)
 	qtrt.ErrPrint(err, rv)
@@ -3648,7 +3648,7 @@ func (this *QPainter) DrawRoundRect_2_1(r qtcore.QRect_ITF, xround int) {
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	yround := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectERK5QRectii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xround, yround)
 	qtrt.ErrPrint(err, rv)
@@ -3704,7 +3704,7 @@ func (this *QPainter) DrawTiledPixmap__(rect qtcore.QRectF_ITF, pm QPixmap_ITF) 
 	if pm != nil && pm.QPixmap_PTR() != nil {
 		convArg1 = pm.QPixmap_PTR().GetCthis()
 	}
-	// arg: 2, const QPointF &=LValueReference, QPointF=Record,
+	// arg: 2, const QPointF &=LValueReference, QPointF=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -3748,9 +3748,9 @@ func (this *QPainter) DrawTiledPixmap_1_(x int, y int, w int, h int, arg4 QPixma
 	if arg4 != nil && arg4.QPixmap_PTR() != nil {
 		convArg4 = arg4.QPixmap_PTR().GetCthis()
 	}
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	sx := int(0)
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	sy := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, convArg4, sx, sy)
 	qtrt.ErrPrint(err, rv)
@@ -3773,7 +3773,7 @@ func (this *QPainter) DrawTiledPixmap_1_1(x int, y int, w int, h int, arg4 QPixm
 	if arg4 != nil && arg4.QPixmap_PTR() != nil {
 		convArg4 = arg4.QPixmap_PTR().GetCthis()
 	}
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	sy := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, convArg4, sx, sy)
 	qtrt.ErrPrint(err, rv)
@@ -3829,7 +3829,7 @@ func (this *QPainter) DrawTiledPixmap_2_(arg0 qtcore.QRect_ITF, arg1 QPixmap_ITF
 	if arg1 != nil && arg1.QPixmap_PTR() != nil {
 		convArg1 = arg1.QPixmap_PTR().GetCthis()
 	}
-	// arg: 2, const QPoint &=LValueReference, QPoint=Record,
+	// arg: 2, const QPoint &=LValueReference, QPoint=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter15drawTiledPixmapERK5QRectRK7QPixmapRK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -4501,7 +4501,7 @@ func (this *QPainter) DrawImage__(targetRect qtcore.QRectF_ITF, image QImage_ITF
 	if sourceRect != nil && sourceRect.QRectF_PTR() != nil {
 		convArg2 = sourceRect.QRectF_PTR().GetCthis()
 	}
-	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageERK6QRectFRK6QImageS2_6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, flags)
 	qtrt.ErrPrint(err, rv)
@@ -4595,7 +4595,7 @@ func (this *QPainter) DrawImage_1_(targetRect qtcore.QRect_ITF, image QImage_ITF
 	if sourceRect != nil && sourceRect.QRect_PTR() != nil {
 		convArg2 = sourceRect.QRect_PTR().GetCthis()
 	}
-	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageERK5QRectRK6QImageS2_6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, flags)
 	qtrt.ErrPrint(err, rv)
@@ -4689,7 +4689,7 @@ func (this *QPainter) DrawImage_2_(p qtcore.QPointF_ITF, image QImage_ITF, sr qt
 	if sr != nil && sr.QRectF_PTR() != nil {
 		convArg2 = sr.QRectF_PTR().GetCthis()
 	}
-	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageERK7QPointFRK6QImageRK6QRectF6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, flags)
 	qtrt.ErrPrint(err, rv)
@@ -4783,7 +4783,7 @@ func (this *QPainter) DrawImage_3_(p qtcore.QPoint_ITF, image QImage_ITF, sr qtc
 	if sr != nil && sr.QRect_PTR() != nil {
 		convArg2 = sr.QRect_PTR().GetCthis()
 	}
-	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageERK6QPointRK6QImageRK5QRect6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, flags)
 	qtrt.ErrPrint(err, rv)
@@ -5029,15 +5029,15 @@ func (this *QPainter) DrawImage_8_(x int, y int, image QImage_ITF) {
 	if image != nil && image.QImage_PTR() != nil {
 		convArg2 = image.QImage_PTR().GetCthis()
 	}
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	sx := int(0)
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	sy := int(0)
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	sw := int(-1)
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	sh := int(-1)
-	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageEiiRK6QImageiiii6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2, sx, sy, sw, sh, flags)
 	qtrt.ErrPrint(err, rv)
@@ -5077,13 +5077,13 @@ func (this *QPainter) DrawImage_8_1(x int, y int, image QImage_ITF, sx int) {
 	if image != nil && image.QImage_PTR() != nil {
 		convArg2 = image.QImage_PTR().GetCthis()
 	}
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	sy := int(0)
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	sw := int(-1)
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	sh := int(-1)
-	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageEiiRK6QImageiiii6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2, sx, sy, sw, sh, flags)
 	qtrt.ErrPrint(err, rv)
@@ -5123,11 +5123,11 @@ func (this *QPainter) DrawImage_8_2(x int, y int, image QImage_ITF, sx int, sy i
 	if image != nil && image.QImage_PTR() != nil {
 		convArg2 = image.QImage_PTR().GetCthis()
 	}
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	sw := int(-1)
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	sh := int(-1)
-	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageEiiRK6QImageiiii6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2, sx, sy, sw, sh, flags)
 	qtrt.ErrPrint(err, rv)
@@ -5167,9 +5167,9 @@ func (this *QPainter) DrawImage_8_3(x int, y int, image QImage_ITF, sx int, sy i
 	if image != nil && image.QImage_PTR() != nil {
 		convArg2 = image.QImage_PTR().GetCthis()
 	}
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	sh := int(-1)
-	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageEiiRK6QImageiiii6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2, sx, sy, sw, sh, flags)
 	qtrt.ErrPrint(err, rv)
@@ -5209,7 +5209,7 @@ func (this *QPainter) DrawImage_8_4(x int, y int, image QImage_ITF, sx int, sy i
 	if image != nil && image.QImage_PTR() != nil {
 		convArg2 = image.QImage_PTR().GetCthis()
 	}
-	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 7, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawImageEiiRK6QImageiiii6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2, sx, sy, sw, sh, flags)
 	qtrt.ErrPrint(err, rv)
@@ -5526,7 +5526,7 @@ func (this *QPainter) DrawText_4_(r qtcore.QRectF_ITF, flags int, text string) {
 	}
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QRectF *=Pointer, QRectF=Record,
+	// arg: 3, QRectF *=Pointer, QRectF=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8drawTextERK6QRectFiRK7QStringPS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -5586,7 +5586,7 @@ func (this *QPainter) DrawText_5_(r qtcore.QRect_ITF, flags int, text string) {
 	}
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QRect *=Pointer, QRect=Record,
+	// arg: 3, QRect *=Pointer, QRect=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -5638,7 +5638,7 @@ See also setFont() and setPen().
 func (this *QPainter) DrawText_6_(x int, y int, w int, h int, flags int, text string) {
 	var tmpArg5 = qtcore.NewQString_5(text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 6, QRect *=Pointer, QRect=Record,
+	// arg: 6, QRect *=Pointer, QRect=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, flags, convArg5, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -5698,7 +5698,7 @@ func (this *QPainter) DrawText_7_(r qtcore.QRectF_ITF, text string) {
 	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QTextOption &=LValueReference, QTextOption=Record,
+	// arg: 2, const QTextOption &=LValueReference, QTextOption=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8drawTextERK6QRectFRK7QStringRK11QTextOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -5922,7 +5922,7 @@ func (this *QPainter) BoundingRect_3_(rect qtcore.QRectF_ITF, text string) *qtco
 	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QTextOption &=LValueReference, QTextOption=Record,
+	// arg: 2, const QTextOption &=LValueReference, QTextOption=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -6344,7 +6344,7 @@ Sets the given render hint on the painter if on is true; otherwise clears the re
 See also setRenderHints(), renderHints(), and Rendering Quality.
 */
 func (this *QPainter) SetRenderHint__(hint int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13setRenderHintENS_10RenderHintEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, on)
 	qtrt.ErrPrint(err, rv)
@@ -6380,7 +6380,7 @@ This function was introduced in  Qt 4.2.
 See also setRenderHint(), renderHints(), and Rendering Quality.
 */
 func (this *QPainter) SetRenderHints__(hints int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter14setRenderHintsE6QFlagsINS_10RenderHintEEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hints, on)
 	qtrt.ErrPrint(err, rv)
@@ -6482,7 +6482,7 @@ func (this *QPainter) SetRedirected__(device QPaintDevice_ITF /*777 const QPaint
 	if replacement != nil && replacement.QPaintDevice_PTR() != nil {
 		convArg1 = replacement.QPaintDevice_PTR().GetCthis()
 	}
-	// arg: 2, const QPoint &=LValueReference, QPoint=Record,
+	// arg: 2, const QPoint &=LValueReference, QPoint=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13setRedirectedEPK12QPaintDevicePS0_RK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -6528,7 +6528,7 @@ func (this *QPainter) Redirected__(device QPaintDevice_ITF /*777 const QPaintDev
 	if device != nil && device.QPaintDevice_PTR() != nil {
 		convArg0 = device.QPaintDevice_PTR().GetCthis()
 	}
-	// arg: 1, QPoint *=Pointer, QPoint=Record,
+	// arg: 1, QPoint *=Pointer, QPoint=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

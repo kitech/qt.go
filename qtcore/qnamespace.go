@@ -5043,255 +5043,197 @@ const Qt__CompositeSingletonRegistration Qt__RegistrationType = 5
 const Qt__QmlUnitCacheHookRegistration Qt__RegistrationType = 6
 
 /*
+Enumerates the levels of support a media service provider may have for a feature.
 
 
- */
-type Qt___EXCEPTION_DISPOSITION = int // stdglobal
+*/
+type Qt__SupportEstimate = int // multimedia
+// The feature is not supported.
+const Qt__NotSupported Qt__SupportEstimate = 0
+
+// The feature may be supported.
+const Qt__MaybeSupported Qt__SupportEstimate = 1
+
+// The feature is probably supported.
+const Qt__ProbablySupported Qt__SupportEstimate = 2
+
+// The service is the preferred provider of a service.
+const Qt__PreferredService Qt__SupportEstimate = 3
+
+/*
+Enumerates quality encoding levels.
+
+ConstantValue
+QMultimedia::VeryLowQuality0
+QMultimedia::LowQuality1
+QMultimedia::NormalQuality2
+QMultimedia::HighQuality3
+QMultimedia::VeryHighQuality4
+
+*/
+type Qt__EncodingQuality = int // multimedia
 //
-const Qt__ExceptionContinueExecution Qt___EXCEPTION_DISPOSITION = 0
+const Qt__VeryLowQuality Qt__EncodingQuality = 0
 
 //
-const Qt__ExceptionContinueSearch Qt___EXCEPTION_DISPOSITION = 1
+const Qt__LowQuality Qt__EncodingQuality = 1
 
 //
-const Qt__ExceptionNestedException Qt___EXCEPTION_DISPOSITION = 2
+const Qt__NormalQuality Qt__EncodingQuality = 2
 
 //
-const Qt__ExceptionCollidedUnwind Qt___EXCEPTION_DISPOSITION = 3
+const Qt__HighQuality Qt__EncodingQuality = 3
+
+//
+const Qt__VeryHighQuality Qt__EncodingQuality = 4
+
+/*
+Enumerates encoding modes.
+
+
+*/
+type Qt__EncodingMode = int // multimedia
+// Encoding will aim to have a constant quality, adjusting bitrate to fit.
+const Qt__ConstantQualityEncoding Qt__EncodingMode = 0
+
+// Encoding will use a constant bit rate, adjust quality to fit.
+const Qt__ConstantBitRateEncoding Qt__EncodingMode = 1
+
+// Encoding will try to keep an average bitrate setting, but will use more or less as needed.
+const Qt__AverageBitRateEncoding Qt__EncodingMode = 2
+
+// The media will first be processed to determine the characteristics, and then processed a second time allocating more bits to the areas that need it.
+const Qt__TwoPassEncoding Qt__EncodingMode = 3
+
+/*
+Enumerates Service status errors.
+
+
+*/
+type Qt__AvailabilityStatus = int // multimedia
+// The service is operating correctly.
+const Qt__Available Qt__AvailabilityStatus = 0
+
+// There is no service available to provide the requested functionality.
+const Qt__ServiceMissing Qt__AvailabilityStatus = 1
+
+// The service must wait for access to necessary resources.
+const Qt__Busy Qt__AvailabilityStatus = 2
+
+// The service could not allocate resources required to function correctly.
+const Qt__ResourceError Qt__AvailabilityStatus = 3
 
 /*
 
-
  */
-type Qt__tagExtendedErrorParamTypes = int // stdglobal
-//
-const Qt__eeptAnsiString Qt__tagExtendedErrorParamTypes = 1
+type Qt__Error = int // multimedia
+// No errors have occurred
+const Qt__NoError Qt__Error = 0
 
-//
-const Qt__eeptUnicodeString Qt__tagExtendedErrorParamTypes = 2
+// An error occurred opening the audio device
+const Qt__OpenError Qt__Error = 1
 
-//
-const Qt__eeptLongVal Qt__tagExtendedErrorParamTypes = 3
+// An error occurred during read/write of audio device
+const Qt__IOError Qt__Error = 2
 
-//
-const Qt__eeptShortVal Qt__tagExtendedErrorParamTypes = 4
+// Audio data is not being fed to the audio device at a fast enough rate
+const Qt__UnderrunError Qt__Error = 3
 
-//
-const Qt__eeptPointerVal Qt__tagExtendedErrorParamTypes = 5
-
-//
-const Qt__eeptNone Qt__tagExtendedErrorParamTypes = 6
-
-//
-const Qt__eeptBinary Qt__tagExtendedErrorParamTypes = 7
+// A non-recoverable error has occurred, the audio device is not usable at this time.
+const Qt__FatalError Qt__Error = 4
 
 /*
 
-
  */
-type Qt___RPC_NOTIFICATION_TYPES = int // stdglobal
-//
-const Qt__RpcNotificationTypeNone Qt___RPC_NOTIFICATION_TYPES = 0
+type Qt__State = int // multimedia
+// Audio data is being processed, this state is set after start() is called and while audio data is available to be processed.
+const Qt__ActiveState Qt__State = 0
 
-//
-const Qt__RpcNotificationTypeEvent Qt___RPC_NOTIFICATION_TYPES = 1
+// The audio stream is in a suspended state. Entered after suspend() is called or when another stream takes control of the audio device. In the later case, a call to resume will return control of the audio device to this stream. This should usually only be done upon user request.
+const Qt__SuspendedState Qt__State = 1
 
-//
-const Qt__RpcNotificationTypeApc Qt___RPC_NOTIFICATION_TYPES = 2
+// The audio device is closed, and is not processing any audio data
+const Qt__StoppedState Qt__State = 2
 
-//
-const Qt__RpcNotificationTypeIoc Qt___RPC_NOTIFICATION_TYPES = 3
+// The QIODevice passed in has no data and audio system's buffer is empty, this state is set after start() is called and while no audio data is available to be processed.
+const Qt__IdleState Qt__State = 3
 
-//
-const Qt__RpcNotificationTypeHwnd Qt___RPC_NOTIFICATION_TYPES = 4
-
-//
-const Qt__RpcNotificationTypeCallback Qt___RPC_NOTIFICATION_TYPES = 5
+// This stream is in a suspended state because another higher priority stream currently has control of the audio device. Playback cannot resume until the higher priority stream relinquishes control of the audio device.
+const Qt__InterruptedState Qt__State = 4
 
 /*
 
-
  */
-type Qt___RPC_ASYNC_EVENT = int // stdglobal
-//
-const Qt__RpcCallComplete Qt___RPC_ASYNC_EVENT = 0
+type Qt__Mode = int // multimedia
+// audio input device
+const Qt__AudioInput Qt__Mode = 0
 
-//
-const Qt__RpcSendComplete Qt___RPC_ASYNC_EVENT = 1
-
-//
-const Qt__RpcReceiveComplete Qt___RPC_ASYNC_EVENT = 2
-
-//
-const Qt__RpcClientDisconnect Qt___RPC_ASYNC_EVENT = 3
-
-//
-const Qt__RpcClientCancel Qt___RPC_ASYNC_EVENT = 4
+// audio output device
+const Qt__AudioOutput Qt__Mode = 1
 
 /*
+This enum describes the role of an audio stream.
 
 
- */
-type Qt___MEDIA_TYPE = int // stdglobal
-//
-const Qt__Unknown Qt___MEDIA_TYPE = 0
 
-//
-const Qt__F5_1Pt2_512 Qt___MEDIA_TYPE = 1
+This enum was introduced or modified in  Qt 5.6.
 
-//
-const Qt__F3_1Pt44_512 Qt___MEDIA_TYPE = 2
+See also QMediaPlayer::setAudioRole().
 
-//
-const Qt__F3_2Pt88_512 Qt___MEDIA_TYPE = 3
+*/
+type Qt__Role = int // multimedia
+// The role is unknown or undefined
+const Qt__UnknownRole Qt__Role = 0
 
-//
-const Qt__F3_20Pt8_512 Qt___MEDIA_TYPE = 4
+// Music
+const Qt__MusicRole Qt__Role = 1
 
-//
-const Qt__F3_720_512 Qt___MEDIA_TYPE = 5
+// Soundtrack from a movie or a video
+const Qt__VideoRole Qt__Role = 2
 
-//
-const Qt__F5_360_512 Qt___MEDIA_TYPE = 6
+// Voice communications, such as telephony
+const Qt__VoiceCommunicationRole Qt__Role = 3
 
-//
-const Qt__F5_320_512 Qt___MEDIA_TYPE = 7
+// Alarm
+const Qt__AlarmRole Qt__Role = 4
 
-//
-const Qt__F5_320_1024 Qt___MEDIA_TYPE = 8
+// Notification, such as an incoming e-mail or a chat request
+const Qt__NotificationRole Qt__Role = 5
 
-//
-const Qt__F5_180_512 Qt___MEDIA_TYPE = 9
+// Ringtone
+const Qt__RingtoneRole Qt__Role = 6
 
-//
-const Qt__F5_160_512 Qt___MEDIA_TYPE = 10
+// For accessibility, such as with a screen reader
+const Qt__AccessibilityRole Qt__Role = 7
 
-//
-const Qt__RemovableMedia Qt___MEDIA_TYPE = 11
+// Sonification, such as with user interface sounds
+const Qt__SonificationRole Qt__Role = 8
 
-//
-const Qt__FixedMedia Qt___MEDIA_TYPE = 12
-
-//
-const Qt__F3_120M_512 Qt___MEDIA_TYPE = 13
-
-//
-const Qt__F3_640_512 Qt___MEDIA_TYPE = 14
-
-//
-const Qt__F5_640_512 Qt___MEDIA_TYPE = 15
-
-//
-const Qt__F5_720_512 Qt___MEDIA_TYPE = 16
-
-//
-const Qt__F3_1Pt2_512 Qt___MEDIA_TYPE = 17
-
-//
-const Qt__F3_1Pt23_1024 Qt___MEDIA_TYPE = 18
-
-//
-const Qt__F5_1Pt23_1024 Qt___MEDIA_TYPE = 19
-
-//
-const Qt__F3_128Mb_512 Qt___MEDIA_TYPE = 20
-
-//
-const Qt__F3_230Mb_512 Qt___MEDIA_TYPE = 21
-
-//
-const Qt__F8_256_128 Qt___MEDIA_TYPE = 22
+// Game audio
+const Qt__GameRole Qt__Role = 9
 
 /*
+This enum defines the different audio volume scales.
 
 
- */
-type Qt__HBitmapFormat = int // winextras
+
+This enum was introduced or modified in  Qt 5.8.
+
+See also QAudio::convertVolume().
+
+*/
+type Qt__VolumeScale = int // multimedia
 //
-const Qt__HBitmapNoAlpha Qt__HBitmapFormat = 0
-
-//
-const Qt__HBitmapPremultipliedAlpha Qt__HBitmapFormat = 1
-
-//
-const Qt__HBitmapAlpha Qt__HBitmapFormat = 2
-
-/*
-
-
- */
-type Qt__WindowFlip3DPolicy = int // winextras
-//
-const Qt__FlipDefault Qt__WindowFlip3DPolicy = 0
+const Qt__LinearVolumeScale Qt__VolumeScale = 0
 
 //
-const Qt__FlipExcludeBelow Qt__WindowFlip3DPolicy = 1
+const Qt__CubicVolumeScale Qt__VolumeScale = 1
 
 //
-const Qt__FlipExcludeAbove Qt__WindowFlip3DPolicy = 2
-
-/*
-
-
- */
-type Qt__jobjectRefType = int // stdglobal
-//
-const Qt__JNIInvalidRefType Qt__jobjectRefType = 0
+const Qt__LogarithmicVolumeScale Qt__VolumeScale = 2
 
 //
-const Qt__JNILocalRefType Qt__jobjectRefType = 1
-
-//
-const Qt__JNIGlobalRefType Qt__jobjectRefType = 2
-
-//
-const Qt__JNIWeakGlobalRefType Qt__jobjectRefType = 3
-
-/*
-
-
- */
-type Qt__BindFlag = int // androidextras
-//
-const Qt__None Qt__BindFlag = 0
-
-//
-const Qt__AutoCreate Qt__BindFlag = 1
-
-//
-const Qt__DebugUnbind Qt__BindFlag = 2
-
-//
-const Qt__NotForeground Qt__BindFlag = 4
-
-//
-const Qt__AboveClient Qt__BindFlag = 8
-
-//
-const Qt__AllowOomManagement Qt__BindFlag = 16
-
-//
-const Qt__WaivePriority Qt__BindFlag = 32
-
-//
-const Qt__Important Qt__BindFlag = 64
-
-//
-const Qt__AdjustWithActivity Qt__BindFlag = 128
-
-//
-const Qt__ExternalService Qt__BindFlag = -2147483648
-
-/*
-
-
- */
-type Qt__PermissionResult = int // androidextras
-//
-const Qt__Granted Qt__PermissionResult = 0
-
-//
-const Qt__Denied Qt__PermissionResult = 1
+const Qt__DecibelVolumeScale Qt__VolumeScale = 3
 
 //  body block end
 

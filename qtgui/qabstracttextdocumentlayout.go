@@ -404,7 +404,7 @@ Unregisters the given component as a handler for items of the given objectType, 
 This function was introduced in  Qt 5.2.
 */
 func (this *QAbstractTextDocumentLayout) UnregisterHandler__(objectType int) {
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), objectType, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -454,7 +454,7 @@ This signal is emitted when the rectangle rect has been updated.
 Subclasses of QAbstractTextDocumentLayout should emit this signal when the layout of the contents change in order to repaint.
 */
 func (this *QAbstractTextDocumentLayout) Update__() {
-	// arg: 0, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayout6updateERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

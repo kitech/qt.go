@@ -18,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 77
+// extern C begin: 80
 */
 // import "C"
 import "unsafe"
@@ -168,7 +168,7 @@ func NewQFileSystemModel(parent qtcore.QObject_ITF /*777 QObject **/) *QFileSyst
 Constructs a file system model with the given parent.
 */
 func NewQFileSystemModel__() *QFileSystemModel {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -221,7 +221,7 @@ func (this *QFileSystemModel) Index(row int, column int, parent qtcore.QModelInd
 Reimplemented from QAbstractItemModel::index().
 */
 func (this *QFileSystemModel) Index__(row int, column int) *qtcore.QModelIndex /*123*/ {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -259,7 +259,7 @@ Reimplemented from QAbstractItemModel::index().
 func (this *QFileSystemModel) Index_1_(path string) *qtcore.QModelIndex /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel5indexERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
@@ -335,7 +335,7 @@ func (this *QFileSystemModel) HasChildren(parent qtcore.QModelIndex_ITF) bool {
 Reimplemented from QAbstractItemModel::hasChildren().
 */
 func (this *QFileSystemModel) HasChildren__() bool {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -404,7 +404,7 @@ func (this *QFileSystemModel) RowCount(parent qtcore.QModelIndex_ITF) int {
 Reimplemented from QAbstractItemModel::rowCount().
 */
 func (this *QFileSystemModel) RowCount__() int {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -438,7 +438,7 @@ func (this *QFileSystemModel) ColumnCount(parent qtcore.QModelIndex_ITF) int {
 Reimplemented from QAbstractItemModel::columnCount().
 */
 func (this *QFileSystemModel) ColumnCount__() int {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel11columnCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -474,7 +474,7 @@ Returns the data stored under the given role for the item "My Computer".
 See also Qt::ItemDataRole.
 */
 func (this *QFileSystemModel) MyComputer__() *qtcore.QVariant /*123*/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel10myComputerEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)
@@ -520,7 +520,7 @@ func (this *QFileSystemModel) Data__(index qtcore.QModelIndex_ITF) *qtcore.QVari
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel4dataERK11QModelIndexi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	qtrt.ErrPrint(err, rv)
@@ -572,7 +572,7 @@ func (this *QFileSystemModel) SetData__(index qtcore.QModelIndex_ITF, value qtco
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg1 = value.QVariant_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::EditRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, role)
 	qtrt.ErrPrint(err, rv)
@@ -604,7 +604,7 @@ func (this *QFileSystemModel) HeaderData(section int, orientation int, role int)
 Reimplemented from QAbstractItemModel::headerData().
 */
 func (this *QFileSystemModel) HeaderData__(section int, orientation int) *qtcore.QVariant /*123*/ {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
 	qtrt.ErrPrint(err, rv)
@@ -653,7 +653,7 @@ func (this *QFileSystemModel) Sort(column int, order int) {
 Reimplemented from QAbstractItemModel::sort().
 */
 func (this *QFileSystemModel) Sort__(column int) {
-	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
+	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	qtrt.ErrPrint(err, rv)

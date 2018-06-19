@@ -99,7 +99,7 @@ func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
 
  */
 func NewQFutureInterfaceBase__() *QFutureInterfaceBase {
-	// arg: 0, QFutureInterfaceBase::State=Enum, QFutureInterfaceBase::State=Enum,
+	// arg: 0, QFutureInterfaceBase::State=Enum, QFutureInterfaceBase::State=Enum, , Invalid
 	initialState := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseC2ENS_5StateE", qtrt.FFI_TYPE_POINTER, initialState)
 	qtrt.ErrPrint(err, rv)

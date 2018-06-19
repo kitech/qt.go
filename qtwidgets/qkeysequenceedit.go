@@ -127,7 +127,7 @@ func NewQKeySequenceEdit(parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit
 Constructs a QKeySequenceEdit widget with the given parent.
 */
 func NewQKeySequenceEdit__() *QKeySequenceEdit {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -173,7 +173,7 @@ func NewQKeySequenceEdit_1_(keySequence qtgui.QKeySequence_ITF) *QKeySequenceEdi
 	if keySequence != nil && keySequence.QKeySequence_PTR() != nil {
 		convArg0 = keySequence.QKeySequence_PTR().GetCthis()
 	}
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

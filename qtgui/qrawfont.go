@@ -110,7 +110,7 @@ Constructs an invalid QRawFont.
 func NewQRawFont_1_(fileName string, pixelSize float64) *QRawFont {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QFont::HintingPreference=Elaborated, QFont::HintingPreference=Enum,
+	// arg: 2, QFont::HintingPreference=Elaborated, QFont::HintingPreference=Enum, , Invalid
 	hintingPreference := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFontC2ERK7QStringdN5QFont17HintingPreferenceE", qtrt.FFI_TYPE_POINTER, convArg0, pixelSize, hintingPreference)
 	qtrt.ErrPrint(err, rv)
@@ -152,7 +152,7 @@ func NewQRawFont_2_(fontData qtcore.QByteArray_ITF, pixelSize float64) *QRawFont
 	if fontData != nil && fontData.QByteArray_PTR() != nil {
 		convArg0 = fontData.QByteArray_PTR().GetCthis()
 	}
-	// arg: 2, QFont::HintingPreference=Elaborated, QFont::HintingPreference=Enum,
+	// arg: 2, QFont::HintingPreference=Elaborated, QFont::HintingPreference=Enum, , Invalid
 	hintingPreference := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFontC2ERK10QByteArraydN5QFont17HintingPreferenceE", qtrt.FFI_TYPE_POINTER, convArg0, pixelSize, hintingPreference)
 	qtrt.ErrPrint(err, rv)
@@ -454,9 +454,9 @@ Otherwise, if antialiasingType is set to QRawFont::SubPixelAntialiasing, then th
 See also pathForGlyph() and QPainter::drawGlyphRun().
 */
 func (this *QRawFont) AlphaMapForGlyph__(glyphIndex uint) *QImage /*123*/ {
-	// arg: 1, QRawFont::AntialiasingType=Enum, QRawFont::AntialiasingType=Enum,
+	// arg: 1, QRawFont::AntialiasingType=Enum, QRawFont::AntialiasingType=Enum, , Invalid
 	antialiasingType := 0
-	// arg: 2, const QTransform &=LValueReference, QTransform=Record,
+	// arg: 2, const QTransform &=LValueReference, QTransform=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont16alphaMapForGlyphEjNS_16AntialiasingTypeERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), glyphIndex, antialiasingType, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -480,7 +480,7 @@ Otherwise, if antialiasingType is set to QRawFont::SubPixelAntialiasing, then th
 See also pathForGlyph() and QPainter::drawGlyphRun().
 */
 func (this *QRawFont) AlphaMapForGlyph__1(glyphIndex uint, antialiasingType int) *QImage /*123*/ {
-	// arg: 2, const QTransform &=LValueReference, QTransform=Record,
+	// arg: 2, const QTransform &=LValueReference, QTransform=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont16alphaMapForGlyphEjNS_16AntialiasingTypeERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), glyphIndex, antialiasingType, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -878,7 +878,7 @@ func (this *QRawFont) FromFont__(font QFont_ITF) *QRawFont /*123*/ {
 	if font != nil && font.QFont_PTR() != nil {
 		convArg0 = font.QFont_PTR().GetCthis()
 	}
-	// arg: 1, QFontDatabase::WritingSystem=Elaborated, QFontDatabase::WritingSystem=Enum,
+	// arg: 1, QFontDatabase::WritingSystem=Elaborated, QFontDatabase::WritingSystem=Enum, , Invalid
 	writingSystem := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFont8fromFontERK5QFontN13QFontDatabase13WritingSystemE", qtrt.FFI_TYPE_POINTER, convArg0, writingSystem)
 	qtrt.ErrPrint(err, rv)

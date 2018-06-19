@@ -97,7 +97,7 @@ Constructs a QCollator from locale. If locale is not specified the system's defa
 See also setLocale().
 */
 func NewQCollator__() *QCollator {
-	// arg: 0, const QLocale &=LValueReference, QLocale=Record,
+	// arg: 0, const QLocale &=LValueReference, QLocale=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollatorC2ERK7QLocale", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

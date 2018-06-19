@@ -112,7 +112,7 @@ Constructs the QWebChannel object with the given parent.
 Note that a QWebChannel is only fully operational once you connect it to a QWebChannelAbstractTransport. The HTML clients also need to be setup appropriately using qwebchannel.js.
 */
 func NewQWebChannel__() *QWebChannel {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWebChannelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

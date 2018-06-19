@@ -116,11 +116,11 @@ See also QGuiApplication::setFont() and QGuiApplication::font().
 func NewQFont_1_(family string) *QFont {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	pointSize := int(-1)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	weight := int(-1)
-	// arg: 3, bool=Bool, =Invalid,
+	// arg: 3, bool=Bool, =Invalid, , Invalid
 	italic := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontC2ERK7QStringiib", qtrt.FFI_TYPE_POINTER, convArg0, pointSize, weight, italic)
 	qtrt.ErrPrint(err, rv)
@@ -142,9 +142,9 @@ See also QGuiApplication::setFont() and QGuiApplication::font().
 func NewQFont_1_1(family string, pointSize int) *QFont {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	weight := int(-1)
-	// arg: 3, bool=Bool, =Invalid,
+	// arg: 3, bool=Bool, =Invalid, , Invalid
 	italic := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontC2ERK7QStringiib", qtrt.FFI_TYPE_POINTER, convArg0, pointSize, weight, italic)
 	qtrt.ErrPrint(err, rv)
@@ -166,7 +166,7 @@ See also QGuiApplication::setFont() and QGuiApplication::font().
 func NewQFont_1_2(family string, pointSize int, weight int) *QFont {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 3, bool=Bool, =Invalid,
+	// arg: 3, bool=Bool, =Invalid, , Invalid
 	italic := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontC2ERK7QStringiib", qtrt.FFI_TYPE_POINTER, convArg0, pointSize, weight, italic)
 	qtrt.ErrPrint(err, rv)
@@ -769,7 +769,7 @@ Qt does not support style hints on X11 since this information is not provided by
 See also StyleHint, styleHint(), StyleStrategy, styleStrategy(), and QFontInfo.
 */
 func (this *QFont) SetStyleHint__(arg0 int) {
-	// arg: 1, QFont::StyleStrategy=Enum, QFont::StyleStrategy=Enum,
+	// arg: 1, QFont::StyleStrategy=Enum, QFont::StyleStrategy=Enum, , Invalid
 	arg1 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont12setStyleHintENS_9StyleHintENS_13StyleStrategyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	qtrt.ErrPrint(err, rv)

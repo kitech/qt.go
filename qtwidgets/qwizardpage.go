@@ -127,7 +127,7 @@ func NewQWizardPage(parent QWidget_ITF /*777 QWidget **/) *QWizardPage {
 
  */
 func NewQWizardPage__() *QWizardPage {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPageC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -540,9 +540,9 @@ func (this *QWizardPage) RegisterField__(name string, widget QWidget_ITF /*777 Q
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
-	// arg: 2, const char *=Pointer, =Invalid,
+	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, const char *=Pointer, =Invalid,
+	// arg: 3, const char *=Pointer, =Invalid, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage13registerFieldERK7QStringP7QWidgetPKcS6_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -565,7 +565,7 @@ func (this *QWizardPage) RegisterField__1(name string, widget QWidget_ITF /*777 
 	}
 	var convArg2 = qtrt.CString(property)
 	defer qtrt.FreeMem(convArg2)
-	// arg: 3, const char *=Pointer, =Invalid,
+	// arg: 3, const char *=Pointer, =Invalid, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage13registerFieldERK7QStringP7QWidgetPKcS6_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)

@@ -111,9 +111,9 @@ Constructs a new input dialog with the given parent and window flags.
 This function was introduced in  Qt 4.5.
 */
 func NewQInputDialog__() *QInputDialog {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialogC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -137,7 +137,7 @@ func NewQInputDialog__1(parent QWidget_ITF /*777 QWidget **/) *QInputDialog {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialogC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -246,7 +246,7 @@ Sets the given option to be enabled if on is true; otherwise, clears the given o
 See also options and testOption().
 */
 func (this *QInputDialog) SetOption__(option int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9setOptionENS_17InputDialogOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	qtrt.ErrPrint(err, rv)
@@ -886,15 +886,15 @@ func (this *QInputDialog) GetText__(parent QWidget_ITF /*777 QWidget **/, title 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QLineEdit::EchoMode=Elaborated, QLineEdit::EchoMode=Enum,
+	// arg: 3, QLineEdit::EchoMode=Elaborated, QLineEdit::EchoMode=Enum, , Invalid
 	echo := 0
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, bool *=Pointer, =Invalid,
+	// arg: 5, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 6, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 6, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
-	// arg: 7, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 7, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getTextEP7QWidgetRK7QStringS4_N9QLineEdit8EchoModeES4_Pb6QFlagsIN2Qt10WindowTypeEES8_INS9_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, echo, convArg4, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -941,13 +941,13 @@ func (this *QInputDialog) GetText__1(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, bool *=Pointer, =Invalid,
+	// arg: 5, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 6, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 6, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
-	// arg: 7, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 7, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getTextEP7QWidgetRK7QStringS4_N9QLineEdit8EchoModeES4_Pb6QFlagsIN2Qt10WindowTypeEES8_INS9_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, echo, convArg4, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -996,11 +996,11 @@ func (this *QInputDialog) GetText__2(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(text)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 5, bool *=Pointer, =Invalid,
+	// arg: 5, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 6, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 6, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
-	// arg: 7, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 7, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getTextEP7QWidgetRK7QStringS4_N9QLineEdit8EchoModeES4_Pb6QFlagsIN2Qt10WindowTypeEES8_INS9_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, echo, convArg4, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1049,9 +1049,9 @@ func (this *QInputDialog) GetText__3(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(text)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 6, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 6, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
-	// arg: 7, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 7, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getTextEP7QWidgetRK7QStringS4_N9QLineEdit8EchoModeES4_Pb6QFlagsIN2Qt10WindowTypeEES8_INS9_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, echo, convArg4, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1100,7 +1100,7 @@ func (this *QInputDialog) GetText__4(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(text)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 7, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 7, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getTextEP7QWidgetRK7QStringS4_N9QLineEdit8EchoModeES4_Pb6QFlagsIN2Qt10WindowTypeEES8_INS9_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, echo, convArg4, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1201,13 +1201,13 @@ func (this *QInputDialog) GetMultiLineText__(parent QWidget_ITF /*777 QWidget **
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, bool *=Pointer, =Invalid,
+	// arg: 4, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
-	// arg: 6, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 6, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16getMultiLineTextEP7QWidgetRK7QStringS4_S4_Pb6QFlagsIN2Qt10WindowTypeEES6_INS7_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1257,11 +1257,11 @@ func (this *QInputDialog) GetMultiLineText__1(parent QWidget_ITF /*777 QWidget *
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, bool *=Pointer, =Invalid,
+	// arg: 4, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
-	// arg: 6, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 6, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16getMultiLineTextEP7QWidgetRK7QStringS4_S4_Pb6QFlagsIN2Qt10WindowTypeEES6_INS7_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1311,9 +1311,9 @@ func (this *QInputDialog) GetMultiLineText__2(parent QWidget_ITF /*777 QWidget *
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
-	// arg: 6, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 6, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16getMultiLineTextEP7QWidgetRK7QStringS4_S4_Pb6QFlagsIN2Qt10WindowTypeEES6_INS7_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1363,7 +1363,7 @@ func (this *QInputDialog) GetMultiLineText__3(parent QWidget_ITF /*777 QWidget *
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 6, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 6, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16getMultiLineTextEP7QWidgetRK7QStringS4_S4_Pb6QFlagsIN2Qt10WindowTypeEES6_INS7_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1476,15 +1476,15 @@ func (this *QInputDialog) GetItem__(parent QWidget_ITF /*777 QWidget **/, title 
 	if items != nil && items.QStringList_PTR() != nil {
 		convArg3 = items.QStringList_PTR().GetCthis()
 	}
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	current := int(0)
-	// arg: 5, bool=Bool, =Invalid,
+	// arg: 5, bool=Bool, =Invalid, , Invalid
 	editable := true
-	// arg: 6, bool *=Pointer, =Invalid,
+	// arg: 6, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
-	// arg: 8, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 8, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getItemEP7QWidgetRK7QStringS4_RK11QStringListibPb6QFlagsIN2Qt10WindowTypeEES9_INSA_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, current, editable, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1539,13 +1539,13 @@ func (this *QInputDialog) GetItem__1(parent QWidget_ITF /*777 QWidget **/, title
 	if items != nil && items.QStringList_PTR() != nil {
 		convArg3 = items.QStringList_PTR().GetCthis()
 	}
-	// arg: 5, bool=Bool, =Invalid,
+	// arg: 5, bool=Bool, =Invalid, , Invalid
 	editable := true
-	// arg: 6, bool *=Pointer, =Invalid,
+	// arg: 6, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
-	// arg: 8, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 8, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getItemEP7QWidgetRK7QStringS4_RK11QStringListibPb6QFlagsIN2Qt10WindowTypeEES9_INSA_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, current, editable, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1600,11 +1600,11 @@ func (this *QInputDialog) GetItem__2(parent QWidget_ITF /*777 QWidget **/, title
 	if items != nil && items.QStringList_PTR() != nil {
 		convArg3 = items.QStringList_PTR().GetCthis()
 	}
-	// arg: 6, bool *=Pointer, =Invalid,
+	// arg: 6, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
-	// arg: 8, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 8, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getItemEP7QWidgetRK7QStringS4_RK11QStringListibPb6QFlagsIN2Qt10WindowTypeEES9_INSA_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, current, editable, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1659,9 +1659,9 @@ func (this *QInputDialog) GetItem__3(parent QWidget_ITF /*777 QWidget **/, title
 	if items != nil && items.QStringList_PTR() != nil {
 		convArg3 = items.QStringList_PTR().GetCthis()
 	}
-	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
-	// arg: 8, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 8, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getItemEP7QWidgetRK7QStringS4_RK11QStringListibPb6QFlagsIN2Qt10WindowTypeEES9_INSA_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, current, editable, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1716,7 +1716,7 @@ func (this *QInputDialog) GetItem__4(parent QWidget_ITF /*777 QWidget **/, title
 	if items != nil && items.QStringList_PTR() != nil {
 		convArg3 = items.QStringList_PTR().GetCthis()
 	}
-	// arg: 8, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>
+	// arg: 8, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getItemEP7QWidgetRK7QStringS4_RK11QStringListibPb6QFlagsIN2Qt10WindowTypeEES9_INSA_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, current, editable, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1812,17 +1812,17 @@ func (this *QInputDialog) GetInt__(parent QWidget_ITF /*777 QWidget **/, title s
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	value := int(0)
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	minValue := int(-2147483647)
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	maxValue := int(2147483647)
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	step := int(1)
-	// arg: 7, bool *=Pointer, =Invalid,
+	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, step, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1867,15 +1867,15 @@ func (this *QInputDialog) GetInt__1(parent QWidget_ITF /*777 QWidget **/, title 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	minValue := int(-2147483647)
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	maxValue := int(2147483647)
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	step := int(1)
-	// arg: 7, bool *=Pointer, =Invalid,
+	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, step, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1920,13 +1920,13 @@ func (this *QInputDialog) GetInt__2(parent QWidget_ITF /*777 QWidget **/, title 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	maxValue := int(2147483647)
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	step := int(1)
-	// arg: 7, bool *=Pointer, =Invalid,
+	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, step, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1971,11 +1971,11 @@ func (this *QInputDialog) GetInt__3(parent QWidget_ITF /*777 QWidget **/, title 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	step := int(1)
-	// arg: 7, bool *=Pointer, =Invalid,
+	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, step, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -2020,9 +2020,9 @@ func (this *QInputDialog) GetInt__4(parent QWidget_ITF /*777 QWidget **/, title 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 7, bool *=Pointer, =Invalid,
+	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, step, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -2067,7 +2067,7 @@ func (this *QInputDialog) GetInt__5(parent QWidget_ITF /*777 QWidget **/, title 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, step, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -2156,17 +2156,17 @@ func (this *QInputDialog) GetDouble__(parent QWidget_ITF /*777 QWidget **/, titl
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, double=Double, =Invalid,
+	// arg: 3, double=Double, =Invalid, , Invalid
 	value := float64(0)
-	// arg: 4, double=Double, =Invalid,
+	// arg: 4, double=Double, =Invalid, , Invalid
 	minValue := float64(-2147483647)
-	// arg: 5, double=Double, =Invalid,
+	// arg: 5, double=Double, =Invalid, , Invalid
 	maxValue := float64(2147483647)
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	decimals := int(1)
-	// arg: 7, bool *=Pointer, =Invalid,
+	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -2209,15 +2209,15 @@ func (this *QInputDialog) GetDouble__1(parent QWidget_ITF /*777 QWidget **/, tit
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, double=Double, =Invalid,
+	// arg: 4, double=Double, =Invalid, , Invalid
 	minValue := float64(-2147483647)
-	// arg: 5, double=Double, =Invalid,
+	// arg: 5, double=Double, =Invalid, , Invalid
 	maxValue := float64(2147483647)
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	decimals := int(1)
-	// arg: 7, bool *=Pointer, =Invalid,
+	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -2260,13 +2260,13 @@ func (this *QInputDialog) GetDouble__2(parent QWidget_ITF /*777 QWidget **/, tit
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 5, double=Double, =Invalid,
+	// arg: 5, double=Double, =Invalid, , Invalid
 	maxValue := float64(2147483647)
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	decimals := int(1)
-	// arg: 7, bool *=Pointer, =Invalid,
+	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -2309,11 +2309,11 @@ func (this *QInputDialog) GetDouble__3(parent QWidget_ITF /*777 QWidget **/, tit
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	decimals := int(1)
-	// arg: 7, bool *=Pointer, =Invalid,
+	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -2356,9 +2356,9 @@ func (this *QInputDialog) GetDouble__4(parent QWidget_ITF /*777 QWidget **/, tit
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 7, bool *=Pointer, =Invalid,
+	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -2401,7 +2401,7 @@ func (this *QInputDialog) GetDouble__5(parent QWidget_ITF /*777 QWidget **/, tit
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, ok, flags)
 	qtrt.ErrPrint(err, rv)

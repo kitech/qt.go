@@ -1252,7 +1252,7 @@ Warning: If the value is convertible to a QMetaType::LongLong but is too large t
 See also canConvert() and convert().
 */
 func (this *QVariant) ToInt__() int {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant5toIntEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
@@ -1294,7 +1294,7 @@ Warning: If the value is convertible to a QMetaType::ULongLong but is too large 
 See also canConvert() and convert().
 */
 func (this *QVariant) ToUInt__() uint {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
@@ -1332,7 +1332,7 @@ If ok is non-null: *ok is set to true if the value could be converted to an int;
 See also canConvert() and convert().
 */
 func (this *QVariant) ToLongLong__() int64 {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
@@ -1370,7 +1370,7 @@ If ok is non-null: *ok is set to true if the value could be converted to an int;
 See also canConvert() and convert().
 */
 func (this *QVariant) ToULongLong__() uint64 {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
@@ -1426,7 +1426,7 @@ If ok is non-null: *ok is set to true if the value could be converted to a doubl
 See also canConvert() and convert().
 */
 func (this *QVariant) ToDouble__() float64 {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
@@ -1468,7 +1468,7 @@ This function was introduced in  Qt 4.6.
 See also canConvert() and convert().
 */
 func (this *QVariant) ToFloat__() float32 {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
@@ -1510,7 +1510,7 @@ This function was introduced in  Qt 4.6.
 See also canConvert() and convert().
 */
 func (this *QVariant) ToReal__() float64 {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toRealEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)

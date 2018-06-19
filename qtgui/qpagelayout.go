@@ -126,9 +126,9 @@ func NewQPageLayout_1_(pageSize QPageSize_ITF, orientation int, margins qtcore.Q
 	if margins != nil && margins.QMarginsF_PTR() != nil {
 		convArg2 = margins.QMarginsF_PTR().GetCthis()
 	}
-	// arg: 3, QPageLayout::Unit=Enum, QPageLayout::Unit=Enum,
+	// arg: 3, QPageLayout::Unit=Enum, QPageLayout::Unit=Enum, , Invalid
 	units := 0
-	// arg: 4, const QMarginsF &=LValueReference, QMarginsF=Record,
+	// arg: 4, const QMarginsF &=LValueReference, QMarginsF=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayoutC2ERK9QPageSizeNS_11OrientationERK9QMarginsFNS_4UnitES6_", qtrt.FFI_TYPE_POINTER, convArg0, orientation, convArg2, units, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -154,7 +154,7 @@ func NewQPageLayout_1_1(pageSize QPageSize_ITF, orientation int, margins qtcore.
 	if margins != nil && margins.QMarginsF_PTR() != nil {
 		convArg2 = margins.QMarginsF_PTR().GetCthis()
 	}
-	// arg: 4, const QMarginsF &=LValueReference, QMarginsF=Record,
+	// arg: 4, const QMarginsF &=LValueReference, QMarginsF=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayoutC2ERK9QPageSizeNS_11OrientationERK9QMarginsFNS_4UnitES6_", qtrt.FFI_TYPE_POINTER, convArg0, orientation, convArg2, units, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -340,7 +340,7 @@ func (this *QPageLayout) SetPageSize__(pageSize QPageSize_ITF) {
 	if pageSize != nil && pageSize.QPageSize_PTR() != nil {
 		convArg0 = pageSize.QPageSize_PTR().GetCthis()
 	}
-	// arg: 1, const QMarginsF &=LValueReference, QMarginsF=Record,
+	// arg: 1, const QMarginsF &=LValueReference, QMarginsF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

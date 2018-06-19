@@ -1192,7 +1192,7 @@ func (this *QRect) Contains__(r QRect_ITF) bool {
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	proper := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect8containsERKS_b", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, proper)
 	qtrt.ErrPrint(err, rv)
@@ -1234,7 +1234,7 @@ func (this *QRect) Contains_1_(p QPoint_ITF) bool {
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	proper := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect8containsERK6QPointb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, proper)
 	qtrt.ErrPrint(err, rv)

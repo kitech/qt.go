@@ -114,7 +114,7 @@ func NewQQuickTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickTran
 
  */
 func NewQQuickTransform__() *QQuickTransform {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QQuickTransformC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

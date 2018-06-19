@@ -105,7 +105,7 @@ func NewQThreadPool(parent QObject_ITF /*777 QObject **/) *QThreadPool {
 Constructs a thread pool with the given parent.
 */
 func NewQThreadPool__() *QThreadPool {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPoolC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -182,7 +182,7 @@ func (this *QThreadPool) Start__(runnable QRunnable_ITF /*777 QRunnable **/) {
 	if runnable != nil && runnable.QRunnable_PTR() != nil {
 		convArg0 = runnable.QRunnable_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	priority := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool5startEP9QRunnablei", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
 	qtrt.ErrPrint(err, rv)
@@ -364,7 +364,7 @@ func (this *QThreadPool) WaitForDone(msecs int) bool {
 Waits up to msecs milliseconds for all threads to exit and removes all threads from the thread pool. Returns true if all threads were removed; otherwise it returns false. If msecs is -1 (the default), the timeout is ignored (waits for the last thread to exit).
 */
 func (this *QThreadPool) WaitForDone__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool11waitForDoneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)

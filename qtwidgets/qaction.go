@@ -116,7 +116,7 @@ Constructs an action with parent. If parent is an action group the action will b
 Note: The parent argument is optional since Qt 5.7.
 */
 func NewQAction__() *QAction {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QActionC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ Note: The parent argument is optional since Qt 5.7.
 func NewQAction_1_(text string) *QAction {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QActionC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +216,7 @@ func NewQAction_2_(icon qtgui.QIcon_ITF, text string) *QAction {
 	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QActionC2ERK5QIconRK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -862,7 +862,7 @@ If a null widget is specified, the event is sent to the action's parent.
 See also statusTip.
 */
 func (this *QAction) ShowStatusText__() bool {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction14showStatusTextEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1120,7 +1120,7 @@ If the action is checkable, checked is true if the action is checked, or false i
 See also QAction::activate(), QAction::toggled(), and checked.
 */
 func (this *QAction) Triggered__() {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	checked := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction9triggeredEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	qtrt.ErrPrint(err, rv)

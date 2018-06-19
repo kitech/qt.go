@@ -397,7 +397,7 @@ func NewQAbstractItemView(parent QWidget_ITF /*777 QWidget **/) *QAbstractItemVi
 Constructs an abstract item view with the given parent.
 */
 func NewQAbstractItemView__() *QAbstractItemView {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1144,7 +1144,7 @@ func (this *QAbstractItemView) ScrollTo__(index qtcore.QModelIndex_ITF) {
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
 	}
-	// arg: 1, QAbstractItemView::ScrollHint=Enum, QAbstractItemView::ScrollHint=Enum,
+	// arg: 1, QAbstractItemView::ScrollHint=Enum, QAbstractItemView::ScrollHint=Enum, , Invalid
 	hint := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView8scrollToERK11QModelIndexNS_10ScrollHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	qtrt.ErrPrint(err, rv)
@@ -2262,7 +2262,7 @@ func (this *QAbstractItemView) SelectionCommand__(index qtcore.QModelIndex_ITF) 
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
 	}
-	// arg: 1, const QEvent *=Pointer, QEvent=Record,
+	// arg: 1, const QEvent *=Pointer, QEvent=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView16selectionCommandERK11QModelIndexPK6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

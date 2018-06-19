@@ -107,7 +107,7 @@ func NewQAbstractEventDispatcher(parent QObject_ITF /*777 QObject **/) *QAbstrac
 Constructs a new event dispatcher with the given parent.
 */
 func NewQAbstractEventDispatcher__() *QAbstractEventDispatcher {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ Returns a pointer to the event dispatcher object for the specified thread. If th
 Note: If Qt is built without thread support, the thread argument is ignored.
 */
 func (this *QAbstractEventDispatcher) Instance__() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
-	// arg: 0, QThread *=Pointer, QThread=Record,
+	// arg: 0, QThread *=Pointer, QThread=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher8instanceEP7QThread", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

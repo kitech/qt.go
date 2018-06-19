@@ -233,7 +233,7 @@ This function was introduced in  Qt 4.2.
 See also toPlainText(), QTextDocument::toHtml(), and QTextCodec.
 */
 func (this *QTextDocumentFragment) ToHtml__() string {
-	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

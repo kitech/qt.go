@@ -118,13 +118,13 @@ Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined 
 See also setType() and setApplicationProxy().
 */
 func NewQNetworkProxy_1_(type_ int) *QNetworkProxy {
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short
+	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(0)
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxyC2ENS_9ProxyTypeERK7QStringtS3_S3_", qtrt.FFI_TYPE_POINTER, type_, convArg1, port, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -146,11 +146,11 @@ See also setType() and setApplicationProxy().
 func NewQNetworkProxy_1_1(type_ int, hostName string) *QNetworkProxy {
 	var tmpArg1 = qtcore.NewQString_5(hostName)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short
+	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(0)
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxyC2ENS_9ProxyTypeERK7QStringtS3_S3_", qtrt.FFI_TYPE_POINTER, type_, convArg1, port, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -172,9 +172,9 @@ See also setType() and setApplicationProxy().
 func NewQNetworkProxy_1_2(type_ int, hostName string, port uint16) *QNetworkProxy {
 	var tmpArg1 = qtcore.NewQString_5(hostName)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxyC2ENS_9ProxyTypeERK7QStringtS3_S3_", qtrt.FFI_TYPE_POINTER, type_, convArg1, port, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -198,7 +198,7 @@ func NewQNetworkProxy_1_3(type_ int, hostName string, port uint16, user string) 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(user)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxyC2ENS_9ProxyTypeERK7QStringtS3_S3_", qtrt.FFI_TYPE_POINTER, type_, convArg1, port, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)

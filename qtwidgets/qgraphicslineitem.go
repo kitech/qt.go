@@ -108,7 +108,7 @@ func NewQGraphicsLineItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 
  */
 func NewQGraphicsLineItem__() *QGraphicsLineItem {
-	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsLineItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -154,7 +154,7 @@ func NewQGraphicsLineItem_1_(line qtcore.QLineF_ITF) *QGraphicsLineItem {
 	if line != nil && line.QLineF_PTR() != nil {
 		convArg0 = line.QLineF_PTR().GetCthis()
 	}
-	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsLineItemC2ERK6QLineFP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func NewQGraphicsLineItem_2(x1 float64, y1 float64, x2 float64, y2 float64, pare
 
  */
 func NewQGraphicsLineItem_2_(x1 float64, y1 float64, x2 float64, y2 float64) *QGraphicsLineItem {
-	// arg: 4, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	// arg: 4, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsLineItemC2EddddP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, x1, y1, x2, y2, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -479,7 +479,7 @@ func (this *QGraphicsLineItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter
 	if option != nil && option.QStyleOptionGraphicsItem_PTR() != nil {
 		convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
 	}
-	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

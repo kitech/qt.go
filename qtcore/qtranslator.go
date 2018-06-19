@@ -105,7 +105,7 @@ func NewQTranslator(parent QObject_ITF /*777 QObject **/) *QTranslator {
 Constructs an empty message file object with parent parent that is not connected to any file.
 */
 func NewQTranslator__() *QTranslator {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -181,9 +181,9 @@ func (this *QTranslator) Translate__(context string, sourceText string) string {
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(sourceText)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 2, const char *=Pointer, =Invalid,
+	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	n := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTranslator9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, n)
 	qtrt.ErrPrint(err, rv)
@@ -216,7 +216,7 @@ func (this *QTranslator) Translate__1(context string, sourceText string, disambi
 	defer qtrt.FreeMem(convArg1)
 	var convArg2 = qtrt.CString(disambiguation)
 	defer qtrt.FreeMem(convArg2)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	n := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTranslator9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, n)
 	qtrt.ErrPrint(err, rv)
@@ -285,11 +285,11 @@ If the file name does not exist, other file names are tried in the following ord
 func (this *QTranslator) Load__(filename string) bool {
 	var tmpArg0 = NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QStringS2_S2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -315,9 +315,9 @@ func (this *QTranslator) Load__1(filename string, directory string) bool {
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(directory)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QStringS2_S2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -345,7 +345,7 @@ func (this *QTranslator) Load__2(filename string, directory string, search_delim
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(search_delimiters)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QStringS2_S2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -405,11 +405,11 @@ func (this *QTranslator) Load_1_(locale QLocale_ITF, filename string) bool {
 	}
 	var tmpArg1 = NewQString_5(filename)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -439,9 +439,9 @@ func (this *QTranslator) Load_1_1(locale QLocale_ITF, filename string, prefix st
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(prefix)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -473,7 +473,7 @@ func (this *QTranslator) Load_1_2(locale QLocale_ITF, filename string, prefix st
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = NewQString_5(directory)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -517,7 +517,7 @@ The previous contents of this translator object are discarded.
 If the file name does not exist, other file names are tried in the following order:
 */
 func (this *QTranslator) Load_2_(data unsafe.Pointer /*666*/, len_ int) bool {
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadEPKhiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), data, len_, convArg2)
 	qtrt.ErrPrint(err, rv)

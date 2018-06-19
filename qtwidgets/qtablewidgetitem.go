@@ -91,7 +91,7 @@ func NewQTableWidgetItem(type_ int) *QTableWidgetItem {
 
  */
 func NewQTableWidgetItem__() *QTableWidgetItem {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItemC2Ei", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -129,7 +129,7 @@ func NewQTableWidgetItem_1(text string, type_ int) *QTableWidgetItem {
 func NewQTableWidgetItem_1_(text string) *QTableWidgetItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItemC2ERK7QStringi", qtrt.FFI_TYPE_POINTER, convArg0, type_)
 	qtrt.ErrPrint(err, rv)
@@ -175,7 +175,7 @@ func NewQTableWidgetItem_2_(icon qtgui.QIcon_ITF, text string) *QTableWidgetItem
 	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_)
 	qtrt.ErrPrint(err, rv)

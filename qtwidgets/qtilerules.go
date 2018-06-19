@@ -107,7 +107,7 @@ func NewQTileRules_1(rule int) *QTileRules {
 
  */
 func NewQTileRules_1_() *QTileRules {
-	// arg: 0, Qt::TileRule=Elaborated, Qt::TileRule=Enum,
+	// arg: 0, Qt::TileRule=Elaborated, Qt::TileRule=Enum, , Invalid
 	rule := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleE", qtrt.FFI_TYPE_POINTER, rule)
 	qtrt.ErrPrint(err, rv)

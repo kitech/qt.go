@@ -643,7 +643,7 @@ This function was introduced in  Qt 5.3.
 See also setOptions(), options(), and testOption().
 */
 func (this *QSurfaceFormat) SetOption_1_(option int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionENS_12FormatOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	qtrt.ErrPrint(err, rv)

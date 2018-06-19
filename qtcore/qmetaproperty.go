@@ -219,7 +219,7 @@ func (this *QMetaProperty) IsDesignable(obj QObject_ITF /*777 const QObject **/)
 
  */
 func (this *QMetaProperty) IsDesignable__() bool {
-	// arg: 0, const QObject *=Pointer, QObject=Record,
+	// arg: 0, const QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty12isDesignableEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func (this *QMetaProperty) IsScriptable(obj QObject_ITF /*777 const QObject **/)
 
  */
 func (this *QMetaProperty) IsScriptable__() bool {
-	// arg: 0, const QObject *=Pointer, QObject=Record,
+	// arg: 0, const QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty12isScriptableEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -287,7 +287,7 @@ func (this *QMetaProperty) IsStored(obj QObject_ITF /*777 const QObject **/) boo
 
  */
 func (this *QMetaProperty) IsStored__() bool {
-	// arg: 0, const QObject *=Pointer, QObject=Record,
+	// arg: 0, const QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty8isStoredEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -321,7 +321,7 @@ func (this *QMetaProperty) IsEditable(obj QObject_ITF /*777 const QObject **/) b
 
  */
 func (this *QMetaProperty) IsEditable__() bool {
-	// arg: 0, const QObject *=Pointer, QObject=Record,
+	// arg: 0, const QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty10isEditableEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -355,7 +355,7 @@ func (this *QMetaProperty) IsUser(obj QObject_ITF /*777 const QObject **/) bool 
 
  */
 func (this *QMetaProperty) IsUser__() bool {
-	// arg: 0, const QObject *=Pointer, QObject=Record,
+	// arg: 0, const QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMetaProperty6isUserEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

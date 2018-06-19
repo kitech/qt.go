@@ -157,7 +157,7 @@ func NewQTabWidget(parent QWidget_ITF /*777 QWidget **/) *QTabWidget {
 Constructs a tabbed widget with parent parent.
 */
 func NewQTabWidget__() *QTabWidget {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -808,7 +808,7 @@ func (this *QTabWidget) SetCornerWidget__(w QWidget_ITF /*777 QWidget **/) {
 	if w != nil && w.QWidget_PTR() != nil {
 		convArg0 = w.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, Qt::Corner=Elaborated, Qt::Corner=Enum,
+	// arg: 1, Qt::Corner=Elaborated, Qt::Corner=Enum, , Invalid
 	corner := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget15setCornerWidgetEP7QWidgetN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, corner)
 	qtrt.ErrPrint(err, rv)
@@ -841,7 +841,7 @@ Returns the widget shown in the corner of the tab widget or 0.
 See also setCornerWidget().
 */
 func (this *QTabWidget) CornerWidget__() *QWidget /*777 QWidget **/ {
-	// arg: 0, Qt::Corner=Elaborated, Qt::Corner=Enum,
+	// arg: 0, Qt::Corner=Elaborated, Qt::Corner=Enum, , Invalid
 	corner := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget12cornerWidgetEN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), corner)
 	qtrt.ErrPrint(err, rv)

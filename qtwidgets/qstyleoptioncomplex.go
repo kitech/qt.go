@@ -89,9 +89,9 @@ func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
 
  */
 func NewQStyleOptionComplex__() *QStyleOptionComplex {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	version := 0 /*QStyleOptionComplex::Version*/
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := QStyleOption__SO_Complex
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
 	qtrt.ErrPrint(err, rv)
@@ -109,7 +109,7 @@ func NewQStyleOptionComplex__() *QStyleOptionComplex {
 
  */
 func NewQStyleOptionComplex__1(version int) *QStyleOptionComplex {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := QStyleOption__SO_Complex
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
 	qtrt.ErrPrint(err, rv)

@@ -179,7 +179,7 @@ func NewQQuickWindow(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickWindow {
 Constructs a window for displaying a QML scene with parent window parent.
 */
 func NewQQuickWindow__() *QQuickWindow {
-	// arg: 0, QWindow *=Pointer, QWindow=Record,
+	// arg: 0, QWindow *=Pointer, QWindow=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWindowC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -560,7 +560,7 @@ func (this *QQuickWindow) CreateTextureFromId__(id uint, size qtcore.QSize_ITF) 
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 2, QQuickWindow::CreateTextureOptions=Typedef, QQuickWindow::CreateTextureOptions=Typedef, QFlags<QQuickWindow::CreateTextureOption>
+	// arg: 2, QQuickWindow::CreateTextureOptions=Typedef, QQuickWindow::CreateTextureOptions=Typedef, QFlags<QQuickWindow::CreateTextureOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWindow19createTextureFromIdEjRK5QSize6QFlagsINS_19CreateTextureOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1, options)
 	qtrt.ErrPrint(err, rv)

@@ -126,9 +126,9 @@ Construct a splash screen that will display the pixmap.
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
 func NewQSplashScreen__() *QSplashScreen {
-	// arg: 0, const QPixmap &=LValueReference, QPixmap=Record,
+	// arg: 0, const QPixmap &=LValueReference, QPixmap=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreenC2ERK7QPixmap6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
@@ -152,7 +152,7 @@ func NewQSplashScreen__1(pixmap qtgui.QPixmap_ITF) *QSplashScreen {
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
 	}
-	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreenC2ERK7QPixmap6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
@@ -202,9 +202,9 @@ func NewQSplashScreen_1_(parent QWidget_ITF /*777 QWidget **/) *QSplashScreen {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, const QPixmap &=LValueReference, QPixmap=Record,
+	// arg: 1, const QPixmap &=LValueReference, QPixmap=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreenC2EP7QWidgetRK7QPixmap6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, f)
 	qtrt.ErrPrint(err, rv)
@@ -232,7 +232,7 @@ func NewQSplashScreen_1_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPi
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg1 = pixmap.QPixmap_PTR().GetCthis()
 	}
-	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreenC2EP7QWidgetRK7QPixmap6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, f)
 	qtrt.ErrPrint(err, rv)
@@ -378,9 +378,9 @@ See also Qt::Alignment, clearMessage(), and message().
 func (this *QSplashScreen) ShowMessage__(message string) {
 	var tmpArg0 = qtcore.NewQString_5(message)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	alignment := 0 /*Qt::AlignLeft*/
-	// arg: 2, const QColor &=LValueReference, QColor=Record,
+	// arg: 2, const QColor &=LValueReference, QColor=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -399,7 +399,7 @@ See also Qt::Alignment, clearMessage(), and message().
 func (this *QSplashScreen) ShowMessage__1(message string, alignment int) {
 	var tmpArg0 = qtcore.NewQString_5(message)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, const QColor &=LValueReference, QColor=Record,
+	// arg: 2, const QColor &=LValueReference, QColor=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment, convArg2)
 	qtrt.ErrPrint(err, rv)

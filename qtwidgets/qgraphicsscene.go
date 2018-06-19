@@ -217,7 +217,7 @@ func NewQGraphicsScene(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsSc
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
 func NewQGraphicsScene__() *QGraphicsScene {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsSceneC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -263,7 +263,7 @@ func NewQGraphicsScene_1_(sceneRect qtcore.QRectF_ITF) *QGraphicsScene {
 	if sceneRect != nil && sceneRect.QRectF_PTR() != nil {
 		convArg0 = sceneRect.QRectF_PTR().GetCthis()
 	}
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsSceneC2ERK6QRectFP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -301,7 +301,7 @@ func NewQGraphicsScene_2(x float64, y float64, width float64, height float64, pa
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
 func NewQGraphicsScene_2_(x float64, y float64, width float64, height float64) *QGraphicsScene {
-	// arg: 4, QObject *=Pointer, QObject=Record,
+	// arg: 4, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsSceneC2EddddP7QObject", qtrt.FFI_TYPE_POINTER, x, y, width, height, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -477,11 +477,11 @@ func (this *QGraphicsScene) Render__(painter qtgui.QPainter_ITF /*777 QPainter *
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
 	}
-	// arg: 1, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 1, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 2, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectRatioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene6renderEP8QPainterRK6QRectFS4_N2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, aspectRatioMode)
 	qtrt.ErrPrint(err, rv)
@@ -522,9 +522,9 @@ func (this *QGraphicsScene) Render__1(painter qtgui.QPainter_ITF /*777 QPainter 
 	if target != nil && target.QRectF_PTR() != nil {
 		convArg1 = target.QRectF_PTR().GetCthis()
 	}
-	// arg: 2, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 2, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectRatioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene6renderEP8QPainterRK6QRectFS4_N2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, aspectRatioMode)
 	qtrt.ErrPrint(err, rv)
@@ -569,7 +569,7 @@ func (this *QGraphicsScene) Render__2(painter qtgui.QPainter_ITF /*777 QPainter 
 	if source != nil && source.QRectF_PTR() != nil {
 		convArg2 = source.QRectF_PTR().GetCthis()
 	}
-	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectRatioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene6renderEP8QPainterRK6QRectFS4_N2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, aspectRatioMode)
 	qtrt.ErrPrint(err, rv)
@@ -827,9 +827,9 @@ func (this *QGraphicsScene) SetSelectionArea_1_(path qtgui.QPainterPath_ITF) {
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum,
+	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
 	mode := 0
-	// arg: 2, const QTransform &=LValueReference, QTransform=Record,
+	// arg: 2, const QTransform &=LValueReference, QTransform=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathN2Qt17ItemSelectionModeERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -856,7 +856,7 @@ func (this *QGraphicsScene) SetSelectionArea_1_1(path qtgui.QPainterPath_ITF, mo
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
 	}
-	// arg: 2, const QTransform &=LValueReference, QTransform=Record,
+	// arg: 2, const QTransform &=LValueReference, QTransform=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathN2Qt17ItemSelectionModeERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -912,9 +912,9 @@ func (this *QGraphicsScene) SetSelectionArea_2_(path qtgui.QPainterPath_ITF, sel
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
 	}
-	// arg: 2, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum,
+	// arg: 2, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
 	mode := 0
-	// arg: 3, const QTransform &=LValueReference, QTransform=Record,
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathN2Qt22ItemSelectionOperationENS3_17ItemSelectionModeERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, selectionOperation, mode, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -941,7 +941,7 @@ func (this *QGraphicsScene) SetSelectionArea_2_1(path qtgui.QPainterPath_ITF, se
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
 	}
-	// arg: 3, const QTransform &=LValueReference, QTransform=Record,
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathN2Qt22ItemSelectionOperationENS3_17ItemSelectionModeERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, selectionOperation, mode, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1044,9 +1044,9 @@ func (this *QGraphicsScene) AddEllipse__(rect qtcore.QRectF_ITF) *QGraphicsEllip
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 1, const QPen &=LValueReference, QPen=Record,
+	// arg: 1, const QPen &=LValueReference, QPen=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 2, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1076,7 +1076,7 @@ func (this *QGraphicsScene) AddEllipse__1(rect qtcore.QRectF_ITF, pen qtgui.QPen
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg1 = pen.QPen_PTR().GetCthis()
 	}
-	// arg: 2, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 2, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1126,9 +1126,9 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 See also addLine(), addPath(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
 func (this *QGraphicsScene) AddEllipse_1_(x float64, y float64, w float64, h float64) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
-	// arg: 4, const QPen &=LValueReference, QPen=Record,
+	// arg: 4, const QPen &=LValueReference, QPen=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 5, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg5 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, convArg4, convArg5)
 	qtrt.ErrPrint(err, rv)
@@ -1154,7 +1154,7 @@ func (this *QGraphicsScene) AddEllipse_1_1(x float64, y float64, w float64, h fl
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg4 = pen.QPen_PTR().GetCthis()
 	}
-	// arg: 5, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 5, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg5 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, convArg4, convArg5)
 	qtrt.ErrPrint(err, rv)
@@ -1208,7 +1208,7 @@ func (this *QGraphicsScene) AddLine__(line qtcore.QLineF_ITF) *QGraphicsLineItem
 	if line != nil && line.QLineF_PTR() != nil {
 		convArg0 = line.QLineF_PTR().GetCthis()
 	}
-	// arg: 1, const QPen &=LValueReference, QPen=Record,
+	// arg: 1, const QPen &=LValueReference, QPen=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene7addLineERK6QLineFRK4QPen", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1254,7 +1254,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 See also addEllipse(), addPath(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
 func (this *QGraphicsScene) AddLine_1_(x1 float64, y1 float64, x2 float64, y2 float64) *QGraphicsLineItem /*777 QGraphicsLineItem **/ {
-	// arg: 4, const QPen &=LValueReference, QPen=Record,
+	// arg: 4, const QPen &=LValueReference, QPen=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene7addLineEddddRK4QPen", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -1312,9 +1312,9 @@ func (this *QGraphicsScene) AddPath__(path qtgui.QPainterPath_ITF) *QGraphicsPat
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
 	}
-	// arg: 1, const QPen &=LValueReference, QPen=Record,
+	// arg: 1, const QPen &=LValueReference, QPen=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 2, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1344,7 +1344,7 @@ func (this *QGraphicsScene) AddPath__1(path qtgui.QPainterPath_ITF, pen qtgui.QP
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg1 = pen.QPen_PTR().GetCthis()
 	}
-	// arg: 2, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 2, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1426,9 +1426,9 @@ func (this *QGraphicsScene) AddPolygon__(polygon qtgui.QPolygonF_ITF) *QGraphics
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
 	}
-	// arg: 1, const QPen &=LValueReference, QPen=Record,
+	// arg: 1, const QPen &=LValueReference, QPen=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 2, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1458,7 +1458,7 @@ func (this *QGraphicsScene) AddPolygon__1(polygon qtgui.QPolygonF_ITF, pen qtgui
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg1 = pen.QPen_PTR().GetCthis()
 	}
-	// arg: 2, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 2, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1516,9 +1516,9 @@ func (this *QGraphicsScene) AddRect__(rect qtcore.QRectF_ITF) *QGraphicsRectItem
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 1, const QPen &=LValueReference, QPen=Record,
+	// arg: 1, const QPen &=LValueReference, QPen=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 2, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1548,7 +1548,7 @@ func (this *QGraphicsScene) AddRect__1(rect qtcore.QRectF_ITF, pen qtgui.QPen_IT
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg1 = pen.QPen_PTR().GetCthis()
 	}
-	// arg: 2, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 2, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1598,9 +1598,9 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 See also addEllipse(), addLine(), addPixmap(), addPixmap(), addText(), addItem(), and addWidget().
 */
 func (this *QGraphicsScene) AddRect_1_(x float64, y float64, w float64, h float64) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
-	// arg: 4, const QPen &=LValueReference, QPen=Record,
+	// arg: 4, const QPen &=LValueReference, QPen=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 5, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg5 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, convArg4, convArg5)
 	qtrt.ErrPrint(err, rv)
@@ -1626,7 +1626,7 @@ func (this *QGraphicsScene) AddRect_1_1(x float64, y float64, w float64, h float
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg4 = pen.QPen_PTR().GetCthis()
 	}
-	// arg: 5, const QBrush &=LValueReference, QBrush=Record,
+	// arg: 5, const QBrush &=LValueReference, QBrush=Record, , Invalid
 	var convArg5 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, convArg4, convArg5)
 	qtrt.ErrPrint(err, rv)
@@ -1676,7 +1676,7 @@ See also addEllipse(), addLine(), addPixmap(), addPixmap(), addRect(), addItem()
 func (this *QGraphicsScene) AddText__(text string) *QGraphicsTextItem /*777 QGraphicsTextItem **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QFont &=LValueReference, QFont=Record,
+	// arg: 1, const QFont &=LValueReference, QFont=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene7addTextERK7QStringRK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1726,7 +1726,7 @@ See also addEllipse(), addLine(), addPixmap(), addPixmap(), addRect(), addItem()
 func (this *QGraphicsScene) AddSimpleText__(text string) *QGraphicsSimpleTextItem /*777 QGraphicsSimpleTextItem **/ {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QFont &=LValueReference, QFont=Record,
+	// arg: 1, const QFont &=LValueReference, QFont=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1780,7 +1780,7 @@ func (this *QGraphicsScene) AddWidget__(widget QWidget_ITF /*777 QWidget **/) *Q
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	wFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene9addWidgetEP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, wFlags)
 	qtrt.ErrPrint(err, rv)
@@ -1866,7 +1866,7 @@ func (this *QGraphicsScene) SetFocusItem__(item QGraphicsItem_ITF /*777 QGraphic
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
 	}
-	// arg: 1, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum,
+	// arg: 1, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum, , Invalid
 	focusReason := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene12setFocusItemEP13QGraphicsItemN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, focusReason)
 	qtrt.ErrPrint(err, rv)
@@ -1918,7 +1918,7 @@ If the scene already has focus, this function does nothing.
 See also hasFocus(), clearFocus(), and setFocusItem().
 */
 func (this *QGraphicsScene) SetFocus__() {
-	// arg: 0, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum,
+	// arg: 0, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum, , Invalid
 	focusReason := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene8setFocusEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), focusReason)
 	qtrt.ErrPrint(err, rv)
@@ -2123,7 +2123,7 @@ Schedules a redraw of the area rect on the scene.
 See also sceneRect() and changed().
 */
 func (this *QGraphicsScene) Update_1_() {
-	// arg: 0, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene6updateERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2227,7 +2227,7 @@ Note that QGraphicsView currently supports background caching only (see QGraphic
 See also QGraphicsView::resetCachedContent().
 */
 func (this *QGraphicsScene) Invalidate__(x float64, y float64, w float64, h float64) {
-	// arg: 4, QGraphicsScene::SceneLayers=Typedef, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>
+	// arg: 4, QGraphicsScene::SceneLayers=Typedef, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>, Unexposed
 	layers := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene10invalidateEdddd6QFlagsINS_10SceneLayerEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, layers)
 	qtrt.ErrPrint(err, rv)
@@ -2335,9 +2335,9 @@ Note that QGraphicsView currently supports background caching only (see QGraphic
 See also QGraphicsView::resetCachedContent().
 */
 func (this *QGraphicsScene) Invalidate_1_() {
-	// arg: 0, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, QGraphicsScene::SceneLayers=Typedef, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>
+	// arg: 1, QGraphicsScene::SceneLayers=Typedef, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>, Unexposed
 	layers := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene10invalidateERK6QRectF6QFlagsINS_10SceneLayerEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, layers)
 	qtrt.ErrPrint(err, rv)
@@ -2394,7 +2394,7 @@ func (this *QGraphicsScene) Invalidate_1_1(rect qtcore.QRectF_ITF) {
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 1, QGraphicsScene::SceneLayers=Typedef, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>
+	// arg: 1, QGraphicsScene::SceneLayers=Typedef, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>, Unexposed
 	layers := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene10invalidateERK6QRectF6QFlagsINS_10SceneLayerEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, layers)
 	qtrt.ErrPrint(err, rv)
@@ -3191,7 +3191,7 @@ func (this *QGraphicsScene) DrawItems__(painter qtgui.QPainter_ITF /*777 QPainte
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
 	}
-	// arg: 4, QWidget *=Pointer, QWidget=Record,
+	// arg: 4, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene9drawItemsEP8QPainteriPP13QGraphicsItemPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, numItems, items, options, convArg4)
 	qtrt.ErrPrint(err, rv)

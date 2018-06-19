@@ -644,13 +644,13 @@ On Windows Vista and above grabbing a layered window, which is created by settin
 Warning: In general, grabbing an area outside the screen is not safe. This depends on the underlying window system.
 */
 func (this *QScreen) GrabWindow__(window uint64) *QPixmap /*123*/ {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	x := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	y := int(0)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	w := int(-1)
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -682,11 +682,11 @@ On Windows Vista and above grabbing a layered window, which is created by settin
 Warning: In general, grabbing an area outside the screen is not safe. This depends on the underlying window system.
 */
 func (this *QScreen) GrabWindow__1(window uint64, x int) *QPixmap /*123*/ {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	y := int(0)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	w := int(-1)
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -718,9 +718,9 @@ On Windows Vista and above grabbing a layered window, which is created by settin
 Warning: In general, grabbing an area outside the screen is not safe. This depends on the underlying window system.
 */
 func (this *QScreen) GrabWindow__2(window uint64, x int, y int) *QPixmap /*123*/ {
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	w := int(-1)
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -752,7 +752,7 @@ On Windows Vista and above grabbing a layered window, which is created by settin
 Warning: In general, grabbing an area outside the screen is not safe. This depends on the underlying window system.
 */
 func (this *QScreen) GrabWindow__3(window uint64, x int, y int, w int) *QPixmap /*123*/ {
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QScreen10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), window, x, y, w, h)
 	qtrt.ErrPrint(err, rv)

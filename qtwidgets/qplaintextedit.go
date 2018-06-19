@@ -272,7 +272,7 @@ func NewQPlainTextEdit(parent QWidget_ITF /*777 QWidget **/) *QPlainTextEdit {
 Constructs an empty QPlainTextEdit with parent parent.
 */
 func NewQPlainTextEdit__() *QPlainTextEdit {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -314,7 +314,7 @@ Constructs an empty QPlainTextEdit with parent parent.
 func NewQPlainTextEdit_1_(text string) *QPlainTextEdit {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEditC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -804,7 +804,7 @@ Finds the next occurrence of the string, exp, using the given options. Returns t
 func (this *QPlainTextEdit) Find__(exp string) bool {
 	var tmpArg0 = qtcore.NewQString_5(exp)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QTextDocument::FindFlags=Elaborated, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
+	// arg: 1, QTextDocument::FindFlags=Elaborated, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit4findERK7QString6QFlagsIN13QTextDocument8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, options)
 	qtrt.ErrPrint(err, rv)
@@ -842,7 +842,7 @@ func (this *QPlainTextEdit) Find_1_(exp qtcore.QRegExp_ITF) bool {
 	if exp != nil && exp.QRegExp_PTR() != nil {
 		convArg0 = exp.QRegExp_PTR().GetCthis()
 	}
-	// arg: 1, QTextDocument::FindFlags=Elaborated, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>
+	// arg: 1, QTextDocument::FindFlags=Elaborated, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit4findERK7QRegExp6QFlagsIN13QTextDocument8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, options)
 	qtrt.ErrPrint(err, rv)
@@ -1162,7 +1162,7 @@ If mode is QTextCursor::KeepAnchor, the cursor selects the text it moves over. T
 See also QTextCursor::movePosition().
 */
 func (this *QPlainTextEdit) MoveCursor__(operation int) {
-	// arg: 1, QTextCursor::MoveMode=Elaborated, QTextCursor::MoveMode=Enum,
+	// arg: 1, QTextCursor::MoveMode=Elaborated, QTextCursor::MoveMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit10moveCursorEN11QTextCursor13MoveOperationENS0_8MoveModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), operation, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1486,7 +1486,7 @@ Zooms in on the text by making the base font size range points larger and recalc
 See also zoomOut().
 */
 func (this *QPlainTextEdit) ZoomIn__() {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	range_ := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit6zoomInEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), range_)
 	qtrt.ErrPrint(err, rv)
@@ -1522,7 +1522,7 @@ Zooms out on the text by making the base font size range points smaller and reca
 See also zoomIn().
 */
 func (this *QPlainTextEdit) ZoomOut__() {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	range_ := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit7zoomOutEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), range_)
 	qtrt.ErrPrint(err, rv)

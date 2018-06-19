@@ -144,7 +144,7 @@ func (this *QWaitCondition) Wait__(lockedMutex QMutex_ITF /*777 QMutex **/) bool
 	if lockedMutex != nil && lockedMutex.QMutex_PTR() != nil {
 		convArg0 = lockedMutex.QMutex_PTR().GetCthis()
 	}
-	// arg: 1, unsigned long=ULong, =Invalid,
+	// arg: 1, unsigned long=ULong, =Invalid, , Invalid
 	time := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	qtrt.ErrPrint(err, rv)
@@ -200,7 +200,7 @@ func (this *QWaitCondition) Wait_1_(lockedReadWriteLock QReadWriteLock_ITF /*777
 	if lockedReadWriteLock != nil && lockedReadWriteLock.QReadWriteLock_PTR() != nil {
 		convArg0 = lockedReadWriteLock.QReadWriteLock_PTR().GetCthis()
 	}
-	// arg: 1, unsigned long=ULong, =Invalid,
+	// arg: 1, unsigned long=ULong, =Invalid, , Invalid
 	time := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	qtrt.ErrPrint(err, rv)

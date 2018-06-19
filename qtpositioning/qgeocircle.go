@@ -112,7 +112,7 @@ func NewQGeoCircle_1_(center QGeoCoordinate_ITF) *QGeoCircle {
 	if center != nil && center.QGeoCoordinate_PTR() != nil {
 		convArg0 = center.QGeoCoordinate_PTR().GetCthis()
 	}
-	// arg: 1, qreal=Typedef, qreal=Typedef, double
+	// arg: 1, qreal=Typedef, qreal=Typedef, double, Double
 	radius := float64(-1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QGeoCircleC2ERK14QGeoCoordinated", qtrt.FFI_TYPE_POINTER, convArg0, radius)
 	qtrt.ErrPrint(err, rv)

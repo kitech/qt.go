@@ -137,7 +137,7 @@ See also setDevice() and setString().
 func NewQTextStream_2_(string string) *QTextStream {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QIODevice::OpenMode=Elaborated, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 1, QIODevice::OpenMode=Elaborated, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamC2EP7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, openMode)
 	qtrt.ErrPrint(err, rv)
@@ -183,7 +183,7 @@ func NewQTextStream_3_(array QByteArray_ITF /*777 QByteArray **/) *QTextStream {
 	if array != nil && array.QByteArray_PTR() != nil {
 		convArg0 = array.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, QIODevice::OpenMode=Elaborated, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 1, QIODevice::OpenMode=Elaborated, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamC2EP10QByteArray6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, openMode)
 	qtrt.ErrPrint(err, rv)
@@ -229,7 +229,7 @@ func NewQTextStream_4_(array QByteArray_ITF) *QTextStream {
 	if array != nil && array.QByteArray_PTR() != nil {
 		convArg0 = array.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, QIODevice::OpenMode=Elaborated, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 1, QIODevice::OpenMode=Elaborated, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamC2ERK10QByteArray6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, openMode)
 	qtrt.ErrPrint(err, rv)
@@ -487,7 +487,7 @@ See also string() and setDevice().
 func (this *QTextStream) SetString__(string string) {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QIODevice::OpenMode=Elaborated, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 1, QIODevice::OpenMode=Elaborated, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream9setStringEP7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, openMode)
 	qtrt.ErrPrint(err, rv)
@@ -699,7 +699,7 @@ If the stream has read to the end of the file, readLine() will return a null QSt
 See also readAll() and QIODevice::readLine().
 */
 func (this *QTextStream) ReadLine__() string {
-	// arg: 0, qint64=Typedef, qint64=Typedef, long long
+	// arg: 0, qint64=Typedef, qint64=Typedef, long long, LongLong
 	maxlen := int64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream8readLineEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
 	qtrt.ErrPrint(err, rv)
@@ -764,7 +764,7 @@ See also readAll() and QIODevice::readLine().
 func (this *QTextStream) ReadLineInto__(line string) bool {
 	var tmpArg0 = NewQString_5(line)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, qint64=Typedef, qint64=Typedef, long long
+	// arg: 1, qint64=Typedef, qint64=Typedef, long long, LongLong
 	maxlen := int64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream12readLineIntoEP7QStringx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)

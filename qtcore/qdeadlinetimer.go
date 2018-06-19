@@ -97,7 +97,7 @@ The timer type timerType may be ignored, since the timer is already expired. Sim
 See also hasExpired(), remainingTime(), Qt::TimerType, and current().
 */
 func NewQDeadlineTimer__() *QDeadlineTimer {
-	// arg: 0, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
+	// arg: 0, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimerC2EN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -139,7 +139,7 @@ The timer type timerType may be ignored, since the timer is already expired. Sim
 See also hasExpired(), remainingTime(), Qt::TimerType, and current().
 */
 func NewQDeadlineTimer_1_(arg0 int) *QDeadlineTimer {
-	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
+	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimerC2ENS_15ForeverConstantEN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, arg0, type_)
 	qtrt.ErrPrint(err, rv)
@@ -181,7 +181,7 @@ The timer type timerType may be ignored, since the timer is already expired. Sim
 See also hasExpired(), remainingTime(), Qt::TimerType, and current().
 */
 func NewQDeadlineTimer_2_(msecs int64) *QDeadlineTimer {
-	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
+	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimerC2ExN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, msecs, type_)
 	qtrt.ErrPrint(err, rv)
@@ -343,7 +343,7 @@ The timer type for this QDeadlineTimer object will be set to the specified timer
 See also setPreciseRemainingTime(), hasExpired(), isForever(), and remainingTime().
 */
 func (this *QDeadlineTimer) SetRemainingTime__(msecs int64) {
-	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
+	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer16setRemainingTimeExN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs, type_)
 	qtrt.ErrPrint(err, rv)
@@ -379,9 +379,9 @@ The timer type for this QDeadlineTimer object will be set to the specified timer
 See also setRemainingTime(), hasExpired(), isForever(), and remainingTime().
 */
 func (this *QDeadlineTimer) SetPreciseRemainingTime__(secs int64) {
-	// arg: 1, qint64=Typedef, qint64=Typedef, long long
+	// arg: 1, qint64=Typedef, qint64=Typedef, long long, LongLong
 	nsecs := int64(0)
-	// arg: 2, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
+	// arg: 2, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer23setPreciseRemainingTimeExxN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), secs, nsecs, type_)
 	qtrt.ErrPrint(err, rv)
@@ -400,7 +400,7 @@ The timer type for this QDeadlineTimer object will be set to the specified timer
 See also setRemainingTime(), hasExpired(), isForever(), and remainingTime().
 */
 func (this *QDeadlineTimer) SetPreciseRemainingTime__1(secs int64, nsecs int64) {
-	// arg: 2, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
+	// arg: 2, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer23setPreciseRemainingTimeExxN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), secs, nsecs, type_)
 	qtrt.ErrPrint(err, rv)
@@ -499,7 +499,7 @@ If msecs is std::numeric_limits<qint64>::max(), this QDeadlineTimer will be set 
 See also setPreciseDeadline(), deadline(), deadlineNSecs(), and setRemainingTime().
 */
 func (this *QDeadlineTimer) SetDeadline__(msecs int64) {
-	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
+	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	timerType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer11setDeadlineExN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs, timerType)
 	qtrt.ErrPrint(err, rv)
@@ -535,9 +535,9 @@ If secs or nsecs is std::numeric_limits<qint64>::max(), this QDeadlineTimer will
 See also setDeadline(), deadline(), deadlineNSecs(), and setRemainingTime().
 */
 func (this *QDeadlineTimer) SetPreciseDeadline__(secs int64) {
-	// arg: 1, qint64=Typedef, qint64=Typedef, long long
+	// arg: 1, qint64=Typedef, qint64=Typedef, long long, LongLong
 	nsecs := int64(0)
-	// arg: 2, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
+	// arg: 2, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer18setPreciseDeadlineExxN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), secs, nsecs, type_)
 	qtrt.ErrPrint(err, rv)
@@ -556,7 +556,7 @@ If secs or nsecs is std::numeric_limits<qint64>::max(), this QDeadlineTimer will
 See also setDeadline(), deadline(), deadlineNSecs(), and setRemainingTime().
 */
 func (this *QDeadlineTimer) SetPreciseDeadline__1(secs int64, nsecs int64) {
-	// arg: 2, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
+	// arg: 2, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer18setPreciseDeadlineExxN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), secs, nsecs, type_)
 	qtrt.ErrPrint(err, rv)
@@ -623,7 +623,7 @@ Returns a QDeadlineTimer that is expired but is guaranteed to contain the curren
 The QDeadlineTimer object will be constructed with the specified timerType.
 */
 func (this *QDeadlineTimer) Current__() *QDeadlineTimer /*123*/ {
-	// arg: 0, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
+	// arg: 0, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	timerType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimer7currentEN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, timerType)
 	qtrt.ErrPrint(err, rv)

@@ -116,7 +116,7 @@ func NewQRasterWindow(parent QWindow_ITF /*777 QWindow **/) *QRasterWindow {
 Constructs a new QRasterWindow with parent.
 */
 func NewQRasterWindow__() *QRasterWindow {
-	// arg: 0, QWindow *=Pointer, QWindow=Record,
+	// arg: 0, QWindow *=Pointer, QWindow=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QRasterWindowC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

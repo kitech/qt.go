@@ -182,7 +182,7 @@ func NewQMenuBar(parent QWidget_ITF /*777 QWidget **/) *QMenuBar {
 Constructs a menu bar with parent parent.
 */
 func NewQMenuBar__() *QMenuBar {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMenuBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -587,7 +587,7 @@ func (this *QMenuBar) SetCornerWidget__(w QWidget_ITF /*777 QWidget **/) {
 	if w != nil && w.QWidget_PTR() != nil {
 		convArg0 = w.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, Qt::Corner=Elaborated, Qt::Corner=Enum,
+	// arg: 1, Qt::Corner=Elaborated, Qt::Corner=Enum, , Invalid
 	corner := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMenuBar15setCornerWidgetEP7QWidgetN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, corner)
 	qtrt.ErrPrint(err, rv)
@@ -624,7 +624,7 @@ Note: Using a corner other than Qt::TopRightCorner or Qt::TopLeftCorner will res
 See also setCornerWidget().
 */
 func (this *QMenuBar) CornerWidget__() *QWidget /*777 QWidget **/ {
-	// arg: 0, Qt::Corner=Elaborated, Qt::Corner=Enum,
+	// arg: 0, Qt::Corner=Elaborated, Qt::Corner=Enum, , Invalid
 	corner := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMenuBar12cornerWidgetEN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), corner)
 	qtrt.ErrPrint(err, rv)

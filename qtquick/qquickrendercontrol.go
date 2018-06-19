@@ -109,7 +109,7 @@ func NewQQuickRenderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QQuick
 Constructs a QQuickRenderControl object, with parent object parent.
 */
 func NewQQuickRenderControl__() *QQuickRenderControl {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -279,7 +279,7 @@ func (this *QQuickRenderControl) RenderWindowFor__(win QQuickWindow_ITF /*777 QQ
 	if win != nil && win.QQuickWindow_PTR() != nil {
 		convArg0 = win.QQuickWindow_PTR().GetCthis()
 	}
-	// arg: 1, QPoint *=Pointer, QPoint=Record,
+	// arg: 1, QPoint *=Pointer, QPoint=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControl15renderWindowForEP12QQuickWindowP6QPoint", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

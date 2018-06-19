@@ -95,7 +95,7 @@ Constructs a QDir object that is a copy of the QDir object for directory dir.
 See also operator=().
 */
 func NewQDir__() *QDir {
-	// arg: 0, const QString &=LValueReference, QString=Record,
+	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -141,9 +141,9 @@ func NewQDir_1_(path string, nameFilter string) *QDir {
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(nameFilter)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
-	// arg: 3, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	// arg: 3, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filter := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QStringS2_6QFlagsINS_8SortFlagEES3_INS_6FilterEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, sort, filter)
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func NewQDir_1_1(path string, nameFilter string, sort int) *QDir {
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(nameFilter)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 3, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	// arg: 3, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filter := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QStringS2_6QFlagsINS_8SortFlagEES3_INS_6FilterEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, sort, filter)
 	qtrt.ErrPrint(err, rv)
@@ -838,7 +838,7 @@ This function was introduced in  Qt 5.9.
 See also count(), entryList(), and setFilter().
 */
 func (this *QDir) IsEmpty__() bool {
-	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filters := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir7isEmptyE6QFlagsINS_6FilterEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters)
 	qtrt.ErrPrint(err, rv)
@@ -922,9 +922,9 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 See also entryInfoList(), setNameFilters(), setSorting(), and setFilter().
 */
 func (this *QDir) EntryList__() *QStringList /*123*/ {
-	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filters := 0
-	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
 	qtrt.ErrPrint(err, rv)
@@ -948,7 +948,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 See also entryInfoList(), setNameFilters(), setSorting(), and setFilter().
 */
 func (this *QDir) EntryList__1(filters int) *QStringList /*123*/ {
-	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
 	qtrt.ErrPrint(err, rv)
@@ -1002,9 +1002,9 @@ func (this *QDir) EntryList_1_(nameFilters QStringList_ITF) *QStringList /*123*/
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg0 = nameFilters.QStringList_PTR().GetCthis()
 	}
-	// arg: 1, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	// arg: 1, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filters := 0
-	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListERK11QStringList6QFlagsINS_6FilterEES3_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, filters, sort)
 	qtrt.ErrPrint(err, rv)
@@ -1032,7 +1032,7 @@ func (this *QDir) EntryList_1_1(nameFilters QStringList_ITF, filters int) *QStri
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg0 = nameFilters.QStringList_PTR().GetCthis()
 	}
-	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListERK11QStringList6QFlagsINS_6FilterEES3_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, filters, sort)
 	qtrt.ErrPrint(err, rv)
@@ -1077,9 +1077,9 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 See also entryList(), setNameFilters(), setSorting(), setFilter(), isReadable(), and exists().
 */
 func (this *QDir) EntryInfoList__() *QFileInfoList /*667*/ {
-	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filters := 0
-	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
 	qtrt.ErrPrint(err, rv)
@@ -1102,7 +1102,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 See also entryList(), setNameFilters(), setSorting(), setFilter(), isReadable(), and exists().
 */
 func (this *QDir) EntryInfoList__1(filters int) *QFileInfoList /*667*/ {
-	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
 	qtrt.ErrPrint(err, rv)
@@ -1154,9 +1154,9 @@ func (this *QDir) EntryInfoList_1_(nameFilters QStringList_ITF) *QFileInfoList /
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg0 = nameFilters.QStringList_PTR().GetCthis()
 	}
-	// arg: 1, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	// arg: 1, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filters := 0
-	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListERK11QStringList6QFlagsINS_6FilterEES3_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, filters, sort)
 	qtrt.ErrPrint(err, rv)
@@ -1183,7 +1183,7 @@ func (this *QDir) EntryInfoList_1_1(nameFilters QStringList_ITF, filters int) *Q
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg0 = nameFilters.QStringList_PTR().GetCthis()
 	}
-	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>
+	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListERK11QStringList6QFlagsINS_6FilterEES3_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, filters, sort)
 	qtrt.ErrPrint(err, rv)

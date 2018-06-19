@@ -151,7 +151,7 @@ Constructs a horizontal splitter with the parent argument passed on to the QFram
 See also setOrientation().
 */
 func NewQSplitter__() *QSplitter {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSplitterC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -193,7 +193,7 @@ Constructs a horizontal splitter with the parent argument passed on to the QFram
 See also setOrientation().
 */
 func NewQSplitter_1_(arg0 int) *QSplitter {
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSplitterC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -402,7 +402,7 @@ func (this *QSplitter) SetOpaqueResize(opaque bool) {
 
  */
 func (this *QSplitter) SetOpaqueResize__() {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	opaque := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSplitter15setOpaqueResizeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opaque)
 	qtrt.ErrPrint(err, rv)

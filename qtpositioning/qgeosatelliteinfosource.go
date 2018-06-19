@@ -336,7 +336,7 @@ If the timeout is zero, the timeout defaults to a reasonable timeout period as a
 This does nothing if another update request is in progress. However it can be called even if startUpdates() has already been called and regular updates are in progress.
 */
 func (this *QGeoSatelliteInfoSource) RequestUpdate__() {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	timeout := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGeoSatelliteInfoSource13requestUpdateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	qtrt.ErrPrint(err, rv)

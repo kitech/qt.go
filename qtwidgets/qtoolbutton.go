@@ -167,7 +167,7 @@ func NewQToolButton(parent QWidget_ITF /*777 QWidget **/) *QToolButton {
 Constructs an empty tool button with parent parent.
 */
 func NewQToolButton__() *QToolButton {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -128,7 +128,7 @@ func NewQNetworkSession__(connConfig QNetworkConfiguration_ITF) *QNetworkSession
 	if connConfig != nil && connConfig.QNetworkConfiguration_PTR() != nil {
 		convArg0 = connConfig.QNetworkConfiguration_PTR().GetCthis()
 	}
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSessionC2ERK21QNetworkConfigurationP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -474,7 +474,7 @@ If msecs is -1, this function will not time out.
 See also open() and error().
 */
 func (this *QNetworkSession) WaitForOpened__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSession13waitForOpenedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)

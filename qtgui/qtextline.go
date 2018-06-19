@@ -303,7 +303,7 @@ func (this *QTextLine) CursorToX(cursorPos unsafe.Pointer /*666*/, edge int) flo
 
  */
 func (this *QTextLine) CursorToX__(cursorPos unsafe.Pointer /*666*/) float64 {
-	// arg: 1, QTextLine::Edge=Enum, QTextLine::Edge=Enum,
+	// arg: 1, QTextLine::Edge=Enum, QTextLine::Edge=Enum, , Invalid
 	edge := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEPiNS_4EdgeE", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), cursorPos, edge)
 	qtrt.ErrPrint(err, rv)
@@ -333,7 +333,7 @@ func (this *QTextLine) CursorToX_1(cursorPos int, edge int) float64 {
 
  */
 func (this *QTextLine) CursorToX_1_(cursorPos int) float64 {
-	// arg: 1, QTextLine::Edge=Enum, QTextLine::Edge=Enum,
+	// arg: 1, QTextLine::Edge=Enum, QTextLine::Edge=Enum, , Invalid
 	edge := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEiNS_4EdgeE", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), cursorPos, edge)
 	qtrt.ErrPrint(err, rv)
@@ -363,7 +363,7 @@ func (this *QTextLine) XToCursor(x float64, arg1 int) int {
 
  */
 func (this *QTextLine) XToCursor__(x float64) int {
-	// arg: 1, QTextLine::CursorPosition=Enum, QTextLine::CursorPosition=Enum,
+	// arg: 1, QTextLine::CursorPosition=Enum, QTextLine::CursorPosition=Enum, , Invalid
 	arg1 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9xToCursorEdNS_14CursorPositionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, arg1)
 	qtrt.ErrPrint(err, rv)

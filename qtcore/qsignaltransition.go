@@ -120,7 +120,7 @@ func NewQSignalTransition(sourceState QState_ITF /*777 QState **/) *QSignalTrans
 Constructs a new signal transition with the given sourceState.
 */
 func NewQSignalTransition__() *QSignalTransition {
-	// arg: 0, QState *=Pointer, QState=Record,
+	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -170,7 +170,7 @@ func NewQSignalTransition_1_(sender QObject_ITF /*777 const QObject **/, signal 
 	}
 	var convArg1 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 2, QState *=Pointer, QState=Record,
+	// arg: 2, QState *=Pointer, QState=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionC2EPK7QObjectPKcP6QState", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

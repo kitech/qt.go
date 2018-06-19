@@ -248,7 +248,7 @@ If parent is 0, you can add the item to a scene by calling QGraphicsScene::addIt
 See also QGraphicsScene::addItem() and setParentItem().
 */
 func NewQGraphicsItem__() *QGraphicsItem {
-	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItemC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -544,7 +544,7 @@ If enabled is true, the item flag flag is enabled; otherwise, it is disabled.
 See also flags() and setFlags().
 */
 func (this *QGraphicsItem) SetFlag__(flag int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem7setFlagENS_16GraphicsItemFlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
 	qtrt.ErrPrint(err, rv)
@@ -645,8 +645,8 @@ This function was introduced in  Qt 4.4.
 See also cacheMode(), CacheMode, and QPixmapCache::setCacheLimit().
 */
 func (this *QGraphicsItem) SetCacheMode__(mode int) {
-	// arg: 1, const QSize &=LValueReference, QSize=Record,
-	var convArg1 unsafe.Pointer
+	// arg: 1, const QSize &=LValueReference, QSize=Record, , Invalid
+	var convArg1 = qtcore.NewQSize()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem12setCacheModeENS_9CacheModeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -727,7 +727,7 @@ This function was introduced in  Qt 4.6.
 See also panelModality(), setPanelModality(), and PanelModality.
 */
 func (this *QGraphicsItem) IsBlockedByModalPanel__() bool {
-	// arg: 0, QGraphicsItem **=Pointer, QGraphicsItem=Record,
+	// arg: 0, QGraphicsItem **=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1460,7 +1460,7 @@ As a result of calling this function, this item will receive a focus in event wi
 See also clearFocus(), hasFocus(), focusItem(), and focusProxy().
 */
 func (this *QGraphicsItem) SetFocus__() {
-	// arg: 0, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum,
+	// arg: 0, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum, , Invalid
 	focusReason := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem8setFocusEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), focusReason)
 	qtrt.ErrPrint(err, rv)
@@ -1861,11 +1861,11 @@ If this item is not viewed by a QGraphicsView, this function does nothing.
 See also QGraphicsView::ensureVisible().
 */
 func (this *QGraphicsItem) EnsureVisible__() {
-	// arg: 0, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	xmargin := int(50)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -1890,9 +1890,9 @@ func (this *QGraphicsItem) EnsureVisible__1(rect qtcore.QRectF_ITF) {
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	xmargin := int(50)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -1917,7 +1917,7 @@ func (this *QGraphicsItem) EnsureVisible__2(rect qtcore.QRectF_ITF, xmargin int)
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -1957,9 +1957,9 @@ If this item is not viewed by a QGraphicsView, this function does nothing.
 See also QGraphicsView::ensureVisible().
 */
 func (this *QGraphicsItem) EnsureVisible_1_(x float64, y float64, w float64, h float64) {
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	xmargin := int(50)
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -1980,7 +1980,7 @@ If this item is not viewed by a QGraphicsView, this function does nothing.
 See also QGraphicsView::ensureVisible().
 */
 func (this *QGraphicsItem) EnsureVisible_1_1(x float64, y float64, w float64, h float64, xmargin int) {
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -2048,7 +2048,7 @@ func (this *QGraphicsItem) SetMatrix__(matrix qtgui.QMatrix_ITF) {
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
 		convArg0 = matrix.QMatrix_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	combine := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem9setMatrixERK7QMatrixb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, combine)
 	qtrt.ErrPrint(err, rv)
@@ -2216,7 +2216,7 @@ func (this *QGraphicsItem) ItemTransform__(other QGraphicsItem_ITF /*777 const Q
 	if other != nil && other.QGraphicsItem_PTR() != nil {
 		convArg0 = other.QGraphicsItem_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem13itemTransformEPKS_Pb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -2275,7 +2275,7 @@ func (this *QGraphicsItem) SetTransform__(matrix qtgui.QTransform_ITF) {
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	combine := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem12setTransformERK10QTransformb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, combine)
 	qtrt.ErrPrint(err, rv)
@@ -2744,7 +2744,7 @@ func (this *QGraphicsItem) CollidesWithItem__(other QGraphicsItem_ITF /*777 cons
 	if other != nil && other.QGraphicsItem_PTR() != nil {
 		convArg0 = other.QGraphicsItem_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum,
+	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -2794,7 +2794,7 @@ func (this *QGraphicsItem) CollidesWithPath__(path qtgui.QPainterPath_ITF) bool 
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum,
+	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -2840,7 +2840,7 @@ This function was introduced in  Qt 4.3.
 See also opaqueArea().
 */
 func (this *QGraphicsItem) IsObscured__() bool {
-	// arg: 0, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem10isObscuredERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -3068,7 +3068,7 @@ func (this *QGraphicsItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/
 	if option != nil && option.QStyleOptionGraphicsItem_PTR() != nil {
 		convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
 	}
-	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -3116,7 +3116,7 @@ If the item is invisible (i.e., isVisible() returns false), this function does n
 See also paint() and boundingRect().
 */
 func (this *QGraphicsItem) Update__() {
-	// arg: 0, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem6updateERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -3203,7 +3203,7 @@ This function was introduced in  Qt 4.4.
 See also boundingRect().
 */
 func (this *QGraphicsItem) Scroll__(dx float64, dy float64) {
-	// arg: 2, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 2, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem6scrollEddRK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy, convArg2)
 	qtrt.ErrPrint(err, rv)

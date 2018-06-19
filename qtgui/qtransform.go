@@ -138,7 +138,7 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 See also reset().
 */
 func NewQTransform_2_(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64) *QTransform {
-	// arg: 8, qreal=Typedef, qreal=Typedef, double
+	// arg: 8, qreal=Typedef, qreal=Typedef, double, Double
 	h33 := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2Eddddddddd", qtrt.FFI_TYPE_POINTER, h11, h12, h13, h21, h22, h23, h31, h32, h33)
 	qtrt.ErrPrint(err, rv)
@@ -593,7 +593,7 @@ If the matrix is singular (not invertible), the returned matrix is the identity 
 See also isInvertible().
 */
 func (this *QTransform) Inverted__() *QTransform /*123*/ {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var invertible unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform8invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
 	qtrt.ErrPrint(err, rv)
@@ -725,7 +725,7 @@ The angle is specified in degrees.
 See also setMatrix().
 */
 func (this *QTransform) Rotate__(a float64) *QTransform {
-	// arg: 1, Qt::Axis=Elaborated, Qt::Axis=Enum,
+	// arg: 1, Qt::Axis=Elaborated, Qt::Axis=Enum, , Invalid
 	axis := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransform6rotateEdN2Qt4AxisE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, axis)
 	qtrt.ErrPrint(err, rv)
@@ -771,7 +771,7 @@ The angle is specified in radians.
 See also setMatrix().
 */
 func (this *QTransform) RotateRadians__(a float64) *QTransform {
-	// arg: 1, Qt::Axis=Elaborated, Qt::Axis=Enum,
+	// arg: 1, Qt::Axis=Elaborated, Qt::Axis=Enum, , Invalid
 	axis := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransform13rotateRadiansEdN2Qt4AxisE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, axis)
 	qtrt.ErrPrint(err, rv)

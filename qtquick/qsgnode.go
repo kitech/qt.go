@@ -468,7 +468,7 @@ Sets the flag f on this node if enabled is true; otherwise clears the flag.
 See also flags().
 */
 func (this *QSGNode) SetFlag__(arg0 int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	arg1 := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode7setFlagENS_4FlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	qtrt.ErrPrint(err, rv)
@@ -500,7 +500,7 @@ Sets the flags f on this node if enabled is true; otherwise clears the flags.
 See also flags().
 */
 func (this *QSGNode) SetFlags__(arg0 int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	arg1 := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode8setFlagsE6QFlagsINS_4FlagEEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	qtrt.ErrPrint(err, rv)

@@ -160,7 +160,7 @@ Calling this function multiple times on the same lock from the same thread witho
 See also lock() and unlock().
 */
 func (this *QLockFile) TryLock__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	timeout := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile7tryLockEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	qtrt.ErrPrint(err, rv)

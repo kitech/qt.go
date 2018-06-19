@@ -117,7 +117,7 @@ func NewQCompleter(parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
 Constructs a completer object with the given parent.
 */
 func NewQCompleter__() *QCompleter {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleterC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -163,7 +163,7 @@ func NewQCompleter_1_(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemMod
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
 		convArg0 = model.QAbstractItemModel_PTR().GetCthis()
 	}
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleterC2EP18QAbstractItemModelP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -209,7 +209,7 @@ func NewQCompleter_2_(completions qtcore.QStringList_ITF) *QCompleter {
 	if completions != nil && completions.QStringList_PTR() != nil {
 		convArg0 = completions.QStringList_PTR().GetCthis()
 	}
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleterC2ERK11QStringListP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -712,7 +712,7 @@ For QCompleter::PopupCompletion and QCompletion::UnfilteredPopupCompletion modes
 For QCompleter::InlineCompletion mode, the highlighted() signal is fired with the current completion.
 */
 func (this *QCompleter) Complete__() {
-	// arg: 0, const QRect &=LValueReference, QRect=Record,
+	// arg: 0, const QRect &=LValueReference, QRect=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter8completeERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

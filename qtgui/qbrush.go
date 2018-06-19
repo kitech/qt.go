@@ -130,7 +130,7 @@ func NewQBrush_2_(color QColor_ITF) *QBrush {
 	if color != nil && color.QColor_PTR() != nil {
 		convArg0 = color.QColor_PTR().GetCthis()
 	}
-	// arg: 1, Qt::BrushStyle=Elaborated, Qt::BrushStyle=Enum,
+	// arg: 1, Qt::BrushStyle=Elaborated, Qt::BrushStyle=Enum, , Invalid
 	bs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK6QColorN2Qt10BrushStyleE", qtrt.FFI_TYPE_POINTER, convArg0, bs)
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +164,7 @@ func NewQBrush_3(color int, bs int) *QBrush {
 Constructs a default black brush with the style Qt::NoBrush (i.e. this brush will not fill shapes).
 */
 func NewQBrush_3_(color int) *QBrush {
-	// arg: 1, Qt::BrushStyle=Elaborated, Qt::BrushStyle=Enum,
+	// arg: 1, Qt::BrushStyle=Elaborated, Qt::BrushStyle=Enum, , Invalid
 	bs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorENS0_10BrushStyleE", qtrt.FFI_TYPE_POINTER, color, bs)
 	qtrt.ErrPrint(err, rv)

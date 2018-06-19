@@ -146,7 +146,7 @@ See also setPattern() and setPatternOptions().
 func NewQRegularExpression_1_(pattern string) *QRegularExpression {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QRegularExpression::PatternOptions=Typedef, QRegularExpression::PatternOptions=Typedef, QFlags<QRegularExpression::PatternOption>
+	// arg: 1, QRegularExpression::PatternOptions=Typedef, QRegularExpression::PatternOptions=Typedef, QFlags<QRegularExpression::PatternOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpressionC2ERK7QString6QFlagsINS_13PatternOptionEE", qtrt.FFI_TYPE_POINTER, convArg0, options)
 	qtrt.ErrPrint(err, rv)
@@ -403,11 +403,11 @@ See also QRegularExpressionMatch and normal matching.
 func (this *QRegularExpression) Match__(subject string) *QRegularExpressionMatch /*123*/ {
 	var tmpArg0 = NewQString_5(subject)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	offset := int(0)
-	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
+	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum, , Invalid
 	matchType := 0
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression5matchERK7QStringiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -431,9 +431,9 @@ See also QRegularExpressionMatch and normal matching.
 func (this *QRegularExpression) Match__1(subject string, offset int) *QRegularExpressionMatch /*123*/ {
 	var tmpArg0 = NewQString_5(subject)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
+	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum, , Invalid
 	matchType := 0
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression5matchERK7QStringiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -457,7 +457,7 @@ See also QRegularExpressionMatch and normal matching.
 func (this *QRegularExpression) Match__2(subject string, offset int, matchType int) *QRegularExpressionMatch /*123*/ {
 	var tmpArg0 = NewQString_5(subject)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression5matchERK7QStringiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -507,11 +507,11 @@ func (this *QRegularExpression) Match_1_(subjectRef QStringRef_ITF) *QRegularExp
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	offset := int(0)
-	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
+	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum, , Invalid
 	matchType := 0
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression5matchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -537,9 +537,9 @@ func (this *QRegularExpression) Match_1_1(subjectRef QStringRef_ITF, offset int)
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
 	}
-	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
+	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum, , Invalid
 	matchType := 0
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression5matchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -565,7 +565,7 @@ func (this *QRegularExpression) Match_1_2(subjectRef QStringRef_ITF, offset int,
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
 	}
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression5matchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -611,11 +611,11 @@ See also QRegularExpressionMatchIterator and global matching.
 func (this *QRegularExpression) GlobalMatch__(subject string) *QRegularExpressionMatchIterator /*123*/ {
 	var tmpArg0 = NewQString_5(subject)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	offset := int(0)
-	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
+	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum, , Invalid
 	matchType := 0
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression11globalMatchERK7QStringiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -639,9 +639,9 @@ See also QRegularExpressionMatchIterator and global matching.
 func (this *QRegularExpression) GlobalMatch__1(subject string, offset int) *QRegularExpressionMatchIterator /*123*/ {
 	var tmpArg0 = NewQString_5(subject)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
+	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum, , Invalid
 	matchType := 0
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression11globalMatchERK7QStringiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -665,7 +665,7 @@ See also QRegularExpressionMatchIterator and global matching.
 func (this *QRegularExpression) GlobalMatch__2(subject string, offset int, matchType int) *QRegularExpressionMatchIterator /*123*/ {
 	var tmpArg0 = NewQString_5(subject)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression11globalMatchERK7QStringiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -715,11 +715,11 @@ func (this *QRegularExpression) GlobalMatch_1_(subjectRef QStringRef_ITF) *QRegu
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	offset := int(0)
-	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
+	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum, , Invalid
 	matchType := 0
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression11globalMatchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -745,9 +745,9 @@ func (this *QRegularExpression) GlobalMatch_1_1(subjectRef QStringRef_ITF, offse
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
 	}
-	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum,
+	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum, , Invalid
 	matchType := 0
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression11globalMatchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -773,7 +773,7 @@ func (this *QRegularExpression) GlobalMatch_1_2(subjectRef QStringRef_ITF, offse
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
 	}
-	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>
+	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression11globalMatchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)

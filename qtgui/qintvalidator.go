@@ -106,7 +106,7 @@ func NewQIntValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidato
 
  */
 func NewQIntValidator__() *QIntValidator {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -144,7 +144,7 @@ func NewQIntValidator_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QOb
 
  */
 func NewQIntValidator_1_(bottom int, top int) *QIntValidator {
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorC2EiiP7QObject", qtrt.FFI_TYPE_POINTER, bottom, top, convArg2)
 	qtrt.ErrPrint(err, rv)

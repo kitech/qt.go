@@ -138,7 +138,7 @@ This function was introduced in  Qt 4.5.
 See also getFont().
 */
 func NewQFontDialog__() *QFontDialog {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialogC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -200,7 +200,7 @@ func NewQFontDialog_1_(initial qtgui.QFont_ITF) *QFontDialog {
 	if initial != nil && initial.QFont_PTR() != nil {
 		convArg0 = initial.QFont_PTR().GetCthis()
 	}
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialogC2ERK5QFontP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -313,7 +313,7 @@ Sets the given option to be enabled if on is true; otherwise, clears the given o
 See also options and testOption().
 */
 func (this *QFontDialog) SetOption__(option int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog9setOptionENS_16FontDialogOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	qtrt.ErrPrint(err, rv)
@@ -492,7 +492,7 @@ In this example, if the user clicks OK the font they chose will be used, and if 
 Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
 */
 func (this *QFontDialog) GetFont__(ok *bool) *qtgui.QFont /*123*/ {
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbP7QWidget", qtrt.FFI_TYPE_POINTER, ok, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -603,11 +603,11 @@ func (this *QFontDialog) GetFont_1_(ok *bool, initial qtgui.QFont_ITF) *qtgui.QF
 	if initial != nil && initial.QFont_PTR() != nil {
 		convArg1 = initial.QFont_PTR().GetCthis()
 	}
-	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QFontDialog::FontDialogOptions=Typedef, QFontDialog::FontDialogOptions=Typedef, QFlags<QFontDialog::FontDialogOption>
+	// arg: 4, QFontDialog::FontDialogOptions=Typedef, QFontDialog::FontDialogOptions=Typedef, QFlags<QFontDialog::FontDialogOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbRK5QFontP7QWidgetRK7QString6QFlagsINS_16FontDialogOptionEE", qtrt.FFI_TYPE_POINTER, ok, convArg1, convArg2, convArg3, options)
 	qtrt.ErrPrint(err, rv)
@@ -662,9 +662,9 @@ func (this *QFontDialog) GetFont_1_1(ok *bool, initial qtgui.QFont_ITF, parent Q
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg2 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QFontDialog::FontDialogOptions=Typedef, QFontDialog::FontDialogOptions=Typedef, QFlags<QFontDialog::FontDialogOption>
+	// arg: 4, QFontDialog::FontDialogOptions=Typedef, QFontDialog::FontDialogOptions=Typedef, QFlags<QFontDialog::FontDialogOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbRK5QFontP7QWidgetRK7QString6QFlagsINS_16FontDialogOptionEE", qtrt.FFI_TYPE_POINTER, ok, convArg1, convArg2, convArg3, options)
 	qtrt.ErrPrint(err, rv)
@@ -721,7 +721,7 @@ func (this *QFontDialog) GetFont_1_2(ok *bool, initial qtgui.QFont_ITF, parent Q
 	}
 	var tmpArg3 = qtcore.NewQString_5(title)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, QFontDialog::FontDialogOptions=Typedef, QFontDialog::FontDialogOptions=Typedef, QFlags<QFontDialog::FontDialogOption>
+	// arg: 4, QFontDialog::FontDialogOptions=Typedef, QFontDialog::FontDialogOptions=Typedef, QFlags<QFontDialog::FontDialogOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbRK5QFontP7QWidgetRK7QString6QFlagsINS_16FontDialogOptionEE", qtrt.FFI_TYPE_POINTER, ok, convArg1, convArg2, convArg3, options)
 	qtrt.ErrPrint(err, rv)

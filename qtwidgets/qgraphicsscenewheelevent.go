@@ -91,7 +91,7 @@ func NewQGraphicsSceneWheelEvent(type_ int) *QGraphicsSceneWheelEvent {
 
  */
 func NewQGraphicsSceneWheelEvent__() *QGraphicsSceneWheelEvent {
-	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum,
+	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

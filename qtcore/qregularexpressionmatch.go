@@ -276,7 +276,7 @@ func (this *QRegularExpressionMatch) Captured(nth int) string {
 
  */
 func (this *QRegularExpressionMatch) Captured__() string {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch8capturedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
@@ -351,7 +351,7 @@ func (this *QRegularExpressionMatch) CapturedRef(nth int) *QStringRef /*123*/ {
 
  */
 func (this *QRegularExpressionMatch) CapturedRef__() *QStringRef /*123*/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedRefEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
@@ -423,7 +423,7 @@ func (this *QRegularExpressionMatch) CapturedView(nth int) *QStringView /*123*/ 
 
  */
 func (this *QRegularExpressionMatch) CapturedView__() *QStringView /*123*/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch12capturedViewEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
@@ -491,7 +491,7 @@ func (this *QRegularExpressionMatch) CapturedStart(nth int) int {
 
  */
 func (this *QRegularExpressionMatch) CapturedStart__() int {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
@@ -555,7 +555,7 @@ func (this *QRegularExpressionMatch) CapturedLength(nth int) int {
 
  */
 func (this *QRegularExpressionMatch) CapturedLength__() int {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
@@ -619,7 +619,7 @@ func (this *QRegularExpressionMatch) CapturedEnd(nth int) int {
 
  */
 func (this *QRegularExpressionMatch) CapturedEnd__() int {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)

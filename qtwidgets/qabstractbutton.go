@@ -177,7 +177,7 @@ func NewQAbstractButton(parent QWidget_ITF /*777 QWidget **/) *QAbstractButton {
 Constructs an abstract button with a parent.
 */
 func NewQAbstractButton__() *QAbstractButton {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -564,7 +564,7 @@ This function does nothing if the button is disabled.
 See also click().
 */
 func (this *QAbstractButton) AnimateClick__() {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msec := int(100)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton12animateClickEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	qtrt.ErrPrint(err, rv)
@@ -677,7 +677,7 @@ If the button is checkable, checked is true if the button is checked, or false i
 See also pressed(), released(), and toggled().
 */
 func (this *QAbstractButton) Clicked__() {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	checked := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton7clickedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	qtrt.ErrPrint(err, rv)

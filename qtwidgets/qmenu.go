@@ -191,7 +191,7 @@ Constructs a menu with parent parent.
 Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
 */
 func NewQMenu__() *QMenu {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenuC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -237,7 +237,7 @@ Although a popup menu is always a top-level widget, if a parent is passed the po
 func NewQMenu_1_(title string) *QMenu {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenuC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -364,7 +364,7 @@ func (this *QMenu) AddAction_2_(text string, receiver qtcore.QObject_ITF /*777 c
 	}
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
-	// arg: 3, const QKeySequence &=LValueReference, QKeySequence=Record,
+	// arg: 3, const QKeySequence &=LValueReference, QKeySequence=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -434,7 +434,7 @@ func (this *QMenu) AddAction_3_(icon qtgui.QIcon_ITF, text string, receiver qtco
 	}
 	var convArg3 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg3)
-	// arg: 4, const QKeySequence &=LValueReference, QKeySequence=Record,
+	// arg: 4, const QKeySequence &=LValueReference, QKeySequence=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -918,7 +918,7 @@ func (this *QMenu) Popup__(pos qtcore.QPoint_ITF) {
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
 	}
-	// arg: 1, QAction *=Pointer, QAction=Record,
+	// arg: 1, QAction *=Pointer, QAction=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu5popupERK6QPointP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1042,7 +1042,7 @@ func (this *QMenu) Exec_1_(pos qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
 	}
-	// arg: 1, QAction *=Pointer, QAction=Record,
+	// arg: 1, QAction *=Pointer, QAction=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu4execERK6QPointP7QAction", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

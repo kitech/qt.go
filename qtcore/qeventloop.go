@@ -105,7 +105,7 @@ func NewQEventLoop(parent QObject_ITF /*777 QObject **/) *QEventLoop {
 Constructs an event loop object with the given parent.
 */
 func NewQEventLoop__() *QEventLoop {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoopC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +160,7 @@ This function is especially useful if you have a long running operation and want
 This function is simply a wrapper for QAbstractEventDispatcher::processEvents(). See the documentation for that function for details.
 */
 func (this *QEventLoop) ProcessEvents__() bool {
-	// arg: 0, QEventLoop::ProcessEventsFlags=Typedef, QEventLoop::ProcessEventsFlags=Typedef, QFlags<QEventLoop::ProcessEventsFlag>
+	// arg: 0, QEventLoop::ProcessEventsFlags=Typedef, QEventLoop::ProcessEventsFlags=Typedef, QFlags<QEventLoop::ProcessEventsFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)
@@ -227,7 +227,7 @@ To make your application perform idle processing (i.e. executing a special funct
 See also QCoreApplication::quit(), exit(), and processEvents().
 */
 func (this *QEventLoop) Exec__() int {
-	// arg: 0, QEventLoop::ProcessEventsFlags=Typedef, QEventLoop::ProcessEventsFlags=Typedef, QFlags<QEventLoop::ProcessEventsFlag>
+	// arg: 0, QEventLoop::ProcessEventsFlags=Typedef, QEventLoop::ProcessEventsFlags=Typedef, QFlags<QEventLoop::ProcessEventsFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)
@@ -272,7 +272,7 @@ Note that unlike the C library function of the same name, this function does ret
 See also QCoreApplication::quit(), quit(), and exec().
 */
 func (this *QEventLoop) Exit__() {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	returnCode := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop4exitEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), returnCode)
 	qtrt.ErrPrint(err, rv)

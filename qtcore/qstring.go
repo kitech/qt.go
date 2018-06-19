@@ -119,7 +119,7 @@ func NewQString_1_(unicode QChar_ITF /*777 const QChar **/) *QString {
 	if unicode != nil && unicode.QChar_PTR() != nil {
 		convArg0 = unicode.QChar_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringC2EPK5QChari", qtrt.FFI_TYPE_POINTER, convArg0, size)
 	qtrt.ErrPrint(err, rv)
@@ -506,7 +506,7 @@ func (this *QString) Count_1_(c QChar_ITF /*123*/) int {
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5countE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -548,7 +548,7 @@ See also contains() and indexOf().
 func (this *QString) Count_2_(s string) int {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5countERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -594,7 +594,7 @@ func (this *QString) Count_3_(s QStringRef_ITF) int {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5countERK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -841,7 +841,7 @@ func (this *QString) Fill__(c QChar_ITF /*123*/) string {
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString4fillE5QChari", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, size)
 	qtrt.ErrPrint(err, rv)
@@ -1386,11 +1386,11 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg__(a int64) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldwidth := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argExii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1429,9 +1429,9 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg__1(a int64, fieldwidth int) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argExii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1470,7 +1470,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg__2(a int64, fieldwidth int, base int) string {
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argExii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1550,11 +1550,11 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_1_(a uint64) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldwidth := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEyii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1593,9 +1593,9 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_1_1(a uint64, fieldwidth int) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEyii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1634,7 +1634,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_1_2(a uint64, fieldwidth int, base int) string {
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEyii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1714,11 +1714,11 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_2_(a int) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldwidth := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argElii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1757,9 +1757,9 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_2_1(a int, fieldwidth int) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argElii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1798,7 +1798,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_2_2(a int, fieldwidth int, base int) string {
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argElii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1878,11 +1878,11 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_3_(a uint) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldwidth := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEmii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1921,9 +1921,9 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_3_1(a uint, fieldwidth int) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEmii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1962,7 +1962,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_3_2(a uint, fieldwidth int, base int) string {
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEmii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldwidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2042,11 +2042,11 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_4_(a int) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldWidth := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEiii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2085,9 +2085,9 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_4_1(a int, fieldWidth int) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEiii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2126,7 +2126,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_4_2(a int, fieldWidth int, base int) string {
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEiii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2206,11 +2206,11 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_5_(a uint) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldWidth := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEjii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2249,9 +2249,9 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_5_1(a uint, fieldWidth int) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEjii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2290,7 +2290,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_5_2(a uint, fieldWidth int, base int) string {
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEjii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2370,11 +2370,11 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_6_(a int16) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldWidth := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEsii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2413,9 +2413,9 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_6_1(a int16, fieldWidth int) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEsii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2454,7 +2454,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_6_2(a int16, fieldWidth int, base int) string {
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEsii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2534,11 +2534,11 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_7_(a uint16) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldWidth := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEtii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2577,9 +2577,9 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_7_1(a uint16, fieldWidth int) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	base := int(10)
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEtii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2618,7 +2618,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_7_2(a uint16, fieldWidth int, base int) string {
-	// arg: 3, QChar=Record, QChar=Record,
+	// arg: 3, QChar=Record, QChar=Record, , Invalid
 	var convArg3 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEtii5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, base, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2698,13 +2698,13 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_8_(a float64) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldWidth := int(0)
-	// arg: 2, char=Char_S, =Invalid,
+	// arg: 2, char=Char_S, =Invalid, , Invalid
 	fmt_ := 'g'
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	prec := int(-1)
-	// arg: 4, QChar=Record, QChar=Record,
+	// arg: 4, QChar=Record, QChar=Record, , Invalid
 	var convArg4 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEdici5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, fmt_, prec, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -2743,11 +2743,11 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_8_1(a float64, fieldWidth int) string {
-	// arg: 2, char=Char_S, =Invalid,
+	// arg: 2, char=Char_S, =Invalid, , Invalid
 	fmt_ := 'g'
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	prec := int(-1)
-	// arg: 4, QChar=Record, QChar=Record,
+	// arg: 4, QChar=Record, QChar=Record, , Invalid
 	var convArg4 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEdici5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, fmt_, prec, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -2786,9 +2786,9 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_8_2(a float64, fieldWidth int, fmt_ byte) string {
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	prec := int(-1)
-	// arg: 4, QChar=Record, QChar=Record,
+	// arg: 4, QChar=Record, QChar=Record, , Invalid
 	var convArg4 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEdici5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, fmt_, prec, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -2827,7 +2827,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_8_3(a float64, fieldWidth int, fmt_ byte, prec int) string {
-	// arg: 4, QChar=Record, QChar=Record,
+	// arg: 4, QChar=Record, QChar=Record, , Invalid
 	var convArg4 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEdici5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, fmt_, prec, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -2907,9 +2907,9 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_9_(a byte) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldWidth := int(0)
-	// arg: 2, QChar=Record, QChar=Record,
+	// arg: 2, QChar=Record, QChar=Record, , Invalid
 	var convArg2 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEci5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -2948,7 +2948,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
 func (this *QString) Arg_9_1(a byte, fieldWidth int) string {
-	// arg: 2, QChar=Record, QChar=Record,
+	// arg: 2, QChar=Record, QChar=Record, , Invalid
 	var convArg2 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argEci5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -3036,9 +3036,9 @@ func (this *QString) Arg_10_(a QChar_ITF /*123*/) string {
 	if a != nil && a.QChar_PTR() != nil {
 		convArg0 = a.QChar_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldWidth := int(0)
-	// arg: 2, QChar=Record, QChar=Record,
+	// arg: 2, QChar=Record, QChar=Record, , Invalid
 	var convArg2 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE5QChariS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -3081,7 +3081,7 @@ func (this *QString) Arg_10_1(a QChar_ITF /*123*/, fieldWidth int) string {
 	if a != nil && a.QChar_PTR() != nil {
 		convArg0 = a.QChar_PTR().GetCthis()
 	}
-	// arg: 2, QChar=Record, QChar=Record,
+	// arg: 2, QChar=Record, QChar=Record, , Invalid
 	var convArg2 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE5QChariS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -3165,9 +3165,9 @@ If there is no unreplaced place marker remaining, a warning message is output an
 func (this *QString) Arg_11_(a string) string {
 	var tmpArg0 = NewQString_5(a)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldWidth := int(0)
-	// arg: 2, QChar=Record, QChar=Record,
+	// arg: 2, QChar=Record, QChar=Record, , Invalid
 	var convArg2 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argERKS_i5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -3208,7 +3208,7 @@ If there is no unreplaced place marker remaining, a warning message is output an
 func (this *QString) Arg_11_1(a string, fieldWidth int) string {
 	var tmpArg0 = NewQString_5(a)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QChar=Record, QChar=Record,
+	// arg: 2, QChar=Record, QChar=Record, , Invalid
 	var convArg2 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argERKS_i5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -3296,9 +3296,9 @@ func (this *QString) Arg_12_(a QStringView_ITF /*123*/) string {
 	if a != nil && a.QStringView_PTR() != nil {
 		convArg0 = a.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldWidth := int(0)
-	// arg: 2, QChar=Record, QChar=Record,
+	// arg: 2, QChar=Record, QChar=Record, , Invalid
 	var convArg2 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE11QStringViewi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -3341,7 +3341,7 @@ func (this *QString) Arg_12_1(a QStringView_ITF /*123*/, fieldWidth int) string 
 	if a != nil && a.QStringView_PTR() != nil {
 		convArg0 = a.QStringView_PTR().GetCthis()
 	}
-	// arg: 2, QChar=Record, QChar=Record,
+	// arg: 2, QChar=Record, QChar=Record, , Invalid
 	var convArg2 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE11QStringViewi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -3429,9 +3429,9 @@ func (this *QString) Arg_13_(a QLatin1String_ITF /*123*/) string {
 	if a != nil && a.QLatin1String_PTR() != nil {
 		convArg0 = a.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	fieldWidth := int(0)
-	// arg: 2, QChar=Record, QChar=Record,
+	// arg: 2, QChar=Record, QChar=Record, , Invalid
 	var convArg2 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE13QLatin1Stringi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -3474,7 +3474,7 @@ func (this *QString) Arg_13_1(a QLatin1String_ITF /*123*/, fieldWidth int) strin
 	if a != nil && a.QLatin1String_PTR() != nil {
 		convArg0 = a.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 2, QChar=Record, QChar=Record,
+	// arg: 2, QChar=Record, QChar=Record, , Invalid
 	var convArg2 = NewQChar_8(' ')
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE13QLatin1Stringi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -3935,9 +3935,9 @@ func (this *QString) IndexOf__(c QChar_ITF /*123*/) int {
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfE5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -3975,7 +3975,7 @@ func (this *QString) IndexOf__1(c QChar_ITF /*123*/, from int) int {
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfE5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4045,9 +4045,9 @@ See also lastIndexOf(), contains(), and count().
 func (this *QString) IndexOf_1_(s string) int {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfERKS_iN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4083,7 +4083,7 @@ See also lastIndexOf(), contains(), and count().
 func (this *QString) IndexOf_1_1(s string, from int) int {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfERKS_iN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4157,9 +4157,9 @@ func (this *QString) IndexOf_2_(s QLatin1String_ITF /*123*/) int {
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfE13QLatin1StringiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4197,7 +4197,7 @@ func (this *QString) IndexOf_2_1(s QLatin1String_ITF /*123*/, from int) int {
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfE13QLatin1StringiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4271,9 +4271,9 @@ func (this *QString) IndexOf_3_(s QStringRef_ITF) int {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfERK10QStringRefiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4311,7 +4311,7 @@ func (this *QString) IndexOf_3_1(s QStringRef_ITF, from int) int {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfERK10QStringRefiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4385,7 +4385,7 @@ func (this *QString) IndexOf_4_(arg0 QRegExp_ITF) int {
 	if arg0 != nil && arg0.QRegExp_PTR() != nil {
 		convArg0 = arg0.QRegExp_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
@@ -4459,7 +4459,7 @@ func (this *QString) IndexOf_5_(arg0 QRegExp_ITF) int {
 	if arg0 != nil && arg0.QRegExp_PTR() != nil {
 		convArg0 = arg0.QRegExp_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
@@ -4533,7 +4533,7 @@ func (this *QString) IndexOf_6_(re QRegularExpression_ITF) int {
 	if re != nil && re.QRegularExpression_PTR() != nil {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7indexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
@@ -4643,9 +4643,9 @@ func (this *QString) LastIndexOf__(c QChar_ITF /*123*/) int {
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(-1)
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfE5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4681,7 +4681,7 @@ func (this *QString) LastIndexOf__1(c QChar_ITF /*123*/, from int) int {
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfE5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4747,9 +4747,9 @@ See also indexOf(), contains(), and count().
 func (this *QString) LastIndexOf_1_(s string) int {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(-1)
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERKS_iN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4783,7 +4783,7 @@ See also indexOf(), contains(), and count().
 func (this *QString) LastIndexOf_1_1(s string, from int) int {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERKS_iN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4853,9 +4853,9 @@ func (this *QString) LastIndexOf_2_(s QLatin1String_ITF /*123*/) int {
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(-1)
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfE13QLatin1StringiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4891,7 +4891,7 @@ func (this *QString) LastIndexOf_2_1(s QLatin1String_ITF /*123*/, from int) int 
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfE13QLatin1StringiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4961,9 +4961,9 @@ func (this *QString) LastIndexOf_3_(s QStringRef_ITF) int {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(-1)
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK10QStringRefiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4999,7 +4999,7 @@ func (this *QString) LastIndexOf_3_1(s QStringRef_ITF, from int) int {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK10QStringRefiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -5069,7 +5069,7 @@ func (this *QString) LastIndexOf_4_(arg0 QRegExp_ITF) int {
 	if arg0 != nil && arg0.QRegExp_PTR() != nil {
 		convArg0 = arg0.QRegExp_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
@@ -5139,7 +5139,7 @@ func (this *QString) LastIndexOf_5_(arg0 QRegExp_ITF) int {
 	if arg0 != nil && arg0.QRegExp_PTR() != nil {
 		convArg0 = arg0.QRegExp_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
@@ -5209,7 +5209,7 @@ func (this *QString) LastIndexOf_6_(re QRegularExpression_ITF) int {
 	if re != nil && re.QRegularExpression_PTR() != nil {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
@@ -5309,7 +5309,7 @@ func (this *QString) Contains__(c QChar_ITF /*123*/) bool {
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8containsE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -5367,7 +5367,7 @@ See also indexOf() and count().
 func (this *QString) Contains_1_(s string) bool {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8containsERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -5429,7 +5429,7 @@ func (this *QString) Contains_2_(s QLatin1String_ITF /*123*/) bool {
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8containsE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -5491,7 +5491,7 @@ func (this *QString) Contains_3_(s QStringRef_ITF) bool {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8containsERK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -5708,9 +5708,9 @@ func (this *QString) Section__(sep QChar_ITF /*123*/, start int) string {
 	if sep != nil && sep.QChar_PTR() != nil {
 		convArg0 = sep.QChar_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	end := int(-1)
-	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>
+	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7sectionE5QCharii6QFlagsINS_11SectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end, flags)
 	qtrt.ErrPrint(err, rv)
@@ -5759,7 +5759,7 @@ func (this *QString) Section__1(sep QChar_ITF /*123*/, start int, end int) strin
 	if sep != nil && sep.QChar_PTR() != nil {
 		convArg0 = sep.QChar_PTR().GetCthis()
 	}
-	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>
+	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7sectionE5QCharii6QFlagsINS_11SectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end, flags)
 	qtrt.ErrPrint(err, rv)
@@ -5851,9 +5851,9 @@ See also split().
 func (this *QString) Section_1_(in_sep string, start int) string {
 	var tmpArg0 = NewQString_5(in_sep)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	end := int(-1)
-	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>
+	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7sectionERKS_ii6QFlagsINS_11SectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end, flags)
 	qtrt.ErrPrint(err, rv)
@@ -5900,7 +5900,7 @@ See also split().
 func (this *QString) Section_1_1(in_sep string, start int, end int) string {
 	var tmpArg0 = NewQString_5(in_sep)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>
+	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7sectionERKS_ii6QFlagsINS_11SectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end, flags)
 	qtrt.ErrPrint(err, rv)
@@ -5996,9 +5996,9 @@ func (this *QString) Section_2_(reg QRegExp_ITF, start int) string {
 	if reg != nil && reg.QRegExp_PTR() != nil {
 		convArg0 = reg.QRegExp_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	end := int(-1)
-	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>
+	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7sectionERK7QRegExpii6QFlagsINS_11SectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end, flags)
 	qtrt.ErrPrint(err, rv)
@@ -6047,7 +6047,7 @@ func (this *QString) Section_2_1(reg QRegExp_ITF, start int, end int) string {
 	if reg != nil && reg.QRegExp_PTR() != nil {
 		convArg0 = reg.QRegExp_PTR().GetCthis()
 	}
-	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>
+	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7sectionERK7QRegExpii6QFlagsINS_11SectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end, flags)
 	qtrt.ErrPrint(err, rv)
@@ -6143,9 +6143,9 @@ func (this *QString) Section_3_(re QRegularExpression_ITF, start int) string {
 	if re != nil && re.QRegularExpression_PTR() != nil {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	end := int(-1)
-	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>
+	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7sectionERK18QRegularExpressionii6QFlagsINS_11SectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end, flags)
 	qtrt.ErrPrint(err, rv)
@@ -6194,7 +6194,7 @@ func (this *QString) Section_3_1(re QRegularExpression_ITF, start int, end int) 
 	if re != nil && re.QRegularExpression_PTR() != nil {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()
 	}
-	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>
+	// arg: 3, QString::SectionFlags=Typedef, QString::SectionFlags=Typedef, QFlags<QString::SectionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7sectionERK18QRegularExpressionii6QFlagsINS_11SectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end, flags)
 	qtrt.ErrPrint(err, rv)
@@ -6310,7 +6310,7 @@ Example:
 See also left(), right(), chopped(), chop(), and truncate().
 */
 func (this *QString) Mid__(position int) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	n := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3midEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position, n)
 	qtrt.ErrPrint(err, rv)
@@ -6458,7 +6458,7 @@ This function was introduced in  Qt 4.4.
 See also mid(), leftRef(), and rightRef().
 */
 func (this *QString) MidRef__(position int) *QStringRef /*123*/ {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	n := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6midRefEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position, n)
 	qtrt.ErrPrint(err, rv)
@@ -6516,7 +6516,7 @@ See also endsWith().
 func (this *QString) StartsWith__(s string) bool {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10startsWithERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -6576,7 +6576,7 @@ func (this *QString) StartsWith_1_(s QStringRef_ITF) bool {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10startsWithERK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -6636,7 +6636,7 @@ func (this *QString) StartsWith_2_(s QStringView_ITF /*123*/) bool {
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10startsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -6696,7 +6696,7 @@ func (this *QString) StartsWith_3_(s QLatin1String_ITF /*123*/) bool {
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -6756,7 +6756,7 @@ func (this *QString) StartsWith_4_(c QChar_ITF /*123*/) bool {
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10startsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -6812,7 +6812,7 @@ See also startsWith().
 func (this *QString) EndsWith__(s string) bool {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8endsWithERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -6872,7 +6872,7 @@ func (this *QString) EndsWith_1_(s QStringRef_ITF) bool {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8endsWithERK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -6932,7 +6932,7 @@ func (this *QString) EndsWith_2_(s QStringView_ITF /*123*/) bool {
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8endsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -6992,7 +6992,7 @@ func (this *QString) EndsWith_3_(s QLatin1String_ITF /*123*/) bool {
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -7052,7 +7052,7 @@ func (this *QString) EndsWith_4_(c QChar_ITF /*123*/) bool {
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8endsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -7125,9 +7125,9 @@ If truncate is true and the size() of the string is more than width, then any ch
 See also rightJustified().
 */
 func (this *QString) LeftJustified__(width int) string {
-	// arg: 1, QChar=Record, QChar=Record,
+	// arg: 1, QChar=Record, QChar=Record, , Invalid
 	var convArg1 = NewQChar_8(' ')
-	// arg: 2, bool=Bool, =Invalid,
+	// arg: 2, bool=Bool, =Invalid, , Invalid
 	trunc := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString13leftJustifiedEi5QCharb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, convArg1, trunc)
 	qtrt.ErrPrint(err, rv)
@@ -7168,7 +7168,7 @@ func (this *QString) LeftJustified__1(width int, fill QChar_ITF /*123*/) string 
 	if fill != nil && fill.QChar_PTR() != nil {
 		convArg1 = fill.QChar_PTR().GetCthis()
 	}
-	// arg: 2, bool=Bool, =Invalid,
+	// arg: 2, bool=Bool, =Invalid, , Invalid
 	trunc := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString13leftJustifiedEi5QCharb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, convArg1, trunc)
 	qtrt.ErrPrint(err, rv)
@@ -7244,9 +7244,9 @@ If truncate is true and the size() of the string is more than width, then the re
 See also leftJustified().
 */
 func (this *QString) RightJustified__(width int) string {
-	// arg: 1, QChar=Record, QChar=Record,
+	// arg: 1, QChar=Record, QChar=Record, , Invalid
 	var convArg1 = NewQChar_8(' ')
-	// arg: 2, bool=Bool, =Invalid,
+	// arg: 2, bool=Bool, =Invalid, , Invalid
 	trunc := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString14rightJustifiedEi5QCharb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, convArg1, trunc)
 	qtrt.ErrPrint(err, rv)
@@ -7287,7 +7287,7 @@ func (this *QString) RightJustified__1(width int, fill QChar_ITF /*123*/) string
 	if fill != nil && fill.QChar_PTR() != nil {
 		convArg1 = fill.QChar_PTR().GetCthis()
 	}
-	// arg: 2, bool=Bool, =Invalid,
+	// arg: 2, bool=Bool, =Invalid, , Invalid
 	trunc := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString14rightJustifiedEi5QCharb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, convArg1, trunc)
 	qtrt.ErrPrint(err, rv)
@@ -7831,7 +7831,7 @@ func (this *QString) Remove_1_(c QChar_ITF /*123*/) string {
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6removeE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -7893,7 +7893,7 @@ See also insert() and replace().
 func (this *QString) Remove_2_(s string) string {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6removeERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -8140,7 +8140,7 @@ func (this *QString) Replace_3_(before QChar_ITF /*123*/, after QChar_ITF /*123*
 	if after != nil && after.QChar_PTR() != nil {
 		convArg1 = after.QChar_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceE5QCharS0_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -8220,7 +8220,7 @@ func (this *QString) Replace_4_(before QChar_ITF /*777 const QChar **/, blen int
 	if after != nil && after.QChar_PTR() != nil {
 		convArg2 = after.QChar_PTR().GetCthis()
 	}
-	// arg: 4, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 4, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceEPK5QChariS2_iN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, blen, convArg2, alen, cs)
 	qtrt.ErrPrint(err, rv)
@@ -8300,7 +8300,7 @@ func (this *QString) Replace_5_(before QLatin1String_ITF /*123*/, after QLatin1S
 	if after != nil && after.QLatin1String_PTR() != nil {
 		convArg1 = after.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceE13QLatin1StringS0_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -8376,7 +8376,7 @@ func (this *QString) Replace_6_(before QLatin1String_ITF /*123*/, after string) 
 	}
 	var tmpArg1 = NewQString_5(after)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceE13QLatin1StringRKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -8452,7 +8452,7 @@ func (this *QString) Replace_7_(before string, after QLatin1String_ITF /*123*/) 
 	if after != nil && after.QLatin1String_PTR() != nil {
 		convArg1 = after.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceERKS_13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -8524,7 +8524,7 @@ func (this *QString) Replace_8_(before string, after string) string {
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(after)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceERKS_S1_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -8600,7 +8600,7 @@ func (this *QString) Replace_9_(c QChar_ITF /*123*/, after string) string {
 	}
 	var tmpArg1 = NewQString_5(after)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceE5QCharRKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -8680,7 +8680,7 @@ func (this *QString) Replace_10_(c QChar_ITF /*123*/, after QLatin1String_ITF /*
 	if after != nil && after.QLatin1String_PTR() != nil {
 		convArg1 = after.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7replaceE5QChar13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -8867,9 +8867,9 @@ See also QStringList::join() and section().
 func (this *QString) Split__(sep string) *QStringList /*123*/ {
 	var tmpArg0 = NewQString_5(sep)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QString::SplitBehavior=Enum, QString::SplitBehavior=Enum,
+	// arg: 1, QString::SplitBehavior=Enum, QString::SplitBehavior=Enum, , Invalid
 	behavior := 0
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitERKS_NS_13SplitBehaviorEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior, cs)
 	qtrt.ErrPrint(err, rv)
@@ -8926,7 +8926,7 @@ See also QStringList::join() and section().
 func (this *QString) Split__1(sep string, behavior int) *QStringList /*123*/ {
 	var tmpArg0 = NewQString_5(sep)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitERKS_NS_13SplitBehaviorEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior, cs)
 	qtrt.ErrPrint(err, rv)
@@ -9042,9 +9042,9 @@ func (this *QString) Split_1_(sep QChar_ITF /*123*/) *QStringList /*123*/ {
 	if sep != nil && sep.QChar_PTR() != nil {
 		convArg0 = sep.QChar_PTR().GetCthis()
 	}
-	// arg: 1, QString::SplitBehavior=Enum, QString::SplitBehavior=Enum,
+	// arg: 1, QString::SplitBehavior=Enum, QString::SplitBehavior=Enum, , Invalid
 	behavior := 0
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitE5QCharNS_13SplitBehaviorEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior, cs)
 	qtrt.ErrPrint(err, rv)
@@ -9103,7 +9103,7 @@ func (this *QString) Split_1_1(sep QChar_ITF /*123*/, behavior int) *QStringList
 	if sep != nil && sep.QChar_PTR() != nil {
 		convArg0 = sep.QChar_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitE5QCharNS_13SplitBehaviorEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior, cs)
 	qtrt.ErrPrint(err, rv)
@@ -9219,7 +9219,7 @@ func (this *QString) Split_2_(sep QRegExp_ITF) *QStringList /*123*/ {
 	if sep != nil && sep.QRegExp_PTR() != nil {
 		convArg0 = sep.QRegExp_PTR().GetCthis()
 	}
-	// arg: 1, QString::SplitBehavior=Enum, QString::SplitBehavior=Enum,
+	// arg: 1, QString::SplitBehavior=Enum, QString::SplitBehavior=Enum, , Invalid
 	behavior := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitERK7QRegExpNS_13SplitBehaviorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior)
 	qtrt.ErrPrint(err, rv)
@@ -9335,7 +9335,7 @@ func (this *QString) Split_3_(sep QRegularExpression_ITF) *QStringList /*123*/ {
 	if sep != nil && sep.QRegularExpression_PTR() != nil {
 		convArg0 = sep.QRegularExpression_PTR().GetCthis()
 	}
-	// arg: 1, QString::SplitBehavior=Enum, QString::SplitBehavior=Enum,
+	// arg: 1, QString::SplitBehavior=Enum, QString::SplitBehavior=Enum, , Invalid
 	behavior := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitERK18QRegularExpressionNS_13SplitBehaviorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior)
 	qtrt.ErrPrint(err, rv)
@@ -9370,7 +9370,7 @@ func (this *QString) Normalized(mode int, version int) string {
 Returns the string in the given Unicode normalization mode, according to the given version of the Unicode standard.
 */
 func (this *QString) Normalized__(mode int) string {
-	// arg: 1, QChar::UnicodeVersion=Elaborated, QChar::UnicodeVersion=Enum,
+	// arg: 1, QChar::UnicodeVersion=Elaborated, QChar::UnicodeVersion=Enum, , Invalid
 	version := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10normalizedENS_17NormalizationFormEN5QChar14UnicodeVersionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, version)
 	qtrt.ErrPrint(err, rv)
@@ -9594,7 +9594,7 @@ See also toLatin1(), fromUtf8(), and fromLocal8Bit().
 func (this *QString) FromLatin1__(str string) string {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString10fromLatin1EPKci", qtrt.FFI_TYPE_POINTER, convArg0, size)
 	qtrt.ErrPrint(err, rv)
@@ -9685,7 +9685,7 @@ See also toUtf8(), fromLatin1(), and fromLocal8Bit().
 func (this *QString) FromUtf8__(str string) string {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString8fromUtf8EPKci", qtrt.FFI_TYPE_POINTER, convArg0, size)
 	qtrt.ErrPrint(err, rv)
@@ -9776,7 +9776,7 @@ See also toLocal8Bit(), fromLatin1(), and fromUtf8().
 func (this *QString) FromLocal8Bit__(str string) string {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString13fromLocal8BitEPKci", qtrt.FFI_TYPE_POINTER, convArg0, size)
 	qtrt.ErrPrint(err, rv)
@@ -9869,7 +9869,7 @@ QString makes a deep copy of the Unicode data.
 See also utf16(), setUtf16(), and fromStdU16String().
 */
 func (this *QString) FromUtf16__(arg0 unsafe.Pointer /*666*/) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString9fromUtf16EPKti", qtrt.FFI_TYPE_POINTER, arg0, size)
 	qtrt.ErrPrint(err, rv)
@@ -9930,7 +9930,7 @@ QString makes a deep copy of the Unicode data.
 See also utf16(), setUtf16(), and fromStdU16String().
 */
 func (this *QString) FromUtf16_1_(str unsafe.Pointer /*666*/) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString9fromUtf16EPKDsi", qtrt.FFI_TYPE_POINTER, str, size)
 	qtrt.ErrPrint(err, rv)
@@ -9983,7 +9983,7 @@ This function was introduced in  Qt 4.2.
 See also toUcs4(), fromUtf16(), utf16(), setUtf16(), fromWCharArray(), and fromStdU32String().
 */
 func (this *QString) FromUcs4__(arg0 unsafe.Pointer /*666*/) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString8fromUcs4EPKji", qtrt.FFI_TYPE_POINTER, arg0, size)
 	qtrt.ErrPrint(err, rv)
@@ -10036,7 +10036,7 @@ This function was introduced in  Qt 4.2.
 See also toUcs4(), fromUtf16(), utf16(), setUtf16(), fromWCharArray(), and fromStdU32String().
 */
 func (this *QString) FromUcs4_1_(str unsafe.Pointer /*666*/) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString8fromUcs4EPKDii", qtrt.FFI_TYPE_POINTER, str, size)
 	qtrt.ErrPrint(err, rv)
@@ -10161,7 +10161,7 @@ This function was introduced in  Qt 4.2.
 See also fromUtf16(), fromLatin1(), fromLocal8Bit(), fromUtf8(), fromUcs4(), and fromStdWString().
 */
 func (this *QString) FromWCharArray__(string unsafe.Pointer /*666*/) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString14fromWCharArrayEPKwi", qtrt.FFI_TYPE_POINTER, string, size)
 	qtrt.ErrPrint(err, rv)
@@ -10303,7 +10303,7 @@ See also operator==(), operator<(), and operator>().
 func (this *QString) Compare__(s string) int {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7compareERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -10371,7 +10371,7 @@ func (this *QString) Compare_1_(other QLatin1String_ITF /*123*/) int {
 	if other != nil && other.QLatin1String_PTR() != nil {
 		convArg0 = other.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7compareE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -10444,7 +10444,7 @@ func (this *QString) Compare_2_(s1 string, s2 string) int {
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(s2)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7compareERKS_S1_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -10521,7 +10521,7 @@ func (this *QString) Compare_3_(s1 string, s2 QLatin1String_ITF /*123*/) int {
 	if s2 != nil && s2.QLatin1String_PTR() != nil {
 		convArg1 = s2.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7compareERKS_13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -10598,7 +10598,7 @@ func (this *QString) Compare_4_(s1 QLatin1String_ITF /*123*/, s2 string) int {
 	}
 	var tmpArg1 = NewQString_5(s2)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7compareE13QLatin1StringRKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -10666,7 +10666,7 @@ func (this *QString) Compare_5_(s QStringRef_ITF) int {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7compareERK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -10743,7 +10743,7 @@ func (this *QString) Compare_6_(s1 string, s2 QStringRef_ITF) int {
 	if s2 != nil && s2.QStringRef_PTR() != nil {
 		convArg1 = s2.QStringRef_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	arg2 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString7compareERKS_RK10QStringRefN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2)
 	qtrt.ErrPrint(err, rv)
@@ -10917,9 +10917,9 @@ Example:
 See also number(), toUShort(), toInt(), and QLocale::toShort().
 */
 func (this *QString) ToShort__() int16 {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -10954,7 +10954,7 @@ Example:
 See also number(), toUShort(), toInt(), and QLocale::toShort().
 */
 func (this *QString) ToShort__1(ok *bool) int16 {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11022,9 +11022,9 @@ Example:
 See also number(), toShort(), and QLocale::toUShort().
 */
 func (this *QString) ToUShort__() uint16 {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11059,7 +11059,7 @@ Example:
 See also number(), toShort(), and QLocale::toUShort().
 */
 func (this *QString) ToUShort__1(ok *bool) uint16 {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11125,9 +11125,9 @@ Example:
 See also number(), toUInt(), toDouble(), and QLocale::toInt().
 */
 func (this *QString) ToInt__() int {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5toIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11161,7 +11161,7 @@ Example:
 See also number(), toUInt(), toDouble(), and QLocale::toInt().
 */
 func (this *QString) ToInt__1(ok *bool) int {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5toIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11229,9 +11229,9 @@ Example:
 See also number(), toInt(), and QLocale::toUInt().
 */
 func (this *QString) ToUInt__() uint {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11266,7 +11266,7 @@ Example:
 See also number(), toInt(), and QLocale::toUInt().
 */
 func (this *QString) ToUInt__1(ok *bool) uint {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11334,9 +11334,9 @@ Example:
 See also number(), toULong(), toInt(), and QLocale::toInt().
 */
 func (this *QString) ToLong__() int {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6toLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11371,7 +11371,7 @@ Example:
 See also number(), toULong(), toInt(), and QLocale::toInt().
 */
 func (this *QString) ToLong__1(ok *bool) int {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString6toLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11439,9 +11439,9 @@ Example:
 See also number() and QLocale::toUInt().
 */
 func (this *QString) ToULong__() uint {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11476,7 +11476,7 @@ Example:
 See also number() and QLocale::toUInt().
 */
 func (this *QString) ToULong__1(ok *bool) uint {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11544,9 +11544,9 @@ Example:
 See also number(), toULongLong(), toInt(), and QLocale::toLongLong().
 */
 func (this *QString) ToLongLong__() int64 {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11581,7 +11581,7 @@ Example:
 See also number(), toULongLong(), toInt(), and QLocale::toLongLong().
 */
 func (this *QString) ToLongLong__1(ok *bool) int64 {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11649,9 +11649,9 @@ Example:
 See also number(), toLongLong(), and QLocale::toULongLong().
 */
 func (this *QString) ToULongLong__() uint64 {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11686,7 +11686,7 @@ Example:
 See also number(), toLongLong(), and QLocale::toULongLong().
 */
 func (this *QString) ToULongLong__1(ok *bool) uint64 {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
 	qtrt.ErrPrint(err, rv)
@@ -11752,7 +11752,7 @@ Example:
 See also number(), toDouble(), toInt(), and QLocale::toFloat().
 */
 func (this *QString) ToFloat__() float32 {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
@@ -11858,7 +11858,7 @@ For historical reasons, this function does not handle thousands group separators
 See also number(), QLocale::setDefault(), QLocale::toDouble(), and trimmed().
 */
 func (this *QString) ToDouble__() float64 {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
@@ -11911,7 +11911,7 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum__(arg0 int16) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumEsi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -11967,7 +11967,7 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum_1_(arg0 uint16) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumEti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12023,7 +12023,7 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum_2_(arg0 int) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12079,7 +12079,7 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum_3_(arg0 uint) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumEji", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12135,7 +12135,7 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum_4_(arg0 int) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumEli", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12191,7 +12191,7 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum_5_(arg0 uint) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumEmi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12247,7 +12247,7 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum_6_(arg0 int64) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumExi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12303,7 +12303,7 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum_7_(arg0 uint64) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumEyi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12359,9 +12359,9 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum_8_(arg0 float32) string {
-	// arg: 1, char=Char_S, =Invalid,
+	// arg: 1, char=Char_S, =Invalid, , Invalid
 	f := 'g'
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
 	qtrt.ErrPrint(err, rv)
@@ -12390,7 +12390,7 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum_8_1(arg0 float32, f byte) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
 	qtrt.ErrPrint(err, rv)
@@ -12446,9 +12446,9 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum_9_(arg0 float64) string {
-	// arg: 1, char=Char_S, =Invalid,
+	// arg: 1, char=Char_S, =Invalid, , Invalid
 	f := 'g'
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
 	qtrt.ErrPrint(err, rv)
@@ -12477,7 +12477,7 @@ The base is 10 by default and must be between 2 and 36. For bases other than 10,
 The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 */
 func (this *QString) SetNum_9_1(arg0 float64, f byte) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6setNumEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
 	qtrt.ErrPrint(err, rv)
@@ -12544,7 +12544,7 @@ The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a loca
 See also setNum().
 */
 func (this *QString) Number__(arg0 int) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6numberEii", qtrt.FFI_TYPE_POINTER, arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12611,7 +12611,7 @@ The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a loca
 See also setNum().
 */
 func (this *QString) Number_1_(arg0 uint) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6numberEji", qtrt.FFI_TYPE_POINTER, arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12678,7 +12678,7 @@ The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a loca
 See also setNum().
 */
 func (this *QString) Number_2_(arg0 int) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6numberEli", qtrt.FFI_TYPE_POINTER, arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12745,7 +12745,7 @@ The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a loca
 See also setNum().
 */
 func (this *QString) Number_3_(arg0 uint) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6numberEmi", qtrt.FFI_TYPE_POINTER, arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12812,7 +12812,7 @@ The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a loca
 See also setNum().
 */
 func (this *QString) Number_4_(arg0 int64) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6numberExi", qtrt.FFI_TYPE_POINTER, arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12879,7 +12879,7 @@ The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a loca
 See also setNum().
 */
 func (this *QString) Number_5_(arg0 uint64) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6numberEyi", qtrt.FFI_TYPE_POINTER, arg0, base)
 	qtrt.ErrPrint(err, rv)
@@ -12946,9 +12946,9 @@ The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a loca
 See also setNum().
 */
 func (this *QString) Number_6_(arg0 float64) string {
-	// arg: 1, char=Char_S, =Invalid,
+	// arg: 1, char=Char_S, =Invalid, , Invalid
 	f := 'g'
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6numberEdci", qtrt.FFI_TYPE_POINTER, arg0, f, prec)
 	qtrt.ErrPrint(err, rv)
@@ -12980,7 +12980,7 @@ The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a loca
 See also setNum().
 */
 func (this *QString) Number_6_1(arg0 float64, f byte) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QString6numberEdci", qtrt.FFI_TYPE_POINTER, arg0, f, prec)
 	qtrt.ErrPrint(err, rv)

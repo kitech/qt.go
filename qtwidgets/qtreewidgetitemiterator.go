@@ -99,7 +99,7 @@ func NewQTreeWidgetItemIterator__(widget QTreeWidget_ITF /*777 QTreeWidget **/) 
 	if widget != nil && widget.QTreeWidget_PTR() != nil {
 		convArg0 = widget.QTreeWidget_PTR().GetCthis()
 	}
-	// arg: 1, QTreeWidgetItemIterator::IteratorFlags=Typedef, QTreeWidgetItemIterator::IteratorFlags=Typedef, QFlags<QTreeWidgetItemIterator::IteratorFlag>
+	// arg: 1, QTreeWidgetItemIterator::IteratorFlags=Typedef, QTreeWidgetItemIterator::IteratorFlags=Typedef, QFlags<QTreeWidgetItemIterator::IteratorFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorC2EP11QTreeWidget6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -141,7 +141,7 @@ func NewQTreeWidgetItemIterator_1_(item QTreeWidgetItem_ITF /*777 QTreeWidgetIte
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
 	}
-	// arg: 1, QTreeWidgetItemIterator::IteratorFlags=Typedef, QTreeWidgetItemIterator::IteratorFlags=Typedef, QFlags<QTreeWidgetItemIterator::IteratorFlag>
+	// arg: 1, QTreeWidgetItemIterator::IteratorFlags=Typedef, QTreeWidgetItemIterator::IteratorFlags=Typedef, QFlags<QTreeWidgetItemIterator::IteratorFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorC2EP15QTreeWidgetItem6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)

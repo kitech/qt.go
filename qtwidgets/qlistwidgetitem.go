@@ -95,9 +95,9 @@ func NewQListWidgetItem(view QListWidget_ITF /*777 QListWidget **/, type_ int) *
 
  */
 func NewQListWidgetItem__() *QListWidgetItem {
-	// arg: 0, QListWidget *=Pointer, QListWidget=Record,
+	// arg: 0, QListWidget *=Pointer, QListWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItemC2EP11QListWidgeti", qtrt.FFI_TYPE_POINTER, convArg0, type_)
 	qtrt.ErrPrint(err, rv)
@@ -119,7 +119,7 @@ func NewQListWidgetItem__1(view QListWidget_ITF /*777 QListWidget **/) *QListWid
 	if view != nil && view.QListWidget_PTR() != nil {
 		convArg0 = view.QListWidget_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItemC2EP11QListWidgeti", qtrt.FFI_TYPE_POINTER, convArg0, type_)
 	qtrt.ErrPrint(err, rv)
@@ -161,9 +161,9 @@ func NewQListWidgetItem_1(text string, view QListWidget_ITF /*777 QListWidget **
 func NewQListWidgetItem_1_(text string) *QListWidgetItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QListWidget *=Pointer, QListWidget=Record,
+	// arg: 1, QListWidget *=Pointer, QListWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_)
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func NewQListWidgetItem_1_1(text string, view QListWidget_ITF /*777 QListWidget 
 	if view != nil && view.QListWidget_PTR() != nil {
 		convArg1 = view.QListWidget_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_)
 	qtrt.ErrPrint(err, rv)
@@ -237,9 +237,9 @@ func NewQListWidgetItem_2_(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
 	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QListWidget *=Pointer, QListWidget=Record,
+	// arg: 2, QListWidget *=Pointer, QListWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, type_)
 	qtrt.ErrPrint(err, rv)
@@ -267,7 +267,7 @@ func NewQListWidgetItem_2_1(icon qtgui.QIcon_ITF, text string, view QListWidget_
 	if view != nil && view.QListWidget_PTR() != nil {
 		convArg2 = view.QListWidget_PTR().GetCthis()
 	}
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, type_)
 	qtrt.ErrPrint(err, rv)

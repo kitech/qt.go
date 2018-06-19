@@ -129,7 +129,7 @@ Constructs an empty buffer with the given parent. You can call setData() to fill
 See also open().
 */
 func NewQBuffer__() *QBuffer {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBufferC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -179,7 +179,7 @@ func NewQBuffer_1_(buf QByteArray_ITF /*777 QByteArray **/) *QBuffer {
 	if buf != nil && buf.QByteArray_PTR() != nil {
 		convArg0 = buf.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBufferC2EP10QByteArrayP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

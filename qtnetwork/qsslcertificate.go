@@ -98,7 +98,7 @@ func NewQSslCertificate__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSsl
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
 	}
-	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateC2EP9QIODeviceN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -136,9 +136,9 @@ func NewQSslCertificate_1(data qtcore.QByteArray_ITF, format int) *QSslCertifica
 Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
 */
 func NewQSslCertificate_1_() *QSslCertificate {
-	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
-	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateC2ERK10QByteArrayN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +160,7 @@ func NewQSslCertificate_1_1(data qtcore.QByteArray_ITF) *QSslCertificate {
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSslCertificateC2ERK10QByteArrayN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -399,7 +399,7 @@ func (this *QSslCertificate) Digest(algorithm int) *qtcore.QByteArray /*123*/ {
 Returns a cryptographic digest of this certificate. By default, an MD5 digest will be generated, but you can also specify a custom algorithm.
 */
 func (this *QSslCertificate) Digest__() *qtcore.QByteArray /*123*/ {
-	// arg: 0, QCryptographicHash::Algorithm=Elaborated, QCryptographicHash::Algorithm=Enum,
+	// arg: 0, QCryptographicHash::Algorithm=Elaborated, QCryptographicHash::Algorithm=Enum, , Invalid
 	algorithm := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate6digestEN18QCryptographicHash9AlgorithmE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), algorithm)
 	qtrt.ErrPrint(err, rv)

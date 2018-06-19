@@ -447,7 +447,7 @@ See also isNull().
 func (this *QVersionNumber) FromString__(string string) *QVersionNumber /*123*/ {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int *=Pointer, =Invalid,
+	// arg: 1, int *=Pointer, =Invalid, , Invalid
 	var suffixIndex unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringERK7QStringPi", qtrt.FFI_TYPE_POINTER, convArg0, suffixIndex)
 	qtrt.ErrPrint(err, rv)
@@ -520,7 +520,7 @@ func (this *QVersionNumber) FromString_1_(string QLatin1String_ITF /*123*/) *QVe
 	if string != nil && string.QLatin1String_PTR() != nil {
 		convArg0 = string.QLatin1String_PTR().GetCthis()
 	}
-	// arg: 1, int *=Pointer, =Invalid,
+	// arg: 1, int *=Pointer, =Invalid, , Invalid
 	var suffixIndex unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE13QLatin1StringPi", qtrt.FFI_TYPE_POINTER, convArg0, suffixIndex)
 	qtrt.ErrPrint(err, rv)
@@ -593,7 +593,7 @@ func (this *QVersionNumber) FromString_2_(string QStringView_ITF /*123*/) *QVers
 	if string != nil && string.QStringView_PTR() != nil {
 		convArg0 = string.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, int *=Pointer, =Invalid,
+	// arg: 1, int *=Pointer, =Invalid, , Invalid
 	var suffixIndex unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE11QStringViewPi", qtrt.FFI_TYPE_POINTER, convArg0, suffixIndex)
 	qtrt.ErrPrint(err, rv)

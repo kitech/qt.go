@@ -120,7 +120,7 @@ func NewQState(parent QState_ITF /*777 QState **/) *QState {
 Constructs a new state with the given parent state.
 */
 func NewQState__() *QState {
-	// arg: 0, QState *=Pointer, QState=Record,
+	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QStateC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ func NewQState_1(childMode int, parent QState_ITF /*777 QState **/) *QState {
 Constructs a new state with the given parent state.
 */
 func NewQState_1_(childMode int) *QState {
-	// arg: 1, QState *=Pointer, QState=Record,
+	// arg: 1, QState *=Pointer, QState=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QStateC2ENS_9ChildModeEPS_", qtrt.FFI_TYPE_POINTER, childMode, convArg1)
 	qtrt.ErrPrint(err, rv)

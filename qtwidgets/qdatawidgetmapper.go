@@ -111,7 +111,7 @@ Constructs a new QDataWidgetMapper with parent object parent. By default, the or
 See also setOrientation() and setSubmitPolicy().
 */
 func NewQDataWidgetMapper__() *QDataWidgetMapper {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QDataWidgetMapperC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

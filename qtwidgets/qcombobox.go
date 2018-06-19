@@ -182,7 +182,7 @@ func NewQComboBox(parent QWidget_ITF /*777 QWidget **/) *QComboBox {
 Constructs a combobox with the given parent, using the default model QStandardItemModel.
 */
 func NewQComboBox__() *QComboBox {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -413,7 +413,7 @@ The flags specify how the items in the combobox are searched.
 func (this *QComboBox) FindText__(text string) int {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>
+	// arg: 1, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8findTextERK7QString6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -455,9 +455,9 @@ func (this *QComboBox) FindData__(data qtcore.QVariant_ITF) int {
 	if data != nil && data.QVariant_PTR() != nil {
 		convArg0 = data.QVariant_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::UserRole*/
-	// arg: 2, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>
+	// arg: 2, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8findDataERK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, flags)
 	qtrt.ErrPrint(err, rv)
@@ -479,7 +479,7 @@ func (this *QComboBox) FindData__1(data qtcore.QVariant_ITF, role int) int {
 	if data != nil && data.QVariant_PTR() != nil {
 		convArg0 = data.QVariant_PTR().GetCthis()
 	}
-	// arg: 2, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>
+	// arg: 2, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8findDataERK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, flags)
 	qtrt.ErrPrint(err, rv)
@@ -938,7 +938,7 @@ func (this *QComboBox) CurrentData(role int) *qtcore.QVariant /*123*/ {
 
  */
 func (this *QComboBox) CurrentData__() *qtcore.QVariant /*123*/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::UserRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox11currentDataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)
@@ -1013,7 +1013,7 @@ Returns the data for the given role in the given index in the combobox, or QVari
 See also setItemData().
 */
 func (this *QComboBox) ItemData__(index int) *qtcore.QVariant /*123*/ {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::UserRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8itemDataEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, role)
 	qtrt.ErrPrint(err, rv)
@@ -1052,7 +1052,7 @@ Adds an item to the combobox with the given text, and containing the specified u
 func (this *QComboBox) AddItem__(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QVariant &=LValueReference, QVariant=Record,
+	// arg: 1, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg1 = qtcore.NewQVariant()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox7addItemERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1096,7 +1096,7 @@ func (this *QComboBox) AddItem_1_(icon qtgui.QIcon_ITF, text string) {
 	}
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QVariant &=LValueReference, QVariant=Record,
+	// arg: 2, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg2 = qtcore.NewQVariant()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1157,7 +1157,7 @@ See also insertItems().
 func (this *QComboBox) InsertItem__(index int, text string) {
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QVariant &=LValueReference, QVariant=Record,
+	// arg: 2, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg2 = qtcore.NewQVariant()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1209,7 +1209,7 @@ func (this *QComboBox) InsertItem_1_(index int, icon qtgui.QIcon_ITF, text strin
 	}
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, const QVariant &=LValueReference, QVariant=Record,
+	// arg: 3, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg3 = qtcore.NewQVariant()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -1340,7 +1340,7 @@ func (this *QComboBox) SetItemData__(index int, value qtcore.QVariant_ITF) {
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg1 = value.QVariant_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::UserRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11setItemDataEiRK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, role)
 	qtrt.ErrPrint(err, rv)

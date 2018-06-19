@@ -115,7 +115,7 @@ func NewQRandomGenerator64(seedValue uint) *QRandomGenerator64 {
 
  */
 func NewQRandomGenerator64__() *QRandomGenerator64 {
-	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int
+	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int, UInt
 	seedValue := uint(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2Ej", qtrt.FFI_TYPE_POINTER, seedValue)
 	qtrt.ErrPrint(err, rv)

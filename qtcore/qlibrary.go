@@ -105,7 +105,7 @@ func NewQLibrary(parent QObject_ITF /*777 QObject **/) *QLibrary {
 Constructs a library with the given parent.
 */
 func NewQLibrary__() *QLibrary {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -147,7 +147,7 @@ Constructs a library with the given parent.
 func NewQLibrary_1_(fileName string) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -189,7 +189,7 @@ Constructs a library with the given parent.
 func NewQLibrary_2_(fileName string, verNum int) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringiP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, verNum, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -235,7 +235,7 @@ func NewQLibrary_3_(fileName string, version string) *QLibrary {
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(version)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringS2_P7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

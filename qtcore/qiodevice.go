@@ -733,7 +733,7 @@ This function calls readLineData(), which is implemented using repeated calls to
 See also getChar(), read(), and write().
 */
 func (this *QIODevice) ReadLine_1_() *QByteArray /*123*/ {
-	// arg: 0, qint64=Typedef, qint64=Typedef, long long
+	// arg: 0, qint64=Typedef, qint64=Typedef, long long, LongLong
 	maxlen := int64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice8readLineEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
 	qtrt.ErrPrint(err, rv)

@@ -110,7 +110,7 @@ Constructs a QDnsLookup object and sets parent as the parent object.
 The type property will default to QDnsLookup::A.
 */
 func NewQDnsLookup__() *QDnsLookup {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -156,7 +156,7 @@ The type property will default to QDnsLookup::A.
 func NewQDnsLookup_1_(type_ int, name string) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2ENS_4TypeERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -210,7 +210,7 @@ func NewQDnsLookup_2_(type_ int, name string, nameserver QHostAddress_ITF) *QDns
 	if nameserver != nil && nameserver.QHostAddress_PTR() != nil {
 		convArg2 = nameserver.QHostAddress_PTR().GetCthis()
 	}
-	// arg: 3, QObject *=Pointer, QObject=Record,
+	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QDnsLookupC2ENS_4TypeERK7QStringRK12QHostAddressP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)

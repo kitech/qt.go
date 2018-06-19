@@ -257,9 +257,9 @@ func NewQGraphicsProxyWidget(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, w
 Constructs a new QGraphicsProxy widget. parent and wFlags are passed to QGraphicsItem's constructor.
 */
 func NewQGraphicsProxyWidget__() *QGraphicsProxyWidget {
-	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	wFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidgetC2EP13QGraphicsItem6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, wFlags)
 	qtrt.ErrPrint(err, rv)
@@ -281,7 +281,7 @@ func NewQGraphicsProxyWidget__1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
 		convArg0 = parent.QGraphicsItem_PTR().GetCthis()
 	}
-	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	wFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsProxyWidgetC2EP13QGraphicsItem6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, wFlags)
 	qtrt.ErrPrint(err, rv)
@@ -951,7 +951,7 @@ func (this *QGraphicsProxyWidget) SizeHint(which int, constraint qtcore.QSizeF_I
 Reimplemented from QGraphicsLayoutItem::sizeHint().
 */
 func (this *QGraphicsProxyWidget) SizeHint__(which int) *qtcore.QSizeF /*123*/ {
-	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record,
+	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)

@@ -104,7 +104,7 @@ func NewQDragMoveEvent__(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeDa
 	if data != nil && data.QMimeData_PTR() != nil {
 		convArg2 = data.QMimeData_PTR().GetCthis()
 	}
-	// arg: 5, QEvent::Type=Enum, QEvent::Type=Enum,
+	// arg: 5, QEvent::Type=Enum, QEvent::Type=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers, type_)
 	qtrt.ErrPrint(err, rv)

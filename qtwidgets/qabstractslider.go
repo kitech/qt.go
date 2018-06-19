@@ -155,7 +155,7 @@ The parent argument is sent to the QWidget constructor.
 The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
 */
 func NewQAbstractSlider__() *QAbstractSlider {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSliderC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -648,9 +648,9 @@ Sets action action to be triggered repetitively in intervals of repeatTime, afte
 See also triggerAction() and repeatAction().
 */
 func (this *QAbstractSlider) SetRepeatAction__(action int) {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	thresholdTime := int(500)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	repeatTime := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider15setRepeatActionENS_12SliderActionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action, thresholdTime, repeatTime)
 	qtrt.ErrPrint(err, rv)
@@ -667,7 +667,7 @@ Sets action action to be triggered repetitively in intervals of repeatTime, afte
 See also triggerAction() and repeatAction().
 */
 func (this *QAbstractSlider) SetRepeatAction__1(action int, thresholdTime int) {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	repeatTime := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider15setRepeatActionENS_12SliderActionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action, thresholdTime, repeatTime)
 	qtrt.ErrPrint(err, rv)

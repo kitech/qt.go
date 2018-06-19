@@ -202,7 +202,7 @@ Constructs a new QThread to manage a new thread. The parent takes ownership of t
 See also start().
 */
 func NewQThread__() *QThread {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThreadC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -420,7 +420,7 @@ No QEventLoops will be started anymore in this thread until QThread::exec() has 
 See also quit() and QEventLoop.
 */
 func (this *QThread) Exit__() {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	retcode := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread4exitEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), retcode)
 	qtrt.ErrPrint(err, rv)
@@ -531,7 +531,7 @@ The effect of the priority parameter is dependent on the operating system's sche
 See also run() and terminate().
 */
 func (this *QThread) Start__() {
-	// arg: 0, QThread::Priority=Enum, QThread::Priority=Enum,
+	// arg: 0, QThread::Priority=Enum, QThread::Priority=Enum, , Invalid
 	arg0 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread5startENS_8PriorityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -616,7 +616,7 @@ This provides similar functionality to the POSIX pthread_join() function.
 See also sleep() and terminate().
 */
 func (this *QThread) Wait__() bool {
-	// arg: 0, unsigned long=ULong, =Invalid,
+	// arg: 0, unsigned long=ULong, =Invalid, , Invalid
 	time := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread4waitEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), time)
 	qtrt.ErrPrint(err, rv)
@@ -753,7 +753,7 @@ When enabled is true, termination is enabled. Future calls to QThread::terminate
 See also terminate().
 */
 func (this *QThread) SetTerminationEnabled__() {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread21setTerminationEnabledEb", qtrt.FFI_TYPE_POINTER, enabled)
 	qtrt.ErrPrint(err, rv)

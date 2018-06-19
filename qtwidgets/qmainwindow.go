@@ -121,9 +121,9 @@ Constructs a QMainWindow with the given parent and the specified widget flags.
 QMainWindow sets the Qt::Window flag itself, and will hence always be created as a top-level widget.
 */
 func NewQMainWindow__() *QMainWindow {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -147,7 +147,7 @@ func NewQMainWindow__1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -627,7 +627,7 @@ func (this *QMainWindow) AddToolBarBreak(area int) {
 Adds a toolbar break to the given area after all the other objects that are present.
 */
 func (this *QMainWindow) AddToolBarBreak__() {
-	// arg: 0, Qt::ToolBarArea=Elaborated, Qt::ToolBarArea=Enum,
+	// arg: 0, Qt::ToolBarArea=Elaborated, Qt::ToolBarArea=Enum, , Invalid
 	area := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow15addToolBarBreakEN2Qt11ToolBarAreaE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), area)
 	qtrt.ErrPrint(err, rv)
@@ -1023,7 +1023,7 @@ To save the geometry when the window closes, you can implement a close event lik
 See also restoreState(), QWidget::saveGeometry(), and QWidget::restoreGeometry().
 */
 func (this *QMainWindow) SaveState__() *qtcore.QByteArray /*123*/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	version := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow9saveStateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), version)
 	qtrt.ErrPrint(err, rv)
@@ -1091,7 +1091,7 @@ func (this *QMainWindow) RestoreState__(state qtcore.QByteArray_ITF) bool {
 	if state != nil && state.QByteArray_PTR() != nil {
 		convArg0 = state.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	version := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow12restoreStateERK10QByteArrayi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, version)
 	qtrt.ErrPrint(err, rv)

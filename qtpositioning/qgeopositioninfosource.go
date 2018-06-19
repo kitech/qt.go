@@ -205,7 +205,7 @@ Returns an update containing the last known position, or a null update if none i
 If fromSatellitePositioningMethodsOnly is true, this returns the last known position received from a satellite positioning method; if none is available, a null update is returned.
 */
 func (this *QGeoPositionInfoSource) LastKnownPosition__() *QGeoPositionInfo /*123*/ {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	fromSatellitePositioningMethodsOnly := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGeoPositionInfoSource17lastKnownPositionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fromSatellitePositioningMethodsOnly)
 	qtrt.ErrPrint(err, rv)
@@ -427,7 +427,7 @@ This does nothing if another update request is in progress. However it can be ca
 If the source uses multiple positioning methods, it tries to get the current position from the most accurate positioning method within the given timeout.
 */
 func (this *QGeoPositionInfoSource) RequestUpdate__() {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	timeout := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGeoPositionInfoSource13requestUpdateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	qtrt.ErrPrint(err, rv)

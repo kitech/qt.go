@@ -250,9 +250,9 @@ func (this *QIcon) Pixmap__(size qtcore.QSize_ITF) *QPixmap /*123*/ {
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 1, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 1, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 2, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 2, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapERK5QSizeNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -278,7 +278,7 @@ func (this *QIcon) Pixmap__1(size qtcore.QSize_ITF, mode int) *QPixmap /*123*/ {
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 2, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 2, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapERK5QSizeNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -320,9 +320,9 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 See also actualSize() and paint().
 */
 func (this *QIcon) Pixmap_1_(w int, h int) *QPixmap /*123*/ {
-	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 3, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 3, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiiNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -344,7 +344,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 See also actualSize() and paint().
 */
 func (this *QIcon) Pixmap_1_1(w int, h int, mode int) *QPixmap /*123*/ {
-	// arg: 3, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 3, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiiNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -386,9 +386,9 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 See also actualSize() and paint().
 */
 func (this *QIcon) Pixmap_2_(extent int) *QPixmap /*123*/ {
-	// arg: 1, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 1, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 2, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 2, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extent, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -410,7 +410,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 See also actualSize() and paint().
 */
 func (this *QIcon) Pixmap_2_1(extent int, mode int) *QPixmap /*123*/ {
-	// arg: 2, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 2, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extent, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -468,9 +468,9 @@ func (this *QIcon) Pixmap_3_(window QWindow_ITF /*777 QWindow **/, size qtcore.Q
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 3, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 3, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEP7QWindowRK5QSizeNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -500,7 +500,7 @@ func (this *QIcon) Pixmap_3_1(window QWindow_ITF /*777 QWindow **/, size qtcore.
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 3, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 3, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEP7QWindowRK5QSizeNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -546,9 +546,9 @@ func (this *QIcon) ActualSize__(size qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 1, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 1, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 2, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 2, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon10actualSizeERK5QSizeNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -572,7 +572,7 @@ func (this *QIcon) ActualSize__1(size qtcore.QSize_ITF, mode int) *qtcore.QSize 
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 2, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 2, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon10actualSizeERK5QSizeNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -626,9 +626,9 @@ func (this *QIcon) ActualSize_1_(window QWindow_ITF /*777 QWindow **/, size qtco
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 3, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 3, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon10actualSizeEP7QWindowRK5QSizeNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -656,7 +656,7 @@ func (this *QIcon) ActualSize_1_1(window QWindow_ITF /*777 QWindow **/, size qtc
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 3, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 3, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon10actualSizeEP7QWindowRK5QSizeNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -730,11 +730,11 @@ func (this *QIcon) Paint__(painter QPainter_ITF /*777 QPainter **/, rect qtcore.
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg1 = rect.QRect_PTR().GetCthis()
 	}
-	// arg: 2, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
+	// arg: 2, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>, Unexposed
 	alignment := 0
-	// arg: 3, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 3, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 4, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 4, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon5paintEP8QPainterRK5QRect6QFlagsIN2Qt13AlignmentFlagEENS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, alignment, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -759,9 +759,9 @@ func (this *QIcon) Paint__1(painter QPainter_ITF /*777 QPainter **/, rect qtcore
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg1 = rect.QRect_PTR().GetCthis()
 	}
-	// arg: 3, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 3, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 4, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 4, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon5paintEP8QPainterRK5QRect6QFlagsIN2Qt13AlignmentFlagEENS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, alignment, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -786,7 +786,7 @@ func (this *QIcon) Paint__2(painter QPainter_ITF /*777 QPainter **/, rect qtcore
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg1 = rect.QRect_PTR().GetCthis()
 	}
-	// arg: 4, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 4, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon5paintEP8QPainterRK5QRect6QFlagsIN2Qt13AlignmentFlagEENS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, alignment, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -826,11 +826,11 @@ func (this *QIcon) Paint_1_(painter QPainter_ITF /*777 QPainter **/, x int, y in
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
 	}
-	// arg: 5, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
+	// arg: 5, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>, Unexposed
 	alignment := 0
-	// arg: 6, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 6, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 7, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 7, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon5paintEP8QPainteriiii6QFlagsIN2Qt13AlignmentFlagEENS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, x, y, w, h, alignment, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -851,9 +851,9 @@ func (this *QIcon) Paint_1_1(painter QPainter_ITF /*777 QPainter **/, x int, y i
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
 	}
-	// arg: 6, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 6, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 7, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 7, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon5paintEP8QPainteriiii6QFlagsIN2Qt13AlignmentFlagEENS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, x, y, w, h, alignment, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -874,7 +874,7 @@ func (this *QIcon) Paint_1_2(painter QPainter_ITF /*777 QPainter **/, x int, y i
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
 	}
-	// arg: 7, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 7, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon5paintEP8QPainteriiii6QFlagsIN2Qt13AlignmentFlagEENS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, x, y, w, h, alignment, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -985,9 +985,9 @@ func (this *QIcon) AddPixmap__(pixmap QPixmap_ITF) {
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
 	}
-	// arg: 1, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 1, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 2, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 2, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon9addPixmapERK7QPixmapNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -1010,7 +1010,7 @@ func (this *QIcon) AddPixmap__1(pixmap QPixmap_ITF, mode int) {
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
 	}
-	// arg: 2, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 2, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon9addPixmapERK7QPixmapNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -1070,11 +1070,11 @@ See also addPixmap() and QPixmap::devicePixelRatio().
 func (this *QIcon) AddFile__(fileName string) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QSize &=LValueReference, QSize=Record,
-	var convArg1 unsafe.Pointer
-	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 1, const QSize &=LValueReference, QSize=Record, , Invalid
+	var convArg1 = qtcore.NewQSize()
+	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 3, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 3, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon7addFileERK7QStringRK5QSizeNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -1107,9 +1107,9 @@ func (this *QIcon) AddFile__1(fileName string, size qtcore.QSize_ITF) {
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum,
+	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
-	// arg: 3, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 3, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon7addFileERK7QStringRK5QSizeNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
 	qtrt.ErrPrint(err, rv)
@@ -1142,10 +1142,67 @@ func (this *QIcon) AddFile__2(fileName string, size qtcore.QSize_ITF, mode int) 
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 3, QIcon::State=Enum, QIcon::State=Enum,
+	// arg: 3, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon7addFileERK7QStringRK5QSizeNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qicon.h:109
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QSize> availableSizes(QIcon::Mode, QIcon::State) const
+
+/*
+Returns a list of available icon sizes for the specified mode and state.
+
+This function was introduced in  Qt 4.5.
+*/
+func (this *QIcon) AvailableSizes(mode int, state int) *qtcore.QSizeList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon14availableSizesENS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, state)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQSizeListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qicon.h:109
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QSize> availableSizes(QIcon::Mode, QIcon::State) const
+
+/*
+Returns a list of available icon sizes for the specified mode and state.
+
+This function was introduced in  Qt 4.5.
+*/
+func (this *QIcon) AvailableSizes__() *qtcore.QSizeList /*lll*/ {
+	// arg: 0, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
+	mode := 0
+	// arg: 1, QIcon::State=Enum, QIcon::State=Enum, , Invalid
+	state := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon14availableSizesENS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, state)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQSizeListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qicon.h:109
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QSize> availableSizes(QIcon::Mode, QIcon::State) const
+
+/*
+Returns a list of available icon sizes for the specified mode and state.
+
+This function was introduced in  Qt 4.5.
+*/
+func (this *QIcon) AvailableSizes__1(mode int) *qtcore.QSizeList /*lll*/ {
+	// arg: 1, QIcon::State=Enum, QIcon::State=Enum, , Invalid
+	state := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon14availableSizesENS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, state)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQSizeListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qicon.h:111

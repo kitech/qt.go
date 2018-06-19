@@ -110,7 +110,7 @@ func NewQTimer(parent QObject_ITF /*777 QObject **/) *QTimer {
 Constructs a timer with the given parent.
 */
 func NewQTimer__() *QTimer {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

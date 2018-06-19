@@ -240,7 +240,7 @@ See also rawData(), fromBinaryData(), isNull(), and DataValidation.
 func (this *QJsonDocument) FromRawData__(data string, size int) *QJsonDocument /*123*/ {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	// arg: 2, QJsonDocument::DataValidation=Enum, QJsonDocument::DataValidation=Enum,
+	// arg: 2, QJsonDocument::DataValidation=Enum, QJsonDocument::DataValidation=Enum, , Invalid
 	validation := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocument11fromRawDataEPKciNS_14DataValidationE", qtrt.FFI_TYPE_POINTER, convArg0, size, validation)
 	qtrt.ErrPrint(err, rv)
@@ -311,7 +311,7 @@ func (this *QJsonDocument) FromBinaryData__(data QByteArray_ITF) *QJsonDocument 
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, QJsonDocument::DataValidation=Enum, QJsonDocument::DataValidation=Enum,
+	// arg: 1, QJsonDocument::DataValidation=Enum, QJsonDocument::DataValidation=Enum, , Invalid
 	validation := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocument14fromBinaryDataERK10QByteArrayNS_14DataValidationE", qtrt.FFI_TYPE_POINTER, convArg0, validation)
 	qtrt.ErrPrint(err, rv)

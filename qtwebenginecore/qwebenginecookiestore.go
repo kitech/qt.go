@@ -132,7 +132,7 @@ func (this *QWebEngineCookieStore) SetCookie__(cookie qtnetwork.QNetworkCookie_I
 	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {
 		convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
 	}
-	// arg: 1, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 1, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg1 = qtcore.NewQUrl()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QWebEngineCookieStore9setCookieERK14QNetworkCookieRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -172,7 +172,7 @@ func (this *QWebEngineCookieStore) DeleteCookie__(cookie qtnetwork.QNetworkCooki
 	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {
 		convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
 	}
-	// arg: 1, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 1, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg1 = qtcore.NewQUrl()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QWebEngineCookieStore12deleteCookieERK14QNetworkCookieRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

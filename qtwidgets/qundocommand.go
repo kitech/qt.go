@@ -95,7 +95,7 @@ func NewQUndoCommand(parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoComma
 
  */
 func NewQUndoCommand__() *QUndoCommand {
-	// arg: 0, QUndoCommand *=Pointer, QUndoCommand=Record,
+	// arg: 0, QUndoCommand *=Pointer, QUndoCommand=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -137,7 +137,7 @@ func NewQUndoCommand_1(text string, parent QUndoCommand_ITF /*777 QUndoCommand *
 func NewQUndoCommand_1_(text string) *QUndoCommand {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QUndoCommand *=Pointer, QUndoCommand=Record,
+	// arg: 1, QUndoCommand *=Pointer, QUndoCommand=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandC2ERK7QStringPS_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

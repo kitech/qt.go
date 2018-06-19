@@ -398,7 +398,7 @@ If the matrix is recognized as the identity or an orthonormal matrix, then this 
 See also determinant() and normalMatrix().
 */
 func (this *QMatrix4x4) Inverted__() *QMatrix4x4 /*123*/ {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var invertible unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x48invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
 	qtrt.ErrPrint(err, rv)
@@ -709,7 +709,7 @@ Multiples this matrix by another that rotates coordinates through angle degrees 
 See also scale() and translate().
 */
 func (this *QMatrix4x4) Rotate_1_(angle float32, x float32, y float32) {
-	// arg: 3, float=Float, =Invalid,
+	// arg: 3, float=Float, =Invalid, , Invalid
 	z := float32(0.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x46rotateEffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), angle, x, y, z)
 	qtrt.ErrPrint(err, rv)
@@ -889,9 +889,9 @@ Multiplies this matrix by another that performs the scale and bias transformatio
 This matches the transform used by the fixed function OpenGL viewport transform controlled by the functions glViewport() and glDepthRange().
 */
 func (this *QMatrix4x4) Viewport_1_(left float32, bottom float32, width float32, height float32) {
-	// arg: 4, float=Float, =Invalid,
+	// arg: 4, float=Float, =Invalid, , Invalid
 	nearPlane := float32(0.0)
-	// arg: 5, float=Float, =Invalid,
+	// arg: 5, float=Float, =Invalid, , Invalid
 	farPlane := float32(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x48viewportEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, bottom, width, height, nearPlane, farPlane)
 	qtrt.ErrPrint(err, rv)
@@ -908,7 +908,7 @@ Multiplies this matrix by another that performs the scale and bias transformatio
 This matches the transform used by the fixed function OpenGL viewport transform controlled by the functions glViewport() and glDepthRange().
 */
 func (this *QMatrix4x4) Viewport_1_1(left float32, bottom float32, width float32, height float32, nearPlane float32) {
-	// arg: 5, float=Float, =Invalid,
+	// arg: 5, float=Float, =Invalid, , Invalid
 	farPlane := float32(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x48viewportEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, bottom, width, height, nearPlane, farPlane)
 	qtrt.ErrPrint(err, rv)

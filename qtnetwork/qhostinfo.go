@@ -94,7 +94,7 @@ Constructs an empty host info object with lookup ID id.
 See also lookupId().
 */
 func NewQHostInfo__() *QHostInfo {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	lookupId := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfoC2Ei", qtrt.FFI_TYPE_POINTER, lookupId)
 	qtrt.ErrPrint(err, rv)

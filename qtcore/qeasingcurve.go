@@ -89,7 +89,7 @@ func NewQEasingCurve(type_ int) *QEasingCurve {
 Constructs an easing curve of the given type.
 */
 func NewQEasingCurve__() *QEasingCurve {
-	// arg: 0, QEasingCurve::Type=Enum, QEasingCurve::Type=Enum,
+	// arg: 0, QEasingCurve::Type=Enum, QEasingCurve::Type=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QEasingCurveC2ENS_4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

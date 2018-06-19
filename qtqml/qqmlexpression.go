@@ -149,7 +149,7 @@ func NewQQmlExpression_1_(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcor
 	}
 	var tmpArg2 = qtcore.NewQString_5(arg2)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QObject *=Pointer, QObject=Record,
+	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2EP11QQmlContextP7QObjectRK7QStringS3_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -207,11 +207,11 @@ func NewQQmlExpression_2_(arg0 QQmlScriptString_ITF) *QQmlExpression {
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
 		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
 	}
-	// arg: 1, QQmlContext *=Pointer, QQmlContext=Record,
+	// arg: 1, QQmlContext *=Pointer, QQmlContext=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QObject *=Pointer, QObject=Record,
+	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2ERK16QQmlScriptStringP11QQmlContextP7QObjectS6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -239,9 +239,9 @@ func NewQQmlExpression_2_1(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777
 	if arg1 != nil && arg1.QQmlContext_PTR() != nil {
 		convArg1 = arg1.QQmlContext_PTR().GetCthis()
 	}
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QObject *=Pointer, QObject=Record,
+	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2ERK16QQmlScriptStringP11QQmlContextP7QObjectS6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -273,7 +273,7 @@ func NewQQmlExpression_2_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777
 	if arg2 != nil && arg2.QObject_PTR() != nil {
 		convArg2 = arg2.QObject_PTR().GetCthis()
 	}
-	// arg: 3, QObject *=Pointer, QObject=Record,
+	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2ERK16QQmlScriptStringP11QQmlContextP7QObjectS6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -467,7 +467,7 @@ Set the location of this expression to line and column of url. This information 
 func (this *QQmlExpression) SetSourceLocation__(fileName string, line int) {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression17setSourceLocationERK7QStringii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, line, column)
 	qtrt.ErrPrint(err, rv)
@@ -571,7 +571,7 @@ valueIsUndefined is set to true if the expression resulted in an undefined value
 See also hasError() and error().
 */
 func (this *QQmlExpression) Evaluate__() *qtcore.QVariant /*123*/ {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var valueIsUndefined unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression8evaluateEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), valueIsUndefined)
 	qtrt.ErrPrint(err, rv)

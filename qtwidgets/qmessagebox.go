@@ -141,7 +141,7 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
 func NewQMessageBox__() *QMessageBox {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -191,11 +191,11 @@ func NewQMessageBox_1_(icon int, title string, text string) *QMessageBox {
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>
+	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>, Unexposed
 	buttons := 0
-	// arg: 4, QWidget *=Pointer, QWidget=Record,
+	// arg: 4, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxC2ENS_4IconERK7QStringS3_6QFlagsINS_14StandardButtonEEP7QWidgetS4_IN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, icon, convArg1, convArg2, buttons, convArg4, flags)
 	qtrt.ErrPrint(err, rv)
@@ -219,9 +219,9 @@ func NewQMessageBox_1_1(icon int, title string, text string, buttons int) *QMess
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, QWidget *=Pointer, QWidget=Record,
+	// arg: 4, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxC2ENS_4IconERK7QStringS3_6QFlagsINS_14StandardButtonEEP7QWidgetS4_IN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, icon, convArg1, convArg2, buttons, convArg4, flags)
 	qtrt.ErrPrint(err, rv)
@@ -249,7 +249,7 @@ func NewQMessageBox_1_2(icon int, title string, text string, buttons int, parent
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg4 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxC2ENS_4IconERK7QStringS3_6QFlagsINS_14StandardButtonEEP7QWidgetS4_IN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, icon, convArg1, convArg2, buttons, convArg4, flags)
 	qtrt.ErrPrint(err, rv)
@@ -299,9 +299,9 @@ func NewQMessageBox_2_(title string, text string, icon int, button0 int, button1
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 6, QWidget *=Pointer, QWidget=Record,
+	// arg: 6, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxC2ERK7QStringS2_NS_4IconEiiiP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, icon, button0, button1, button2, convArg6, f)
 	qtrt.ErrPrint(err, rv)
@@ -329,7 +329,7 @@ func NewQMessageBox_2_1(title string, text string, icon int, button0 int, button
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg6 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 7, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxC2ERK7QStringS2_NS_4IconEiiiP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, icon, button0, button1, button2, convArg6, f)
 	qtrt.ErrPrint(err, rv)
@@ -942,9 +942,9 @@ func (this *QMessageBox) Information__(parent QWidget_ITF /*777 QWidget **/, tit
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>
+	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>, Unexposed
 	buttons := 0
-	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum,
+	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -980,7 +980,7 @@ func (this *QMessageBox) Information__1(parent QWidget_ITF /*777 QWidget **/, ti
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum,
+	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -1055,9 +1055,9 @@ func (this *QMessageBox) Information_1_(parent QWidget_ITF /*777 QWidget **/, ti
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	button1 := int(0)
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	button2 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
 	qtrt.ErrPrint(err, rv)
@@ -1093,7 +1093,7 @@ func (this *QMessageBox) Information_1_1(parent QWidget_ITF /*777 QWidget **/, t
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	button2 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
 	qtrt.ErrPrint(err, rv)
@@ -1176,13 +1176,13 @@ func (this *QMessageBox) Information_2_(parent QWidget_ITF /*777 QWidget **/, ti
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, const QString &=LValueReference, QString=Record,
+	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -1222,11 +1222,11 @@ func (this *QMessageBox) Information_2_1(parent QWidget_ITF /*777 QWidget **/, t
 	var convArg3 = tmpArg3.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 5, const QString &=LValueReference, QString=Record,
+	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -1268,9 +1268,9 @@ func (this *QMessageBox) Information_2_2(parent QWidget_ITF /*777 QWidget **/, t
 	var convArg4 = tmpArg4.GetCthis()
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -1312,7 +1312,7 @@ func (this *QMessageBox) Information_2_3(parent QWidget_ITF /*777 QWidget **/, t
 	var convArg4 = tmpArg4.GetCthis()
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -1387,7 +1387,7 @@ func (this *QMessageBox) Information_3_(parent QWidget_ITF /*777 QWidget **/, ti
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum,
+	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	button1 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
 	qtrt.ErrPrint(err, rv)
@@ -1462,9 +1462,9 @@ func (this *QMessageBox) Question__(parent QWidget_ITF /*777 QWidget **/, title 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>
+	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>, Unexposed
 	buttons := 0
-	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum,
+	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -1500,7 +1500,7 @@ func (this *QMessageBox) Question__1(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum,
+	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -1575,9 +1575,9 @@ func (this *QMessageBox) Question_1_(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	button1 := int(0)
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	button2 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
 	qtrt.ErrPrint(err, rv)
@@ -1613,7 +1613,7 @@ func (this *QMessageBox) Question_1_1(parent QWidget_ITF /*777 QWidget **/, titl
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	button2 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
 	qtrt.ErrPrint(err, rv)
@@ -1696,13 +1696,13 @@ func (this *QMessageBox) Question_2_(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, const QString &=LValueReference, QString=Record,
+	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -1742,11 +1742,11 @@ func (this *QMessageBox) Question_2_1(parent QWidget_ITF /*777 QWidget **/, titl
 	var convArg3 = tmpArg3.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 5, const QString &=LValueReference, QString=Record,
+	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -1788,9 +1788,9 @@ func (this *QMessageBox) Question_2_2(parent QWidget_ITF /*777 QWidget **/, titl
 	var convArg4 = tmpArg4.GetCthis()
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -1832,7 +1832,7 @@ func (this *QMessageBox) Question_2_3(parent QWidget_ITF /*777 QWidget **/, titl
 	var convArg4 = tmpArg4.GetCthis()
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -1946,9 +1946,9 @@ func (this *QMessageBox) Warning__(parent QWidget_ITF /*777 QWidget **/, title s
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>
+	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>, Unexposed
 	buttons := 0
-	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum,
+	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -1984,7 +1984,7 @@ func (this *QMessageBox) Warning__1(parent QWidget_ITF /*777 QWidget **/, title 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum,
+	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -2059,7 +2059,7 @@ func (this *QMessageBox) Warning_1_(parent QWidget_ITF /*777 QWidget **/, title 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	button2 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
 	qtrt.ErrPrint(err, rv)
@@ -2142,13 +2142,13 @@ func (this *QMessageBox) Warning_2_(parent QWidget_ITF /*777 QWidget **/, title 
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, const QString &=LValueReference, QString=Record,
+	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -2188,11 +2188,11 @@ func (this *QMessageBox) Warning_2_1(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg3 = tmpArg3.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 5, const QString &=LValueReference, QString=Record,
+	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -2234,9 +2234,9 @@ func (this *QMessageBox) Warning_2_2(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg4 = tmpArg4.GetCthis()
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -2278,7 +2278,7 @@ func (this *QMessageBox) Warning_2_3(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg4 = tmpArg4.GetCthis()
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -2392,9 +2392,9 @@ func (this *QMessageBox) Critical__(parent QWidget_ITF /*777 QWidget **/, title 
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>
+	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>, Unexposed
 	buttons := 0
-	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum,
+	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -2430,7 +2430,7 @@ func (this *QMessageBox) Critical__1(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum,
+	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -2505,7 +2505,7 @@ func (this *QMessageBox) Critical_1_(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	button2 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
 	qtrt.ErrPrint(err, rv)
@@ -2588,13 +2588,13 @@ func (this *QMessageBox) Critical_2_(parent QWidget_ITF /*777 QWidget **/, title
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, const QString &=LValueReference, QString=Record,
+	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, const QString &=LValueReference, QString=Record,
+	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -2634,11 +2634,11 @@ func (this *QMessageBox) Critical_2_1(parent QWidget_ITF /*777 QWidget **/, titl
 	var convArg3 = tmpArg3.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 5, const QString &=LValueReference, QString=Record,
+	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -2680,9 +2680,9 @@ func (this *QMessageBox) Critical_2_2(parent QWidget_ITF /*777 QWidget **/, titl
 	var convArg4 = tmpArg4.GetCthis()
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -2724,7 +2724,7 @@ func (this *QMessageBox) Critical_2_3(parent QWidget_ITF /*777 QWidget **/, titl
 	var convArg4 = tmpArg4.GetCthis()
 	var tmpArg5 = qtcore.NewQString_5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 7, int=Int, =Invalid,
+	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
@@ -2849,7 +2849,7 @@ func (this *QMessageBox) AboutQt__(parent QWidget_ITF /*777 QWidget **/) {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

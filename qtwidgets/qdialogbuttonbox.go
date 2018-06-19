@@ -121,7 +121,7 @@ Constructs an empty, horizontal button box with the given parent.
 See also orientation and addButton().
 */
 func NewQDialogButtonBox__() *QDialogButtonBox {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -163,7 +163,7 @@ Constructs an empty, horizontal button box with the given parent.
 See also orientation and addButton().
 */
 func NewQDialogButtonBox_1_(orientation int) *QDialogButtonBox {
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -205,7 +205,7 @@ Constructs an empty, horizontal button box with the given parent.
 See also orientation and addButton().
 */
 func NewQDialogButtonBox_2_(buttons int) *QDialogButtonBox {
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2E6QFlagsINS_14StandardButtonEEP7QWidget", qtrt.FFI_TYPE_POINTER, buttons, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -247,7 +247,7 @@ Constructs an empty, horizontal button box with the given parent.
 See also orientation and addButton().
 */
 func NewQDialogButtonBox_3_(buttons int, orientation int) *QDialogButtonBox {
-	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2E6QFlagsINS_14StandardButtonEEN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, buttons, orientation, convArg2)
 	qtrt.ErrPrint(err, rv)

@@ -101,7 +101,7 @@ This function was introduced in  Qt 4.4.
 See also lockForRead(), lockForWrite(), and RecursionMode.
 */
 func NewQReadWriteLock__() *QReadWriteLock {
-	// arg: 0, QReadWriteLock::RecursionMode=Enum, QReadWriteLock::RecursionMode=Enum,
+	// arg: 0, QReadWriteLock::RecursionMode=Enum, QReadWriteLock::RecursionMode=Enum, , Invalid
 	recursionMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLockC2ENS_13RecursionModeE", qtrt.FFI_TYPE_POINTER, recursionMode)
 	qtrt.ErrPrint(err, rv)

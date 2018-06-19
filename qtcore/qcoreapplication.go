@@ -116,7 +116,7 @@ Warning: The data referred to by argc and argv must stay valid for the entire li
 */
 func NewQCoreApplication__(argc int, argv []string) *QCoreApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	arg2 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
 	qtrt.ErrPrint(err, rv)
@@ -205,7 +205,7 @@ Sets the attribute attribute if on is true; otherwise clears the attribute.
 See also testAttribute().
 */
 func (this *QCoreApplication) SetAttribute__(attribute int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication12setAttributeEN2Qt20ApplicationAttributeEb", qtrt.FFI_TYPE_POINTER, attribute, on)
 	qtrt.ErrPrint(err, rv)
@@ -540,7 +540,7 @@ Note: This function is thread-safe.
 See also exec(), QTimer, QEventLoop::processEvents(), flush(), and sendPostedEvents().
 */
 func (this *QCoreApplication) ProcessEvents__() {
-	// arg: 0, QEventLoop::ProcessEventsFlags=Elaborated, QEventLoop::ProcessEventsFlags=Typedef, QFlags<QEventLoop::ProcessEventsFlag>
+	// arg: 0, QEventLoop::ProcessEventsFlags=Elaborated, QEventLoop::ProcessEventsFlags=Typedef, QFlags<QEventLoop::ProcessEventsFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE", qtrt.FFI_TYPE_POINTER, flags)
 	qtrt.ErrPrint(err, rv)
@@ -615,7 +615,7 @@ Note that unlike the C library function of the same name, this function does ret
 See also quit() and exec().
 */
 func (this *QCoreApplication) Exit__() {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	retcode := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication4exitEi", qtrt.FFI_TYPE_POINTER, retcode)
 	qtrt.ErrPrint(err, rv)
@@ -724,7 +724,7 @@ func (this *QCoreApplication) PostEvent__(receiver QObject_ITF /*777 QObject **/
 	if event != nil && event.QEvent_PTR() != nil {
 		convArg1 = event.QEvent_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	priority := 0 /*Qt::NormalEventPriority*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9postEventEP7QObjectP6QEventi", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, priority)
 	qtrt.ErrPrint(err, rv)
@@ -776,9 +776,9 @@ Note: This method must be called from the thread in which its QObject parameter,
 See also flush() and postEvent().
 */
 func (this *QCoreApplication) SendPostedEvents__() {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	event_type := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16sendPostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, event_type)
 	qtrt.ErrPrint(err, rv)
@@ -805,7 +805,7 @@ func (this *QCoreApplication) SendPostedEvents__1(receiver QObject_ITF /*777 QOb
 	if receiver != nil && receiver.QObject_PTR() != nil {
 		convArg0 = receiver.QObject_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	event_type := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16sendPostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, event_type)
 	qtrt.ErrPrint(err, rv)
@@ -861,7 +861,7 @@ func (this *QCoreApplication) RemovePostedEvents__(receiver QObject_ITF /*777 QO
 	if receiver != nil && receiver.QObject_PTR() != nil {
 		convArg0 = receiver.QObject_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	eventType := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18removePostedEventsEP7QObjecti", qtrt.FFI_TYPE_POINTER, convArg0, eventType)
 	qtrt.ErrPrint(err, rv)
@@ -1322,9 +1322,9 @@ func (this *QCoreApplication) Translate__(context string, key string) string {
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(key)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 2, const char *=Pointer, =Invalid,
+	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	n := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, n)
 	qtrt.ErrPrint(err, rv)
@@ -1367,7 +1367,7 @@ func (this *QCoreApplication) Translate__1(context string, key string, disambigu
 	defer qtrt.FreeMem(convArg1)
 	var convArg2 = qtrt.CString(disambiguation)
 	defer qtrt.FreeMem(convArg2)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	n := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, n)
 	qtrt.ErrPrint(err, rv)

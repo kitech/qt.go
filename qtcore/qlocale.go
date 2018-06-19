@@ -131,7 +131,7 @@ Constructs a QLocale object initialized with the default locale. If no default l
 See also setDefault().
 */
 func NewQLocale_2_(language int) *QLocale {
-	// arg: 1, QLocale::Country=Enum, QLocale::Country=Enum,
+	// arg: 1, QLocale::Country=Enum, QLocale::Country=Enum, , Invalid
 	country := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_7CountryE", qtrt.FFI_TYPE_POINTER, language, country)
 	qtrt.ErrPrint(err, rv)
@@ -409,7 +409,7 @@ See also toUShort() and toString().
 func (this *QLocale) ToShort__(s string) int16 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toShortERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -463,7 +463,7 @@ func (this *QLocale) ToShort_1_(s QStringRef_ITF) int16 {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toShortERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -517,7 +517,7 @@ func (this *QLocale) ToShort_2_(s QStringView_ITF /*123*/) int16 {
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toShortE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -567,7 +567,7 @@ See also toShort() and toString().
 func (this *QLocale) ToUShort__(s string) uint16 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -621,7 +621,7 @@ func (this *QLocale) ToUShort_1_(s QStringRef_ITF) uint16 {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -675,7 +675,7 @@ func (this *QLocale) ToUShort_2_(s QStringView_ITF /*123*/) uint16 {
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -725,7 +725,7 @@ See also toUInt() and toString().
 func (this *QLocale) ToInt__(s string) int {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale5toIntERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -779,7 +779,7 @@ func (this *QLocale) ToInt_1_(s QStringRef_ITF) int {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale5toIntERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -833,7 +833,7 @@ func (this *QLocale) ToInt_2_(s QStringView_ITF /*123*/) int {
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale5toIntE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -883,7 +883,7 @@ See also toInt() and toString().
 func (this *QLocale) ToUInt__(s string) uint {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -937,7 +937,7 @@ func (this *QLocale) ToUInt_1_(s QStringRef_ITF) uint {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -991,7 +991,7 @@ func (this *QLocale) ToUInt_2_(s QStringView_ITF /*123*/) uint {
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1041,7 +1041,7 @@ See also toInt(), toULongLong(), toDouble(), and toString().
 func (this *QLocale) ToLongLong__(s string) int64 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1095,7 +1095,7 @@ func (this *QLocale) ToLongLong_1_(s QStringRef_ITF) int64 {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1149,7 +1149,7 @@ func (this *QLocale) ToLongLong_2_(s QStringView_ITF /*123*/) int64 {
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1199,7 +1199,7 @@ See also toLongLong(), toInt(), toDouble(), and toString().
 func (this *QLocale) ToULongLong__(s string) uint64 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1253,7 +1253,7 @@ func (this *QLocale) ToULongLong_1_(s QStringRef_ITF) uint64 {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK10QStringRefPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1307,7 +1307,7 @@ func (this *QLocale) ToULongLong_2_(s QStringView_ITF /*123*/) uint64 {
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1353,7 +1353,7 @@ See also toDouble(), toInt(), and toString().
 func (this *QLocale) ToFloat__(s string) float32 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toFloatERK7QStringPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1403,7 +1403,7 @@ func (this *QLocale) ToFloat_1_(s QStringRef_ITF) float32 {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toFloatERK10QStringRefPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1453,7 +1453,7 @@ func (this *QLocale) ToFloat_2_(s QStringView_ITF /*123*/) float32 {
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toFloatE11QStringViewPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1543,7 +1543,7 @@ See also toFloat(), toInt(), and toString().
 func (this *QLocale) ToDouble__(s string) float64 {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toDoubleERK7QStringPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1637,7 +1637,7 @@ func (this *QLocale) ToDouble_1_(s QStringRef_ITF) float64 {
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toDoubleERK10QStringRefPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1731,7 +1731,7 @@ func (this *QLocale) ToDouble_2_(s QStringView_ITF /*123*/) float64 {
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
 	}
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toDoubleE11QStringViewPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1882,9 +1882,9 @@ Returns a localized string representation of i.
 See also toLongLong().
 */
 func (this *QLocale) ToString_6_(i float64) string {
-	// arg: 1, char=Char_S, =Invalid,
+	// arg: 1, char=Char_S, =Invalid, , Invalid
 	f := 'g'
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	qtrt.ErrPrint(err, rv)
@@ -1905,7 +1905,7 @@ Returns a localized string representation of i.
 See also toLongLong().
 */
 func (this *QLocale) ToString_6_1(i float64, f byte) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	qtrt.ErrPrint(err, rv)
@@ -1945,9 +1945,9 @@ Returns a localized string representation of i.
 See also toLongLong().
 */
 func (this *QLocale) ToString_7_(i float32) string {
-	// arg: 1, char=Char_S, =Invalid,
+	// arg: 1, char=Char_S, =Invalid, , Invalid
 	f := 'g'
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	qtrt.ErrPrint(err, rv)
@@ -1968,7 +1968,7 @@ Returns a localized string representation of i.
 See also toLongLong().
 */
 func (this *QLocale) ToString_7_1(i float32, f byte) string {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	qtrt.ErrPrint(err, rv)
@@ -2172,7 +2172,7 @@ func (this *QLocale) ToString_14_(date QDate_ITF) string {
 	if date != nil && date.QDate_PTR() != nil {
 		convArg0 = date.QDate_PTR().GetCthis()
 	}
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -2220,7 +2220,7 @@ func (this *QLocale) ToString_15_(time QTime_ITF) string {
 	if time != nil && time.QTime_PTR() != nil {
 		convArg0 = time.QTime_PTR().GetCthis()
 	}
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -2268,7 +2268,7 @@ func (this *QLocale) ToString_16_(dateTime QDateTime_ITF) string {
 	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
 		convArg0 = dateTime.QDateTime_PTR().GetCthis()
 	}
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -2316,7 +2316,7 @@ This function was introduced in  Qt 4.1.
 See also QDate::toString() and QDate::fromString().
 */
 func (this *QLocale) DateFormat__() string {
-	// arg: 0, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 0, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10dateFormatENS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
@@ -2364,7 +2364,7 @@ This function was introduced in  Qt 4.1.
 See also QTime::toString() and QTime::fromString().
 */
 func (this *QLocale) TimeFormat__() string {
-	// arg: 0, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 0, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10timeFormatENS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
@@ -2412,7 +2412,7 @@ This function was introduced in  Qt 4.4.
 See also QDateTime::toString() and QDateTime::fromString().
 */
 func (this *QLocale) DateTimeFormat__() string {
-	// arg: 0, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 0, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale14dateTimeFormatENS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
@@ -2463,7 +2463,7 @@ See also dateFormat(), toTime(), toDateTime(), and QDate::fromString().
 func (this *QLocale) ToDate__(string string) *QDate /*123*/ {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	arg1 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	qtrt.ErrPrint(err, rv)
@@ -2539,7 +2539,7 @@ See also timeFormat(), toDate(), toDateTime(), and QTime::fromString().
 func (this *QLocale) ToTime__(string string) *QTime /*123*/ {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	arg1 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	qtrt.ErrPrint(err, rv)
@@ -2615,7 +2615,7 @@ See also dateTimeFormat(), toTime(), toDate(), and QDateTime::fromString().
 func (this *QLocale) ToDateTime__(string string) *QDateTime /*123*/ {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -2810,7 +2810,7 @@ This function was introduced in  Qt 4.2.
 See also dayName() and standaloneMonthName().
 */
 func (this *QLocale) MonthName__(arg0 int) string {
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale9monthNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -2858,7 +2858,7 @@ This function was introduced in  Qt 4.5.
 See also monthName() and standaloneDayName().
 */
 func (this *QLocale) StandaloneMonthName__(arg0 int) string {
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale19standaloneMonthNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -2902,7 +2902,7 @@ This function was introduced in  Qt 4.2.
 See also monthName() and standaloneDayName().
 */
 func (this *QLocale) DayName__(arg0 int) string {
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7dayNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -2950,7 +2950,7 @@ This function was introduced in  Qt 4.5.
 See also dayName() and standaloneMonthName().
 */
 func (this *QLocale) StandaloneDayName__(arg0 int) string {
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum,
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale17standaloneDayNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -3130,7 +3130,7 @@ Returns a currency symbol according to the format.
 This function was introduced in  Qt 4.8.
 */
 func (this *QLocale) CurrencySymbol__() string {
-	// arg: 0, QLocale::CurrencySymbolFormat=Enum, QLocale::CurrencySymbolFormat=Enum,
+	// arg: 0, QLocale::CurrencySymbolFormat=Enum, QLocale::CurrencySymbolFormat=Enum, , Invalid
 	arg0 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale14currencySymbolENS_20CurrencySymbolFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
@@ -3176,7 +3176,7 @@ This function was introduced in  Qt 4.8.
 See also currencySymbol().
 */
 func (this *QLocale) ToCurrencyString__(arg0 int64) string {
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringExRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3222,7 +3222,7 @@ This function was introduced in  Qt 4.8.
 See also currencySymbol().
 */
 func (this *QLocale) ToCurrencyString_1_(arg0 uint64) string {
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEyRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3268,7 +3268,7 @@ This function was introduced in  Qt 4.8.
 See also currencySymbol().
 */
 func (this *QLocale) ToCurrencyString_2_(arg0 int16) string {
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEsRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3314,7 +3314,7 @@ This function was introduced in  Qt 4.8.
 See also currencySymbol().
 */
 func (this *QLocale) ToCurrencyString_3_(arg0 uint16) string {
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEtRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3360,7 +3360,7 @@ This function was introduced in  Qt 4.8.
 See also currencySymbol().
 */
 func (this *QLocale) ToCurrencyString_4_(arg0 int) string {
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3406,7 +3406,7 @@ This function was introduced in  Qt 4.8.
 See also currencySymbol().
 */
 func (this *QLocale) ToCurrencyString_5_(arg0 uint) string {
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEjRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3452,7 +3452,7 @@ This function was introduced in  Qt 4.8.
 See also currencySymbol().
 */
 func (this *QLocale) ToCurrencyString_6_(arg0 float64) string {
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3521,7 +3521,7 @@ This function was introduced in  Qt 4.8.
 See also currencySymbol().
 */
 func (this *QLocale) ToCurrencyString_8_(i float32) string {
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3584,9 +3584,9 @@ Converts a size in bytes to a human-readable localized string, comprising a numb
 This function was introduced in  Qt 5.10.
 */
 func (this *QLocale) FormattedDataSize__(bytes int64) string {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	precision := int(2)
-	// arg: 2, QLocale::DataSizeFormats=Typedef, QLocale::DataSizeFormats=Typedef, QFlags<QLocale::DataSizeFormat>
+	// arg: 2, QLocale::DataSizeFormats=Typedef, QLocale::DataSizeFormats=Typedef, QFlags<QLocale::DataSizeFormat>, Unexposed
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale17formattedDataSizeExi6QFlagsINS_14DataSizeFormatEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bytes, precision, format)
 	qtrt.ErrPrint(err, rv)
@@ -3607,7 +3607,7 @@ Converts a size in bytes to a human-readable localized string, comprising a numb
 This function was introduced in  Qt 5.10.
 */
 func (this *QLocale) FormattedDataSize__1(bytes int64, precision int) string {
-	// arg: 2, QLocale::DataSizeFormats=Typedef, QLocale::DataSizeFormats=Typedef, QFlags<QLocale::DataSizeFormat>
+	// arg: 2, QLocale::DataSizeFormats=Typedef, QLocale::DataSizeFormats=Typedef, QFlags<QLocale::DataSizeFormat>, Unexposed
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale17formattedDataSizeExi6QFlagsINS_14DataSizeFormatEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bytes, precision, format)
 	qtrt.ErrPrint(err, rv)
@@ -3899,7 +3899,7 @@ This function was introduced in  Qt 4.8.
 func (this *QLocale) QuoteString__(str string) string {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QLocale::QuotationStyle=Enum, QLocale::QuotationStyle=Enum,
+	// arg: 1, QLocale::QuotationStyle=Enum, QLocale::QuotationStyle=Enum, , Invalid
 	style := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11quoteStringERK7QStringNS_14QuotationStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, style)
 	qtrt.ErrPrint(err, rv)
@@ -3947,7 +3947,7 @@ func (this *QLocale) QuoteString_1_(str QStringRef_ITF) string {
 	if str != nil && str.QStringRef_PTR() != nil {
 		convArg0 = str.QStringRef_PTR().GetCthis()
 	}
-	// arg: 1, QLocale::QuotationStyle=Enum, QLocale::QuotationStyle=Enum,
+	// arg: 1, QLocale::QuotationStyle=Enum, QLocale::QuotationStyle=Enum, , Invalid
 	style := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11quoteStringERK10QStringRefNS_14QuotationStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, style)
 	qtrt.ErrPrint(err, rv)

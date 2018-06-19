@@ -130,9 +130,9 @@ func NewQNetworkDatagram_1_(data qtcore.QByteArray_ITF) *QNetworkDatagram {
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, const QHostAddress &=LValueReference, QHostAddress=Record,
+	// arg: 1, const QHostAddress &=LValueReference, QHostAddress=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short
+	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagramC2ERK10QByteArrayRK12QHostAddresst", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, port)
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ func NewQNetworkDatagram_1_1(data qtcore.QByteArray_ITF, destinationAddress QHos
 	if destinationAddress != nil && destinationAddress.QHostAddress_PTR() != nil {
 		convArg1 = destinationAddress.QHostAddress_PTR().GetCthis()
 	}
-	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short
+	// arg: 2, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagramC2ERK10QByteArrayRK12QHostAddresst", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, port)
 	qtrt.ErrPrint(err, rv)
@@ -439,7 +439,7 @@ func (this *QNetworkDatagram) SetSender__(address QHostAddress_ITF) {
 	if address != nil && address.QHostAddress_PTR() != nil {
 		convArg0 = address.QHostAddress_PTR().GetCthis()
 	}
-	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
+	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagram9setSenderERK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	qtrt.ErrPrint(err, rv)

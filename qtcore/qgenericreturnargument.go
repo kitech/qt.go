@@ -89,9 +89,9 @@ func NewQGenericReturnArgument(aName string, aData unsafe.Pointer /*666*/) *QGen
 
  */
 func NewQGenericReturnArgument__() *QGenericReturnArgument {
-	// arg: 0, const char *=Pointer, =Invalid,
+	// arg: 0, const char *=Pointer, =Invalid, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, void *=Pointer, =Invalid,
+	// arg: 1, void *=Pointer, =Invalid, , Invalid
 	var aData unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGenericReturnArgumentC2EPKcPv", qtrt.FFI_TYPE_POINTER, convArg0, aData)
 	qtrt.ErrPrint(err, rv)
@@ -111,7 +111,7 @@ func NewQGenericReturnArgument__() *QGenericReturnArgument {
 func NewQGenericReturnArgument__1(aName string) *QGenericReturnArgument {
 	var convArg0 = qtrt.CString(aName)
 	defer qtrt.FreeMem(convArg0)
-	// arg: 1, void *=Pointer, =Invalid,
+	// arg: 1, void *=Pointer, =Invalid, , Invalid
 	var aData unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGenericReturnArgumentC2EPKcPv", qtrt.FFI_TYPE_POINTER, convArg0, aData)
 	qtrt.ErrPrint(err, rv)

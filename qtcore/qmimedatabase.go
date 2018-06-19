@@ -168,7 +168,7 @@ See also QMimeType::isDefault() and mimeTypeForData().
 func (this *QMimeDatabase) MimeTypeForFile__(fileName string) *QMimeType /*123*/ {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QMimeDatabase::MatchMode=Enum, QMimeDatabase::MatchMode=Enum,
+	// arg: 1, QMimeDatabase::MatchMode=Enum, QMimeDatabase::MatchMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMimeDatabase15mimeTypeForFileERK7QStringNS_9MatchModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -234,7 +234,7 @@ func (this *QMimeDatabase) MimeTypeForFile_1_(fileInfo QFileInfo_ITF) *QMimeType
 	if fileInfo != nil && fileInfo.QFileInfo_PTR() != nil {
 		convArg0 = fileInfo.QFileInfo_PTR().GetCthis()
 	}
-	// arg: 1, QMimeDatabase::MatchMode=Enum, QMimeDatabase::MatchMode=Enum,
+	// arg: 1, QMimeDatabase::MatchMode=Enum, QMimeDatabase::MatchMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMimeDatabase15mimeTypeForFileERK9QFileInfoNS_9MatchModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)

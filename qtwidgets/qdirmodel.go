@@ -115,7 +115,7 @@ func NewQDirModel__(nameFilters qtcore.QStringList_ITF, filters int, sort int) *
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg0 = nameFilters.QStringList_PTR().GetCthis()
 	}
-	// arg: 3, QObject *=Pointer, QObject=Record,
+	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDirModelC2ERK11QStringList6QFlagsIN4QDir6FilterEES3_INS4_8SortFlagEEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, filters, sort, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func NewQDirModel_1(parent qtcore.QObject_ITF /*777 QObject **/) *QDirModel {
 Constructs a new directory model with the given parent. Only those files matching the nameFilters and the filters are included in the model. The sort order is given by the sort flags.
 */
 func NewQDirModel_1_() *QDirModel {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDirModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -210,7 +210,7 @@ Reimplemented from QAbstractItemModel::index().
 Returns the model item index for the item in the parent with the given row and column.
 */
 func (this *QDirModel) Index__(row int, column int) *qtcore.QModelIndex /*123*/ {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDirModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -252,7 +252,7 @@ Returns the model item index for the item in the parent with the given row and c
 func (this *QDirModel) Index_1_(path string) *qtcore.QModelIndex /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDirModel5indexERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
@@ -314,7 +314,7 @@ Reimplemented from QAbstractItemModel::rowCount().
 Returns the number of rows in the parent model item.
 */
 func (this *QDirModel) RowCount__() int {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDirModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -352,7 +352,7 @@ Reimplemented from QAbstractItemModel::columnCount().
 Returns the number of columns in the parent model item.
 */
 func (this *QDirModel) ColumnCount__() int {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDirModel11columnCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -400,7 +400,7 @@ func (this *QDirModel) Data__(index qtcore.QModelIndex_ITF) *qtcore.QVariant /*1
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDirModel4dataERK11QModelIndexi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	qtrt.ErrPrint(err, rv)
@@ -456,7 +456,7 @@ func (this *QDirModel) SetData__(index qtcore.QModelIndex_ITF, value qtcore.QVar
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg1 = value.QVariant_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::EditRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, role)
 	qtrt.ErrPrint(err, rv)
@@ -492,7 +492,7 @@ Reimplemented from QAbstractItemModel::headerData().
 Returns the data stored under the given role for the specified section of the header with the given orientation.
 */
 func (this *QDirModel) HeaderData__(section int, orientation int) *qtcore.QVariant /*123*/ {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDirModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
 	qtrt.ErrPrint(err, rv)
@@ -532,7 +532,7 @@ Reimplemented from QAbstractItemModel::hasChildren().
 Returns true if the parent model item has children; otherwise returns false.
 */
 func (this *QDirModel) HasChildren__() bool {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDirModel11hasChildrenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -587,7 +587,7 @@ Reimplemented from QAbstractItemModel::sort().
 Sort the model items in the column using the order given. The order is a value defined in Qt::SortOrder.
 */
 func (this *QDirModel) Sort__(column int) {
-	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
+	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDirModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	qtrt.ErrPrint(err, rv)
@@ -1070,7 +1070,7 @@ func (this *QDirModel) Refresh(parent qtcore.QModelIndex_ITF) {
 QDirModel caches file information. This function updates the cache. The parent parameter is the directory from which the model is updated; the default value will update the model from root directory of the file system (the entire model).
 */
 func (this *QDirModel) Refresh__() {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDirModel7refreshERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

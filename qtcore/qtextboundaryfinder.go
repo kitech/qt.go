@@ -131,9 +131,9 @@ func NewQTextBoundaryFinder_2_(type_ int, chars QChar_ITF /*777 const QChar **/,
 	if chars != nil && chars.QChar_PTR() != nil {
 		convArg1 = chars.QChar_PTR().GetCthis()
 	}
-	// arg: 3, unsigned char *=Pointer, =Invalid,
+	// arg: 3, unsigned char *=Pointer, =Invalid, , Invalid
 	var buffer unsafe.Pointer
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	bufferSize := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", qtrt.FFI_TYPE_POINTER, type_, convArg1, length, buffer, bufferSize)
 	qtrt.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func NewQTextBoundaryFinder_2_1(type_ int, chars QChar_ITF /*777 const QChar **/
 	if chars != nil && chars.QChar_PTR() != nil {
 		convArg1 = chars.QChar_PTR().GetCthis()
 	}
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	bufferSize := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", qtrt.FFI_TYPE_POINTER, type_, convArg1, length, buffer, bufferSize)
 	qtrt.ErrPrint(err, rv)

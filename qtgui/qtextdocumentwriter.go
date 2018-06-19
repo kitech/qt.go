@@ -138,7 +138,7 @@ Constructs an empty QTextDocumentWriter object. Before writing, you must call se
 func NewQTextDocumentWriter_2_(fileName string) *QTextDocumentWriter {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

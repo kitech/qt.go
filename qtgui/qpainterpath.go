@@ -910,7 +910,7 @@ func (this *QPainterPath) AddRoundedRect__(rect qtcore.QRectF_ITF, xRadius float
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 3, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum,
+	// arg: 3, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath14addRoundedRectERK6QRectFddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xRadius, yRadius, mode)
 	qtrt.ErrPrint(err, rv)
@@ -950,7 +950,7 @@ This function was introduced in  Qt 4.4.
 See also addRect().
 */
 func (this *QPainterPath) AddRoundedRect_1_(x float64, y float64, w float64, h float64, xRadius float64, yRadius float64) {
-	// arg: 6, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum,
+	// arg: 6, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath14addRoundedRectEddddddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xRadius, yRadius, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1370,7 +1370,7 @@ Note that rewinding inserts addition lines in the polygon so the outline of the 
 See also toSubpathPolygons(), toFillPolygons(), and QPainterPath Conversion.
 */
 func (this *QPainterPath) ToFillPolygon__() *QPolygonF /*123*/ {
-	// arg: 0, const QMatrix &=LValueReference, QMatrix=Record,
+	// arg: 0, const QMatrix &=LValueReference, QMatrix=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath13toFillPolygonERK7QMatrix", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

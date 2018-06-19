@@ -107,7 +107,7 @@ The mode argument is used to control which part of the system clipboard is used.
 See also QClipboard::Mode and supportsSelection().
 */
 func (this *QClipboard) Clear__() {
-	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum,
+	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard5clearENS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -219,7 +219,7 @@ The mode argument is used to control which part of the system clipboard is used.
 See also setText() and mimeData().
 */
 func (this *QClipboard) Text__() string {
-	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum,
+	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QClipboard4textENS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -267,7 +267,7 @@ See also setText() and mimeData().
 func (this *QClipboard) Text_1_(subtype string) string {
 	var tmpArg0 = qtcore.NewQString_5(subtype)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum,
+	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QClipboard4textER7QStringNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -311,7 +311,7 @@ See also text() and setMimeData().
 func (this *QClipboard) SetText__(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum,
+	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard7setTextERK7QStringNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -356,7 +356,7 @@ Note: The pointer returned might become invalidated when the contents of the cli
 See also setMimeData().
 */
 func (this *QClipboard) MimeData__() *qtcore.QMimeData /*777 const QMimeData **/ {
-	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum,
+	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QClipboard8mimeDataENS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -405,7 +405,7 @@ func (this *QClipboard) SetMimeData__(data qtcore.QMimeData_ITF /*777 QMimeData 
 	if data != nil && data.QMimeData_PTR() != nil {
 		convArg0 = data.QMimeData_PTR().GetCthis()
 	}
-	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum,
+	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard11setMimeDataEP9QMimeDataNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -444,7 +444,7 @@ The mode argument is used to control which part of the system clipboard is used.
 See also setImage(), pixmap(), mimeData(), and QImage::isNull().
 */
 func (this *QClipboard) Image__() *QImage /*123*/ {
-	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum,
+	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QClipboard5imageENS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -486,7 +486,7 @@ The mode argument is used to control which part of the system clipboard is used.
 See also setPixmap(), image(), mimeData(), and QPixmap::convertFromImage().
 */
 func (this *QClipboard) Pixmap__() *QPixmap /*123*/ {
-	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum,
+	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QClipboard6pixmapENS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -551,7 +551,7 @@ func (this *QClipboard) SetImage__(arg0 QImage_ITF) {
 	if arg0 != nil && arg0.QImage_PTR() != nil {
 		convArg0 = arg0.QImage_PTR().GetCthis()
 	}
-	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum,
+	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard8setImageERK6QImageNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -595,7 +595,7 @@ func (this *QClipboard) SetPixmap__(arg0 QPixmap_ITF) {
 	if arg0 != nil && arg0.QPixmap_PTR() != nil {
 		convArg0 = arg0.QPixmap_PTR().GetCthis()
 	}
-	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum,
+	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard9setPixmapERK7QPixmapNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)

@@ -104,7 +104,7 @@ func NewQHoverEvent__(type_ int, pos qtcore.QPointF_ITF, oldPos qtcore.QPointF_I
 	if oldPos != nil && oldPos.QPointF_PTR() != nil {
 		convArg2 = oldPos.QPointF_PTR().GetCthis()
 	}
-	// arg: 3, Qt::KeyboardModifiers=Elaborated, Qt::KeyboardModifiers=Typedef, QFlags<Qt::KeyboardModifier>
+	// arg: 3, Qt::KeyboardModifiers=Elaborated, Qt::KeyboardModifiers=Typedef, QFlags<Qt::KeyboardModifier>, Unexposed
 	modifiers := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHoverEventC2EN6QEvent4TypeERK7QPointFS4_6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, modifiers)
 	qtrt.ErrPrint(err, rv)

@@ -276,7 +276,7 @@ Update the texture state to match the filtering, mipmap and wrap options current
 If force is true, all properties will be updated regardless of weither they have changed or not.
 */
 func (this *QSGTexture) UpdateBindOptions__() {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	force := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTexture17updateBindOptionsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), force)
 	qtrt.ErrPrint(err, rv)

@@ -120,7 +120,7 @@ func NewQEventTransition(sourceState QState_ITF /*777 QState **/) *QEventTransit
 Constructs a new QEventTransition object with the given sourceState.
 */
 func NewQEventTransition__() *QEventTransition {
-	// arg: 0, QState *=Pointer, QState=Record,
+	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -166,7 +166,7 @@ func NewQEventTransition_1_(object QObject_ITF /*777 QObject **/, type_ int) *QE
 	if object != nil && object.QObject_PTR() != nil {
 		convArg0 = object.QObject_PTR().GetCthis()
 	}
-	// arg: 2, QState *=Pointer, QState=Record,
+	// arg: 2, QState *=Pointer, QState=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionC2EP7QObjectN6QEvent4TypeEP6QState", qtrt.FFI_TYPE_POINTER, convArg0, type_, convArg2)
 	qtrt.ErrPrint(err, rv)

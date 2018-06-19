@@ -107,7 +107,7 @@ func NewQUndoView(parent QWidget_ITF /*777 QWidget **/) *QUndoView {
 Constructs a new view with parent parent.
 */
 func NewQUndoView__() *QUndoView {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func NewQUndoView_1_(stack QUndoStack_ITF /*777 QUndoStack **/) *QUndoView {
 	if stack != nil && stack.QUndoStack_PTR() != nil {
 		convArg0 = stack.QUndoStack_PTR().GetCthis()
 	}
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP10QUndoStackP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -199,7 +199,7 @@ func NewQUndoView_2_(group QUndoGroup_ITF /*777 QUndoGroup **/) *QUndoView {
 	if group != nil && group.QUndoGroup_PTR() != nil {
 		convArg0 = group.QUndoGroup_PTR().GetCthis()
 	}
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP10QUndoGroupP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

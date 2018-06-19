@@ -201,7 +201,7 @@ Resizes the vertex and index data of this geometry object to fit vertexCount ver
 Vertex and index data will be invalidated after this call and the caller must mark the associated geometry node as dirty, by calling node->markDirty(QSGNode::DirtyGeometry) to ensure that the renderer has a chance to update internal buffers.
 */
 func (this *QSGGeometry) Allocate__(vertexCount int) {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	indexCount := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry8allocateEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), vertexCount, indexCount)
 	qtrt.ErrPrint(err, rv)

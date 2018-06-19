@@ -107,7 +107,7 @@ func NewQAbstractItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QAbs
 Creates a new abstract item delegate with the given parent.
 */
 func NewQAbstractItemDelegate__() *QAbstractItemDelegate {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegateC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -477,7 +477,7 @@ func (this *QAbstractItemDelegate) CloseEditor__(editor QWidget_ITF /*777 QWidge
 	if editor != nil && editor.QWidget_PTR() != nil {
 		convArg0 = editor.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, QAbstractItemDelegate::EndEditHint=Elaborated, QAbstractItemDelegate::EndEditHint=Enum,
+	// arg: 1, QAbstractItemDelegate::EndEditHint=Elaborated, QAbstractItemDelegate::EndEditHint=Enum, , Invalid
 	hint := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	qtrt.ErrPrint(err, rv)

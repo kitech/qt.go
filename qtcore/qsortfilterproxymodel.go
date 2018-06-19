@@ -130,7 +130,7 @@ func NewQSortFilterProxyModel(parent QObject_ITF /*777 QObject **/) *QSortFilter
 Constructs a sorting filter model with the given parent.
 */
 func NewQSortFilterProxyModel__() *QSortFilterProxyModel {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -780,7 +780,7 @@ func (this *QSortFilterProxyModel) Index(row int, column int, parent QModelIndex
 Reimplemented from QAbstractItemModel::index().
 */
 func (this *QSortFilterProxyModel) Index__(row int, column int) *QModelIndex /*123*/ {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -856,7 +856,7 @@ func (this *QSortFilterProxyModel) RowCount(parent QModelIndex_ITF) int {
 Reimplemented from QAbstractItemModel::rowCount().
 */
 func (this *QSortFilterProxyModel) RowCount__() int {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -890,7 +890,7 @@ func (this *QSortFilterProxyModel) ColumnCount(parent QModelIndex_ITF) int {
 Reimplemented from QAbstractItemModel::columnCount().
 */
 func (this *QSortFilterProxyModel) ColumnCount__() int {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel11columnCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -924,7 +924,7 @@ func (this *QSortFilterProxyModel) HasChildren(parent QModelIndex_ITF) bool {
 Reimplemented from QAbstractItemModel::hasChildren().
 */
 func (this *QSortFilterProxyModel) HasChildren__() bool {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel11hasChildrenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -968,7 +968,7 @@ func (this *QSortFilterProxyModel) Data__(index QModelIndex_ITF) *QVariant /*123
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel4dataERK11QModelIndexi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	qtrt.ErrPrint(err, rv)
@@ -1020,7 +1020,7 @@ func (this *QSortFilterProxyModel) SetData__(index QModelIndex_ITF, value QVaria
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg1 = value.QVariant_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::EditRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel7setDataERK11QModelIndexRK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, role)
 	qtrt.ErrPrint(err, rv)
@@ -1056,7 +1056,7 @@ Reimplemented from QAbstractItemModel::headerData().
 See also setHeaderData().
 */
 func (this *QSortFilterProxyModel) HeaderData__(section int, orientation int) *QVariant /*123*/ {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
 	qtrt.ErrPrint(err, rv)
@@ -1100,7 +1100,7 @@ func (this *QSortFilterProxyModel) SetHeaderData__(section int, orientation int,
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg2 = value.QVariant_PTR().GetCthis()
 	}
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::EditRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, convArg2, role)
 	qtrt.ErrPrint(err, rv)
@@ -1156,7 +1156,7 @@ func (this *QSortFilterProxyModel) InsertRows(row int, count int, parent QModelI
 Reimplemented from QAbstractItemModel::insertRows().
 */
 func (this *QSortFilterProxyModel) InsertRows__(row int, count int) bool {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel10insertRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1190,7 +1190,7 @@ func (this *QSortFilterProxyModel) InsertColumns(column int, count int, parent Q
 Reimplemented from QAbstractItemModel::insertColumns().
 */
 func (this *QSortFilterProxyModel) InsertColumns__(column int, count int) bool {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13insertColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1224,7 +1224,7 @@ func (this *QSortFilterProxyModel) RemoveRows(row int, count int, parent QModelI
 Reimplemented from QAbstractItemModel::removeRows().
 */
 func (this *QSortFilterProxyModel) RemoveRows__(row int, count int) bool {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel10removeRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1258,7 +1258,7 @@ func (this *QSortFilterProxyModel) RemoveColumns(column int, count int, parent Q
 Reimplemented from QAbstractItemModel::removeColumns().
 */
 func (this *QSortFilterProxyModel) RemoveColumns__(column int, count int) bool {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1378,9 +1378,9 @@ func (this *QSortFilterProxyModel) Match__(start QModelIndex_ITF, role int, valu
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg2 = value.QVariant_PTR().GetCthis()
 	}
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	hits := int(1)
-	// arg: 4, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>
+	// arg: 4, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel5matchERK11QModelIndexiRK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, convArg2, hits, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1405,7 +1405,7 @@ func (this *QSortFilterProxyModel) Match__1(start QModelIndex_ITF, role int, val
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg2 = value.QVariant_PTR().GetCthis()
 	}
-	// arg: 4, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>
+	// arg: 4, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel5matchERK11QModelIndexiRK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, convArg2, hits, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1455,7 +1455,7 @@ func (this *QSortFilterProxyModel) Sort(column int, order int) {
 Reimplemented from QAbstractItemModel::sort().
 */
 func (this *QSortFilterProxyModel) Sort__(column int) {
-	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
+	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	qtrt.ErrPrint(err, rv)

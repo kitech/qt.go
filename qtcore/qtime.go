@@ -105,9 +105,9 @@ func NewQTime_1(h int, m int, s int, ms int) *QTime {
 
  */
 func NewQTime_1_(h int, m int) *QTime {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	s := int(0)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	ms := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
 	qtrt.ErrPrint(err, rv)
@@ -125,7 +125,7 @@ func NewQTime_1_(h int, m int) *QTime {
 
  */
 func NewQTime_1_1(h int, m int, s int) *QTime {
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	ms := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
 	qtrt.ErrPrint(err, rv)
@@ -204,7 +204,7 @@ If the timeSpec() is Qt::LocalTime or Qt::TimeZone then the date and time are ch
 See also QDate::isValid() and QTime::isValid().
 */
 func (this *QTime) IsValid_1_(h int, m int, s int) bool {
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	ms := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime7isValidEiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
 	qtrt.ErrPrint(err, rv)
@@ -397,7 +397,7 @@ If the datetime is invalid, an empty string will be returned.
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
 func (this *QTime) ToString__() string {
-	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum,
+	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
@@ -574,7 +574,7 @@ func (this *QTime) SetHMS(h int, m int, s int, ms int) bool {
 
  */
 func (this *QTime) SetHMS__(h int, m int, s int) bool {
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	ms := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime6setHMSEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, m, s, ms)
 	qtrt.ErrPrint(err, rv)
@@ -884,7 +884,7 @@ See also toString() and QLocale::toDateTime().
 func (this *QTime) FromString__(s string) *QTime /*123*/ {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum,
+	// arg: 1, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime10fromStringERK7QStringN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)

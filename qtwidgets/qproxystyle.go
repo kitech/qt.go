@@ -116,7 +116,7 @@ Constructs a QProxyStyle object for overriding behavior in the specified style, 
 Ownership of style is transferred to QProxyStyle.
 */
 func NewQProxyStyle__() *QProxyStyle {
-	// arg: 0, QStyle *=Pointer, QStyle=Record,
+	// arg: 0, QStyle *=Pointer, QStyle=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QProxyStyleC2EP6QStyle", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -241,7 +241,7 @@ func (this *QProxyStyle) DrawPrimitive__(element int, option QStyleOption_ITF /*
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg2 = painter.QPainter_PTR().GetCthis()
 	}
-	// arg: 3, const QWidget *=Pointer, QWidget=Record,
+	// arg: 3, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle13drawPrimitiveEN6QStyle16PrimitiveElementEPK12QStyleOptionP8QPainterPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), element, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -289,7 +289,7 @@ func (this *QProxyStyle) DrawControl__(element int, option QStyleOption_ITF /*77
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg2 = painter.QPainter_PTR().GetCthis()
 	}
-	// arg: 3, const QWidget *=Pointer, QWidget=Record,
+	// arg: 3, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle11drawControlEN6QStyle14ControlElementEPK12QStyleOptionP8QPainterPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), element, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -337,7 +337,7 @@ func (this *QProxyStyle) DrawComplexControl__(control int, option QStyleOptionCo
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg2 = painter.QPainter_PTR().GetCthis()
 	}
-	// arg: 3, const QWidget *=Pointer, QWidget=Record,
+	// arg: 3, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle18drawComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexP8QPainterPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), control, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -393,7 +393,7 @@ func (this *QProxyStyle) DrawItemText__(painter qtgui.QPainter_ITF /*777 QPainte
 	}
 	var tmpArg5 = qtcore.NewQString_5(text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 6, QPalette::ColorRole=Elaborated, QPalette::ColorRole=Enum,
+	// arg: 6, QPalette::ColorRole=Elaborated, QPalette::ColorRole=Enum, , Invalid
 	textRole := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle12drawItemTextEP8QPainterRK5QRectiRK8QPalettebRK7QStringNS5_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, flags, convArg3, enabled, convArg5, textRole)
 	qtrt.ErrPrint(err, rv)
@@ -593,7 +593,7 @@ func (this *QProxyStyle) HitTestComplexControl__(control int, option QStyleOptio
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg2 = pos.QPoint_PTR().GetCthis()
 	}
-	// arg: 3, const QWidget *=Pointer, QWidget=Record,
+	// arg: 3, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle21hitTestComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexRK6QPointPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), control, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -635,11 +635,11 @@ func (this *QProxyStyle) StyleHint(hint int, option QStyleOption_ITF /*777 const
 Reimplemented from QStyle::styleHint().
 */
 func (this *QProxyStyle) StyleHint__(hint int) int {
-	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record,
+	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QStyleHintReturn *=Pointer, QStyleHintReturn=Record,
+	// arg: 3, QStyleHintReturn *=Pointer, QStyleHintReturn=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -659,9 +659,9 @@ func (this *QProxyStyle) StyleHint__1(hint int, option QStyleOption_ITF /*777 co
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
 	}
-	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QStyleHintReturn *=Pointer, QStyleHintReturn=Record,
+	// arg: 3, QStyleHintReturn *=Pointer, QStyleHintReturn=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -685,7 +685,7 @@ func (this *QProxyStyle) StyleHint__2(hint int, option QStyleOption_ITF /*777 co
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg2 = widget.QWidget_PTR().GetCthis()
 	}
-	// arg: 3, QStyleHintReturn *=Pointer, QStyleHintReturn=Record,
+	// arg: 3, QStyleHintReturn *=Pointer, QStyleHintReturn=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -723,9 +723,9 @@ func (this *QProxyStyle) PixelMetric(metric int, option QStyleOption_ITF /*777 c
 Reimplemented from QStyle::pixelMetric().
 */
 func (this *QProxyStyle) PixelMetric__(metric int) int {
-	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record,
+	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle11pixelMetricEN6QStyle11PixelMetricEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -745,7 +745,7 @@ func (this *QProxyStyle) PixelMetric__1(metric int, option QStyleOption_ITF /*77
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
 	}
-	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle11pixelMetricEN6QStyle11PixelMetricEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -795,9 +795,9 @@ The default implementation returns -1.
 See also combinedLayoutSpacing().
 */
 func (this *QProxyStyle) LayoutSpacing__(control1 int, control2 int, orientation int) int {
-	// arg: 3, const QStyleOption *=Pointer, QStyleOption=Record,
+	// arg: 3, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg3 unsafe.Pointer
-	// arg: 4, const QWidget *=Pointer, QWidget=Record,
+	// arg: 4, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle13layoutSpacingEN11QSizePolicy11ControlTypeES1_N2Qt11OrientationEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), control1, control2, orientation, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -823,7 +823,7 @@ func (this *QProxyStyle) LayoutSpacing__1(control1 int, control2 int, orientatio
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg3 = option.QStyleOption_PTR().GetCthis()
 	}
-	// arg: 4, const QWidget *=Pointer, QWidget=Record,
+	// arg: 4, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle13layoutSpacingEN11QSizePolicy11ControlTypeES1_N2Qt11OrientationEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), control1, control2, orientation, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -871,9 +871,9 @@ Returns an icon for the given standardIcon.
 Reimplement this slot to provide your own icons in a QStyle subclass. The option argument can be used to pass extra information required to find the appropriate icon. The widget argument is optional and can also be used to help find the icon.
 */
 func (this *QProxyStyle) StandardIcon__(standardIcon int) *qtgui.QIcon /*123*/ {
-	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record,
+	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle12standardIconEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), standardIcon, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -899,7 +899,7 @@ func (this *QProxyStyle) StandardIcon__1(standardIcon int, option QStyleOption_I
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
 	}
-	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle12standardIconEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), standardIcon, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -945,7 +945,7 @@ func (this *QProxyStyle) StandardPixmap__(standardPixmap int, opt QStyleOption_I
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
 	}
-	// arg: 2, const QWidget *=Pointer, QWidget=Record,
+	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle14standardPixmapEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), standardPixmap, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

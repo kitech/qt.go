@@ -110,9 +110,9 @@ func NewQGraphicsLayoutItem(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayout
 Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
 */
 func NewQGraphicsLayoutItem__() *QGraphicsLayoutItem {
-	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record,
+	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	isLayout := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItemC2EPS_b", qtrt.FFI_TYPE_POINTER, convArg0, isLayout)
 	qtrt.ErrPrint(err, rv)
@@ -134,7 +134,7 @@ func NewQGraphicsLayoutItem__1(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLay
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
 		convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	isLayout := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItemC2EPS_b", qtrt.FFI_TYPE_POINTER, convArg0, isLayout)
 	qtrt.ErrPrint(err, rv)
@@ -209,7 +209,7 @@ QGraphicsLayoutItem's default size policy is (QSizePolicy::Fixed, QSizePolicy::F
 See also sizePolicy() and QWidget::sizePolicy().
 */
 func (this *QGraphicsLayoutItem) SetSizePolicy_1_(hPolicy int, vPolicy int) {
-	// arg: 2, QSizePolicy::ControlType=Elaborated, QSizePolicy::ControlType=Enum,
+	// arg: 2, QSizePolicy::ControlType=Elaborated, QSizePolicy::ControlType=Enum, , Invalid
 	controlType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem13setSizePolicyEN11QSizePolicy6PolicyES1_NS0_11ControlTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hPolicy, vPolicy, controlType)
 	qtrt.ErrPrint(err, rv)
@@ -704,7 +704,7 @@ This function caches each of the size hints and guarantees that sizeHint() will 
 See also sizeHint().
 */
 func (this *QGraphicsLayoutItem) EffectiveSizeHint__(which int) *qtcore.QSizeF /*123*/ {
-	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record,
+	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem17effectiveSizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -890,7 +890,7 @@ Reimplement this function in a subclass of QGraphicsLayoutItem to provide the ne
 See also effectiveSizeHint().
 */
 func (this *QGraphicsLayoutItem) SizeHint__(which int) *qtcore.QSizeF /*123*/ {
-	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record,
+	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)

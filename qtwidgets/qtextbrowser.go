@@ -147,7 +147,7 @@ func NewQTextBrowser(parent QWidget_ITF /*777 QWidget **/) *QTextBrowser {
 Constructs an empty QTextBrowser with parent parent.
 */
 func NewQTextBrowser__() *QTextBrowser {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowserC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

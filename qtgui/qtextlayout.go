@@ -148,7 +148,7 @@ func NewQTextLayout_2_(text string, font QFont_ITF) *QTextLayout {
 	if font != nil && font.QFont_PTR() != nil {
 		convArg1 = font.QFont_PTR().GetCthis()
 	}
-	// arg: 2, QPaintDevice *=Pointer, QPaintDevice=Record,
+	// arg: 2, QPaintDevice *=Pointer, QPaintDevice=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -633,7 +633,7 @@ Returns the next valid cursor position after oldPos that respects the given curs
 See also isValidCursorPosition() and previousCursorPosition().
 */
 func (this *QTextLayout) NextCursorPosition__(oldPos int) int {
-	// arg: 1, QTextLayout::CursorMode=Enum, QTextLayout::CursorMode=Enum,
+	// arg: 1, QTextLayout::CursorMode=Enum, QTextLayout::CursorMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout18nextCursorPositionEiNS_10CursorModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
 	qtrt.ErrPrint(err, rv)
@@ -667,7 +667,7 @@ Returns the first valid cursor position before oldPos that respects the given cu
 See also isValidCursorPosition() and nextCursorPosition().
 */
 func (this *QTextLayout) PreviousCursorPosition__(oldPos int) int {
-	// arg: 1, QTextLayout::CursorMode=Enum, QTextLayout::CursorMode=Enum,
+	// arg: 1, QTextLayout::CursorMode=Enum, QTextLayout::CursorMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout22previousCursorPositionEiNS_10CursorModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
 	qtrt.ErrPrint(err, rv)

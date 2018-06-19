@@ -427,7 +427,7 @@ Note: If you do not have a value to return, return an invalid QVariant instead o
 See also Qt::ItemDataRole, setData(), and headerData().
 */
 func (this *QPersistentModelIndex) Data__() *QVariant /*123*/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex4dataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)

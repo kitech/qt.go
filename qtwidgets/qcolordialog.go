@@ -121,7 +121,7 @@ Constructs a color dialog with the given parent.
 This function was introduced in  Qt 4.5.
 */
 func NewQColorDialog__() *QColorDialog {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialogC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ func NewQColorDialog_1_(initial qtgui.QColor_ITF) *QColorDialog {
 	if initial != nil && initial.QColor_PTR() != nil {
 		convArg0 = initial.QColor_PTR().GetCthis()
 	}
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialogC2ERK6QColorP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -272,7 +272,7 @@ Sets the given option to be enabled if on is true; otherwise, clears the given o
 See also options and testOption().
 */
 func (this *QColorDialog) SetOption__(option int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog9setOptionENS_17ColorDialogOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	qtrt.ErrPrint(err, rv)
@@ -411,13 +411,13 @@ The options argument allows you to customize the dialog.
 This function was introduced in  Qt 4.5.
 */
 func (this *QColorDialog) GetColor__() *qtgui.QColor /*123*/ {
-	// arg: 0, const QColor &=LValueReference, QColor=Record,
+	// arg: 0, const QColor &=LValueReference, QColor=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, QColorDialog::ColorDialogOptions=Typedef, QColorDialog::ColorDialogOptions=Typedef, QFlags<QColorDialog::ColorDialogOption>
+	// arg: 3, QColorDialog::ColorDialogOptions=Typedef, QColorDialog::ColorDialogOptions=Typedef, QFlags<QColorDialog::ColorDialogOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog8getColorERK6QColorP7QWidgetRK7QString6QFlagsINS_17ColorDialogOptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	qtrt.ErrPrint(err, rv)
@@ -443,11 +443,11 @@ func (this *QColorDialog) GetColor__1(initial qtgui.QColor_ITF) *qtgui.QColor /*
 	if initial != nil && initial.QColor_PTR() != nil {
 		convArg0 = initial.QColor_PTR().GetCthis()
 	}
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, QColorDialog::ColorDialogOptions=Typedef, QColorDialog::ColorDialogOptions=Typedef, QFlags<QColorDialog::ColorDialogOption>
+	// arg: 3, QColorDialog::ColorDialogOptions=Typedef, QColorDialog::ColorDialogOptions=Typedef, QFlags<QColorDialog::ColorDialogOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog8getColorERK6QColorP7QWidgetRK7QString6QFlagsINS_17ColorDialogOptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	qtrt.ErrPrint(err, rv)
@@ -477,9 +477,9 @@ func (this *QColorDialog) GetColor__2(initial qtgui.QColor_ITF, parent QWidget_I
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, QColorDialog::ColorDialogOptions=Typedef, QColorDialog::ColorDialogOptions=Typedef, QFlags<QColorDialog::ColorDialogOption>
+	// arg: 3, QColorDialog::ColorDialogOptions=Typedef, QColorDialog::ColorDialogOptions=Typedef, QFlags<QColorDialog::ColorDialogOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog8getColorERK6QColorP7QWidgetRK7QString6QFlagsINS_17ColorDialogOptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	qtrt.ErrPrint(err, rv)
@@ -511,7 +511,7 @@ func (this *QColorDialog) GetColor__3(initial qtgui.QColor_ITF, parent QWidget_I
 	}
 	var tmpArg2 = qtcore.NewQString_5(title)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QColorDialog::ColorDialogOptions=Typedef, QColorDialog::ColorDialogOptions=Typedef, QFlags<QColorDialog::ColorDialogOption>
+	// arg: 3, QColorDialog::ColorDialogOptions=Typedef, QColorDialog::ColorDialogOptions=Typedef, QFlags<QColorDialog::ColorDialogOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog8getColorERK6QColorP7QWidgetRK7QString6QFlagsINS_17ColorDialogOptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	qtrt.ErrPrint(err, rv)
@@ -552,11 +552,11 @@ func QColorDialog_GetRgba(rgba uint, ok *bool, parent QWidget_ITF /*777 QWidget 
 
  */
 func (this *QColorDialog) GetRgba__() uint {
-	// arg: 0, QRgb=Typedef, QRgb=Typedef, unsigned int
+	// arg: 0, QRgb=Typedef, QRgb=Typedef, unsigned int, UInt
 	rgba := uint(0xffffffff)
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog7getRgbaEjPbP7QWidget", qtrt.FFI_TYPE_POINTER, rgba, ok, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -572,9 +572,9 @@ func (this *QColorDialog) GetRgba__() uint {
 
  */
 func (this *QColorDialog) GetRgba__1(rgba uint) uint {
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
-	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog7getRgbaEjPbP7QWidget", qtrt.FFI_TYPE_POINTER, rgba, ok, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -590,7 +590,7 @@ func (this *QColorDialog) GetRgba__1(rgba uint) uint {
 
  */
 func (this *QColorDialog) GetRgba__2(rgba uint, ok *bool) uint {
-	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog7getRgbaEjPbP7QWidget", qtrt.FFI_TYPE_POINTER, rgba, ok, convArg2)
 	qtrt.ErrPrint(err, rv)

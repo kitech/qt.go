@@ -237,7 +237,7 @@ func NewQGraphicsView(parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
 Constructs a QGraphicsView. parent is passed to QWidget's constructor.
 */
 func NewQGraphicsView__() *QGraphicsView {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -283,7 +283,7 @@ func NewQGraphicsView_1_(scene QGraphicsScene_ITF /*777 QGraphicsScene **/) *QGr
 	if scene != nil && scene.QGraphicsScene_PTR() != nil {
 		convArg0 = scene.QGraphicsScene_PTR().GetCthis()
 	}
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -363,7 +363,7 @@ If enabled is true, the render hint hint is enabled; otherwise it is disabled.
 See also renderHints.
 */
 func (this *QGraphicsView) SetRenderHint__(hint int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13setRenderHintEN8QPainter10RenderHintEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, enabled)
 	qtrt.ErrPrint(err, rv)
@@ -530,7 +530,7 @@ Enables flag if enabled is true; otherwise disables flag.
 See also optimizationFlags.
 */
 func (this *QGraphicsView) SetOptimizationFlag__(flag int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView19setOptimizationFlagENS_16OptimizationFlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
 	qtrt.ErrPrint(err, rv)
@@ -869,7 +869,7 @@ func (this *QGraphicsView) SetMatrix__(matrix qtgui.QMatrix_ITF) {
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
 		convArg0 = matrix.QMatrix_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	combine := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9setMatrixERK7QMatrixb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, combine)
 	qtrt.ErrPrint(err, rv)
@@ -1014,7 +1014,7 @@ func (this *QGraphicsView) SetTransform__(matrix qtgui.QTransform_ITF) {
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	combine := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView12setTransformERK10QTransformb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, combine)
 	qtrt.ErrPrint(err, rv)
@@ -1194,9 +1194,9 @@ func (this *QGraphicsView) EnsureVisible__(rect qtcore.QRectF_ITF) {
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	xmargin := int(50)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -1217,7 +1217,7 @@ func (this *QGraphicsView) EnsureVisible__1(rect qtcore.QRectF_ITF, xmargin int)
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleERK6QRectFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -1249,9 +1249,9 @@ Scrolls the contents of the viewport so that the scene rectangle rect is visible
 See also centerOn().
 */
 func (this *QGraphicsView) EnsureVisible_1_(x float64, y float64, w float64, h float64) {
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	xmargin := int(50)
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -1268,7 +1268,7 @@ Scrolls the contents of the viewport so that the scene rectangle rect is visible
 See also centerOn().
 */
 func (this *QGraphicsView) EnsureVisible_1_1(x float64, y float64, w float64, h float64, xmargin int) {
-	// arg: 5, int=Int, =Invalid,
+	// arg: 5, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -1308,9 +1308,9 @@ func (this *QGraphicsView) EnsureVisible_2_(item QGraphicsItem_ITF /*777 const Q
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	xmargin := int(50)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -1331,7 +1331,7 @@ func (this *QGraphicsView) EnsureVisible_2_1(item QGraphicsItem_ITF /*777 const 
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
@@ -1383,7 +1383,7 @@ func (this *QGraphicsView) FitInView__(rect qtcore.QRectF_ITF) {
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 1, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 1, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectRadioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewERK6QRectFN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, aspectRadioMode)
 	qtrt.ErrPrint(err, rv)
@@ -1427,7 +1427,7 @@ If rect is empty, or if the viewport is too small, this function will do nothing
 See also setTransform(), ensureVisible(), and centerOn().
 */
 func (this *QGraphicsView) FitInView_1_(x float64, y float64, w float64, h float64) {
-	// arg: 4, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 4, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectRadioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewEddddN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, aspectRadioMode)
 	qtrt.ErrPrint(err, rv)
@@ -1479,7 +1479,7 @@ func (this *QGraphicsView) FitInView_2_(item QGraphicsItem_ITF /*777 const QGrap
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
 	}
-	// arg: 1, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 1, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectRadioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewEPK13QGraphicsItemN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, aspectRadioMode)
 	qtrt.ErrPrint(err, rv)
@@ -1587,11 +1587,11 @@ func (this *QGraphicsView) Render__(painter qtgui.QPainter_ITF /*777 QPainter **
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
 	}
-	// arg: 1, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 1, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QRect &=LValueReference, QRect=Record,
+	// arg: 2, const QRect &=LValueReference, QRect=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectRatioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView6renderEP8QPainterRK6QRectFRK5QRectN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, aspectRatioMode)
 	qtrt.ErrPrint(err, rv)
@@ -1646,9 +1646,9 @@ func (this *QGraphicsView) Render__1(painter qtgui.QPainter_ITF /*777 QPainter *
 	if target != nil && target.QRectF_PTR() != nil {
 		convArg1 = target.QRectF_PTR().GetCthis()
 	}
-	// arg: 2, const QRect &=LValueReference, QRect=Record,
+	// arg: 2, const QRect &=LValueReference, QRect=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectRatioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView6renderEP8QPainterRK6QRectFRK5QRectN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, aspectRatioMode)
 	qtrt.ErrPrint(err, rv)
@@ -1707,7 +1707,7 @@ func (this *QGraphicsView) Render__2(painter qtgui.QPainter_ITF /*777 QPainter *
 	if source != nil && source.QRect_PTR() != nil {
 		convArg2 = source.QRect_PTR().GetCthis()
 	}
-	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 3, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectRatioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView6renderEP8QPainterRK6QRectFRK5QRectN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, aspectRatioMode)
 	qtrt.ErrPrint(err, rv)
@@ -2157,9 +2157,9 @@ Note that QGraphicsView currently supports background caching only (see QGraphic
 See also QGraphicsScene::invalidate() and update().
 */
 func (this *QGraphicsView) InvalidateScene__() {
-	// arg: 0, const QRectF &=LValueReference, QRectF=Record,
+	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, QGraphicsScene::SceneLayers=Elaborated, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>
+	// arg: 1, QGraphicsScene::SceneLayers=Elaborated, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>, Unexposed
 	layers := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView15invalidateSceneERK6QRectF6QFlagsIN14QGraphicsScene10SceneLayerEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, layers)
 	qtrt.ErrPrint(err, rv)
@@ -2184,7 +2184,7 @@ func (this *QGraphicsView) InvalidateScene__1(rect qtcore.QRectF_ITF) {
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 1, QGraphicsScene::SceneLayers=Elaborated, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>
+	// arg: 1, QGraphicsScene::SceneLayers=Elaborated, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>, Unexposed
 	layers := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView15invalidateSceneERK6QRectF6QFlagsIN14QGraphicsScene10SceneLayerEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, layers)
 	qtrt.ErrPrint(err, rv)

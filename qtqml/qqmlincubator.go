@@ -101,7 +101,7 @@ func NewQQmlIncubator(arg0 int) *QQmlIncubator {
 Create a new incubator with the specified mode
 */
 func NewQQmlIncubator__() *QQmlIncubator {
-	// arg: 0, QQmlIncubator::IncubationMode=Enum, QQmlIncubator::IncubationMode=Enum,
+	// arg: 0, QQmlIncubator::IncubationMode=Enum, QQmlIncubator::IncubationMode=Enum, , Invalid
 	arg0 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubatorC2ENS_14IncubationModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)

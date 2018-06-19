@@ -156,7 +156,7 @@ func NewQWebEnginePage(parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineP
 
  */
 func NewQWebEnginePage__() *QWebEnginePage {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEnginePageC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ func NewQWebEnginePage_1_(profile QWebEngineProfile_ITF /*777 QWebEngineProfile 
 	if profile != nil && profile.QWebEngineProfile_PTR() != nil {
 		convArg0 = profile.QWebEngineProfile_PTR().GetCthis()
 	}
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEnginePageC2EP17QWebEngineProfileP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -352,7 +352,7 @@ func (this *QWebEnginePage) TriggerAction(action int, checked bool) {
 
  */
 func (this *QWebEnginePage) TriggerAction__(action int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	checked := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEnginePage13triggerActionENS_9WebActionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action, checked)
 	qtrt.ErrPrint(err, rv)
@@ -488,7 +488,7 @@ func (this *QWebEnginePage) Download__(url qtcore.QUrl_ITF) {
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEnginePage8downloadERK4QUrlRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -524,7 +524,7 @@ func (this *QWebEnginePage) SetHtml(html string, baseUrl qtcore.QUrl_ITF) {
 func (this *QWebEnginePage) SetHtml__(html string) {
 	var tmpArg0 = qtcore.NewQString_5(html)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 1, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg1 = qtcore.NewQUrl()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEnginePage7setHtmlERK7QStringRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -566,9 +566,9 @@ func (this *QWebEnginePage) SetContent__(data qtcore.QByteArray_ITF) {
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEnginePage10setContentERK10QByteArrayRK7QStringRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -589,7 +589,7 @@ func (this *QWebEnginePage) SetContent__1(data qtcore.QByteArray_ITF, mimeType s
 	}
 	var tmpArg1 = qtcore.NewQString_5(mimeType)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEnginePage10setContentERK10QByteArrayRK7QStringRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -919,7 +919,7 @@ func (this *QWebEnginePage) Save(filePath string, format int) {
 func (this *QWebEnginePage) Save__(filePath string) {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QWebEngineDownloadItem::SavePageFormat=Elaborated, QWebEngineDownloadItem::SavePageFormat=Enum,
+	// arg: 1, QWebEngineDownloadItem::SavePageFormat=Elaborated, QWebEngineDownloadItem::SavePageFormat=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QWebEnginePage4saveERK7QStringN22QWebEngineDownloadItem14SavePageFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -996,7 +996,7 @@ func (this *QWebEnginePage) PrintToPdf(filePath string, layout qtgui.QPageLayout
 func (this *QWebEnginePage) PrintToPdf__(filePath string) {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QPageLayout &=LValueReference, QPageLayout=Record,
+	// arg: 1, const QPageLayout &=LValueReference, QPageLayout=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEnginePage10printToPdfERK7QStringRK11QPageLayout", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

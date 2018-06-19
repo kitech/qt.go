@@ -112,7 +112,7 @@ func NewQFontComboBox(parent QWidget_ITF /*777 QWidget **/) *QFontComboBox {
 Constructs a font combobox with the given parent.
 */
 func NewQFontComboBox__() *QFontComboBox {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontComboBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

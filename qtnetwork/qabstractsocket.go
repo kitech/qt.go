@@ -271,9 +271,9 @@ func (this *QAbstractSocket) Bind__(address QHostAddress_ITF) bool {
 	if address != nil && address.QHostAddress_PTR() != nil {
 		convArg0 = address.QHostAddress_PTR().GetCthis()
 	}
-	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short
+	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(0)
-	// arg: 2, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>
+	// arg: 2, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindERK12QHostAddresst6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode)
 	qtrt.ErrPrint(err, rv)
@@ -305,7 +305,7 @@ func (this *QAbstractSocket) Bind__1(address QHostAddress_ITF, port uint16) bool
 	if address != nil && address.QHostAddress_PTR() != nil {
 		convArg0 = address.QHostAddress_PTR().GetCthis()
 	}
-	// arg: 2, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>
+	// arg: 2, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindERK12QHostAddresst6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode)
 	qtrt.ErrPrint(err, rv)
@@ -359,9 +359,9 @@ On success, the functions returns true and the socket enters BoundState; otherwi
 This function was introduced in  Qt 5.0.
 */
 func (this *QAbstractSocket) Bind_1_() bool {
-	// arg: 0, quint16=Typedef, quint16=Typedef, unsigned short
+	// arg: 0, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(0)
-	// arg: 1, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>
+	// arg: 1, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindEt6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), port, mode)
 	qtrt.ErrPrint(err, rv)
@@ -389,7 +389,7 @@ On success, the functions returns true and the socket enters BoundState; otherwi
 This function was introduced in  Qt 5.0.
 */
 func (this *QAbstractSocket) Bind_1_1(port uint16) bool {
-	// arg: 1, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>
+	// arg: 1, QAbstractSocket::BindMode=Typedef, QAbstractSocket::BindMode=Typedef, QFlags<QAbstractSocket::BindFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket4bindEt6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), port, mode)
 	qtrt.ErrPrint(err, rv)
@@ -438,9 +438,9 @@ See also state(), peerName(), peerAddress(), peerPort(), and waitForConnected().
 func (this *QAbstractSocket) ConnectToHost__(hostName string, port uint16) {
 	var tmpArg0 = qtcore.NewQString_5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	mode := 0
-	// arg: 3, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum,
+	// arg: 3, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum, , Invalid
 	protocol := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket13connectToHostERK7QStringt6QFlagsIN9QIODevice12OpenModeFlagEENS_20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode, protocol)
 	qtrt.ErrPrint(err, rv)
@@ -465,7 +465,7 @@ See also state(), peerName(), peerAddress(), peerPort(), and waitForConnected().
 func (this *QAbstractSocket) ConnectToHost__1(hostName string, port uint16, mode int) {
 	var tmpArg0 = qtcore.NewQString_5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 3, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum,
+	// arg: 3, QAbstractSocket::NetworkLayerProtocol=Enum, QAbstractSocket::NetworkLayerProtocol=Enum, , Invalid
 	protocol := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket13connectToHostERK7QStringt6QFlagsIN9QIODevice12OpenModeFlagEENS_20NetworkLayerProtocolE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode, protocol)
 	qtrt.ErrPrint(err, rv)
@@ -517,7 +517,7 @@ func (this *QAbstractSocket) ConnectToHost_1_(address QHostAddress_ITF, port uin
 	if address != nil && address.QHostAddress_PTR() != nil {
 		convArg0 = address.QHostAddress_PTR().GetCthis()
 	}
-	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket13connectToHostERK12QHostAddresst6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port, mode)
 	qtrt.ErrPrint(err, rv)
@@ -804,9 +804,9 @@ Note: It is not possible to initialize two abstract sockets with the same native
 See also socketDescriptor().
 */
 func (this *QAbstractSocket) SetSocketDescriptor__(socketDescriptor int64) bool {
-	// arg: 1, QAbstractSocket::SocketState=Enum, QAbstractSocket::SocketState=Enum,
+	// arg: 1, QAbstractSocket::SocketState=Enum, QAbstractSocket::SocketState=Enum, , Invalid
 	state := 0
-	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19setSocketDescriptorExNS_11SocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor, state, openMode)
 	qtrt.ErrPrint(err, rv)
@@ -826,7 +826,7 @@ Note: It is not possible to initialize two abstract sockets with the same native
 See also socketDescriptor().
 */
 func (this *QAbstractSocket) SetSocketDescriptor__1(socketDescriptor int64, state int) bool {
-	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19setSocketDescriptorExNS_11SocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor, state, openMode)
 	qtrt.ErrPrint(err, rv)
@@ -1083,7 +1083,7 @@ Note: This function may fail randomly on Windows. Consider using the event loop 
 See also connectToHost() and connected().
 */
 func (this *QAbstractSocket) WaitForConnected__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket16waitForConnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
@@ -1129,7 +1129,7 @@ Note: This function may fail randomly on Windows. Consider using the event loop 
 See also waitForBytesWritten().
 */
 func (this *QAbstractSocket) WaitForReadyRead__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
@@ -1175,7 +1175,7 @@ Note: This function may fail randomly on Windows. Consider using the event loop 
 See also waitForReadyRead().
 */
 func (this *QAbstractSocket) WaitForBytesWritten__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19waitForBytesWrittenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
@@ -1237,7 +1237,7 @@ Note: This function may fail randomly on Windows. Consider using the event loop 
 See also disconnectFromHost() and close().
 */
 func (this *QAbstractSocket) WaitForDisconnected__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSocket19waitForDisconnectedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)

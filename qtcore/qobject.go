@@ -186,7 +186,7 @@ Setting parent to 0 constructs an object with no parent. If the object is a widg
 See also parent(), findChild(), and findChildren().
 */
 func NewQObject__() *QObject {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObjectC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -616,7 +616,7 @@ The QTimer class provides a high-level programming interface with single-shot ti
 See also timerEvent(), killTimer(), and QTimer::singleShot().
 */
 func (this *QObject) StartTimer__(interval int) int {
-	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum,
+	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	timerType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject10startTimerEiN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), interval, timerType)
 	qtrt.ErrPrint(err, rv)
@@ -975,7 +975,7 @@ func (this *QObject) Connect__(sender QObject_ITF /*777 const QObject **/, signa
 	}
 	var convArg3 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg3)
-	// arg: 4, Qt::ConnectionType=Elaborated, Qt::ConnectionType=Enum,
+	// arg: 4, Qt::ConnectionType=Elaborated, Qt::ConnectionType=Enum, , Invalid
 	arg4 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
 	qtrt.ErrPrint(err, rv)
@@ -1184,7 +1184,7 @@ func (this *QObject) Connect_1_(sender QObject_ITF /*777 const QObject **/, sign
 	if method != nil && method.QMetaMethod_PTR() != nil {
 		convArg3 = method.QMetaMethod_PTR().GetCthis()
 	}
-	// arg: 4, Qt::ConnectionType=Elaborated, Qt::ConnectionType=Enum,
+	// arg: 4, Qt::ConnectionType=Elaborated, Qt::ConnectionType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject7connectEPKS_RK11QMetaMethodS1_S4_N2Qt14ConnectionTypeE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, type_)
 	qtrt.ErrPrint(err, rv)
@@ -1372,7 +1372,7 @@ func (this *QObject) Connect_2_(sender QObject_ITF /*777 const QObject **/, sign
 	defer qtrt.FreeMem(convArg1)
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
-	// arg: 3, Qt::ConnectionType=Elaborated, Qt::ConnectionType=Enum,
+	// arg: 3, Qt::ConnectionType=Elaborated, Qt::ConnectionType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject7connectEPKS_PKcS3_N2Qt14ConnectionTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, type_)
 	qtrt.ErrPrint(err, rv)
@@ -1492,11 +1492,11 @@ A signal-slot connection is removed when either of the objects involved are dest
 disconnect() is typically used in three ways, as the following examples demonstrate.
 */
 func (this *QObject) Disconnect_2_() bool {
-	// arg: 0, const char *=Pointer, =Invalid,
+	// arg: 0, const char *=Pointer, =Invalid, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, const QObject *=Pointer, QObject=Record,
+	// arg: 1, const QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const char *=Pointer, =Invalid,
+	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject10disconnectEPKcPKS_S1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1518,9 +1518,9 @@ disconnect() is typically used in three ways, as the following examples demonstr
 func (this *QObject) Disconnect_2_1(signal string) bool {
 	var convArg0 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg0)
-	// arg: 1, const QObject *=Pointer, QObject=Record,
+	// arg: 1, const QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const char *=Pointer, =Invalid,
+	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject10disconnectEPKcPKS_S1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1546,7 +1546,7 @@ func (this *QObject) Disconnect_2_2(signal string, receiver QObject_ITF /*777 co
 	if receiver != nil && receiver.QObject_PTR() != nil {
 		convArg1 = receiver.QObject_PTR().GetCthis()
 	}
-	// arg: 2, const char *=Pointer, =Invalid,
+	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject10disconnectEPKcPKS_S1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1594,7 +1594,7 @@ func (this *QObject) Disconnect_3_(receiver QObject_ITF /*777 const QObject **/)
 	if receiver != nil && receiver.QObject_PTR() != nil {
 		convArg0 = receiver.QObject_PTR().GetCthis()
 	}
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject10disconnectEPKS_PKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1807,7 +1807,7 @@ All the objects's children are destroyed immediately after this signal is emitte
 See also deleteLater() and QPointer.
 */
 func (this *QObject) Destroyed__() {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject9destroyedEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -500,7 +500,7 @@ See also boundingRect().
 func (this *QFontMetrics) Width__(arg0 string) int {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	len_ := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics5widthERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
@@ -672,9 +672,9 @@ func (this *QFontMetrics) BoundingRect_2_(r qtcore.QRect_ITF, flags int, text st
 	}
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	tabstops := int(0)
-	// arg: 4, int *=Pointer, =Invalid,
+	// arg: 4, int *=Pointer, =Invalid, , Invalid
 	var tabarray unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2, tabstops, tabarray)
 	qtrt.ErrPrint(err, rv)
@@ -706,7 +706,7 @@ func (this *QFontMetrics) BoundingRect_2_1(r qtcore.QRect_ITF, flags int, text s
 	}
 	var tmpArg2 = qtcore.NewQString_5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 4, int *=Pointer, =Invalid,
+	// arg: 4, int *=Pointer, =Invalid, , Invalid
 	var tabarray unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2, tabstops, tabarray)
 	qtrt.ErrPrint(err, rv)
@@ -760,9 +760,9 @@ See also width().
 func (this *QFontMetrics) BoundingRect_3_(x int, y int, w int, h int, flags int, text string) *qtcore.QRect /*123*/ {
 	var tmpArg5 = qtcore.NewQString_5(text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 6, int=Int, =Invalid,
+	// arg: 6, int=Int, =Invalid, , Invalid
 	tabstops := int(0)
-	// arg: 7, int *=Pointer, =Invalid,
+	// arg: 7, int *=Pointer, =Invalid, , Invalid
 	var tabarray unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, flags, convArg5, tabstops, tabarray)
 	qtrt.ErrPrint(err, rv)
@@ -790,7 +790,7 @@ See also width().
 func (this *QFontMetrics) BoundingRect_3_1(x int, y int, w int, h int, flags int, text string, tabstops int) *qtcore.QRect /*123*/ {
 	var tmpArg5 = qtcore.NewQString_5(text)
 	var convArg5 = tmpArg5.GetCthis()
-	// arg: 7, int *=Pointer, =Invalid,
+	// arg: 7, int *=Pointer, =Invalid, , Invalid
 	var tabarray unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, flags, convArg5, tabstops, tabarray)
 	qtrt.ErrPrint(err, rv)
@@ -862,9 +862,9 @@ See also boundingRect().
 func (this *QFontMetrics) Size__(flags int, str string) *qtcore.QSize /*123*/ {
 	var tmpArg1 = qtcore.NewQString_5(str)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	tabstops := int(0)
-	// arg: 3, int *=Pointer, =Invalid,
+	// arg: 3, int *=Pointer, =Invalid, , Invalid
 	var tabarray unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics4sizeEiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags, convArg1, tabstops, tabarray)
 	qtrt.ErrPrint(err, rv)
@@ -901,7 +901,7 @@ See also boundingRect().
 func (this *QFontMetrics) Size__1(flags int, str string, tabstops int) *qtcore.QSize /*123*/ {
 	var tmpArg1 = qtcore.NewQString_5(str)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 3, int *=Pointer, =Invalid,
+	// arg: 3, int *=Pointer, =Invalid, , Invalid
 	var tabarray unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics4sizeEiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags, convArg1, tabstops, tabarray)
 	qtrt.ErrPrint(err, rv)
@@ -990,7 +990,7 @@ This function was introduced in  Qt 4.2.
 func (this *QFontMetrics) ElidedText__(text string, mode int, width int) string {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	flags := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics10elidedTextERK7QStringN2Qt13TextElideModeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, width, flags)
 	qtrt.ErrPrint(err, rv)

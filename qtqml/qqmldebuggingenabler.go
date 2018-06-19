@@ -91,7 +91,7 @@ func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 
  */
 func NewQQmlDebuggingEnabler__() *QQmlDebuggingEnabler {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	printWarning := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnablerC2Eb", qtrt.FFI_TYPE_POINTER, printWarning)
 	qtrt.ErrPrint(err, rv)
@@ -235,9 +235,9 @@ func QQmlDebuggingEnabler_StartTcpDebugServer(port int, mode int, hostName strin
 
  */
 func (this *QQmlDebuggingEnabler) StartTcpDebugServer__(port int) bool {
-	// arg: 1, QQmlDebuggingEnabler::StartMode=Enum, QQmlDebuggingEnabler::StartMode=Enum,
+	// arg: 1, QQmlDebuggingEnabler::StartMode=Enum, QQmlDebuggingEnabler::StartMode=Enum, , Invalid
 	mode := 0
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler19startTcpDebugServerEiNS_9StartModeERK7QString", qtrt.FFI_TYPE_POINTER, port, mode, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func (this *QQmlDebuggingEnabler) StartTcpDebugServer__(port int) bool {
 
  */
 func (this *QQmlDebuggingEnabler) StartTcpDebugServer__1(port int, mode int) bool {
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler19startTcpDebugServerEiNS_9StartModeERK7QString", qtrt.FFI_TYPE_POINTER, port, mode, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -292,7 +292,7 @@ func QQmlDebuggingEnabler_ConnectToLocalDebugger(socketFileName string, mode int
 func (this *QQmlDebuggingEnabler) ConnectToLocalDebugger__(socketFileName string) bool {
 	var tmpArg0 = qtcore.NewQString_5(socketFileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QQmlDebuggingEnabler::StartMode=Enum, QQmlDebuggingEnabler::StartMode=Enum,
+	// arg: 1, QQmlDebuggingEnabler::StartMode=Enum, QQmlDebuggingEnabler::StartMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler22connectToLocalDebuggerERK7QStringNS_9StartModeE", qtrt.FFI_TYPE_POINTER, convArg0, mode)
 	qtrt.ErrPrint(err, rv)

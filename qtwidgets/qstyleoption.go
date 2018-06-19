@@ -103,9 +103,9 @@ The state member variable is initialized to QStyle::State_None.
 See also version and type.
 */
 func NewQStyleOption__() *QStyleOption {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	version := 0 /*QStyleOption::Version*/
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := QStyleOption__SO_Default
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOptionC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
 	qtrt.ErrPrint(err, rv)
@@ -129,7 +129,7 @@ The state member variable is initialized to QStyle::State_None.
 See also version and type.
 */
 func NewQStyleOption__1(version int) *QStyleOption {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := QStyleOption__SO_Default
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOptionC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
 	qtrt.ErrPrint(err, rv)

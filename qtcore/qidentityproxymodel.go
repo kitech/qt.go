@@ -105,7 +105,7 @@ func NewQIdentityProxyModel(parent QObject_ITF /*777 QObject **/) *QIdentityProx
 Constructs an identity model with the given parent.
 */
 func NewQIdentityProxyModel__() *QIdentityProxyModel {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -156,7 +156,7 @@ func (this *QIdentityProxyModel) ColumnCount(parent QModelIndex_ITF) int {
 Reimplemented from QAbstractItemModel::columnCount().
 */
 func (this *QIdentityProxyModel) ColumnCount__() int {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func (this *QIdentityProxyModel) Index(row int, column int, parent QModelIndex_I
 Reimplemented from QAbstractItemModel::index().
 */
 func (this *QIdentityProxyModel) Index__(row int, column int) *QModelIndex /*123*/ {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -288,7 +288,7 @@ func (this *QIdentityProxyModel) RowCount(parent QModelIndex_ITF) int {
 Reimplemented from QAbstractItemModel::rowCount().
 */
 func (this *QIdentityProxyModel) RowCount__() int {
-	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -320,7 +320,7 @@ func (this *QIdentityProxyModel) HeaderData(section int, orientation int, role i
 Reimplemented from QAbstractItemModel::headerData().
 */
 func (this *QIdentityProxyModel) HeaderData__(section int, orientation int) *QVariant /*123*/ {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
 	qtrt.ErrPrint(err, rv)
@@ -451,9 +451,9 @@ func (this *QIdentityProxyModel) Match__(start QModelIndex_ITF, role int, value 
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg2 = value.QVariant_PTR().GetCthis()
 	}
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	hits := int(1)
-	// arg: 4, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>
+	// arg: 4, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel5matchERK11QModelIndexiRK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, convArg2, hits, flags)
 	qtrt.ErrPrint(err, rv)
@@ -478,7 +478,7 @@ func (this *QIdentityProxyModel) Match__1(start QModelIndex_ITF, role int, value
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg2 = value.QVariant_PTR().GetCthis()
 	}
-	// arg: 4, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>
+	// arg: 4, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel5matchERK11QModelIndexiRK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, convArg2, hits, flags)
 	qtrt.ErrPrint(err, rv)
@@ -530,7 +530,7 @@ func (this *QIdentityProxyModel) InsertColumns(column int, count int, parent QMo
 Reimplemented from QAbstractItemModel::insertColumns().
 */
 func (this *QIdentityProxyModel) InsertColumns__(column int, count int) bool {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -564,7 +564,7 @@ func (this *QIdentityProxyModel) InsertRows(row int, count int, parent QModelInd
 Reimplemented from QAbstractItemModel::insertRows().
 */
 func (this *QIdentityProxyModel) InsertRows__(row int, count int) bool {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -598,7 +598,7 @@ func (this *QIdentityProxyModel) RemoveColumns(column int, count int, parent QMo
 Reimplemented from QAbstractItemModel::removeColumns().
 */
 func (this *QIdentityProxyModel) RemoveColumns__(column int, count int) bool {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -632,7 +632,7 @@ func (this *QIdentityProxyModel) RemoveRows(row int, count int, parent QModelInd
 Reimplemented from QAbstractItemModel::removeRows().
 */
 func (this *QIdentityProxyModel) RemoveRows__(row int, count int) bool {
-	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record,
+	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	qtrt.ErrPrint(err, rv)

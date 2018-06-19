@@ -107,7 +107,7 @@ func NewQQmlComponent(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponen
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
 func NewQQmlComponent__() *QQmlComponent {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func NewQQmlComponent_1_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlComponen
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
 	}
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP10QQmlEngineP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -203,7 +203,7 @@ func NewQQmlComponent_2_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName stri
 	}
 	var tmpArg1 = qtcore.NewQString_5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP10QQmlEngineRK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func NewQQmlComponent_3_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName stri
 	}
 	var tmpArg1 = qtcore.NewQString_5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 3, QObject *=Pointer, QObject=Record,
+	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP10QQmlEngineRK7QStringNS_15CompilationModeEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, mode, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -307,7 +307,7 @@ func NewQQmlComponent_4_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QU
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg1 = url.QUrl_PTR().GetCthis()
 	}
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP10QQmlEngineRK4QUrlP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -361,7 +361,7 @@ func NewQQmlComponent_5_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QU
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg1 = url.QUrl_PTR().GetCthis()
 	}
-	// arg: 3, QObject *=Pointer, QObject=Record,
+	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP10QQmlEngineRK4QUrlNS_15CompilationModeEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, mode, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -545,7 +545,7 @@ If the object being created from this component is a visual item, it must have a
 See also QQmlEngine::ObjectOwnership.
 */
 func (this *QQmlComponent) Create__() *qtcore.QObject /*777 QObject **/ {
-	// arg: 0, QQmlContext *=Pointer, QQmlContext=Record,
+	// arg: 0, QQmlContext *=Pointer, QQmlContext=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent6createEP11QQmlContext", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -606,9 +606,9 @@ func (this *QQmlComponent) Create_1_(arg0 QQmlIncubator_ITF) {
 	if arg0 != nil && arg0.QQmlIncubator_PTR() != nil {
 		convArg0 = arg0.QQmlIncubator_PTR().GetCthis()
 	}
-	// arg: 1, QQmlContext *=Pointer, QQmlContext=Record,
+	// arg: 1, QQmlContext *=Pointer, QQmlContext=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, QQmlContext *=Pointer, QQmlContext=Record,
+	// arg: 2, QQmlContext *=Pointer, QQmlContext=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent6createER13QQmlIncubatorP11QQmlContextS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -639,7 +639,7 @@ func (this *QQmlComponent) Create_1_1(arg0 QQmlIncubator_ITF, context QQmlContex
 	if context != nil && context.QQmlContext_PTR() != nil {
 		convArg1 = context.QQmlContext_PTR().GetCthis()
 	}
-	// arg: 2, QQmlContext *=Pointer, QQmlContext=Record,
+	// arg: 2, QQmlContext *=Pointer, QQmlContext=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent6createER13QQmlIncubatorP11QQmlContextS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

@@ -130,7 +130,7 @@ Create a new local socket server with the given parent.
 See also listen().
 */
 func NewQLocalServer__() *QLocalServer {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -441,9 +441,9 @@ If msec is -1, this function will not time out.
 See also hasPendingConnections() and nextPendingConnection().
 */
 func (this *QLocalServer) WaitForNewConnection__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msec := int(0)
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var timedOut unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timedOut)
 	qtrt.ErrPrint(err, rv)
@@ -467,7 +467,7 @@ If msec is -1, this function will not time out.
 See also hasPendingConnections() and nextPendingConnection().
 */
 func (this *QLocalServer) WaitForNewConnection__1(msec int) bool {
-	// arg: 1, bool *=Pointer, =Invalid,
+	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var timedOut unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QLocalServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timedOut)
 	qtrt.ErrPrint(err, rv)

@@ -167,7 +167,7 @@ func (this *QQmlIncubationController) IncubateWhile(flag *bool, msecs int) {
 
  */
 func (this *QQmlIncubationController) IncubateWhile__(flag *bool) {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	msecs := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQmlIncubationController13incubateWhileEPVbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, msecs)
 	qtrt.ErrPrint(err, rv)

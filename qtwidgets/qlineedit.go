@@ -204,7 +204,7 @@ The parent argument is sent to the QWidget constructor.
 See also setText() and setMaxLength().
 */
 func NewQLineEdit__() *QLineEdit {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -258,7 +258,7 @@ See also setText() and setMaxLength().
 func NewQLineEdit_1_(arg0 string) *QLineEdit {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEditC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -701,7 +701,7 @@ Moves the cursor forward steps characters. If mark is true each character moved 
 See also cursorBackward().
 */
 func (this *QLineEdit) CursorForward__(mark bool) {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	steps := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit13cursorForwardEbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mark, steps)
 	qtrt.ErrPrint(err, rv)
@@ -733,7 +733,7 @@ Moves the cursor back steps characters. If mark is true each character moved ove
 See also cursorForward().
 */
 func (this *QLineEdit) CursorBackward__(mark bool) {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	steps := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit14cursorBackwardEbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mark, steps)
 	qtrt.ErrPrint(err, rv)

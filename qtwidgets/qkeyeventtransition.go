@@ -117,7 +117,7 @@ func NewQKeyEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *QKe
 Constructs a new key event transition with the given sourceState.
 */
 func NewQKeyEventTransition__() *QKeyEventTransition {
-	// arg: 0, QState *=Pointer, QState=Record,
+	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -163,7 +163,7 @@ func NewQKeyEventTransition_1_(object qtcore.QObject_ITF /*777 QObject **/, type
 	if object != nil && object.QObject_PTR() != nil {
 		convArg0 = object.QObject_PTR().GetCthis()
 	}
-	// arg: 3, QState *=Pointer, QState=Record,
+	// arg: 3, QState *=Pointer, QState=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP7QObjectN6QEvent4TypeEiP6QState", qtrt.FFI_TYPE_POINTER, convArg0, type_, key, convArg3)
 	qtrt.ErrPrint(err, rv)

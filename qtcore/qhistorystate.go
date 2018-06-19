@@ -120,7 +120,7 @@ func NewQHistoryState(parent QState_ITF /*777 QState **/) *QHistoryState {
 Constructs a new shallow history state with the given parent state.
 */
 func NewQHistoryState__() *QHistoryState {
-	// arg: 0, QState *=Pointer, QState=Record,
+	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ func NewQHistoryState_1(type_ int, parent QState_ITF /*777 QState **/) *QHistory
 Constructs a new shallow history state with the given parent state.
 */
 func NewQHistoryState_1_(type_ int) *QHistoryState {
-	// arg: 1, QState *=Pointer, QState=Record,
+	// arg: 1, QState *=Pointer, QState=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2ENS_11HistoryTypeEP6QState", qtrt.FFI_TYPE_POINTER, type_, convArg1)
 	qtrt.ErrPrint(err, rv)

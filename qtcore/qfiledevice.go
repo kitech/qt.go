@@ -386,7 +386,7 @@ Returns a pointer to the memory or 0 if there is an error.
 See also unmap().
 */
 func (this *QFileDevice) Map__(offset int64, size int64) unsafe.Pointer /*666*/ {
-	// arg: 2, QFileDevice::MemoryMapFlags=Enum, QFileDevice::MemoryMapFlags=Enum,
+	// arg: 2, QFileDevice::MemoryMapFlags=Enum, QFileDevice::MemoryMapFlags=Enum, , Invalid
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDevice3mapExxNS_14MemoryMapFlagsE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, size, flags)
 	qtrt.ErrPrint(err, rv)

@@ -374,9 +374,9 @@ To avoid the overhead of creating the layout the first time you draw the QStatic
 See also QPainter::setFont() and QPainter::setMatrix().
 */
 func (this *QStaticText) Prepare__() {
-	// arg: 0, const QTransform &=LValueReference, QTransform=Record,
+	// arg: 0, const QTransform &=LValueReference, QTransform=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, const QFont &=LValueReference, QFont=Record,
+	// arg: 1, const QFont &=LValueReference, QFont=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText7prepareERK10QTransformRK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -401,7 +401,7 @@ func (this *QStaticText) Prepare__1(matrix QTransform_ITF) {
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()
 	}
-	// arg: 1, const QFont &=LValueReference, QFont=Record,
+	// arg: 1, const QFont &=LValueReference, QFont=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText7prepareERK10QTransformRK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

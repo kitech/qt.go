@@ -142,7 +142,7 @@ func NewQTableWidget(parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
 Creates a new table view with the given parent.
 */
 func NewQTableWidget__() *QTableWidget {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTableWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -180,7 +180,7 @@ func NewQTableWidget_1(rows int, columns int, parent QWidget_ITF /*777 QWidget *
 Creates a new table view with the given parent.
 */
 func NewQTableWidget_1_(rows int, columns int) *QTableWidget {
-	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTableWidgetC2EiiP7QWidget", qtrt.FFI_TYPE_POINTER, rows, columns, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -651,7 +651,7 @@ func (this *QTableWidget) SortItems(column int, order int) {
 Sorts all the rows in the table widget based on column and order.
 */
 func (this *QTableWidget) SortItems__(column int) {
-	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
+	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTableWidget9sortItemsEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	qtrt.ErrPrint(err, rv)
@@ -1031,7 +1031,7 @@ func (this *QTableWidget) ScrollToItem__(item QTableWidgetItem_ITF /*777 const Q
 	if item != nil && item.QTableWidgetItem_PTR() != nil {
 		convArg0 = item.QTableWidgetItem_PTR().GetCthis()
 	}
-	// arg: 1, QAbstractItemView::ScrollHint=Elaborated, QAbstractItemView::ScrollHint=Enum,
+	// arg: 1, QAbstractItemView::ScrollHint=Elaborated, QAbstractItemView::ScrollHint=Enum, , Invalid
 	hint := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTableWidget12scrollToItemEPK16QTableWidgetItemN17QAbstractItemView10ScrollHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	qtrt.ErrPrint(err, rv)

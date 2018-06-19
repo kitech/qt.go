@@ -95,7 +95,7 @@ func NewQMessageAuthenticationCode(method int, key QByteArray_ITF) *QMessageAuth
 Constructs an object that can be used to create a cryptographic hash from data using method method and key key.
 */
 func NewQMessageAuthenticationCode__(method int) *QMessageAuthenticationCode {
-	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeC2EN18QCryptographicHash9AlgorithmERK10QByteArray", qtrt.FFI_TYPE_POINTER, method, convArg1)
 	qtrt.ErrPrint(err, rv)

@@ -96,7 +96,7 @@ func NewQShortcutEvent__(key QKeySequence_ITF, id int) *QShortcutEvent {
 	if key != nil && key.QKeySequence_PTR() != nil {
 		convArg0 = key.QKeySequence_PTR().GetCthis()
 	}
-	// arg: 2, bool=Bool, =Invalid,
+	// arg: 2, bool=Bool, =Invalid, , Invalid
 	ambiguous := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QShortcutEventC2ERK12QKeySequenceib", qtrt.FFI_TYPE_POINTER, convArg0, id, ambiguous)
 	qtrt.ErrPrint(err, rv)

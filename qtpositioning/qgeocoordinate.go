@@ -406,7 +406,7 @@ The altitude will have distanceUp added to it.
 Returns an invalid coordinate if this coordinate is invalid.
 */
 func (this *QGeoCoordinate) AtDistanceAndAzimuth__(distance float64, azimuth float64) *QGeoCoordinate /*123*/ {
-	// arg: 2, qreal=Typedef, qreal=Typedef, double
+	// arg: 2, qreal=Typedef, qreal=Typedef, double, Double
 	distanceUp := float64(0.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGeoCoordinate20atDistanceAndAzimuthEddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), distance, azimuth, distanceUp)
 	qtrt.ErrPrint(err, rv)
@@ -473,7 +473,7 @@ The altitude field is omitted if no altitude is set.
 If the coordinate is invalid, an empty string is returned.
 */
 func (this *QGeoCoordinate) ToString__() string {
-	// arg: 0, QGeoCoordinate::CoordinateFormat=Enum, QGeoCoordinate::CoordinateFormat=Enum,
+	// arg: 0, QGeoCoordinate::CoordinateFormat=Enum, QGeoCoordinate::CoordinateFormat=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGeoCoordinate8toStringENS_16CoordinateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)

@@ -132,9 +132,9 @@ func NewQPageSize_2_(pointSize qtcore.QSize_ITF) *QPageSize {
 	if pointSize != nil && pointSize.QSize_PTR() != nil {
 		convArg0 = pointSize.QSize_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	// arg: 2, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum, , Invalid
 	matchPolicy := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK5QSizeRK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, matchPolicy)
 	qtrt.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ func NewQPageSize_2_1(pointSize qtcore.QSize_ITF, name string) *QPageSize {
 	}
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	// arg: 2, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum, , Invalid
 	matchPolicy := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK5QSizeRK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, matchPolicy)
 	qtrt.ErrPrint(err, rv)
@@ -202,9 +202,9 @@ func NewQPageSize_3_(size qtcore.QSizeF_ITF, units int) *QPageSize {
 	if size != nil && size.QSizeF_PTR() != nil {
 		convArg0 = size.QSizeF_PTR().GetCthis()
 	}
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	// arg: 3, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum, , Invalid
 	matchPolicy := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK6QSizeFNS_4UnitERK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, units, convArg2, matchPolicy)
 	qtrt.ErrPrint(err, rv)
@@ -228,7 +228,7 @@ func NewQPageSize_3_1(size qtcore.QSizeF_ITF, units int, name string) *QPageSize
 	}
 	var tmpArg2 = qtcore.NewQString_5(name)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	// arg: 3, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum, , Invalid
 	matchPolicy := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK6QSizeFNS_4UnitERK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, units, convArg2, matchPolicy)
 	qtrt.ErrPrint(err, rv)
@@ -497,7 +497,7 @@ func (this *QPageSize) Id_1_(pointSize qtcore.QSize_ITF) int {
 	if pointSize != nil && pointSize.QSize_PTR() != nil {
 		convArg0 = pointSize.QSize_PTR().GetCthis()
 	}
-	// arg: 1, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	// arg: 1, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum, , Invalid
 	matchPolicy := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize2idERK5QSizeNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, matchPolicy)
 	qtrt.ErrPrint(err, rv)
@@ -544,7 +544,7 @@ func (this *QPageSize) Id_2_(size qtcore.QSizeF_ITF, units int) int {
 	if size != nil && size.QSizeF_PTR() != nil {
 		convArg0 = size.QSizeF_PTR().GetCthis()
 	}
-	// arg: 2, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum,
+	// arg: 2, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum, , Invalid
 	matchPolicy := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize2idERK6QSizeFNS_4UnitENS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, units, matchPolicy)
 	qtrt.ErrPrint(err, rv)

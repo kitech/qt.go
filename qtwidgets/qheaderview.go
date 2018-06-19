@@ -252,7 +252,7 @@ func NewQHeaderView(orientation int, parent QWidget_ITF /*777 QWidget **/) *QHea
 Creates a new generic header with the given orientation and parent.
 */
 func NewQHeaderView__(orientation int) *QHeaderView {
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHeaderViewC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
 	qtrt.ErrPrint(err, rv)

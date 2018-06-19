@@ -208,7 +208,7 @@ The window is not shown until setVisible(true), show(), or similar is called.
 See also setScreen().
 */
 func NewQWindow__() *QWindow {
-	// arg: 0, QScreen *=Pointer, QScreen=Record,
+	// arg: 0, QScreen *=Pointer, QScreen=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindowC2EP7QScreen", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -634,7 +634,7 @@ This function was introduced in  Qt 5.9.
 See also setFlags(), flags(), and type().
 */
 func (this *QWindow) SetFlag__(arg0 int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow7setFlagEN2Qt10WindowTypeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, on)
 	qtrt.ErrPrint(err, rv)
@@ -960,7 +960,7 @@ func (this *QWindow) IsAncestorOf__(child QWindow_ITF /*777 const QWindow **/) b
 	if child != nil && child.QWindow_PTR() != nil {
 		convArg0 = child.QWindow_PTR().GetCthis()
 	}
-	// arg: 1, QWindow::AncestorMode=Enum, QWindow::AncestorMode=Enum,
+	// arg: 1, QWindow::AncestorMode=Enum, QWindow::AncestorMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow12isAncestorOfEPKS_NS_12AncestorModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)

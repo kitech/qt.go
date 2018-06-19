@@ -109,7 +109,7 @@ Constructs a shared memory object with the given parent and with its key set to 
 See also setKey(), create(), and attach().
 */
 func NewQSharedMemory__() *QSharedMemory {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemoryC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ See also setKey(), create(), and attach().
 func NewQSharedMemory_1_(key string) *QSharedMemory {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemoryC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -296,7 +296,7 @@ Creates a shared memory segment of size bytes with the key passed to the constru
 See also error().
 */
 func (this *QSharedMemory) Create__(size int) bool {
-	// arg: 1, QSharedMemory::AccessMode=Enum, QSharedMemory::AccessMode=Enum,
+	// arg: 1, QSharedMemory::AccessMode=Enum, QSharedMemory::AccessMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory6createEiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size, mode)
 	qtrt.ErrPrint(err, rv)
@@ -348,7 +348,7 @@ Attempts to attach the process to the shared memory segment identified by the ke
 See also isAttached(), detach(), and create().
 */
 func (this *QSharedMemory) Attach__() bool {
-	// arg: 0, QSharedMemory::AccessMode=Enum, QSharedMemory::AccessMode=Enum,
+	// arg: 0, QSharedMemory::AccessMode=Enum, QSharedMemory::AccessMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory6attachENS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)

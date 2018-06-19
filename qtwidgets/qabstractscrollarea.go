@@ -211,7 +211,7 @@ Constructs a viewport.
 The parent argument is sent to the QWidget constructor.
 */
 func NewQAbstractScrollArea__() *QAbstractScrollArea {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollAreaC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -468,7 +468,7 @@ See also addScrollBarWidget().
 func (this *QAbstractScrollArea) ScrollBarWidgets(alignment int) *QWidgetList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea16scrollBarWidgetsE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
 	qtrt.ErrPrint(err, rv)
-	rv2 := NewQWidgetListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	rv2 := /*222*/ NewQWidgetListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
 

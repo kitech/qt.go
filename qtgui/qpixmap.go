@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 108
+// extern C begin: 112
 */
 // import "C"
 import "unsafe"
@@ -166,9 +166,9 @@ See also isNull().
 func NewQPixmap_3_(fileName string) *QPixmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmapC2ERK7QStringPKc6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, flags)
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func NewQPixmap_3_1(fileName string, format string) *QPixmap {
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmapC2ERK7QStringPKc6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, flags)
 	qtrt.ErrPrint(err, rv)
@@ -463,7 +463,7 @@ The effect of this function is undefined when the pixmap is being painted on.
 See also Pixmap Transformations.
 */
 func (this *QPixmap) Fill__() {
-	// arg: 0, const QColor &=LValueReference, QColor=Record,
+	// arg: 0, const QColor &=LValueReference, QColor=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap4fillERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -686,7 +686,7 @@ This function is slow because it involves converting to/from a QImage, and non-t
 See also QImage::createHeuristicMask() and createMaskFromColor().
 */
 func (this *QPixmap) CreateHeuristicMask__() *QBitmap /*123*/ {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	clipTight := true
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap19createHeuristicMaskEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), clipTight)
 	qtrt.ErrPrint(err, rv)
@@ -736,7 +736,7 @@ func (this *QPixmap) CreateMaskFromColor__(maskColor QColor_ITF) *QBitmap /*123*
 	if maskColor != nil && maskColor.QColor_PTR() != nil {
 		convArg0 = maskColor.QColor_PTR().GetCthis()
 	}
-	// arg: 1, Qt::MaskMode=Elaborated, Qt::MaskMode=Enum,
+	// arg: 1, Qt::MaskMode=Elaborated, Qt::MaskMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap19createMaskFromColorERK6QColorN2Qt8MaskModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -775,13 +775,13 @@ func QPixmap_GrabWindow(arg0 uint64, x int, y int, w int, h int) *QPixmap /*123*
 
  */
 func (this *QPixmap) GrabWindow__(arg0 uint64) *QPixmap /*123*/ {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	x := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	y := int(0)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	w := int(-1)
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, arg0, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -799,11 +799,11 @@ func (this *QPixmap) GrabWindow__(arg0 uint64) *QPixmap /*123*/ {
 
  */
 func (this *QPixmap) GrabWindow__1(arg0 uint64, x int) *QPixmap /*123*/ {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	y := int(0)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	w := int(-1)
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, arg0, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -821,9 +821,9 @@ func (this *QPixmap) GrabWindow__1(arg0 uint64, x int) *QPixmap /*123*/ {
 
  */
 func (this *QPixmap) GrabWindow__2(arg0 uint64, x int, y int) *QPixmap /*123*/ {
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	w := int(-1)
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, arg0, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -841,7 +841,7 @@ func (this *QPixmap) GrabWindow__2(arg0 uint64, x int, y int) *QPixmap /*123*/ {
 
  */
 func (this *QPixmap) GrabWindow__3(arg0 uint64, x int, y int, w int) *QPixmap /*123*/ {
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap10grabWindowEyiiii", qtrt.FFI_TYPE_POINTER, arg0, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -917,13 +917,13 @@ func (this *QPixmap) GrabWidget_1_(widget qtcore.QObject_ITF /*777 QObject **/) 
 	if widget != nil && widget.QObject_PTR() != nil {
 		convArg0 = widget.QObject_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	x := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	y := int(0)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	w := int(-1)
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap10grabWidgetEP7QObjectiiii", qtrt.FFI_TYPE_POINTER, convArg0, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -945,11 +945,11 @@ func (this *QPixmap) GrabWidget_1_1(widget qtcore.QObject_ITF /*777 QObject **/,
 	if widget != nil && widget.QObject_PTR() != nil {
 		convArg0 = widget.QObject_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	y := int(0)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	w := int(-1)
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap10grabWidgetEP7QObjectiiii", qtrt.FFI_TYPE_POINTER, convArg0, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -971,9 +971,9 @@ func (this *QPixmap) GrabWidget_1_2(widget qtcore.QObject_ITF /*777 QObject **/,
 	if widget != nil && widget.QObject_PTR() != nil {
 		convArg0 = widget.QObject_PTR().GetCthis()
 	}
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	w := int(-1)
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap10grabWidgetEP7QObjectiiii", qtrt.FFI_TYPE_POINTER, convArg0, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -995,7 +995,7 @@ func (this *QPixmap) GrabWidget_1_3(widget qtcore.QObject_ITF /*777 QObject **/,
 	if widget != nil && widget.QObject_PTR() != nil {
 		convArg0 = widget.QObject_PTR().GetCthis()
 	}
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	h := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap10grabWidgetEP7QObjectiiii", qtrt.FFI_TYPE_POINTER, convArg0, x, y, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -1057,9 +1057,9 @@ In some cases it can be more beneficial to draw the pixmap to a painter with a s
 See also isNull() and Pixmap Transformations.
 */
 func (this *QPixmap) Scaled__(w int, h int) *QPixmap /*123*/ {
-	// arg: 2, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 2, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectMode := 0
-	// arg: 3, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 3, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap6scaledEiiN2Qt15AspectRatioModeENS0_18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, aspectMode, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1091,7 +1091,7 @@ In some cases it can be more beneficial to draw the pixmap to a painter with a s
 See also isNull() and Pixmap Transformations.
 */
 func (this *QPixmap) Scaled__1(w int, h int, aspectMode int) *QPixmap /*123*/ {
-	// arg: 3, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 3, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap6scaledEiiN2Qt15AspectRatioModeENS0_18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, aspectMode, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1161,9 +1161,9 @@ func (this *QPixmap) Scaled_1_(s qtcore.QSize_ITF) *QPixmap /*123*/ {
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
 	}
-	// arg: 1, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum,
+	// arg: 1, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectMode := 0
-	// arg: 2, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 2, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap6scaledERK5QSizeN2Qt15AspectRatioModeENS3_18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, aspectMode, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1199,7 +1199,7 @@ func (this *QPixmap) Scaled_1_1(s qtcore.QSize_ITF, aspectMode int) *QPixmap /*1
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
 	}
-	// arg: 2, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 2, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap6scaledERK5QSizeN2Qt15AspectRatioModeENS3_18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, aspectMode, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1241,7 +1241,7 @@ If width is 0 or negative, a null pixmap is returned.
 See also isNull() and Pixmap Transformations.
 */
 func (this *QPixmap) ScaledToWidth__(w int) *QPixmap /*123*/ {
-	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap13scaledToWidthEiN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1283,7 +1283,7 @@ If height is 0 or negative, a null pixmap is returned.
 See also isNull() and Pixmap Transformations.
 */
 func (this *QPixmap) ScaledToHeight__(h int) *QPixmap /*123*/ {
-	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap14scaledToHeightEiN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1337,7 +1337,7 @@ func (this *QPixmap) Transformed__(arg0 QMatrix_ITF) *QPixmap /*123*/ {
 	if arg0 != nil && arg0.QMatrix_PTR() != nil {
 		convArg0 = arg0.QMatrix_PTR().GetCthis()
 	}
-	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap11transformedERK7QMatrixN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1391,7 +1391,7 @@ func (this *QPixmap) Transformed_1_(arg0 QTransform_ITF) *QPixmap /*123*/ {
 	if arg0 != nil && arg0.QTransform_PTR() != nil {
 		convArg0 = arg0.QTransform_PTR().GetCthis()
 	}
-	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum,
+	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap11transformedERK10QTransformN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1526,7 +1526,7 @@ func (this *QPixmap) FromImage__(image QImage_ITF) *QPixmap /*123*/ {
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1573,7 +1573,7 @@ In case of monochrome and 8-bit images, the image is first converted to a 32-bit
 See also fromImageReader(), toImage(), and Pixmap Conversion.
 */
 func (this *QPixmap) FromImage_1_(image unsafe.Pointer /*333*/) *QPixmap /*123*/ {
-	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap9fromImageEO6QImage6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, image, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1628,7 +1628,7 @@ func (this *QPixmap) FromImageReader__(imageReader QImageReader_ITF /*777 QImage
 	if imageReader != nil && imageReader.QImageReader_PTR() != nil {
 		convArg0 = imageReader.QImageReader_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap15fromImageReaderEP12QImageReader6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1686,9 +1686,9 @@ See also loadFromData() and Reading and Writing Image Files.
 func (this *QPixmap) Load__(fileName string) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap4loadERK7QStringPKc6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1718,7 +1718,7 @@ func (this *QPixmap) Load__1(fileName string, format string) bool {
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap4loadERK7QStringPKc6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1762,9 +1762,9 @@ If the data needs to be modified to fit in a lower-resolution result (e.g. conve
 See also load() and Reading and Writing Image Files.
 */
 func (this *QPixmap) LoadFromData__(buf unsafe.Pointer /*666*/, len_ uint) bool {
-	// arg: 2, const char *=Pointer, =Invalid,
+	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap12loadFromDataEPKhjPKc6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), buf, len_, convArg2, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1788,7 +1788,7 @@ See also load() and Reading and Writing Image Files.
 func (this *QPixmap) LoadFromData__1(buf unsafe.Pointer /*666*/, len_ uint, format string) bool {
 	var convArg2 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg2)
-	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap12loadFromDataEPKhjPKc6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), buf, len_, convArg2, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1840,9 +1840,9 @@ func (this *QPixmap) LoadFromData_1_(data qtcore.QByteArray_ITF) bool {
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap12loadFromDataERK10QByteArrayPKc6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1870,7 +1870,7 @@ func (this *QPixmap) LoadFromData_1_1(data qtcore.QByteArray_ITF, format string)
 	}
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 2, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap12loadFromDataERK10QByteArrayPKc6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1918,9 +1918,9 @@ See also Reading and Writing Image Files.
 func (this *QPixmap) Save__(fileName string) bool {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap4saveERK7QStringPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
@@ -1946,7 +1946,7 @@ func (this *QPixmap) Save__1(fileName string, format string) bool {
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap4saveERK7QStringPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
@@ -1998,9 +1998,9 @@ func (this *QPixmap) Save_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) bo
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
 	}
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap4saveEP9QIODevicePKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
@@ -2028,7 +2028,7 @@ func (this *QPixmap) Save_1_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, f
 	}
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	quality := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap4saveEP9QIODevicePKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	qtrt.ErrPrint(err, rv)
@@ -2078,7 +2078,7 @@ func (this *QPixmap) ConvertFromImage__(img QImage_ITF) bool {
 	if img != nil && img.QImage_PTR() != nil {
 		convArg0 = img.QImage_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap16convertFromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -2142,7 +2142,7 @@ If the given rectangle is empty, the whole image is copied.
 See also operator=(), QPixmap(), and Pixmap Transformations.
 */
 func (this *QPixmap) Copy_1_() *QPixmap /*123*/ {
-	// arg: 0, const QRect &=LValueReference, QRect=Record,
+	// arg: 0, const QRect &=LValueReference, QRect=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QPixmap4copyERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2185,7 +2185,7 @@ This function was introduced in  Qt 4.6.
 See also QWidget::scroll() and QGraphicsItem::scroll().
 */
 func (this *QPixmap) Scroll__(dx int, dy int, x int, y int, width int, height int) {
-	// arg: 6, QRegion *=Pointer, QRegion=Record,
+	// arg: 6, QRegion *=Pointer, QRegion=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap6scrollEiiiiiiP7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy, x, y, width, height, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2233,7 +2233,7 @@ func (this *QPixmap) Scroll_1_(dx int, dy int, rect qtcore.QRect_ITF) {
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg2 = rect.QRect_PTR().GetCthis()
 	}
-	// arg: 3, QRegion *=Pointer, QRegion=Record,
+	// arg: 3, QRegion *=Pointer, QRegion=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap6scrollEiiRK5QRectP7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -2382,7 +2382,7 @@ func (this *QPixmap) FromImageInPlace__(image QImage_ITF) *QPixmap /*123*/ {
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmap16fromImageInPlaceER6QImage6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)

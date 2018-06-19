@@ -109,7 +109,7 @@ Create a QFileSelector instance. This instance will have the same static selecto
 If supplied, it will have the given QObject parent.
 */
 func NewQFileSelector__() *QFileSelector {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFileSelectorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

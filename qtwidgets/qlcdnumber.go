@@ -125,7 +125,7 @@ The parent argument is passed to the QFrame constructor.
 See also setDigitCount() and setSmallDecimalPoint().
 */
 func NewQLCDNumber__() *QLCDNumber {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumberC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ The parent argument is passed to the QFrame constructor.
 See also setDigitCount() and setSmallDecimalPoint().
 */
 func NewQLCDNumber_1_(numDigits uint) *QLCDNumber {
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumberC2EjP7QWidget", qtrt.FFI_TYPE_POINTER, numDigits, convArg1)
 	qtrt.ErrPrint(err, rv)

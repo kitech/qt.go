@@ -89,9 +89,9 @@ func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 
  */
 func NewQSpacerItem__(w int, h int) *QSpacerItem {
-	// arg: 2, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	// arg: 2, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	hData := 0
-	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	vData := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, w, h, hData, vData)
 	qtrt.ErrPrint(err, rv)
@@ -109,7 +109,7 @@ func NewQSpacerItem__(w int, h int) *QSpacerItem {
 
  */
 func NewQSpacerItem__1(w int, h int, hData int) *QSpacerItem {
-	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	vData := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, w, h, hData, vData)
 	qtrt.ErrPrint(err, rv)
@@ -155,9 +155,9 @@ func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
 
  */
 func (this *QSpacerItem) ChangeSize__(w int, h int) {
-	// arg: 2, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	// arg: 2, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	hData := 0
-	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	vData := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, hData, vData)
 	qtrt.ErrPrint(err, rv)
@@ -172,7 +172,7 @@ func (this *QSpacerItem) ChangeSize__(w int, h int) {
 
  */
 func (this *QSpacerItem) ChangeSize__1(w int, h int, hData int) {
-	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum,
+	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	vData := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, hData, vData)
 	qtrt.ErrPrint(err, rv)

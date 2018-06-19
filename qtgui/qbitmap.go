@@ -178,7 +178,7 @@ See also QPixmap::isNull().
 func NewQBitmap_4_(fileName string) *QBitmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2ERK7QStringPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -332,7 +332,7 @@ func (this *QBitmap) FromImage__(image QImage_ITF) *QBitmap /*123*/ {
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -387,7 +387,7 @@ func (this *QBitmap) FromData__(size qtcore.QSize_ITF, bits unsafe.Pointer /*666
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 2, QImage::Format=Elaborated, QImage::Format=Enum,
+	// arg: 2, QImage::Format=Elaborated, QImage::Format=Enum, , Invalid
 	monoFormat := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmap8fromDataERK5QSizePKhN6QImage6FormatE", qtrt.FFI_TYPE_POINTER, convArg0, bits, monoFormat)
 	qtrt.ErrPrint(err, rv)

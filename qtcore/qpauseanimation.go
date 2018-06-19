@@ -115,7 +115,7 @@ func NewQPauseAnimation(parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
 Constructs a QPauseAnimation. parent is passed to QObject's constructor. The default duration is 0.
 */
 func NewQPauseAnimation__() *QPauseAnimation {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func NewQPauseAnimation_1(msecs int, parent QObject_ITF /*777 QObject **/) *QPau
 Constructs a QPauseAnimation. parent is passed to QObject's constructor. The default duration is 0.
 */
 func NewQPauseAnimation_1_(msecs int) *QPauseAnimation {
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", qtrt.FFI_TYPE_POINTER, msecs, convArg1)
 	qtrt.ErrPrint(err, rv)

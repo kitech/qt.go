@@ -150,11 +150,11 @@ func NewQPen_3_(brush QBrush_ITF, width float64) *QPen {
 	if brush != nil && brush.QBrush_PTR() != nil {
 		convArg0 = brush.QBrush_PTR().GetCthis()
 	}
-	// arg: 2, Qt::PenStyle=Elaborated, Qt::PenStyle=Enum,
+	// arg: 2, Qt::PenStyle=Elaborated, Qt::PenStyle=Enum, , Invalid
 	s := 0
-	// arg: 3, Qt::PenCapStyle=Elaborated, Qt::PenCapStyle=Enum,
+	// arg: 3, Qt::PenCapStyle=Elaborated, Qt::PenCapStyle=Enum, , Invalid
 	c := 0
-	// arg: 4, Qt::PenJoinStyle=Elaborated, Qt::PenJoinStyle=Enum,
+	// arg: 4, Qt::PenJoinStyle=Elaborated, Qt::PenJoinStyle=Enum, , Invalid
 	j := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE", qtrt.FFI_TYPE_POINTER, convArg0, width, s, c, j)
 	qtrt.ErrPrint(err, rv)
@@ -176,9 +176,9 @@ func NewQPen_3_1(brush QBrush_ITF, width float64, s int) *QPen {
 	if brush != nil && brush.QBrush_PTR() != nil {
 		convArg0 = brush.QBrush_PTR().GetCthis()
 	}
-	// arg: 3, Qt::PenCapStyle=Elaborated, Qt::PenCapStyle=Enum,
+	// arg: 3, Qt::PenCapStyle=Elaborated, Qt::PenCapStyle=Enum, , Invalid
 	c := 0
-	// arg: 4, Qt::PenJoinStyle=Elaborated, Qt::PenJoinStyle=Enum,
+	// arg: 4, Qt::PenJoinStyle=Elaborated, Qt::PenJoinStyle=Enum, , Invalid
 	j := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE", qtrt.FFI_TYPE_POINTER, convArg0, width, s, c, j)
 	qtrt.ErrPrint(err, rv)
@@ -200,7 +200,7 @@ func NewQPen_3_2(brush QBrush_ITF, width float64, s int, c int) *QPen {
 	if brush != nil && brush.QBrush_PTR() != nil {
 		convArg0 = brush.QBrush_PTR().GetCthis()
 	}
-	// arg: 4, Qt::PenJoinStyle=Elaborated, Qt::PenJoinStyle=Enum,
+	// arg: 4, Qt::PenJoinStyle=Elaborated, Qt::PenJoinStyle=Enum, , Invalid
 	j := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE", qtrt.FFI_TYPE_POINTER, convArg0, width, s, c, j)
 	qtrt.ErrPrint(err, rv)

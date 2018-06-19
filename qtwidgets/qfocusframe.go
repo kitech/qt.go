@@ -135,7 +135,7 @@ The focus frame will not monitor parent for updates but rather can be placed man
 See also QFocusFrame::setWidget().
 */
 func NewQFocusFrame__() *QFocusFrame {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusFrameC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

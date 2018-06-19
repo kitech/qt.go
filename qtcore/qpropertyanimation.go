@@ -120,7 +120,7 @@ func NewQPropertyAnimation(parent QObject_ITF /*777 QObject **/) *QPropertyAnima
 Construct a QPropertyAnimation object. parent is passed to QObject's constructor.
 */
 func NewQPropertyAnimation__() *QPropertyAnimation {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +174,7 @@ func NewQPropertyAnimation_1_(target QObject_ITF /*777 QObject **/, propertyName
 	if propertyName != nil && propertyName.QByteArray_PTR() != nil {
 		convArg1 = propertyName.QByteArray_PTR().GetCthis()
 	}
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

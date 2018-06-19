@@ -113,9 +113,9 @@ See also acquire() and key().
 func NewQSystemSemaphore__(key string) *QSystemSemaphore {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	initialValue := int(0)
-	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum,
+	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphoreC2ERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, convArg0, initialValue, mode)
 	qtrt.ErrPrint(err, rv)
@@ -145,7 +145,7 @@ See also acquire() and key().
 func NewQSystemSemaphore__1(key string, initialValue int) *QSystemSemaphore {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum,
+	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphoreC2ERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, convArg0, initialValue, mode)
 	qtrt.ErrPrint(err, rv)
@@ -199,9 +199,9 @@ See also QSystemSemaphore() and key().
 func (this *QSystemSemaphore) SetKey__(key string) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	initialValue := int(0)
-	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum,
+	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, initialValue, mode)
 	qtrt.ErrPrint(err, rv)
@@ -220,7 +220,7 @@ See also QSystemSemaphore() and key().
 func (this *QSystemSemaphore) SetKey__1(key string, initialValue int) {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum,
+	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, initialValue, mode)
 	qtrt.ErrPrint(err, rv)
@@ -328,7 +328,7 @@ Ten new resources are now guarded by the semaphore, in addition to the five that
 See also acquire().
 */
 func (this *QSystemSemaphore) Release__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore7releaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	qtrt.ErrPrint(err, rv)

@@ -574,7 +574,7 @@ func (this *QTextCharFormat) SetFontStyleHint(hint int, strategy int) {
 
  */
 func (this *QTextCharFormat) SetFontStyleHint__(hint int) {
-	// arg: 1, QFont::StyleStrategy=Elaborated, QFont::StyleStrategy=Enum,
+	// arg: 1, QFont::StyleStrategy=Elaborated, QFont::StyleStrategy=Enum, , Invalid
 	strategy := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat16setFontStyleHintEN5QFont9StyleHintENS0_13StyleStrategyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, strategy)
 	qtrt.ErrPrint(err, rv)

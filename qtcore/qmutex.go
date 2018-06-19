@@ -99,7 +99,7 @@ Recursive mutexes are slower and take more memory than non-recursive ones.
 See also lock() and unlock().
 */
 func NewQMutex__() *QMutex {
-	// arg: 0, QMutex::RecursionMode=Enum, QMutex::RecursionMode=Enum,
+	// arg: 0, QMutex::RecursionMode=Enum, QMutex::RecursionMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMutexC2ENS_13RecursionModeE", qtrt.FFI_TYPE_POINTER, mode)
 	qtrt.ErrPrint(err, rv)
@@ -179,7 +179,7 @@ Calling this function multiple times on the same mutex from the same thread is a
 See also lock() and unlock().
 */
 func (this *QMutex) TryLock__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	timeout := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMutex7tryLockEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	qtrt.ErrPrint(err, rv)

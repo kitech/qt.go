@@ -110,7 +110,7 @@ func NewQItemSelectionModel(model QAbstractItemModel_ITF /*777 QAbstractItemMode
 Constructs a selection model that operates on the specified item model.
 */
 func NewQItemSelectionModel__() *QItemSelectionModel {
-	// arg: 0, QAbstractItemModel *=Pointer, QAbstractItemModel=Record,
+	// arg: 0, QAbstractItemModel *=Pointer, QAbstractItemModel=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModelC2EP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -335,7 +335,7 @@ This function was introduced in  Qt 4.2.
 See also selectedIndexes() and selectedColumns().
 */
 func (this *QItemSelectionModel) SelectedRows__() *QModelIndexList /*667*/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12selectedRowsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
@@ -375,7 +375,7 @@ This function was introduced in  Qt 4.2.
 See also selectedIndexes() and selectedRows().
 */
 func (this *QItemSelectionModel) SelectedColumns__() *QModelIndexList /*667*/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	row := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedColumnsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)

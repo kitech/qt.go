@@ -148,13 +148,13 @@ func NewQFileDialog_1(parent QWidget_ITF /*777 QWidget **/, caption string, dire
 Constructs a file dialog with the given parent and widget flags.
 */
 func NewQFileDialog_1_() *QFileDialog {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialogC2EP7QWidgetRK7QStringS4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -176,11 +176,11 @@ func NewQFileDialog_1_1(parent QWidget_ITF /*777 QWidget **/) *QFileDialog {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialogC2EP7QWidgetRK7QStringS4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -204,9 +204,9 @@ func NewQFileDialog_1_2(parent QWidget_ITF /*777 QWidget **/, caption string) *Q
 	}
 	var tmpArg1 = qtcore.NewQString_5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialogC2EP7QWidgetRK7QStringS4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -232,7 +232,7 @@ func NewQFileDialog_1_3(parent QWidget_ITF /*777 QWidget **/, caption string, di
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(directory)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialogC2EP7QWidgetRK7QStringS4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -415,6 +415,25 @@ func (this *QFileDialog) SelectUrl(url qtcore.QUrl_ITF) {
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog9selectUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:118
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] QList<QUrl> selectedUrls() const
+
+/*
+Returns a list of urls containing the selected files in the dialog. If no files are selected, or the mode is not ExistingFiles or ExistingFile, selectedUrls() contains the current path in the viewport.
+
+This function was introduced in  Qt 5.2.
+
+See also selectedNameFilter() and selectUrl().
+*/
+func (this *QFileDialog) SelectedUrls() *qtcore.QUrlList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDialog12selectedUrlsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:120
@@ -833,6 +852,25 @@ func (this *QFileDialog) ResolveSymlinks() bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtWidgets/qfiledialog.h:155
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] QList<QUrl> sidebarUrls() const
+
+/*
+Returns a list of urls that are currently in the sidebar
+
+This function was introduced in  Qt 4.3.
+
+See also setSidebarUrls().
+*/
+func (this *QFileDialog) SidebarUrls() *qtcore.QUrlList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDialog11sidebarUrlsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qfiledialog.h:157
 // index:0
 // Public Visibility=Default Availability=Available
@@ -1185,7 +1223,7 @@ This function was introduced in  Qt 4.5.
 See also options and testOption().
 */
 func (this *QFileDialog) SetOption__(option int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog9setOptionENS_6OptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	qtrt.ErrPrint(err, rv)
@@ -1525,17 +1563,17 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 See also getOpenFileNames(), getSaveFileName(), and getExistingDirectory().
 */
 func (this *QFileDialog) GetOpenFileName__() string {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -1588,15 +1626,15 @@ func (this *QFileDialog) GetOpenFileName__1(parent QWidget_ITF /*777 QWidget **/
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -1651,13 +1689,13 @@ func (this *QFileDialog) GetOpenFileName__2(parent QWidget_ITF /*777 QWidget **/
 	}
 	var tmpArg1 = qtcore.NewQString_5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -1714,11 +1752,11 @@ func (this *QFileDialog) GetOpenFileName__3(parent QWidget_ITF /*777 QWidget **/
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -1777,9 +1815,9 @@ func (this *QFileDialog) GetOpenFileName__4(parent QWidget_ITF /*777 QWidget **/
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -1840,7 +1878,7 @@ func (this *QFileDialog) GetOpenFileName__5(parent QWidget_ITF /*777 QWidget **/
 	var convArg3 = tmpArg3.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -1922,19 +1960,19 @@ This function was introduced in  Qt 5.2.
 See also getOpenFileName(), getOpenFileUrls(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
 func (this *QFileDialog) GetOpenFileUrl__() *qtcore.QUrl /*123*/ {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getOpenFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -1968,17 +2006,17 @@ func (this *QFileDialog) GetOpenFileUrl__1(parent QWidget_ITF /*777 QWidget **/)
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getOpenFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2014,15 +2052,15 @@ func (this *QFileDialog) GetOpenFileUrl__2(parent QWidget_ITF /*777 QWidget **/,
 	}
 	var tmpArg1 = qtcore.NewQString_5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getOpenFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2062,13 +2100,13 @@ func (this *QFileDialog) GetOpenFileUrl__3(parent QWidget_ITF /*777 QWidget **/,
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getOpenFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2110,11 +2148,11 @@ func (this *QFileDialog) GetOpenFileUrl__4(parent QWidget_ITF /*777 QWidget **/,
 	}
 	var tmpArg3 = qtcore.NewQString_5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getOpenFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2158,9 +2196,9 @@ func (this *QFileDialog) GetOpenFileUrl__5(parent QWidget_ITF /*777 QWidget **/,
 	var convArg3 = tmpArg3.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getOpenFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2204,7 +2242,7 @@ func (this *QFileDialog) GetOpenFileUrl__6(parent QWidget_ITF /*777 QWidget **/,
 	var convArg3 = tmpArg3.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getOpenFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2320,17 +2358,17 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 See also getOpenFileName(), getOpenFileNames(), and getExistingDirectory().
 */
 func (this *QFileDialog) GetSaveFileName__() string {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getSaveFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -2385,15 +2423,15 @@ func (this *QFileDialog) GetSaveFileName__1(parent QWidget_ITF /*777 QWidget **/
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getSaveFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -2450,13 +2488,13 @@ func (this *QFileDialog) GetSaveFileName__2(parent QWidget_ITF /*777 QWidget **/
 	}
 	var tmpArg1 = qtcore.NewQString_5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getSaveFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -2515,11 +2553,11 @@ func (this *QFileDialog) GetSaveFileName__3(parent QWidget_ITF /*777 QWidget **/
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getSaveFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -2580,9 +2618,9 @@ func (this *QFileDialog) GetSaveFileName__4(parent QWidget_ITF /*777 QWidget **/
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getSaveFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -2645,7 +2683,7 @@ func (this *QFileDialog) GetSaveFileName__5(parent QWidget_ITF /*777 QWidget **/
 	var convArg3 = tmpArg3.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getSaveFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -2727,19 +2765,19 @@ This function was introduced in  Qt 5.2.
 See also getSaveFileName(), getOpenFileUrl(), getOpenFileUrls(), and getExistingDirectoryUrl().
 */
 func (this *QFileDialog) GetSaveFileUrl__() *qtcore.QUrl /*123*/ {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getSaveFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2773,17 +2811,17 @@ func (this *QFileDialog) GetSaveFileUrl__1(parent QWidget_ITF /*777 QWidget **/)
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getSaveFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2819,15 +2857,15 @@ func (this *QFileDialog) GetSaveFileUrl__2(parent QWidget_ITF /*777 QWidget **/,
 	}
 	var tmpArg1 = qtcore.NewQString_5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getSaveFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2867,13 +2905,13 @@ func (this *QFileDialog) GetSaveFileUrl__3(parent QWidget_ITF /*777 QWidget **/,
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getSaveFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2915,11 +2953,11 @@ func (this *QFileDialog) GetSaveFileUrl__4(parent QWidget_ITF /*777 QWidget **/,
 	}
 	var tmpArg3 = qtcore.NewQString_5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getSaveFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -2963,9 +3001,9 @@ func (this *QFileDialog) GetSaveFileUrl__5(parent QWidget_ITF /*777 QWidget **/,
 	var convArg3 = tmpArg3.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getSaveFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -3009,7 +3047,7 @@ func (this *QFileDialog) GetSaveFileUrl__6(parent QWidget_ITF /*777 QWidget **/,
 	var convArg3 = tmpArg3.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 6, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14getSaveFileUrlEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
 	qtrt.ErrPrint(err, rv)
@@ -3105,13 +3143,13 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 See also getOpenFileName(), getOpenFileNames(), and getSaveFileName().
 */
 func (this *QFileDialog) GetExistingDirectory__() string {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog20getExistingDirectoryEP7QWidgetRK7QStringS4_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	qtrt.ErrPrint(err, rv)
@@ -3158,11 +3196,11 @@ func (this *QFileDialog) GetExistingDirectory__1(parent QWidget_ITF /*777 QWidge
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog20getExistingDirectoryEP7QWidgetRK7QStringS4_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	qtrt.ErrPrint(err, rv)
@@ -3211,9 +3249,9 @@ func (this *QFileDialog) GetExistingDirectory__2(parent QWidget_ITF /*777 QWidge
 	}
 	var tmpArg1 = qtcore.NewQString_5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog20getExistingDirectoryEP7QWidgetRK7QStringS4_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	qtrt.ErrPrint(err, rv)
@@ -3264,7 +3302,7 @@ func (this *QFileDialog) GetExistingDirectory__3(parent QWidget_ITF /*777 QWidge
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog20getExistingDirectoryEP7QWidgetRK7QStringS4_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	qtrt.ErrPrint(err, rv)
@@ -3342,15 +3380,15 @@ This function was introduced in  Qt 5.2.
 See also getExistingDirectory(), getOpenFileUrl(), getOpenFileUrls(), and getSaveFileUrl().
 */
 func (this *QFileDialog) GetExistingDirectoryUrl__() *qtcore.QUrl /*123*/ {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
-	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 4, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 4, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog23getExistingDirectoryUrlEP7QWidgetRK7QStringRK4QUrl6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -3384,13 +3422,13 @@ func (this *QFileDialog) GetExistingDirectoryUrl__1(parent QWidget_ITF /*777 QWi
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
-	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 4, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 4, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog23getExistingDirectoryUrlEP7QWidgetRK7QStringRK4QUrl6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -3426,11 +3464,11 @@ func (this *QFileDialog) GetExistingDirectoryUrl__2(parent QWidget_ITF /*777 QWi
 	}
 	var tmpArg1 = qtcore.NewQString_5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
-	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 4, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 4, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog23getExistingDirectoryUrlEP7QWidgetRK7QStringRK4QUrl6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -3470,9 +3508,9 @@ func (this *QFileDialog) GetExistingDirectoryUrl__3(parent QWidget_ITF /*777 QWi
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
-	// arg: 4, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 4, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog23getExistingDirectoryUrlEP7QWidgetRK7QStringRK4QUrl6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -3512,7 +3550,7 @@ func (this *QFileDialog) GetExistingDirectoryUrl__4(parent QWidget_ITF /*777 QWi
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	// arg: 4, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 4, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog23getExistingDirectoryUrlEP7QWidgetRK7QStringRK4QUrl6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -3623,17 +3661,17 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 See also getOpenFileName(), getSaveFileName(), and getExistingDirectory().
 */
 func (this *QFileDialog) GetOpenFileNames__() *qtcore.QStringList /*123*/ {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog16getOpenFileNamesEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -3685,15 +3723,15 @@ func (this *QFileDialog) GetOpenFileNames__1(parent QWidget_ITF /*777 QWidget **
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog16getOpenFileNamesEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -3747,13 +3785,13 @@ func (this *QFileDialog) GetOpenFileNames__2(parent QWidget_ITF /*777 QWidget **
 	}
 	var tmpArg1 = qtcore.NewQString_5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog16getOpenFileNamesEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -3809,11 +3847,11 @@ func (this *QFileDialog) GetOpenFileNames__3(parent QWidget_ITF /*777 QWidget **
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = qtcore.NewQString_5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog16getOpenFileNamesEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -3871,9 +3909,9 @@ func (this *QFileDialog) GetOpenFileNames__4(parent QWidget_ITF /*777 QWidget **
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = qtcore.NewQString_5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, QString *=Pointer, QString=Record,
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog16getOpenFileNamesEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -3933,12 +3971,367 @@ func (this *QFileDialog) GetOpenFileNames__5(parent QWidget_ITF /*777 QWidget **
 	var convArg3 = tmpArg3.GetCthis()
 	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog16getOpenFileNamesEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
+
+/*
+This is a convenience static function that will return one or more existing files selected by the user. If the user presses Cancel, it returns an empty list.
+
+The function is used similarly to QFileDialog::getOpenFileNames(). In particular parent, caption, dir, filter, selectedFilter and options are used in the exact same way.
+
+The main difference with QFileDialog::getOpenFileNames() comes from the ability offered to the user to select remote files. That's why the return type and the type of dir are respectively QList<QUrl> and QUrl.
+
+The supportedSchemes argument allows to restrict the type of URLs the user will be able to select. It is a way for the application to declare the protocols it will support to fetch the file content. An empty list means that no restriction is applied (the default). Supported for local files ("file" scheme) is implicit and always enabled; it is not necessary to include it in the restriction.
+
+When possible, this static function will use the native file dialog and not a QFileDialog. On platforms which don't support selecting remote files, Qt will allow to select only local files.
+
+This function was introduced in  Qt 5.2.
+
+See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
+*/
+func (this *QFileDialog) GetOpenFileUrls(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string, options int, supportedSchemes qtcore.QStringList_ITF) *qtcore.QUrlList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString_5(caption)
+	var convArg1 = tmpArg1.GetCthis()
+	var convArg2 unsafe.Pointer
+	if dir != nil && dir.QUrl_PTR() != nil {
+		convArg2 = dir.QUrl_PTR().GetCthis()
+	}
+	var tmpArg3 = qtcore.NewQString_5(filter)
+	var convArg3 = tmpArg3.GetCthis()
+	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var convArg4 = tmpArg4.GetCthis()
+	var convArg6 unsafe.Pointer
+	if supportedSchemes != nil && supportedSchemes.QStringList_PTR() != nil {
+		convArg6 = supportedSchemes.QStringList_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileUrlsEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+func QFileDialog_GetOpenFileUrls(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string, options int, supportedSchemes qtcore.QStringList_ITF) *qtcore.QUrlList /*lll*/ {
+	var nilthis *QFileDialog
+	rv := nilthis.GetOpenFileUrls(parent, caption, dir, filter, selectedFilter, options, supportedSchemes)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
+
+/*
+This is a convenience static function that will return one or more existing files selected by the user. If the user presses Cancel, it returns an empty list.
+
+The function is used similarly to QFileDialog::getOpenFileNames(). In particular parent, caption, dir, filter, selectedFilter and options are used in the exact same way.
+
+The main difference with QFileDialog::getOpenFileNames() comes from the ability offered to the user to select remote files. That's why the return type and the type of dir are respectively QList<QUrl> and QUrl.
+
+The supportedSchemes argument allows to restrict the type of URLs the user will be able to select. It is a way for the application to declare the protocols it will support to fetch the file content. An empty list means that no restriction is applied (the default). Supported for local files ("file" scheme) is implicit and always enabled; it is not necessary to include it in the restriction.
+
+When possible, this static function will use the native file dialog and not a QFileDialog. On platforms which don't support selecting remote files, Qt will allow to select only local files.
+
+This function was introduced in  Qt 5.2.
+
+See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
+*/
+func (this *QFileDialog) GetOpenFileUrls__() *qtcore.QUrlList /*lll*/ {
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
+	var convArg0 unsafe.Pointer
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
+	var convArg1 = qtcore.NewQString()
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
+	var convArg2 = qtcore.NewQUrl()
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
+	var convArg3 = qtcore.NewQString()
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
+	var convArg4 = qtcore.NewQString()
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
+	options := 0
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
+	var convArg6 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileUrlsEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
+
+/*
+This is a convenience static function that will return one or more existing files selected by the user. If the user presses Cancel, it returns an empty list.
+
+The function is used similarly to QFileDialog::getOpenFileNames(). In particular parent, caption, dir, filter, selectedFilter and options are used in the exact same way.
+
+The main difference with QFileDialog::getOpenFileNames() comes from the ability offered to the user to select remote files. That's why the return type and the type of dir are respectively QList<QUrl> and QUrl.
+
+The supportedSchemes argument allows to restrict the type of URLs the user will be able to select. It is a way for the application to declare the protocols it will support to fetch the file content. An empty list means that no restriction is applied (the default). Supported for local files ("file" scheme) is implicit and always enabled; it is not necessary to include it in the restriction.
+
+When possible, this static function will use the native file dialog and not a QFileDialog. On platforms which don't support selecting remote files, Qt will allow to select only local files.
+
+This function was introduced in  Qt 5.2.
+
+See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
+*/
+func (this *QFileDialog) GetOpenFileUrls__1(parent QWidget_ITF /*777 QWidget **/) *qtcore.QUrlList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
+	var convArg1 = qtcore.NewQString()
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
+	var convArg2 = qtcore.NewQUrl()
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
+	var convArg3 = qtcore.NewQString()
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
+	var convArg4 = qtcore.NewQString()
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
+	options := 0
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
+	var convArg6 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileUrlsEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
+
+/*
+This is a convenience static function that will return one or more existing files selected by the user. If the user presses Cancel, it returns an empty list.
+
+The function is used similarly to QFileDialog::getOpenFileNames(). In particular parent, caption, dir, filter, selectedFilter and options are used in the exact same way.
+
+The main difference with QFileDialog::getOpenFileNames() comes from the ability offered to the user to select remote files. That's why the return type and the type of dir are respectively QList<QUrl> and QUrl.
+
+The supportedSchemes argument allows to restrict the type of URLs the user will be able to select. It is a way for the application to declare the protocols it will support to fetch the file content. An empty list means that no restriction is applied (the default). Supported for local files ("file" scheme) is implicit and always enabled; it is not necessary to include it in the restriction.
+
+When possible, this static function will use the native file dialog and not a QFileDialog. On platforms which don't support selecting remote files, Qt will allow to select only local files.
+
+This function was introduced in  Qt 5.2.
+
+See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
+*/
+func (this *QFileDialog) GetOpenFileUrls__2(parent QWidget_ITF /*777 QWidget **/, caption string) *qtcore.QUrlList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString_5(caption)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
+	var convArg2 = qtcore.NewQUrl()
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
+	var convArg3 = qtcore.NewQString()
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
+	var convArg4 = qtcore.NewQString()
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
+	options := 0
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
+	var convArg6 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileUrlsEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
+
+/*
+This is a convenience static function that will return one or more existing files selected by the user. If the user presses Cancel, it returns an empty list.
+
+The function is used similarly to QFileDialog::getOpenFileNames(). In particular parent, caption, dir, filter, selectedFilter and options are used in the exact same way.
+
+The main difference with QFileDialog::getOpenFileNames() comes from the ability offered to the user to select remote files. That's why the return type and the type of dir are respectively QList<QUrl> and QUrl.
+
+The supportedSchemes argument allows to restrict the type of URLs the user will be able to select. It is a way for the application to declare the protocols it will support to fetch the file content. An empty list means that no restriction is applied (the default). Supported for local files ("file" scheme) is implicit and always enabled; it is not necessary to include it in the restriction.
+
+When possible, this static function will use the native file dialog and not a QFileDialog. On platforms which don't support selecting remote files, Qt will allow to select only local files.
+
+This function was introduced in  Qt 5.2.
+
+See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
+*/
+func (this *QFileDialog) GetOpenFileUrls__3(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF) *qtcore.QUrlList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString_5(caption)
+	var convArg1 = tmpArg1.GetCthis()
+	var convArg2 unsafe.Pointer
+	if dir != nil && dir.QUrl_PTR() != nil {
+		convArg2 = dir.QUrl_PTR().GetCthis()
+	}
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
+	var convArg3 = qtcore.NewQString()
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
+	var convArg4 = qtcore.NewQString()
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
+	options := 0
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
+	var convArg6 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileUrlsEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
+
+/*
+This is a convenience static function that will return one or more existing files selected by the user. If the user presses Cancel, it returns an empty list.
+
+The function is used similarly to QFileDialog::getOpenFileNames(). In particular parent, caption, dir, filter, selectedFilter and options are used in the exact same way.
+
+The main difference with QFileDialog::getOpenFileNames() comes from the ability offered to the user to select remote files. That's why the return type and the type of dir are respectively QList<QUrl> and QUrl.
+
+The supportedSchemes argument allows to restrict the type of URLs the user will be able to select. It is a way for the application to declare the protocols it will support to fetch the file content. An empty list means that no restriction is applied (the default). Supported for local files ("file" scheme) is implicit and always enabled; it is not necessary to include it in the restriction.
+
+When possible, this static function will use the native file dialog and not a QFileDialog. On platforms which don't support selecting remote files, Qt will allow to select only local files.
+
+This function was introduced in  Qt 5.2.
+
+See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
+*/
+func (this *QFileDialog) GetOpenFileUrls__4(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string) *qtcore.QUrlList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString_5(caption)
+	var convArg1 = tmpArg1.GetCthis()
+	var convArg2 unsafe.Pointer
+	if dir != nil && dir.QUrl_PTR() != nil {
+		convArg2 = dir.QUrl_PTR().GetCthis()
+	}
+	var tmpArg3 = qtcore.NewQString_5(filter)
+	var convArg3 = tmpArg3.GetCthis()
+	// arg: 4, QString *=Pointer, QString=Record, , Invalid
+	var convArg4 = qtcore.NewQString()
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
+	options := 0
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
+	var convArg6 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileUrlsEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
+
+/*
+This is a convenience static function that will return one or more existing files selected by the user. If the user presses Cancel, it returns an empty list.
+
+The function is used similarly to QFileDialog::getOpenFileNames(). In particular parent, caption, dir, filter, selectedFilter and options are used in the exact same way.
+
+The main difference with QFileDialog::getOpenFileNames() comes from the ability offered to the user to select remote files. That's why the return type and the type of dir are respectively QList<QUrl> and QUrl.
+
+The supportedSchemes argument allows to restrict the type of URLs the user will be able to select. It is a way for the application to declare the protocols it will support to fetch the file content. An empty list means that no restriction is applied (the default). Supported for local files ("file" scheme) is implicit and always enabled; it is not necessary to include it in the restriction.
+
+When possible, this static function will use the native file dialog and not a QFileDialog. On platforms which don't support selecting remote files, Qt will allow to select only local files.
+
+This function was introduced in  Qt 5.2.
+
+See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
+*/
+func (this *QFileDialog) GetOpenFileUrls__5(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string) *qtcore.QUrlList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString_5(caption)
+	var convArg1 = tmpArg1.GetCthis()
+	var convArg2 unsafe.Pointer
+	if dir != nil && dir.QUrl_PTR() != nil {
+		convArg2 = dir.QUrl_PTR().GetCthis()
+	}
+	var tmpArg3 = qtcore.NewQString_5(filter)
+	var convArg3 = tmpArg3.GetCthis()
+	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var convArg4 = tmpArg4.GetCthis()
+	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
+	options := 0
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
+	var convArg6 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileUrlsEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
+
+/*
+This is a convenience static function that will return one or more existing files selected by the user. If the user presses Cancel, it returns an empty list.
+
+The function is used similarly to QFileDialog::getOpenFileNames(). In particular parent, caption, dir, filter, selectedFilter and options are used in the exact same way.
+
+The main difference with QFileDialog::getOpenFileNames() comes from the ability offered to the user to select remote files. That's why the return type and the type of dir are respectively QList<QUrl> and QUrl.
+
+The supportedSchemes argument allows to restrict the type of URLs the user will be able to select. It is a way for the application to declare the protocols it will support to fetch the file content. An empty list means that no restriction is applied (the default). Supported for local files ("file" scheme) is implicit and always enabled; it is not necessary to include it in the restriction.
+
+When possible, this static function will use the native file dialog and not a QFileDialog. On platforms which don't support selecting remote files, Qt will allow to select only local files.
+
+This function was introduced in  Qt 5.2.
+
+See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
+*/
+func (this *QFileDialog) GetOpenFileUrls__6(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string, options int) *qtcore.QUrlList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if parent != nil && parent.QWidget_PTR() != nil {
+		convArg0 = parent.QWidget_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString_5(caption)
+	var convArg1 = tmpArg1.GetCthis()
+	var convArg2 unsafe.Pointer
+	if dir != nil && dir.QUrl_PTR() != nil {
+		convArg2 = dir.QUrl_PTR().GetCthis()
+	}
+	var tmpArg3 = qtcore.NewQString_5(filter)
+	var convArg3 = tmpArg3.GetCthis()
+	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var convArg4 = tmpArg4.GetCthis()
+	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
+	var convArg6 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileUrlsEP7QWidgetRK7QStringRK4QUrlS4_PS2_6QFlagsINS_6OptionEERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options, convArg6)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
 	return rv2
 }
 

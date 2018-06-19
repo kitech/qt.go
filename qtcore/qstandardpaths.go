@@ -152,7 +152,7 @@ The full path to the first file or directory (depending on options) found is ret
 func (this *QStandardPaths) Locate__(type_ int, fileName string) string {
 	var tmpArg1 = NewQString_5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QStandardPaths::LocateOptions=Typedef, QStandardPaths::LocateOptions=Typedef, QFlags<QStandardPaths::LocateOption>
+	// arg: 2, QStandardPaths::LocateOptions=Typedef, QStandardPaths::LocateOptions=Typedef, QFlags<QStandardPaths::LocateOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths6locateENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, options)
 	qtrt.ErrPrint(err, rv)
@@ -204,7 +204,7 @@ Returns the list of all the files that were found.
 func (this *QStandardPaths) LocateAll__(type_ int, fileName string) *QStringList /*123*/ {
 	var tmpArg1 = NewQString_5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QStandardPaths::LocateOptions=Typedef, QStandardPaths::LocateOptions=Typedef, QFlags<QStandardPaths::LocateOption>
+	// arg: 2, QStandardPaths::LocateOptions=Typedef, QStandardPaths::LocateOptions=Typedef, QFlags<QStandardPaths::LocateOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths9locateAllENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, options)
 	qtrt.ErrPrint(err, rv)
@@ -294,7 +294,7 @@ Returns the absolute file path to the executable, or an empty string if not foun
 func (this *QStandardPaths) FindExecutable__(executableName string) string {
 	var tmpArg0 = NewQString_5(executableName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QStringList &=LValueReference, QStringList=Record,
+	// arg: 1, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

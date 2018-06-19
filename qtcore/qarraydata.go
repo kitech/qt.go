@@ -176,7 +176,7 @@ func QArrayData_Allocate(objectSize uint, alignment uint, capacity uint, options
 
  */
 func (this *QArrayData) Allocate__(objectSize uint, alignment uint, capacity uint) *QArrayData /*777 QArrayData **/ {
-	// arg: 3, QArrayData::AllocationOptions=Typedef, QArrayData::AllocationOptions=Typedef, QFlags<QArrayData::AllocationOption>
+	// arg: 3, QArrayData::AllocationOptions=Typedef, QArrayData::AllocationOptions=Typedef, QFlags<QArrayData::AllocationOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QArrayData8allocateEmmm6QFlagsINS_16AllocationOptionEE", qtrt.FFI_TYPE_POINTER, objectSize, alignment, capacity, options)
 	qtrt.ErrPrint(err, rv)

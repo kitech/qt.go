@@ -251,7 +251,7 @@ Moves the cursor to the absolute position in the document specified by pos using
 See also position(), movePosition(), and anchor().
 */
 func (this *QTextCursor) SetPosition__(pos int) {
-	// arg: 1, QTextCursor::MoveMode=Enum, QTextCursor::MoveMode=Enum,
+	// arg: 1, QTextCursor::MoveMode=Enum, QTextCursor::MoveMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11setPositionEiNS_8MoveModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, mode)
 	qtrt.ErrPrint(err, rv)
@@ -412,9 +412,9 @@ If mode is KeepAnchor, the cursor selects the text it moves over. This is the sa
 See also setVisualNavigation().
 */
 func (this *QTextCursor) MovePosition__(op int) bool {
-	// arg: 1, QTextCursor::MoveMode=Enum, QTextCursor::MoveMode=Enum,
+	// arg: 1, QTextCursor::MoveMode=Enum, QTextCursor::MoveMode=Enum, , Invalid
 	arg1 := 0
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor12movePositionENS_13MoveOperationENS_8MoveModeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), op, arg1, n)
 	qtrt.ErrPrint(err, rv)
@@ -438,7 +438,7 @@ If mode is KeepAnchor, the cursor selects the text it moves over. This is the sa
 See also setVisualNavigation().
 */
 func (this *QTextCursor) MovePosition__1(op int, arg1 int) bool {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor12movePositionENS_13MoveOperationENS_8MoveModeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), op, arg1, n)
 	qtrt.ErrPrint(err, rv)
@@ -1365,7 +1365,7 @@ func (this *QTextCursor) InsertImage_3_(image QImage_ITF) {
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()
 	}
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK6QImageRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

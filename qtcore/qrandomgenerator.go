@@ -89,7 +89,7 @@ func NewQRandomGenerator(seedValue uint) *QRandomGenerator {
 
  */
 func NewQRandomGenerator__() *QRandomGenerator {
-	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int
+	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int, UInt
 	seedValue := uint(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2Ej", qtrt.FFI_TYPE_POINTER, seedValue)
 	qtrt.ErrPrint(err, rv)
@@ -327,7 +327,7 @@ func (this *QRandomGenerator) Seed(s uint) {
 
  */
 func (this *QRandomGenerator) Seed__() {
-	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int
+	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int, UInt
 	s := uint(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator4seedEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), s)
 	qtrt.ErrPrint(err, rv)

@@ -407,7 +407,7 @@ The framebuffer specified by fboId will be bound automatically.
 See also QOpenGLContext::swapBuffers() and QOpenGLFramebufferObject::handle().
 */
 func (this *QSGAbstractRenderer) RenderScene__() {
-	// arg: 0, uint=Typedef, uint=Typedef, unsigned int
+	// arg: 0, uint=Typedef, uint=Typedef, unsigned int, UInt
 	fboId := uint(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer11renderSceneEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fboId)
 	qtrt.ErrPrint(err, rv)
@@ -455,7 +455,7 @@ func NewQSGAbstractRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSGAbs
 
  */
 func NewQSGAbstractRenderer__() *QSGAbstractRenderer {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRendererC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

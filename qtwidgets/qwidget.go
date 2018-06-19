@@ -321,9 +321,9 @@ Note that the X11 version of Qt may not be able to deliver all combinations of s
 See also windowFlags.
 */
 func NewQWidget__() *QWidget {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidgetC2EPS_6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
@@ -355,7 +355,7 @@ func NewQWidget__1(parent QWidget_ITF /*777 QWidget **/) *QWidget {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidgetC2EPS_6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
@@ -1941,11 +1941,11 @@ func (this *QWidget) Render__(target qtgui.QPaintDevice_ITF /*777 QPaintDevice *
 	if target != nil && target.QPaintDevice_PTR() != nil {
 		convArg0 = target.QPaintDevice_PTR().GetCthis()
 	}
-	// arg: 1, const QPoint &=LValueReference, QPoint=Record,
+	// arg: 1, const QPoint &=LValueReference, QPoint=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QRegion &=LValueReference, QRegion=Record,
+	// arg: 2, const QRegion &=LValueReference, QRegion=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>, Unexposed
 	renderFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP12QPaintDeviceRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
 	qtrt.ErrPrint(err, rv)
@@ -1992,9 +1992,9 @@ func (this *QWidget) Render__1(target qtgui.QPaintDevice_ITF /*777 QPaintDevice 
 	if targetOffset != nil && targetOffset.QPoint_PTR() != nil {
 		convArg1 = targetOffset.QPoint_PTR().GetCthis()
 	}
-	// arg: 2, const QRegion &=LValueReference, QRegion=Record,
+	// arg: 2, const QRegion &=LValueReference, QRegion=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>, Unexposed
 	renderFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP12QPaintDeviceRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
 	qtrt.ErrPrint(err, rv)
@@ -2045,7 +2045,7 @@ func (this *QWidget) Render__2(target qtgui.QPaintDevice_ITF /*777 QPaintDevice 
 	if sourceRegion != nil && sourceRegion.QRegion_PTR() != nil {
 		convArg2 = sourceRegion.QRegion_PTR().GetCthis()
 	}
-	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>, Unexposed
 	renderFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP12QPaintDeviceRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
 	qtrt.ErrPrint(err, rv)
@@ -2137,11 +2137,11 @@ func (this *QWidget) Render_1_(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
 	}
-	// arg: 1, const QPoint &=LValueReference, QPoint=Record,
+	// arg: 1, const QPoint &=LValueReference, QPoint=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QRegion &=LValueReference, QRegion=Record,
+	// arg: 2, const QRegion &=LValueReference, QRegion=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>, Unexposed
 	renderFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP8QPainterRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
 	qtrt.ErrPrint(err, rv)
@@ -2188,9 +2188,9 @@ func (this *QWidget) Render_1_1(painter qtgui.QPainter_ITF /*777 QPainter **/, t
 	if targetOffset != nil && targetOffset.QPoint_PTR() != nil {
 		convArg1 = targetOffset.QPoint_PTR().GetCthis()
 	}
-	// arg: 2, const QRegion &=LValueReference, QRegion=Record,
+	// arg: 2, const QRegion &=LValueReference, QRegion=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>, Unexposed
 	renderFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP8QPainterRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
 	qtrt.ErrPrint(err, rv)
@@ -2241,7 +2241,7 @@ func (this *QWidget) Render_1_2(painter qtgui.QPainter_ITF /*777 QPainter **/, t
 	if sourceRegion != nil && sourceRegion.QRegion_PTR() != nil {
 		convArg2 = sourceRegion.QRegion_PTR().GetCthis()
 	}
-	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>
+	// arg: 3, QWidget::RenderFlags=Typedef, QWidget::RenderFlags=Typedef, QFlags<QWidget::RenderFlag>, Unexposed
 	renderFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6renderEP8QPainterRK6QPointRK7QRegion6QFlagsINS_10RenderFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, renderFlags)
 	qtrt.ErrPrint(err, rv)
@@ -2288,7 +2288,7 @@ This function was introduced in  Qt 5.0.
 See also render() and QPixmap.
 */
 func (this *QWidget) Grab__() *qtgui.QPixmap /*123*/ {
-	// arg: 0, const QRect &=LValueReference, QRect=Record,
+	// arg: 0, const QRect &=LValueReference, QRect=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget4grabERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2378,7 +2378,7 @@ This function was introduced in  Qt 4.6.
 See also ungrabGesture() and QGestureEvent.
 */
 func (this *QWidget) GrabGesture__(type_ int) {
-	// arg: 1, Qt::GestureFlags=Elaborated, Qt::GestureFlags=Typedef, QFlags<Qt::GestureFlag>
+	// arg: 1, Qt::GestureFlags=Elaborated, Qt::GestureFlags=Typedef, QFlags<Qt::GestureFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget11grabGestureEN2Qt11GestureTypeE6QFlagsINS0_11GestureFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, flags)
 	qtrt.ErrPrint(err, rv)
@@ -3351,7 +3351,7 @@ func (this *QWidget) GrabShortcut__(key qtgui.QKeySequence_ITF) int {
 	if key != nil && key.QKeySequence_PTR() != nil {
 		convArg0 = key.QKeySequence_PTR().GetCthis()
 	}
-	// arg: 1, Qt::ShortcutContext=Elaborated, Qt::ShortcutContext=Enum,
+	// arg: 1, Qt::ShortcutContext=Elaborated, Qt::ShortcutContext=Enum, , Invalid
 	context := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget12grabShortcutERK12QKeySequenceN2Qt15ShortcutContextE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, context)
 	qtrt.ErrPrint(err, rv)
@@ -3405,7 +3405,7 @@ Warning: You should not normally need to use this function since Qt's shortcut s
 See also grabShortcut() and releaseShortcut().
 */
 func (this *QWidget) SetShortcutEnabled__(id int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enable := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget18setShortcutEnabledEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, enable)
 	qtrt.ErrPrint(err, rv)
@@ -3441,7 +3441,7 @@ This function was introduced in  Qt 4.2.
 See also grabShortcut() and releaseShortcut().
 */
 func (this *QWidget) SetShortcutAutoRepeat__(id int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enable := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget21setShortcutAutoRepeatEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, enable)
 	qtrt.ErrPrint(err, rv)
@@ -4898,7 +4898,7 @@ This function was introduced in  Qt 5.9.
 See also setWindowFlags(), windowFlags(), and windowType().
 */
 func (this *QWidget) SetWindowFlag__(arg0 int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget13setWindowFlagEN2Qt10WindowTypeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, on)
 	qtrt.ErrPrint(err, rv)
@@ -5016,7 +5016,7 @@ Sets the attribute attribute on this widget if on is true; otherwise clears the 
 See also testAttribute().
 */
 func (this *QWidget) SetAttribute__(arg0 int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget12setAttributeEN2Qt15WidgetAttributeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, on)
 	qtrt.ErrPrint(err, rv)
@@ -5232,9 +5232,9 @@ func (this *QWidget) CreateWindowContainer__(window qtgui.QWindow_ITF /*777 QWin
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg0 = window.QWindow_PTR().GetCthis()
 	}
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget21createWindowContainerEP7QWindowPS_6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, flags)
 	qtrt.ErrPrint(err, rv)
@@ -5274,7 +5274,7 @@ func (this *QWidget) CreateWindowContainer__1(window qtgui.QWindow_ITF /*777 QWi
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>
+	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget21createWindowContainerEP7QWindowPS_6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, flags)
 	qtrt.ErrPrint(err, rv)
@@ -6198,11 +6198,11 @@ The QWidget constructor calls create(0,true,true) to create a window for this wi
 See also createWindowContainer() and QWindow::fromWinId().
 */
 func (this *QWidget) Create__() {
-	// arg: 0, WId=Typedef, WId=Typedef, ::quintptr
+	// arg: 0, WId=Typedef, WId=Typedef, ::quintptr, Elaborated
 	var arg0 unsafe.Pointer
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	initializeWindow := true
-	// arg: 2, bool=Bool, =Invalid,
+	// arg: 2, bool=Bool, =Invalid, , Invalid
 	destroyOldWindow := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6createEybb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, initializeWindow, destroyOldWindow)
 	qtrt.ErrPrint(err, rv)
@@ -6227,9 +6227,9 @@ The QWidget constructor calls create(0,true,true) to create a window for this wi
 See also createWindowContainer() and QWindow::fromWinId().
 */
 func (this *QWidget) Create__1(arg0 uint64) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	initializeWindow := true
-	// arg: 2, bool=Bool, =Invalid,
+	// arg: 2, bool=Bool, =Invalid, , Invalid
 	destroyOldWindow := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6createEybb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, initializeWindow, destroyOldWindow)
 	qtrt.ErrPrint(err, rv)
@@ -6254,7 +6254,7 @@ The QWidget constructor calls create(0,true,true) to create a window for this wi
 See also createWindowContainer() and QWindow::fromWinId().
 */
 func (this *QWidget) Create__2(arg0 uint64, initializeWindow bool) {
-	// arg: 2, bool=Bool, =Invalid,
+	// arg: 2, bool=Bool, =Invalid, , Invalid
 	destroyOldWindow := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6createEybb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, initializeWindow, destroyOldWindow)
 	qtrt.ErrPrint(err, rv)
@@ -6290,9 +6290,9 @@ destroy() calls itself recursively for all the child widgets, passing destroySub
 This function is usually called from the QWidget destructor.
 */
 func (this *QWidget) Destroy__() {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	destroyWindow := true
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	destroySubWindows := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget7destroyEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), destroyWindow, destroySubWindows)
 	qtrt.ErrPrint(err, rv)
@@ -6311,7 +6311,7 @@ destroy() calls itself recursively for all the child widgets, passing destroySub
 This function is usually called from the QWidget destructor.
 */
 func (this *QWidget) Destroy__1(destroyWindow bool) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	destroySubWindows := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget7destroyEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), destroyWindow, destroySubWindows)
 	qtrt.ErrPrint(err, rv)

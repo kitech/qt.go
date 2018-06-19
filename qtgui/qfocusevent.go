@@ -88,7 +88,7 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 
  */
 func NewQFocusEvent__(type_ int) *QFocusEvent {
-	// arg: 1, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum,
+	// arg: 1, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum, , Invalid
 	reason := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, type_, reason)
 	qtrt.ErrPrint(err, rv)

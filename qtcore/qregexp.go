@@ -115,9 +115,9 @@ See also isValid() and errorString().
 func NewQRegExp_1_(pattern string) *QRegExp {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
-	// arg: 2, QRegExp::PatternSyntax=Enum, QRegExp::PatternSyntax=Enum,
+	// arg: 2, QRegExp::PatternSyntax=Enum, QRegExp::PatternSyntax=Enum, , Invalid
 	syntax := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExpC2ERK7QStringN2Qt15CaseSensitivityENS_13PatternSyntaxE", qtrt.FFI_TYPE_POINTER, convArg0, cs, syntax)
 	qtrt.ErrPrint(err, rv)
@@ -139,7 +139,7 @@ See also isValid() and errorString().
 func NewQRegExp_1_1(pattern string, cs int) *QRegExp {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QRegExp::PatternSyntax=Enum, QRegExp::PatternSyntax=Enum,
+	// arg: 2, QRegExp::PatternSyntax=Enum, QRegExp::PatternSyntax=Enum, , Invalid
 	syntax := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExpC2ERK7QStringN2Qt15CaseSensitivityENS_13PatternSyntaxE", qtrt.FFI_TYPE_POINTER, convArg0, cs, syntax)
 	qtrt.ErrPrint(err, rv)
@@ -534,9 +534,9 @@ See also lastIndexIn() and exactMatch().
 func (this *QRegExp) IndexIn__(str string) int {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	offset := int(0)
-	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum,
+	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum, , Invalid
 	caretMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp7indexInERK7QStringiNS_9CaretModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
 	qtrt.ErrPrint(err, rv)
@@ -581,7 +581,7 @@ See also lastIndexIn() and exactMatch().
 func (this *QRegExp) IndexIn__1(str string, offset int) int {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum,
+	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum, , Invalid
 	caretMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp7indexInERK7QStringiNS_9CaretModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
 	qtrt.ErrPrint(err, rv)
@@ -635,9 +635,9 @@ See also indexIn() and exactMatch().
 func (this *QRegExp) LastIndexIn__(str string) int {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	offset := int(-1)
-	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum,
+	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum, , Invalid
 	caretMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp11lastIndexInERK7QStringiNS_9CaretModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
 	qtrt.ErrPrint(err, rv)
@@ -665,7 +665,7 @@ See also indexIn() and exactMatch().
 func (this *QRegExp) LastIndexIn__1(str string, offset int) int {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum,
+	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum, , Invalid
 	caretMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp11lastIndexInERK7QStringiNS_9CaretModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
 	qtrt.ErrPrint(err, rv)
@@ -872,7 +872,7 @@ The order of elements matched by cap() is as follows. The first element, cap(0),
 See also capturedTexts() and pos().
 */
 func (this *QRegExp) Cap__() string {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp3capEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
@@ -938,7 +938,7 @@ The order of elements matched by cap() is as follows. The first element, cap(0),
 See also capturedTexts() and pos().
 */
 func (this *QRegExp) Cap_1_() string {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp3capEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
@@ -1001,7 +1001,7 @@ For zero-length matches, pos() always returns -1. (For example, if cap(4) would 
 See also cap() and capturedTexts().
 */
 func (this *QRegExp) Pos__() int {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp3posEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
@@ -1061,7 +1061,7 @@ For zero-length matches, pos() always returns -1. (For example, if cap(4) would 
 See also cap() and capturedTexts().
 */
 func (this *QRegExp) Pos_1_() int {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp3posEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)

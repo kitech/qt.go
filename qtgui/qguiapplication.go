@@ -125,7 +125,7 @@ Note: argc and argv might be changed as Qt removes command line arguments that i
 */
 func NewQGuiApplication__(argc int, argv []string) *QGuiApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	arg2 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
 	qtrt.ErrPrint(err, rv)

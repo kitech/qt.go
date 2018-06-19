@@ -114,7 +114,7 @@ If a family exists in several foundries, the returned name for that font is in t
 See also writingSystems().
 */
 func (this *QFontDatabase) Families__() *qtcore.QStringList /*123*/ {
-	// arg: 0, QFontDatabase::WritingSystem=Enum, QFontDatabase::WritingSystem=Enum,
+	// arg: 0, QFontDatabase::WritingSystem=Enum, QFontDatabase::WritingSystem=Enum, , Invalid
 	writingSystem := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase8familiesENS_13WritingSystemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), writingSystem)
 	qtrt.ErrPrint(err, rv)
@@ -238,7 +238,7 @@ See also isScalable() and isSmoothlyScalable().
 func (this *QFontDatabase) IsBitmapScalable__(family string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -278,7 +278,7 @@ See also isScalable() and isBitmapScalable().
 func (this *QFontDatabase) IsSmoothlyScalable__(family string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -318,7 +318,7 @@ See also isBitmapScalable() and isSmoothlyScalable().
 func (this *QFontDatabase) IsScalable__(family string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase10isScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -354,7 +354,7 @@ Returns true if the font that has family family and style style is fixed pitch; 
 func (this *QFontDatabase) IsFixedPitch__(family string) bool {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

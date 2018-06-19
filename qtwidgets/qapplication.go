@@ -154,7 +154,7 @@ See also QCoreApplication::arguments().
 */
 func NewQApplication__(argc int, argv []string) *QApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	arg2 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
 	qtrt.ErrPrint(err, rv)
@@ -419,7 +419,7 @@ func (this *QApplication) SetPalette__(arg0 qtgui.QPalette_ITF) {
 	if arg0 != nil && arg0.QPalette_PTR() != nil {
 		convArg0 = arg0.QPalette_PTR().GetCthis()
 	}
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication10setPaletteERK8QPalettePKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -548,7 +548,7 @@ func (this *QApplication) SetFont__(arg0 qtgui.QFont_ITF) {
 	if arg0 != nil && arg0.QFont_PTR() != nil {
 		convArg0 = arg0.QFont_PTR().GetCthis()
 	}
-	// arg: 1, const char *=Pointer, =Invalid,
+	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication7setFontERK5QFontPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -647,7 +647,7 @@ See also topLevelWidgets() and QWidget::isVisible().
 func (this *QApplication) AllWidgets() *QWidgetList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication10allWidgetsEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
-	rv2 := NewQWidgetListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	rv2 := /*222*/ NewQWidgetListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
 func QApplication_AllWidgets() *QWidgetList /*667*/ {
@@ -684,7 +684,7 @@ See also allWidgets(), QWidget::isWindow(), and QWidget::isHidden().
 func (this *QApplication) TopLevelWidgets() *QWidgetList /*667*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication15topLevelWidgetsEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
-	rv2 := NewQWidgetListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	rv2 := /*222*/ NewQWidgetListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
 func QApplication_TopLevelWidgets() *QWidgetList /*667*/ {
@@ -998,7 +998,7 @@ func (this *QApplication) Alert__(widget QWidget_ITF /*777 QWidget **/) {
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	duration := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication5alertEP7QWidgeti", qtrt.FFI_TYPE_POINTER, convArg0, duration)
 	qtrt.ErrPrint(err, rv)
@@ -1321,7 +1321,7 @@ Note: All effects are disabled on screens running at less than 16-bit color dept
 See also isEffectEnabled(), Qt::UIEffect, and setDesktopSettingsAware().
 */
 func (this *QApplication) SetEffectEnabled__(arg0 int) {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enable := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication16setEffectEnabledEN2Qt8UIEffectEb", qtrt.FFI_TYPE_POINTER, arg0, enable)
 	qtrt.ErrPrint(err, rv)

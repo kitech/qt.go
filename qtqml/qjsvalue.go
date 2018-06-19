@@ -91,7 +91,7 @@ func NewQJSValue(value int) *QJSValue {
 Constructs a new QJSValue with a special value.
 */
 func NewQJSValue__() *QJSValue {
-	// arg: 0, QJSValue::SpecialValue=Enum, QJSValue::SpecialValue=Enum,
+	// arg: 0, QJSValue::SpecialValue=Enum, QJSValue::SpecialValue=Enum, , Invalid
 	value := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2ENS_12SpecialValueE", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)

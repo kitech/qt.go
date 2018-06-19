@@ -117,7 +117,7 @@ func NewQMouseEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *Q
 Constructs a new mouse event transition with the given sourceState.
 */
 func NewQMouseEventTransition__() *QMouseEventTransition {
-	// arg: 0, QState *=Pointer, QState=Record,
+	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -163,7 +163,7 @@ func NewQMouseEventTransition_1_(object qtcore.QObject_ITF /*777 QObject **/, ty
 	if object != nil && object.QObject_PTR() != nil {
 		convArg0 = object.QObject_PTR().GetCthis()
 	}
-	// arg: 3, QState *=Pointer, QState=Record,
+	// arg: 3, QState *=Pointer, QState=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP7QObjectN6QEvent4TypeEN2Qt11MouseButtonEP6QState", qtrt.FFI_TYPE_POINTER, convArg0, type_, button, convArg3)
 	qtrt.ErrPrint(err, rv)

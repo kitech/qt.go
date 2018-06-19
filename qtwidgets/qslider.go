@@ -132,7 +132,7 @@ func NewQSlider(parent QWidget_ITF /*777 QWidget **/) *QSlider {
 Constructs a vertical slider with the given parent.
 */
 func NewQSlider__() *QSlider {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSliderC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -170,7 +170,7 @@ func NewQSlider_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlide
 Constructs a vertical slider with the given parent.
 */
 func NewQSlider_1_(orientation int) *QSlider {
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSliderC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
 	qtrt.ErrPrint(err, rv)

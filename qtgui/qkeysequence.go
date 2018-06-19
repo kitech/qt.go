@@ -110,7 +110,7 @@ Constructs an empty key sequence.
 func NewQKeySequence_1_(key string) *QKeySequence {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum,
+	// arg: 1, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2ERK7QStringNS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -144,11 +144,11 @@ func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
 Constructs an empty key sequence.
 */
 func NewQKeySequence_2_(k1 int) *QKeySequence {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	k2 := int(0)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	k3 := int(0)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	k4 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
 	qtrt.ErrPrint(err, rv)
@@ -166,9 +166,9 @@ func NewQKeySequence_2_(k1 int) *QKeySequence {
 Constructs an empty key sequence.
 */
 func NewQKeySequence_2_1(k1 int, k2 int) *QKeySequence {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	k3 := int(0)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	k4 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
 	qtrt.ErrPrint(err, rv)
@@ -186,7 +186,7 @@ func NewQKeySequence_2_1(k1 int, k2 int) *QKeySequence {
 Constructs an empty key sequence.
 */
 func NewQKeySequence_2_2(k1 int, k2 int, k3 int) *QKeySequence {
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	k4 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
 	qtrt.ErrPrint(err, rv)
@@ -300,7 +300,7 @@ This function was introduced in  Qt 4.1.
 See also fromString().
 */
 func (this *QKeySequence) ToString__() string {
-	// arg: 0, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum,
+	// arg: 0, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence8toStringENS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
@@ -352,7 +352,7 @@ See also toString().
 func (this *QKeySequence) FromString__(str string) *QKeySequence /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum,
+	// arg: 1, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequence10fromStringERK7QStringNS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)

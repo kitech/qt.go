@@ -266,6 +266,69 @@ func (this *QIconEngine) Write(out qtcore.QDataStream_ITF) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qiconengine.h:77
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QList<QSize> availableSizes(QIcon::Mode, QIcon::State) const
+
+/*
+Returns sizes of all images that are contained in the engine for the specific mode and state.
+
+Note: This is a helper method and the actual work is done by the virtual_hook() method, hence this method depends on icon engine support and may not work with all icon engines.
+
+This function was introduced in  Qt 4.5.
+*/
+func (this *QIconEngine) AvailableSizes(mode int, state int) *qtcore.QSizeList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine14availableSizesEN5QIcon4ModeENS0_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, state)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQSizeListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qiconengine.h:77
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QList<QSize> availableSizes(QIcon::Mode, QIcon::State) const
+
+/*
+Returns sizes of all images that are contained in the engine for the specific mode and state.
+
+Note: This is a helper method and the actual work is done by the virtual_hook() method, hence this method depends on icon engine support and may not work with all icon engines.
+
+This function was introduced in  Qt 4.5.
+*/
+func (this *QIconEngine) AvailableSizes__() *qtcore.QSizeList /*lll*/ {
+	// arg: 0, QIcon::Mode=Elaborated, QIcon::Mode=Enum, , Invalid
+	mode := 0
+	// arg: 1, QIcon::State=Elaborated, QIcon::State=Enum, , Invalid
+	state := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine14availableSizesEN5QIcon4ModeENS0_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, state)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQSizeListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qiconengine.h:77
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QList<QSize> availableSizes(QIcon::Mode, QIcon::State) const
+
+/*
+Returns sizes of all images that are contained in the engine for the specific mode and state.
+
+Note: This is a helper method and the actual work is done by the virtual_hook() method, hence this method depends on icon engine support and may not work with all icon engines.
+
+This function was introduced in  Qt 4.5.
+*/
+func (this *QIconEngine) AvailableSizes__1(mode int) *qtcore.QSizeList /*lll*/ {
+	// arg: 1, QIcon::State=Elaborated, QIcon::State=Enum, , Invalid
+	state := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine14availableSizesEN5QIcon4ModeENS0_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, state)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQSizeListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qiconengine.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available

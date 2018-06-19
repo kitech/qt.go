@@ -102,9 +102,9 @@ Create a new QNetworkCookie object, initializing the cookie name to name and its
 A cookie is only valid if it has a name. However, the value is opaque to the application and being empty may have significance to the remote server.
 */
 func NewQNetworkCookie__() *QNetworkCookie {
-	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
-	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QNetworkCookieC2ERK10QByteArrayS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -128,7 +128,7 @@ func NewQNetworkCookie__1(name qtcore.QByteArray_ITF) *QNetworkCookie {
 	if name != nil && name.QByteArray_PTR() != nil {
 		convArg0 = name.QByteArray_PTR().GetCthis()
 	}
-	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QNetworkCookieC2ERK10QByteArrayS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -549,7 +549,7 @@ Returns the raw form of this QNetworkCookie. The QByteArray returned by this fun
 See also parseCookies().
 */
 func (this *QNetworkCookie) ToRawForm__() *qtcore.QByteArray /*123*/ {
-	// arg: 0, QNetworkCookie::RawForm=Enum, QNetworkCookie::RawForm=Enum,
+	// arg: 0, QNetworkCookie::RawForm=Enum, QNetworkCookie::RawForm=Enum, , Invalid
 	form := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QNetworkCookie9toRawFormENS_7RawFormE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), form)
 	qtrt.ErrPrint(err, rv)

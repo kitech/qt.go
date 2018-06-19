@@ -93,7 +93,7 @@ func NewQQuickImageProvider(type_ int, flags int) *QQuickImageProvider {
 Creates an image provider that will provide images of the given type and behave according to the given flags.
 */
 func NewQQuickImageProvider__(type_ int) *QQuickImageProvider {
-	// arg: 1, QQmlImageProviderBase::Flags=Typedef, QQmlImageProviderBase::Flags=Typedef, QFlags<QQmlImageProviderBase::Flag>
+	// arg: 1, QQmlImageProviderBase::Flags=Typedef, QQmlImageProviderBase::Flags=Typedef, QFlags<QQmlImageProviderBase::Flag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProviderC2EN21QQmlImageProviderBase9ImageTypeE6QFlagsINS0_4FlagEE", qtrt.FFI_TYPE_POINTER, type_, flags)
 	qtrt.ErrPrint(err, rv)

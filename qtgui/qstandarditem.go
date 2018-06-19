@@ -156,7 +156,7 @@ func NewQStandardItem_3(rows int, columns int) *QStandardItem {
 
  */
 func NewQStandardItem_3_(rows int) *QStandardItem {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	columns := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemC2Eii", qtrt.FFI_TYPE_POINTER, rows, columns)
 	qtrt.ErrPrint(err, rv)
@@ -209,7 +209,7 @@ Reimplemented from QAbstractItemModel::data().
 See also setData().
 */
 func (this *QStandardItem) Data__() *qtcore.QVariant /*123*/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::UserRole + 1*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem4dataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)
@@ -252,7 +252,7 @@ func (this *QStandardItem) SetData__(value qtcore.QVariant_ITF) {
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg0 = value.QVariant_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::UserRole + 1*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem7setDataERK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	qtrt.ErrPrint(err, rv)
@@ -1114,7 +1114,7 @@ func (this *QStandardItem) Child(row int, column int) *QStandardItem /*777 QStan
 
  */
 func (this *QStandardItem) Child__(row int) *QStandardItem /*777 QStandardItem **/ {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem5childEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -1298,7 +1298,7 @@ func (this *QStandardItem) TakeChild(row int, column int) *QStandardItem /*777 Q
 
  */
 func (this *QStandardItem) TakeChild__(row int) *QStandardItem /*777 QStandardItem **/ {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem9takeChildEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
@@ -1327,7 +1327,7 @@ func (this *QStandardItem) SortChildren(column int, order int) {
 
  */
 func (this *QStandardItem) SortChildren__(column int) {
-	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum,
+	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem12sortChildrenEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	qtrt.ErrPrint(err, rv)

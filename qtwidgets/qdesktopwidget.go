@@ -201,7 +201,7 @@ Returns the index of the screen that contains the largest part of widget, or -1 
 See also primaryScreen.
 */
 func (this *QDesktopWidget) ScreenNumber__() int {
-	// arg: 0, const QWidget *=Pointer, QWidget=Record,
+	// arg: 0, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget12screenNumberEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -259,7 +259,7 @@ If the system uses a virtual desktop, the returned widget will have the geometry
 See also primaryScreen, screenCount, and virtualDesktop.
 */
 func (this *QDesktopWidget) Screen__() *QWidget /*777 QWidget **/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	screen := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidget6screenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
 	qtrt.ErrPrint(err, rv)
@@ -295,7 +295,7 @@ Returns the geometry of the screen with index screen. The default screen is used
 See also screenNumber().
 */
 func (this *QDesktopWidget) ScreenGeometry__() *qtcore.QRect /*123*/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	screen := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget14screenGeometryEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
 	qtrt.ErrPrint(err, rv)
@@ -377,7 +377,7 @@ Returns the available geometry of the screen with index screen. What is availabl
 See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
 */
 func (this *QDesktopWidget) AvailableGeometry__() *qtcore.QRect /*123*/ {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	screen := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget17availableGeometryEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
 	qtrt.ErrPrint(err, rv)

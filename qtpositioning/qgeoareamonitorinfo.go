@@ -96,7 +96,7 @@ Constructs a QGeoAreaMonitorInfo object with the specified name.
 See also name().
 */
 func NewQGeoAreaMonitorInfo__() *QGeoAreaMonitorInfo {
-	// arg: 0, const QString &=LValueReference, QString=Record,
+	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGeoAreaMonitorInfoC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

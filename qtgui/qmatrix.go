@@ -848,7 +848,7 @@ If the matrix is singular (not invertible), the returned matrix is the identity 
 See also isInvertible().
 */
 func (this *QMatrix) Inverted__() *QMatrix /*123*/ {
-	// arg: 0, bool *=Pointer, =Invalid,
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var invertible unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix8invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
 	qtrt.ErrPrint(err, rv)

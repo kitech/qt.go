@@ -155,9 +155,9 @@ func NewQCommandLineOption_2_(name string, description string) *QCommandLineOpti
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(description)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK7QStringS2_S2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -185,7 +185,7 @@ func NewQCommandLineOption_2_1(name string, description string, valueName string
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(valueName)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK7QStringS2_S2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -243,9 +243,9 @@ func NewQCommandLineOption_3_(names QStringList_ITF, description string) *QComma
 	}
 	var tmpArg1 = NewQString_5(description)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -275,7 +275,7 @@ func NewQCommandLineOption_3_1(names QStringList_ITF, description string, valueN
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(valueName)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)

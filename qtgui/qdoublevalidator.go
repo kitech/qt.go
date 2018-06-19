@@ -106,7 +106,7 @@ func NewQDoubleValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleVa
 
  */
 func NewQDoubleValidator__() *QDoubleValidator {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -144,7 +144,7 @@ func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent qtc
 
  */
 func NewQDoubleValidator_1_(bottom float64, top float64, decimals int) *QDoubleValidator {
-	// arg: 3, QObject *=Pointer, QObject=Record,
+	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidatorC2EddiP7QObject", qtrt.FFI_TYPE_POINTER, bottom, top, decimals, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -208,7 +208,7 @@ func (this *QDoubleValidator) SetRange(bottom float64, top float64, decimals int
 
  */
 func (this *QDoubleValidator) SetRange__(bottom float64, top float64) {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	decimals := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDoubleValidator8setRangeEddi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bottom, top, decimals)
 	qtrt.ErrPrint(err, rv)

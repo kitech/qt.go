@@ -115,7 +115,7 @@ func NewQQmlContext__(parent QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlContext {
 	if parent != nil && parent.QQmlEngine_PTR() != nil {
 		convArg0 = parent.QQmlEngine_PTR().GetCthis()
 	}
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContextC2EP10QQmlEngineP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -161,7 +161,7 @@ func NewQQmlContext_1_(parent QQmlContext_ITF /*777 QQmlContext **/) *QQmlContex
 	if parent != nil && parent.QQmlContext_PTR() != nil {
 		convArg0 = parent.QQmlContext_PTR().GetCthis()
 	}
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQmlContextC2EPS_P7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

@@ -124,11 +124,11 @@ func NewQSslKey_1_(encoded qtcore.QByteArray_ITF, algorithm int) *QSslKey {
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
 		convArg0 = encoded.QByteArray_PTR().GetCthis()
 	}
-	// arg: 2, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	// arg: 2, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum, , Invalid
 	format := 0
-	// arg: 3, QSsl::KeyType=Elaborated, QSsl::KeyType=Enum,
+	// arg: 3, QSsl::KeyType=Elaborated, QSsl::KeyType=Enum, , Invalid
 	type_ := 0
-	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg4 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2ERK10QByteArrayN4QSsl12KeyAlgorithmENS3_14EncodingFormatENS3_7KeyTypeES2_", qtrt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -152,9 +152,9 @@ func NewQSslKey_1_1(encoded qtcore.QByteArray_ITF, algorithm int, format int) *Q
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
 		convArg0 = encoded.QByteArray_PTR().GetCthis()
 	}
-	// arg: 3, QSsl::KeyType=Elaborated, QSsl::KeyType=Enum,
+	// arg: 3, QSsl::KeyType=Elaborated, QSsl::KeyType=Enum, , Invalid
 	type_ := 0
-	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg4 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2ERK10QByteArrayN4QSsl12KeyAlgorithmENS3_14EncodingFormatENS3_7KeyTypeES2_", qtrt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -178,7 +178,7 @@ func NewQSslKey_1_2(encoded qtcore.QByteArray_ITF, algorithm int, format int, ty
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
 		convArg0 = encoded.QByteArray_PTR().GetCthis()
 	}
-	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg4 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2ERK10QByteArrayN4QSsl12KeyAlgorithmENS3_14EncodingFormatENS3_7KeyTypeES2_", qtrt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -228,11 +228,11 @@ func NewQSslKey_2_(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm in
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
 	}
-	// arg: 2, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum,
+	// arg: 2, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum, , Invalid
 	format := 0
-	// arg: 3, QSsl::KeyType=Elaborated, QSsl::KeyType=Enum,
+	// arg: 3, QSsl::KeyType=Elaborated, QSsl::KeyType=Enum, , Invalid
 	type_ := 0
-	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg4 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2EP9QIODeviceN4QSsl12KeyAlgorithmENS2_14EncodingFormatENS2_7KeyTypeERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -256,9 +256,9 @@ func NewQSslKey_2_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm i
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
 	}
-	// arg: 3, QSsl::KeyType=Elaborated, QSsl::KeyType=Enum,
+	// arg: 3, QSsl::KeyType=Elaborated, QSsl::KeyType=Enum, , Invalid
 	type_ := 0
-	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg4 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2EP9QIODeviceN4QSsl12KeyAlgorithmENS2_14EncodingFormatENS2_7KeyTypeERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -282,7 +282,7 @@ func NewQSslKey_2_2(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm i
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
 	}
-	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 4, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg4 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2EP9QIODeviceN4QSsl12KeyAlgorithmENS2_14EncodingFormatENS2_7KeyTypeERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -463,7 +463,7 @@ func (this *QSslKey) ToPem(passPhrase qtcore.QByteArray_ITF) *qtcore.QByteArray 
 Returns the key in PEM encoding. The result is encrypted with passPhrase if the key is a private key and passPhrase is non-empty.
 */
 func (this *QSslKey) ToPem__() *qtcore.QByteArray /*123*/ {
-	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey5toPemERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -505,7 +505,7 @@ Returns the key in DER encoding.
 The passPhrase argument should be omitted as DER cannot be encrypted. It will be removed in a future version of Qt.
 */
 func (this *QSslKey) ToDer__() *qtcore.QByteArray /*123*/ {
-	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record,
+	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey5toDerERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -108,7 +108,7 @@ func NewQGraphicsRectItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 
  */
 func NewQGraphicsRectItem__() *QGraphicsRectItem {
-	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -154,7 +154,7 @@ func NewQGraphicsRectItem_1_(rect qtcore.QRectF_ITF) *QGraphicsRectItem {
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2ERK6QRectFP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func NewQGraphicsRectItem_2(x float64, y float64, w float64, h float64, parent Q
 
  */
 func NewQGraphicsRectItem_2_(x float64, y float64, w float64, h float64) *QGraphicsRectItem {
-	// arg: 4, QGraphicsItem *=Pointer, QGraphicsItem=Record,
+	// arg: 4, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2EddddP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, x, y, w, h, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -446,7 +446,7 @@ func (this *QGraphicsRectItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter
 	if option != nil && option.QStyleOptionGraphicsItem_PTR() != nil {
 		convArg1 = option.QStyleOptionGraphicsItem_PTR().GetCthis()
 	}
-	// arg: 2, QWidget *=Pointer, QWidget=Record,
+	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

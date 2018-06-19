@@ -124,7 +124,7 @@ URLs correspond to the MIME type text/uri-list.
 
 See also setUrls(), hasUrls(), and data().
 */
-func (this *QMimeData) Urls() *QUrlList {
+func (this *QMimeData) Urls() *QUrlList /*lll*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData4urlsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUrlListFromPointer(unsafe.Pointer(uintptr(rv))) //5552

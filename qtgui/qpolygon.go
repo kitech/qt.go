@@ -138,7 +138,7 @@ func NewQPolygon_2_(r qtcore.QRect_ITF) *QPolygon {
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	closed := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygonC2ERK5QRectb", qtrt.FFI_TYPE_POINTER, convArg0, closed)
 	qtrt.ErrPrint(err, rv)
@@ -531,7 +531,7 @@ func (this *QPolygon) PutPoints_1_(index int, nPoints int, from QPolygon_ITF) {
 	if from != nil && from.QPolygon_PTR() != nil {
 		convArg2 = from.QPolygon_PTR().GetCthis()
 	}
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	fromIndex := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygon9putPointsEiiRKS_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, nPoints, convArg2, fromIndex)
 	qtrt.ErrPrint(err, rv)

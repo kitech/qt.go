@@ -91,9 +91,9 @@ func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 
  */
 func NewQStyleHintReturn__() *QStyleHintReturn {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	version := 0 /*QStyleOption::Version*/
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := QStyleHintReturn__SH_Default
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
 	qtrt.ErrPrint(err, rv)
@@ -111,7 +111,7 @@ func NewQStyleHintReturn__() *QStyleHintReturn {
 
  */
 func NewQStyleHintReturn__1(version int) *QStyleHintReturn {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := QStyleHintReturn__SH_Default
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
 	qtrt.ErrPrint(err, rv)

@@ -119,7 +119,7 @@ The policies can be altered using the setHorizontalPolicy() and setVerticalPolic
 See also setHorizontalStretch() and setVerticalStretch().
 */
 func NewQSizePolicy_1_(horizontal int, vertical int) *QSizePolicy {
-	// arg: 2, QSizePolicy::ControlType=Enum, QSizePolicy::ControlType=Enum,
+	// arg: 2, QSizePolicy::ControlType=Enum, QSizePolicy::ControlType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSizePolicyC2ENS_6PolicyES0_NS_11ControlTypeE", qtrt.FFI_TYPE_POINTER, horizontal, vertical, type_)
 	qtrt.ErrPrint(err, rv)

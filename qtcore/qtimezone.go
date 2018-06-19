@@ -159,9 +159,9 @@ func NewQTimeZone_3_(zoneId QByteArray_ITF, offsetSeconds int, name string, abbr
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = NewQString_5(abbreviation)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, QLocale::Country=Elaborated, QLocale::Country=Enum,
+	// arg: 4, QLocale::Country=Elaborated, QLocale::Country=Enum, , Invalid
 	country := 0
-	// arg: 5, const QString &=LValueReference, QString=Record,
+	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZoneC2ERK10QByteArrayiRK7QStringS5_N7QLocale7CountryES5_", qtrt.FFI_TYPE_POINTER, convArg0, offsetSeconds, convArg2, convArg3, country, convArg5)
 	qtrt.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func NewQTimeZone_3_1(zoneId QByteArray_ITF, offsetSeconds int, name string, abb
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = NewQString_5(abbreviation)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 5, const QString &=LValueReference, QString=Record,
+	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZoneC2ERK10QByteArrayiRK7QStringS5_N7QLocale7CountryES5_", qtrt.FFI_TYPE_POINTER, convArg0, offsetSeconds, convArg2, convArg3, country, convArg5)
 	qtrt.ErrPrint(err, rv)
@@ -415,9 +415,9 @@ func (this *QTimeZone) DisplayName__(atDateTime QDateTime_ITF) string {
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
 		convArg0 = atDateTime.QDateTime_PTR().GetCthis()
 	}
-	// arg: 1, QTimeZone::NameType=Elaborated, QTimeZone::NameType=Enum,
+	// arg: 1, QTimeZone::NameType=Elaborated, QTimeZone::NameType=Enum, , Invalid
 	nameType := 0
-	// arg: 2, const QLocale &=LValueReference, QLocale=Record,
+	// arg: 2, const QLocale &=LValueReference, QLocale=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeZone11displayNameERK9QDateTimeNS_8NameTypeERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, nameType, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -446,7 +446,7 @@ func (this *QTimeZone) DisplayName__1(atDateTime QDateTime_ITF, nameType int) st
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
 		convArg0 = atDateTime.QDateTime_PTR().GetCthis()
 	}
-	// arg: 2, const QLocale &=LValueReference, QLocale=Record,
+	// arg: 2, const QLocale &=LValueReference, QLocale=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeZone11displayNameERK9QDateTimeNS_8NameTypeERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, nameType, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -498,9 +498,9 @@ The display name may change depending on DST or historical events.
 See also abbreviation().
 */
 func (this *QTimeZone) DisplayName_1_(timeType int) string {
-	// arg: 1, QTimeZone::NameType=Elaborated, QTimeZone::NameType=Enum,
+	// arg: 1, QTimeZone::NameType=Elaborated, QTimeZone::NameType=Enum, , Invalid
 	nameType := 0
-	// arg: 2, const QLocale &=LValueReference, QLocale=Record,
+	// arg: 2, const QLocale &=LValueReference, QLocale=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeZone11displayNameENS_8TimeTypeENS_8NameTypeERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeType, nameType, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -525,7 +525,7 @@ The display name may change depending on DST or historical events.
 See also abbreviation().
 */
 func (this *QTimeZone) DisplayName_1_1(timeType int, nameType int) string {
-	// arg: 2, const QLocale &=LValueReference, QLocale=Record,
+	// arg: 2, const QLocale &=LValueReference, QLocale=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeZone11displayNameENS_8TimeTypeENS_8NameTypeERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeType, nameType, convArg2)
 	qtrt.ErrPrint(err, rv)

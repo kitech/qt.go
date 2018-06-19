@@ -149,7 +149,7 @@ func NewQDateTime_2_(arg0 QDate_ITF, arg1 QTime_ITF) *QDateTime {
 	if arg1 != nil && arg1.QTime_PTR() != nil {
 		convArg1 = arg1.QTime_PTR().GetCthis()
 	}
-	// arg: 2, Qt::TimeSpec=Elaborated, Qt::TimeSpec=Enum,
+	// arg: 2, Qt::TimeSpec=Elaborated, Qt::TimeSpec=Enum, , Invalid
 	spec := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTimeC2ERK5QDateRK5QTimeN2Qt8TimeSpecE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, spec)
 	qtrt.ErrPrint(err, rv)
@@ -800,7 +800,7 @@ If the datetime is invalid, an empty string will be returned.
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
 func (this *QDateTime) ToString__() string {
-	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum,
+	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
@@ -1511,7 +1511,7 @@ See also toString() and QLocale::toDateTime().
 func (this *QDateTime) FromString__(s string) *QDateTime /*123*/ {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum,
+	// arg: 1, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime10fromStringERK7QStringN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
@@ -1627,7 +1627,7 @@ func QDateTime_FromTime_t_1(secsSince1Jan1970UTC uint, spec int, offsetFromUtc i
 
  */
 func (this *QDateTime) FromTime_t_1_(secsSince1Jan1970UTC uint, spec int) *QDateTime /*123*/ {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	offsetFromUtc := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime10fromTime_tEjN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, secsSince1Jan1970UTC, spec, offsetFromUtc)
 	qtrt.ErrPrint(err, rv)
@@ -1730,7 +1730,7 @@ This function was introduced in  Qt 4.7.
 See also toMSecsSinceEpoch() and setMSecsSinceEpoch().
 */
 func (this *QDateTime) FromMSecsSinceEpoch_1_(msecs int64, spec int) *QDateTime /*123*/ {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	offsetFromUtc := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime19fromMSecsSinceEpochExN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, msecs, spec, offsetFromUtc)
 	qtrt.ErrPrint(err, rv)
@@ -1820,9 +1820,9 @@ This function was introduced in  Qt 5.8.
 See also toSecsSinceEpoch() and setSecsSinceEpoch().
 */
 func (this *QDateTime) FromSecsSinceEpoch__(secs int64) *QDateTime /*123*/ {
-	// arg: 1, Qt::TimeSpec=Elaborated, Qt::TimeSpec=Enum,
+	// arg: 1, Qt::TimeSpec=Elaborated, Qt::TimeSpec=Enum, , Invalid
 	spe := 0
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	offsetFromUtc := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime18fromSecsSinceEpochExN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, secs, spe, offsetFromUtc)
 	qtrt.ErrPrint(err, rv)
@@ -1850,7 +1850,7 @@ This function was introduced in  Qt 5.8.
 See also toSecsSinceEpoch() and setSecsSinceEpoch().
 */
 func (this *QDateTime) FromSecsSinceEpoch__1(secs int64, spe int) *QDateTime /*123*/ {
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	offsetFromUtc := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime18fromSecsSinceEpochExN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, secs, spe, offsetFromUtc)
 	qtrt.ErrPrint(err, rv)

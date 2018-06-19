@@ -116,7 +116,7 @@ func NewQWebEngineProfile(parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngi
 
  */
 func NewQWebEngineProfile__() *QWebEngineProfile {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWebEngineProfileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ func NewQWebEngineProfile_1(name string, parent qtcore.QObject_ITF /*777 QObject
 func NewQWebEngineProfile_1_(name string) *QWebEngineProfile {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWebEngineProfileC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

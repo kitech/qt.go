@@ -602,9 +602,9 @@ func (this *QMetaObject) Connect__(sender QObject_ITF /*777 const QObject **/, s
 	if receiver != nil && receiver.QObject_PTR() != nil {
 		convArg2 = receiver.QObject_PTR().GetCthis()
 	}
-	// arg: 4, int=Int, =Invalid,
+	// arg: 4, int=Int, =Invalid, , Invalid
 	type_ := int(0)
-	// arg: 5, int *=Pointer, =Invalid,
+	// arg: 5, int *=Pointer, =Invalid, , Invalid
 	var types unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject7connectEPK7QObjectiS2_iiPi", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, convArg2, method_index, type_, types)
 	qtrt.ErrPrint(err, rv)
@@ -628,7 +628,7 @@ func (this *QMetaObject) Connect__1(sender QObject_ITF /*777 const QObject **/, 
 	if receiver != nil && receiver.QObject_PTR() != nil {
 		convArg2 = receiver.QObject_PTR().GetCthis()
 	}
-	// arg: 5, int *=Pointer, =Invalid,
+	// arg: 5, int *=Pointer, =Invalid, , Invalid
 	var types unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject7connectEPK7QObjectiS2_iiPi", qtrt.FFI_TYPE_POINTER, convArg0, signal_index, convArg2, method_index, type_, types)
 	qtrt.ErrPrint(err, rv)
@@ -840,25 +840,25 @@ func (this *QMetaObject) InvokeMethod__(obj QObject_ITF /*777 QObject **/, membe
 	if ret != nil && ret.QGenericReturnArgument_PTR() != nil {
 		convArg3 = ret.QGenericReturnArgument_PTR().GetCthis()
 	}
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
-	// arg: 13, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 13, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg13 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
 	qtrt.ErrPrint(err, rv)
@@ -888,23 +888,23 @@ func (this *QMetaObject) InvokeMethod__1(obj QObject_ITF /*777 QObject **/, memb
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
 		convArg4 = val0.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
-	// arg: 13, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 13, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg13 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
 	qtrt.ErrPrint(err, rv)
@@ -938,21 +938,21 @@ func (this *QMetaObject) InvokeMethod__2(obj QObject_ITF /*777 QObject **/, memb
 	if val1 != nil && val1.QGenericArgument_PTR() != nil {
 		convArg5 = val1.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
-	// arg: 13, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 13, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg13 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
 	qtrt.ErrPrint(err, rv)
@@ -990,19 +990,19 @@ func (this *QMetaObject) InvokeMethod__3(obj QObject_ITF /*777 QObject **/, memb
 	if val2 != nil && val2.QGenericArgument_PTR() != nil {
 		convArg6 = val2.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
-	// arg: 13, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 13, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg13 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
 	qtrt.ErrPrint(err, rv)
@@ -1044,17 +1044,17 @@ func (this *QMetaObject) InvokeMethod__4(obj QObject_ITF /*777 QObject **/, memb
 	if val3 != nil && val3.QGenericArgument_PTR() != nil {
 		convArg7 = val3.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
-	// arg: 13, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 13, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg13 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
 	qtrt.ErrPrint(err, rv)
@@ -1100,15 +1100,15 @@ func (this *QMetaObject) InvokeMethod__5(obj QObject_ITF /*777 QObject **/, memb
 	if val4 != nil && val4.QGenericArgument_PTR() != nil {
 		convArg8 = val4.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
-	// arg: 13, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 13, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg13 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
 	qtrt.ErrPrint(err, rv)
@@ -1158,13 +1158,13 @@ func (this *QMetaObject) InvokeMethod__6(obj QObject_ITF /*777 QObject **/, memb
 	if val5 != nil && val5.QGenericArgument_PTR() != nil {
 		convArg9 = val5.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
-	// arg: 13, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 13, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg13 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
 	qtrt.ErrPrint(err, rv)
@@ -1218,11 +1218,11 @@ func (this *QMetaObject) InvokeMethod__7(obj QObject_ITF /*777 QObject **/, memb
 	if val6 != nil && val6.QGenericArgument_PTR() != nil {
 		convArg10 = val6.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
-	// arg: 13, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 13, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg13 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
 	qtrt.ErrPrint(err, rv)
@@ -1280,9 +1280,9 @@ func (this *QMetaObject) InvokeMethod__8(obj QObject_ITF /*777 QObject **/, memb
 	if val7 != nil && val7.QGenericArgument_PTR() != nil {
 		convArg11 = val7.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
-	// arg: 13, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 13, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg13 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
 	qtrt.ErrPrint(err, rv)
@@ -1344,7 +1344,7 @@ func (this *QMetaObject) InvokeMethod__9(obj QObject_ITF /*777 QObject **/, memb
 	if val8 != nil && val8.QGenericArgument_PTR() != nil {
 		convArg12 = val8.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 13, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 13, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg13 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12, convArg13)
 	qtrt.ErrPrint(err, rv)
@@ -1439,25 +1439,25 @@ func (this *QMetaObject) InvokeMethod_1_(obj QObject_ITF /*777 QObject **/, memb
 	if ret != nil && ret.QGenericReturnArgument_PTR() != nil {
 		convArg2 = ret.QGenericReturnArgument_PTR().GetCthis()
 	}
-	// arg: 3, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 3, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg3 unsafe.Pointer
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -1487,23 +1487,23 @@ func (this *QMetaObject) InvokeMethod_1_1(obj QObject_ITF /*777 QObject **/, mem
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
 		convArg3 = val0.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -1537,21 +1537,21 @@ func (this *QMetaObject) InvokeMethod_1_2(obj QObject_ITF /*777 QObject **/, mem
 	if val1 != nil && val1.QGenericArgument_PTR() != nil {
 		convArg4 = val1.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -1589,19 +1589,19 @@ func (this *QMetaObject) InvokeMethod_1_3(obj QObject_ITF /*777 QObject **/, mem
 	if val2 != nil && val2.QGenericArgument_PTR() != nil {
 		convArg5 = val2.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -1643,17 +1643,17 @@ func (this *QMetaObject) InvokeMethod_1_4(obj QObject_ITF /*777 QObject **/, mem
 	if val3 != nil && val3.QGenericArgument_PTR() != nil {
 		convArg6 = val3.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -1699,15 +1699,15 @@ func (this *QMetaObject) InvokeMethod_1_5(obj QObject_ITF /*777 QObject **/, mem
 	if val4 != nil && val4.QGenericArgument_PTR() != nil {
 		convArg7 = val4.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -1757,13 +1757,13 @@ func (this *QMetaObject) InvokeMethod_1_6(obj QObject_ITF /*777 QObject **/, mem
 	if val5 != nil && val5.QGenericArgument_PTR() != nil {
 		convArg8 = val5.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -1817,11 +1817,11 @@ func (this *QMetaObject) InvokeMethod_1_7(obj QObject_ITF /*777 QObject **/, mem
 	if val6 != nil && val6.QGenericArgument_PTR() != nil {
 		convArg9 = val6.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -1879,9 +1879,9 @@ func (this *QMetaObject) InvokeMethod_1_8(obj QObject_ITF /*777 QObject **/, mem
 	if val7 != nil && val7.QGenericArgument_PTR() != nil {
 		convArg10 = val7.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -1943,7 +1943,7 @@ func (this *QMetaObject) InvokeMethod_1_9(obj QObject_ITF /*777 QObject **/, mem
 	if val8 != nil && val8.QGenericArgument_PTR() != nil {
 		convArg11 = val8.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -2030,25 +2030,25 @@ func (this *QMetaObject) InvokeMethod_2_(obj QObject_ITF /*777 QObject **/, memb
 	}
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 3, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 3, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg3 unsafe.Pointer
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -2074,23 +2074,23 @@ func (this *QMetaObject) InvokeMethod_2_1(obj QObject_ITF /*777 QObject **/, mem
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
 		convArg3 = val0.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -2120,21 +2120,21 @@ func (this *QMetaObject) InvokeMethod_2_2(obj QObject_ITF /*777 QObject **/, mem
 	if val1 != nil && val1.QGenericArgument_PTR() != nil {
 		convArg4 = val1.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -2168,19 +2168,19 @@ func (this *QMetaObject) InvokeMethod_2_3(obj QObject_ITF /*777 QObject **/, mem
 	if val2 != nil && val2.QGenericArgument_PTR() != nil {
 		convArg5 = val2.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -2218,17 +2218,17 @@ func (this *QMetaObject) InvokeMethod_2_4(obj QObject_ITF /*777 QObject **/, mem
 	if val3 != nil && val3.QGenericArgument_PTR() != nil {
 		convArg6 = val3.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -2270,15 +2270,15 @@ func (this *QMetaObject) InvokeMethod_2_5(obj QObject_ITF /*777 QObject **/, mem
 	if val4 != nil && val4.QGenericArgument_PTR() != nil {
 		convArg7 = val4.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -2324,13 +2324,13 @@ func (this *QMetaObject) InvokeMethod_2_6(obj QObject_ITF /*777 QObject **/, mem
 	if val5 != nil && val5.QGenericArgument_PTR() != nil {
 		convArg8 = val5.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -2380,11 +2380,11 @@ func (this *QMetaObject) InvokeMethod_2_7(obj QObject_ITF /*777 QObject **/, mem
 	if val6 != nil && val6.QGenericArgument_PTR() != nil {
 		convArg9 = val6.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -2438,9 +2438,9 @@ func (this *QMetaObject) InvokeMethod_2_8(obj QObject_ITF /*777 QObject **/, mem
 	if val7 != nil && val7.QGenericArgument_PTR() != nil {
 		convArg10 = val7.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -2498,7 +2498,7 @@ func (this *QMetaObject) InvokeMethod_2_9(obj QObject_ITF /*777 QObject **/, mem
 	if val8 != nil && val8.QGenericArgument_PTR() != nil {
 		convArg11 = val8.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 12, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 12, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg12 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	qtrt.ErrPrint(err, rv)
@@ -2585,25 +2585,25 @@ func (this *QMetaObject) InvokeMethod_3_(obj QObject_ITF /*777 QObject **/, memb
 	}
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
-	// arg: 2, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 2, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 3, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg3 unsafe.Pointer
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	qtrt.ErrPrint(err, rv)
@@ -2629,23 +2629,23 @@ func (this *QMetaObject) InvokeMethod_3_1(obj QObject_ITF /*777 QObject **/, mem
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
 		convArg2 = val0.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 3, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 3, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg3 unsafe.Pointer
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	qtrt.ErrPrint(err, rv)
@@ -2675,21 +2675,21 @@ func (this *QMetaObject) InvokeMethod_3_2(obj QObject_ITF /*777 QObject **/, mem
 	if val1 != nil && val1.QGenericArgument_PTR() != nil {
 		convArg3 = val1.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	qtrt.ErrPrint(err, rv)
@@ -2723,19 +2723,19 @@ func (this *QMetaObject) InvokeMethod_3_3(obj QObject_ITF /*777 QObject **/, mem
 	if val2 != nil && val2.QGenericArgument_PTR() != nil {
 		convArg4 = val2.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	qtrt.ErrPrint(err, rv)
@@ -2773,17 +2773,17 @@ func (this *QMetaObject) InvokeMethod_3_4(obj QObject_ITF /*777 QObject **/, mem
 	if val3 != nil && val3.QGenericArgument_PTR() != nil {
 		convArg5 = val3.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	qtrt.ErrPrint(err, rv)
@@ -2825,15 +2825,15 @@ func (this *QMetaObject) InvokeMethod_3_5(obj QObject_ITF /*777 QObject **/, mem
 	if val4 != nil && val4.QGenericArgument_PTR() != nil {
 		convArg6 = val4.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	qtrt.ErrPrint(err, rv)
@@ -2879,13 +2879,13 @@ func (this *QMetaObject) InvokeMethod_3_6(obj QObject_ITF /*777 QObject **/, mem
 	if val5 != nil && val5.QGenericArgument_PTR() != nil {
 		convArg7 = val5.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	qtrt.ErrPrint(err, rv)
@@ -2935,11 +2935,11 @@ func (this *QMetaObject) InvokeMethod_3_7(obj QObject_ITF /*777 QObject **/, mem
 	if val6 != nil && val6.QGenericArgument_PTR() != nil {
 		convArg8 = val6.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	qtrt.ErrPrint(err, rv)
@@ -2993,9 +2993,9 @@ func (this *QMetaObject) InvokeMethod_3_8(obj QObject_ITF /*777 QObject **/, mem
 	if val7 != nil && val7.QGenericArgument_PTR() != nil {
 		convArg9 = val7.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 10, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 10, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg10 unsafe.Pointer
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	qtrt.ErrPrint(err, rv)
@@ -3053,7 +3053,7 @@ func (this *QMetaObject) InvokeMethod_3_9(obj QObject_ITF /*777 QObject **/, mem
 	if val8 != nil && val8.QGenericArgument_PTR() != nil {
 		convArg10 = val8.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 11, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 11, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg11 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	qtrt.ErrPrint(err, rv)
@@ -3123,25 +3123,25 @@ func (this *QMetaObject) NewInstance(val0 QGenericArgument_ITF /*123*/, val1 QGe
 
  */
 func (this *QMetaObject) NewInstance__() *QObject /*777 QObject **/ {
-	// arg: 0, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 0, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg0 unsafe.Pointer
-	// arg: 1, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 1, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 2, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 3, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg3 unsafe.Pointer
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)
@@ -3161,23 +3161,23 @@ func (this *QMetaObject) NewInstance__1(val0 QGenericArgument_ITF /*123*/) *QObj
 	if val0 != nil && val0.QGenericArgument_PTR() != nil {
 		convArg0 = val0.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 1, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 1, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 2, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 3, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg3 unsafe.Pointer
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)
@@ -3201,21 +3201,21 @@ func (this *QMetaObject) NewInstance__2(val0 QGenericArgument_ITF /*123*/, val1 
 	if val1 != nil && val1.QGenericArgument_PTR() != nil {
 		convArg1 = val1.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 2, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 2, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 3, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg3 unsafe.Pointer
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)
@@ -3243,19 +3243,19 @@ func (this *QMetaObject) NewInstance__3(val0 QGenericArgument_ITF /*123*/, val1 
 	if val2 != nil && val2.QGenericArgument_PTR() != nil {
 		convArg2 = val2.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 3, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 3, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg3 unsafe.Pointer
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)
@@ -3287,17 +3287,17 @@ func (this *QMetaObject) NewInstance__4(val0 QGenericArgument_ITF /*123*/, val1 
 	if val3 != nil && val3.QGenericArgument_PTR() != nil {
 		convArg3 = val3.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 4, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 4, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg4 unsafe.Pointer
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)
@@ -3333,15 +3333,15 @@ func (this *QMetaObject) NewInstance__5(val0 QGenericArgument_ITF /*123*/, val1 
 	if val4 != nil && val4.QGenericArgument_PTR() != nil {
 		convArg4 = val4.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 5, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 5, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg5 unsafe.Pointer
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)
@@ -3381,13 +3381,13 @@ func (this *QMetaObject) NewInstance__6(val0 QGenericArgument_ITF /*123*/, val1 
 	if val5 != nil && val5.QGenericArgument_PTR() != nil {
 		convArg5 = val5.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 6, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 6, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg6 unsafe.Pointer
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)
@@ -3431,11 +3431,11 @@ func (this *QMetaObject) NewInstance__7(val0 QGenericArgument_ITF /*123*/, val1 
 	if val6 != nil && val6.QGenericArgument_PTR() != nil {
 		convArg6 = val6.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 7, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 7, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg7 unsafe.Pointer
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)
@@ -3483,9 +3483,9 @@ func (this *QMetaObject) NewInstance__8(val0 QGenericArgument_ITF /*123*/, val1 
 	if val7 != nil && val7.QGenericArgument_PTR() != nil {
 		convArg7 = val7.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 8, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 8, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg8 unsafe.Pointer
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)
@@ -3537,7 +3537,7 @@ func (this *QMetaObject) NewInstance__9(val0 QGenericArgument_ITF /*123*/, val1 
 	if val8 != nil && val8.QGenericArgument_PTR() != nil {
 		convArg8 = val8.QGenericArgument_PTR().GetCthis()
 	}
-	// arg: 9, QGenericArgument=Record, QGenericArgument=Record,
+	// arg: 9, QGenericArgument=Record, QGenericArgument=Record, , Invalid
 	var convArg9 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMetaObject11newInstanceE16QGenericArgumentS0_S0_S0_S0_S0_S0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	qtrt.ErrPrint(err, rv)

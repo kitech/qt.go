@@ -138,9 +138,9 @@ See also setDefaultFormat() and Fallback Mechanism.
 func NewQSettings__(organization string) *QSettings {
 	var tmpArg0 = NewQString_5(organization)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2ERK7QStringS2_P7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -173,7 +173,7 @@ func NewQSettings__1(organization string, application string) *QSettings {
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString_5(application)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2ERK7QStringS2_P7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -239,9 +239,9 @@ See also setDefaultFormat() and Fallback Mechanism.
 func NewQSettings_1_(scope int, organization string) *QSettings {
 	var tmpArg1 = NewQString_5(organization)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, const QString &=LValueReference, QString=Record,
+	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
-	// arg: 3, QObject *=Pointer, QObject=Record,
+	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2ENS_5ScopeERK7QStringS3_P7QObject", qtrt.FFI_TYPE_POINTER, scope, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -274,7 +274,7 @@ func NewQSettings_1_1(scope int, organization string, application string) *QSett
 	var convArg1 = tmpArg1.GetCthis()
 	var tmpArg2 = NewQString_5(application)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, QObject *=Pointer, QObject=Record,
+	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2ENS_5ScopeERK7QStringS3_P7QObject", qtrt.FFI_TYPE_POINTER, scope, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -340,9 +340,9 @@ See also setDefaultFormat() and Fallback Mechanism.
 func NewQSettings_2_(format int, scope int, organization string) *QSettings {
 	var tmpArg2 = NewQString_5(organization)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, const QString &=LValueReference, QString=Record,
+	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
-	// arg: 4, QObject *=Pointer, QObject=Record,
+	// arg: 4, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2ENS_6FormatENS_5ScopeERK7QStringS4_P7QObject", qtrt.FFI_TYPE_POINTER, format, scope, convArg2, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -375,7 +375,7 @@ func NewQSettings_2_1(format int, scope int, organization string, application st
 	var convArg2 = tmpArg2.GetCthis()
 	var tmpArg3 = NewQString_5(application)
 	var convArg3 = tmpArg3.GetCthis()
-	// arg: 4, QObject *=Pointer, QObject=Record,
+	// arg: 4, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2ENS_6FormatENS_5ScopeERK7QStringS4_P7QObject", qtrt.FFI_TYPE_POINTER, format, scope, convArg2, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -439,7 +439,7 @@ See also setDefaultFormat() and Fallback Mechanism.
 func NewQSettings_3_(fileName string, format int) *QSettings {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QObject *=Pointer, QObject=Record,
+	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2ERK7QStringNS_6FormatEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, format, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -499,7 +499,7 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 See also setDefaultFormat() and Fallback Mechanism.
 */
 func NewQSettings_4_() *QSettings {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -857,7 +857,7 @@ See also beginReadArray(), endArray(), and setArrayIndex().
 func (this *QSettings) BeginWriteArray__(prefix string) {
 	var tmpArg0 = NewQString_5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings15beginWriteArrayERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, size)
 	qtrt.ErrPrint(err, rv)
@@ -1142,7 +1142,7 @@ See also setValue(), contains(), and remove().
 func (this *QSettings) Value__(key string) *QVariant /*123*/ {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QVariant &=LValueReference, QVariant=Record,
+	// arg: 1, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg1 = NewQVariant()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSettings5valueERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

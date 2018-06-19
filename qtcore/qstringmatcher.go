@@ -109,7 +109,7 @@ Constructs an empty string matcher that won't match anything. Call setPattern() 
 func NewQStringMatcher_1_(pattern string) *QStringMatcher {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherC2ERK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +151,7 @@ func NewQStringMatcher_2_(uc QChar_ITF /*777 const QChar **/, len_ int) *QString
 	if uc != nil && uc.QChar_PTR() != nil {
 		convArg0 = uc.QChar_PTR().GetCthis()
 	}
-	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum,
+	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherC2EPK5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, len_, cs)
 	qtrt.ErrPrint(err, rv)
@@ -258,7 +258,7 @@ See also setPattern() and setCaseSensitivity().
 func (this *QStringMatcher) IndexIn__(str string) int {
 	var tmpArg0 = NewQString_5(str)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
@@ -300,7 +300,7 @@ func (this *QStringMatcher) IndexIn_1_(str QChar_ITF /*777 const QChar **/, leng
 	if str != nil && str.QChar_PTR() != nil {
 		convArg0 = str.QChar_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	from := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInEPK5QCharii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, length, from)
 	qtrt.ErrPrint(err, rv)

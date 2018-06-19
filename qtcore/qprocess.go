@@ -125,7 +125,7 @@ func NewQProcess(parent QObject_ITF /*777 QObject **/) *QProcess {
 Constructs a QProcess object with the given parent.
 */
 func NewQProcess__() *QProcess {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcessC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -211,7 +211,7 @@ func (this *QProcess) Start__(program string, arguments QStringList_ITF) {
 	if arguments != nil && arguments.QStringList_PTR() != nil {
 		convArg1 = arguments.QStringList_PTR().GetCthis()
 	}
-	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 2, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess5startERK7QStringRK11QStringList6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode)
 	qtrt.ErrPrint(err, rv)
@@ -271,7 +271,7 @@ See also processId(), started(), waitForStarted(), and setNativeArguments().
 func (this *QProcess) Start_1_(command string) {
 	var tmpArg0 = NewQString_5(command)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 1, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess5startERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -327,7 +327,7 @@ If the QProcess object is already running a process, a warning may be printed at
 See also processId(), started(), waitForStarted(), and setNativeArguments().
 */
 func (this *QProcess) Start_2_() {
-	// arg: 0, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 0, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess5startE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -412,7 +412,7 @@ This function was introduced in  Qt 5.10.
 See also start(), startDetached(const QString &program, const QStringList &arguments, const QString &workingDirectory, qint64 *pid), and startDetached(const QString &command).
 */
 func (this *QProcess) StartDetached__() bool {
-	// arg: 0, qint64 *=Pointer, qint64=Typedef, long long
+	// arg: 0, qint64 *=Pointer, qint64=Typedef, long long, LongLong
 	pid := unsafe.Pointer(nil)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedEPx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pid)
 	qtrt.ErrPrint(err, rv)
@@ -519,7 +519,7 @@ func (this *QProcess) StartDetached_1_(program string, arguments QStringList_ITF
 	}
 	var tmpArg2 = NewQString_5(workingDirectory)
 	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, qint64 *=Pointer, qint64=Typedef, long long
+	// arg: 3, qint64 *=Pointer, qint64=Typedef, long long, LongLong
 	pid := unsafe.Pointer(nil)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, pid)
 	qtrt.ErrPrint(err, rv)
@@ -663,7 +663,7 @@ This method is an alias for start(), and exists only to fully implement the inte
 See also start(), setProgram(), and setArguments().
 */
 func (this *QProcess) Open__() bool {
-	// arg: 0, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 0, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess4openE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
@@ -1011,7 +1011,7 @@ See also setStandardInputFile(), setStandardErrorFile(), and setStandardOutputPr
 func (this *QProcess) SetStandardOutputFile__(fileName string) {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 1, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess21setStandardOutputFileERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1059,7 +1059,7 @@ See also setStandardInputFile(), setStandardOutputFile(), and setStandardOutputP
 func (this *QProcess) SetStandardErrorFile__(fileName string) {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>
+	// arg: 1, QIODevice::OpenMode=Typedef, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess20setStandardErrorFileERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1353,7 +1353,7 @@ Note: On some UNIX operating systems, this function may return true but the proc
 See also started(), waitForReadyRead(), waitForBytesWritten(), and waitForFinished().
 */
 func (this *QProcess) WaitForStarted__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess14waitForStartedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
@@ -1383,7 +1383,7 @@ func (this *QProcess) WaitForReadyRead(msecs int) bool {
 Reimplemented from QIODevice::waitForReadyRead().
 */
 func (this *QProcess) WaitForReadyRead__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
@@ -1413,7 +1413,7 @@ func (this *QProcess) WaitForBytesWritten(msecs int) bool {
 Reimplemented from QIODevice::waitForBytesWritten().
 */
 func (this *QProcess) WaitForBytesWritten__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess19waitForBytesWrittenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)
@@ -1463,7 +1463,7 @@ If msecs is -1, this function will not time out.
 See also finished(), waitForStarted(), waitForReadyRead(), and waitForBytesWritten().
 */
 func (this *QProcess) WaitForFinished__() bool {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess15waitForFinishedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	qtrt.ErrPrint(err, rv)

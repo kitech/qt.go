@@ -202,9 +202,9 @@ Note: If an exception was thrown and the exception value is not an Error instanc
 func (this *QJSEngine) Evaluate__(program string) *QJSValue /*123*/ {
 	var tmpArg0 = qtcore.NewQString_5(program)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, const QString &=LValueReference, QString=Record,
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	lineNumber := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine8evaluateERK7QStringS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, lineNumber)
 	qtrt.ErrPrint(err, rv)
@@ -236,7 +236,7 @@ func (this *QJSEngine) Evaluate__1(program string, fileName string) *QJSValue /*
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString_5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	lineNumber := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine8evaluateERK7QStringS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, lineNumber)
 	qtrt.ErrPrint(err, rv)
@@ -294,7 +294,7 @@ Creates a JavaScript object of class Array with the given length.
 See also newObject().
 */
 func (this *QJSEngine) NewArray__() *QJSValue /*123*/ {
-	// arg: 0, uint=Typedef, uint=Typedef, unsigned int
+	// arg: 0, uint=Typedef, uint=Typedef, unsigned int, UInt
 	length := uint(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine8newArrayEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), length)
 	qtrt.ErrPrint(err, rv)
@@ -376,7 +376,7 @@ func (this *QJSEngine) InstallTranslatorFunctions(object QJSValue_ITF) {
 
  */
 func (this *QJSEngine) InstallTranslatorFunctions__() {
-	// arg: 0, const QJSValue &=LValueReference, QJSValue=Record,
+	// arg: 0, const QJSValue &=LValueReference, QJSValue=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine26installTranslatorFunctionsERK8QJSValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -434,7 +434,7 @@ This function was introduced in  Qt 5.6.
 See also Extension.
 */
 func (this *QJSEngine) InstallExtensions__(extensions int) {
-	// arg: 1, const QJSValue &=LValueReference, QJSValue=Record,
+	// arg: 1, const QJSValue &=LValueReference, QJSValue=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine17installExtensionsE6QFlagsINS_9ExtensionEERK8QJSValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extensions, convArg1)
 	qtrt.ErrPrint(err, rv)

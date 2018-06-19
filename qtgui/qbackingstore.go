@@ -184,9 +184,9 @@ func (this *QBackingStore) Flush__(region QRegion_ITF) {
 	if region != nil && region.QRegion_PTR() != nil {
 		convArg0 = region.QRegion_PTR().GetCthis()
 	}
-	// arg: 1, QWindow *=Pointer, QWindow=Record,
+	// arg: 1, QWindow *=Pointer, QWindow=Record, , Invalid
 	var convArg1 unsafe.Pointer
-	// arg: 2, const QPoint &=LValueReference, QPoint=Record,
+	// arg: 2, const QPoint &=LValueReference, QPoint=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QBackingStore) Flush__1(region QRegion_ITF, window QWindow_ITF /*777
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg1 = window.QWindow_PTR().GetCthis()
 	}
-	// arg: 2, const QPoint &=LValueReference, QPoint=Record,
+	// arg: 2, const QPoint &=LValueReference, QPoint=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

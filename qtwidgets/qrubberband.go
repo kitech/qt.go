@@ -146,7 +146,7 @@ Constructs a rubber band of shape s, with parent p.
 By default a rectangular rubber band (s is Rectangle) will use a mask, so that a small border of the rectangle is all that is visible. Some styles (e.g., native macOS) will change this and call QWidget::setWindowOpacity() to make a semi-transparent filled selection rectangle.
 */
 func NewQRubberBand__(arg0 int) *QRubberBand {
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBandC2ENS_5ShapeEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)

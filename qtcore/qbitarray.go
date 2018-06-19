@@ -111,7 +111,7 @@ Constructs an empty bit array.
 See also isEmpty().
 */
 func NewQBitArray_1_(size int) *QBitArray {
-	// arg: 1, bool=Bool, =Invalid,
+	// arg: 1, bool=Bool, =Invalid, , Invalid
 	val := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArrayC2Eib", qtrt.FFI_TYPE_POINTER, size, val)
 	qtrt.ErrPrint(err, rv)
@@ -653,7 +653,7 @@ Example:
 See also resize().
 */
 func (this *QBitArray) Fill__(val bool) bool {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArray4fillEbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val, size)
 	qtrt.ErrPrint(err, rv)

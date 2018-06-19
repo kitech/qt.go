@@ -113,7 +113,7 @@ func NewQDirIterator__(dir QDir_ITF) *QDirIterator {
 	if dir != nil && dir.QDir_PTR() != nil {
 		convArg0 = dir.QDir_PTR().GetCthis()
 	}
-	// arg: 1, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>
+	// arg: 1, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK4QDir6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ See also hasNext(), next(), and IteratorFlags.
 func NewQDirIterator_1_(path string) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>
+	// arg: 1, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QString6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -221,7 +221,7 @@ See also hasNext(), next(), and IteratorFlags.
 func NewQDirIterator_2_(path string, filter int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 2, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>
+	// arg: 2, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QString6QFlagsIN4QDir6FilterEES3_INS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, filter, flags)
 	qtrt.ErrPrint(err, rv)
@@ -283,9 +283,9 @@ func NewQDirIterator_3_(path string, nameFilters QStringList_ITF) *QDirIterator 
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg1 = nameFilters.QStringList_PTR().GetCthis()
 	}
-	// arg: 2, QDir::Filters=Elaborated, QDir::Filters=Typedef, QFlags<QDir::Filter>
+	// arg: 2, QDir::Filters=Elaborated, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filters := 0
-	// arg: 3, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>
+	// arg: 3, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QStringRK11QStringList6QFlagsIN4QDir6FilterEES6_INS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, filters, flags)
 	qtrt.ErrPrint(err, rv)
@@ -317,7 +317,7 @@ func NewQDirIterator_3_1(path string, nameFilters QStringList_ITF, filters int) 
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg1 = nameFilters.QStringList_PTR().GetCthis()
 	}
-	// arg: 3, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>
+	// arg: 3, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QStringRK11QStringList6QFlagsIN4QDir6FilterEES6_INS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, filters, flags)
 	qtrt.ErrPrint(err, rv)

@@ -200,7 +200,7 @@ func NewQAbstractState(parent QState_ITF /*777 QState **/) *QAbstractState {
 Constructs a new state with the given parent state.
 */
 func NewQAbstractState__() *QAbstractState {
-	// arg: 0, QState *=Pointer, QState=Record,
+	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAbstractStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

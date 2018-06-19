@@ -691,7 +691,7 @@ Note: In WriteOnly or ReadWrite mode, if the relevant file does not already exis
 See also QIODevice::OpenMode and setFileName().
 */
 func (this *QFile) Open_1_(fd int, ioFlags int) bool {
-	// arg: 2, QFileDevice::FileHandleFlags=Typedef, QFileDevice::FileHandleFlags=Typedef, QFlags<QFileDevice::FileHandleFlag>
+	// arg: 2, QFileDevice::FileHandleFlags=Typedef, QFileDevice::FileHandleFlags=Typedef, QFlags<QFileDevice::FileHandleFlag>, Unexposed
 	handleFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4openEi6QFlagsIN9QIODevice12OpenModeFlagEES0_IN11QFileDevice14FileHandleFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fd, ioFlags, handleFlags)
 	qtrt.ErrPrint(err, rv)

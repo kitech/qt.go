@@ -93,7 +93,7 @@ Creates a QJsonValue of type type.
 The default is to create a Null value.
 */
 func NewQJsonValue__() *QJsonValue {
-	// arg: 0, QJsonValue::Type=Enum, QJsonValue::Type=Enum,
+	// arg: 0, QJsonValue::Type=Enum, QJsonValue::Type=Enum, , Invalid
 	arg0 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValueC2ENS_4TypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -597,7 +597,7 @@ Converts the value to a bool and returns it.
 If type() is not bool, the defaultValue will be returned.
 */
 func (this *QJsonValue) ToBool__() bool {
-	// arg: 0, bool=Bool, =Invalid,
+	// arg: 0, bool=Bool, =Invalid, , Invalid
 	defaultValue := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonValue6toBoolEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	qtrt.ErrPrint(err, rv)
@@ -631,7 +631,7 @@ Converts the value to an int and returns it.
 If type() is not Double or the value is not a whole number, the defaultValue will be returned.
 */
 func (this *QJsonValue) ToInt__() int {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	defaultValue := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonValue5toIntEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	qtrt.ErrPrint(err, rv)
@@ -665,7 +665,7 @@ Converts the value to a double and returns it.
 If type() is not Double, the defaultValue will be returned.
 */
 func (this *QJsonValue) ToDouble__() float64 {
-	// arg: 0, double=Double, =Invalid,
+	// arg: 0, double=Double, =Invalid, , Invalid
 	defaultValue := float64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonValue8toDoubleEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), defaultValue)
 	qtrt.ErrPrint(err, rv)

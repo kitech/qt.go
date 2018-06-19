@@ -100,9 +100,9 @@ func NewQWebEngineHttpRequest(url qtcore.QUrl_ITF, method int) *QWebEngineHttpRe
 
  */
 func NewQWebEngineHttpRequest__() *QWebEngineHttpRequest {
-	// arg: 0, const QUrl &=LValueReference, QUrl=Record,
+	// arg: 0, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg0 = qtcore.NewQUrl()
-	// arg: 1, const QWebEngineHttpRequest::Method &=LValueReference, QWebEngineHttpRequest::Method=Enum,
+	// arg: 1, const QWebEngineHttpRequest::Method &=LValueReference, QWebEngineHttpRequest::Method=Enum, , Invalid
 	method := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QWebEngineHttpRequestC2ERK4QUrlRKNS_6MethodE", qtrt.FFI_TYPE_POINTER, convArg0, &method)
 	qtrt.ErrPrint(err, rv)
@@ -124,7 +124,7 @@ func NewQWebEngineHttpRequest__1(url qtcore.QUrl_ITF) *QWebEngineHttpRequest {
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
 	}
-	// arg: 1, const QWebEngineHttpRequest::Method &=LValueReference, QWebEngineHttpRequest::Method=Enum,
+	// arg: 1, const QWebEngineHttpRequest::Method &=LValueReference, QWebEngineHttpRequest::Method=Enum, , Invalid
 	method := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QWebEngineHttpRequestC2ERK4QUrlRKNS_6MethodE", qtrt.FFI_TYPE_POINTER, convArg0, &method)
 	qtrt.ErrPrint(err, rv)

@@ -96,7 +96,7 @@ func NewQWheelEvent__(pos qtcore.QPointF_ITF, delta int, buttons int, modifiers 
 	if pos != nil && pos.QPointF_PTR() != nil {
 		convArg0 = pos.QPointF_PTR().GetCthis()
 	}
-	// arg: 4, Qt::Orientation=Elaborated, Qt::Orientation=Enum,
+	// arg: 4, Qt::Orientation=Elaborated, Qt::Orientation=Enum, , Invalid
 	orient := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFi6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE", qtrt.FFI_TYPE_POINTER, convArg0, delta, buttons, modifiers, orient)
 	qtrt.ErrPrint(err, rv)
@@ -146,7 +146,7 @@ func NewQWheelEvent_1_(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, del
 	if globalPos != nil && globalPos.QPointF_PTR() != nil {
 		convArg1 = globalPos.QPointF_PTR().GetCthis()
 	}
-	// arg: 5, Qt::Orientation=Elaborated, Qt::Orientation=Enum,
+	// arg: 5, Qt::Orientation=Elaborated, Qt::Orientation=Enum, , Invalid
 	orient := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_i6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, delta, buttons, modifiers, orient)
 	qtrt.ErrPrint(err, rv)

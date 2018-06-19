@@ -109,7 +109,7 @@ func NewQSGEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QSGEngine {
 Constructs a new QSGEngine with its parent
 */
 func NewQSGEngine__() *QSGEngine {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSGEngineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ func (this *QSGEngine) CreateTextureFromImage__(image qtgui.QImage_ITF) *QSGText
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()
 	}
-	// arg: 1, QSGEngine::CreateTextureOptions=Typedef, QSGEngine::CreateTextureOptions=Typedef, QFlags<QSGEngine::CreateTextureOption>
+	// arg: 1, QSGEngine::CreateTextureOptions=Typedef, QSGEngine::CreateTextureOptions=Typedef, QFlags<QSGEngine::CreateTextureOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSGEngine22createTextureFromImageERK6QImage6QFlagsINS_19CreateTextureOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, options)
 	qtrt.ErrPrint(err, rv)
@@ -257,7 +257,7 @@ func (this *QSGEngine) CreateTextureFromId__(id uint, size qtcore.QSize_ITF) *QS
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()
 	}
-	// arg: 2, QSGEngine::CreateTextureOptions=Typedef, QSGEngine::CreateTextureOptions=Typedef, QFlags<QSGEngine::CreateTextureOption>
+	// arg: 2, QSGEngine::CreateTextureOptions=Typedef, QSGEngine::CreateTextureOptions=Typedef, QFlags<QSGEngine::CreateTextureOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSGEngine19createTextureFromIdEjRK5QSize6QFlagsINS_19CreateTextureOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1, options)
 	qtrt.ErrPrint(err, rv)

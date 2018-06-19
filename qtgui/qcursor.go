@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 32
+// extern C begin: 33
 */
 // import "C"
 import "unsafe"
@@ -138,9 +138,9 @@ func NewQCursor_2_(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
 	if mask != nil && mask.QBitmap_PTR() != nil {
 		convArg1 = mask.QBitmap_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	hotX := int(-1)
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	hotY := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QBitmapS2_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, hotX, hotY)
 	qtrt.ErrPrint(err, rv)
@@ -166,7 +166,7 @@ func NewQCursor_2_1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
 	if mask != nil && mask.QBitmap_PTR() != nil {
 		convArg1 = mask.QBitmap_PTR().GetCthis()
 	}
-	// arg: 3, int=Int, =Invalid,
+	// arg: 3, int=Int, =Invalid, , Invalid
 	hotY := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QBitmapS2_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, hotX, hotY)
 	qtrt.ErrPrint(err, rv)
@@ -208,9 +208,9 @@ func NewQCursor_3_(pixmap QPixmap_ITF) *QCursor {
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	hotX := int(-1)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	hotY := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QPixmapii", qtrt.FFI_TYPE_POINTER, convArg0, hotX, hotY)
 	qtrt.ErrPrint(err, rv)
@@ -232,7 +232,7 @@ func NewQCursor_3_1(pixmap QPixmap_ITF, hotX int) *QCursor {
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	hotY := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2ERK7QPixmapii", qtrt.FFI_TYPE_POINTER, convArg0, hotX, hotY)
 	qtrt.ErrPrint(err, rv)

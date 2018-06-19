@@ -275,7 +275,7 @@ func (this *QStylePainter) DrawItemText__(r qtcore.QRect_ITF, flags int, pal qtg
 	}
 	var tmpArg4 = qtcore.NewQString_5(text)
 	var convArg4 = tmpArg4.GetCthis()
-	// arg: 5, QPalette::ColorRole=Elaborated, QPalette::ColorRole=Enum,
+	// arg: 5, QPalette::ColorRole=Elaborated, QPalette::ColorRole=Enum, , Invalid
 	textRole := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainter12drawItemTextERK5QRectiRK8QPalettebRK7QStringNS3_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2, enabled, convArg4, textRole)
 	qtrt.ErrPrint(err, rv)

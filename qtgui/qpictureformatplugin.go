@@ -106,7 +106,7 @@ func NewQPictureFormatPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QPict
 Constructs an picture format plugin with the given parent. This is invoked automatically by the moc generated code that exports the plugin.
 */
 func NewQPictureFormatPlugin__() *QPictureFormatPlugin {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

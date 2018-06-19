@@ -91,7 +91,7 @@ func NewQLayoutItem(alignment int) *QLayoutItem {
 Constructs a layout item with an alignment. Not all subclasses support alignment.
 */
 func NewQLayoutItem__() *QLayoutItem {
-	// arg: 0, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
+	// arg: 0, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>, Unexposed
 	alignment := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QLayoutItemC2E6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, alignment)
 	qtrt.ErrPrint(err, rv)

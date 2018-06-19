@@ -111,7 +111,7 @@ Constructs a new QBoxLayout with direction dir and parent widget parent.
 See also direction().
 */
 func NewQBoxLayout__(arg0 int) *QBoxLayout {
-	// arg: 1, QWidget *=Pointer, QWidget=Record,
+	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayoutC2ENS_9DirectionEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ Adds a stretchable space (a QSpacerItem) with zero minimum size and stretch fact
 See also insertStretch(), addItem(), and QSpacerItem.
 */
 func (this *QBoxLayout) AddStretch__() {
-	// arg: 0, int=Int, =Invalid,
+	// arg: 0, int=Int, =Invalid, , Invalid
 	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout10addStretchEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), stretch)
 	qtrt.ErrPrint(err, rv)
@@ -280,9 +280,9 @@ func (this *QBoxLayout) AddWidget__(arg0 QWidget_ITF /*777 QWidget **/) {
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	stretch := int(0)
-	// arg: 2, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
+	// arg: 2, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>, Unexposed
 	alignment := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch, alignment)
 	qtrt.ErrPrint(err, rv)
@@ -309,7 +309,7 @@ func (this *QBoxLayout) AddWidget__1(arg0 QWidget_ITF /*777 QWidget **/, stretch
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
 	}
-	// arg: 2, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
+	// arg: 2, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>, Unexposed
 	alignment := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch, alignment)
 	qtrt.ErrPrint(err, rv)
@@ -349,7 +349,7 @@ func (this *QBoxLayout) AddLayout__(layout QLayout_ITF /*777 QLayout **/) {
 	if layout != nil && layout.QLayout_PTR() != nil {
 		convArg0 = layout.QLayout_PTR().GetCthis()
 	}
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout9addLayoutEP7QLayouti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	qtrt.ErrPrint(err, rv)
@@ -430,7 +430,7 @@ Inserts a stretchable space (a QSpacerItem) at position index, with zero minimum
 See also addStretch(), insertItem(), and QSpacerItem.
 */
 func (this *QBoxLayout) InsertStretch__(index int) {
-	// arg: 1, int=Int, =Invalid,
+	// arg: 1, int=Int, =Invalid, , Invalid
 	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout13insertStretchEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, stretch)
 	qtrt.ErrPrint(err, rv)
@@ -503,9 +503,9 @@ func (this *QBoxLayout) InsertWidget__(index int, widget QWidget_ITF /*777 QWidg
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	stretch := int(0)
-	// arg: 3, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
+	// arg: 3, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>, Unexposed
 	alignment := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout12insertWidgetEiP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch, alignment)
 	qtrt.ErrPrint(err, rv)
@@ -532,7 +532,7 @@ func (this *QBoxLayout) InsertWidget__1(index int, widget QWidget_ITF /*777 QWid
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
-	// arg: 3, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>
+	// arg: 3, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>, Unexposed
 	alignment := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout12insertWidgetEiP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch, alignment)
 	qtrt.ErrPrint(err, rv)
@@ -576,7 +576,7 @@ func (this *QBoxLayout) InsertLayout__(index int, layout QLayout_ITF /*777 QLayo
 	if layout != nil && layout.QLayout_PTR() != nil {
 		convArg1 = layout.QLayout_PTR().GetCthis()
 	}
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout12insertLayoutEiP7QLayouti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	qtrt.ErrPrint(err, rv)

@@ -136,7 +136,7 @@ Constructs a spin box with 0 as minimum value and 99 as maximum value, a step va
 See also setMinimum(), setMaximum(), and setSingleStep().
 */
 func NewQSpinBox__() *QSpinBox {
-	// arg: 0, QWidget *=Pointer, QWidget=Record,
+	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

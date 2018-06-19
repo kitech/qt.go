@@ -90,7 +90,7 @@ func NewQPaintEngine(features int) *QPaintEngine {
 Creates a paint engine with the featureset specified by caps.
 */
 func NewQPaintEngine__() *QPaintEngine {
-	// arg: 0, QPaintEngine::PaintEngineFeatures=Typedef, QPaintEngine::PaintEngineFeatures=Typedef, QFlags<QPaintEngine::PaintEngineFeature>
+	// arg: 0, QPaintEngine::PaintEngineFeatures=Typedef, QPaintEngine::PaintEngineFeatures=Typedef, QFlags<QPaintEngine::PaintEngineFeature>, Unexposed
 	features := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngineC2E6QFlagsINS_18PaintEngineFeatureEE", qtrt.FFI_TYPE_POINTER, features)
 	qtrt.ErrPrint(err, rv)
@@ -514,7 +514,7 @@ func (this *QPaintEngine) DrawImage__(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtc
 	if sr != nil && sr.QRectF_PTR() != nil {
 		convArg2 = sr.QRectF_PTR().GetCthis()
 	}
-	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>
+	// arg: 3, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine9drawImageERK6QRectFRK6QImageS2_6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, flags)
 	qtrt.ErrPrint(err, rv)

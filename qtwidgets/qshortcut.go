@@ -154,11 +154,11 @@ func NewQShortcut_1_(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidge
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
-	// arg: 2, const char *=Pointer, =Invalid,
+	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, const char *=Pointer, =Invalid,
+	// arg: 3, const char *=Pointer, =Invalid, , Invalid
 	var convArg3 unsafe.Pointer
-	// arg: 4, Qt::ShortcutContext=Elaborated, Qt::ShortcutContext=Enum,
+	// arg: 4, Qt::ShortcutContext=Elaborated, Qt::ShortcutContext=Enum, , Invalid
 	context := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcutC2ERK12QKeySequenceP7QWidgetPKcS6_N2Qt15ShortcutContextE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, context)
 	qtrt.ErrPrint(err, rv)
@@ -188,9 +188,9 @@ func NewQShortcut_1_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidg
 	}
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
-	// arg: 3, const char *=Pointer, =Invalid,
+	// arg: 3, const char *=Pointer, =Invalid, , Invalid
 	var convArg3 unsafe.Pointer
-	// arg: 4, Qt::ShortcutContext=Elaborated, Qt::ShortcutContext=Enum,
+	// arg: 4, Qt::ShortcutContext=Elaborated, Qt::ShortcutContext=Enum, , Invalid
 	context := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcutC2ERK12QKeySequenceP7QWidgetPKcS6_N2Qt15ShortcutContextE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, context)
 	qtrt.ErrPrint(err, rv)
@@ -222,7 +222,7 @@ func NewQShortcut_1_2(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidg
 	defer qtrt.FreeMem(convArg2)
 	var convArg3 = qtrt.CString(ambiguousMember)
 	defer qtrt.FreeMem(convArg3)
-	// arg: 4, Qt::ShortcutContext=Elaborated, Qt::ShortcutContext=Enum,
+	// arg: 4, Qt::ShortcutContext=Elaborated, Qt::ShortcutContext=Enum, , Invalid
 	context := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcutC2ERK12QKeySequenceP7QWidgetPKcS6_N2Qt15ShortcutContextE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, context)
 	qtrt.ErrPrint(err, rv)

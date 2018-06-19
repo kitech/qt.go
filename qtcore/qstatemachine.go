@@ -140,7 +140,7 @@ func NewQStateMachine(parent QObject_ITF /*777 QObject **/) *QStateMachine {
 Constructs a new state machine with the given parent.
 */
 func NewQStateMachine__() *QStateMachine {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -178,7 +178,7 @@ func NewQStateMachine_1(childMode int, parent QObject_ITF /*777 QObject **/) *QS
 Constructs a new state machine with the given parent.
 */
 func NewQStateMachine_1_(childMode int) *QStateMachine {
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachineC2EN6QState9ChildModeEP7QObject", qtrt.FFI_TYPE_POINTER, childMode, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -450,7 +450,7 @@ func (this *QStateMachine) PostEvent__(event QEvent_ITF /*777 QEvent **/) {
 	if event != nil && event.QEvent_PTR() != nil {
 		convArg0 = event.QEvent_PTR().GetCthis()
 	}
-	// arg: 1, QStateMachine::EventPriority=Enum, QStateMachine::EventPriority=Enum,
+	// arg: 1, QStateMachine::EventPriority=Enum, QStateMachine::EventPriority=Enum, , Invalid
 	priority := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachine9postEventEP6QEventNS_13EventPriorityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
 	qtrt.ErrPrint(err, rv)
