@@ -19,49 +19,49 @@ realall: rts bases qmls extras webengines multimedias tools
 
 rts: qtrt- mock-
 qtrt-:
-	go install -v ${ARGI} -x ./qtqt
-	go install -v ${ARGI} -x ./qtrt
+	go install -v -x ${ARGI} ./qtqt
+	go install -v -x ${ARGI} ./qtrt
 mock-:
-	go install -v ${ARGI} -x ./qtmock
+	go install -v -x ${ARGI} ./qtmock
 
 bases: qtrt- core- gui- widgets-
 core-:
-	go install -v ${ARGI} -x ./qtcore
+	go install -v -x ${ARGI} ./qtcore
 gui-:
-	go install -v ${ARGI} -x ./qtgui
+	go install -v -x ${ARGI} ./qtgui
 widgets-:
-	go install -v ${ARGI} -x ./qtwidgets
+	go install -v -x ${ARGI} ./qtwidgets
 
 network-:
-	go install -v ${ARGI} -x ./qtnetwork
+	go install -v -x ${ARGI} ./qtnetwork
 
 qmls: qml- quick- quickctrl- quickwgt-
 qml-:
-	go install -v ${ARGI} -x ./qtqml
+	go install -v -x ${ARGI} ./qtqml
 quick-:
-	go install -v ${ARGI} -x ./qtquick
+	go install -v -x ${ARGI} ./qtquick
 quickctrl-:
-	go install -v ${ARGI} -x ./qtquicktemplates2
-	go install -v ${ARGI} -x ./qtquickcontrols2
+	go install -v -x ${ARGI} ./qtquicktemplates2
+	go install -v -x ${ARGI} ./qtquickcontrols2
 quickwgt-:
-	go install -v ${ARGI} -x ./qtquickwidgets
+	go install -v -x ${ARGI} ./qtquickwidgets
 
 extras:
-	go install -v ${ARGI} -x ./qtandroidextras
-	go install -v ${ARGI} -x ./qtmacextras
-	go install -v ${ARGI} -x ./qtwinextras
+	go install -v -x ${ARGI} ./qtandroidextras
+	go install -v -x ${ARGI} ./qtmacextras
+	go install -v -x ${ARGI} ./qtwinextras
 
 webengines:
-	go install -v ${ARGI} -x ./qtpositioning
-	go install -v ${ARGI} -x ./qtprintsupport
-	go install -v ${ARGI} -x ./qtwebchannel
-	go install -v ${ARGI} -x ./qtwebenginecore
-	go install -v ${ARGI} -x ./qtwebengine
-	go install -v ${ARGI} -x ./qtwebenginewidgets
+	go install -v -x ${ARGI} ./qtpositioning
+	go install -v -x ${ARGI} ./qtprintsupport
+	go install -v -x ${ARGI} ./qtwebchannel
+	go install -v -x ${ARGI} ./qtwebenginecore
+	go install -v -x ${ARGI} ./qtwebengine
+	go install -v -x ${ARGI} ./qtwebenginewidgets
 
 multimedias:
-	go install -v ${ARGI} -x ./qtsvg
-	go install -v ${ARGI} -x ./qtmultimedia
+	go install -v -x ${ARGI} ./qtsvg
+	go install -v -x ${ARGI} ./qtmultimedia
 
 eg-:
 	go build -v -x eg/coreapp.go
