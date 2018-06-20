@@ -1,60 +1,67 @@
 
 # GOPATH := $(PWD):$(GOPATH)
+MINORVER := $(shell go version|awk '{print $$3}'|awk -F. '{print $$2}')
+USEI=$(shell expr "${MINORVER}" ">=" "10")
+ifeq ($(USEI), 1)
+	ARGI="-i"
+endif
 
 all:
 	@echo ${GOPATH}
+	@echo ${MINORVER}
+	@echo "dd ${ARGI} dd"
 	# CC=clang CXX=clang++ go install -v -x qt5
 	# go build -v -x core
 	# go build -v -x gui
 	# go build -v -x widgets
 
-realall: rts bases qmls extras webengines tools
+realall: rts bases qmls extras webengines multimedias tools
 
 rts: qtrt- mock-
 qtrt-:
-	go install -v -i -x ./qtqt
-	go install -v -i -x ./qtrt
+	go install -v ${ARGI} -x ./qtqt
+	go install -v ${ARGI} -x ./qtrt
 mock-:
-	go install -v -i -x ./qtmock
+	go install -v ${ARGI} -x ./qtmock
 
 bases: qtrt- core- gui- widgets-
 core-:
-	go install -v -i -x ./qtcore
+	go install -v ${ARGI} -x ./qtcore
 gui-:
-	go install -v -i -x ./qtgui
+	go install -v ${ARGI} -x ./qtgui
 widgets-:
-	go install -v -i -x ./qtwidgets
+	go install -v ${ARGI} -x ./qtwidgets
 
 network-:
-	go install -v -i -x ./qtnetwork
+	go install -v ${ARGI} -x ./qtnetwork
 
 qmls: qml- quick- quickctrl- quickwgt-
 qml-:
-	go install -v -i -x ./qtqml
+	go install -v ${ARGI} -x ./qtqml
 quick-:
-	go install -v -i -x ./qtquick
+	go install -v ${ARGI} -x ./qtquick
 quickctrl-:
-	go install -v -i -x ./qtquicktemplates2
-	go install -v -i -x ./qtquickcontrols2
+	go install -v ${ARGI} -x ./qtquicktemplates2
+	go install -v ${ARGI} -x ./qtquickcontrols2
 quickwgt-:
-	go install -v -i -x ./qtquickwidgets
+	go install -v ${ARGI} -x ./qtquickwidgets
 
 extras:
-	go install -v -i -x ./qtandroidextras
-	go install -v -i -x ./qtmacextras
-	go install -v -i -x ./qtwinextras
+	go install -v ${ARGI} -x ./qtandroidextras
+	go install -v ${ARGI} -x ./qtmacextras
+	go install -v ${ARGI} -x ./qtwinextras
 
 webengines:
-	go install -v -i -x ./qtpositioning
-	go install -v -i -x ./qtprintsupport
-	go install -v -i -x ./qtwebchannel
-	go install -v -i -x ./qtwebenginecore
-	go install -v -i -x ./qtwebengine
-	go install -v -i -x ./qtwebenginewidgets
+	go install -v ${ARGI} -x ./qtpositioning
+	go install -v ${ARGI} -x ./qtprintsupport
+	go install -v ${ARGI} -x ./qtwebchannel
+	go install -v ${ARGI} -x ./qtwebenginecore
+	go install -v ${ARGI} -x ./qtwebengine
+	go install -v ${ARGI} -x ./qtwebenginewidgets
 
 multimedias:
-	go install -v -i -x ./qtsvg
-	go install -v -i -x ./qtmultimedia
+	go install -v ${ARGI} -x ./qtsvg
+	go install -v ${ARGI} -x ./qtmultimedia
 
 eg-:
 	go build -v -x eg/coreapp.go
