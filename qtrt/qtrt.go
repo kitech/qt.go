@@ -11,14 +11,18 @@ import "C"
 import (
 	"fmt"
 	"log"
+	"os"
 	"reflect"
 	"runtime"
+	"strings"
 	"unsafe"
 )
 
-func CString(s string) unsafe.Pointer  { return unsafe.Pointer(C.CString(s)) }
-func GoString(p unsafe.Pointer) string { return C.GoString((*C.char)(p)) }
-func GoStringI(p uint64) string        { return GoString(unsafe.Pointer(uintptr(p))) }
+func CString(s string) unsafe.Pointer          { return unsafe.Pointer(C.CString(s)) }
+func GoString(p unsafe.Pointer) string         { return C.GoString((*C.char)(p)) }
+func GoStringN(p unsafe.Pointer, n int) string { return C.GoStringN((*C.char)(p), C.int(n)) }
+func GoStringI(p uint64) string                { return GoString(unsafe.Pointer(uintptr(p))) }
+func GoStringIN(p uint64, n int) string        { return GoStringN(unsafe.Pointer(uintptr(p)), n) }
 
 var zeromem = C.calloc(1, 8096)
 
@@ -52,6 +56,13 @@ func (this *CObject) GetCthis_() unsafe.Pointer {
 
 ///////////
 var DebugFinal bool = false
+var FinalProxyFn = func(f func()) { f() } //
+func init() {
+	dbgval := os.Getenv("QTGO_DEBUG_FINAL")
+	if strings.ToLower(dbgval) == "true" || dbgval == "1" {
+		DebugFinal = true
+	}
+}
 
 func objectFinalBefore(o interface{}) {
 	if DebugFinal {
@@ -65,17 +76,19 @@ func objectFinalAfter(o interface{}) {
 }
 func SetFinalizer(obj interface{}, finalizer interface{}) {
 	runtime.SetFinalizer(obj, func(o interface{}) {
-		objectFinalBefore(o)
-		ov := reflect.ValueOf(o)
-		fv := reflect.ValueOf(finalizer)
-		insure := false
-		if finalizerObjectFilterFn != nil {
-			insure = finalizerObjectFilterFn(ov)
-		}
-		if insure {
-			fv.Call([]reflect.Value{ov})
-		}
-		objectFinalAfter(o)
+		FinalProxyFn(func() {
+			objectFinalBefore(o)
+			ov := reflect.ValueOf(o)
+			fv := reflect.ValueOf(finalizer)
+			insure := false
+			if finalizerObjectFilterFn != nil {
+				insure = finalizerObjectFilterFn(ov)
+			}
+			if insure {
+				fv.Call([]reflect.Value{ov})
+			}
+			objectFinalAfter(o)
+		})
 	})
 }
 func UnsetFinalizer(obj interface{})   { runtime.SetFinalizer(obj, nil) }

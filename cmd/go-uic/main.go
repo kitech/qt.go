@@ -55,11 +55,13 @@ func main() {
 	cp.APf("header", "import \"github.com/kitech/qt.go/qtwidgets\"")
 	cp.APf("header", "import \"github.com/kitech/qt.go/qtquickwidgets\"")
 	cp.APf("header", "import \"github.com/kitech/qt.go/qtmock\"")
+	cp.APf("header", "import \"github.com/kitech/qt.go/qtrt\"")
 	cp.APf("header", "func init(){qtcore.KeepMe()}")
 	cp.APf("header", "func init(){qtgui.KeepMe()}")
 	cp.APf("header", "func init(){qtwidgets.KeepMe()}")
 	cp.APf("header", "func init(){qtquickwidgets.KeepMe()}")
 	cp.APf("header", "func init(){qtmock.KeepMe()}")
+	cp.APf("header", "func init(){qtrt.KeepMe()}")
 
 	insection := INSEC_NONE
 	for _, line := range lines {
@@ -268,7 +270,8 @@ func onSetupUi(line string) {
 				"AutoRepeat", "AutoExclusive", "DocumentMode",
 				"Checked", "Flat", "AutoFillBackground":
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
-			case "Bold", "OpenExternalLinks", "WordWrap", "Frame", "Editable", "DragDropOverwriteMode",
+			case "Bold", "OpenExternalLinks", "WordWrap", "Frame", "Editable",
+				"DragDropOverwriteMode", "ReadOnly",
 				"AcceptRichText", "Checkable", "MouseTracking", "Enabled":
 				refmtval = untitle(refmtval) // True => true
 			case "ToolButtonStyle":
@@ -388,6 +391,7 @@ func onSetupUi(line string) {
 			a3 := "qtwidgets." + strings.Replace(mats[0][6], ":", "_", -1)
 			cp.APf("setupUi", " this.%s = qtwidgets.NewQSpacerItem(%s, %s, %s, %s)",
 				strings.Title(mats[0][1]), a0, a1, a2, a3)
+			cp.APf("setupUi", " qtrt.ReleaseOwnerToQt(this.%s)", strings.Title(mats[0][1]))
 		} else {
 			cp.APf("setupUi", fmt.Sprintf("// %s // 126", line))
 		}

@@ -7,6 +7,7 @@ import "C"
 import (
 	"errors"
 	"log"
+	"os"
 	"strings"
 	"unsafe"
 
@@ -248,6 +249,12 @@ var afterDestroyedQObject = func(senderCobj, recverCobj unsafe.Pointer, classNam
 //
 var debugDynSlot bool = false
 
+func init() {
+	dbgval := os.Getenv("QTGO_DEBUG_DYNSLOT")
+	if strings.ToLower(dbgval) == "true" || dbgval == "1" {
+		debugDynSlot = true
+	}
+}
 func SetDebugDynSlot(on bool) {
 	debugDynSlot = on
 	InvokeQtFunc6("QDynSlotObject_set_debug", FFI_TYPE_VOID, IfElseInt(on, 1, 0))

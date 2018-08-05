@@ -152,6 +152,13 @@ type VRetype = uint64 // interface{}
 var debugFFICall = false
 var qtlibs = map[string]FFILibrary{}
 
+func init() {
+	dbgval := os.Getenv("QTGO_DEBUG_FFI_CALL")
+	if strings.ToLower(dbgval) == "true" || dbgval == "1" {
+		debugFFICall = true
+	}
+}
+
 func SetDebugFFICall(on bool) { debugFFICall = on }
 func init() {
 	log.SetFlags(log.Flags() | log.Lshortfile)
