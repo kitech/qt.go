@@ -185,6 +185,7 @@ func onSetupUi(line string) {
 		reg6 := regexp.MustCompile(`(Q[A-Z][iconfont]+) ([iconfont0-9]+);`)
 		reg7 := regexp.MustCompile(`QSizePolicy (.+)\((.+), (.+)\);`)
 		reg8 := regexp.MustCompile(`(.+) = new (QSpacerItem)\(([0-9]+), ([0-9]+), (.+), (.+)\);`)
+		reg9 := regexp.MustCompile(`if \((.+)->([rowCountcolumn]+)\(\) < ([0-9]+)\)`) // if (tableWidget->rowCount() < 3)
 		reg100 := regexp.MustCompile(`QMetaObject::connectSlotsByName\((.+)\);`)
 		if reg100.MatchString(line) {
 			mats := reg100.FindAllStringSubmatch(line, -1)
@@ -258,7 +259,7 @@ func onSetupUi(line string) {
 			refmtsuf := ""
 			switch mats[0][2] {
 			case "Spacing", "HorizontalStretch", "VerticalStretch":
-			case "PointSize", "Weight", "ColumnCount": // do nothing
+			case "PointSize", "Weight", "ColumnCount", "RowCount": // do nothing
 			case "ContentsMargins", "CurrentIndex", "LineWidth":
 			case "MaxVisibleItems", "ModelColumn", "VerticalSpacing":
 			case "Orientation", "TextFormat":
@@ -284,10 +285,10 @@ func onSetupUi(line string) {
 				refmtval = strings.Replace(refmtval, "|", "|qtwidgets.", -1)
 			case "Geometry":
 				refmtval = strings.TrimRight(refmtval[6:], ")")
-			case "HorizontalScrollBarPolicy", "ContextMenuPolicy":
+			case "HorizontalScrollBarPolicy", "VerticalScrollBarPolicy", "ContextMenuPolicy":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "SizeAdjustPolicy", "SizeConstraint", "FrameShape", "FrameShadow",
-				"SelectionBehavior":
+				"SelectionBehavior", "SelectionMode":
 				refmtval = "qtwidgets." + strings.Replace(refmtval, ":", "_", -1)
 			case "ResizeMode":
 				refmtval = "qtquickwidgets." + strings.Replace(refmtval, ":", "_", -1)
@@ -304,7 +305,7 @@ func onSetupUi(line string) {
 				refmtval = fmt.Sprintf("qtcore.NewQUrl_1(\"%s\", 0)", strings.Split(refmtval, "\"")[1])
 			case "HeightForWidth":
 				refmtval = "this." + strings.Replace(refmtval, "->", ".", -1)
-			case "HorizontalHeaderItem":
+			case "HorizontalHeaderItem", "VerticalHeaderItem":
 				refmtval = strings.Replace(refmtval, ",", ", this.", 1)
 				// refmtval = "false" // TODO label_x.SizePolicy().HasHeightForWidth() crash
 			// case "SizePolicy": // TODO 可能值有点问题，过滤掉设置setSizePolicy
@@ -392,6 +393,11 @@ func onSetupUi(line string) {
 			cp.APf("setupUi", " this.%s = qtwidgets.NewQSpacerItem(%s, %s, %s, %s)",
 				strings.Title(mats[0][1]), a0, a1, a2, a3)
 			cp.APf("setupUi", " qtrt.ReleaseOwnerToQt(this.%s)", strings.Title(mats[0][1]))
+		} else if reg9.MatchString(line) {
+			mats := reg9.FindAllStringSubmatch(line, -1)
+			log.Println(len(mats), mats, "//", line)
+			cp.APf("setupUi", " // if this.%s.%s() > %s // 119",
+				strings.Title(mats[0][1]), strings.Title(mats[0][2]), mats[0][3])
 		} else {
 			cp.APf("setupUi", fmt.Sprintf("// %s // 126", line))
 		}

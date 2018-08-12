@@ -138,6 +138,16 @@ func (*QDynSlotObject) _ConnectSwitch(src unsafe.Pointer, signame string, on boo
 // TODO
 func Disconnect(cobj CObjectITF, signame string) {
 	qt.DisconnectAllSignals(cobj.GetCthis(), signame)
+
+}
+
+// the same as QObject.Disconnect_2_()
+func DisconnectAll(cobj CObjectITF) {
+	var convArg0 unsafe.Pointer
+	var convArg1 unsafe.Pointer
+	var convArg2 unsafe.Pointer
+	rv, err := InvokeQtFunc6("_ZNK7QObject10disconnectEPKcPKS_S1_", FFI_TYPE_POINTER, cobj.GetCthis(), convArg0, convArg1, convArg2)
+	ErrPrint(err, rv)
 }
 
 // or direct use qtcore.QObject_Connect
