@@ -1,7 +1,10 @@
 package qtrt
 
 /*
- */
+#include <stdint.h>
+
+static void *derefp4dynslotcbarg(void *ptr) { return *((void**)ptr);}
+*/
 import "C"
 import (
 	"log"
@@ -99,9 +102,9 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 
 		switch argty.Kind() {
 		case reflect.Int:
-			in = append(in, reflect.ValueOf(*(*int)(argvals[i+1])))
+			in = append(in, reflect.ValueOf(int(*(*C.int)(argvals[i+1]))))
 		case reflect.Bool: // it's come from qt's *bool, only 1B
-			prmval := IfElse(*(*int8)(argvals[i+1]) == 0, false, true).(bool)
+			prmval := IfElse(int8(*(*C.int8_t)(argvals[i+1])) == 0, false, true).(bool)
 			in = append(in, reflect.ValueOf(prmval))
 		case reflect.Ptr:
 			argd1ty := argty.Elem()
@@ -115,12 +118,20 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 						log.Println("qt class pointer:", argd1ty.String())
 					}
 					prmval := reflect.New(argd1ty)
-					prmval.MethodByName("SetCthis").Call([]reflect.Value{reflect.ValueOf(argvals[i+1])})
+					setmthv := prmval.MethodByName("SetCthis")
+					tmpmthv := prmval.MethodByName("QObject_PTR")
+					if tmpmthv.IsValid() { // QObject or subclas
+						tmpval := C.derefp4dynslotcbarg(argvals[i+1])
+						setmthv.Call([]reflect.Value{reflect.ValueOf(tmpval)})
+					} else {
+						setmthv.Call([]reflect.Value{reflect.ValueOf(argvals[i+1])})
+					}
 					in = append(in, prmval)
 				}
 			}
 		case reflect.UnsafePointer:
-			in = append(in, reflect.ValueOf(argvals[i+1]))
+			tmpval := C.derefp4dynslotcbarg(argvals[i+1])
+			in = append(in, reflect.ValueOf(tmpval))
 		case reflect.String: // think caller supply a QString*
 			var this_ unsafe.Pointer = argvals[i+1]
 			ret1, err := InvokeQtFunc6("_ZNKR7QString6toUtf8Ev", FFI_TYPE_POINTER, this_)
@@ -131,21 +142,21 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 			in = append(in, prmval)
 			InvokeQtFunc6("_ZN10QByteArrayD2Ev", FFI_TYPE_VOID, unsafe.Pointer(uintptr(ret1)))
 		case reflect.Float64:
-			in = append(in, reflect.ValueOf(*(*float64)(argvals[i+1])))
+			in = append(in, reflect.ValueOf(float64(*(*C.double)(argvals[i+1]))))
 		case reflect.Float32:
-			in = append(in, reflect.ValueOf(*(*float32)(argvals[i+1])))
+			in = append(in, reflect.ValueOf(float32(*(*C.float)(argvals[i+1]))))
 		case reflect.Uint16:
-			in = append(in, reflect.ValueOf(*(*uint16)(argvals[i+1])))
+			in = append(in, reflect.ValueOf(uint16(*(*C.uint16_t)(argvals[i+1]))))
 		case reflect.Int16:
-			in = append(in, reflect.ValueOf(*(*int16)(argvals[i+1])))
+			in = append(in, reflect.ValueOf(int16(*(*C.int16_t)(argvals[i+1]))))
 		case reflect.Uint32:
-			in = append(in, reflect.ValueOf(*(*uint32)(argvals[i+1])))
+			in = append(in, reflect.ValueOf(uint32(*(*C.uint32_t)(argvals[i+1]))))
 		case reflect.Int32:
-			in = append(in, reflect.ValueOf(*(*int32)(argvals[i+1])))
+			in = append(in, reflect.ValueOf(int32(*(*C.int32_t)(argvals[i+1]))))
 		case reflect.Uint64:
-			in = append(in, reflect.ValueOf(*(*uint64)(argvals[i+1])))
+			in = append(in, reflect.ValueOf(uint64(*(*C.uint64_t)(argvals[i+1]))))
 		case reflect.Int64:
-			in = append(in, reflect.ValueOf(*(*int64)(argvals[i+1])))
+			in = append(in, reflect.ValueOf(int64(*(*C.int64_t)(argvals[i+1]))))
 		default:
 			log.Println("Unsupported:", argty.Kind().String(), argty.String())
 		}
