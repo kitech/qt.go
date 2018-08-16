@@ -90,7 +90,7 @@ Default constructs an instance of QAndroidService.
 */
 func NewQAndroidService__(argc int, argv []string) *QAndroidService {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
-	// arg: 2, int=Int, =Invalid,
+	// arg: 2, int=Int, =Invalid, , Invalid
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidServiceC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, flags)
 	qtrt.ErrPrint(err, rv)

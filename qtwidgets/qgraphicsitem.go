@@ -413,6 +413,27 @@ func (this *QGraphicsItem) SetParentItem(parent QGraphicsItem_ITF /*777 QGraphic
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:177
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> childItems() const
+
+/*
+Returns a list of this item's children.
+
+The items are sorted by stacking order. This takes into account both the items' insertion order and their Z-values.
+
+This function was introduced in  Qt 4.4.
+
+See also setParentItem(), zValue(), and Sorting.
+*/
+func (this *QGraphicsItem) ChildItems() *QGraphicsItemList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem10childItemsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:178
 // index:0
 // Public Visibility=Default Availability=Available
@@ -2799,6 +2820,46 @@ func (this *QGraphicsItem) CollidesWithPath__(path qtgui.QPainterPath_ITF) bool 
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:333
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> collidingItems(Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all items that collide with this item.
+
+The way collisions are detected is determined by applying mode to items that are compared to this item, i.e., each item's shape or bounding rectangle is checked against this item's shape. The default value for mode is Qt::IntersectsItemShape.
+
+See also collidesWithItem().
+*/
+func (this *QGraphicsItem) CollidingItems(mode int) *QGraphicsItemList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem14collidingItemsEN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:333
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> collidingItems(Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all items that collide with this item.
+
+The way collisions are detected is determined by applying mode to items that are compared to this item, i.e., each item's shape or bounding rectangle is checked against this item's shape. The default value for mode is Qt::IntersectsItemShape.
+
+See also collidesWithItem().
+*/
+func (this *QGraphicsItem) CollidingItems__() *QGraphicsItemList /*lll*/ {
+	// arg: 0, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem14collidingItemsEN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:334

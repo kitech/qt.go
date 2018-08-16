@@ -28,22 +28,32 @@ func SetInheritCallback2c(name string, fnptr unsafe.Pointer) {
 }
 
 func SetAllInheritCallback(cbobj CObjectITF, name string, f interface{}) {
-	if cbobj.GetCthis() == nil {
-		log.Println("obj is nil", name)
-	}
-
 	if cbobj.GetCthis() != nil {
-
-		if signal := qt.LendSignal(cbobj.GetCthis(), name); signal != nil {
-			log.Println("already exists:", name, reflect.TypeOf(cbobj))
-			qt.ConnectSignal(cbobj.GetCthis(), name, func(args ...uint64) {
-				signal.(func(...uint64))(args...)
-				callbackInheritInvokeGo(f, args...)
-			})
-		} else {
-			qt.ConnectSignal(cbobj.GetCthis(), name, f)
+	} else { // take as global function call, just no this field
+		if debugDynSlot {
+			log.Println("obj is nil, take as global event", name)
 		}
 	}
+
+	if signal := qt.LendSignal(cbobj.GetCthis(), name); signal != nil {
+		log.Println("already exists:", name, reflect.TypeOf(cbobj))
+		qt.ConnectSignal(cbobj.GetCthis(), name, func(args ...uint64) {
+			signal.(func(...uint64))(args...)
+			callbackInheritInvokeGo(f, args...)
+		})
+	} else {
+		qt.ConnectSignal(cbobj.GetCthis(), name, f)
+	}
+}
+func UnsetAllInheritCallback(cbobj CObjectITF, name string) {
+	if signal := qt.LendSignal(cbobj.GetCthis(), name); signal != nil {
+		qt.DisconnectSignal(cbobj.GetCthis(), name)
+	} else {
+		log.Println("not exists:", cbobj, name)
+	}
+}
+func UnsetAllInheritCallbackAll(cbobj CObjectITF) {
+	qt.DisconnectObject(cbobj.GetCthis())
 }
 
 // depcreated
@@ -219,12 +229,26 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 		switch argty.Kind() {
 		case reflect.Int:
 			in = append(in, reflect.ValueOf(int(args[i])))
+		case reflect.Uint32:
+			in = append(in, reflect.ValueOf(uint32(args[i])))
+		case reflect.Int32:
+			in = append(in, reflect.ValueOf(int32(args[i])))
+		case reflect.Uint16:
+			in = append(in, reflect.ValueOf(uint16(args[i])))
+		case reflect.Int16:
+			in = append(in, reflect.ValueOf(int16(args[i])))
+		case reflect.Uint64:
+			in = append(in, reflect.ValueOf(uint64(args[i])))
+		case reflect.Int64:
+			in = append(in, reflect.ValueOf(int64(args[i])))
 		case reflect.Bool:
 			in = append(in, reflect.ValueOf(args[i] == 1))
 		case reflect.Float64:
 			in = append(in, reflect.ValueOf((float64)(*(*C.double)(unsafe.Pointer(uintptr(args[i]))))))
 		case reflect.Float32:
 			in = append(in, reflect.ValueOf((float32)(*(*C.float)(unsafe.Pointer(uintptr(args[i]))))))
+		case reflect.String:
+			in = append(in, reflect.ValueOf(GoStringI(args[i])))
 		case reflect.Ptr:
 			argd1ty := argty.Elem()
 			switch argd1ty.Kind() {

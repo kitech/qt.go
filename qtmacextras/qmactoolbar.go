@@ -107,7 +107,7 @@ func NewQMacToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 Constructs a QMacToolBar with the given parent
 */
 func NewQMacToolBar__() *QMacToolBar {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -149,7 +149,7 @@ Constructs a QMacToolBar with the given parent
 func NewQMacToolBar_1_(identifier string) *QMacToolBar {
 	var tmpArg0 = qtcore.NewQString_5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
-	// arg: 1, QObject *=Pointer, QObject=Record,
+	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBarC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

@@ -56,14 +56,19 @@ func (this *QWindowListx) At(i int) *QWindow {
 	return NewQWindowFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
-func (this *QWindowListx) Count() int {
-	rv, err := qtrt.InvokeQtFunc6("C_QWindowList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+func (this *QWindowListx) Count(that *QWindow) int {
+	rv, err := qtrt.InvokeQtFunc6("C_QWindowList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), that.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+func (this *QWindowListx) Count_1() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QWindowList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QWindowListx) ConvertToSlice() (lst []*QWindow) {
-	for i := 0; i < this.Count(); i++ {
+	for i := 0; i < this.Count_1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return

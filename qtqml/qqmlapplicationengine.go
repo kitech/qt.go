@@ -219,6 +219,40 @@ func DeleteQQmlApplicationEngine(this *QQmlApplicationEngine) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtQml/qqmlapplicationengine.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QObject *> rootObjects()
+
+/*
+Returns a list of all the root objects instantiated by the QQmlApplicationEngine. This will only contain objects loaded via load() or a convenience constructor.
+
+Note: In Qt versions prior to 5.9, this function is marked as non-const.
+*/
+func (this *QQmlApplicationEngine) RootObjects() *qtcore.QObjectList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngine11rootObjectsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQObjectListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtQml/qqmlapplicationengine.h:64
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QList<QObject *> rootObjects() const
+
+/*
+Returns a list of all the root objects instantiated by the QQmlApplicationEngine. This will only contain objects loaded via load() or a convenience constructor.
+
+Note: In Qt versions prior to 5.9, this function is marked as non-const.
+*/
+func (this *QQmlApplicationEngine) RootObjects_1() *qtcore.QObjectList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QQmlApplicationEngine11rootObjectsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQObjectListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
 // /usr/include/qt/QtQml/qqmlapplicationengine.h:67
 // index:0
 // Public Visibility=Default Availability=Available

@@ -415,6 +415,21 @@ func (this *QQuickItem) ChildrenRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtQuick/qquickitem.h:209
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] QList<QQuickItem *> childItems() const
+
+/*
+Returns the children of this item.
+*/
+func (this *QQuickItem) ChildItems() *QQuickItemList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem10childItemsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQQuickItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
 // /usr/include/qt/QtQuick/qquickitem.h:211
 // index:0
 // Public Visibility=Default Availability=Available

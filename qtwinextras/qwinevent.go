@@ -18,7 +18,7 @@ package qtwinextras
 
 /*
 #include <stdlib.h>
-// extern C begin: 45
+// extern C begin: 9
 */
 // import "C"
 import "unsafe"

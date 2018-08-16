@@ -111,7 +111,7 @@ Constructs a QWinTaskbarButton with the specified parent.
 If parent is an instance of QWindow, it is automatically assigned as the taskbar button's window.
 */
 func NewQWinTaskbarButton__() *QWinTaskbarButton {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButtonC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

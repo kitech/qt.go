@@ -48,17 +48,22 @@ func DeleteQObjectList(*QObjectList) {} // TODO
 func (this *QObjectListx) At(i int) *QObject {
 	rv, err := qtrt.InvokeQtFunc6("C_QObjectList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
-	return NewQObjectFromPointer(unsafe.Pointer(uintptr(rv)))
+	return NewQObjectFromPointer(qtrt.DerefPtr2(unsafe.Pointer(uintptr(rv))))
 }
 
-func (this *QObjectListx) Count() int {
-	rv, err := qtrt.InvokeQtFunc6("C_QObjectList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+func (this *QObjectListx) Count(that *QObject) int {
+	rv, err := qtrt.InvokeQtFunc6("C_QObjectList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), that.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+func (this *QObjectListx) Count_1() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QObjectList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QObjectListx) ConvertToSlice() (lst []*QObject) {
-	for i := 0; i < this.Count(); i++ {
+	for i := 0; i < this.Count_1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return
@@ -103,14 +108,19 @@ func (this *QFileInfoListx) At(i int) *QFileInfo {
 	return NewQFileInfoFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
-func (this *QFileInfoListx) Count() int {
-	rv, err := qtrt.InvokeQtFunc6("C_QFileInfoList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+func (this *QFileInfoListx) Count(that *QFileInfo) int {
+	rv, err := qtrt.InvokeQtFunc6("C_QFileInfoList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), that.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+func (this *QFileInfoListx) Count_1() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QFileInfoList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QFileInfoListx) ConvertToSlice() (lst []*QFileInfo) {
-	for i := 0; i < this.Count(); i++ {
+	for i := 0; i < this.Count_1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return
@@ -155,14 +165,19 @@ func (this *QModelIndexListx) At(i int) *QModelIndex {
 	return NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
-func (this *QModelIndexListx) Count() int {
-	rv, err := qtrt.InvokeQtFunc6("C_QModelIndexList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+func (this *QModelIndexListx) Count(that *QModelIndex) int {
+	rv, err := qtrt.InvokeQtFunc6("C_QModelIndexList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), that.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+func (this *QModelIndexListx) Count_1() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QModelIndexList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QModelIndexListx) ConvertToSlice() (lst []*QModelIndex) {
-	for i := 0; i < this.Count(); i++ {
+	for i := 0; i < this.Count_1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return

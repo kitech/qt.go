@@ -1577,6 +1577,12 @@ const QTSVG_VERSION_STR = "5.10.1"                                              
 const QTSVG_VERSION = 0x050A01                                                                         // num16 @ svg
 const QTX11EXTRAS_VERSION_STR = "5.10.1"                                                               // str @ x11extras
 const QTX11EXTRAS_VERSION = 0x050A01                                                                   // num16 @ x11extras
+const QTWINEXTRAS_VERSION_STR = "5.10.1"                                                               // str @ winextras
+const QTWINEXTRAS_VERSION = 0x050A01                                                                   // num16 @ winextras
+const QTMACEXTRAS_VERSION_STR = "5.10.1"                                                               // str @ macextras
+const QTMACEXTRAS_VERSION = 0x050A01                                                                   // num16 @ macextras
+const QTANDROIDEXTRAS_VERSION_STR = "5.10.1"                                                           // str @ androidextras
+const QTANDROIDEXTRAS_VERSION = 0x050A01                                                               // num16 @ androidextras
 //  body block end
 
 //  keep block begin

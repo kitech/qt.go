@@ -60,14 +60,19 @@ func (this *QWidgetListx) At(i int) *QWidget {
 	return NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
-func (this *QWidgetListx) Count() int {
-	rv, err := qtrt.InvokeQtFunc6("C_QWidgetList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+func (this *QWidgetListx) Count(that *QWidget) int {
+	rv, err := qtrt.InvokeQtFunc6("C_QWidgetList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), that.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+func (this *QWidgetListx) Count_1() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QWidgetList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QWidgetListx) ConvertToSlice() (lst []*QWidget) {
-	for i := 0; i < this.Count(); i++ {
+	for i := 0; i < this.Count_1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return
@@ -109,19 +114,81 @@ func (this *QWidgetSetx) At(i int) *QWidget {
 	return NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
-func (this *QWidgetSetx) Count() int {
-	rv, err := qtrt.InvokeQtFunc6("C_QWidgetSet_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+func (this *QWidgetSetx) Count(that *QWidget) int {
+	rv, err := qtrt.InvokeQtFunc6("C_QWidgetSet_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), that.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+func (this *QWidgetSetx) Count_1() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QWidgetSet_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QWidgetSetx) ConvertToSlice() (lst []*QWidget) {
-	for i := 0; i < this.Count(); i++ {
+	for i := 0; i < this.Count_1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return
 }
 
 func (*QWidgetSetx) ConvertFromSlice(lst []*QWidget) *QWidgetSetx {
+	return nil
+}
+
+/////
+type QGraphicsItemListx struct {
+	*qtrt.CObject
+}
+
+func (this *QGraphicsItemListx) GetCthis() unsafe.Pointer {
+	if this == nil {
+		return nil
+	} else {
+		return this.Cthis
+	}
+}
+func (this *QGraphicsItemListx) SetCthis(cthis unsafe.Pointer) {
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
+}
+func NewQGraphicsItemListxFromPointer(cthis unsafe.Pointer) *QGraphicsItemListx {
+	return &QGraphicsItemListx{&qtrt.CObject{cthis}}
+}
+func NewQGraphicsItemListFromPointer(cthis unsafe.Pointer) *QGraphicsItemList {
+	return &QGraphicsItemList{&qtrt.CObject{cthis}}
+}
+func (*QGraphicsItemListx) NewFromPointer(cthis unsafe.Pointer) *QGraphicsItemListx {
+	return NewQGraphicsItemListxFromPointer(cthis)
+}
+
+func (this *QGraphicsItemListx) At(i int) *QGraphicsItem {
+	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsItemList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	qtrt.ErrPrint(err, rv)
+	return NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv)))
+}
+
+func (this *QGraphicsItemListx) Count(that *QGraphicsItem) int {
+	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsItemList_count_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), that.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+func (this *QGraphicsItemListx) Count_1() int {
+	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsItemList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int)
+}
+
+func (this *QGraphicsItemListx) ConvertToSlice() (lst []*QGraphicsItem) {
+	for i := 0; i < this.Count_1(); i++ {
+		lst = append(lst, this.At(i))
+	}
+	return
+}
+
+func (*QGraphicsItemListx) ConvertFromSlice(lst []*QGraphicsItem) *QGraphicsItemListx {
 	return nil
 }

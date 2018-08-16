@@ -139,3 +139,17 @@ func Cpretval2go(ty string, rv uint64) interface{} {
 	}
 	return rv
 }
+
+func GoBool2C(b bool) int {
+	if b {
+		return 1
+	}
+	return 0
+}
+
+func CBool2Go(b int) bool {
+	if b == 0 {
+		return false
+	}
+	return true
+}

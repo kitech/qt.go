@@ -674,6 +674,530 @@ func (this *QGraphicsScene) ItemsBoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:151
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(Qt::SortOrder) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items(order int) *QGraphicsItemList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsEN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), order)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:151
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(Qt::SortOrder) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items__() *QGraphicsItemList /*lll*/ {
+	// arg: 0, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
+	order := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsEN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), order)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:153
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPointF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_1(pos qtcore.QPointF_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if deviceTransform != nil && deviceTransform.QTransform_PTR() != nil {
+		convArg3 = deviceTransform.QTransform_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK7QPointFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:153
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPointF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_1_(pos qtcore.QPointF_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
+	mode := 0
+	// arg: 2, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
+	order := 0
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK7QPointFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:153
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPointF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_1_1(pos qtcore.QPointF_ITF, mode int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	// arg: 2, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
+	order := 0
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK7QPointFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:153
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPointF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_1_2(pos qtcore.QPointF_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPointF_PTR() != nil {
+		convArg0 = pos.QPointF_PTR().GetCthis()
+	}
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK7QPointFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:154
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QRectF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_2(rect qtcore.QRectF_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if deviceTransform != nil && deviceTransform.QTransform_PTR() != nil {
+		convArg3 = deviceTransform.QTransform_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK6QRectFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:154
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QRectF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_2_(rect qtcore.QRectF_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
+	mode := 0
+	// arg: 2, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
+	order := 0
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK6QRectFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:154
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QRectF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_2_1(rect qtcore.QRectF_ITF, mode int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	// arg: 2, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
+	order := 0
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK6QRectFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:154
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QRectF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_2_2(rect qtcore.QRectF_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRectF_PTR() != nil {
+		convArg0 = rect.QRectF_PTR().GetCthis()
+	}
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK6QRectFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:155
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPolygonF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_3(polygon qtgui.QPolygonF_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if polygon != nil && polygon.QPolygonF_PTR() != nil {
+		convArg0 = polygon.QPolygonF_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if deviceTransform != nil && deviceTransform.QTransform_PTR() != nil {
+		convArg3 = deviceTransform.QTransform_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK9QPolygonFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:155
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPolygonF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_3_(polygon qtgui.QPolygonF_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if polygon != nil && polygon.QPolygonF_PTR() != nil {
+		convArg0 = polygon.QPolygonF_PTR().GetCthis()
+	}
+	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
+	mode := 0
+	// arg: 2, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
+	order := 0
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK9QPolygonFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:155
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPolygonF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_3_1(polygon qtgui.QPolygonF_ITF, mode int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if polygon != nil && polygon.QPolygonF_PTR() != nil {
+		convArg0 = polygon.QPolygonF_PTR().GetCthis()
+	}
+	// arg: 2, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
+	order := 0
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK9QPolygonFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:155
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPolygonF &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_3_2(polygon qtgui.QPolygonF_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if polygon != nil && polygon.QPolygonF_PTR() != nil {
+		convArg0 = polygon.QPolygonF_PTR().GetCthis()
+	}
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK9QPolygonFN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:156
+// index:4
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPainterPath &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_4(path qtgui.QPainterPath_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if path != nil && path.QPainterPath_PTR() != nil {
+		convArg0 = path.QPainterPath_PTR().GetCthis()
+	}
+	var convArg3 unsafe.Pointer
+	if deviceTransform != nil && deviceTransform.QTransform_PTR() != nil {
+		convArg3 = deviceTransform.QTransform_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK12QPainterPathN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:156
+// index:4
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPainterPath &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_4_(path qtgui.QPainterPath_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if path != nil && path.QPainterPath_PTR() != nil {
+		convArg0 = path.QPainterPath_PTR().GetCthis()
+	}
+	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
+	mode := 0
+	// arg: 2, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
+	order := 0
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK12QPainterPathN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:156
+// index:4
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPainterPath &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_4_1(path qtgui.QPainterPath_ITF, mode int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if path != nil && path.QPainterPath_PTR() != nil {
+		convArg0 = path.QPainterPath_PTR().GetCthis()
+	}
+	// arg: 2, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
+	order := 0
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK12QPainterPathN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:156
+// index:4
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPainterPath &, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_4_2(path qtgui.QPainterPath_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if path != nil && path.QPainterPath_PTR() != nil {
+		convArg0 = path.QPainterPath_PTR().GetCthis()
+	}
+	// arg: 3, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg3 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsERK12QPainterPathN2Qt17ItemSelectionModeENS3_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, order, convArg3)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:170
+// index:5
+// Public inline Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(qreal, qreal, qreal, qreal, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_5(x float64, y float64, w float64, h float64, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg6 unsafe.Pointer
+	if deviceTransform != nil && deviceTransform.QTransform_PTR() != nil {
+		convArg6 = deviceTransform.QTransform_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsEddddN2Qt17ItemSelectionModeENS0_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, mode, order, convArg6)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:170
+// index:5
+// Public inline Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(qreal, qreal, qreal, qreal, Qt::ItemSelectionMode, Qt::SortOrder, const QTransform &) const
+
+/*
+Returns an ordered list of all items on the scene. order decides the stacking order.
+
+See also addItem(), removeItem(), and Sorting.
+*/
+func (this *QGraphicsScene) Items_5_(x float64, y float64, w float64, h float64, mode int, order int) *QGraphicsItemList /*lll*/ {
+	// arg: 6, const QTransform &=LValueReference, QTransform=Record, , Invalid
+	var convArg6 unsafe.Pointer
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsEddddN2Qt17ItemSelectionModeENS0_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, mode, order, convArg6)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:158
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> collidingItems(const QGraphicsItem *, Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all items that collide with item. Collisions are determined by calling QGraphicsItem::collidesWithItem(); the collision detection is determined by mode. By default, all items whose shape intersects item or is contained inside item's shape are returned.
+
+The items are returned in descending stacking order (i.e., the first item in the list is the uppermost item, and the last item is the lowermost item).
+
+See also items(), itemAt(), QGraphicsItem::collidesWithItem(), and Sorting.
+*/
+func (this *QGraphicsScene) CollidingItems(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, mode int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsItem_PTR() != nil {
+		convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene14collidingItemsEPK13QGraphicsItemN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:158
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> collidingItems(const QGraphicsItem *, Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all items that collide with item. Collisions are determined by calling QGraphicsItem::collidesWithItem(); the collision detection is determined by mode. By default, all items whose shape intersects item or is contained inside item's shape are returned.
+
+The items are returned in descending stacking order (i.e., the first item in the list is the uppermost item, and the last item is the lowermost item).
+
+See also items(), itemAt(), QGraphicsItem::collidesWithItem(), and Sorting.
+*/
+func (this *QGraphicsScene) CollidingItems__(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QGraphicsItem_PTR() != nil {
+		convArg0 = item.QGraphicsItem_PTR().GetCthis()
+	}
+	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene14collidingItemsEPK13QGraphicsItemN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:165
 // index:0
 // Public Visibility=Default Availability=Available
@@ -728,6 +1252,23 @@ func (this *QGraphicsScene) ItemAt_1(x float64, y float64, deviceTransform qtgui
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene6itemAtEddRK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:182
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> selectedItems() const
+
+/*
+Returns a list of all currently selected items. The items are returned in no particular order.
+
+See also setSelectionArea().
+*/
+func (this *QGraphicsScene) SelectedItems() *QGraphicsItemList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene13selectedItemsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:183

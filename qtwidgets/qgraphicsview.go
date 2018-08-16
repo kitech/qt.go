@@ -1713,6 +1713,229 @@ func (this *QGraphicsView) Render__2(painter qtgui.QPainter_ITF /*777 QPainter *
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsview.h:194
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items() const
+
+/*
+Returns a list of all the items in the associated scene, in descending stacking order (i.e., the first item in the returned list is the uppermost item).
+
+See also QGraphicsScene::items() and Sorting.
+*/
+func (this *QGraphicsView) Items() *QGraphicsItemList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:195
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPoint &) const
+
+/*
+Returns a list of all the items in the associated scene, in descending stacking order (i.e., the first item in the returned list is the uppermost item).
+
+See also QGraphicsScene::items() and Sorting.
+*/
+func (this *QGraphicsView) Items_1(pos qtcore.QPoint_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if pos != nil && pos.QPoint_PTR() != nil {
+		convArg0 = pos.QPoint_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:196
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(int, int) const
+
+/*
+Returns a list of all the items in the associated scene, in descending stacking order (i.e., the first item in the returned list is the uppermost item).
+
+See also QGraphicsScene::items() and Sorting.
+*/
+func (this *QGraphicsView) Items_2(x int, y int) *QGraphicsItemList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:197
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QRect &, Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all the items in the associated scene, in descending stacking order (i.e., the first item in the returned list is the uppermost item).
+
+See also QGraphicsScene::items() and Sorting.
+*/
+func (this *QGraphicsView) Items_3(rect qtcore.QRect_ITF, mode int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsERK5QRectN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:197
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QRect &, Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all the items in the associated scene, in descending stacking order (i.e., the first item in the returned list is the uppermost item).
+
+See also QGraphicsScene::items() and Sorting.
+*/
+func (this *QGraphicsView) Items_3_(rect qtcore.QRect_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
+	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsERK5QRectN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:198
+// index:4
+// Public inline Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(int, int, int, int, Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all the items in the associated scene, in descending stacking order (i.e., the first item in the returned list is the uppermost item).
+
+See also QGraphicsScene::items() and Sorting.
+*/
+func (this *QGraphicsView) Items_4(x int, y int, w int, h int, mode int) *QGraphicsItemList /*lll*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsEiiiiN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:198
+// index:4
+// Public inline Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(int, int, int, int, Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all the items in the associated scene, in descending stacking order (i.e., the first item in the returned list is the uppermost item).
+
+See also QGraphicsScene::items() and Sorting.
+*/
+func (this *QGraphicsView) Items_4_(x int, y int, w int, h int) *QGraphicsItemList /*lll*/ {
+	// arg: 4, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsEiiiiN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:199
+// index:5
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPolygon &, Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all the items in the associated scene, in descending stacking order (i.e., the first item in the returned list is the uppermost item).
+
+See also QGraphicsScene::items() and Sorting.
+*/
+func (this *QGraphicsView) Items_5(polygon qtgui.QPolygon_ITF, mode int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if polygon != nil && polygon.QPolygon_PTR() != nil {
+		convArg0 = polygon.QPolygon_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsERK8QPolygonN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:199
+// index:5
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPolygon &, Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all the items in the associated scene, in descending stacking order (i.e., the first item in the returned list is the uppermost item).
+
+See also QGraphicsScene::items() and Sorting.
+*/
+func (this *QGraphicsView) Items_5_(polygon qtgui.QPolygon_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if polygon != nil && polygon.QPolygon_PTR() != nil {
+		convArg0 = polygon.QPolygon_PTR().GetCthis()
+	}
+	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsERK8QPolygonN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:200
+// index:6
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPainterPath &, Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all the items in the associated scene, in descending stacking order (i.e., the first item in the returned list is the uppermost item).
+
+See also QGraphicsScene::items() and Sorting.
+*/
+func (this *QGraphicsView) Items_6(path qtgui.QPainterPath_ITF, mode int) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if path != nil && path.QPainterPath_PTR() != nil {
+		convArg0 = path.QPainterPath_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsERK12QPainterPathN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:200
+// index:6
+// Public Visibility=Default Availability=Available
+// [8] QList<QGraphicsItem *> items(const QPainterPath &, Qt::ItemSelectionMode) const
+
+/*
+Returns a list of all the items in the associated scene, in descending stacking order (i.e., the first item in the returned list is the uppermost item).
+
+See also QGraphicsScene::items() and Sorting.
+*/
+func (this *QGraphicsView) Items_6_(path qtgui.QPainterPath_ITF) *QGraphicsItemList /*lll*/ {
+	var convArg0 unsafe.Pointer
+	if path != nil && path.QPainterPath_PTR() != nil {
+		convArg0 = path.QPainterPath_PTR().GetCthis()
+	}
+	// arg: 1, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
+	mode := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsERK12QPainterPathN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsview.h:201
 // index:0
 // Public Visibility=Default Availability=Available

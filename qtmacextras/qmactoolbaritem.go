@@ -107,7 +107,7 @@ func NewQMacToolBarItem(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBa
 Constructs a QMacToolBarItem with parent.
 */
 func NewQMacToolBarItem__() *QMacToolBarItem {
-	// arg: 0, QObject *=Pointer, QObject=Record,
+	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QMacToolBarItemC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

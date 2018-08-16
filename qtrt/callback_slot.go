@@ -23,6 +23,8 @@ func UNQSIGNAL(sigName string) string { return sigName[1:] }
 func UNQSLOT(slotName string) string  { return slotName[1:] }
 func UNQMETHOD(mthName string) string { return mthName[1:] }
 
+func DerefPtr2(ptr2 unsafe.Pointer) unsafe.Pointer { return C.derefp4dynslotcbarg(ptr2) }
+
 // export为C的函数，并取该export函数的C地址：
 // 在另一文件中采用extern，不能在当前文件中extern，否则会出现符号冲突
 

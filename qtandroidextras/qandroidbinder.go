@@ -202,9 +202,9 @@ func (this *QAndroidBinder) Transact__(code int, data QAndroidParcel_ITF) bool {
 	if data != nil && data.QAndroidParcel_PTR() != nil {
 		convArg1 = data.QAndroidParcel_PTR().GetCthis()
 	}
-	// arg: 2, QAndroidParcel *=Pointer, QAndroidParcel=Record,
+	// arg: 2, QAndroidParcel *=Pointer, QAndroidParcel=Record, , Invalid
 	var convArg2 unsafe.Pointer
-	// arg: 3, QAndroidBinder::CallType=Enum, QAndroidBinder::CallType=Enum,
+	// arg: 3, QAndroidBinder::CallType=Enum, QAndroidBinder::CallType=Enum, , Invalid
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidBinder8transactEiRK14QAndroidParcelPS0_NS_8CallTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1, convArg2, flags)
 	qtrt.ErrPrint(err, rv)
@@ -236,7 +236,7 @@ func (this *QAndroidBinder) Transact__1(code int, data QAndroidParcel_ITF, reply
 	if reply != nil && reply.QAndroidParcel_PTR() != nil {
 		convArg2 = reply.QAndroidParcel_PTR().GetCthis()
 	}
-	// arg: 3, QAndroidBinder::CallType=Enum, QAndroidBinder::CallType=Enum,
+	// arg: 3, QAndroidBinder::CallType=Enum, QAndroidBinder::CallType=Enum, , Invalid
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidBinder8transactEiRK14QAndroidParcelPS0_NS_8CallTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1, convArg2, flags)
 	qtrt.ErrPrint(err, rv)
