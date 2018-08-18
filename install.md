@@ -70,9 +70,11 @@ extract to $HOME/qtenv/libQt5Inline.dylib
 
 ##### Qt5Inline.so
 
-wget https://github.com/kitech/qt.inline/releases/download/v1.0-rc2/qt510_linux_x64_static.tar.bz2
+wget https://github.com/kitech/qt.inline/releases/download/v1.0-rc3/qt510_linux_x64_static.tar.bz2
 
 extract to $HOME/qtenv/libQt5Inline.so
+
+Note: thus not need install Qt yourself.
 
 ##### qt.go
 

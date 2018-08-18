@@ -13,6 +13,19 @@ func (this *QByteArray) Data_fix() string {
 }
 
 // First parameter need keep alive until object destroyed
+func NewQGenericReturnArgument_fix(aName string, aData unsafe.Pointer /*666*/) *QGenericReturnArgument {
+	var convArg0 = qtrt.CString(aName)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QGenericReturnArgumentC2EPKcPv", qtrt.FFI_TYPE_POINTER, convArg0, aData)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQGenericReturnArgumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, func(obj *QGenericReturnArgument) {
+		DeleteQGenericReturnArgument(obj)
+		qtrt.FreeMem(convArg0)
+	})
+	return gothis
+}
+
+// First parameter need keep alive until object destroyed
 func NewQGenericArgument_fix(aName string, aData unsafe.Pointer /*666*/) *QGenericArgument {
 	var convArg0 = qtrt.CString(aName)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QGenericArgumentC2EPKcPKv", qtrt.FFI_TYPE_POINTER, convArg0, aData)
