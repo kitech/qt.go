@@ -328,6 +328,10 @@ func refmtSymbolName(symname string) string {
 
 func GetQtSymAddr(symname string) unsafe.Pointer {
 	symname = refmtSymbolName(symname)
+	return GetQtSymAddrRaw(symname)
+}
+
+func GetQtSymAddrRaw(symname string) unsafe.Pointer {
 	for _, lib := range qtlibs {
 		addr, err := lib.Symbol(symname)
 		if !isUndefinedSymbolErr(err) {
