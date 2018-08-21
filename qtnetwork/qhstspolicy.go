@@ -324,6 +324,19 @@ type QHstsPolicy__PolicyFlag = int
 //
 const QHstsPolicy__IncludeSubDomains QHstsPolicy__PolicyFlag = 1
 
+func (this *QHstsPolicy) PolicyFlagItemName(val int) string {
+	switch val {
+	case QHstsPolicy__IncludeSubDomains: // 1
+		return "IncludeSubDomains"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QHstsPolicy_PolicyFlagItemName(val int) string {
+	var nilthis *QHstsPolicy
+	return nilthis.PolicyFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

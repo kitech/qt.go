@@ -914,6 +914,37 @@ const QRegularExpression__OptimizeOnFirstUsageOption QRegularExpression__Pattern
 //
 const QRegularExpression__DontAutomaticallyOptimizeOption QRegularExpression__PatternOption = 256
 
+func (this *QRegularExpression) PatternOptionItemName(val int) string {
+	switch val {
+	case QRegularExpression__NoPatternOption: // 0
+		return "NoPatternOption"
+	case QRegularExpression__CaseInsensitiveOption: // 1
+		return "CaseInsensitiveOption"
+	case QRegularExpression__DotMatchesEverythingOption: // 2
+		return "DotMatchesEverythingOption"
+	case QRegularExpression__MultilineOption: // 4
+		return "MultilineOption"
+	case QRegularExpression__ExtendedPatternSyntaxOption: // 8
+		return "ExtendedPatternSyntaxOption"
+	case QRegularExpression__InvertedGreedinessOption: // 16
+		return "InvertedGreedinessOption"
+	case QRegularExpression__DontCaptureOption: // 32
+		return "DontCaptureOption"
+	case QRegularExpression__UseUnicodePropertiesOption: // 64
+		return "UseUnicodePropertiesOption"
+	case QRegularExpression__OptimizeOnFirstUsageOption: // 128
+		return "OptimizeOnFirstUsageOption"
+	case QRegularExpression__DontAutomaticallyOptimizeOption: // 256
+		return "DontAutomaticallyOptimizeOption"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QRegularExpression_PatternOptionItemName(val int) string {
+	var nilthis *QRegularExpression
+	return nilthis.PatternOptionItemName(val)
+}
+
 /*
 The MatchType enum defines the type of the match that should be attempted against the subject string.
 
@@ -933,6 +964,25 @@ const QRegularExpression__PartialPreferFirstMatch QRegularExpression__MatchType 
 //
 const QRegularExpression__NoMatch QRegularExpression__MatchType = 3
 
+func (this *QRegularExpression) MatchTypeItemName(val int) string {
+	switch val {
+	case QRegularExpression__NormalMatch: // 0
+		return "NormalMatch"
+	case QRegularExpression__PartialPreferCompleteMatch: // 1
+		return "PartialPreferCompleteMatch"
+	case QRegularExpression__PartialPreferFirstMatch: // 2
+		return "PartialPreferFirstMatch"
+	case QRegularExpression__NoMatch: // 3
+		return "NoMatch"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QRegularExpression_MatchTypeItemName(val int) string {
+	var nilthis *QRegularExpression
+	return nilthis.MatchTypeItemName(val)
+}
+
 /*
 
 
@@ -947,6 +997,23 @@ const QRegularExpression__AnchoredMatchOption QRegularExpression__MatchOption = 
 
 //
 const QRegularExpression__DontCheckSubjectStringMatchOption QRegularExpression__MatchOption = 2
+
+func (this *QRegularExpression) MatchOptionItemName(val int) string {
+	switch val {
+	case QRegularExpression__NoMatchOption: // 0
+		return "NoMatchOption"
+	case QRegularExpression__AnchoredMatchOption: // 1
+		return "AnchoredMatchOption"
+	case QRegularExpression__DontCheckSubjectStringMatchOption: // 2
+		return "DontCheckSubjectStringMatchOption"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QRegularExpression_MatchOptionItemName(val int) string {
+	var nilthis *QRegularExpression
+	return nilthis.MatchOptionItemName(val)
+}
 
 //  body block end
 

@@ -118,6 +118,19 @@ type QStyleOptionRubberBand__StyleOptionType = int
 //
 const QStyleOptionRubberBand__Type QStyleOptionRubberBand__StyleOptionType = 13
 
+func (this *QStyleOptionRubberBand) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionRubberBand__Type: // 13
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionRubberBand_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionRubberBand
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionRubberBand__StyleOptionVersion = int
 
 // 1
 const QStyleOptionRubberBand__Version QStyleOptionRubberBand__StyleOptionVersion = 1
+
+func (this *QStyleOptionRubberBand) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionRubberBand__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionRubberBand_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionRubberBand
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

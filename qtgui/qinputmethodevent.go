@@ -228,6 +228,27 @@ const QInputMethodEvent__Ruby QInputMethodEvent__AttributeType = 3
 //
 const QInputMethodEvent__Selection QInputMethodEvent__AttributeType = 4
 
+func (this *QInputMethodEvent) AttributeTypeItemName(val int) string {
+	switch val {
+	case QInputMethodEvent__TextFormat: // 0
+		return "TextFormat"
+	case QInputMethodEvent__Cursor: // 1
+		return "Cursor"
+	case QInputMethodEvent__Language: // 2
+		return "Language"
+	case QInputMethodEvent__Ruby: // 3
+		return "Ruby"
+	case QInputMethodEvent__Selection: // 4
+		return "Selection"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QInputMethodEvent_AttributeTypeItemName(val int) string {
+	var nilthis *QInputMethodEvent
+	return nilthis.AttributeTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

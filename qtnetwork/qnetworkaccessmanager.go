@@ -1423,6 +1423,14 @@ const QNetworkAccessManager__CustomOperation QNetworkAccessManager__Operation = 
 //
 const QNetworkAccessManager__UnknownOperation QNetworkAccessManager__Operation = 0
 
+func (this *QNetworkAccessManager) OperationItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QNetworkAccessManager_OperationItemName(val int) string {
+	var nilthis *QNetworkAccessManager
+	return nilthis.OperationItemName(val)
+}
+
 /*
 Indicates whether the network is accessible via this network access manager.
 
@@ -1441,6 +1449,14 @@ const QNetworkAccessManager__NotAccessible QNetworkAccessManager__NetworkAccessi
 
 // The network is accessible.
 const QNetworkAccessManager__Accessible QNetworkAccessManager__NetworkAccessibility = 1
+
+func (this *QNetworkAccessManager) NetworkAccessibilityItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QNetworkAccessManager_NetworkAccessibilityItemName(val int) string {
+	var nilthis *QNetworkAccessManager
+	return nilthis.NetworkAccessibilityItemName(val)
+}
 
 //  body block end
 

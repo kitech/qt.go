@@ -130,6 +130,27 @@ const QQmlImageProviderBase__Invalid QQmlImageProviderBase__ImageType = 3
 //
 const QQmlImageProviderBase__ImageResponse QQmlImageProviderBase__ImageType = 4
 
+func (this *QQmlImageProviderBase) ImageTypeItemName(val int) string {
+	switch val {
+	case QQmlImageProviderBase__Image: // 0
+		return "Image"
+	case QQmlImageProviderBase__Pixmap: // 1
+		return "Pixmap"
+	case QQmlImageProviderBase__Texture: // 2
+		return "Texture"
+	case QQmlImageProviderBase__Invalid: // 3
+		return "Invalid"
+	case QQmlImageProviderBase__ImageResponse: // 4
+		return "ImageResponse"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QQmlImageProviderBase_ImageTypeItemName(val int) string {
+	var nilthis *QQmlImageProviderBase
+	return nilthis.ImageTypeItemName(val)
+}
+
 /*
 
 
@@ -138,6 +159,19 @@ type QQmlImageProviderBase__Flag = int
 
 //
 const QQmlImageProviderBase__ForceAsynchronousImageLoading QQmlImageProviderBase__Flag = 1
+
+func (this *QQmlImageProviderBase) FlagItemName(val int) string {
+	switch val {
+	case QQmlImageProviderBase__ForceAsynchronousImageLoading: // 1
+		return "ForceAsynchronousImageLoading"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QQmlImageProviderBase_FlagItemName(val int) string {
+	var nilthis *QQmlImageProviderBase
+	return nilthis.FlagItemName(val)
+}
 
 //  body block end
 

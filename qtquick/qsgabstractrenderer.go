@@ -496,6 +496,14 @@ const QSGAbstractRenderer__ClearDepthBuffer QSGAbstractRenderer__ClearModeBit = 
 //
 const QSGAbstractRenderer__ClearStencilBuffer QSGAbstractRenderer__ClearModeBit = 4
 
+func (this *QSGAbstractRenderer) ClearModeBitItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSGAbstractRenderer_ClearModeBitItemName(val int) string {
+	var nilthis *QSGAbstractRenderer
+	return nilthis.ClearModeBitItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -118,6 +118,19 @@ type QStyleOptionTabBarBase__StyleOptionType = int
 //
 const QStyleOptionTabBarBase__Type QStyleOptionTabBarBase__StyleOptionType = 12
 
+func (this *QStyleOptionTabBarBase) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionTabBarBase__Type: // 12
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTabBarBase_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionTabBarBase
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionTabBarBase__StyleOptionVersion = int
 
 // 1
 const QStyleOptionTabBarBase__Version QStyleOptionTabBarBase__StyleOptionVersion = 2
+
+func (this *QStyleOptionTabBarBase) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionTabBarBase__Version: // 2
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTabBarBase_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionTabBarBase
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

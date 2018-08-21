@@ -378,6 +378,19 @@ type QGraphicsItemGroup__ = int
 //
 const QGraphicsItemGroup__Type QGraphicsItemGroup__ = 10
 
+func (this *QGraphicsItemGroup) ItemName(val int) string {
+	switch val {
+	case QGraphicsItemGroup__Type: // 10
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsItemGroup_ItemName(val int) string {
+	var nilthis *QGraphicsItemGroup
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

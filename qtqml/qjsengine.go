@@ -472,6 +472,14 @@ const QJSEngine__GarbageCollectionExtension QJSEngine__Extension = 4
 //
 const QJSEngine__AllExtensions QJSEngine__Extension = -1
 
+func (this *QJSEngine) ExtensionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QJSEngine_ExtensionItemName(val int) string {
+	var nilthis *QJSEngine
+	return nilthis.ExtensionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

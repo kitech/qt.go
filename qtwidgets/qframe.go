@@ -519,6 +519,14 @@ const QFrame__VLine QFrame__Shape = 5
 //
 const QFrame__StyledPanel QFrame__Shape = 6
 
+func (this *QFrame) ShapeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFrame_ShapeItemName(val int) string {
+	var nilthis *QFrame
+	return nilthis.ShapeItemName(val)
+}
+
 /*
 This enum type defines the types of shadow that are used to give a 3D effect to frames.
 
@@ -540,6 +548,14 @@ const QFrame__Raised QFrame__Shadow = 32
 //
 const QFrame__Sunken QFrame__Shadow = 48
 
+func (this *QFrame) ShadowItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFrame_ShadowItemName(val int) string {
+	var nilthis *QFrame
+	return nilthis.ShadowItemName(val)
+}
+
 /*
 This enum defines two constants that can be used to extract the two components of frameStyle():
 
@@ -557,6 +573,14 @@ const QFrame__Shadow_Mask QFrame__StyleMask = 240
 
 //
 const QFrame__Shape_Mask QFrame__StyleMask = 15
+
+func (this *QFrame) StyleMaskItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFrame_StyleMaskItemName(val int) string {
+	var nilthis *QFrame
+	return nilthis.StyleMaskItemName(val)
+}
 
 //  body block end
 

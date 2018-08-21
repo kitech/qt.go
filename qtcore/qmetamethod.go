@@ -3526,6 +3526,23 @@ const QMetaMethod__Protected QMetaMethod__Access = 1
 //
 const QMetaMethod__Public QMetaMethod__Access = 2
 
+func (this *QMetaMethod) AccessItemName(val int) string {
+	switch val {
+	case QMetaMethod__Private: // 0
+		return "Private"
+	case QMetaMethod__Protected: // 1
+		return "Protected"
+	case QMetaMethod__Public: // 2
+		return "Public"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMetaMethod_AccessItemName(val int) string {
+	var nilthis *QMetaMethod
+	return nilthis.AccessItemName(val)
+}
+
 /*
 
 
@@ -3544,6 +3561,25 @@ const QMetaMethod__Slot QMetaMethod__MethodType = 2
 //
 const QMetaMethod__Constructor QMetaMethod__MethodType = 3
 
+func (this *QMetaMethod) MethodTypeItemName(val int) string {
+	switch val {
+	case QMetaMethod__Method: // 0
+		return "Method"
+	case QMetaMethod__Signal: // 1
+		return "Signal"
+	case QMetaMethod__Slot: // 2
+		return "Slot"
+	case QMetaMethod__Constructor: // 3
+		return "Constructor"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMetaMethod_MethodTypeItemName(val int) string {
+	var nilthis *QMetaMethod
+	return nilthis.MethodTypeItemName(val)
+}
+
 /*
 
 
@@ -3558,6 +3594,23 @@ const QMetaMethod__Cloned QMetaMethod__Attributes = 2
 
 //
 const QMetaMethod__Scriptable QMetaMethod__Attributes = 4
+
+func (this *QMetaMethod) AttributesItemName(val int) string {
+	switch val {
+	case QMetaMethod__Compatibility: // 1
+		return "Compatibility"
+	case QMetaMethod__Cloned: // 2
+		return "Cloned"
+	case QMetaMethod__Scriptable: // 4
+		return "Scriptable"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMetaMethod_AttributesItemName(val int) string {
+	var nilthis *QMetaMethod
+	return nilthis.AttributesItemName(val)
+}
 
 //  body block end
 

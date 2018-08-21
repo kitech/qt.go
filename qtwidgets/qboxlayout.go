@@ -910,6 +910,14 @@ const QBoxLayout__Down QBoxLayout__Direction = 2
 //
 const QBoxLayout__Up QBoxLayout__Direction = 3
 
+func (this *QBoxLayout) DirectionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QBoxLayout_DirectionItemName(val int) string {
+	var nilthis *QBoxLayout
+	return nilthis.DirectionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

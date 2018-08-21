@@ -578,6 +578,14 @@ const QLCDNumber__Oct QLCDNumber__Mode = 2
 // Binary
 const QLCDNumber__Bin QLCDNumber__Mode = 3
 
+func (this *QLCDNumber) ModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QLCDNumber_ModeItemName(val int) string {
+	var nilthis *QLCDNumber
+	return nilthis.ModeItemName(val)
+}
+
 /*
 This type determines the visual appearance of the QLCDNumber widget.
 
@@ -593,6 +601,14 @@ const QLCDNumber__Filled QLCDNumber__SegmentStyle = 1
 
 // gives flat segments filled with the windowText color.
 const QLCDNumber__Flat QLCDNumber__SegmentStyle = 2
+
+func (this *QLCDNumber) SegmentStyleItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QLCDNumber_SegmentStyleItemName(val int) string {
+	var nilthis *QLCDNumber
+	return nilthis.SegmentStyleItemName(val)
+}
 
 //  body block end
 

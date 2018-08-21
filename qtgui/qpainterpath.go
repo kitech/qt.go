@@ -1868,6 +1868,25 @@ const QPainterPath__CurveToElement QPainterPath__ElementType = 2
 // The extra data required to describe a curve in a CurveToElement element.
 const QPainterPath__CurveToDataElement QPainterPath__ElementType = 3
 
+func (this *QPainterPath) ElementTypeItemName(val int) string {
+	switch val {
+	case QPainterPath__MoveToElement: // 0
+		return "MoveToElement"
+	case QPainterPath__LineToElement: // 1
+		return "LineToElement"
+	case QPainterPath__CurveToElement: // 2
+		return "CurveToElement"
+	case QPainterPath__CurveToDataElement: // 3
+		return "CurveToDataElement"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPainterPath_ElementTypeItemName(val int) string {
+	var nilthis *QPainterPath
+	return nilthis.ElementTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

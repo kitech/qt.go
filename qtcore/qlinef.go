@@ -712,6 +712,23 @@ const QLineF__BoundedIntersection QLineF__IntersectType = 1
 //
 const QLineF__UnboundedIntersection QLineF__IntersectType = 2
 
+func (this *QLineF) IntersectTypeItemName(val int) string {
+	switch val {
+	case QLineF__NoIntersection: // 0
+		return "NoIntersection"
+	case QLineF__BoundedIntersection: // 1
+		return "BoundedIntersection"
+	case QLineF__UnboundedIntersection: // 2
+		return "UnboundedIntersection"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLineF_IntersectTypeItemName(val int) string {
+	var nilthis *QLineF
+	return nilthis.IntersectTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

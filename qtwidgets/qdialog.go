@@ -680,6 +680,14 @@ const QDialog__Rejected QDialog__DialogCode = 0
 //
 const QDialog__Accepted QDialog__DialogCode = 1
 
+func (this *QDialog) DialogCodeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QDialog_DialogCodeItemName(val int) string {
+	var nilthis *QDialog
+	return nilthis.DialogCodeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

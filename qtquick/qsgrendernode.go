@@ -267,6 +267,33 @@ const QSGRenderNode__ViewportState QSGRenderNode__StateFlag = 64
 //
 const QSGRenderNode__RenderTargetState QSGRenderNode__StateFlag = 128
 
+func (this *QSGRenderNode) StateFlagItemName(val int) string {
+	switch val {
+	case QSGRenderNode__DepthState: // 1
+		return "DepthState"
+	case QSGRenderNode__StencilState: // 2
+		return "StencilState"
+	case QSGRenderNode__ScissorState: // 4
+		return "ScissorState"
+	case QSGRenderNode__ColorState: // 8
+		return "ColorState"
+	case QSGRenderNode__BlendState: // 16
+		return "BlendState"
+	case QSGRenderNode__CullState: // 32
+		return "CullState"
+	case QSGRenderNode__ViewportState: // 64
+		return "ViewportState"
+	case QSGRenderNode__RenderTargetState: // 128
+		return "RenderTargetState"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGRenderNode_StateFlagItemName(val int) string {
+	var nilthis *QSGRenderNode
+	return nilthis.StateFlagItemName(val)
+}
+
 /*
 
 
@@ -281,6 +308,23 @@ const QSGRenderNode__DepthAwareRendering QSGRenderNode__RenderingFlag = 2
 
 //
 const QSGRenderNode__OpaqueRendering QSGRenderNode__RenderingFlag = 4
+
+func (this *QSGRenderNode) RenderingFlagItemName(val int) string {
+	switch val {
+	case QSGRenderNode__BoundedRectRendering: // 1
+		return "BoundedRectRendering"
+	case QSGRenderNode__DepthAwareRendering: // 2
+		return "DepthAwareRendering"
+	case QSGRenderNode__OpaqueRendering: // 4
+		return "OpaqueRendering"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGRenderNode_RenderingFlagItemName(val int) string {
+	var nilthis *QSGRenderNode
+	return nilthis.RenderingFlagItemName(val)
+}
 
 //  body block end
 

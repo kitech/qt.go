@@ -118,6 +118,19 @@ type QStyleOptionProgressBar__StyleOptionType = int
 //
 const QStyleOptionProgressBar__Type QStyleOptionProgressBar__StyleOptionType = 6
 
+func (this *QStyleOptionProgressBar) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionProgressBar__Type: // 6
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionProgressBar_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionProgressBar
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionProgressBar__StyleOptionVersion = int
 
 // 1
 const QStyleOptionProgressBar__Version QStyleOptionProgressBar__StyleOptionVersion = 2
+
+func (this *QStyleOptionProgressBar) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionProgressBar__Version: // 2
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionProgressBar_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionProgressBar
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

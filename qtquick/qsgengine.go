@@ -356,6 +356,14 @@ const QSGEngine__TextureCanUseAtlas QSGEngine__CreateTextureOption = 8
 //
 const QSGEngine__TextureIsOpaque QSGEngine__CreateTextureOption = 16
 
+func (this *QSGEngine) CreateTextureOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSGEngine_CreateTextureOptionItemName(val int) string {
+	var nilthis *QSGEngine
+	return nilthis.CreateTextureOptionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

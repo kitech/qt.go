@@ -361,6 +361,57 @@ const QTreeWidgetItemIterator__NotEditable QTreeWidgetItemIterator__IteratorFlag
 //
 const QTreeWidgetItemIterator__UserFlag QTreeWidgetItemIterator__IteratorFlag = 16777216
 
+func (this *QTreeWidgetItemIterator) IteratorFlagItemName(val int) string {
+	switch val {
+	case QTreeWidgetItemIterator__All: // 0
+		return "All"
+	case QTreeWidgetItemIterator__Hidden: // 1
+		return "Hidden"
+	case QTreeWidgetItemIterator__NotHidden: // 2
+		return "NotHidden"
+	case QTreeWidgetItemIterator__Selected: // 4
+		return "Selected"
+	case QTreeWidgetItemIterator__Unselected: // 8
+		return "Unselected"
+	case QTreeWidgetItemIterator__Selectable: // 16
+		return "Selectable"
+	case QTreeWidgetItemIterator__NotSelectable: // 32
+		return "NotSelectable"
+	case QTreeWidgetItemIterator__DragEnabled: // 64
+		return "DragEnabled"
+	case QTreeWidgetItemIterator__DragDisabled: // 128
+		return "DragDisabled"
+	case QTreeWidgetItemIterator__DropEnabled: // 256
+		return "DropEnabled"
+	case QTreeWidgetItemIterator__DropDisabled: // 512
+		return "DropDisabled"
+	case QTreeWidgetItemIterator__HasChildren: // 1024
+		return "HasChildren"
+	case QTreeWidgetItemIterator__NoChildren: // 2048
+		return "NoChildren"
+	case QTreeWidgetItemIterator__Checked: // 4096
+		return "Checked"
+	case QTreeWidgetItemIterator__NotChecked: // 8192
+		return "NotChecked"
+	case QTreeWidgetItemIterator__Enabled: // 16384
+		return "Enabled"
+	case QTreeWidgetItemIterator__Disabled: // 32768
+		return "Disabled"
+	case QTreeWidgetItemIterator__Editable: // 65536
+		return "Editable"
+	case QTreeWidgetItemIterator__NotEditable: // 131072
+		return "NotEditable"
+	case QTreeWidgetItemIterator__UserFlag: // 16777216
+		return "UserFlag"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTreeWidgetItemIterator_IteratorFlagItemName(val int) string {
+	var nilthis *QTreeWidgetItemIterator
+	return nilthis.IteratorFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

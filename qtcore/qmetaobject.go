@@ -3632,6 +3632,43 @@ const QMetaObject__RegisterPropertyMetaType QMetaObject__Call = 11
 //
 const QMetaObject__RegisterMethodArgumentMetaType QMetaObject__Call = 12
 
+func (this *QMetaObject) CallItemName(val int) string {
+	switch val {
+	case QMetaObject__InvokeMetaMethod: // 0
+		return "InvokeMetaMethod"
+	case QMetaObject__ReadProperty: // 1
+		return "ReadProperty"
+	case QMetaObject__WriteProperty: // 2
+		return "WriteProperty"
+	case QMetaObject__ResetProperty: // 3
+		return "ResetProperty"
+	case QMetaObject__QueryPropertyDesignable: // 4
+		return "QueryPropertyDesignable"
+	case QMetaObject__QueryPropertyScriptable: // 5
+		return "QueryPropertyScriptable"
+	case QMetaObject__QueryPropertyStored: // 6
+		return "QueryPropertyStored"
+	case QMetaObject__QueryPropertyEditable: // 7
+		return "QueryPropertyEditable"
+	case QMetaObject__QueryPropertyUser: // 8
+		return "QueryPropertyUser"
+	case QMetaObject__CreateInstance: // 9
+		return "CreateInstance"
+	case QMetaObject__IndexOfMethod: // 10
+		return "IndexOfMethod"
+	case QMetaObject__RegisterPropertyMetaType: // 11
+		return "RegisterPropertyMetaType"
+	case QMetaObject__RegisterMethodArgumentMetaType: // 12
+		return "RegisterMethodArgumentMetaType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMetaObject_CallItemName(val int) string {
+	var nilthis *QMetaObject
+	return nilthis.CallItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

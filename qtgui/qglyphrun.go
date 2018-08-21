@@ -537,6 +537,27 @@ const QGlyphRun__RightToLeft QGlyphRun__GlyphRunFlag = 8
 //
 const QGlyphRun__SplitLigature QGlyphRun__GlyphRunFlag = 16
 
+func (this *QGlyphRun) GlyphRunFlagItemName(val int) string {
+	switch val {
+	case QGlyphRun__Overline: // 1
+		return "Overline"
+	case QGlyphRun__Underline: // 2
+		return "Underline"
+	case QGlyphRun__StrikeOut: // 4
+		return "StrikeOut"
+	case QGlyphRun__RightToLeft: // 8
+		return "RightToLeft"
+	case QGlyphRun__SplitLigature: // 16
+		return "SplitLigature"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGlyphRun_GlyphRunFlagItemName(val int) string {
+	var nilthis *QGlyphRun
+	return nilthis.GlyphRunFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

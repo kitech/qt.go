@@ -223,6 +223,27 @@ const QSGRendererInterface__Direct3D12 QSGRendererInterface__GraphicsApi = 3
 // OpenVG via EGL
 const QSGRendererInterface__OpenVG QSGRendererInterface__GraphicsApi = 4
 
+func (this *QSGRendererInterface) GraphicsApiItemName(val int) string {
+	switch val {
+	case QSGRendererInterface__Unknown: // 0
+		return "Unknown"
+	case QSGRendererInterface__Software: // 1
+		return "Software"
+	case QSGRendererInterface__OpenGL: // 2
+		return "OpenGL"
+	case QSGRendererInterface__Direct3D12: // 3
+		return "Direct3D12"
+	case QSGRendererInterface__OpenVG: // 4
+		return "OpenVG"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGRendererInterface_GraphicsApiItemName(val int) string {
+	var nilthis *QSGRendererInterface
+	return nilthis.GraphicsApiItemName(val)
+}
+
 /*
 
  */
@@ -240,6 +261,25 @@ const QSGRendererInterface__CommandListResource QSGRendererInterface__Resource =
 // The active QPainter used by the scenegraph, when running with the software backend.
 const QSGRendererInterface__PainterResource QSGRendererInterface__Resource = 3
 
+func (this *QSGRendererInterface) ResourceItemName(val int) string {
+	switch val {
+	case QSGRendererInterface__DeviceResource: // 0
+		return "DeviceResource"
+	case QSGRendererInterface__CommandQueueResource: // 1
+		return "CommandQueueResource"
+	case QSGRendererInterface__CommandListResource: // 2
+		return "CommandListResource"
+	case QSGRendererInterface__PainterResource: // 3
+		return "PainterResource"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGRendererInterface_ResourceItemName(val int) string {
+	var nilthis *QSGRendererInterface
+	return nilthis.ResourceItemName(val)
+}
+
 /*
 
  */
@@ -254,6 +294,23 @@ const QSGRendererInterface__GLSL QSGRendererInterface__ShaderType = 1
 // HLSL
 const QSGRendererInterface__HLSL QSGRendererInterface__ShaderType = 2
 
+func (this *QSGRendererInterface) ShaderTypeItemName(val int) string {
+	switch val {
+	case QSGRendererInterface__UnknownShadingLanguage: // 0
+		return "UnknownShadingLanguage"
+	case QSGRendererInterface__GLSL: // 1
+		return "GLSL"
+	case QSGRendererInterface__HLSL: // 2
+		return "HLSL"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGRendererInterface_ShaderTypeItemName(val int) string {
+	var nilthis *QSGRendererInterface
+	return nilthis.ShaderTypeItemName(val)
+}
+
 /*
 
 
@@ -265,6 +322,21 @@ const QSGRendererInterface__RuntimeCompilation QSGRendererInterface__ShaderCompi
 
 //
 const QSGRendererInterface__OfflineCompilation QSGRendererInterface__ShaderCompilationType = 2
+
+func (this *QSGRendererInterface) ShaderCompilationTypeItemName(val int) string {
+	switch val {
+	case QSGRendererInterface__RuntimeCompilation: // 1
+		return "RuntimeCompilation"
+	case QSGRendererInterface__OfflineCompilation: // 2
+		return "OfflineCompilation"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGRendererInterface_ShaderCompilationTypeItemName(val int) string {
+	var nilthis *QSGRendererInterface
+	return nilthis.ShaderCompilationTypeItemName(val)
+}
 
 /*
 
@@ -280,6 +352,23 @@ const QSGRendererInterface__ShaderSourceFile QSGRendererInterface__ShaderSourceT
 
 //
 const QSGRendererInterface__ShaderByteCode QSGRendererInterface__ShaderSourceType = 4
+
+func (this *QSGRendererInterface) ShaderSourceTypeItemName(val int) string {
+	switch val {
+	case QSGRendererInterface__ShaderSourceString: // 1
+		return "ShaderSourceString"
+	case QSGRendererInterface__ShaderSourceFile: // 2
+		return "ShaderSourceFile"
+	case QSGRendererInterface__ShaderByteCode: // 4
+		return "ShaderByteCode"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGRendererInterface_ShaderSourceTypeItemName(val int) string {
+	var nilthis *QSGRendererInterface
+	return nilthis.ShaderSourceTypeItemName(val)
+}
 
 //  body block end
 

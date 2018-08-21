@@ -111,6 +111,19 @@ type QStyleHintReturnMask__StyleOptionType = int
 //
 const QStyleHintReturnMask__Type QStyleHintReturnMask__StyleOptionType = 61441
 
+func (this *QStyleHintReturnMask) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleHintReturnMask__Type: // 61441
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleHintReturnMask_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleHintReturnMask
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -125,6 +138,19 @@ type QStyleHintReturnMask__StyleOptionVersion = int
 
 // 1
 const QStyleHintReturnMask__Version QStyleHintReturnMask__StyleOptionVersion = 1
+
+func (this *QStyleHintReturnMask) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleHintReturnMask__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleHintReturnMask_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleHintReturnMask
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

@@ -320,6 +320,25 @@ const QLockFile__PermissionError QLockFile__LockError = 2
 // Another error happened, for instance a full partition prevented writing out the lock file.
 const QLockFile__UnknownError QLockFile__LockError = 3
 
+func (this *QLockFile) LockErrorItemName(val int) string {
+	switch val {
+	case QLockFile__NoError: // 0
+		return "NoError"
+	case QLockFile__LockFailedError: // 1
+		return "LockFailedError"
+	case QLockFile__PermissionError: // 2
+		return "PermissionError"
+	case QLockFile__UnknownError: // 3
+		return "UnknownError"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLockFile_LockErrorItemName(val int) string {
+	var nilthis *QLockFile
+	return nilthis.LockErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

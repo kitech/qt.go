@@ -731,6 +731,14 @@ const QRadioTuner__ActiveState QRadioTuner__State = 0
 // The tuner device is stopped.
 const QRadioTuner__StoppedState QRadioTuner__State = 1
 
+func (this *QRadioTuner) StateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QRadioTuner_StateItemName(val int) string {
+	var nilthis *QRadioTuner
+	return nilthis.StateItemName(val)
+}
+
 /*
 Enumerates radio frequency bands.
 
@@ -753,6 +761,14 @@ const QRadioTuner__LW QRadioTuner__Band = 3
 // range not defined, used when area supports more than one FM range.
 const QRadioTuner__FM2 QRadioTuner__Band = 4
 
+func (this *QRadioTuner) BandItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QRadioTuner_BandItemName(val int) string {
+	var nilthis *QRadioTuner
+	return nilthis.BandItemName(val)
+}
+
 /*
 Enumerates radio tuner error conditions.
 
@@ -772,6 +788,14 @@ const QRadioTuner__OpenError QRadioTuner__Error = 2
 // An attempt to set a frequency or band that is not supported by radio device.
 const QRadioTuner__OutOfRangeError QRadioTuner__Error = 3
 
+func (this *QRadioTuner) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QRadioTuner_ErrorItemName(val int) string {
+	var nilthis *QRadioTuner
+	return nilthis.ErrorItemName(val)
+}
+
 /*
 Enumerates radio tuner policy for receiving stereo signals.
 
@@ -788,6 +812,14 @@ const QRadioTuner__ForceMono QRadioTuner__StereoMode = 1
 // Uses the stereo mode matching the station.
 const QRadioTuner__Auto QRadioTuner__StereoMode = 2
 
+func (this *QRadioTuner) StereoModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QRadioTuner_StereoModeItemName(val int) string {
+	var nilthis *QRadioTuner
+	return nilthis.StereoModeItemName(val)
+}
+
 /*
 Enumerates how the radio tuner should search for stations.
 
@@ -800,6 +832,14 @@ const QRadioTuner__SearchFast QRadioTuner__SearchMode = 0
 
 // After finding a strong signal, wait for the RDS station id (PI) before continuing.
 const QRadioTuner__SearchGetStationId QRadioTuner__SearchMode = 1
+
+func (this *QRadioTuner) SearchModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QRadioTuner_SearchModeItemName(val int) string {
+	var nilthis *QRadioTuner
+	return nilthis.SearchModeItemName(val)
+}
 
 //  body block end
 

@@ -493,6 +493,25 @@ const QRgba64__BlueShift QRgba64__Shifts = 32
 //
 const QRgba64__AlphaShift QRgba64__Shifts = 48
 
+func (this *QRgba64) ShiftsItemName(val int) string {
+	switch val {
+	case QRgba64__RedShift: // 0
+		return "RedShift"
+	case QRgba64__GreenShift: // 16
+		return "GreenShift"
+	case QRgba64__BlueShift: // 32
+		return "BlueShift"
+	case QRgba64__AlphaShift: // 48
+		return "AlphaShift"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QRgba64_ShiftsItemName(val int) string {
+	var nilthis *QRgba64
+	return nilthis.ShiftsItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

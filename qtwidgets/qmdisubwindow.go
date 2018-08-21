@@ -996,6 +996,14 @@ const QMdiSubWindow__RubberBandResize QMdiSubWindow__SubWindowOption = 4
 //
 const QMdiSubWindow__RubberBandMove QMdiSubWindow__SubWindowOption = 8
 
+func (this *QMdiSubWindow) SubWindowOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMdiSubWindow_SubWindowOptionItemName(val int) string {
+	var nilthis *QMdiSubWindow
+	return nilthis.SubWindowOptionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

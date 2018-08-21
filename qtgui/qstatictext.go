@@ -491,6 +491,21 @@ const QStaticText__ModerateCaching QStaticText__PerformanceHint = 0
 // Use additional caching when available. This may improve performance at a higher memory cost.
 const QStaticText__AggressiveCaching QStaticText__PerformanceHint = 1
 
+func (this *QStaticText) PerformanceHintItemName(val int) string {
+	switch val {
+	case QStaticText__ModerateCaching: // 0
+		return "ModerateCaching"
+	case QStaticText__AggressiveCaching: // 1
+		return "AggressiveCaching"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStaticText_PerformanceHintItemName(val int) string {
+	var nilthis *QStaticText
+	return nilthis.PerformanceHintItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

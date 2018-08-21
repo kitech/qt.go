@@ -276,6 +276,23 @@ const QColormap__Indexed QColormap__Mode = 1
 // Similar to Indexed, pixel values represent a vector of available gray tones. QColormap uses the index of the gray tone that most closely matches the computed gray tone of an RGB value.
 const QColormap__Gray QColormap__Mode = 2
 
+func (this *QColormap) ModeItemName(val int) string {
+	switch val {
+	case QColormap__Direct: // 0
+		return "Direct"
+	case QColormap__Indexed: // 1
+		return "Indexed"
+	case QColormap__Gray: // 2
+		return "Gray"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QColormap_ModeItemName(val int) string {
+	var nilthis *QColormap
+	return nilthis.ModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

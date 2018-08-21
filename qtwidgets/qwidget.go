@@ -6386,6 +6386,14 @@ const QWidget__DrawChildren QWidget__RenderFlag = 2
 //
 const QWidget__IgnoreMask QWidget__RenderFlag = 4
 
+func (this *QWidget) RenderFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWidget_RenderFlagItemName(val int) string {
+	var nilthis *QWidget
+	return nilthis.RenderFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

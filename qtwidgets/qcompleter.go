@@ -927,6 +927,14 @@ const QCompleter__UnfilteredPopupCompletion QCompleter__CompletionMode = 1
 // Completions appear inline (as selected text).
 const QCompleter__InlineCompletion QCompleter__CompletionMode = 2
 
+func (this *QCompleter) CompletionModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCompleter_CompletionModeItemName(val int) string {
+	var nilthis *QCompleter
+	return nilthis.CompletionModeItemName(val)
+}
+
 /*
 This enum specifies how the items in the model are sorted.
 
@@ -945,6 +953,14 @@ const QCompleter__CaseSensitivelySortedModel QCompleter__ModelSorting = 1
 
 // The model is sorted case insensitively.
 const QCompleter__CaseInsensitivelySortedModel QCompleter__ModelSorting = 2
+
+func (this *QCompleter) ModelSortingItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCompleter_ModelSortingItemName(val int) string {
+	var nilthis *QCompleter
+	return nilthis.ModelSortingItemName(val)
+}
 
 //  body block end
 

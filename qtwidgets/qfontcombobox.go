@@ -299,6 +299,14 @@ const QFontComboBox__MonospacedFonts QFontComboBox__FontFilter = 4
 //
 const QFontComboBox__ProportionalFonts QFontComboBox__FontFilter = 8
 
+func (this *QFontComboBox) FontFilterItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFontComboBox_FontFilterItemName(val int) string {
+	var nilthis *QFontComboBox
+	return nilthis.FontFilterItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

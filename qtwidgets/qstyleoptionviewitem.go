@@ -118,6 +118,19 @@ type QStyleOptionViewItem__StyleOptionType = int
 //
 const QStyleOptionViewItem__Type QStyleOptionViewItem__StyleOptionType = 10
 
+func (this *QStyleOptionViewItem) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionViewItem__Type: // 10
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionViewItem_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionViewItem
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionViewItem__StyleOptionVersion = int
 
 // 1
 const QStyleOptionViewItem__Version QStyleOptionViewItem__StyleOptionVersion = 4
+
+func (this *QStyleOptionViewItem) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionViewItem__Version: // 4
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionViewItem_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionViewItem
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 /*
 
@@ -150,6 +176,25 @@ const QStyleOptionViewItem__Top QStyleOptionViewItem__Position = 2
 
 //
 const QStyleOptionViewItem__Bottom QStyleOptionViewItem__Position = 3
+
+func (this *QStyleOptionViewItem) PositionItemName(val int) string {
+	switch val {
+	case QStyleOptionViewItem__Left: // 0
+		return "Left"
+	case QStyleOptionViewItem__Right: // 1
+		return "Right"
+	case QStyleOptionViewItem__Top: // 2
+		return "Top"
+	case QStyleOptionViewItem__Bottom: // 3
+		return "Bottom"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionViewItem_PositionItemName(val int) string {
+	var nilthis *QStyleOptionViewItem
+	return nilthis.PositionItemName(val)
+}
 
 /*
 
@@ -175,6 +220,29 @@ const QStyleOptionViewItem__HasDisplay QStyleOptionViewItem__ViewItemFeature = 8
 //
 const QStyleOptionViewItem__HasDecoration QStyleOptionViewItem__ViewItemFeature = 16
 
+func (this *QStyleOptionViewItem) ViewItemFeatureItemName(val int) string {
+	switch val {
+	case QStyleOptionViewItem__None: // 0
+		return "None"
+	case QStyleOptionViewItem__WrapText: // 1
+		return "WrapText"
+	case QStyleOptionViewItem__Alternate: // 2
+		return "Alternate"
+	case QStyleOptionViewItem__HasCheckIndicator: // 4
+		return "HasCheckIndicator"
+	case QStyleOptionViewItem__HasDisplay: // 8
+		return "HasDisplay"
+	case QStyleOptionViewItem__HasDecoration: // 16
+		return "HasDecoration"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionViewItem_ViewItemFeatureItemName(val int) string {
+	var nilthis *QStyleOptionViewItem
+	return nilthis.ViewItemFeatureItemName(val)
+}
+
 /*
 
 
@@ -195,6 +263,27 @@ const QStyleOptionViewItem__End QStyleOptionViewItem__ViewItemPosition = 3
 
 //
 const QStyleOptionViewItem__OnlyOne QStyleOptionViewItem__ViewItemPosition = 4
+
+func (this *QStyleOptionViewItem) ViewItemPositionItemName(val int) string {
+	switch val {
+	case QStyleOptionViewItem__Invalid: // 0
+		return "Invalid"
+	case QStyleOptionViewItem__Beginning: // 1
+		return "Beginning"
+	case QStyleOptionViewItem__Middle: // 2
+		return "Middle"
+	case QStyleOptionViewItem__End: // 3
+		return "End"
+	case QStyleOptionViewItem__OnlyOne: // 4
+		return "OnlyOne"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionViewItem_ViewItemPositionItemName(val int) string {
+	var nilthis *QStyleOptionViewItem
+	return nilthis.ViewItemPositionItemName(val)
+}
 
 //  body block end
 

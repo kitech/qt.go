@@ -118,6 +118,19 @@ type QStyleOptionTab__StyleOptionType = int
 //
 const QStyleOptionTab__Type QStyleOptionTab__StyleOptionType = 3
 
+func (this *QStyleOptionTab) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionTab__Type: // 3
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTab_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionTab
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionTab__StyleOptionVersion = int
 
 // 1
 const QStyleOptionTab__Version QStyleOptionTab__StyleOptionVersion = 3
+
+func (this *QStyleOptionTab) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionTab__Version: // 3
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTab_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionTab
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 /*
 
@@ -151,6 +177,25 @@ const QStyleOptionTab__End QStyleOptionTab__TabPosition = 2
 //
 const QStyleOptionTab__OnlyOneTab QStyleOptionTab__TabPosition = 3
 
+func (this *QStyleOptionTab) TabPositionItemName(val int) string {
+	switch val {
+	case QStyleOptionTab__Beginning: // 0
+		return "Beginning"
+	case QStyleOptionTab__Middle: // 1
+		return "Middle"
+	case QStyleOptionTab__End: // 2
+		return "End"
+	case QStyleOptionTab__OnlyOneTab: // 3
+		return "OnlyOneTab"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTab_TabPositionItemName(val int) string {
+	var nilthis *QStyleOptionTab
+	return nilthis.TabPositionItemName(val)
+}
+
 /*
 
 
@@ -165,6 +210,23 @@ const QStyleOptionTab__NextIsSelected QStyleOptionTab__SelectedPosition = 1
 
 //
 const QStyleOptionTab__PreviousIsSelected QStyleOptionTab__SelectedPosition = 2
+
+func (this *QStyleOptionTab) SelectedPositionItemName(val int) string {
+	switch val {
+	case QStyleOptionTab__NotAdjacent: // 0
+		return "NotAdjacent"
+	case QStyleOptionTab__NextIsSelected: // 1
+		return "NextIsSelected"
+	case QStyleOptionTab__PreviousIsSelected: // 2
+		return "PreviousIsSelected"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTab_SelectedPositionItemName(val int) string {
+	var nilthis *QStyleOptionTab
+	return nilthis.SelectedPositionItemName(val)
+}
 
 /*
 
@@ -181,6 +243,23 @@ const QStyleOptionTab__LeftCornerWidget QStyleOptionTab__CornerWidget = 1
 //
 const QStyleOptionTab__RightCornerWidget QStyleOptionTab__CornerWidget = 2
 
+func (this *QStyleOptionTab) CornerWidgetItemName(val int) string {
+	switch val {
+	case QStyleOptionTab__NoCornerWidgets: // 0
+		return "NoCornerWidgets"
+	case QStyleOptionTab__LeftCornerWidget: // 1
+		return "LeftCornerWidget"
+	case QStyleOptionTab__RightCornerWidget: // 2
+		return "RightCornerWidget"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTab_CornerWidgetItemName(val int) string {
+	var nilthis *QStyleOptionTab
+	return nilthis.CornerWidgetItemName(val)
+}
+
 /*
 
 
@@ -192,6 +271,21 @@ const QStyleOptionTab__None QStyleOptionTab__TabFeature = 0
 
 //
 const QStyleOptionTab__HasFrame QStyleOptionTab__TabFeature = 1
+
+func (this *QStyleOptionTab) TabFeatureItemName(val int) string {
+	switch val {
+	case QStyleOptionTab__None: // 0
+		return "None"
+	case QStyleOptionTab__HasFrame: // 1
+		return "HasFrame"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTab_TabFeatureItemName(val int) string {
+	var nilthis *QStyleOptionTab
+	return nilthis.TabFeatureItemName(val)
+}
 
 //  body block end
 

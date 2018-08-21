@@ -118,6 +118,19 @@ type QStyleOptionFrame__StyleOptionType = int
 //
 const QStyleOptionFrame__Type QStyleOptionFrame__StyleOptionType = 5
 
+func (this *QStyleOptionFrame) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionFrame__Type: // 5
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionFrame_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionFrame
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -133,6 +146,19 @@ type QStyleOptionFrame__StyleOptionVersion = int
 // 1
 const QStyleOptionFrame__Version QStyleOptionFrame__StyleOptionVersion = 3
 
+func (this *QStyleOptionFrame) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionFrame__Version: // 3
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionFrame_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionFrame
+	return nilthis.StyleOptionVersionItemName(val)
+}
+
 /*
 
 
@@ -147,6 +173,23 @@ const QStyleOptionFrame__Flat QStyleOptionFrame__FrameFeature = 1
 
 //
 const QStyleOptionFrame__Rounded QStyleOptionFrame__FrameFeature = 2
+
+func (this *QStyleOptionFrame) FrameFeatureItemName(val int) string {
+	switch val {
+	case QStyleOptionFrame__None: // 0
+		return "None"
+	case QStyleOptionFrame__Flat: // 1
+		return "Flat"
+	case QStyleOptionFrame__Rounded: // 2
+		return "Rounded"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionFrame_FrameFeatureItemName(val int) string {
+	var nilthis *QStyleOptionFrame
+	return nilthis.FrameFeatureItemName(val)
+}
 
 //  body block end
 

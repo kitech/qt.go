@@ -1109,6 +1109,14 @@ const QAbstractSpinBox__StepUpEnabled QAbstractSpinBox__StepEnabledFlag = 1
 //
 const QAbstractSpinBox__StepDownEnabled QAbstractSpinBox__StepEnabledFlag = 2
 
+func (this *QAbstractSpinBox) StepEnabledFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSpinBox_StepEnabledFlagItemName(val int) string {
+	var nilthis *QAbstractSpinBox
+	return nilthis.StepEnabledFlagItemName(val)
+}
+
 /*
 This enum type describes the symbols that can be displayed on the buttons in a spin box.
 
@@ -1130,6 +1138,14 @@ const QAbstractSpinBox__PlusMinus QAbstractSpinBox__ButtonSymbols = 1
 // Don't display buttons.
 const QAbstractSpinBox__NoButtons QAbstractSpinBox__ButtonSymbols = 2
 
+func (this *QAbstractSpinBox) ButtonSymbolsItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSpinBox_ButtonSymbolsItemName(val int) string {
+	var nilthis *QAbstractSpinBox
+	return nilthis.ButtonSymbolsItemName(val)
+}
+
 /*
 This enum type describes the mode the spinbox will use to correct an Intermediate value if editing finishes.
 
@@ -1145,6 +1161,14 @@ const QAbstractSpinBox__CorrectToPreviousValue QAbstractSpinBox__CorrectionMode 
 
 // The spinbox will revert to the nearest valid value.
 const QAbstractSpinBox__CorrectToNearestValue QAbstractSpinBox__CorrectionMode = 1
+
+func (this *QAbstractSpinBox) CorrectionModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSpinBox_CorrectionModeItemName(val int) string {
+	var nilthis *QAbstractSpinBox
+	return nilthis.CorrectionModeItemName(val)
+}
 
 //  body block end
 

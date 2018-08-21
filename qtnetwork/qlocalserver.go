@@ -573,6 +573,14 @@ const QLocalServer__OtherAccessOption QLocalServer__SocketOption = 4
 //
 const QLocalServer__WorldAccessOption QLocalServer__SocketOption = 7
 
+func (this *QLocalServer) SocketOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QLocalServer_SocketOptionItemName(val int) string {
+	var nilthis *QLocalServer
+	return nilthis.SocketOptionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

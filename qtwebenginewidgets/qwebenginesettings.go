@@ -303,6 +303,31 @@ const QWebEngineSettings__FantasyFont QWebEngineSettings__FontFamily = 5
 //
 const QWebEngineSettings__PictographFont QWebEngineSettings__FontFamily = 6
 
+func (this *QWebEngineSettings) FontFamilyItemName(val int) string {
+	switch val {
+	case QWebEngineSettings__StandardFont: // 0
+		return "StandardFont"
+	case QWebEngineSettings__FixedFont: // 1
+		return "FixedFont"
+	case QWebEngineSettings__SerifFont: // 2
+		return "SerifFont"
+	case QWebEngineSettings__SansSerifFont: // 3
+		return "SansSerifFont"
+	case QWebEngineSettings__CursiveFont: // 4
+		return "CursiveFont"
+	case QWebEngineSettings__FantasyFont: // 5
+		return "FantasyFont"
+	case QWebEngineSettings__PictographFont: // 6
+		return "PictographFont"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineSettings_FontFamilyItemName(val int) string {
+	var nilthis *QWebEngineSettings
+	return nilthis.FontFamilyItemName(val)
+}
+
 /*
 
 
@@ -387,6 +412,69 @@ const QWebEngineSettings__AllowWindowActivationFromJavaScript QWebEngineSettings
 //
 const QWebEngineSettings__ShowScrollBars QWebEngineSettings__WebAttribute = 25
 
+func (this *QWebEngineSettings) WebAttributeItemName(val int) string {
+	switch val {
+	case QWebEngineSettings__AutoLoadImages: // 0
+		return "AutoLoadImages"
+	case QWebEngineSettings__JavascriptEnabled: // 1
+		return "JavascriptEnabled"
+	case QWebEngineSettings__JavascriptCanOpenWindows: // 2
+		return "JavascriptCanOpenWindows"
+	case QWebEngineSettings__JavascriptCanAccessClipboard: // 3
+		return "JavascriptCanAccessClipboard"
+	case QWebEngineSettings__LinksIncludedInFocusChain: // 4
+		return "LinksIncludedInFocusChain"
+	case QWebEngineSettings__LocalStorageEnabled: // 5
+		return "LocalStorageEnabled"
+	case QWebEngineSettings__LocalContentCanAccessRemoteUrls: // 6
+		return "LocalContentCanAccessRemoteUrls"
+	case QWebEngineSettings__XSSAuditingEnabled: // 7
+		return "XSSAuditingEnabled"
+	case QWebEngineSettings__SpatialNavigationEnabled: // 8
+		return "SpatialNavigationEnabled"
+	case QWebEngineSettings__LocalContentCanAccessFileUrls: // 9
+		return "LocalContentCanAccessFileUrls"
+	case QWebEngineSettings__HyperlinkAuditingEnabled: // 10
+		return "HyperlinkAuditingEnabled"
+	case QWebEngineSettings__ScrollAnimatorEnabled: // 11
+		return "ScrollAnimatorEnabled"
+	case QWebEngineSettings__ErrorPageEnabled: // 12
+		return "ErrorPageEnabled"
+	case QWebEngineSettings__PluginsEnabled: // 13
+		return "PluginsEnabled"
+	case QWebEngineSettings__FullScreenSupportEnabled: // 14
+		return "FullScreenSupportEnabled"
+	case QWebEngineSettings__ScreenCaptureEnabled: // 15
+		return "ScreenCaptureEnabled"
+	case QWebEngineSettings__WebGLEnabled: // 16
+		return "WebGLEnabled"
+	case QWebEngineSettings__Accelerated2dCanvasEnabled: // 17
+		return "Accelerated2dCanvasEnabled"
+	case QWebEngineSettings__AutoLoadIconsForPage: // 18
+		return "AutoLoadIconsForPage"
+	case QWebEngineSettings__TouchIconsEnabled: // 19
+		return "TouchIconsEnabled"
+	case QWebEngineSettings__FocusOnNavigationEnabled: // 20
+		return "FocusOnNavigationEnabled"
+	case QWebEngineSettings__PrintElementBackgrounds: // 21
+		return "PrintElementBackgrounds"
+	case QWebEngineSettings__AllowRunningInsecureContent: // 22
+		return "AllowRunningInsecureContent"
+	case QWebEngineSettings__AllowGeolocationOnInsecureOrigins: // 23
+		return "AllowGeolocationOnInsecureOrigins"
+	case QWebEngineSettings__AllowWindowActivationFromJavaScript: // 24
+		return "AllowWindowActivationFromJavaScript"
+	case QWebEngineSettings__ShowScrollBars: // 25
+		return "ShowScrollBars"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineSettings_WebAttributeItemName(val int) string {
+	var nilthis *QWebEngineSettings
+	return nilthis.WebAttributeItemName(val)
+}
+
 /*
 
 
@@ -404,6 +492,25 @@ const QWebEngineSettings__DefaultFontSize QWebEngineSettings__FontSize = 2
 
 //
 const QWebEngineSettings__DefaultFixedFontSize QWebEngineSettings__FontSize = 3
+
+func (this *QWebEngineSettings) FontSizeItemName(val int) string {
+	switch val {
+	case QWebEngineSettings__MinimumFontSize: // 0
+		return "MinimumFontSize"
+	case QWebEngineSettings__MinimumLogicalFontSize: // 1
+		return "MinimumLogicalFontSize"
+	case QWebEngineSettings__DefaultFontSize: // 2
+		return "DefaultFontSize"
+	case QWebEngineSettings__DefaultFixedFontSize: // 3
+		return "DefaultFixedFontSize"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineSettings_FontSizeItemName(val int) string {
+	var nilthis *QWebEngineSettings
+	return nilthis.FontSizeItemName(val)
+}
 
 //  body block end
 

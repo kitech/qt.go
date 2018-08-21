@@ -1155,6 +1155,14 @@ const QWizard__NStandardButtons QWizard__WizardButton = 6
 //
 const QWizard__NButtons QWizard__WizardButton = 9
 
+func (this *QWizard) WizardButtonItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWizard_WizardButtonItemName(val int) string {
+	var nilthis *QWizard
+	return nilthis.WizardButtonItemName(val)
+}
+
 /*
 This enum specifies the pixmaps that can be associated with a page.
 
@@ -1180,6 +1188,14 @@ const QWizard__BackgroundPixmap QWizard__WizardPixmap = 3
 //
 const QWizard__NPixmaps QWizard__WizardPixmap = 4
 
+func (this *QWizard) WizardPixmapItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWizard_WizardPixmapItemName(val int) string {
+	var nilthis *QWizard
+	return nilthis.WizardPixmapItemName(val)
+}
+
 /*
 This enum specifies the different looks supported by QWizard.
 
@@ -1204,6 +1220,14 @@ const QWizard__AeroStyle QWizard__WizardStyle = 3
 
 //
 const QWizard__NStyles QWizard__WizardStyle = 4
+
+func (this *QWizard) WizardStyleItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWizard_WizardStyleItemName(val int) string {
+	var nilthis *QWizard
+	return nilthis.WizardStyleItemName(val)
+}
 
 /*
 
@@ -1261,6 +1285,14 @@ const QWizard__HaveCustomButton3 QWizard__WizardOption = 32768
 
 //
 const QWizard__NoCancelButtonOnLastPage QWizard__WizardOption = 65536
+
+func (this *QWizard) WizardOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWizard_WizardOptionItemName(val int) string {
+	var nilthis *QWizard
+	return nilthis.WizardOptionItemName(val)
+}
 
 //  body block end
 

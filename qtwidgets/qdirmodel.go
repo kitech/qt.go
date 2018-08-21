@@ -1094,6 +1094,14 @@ const QDirModel__FilePathRole QDirModel__Roles = 257
 //
 const QDirModel__FileNameRole QDirModel__Roles = 258
 
+func (this *QDirModel) RolesItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QDirModel_RolesItemName(val int) string {
+	var nilthis *QDirModel
+	return nilthis.RolesItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

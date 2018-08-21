@@ -513,6 +513,25 @@ const QAudioFormat__UnSignedInt QAudioFormat__SampleType = 2
 // Samples are floats
 const QAudioFormat__Float QAudioFormat__SampleType = 3
 
+func (this *QAudioFormat) SampleTypeItemName(val int) string {
+	switch val {
+	case QAudioFormat__Unknown: // 0
+		return "Unknown"
+	case QAudioFormat__SignedInt: // 1
+		return "SignedInt"
+	case QAudioFormat__UnSignedInt: // 2
+		return "UnSignedInt"
+	case QAudioFormat__Float: // 3
+		return "Float"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAudioFormat_SampleTypeItemName(val int) string {
+	var nilthis *QAudioFormat
+	return nilthis.SampleTypeItemName(val)
+}
+
 /*
 QAudioFormat::BigEndianQSysInfo::BigEndianSamples are big endian byte order
 QAudioFormat::LittleEndianQSysInfo::LittleEndianSamples are little endian byte order
@@ -525,6 +544,21 @@ const QAudioFormat__BigEndian QAudioFormat__Endian = 0
 
 //
 const QAudioFormat__LittleEndian QAudioFormat__Endian = 1
+
+func (this *QAudioFormat) EndianItemName(val int) string {
+	switch val {
+	case QAudioFormat__BigEndian: // 0
+		return "BigEndian"
+	case QAudioFormat__LittleEndian: // 1
+		return "LittleEndian"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAudioFormat_EndianItemName(val int) string {
+	var nilthis *QAudioFormat
+	return nilthis.EndianItemName(val)
+}
 
 //  body block end
 

@@ -1072,6 +1072,14 @@ const QCalendarWidget__ShortDayNames QCalendarWidget__HorizontalHeaderFormat = 2
 // The header displays complete day names (e.g. Monday).
 const QCalendarWidget__LongDayNames QCalendarWidget__HorizontalHeaderFormat = 3
 
+func (this *QCalendarWidget) HorizontalHeaderFormatItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCalendarWidget_HorizontalHeaderFormatItemName(val int) string {
+	var nilthis *QCalendarWidget
+	return nilthis.HorizontalHeaderFormatItemName(val)
+}
+
 /*
 This enum type defines the various formats the vertical header can display.
 
@@ -1088,6 +1096,14 @@ const QCalendarWidget__NoVerticalHeader QCalendarWidget__VerticalHeaderFormat = 
 // The header displays ISO week numbers as described by QDate::weekNumber().
 const QCalendarWidget__ISOWeekNumbers QCalendarWidget__VerticalHeaderFormat = 1
 
+func (this *QCalendarWidget) VerticalHeaderFormatItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCalendarWidget_VerticalHeaderFormatItemName(val int) string {
+	var nilthis *QCalendarWidget
+	return nilthis.VerticalHeaderFormatItemName(val)
+}
+
 /*
 This enum describes the types of selection offered to the user for selecting dates in the calendar.
 
@@ -1103,6 +1119,14 @@ const QCalendarWidget__NoSelection QCalendarWidget__SelectionMode = 0
 
 // Single dates can be selected.
 const QCalendarWidget__SingleSelection QCalendarWidget__SelectionMode = 1
+
+func (this *QCalendarWidget) SelectionModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCalendarWidget_SelectionModeItemName(val int) string {
+	var nilthis *QCalendarWidget
+	return nilthis.SelectionModeItemName(val)
+}
 
 //  body block end
 

@@ -817,6 +817,25 @@ const QQmlProperty__Object QQmlProperty__PropertyTypeCategory = 2
 // The property is a normal value property.
 const QQmlProperty__Normal QQmlProperty__PropertyTypeCategory = 3
 
+func (this *QQmlProperty) PropertyTypeCategoryItemName(val int) string {
+	switch val {
+	case QQmlProperty__InvalidCategory: // 0
+		return "InvalidCategory"
+	case QQmlProperty__List: // 1
+		return "List"
+	case QQmlProperty__Object: // 2
+		return "Object"
+	case QQmlProperty__Normal: // 3
+		return "Normal"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QQmlProperty_PropertyTypeCategoryItemName(val int) string {
+	var nilthis *QQmlProperty
+	return nilthis.PropertyTypeCategoryItemName(val)
+}
+
 /*
 This enum specifies a type of QML property.
 
@@ -832,6 +851,23 @@ const QQmlProperty__Property QQmlProperty__Type = 1
 
 // The property is a signal property.
 const QQmlProperty__SignalProperty QQmlProperty__Type = 2
+
+func (this *QQmlProperty) TypeItemName(val int) string {
+	switch val {
+	case QQmlProperty__Invalid: // 0
+		return "Invalid"
+	case QQmlProperty__Property: // 1
+		return "Property"
+	case QQmlProperty__SignalProperty: // 2
+		return "SignalProperty"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QQmlProperty_TypeItemName(val int) string {
+	var nilthis *QQmlProperty
+	return nilthis.TypeItemName(val)
+}
 
 //  body block end
 

@@ -356,6 +356,27 @@ const QMediaServiceProviderHint__SupportedFeatures QMediaServiceProviderHint__Ty
 //
 const QMediaServiceProviderHint__CameraPosition QMediaServiceProviderHint__Type = 4
 
+func (this *QMediaServiceProviderHint) TypeItemName(val int) string {
+	switch val {
+	case QMediaServiceProviderHint__Null: // 0
+		return "Null"
+	case QMediaServiceProviderHint__ContentType: // 1
+		return "ContentType"
+	case QMediaServiceProviderHint__Device: // 2
+		return "Device"
+	case QMediaServiceProviderHint__SupportedFeatures: // 3
+		return "SupportedFeatures"
+	case QMediaServiceProviderHint__CameraPosition: // 4
+		return "CameraPosition"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMediaServiceProviderHint_TypeItemName(val int) string {
+	var nilthis *QMediaServiceProviderHint
+	return nilthis.TypeItemName(val)
+}
+
 /*
 
 
@@ -373,6 +394,25 @@ const QMediaServiceProviderHint__StreamPlayback QMediaServiceProviderHint__Featu
 
 //
 const QMediaServiceProviderHint__VideoSurface QMediaServiceProviderHint__Feature = 8
+
+func (this *QMediaServiceProviderHint) FeatureItemName(val int) string {
+	switch val {
+	case QMediaServiceProviderHint__LowLatencyPlayback: // 1
+		return "LowLatencyPlayback"
+	case QMediaServiceProviderHint__RecordingSupport: // 2
+		return "RecordingSupport"
+	case QMediaServiceProviderHint__StreamPlayback: // 4
+		return "StreamPlayback"
+	case QMediaServiceProviderHint__VideoSurface: // 8
+		return "VideoSurface"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMediaServiceProviderHint_FeatureItemName(val int) string {
+	var nilthis *QMediaServiceProviderHint
+	return nilthis.FeatureItemName(val)
+}
 
 //  body block end
 

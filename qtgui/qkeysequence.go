@@ -822,6 +822,159 @@ const QKeySequence__Backspace QKeySequence__StandardKey = 69
 //
 const QKeySequence__Cancel QKeySequence__StandardKey = 70
 
+func (this *QKeySequence) StandardKeyItemName(val int) string {
+	switch val {
+	case QKeySequence__UnknownKey: // 0
+		return "UnknownKey"
+	case QKeySequence__HelpContents: // 1
+		return "HelpContents"
+	case QKeySequence__WhatsThis: // 2
+		return "WhatsThis"
+	case QKeySequence__Open: // 3
+		return "Open"
+	case QKeySequence__Close: // 4
+		return "Close"
+	case QKeySequence__Save: // 5
+		return "Save"
+	case QKeySequence__New: // 6
+		return "New"
+	case QKeySequence__Delete: // 7
+		return "Delete"
+	case QKeySequence__Cut: // 8
+		return "Cut"
+	case QKeySequence__Copy: // 9
+		return "Copy"
+	case QKeySequence__Paste: // 10
+		return "Paste"
+	case QKeySequence__Undo: // 11
+		return "Undo"
+	case QKeySequence__Redo: // 12
+		return "Redo"
+	case QKeySequence__Back: // 13
+		return "Back"
+	case QKeySequence__Forward: // 14
+		return "Forward"
+	case QKeySequence__Refresh: // 15
+		return "Refresh"
+	case QKeySequence__ZoomIn: // 16
+		return "ZoomIn"
+	case QKeySequence__ZoomOut: // 17
+		return "ZoomOut"
+	case QKeySequence__Print: // 18
+		return "Print"
+	case QKeySequence__AddTab: // 19
+		return "AddTab"
+	case QKeySequence__NextChild: // 20
+		return "NextChild"
+	case QKeySequence__PreviousChild: // 21
+		return "PreviousChild"
+	case QKeySequence__Find: // 22
+		return "Find"
+	case QKeySequence__FindNext: // 23
+		return "FindNext"
+	case QKeySequence__FindPrevious: // 24
+		return "FindPrevious"
+	case QKeySequence__Replace: // 25
+		return "Replace"
+	case QKeySequence__SelectAll: // 26
+		return "SelectAll"
+	case QKeySequence__Bold: // 27
+		return "Bold"
+	case QKeySequence__Italic: // 28
+		return "Italic"
+	case QKeySequence__Underline: // 29
+		return "Underline"
+	case QKeySequence__MoveToNextChar: // 30
+		return "MoveToNextChar"
+	case QKeySequence__MoveToPreviousChar: // 31
+		return "MoveToPreviousChar"
+	case QKeySequence__MoveToNextWord: // 32
+		return "MoveToNextWord"
+	case QKeySequence__MoveToPreviousWord: // 33
+		return "MoveToPreviousWord"
+	case QKeySequence__MoveToNextLine: // 34
+		return "MoveToNextLine"
+	case QKeySequence__MoveToPreviousLine: // 35
+		return "MoveToPreviousLine"
+	case QKeySequence__MoveToNextPage: // 36
+		return "MoveToNextPage"
+	case QKeySequence__MoveToPreviousPage: // 37
+		return "MoveToPreviousPage"
+	case QKeySequence__MoveToStartOfLine: // 38
+		return "MoveToStartOfLine"
+	case QKeySequence__MoveToEndOfLine: // 39
+		return "MoveToEndOfLine"
+	case QKeySequence__MoveToStartOfBlock: // 40
+		return "MoveToStartOfBlock"
+	case QKeySequence__MoveToEndOfBlock: // 41
+		return "MoveToEndOfBlock"
+	case QKeySequence__MoveToStartOfDocument: // 42
+		return "MoveToStartOfDocument"
+	case QKeySequence__MoveToEndOfDocument: // 43
+		return "MoveToEndOfDocument"
+	case QKeySequence__SelectNextChar: // 44
+		return "SelectNextChar"
+	case QKeySequence__SelectPreviousChar: // 45
+		return "SelectPreviousChar"
+	case QKeySequence__SelectNextWord: // 46
+		return "SelectNextWord"
+	case QKeySequence__SelectPreviousWord: // 47
+		return "SelectPreviousWord"
+	case QKeySequence__SelectNextLine: // 48
+		return "SelectNextLine"
+	case QKeySequence__SelectPreviousLine: // 49
+		return "SelectPreviousLine"
+	case QKeySequence__SelectNextPage: // 50
+		return "SelectNextPage"
+	case QKeySequence__SelectPreviousPage: // 51
+		return "SelectPreviousPage"
+	case QKeySequence__SelectStartOfLine: // 52
+		return "SelectStartOfLine"
+	case QKeySequence__SelectEndOfLine: // 53
+		return "SelectEndOfLine"
+	case QKeySequence__SelectStartOfBlock: // 54
+		return "SelectStartOfBlock"
+	case QKeySequence__SelectEndOfBlock: // 55
+		return "SelectEndOfBlock"
+	case QKeySequence__SelectStartOfDocument: // 56
+		return "SelectStartOfDocument"
+	case QKeySequence__SelectEndOfDocument: // 57
+		return "SelectEndOfDocument"
+	case QKeySequence__DeleteStartOfWord: // 58
+		return "DeleteStartOfWord"
+	case QKeySequence__DeleteEndOfWord: // 59
+		return "DeleteEndOfWord"
+	case QKeySequence__DeleteEndOfLine: // 60
+		return "DeleteEndOfLine"
+	case QKeySequence__InsertParagraphSeparator: // 61
+		return "InsertParagraphSeparator"
+	case QKeySequence__InsertLineSeparator: // 62
+		return "InsertLineSeparator"
+	case QKeySequence__SaveAs: // 63
+		return "SaveAs"
+	case QKeySequence__Preferences: // 64
+		return "Preferences"
+	case QKeySequence__Quit: // 65
+		return "Quit"
+	case QKeySequence__FullScreen: // 66
+		return "FullScreen"
+	case QKeySequence__Deselect: // 67
+		return "Deselect"
+	case QKeySequence__DeleteCompleteLine: // 68
+		return "DeleteCompleteLine"
+	case QKeySequence__Backspace: // 69
+		return "Backspace"
+	case QKeySequence__Cancel: // 70
+		return "Cancel"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QKeySequence_StandardKeyItemName(val int) string {
+	var nilthis *QKeySequence
+	return nilthis.StandardKeyItemName(val)
+}
+
 /*
 
  */
@@ -832,6 +985,21 @@ const QKeySequence__NativeText QKeySequence__SequenceFormat = 0
 
 //
 const QKeySequence__PortableText QKeySequence__SequenceFormat = 1
+
+func (this *QKeySequence) SequenceFormatItemName(val int) string {
+	switch val {
+	case QKeySequence__NativeText: // 0
+		return "NativeText"
+	case QKeySequence__PortableText: // 1
+		return "PortableText"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QKeySequence_SequenceFormatItemName(val int) string {
+	var nilthis *QKeySequence
+	return nilthis.SequenceFormatItemName(val)
+}
 
 /*
 
@@ -846,6 +1014,23 @@ const QKeySequence__PartialMatch QKeySequence__SequenceMatch = 1
 
 // The key sequences are the same.
 const QKeySequence__ExactMatch QKeySequence__SequenceMatch = 2
+
+func (this *QKeySequence) SequenceMatchItemName(val int) string {
+	switch val {
+	case QKeySequence__NoMatch: // 0
+		return "NoMatch"
+	case QKeySequence__PartialMatch: // 1
+		return "PartialMatch"
+	case QKeySequence__ExactMatch: // 2
+		return "ExactMatch"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QKeySequence_SequenceMatchItemName(val int) string {
+	var nilthis *QKeySequence
+	return nilthis.SequenceMatchItemName(val)
+}
 
 //  body block end
 

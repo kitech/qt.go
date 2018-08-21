@@ -353,6 +353,23 @@ const QWebEngineScript__DocumentReady QWebEngineScript__InjectionPoint = 1
 //
 const QWebEngineScript__DocumentCreation QWebEngineScript__InjectionPoint = 2
 
+func (this *QWebEngineScript) InjectionPointItemName(val int) string {
+	switch val {
+	case QWebEngineScript__Deferred: // 0
+		return "Deferred"
+	case QWebEngineScript__DocumentReady: // 1
+		return "DocumentReady"
+	case QWebEngineScript__DocumentCreation: // 2
+		return "DocumentCreation"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineScript_InjectionPointItemName(val int) string {
+	var nilthis *QWebEngineScript
+	return nilthis.InjectionPointItemName(val)
+}
+
 /*
 
 
@@ -367,6 +384,23 @@ const QWebEngineScript__ApplicationWorld QWebEngineScript__ScriptWorldId = 1
 
 //
 const QWebEngineScript__UserWorld QWebEngineScript__ScriptWorldId = 2
+
+func (this *QWebEngineScript) ScriptWorldIdItemName(val int) string {
+	switch val {
+	case QWebEngineScript__MainWorld: // 0
+		return "MainWorld"
+	case QWebEngineScript__ApplicationWorld: // 1
+		return "ApplicationWorld"
+	case QWebEngineScript__UserWorld: // 2
+		return "UserWorld"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineScript_ScriptWorldIdItemName(val int) string {
+	var nilthis *QWebEngineScript
+	return nilthis.ScriptWorldIdItemName(val)
+}
 
 //  body block end
 

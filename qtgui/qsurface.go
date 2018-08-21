@@ -185,6 +185,21 @@ const QSurface__Window QSurface__SurfaceClass = 0
 // The surface is an instance of QOffscreenSurface.
 const QSurface__Offscreen QSurface__SurfaceClass = 1
 
+func (this *QSurface) SurfaceClassItemName(val int) string {
+	switch val {
+	case QSurface__Window: // 0
+		return "Window"
+	case QSurface__Offscreen: // 1
+		return "Offscreen"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSurface_SurfaceClassItemName(val int) string {
+	var nilthis *QSurface
+	return nilthis.SurfaceClassItemName(val)
+}
+
 /*
 The SurfaceType enum describes what type of surface this is.
 
@@ -206,6 +221,27 @@ const QSurface__OpenVGSurface QSurface__SurfaceType = 3
 
 // The surface is a Vulkan compatible surface and can be used in conjunction with the Vulkan graphics API.
 const QSurface__VulkanSurface QSurface__SurfaceType = 4
+
+func (this *QSurface) SurfaceTypeItemName(val int) string {
+	switch val {
+	case QSurface__RasterSurface: // 0
+		return "RasterSurface"
+	case QSurface__OpenGLSurface: // 1
+		return "OpenGLSurface"
+	case QSurface__RasterGLSurface: // 2
+		return "RasterGLSurface"
+	case QSurface__OpenVGSurface: // 3
+		return "OpenVGSurface"
+	case QSurface__VulkanSurface: // 4
+		return "VulkanSurface"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSurface_SurfaceTypeItemName(val int) string {
+	var nilthis *QSurface
+	return nilthis.SurfaceTypeItemName(val)
+}
 
 //  body block end
 

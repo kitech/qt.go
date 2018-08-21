@@ -6644,6 +6644,29 @@ const QPainter__NonCosmeticDefaultPen QPainter__RenderHint = 16
 //
 const QPainter__Qt4CompatiblePainting QPainter__RenderHint = 32
 
+func (this *QPainter) RenderHintItemName(val int) string {
+	switch val {
+	case QPainter__Antialiasing: // 1
+		return "Antialiasing"
+	case QPainter__TextAntialiasing: // 2
+		return "TextAntialiasing"
+	case QPainter__SmoothPixmapTransform: // 4
+		return "SmoothPixmapTransform"
+	case QPainter__HighQualityAntialiasing: // 8
+		return "HighQualityAntialiasing"
+	case QPainter__NonCosmeticDefaultPen: // 16
+		return "NonCosmeticDefaultPen"
+	case QPainter__Qt4CompatiblePainting: // 32
+		return "Qt4CompatiblePainting"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPainter_RenderHintItemName(val int) string {
+	var nilthis *QPainter
+	return nilthis.RenderHintItemName(val)
+}
+
 /*
 
 
@@ -6652,6 +6675,19 @@ type QPainter__PixmapFragmentHint = int
 
 //
 const QPainter__OpaqueHint QPainter__PixmapFragmentHint = 1
+
+func (this *QPainter) PixmapFragmentHintItemName(val int) string {
+	switch val {
+	case QPainter__OpaqueHint: // 1
+		return "OpaqueHint"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPainter_PixmapFragmentHintItemName(val int) string {
+	var nilthis *QPainter
+	return nilthis.PixmapFragmentHintItemName(val)
+}
 
 /*
 Defines the modes supported for digital image compositing. Composition modes are used to specify how the pixels in one image, the source, are merged with the pixel in another image, the destination.
@@ -6788,6 +6824,93 @@ const QPainter__RasterOp_SetDestination QPainter__CompositionMode = 36
 
 //
 const QPainter__RasterOp_NotDestination QPainter__CompositionMode = 37
+
+func (this *QPainter) CompositionModeItemName(val int) string {
+	switch val {
+	case QPainter__CompositionMode_SourceOver: // 0
+		return "CompositionMode_SourceOver"
+	case QPainter__CompositionMode_DestinationOver: // 1
+		return "CompositionMode_DestinationOver"
+	case QPainter__CompositionMode_Clear: // 2
+		return "CompositionMode_Clear"
+	case QPainter__CompositionMode_Source: // 3
+		return "CompositionMode_Source"
+	case QPainter__CompositionMode_Destination: // 4
+		return "CompositionMode_Destination"
+	case QPainter__CompositionMode_SourceIn: // 5
+		return "CompositionMode_SourceIn"
+	case QPainter__CompositionMode_DestinationIn: // 6
+		return "CompositionMode_DestinationIn"
+	case QPainter__CompositionMode_SourceOut: // 7
+		return "CompositionMode_SourceOut"
+	case QPainter__CompositionMode_DestinationOut: // 8
+		return "CompositionMode_DestinationOut"
+	case QPainter__CompositionMode_SourceAtop: // 9
+		return "CompositionMode_SourceAtop"
+	case QPainter__CompositionMode_DestinationAtop: // 10
+		return "CompositionMode_DestinationAtop"
+	case QPainter__CompositionMode_Xor: // 11
+		return "CompositionMode_Xor"
+	case QPainter__CompositionMode_Plus: // 12
+		return "CompositionMode_Plus"
+	case QPainter__CompositionMode_Multiply: // 13
+		return "CompositionMode_Multiply"
+	case QPainter__CompositionMode_Screen: // 14
+		return "CompositionMode_Screen"
+	case QPainter__CompositionMode_Overlay: // 15
+		return "CompositionMode_Overlay"
+	case QPainter__CompositionMode_Darken: // 16
+		return "CompositionMode_Darken"
+	case QPainter__CompositionMode_Lighten: // 17
+		return "CompositionMode_Lighten"
+	case QPainter__CompositionMode_ColorDodge: // 18
+		return "CompositionMode_ColorDodge"
+	case QPainter__CompositionMode_ColorBurn: // 19
+		return "CompositionMode_ColorBurn"
+	case QPainter__CompositionMode_HardLight: // 20
+		return "CompositionMode_HardLight"
+	case QPainter__CompositionMode_SoftLight: // 21
+		return "CompositionMode_SoftLight"
+	case QPainter__CompositionMode_Difference: // 22
+		return "CompositionMode_Difference"
+	case QPainter__CompositionMode_Exclusion: // 23
+		return "CompositionMode_Exclusion"
+	case QPainter__RasterOp_SourceOrDestination: // 24
+		return "RasterOp_SourceOrDestination"
+	case QPainter__RasterOp_SourceAndDestination: // 25
+		return "RasterOp_SourceAndDestination"
+	case QPainter__RasterOp_SourceXorDestination: // 26
+		return "RasterOp_SourceXorDestination"
+	case QPainter__RasterOp_NotSourceAndNotDestination: // 27
+		return "RasterOp_NotSourceAndNotDestination"
+	case QPainter__RasterOp_NotSourceOrNotDestination: // 28
+		return "RasterOp_NotSourceOrNotDestination"
+	case QPainter__RasterOp_NotSourceXorDestination: // 29
+		return "RasterOp_NotSourceXorDestination"
+	case QPainter__RasterOp_NotSource: // 30
+		return "RasterOp_NotSource"
+	case QPainter__RasterOp_NotSourceAndDestination: // 31
+		return "RasterOp_NotSourceAndDestination"
+	case QPainter__RasterOp_SourceAndNotDestination: // 32
+		return "RasterOp_SourceAndNotDestination"
+	case QPainter__RasterOp_NotSourceOrDestination: // 33
+		return "RasterOp_NotSourceOrDestination"
+	case QPainter__RasterOp_SourceOrNotDestination: // 34
+		return "RasterOp_SourceOrNotDestination"
+	case QPainter__RasterOp_ClearDestination: // 35
+		return "RasterOp_ClearDestination"
+	case QPainter__RasterOp_SetDestination: // 36
+		return "RasterOp_SetDestination"
+	case QPainter__RasterOp_NotDestination: // 37
+		return "RasterOp_NotDestination"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPainter_CompositionModeItemName(val int) string {
+	var nilthis *QPainter
+	return nilthis.CompositionModeItemName(val)
+}
 
 //  body block end
 

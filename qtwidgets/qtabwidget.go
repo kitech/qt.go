@@ -1310,6 +1310,14 @@ const QTabWidget__West QTabWidget__TabPosition = 2
 // The tabs are drawn to the right of the pages.
 const QTabWidget__East QTabWidget__TabPosition = 3
 
+func (this *QTabWidget) TabPositionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTabWidget_TabPositionItemName(val int) string {
+	var nilthis *QTabWidget
+	return nilthis.TabPositionItemName(val)
+}
+
 /*
 This enum type defines the shape of the tabs:
 
@@ -1322,6 +1330,14 @@ const QTabWidget__Rounded QTabWidget__TabShape = 0
 
 // The tabs are drawn with a triangular look.
 const QTabWidget__Triangular QTabWidget__TabShape = 1
+
+func (this *QTabWidget) TabShapeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTabWidget_TabShapeItemName(val int) string {
+	var nilthis *QTabWidget
+	return nilthis.TabShapeItemName(val)
+}
 
 //  body block end
 

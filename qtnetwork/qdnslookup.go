@@ -496,6 +496,14 @@ const QDnsLookup__ServerRefusedError QDnsLookup__Error = 6
 // the requested domain name does not exist (NXDOMAIN).
 const QDnsLookup__NotFoundError QDnsLookup__Error = 7
 
+func (this *QDnsLookup) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QDnsLookup_ErrorItemName(val int) string {
+	var nilthis *QDnsLookup
+	return nilthis.ErrorItemName(val)
+}
+
 /*
 Indicates the type of DNS lookup that was performed.
 
@@ -529,6 +537,14 @@ const QDnsLookup__SRV QDnsLookup__Type = 33
 
 //
 const QDnsLookup__TXT QDnsLookup__Type = 16
+
+func (this *QDnsLookup) TypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QDnsLookup_TypeItemName(val int) string {
+	var nilthis *QDnsLookup
+	return nilthis.TypeItemName(val)
+}
 
 //  body block end
 

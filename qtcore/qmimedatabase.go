@@ -410,6 +410,23 @@ const QMimeDatabase__MatchExtension QMimeDatabase__MatchMode = 1
 //
 const QMimeDatabase__MatchContent QMimeDatabase__MatchMode = 2
 
+func (this *QMimeDatabase) MatchModeItemName(val int) string {
+	switch val {
+	case QMimeDatabase__MatchDefault: // 0
+		return "MatchDefault"
+	case QMimeDatabase__MatchExtension: // 1
+		return "MatchExtension"
+	case QMimeDatabase__MatchContent: // 2
+		return "MatchContent"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMimeDatabase_MatchModeItemName(val int) string {
+	var nilthis *QMimeDatabase
+	return nilthis.MatchModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

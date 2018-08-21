@@ -783,6 +783,29 @@ const QNetworkProxy__HttpCachingProxy QNetworkProxy__ProxyType = 4
 // Proxying for FTP requests only
 const QNetworkProxy__FtpCachingProxy QNetworkProxy__ProxyType = 5
 
+func (this *QNetworkProxy) ProxyTypeItemName(val int) string {
+	switch val {
+	case QNetworkProxy__DefaultProxy: // 0
+		return "DefaultProxy"
+	case QNetworkProxy__Socks5Proxy: // 1
+		return "Socks5Proxy"
+	case QNetworkProxy__NoProxy: // 2
+		return "NoProxy"
+	case QNetworkProxy__HttpProxy: // 3
+		return "HttpProxy"
+	case QNetworkProxy__HttpCachingProxy: // 4
+		return "HttpCachingProxy"
+	case QNetworkProxy__FtpCachingProxy: // 5
+		return "FtpCachingProxy"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkProxy_ProxyTypeItemName(val int) string {
+	var nilthis *QNetworkProxy
+	return nilthis.ProxyTypeItemName(val)
+}
+
 /*
 
 
@@ -809,6 +832,31 @@ const QNetworkProxy__SctpTunnelingCapability QNetworkProxy__Capability = 32
 
 //
 const QNetworkProxy__SctpListeningCapability QNetworkProxy__Capability = 64
+
+func (this *QNetworkProxy) CapabilityItemName(val int) string {
+	switch val {
+	case QNetworkProxy__TunnelingCapability: // 1
+		return "TunnelingCapability"
+	case QNetworkProxy__ListeningCapability: // 2
+		return "ListeningCapability"
+	case QNetworkProxy__UdpTunnelingCapability: // 4
+		return "UdpTunnelingCapability"
+	case QNetworkProxy__CachingCapability: // 8
+		return "CachingCapability"
+	case QNetworkProxy__HostNameLookupCapability: // 16
+		return "HostNameLookupCapability"
+	case QNetworkProxy__SctpTunnelingCapability: // 32
+		return "SctpTunnelingCapability"
+	case QNetworkProxy__SctpListeningCapability: // 64
+		return "SctpListeningCapability"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkProxy_CapabilityItemName(val int) string {
+	var nilthis *QNetworkProxy
+	return nilthis.CapabilityItemName(val)
+}
 
 //  body block end
 

@@ -936,6 +936,14 @@ type QMdiArea__AreaOption = int
 //
 const QMdiArea__DontMaximizeSubWindowOnActivation QMdiArea__AreaOption = 1
 
+func (this *QMdiArea) AreaOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMdiArea_AreaOptionItemName(val int) string {
+	var nilthis *QMdiArea
+	return nilthis.AreaOptionItemName(val)
+}
+
 /*
 Specifies the criteria to use for ordering the list of child windows returned by subWindowList(). The functions cascadeSubWindows() and tileSubWindows() follow this order when arranging the windows.
 
@@ -955,6 +963,14 @@ const QMdiArea__StackingOrder QMdiArea__WindowOrder = 1
 // The windows are returned in the order in which they were activated.
 const QMdiArea__ActivationHistoryOrder QMdiArea__WindowOrder = 2
 
+func (this *QMdiArea) WindowOrderItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMdiArea_WindowOrderItemName(val int) string {
+	var nilthis *QMdiArea
+	return nilthis.WindowOrderItemName(val)
+}
+
 /*
 This enum describes the view mode of the area; i.e. how sub-windows will be displayed.
 
@@ -972,6 +988,14 @@ const QMdiArea__SubWindowView QMdiArea__ViewMode = 0
 
 // Display sub-windows with tabs in a tab bar.
 const QMdiArea__TabbedView QMdiArea__ViewMode = 1
+
+func (this *QMdiArea) ViewModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMdiArea_ViewModeItemName(val int) string {
+	var nilthis *QMdiArea
+	return nilthis.ViewModeItemName(val)
+}
 
 //  body block end
 

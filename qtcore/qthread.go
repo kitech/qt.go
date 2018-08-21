@@ -790,6 +790,14 @@ const QThread__TimeCriticalPriority QThread__Priority = 6
 // use the same priority as the creating thread. This is the default.
 const QThread__InheritPriority QThread__Priority = 7
 
+func (this *QThread) PriorityItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QThread_PriorityItemName(val int) string {
+	var nilthis *QThread
+	return nilthis.PriorityItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

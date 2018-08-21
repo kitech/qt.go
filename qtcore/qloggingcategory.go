@@ -301,6 +301,25 @@ const QLoggingCategory__CriticalShift QLoggingCategory__ = 16
 //
 const QLoggingCategory__InfoShift QLoggingCategory__ = 24
 
+func (this *QLoggingCategory) ItemName(val int) string {
+	switch val {
+	case QLoggingCategory__DebugShift: // 0
+		return "DebugShift"
+	case QLoggingCategory__WarningShift: // 8
+		return "WarningShift"
+	case QLoggingCategory__CriticalShift: // 16
+		return "CriticalShift"
+	case QLoggingCategory__InfoShift: // 24
+		return "InfoShift"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLoggingCategory_ItemName(val int) string {
+	var nilthis *QLoggingCategory
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

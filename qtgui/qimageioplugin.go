@@ -209,6 +209,14 @@ const QImageIOPlugin__CanWrite QImageIOPlugin__Capability = 2
 //
 const QImageIOPlugin__CanReadIncremental QImageIOPlugin__Capability = 4
 
+func (this *QImageIOPlugin) CapabilityItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QImageIOPlugin_CapabilityItemName(val int) string {
+	var nilthis *QImageIOPlugin
+	return nilthis.CapabilityItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

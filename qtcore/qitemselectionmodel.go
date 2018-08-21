@@ -748,6 +748,14 @@ const QItemSelectionModel__ToggleCurrent QItemSelectionModel__SelectionFlag = 24
 //
 const QItemSelectionModel__ClearAndSelect QItemSelectionModel__SelectionFlag = 3
 
+func (this *QItemSelectionModel) SelectionFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QItemSelectionModel_SelectionFlagItemName(val int) string {
+	var nilthis *QItemSelectionModel
+	return nilthis.SelectionFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

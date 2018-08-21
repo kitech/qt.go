@@ -13681,6 +13681,27 @@ const QString__SectionIncludeTrailingSep QString__SectionFlag = 4
 //
 const QString__SectionCaseInsensitiveSeps QString__SectionFlag = 8
 
+func (this *QString) SectionFlagItemName(val int) string {
+	switch val {
+	case QString__SectionDefault: // 0
+		return "SectionDefault"
+	case QString__SectionSkipEmpty: // 1
+		return "SectionSkipEmpty"
+	case QString__SectionIncludeLeadingSep: // 2
+		return "SectionIncludeLeadingSep"
+	case QString__SectionIncludeTrailingSep: // 4
+		return "SectionIncludeTrailingSep"
+	case QString__SectionCaseInsensitiveSeps: // 8
+		return "SectionCaseInsensitiveSeps"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QString_SectionFlagItemName(val int) string {
+	var nilthis *QString
+	return nilthis.SectionFlagItemName(val)
+}
+
 /*
 This enum specifies how the split() function should behave with respect to empty strings.
 
@@ -13696,6 +13717,21 @@ const QString__KeepEmptyParts QString__SplitBehavior = 0
 
 // If a field is empty, don't include it in the result.
 const QString__SkipEmptyParts QString__SplitBehavior = 1
+
+func (this *QString) SplitBehaviorItemName(val int) string {
+	switch val {
+	case QString__KeepEmptyParts: // 0
+		return "KeepEmptyParts"
+	case QString__SkipEmptyParts: // 1
+		return "SkipEmptyParts"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QString_SplitBehaviorItemName(val int) string {
+	var nilthis *QString
+	return nilthis.SplitBehaviorItemName(val)
+}
 
 /*
 This enum describes the various normalized forms of Unicode text.
@@ -13718,6 +13754,25 @@ const QString__NormalizationForm_KD QString__NormalizationForm = 2
 
 // Compatibility Decomposition followed by Canonical Composition
 const QString__NormalizationForm_KC QString__NormalizationForm = 3
+
+func (this *QString) NormalizationFormItemName(val int) string {
+	switch val {
+	case QString__NormalizationForm_D: // 0
+		return "NormalizationForm_D"
+	case QString__NormalizationForm_C: // 1
+		return "NormalizationForm_C"
+	case QString__NormalizationForm_KD: // 2
+		return "NormalizationForm_KD"
+	case QString__NormalizationForm_KC: // 3
+		return "NormalizationForm_KC"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QString_NormalizationFormItemName(val int) string {
+	var nilthis *QString
+	return nilthis.NormalizationFormItemName(val)
+}
 
 //  body block end
 

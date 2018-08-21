@@ -3835,6 +3835,14 @@ const QGraphicsScene__BspTreeIndex QGraphicsScene__ItemIndexMethod = 0
 //
 const QGraphicsScene__NoIndex QGraphicsScene__ItemIndexMethod = -1
 
+func (this *QGraphicsScene) ItemIndexMethodItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsScene_ItemIndexMethodItemName(val int) string {
+	var nilthis *QGraphicsScene
+	return nilthis.ItemIndexMethodItemName(val)
+}
+
 /*
 
 
@@ -3852,6 +3860,14 @@ const QGraphicsScene__ForegroundLayer QGraphicsScene__SceneLayer = 4
 
 //
 const QGraphicsScene__AllLayers QGraphicsScene__SceneLayer = 65535
+
+func (this *QGraphicsScene) SceneLayerItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsScene_SceneLayerItemName(val int) string {
+	var nilthis *QGraphicsScene
+	return nilthis.SceneLayerItemName(val)
+}
 
 //  body block end
 

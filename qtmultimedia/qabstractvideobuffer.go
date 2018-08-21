@@ -267,6 +267,31 @@ const QAbstractVideoBuffer__EGLImageHandle QAbstractVideoBuffer__HandleType = 5
 //
 const QAbstractVideoBuffer__UserHandle QAbstractVideoBuffer__HandleType = 1000
 
+func (this *QAbstractVideoBuffer) HandleTypeItemName(val int) string {
+	switch val {
+	case QAbstractVideoBuffer__NoHandle: // 0
+		return "NoHandle"
+	case QAbstractVideoBuffer__GLTextureHandle: // 1
+		return "GLTextureHandle"
+	case QAbstractVideoBuffer__XvShmImageHandle: // 2
+		return "XvShmImageHandle"
+	case QAbstractVideoBuffer__CoreImageHandle: // 3
+		return "CoreImageHandle"
+	case QAbstractVideoBuffer__QPixmapHandle: // 4
+		return "QPixmapHandle"
+	case QAbstractVideoBuffer__EGLImageHandle: // 5
+		return "EGLImageHandle"
+	case QAbstractVideoBuffer__UserHandle: // 1000
+		return "UserHandle"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAbstractVideoBuffer_HandleTypeItemName(val int) string {
+	var nilthis *QAbstractVideoBuffer
+	return nilthis.HandleTypeItemName(val)
+}
+
 /*
 Enumerates how a video buffer's data is mapped to system memory.
 
@@ -289,6 +314,25 @@ const QAbstractVideoBuffer__WriteOnly QAbstractVideoBuffer__MapMode = 2
 
 //
 const QAbstractVideoBuffer__ReadWrite QAbstractVideoBuffer__MapMode = 3
+
+func (this *QAbstractVideoBuffer) MapModeItemName(val int) string {
+	switch val {
+	case QAbstractVideoBuffer__NotMapped: // 0
+		return "NotMapped"
+	case QAbstractVideoBuffer__ReadOnly: // 1
+		return "ReadOnly"
+	case QAbstractVideoBuffer__WriteOnly: // 2
+		return "WriteOnly"
+	case QAbstractVideoBuffer__ReadWrite: // 3
+		return "ReadWrite"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAbstractVideoBuffer_MapModeItemName(val int) string {
+	var nilthis *QAbstractVideoBuffer
+	return nilthis.MapModeItemName(val)
+}
 
 //  body block end
 

@@ -207,6 +207,14 @@ const QSwipeGesture__Up QSwipeGesture__SwipeDirection = 3
 //
 const QSwipeGesture__Down QSwipeGesture__SwipeDirection = 4
 
+func (this *QSwipeGesture) SwipeDirectionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSwipeGesture_SwipeDirectionItemName(val int) string {
+	var nilthis *QSwipeGesture
+	return nilthis.SwipeDirectionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

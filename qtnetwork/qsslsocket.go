@@ -1960,6 +1960,14 @@ const QSslSocket__SslClientMode QSslSocket__SslMode = 1
 // The socket is a server-side SSL socket. It is either already encrypted, or it is in the SSL handshake phase (see QSslSocket::isEncrypted()).
 const QSslSocket__SslServerMode QSslSocket__SslMode = 2
 
+func (this *QSslSocket) SslModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSslSocket_SslModeItemName(val int) string {
+	var nilthis *QSslSocket
+	return nilthis.SslModeItemName(val)
+}
+
 /*
 Describes the peer verification modes for QSslSocket. The default mode is AutoVerifyPeer, which selects an appropriate mode depending on the socket's QSocket::SslMode.
 
@@ -1983,6 +1991,14 @@ const QSslSocket__VerifyPeer QSslSocket__PeerVerifyMode = 2
 
 // QSslSocket will automatically use QueryPeer for server sockets and VerifyPeer for client sockets.
 const QSslSocket__AutoVerifyPeer QSslSocket__PeerVerifyMode = 3
+
+func (this *QSslSocket) PeerVerifyModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSslSocket_PeerVerifyModeItemName(val int) string {
+	var nilthis *QSslSocket
+	return nilthis.PeerVerifyModeItemName(val)
+}
 
 //  body block end
 

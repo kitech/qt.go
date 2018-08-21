@@ -620,6 +620,27 @@ const QUuid__Microsoft QUuid__Variant = 6
 // Reserved for future definition
 const QUuid__Reserved QUuid__Variant = 7
 
+func (this *QUuid) VariantItemName(val int) string {
+	switch val {
+	case QUuid__VarUnknown: // -1
+		return "VarUnknown"
+	case QUuid__NCS: // 0
+		return "NCS"
+	case QUuid__DCE: // 2
+		return "DCE"
+	case QUuid__Microsoft: // 6
+		return "Microsoft"
+	case QUuid__Reserved: // 7
+		return "Reserved"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QUuid_VariantItemName(val int) string {
+	var nilthis *QUuid
+	return nilthis.VariantItemName(val)
+}
+
 /*
 This enum defines the values used in the version field of the UUID. The version field is meaningful only if the value in the variant field is QUuid::DCE.
 
@@ -647,6 +668,31 @@ const QUuid__Random QUuid__Version = 4
 
 //
 const QUuid__Sha1 QUuid__Version = 5
+
+func (this *QUuid) VersionItemName(val int) string {
+	switch val {
+	case QUuid__VerUnknown: // -1
+		return "VerUnknown"
+	case QUuid__Time: // 1
+		return "Time"
+	case QUuid__EmbeddedPOSIX: // 2
+		return "EmbeddedPOSIX"
+	case QUuid__Md5: // 3
+		return "Md5,Name"
+		// case QUuid__Name: // 3
+		// return ""
+	case QUuid__Random: // 4
+		return "Random"
+	case QUuid__Sha1: // 5
+		return "Sha1"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QUuid_VersionItemName(val int) string {
+	var nilthis *QUuid
+	return nilthis.VersionItemName(val)
+}
 
 //  body block end
 

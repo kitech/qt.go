@@ -526,6 +526,19 @@ type QGraphicsSimpleTextItem__ = int
 //
 const QGraphicsSimpleTextItem__Type QGraphicsSimpleTextItem__ = 9
 
+func (this *QGraphicsSimpleTextItem) ItemName(val int) string {
+	switch val {
+	case QGraphicsSimpleTextItem__Type: // 9
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsSimpleTextItem_ItemName(val int) string {
+	var nilthis *QGraphicsSimpleTextItem
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

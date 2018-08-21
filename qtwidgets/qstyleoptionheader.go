@@ -118,6 +118,19 @@ type QStyleOptionHeader__StyleOptionType = int
 //
 const QStyleOptionHeader__Type QStyleOptionHeader__StyleOptionType = 8
 
+func (this *QStyleOptionHeader) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionHeader__Type: // 8
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionHeader_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionHeader
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionHeader__StyleOptionVersion = int
 
 // 1
 const QStyleOptionHeader__Version QStyleOptionHeader__StyleOptionVersion = 1
+
+func (this *QStyleOptionHeader) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionHeader__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionHeader_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionHeader
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 /*
 
@@ -151,6 +177,25 @@ const QStyleOptionHeader__End QStyleOptionHeader__SectionPosition = 2
 //
 const QStyleOptionHeader__OnlyOneSection QStyleOptionHeader__SectionPosition = 3
 
+func (this *QStyleOptionHeader) SectionPositionItemName(val int) string {
+	switch val {
+	case QStyleOptionHeader__Beginning: // 0
+		return "Beginning"
+	case QStyleOptionHeader__Middle: // 1
+		return "Middle"
+	case QStyleOptionHeader__End: // 2
+		return "End"
+	case QStyleOptionHeader__OnlyOneSection: // 3
+		return "OnlyOneSection"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionHeader_SectionPositionItemName(val int) string {
+	var nilthis *QStyleOptionHeader
+	return nilthis.SectionPositionItemName(val)
+}
+
 /*
 
 
@@ -169,6 +214,25 @@ const QStyleOptionHeader__PreviousIsSelected QStyleOptionHeader__SelectedPositio
 //
 const QStyleOptionHeader__NextAndPreviousAreSelected QStyleOptionHeader__SelectedPosition = 3
 
+func (this *QStyleOptionHeader) SelectedPositionItemName(val int) string {
+	switch val {
+	case QStyleOptionHeader__NotAdjacent: // 0
+		return "NotAdjacent"
+	case QStyleOptionHeader__NextIsSelected: // 1
+		return "NextIsSelected"
+	case QStyleOptionHeader__PreviousIsSelected: // 2
+		return "PreviousIsSelected"
+	case QStyleOptionHeader__NextAndPreviousAreSelected: // 3
+		return "NextAndPreviousAreSelected"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionHeader_SelectedPositionItemName(val int) string {
+	var nilthis *QStyleOptionHeader
+	return nilthis.SelectedPositionItemName(val)
+}
+
 /*
 
 
@@ -183,6 +247,23 @@ const QStyleOptionHeader__SortUp QStyleOptionHeader__SortIndicator = 1
 
 //
 const QStyleOptionHeader__SortDown QStyleOptionHeader__SortIndicator = 2
+
+func (this *QStyleOptionHeader) SortIndicatorItemName(val int) string {
+	switch val {
+	case QStyleOptionHeader__None: // 0
+		return "None"
+	case QStyleOptionHeader__SortUp: // 1
+		return "SortUp"
+	case QStyleOptionHeader__SortDown: // 2
+		return "SortDown"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionHeader_SortIndicatorItemName(val int) string {
+	var nilthis *QStyleOptionHeader
+	return nilthis.SortIndicatorItemName(val)
+}
 
 //  body block end
 

@@ -2025,6 +2025,14 @@ const QComboBox__InsertBeforeCurrent QComboBox__InsertPolicy = 5
 // The string is inserted in the alphabetic order in the combobox.
 const QComboBox__InsertAlphabetically QComboBox__InsertPolicy = 6
 
+func (this *QComboBox) InsertPolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QComboBox_InsertPolicyItemName(val int) string {
+	var nilthis *QComboBox
+	return nilthis.InsertPolicyItemName(val)
+}
+
 /*
 This enum specifies how the size hint of the QComboBox should adjust when new content is added or content changes.
 
@@ -2043,6 +2051,14 @@ const QComboBox__AdjustToMinimumContentsLength QComboBox__SizeAdjustPolicy = 2
 
 // The combobox will adjust to minimumContentsLength plus space for an icon. For performance reasons use this policy on large models.
 const QComboBox__AdjustToMinimumContentsLengthWithIcon QComboBox__SizeAdjustPolicy = 3
+
+func (this *QComboBox) SizeAdjustPolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QComboBox_SizeAdjustPolicyItemName(val int) string {
+	var nilthis *QComboBox
+	return nilthis.SizeAdjustPolicyItemName(val)
+}
 
 //  body block end
 

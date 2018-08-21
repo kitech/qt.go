@@ -318,6 +318,14 @@ const QCameraExposureControl__MeteringMode QCameraExposureControl__ExposureParam
 //
 const QCameraExposureControl__ExtendedExposureParameter QCameraExposureControl__ExposureParameter = 1000
 
+func (this *QCameraExposureControl) ExposureParameterItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraExposureControl_ExposureParameterItemName(val int) string {
+	var nilthis *QCameraExposureControl
+	return nilthis.ExposureParameterItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

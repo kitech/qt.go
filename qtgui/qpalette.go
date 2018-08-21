@@ -1109,6 +1109,31 @@ const QPalette__All QPalette__ColorGroup = 5
 //
 const QPalette__Normal QPalette__ColorGroup = 0
 
+func (this *QPalette) ColorGroupItemName(val int) string {
+	switch val {
+	case QPalette__Active: // 0
+		return "Active,Normal"
+	case QPalette__Disabled: // 1
+		return "Disabled"
+	case QPalette__Inactive: // 2
+		return "Inactive"
+	case QPalette__NColorGroups: // 3
+		return "NColorGroups"
+	case QPalette__Current: // 4
+		return "Current"
+	case QPalette__All: // 5
+		return "All"
+		// case QPalette__Normal: // 0
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPalette_ColorGroupItemName(val int) string {
+	var nilthis *QPalette
+	return nilthis.ColorGroupItemName(val)
+}
+
 /*
 The ColorRole enum defines the different symbolic color roles used in current GUIs.
 
@@ -1211,6 +1236,63 @@ const QPalette__Foreground QPalette__ColorRole = 0
 
 //
 const QPalette__Background QPalette__ColorRole = 10
+
+func (this *QPalette) ColorRoleItemName(val int) string {
+	switch val {
+	case QPalette__WindowText: // 0
+		return "WindowText,Foreground"
+	case QPalette__Button: // 1
+		return "Button"
+	case QPalette__Light: // 2
+		return "Light"
+	case QPalette__Midlight: // 3
+		return "Midlight"
+	case QPalette__Dark: // 4
+		return "Dark"
+	case QPalette__Mid: // 5
+		return "Mid"
+	case QPalette__Text: // 6
+		return "Text"
+	case QPalette__BrightText: // 7
+		return "BrightText"
+	case QPalette__ButtonText: // 8
+		return "ButtonText"
+	case QPalette__Base: // 9
+		return "Base"
+	case QPalette__Window: // 10
+		return "Window,Background"
+	case QPalette__Shadow: // 11
+		return "Shadow"
+	case QPalette__Highlight: // 12
+		return "Highlight"
+	case QPalette__HighlightedText: // 13
+		return "HighlightedText"
+	case QPalette__Link: // 14
+		return "Link"
+	case QPalette__LinkVisited: // 15
+		return "LinkVisited"
+	case QPalette__AlternateBase: // 16
+		return "AlternateBase"
+	case QPalette__NoRole: // 17
+		return "NoRole"
+	case QPalette__ToolTipBase: // 18
+		return "ToolTipBase"
+	case QPalette__ToolTipText: // 19
+		return "ToolTipText"
+	case QPalette__NColorRoles: // 20
+		return "NColorRoles"
+		// case QPalette__Foreground: // 0
+		// return ""
+		// case QPalette__Background: // 10
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPalette_ColorRoleItemName(val int) string {
+	var nilthis *QPalette
+	return nilthis.ColorRoleItemName(val)
+}
 
 //  body block end
 

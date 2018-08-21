@@ -1191,6 +1191,14 @@ const QAction__PreferencesRole QAction__MenuRole = 5
 // This action should be placed where the Quit menu item is in the application menu.
 const QAction__QuitRole QAction__MenuRole = 6
 
+func (this *QAction) MenuRoleItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAction_MenuRoleItemName(val int) string {
+	var nilthis *QAction
+	return nilthis.MenuRoleItemName(val)
+}
+
 /*
 This enum defines priorities for actions in user interface.
 
@@ -1212,6 +1220,14 @@ const QAction__NormalPriority QAction__Priority = 128
 //
 const QAction__HighPriority QAction__Priority = 256
 
+func (this *QAction) PriorityItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAction_PriorityItemName(val int) string {
+	var nilthis *QAction
+	return nilthis.PriorityItemName(val)
+}
+
 /*
 This enum type is used when calling QAction::activate()
 
@@ -1224,6 +1240,14 @@ const QAction__Trigger QAction__ActionEvent = 0
 
 // this will cause the QAction::hovered() signal to be emitted.
 const QAction__Hover QAction__ActionEvent = 1
+
+func (this *QAction) ActionEventItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAction_ActionEventItemName(val int) string {
+	var nilthis *QAction
+	return nilthis.ActionEventItemName(val)
+}
 
 //  body block end
 

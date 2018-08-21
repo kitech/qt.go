@@ -371,6 +371,25 @@ const QTextOption__CenterTab QTextOption__TabType = 2
 // A tab stopping at a certain delimiter-character
 const QTextOption__DelimiterTab QTextOption__TabType = 3
 
+func (this *QTextOption) TabTypeItemName(val int) string {
+	switch val {
+	case QTextOption__LeftTab: // 0
+		return "LeftTab"
+	case QTextOption__RightTab: // 1
+		return "RightTab"
+	case QTextOption__CenterTab: // 2
+		return "CenterTab"
+	case QTextOption__DelimiterTab: // 3
+		return "DelimiterTab"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextOption_TabTypeItemName(val int) string {
+	var nilthis *QTextOption
+	return nilthis.TabTypeItemName(val)
+}
+
 /*
 This enum describes how text is wrapped in a document.
 
@@ -392,6 +411,27 @@ const QTextOption__WrapAnywhere QTextOption__WrapMode = 3
 
 // If possible, wrapping occurs at a word boundary; otherwise it will occur at the appropriate point on the line, even in the middle of a word.
 const QTextOption__WrapAtWordBoundaryOrAnywhere QTextOption__WrapMode = 4
+
+func (this *QTextOption) WrapModeItemName(val int) string {
+	switch val {
+	case QTextOption__NoWrap: // 0
+		return "NoWrap"
+	case QTextOption__WordWrap: // 1
+		return "WordWrap"
+	case QTextOption__ManualWrap: // 2
+		return "ManualWrap"
+	case QTextOption__WrapAnywhere: // 3
+		return "WrapAnywhere"
+	case QTextOption__WrapAtWordBoundaryOrAnywhere: // 4
+		return "WrapAtWordBoundaryOrAnywhere"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextOption_WrapModeItemName(val int) string {
+	var nilthis *QTextOption
+	return nilthis.WrapModeItemName(val)
+}
 
 /*
 
@@ -416,6 +456,29 @@ const QTextOption__ShowDocumentTerminator QTextOption__Flag = 16
 
 //
 const QTextOption__IncludeTrailingSpaces QTextOption__Flag = -2147483648
+
+func (this *QTextOption) FlagItemName(val int) string {
+	switch val {
+	case QTextOption__ShowTabsAndSpaces: // 1
+		return "ShowTabsAndSpaces"
+	case QTextOption__ShowLineAndParagraphSeparators: // 2
+		return "ShowLineAndParagraphSeparators"
+	case QTextOption__AddSpaceForLineAndParagraphSeparators: // 4
+		return "AddSpaceForLineAndParagraphSeparators"
+	case QTextOption__SuppressColors: // 8
+		return "SuppressColors"
+	case QTextOption__ShowDocumentTerminator: // 16
+		return "ShowDocumentTerminator"
+	case QTextOption__IncludeTrailingSpaces: // -2147483648
+		return "IncludeTrailingSpaces"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextOption_FlagItemName(val int) string {
+	var nilthis *QTextOption
+	return nilthis.FlagItemName(val)
+}
 
 //  body block end
 

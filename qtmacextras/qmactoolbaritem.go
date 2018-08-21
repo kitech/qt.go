@@ -291,6 +291,14 @@ const QMacToolBarItem__Space QMacToolBarItem__StandardItem = 1
 // A spacing item which grows to fill available space
 const QMacToolBarItem__FlexibleSpace QMacToolBarItem__StandardItem = 2
 
+func (this *QMacToolBarItem) StandardItemItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMacToolBarItem_StandardItemItemName(val int) string {
+	var nilthis *QMacToolBarItem
+	return nilthis.StandardItemItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

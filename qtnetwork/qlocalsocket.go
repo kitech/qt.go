@@ -949,6 +949,14 @@ const QLocalSocket__UnknownSocketError QLocalSocket__LocalSocketError = -1
 //
 const QLocalSocket__OperationError QLocalSocket__LocalSocketError = 19
 
+func (this *QLocalSocket) LocalSocketErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QLocalSocket_LocalSocketErrorItemName(val int) string {
+	var nilthis *QLocalSocket
+	return nilthis.LocalSocketErrorItemName(val)
+}
+
 /*
 This enum describes the different states in which a socket can be.
 
@@ -974,6 +982,14 @@ const QLocalSocket__ConnectedState QLocalSocket__LocalSocketState = 3
 
 //
 const QLocalSocket__ClosingState QLocalSocket__LocalSocketState = 6
+
+func (this *QLocalSocket) LocalSocketStateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QLocalSocket_LocalSocketStateItemName(val int) string {
+	var nilthis *QLocalSocket
+	return nilthis.LocalSocketStateItemName(val)
+}
 
 //  body block end
 

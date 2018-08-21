@@ -1589,6 +1589,29 @@ const QTransform__TxShear QTransform__TransformationType = 8
 //
 const QTransform__TxProject QTransform__TransformationType = 16
 
+func (this *QTransform) TransformationTypeItemName(val int) string {
+	switch val {
+	case QTransform__TxNone: // 0
+		return "TxNone"
+	case QTransform__TxTranslate: // 1
+		return "TxTranslate"
+	case QTransform__TxScale: // 2
+		return "TxScale"
+	case QTransform__TxRotate: // 4
+		return "TxRotate"
+	case QTransform__TxShear: // 8
+		return "TxShear"
+	case QTransform__TxProject: // 16
+		return "TxProject"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTransform_TransformationTypeItemName(val int) string {
+	var nilthis *QTransform
+	return nilthis.TransformationTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

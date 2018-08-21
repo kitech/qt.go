@@ -481,6 +481,14 @@ const QSGTexture__ClampToEdge QSGTexture__WrapMode = 1
 //
 const QSGTexture__MirroredRepeat QSGTexture__WrapMode = 2
 
+func (this *QSGTexture) WrapModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSGTexture_WrapModeItemName(val int) string {
+	var nilthis *QSGTexture
+	return nilthis.WrapModeItemName(val)
+}
+
 /*
 Specifies how sampling of texels should filter when texture coordinates are not pixel aligned.
 
@@ -496,6 +504,14 @@ const QSGTexture__Nearest QSGTexture__Filtering = 1
 
 // Sampling returns a linear interpolation of the neighboring texels.
 const QSGTexture__Linear QSGTexture__Filtering = 2
+
+func (this *QSGTexture) FilteringItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSGTexture_FilteringItemName(val int) string {
+	var nilthis *QSGTexture
+	return nilthis.FilteringItemName(val)
+}
 
 /*
 Specifies the anisotropic filtering level to be used when the texture is not screen aligned.
@@ -521,6 +537,14 @@ const QSGTexture__Anisotropy8x QSGTexture__AnisotropyLevel = 3
 
 //
 const QSGTexture__Anisotropy16x QSGTexture__AnisotropyLevel = 4
+
+func (this *QSGTexture) AnisotropyLevelItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSGTexture_AnisotropyLevelItemName(val int) string {
+	var nilthis *QSGTexture
+	return nilthis.AnisotropyLevelItemName(val)
+}
 
 //  body block end
 

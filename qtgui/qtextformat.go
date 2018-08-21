@@ -921,6 +921,31 @@ const QTextFormat__FrameFormat QTextFormat__FormatType = 5
 //
 const QTextFormat__UserFormat QTextFormat__FormatType = 100
 
+func (this *QTextFormat) FormatTypeItemName(val int) string {
+	switch val {
+	case QTextFormat__InvalidFormat: // -1
+		return "InvalidFormat"
+	case QTextFormat__BlockFormat: // 1
+		return "BlockFormat"
+	case QTextFormat__CharFormat: // 2
+		return "CharFormat"
+	case QTextFormat__ListFormat: // 3
+		return "ListFormat"
+	case QTextFormat__TableFormat: // 4
+		return "TableFormat"
+	case QTextFormat__FrameFormat: // 5
+		return "FrameFormat"
+	case QTextFormat__UserFormat: // 100
+		return "UserFormat"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextFormat_FormatTypeItemName(val int) string {
+	var nilthis *QTextFormat
+	return nilthis.FormatTypeItemName(val)
+}
+
 /*
 This enum describes the different properties a format can have.
 
@@ -1216,6 +1241,181 @@ const QTextFormat__PageBreakPolicy QTextFormat__Property = 28672
 //
 const QTextFormat__UserProperty QTextFormat__Property = 1048576
 
+func (this *QTextFormat) PropertyItemName(val int) string {
+	switch val {
+	case QTextFormat__ObjectIndex: // 0
+		return "ObjectIndex"
+	case QTextFormat__CssFloat: // 2048
+		return "CssFloat"
+	case QTextFormat__LayoutDirection: // 2049
+		return "LayoutDirection"
+	case QTextFormat__OutlinePen: // 2064
+		return "OutlinePen"
+	case QTextFormat__BackgroundBrush: // 2080
+		return "BackgroundBrush"
+	case QTextFormat__ForegroundBrush: // 2081
+		return "ForegroundBrush"
+	case QTextFormat__BackgroundImageUrl: // 2083
+		return "BackgroundImageUrl"
+	case QTextFormat__BlockAlignment: // 4112
+		return "BlockAlignment"
+	case QTextFormat__BlockTopMargin: // 4144
+		return "BlockTopMargin"
+	case QTextFormat__BlockBottomMargin: // 4145
+		return "BlockBottomMargin"
+	case QTextFormat__BlockLeftMargin: // 4146
+		return "BlockLeftMargin"
+	case QTextFormat__BlockRightMargin: // 4147
+		return "BlockRightMargin"
+	case QTextFormat__TextIndent: // 4148
+		return "TextIndent"
+	case QTextFormat__TabPositions: // 4149
+		return "TabPositions"
+	case QTextFormat__BlockIndent: // 4160
+		return "BlockIndent"
+	case QTextFormat__LineHeight: // 4168
+		return "LineHeight"
+	case QTextFormat__LineHeightType: // 4169
+		return "LineHeightType"
+	case QTextFormat__BlockNonBreakableLines: // 4176
+		return "BlockNonBreakableLines"
+	case QTextFormat__BlockTrailingHorizontalRulerWidth: // 4192
+		return "BlockTrailingHorizontalRulerWidth"
+	case QTextFormat__FirstFontProperty: // 8160
+		return "FirstFontProperty,FontCapitalization"
+		// case QTextFormat__FontCapitalization: // 8160
+		// return ""
+	case QTextFormat__FontLetterSpacingType: // 8243
+		return "FontLetterSpacingType"
+	case QTextFormat__FontLetterSpacing: // 8161
+		return "FontLetterSpacing"
+	case QTextFormat__FontWordSpacing: // 8162
+		return "FontWordSpacing"
+	case QTextFormat__FontStretch: // 8244
+		return "FontStretch"
+	case QTextFormat__FontStyleHint: // 8163
+		return "FontStyleHint"
+	case QTextFormat__FontStyleStrategy: // 8164
+		return "FontStyleStrategy"
+	case QTextFormat__FontKerning: // 8165
+		return "FontKerning"
+	case QTextFormat__FontHintingPreference: // 8166
+		return "FontHintingPreference"
+	case QTextFormat__FontFamily: // 8192
+		return "FontFamily"
+	case QTextFormat__FontPointSize: // 8193
+		return "FontPointSize"
+	case QTextFormat__FontSizeAdjustment: // 8194
+		return "FontSizeAdjustment,FontSizeIncrement"
+		// case QTextFormat__FontSizeIncrement: // 8194
+		// return ""
+	case QTextFormat__FontWeight: // 8195
+		return "FontWeight"
+	case QTextFormat__FontItalic: // 8196
+		return "FontItalic"
+	case QTextFormat__FontUnderline: // 8197
+		return "FontUnderline"
+	case QTextFormat__FontOverline: // 8198
+		return "FontOverline"
+	case QTextFormat__FontStrikeOut: // 8199
+		return "FontStrikeOut"
+	case QTextFormat__FontFixedPitch: // 8200
+		return "FontFixedPitch"
+	case QTextFormat__FontPixelSize: // 8201
+		return "FontPixelSize,LastFontProperty"
+		// case QTextFormat__LastFontProperty: // 8201
+		// return ""
+	case QTextFormat__TextUnderlineColor: // 8208
+		return "TextUnderlineColor"
+	case QTextFormat__TextVerticalAlignment: // 8225
+		return "TextVerticalAlignment"
+	case QTextFormat__TextOutline: // 8226
+		return "TextOutline"
+	case QTextFormat__TextUnderlineStyle: // 8227
+		return "TextUnderlineStyle"
+	case QTextFormat__TextToolTip: // 8228
+		return "TextToolTip"
+	case QTextFormat__IsAnchor: // 8240
+		return "IsAnchor"
+	case QTextFormat__AnchorHref: // 8241
+		return "AnchorHref"
+	case QTextFormat__AnchorName: // 8242
+		return "AnchorName"
+	case QTextFormat__ObjectType: // 12032
+		return "ObjectType"
+	case QTextFormat__ListStyle: // 12288
+		return "ListStyle"
+	case QTextFormat__ListIndent: // 12289
+		return "ListIndent"
+	case QTextFormat__ListNumberPrefix: // 12290
+		return "ListNumberPrefix"
+	case QTextFormat__ListNumberSuffix: // 12291
+		return "ListNumberSuffix"
+	case QTextFormat__FrameBorder: // 16384
+		return "FrameBorder"
+	case QTextFormat__FrameMargin: // 16385
+		return "FrameMargin"
+	case QTextFormat__FramePadding: // 16386
+		return "FramePadding"
+	case QTextFormat__FrameWidth: // 16387
+		return "FrameWidth"
+	case QTextFormat__FrameHeight: // 16388
+		return "FrameHeight"
+	case QTextFormat__FrameTopMargin: // 16389
+		return "FrameTopMargin"
+	case QTextFormat__FrameBottomMargin: // 16390
+		return "FrameBottomMargin"
+	case QTextFormat__FrameLeftMargin: // 16391
+		return "FrameLeftMargin"
+	case QTextFormat__FrameRightMargin: // 16392
+		return "FrameRightMargin"
+	case QTextFormat__FrameBorderBrush: // 16393
+		return "FrameBorderBrush"
+	case QTextFormat__FrameBorderStyle: // 16400
+		return "FrameBorderStyle"
+	case QTextFormat__TableColumns: // 16640
+		return "TableColumns"
+	case QTextFormat__TableColumnWidthConstraints: // 16641
+		return "TableColumnWidthConstraints"
+	case QTextFormat__TableCellSpacing: // 16642
+		return "TableCellSpacing"
+	case QTextFormat__TableCellPadding: // 16643
+		return "TableCellPadding"
+	case QTextFormat__TableHeaderRowCount: // 16644
+		return "TableHeaderRowCount"
+	case QTextFormat__TableCellRowSpan: // 18448
+		return "TableCellRowSpan"
+	case QTextFormat__TableCellColumnSpan: // 18449
+		return "TableCellColumnSpan"
+	case QTextFormat__TableCellTopPadding: // 18450
+		return "TableCellTopPadding"
+	case QTextFormat__TableCellBottomPadding: // 18451
+		return "TableCellBottomPadding"
+	case QTextFormat__TableCellLeftPadding: // 18452
+		return "TableCellLeftPadding"
+	case QTextFormat__TableCellRightPadding: // 18453
+		return "TableCellRightPadding"
+	case QTextFormat__ImageName: // 20480
+		return "ImageName"
+	case QTextFormat__ImageWidth: // 20496
+		return "ImageWidth"
+	case QTextFormat__ImageHeight: // 20497
+		return "ImageHeight"
+	case QTextFormat__FullWidthSelection: // 24576
+		return "FullWidthSelection"
+	case QTextFormat__PageBreakPolicy: // 28672
+		return "PageBreakPolicy"
+	case QTextFormat__UserProperty: // 1048576
+		return "UserProperty"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextFormat_PropertyItemName(val int) string {
+	var nilthis *QTextFormat
+	return nilthis.PropertyItemName(val)
+}
+
 /*
 This enum describes what kind of QTextObject this format is associated with.
 
@@ -1241,6 +1441,27 @@ const QTextFormat__TableCellObject QTextFormat__ObjectTypes = 3
 //
 const QTextFormat__UserObject QTextFormat__ObjectTypes = 4096
 
+func (this *QTextFormat) ObjectTypesItemName(val int) string {
+	switch val {
+	case QTextFormat__NoObject: // 0
+		return "NoObject"
+	case QTextFormat__ImageObject: // 1
+		return "ImageObject"
+	case QTextFormat__TableObject: // 2
+		return "TableObject"
+	case QTextFormat__TableCellObject: // 3
+		return "TableCellObject"
+	case QTextFormat__UserObject: // 4096
+		return "UserObject"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextFormat_ObjectTypesItemName(val int) string {
+	var nilthis *QTextFormat
+	return nilthis.ObjectTypesItemName(val)
+}
+
 /*
 
 
@@ -1255,6 +1476,23 @@ const QTextFormat__PageBreak_AlwaysBefore QTextFormat__PageBreakFlag = 1
 
 //
 const QTextFormat__PageBreak_AlwaysAfter QTextFormat__PageBreakFlag = 16
+
+func (this *QTextFormat) PageBreakFlagItemName(val int) string {
+	switch val {
+	case QTextFormat__PageBreak_Auto: // 0
+		return "PageBreak_Auto"
+	case QTextFormat__PageBreak_AlwaysBefore: // 1
+		return "PageBreak_AlwaysBefore"
+	case QTextFormat__PageBreak_AlwaysAfter: // 16
+		return "PageBreak_AlwaysAfter"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextFormat_PageBreakFlagItemName(val int) string {
+	var nilthis *QTextFormat
+	return nilthis.PageBreakFlagItemName(val)
+}
 
 //  body block end
 

@@ -312,6 +312,69 @@ const QStyleOption__SO_CustomBase QStyleOption__OptionType = 3840
 //
 const QStyleOption__SO_ComplexCustomBase QStyleOption__OptionType = 251658240
 
+func (this *QStyleOption) OptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOption__SO_Default: // 0
+		return "SO_Default"
+	case QStyleOption__SO_FocusRect: // 1
+		return "SO_FocusRect"
+	case QStyleOption__SO_Button: // 2
+		return "SO_Button"
+	case QStyleOption__SO_Tab: // 3
+		return "SO_Tab"
+	case QStyleOption__SO_MenuItem: // 4
+		return "SO_MenuItem"
+	case QStyleOption__SO_Frame: // 5
+		return "SO_Frame"
+	case QStyleOption__SO_ProgressBar: // 6
+		return "SO_ProgressBar"
+	case QStyleOption__SO_ToolBox: // 7
+		return "SO_ToolBox"
+	case QStyleOption__SO_Header: // 8
+		return "SO_Header"
+	case QStyleOption__SO_DockWidget: // 9
+		return "SO_DockWidget"
+	case QStyleOption__SO_ViewItem: // 10
+		return "SO_ViewItem"
+	case QStyleOption__SO_TabWidgetFrame: // 11
+		return "SO_TabWidgetFrame"
+	case QStyleOption__SO_TabBarBase: // 12
+		return "SO_TabBarBase"
+	case QStyleOption__SO_RubberBand: // 13
+		return "SO_RubberBand"
+	case QStyleOption__SO_ToolBar: // 14
+		return "SO_ToolBar"
+	case QStyleOption__SO_GraphicsItem: // 15
+		return "SO_GraphicsItem"
+	case QStyleOption__SO_Complex: // 983040
+		return "SO_Complex"
+	case QStyleOption__SO_Slider: // 983041
+		return "SO_Slider"
+	case QStyleOption__SO_SpinBox: // 983042
+		return "SO_SpinBox"
+	case QStyleOption__SO_ToolButton: // 983043
+		return "SO_ToolButton"
+	case QStyleOption__SO_ComboBox: // 983044
+		return "SO_ComboBox"
+	case QStyleOption__SO_TitleBar: // 983045
+		return "SO_TitleBar"
+	case QStyleOption__SO_GroupBox: // 983046
+		return "SO_GroupBox"
+	case QStyleOption__SO_SizeGrip: // 983047
+		return "SO_SizeGrip"
+	case QStyleOption__SO_CustomBase: // 3840
+		return "SO_CustomBase"
+	case QStyleOption__SO_ComplexCustomBase: // 251658240
+		return "SO_ComplexCustomBase"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOption_OptionTypeItemName(val int) string {
+	var nilthis *QStyleOption
+	return nilthis.OptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
 
@@ -328,6 +391,19 @@ type QStyleOption__StyleOptionType = int
 //
 const QStyleOption__Type QStyleOption__StyleOptionType = 0
 
+func (this *QStyleOption) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOption__Type: // 0
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOption_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOption
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -342,6 +418,19 @@ type QStyleOption__StyleOptionVersion = int
 
 // 1
 const QStyleOption__Version QStyleOption__StyleOptionVersion = 1
+
+func (this *QStyleOption) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOption__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOption_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOption
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

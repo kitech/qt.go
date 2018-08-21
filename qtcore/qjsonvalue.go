@@ -914,6 +914,31 @@ const QJsonValue__Object QJsonValue__Type = 5
 //
 const QJsonValue__Undefined QJsonValue__Type = 128
 
+func (this *QJsonValue) TypeItemName(val int) string {
+	switch val {
+	case QJsonValue__Null: // 0
+		return "Null"
+	case QJsonValue__Bool: // 1
+		return "Bool"
+	case QJsonValue__Double: // 2
+		return "Double"
+	case QJsonValue__String: // 3
+		return "String"
+	case QJsonValue__Array: // 4
+		return "Array"
+	case QJsonValue__Object: // 5
+		return "Object"
+	case QJsonValue__Undefined: // 128
+		return "Undefined"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QJsonValue_TypeItemName(val int) string {
+	var nilthis *QJsonValue
+	return nilthis.TypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

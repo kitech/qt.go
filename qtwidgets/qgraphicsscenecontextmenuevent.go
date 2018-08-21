@@ -283,6 +283,23 @@ const QGraphicsSceneContextMenuEvent__Keyboard QGraphicsSceneContextMenuEvent__R
 //
 const QGraphicsSceneContextMenuEvent__Other QGraphicsSceneContextMenuEvent__Reason = 2
 
+func (this *QGraphicsSceneContextMenuEvent) ReasonItemName(val int) string {
+	switch val {
+	case QGraphicsSceneContextMenuEvent__Mouse: // 0
+		return "Mouse"
+	case QGraphicsSceneContextMenuEvent__Keyboard: // 1
+		return "Keyboard"
+	case QGraphicsSceneContextMenuEvent__Other: // 2
+		return "Other"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsSceneContextMenuEvent_ReasonItemName(val int) string {
+	var nilthis *QGraphicsSceneContextMenuEvent
+	return nilthis.ReasonItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

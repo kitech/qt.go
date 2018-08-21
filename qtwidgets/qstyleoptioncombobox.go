@@ -118,6 +118,19 @@ type QStyleOptionComboBox__StyleOptionType = int
 //
 const QStyleOptionComboBox__Type QStyleOptionComboBox__StyleOptionType = 983044
 
+func (this *QStyleOptionComboBox) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionComboBox__Type: // 983044
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionComboBox_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionComboBox
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionComboBox__StyleOptionVersion = int
 
 // 1
 const QStyleOptionComboBox__Version QStyleOptionComboBox__StyleOptionVersion = 1
+
+func (this *QStyleOptionComboBox) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionComboBox__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionComboBox_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionComboBox
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

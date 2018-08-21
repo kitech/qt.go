@@ -311,6 +311,14 @@ const QNetworkConfigurationManager__DataStatistics QNetworkConfigurationManager_
 //
 const QNetworkConfigurationManager__NetworkSessionRequired QNetworkConfigurationManager__Capability = 64
 
+func (this *QNetworkConfigurationManager) CapabilityItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QNetworkConfigurationManager_CapabilityItemName(val int) string {
+	var nilthis *QNetworkConfigurationManager
+	return nilthis.CapabilityItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

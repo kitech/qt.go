@@ -1598,6 +1598,14 @@ const QAbstractSocket__SctpSocket QAbstractSocket__SocketType = 2
 //
 const QAbstractSocket__UnknownSocketType QAbstractSocket__SocketType = -1
 
+func (this *QAbstractSocket) SocketTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSocket_SocketTypeItemName(val int) string {
+	var nilthis *QAbstractSocket
+	return nilthis.SocketTypeItemName(val)
+}
+
 /*
 This enum describes the network layer protocol values used in Qt.
 
@@ -1619,6 +1627,14 @@ const QAbstractSocket__AnyIPProtocol QAbstractSocket__NetworkLayerProtocol = 2
 
 //
 const QAbstractSocket__UnknownNetworkLayerProtocol QAbstractSocket__NetworkLayerProtocol = -1
+
+func (this *QAbstractSocket) NetworkLayerProtocolItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSocket_NetworkLayerProtocolItemName(val int) string {
+	var nilthis *QAbstractSocket
+	return nilthis.NetworkLayerProtocolItemName(val)
+}
 
 /*
 This enum describes the socket errors that can occur.
@@ -1702,6 +1718,14 @@ const QAbstractSocket__TemporaryError QAbstractSocket__SocketError = 22
 //
 const QAbstractSocket__UnknownSocketError QAbstractSocket__SocketError = -1
 
+func (this *QAbstractSocket) SocketErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSocket_SocketErrorItemName(val int) string {
+	var nilthis *QAbstractSocket
+	return nilthis.SocketErrorItemName(val)
+}
+
 /*
 This enum describes the different states in which a socket can be.
 
@@ -1732,6 +1756,14 @@ const QAbstractSocket__ListeningState QAbstractSocket__SocketState = 5
 
 // The socket is about to close (data may still be waiting to be written).
 const QAbstractSocket__ClosingState QAbstractSocket__SocketState = 6
+
+func (this *QAbstractSocket) SocketStateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSocket_SocketStateItemName(val int) string {
+	var nilthis *QAbstractSocket
+	return nilthis.SocketStateItemName(val)
+}
 
 /*
 This enum represents the options that can be set on a socket. If desired, they can be set after having received the connected() signal from the socket or after having received a new socket from a QTcpServer.
@@ -1780,6 +1812,14 @@ const QAbstractSocket__SendBufferSizeSocketOption QAbstractSocket__SocketOption 
 //
 const QAbstractSocket__ReceiveBufferSizeSocketOption QAbstractSocket__SocketOption = 6
 
+func (this *QAbstractSocket) SocketOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSocket_SocketOptionItemName(val int) string {
+	var nilthis *QAbstractSocket
+	return nilthis.SocketOptionItemName(val)
+}
+
 /*
 
 
@@ -1798,6 +1838,14 @@ const QAbstractSocket__DontShareAddress QAbstractSocket__BindFlag = 2
 //
 const QAbstractSocket__ReuseAddressHint QAbstractSocket__BindFlag = 4
 
+func (this *QAbstractSocket) BindFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSocket_BindFlagItemName(val int) string {
+	var nilthis *QAbstractSocket
+	return nilthis.BindFlagItemName(val)
+}
+
 /*
 
 
@@ -1809,6 +1857,14 @@ const QAbstractSocket__PauseNever QAbstractSocket__PauseMode = 0
 
 //
 const QAbstractSocket__PauseOnSslErrors QAbstractSocket__PauseMode = 1
+
+func (this *QAbstractSocket) PauseModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSocket_PauseModeItemName(val int) string {
+	var nilthis *QAbstractSocket
+	return nilthis.PauseModeItemName(val)
+}
 
 //  body block end
 

@@ -2245,6 +2245,14 @@ const QAbstractItemModel__VerticalSortHint QAbstractItemModel__LayoutChangeHint 
 // Columns are being sorted.
 const QAbstractItemModel__HorizontalSortHint QAbstractItemModel__LayoutChangeHint = 2
 
+func (this *QAbstractItemModel) LayoutChangeHintItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemModel_LayoutChangeHintItemName(val int) string {
+	var nilthis *QAbstractItemModel
+	return nilthis.LayoutChangeHintItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

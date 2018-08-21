@@ -253,6 +253,25 @@ const QGradient__ConicalGradient QGradient__Type = 2
 //
 const QGradient__NoGradient QGradient__Type = 3
 
+func (this *QGradient) TypeItemName(val int) string {
+	switch val {
+	case QGradient__LinearGradient: // 0
+		return "LinearGradient"
+	case QGradient__RadialGradient: // 1
+		return "RadialGradient"
+	case QGradient__ConicalGradient: // 2
+		return "ConicalGradient"
+	case QGradient__NoGradient: // 3
+		return "NoGradient"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGradient_TypeItemName(val int) string {
+	var nilthis *QGradient
+	return nilthis.TypeItemName(val)
+}
+
 /*
 
 
@@ -267,6 +286,23 @@ const QGradient__ReflectSpread QGradient__Spread = 1
 
 //
 const QGradient__RepeatSpread QGradient__Spread = 2
+
+func (this *QGradient) SpreadItemName(val int) string {
+	switch val {
+	case QGradient__PadSpread: // 0
+		return "PadSpread"
+	case QGradient__ReflectSpread: // 1
+		return "ReflectSpread"
+	case QGradient__RepeatSpread: // 2
+		return "RepeatSpread"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGradient_SpreadItemName(val int) string {
+	var nilthis *QGradient
+	return nilthis.SpreadItemName(val)
+}
 
 /*
 
@@ -283,6 +319,23 @@ const QGradient__StretchToDeviceMode QGradient__CoordinateMode = 1
 //
 const QGradient__ObjectBoundingMode QGradient__CoordinateMode = 2
 
+func (this *QGradient) CoordinateModeItemName(val int) string {
+	switch val {
+	case QGradient__LogicalMode: // 0
+		return "LogicalMode"
+	case QGradient__StretchToDeviceMode: // 1
+		return "StretchToDeviceMode"
+	case QGradient__ObjectBoundingMode: // 2
+		return "ObjectBoundingMode"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGradient_CoordinateModeItemName(val int) string {
+	var nilthis *QGradient
+	return nilthis.CoordinateModeItemName(val)
+}
+
 /*
 
 
@@ -294,6 +347,21 @@ const QGradient__ColorInterpolation QGradient__InterpolationMode = 0
 
 //
 const QGradient__ComponentInterpolation QGradient__InterpolationMode = 1
+
+func (this *QGradient) InterpolationModeItemName(val int) string {
+	switch val {
+	case QGradient__ColorInterpolation: // 0
+		return "ColorInterpolation"
+	case QGradient__ComponentInterpolation: // 1
+		return "ComponentInterpolation"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGradient_InterpolationModeItemName(val int) string {
+	var nilthis *QGradient
+	return nilthis.InterpolationModeItemName(val)
+}
 
 //  body block end
 

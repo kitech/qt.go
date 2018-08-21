@@ -795,6 +795,14 @@ const QQuickWebEngineProfile__DiskHttpCache QQuickWebEngineProfile__HttpCacheTyp
 //
 const QQuickWebEngineProfile__NoCache QQuickWebEngineProfile__HttpCacheType = 2
 
+func (this *QQuickWebEngineProfile) HttpCacheTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickWebEngineProfile_HttpCacheTypeItemName(val int) string {
+	var nilthis *QQuickWebEngineProfile
+	return nilthis.HttpCacheTypeItemName(val)
+}
+
 /*
 This enum describes policy for cookie persistency:
 
@@ -810,6 +818,14 @@ const QQuickWebEngineProfile__AllowPersistentCookies QQuickWebEngineProfile__Per
 
 // Both session and persistent cookies are saved to and restored from disk.
 const QQuickWebEngineProfile__ForcePersistentCookies QQuickWebEngineProfile__PersistentCookiesPolicy = 2
+
+func (this *QQuickWebEngineProfile) PersistentCookiesPolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickWebEngineProfile_PersistentCookiesPolicyItemName(val int) string {
+	var nilthis *QQuickWebEngineProfile
+	return nilthis.PersistentCookiesPolicyItemName(val)
+}
 
 //  body block end
 

@@ -118,6 +118,19 @@ type QStyleOptionGroupBox__StyleOptionType = int
 //
 const QStyleOptionGroupBox__Type QStyleOptionGroupBox__StyleOptionType = 983046
 
+func (this *QStyleOptionGroupBox) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionGroupBox__Type: // 983046
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionGroupBox_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionGroupBox
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionGroupBox__StyleOptionVersion = int
 
 // 1
 const QStyleOptionGroupBox__Version QStyleOptionGroupBox__StyleOptionVersion = 1
+
+func (this *QStyleOptionGroupBox) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionGroupBox__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionGroupBox_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionGroupBox
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

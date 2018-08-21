@@ -753,6 +753,361 @@ const QEvent__User QEvent__Type = 1000
 //
 const QEvent__MaxUser QEvent__Type = 65535
 
+func (this *QEvent) TypeItemName(val int) string {
+	switch val {
+	case QEvent__None: // 0
+		return "None"
+	case QEvent__Timer: // 1
+		return "Timer"
+	case QEvent__MouseButtonPress: // 2
+		return "MouseButtonPress"
+	case QEvent__MouseButtonRelease: // 3
+		return "MouseButtonRelease"
+	case QEvent__MouseButtonDblClick: // 4
+		return "MouseButtonDblClick"
+	case QEvent__MouseMove: // 5
+		return "MouseMove"
+	case QEvent__KeyPress: // 6
+		return "KeyPress"
+	case QEvent__KeyRelease: // 7
+		return "KeyRelease"
+	case QEvent__FocusIn: // 8
+		return "FocusIn"
+	case QEvent__FocusOut: // 9
+		return "FocusOut"
+	case QEvent__FocusAboutToChange: // 23
+		return "FocusAboutToChange"
+	case QEvent__Enter: // 10
+		return "Enter"
+	case QEvent__Leave: // 11
+		return "Leave"
+	case QEvent__Paint: // 12
+		return "Paint"
+	case QEvent__Move: // 13
+		return "Move"
+	case QEvent__Resize: // 14
+		return "Resize"
+	case QEvent__Create: // 15
+		return "Create"
+	case QEvent__Destroy: // 16
+		return "Destroy"
+	case QEvent__Show: // 17
+		return "Show"
+	case QEvent__Hide: // 18
+		return "Hide"
+	case QEvent__Close: // 19
+		return "Close"
+	case QEvent__Quit: // 20
+		return "Quit"
+	case QEvent__ParentChange: // 21
+		return "ParentChange"
+	case QEvent__ParentAboutToChange: // 131
+		return "ParentAboutToChange"
+	case QEvent__ThreadChange: // 22
+		return "ThreadChange"
+	case QEvent__WindowActivate: // 24
+		return "WindowActivate"
+	case QEvent__WindowDeactivate: // 25
+		return "WindowDeactivate"
+	case QEvent__ShowToParent: // 26
+		return "ShowToParent"
+	case QEvent__HideToParent: // 27
+		return "HideToParent"
+	case QEvent__Wheel: // 31
+		return "Wheel"
+	case QEvent__WindowTitleChange: // 33
+		return "WindowTitleChange"
+	case QEvent__WindowIconChange: // 34
+		return "WindowIconChange"
+	case QEvent__ApplicationWindowIconChange: // 35
+		return "ApplicationWindowIconChange"
+	case QEvent__ApplicationFontChange: // 36
+		return "ApplicationFontChange"
+	case QEvent__ApplicationLayoutDirectionChange: // 37
+		return "ApplicationLayoutDirectionChange"
+	case QEvent__ApplicationPaletteChange: // 38
+		return "ApplicationPaletteChange"
+	case QEvent__PaletteChange: // 39
+		return "PaletteChange"
+	case QEvent__Clipboard: // 40
+		return "Clipboard"
+	case QEvent__Speech: // 42
+		return "Speech"
+	case QEvent__MetaCall: // 43
+		return "MetaCall"
+	case QEvent__SockAct: // 50
+		return "SockAct"
+	case QEvent__WinEventAct: // 132
+		return "WinEventAct"
+	case QEvent__DeferredDelete: // 52
+		return "DeferredDelete"
+	case QEvent__DragEnter: // 60
+		return "DragEnter"
+	case QEvent__DragMove: // 61
+		return "DragMove"
+	case QEvent__DragLeave: // 62
+		return "DragLeave"
+	case QEvent__Drop: // 63
+		return "Drop"
+	case QEvent__DragResponse: // 64
+		return "DragResponse"
+	case QEvent__ChildAdded: // 68
+		return "ChildAdded"
+	case QEvent__ChildPolished: // 69
+		return "ChildPolished"
+	case QEvent__ChildRemoved: // 71
+		return "ChildRemoved"
+	case QEvent__ShowWindowRequest: // 73
+		return "ShowWindowRequest"
+	case QEvent__PolishRequest: // 74
+		return "PolishRequest"
+	case QEvent__Polish: // 75
+		return "Polish"
+	case QEvent__LayoutRequest: // 76
+		return "LayoutRequest"
+	case QEvent__UpdateRequest: // 77
+		return "UpdateRequest"
+	case QEvent__UpdateLater: // 78
+		return "UpdateLater"
+	case QEvent__EmbeddingControl: // 79
+		return "EmbeddingControl"
+	case QEvent__ActivateControl: // 80
+		return "ActivateControl"
+	case QEvent__DeactivateControl: // 81
+		return "DeactivateControl"
+	case QEvent__ContextMenu: // 82
+		return "ContextMenu"
+	case QEvent__InputMethod: // 83
+		return "InputMethod"
+	case QEvent__TabletMove: // 87
+		return "TabletMove"
+	case QEvent__LocaleChange: // 88
+		return "LocaleChange"
+	case QEvent__LanguageChange: // 89
+		return "LanguageChange"
+	case QEvent__LayoutDirectionChange: // 90
+		return "LayoutDirectionChange"
+	case QEvent__Style: // 91
+		return "Style"
+	case QEvent__TabletPress: // 92
+		return "TabletPress"
+	case QEvent__TabletRelease: // 93
+		return "TabletRelease"
+	case QEvent__OkRequest: // 94
+		return "OkRequest"
+	case QEvent__HelpRequest: // 95
+		return "HelpRequest"
+	case QEvent__IconDrag: // 96
+		return "IconDrag"
+	case QEvent__FontChange: // 97
+		return "FontChange"
+	case QEvent__EnabledChange: // 98
+		return "EnabledChange"
+	case QEvent__ActivationChange: // 99
+		return "ActivationChange"
+	case QEvent__StyleChange: // 100
+		return "StyleChange"
+	case QEvent__IconTextChange: // 101
+		return "IconTextChange"
+	case QEvent__ModifiedChange: // 102
+		return "ModifiedChange"
+	case QEvent__MouseTrackingChange: // 109
+		return "MouseTrackingChange"
+	case QEvent__WindowBlocked: // 103
+		return "WindowBlocked"
+	case QEvent__WindowUnblocked: // 104
+		return "WindowUnblocked"
+	case QEvent__WindowStateChange: // 105
+		return "WindowStateChange"
+	case QEvent__ReadOnlyChange: // 106
+		return "ReadOnlyChange"
+	case QEvent__ToolTip: // 110
+		return "ToolTip"
+	case QEvent__WhatsThis: // 111
+		return "WhatsThis"
+	case QEvent__StatusTip: // 112
+		return "StatusTip"
+	case QEvent__ActionChanged: // 113
+		return "ActionChanged"
+	case QEvent__ActionAdded: // 114
+		return "ActionAdded"
+	case QEvent__ActionRemoved: // 115
+		return "ActionRemoved"
+	case QEvent__FileOpen: // 116
+		return "FileOpen"
+	case QEvent__Shortcut: // 117
+		return "Shortcut"
+	case QEvent__ShortcutOverride: // 51
+		return "ShortcutOverride"
+	case QEvent__WhatsThisClicked: // 118
+		return "WhatsThisClicked"
+	case QEvent__ToolBarChange: // 120
+		return "ToolBarChange"
+	case QEvent__ApplicationActivate: // 121
+		return "ApplicationActivate,ApplicationActivated"
+		// case QEvent__ApplicationActivated: // 121
+		// return ""
+	case QEvent__ApplicationDeactivate: // 122
+		return "ApplicationDeactivate,ApplicationDeactivated"
+		// case QEvent__ApplicationDeactivated: // 122
+		// return ""
+	case QEvent__QueryWhatsThis: // 123
+		return "QueryWhatsThis"
+	case QEvent__EnterWhatsThisMode: // 124
+		return "EnterWhatsThisMode"
+	case QEvent__LeaveWhatsThisMode: // 125
+		return "LeaveWhatsThisMode"
+	case QEvent__ZOrderChange: // 126
+		return "ZOrderChange"
+	case QEvent__HoverEnter: // 127
+		return "HoverEnter"
+	case QEvent__HoverLeave: // 128
+		return "HoverLeave"
+	case QEvent__HoverMove: // 129
+		return "HoverMove"
+	case QEvent__AcceptDropsChange: // 152
+		return "AcceptDropsChange"
+	case QEvent__ZeroTimerEvent: // 154
+		return "ZeroTimerEvent"
+	case QEvent__GraphicsSceneMouseMove: // 155
+		return "GraphicsSceneMouseMove"
+	case QEvent__GraphicsSceneMousePress: // 156
+		return "GraphicsSceneMousePress"
+	case QEvent__GraphicsSceneMouseRelease: // 157
+		return "GraphicsSceneMouseRelease"
+	case QEvent__GraphicsSceneMouseDoubleClick: // 158
+		return "GraphicsSceneMouseDoubleClick"
+	case QEvent__GraphicsSceneContextMenu: // 159
+		return "GraphicsSceneContextMenu"
+	case QEvent__GraphicsSceneHoverEnter: // 160
+		return "GraphicsSceneHoverEnter"
+	case QEvent__GraphicsSceneHoverMove: // 161
+		return "GraphicsSceneHoverMove"
+	case QEvent__GraphicsSceneHoverLeave: // 162
+		return "GraphicsSceneHoverLeave"
+	case QEvent__GraphicsSceneHelp: // 163
+		return "GraphicsSceneHelp"
+	case QEvent__GraphicsSceneDragEnter: // 164
+		return "GraphicsSceneDragEnter"
+	case QEvent__GraphicsSceneDragMove: // 165
+		return "GraphicsSceneDragMove"
+	case QEvent__GraphicsSceneDragLeave: // 166
+		return "GraphicsSceneDragLeave"
+	case QEvent__GraphicsSceneDrop: // 167
+		return "GraphicsSceneDrop"
+	case QEvent__GraphicsSceneWheel: // 168
+		return "GraphicsSceneWheel"
+	case QEvent__KeyboardLayoutChange: // 169
+		return "KeyboardLayoutChange"
+	case QEvent__DynamicPropertyChange: // 170
+		return "DynamicPropertyChange"
+	case QEvent__TabletEnterProximity: // 171
+		return "TabletEnterProximity"
+	case QEvent__TabletLeaveProximity: // 172
+		return "TabletLeaveProximity"
+	case QEvent__NonClientAreaMouseMove: // 173
+		return "NonClientAreaMouseMove"
+	case QEvent__NonClientAreaMouseButtonPress: // 174
+		return "NonClientAreaMouseButtonPress"
+	case QEvent__NonClientAreaMouseButtonRelease: // 175
+		return "NonClientAreaMouseButtonRelease"
+	case QEvent__NonClientAreaMouseButtonDblClick: // 176
+		return "NonClientAreaMouseButtonDblClick"
+	case QEvent__MacSizeChange: // 177
+		return "MacSizeChange"
+	case QEvent__ContentsRectChange: // 178
+		return "ContentsRectChange"
+	case QEvent__MacGLWindowChange: // 179
+		return "MacGLWindowChange"
+	case QEvent__FutureCallOut: // 180
+		return "FutureCallOut"
+	case QEvent__GraphicsSceneResize: // 181
+		return "GraphicsSceneResize"
+	case QEvent__GraphicsSceneMove: // 182
+		return "GraphicsSceneMove"
+	case QEvent__CursorChange: // 183
+		return "CursorChange"
+	case QEvent__ToolTipChange: // 184
+		return "ToolTipChange"
+	case QEvent__NetworkReplyUpdated: // 185
+		return "NetworkReplyUpdated"
+	case QEvent__GrabMouse: // 186
+		return "GrabMouse"
+	case QEvent__UngrabMouse: // 187
+		return "UngrabMouse"
+	case QEvent__GrabKeyboard: // 188
+		return "GrabKeyboard"
+	case QEvent__UngrabKeyboard: // 189
+		return "UngrabKeyboard"
+	case QEvent__MacGLClearDrawable: // 191
+		return "MacGLClearDrawable"
+	case QEvent__StateMachineSignal: // 192
+		return "StateMachineSignal"
+	case QEvent__StateMachineWrapped: // 193
+		return "StateMachineWrapped"
+	case QEvent__TouchBegin: // 194
+		return "TouchBegin"
+	case QEvent__TouchUpdate: // 195
+		return "TouchUpdate"
+	case QEvent__TouchEnd: // 196
+		return "TouchEnd"
+	case QEvent__NativeGesture: // 197
+		return "NativeGesture"
+	case QEvent__RequestSoftwareInputPanel: // 199
+		return "RequestSoftwareInputPanel"
+	case QEvent__CloseSoftwareInputPanel: // 200
+		return "CloseSoftwareInputPanel"
+	case QEvent__WinIdChange: // 203
+		return "WinIdChange"
+	case QEvent__Gesture: // 198
+		return "Gesture"
+	case QEvent__GestureOverride: // 202
+		return "GestureOverride"
+	case QEvent__ScrollPrepare: // 204
+		return "ScrollPrepare"
+	case QEvent__Scroll: // 205
+		return "Scroll"
+	case QEvent__Expose: // 206
+		return "Expose"
+	case QEvent__InputMethodQuery: // 207
+		return "InputMethodQuery"
+	case QEvent__OrientationChange: // 208
+		return "OrientationChange"
+	case QEvent__TouchCancel: // 209
+		return "TouchCancel"
+	case QEvent__ThemeChange: // 210
+		return "ThemeChange"
+	case QEvent__SockClose: // 211
+		return "SockClose"
+	case QEvent__PlatformPanel: // 212
+		return "PlatformPanel"
+	case QEvent__StyleAnimationUpdate: // 213
+		return "StyleAnimationUpdate"
+	case QEvent__ApplicationStateChange: // 214
+		return "ApplicationStateChange"
+	case QEvent__WindowChangeInternal: // 215
+		return "WindowChangeInternal"
+	case QEvent__ScreenChangeInternal: // 216
+		return "ScreenChangeInternal"
+	case QEvent__PlatformSurface: // 217
+		return "PlatformSurface"
+	case QEvent__Pointer: // 218
+		return "Pointer"
+	case QEvent__TabletTrackingChange: // 219
+		return "TabletTrackingChange"
+	case QEvent__User: // 1000
+		return "User"
+	case QEvent__MaxUser: // 65535
+		return "MaxUser"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QEvent_TypeItemName(val int) string {
+	var nilthis *QEvent
+	return nilthis.TypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

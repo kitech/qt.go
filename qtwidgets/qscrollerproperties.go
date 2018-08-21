@@ -252,6 +252,23 @@ const QScrollerProperties__OvershootAlwaysOff QScrollerProperties__OvershootPoli
 // Overshooting is always enabled, even when the content is not scrollable.
 const QScrollerProperties__OvershootAlwaysOn QScrollerProperties__OvershootPolicy = 2
 
+func (this *QScrollerProperties) OvershootPolicyItemName(val int) string {
+	switch val {
+	case QScrollerProperties__OvershootWhenScrollable: // 0
+		return "OvershootWhenScrollable"
+	case QScrollerProperties__OvershootAlwaysOff: // 1
+		return "OvershootAlwaysOff"
+	case QScrollerProperties__OvershootAlwaysOn: // 2
+		return "OvershootAlwaysOn"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QScrollerProperties_OvershootPolicyItemName(val int) string {
+	var nilthis *QScrollerProperties
+	return nilthis.OvershootPolicyItemName(val)
+}
+
 /*
 This enum describes the available frame rates used while dragging or scrolling.
 
@@ -270,6 +287,25 @@ const QScrollerProperties__Fps30 QScrollerProperties__FrameRates = 2
 
 //
 const QScrollerProperties__Fps20 QScrollerProperties__FrameRates = 3
+
+func (this *QScrollerProperties) FrameRatesItemName(val int) string {
+	switch val {
+	case QScrollerProperties__Standard: // 0
+		return "Standard"
+	case QScrollerProperties__Fps60: // 1
+		return "Fps60"
+	case QScrollerProperties__Fps30: // 2
+		return "Fps30"
+	case QScrollerProperties__Fps20: // 3
+		return "Fps20"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QScrollerProperties_FrameRatesItemName(val int) string {
+	var nilthis *QScrollerProperties
+	return nilthis.FrameRatesItemName(val)
+}
 
 /*
 This enum contains the different scroll metric types. When not indicated otherwise the setScrollMetric function expects a QVariant of type qreal.
@@ -342,6 +378,59 @@ const QScrollerProperties__FrameRate QScrollerProperties__ScrollMetric = 19
 
 //
 const QScrollerProperties__ScrollMetricCount QScrollerProperties__ScrollMetric = 20
+
+func (this *QScrollerProperties) ScrollMetricItemName(val int) string {
+	switch val {
+	case QScrollerProperties__MousePressEventDelay: // 0
+		return "MousePressEventDelay"
+	case QScrollerProperties__DragStartDistance: // 1
+		return "DragStartDistance"
+	case QScrollerProperties__DragVelocitySmoothingFactor: // 2
+		return "DragVelocitySmoothingFactor"
+	case QScrollerProperties__AxisLockThreshold: // 3
+		return "AxisLockThreshold"
+	case QScrollerProperties__ScrollingCurve: // 4
+		return "ScrollingCurve"
+	case QScrollerProperties__DecelerationFactor: // 5
+		return "DecelerationFactor"
+	case QScrollerProperties__MinimumVelocity: // 6
+		return "MinimumVelocity"
+	case QScrollerProperties__MaximumVelocity: // 7
+		return "MaximumVelocity"
+	case QScrollerProperties__MaximumClickThroughVelocity: // 8
+		return "MaximumClickThroughVelocity"
+	case QScrollerProperties__AcceleratingFlickMaximumTime: // 9
+		return "AcceleratingFlickMaximumTime"
+	case QScrollerProperties__AcceleratingFlickSpeedupFactor: // 10
+		return "AcceleratingFlickSpeedupFactor"
+	case QScrollerProperties__SnapPositionRatio: // 11
+		return "SnapPositionRatio"
+	case QScrollerProperties__SnapTime: // 12
+		return "SnapTime"
+	case QScrollerProperties__OvershootDragResistanceFactor: // 13
+		return "OvershootDragResistanceFactor"
+	case QScrollerProperties__OvershootDragDistanceFactor: // 14
+		return "OvershootDragDistanceFactor"
+	case QScrollerProperties__OvershootScrollDistanceFactor: // 15
+		return "OvershootScrollDistanceFactor"
+	case QScrollerProperties__OvershootScrollTime: // 16
+		return "OvershootScrollTime"
+	case QScrollerProperties__HorizontalOvershootPolicy: // 17
+		return "HorizontalOvershootPolicy"
+	case QScrollerProperties__VerticalOvershootPolicy: // 18
+		return "VerticalOvershootPolicy"
+	case QScrollerProperties__FrameRate: // 19
+		return "FrameRate"
+	case QScrollerProperties__ScrollMetricCount: // 20
+		return "ScrollMetricCount"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QScrollerProperties_ScrollMetricItemName(val int) string {
+	var nilthis *QScrollerProperties
+	return nilthis.ScrollMetricItemName(val)
+}
 
 //  body block end
 

@@ -944,6 +944,21 @@ const QListWidgetItem__Type QListWidgetItem__ItemType = 0
 //
 const QListWidgetItem__UserType QListWidgetItem__ItemType = 1000
 
+func (this *QListWidgetItem) ItemTypeItemName(val int) string {
+	switch val {
+	case QListWidgetItem__Type: // 0
+		return "Type"
+	case QListWidgetItem__UserType: // 1000
+		return "UserType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QListWidgetItem_ItemTypeItemName(val int) string {
+	var nilthis *QListWidgetItem
+	return nilthis.ItemTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

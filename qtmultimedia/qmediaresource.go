@@ -684,6 +684,41 @@ const QMediaResource__ChannelCount QMediaResource__Property = 10
 //
 const QMediaResource__Resolution QMediaResource__Property = 11
 
+func (this *QMediaResource) PropertyItemName(val int) string {
+	switch val {
+	case QMediaResource__Url: // 0
+		return "Url"
+	case QMediaResource__Request: // 1
+		return "Request"
+	case QMediaResource__MimeType: // 2
+		return "MimeType"
+	case QMediaResource__Language: // 3
+		return "Language"
+	case QMediaResource__AudioCodec: // 4
+		return "AudioCodec"
+	case QMediaResource__VideoCodec: // 5
+		return "VideoCodec"
+	case QMediaResource__DataSize: // 6
+		return "DataSize"
+	case QMediaResource__AudioBitRate: // 7
+		return "AudioBitRate"
+	case QMediaResource__VideoBitRate: // 8
+		return "VideoBitRate"
+	case QMediaResource__SampleRate: // 9
+		return "SampleRate"
+	case QMediaResource__ChannelCount: // 10
+		return "ChannelCount"
+	case QMediaResource__Resolution: // 11
+		return "Resolution"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMediaResource_PropertyItemName(val int) string {
+	var nilthis *QMediaResource
+	return nilthis.PropertyItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

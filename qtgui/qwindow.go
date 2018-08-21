@@ -2803,6 +2803,14 @@ const QWindow__Maximized QWindow__Visibility = 4
 // The window occupies one entire screen, is not resizable, and there is no titlebar. On some platforms which do not support showing multiple simultaneous windows, this can be the usual visibility when the window is not hidden.
 const QWindow__FullScreen QWindow__Visibility = 5
 
+func (this *QWindow) VisibilityItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWindow_VisibilityItemName(val int) string {
+	var nilthis *QWindow
+	return nilthis.VisibilityItemName(val)
+}
+
 /*
 This enum is used to control whether or not transient parents should be considered ancestors.
 
@@ -2815,6 +2823,14 @@ const QWindow__ExcludeTransients QWindow__AncestorMode = 0
 
 // Transient parents are considered ancestors.
 const QWindow__IncludeTransients QWindow__AncestorMode = 1
+
+func (this *QWindow) AncestorModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWindow_AncestorModeItemName(val int) string {
+	var nilthis *QWindow
+	return nilthis.AncestorModeItemName(val)
+}
 
 //  body block end
 

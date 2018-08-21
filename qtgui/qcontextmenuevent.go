@@ -263,6 +263,23 @@ const QContextMenuEvent__Keyboard QContextMenuEvent__Reason = 1
 //
 const QContextMenuEvent__Other QContextMenuEvent__Reason = 2
 
+func (this *QContextMenuEvent) ReasonItemName(val int) string {
+	switch val {
+	case QContextMenuEvent__Mouse: // 0
+		return "Mouse"
+	case QContextMenuEvent__Keyboard: // 1
+		return "Keyboard"
+	case QContextMenuEvent__Other: // 2
+		return "Other"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QContextMenuEvent_ReasonItemName(val int) string {
+	var nilthis *QContextMenuEvent
+	return nilthis.ReasonItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

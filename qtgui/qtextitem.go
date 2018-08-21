@@ -181,6 +181,27 @@ const QTextItem__StrikeOut QTextItem__RenderFlag = 64
 //
 const QTextItem__Dummy QTextItem__RenderFlag = -1
 
+func (this *QTextItem) RenderFlagItemName(val int) string {
+	switch val {
+	case QTextItem__RightToLeft: // 1
+		return "RightToLeft"
+	case QTextItem__Overline: // 16
+		return "Overline"
+	case QTextItem__Underline: // 32
+		return "Underline"
+	case QTextItem__StrikeOut: // 64
+		return "StrikeOut"
+	case QTextItem__Dummy: // -1
+		return "Dummy"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextItem_RenderFlagItemName(val int) string {
+	var nilthis *QTextItem
+	return nilthis.RenderFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

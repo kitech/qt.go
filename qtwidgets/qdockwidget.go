@@ -678,6 +678,14 @@ const QDockWidget__NoDockWidgetFeatures QDockWidget__DockWidgetFeature = 0
 //
 const QDockWidget__Reserved QDockWidget__DockWidgetFeature = 255
 
+func (this *QDockWidget) DockWidgetFeatureItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QDockWidget_DockWidgetFeatureItemName(val int) string {
+	var nilthis *QDockWidget
+	return nilthis.DockWidgetFeatureItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

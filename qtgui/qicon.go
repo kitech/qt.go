@@ -1487,6 +1487,25 @@ const QIcon__Active QIcon__Mode = 2
 // Display the pixmap when the item represented by the icon is selected.
 const QIcon__Selected QIcon__Mode = 3
 
+func (this *QIcon) ModeItemName(val int) string {
+	switch val {
+	case QIcon__Normal: // 0
+		return "Normal"
+	case QIcon__Disabled: // 1
+		return "Disabled"
+	case QIcon__Active: // 2
+		return "Active"
+	case QIcon__Selected: // 3
+		return "Selected"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QIcon_ModeItemName(val int) string {
+	var nilthis *QIcon
+	return nilthis.ModeItemName(val)
+}
+
 /*
 This enum describes the state for which a pixmap is intended to be used. The state can be:
 
@@ -1499,6 +1518,21 @@ const QIcon__On QIcon__State = 0
 
 // Display the pixmap when the widget is in an "off" state
 const QIcon__Off QIcon__State = 1
+
+func (this *QIcon) StateItemName(val int) string {
+	switch val {
+	case QIcon__On: // 0
+		return "On"
+	case QIcon__Off: // 1
+		return "Off"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QIcon_StateItemName(val int) string {
+	var nilthis *QIcon
+	return nilthis.StateItemName(val)
+}
 
 //  body block end
 

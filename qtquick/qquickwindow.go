@@ -1552,6 +1552,14 @@ const QQuickWindow__TextureCanUseAtlas QQuickWindow__CreateTextureOption = 8
 //
 const QQuickWindow__TextureIsOpaque QQuickWindow__CreateTextureOption = 16
 
+func (this *QQuickWindow) CreateTextureOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickWindow_CreateTextureOptionItemName(val int) string {
+	var nilthis *QQuickWindow
+	return nilthis.CreateTextureOptionItemName(val)
+}
+
 /*
 
 
@@ -1580,6 +1588,14 @@ const QQuickWindow__AfterSwapStage QQuickWindow__RenderStage = 4
 //
 const QQuickWindow__NoStage QQuickWindow__RenderStage = 5
 
+func (this *QQuickWindow) RenderStageItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickWindow_RenderStageItemName(val int) string {
+	var nilthis *QQuickWindow
+	return nilthis.RenderStageItemName(val)
+}
+
 /*
 This enum describes the error in a sceneGraphError() signal.
 
@@ -1592,6 +1608,14 @@ type QQuickWindow__SceneGraphError = int
 
 //
 const QQuickWindow__ContextNotAvailable QQuickWindow__SceneGraphError = 1
+
+func (this *QQuickWindow) SceneGraphErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickWindow_SceneGraphErrorItemName(val int) string {
+	var nilthis *QQuickWindow
+	return nilthis.SceneGraphErrorItemName(val)
+}
 
 /*
 This enum describes the default render type of text-like elements in Qt Quick (Text, TextInput, etc.).
@@ -1610,6 +1634,14 @@ const QQuickWindow__QtTextRendering QQuickWindow__TextRenderType = 0
 
 // Use the operating system's native rasterizer for text.
 const QQuickWindow__NativeTextRendering QQuickWindow__TextRenderType = 1
+
+func (this *QQuickWindow) TextRenderTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickWindow_TextRenderTypeItemName(val int) string {
+	var nilthis *QQuickWindow
+	return nilthis.TextRenderTypeItemName(val)
+}
 
 //  body block end
 

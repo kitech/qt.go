@@ -231,6 +231,14 @@ const QValidator__Intermediate QValidator__State = 1
 // The string is acceptable as a final result; i.e. it is valid.
 const QValidator__Acceptable QValidator__State = 2
 
+func (this *QValidator) StateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QValidator_StateItemName(val int) string {
+	var nilthis *QValidator
+	return nilthis.StateItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

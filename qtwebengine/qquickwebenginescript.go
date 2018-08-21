@@ -456,6 +456,14 @@ const QQuickWebEngineScript__DocumentReady QQuickWebEngineScript__InjectionPoint
 // The script will be executed as soon as the document is created. This is not suitable for any DOM operation.
 const QQuickWebEngineScript__DocumentCreation QQuickWebEngineScript__InjectionPoint = 2
 
+func (this *QQuickWebEngineScript) InjectionPointItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickWebEngineScript_InjectionPointItemName(val int) string {
+	var nilthis *QQuickWebEngineScript
+	return nilthis.InjectionPointItemName(val)
+}
+
 /*
 The world ID defining which isolated world the script is executed in.
 
@@ -471,6 +479,14 @@ const QQuickWebEngineScript__ApplicationWorld QQuickWebEngineScript__ScriptWorld
 
 // The first isolated world to be used by scripts set by users if the application is not making use of more worlds. As a rule of thumb, if that functionality is exposed to the application users, each individual script should probably get its own isolated world.
 const QQuickWebEngineScript__UserWorld QQuickWebEngineScript__ScriptWorldId = 2
+
+func (this *QQuickWebEngineScript) ScriptWorldIdItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickWebEngineScript_ScriptWorldIdItemName(val int) string {
+	var nilthis *QQuickWebEngineScript
+	return nilthis.ScriptWorldIdItemName(val)
+}
 
 //  body block end
 

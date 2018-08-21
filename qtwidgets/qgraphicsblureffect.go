@@ -298,6 +298,14 @@ const QGraphicsBlurEffect__QualityHint QGraphicsBlurEffect__BlurHint = 1
 //
 const QGraphicsBlurEffect__AnimationHint QGraphicsBlurEffect__BlurHint = 2
 
+func (this *QGraphicsBlurEffect) BlurHintItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsBlurEffect_BlurHintItemName(val int) string {
+	var nilthis *QGraphicsBlurEffect
+	return nilthis.BlurHintItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

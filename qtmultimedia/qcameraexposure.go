@@ -607,6 +607,14 @@ const QCameraExposure__FlashSlowSyncRearCurtain QCameraExposure__FlashMode = 256
 //
 const QCameraExposure__FlashManual QCameraExposure__FlashMode = 512
 
+func (this *QCameraExposure) FlashModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraExposure_FlashModeItemName(val int) string {
+	var nilthis *QCameraExposure
+	return nilthis.FlashModeItemName(val)
+}
+
 /*
 
  */
@@ -678,6 +686,14 @@ const QCameraExposure__ExposureBarcode QCameraExposure__ExposureMode = 20
 //
 const QCameraExposure__ExposureModeVendor QCameraExposure__ExposureMode = 1000
 
+func (this *QCameraExposure) ExposureModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraExposure_ExposureModeItemName(val int) string {
+	var nilthis *QCameraExposure
+	return nilthis.ExposureModeItemName(val)
+}
+
 /*
 
  */
@@ -691,6 +707,14 @@ const QCameraExposure__MeteringAverage QCameraExposure__MeteringMode = 2
 
 // Spot metering mode.
 const QCameraExposure__MeteringSpot QCameraExposure__MeteringMode = 3
+
+func (this *QCameraExposure) MeteringModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraExposure_MeteringModeItemName(val int) string {
+	var nilthis *QCameraExposure
+	return nilthis.MeteringModeItemName(val)
+}
 
 //  body block end
 

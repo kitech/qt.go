@@ -214,6 +214,14 @@ const QCameraViewfinderSettingsControl__PixelFormat QCameraViewfinderSettingsCon
 //
 const QCameraViewfinderSettingsControl__UserParameter QCameraViewfinderSettingsControl__ViewfinderParameter = 1000
 
+func (this *QCameraViewfinderSettingsControl) ViewfinderParameterItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraViewfinderSettingsControl_ViewfinderParameterItemName(val int) string {
+	var nilthis *QCameraViewfinderSettingsControl
+	return nilthis.ViewfinderParameterItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

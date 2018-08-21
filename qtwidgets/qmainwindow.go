@@ -1275,6 +1275,14 @@ const QMainWindow__VerticalTabs QMainWindow__DockOption = 16
 //
 const QMainWindow__GroupedDragging QMainWindow__DockOption = 32
 
+func (this *QMainWindow) DockOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMainWindow_DockOptionItemName(val int) string {
+	var nilthis *QMainWindow
+	return nilthis.DockOptionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

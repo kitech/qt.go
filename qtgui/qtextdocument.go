@@ -2250,6 +2250,14 @@ const QTextDocument__DocumentTitle QTextDocument__MetaInformation = 0
 // The url of the document. The loadResource() function uses this url as the base when loading relative resources.
 const QTextDocument__DocumentUrl QTextDocument__MetaInformation = 1
 
+func (this *QTextDocument) MetaInformationItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTextDocument_MetaInformationItemName(val int) string {
+	var nilthis *QTextDocument
+	return nilthis.MetaInformationItemName(val)
+}
+
 /*
 
 
@@ -2264,6 +2272,14 @@ const QTextDocument__FindCaseSensitively QTextDocument__FindFlag = 2
 
 //
 const QTextDocument__FindWholeWords QTextDocument__FindFlag = 4
+
+func (this *QTextDocument) FindFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTextDocument_FindFlagItemName(val int) string {
+	var nilthis *QTextDocument
+	return nilthis.FindFlagItemName(val)
+}
 
 /*
 This enum describes the types of resources that can be loaded by QTextDocument's loadResource() function.
@@ -2287,6 +2303,14 @@ const QTextDocument__StyleSheetResource QTextDocument__ResourceType = 3
 //
 const QTextDocument__UserResource QTextDocument__ResourceType = 100
 
+func (this *QTextDocument) ResourceTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTextDocument_ResourceTypeItemName(val int) string {
+	var nilthis *QTextDocument
+	return nilthis.ResourceTypeItemName(val)
+}
+
 /*
 QTextDocument::UndoAndRedoStacksUndoStack | RedoStackBoth the undo and redo stacks.
 
@@ -2301,6 +2325,14 @@ const QTextDocument__RedoStack QTextDocument__Stacks = 2
 
 //
 const QTextDocument__UndoAndRedoStacks QTextDocument__Stacks = 3
+
+func (this *QTextDocument) StacksItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTextDocument_StacksItemName(val int) string {
+	var nilthis *QTextDocument
+	return nilthis.StacksItemName(val)
+}
 
 //  body block end
 

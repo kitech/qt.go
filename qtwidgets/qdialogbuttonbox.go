@@ -649,6 +649,14 @@ const QDialogButtonBox__ApplyRole QDialogButtonBox__ButtonRole = 8
 //
 const QDialogButtonBox__NRoles QDialogButtonBox__ButtonRole = 9
 
+func (this *QDialogButtonBox) ButtonRoleItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QDialogButtonBox_ButtonRoleItemName(val int) string {
+	var nilthis *QDialogButtonBox
+	return nilthis.ButtonRoleItemName(val)
+}
+
 /*
 
 
@@ -718,6 +726,14 @@ const QDialogButtonBox__FirstButton QDialogButtonBox__StandardButton = 1024
 //
 const QDialogButtonBox__LastButton QDialogButtonBox__StandardButton = 134217728
 
+func (this *QDialogButtonBox) StandardButtonItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QDialogButtonBox_StandardButtonItemName(val int) string {
+	var nilthis *QDialogButtonBox
+	return nilthis.StandardButtonItemName(val)
+}
+
 /*
 This enum describes the layout policy to be used when arranging the buttons contained in the button box.
 
@@ -742,6 +758,14 @@ const QDialogButtonBox__GnomeLayout QDialogButtonBox__ButtonLayout = 3
 
 //
 const QDialogButtonBox__AndroidLayout QDialogButtonBox__ButtonLayout = 5
+
+func (this *QDialogButtonBox) ButtonLayoutItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QDialogButtonBox_ButtonLayoutItemName(val int) string {
+	var nilthis *QDialogButtonBox
+	return nilthis.ButtonLayoutItemName(val)
+}
 
 //  body block end
 

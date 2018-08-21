@@ -1130,6 +1130,27 @@ const QImageReader__UnsupportedFormatError QImageReader__ImageReaderError = 3
 // The image data was invalid, and QImageReader was unable to read an image from it. The can happen if the image file is damaged.
 const QImageReader__InvalidDataError QImageReader__ImageReaderError = 4
 
+func (this *QImageReader) ImageReaderErrorItemName(val int) string {
+	switch val {
+	case QImageReader__UnknownError: // 0
+		return "UnknownError"
+	case QImageReader__FileNotFoundError: // 1
+		return "FileNotFoundError"
+	case QImageReader__DeviceError: // 2
+		return "DeviceError"
+	case QImageReader__UnsupportedFormatError: // 3
+		return "UnsupportedFormatError"
+	case QImageReader__InvalidDataError: // 4
+		return "InvalidDataError"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QImageReader_ImageReaderErrorItemName(val int) string {
+	var nilthis *QImageReader
+	return nilthis.ImageReaderErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

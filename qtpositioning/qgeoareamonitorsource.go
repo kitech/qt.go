@@ -457,6 +457,14 @@ const QGeoAreaMonitorSource__UnknownSourceError QGeoAreaMonitorSource__Error = 2
 // No error has occurred.
 const QGeoAreaMonitorSource__NoError QGeoAreaMonitorSource__Error = 3
 
+func (this *QGeoAreaMonitorSource) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGeoAreaMonitorSource_ErrorItemName(val int) string {
+	var nilthis *QGeoAreaMonitorSource
+	return nilthis.ErrorItemName(val)
+}
+
 /*
 
 
@@ -468,6 +476,14 @@ const QGeoAreaMonitorSource__PersistentAreaMonitorFeature QGeoAreaMonitorSource_
 
 //
 const QGeoAreaMonitorSource__AnyAreaMonitorFeature QGeoAreaMonitorSource__AreaMonitorFeature = -1
+
+func (this *QGeoAreaMonitorSource) AreaMonitorFeatureItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGeoAreaMonitorSource_AreaMonitorFeatureItemName(val int) string {
+	var nilthis *QGeoAreaMonitorSource
+	return nilthis.AreaMonitorFeatureItemName(val)
+}
 
 //  body block end
 

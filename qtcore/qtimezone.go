@@ -943,6 +943,21 @@ const QTimeZone__MinUtcOffsetSecs QTimeZone__ = -50400
 //
 const QTimeZone__MaxUtcOffsetSecs QTimeZone__ = 50400
 
+func (this *QTimeZone) ItemName(val int) string {
+	switch val {
+	case QTimeZone__MinUtcOffsetSecs: // -50400
+		return "MinUtcOffsetSecs"
+	case QTimeZone__MaxUtcOffsetSecs: // 50400
+		return "MaxUtcOffsetSecs"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTimeZone_ItemName(val int) string {
+	var nilthis *QTimeZone
+	return nilthis.ItemName(val)
+}
+
 /*
 The type of time zone time, for example when requesting the name. In time zones that do not apply DST, all three values may return the same result.
 
@@ -958,6 +973,23 @@ const QTimeZone__DaylightTime QTimeZone__TimeType = 1
 
 // A time which is not specifically Standard or Daylight-Saving time, either an unknown time or a neutral form. For example when formatting a display name this will show something like "Pacific Time".
 const QTimeZone__GenericTime QTimeZone__TimeType = 2
+
+func (this *QTimeZone) TimeTypeItemName(val int) string {
+	switch val {
+	case QTimeZone__StandardTime: // 0
+		return "StandardTime"
+	case QTimeZone__DaylightTime: // 1
+		return "DaylightTime"
+	case QTimeZone__GenericTime: // 2
+		return "GenericTime"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTimeZone_TimeTypeItemName(val int) string {
+	var nilthis *QTimeZone
+	return nilthis.TimeTypeItemName(val)
+}
 
 /*
 The type of time zone name.
@@ -977,6 +1009,25 @@ const QTimeZone__ShortName QTimeZone__NameType = 2
 
 //
 const QTimeZone__OffsetName QTimeZone__NameType = 3
+
+func (this *QTimeZone) NameTypeItemName(val int) string {
+	switch val {
+	case QTimeZone__DefaultName: // 0
+		return "DefaultName"
+	case QTimeZone__LongName: // 1
+		return "LongName"
+	case QTimeZone__ShortName: // 2
+		return "ShortName"
+	case QTimeZone__OffsetName: // 3
+		return "OffsetName"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTimeZone_NameTypeItemName(val int) string {
+	var nilthis *QTimeZone
+	return nilthis.NameTypeItemName(val)
+}
 
 //  body block end
 

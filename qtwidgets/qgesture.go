@@ -263,6 +263,14 @@ const QGesture__CancelNone QGesture__GestureCancelPolicy = 0
 // On accepting this gesture all gestures that are active in the context (respecting the Qt::GestureFlag that were specified when subscribed to the gesture) will be cancelled.
 const QGesture__CancelAllInContext QGesture__GestureCancelPolicy = 1
 
+func (this *QGesture) GestureCancelPolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGesture_GestureCancelPolicyItemName(val int) string {
+	var nilthis *QGesture
+	return nilthis.GestureCancelPolicyItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -265,6 +265,55 @@ const QCryptographicHash__Sha3_384 QCryptographicHash__Algorithm = 13
 //
 const QCryptographicHash__Sha3_512 QCryptographicHash__Algorithm = 14
 
+func (this *QCryptographicHash) AlgorithmItemName(val int) string {
+	switch val {
+	case QCryptographicHash__Md4: // 0
+		return "Md4"
+	case QCryptographicHash__Md5: // 1
+		return "Md5"
+	case QCryptographicHash__Sha1: // 2
+		return "Sha1"
+	case QCryptographicHash__Sha224: // 3
+		return "Sha224"
+	case QCryptographicHash__Sha256: // 4
+		return "Sha256"
+	case QCryptographicHash__Sha384: // 5
+		return "Sha384"
+	case QCryptographicHash__Sha512: // 6
+		return "Sha512"
+	case QCryptographicHash__Keccak_224: // 7
+		return "Keccak_224"
+	case QCryptographicHash__Keccak_256: // 8
+		return "Keccak_256"
+	case QCryptographicHash__Keccak_384: // 9
+		return "Keccak_384"
+	case QCryptographicHash__Keccak_512: // 10
+		return "Keccak_512"
+	case QCryptographicHash__RealSha3_224: // 11
+		return "RealSha3_224,Sha3_224"
+	case QCryptographicHash__RealSha3_256: // 12
+		return "RealSha3_256,Sha3_256"
+	case QCryptographicHash__RealSha3_384: // 13
+		return "RealSha3_384,Sha3_384"
+	case QCryptographicHash__RealSha3_512: // 14
+		return "RealSha3_512,Sha3_512"
+		// case QCryptographicHash__Sha3_224: // 11
+		// return ""
+		// case QCryptographicHash__Sha3_256: // 12
+		// return ""
+		// case QCryptographicHash__Sha3_384: // 13
+		// return ""
+		// case QCryptographicHash__Sha3_512: // 14
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QCryptographicHash_AlgorithmItemName(val int) string {
+	var nilthis *QCryptographicHash
+	return nilthis.AlgorithmItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

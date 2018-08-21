@@ -692,6 +692,19 @@ type QDeadlineTimer__ForeverConstant = int
 // Used when creating a QDeadlineTimer to indicate the deadline should not expire
 const QDeadlineTimer__Forever QDeadlineTimer__ForeverConstant = 0
 
+func (this *QDeadlineTimer) ForeverConstantItemName(val int) string {
+	switch val {
+	case QDeadlineTimer__Forever: // 0
+		return "Forever"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QDeadlineTimer_ForeverConstantItemName(val int) string {
+	var nilthis *QDeadlineTimer
+	return nilthis.ForeverConstantItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

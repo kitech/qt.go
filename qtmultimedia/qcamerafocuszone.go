@@ -271,6 +271,25 @@ const QCameraFocusZone__Selected QCameraFocusZone__FocusZoneStatus = 2
 //
 const QCameraFocusZone__Focused QCameraFocusZone__FocusZoneStatus = 3
 
+func (this *QCameraFocusZone) FocusZoneStatusItemName(val int) string {
+	switch val {
+	case QCameraFocusZone__Invalid: // 0
+		return "Invalid"
+	case QCameraFocusZone__Unused: // 1
+		return "Unused"
+	case QCameraFocusZone__Selected: // 2
+		return "Selected"
+	case QCameraFocusZone__Focused: // 3
+		return "Focused"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QCameraFocusZone_FocusZoneStatusItemName(val int) string {
+	var nilthis *QCameraFocusZone
+	return nilthis.FocusZoneStatusItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

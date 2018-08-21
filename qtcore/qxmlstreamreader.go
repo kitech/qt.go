@@ -991,6 +991,39 @@ const QXmlStreamReader__EntityReference QXmlStreamReader__TokenType = 9
 //
 const QXmlStreamReader__ProcessingInstruction QXmlStreamReader__TokenType = 10
 
+func (this *QXmlStreamReader) TokenTypeItemName(val int) string {
+	switch val {
+	case QXmlStreamReader__NoToken: // 0
+		return "NoToken"
+	case QXmlStreamReader__Invalid: // 1
+		return "Invalid"
+	case QXmlStreamReader__StartDocument: // 2
+		return "StartDocument"
+	case QXmlStreamReader__EndDocument: // 3
+		return "EndDocument"
+	case QXmlStreamReader__StartElement: // 4
+		return "StartElement"
+	case QXmlStreamReader__EndElement: // 5
+		return "EndElement"
+	case QXmlStreamReader__Characters: // 6
+		return "Characters"
+	case QXmlStreamReader__Comment: // 7
+		return "Comment"
+	case QXmlStreamReader__DTD: // 8
+		return "DTD"
+	case QXmlStreamReader__EntityReference: // 9
+		return "EntityReference"
+	case QXmlStreamReader__ProcessingInstruction: // 10
+		return "ProcessingInstruction"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QXmlStreamReader_TokenTypeItemName(val int) string {
+	var nilthis *QXmlStreamReader
+	return nilthis.TokenTypeItemName(val)
+}
+
 /*
 
 
@@ -1005,6 +1038,23 @@ const QXmlStreamReader__IncludeChildElements QXmlStreamReader__ReadElementTextBe
 
 //
 const QXmlStreamReader__SkipChildElements QXmlStreamReader__ReadElementTextBehaviour = 2
+
+func (this *QXmlStreamReader) ReadElementTextBehaviourItemName(val int) string {
+	switch val {
+	case QXmlStreamReader__ErrorOnUnexpectedElement: // 0
+		return "ErrorOnUnexpectedElement"
+	case QXmlStreamReader__IncludeChildElements: // 1
+		return "IncludeChildElements"
+	case QXmlStreamReader__SkipChildElements: // 2
+		return "SkipChildElements"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QXmlStreamReader_ReadElementTextBehaviourItemName(val int) string {
+	var nilthis *QXmlStreamReader
+	return nilthis.ReadElementTextBehaviourItemName(val)
+}
 
 /*
 
@@ -1026,6 +1076,27 @@ const QXmlStreamReader__NotWellFormedError QXmlStreamReader__Error = 3
 
 //
 const QXmlStreamReader__PrematureEndOfDocumentError QXmlStreamReader__Error = 4
+
+func (this *QXmlStreamReader) ErrorItemName(val int) string {
+	switch val {
+	case QXmlStreamReader__NoError: // 0
+		return "NoError"
+	case QXmlStreamReader__UnexpectedElementError: // 1
+		return "UnexpectedElementError"
+	case QXmlStreamReader__CustomError: // 2
+		return "CustomError"
+	case QXmlStreamReader__NotWellFormedError: // 3
+		return "NotWellFormedError"
+	case QXmlStreamReader__PrematureEndOfDocumentError: // 4
+		return "PrematureEndOfDocumentError"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QXmlStreamReader_ErrorItemName(val int) string {
+	var nilthis *QXmlStreamReader
+	return nilthis.ErrorItemName(val)
+}
 
 //  body block end
 

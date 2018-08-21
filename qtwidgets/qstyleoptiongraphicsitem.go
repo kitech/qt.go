@@ -143,6 +143,19 @@ type QStyleOptionGraphicsItem__StyleOptionType = int
 //
 const QStyleOptionGraphicsItem__Type QStyleOptionGraphicsItem__StyleOptionType = 15
 
+func (this *QStyleOptionGraphicsItem) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionGraphicsItem__Type: // 15
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionGraphicsItem_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionGraphicsItem
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -157,6 +170,19 @@ type QStyleOptionGraphicsItem__StyleOptionVersion = int
 
 // 1
 const QStyleOptionGraphicsItem__Version QStyleOptionGraphicsItem__StyleOptionVersion = 1
+
+func (this *QStyleOptionGraphicsItem) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionGraphicsItem__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionGraphicsItem_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionGraphicsItem
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

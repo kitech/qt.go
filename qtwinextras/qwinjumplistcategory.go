@@ -397,6 +397,25 @@ const QWinJumpListCategory__Frequent QWinJumpListCategory__Type = 2
 // A jump list category of tasks.
 const QWinJumpListCategory__Tasks QWinJumpListCategory__Type = 3
 
+func (this *QWinJumpListCategory) TypeItemName(val int) string {
+	switch val {
+	case QWinJumpListCategory__Custom: // 0
+		return "Custom"
+	case QWinJumpListCategory__Recent: // 1
+		return "Recent"
+	case QWinJumpListCategory__Frequent: // 2
+		return "Frequent"
+	case QWinJumpListCategory__Tasks: // 3
+		return "Tasks"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWinJumpListCategory_TypeItemName(val int) string {
+	var nilthis *QWinJumpListCategory
+	return nilthis.TypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

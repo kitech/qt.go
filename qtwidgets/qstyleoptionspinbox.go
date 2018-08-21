@@ -118,6 +118,19 @@ type QStyleOptionSpinBox__StyleOptionType = int
 //
 const QStyleOptionSpinBox__Type QStyleOptionSpinBox__StyleOptionType = 983042
 
+func (this *QStyleOptionSpinBox) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionSpinBox__Type: // 983042
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionSpinBox_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionSpinBox
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionSpinBox__StyleOptionVersion = int
 
 // 1
 const QStyleOptionSpinBox__Version QStyleOptionSpinBox__StyleOptionVersion = 1
+
+func (this *QStyleOptionSpinBox) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionSpinBox__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionSpinBox_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionSpinBox
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

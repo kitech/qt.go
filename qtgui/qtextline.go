@@ -508,6 +508,21 @@ const QTextLine__Leading QTextLine__Edge = 0
 //
 const QTextLine__Trailing QTextLine__Edge = 1
 
+func (this *QTextLine) EdgeItemName(val int) string {
+	switch val {
+	case QTextLine__Leading: // 0
+		return "Leading"
+	case QTextLine__Trailing: // 1
+		return "Trailing"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextLine_EdgeItemName(val int) string {
+	var nilthis *QTextLine
+	return nilthis.EdgeItemName(val)
+}
+
 /*
 
 
@@ -519,6 +534,21 @@ const QTextLine__CursorBetweenCharacters QTextLine__CursorPosition = 0
 
 //
 const QTextLine__CursorOnCharacter QTextLine__CursorPosition = 1
+
+func (this *QTextLine) CursorPositionItemName(val int) string {
+	switch val {
+	case QTextLine__CursorBetweenCharacters: // 0
+		return "CursorBetweenCharacters"
+	case QTextLine__CursorOnCharacter: // 1
+		return "CursorOnCharacter"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextLine_CursorPositionItemName(val int) string {
+	var nilthis *QTextLine
+	return nilthis.CursorPositionItemName(val)
+}
 
 //  body block end
 

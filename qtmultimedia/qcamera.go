@@ -910,6 +910,14 @@ const QCamera__StoppingStatus QCamera__Status = 7
 // The camera has been started and can produce data. The viewfinder displays video frames in active state.
 const QCamera__ActiveStatus QCamera__Status = 8
 
+func (this *QCamera) StatusItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCamera_StatusItemName(val int) string {
+	var nilthis *QCamera
+	return nilthis.StatusItemName(val)
+}
+
 /*
 
 
@@ -934,6 +942,14 @@ const QCamera__LoadedState QCamera__State = 1
 // In the active state as soon as camera is started the viewfinder displays video frames and the camera is ready for capture.
 const QCamera__ActiveState QCamera__State = 2
 
+func (this *QCamera) StateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCamera_StateItemName(val int) string {
+	var nilthis *QCamera
+	return nilthis.StateItemName(val)
+}
+
 /*
 
 
@@ -948,6 +964,14 @@ const QCamera__CaptureStillImage QCamera__CaptureMode = 1
 
 //
 const QCamera__CaptureVideo QCamera__CaptureMode = 2
+
+func (this *QCamera) CaptureModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCamera_CaptureModeItemName(val int) string {
+	var nilthis *QCamera
+	return nilthis.CaptureModeItemName(val)
+}
 
 /*
 
@@ -969,6 +993,14 @@ const QCamera__ServiceMissingError QCamera__Error = 3
 // The feature is not supported.
 const QCamera__NotSupportedFeatureError QCamera__Error = 4
 
+func (this *QCamera) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCamera_ErrorItemName(val int) string {
+	var nilthis *QCamera
+	return nilthis.ErrorItemName(val)
+}
+
 /*
 
 
@@ -985,6 +1017,14 @@ const QCamera__Searching QCamera__LockStatus = 1
 
 // The camera focus, exposure or white balance is locked. The camera is ready to capture, application may check the exposure parameters.
 const QCamera__Locked QCamera__LockStatus = 2
+
+func (this *QCamera) LockStatusItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCamera_LockStatusItemName(val int) string {
+	var nilthis *QCamera
+	return nilthis.LockStatusItemName(val)
+}
 
 /*
 
@@ -1006,6 +1046,14 @@ const QCamera__LockLost QCamera__LockChangeReason = 3
 // The lock is lost, but the camera is working hard to reacquire it. This value may be used in continuous focusing mode, when the camera loses the focus, the focus lock state is changed to Qcamera::Searching with LockTemporaryLost reason.
 const QCamera__LockTemporaryLost QCamera__LockChangeReason = 4
 
+func (this *QCamera) LockChangeReasonItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCamera_LockChangeReasonItemName(val int) string {
+	var nilthis *QCamera
+	return nilthis.LockChangeReasonItemName(val)
+}
+
 /*
 
 
@@ -1023,6 +1071,14 @@ const QCamera__LockWhiteBalance QCamera__LockType = 2
 
 //
 const QCamera__LockFocus QCamera__LockType = 4
+
+func (this *QCamera) LockTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCamera_LockTypeItemName(val int) string {
+	var nilthis *QCamera
+	return nilthis.LockTypeItemName(val)
+}
 
 /*
 This enum specifies the physical position of the camera on the system hardware.
@@ -1044,6 +1100,14 @@ const QCamera__BackFace QCamera__Position = 1
 
 // The camera is on the front face of the system hardware. For example on a mobile device, it means it is on the same side as that of the screen. Viewfinder frames of front-facing cameras are mirrored horizontally, so the users can see themselves as looking into a mirror. Captured images or videos are not mirrored.
 const QCamera__FrontFace QCamera__Position = 2
+
+func (this *QCamera) PositionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCamera_PositionItemName(val int) string {
+	var nilthis *QCamera
+	return nilthis.PositionItemName(val)
+}
 
 //  body block end
 

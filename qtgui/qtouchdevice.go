@@ -242,6 +242,21 @@ const QTouchDevice__TouchScreen QTouchDevice__DeviceType = 0
 // In this type of device, the touch surface is separate from the display. There is not a direct relationship between the physical touch location and the on-screen coordinates. Instead, they are calculated relative to the current mouse position, and the user must use the touch-pad to move this reference point. Unlike touch-screens, Qt allows users to only interact with a single QWidget or QGraphicsItem at a time.
 const QTouchDevice__TouchPad QTouchDevice__DeviceType = 1
 
+func (this *QTouchDevice) DeviceTypeItemName(val int) string {
+	switch val {
+	case QTouchDevice__TouchScreen: // 0
+		return "TouchScreen"
+	case QTouchDevice__TouchPad: // 1
+		return "TouchPad"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTouchDevice_DeviceTypeItemName(val int) string {
+	var nilthis *QTouchDevice
+	return nilthis.DeviceTypeItemName(val)
+}
+
 /*
 
 
@@ -268,6 +283,31 @@ const QTouchDevice__NormalizedPosition QTouchDevice__CapabilityFlag = 32
 
 //
 const QTouchDevice__MouseEmulation QTouchDevice__CapabilityFlag = 64
+
+func (this *QTouchDevice) CapabilityFlagItemName(val int) string {
+	switch val {
+	case QTouchDevice__Position: // 1
+		return "Position"
+	case QTouchDevice__Area: // 2
+		return "Area"
+	case QTouchDevice__Pressure: // 4
+		return "Pressure"
+	case QTouchDevice__Velocity: // 8
+		return "Velocity"
+	case QTouchDevice__RawPositions: // 16
+		return "RawPositions"
+	case QTouchDevice__NormalizedPosition: // 32
+		return "NormalizedPosition"
+	case QTouchDevice__MouseEmulation: // 64
+		return "MouseEmulation"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTouchDevice_CapabilityFlagItemName(val int) string {
+	var nilthis *QTouchDevice
+	return nilthis.CapabilityFlagItemName(val)
+}
 
 //  body block end
 

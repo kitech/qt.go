@@ -217,6 +217,27 @@ const QMacPasteboardMime__MIME_QT3_CONVERTOR QMacPasteboardMime__QMacPasteboardM
 //
 const QMacPasteboardMime__MIME_ALL QMacPasteboardMime__QMacPasteboardMimeType = 3
 
+func (this *QMacPasteboardMime) QMacPasteboardMimeTypeItemName(val int) string {
+	switch val {
+	case QMacPasteboardMime__MIME_DND: // 1
+		return "MIME_DND"
+	case QMacPasteboardMime__MIME_CLIP: // 2
+		return "MIME_CLIP"
+	case QMacPasteboardMime__MIME_QT_CONVERTOR: // 4
+		return "MIME_QT_CONVERTOR"
+	case QMacPasteboardMime__MIME_QT3_CONVERTOR: // 8
+		return "MIME_QT3_CONVERTOR"
+	case QMacPasteboardMime__MIME_ALL: // 3
+		return "MIME_ALL"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMacPasteboardMime_QMacPasteboardMimeTypeItemName(val int) string {
+	var nilthis *QMacPasteboardMime
+	return nilthis.QMacPasteboardMimeTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

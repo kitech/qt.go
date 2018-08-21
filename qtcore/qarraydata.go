@@ -229,6 +229,27 @@ const QArrayData__Grow QArrayData__AllocationOption = 8
 //
 const QArrayData__Default QArrayData__AllocationOption = 0
 
+func (this *QArrayData) AllocationOptionItemName(val int) string {
+	switch val {
+	case QArrayData__CapacityReserved: // 1
+		return "CapacityReserved"
+	case QArrayData__Unsharable: // 2
+		return "Unsharable"
+	case QArrayData__RawData: // 4
+		return "RawData"
+	case QArrayData__Grow: // 8
+		return "Grow"
+	case QArrayData__Default: // 0
+		return "Default"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QArrayData_AllocationOptionItemName(val int) string {
+	var nilthis *QArrayData
+	return nilthis.AllocationOptionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

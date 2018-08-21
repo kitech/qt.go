@@ -214,6 +214,27 @@ const QSGMaterial__RequiresFullMatrix QSGMaterial__Flag = 14
 //
 const QSGMaterial__CustomCompileStep QSGMaterial__Flag = 16
 
+func (this *QSGMaterial) FlagItemName(val int) string {
+	switch val {
+	case QSGMaterial__Blending: // 1
+		return "Blending"
+	case QSGMaterial__RequiresDeterminant: // 2
+		return "RequiresDeterminant"
+	case QSGMaterial__RequiresFullMatrixExceptTranslate: // 6
+		return "RequiresFullMatrixExceptTranslate"
+	case QSGMaterial__RequiresFullMatrix: // 14
+		return "RequiresFullMatrix"
+	case QSGMaterial__CustomCompileStep: // 16
+		return "CustomCompileStep"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGMaterial_FlagItemName(val int) string {
+	var nilthis *QSGMaterial
+	return nilthis.FlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

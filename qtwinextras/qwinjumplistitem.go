@@ -377,6 +377,23 @@ const QWinJumpListItem__Link QWinJumpListItem__Type = 1
 // Item is a separator. Only tasks category supports separators.
 const QWinJumpListItem__Separator QWinJumpListItem__Type = 2
 
+func (this *QWinJumpListItem) TypeItemName(val int) string {
+	switch val {
+	case QWinJumpListItem__Destination: // 0
+		return "Destination"
+	case QWinJumpListItem__Link: // 1
+		return "Link"
+	case QWinJumpListItem__Separator: // 2
+		return "Separator"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWinJumpListItem_TypeItemName(val int) string {
+	var nilthis *QWinJumpListItem
+	return nilthis.TypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

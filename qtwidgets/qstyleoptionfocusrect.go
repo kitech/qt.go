@@ -118,6 +118,19 @@ type QStyleOptionFocusRect__StyleOptionType = int
 //
 const QStyleOptionFocusRect__Type QStyleOptionFocusRect__StyleOptionType = 1
 
+func (this *QStyleOptionFocusRect) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionFocusRect__Type: // 1
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionFocusRect_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionFocusRect
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionFocusRect__StyleOptionVersion = int
 
 // 1
 const QStyleOptionFocusRect__Version QStyleOptionFocusRect__StyleOptionVersion = 1
+
+func (this *QStyleOptionFocusRect) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionFocusRect__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionFocusRect_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionFocusRect
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

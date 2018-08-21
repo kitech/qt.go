@@ -761,6 +761,31 @@ const QFutureInterfaceBase__Paused QFutureInterfaceBase__State = 16
 //
 const QFutureInterfaceBase__Throttled QFutureInterfaceBase__State = 32
 
+func (this *QFutureInterfaceBase) StateItemName(val int) string {
+	switch val {
+	case QFutureInterfaceBase__NoState: // 0
+		return "NoState"
+	case QFutureInterfaceBase__Running: // 1
+		return "Running"
+	case QFutureInterfaceBase__Started: // 2
+		return "Started"
+	case QFutureInterfaceBase__Finished: // 4
+		return "Finished"
+	case QFutureInterfaceBase__Canceled: // 8
+		return "Canceled"
+	case QFutureInterfaceBase__Paused: // 16
+		return "Paused"
+	case QFutureInterfaceBase__Throttled: // 32
+		return "Throttled"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFutureInterfaceBase_StateItemName(val int) string {
+	var nilthis *QFutureInterfaceBase
+	return nilthis.StateItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -312,6 +312,31 @@ const QWebEngineContextMenuData__MediaTypeFile QWebEngineContextMenuData__MediaT
 //
 const QWebEngineContextMenuData__MediaTypePlugin QWebEngineContextMenuData__MediaType = 6
 
+func (this *QWebEngineContextMenuData) MediaTypeItemName(val int) string {
+	switch val {
+	case QWebEngineContextMenuData__MediaTypeNone: // 0
+		return "MediaTypeNone"
+	case QWebEngineContextMenuData__MediaTypeImage: // 1
+		return "MediaTypeImage"
+	case QWebEngineContextMenuData__MediaTypeVideo: // 2
+		return "MediaTypeVideo"
+	case QWebEngineContextMenuData__MediaTypeAudio: // 3
+		return "MediaTypeAudio"
+	case QWebEngineContextMenuData__MediaTypeCanvas: // 4
+		return "MediaTypeCanvas"
+	case QWebEngineContextMenuData__MediaTypeFile: // 5
+		return "MediaTypeFile"
+	case QWebEngineContextMenuData__MediaTypePlugin: // 6
+		return "MediaTypePlugin"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineContextMenuData_MediaTypeItemName(val int) string {
+	var nilthis *QWebEngineContextMenuData
+	return nilthis.MediaTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

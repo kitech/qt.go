@@ -729,6 +729,25 @@ const QImageWriter__UnsupportedFormatError QImageWriter__ImageWriterError = 2
 // An attempt was made to write an invalid QImage. An example of an invalid image would be a null QImage.
 const QImageWriter__InvalidImageError QImageWriter__ImageWriterError = 3
 
+func (this *QImageWriter) ImageWriterErrorItemName(val int) string {
+	switch val {
+	case QImageWriter__UnknownError: // 0
+		return "UnknownError"
+	case QImageWriter__DeviceError: // 1
+		return "DeviceError"
+	case QImageWriter__UnsupportedFormatError: // 2
+		return "UnsupportedFormatError"
+	case QImageWriter__InvalidImageError: // 3
+		return "InvalidImageError"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QImageWriter_ImageWriterErrorItemName(val int) string {
+	var nilthis *QImageWriter
+	return nilthis.ImageWriterErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

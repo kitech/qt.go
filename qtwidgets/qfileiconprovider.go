@@ -223,6 +223,31 @@ const QFileIconProvider__Folder QFileIconProvider__IconType = 5
 //
 const QFileIconProvider__File QFileIconProvider__IconType = 6
 
+func (this *QFileIconProvider) IconTypeItemName(val int) string {
+	switch val {
+	case QFileIconProvider__Computer: // 0
+		return "Computer"
+	case QFileIconProvider__Desktop: // 1
+		return "Desktop"
+	case QFileIconProvider__Trashcan: // 2
+		return "Trashcan"
+	case QFileIconProvider__Network: // 3
+		return "Network"
+	case QFileIconProvider__Drive: // 4
+		return "Drive"
+	case QFileIconProvider__Folder: // 5
+		return "Folder"
+	case QFileIconProvider__File: // 6
+		return "File"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFileIconProvider_IconTypeItemName(val int) string {
+	var nilthis *QFileIconProvider
+	return nilthis.IconTypeItemName(val)
+}
+
 /*
 
 
@@ -231,6 +256,19 @@ type QFileIconProvider__Option = int
 
 //
 const QFileIconProvider__DontUseCustomDirectoryIcons QFileIconProvider__Option = 1
+
+func (this *QFileIconProvider) OptionItemName(val int) string {
+	switch val {
+	case QFileIconProvider__DontUseCustomDirectoryIcons: // 1
+		return "DontUseCustomDirectoryIcons"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFileIconProvider_OptionItemName(val int) string {
+	var nilthis *QFileIconProvider
+	return nilthis.OptionItemName(val)
+}
 
 //  body block end
 

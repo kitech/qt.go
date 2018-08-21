@@ -140,6 +140,19 @@ type QStyleOptionComplex__StyleOptionType = int
 //
 const QStyleOptionComplex__Type QStyleOptionComplex__StyleOptionType = 983040
 
+func (this *QStyleOptionComplex) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionComplex__Type: // 983040
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionComplex_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionComplex
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -154,6 +167,19 @@ type QStyleOptionComplex__StyleOptionVersion = int
 
 // 1
 const QStyleOptionComplex__Version QStyleOptionComplex__StyleOptionVersion = 1
+
+func (this *QStyleOptionComplex) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionComplex__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionComplex_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionComplex
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

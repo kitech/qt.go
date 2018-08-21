@@ -281,6 +281,14 @@ type QSound__Loop = int
 //
 const QSound__Infinite QSound__Loop = -1
 
+func (this *QSound) LoopItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSound_LoopItemName(val int) string {
+	var nilthis *QSound
+	return nilthis.LoopItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

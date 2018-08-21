@@ -3120,6 +3120,14 @@ const QQuickItem__ItemHasContents QQuickItem__Flag = 8
 //
 const QQuickItem__ItemAcceptsDrops QQuickItem__Flag = 16
 
+func (this *QQuickItem) FlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickItem_FlagItemName(val int) string {
+	var nilthis *QQuickItem
+	return nilthis.FlagItemName(val)
+}
+
 /*
 Used in conjunction with QQuickItem::itemChange() to notify the item about certain types of changes.
 
@@ -3160,6 +3168,14 @@ const QQuickItem__ItemDevicePixelRatioHasChanged QQuickItem__ItemChange = 9
 //
 const QQuickItem__ItemEnabledHasChanged QQuickItem__ItemChange = 10
 
+func (this *QQuickItem) ItemChangeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickItem_ItemChangeItemName(val int) string {
+	var nilthis *QQuickItem
+	return nilthis.ItemChangeItemName(val)
+}
+
 /*
 Controls the point about which simple transforms like scale apply.
 
@@ -3196,6 +3212,14 @@ const QQuickItem__Bottom QQuickItem__TransformOrigin = 7
 
 // The bottom-right corner of the item.
 const QQuickItem__BottomRight QQuickItem__TransformOrigin = 8
+
+func (this *QQuickItem) TransformOriginItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickItem_TransformOriginItemName(val int) string {
+	var nilthis *QQuickItem
+	return nilthis.TransformOriginItemName(val)
+}
 
 //  body block end
 

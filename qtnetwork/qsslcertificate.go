@@ -643,6 +643,35 @@ const QSslCertificate__SerialNumber QSslCertificate__SubjectInfo = 7
 // The email address associated with the certificate
 const QSslCertificate__EmailAddress QSslCertificate__SubjectInfo = 8
 
+func (this *QSslCertificate) SubjectInfoItemName(val int) string {
+	switch val {
+	case QSslCertificate__Organization: // 0
+		return "Organization"
+	case QSslCertificate__CommonName: // 1
+		return "CommonName"
+	case QSslCertificate__LocalityName: // 2
+		return "LocalityName"
+	case QSslCertificate__OrganizationalUnitName: // 3
+		return "OrganizationalUnitName"
+	case QSslCertificate__CountryName: // 4
+		return "CountryName"
+	case QSslCertificate__StateOrProvinceName: // 5
+		return "StateOrProvinceName"
+	case QSslCertificate__DistinguishedNameQualifier: // 6
+		return "DistinguishedNameQualifier"
+	case QSslCertificate__SerialNumber: // 7
+		return "SerialNumber"
+	case QSslCertificate__EmailAddress: // 8
+		return "EmailAddress"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSslCertificate_SubjectInfoItemName(val int) string {
+	var nilthis *QSslCertificate
+	return nilthis.SubjectInfoItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -805,6 +805,14 @@ const QColorDialog__NoButtons QColorDialog__ColorDialogOption = 2
 //
 const QColorDialog__DontUseNativeDialog QColorDialog__ColorDialogOption = 4
 
+func (this *QColorDialog) ColorDialogOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QColorDialog_ColorDialogOptionItemName(val int) string {
+	var nilthis *QColorDialog
+	return nilthis.ColorDialogOptionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

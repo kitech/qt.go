@@ -1066,6 +1066,14 @@ const QMediaPlayer__PlayingState QMediaPlayer__State = 1
 // The media player has paused playback, playback of the current track will resume from the position the player was paused at.
 const QMediaPlayer__PausedState QMediaPlayer__State = 2
 
+func (this *QMediaPlayer) StateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMediaPlayer_StateItemName(val int) string {
+	var nilthis *QMediaPlayer
+	return nilthis.StateItemName(val)
+}
+
 /*
 Defines the status of a media player's current media.
 
@@ -1100,6 +1108,14 @@ const QMediaPlayer__EndOfMedia QMediaPlayer__MediaStatus = 7
 // The current media cannot be played. The player is in the StoppedState.
 const QMediaPlayer__InvalidMedia QMediaPlayer__MediaStatus = 8
 
+func (this *QMediaPlayer) MediaStatusItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMediaPlayer_MediaStatusItemName(val int) string {
+	var nilthis *QMediaPlayer
+	return nilthis.MediaStatusItemName(val)
+}
+
 /*
 
 
@@ -1114,6 +1130,14 @@ const QMediaPlayer__StreamPlayback QMediaPlayer__Flag = 2
 
 //
 const QMediaPlayer__VideoSurface QMediaPlayer__Flag = 4
+
+func (this *QMediaPlayer) FlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMediaPlayer_FlagItemName(val int) string {
+	var nilthis *QMediaPlayer
+	return nilthis.FlagItemName(val)
+}
 
 /*
 Defines a media player error condition.
@@ -1142,6 +1166,14 @@ const QMediaPlayer__ServiceMissingError QMediaPlayer__Error = 5
 
 //
 const QMediaPlayer__MediaIsPlaylist QMediaPlayer__Error = 6
+
+func (this *QMediaPlayer) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMediaPlayer_ErrorItemName(val int) string {
+	var nilthis *QMediaPlayer
+	return nilthis.ErrorItemName(val)
+}
 
 //  body block end
 

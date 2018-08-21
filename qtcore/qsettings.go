@@ -1587,6 +1587,14 @@ const QSettings__AccessError QSettings__Status = 1
 // A format error occurred (e.g. loading a malformed INI file).
 const QSettings__FormatError QSettings__Status = 2
 
+func (this *QSettings) StatusItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSettings_StatusItemName(val int) string {
+	var nilthis *QSettings
+	return nilthis.StatusItemName(val)
+}
+
 /*
 This enum type specifies the storage format used by QSettings.
 
@@ -1675,6 +1683,14 @@ const QSettings__CustomFormat15 QSettings__Format = 31
 //
 const QSettings__CustomFormat16 QSettings__Format = 32
 
+func (this *QSettings) FormatItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSettings_FormatItemName(val int) string {
+	var nilthis *QSettings
+	return nilthis.FormatItemName(val)
+}
+
 /*
 This enum specifies whether settings are user-specific or shared by all users of the same system.
 
@@ -1690,6 +1706,14 @@ const QSettings__UserScope QSettings__Scope = 0
 
 // Store settings in a global location, so that all users on the same machine access the same set of settings.
 const QSettings__SystemScope QSettings__Scope = 1
+
+func (this *QSettings) ScopeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSettings_ScopeItemName(val int) string {
+	var nilthis *QSettings
+	return nilthis.ScopeItemName(val)
+}
 
 //  body block end
 

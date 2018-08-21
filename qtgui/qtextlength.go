@@ -198,6 +198,23 @@ const QTextLength__FixedLength QTextLength__Type = 1
 //
 const QTextLength__PercentageLength QTextLength__Type = 2
 
+func (this *QTextLength) TypeItemName(val int) string {
+	switch val {
+	case QTextLength__VariableLength: // 0
+		return "VariableLength"
+	case QTextLength__FixedLength: // 1
+		return "FixedLength"
+	case QTextLength__PercentageLength: // 2
+		return "PercentageLength"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextLength_TypeItemName(val int) string {
+	var nilthis *QTextLength
+	return nilthis.TypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -506,6 +506,41 @@ const QPaintDevice__PdmDevicePixelRatio QPaintDevice__PaintDeviceMetric = 11
 //
 const QPaintDevice__PdmDevicePixelRatioScaled QPaintDevice__PaintDeviceMetric = 12
 
+func (this *QPaintDevice) PaintDeviceMetricItemName(val int) string {
+	switch val {
+	case QPaintDevice__PdmWidth: // 1
+		return "PdmWidth"
+	case QPaintDevice__PdmHeight: // 2
+		return "PdmHeight"
+	case QPaintDevice__PdmWidthMM: // 3
+		return "PdmWidthMM"
+	case QPaintDevice__PdmHeightMM: // 4
+		return "PdmHeightMM"
+	case QPaintDevice__PdmNumColors: // 5
+		return "PdmNumColors"
+	case QPaintDevice__PdmDepth: // 6
+		return "PdmDepth"
+	case QPaintDevice__PdmDpiX: // 7
+		return "PdmDpiX"
+	case QPaintDevice__PdmDpiY: // 8
+		return "PdmDpiY"
+	case QPaintDevice__PdmPhysicalDpiX: // 9
+		return "PdmPhysicalDpiX"
+	case QPaintDevice__PdmPhysicalDpiY: // 10
+		return "PdmPhysicalDpiY"
+	case QPaintDevice__PdmDevicePixelRatio: // 11
+		return "PdmDevicePixelRatio"
+	case QPaintDevice__PdmDevicePixelRatioScaled: // 12
+		return "PdmDevicePixelRatioScaled"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPaintDevice_PaintDeviceMetricItemName(val int) string {
+	var nilthis *QPaintDevice
+	return nilthis.PaintDeviceMetricItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

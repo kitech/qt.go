@@ -662,6 +662,14 @@ const QDataWidgetMapper__AutoSubmit QDataWidgetMapper__SubmitPolicy = 0
 // The model is not updated until submit() is called.
 const QDataWidgetMapper__ManualSubmit QDataWidgetMapper__SubmitPolicy = 1
 
+func (this *QDataWidgetMapper) SubmitPolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QDataWidgetMapper_SubmitPolicyItemName(val int) string {
+	var nilthis *QDataWidgetMapper
+	return nilthis.SubmitPolicyItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -272,6 +272,21 @@ const QAndroidBinder__Normal QAndroidBinder__CallType = 0
 // one-way IPC, meaning that the caller returns immediately, without waiting for a result from the callee
 const QAndroidBinder__OneWay QAndroidBinder__CallType = 1
 
+func (this *QAndroidBinder) CallTypeItemName(val int) string {
+	switch val {
+	case QAndroidBinder__Normal: // 0
+		return "Normal"
+	case QAndroidBinder__OneWay: // 1
+		return "OneWay"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAndroidBinder_CallTypeItemName(val int) string {
+	var nilthis *QAndroidBinder
+	return nilthis.CallTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -1132,6 +1132,21 @@ const QRegion__Rectangle QRegion__RegionType = 0
 // the region is an ellipse inside the rectangle.
 const QRegion__Ellipse QRegion__RegionType = 1
 
+func (this *QRegion) RegionTypeItemName(val int) string {
+	switch val {
+	case QRegion__Rectangle: // 0
+		return "Rectangle"
+	case QRegion__Ellipse: // 1
+		return "Ellipse"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QRegion_RegionTypeItemName(val int) string {
+	var nilthis *QRegion
+	return nilthis.RegionTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

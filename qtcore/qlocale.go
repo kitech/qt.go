@@ -5129,6 +5129,767 @@ const QLocale__Uigur QLocale__Language = 128
 //
 const QLocale__LastLanguage QLocale__Language = 359
 
+func (this *QLocale) LanguageItemName(val int) string {
+	switch val {
+	case QLocale__AnyLanguage: // 0
+		return "AnyLanguage"
+	case QLocale__C: // 1
+		return "C"
+	case QLocale__Abkhazian: // 2
+		return "Abkhazian"
+	case QLocale__Oromo: // 3
+		return "Oromo,Afan"
+	case QLocale__Afar: // 4
+		return "Afar"
+	case QLocale__Afrikaans: // 5
+		return "Afrikaans"
+	case QLocale__Albanian: // 6
+		return "Albanian"
+	case QLocale__Amharic: // 7
+		return "Amharic"
+	case QLocale__Arabic: // 8
+		return "Arabic"
+	case QLocale__Armenian: // 9
+		return "Armenian"
+	case QLocale__Assamese: // 10
+		return "Assamese"
+	case QLocale__Aymara: // 11
+		return "Aymara"
+	case QLocale__Azerbaijani: // 12
+		return "Azerbaijani"
+	case QLocale__Bashkir: // 13
+		return "Bashkir"
+	case QLocale__Basque: // 14
+		return "Basque"
+	case QLocale__Bengali: // 15
+		return "Bengali"
+	case QLocale__Dzongkha: // 16
+		return "Dzongkha,Bhutani"
+	case QLocale__Bihari: // 17
+		return "Bihari"
+	case QLocale__Bislama: // 18
+		return "Bislama"
+	case QLocale__Breton: // 19
+		return "Breton"
+	case QLocale__Bulgarian: // 20
+		return "Bulgarian"
+	case QLocale__Burmese: // 21
+		return "Burmese"
+	case QLocale__Belarusian: // 22
+		return "Belarusian,Byelorussian"
+	case QLocale__Khmer: // 23
+		return "Khmer,Cambodian"
+	case QLocale__Catalan: // 24
+		return "Catalan"
+	case QLocale__Chinese: // 25
+		return "Chinese"
+	case QLocale__Corsican: // 26
+		return "Corsican"
+	case QLocale__Croatian: // 27
+		return "Croatian"
+	case QLocale__Czech: // 28
+		return "Czech"
+	case QLocale__Danish: // 29
+		return "Danish"
+	case QLocale__Dutch: // 30
+		return "Dutch"
+	case QLocale__English: // 31
+		return "English"
+	case QLocale__Esperanto: // 32
+		return "Esperanto"
+	case QLocale__Estonian: // 33
+		return "Estonian"
+	case QLocale__Faroese: // 34
+		return "Faroese"
+	case QLocale__Fijian: // 35
+		return "Fijian"
+	case QLocale__Finnish: // 36
+		return "Finnish"
+	case QLocale__French: // 37
+		return "French"
+	case QLocale__WesternFrisian: // 38
+		return "WesternFrisian,Frisian"
+	case QLocale__Gaelic: // 39
+		return "Gaelic"
+	case QLocale__Galician: // 40
+		return "Galician"
+	case QLocale__Georgian: // 41
+		return "Georgian"
+	case QLocale__German: // 42
+		return "German"
+	case QLocale__Greek: // 43
+		return "Greek"
+	case QLocale__Greenlandic: // 44
+		return "Greenlandic"
+	case QLocale__Guarani: // 45
+		return "Guarani"
+	case QLocale__Gujarati: // 46
+		return "Gujarati"
+	case QLocale__Hausa: // 47
+		return "Hausa"
+	case QLocale__Hebrew: // 48
+		return "Hebrew"
+	case QLocale__Hindi: // 49
+		return "Hindi"
+	case QLocale__Hungarian: // 50
+		return "Hungarian"
+	case QLocale__Icelandic: // 51
+		return "Icelandic"
+	case QLocale__Indonesian: // 52
+		return "Indonesian"
+	case QLocale__Interlingua: // 53
+		return "Interlingua"
+	case QLocale__Interlingue: // 54
+		return "Interlingue"
+	case QLocale__Inuktitut: // 55
+		return "Inuktitut"
+	case QLocale__Inupiak: // 56
+		return "Inupiak"
+	case QLocale__Irish: // 57
+		return "Irish"
+	case QLocale__Italian: // 58
+		return "Italian"
+	case QLocale__Japanese: // 59
+		return "Japanese"
+	case QLocale__Javanese: // 60
+		return "Javanese"
+	case QLocale__Kannada: // 61
+		return "Kannada"
+	case QLocale__Kashmiri: // 62
+		return "Kashmiri"
+	case QLocale__Kazakh: // 63
+		return "Kazakh"
+	case QLocale__Kinyarwanda: // 64
+		return "Kinyarwanda"
+	case QLocale__Kirghiz: // 65
+		return "Kirghiz"
+	case QLocale__Korean: // 66
+		return "Korean"
+	case QLocale__Kurdish: // 67
+		return "Kurdish"
+	case QLocale__Rundi: // 68
+		return "Rundi,Kurundi"
+	case QLocale__Lao: // 69
+		return "Lao"
+	case QLocale__Latin: // 70
+		return "Latin"
+	case QLocale__Latvian: // 71
+		return "Latvian"
+	case QLocale__Lingala: // 72
+		return "Lingala"
+	case QLocale__Lithuanian: // 73
+		return "Lithuanian"
+	case QLocale__Macedonian: // 74
+		return "Macedonian"
+	case QLocale__Malagasy: // 75
+		return "Malagasy"
+	case QLocale__Malay: // 76
+		return "Malay"
+	case QLocale__Malayalam: // 77
+		return "Malayalam"
+	case QLocale__Maltese: // 78
+		return "Maltese"
+	case QLocale__Maori: // 79
+		return "Maori"
+	case QLocale__Marathi: // 80
+		return "Marathi"
+	case QLocale__Marshallese: // 81
+		return "Marshallese"
+	case QLocale__Mongolian: // 82
+		return "Mongolian"
+	case QLocale__NauruLanguage: // 83
+		return "NauruLanguage"
+	case QLocale__Nepali: // 84
+		return "Nepali"
+	case QLocale__NorwegianBokmal: // 85
+		return "NorwegianBokmal,Norwegian"
+	case QLocale__Occitan: // 86
+		return "Occitan"
+	case QLocale__Oriya: // 87
+		return "Oriya"
+	case QLocale__Pashto: // 88
+		return "Pashto"
+	case QLocale__Persian: // 89
+		return "Persian"
+	case QLocale__Polish: // 90
+		return "Polish"
+	case QLocale__Portuguese: // 91
+		return "Portuguese"
+	case QLocale__Punjabi: // 92
+		return "Punjabi"
+	case QLocale__Quechua: // 93
+		return "Quechua"
+	case QLocale__Romansh: // 94
+		return "Romansh,RhaetoRomance"
+	case QLocale__Romanian: // 95
+		return "Romanian,Moldavian"
+	case QLocale__Russian: // 96
+		return "Russian"
+	case QLocale__Samoan: // 97
+		return "Samoan"
+	case QLocale__Sango: // 98
+		return "Sango"
+	case QLocale__Sanskrit: // 99
+		return "Sanskrit"
+	case QLocale__Serbian: // 100
+		return "Serbian,SerboCroatian"
+	case QLocale__Ossetic: // 101
+		return "Ossetic"
+	case QLocale__SouthernSotho: // 102
+		return "SouthernSotho"
+	case QLocale__Tswana: // 103
+		return "Tswana"
+	case QLocale__Shona: // 104
+		return "Shona"
+	case QLocale__Sindhi: // 105
+		return "Sindhi"
+	case QLocale__Sinhala: // 106
+		return "Sinhala"
+	case QLocale__Swati: // 107
+		return "Swati"
+	case QLocale__Slovak: // 108
+		return "Slovak"
+	case QLocale__Slovenian: // 109
+		return "Slovenian"
+	case QLocale__Somali: // 110
+		return "Somali"
+	case QLocale__Spanish: // 111
+		return "Spanish"
+	case QLocale__Sundanese: // 112
+		return "Sundanese"
+	case QLocale__Swahili: // 113
+		return "Swahili"
+	case QLocale__Swedish: // 114
+		return "Swedish"
+	case QLocale__Sardinian: // 115
+		return "Sardinian"
+	case QLocale__Tajik: // 116
+		return "Tajik"
+	case QLocale__Tamil: // 117
+		return "Tamil"
+	case QLocale__Tatar: // 118
+		return "Tatar"
+	case QLocale__Telugu: // 119
+		return "Telugu"
+	case QLocale__Thai: // 120
+		return "Thai"
+	case QLocale__Tibetan: // 121
+		return "Tibetan"
+	case QLocale__Tigrinya: // 122
+		return "Tigrinya"
+	case QLocale__Tongan: // 123
+		return "Tongan"
+	case QLocale__Tsonga: // 124
+		return "Tsonga"
+	case QLocale__Turkish: // 125
+		return "Turkish"
+	case QLocale__Turkmen: // 126
+		return "Turkmen"
+	case QLocale__Tahitian: // 127
+		return "Tahitian"
+	case QLocale__Uighur: // 128
+		return "Uighur,Uigur"
+	case QLocale__Ukrainian: // 129
+		return "Ukrainian"
+	case QLocale__Urdu: // 130
+		return "Urdu"
+	case QLocale__Uzbek: // 131
+		return "Uzbek"
+	case QLocale__Vietnamese: // 132
+		return "Vietnamese"
+	case QLocale__Volapuk: // 133
+		return "Volapuk"
+	case QLocale__Welsh: // 134
+		return "Welsh"
+	case QLocale__Wolof: // 135
+		return "Wolof"
+	case QLocale__Xhosa: // 136
+		return "Xhosa"
+	case QLocale__Yiddish: // 137
+		return "Yiddish"
+	case QLocale__Yoruba: // 138
+		return "Yoruba"
+	case QLocale__Zhuang: // 139
+		return "Zhuang"
+	case QLocale__Zulu: // 140
+		return "Zulu"
+	case QLocale__NorwegianNynorsk: // 141
+		return "NorwegianNynorsk"
+	case QLocale__Bosnian: // 142
+		return "Bosnian"
+	case QLocale__Divehi: // 143
+		return "Divehi"
+	case QLocale__Manx: // 144
+		return "Manx"
+	case QLocale__Cornish: // 145
+		return "Cornish"
+	case QLocale__Akan: // 146
+		return "Akan,Twi"
+	case QLocale__Konkani: // 147
+		return "Konkani"
+	case QLocale__Ga: // 148
+		return "Ga"
+	case QLocale__Igbo: // 149
+		return "Igbo"
+	case QLocale__Kamba: // 150
+		return "Kamba"
+	case QLocale__Syriac: // 151
+		return "Syriac"
+	case QLocale__Blin: // 152
+		return "Blin"
+	case QLocale__Geez: // 153
+		return "Geez"
+	case QLocale__Koro: // 154
+		return "Koro"
+	case QLocale__Sidamo: // 155
+		return "Sidamo"
+	case QLocale__Atsam: // 156
+		return "Atsam"
+	case QLocale__Tigre: // 157
+		return "Tigre"
+	case QLocale__Jju: // 158
+		return "Jju"
+	case QLocale__Friulian: // 159
+		return "Friulian"
+	case QLocale__Venda: // 160
+		return "Venda"
+	case QLocale__Ewe: // 161
+		return "Ewe"
+	case QLocale__Walamo: // 162
+		return "Walamo"
+	case QLocale__Hawaiian: // 163
+		return "Hawaiian"
+	case QLocale__Tyap: // 164
+		return "Tyap"
+	case QLocale__Nyanja: // 165
+		return "Nyanja,Chewa"
+	case QLocale__Filipino: // 166
+		return "Filipino,Tagalog"
+	case QLocale__SwissGerman: // 167
+		return "SwissGerman"
+	case QLocale__SichuanYi: // 168
+		return "SichuanYi"
+	case QLocale__Kpelle: // 169
+		return "Kpelle"
+	case QLocale__LowGerman: // 170
+		return "LowGerman"
+	case QLocale__SouthNdebele: // 171
+		return "SouthNdebele"
+	case QLocale__NorthernSotho: // 172
+		return "NorthernSotho"
+	case QLocale__NorthernSami: // 173
+		return "NorthernSami"
+	case QLocale__Taroko: // 174
+		return "Taroko"
+	case QLocale__Gusii: // 175
+		return "Gusii"
+	case QLocale__Taita: // 176
+		return "Taita"
+	case QLocale__Fulah: // 177
+		return "Fulah"
+	case QLocale__Kikuyu: // 178
+		return "Kikuyu"
+	case QLocale__Samburu: // 179
+		return "Samburu"
+	case QLocale__Sena: // 180
+		return "Sena"
+	case QLocale__NorthNdebele: // 181
+		return "NorthNdebele"
+	case QLocale__Rombo: // 182
+		return "Rombo"
+	case QLocale__Tachelhit: // 183
+		return "Tachelhit"
+	case QLocale__Kabyle: // 184
+		return "Kabyle"
+	case QLocale__Nyankole: // 185
+		return "Nyankole"
+	case QLocale__Bena: // 186
+		return "Bena"
+	case QLocale__Vunjo: // 187
+		return "Vunjo"
+	case QLocale__Bambara: // 188
+		return "Bambara"
+	case QLocale__Embu: // 189
+		return "Embu"
+	case QLocale__Cherokee: // 190
+		return "Cherokee"
+	case QLocale__Morisyen: // 191
+		return "Morisyen"
+	case QLocale__Makonde: // 192
+		return "Makonde"
+	case QLocale__Langi: // 193
+		return "Langi"
+	case QLocale__Ganda: // 194
+		return "Ganda"
+	case QLocale__Bemba: // 195
+		return "Bemba"
+	case QLocale__Kabuverdianu: // 196
+		return "Kabuverdianu"
+	case QLocale__Meru: // 197
+		return "Meru"
+	case QLocale__Kalenjin: // 198
+		return "Kalenjin"
+	case QLocale__Nama: // 199
+		return "Nama"
+	case QLocale__Machame: // 200
+		return "Machame"
+	case QLocale__Colognian: // 201
+		return "Colognian"
+	case QLocale__Masai: // 202
+		return "Masai"
+	case QLocale__Soga: // 203
+		return "Soga"
+	case QLocale__Luyia: // 204
+		return "Luyia"
+	case QLocale__Asu: // 205
+		return "Asu"
+	case QLocale__Teso: // 206
+		return "Teso"
+	case QLocale__Saho: // 207
+		return "Saho"
+	case QLocale__KoyraChiini: // 208
+		return "KoyraChiini"
+	case QLocale__Rwa: // 209
+		return "Rwa"
+	case QLocale__Luo: // 210
+		return "Luo"
+	case QLocale__Chiga: // 211
+		return "Chiga"
+	case QLocale__CentralMoroccoTamazight: // 212
+		return "CentralMoroccoTamazight"
+	case QLocale__KoyraboroSenni: // 213
+		return "KoyraboroSenni"
+	case QLocale__Shambala: // 214
+		return "Shambala"
+	case QLocale__Bodo: // 215
+		return "Bodo"
+	case QLocale__Avaric: // 216
+		return "Avaric"
+	case QLocale__Chamorro: // 217
+		return "Chamorro"
+	case QLocale__Chechen: // 218
+		return "Chechen"
+	case QLocale__Church: // 219
+		return "Church"
+	case QLocale__Chuvash: // 220
+		return "Chuvash"
+	case QLocale__Cree: // 221
+		return "Cree"
+	case QLocale__Haitian: // 222
+		return "Haitian"
+	case QLocale__Herero: // 223
+		return "Herero"
+	case QLocale__HiriMotu: // 224
+		return "HiriMotu"
+	case QLocale__Kanuri: // 225
+		return "Kanuri"
+	case QLocale__Komi: // 226
+		return "Komi"
+	case QLocale__Kongo: // 227
+		return "Kongo"
+	case QLocale__Kwanyama: // 228
+		return "Kwanyama"
+	case QLocale__Limburgish: // 229
+		return "Limburgish"
+	case QLocale__LubaKatanga: // 230
+		return "LubaKatanga"
+	case QLocale__Luxembourgish: // 231
+		return "Luxembourgish"
+	case QLocale__Navaho: // 232
+		return "Navaho"
+	case QLocale__Ndonga: // 233
+		return "Ndonga"
+	case QLocale__Ojibwa: // 234
+		return "Ojibwa"
+	case QLocale__Pali: // 235
+		return "Pali"
+	case QLocale__Walloon: // 236
+		return "Walloon"
+	case QLocale__Aghem: // 237
+		return "Aghem"
+	case QLocale__Basaa: // 238
+		return "Basaa"
+	case QLocale__Zarma: // 239
+		return "Zarma"
+	case QLocale__Duala: // 240
+		return "Duala"
+	case QLocale__JolaFonyi: // 241
+		return "JolaFonyi"
+	case QLocale__Ewondo: // 242
+		return "Ewondo"
+	case QLocale__Bafia: // 243
+		return "Bafia"
+	case QLocale__MakhuwaMeetto: // 244
+		return "MakhuwaMeetto"
+	case QLocale__Mundang: // 245
+		return "Mundang"
+	case QLocale__Kwasio: // 246
+		return "Kwasio"
+	case QLocale__Nuer: // 247
+		return "Nuer"
+	case QLocale__Sakha: // 248
+		return "Sakha"
+	case QLocale__Sangu: // 249
+		return "Sangu"
+	case QLocale__CongoSwahili: // 250
+		return "CongoSwahili"
+	case QLocale__Tasawaq: // 251
+		return "Tasawaq"
+	case QLocale__Vai: // 252
+		return "Vai"
+	case QLocale__Walser: // 253
+		return "Walser"
+	case QLocale__Yangben: // 254
+		return "Yangben"
+	case QLocale__Avestan: // 255
+		return "Avestan"
+	case QLocale__Asturian: // 256
+		return "Asturian"
+	case QLocale__Ngomba: // 257
+		return "Ngomba"
+	case QLocale__Kako: // 258
+		return "Kako"
+	case QLocale__Meta: // 259
+		return "Meta"
+	case QLocale__Ngiemboon: // 260
+		return "Ngiemboon"
+	case QLocale__Aragonese: // 261
+		return "Aragonese"
+	case QLocale__Akkadian: // 262
+		return "Akkadian"
+	case QLocale__AncientEgyptian: // 263
+		return "AncientEgyptian"
+	case QLocale__AncientGreek: // 264
+		return "AncientGreek"
+	case QLocale__Aramaic: // 265
+		return "Aramaic"
+	case QLocale__Balinese: // 266
+		return "Balinese"
+	case QLocale__Bamun: // 267
+		return "Bamun"
+	case QLocale__BatakToba: // 268
+		return "BatakToba"
+	case QLocale__Buginese: // 269
+		return "Buginese"
+	case QLocale__Buhid: // 270
+		return "Buhid"
+	case QLocale__Carian: // 271
+		return "Carian"
+	case QLocale__Chakma: // 272
+		return "Chakma"
+	case QLocale__ClassicalMandaic: // 273
+		return "ClassicalMandaic"
+	case QLocale__Coptic: // 274
+		return "Coptic"
+	case QLocale__Dogri: // 275
+		return "Dogri"
+	case QLocale__EasternCham: // 276
+		return "EasternCham"
+	case QLocale__EasternKayah: // 277
+		return "EasternKayah"
+	case QLocale__Etruscan: // 278
+		return "Etruscan"
+	case QLocale__Gothic: // 279
+		return "Gothic"
+	case QLocale__Hanunoo: // 280
+		return "Hanunoo"
+	case QLocale__Ingush: // 281
+		return "Ingush"
+	case QLocale__LargeFloweryMiao: // 282
+		return "LargeFloweryMiao"
+	case QLocale__Lepcha: // 283
+		return "Lepcha"
+	case QLocale__Limbu: // 284
+		return "Limbu"
+	case QLocale__Lisu: // 285
+		return "Lisu"
+	case QLocale__Lu: // 286
+		return "Lu"
+	case QLocale__Lycian: // 287
+		return "Lycian"
+	case QLocale__Lydian: // 288
+		return "Lydian"
+	case QLocale__Mandingo: // 289
+		return "Mandingo"
+	case QLocale__Manipuri: // 290
+		return "Manipuri"
+	case QLocale__Meroitic: // 291
+		return "Meroitic"
+	case QLocale__NorthernThai: // 292
+		return "NorthernThai"
+	case QLocale__OldIrish: // 293
+		return "OldIrish"
+	case QLocale__OldNorse: // 294
+		return "OldNorse"
+	case QLocale__OldPersian: // 295
+		return "OldPersian"
+	case QLocale__OldTurkish: // 296
+		return "OldTurkish"
+	case QLocale__Pahlavi: // 297
+		return "Pahlavi"
+	case QLocale__Parthian: // 298
+		return "Parthian"
+	case QLocale__Phoenician: // 299
+		return "Phoenician"
+	case QLocale__PrakritLanguage: // 300
+		return "PrakritLanguage"
+	case QLocale__Rejang: // 301
+		return "Rejang"
+	case QLocale__Sabaean: // 302
+		return "Sabaean"
+	case QLocale__Samaritan: // 303
+		return "Samaritan"
+	case QLocale__Santali: // 304
+		return "Santali"
+	case QLocale__Saurashtra: // 305
+		return "Saurashtra"
+	case QLocale__Sora: // 306
+		return "Sora"
+	case QLocale__Sylheti: // 307
+		return "Sylheti"
+	case QLocale__Tagbanwa: // 308
+		return "Tagbanwa"
+	case QLocale__TaiDam: // 309
+		return "TaiDam"
+	case QLocale__TaiNua: // 310
+		return "TaiNua"
+	case QLocale__Ugaritic: // 311
+		return "Ugaritic"
+	case QLocale__Akoose: // 312
+		return "Akoose"
+	case QLocale__Lakota: // 313
+		return "Lakota"
+	case QLocale__StandardMoroccanTamazight: // 314
+		return "StandardMoroccanTamazight"
+	case QLocale__Mapuche: // 315
+		return "Mapuche"
+	case QLocale__CentralKurdish: // 316
+		return "CentralKurdish"
+	case QLocale__LowerSorbian: // 317
+		return "LowerSorbian"
+	case QLocale__UpperSorbian: // 318
+		return "UpperSorbian"
+	case QLocale__Kenyang: // 319
+		return "Kenyang"
+	case QLocale__Mohawk: // 320
+		return "Mohawk"
+	case QLocale__Nko: // 321
+		return "Nko"
+	case QLocale__Prussian: // 322
+		return "Prussian"
+	case QLocale__Kiche: // 323
+		return "Kiche"
+	case QLocale__SouthernSami: // 324
+		return "SouthernSami"
+	case QLocale__LuleSami: // 325
+		return "LuleSami"
+	case QLocale__InariSami: // 326
+		return "InariSami"
+	case QLocale__SkoltSami: // 327
+		return "SkoltSami"
+	case QLocale__Warlpiri: // 328
+		return "Warlpiri"
+	case QLocale__ManichaeanMiddlePersian: // 329
+		return "ManichaeanMiddlePersian"
+	case QLocale__Mende: // 330
+		return "Mende"
+	case QLocale__AncientNorthArabian: // 331
+		return "AncientNorthArabian"
+	case QLocale__LinearA: // 332
+		return "LinearA"
+	case QLocale__HmongNjua: // 333
+		return "HmongNjua"
+	case QLocale__Ho: // 334
+		return "Ho"
+	case QLocale__Lezghian: // 335
+		return "Lezghian"
+	case QLocale__Bassa: // 336
+		return "Bassa"
+	case QLocale__Mono: // 337
+		return "Mono"
+	case QLocale__TedimChin: // 338
+		return "TedimChin"
+	case QLocale__Maithili: // 339
+		return "Maithili"
+	case QLocale__Ahom: // 340
+		return "Ahom"
+	case QLocale__AmericanSignLanguage: // 341
+		return "AmericanSignLanguage"
+	case QLocale__ArdhamagadhiPrakrit: // 342
+		return "ArdhamagadhiPrakrit"
+	case QLocale__Bhojpuri: // 343
+		return "Bhojpuri"
+	case QLocale__HieroglyphicLuwian: // 344
+		return "HieroglyphicLuwian"
+	case QLocale__LiteraryChinese: // 345
+		return "LiteraryChinese"
+	case QLocale__Mazanderani: // 346
+		return "Mazanderani"
+	case QLocale__Mru: // 347
+		return "Mru"
+	case QLocale__Newari: // 348
+		return "Newari"
+	case QLocale__NorthernLuri: // 349
+		return "NorthernLuri"
+	case QLocale__Palauan: // 350
+		return "Palauan"
+	case QLocale__Papiamento: // 351
+		return "Papiamento"
+	case QLocale__Saraiki: // 352
+		return "Saraiki"
+	case QLocale__TokelauLanguage: // 353
+		return "TokelauLanguage"
+	case QLocale__TokPisin: // 354
+		return "TokPisin"
+	case QLocale__TuvaluLanguage: // 355
+		return "TuvaluLanguage"
+	case QLocale__UncodedLanguages: // 356
+		return "UncodedLanguages"
+	case QLocale__Cantonese: // 357
+		return "Cantonese"
+	case QLocale__Osage: // 358
+		return "Osage"
+	case QLocale__Tangut: // 359
+		return "Tangut,LastLanguage"
+		// case QLocale__Norwegian: // 85
+		// return ""
+		// case QLocale__Moldavian: // 95
+		// return ""
+		// case QLocale__SerboCroatian: // 100
+		// return ""
+		// case QLocale__Tagalog: // 166
+		// return ""
+		// case QLocale__Twi: // 146
+		// return ""
+		// case QLocale__Afan: // 3
+		// return ""
+		// case QLocale__Byelorussian: // 22
+		// return ""
+		// case QLocale__Bhutani: // 16
+		// return ""
+		// case QLocale__Cambodian: // 23
+		// return ""
+		// case QLocale__Kurundi: // 68
+		// return ""
+		// case QLocale__RhaetoRomance: // 94
+		// return ""
+		// case QLocale__Chewa: // 165
+		// return ""
+		// case QLocale__Frisian: // 38
+		// return ""
+		// case QLocale__Uigur: // 128
+		// return ""
+		// case QLocale__LastLanguage: // 359
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLocale_LanguageItemName(val int) string {
+	var nilthis *QLocale
+	return nilthis.LanguageItemName(val)
+}
+
 /*
 This enumerated type is used to specify a script.
 
@@ -5575,6 +6336,307 @@ const QLocale__TraditionalChineseScript QLocale__Script = 6
 
 //
 const QLocale__LastScript QLocale__Script = 141
+
+func (this *QLocale) ScriptItemName(val int) string {
+	switch val {
+	case QLocale__AnyScript: // 0
+		return "AnyScript"
+	case QLocale__ArabicScript: // 1
+		return "ArabicScript"
+	case QLocale__CyrillicScript: // 2
+		return "CyrillicScript"
+	case QLocale__DeseretScript: // 3
+		return "DeseretScript"
+	case QLocale__GurmukhiScript: // 4
+		return "GurmukhiScript"
+	case QLocale__SimplifiedHanScript: // 5
+		return "SimplifiedHanScript,SimplifiedChineseScript"
+	case QLocale__TraditionalHanScript: // 6
+		return "TraditionalHanScript,TraditionalChineseScript"
+	case QLocale__LatinScript: // 7
+		return "LatinScript"
+	case QLocale__MongolianScript: // 8
+		return "MongolianScript"
+	case QLocale__TifinaghScript: // 9
+		return "TifinaghScript"
+	case QLocale__ArmenianScript: // 10
+		return "ArmenianScript"
+	case QLocale__BengaliScript: // 11
+		return "BengaliScript"
+	case QLocale__CherokeeScript: // 12
+		return "CherokeeScript"
+	case QLocale__DevanagariScript: // 13
+		return "DevanagariScript"
+	case QLocale__EthiopicScript: // 14
+		return "EthiopicScript"
+	case QLocale__GeorgianScript: // 15
+		return "GeorgianScript"
+	case QLocale__GreekScript: // 16
+		return "GreekScript"
+	case QLocale__GujaratiScript: // 17
+		return "GujaratiScript"
+	case QLocale__HebrewScript: // 18
+		return "HebrewScript"
+	case QLocale__JapaneseScript: // 19
+		return "JapaneseScript"
+	case QLocale__KhmerScript: // 20
+		return "KhmerScript"
+	case QLocale__KannadaScript: // 21
+		return "KannadaScript"
+	case QLocale__KoreanScript: // 22
+		return "KoreanScript"
+	case QLocale__LaoScript: // 23
+		return "LaoScript"
+	case QLocale__MalayalamScript: // 24
+		return "MalayalamScript"
+	case QLocale__MyanmarScript: // 25
+		return "MyanmarScript"
+	case QLocale__OriyaScript: // 26
+		return "OriyaScript"
+	case QLocale__TamilScript: // 27
+		return "TamilScript"
+	case QLocale__TeluguScript: // 28
+		return "TeluguScript"
+	case QLocale__ThaanaScript: // 29
+		return "ThaanaScript"
+	case QLocale__ThaiScript: // 30
+		return "ThaiScript"
+	case QLocale__TibetanScript: // 31
+		return "TibetanScript"
+	case QLocale__SinhalaScript: // 32
+		return "SinhalaScript"
+	case QLocale__SyriacScript: // 33
+		return "SyriacScript"
+	case QLocale__YiScript: // 34
+		return "YiScript"
+	case QLocale__VaiScript: // 35
+		return "VaiScript"
+	case QLocale__AvestanScript: // 36
+		return "AvestanScript"
+	case QLocale__BalineseScript: // 37
+		return "BalineseScript"
+	case QLocale__BamumScript: // 38
+		return "BamumScript"
+	case QLocale__BatakScript: // 39
+		return "BatakScript"
+	case QLocale__BopomofoScript: // 40
+		return "BopomofoScript"
+	case QLocale__BrahmiScript: // 41
+		return "BrahmiScript"
+	case QLocale__BugineseScript: // 42
+		return "BugineseScript"
+	case QLocale__BuhidScript: // 43
+		return "BuhidScript"
+	case QLocale__CanadianAboriginalScript: // 44
+		return "CanadianAboriginalScript"
+	case QLocale__CarianScript: // 45
+		return "CarianScript"
+	case QLocale__ChakmaScript: // 46
+		return "ChakmaScript"
+	case QLocale__ChamScript: // 47
+		return "ChamScript"
+	case QLocale__CopticScript: // 48
+		return "CopticScript"
+	case QLocale__CypriotScript: // 49
+		return "CypriotScript"
+	case QLocale__EgyptianHieroglyphsScript: // 50
+		return "EgyptianHieroglyphsScript"
+	case QLocale__FraserScript: // 51
+		return "FraserScript"
+	case QLocale__GlagoliticScript: // 52
+		return "GlagoliticScript"
+	case QLocale__GothicScript: // 53
+		return "GothicScript"
+	case QLocale__HanScript: // 54
+		return "HanScript"
+	case QLocale__HangulScript: // 55
+		return "HangulScript"
+	case QLocale__HanunooScript: // 56
+		return "HanunooScript"
+	case QLocale__ImperialAramaicScript: // 57
+		return "ImperialAramaicScript"
+	case QLocale__InscriptionalPahlaviScript: // 58
+		return "InscriptionalPahlaviScript"
+	case QLocale__InscriptionalParthianScript: // 59
+		return "InscriptionalParthianScript"
+	case QLocale__JavaneseScript: // 60
+		return "JavaneseScript"
+	case QLocale__KaithiScript: // 61
+		return "KaithiScript"
+	case QLocale__KatakanaScript: // 62
+		return "KatakanaScript"
+	case QLocale__KayahLiScript: // 63
+		return "KayahLiScript"
+	case QLocale__KharoshthiScript: // 64
+		return "KharoshthiScript"
+	case QLocale__LannaScript: // 65
+		return "LannaScript"
+	case QLocale__LepchaScript: // 66
+		return "LepchaScript"
+	case QLocale__LimbuScript: // 67
+		return "LimbuScript"
+	case QLocale__LinearBScript: // 68
+		return "LinearBScript"
+	case QLocale__LycianScript: // 69
+		return "LycianScript"
+	case QLocale__LydianScript: // 70
+		return "LydianScript"
+	case QLocale__MandaeanScript: // 71
+		return "MandaeanScript"
+	case QLocale__MeiteiMayekScript: // 72
+		return "MeiteiMayekScript"
+	case QLocale__MeroiticScript: // 73
+		return "MeroiticScript"
+	case QLocale__MeroiticCursiveScript: // 74
+		return "MeroiticCursiveScript"
+	case QLocale__NkoScript: // 75
+		return "NkoScript"
+	case QLocale__NewTaiLueScript: // 76
+		return "NewTaiLueScript"
+	case QLocale__OghamScript: // 77
+		return "OghamScript"
+	case QLocale__OlChikiScript: // 78
+		return "OlChikiScript"
+	case QLocale__OldItalicScript: // 79
+		return "OldItalicScript"
+	case QLocale__OldPersianScript: // 80
+		return "OldPersianScript"
+	case QLocale__OldSouthArabianScript: // 81
+		return "OldSouthArabianScript"
+	case QLocale__OrkhonScript: // 82
+		return "OrkhonScript"
+	case QLocale__OsmanyaScript: // 83
+		return "OsmanyaScript"
+	case QLocale__PhagsPaScript: // 84
+		return "PhagsPaScript"
+	case QLocale__PhoenicianScript: // 85
+		return "PhoenicianScript"
+	case QLocale__PollardPhoneticScript: // 86
+		return "PollardPhoneticScript"
+	case QLocale__RejangScript: // 87
+		return "RejangScript"
+	case QLocale__RunicScript: // 88
+		return "RunicScript"
+	case QLocale__SamaritanScript: // 89
+		return "SamaritanScript"
+	case QLocale__SaurashtraScript: // 90
+		return "SaurashtraScript"
+	case QLocale__SharadaScript: // 91
+		return "SharadaScript"
+	case QLocale__ShavianScript: // 92
+		return "ShavianScript"
+	case QLocale__SoraSompengScript: // 93
+		return "SoraSompengScript"
+	case QLocale__CuneiformScript: // 94
+		return "CuneiformScript"
+	case QLocale__SundaneseScript: // 95
+		return "SundaneseScript"
+	case QLocale__SylotiNagriScript: // 96
+		return "SylotiNagriScript"
+	case QLocale__TagalogScript: // 97
+		return "TagalogScript"
+	case QLocale__TagbanwaScript: // 98
+		return "TagbanwaScript"
+	case QLocale__TaiLeScript: // 99
+		return "TaiLeScript"
+	case QLocale__TaiVietScript: // 100
+		return "TaiVietScript"
+	case QLocale__TakriScript: // 101
+		return "TakriScript"
+	case QLocale__UgariticScript: // 102
+		return "UgariticScript"
+	case QLocale__BrailleScript: // 103
+		return "BrailleScript"
+	case QLocale__HiraganaScript: // 104
+		return "HiraganaScript"
+	case QLocale__CaucasianAlbanianScript: // 105
+		return "CaucasianAlbanianScript"
+	case QLocale__BassaVahScript: // 106
+		return "BassaVahScript"
+	case QLocale__DuployanScript: // 107
+		return "DuployanScript"
+	case QLocale__ElbasanScript: // 108
+		return "ElbasanScript"
+	case QLocale__GranthaScript: // 109
+		return "GranthaScript"
+	case QLocale__PahawhHmongScript: // 110
+		return "PahawhHmongScript"
+	case QLocale__KhojkiScript: // 111
+		return "KhojkiScript"
+	case QLocale__LinearAScript: // 112
+		return "LinearAScript"
+	case QLocale__MahajaniScript: // 113
+		return "MahajaniScript"
+	case QLocale__ManichaeanScript: // 114
+		return "ManichaeanScript"
+	case QLocale__MendeKikakuiScript: // 115
+		return "MendeKikakuiScript"
+	case QLocale__ModiScript: // 116
+		return "ModiScript"
+	case QLocale__MroScript: // 117
+		return "MroScript"
+	case QLocale__OldNorthArabianScript: // 118
+		return "OldNorthArabianScript"
+	case QLocale__NabataeanScript: // 119
+		return "NabataeanScript"
+	case QLocale__PalmyreneScript: // 120
+		return "PalmyreneScript"
+	case QLocale__PauCinHauScript: // 121
+		return "PauCinHauScript"
+	case QLocale__OldPermicScript: // 122
+		return "OldPermicScript"
+	case QLocale__PsalterPahlaviScript: // 123
+		return "PsalterPahlaviScript"
+	case QLocale__SiddhamScript: // 124
+		return "SiddhamScript"
+	case QLocale__KhudawadiScript: // 125
+		return "KhudawadiScript"
+	case QLocale__TirhutaScript: // 126
+		return "TirhutaScript"
+	case QLocale__VarangKshitiScript: // 127
+		return "VarangKshitiScript"
+	case QLocale__AhomScript: // 128
+		return "AhomScript"
+	case QLocale__AnatolianHieroglyphsScript: // 129
+		return "AnatolianHieroglyphsScript"
+	case QLocale__HatranScript: // 130
+		return "HatranScript"
+	case QLocale__MultaniScript: // 131
+		return "MultaniScript"
+	case QLocale__OldHungarianScript: // 132
+		return "OldHungarianScript"
+	case QLocale__SignWritingScript: // 133
+		return "SignWritingScript"
+	case QLocale__AdlamScript: // 134
+		return "AdlamScript"
+	case QLocale__BhaiksukiScript: // 135
+		return "BhaiksukiScript"
+	case QLocale__MarchenScript: // 136
+		return "MarchenScript"
+	case QLocale__NewaScript: // 137
+		return "NewaScript"
+	case QLocale__OsageScript: // 138
+		return "OsageScript"
+	case QLocale__TangutScript: // 139
+		return "TangutScript"
+	case QLocale__HanWithBopomofoScript: // 140
+		return "HanWithBopomofoScript"
+	case QLocale__JamoScript: // 141
+		return "JamoScript,LastScript"
+		// case QLocale__SimplifiedChineseScript: // 5
+		// return ""
+		// case QLocale__TraditionalChineseScript: // 6
+		// return ""
+		// case QLocale__LastScript: // 141
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLocale_ScriptItemName(val int) string {
+	var nilthis *QLocale
+	return nilthis.ScriptItemName(val)
+}
 
 /*
 This enumerated type is used to specify a country.
@@ -6401,6 +7463,555 @@ const QLocale__SyrianArabRepublic QLocale__Country = 207
 //
 const QLocale__LastCountry QLocale__Country = 259
 
+func (this *QLocale) CountryItemName(val int) string {
+	switch val {
+	case QLocale__AnyCountry: // 0
+		return "AnyCountry"
+	case QLocale__Afghanistan: // 1
+		return "Afghanistan"
+	case QLocale__Albania: // 2
+		return "Albania"
+	case QLocale__Algeria: // 3
+		return "Algeria"
+	case QLocale__AmericanSamoa: // 4
+		return "AmericanSamoa"
+	case QLocale__Andorra: // 5
+		return "Andorra"
+	case QLocale__Angola: // 6
+		return "Angola"
+	case QLocale__Anguilla: // 7
+		return "Anguilla"
+	case QLocale__Antarctica: // 8
+		return "Antarctica"
+	case QLocale__AntiguaAndBarbuda: // 9
+		return "AntiguaAndBarbuda"
+	case QLocale__Argentina: // 10
+		return "Argentina"
+	case QLocale__Armenia: // 11
+		return "Armenia"
+	case QLocale__Aruba: // 12
+		return "Aruba"
+	case QLocale__Australia: // 13
+		return "Australia"
+	case QLocale__Austria: // 14
+		return "Austria"
+	case QLocale__Azerbaijan: // 15
+		return "Azerbaijan"
+	case QLocale__Bahamas: // 16
+		return "Bahamas"
+	case QLocale__Bahrain: // 17
+		return "Bahrain"
+	case QLocale__Bangladesh: // 18
+		return "Bangladesh"
+	case QLocale__Barbados: // 19
+		return "Barbados"
+	case QLocale__Belarus: // 20
+		return "Belarus"
+	case QLocale__Belgium: // 21
+		return "Belgium"
+	case QLocale__Belize: // 22
+		return "Belize"
+	case QLocale__Benin: // 23
+		return "Benin"
+	case QLocale__Bermuda: // 24
+		return "Bermuda"
+	case QLocale__Bhutan: // 25
+		return "Bhutan"
+	case QLocale__Bolivia: // 26
+		return "Bolivia"
+	case QLocale__BosniaAndHerzegowina: // 27
+		return "BosniaAndHerzegowina"
+	case QLocale__Botswana: // 28
+		return "Botswana"
+	case QLocale__BouvetIsland: // 29
+		return "BouvetIsland"
+	case QLocale__Brazil: // 30
+		return "Brazil"
+	case QLocale__BritishIndianOceanTerritory: // 31
+		return "BritishIndianOceanTerritory"
+	case QLocale__Brunei: // 32
+		return "Brunei"
+	case QLocale__Bulgaria: // 33
+		return "Bulgaria"
+	case QLocale__BurkinaFaso: // 34
+		return "BurkinaFaso"
+	case QLocale__Burundi: // 35
+		return "Burundi"
+	case QLocale__Cambodia: // 36
+		return "Cambodia"
+	case QLocale__Cameroon: // 37
+		return "Cameroon"
+	case QLocale__Canada: // 38
+		return "Canada"
+	case QLocale__CapeVerde: // 39
+		return "CapeVerde"
+	case QLocale__CaymanIslands: // 40
+		return "CaymanIslands"
+	case QLocale__CentralAfricanRepublic: // 41
+		return "CentralAfricanRepublic"
+	case QLocale__Chad: // 42
+		return "Chad"
+	case QLocale__Chile: // 43
+		return "Chile"
+	case QLocale__China: // 44
+		return "China"
+	case QLocale__ChristmasIsland: // 45
+		return "ChristmasIsland"
+	case QLocale__CocosIslands: // 46
+		return "CocosIslands"
+	case QLocale__Colombia: // 47
+		return "Colombia"
+	case QLocale__Comoros: // 48
+		return "Comoros"
+	case QLocale__CongoKinshasa: // 49
+		return "CongoKinshasa,DemocraticRepublicOfCongo"
+	case QLocale__CongoBrazzaville: // 50
+		return "CongoBrazzaville,PeoplesRepublicOfCongo"
+	case QLocale__CookIslands: // 51
+		return "CookIslands"
+	case QLocale__CostaRica: // 52
+		return "CostaRica"
+	case QLocale__IvoryCoast: // 53
+		return "IvoryCoast"
+	case QLocale__Croatia: // 54
+		return "Croatia"
+	case QLocale__Cuba: // 55
+		return "Cuba"
+	case QLocale__Cyprus: // 56
+		return "Cyprus"
+	case QLocale__CzechRepublic: // 57
+		return "CzechRepublic"
+	case QLocale__Denmark: // 58
+		return "Denmark"
+	case QLocale__Djibouti: // 59
+		return "Djibouti"
+	case QLocale__Dominica: // 60
+		return "Dominica"
+	case QLocale__DominicanRepublic: // 61
+		return "DominicanRepublic"
+	case QLocale__EastTimor: // 62
+		return "EastTimor"
+	case QLocale__Ecuador: // 63
+		return "Ecuador"
+	case QLocale__Egypt: // 64
+		return "Egypt"
+	case QLocale__ElSalvador: // 65
+		return "ElSalvador"
+	case QLocale__EquatorialGuinea: // 66
+		return "EquatorialGuinea"
+	case QLocale__Eritrea: // 67
+		return "Eritrea"
+	case QLocale__Estonia: // 68
+		return "Estonia"
+	case QLocale__Ethiopia: // 69
+		return "Ethiopia"
+	case QLocale__FalklandIslands: // 70
+		return "FalklandIslands"
+	case QLocale__FaroeIslands: // 71
+		return "FaroeIslands"
+	case QLocale__Fiji: // 72
+		return "Fiji"
+	case QLocale__Finland: // 73
+		return "Finland"
+	case QLocale__France: // 74
+		return "France"
+	case QLocale__Guernsey: // 75
+		return "Guernsey"
+	case QLocale__FrenchGuiana: // 76
+		return "FrenchGuiana"
+	case QLocale__FrenchPolynesia: // 77
+		return "FrenchPolynesia"
+	case QLocale__FrenchSouthernTerritories: // 78
+		return "FrenchSouthernTerritories"
+	case QLocale__Gabon: // 79
+		return "Gabon"
+	case QLocale__Gambia: // 80
+		return "Gambia"
+	case QLocale__Georgia: // 81
+		return "Georgia"
+	case QLocale__Germany: // 82
+		return "Germany"
+	case QLocale__Ghana: // 83
+		return "Ghana"
+	case QLocale__Gibraltar: // 84
+		return "Gibraltar"
+	case QLocale__Greece: // 85
+		return "Greece"
+	case QLocale__Greenland: // 86
+		return "Greenland"
+	case QLocale__Grenada: // 87
+		return "Grenada"
+	case QLocale__Guadeloupe: // 88
+		return "Guadeloupe"
+	case QLocale__Guam: // 89
+		return "Guam"
+	case QLocale__Guatemala: // 90
+		return "Guatemala"
+	case QLocale__Guinea: // 91
+		return "Guinea"
+	case QLocale__GuineaBissau: // 92
+		return "GuineaBissau"
+	case QLocale__Guyana: // 93
+		return "Guyana"
+	case QLocale__Haiti: // 94
+		return "Haiti"
+	case QLocale__HeardAndMcDonaldIslands: // 95
+		return "HeardAndMcDonaldIslands"
+	case QLocale__Honduras: // 96
+		return "Honduras"
+	case QLocale__HongKong: // 97
+		return "HongKong"
+	case QLocale__Hungary: // 98
+		return "Hungary"
+	case QLocale__Iceland: // 99
+		return "Iceland"
+	case QLocale__India: // 100
+		return "India"
+	case QLocale__Indonesia: // 101
+		return "Indonesia"
+	case QLocale__Iran: // 102
+		return "Iran"
+	case QLocale__Iraq: // 103
+		return "Iraq"
+	case QLocale__Ireland: // 104
+		return "Ireland"
+	case QLocale__Israel: // 105
+		return "Israel"
+	case QLocale__Italy: // 106
+		return "Italy"
+	case QLocale__Jamaica: // 107
+		return "Jamaica"
+	case QLocale__Japan: // 108
+		return "Japan"
+	case QLocale__Jordan: // 109
+		return "Jordan"
+	case QLocale__Kazakhstan: // 110
+		return "Kazakhstan"
+	case QLocale__Kenya: // 111
+		return "Kenya"
+	case QLocale__Kiribati: // 112
+		return "Kiribati"
+	case QLocale__NorthKorea: // 113
+		return "NorthKorea,DemocraticRepublicOfKorea"
+	case QLocale__SouthKorea: // 114
+		return "SouthKorea,RepublicOfKorea"
+	case QLocale__Kuwait: // 115
+		return "Kuwait"
+	case QLocale__Kyrgyzstan: // 116
+		return "Kyrgyzstan"
+	case QLocale__Laos: // 117
+		return "Laos"
+	case QLocale__Latvia: // 118
+		return "Latvia"
+	case QLocale__Lebanon: // 119
+		return "Lebanon"
+	case QLocale__Lesotho: // 120
+		return "Lesotho"
+	case QLocale__Liberia: // 121
+		return "Liberia"
+	case QLocale__Libya: // 122
+		return "Libya"
+	case QLocale__Liechtenstein: // 123
+		return "Liechtenstein"
+	case QLocale__Lithuania: // 124
+		return "Lithuania"
+	case QLocale__Luxembourg: // 125
+		return "Luxembourg"
+	case QLocale__Macau: // 126
+		return "Macau"
+	case QLocale__Macedonia: // 127
+		return "Macedonia"
+	case QLocale__Madagascar: // 128
+		return "Madagascar"
+	case QLocale__Malawi: // 129
+		return "Malawi"
+	case QLocale__Malaysia: // 130
+		return "Malaysia"
+	case QLocale__Maldives: // 131
+		return "Maldives"
+	case QLocale__Mali: // 132
+		return "Mali"
+	case QLocale__Malta: // 133
+		return "Malta"
+	case QLocale__MarshallIslands: // 134
+		return "MarshallIslands"
+	case QLocale__Martinique: // 135
+		return "Martinique"
+	case QLocale__Mauritania: // 136
+		return "Mauritania"
+	case QLocale__Mauritius: // 137
+		return "Mauritius"
+	case QLocale__Mayotte: // 138
+		return "Mayotte"
+	case QLocale__Mexico: // 139
+		return "Mexico"
+	case QLocale__Micronesia: // 140
+		return "Micronesia"
+	case QLocale__Moldova: // 141
+		return "Moldova"
+	case QLocale__Monaco: // 142
+		return "Monaco"
+	case QLocale__Mongolia: // 143
+		return "Mongolia"
+	case QLocale__Montserrat: // 144
+		return "Montserrat"
+	case QLocale__Morocco: // 145
+		return "Morocco"
+	case QLocale__Mozambique: // 146
+		return "Mozambique"
+	case QLocale__Myanmar: // 147
+		return "Myanmar"
+	case QLocale__Namibia: // 148
+		return "Namibia"
+	case QLocale__NauruCountry: // 149
+		return "NauruCountry"
+	case QLocale__Nepal: // 150
+		return "Nepal"
+	case QLocale__Netherlands: // 151
+		return "Netherlands"
+	case QLocale__CuraSao: // 152
+		return "CuraSao"
+	case QLocale__NewCaledonia: // 153
+		return "NewCaledonia"
+	case QLocale__NewZealand: // 154
+		return "NewZealand"
+	case QLocale__Nicaragua: // 155
+		return "Nicaragua"
+	case QLocale__Niger: // 156
+		return "Niger"
+	case QLocale__Nigeria: // 157
+		return "Nigeria"
+	case QLocale__Niue: // 158
+		return "Niue"
+	case QLocale__NorfolkIsland: // 159
+		return "NorfolkIsland"
+	case QLocale__NorthernMarianaIslands: // 160
+		return "NorthernMarianaIslands"
+	case QLocale__Norway: // 161
+		return "Norway"
+	case QLocale__Oman: // 162
+		return "Oman"
+	case QLocale__Pakistan: // 163
+		return "Pakistan"
+	case QLocale__Palau: // 164
+		return "Palau"
+	case QLocale__PalestinianTerritories: // 165
+		return "PalestinianTerritories"
+	case QLocale__Panama: // 166
+		return "Panama"
+	case QLocale__PapuaNewGuinea: // 167
+		return "PapuaNewGuinea"
+	case QLocale__Paraguay: // 168
+		return "Paraguay"
+	case QLocale__Peru: // 169
+		return "Peru"
+	case QLocale__Philippines: // 170
+		return "Philippines"
+	case QLocale__Pitcairn: // 171
+		return "Pitcairn"
+	case QLocale__Poland: // 172
+		return "Poland"
+	case QLocale__Portugal: // 173
+		return "Portugal"
+	case QLocale__PuertoRico: // 174
+		return "PuertoRico"
+	case QLocale__Qatar: // 175
+		return "Qatar"
+	case QLocale__Reunion: // 176
+		return "Reunion"
+	case QLocale__Romania: // 177
+		return "Romania"
+	case QLocale__Russia: // 178
+		return "Russia,RussianFederation"
+	case QLocale__Rwanda: // 179
+		return "Rwanda"
+	case QLocale__SaintKittsAndNevis: // 180
+		return "SaintKittsAndNevis"
+	case QLocale__SaintLucia: // 181
+		return "SaintLucia"
+	case QLocale__SaintVincentAndTheGrenadines: // 182
+		return "SaintVincentAndTheGrenadines"
+	case QLocale__Samoa: // 183
+		return "Samoa"
+	case QLocale__SanMarino: // 184
+		return "SanMarino"
+	case QLocale__SaoTomeAndPrincipe: // 185
+		return "SaoTomeAndPrincipe"
+	case QLocale__SaudiArabia: // 186
+		return "SaudiArabia"
+	case QLocale__Senegal: // 187
+		return "Senegal"
+	case QLocale__Seychelles: // 188
+		return "Seychelles"
+	case QLocale__SierraLeone: // 189
+		return "SierraLeone"
+	case QLocale__Singapore: // 190
+		return "Singapore"
+	case QLocale__Slovakia: // 191
+		return "Slovakia"
+	case QLocale__Slovenia: // 192
+		return "Slovenia"
+	case QLocale__SolomonIslands: // 193
+		return "SolomonIslands"
+	case QLocale__Somalia: // 194
+		return "Somalia"
+	case QLocale__SouthAfrica: // 195
+		return "SouthAfrica"
+	case QLocale__SouthGeorgiaAndTheSouthSandwichIslands: // 196
+		return "SouthGeorgiaAndTheSouthSandwichIslands"
+	case QLocale__Spain: // 197
+		return "Spain"
+	case QLocale__SriLanka: // 198
+		return "SriLanka"
+	case QLocale__SaintHelena: // 199
+		return "SaintHelena"
+	case QLocale__SaintPierreAndMiquelon: // 200
+		return "SaintPierreAndMiquelon"
+	case QLocale__Sudan: // 201
+		return "Sudan"
+	case QLocale__Suriname: // 202
+		return "Suriname"
+	case QLocale__SvalbardAndJanMayenIslands: // 203
+		return "SvalbardAndJanMayenIslands"
+	case QLocale__Swaziland: // 204
+		return "Swaziland"
+	case QLocale__Sweden: // 205
+		return "Sweden"
+	case QLocale__Switzerland: // 206
+		return "Switzerland"
+	case QLocale__Syria: // 207
+		return "Syria,SyrianArabRepublic"
+	case QLocale__Taiwan: // 208
+		return "Taiwan"
+	case QLocale__Tajikistan: // 209
+		return "Tajikistan"
+	case QLocale__Tanzania: // 210
+		return "Tanzania"
+	case QLocale__Thailand: // 211
+		return "Thailand"
+	case QLocale__Togo: // 212
+		return "Togo"
+	case QLocale__TokelauCountry: // 213
+		return "TokelauCountry,Tokelau"
+	case QLocale__Tonga: // 214
+		return "Tonga"
+	case QLocale__TrinidadAndTobago: // 215
+		return "TrinidadAndTobago"
+	case QLocale__Tunisia: // 216
+		return "Tunisia"
+	case QLocale__Turkey: // 217
+		return "Turkey"
+	case QLocale__Turkmenistan: // 218
+		return "Turkmenistan"
+	case QLocale__TurksAndCaicosIslands: // 219
+		return "TurksAndCaicosIslands"
+	case QLocale__TuvaluCountry: // 220
+		return "TuvaluCountry,Tuvalu"
+	case QLocale__Uganda: // 221
+		return "Uganda"
+	case QLocale__Ukraine: // 222
+		return "Ukraine"
+	case QLocale__UnitedArabEmirates: // 223
+		return "UnitedArabEmirates"
+	case QLocale__UnitedKingdom: // 224
+		return "UnitedKingdom"
+	case QLocale__UnitedStates: // 225
+		return "UnitedStates"
+	case QLocale__UnitedStatesMinorOutlyingIslands: // 226
+		return "UnitedStatesMinorOutlyingIslands"
+	case QLocale__Uruguay: // 227
+		return "Uruguay"
+	case QLocale__Uzbekistan: // 228
+		return "Uzbekistan"
+	case QLocale__Vanuatu: // 229
+		return "Vanuatu"
+	case QLocale__VaticanCityState: // 230
+		return "VaticanCityState"
+	case QLocale__Venezuela: // 231
+		return "Venezuela"
+	case QLocale__Vietnam: // 232
+		return "Vietnam"
+	case QLocale__BritishVirginIslands: // 233
+		return "BritishVirginIslands"
+	case QLocale__UnitedStatesVirginIslands: // 234
+		return "UnitedStatesVirginIslands"
+	case QLocale__WallisAndFutunaIslands: // 235
+		return "WallisAndFutunaIslands"
+	case QLocale__WesternSahara: // 236
+		return "WesternSahara"
+	case QLocale__Yemen: // 237
+		return "Yemen"
+	case QLocale__CanaryIslands: // 238
+		return "CanaryIslands"
+	case QLocale__Zambia: // 239
+		return "Zambia"
+	case QLocale__Zimbabwe: // 240
+		return "Zimbabwe"
+	case QLocale__ClippertonIsland: // 241
+		return "ClippertonIsland"
+	case QLocale__Montenegro: // 242
+		return "Montenegro"
+	case QLocale__Serbia: // 243
+		return "Serbia"
+	case QLocale__SaintBarthelemy: // 244
+		return "SaintBarthelemy"
+	case QLocale__SaintMartin: // 245
+		return "SaintMartin"
+	case QLocale__LatinAmericaAndTheCaribbean: // 246
+		return "LatinAmericaAndTheCaribbean"
+	case QLocale__AscensionIsland: // 247
+		return "AscensionIsland"
+	case QLocale__AlandIslands: // 248
+		return "AlandIslands"
+	case QLocale__DiegoGarcia: // 249
+		return "DiegoGarcia"
+	case QLocale__CeutaAndMelilla: // 250
+		return "CeutaAndMelilla"
+	case QLocale__IsleOfMan: // 251
+		return "IsleOfMan"
+	case QLocale__Jersey: // 252
+		return "Jersey"
+	case QLocale__TristanDaCunha: // 253
+		return "TristanDaCunha"
+	case QLocale__SouthSudan: // 254
+		return "SouthSudan"
+	case QLocale__Bonaire: // 255
+		return "Bonaire"
+	case QLocale__SintMaarten: // 256
+		return "SintMaarten"
+	case QLocale__Kosovo: // 257
+		return "Kosovo"
+	case QLocale__EuropeanUnion: // 258
+		return "EuropeanUnion"
+	case QLocale__OutlyingOceania: // 259
+		return "OutlyingOceania,LastCountry"
+		// case QLocale__Tokelau: // 213
+		// return ""
+		// case QLocale__Tuvalu: // 220
+		// return ""
+		// case QLocale__DemocraticRepublicOfCongo: // 49
+		// return ""
+		// case QLocale__PeoplesRepublicOfCongo: // 50
+		// return ""
+		// case QLocale__DemocraticRepublicOfKorea: // 113
+		// return ""
+		// case QLocale__RepublicOfKorea: // 114
+		// return ""
+		// case QLocale__RussianFederation: // 178
+		// return ""
+		// case QLocale__SyrianArabRepublic: // 207
+		// return ""
+		// case QLocale__LastCountry: // 259
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLocale_CountryItemName(val int) string {
+	var nilthis *QLocale
+	return nilthis.CountryItemName(val)
+}
+
 /*
 This enum defines which units are used for measurement.
 
@@ -6424,6 +8035,25 @@ const QLocale__ImperialUKSystem QLocale__MeasurementSystem = 2
 //
 const QLocale__ImperialSystem QLocale__MeasurementSystem = 1
 
+func (this *QLocale) MeasurementSystemItemName(val int) string {
+	switch val {
+	case QLocale__MetricSystem: // 0
+		return "MetricSystem"
+	case QLocale__ImperialUSSystem: // 1
+		return "ImperialUSSystem,ImperialSystem"
+	case QLocale__ImperialUKSystem: // 2
+		return "ImperialUKSystem"
+		// case QLocale__ImperialSystem: // 1
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLocale_MeasurementSystemItemName(val int) string {
+	var nilthis *QLocale
+	return nilthis.MeasurementSystemItemName(val)
+}
+
 /*
 This enum describes the types of format that can be used when converting QDate and QTime objects to strings.
 
@@ -6439,6 +8069,23 @@ const QLocale__ShortFormat QLocale__FormatType = 1
 
 // A special version of day and month names for use when space is limited; for example, returning "J" as a month name. Note that the narrow format might contain the same text for different months and days or it can even be an empty string if the locale doesn't support narrow names, so you should avoid using it for date formatting. Also, for the system locale this format is the same as ShortFormat.
 const QLocale__NarrowFormat QLocale__FormatType = 2
+
+func (this *QLocale) FormatTypeItemName(val int) string {
+	switch val {
+	case QLocale__LongFormat: // 0
+		return "LongFormat"
+	case QLocale__ShortFormat: // 1
+		return "ShortFormat"
+	case QLocale__NarrowFormat: // 2
+		return "NarrowFormat"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLocale_FormatTypeItemName(val int) string {
+	var nilthis *QLocale
+	return nilthis.FormatTypeItemName(val)
+}
 
 /*
 
@@ -6467,6 +8114,31 @@ const QLocale__IncludeTrailingZeroesAfterDot QLocale__NumberOption = 16
 //
 const QLocale__RejectTrailingZeroesAfterDot QLocale__NumberOption = 32
 
+func (this *QLocale) NumberOptionItemName(val int) string {
+	switch val {
+	case QLocale__DefaultNumberOptions: // 0
+		return "DefaultNumberOptions"
+	case QLocale__OmitGroupSeparator: // 1
+		return "OmitGroupSeparator"
+	case QLocale__RejectGroupSeparator: // 2
+		return "RejectGroupSeparator"
+	case QLocale__OmitLeadingZeroInExponent: // 4
+		return "OmitLeadingZeroInExponent"
+	case QLocale__RejectLeadingZeroInExponent: // 8
+		return "RejectLeadingZeroInExponent"
+	case QLocale__IncludeTrailingZeroesAfterDot: // 16
+		return "IncludeTrailingZeroesAfterDot"
+	case QLocale__RejectTrailingZeroesAfterDot: // 32
+		return "RejectTrailingZeroesAfterDot"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLocale_NumberOptionItemName(val int) string {
+	var nilthis *QLocale
+	return nilthis.NumberOptionItemName(val)
+}
+
 /*
 This enum defines constants that can be given as precision to QString::number(), QByteArray::number(), and QLocale::toString() when converting floats or doubles, in order to express a variable number of digits as precision.
 
@@ -6481,6 +8153,19 @@ type QLocale__FloatingPointPrecisionOption = int
 
 //
 const QLocale__FloatingPointShortest QLocale__FloatingPointPrecisionOption = -128
+
+func (this *QLocale) FloatingPointPrecisionOptionItemName(val int) string {
+	switch val {
+	case QLocale__FloatingPointShortest: // -128
+		return "FloatingPointShortest"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLocale_FloatingPointPrecisionOptionItemName(val int) string {
+	var nilthis *QLocale
+	return nilthis.FloatingPointPrecisionOptionItemName(val)
+}
 
 /*
 Specifies the format of the currency symbol.
@@ -6500,6 +8185,23 @@ const QLocale__CurrencySymbol QLocale__CurrencySymbolFormat = 1
 
 // a user readable name of the currency.
 const QLocale__CurrencyDisplayName QLocale__CurrencySymbolFormat = 2
+
+func (this *QLocale) CurrencySymbolFormatItemName(val int) string {
+	switch val {
+	case QLocale__CurrencyIsoCode: // 0
+		return "CurrencyIsoCode"
+	case QLocale__CurrencySymbol: // 1
+		return "CurrencySymbol"
+	case QLocale__CurrencyDisplayName: // 2
+		return "CurrencyDisplayName"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLocale_CurrencySymbolFormatItemName(val int) string {
+	var nilthis *QLocale
+	return nilthis.CurrencySymbolFormatItemName(val)
+}
 
 /*
 
@@ -6522,6 +8224,27 @@ const QLocale__DataSizeTraditionalFormat QLocale__DataSizeFormat = 2
 //
 const QLocale__DataSizeSIFormat QLocale__DataSizeFormat = 3
 
+func (this *QLocale) DataSizeFormatItemName(val int) string {
+	switch val {
+	case QLocale__DataSizeBase1000: // 1
+		return "DataSizeBase1000"
+	case QLocale__DataSizeSIQuantifiers: // 2
+		return "DataSizeSIQuantifiers,DataSizeTraditionalFormat"
+	case QLocale__DataSizeIecFormat: // 0
+		return "DataSizeIecFormat"
+		// case QLocale__DataSizeTraditionalFormat: // 2
+		// return ""
+	case QLocale__DataSizeSIFormat: // 3
+		return "DataSizeSIFormat"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLocale_DataSizeFormatItemName(val int) string {
+	var nilthis *QLocale
+	return nilthis.DataSizeFormatItemName(val)
+}
+
 /*
 This enum defines a set of possible styles for locale specific quotation.
 
@@ -6539,6 +8262,21 @@ const QLocale__StandardQuotation QLocale__QuotationStyle = 0
 
 // If this option is set, the alternate quotation marks will be used to quote strings.
 const QLocale__AlternateQuotation QLocale__QuotationStyle = 1
+
+func (this *QLocale) QuotationStyleItemName(val int) string {
+	switch val {
+	case QLocale__StandardQuotation: // 0
+		return "StandardQuotation"
+	case QLocale__AlternateQuotation: // 1
+		return "AlternateQuotation"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QLocale_QuotationStyleItemName(val int) string {
+	var nilthis *QLocale
+	return nilthis.QuotationStyleItemName(val)
+}
 
 //  body block end
 

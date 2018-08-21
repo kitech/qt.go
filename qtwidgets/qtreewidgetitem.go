@@ -1372,6 +1372,21 @@ const QTreeWidgetItem__Type QTreeWidgetItem__ItemType = 0
 //
 const QTreeWidgetItem__UserType QTreeWidgetItem__ItemType = 1000
 
+func (this *QTreeWidgetItem) ItemTypeItemName(val int) string {
+	switch val {
+	case QTreeWidgetItem__Type: // 0
+		return "Type"
+	case QTreeWidgetItem__UserType: // 1000
+		return "UserType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTreeWidgetItem_ItemTypeItemName(val int) string {
+	var nilthis *QTreeWidgetItem
+	return nilthis.ItemTypeItemName(val)
+}
+
 /*
 
 
@@ -1386,6 +1401,23 @@ const QTreeWidgetItem__DontShowIndicator QTreeWidgetItem__ChildIndicatorPolicy =
 
 //
 const QTreeWidgetItem__DontShowIndicatorWhenChildless QTreeWidgetItem__ChildIndicatorPolicy = 2
+
+func (this *QTreeWidgetItem) ChildIndicatorPolicyItemName(val int) string {
+	switch val {
+	case QTreeWidgetItem__ShowIndicator: // 0
+		return "ShowIndicator"
+	case QTreeWidgetItem__DontShowIndicator: // 1
+		return "DontShowIndicator"
+	case QTreeWidgetItem__DontShowIndicatorWhenChildless: // 2
+		return "DontShowIndicatorWhenChildless"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTreeWidgetItem_ChildIndicatorPolicyItemName(val int) string {
+	var nilthis *QTreeWidgetItem
+	return nilthis.ChildIndicatorPolicyItemName(val)
+}
 
 //  body block end
 

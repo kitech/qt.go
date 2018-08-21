@@ -2030,6 +2030,57 @@ const QDir__NoDotAndDotDot QDir__Filter = 24576
 //
 const QDir__NoFilter QDir__Filter = -1
 
+func (this *QDir) FilterItemName(val int) string {
+	switch val {
+	case QDir__Dirs: // 1
+		return "Dirs"
+	case QDir__Files: // 2
+		return "Files"
+	case QDir__Drives: // 4
+		return "Drives"
+	case QDir__NoSymLinks: // 8
+		return "NoSymLinks"
+	case QDir__AllEntries: // 7
+		return "AllEntries"
+	case QDir__TypeMask: // 15
+		return "TypeMask"
+	case QDir__Readable: // 16
+		return "Readable"
+	case QDir__Writable: // 32
+		return "Writable"
+	case QDir__Executable: // 64
+		return "Executable"
+	case QDir__PermissionMask: // 112
+		return "PermissionMask"
+	case QDir__Modified: // 128
+		return "Modified"
+	case QDir__Hidden: // 256
+		return "Hidden"
+	case QDir__System: // 512
+		return "System"
+	case QDir__AccessMask: // 1008
+		return "AccessMask"
+	case QDir__AllDirs: // 1024
+		return "AllDirs"
+	case QDir__CaseSensitive: // 2048
+		return "CaseSensitive"
+	case QDir__NoDot: // 8192
+		return "NoDot"
+	case QDir__NoDotDot: // 16384
+		return "NoDotDot"
+	case QDir__NoDotAndDotDot: // 24576
+		return "NoDotAndDotDot"
+	case QDir__NoFilter: // -1
+		return "NoFilter"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QDir_FilterItemName(val int) string {
+	var nilthis *QDir
+	return nilthis.FilterItemName(val)
+}
+
 /*
 
 
@@ -2071,6 +2122,41 @@ const QDir__Type QDir__SortFlag = 128
 
 //
 const QDir__NoSort QDir__SortFlag = -1
+
+func (this *QDir) SortFlagItemName(val int) string {
+	switch val {
+	case QDir__Name: // 0
+		return "Name"
+	case QDir__Time: // 1
+		return "Time"
+	case QDir__Size: // 2
+		return "Size"
+	case QDir__Unsorted: // 3
+		return "Unsorted,SortByMask"
+		// case QDir__SortByMask: // 3
+		// return ""
+	case QDir__DirsFirst: // 4
+		return "DirsFirst"
+	case QDir__Reversed: // 8
+		return "Reversed"
+	case QDir__IgnoreCase: // 16
+		return "IgnoreCase"
+	case QDir__DirsLast: // 32
+		return "DirsLast"
+	case QDir__LocaleAware: // 64
+		return "LocaleAware"
+	case QDir__Type: // 128
+		return "Type"
+	case QDir__NoSort: // -1
+		return "NoSort"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QDir_SortFlagItemName(val int) string {
+	var nilthis *QDir
+	return nilthis.SortFlagItemName(val)
+}
 
 //  body block end
 

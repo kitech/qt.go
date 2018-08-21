@@ -1359,6 +1359,14 @@ const QIODevice__Text QIODevice__OpenModeFlag = 16
 //
 const QIODevice__Unbuffered QIODevice__OpenModeFlag = 32
 
+func (this *QIODevice) OpenModeFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QIODevice_OpenModeFlagItemName(val int) string {
+	var nilthis *QIODevice
+	return nilthis.OpenModeFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

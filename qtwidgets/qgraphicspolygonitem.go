@@ -572,6 +572,19 @@ type QGraphicsPolygonItem__ = int
 //
 const QGraphicsPolygonItem__Type QGraphicsPolygonItem__ = 5
 
+func (this *QGraphicsPolygonItem) ItemName(val int) string {
+	switch val {
+	case QGraphicsPolygonItem__Type: // 5
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsPolygonItem_ItemName(val int) string {
+	var nilthis *QGraphicsPolygonItem
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

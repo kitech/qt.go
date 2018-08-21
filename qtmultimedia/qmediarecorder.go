@@ -1170,6 +1170,14 @@ const QMediaRecorder__RecordingState QMediaRecorder__State = 1
 // The recorder is paused.
 const QMediaRecorder__PausedState QMediaRecorder__State = 2
 
+func (this *QMediaRecorder) StateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMediaRecorder_StateItemName(val int) string {
+	var nilthis *QMediaRecorder
+	return nilthis.StateItemName(val)
+}
+
 /*
 
  */
@@ -1199,6 +1207,14 @@ const QMediaRecorder__PausedStatus QMediaRecorder__Status = 6
 // Recording is stopped with media being finalized.
 const QMediaRecorder__FinalizingStatus QMediaRecorder__Status = 7
 
+func (this *QMediaRecorder) StatusItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMediaRecorder_StatusItemName(val int) string {
+	var nilthis *QMediaRecorder
+	return nilthis.StatusItemName(val)
+}
+
 /*
 
  */
@@ -1215,6 +1231,14 @@ const QMediaRecorder__FormatError QMediaRecorder__Error = 2
 
 // No space left on device.
 const QMediaRecorder__OutOfSpaceError QMediaRecorder__Error = 3
+
+func (this *QMediaRecorder) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMediaRecorder_ErrorItemName(val int) string {
+	var nilthis *QMediaRecorder
+	return nilthis.ErrorItemName(val)
+}
 
 //  body block end
 

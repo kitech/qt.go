@@ -591,6 +591,14 @@ const QFileDevice__PermissionsError QFileDevice__FileError = 13
 //
 const QFileDevice__CopyError QFileDevice__FileError = 14
 
+func (this *QFileDevice) FileErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFileDevice_FileErrorItemName(val int) string {
+	var nilthis *QFileDevice
+	return nilthis.FileErrorItemName(val)
+}
+
 /*
 This enum is used by the fileTime() and setFileTime() functions.
 
@@ -614,6 +622,14 @@ const QFileDevice__FileMetadataChangeTime QFileDevice__FileTime = 2
 
 // When the file was most recently modified.
 const QFileDevice__FileModificationTime QFileDevice__FileTime = 3
+
+func (this *QFileDevice) FileTimeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFileDevice_FileTimeItemName(val int) string {
+	var nilthis *QFileDevice
+	return nilthis.FileTimeItemName(val)
+}
 
 /*
 
@@ -657,6 +673,14 @@ const QFileDevice__WriteOther QFileDevice__Permission = 2
 //
 const QFileDevice__ExeOther QFileDevice__Permission = 1
 
+func (this *QFileDevice) PermissionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFileDevice_PermissionItemName(val int) string {
+	var nilthis *QFileDevice
+	return nilthis.PermissionItemName(val)
+}
+
 /*
 
 
@@ -668,6 +692,14 @@ const QFileDevice__AutoCloseHandle QFileDevice__FileHandleFlag = 1
 
 //
 const QFileDevice__DontCloseHandle QFileDevice__FileHandleFlag = 0
+
+func (this *QFileDevice) FileHandleFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFileDevice_FileHandleFlagItemName(val int) string {
+	var nilthis *QFileDevice
+	return nilthis.FileHandleFlagItemName(val)
+}
 
 /*
 This enum describes special options that may be used by the map() function.
@@ -684,6 +716,14 @@ const QFileDevice__NoOptions QFileDevice__MemoryMapFlags = 0
 
 //
 const QFileDevice__MapPrivateOption QFileDevice__MemoryMapFlags = 1
+
+func (this *QFileDevice) MemoryMapFlagsItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFileDevice_MemoryMapFlagsItemName(val int) string {
+	var nilthis *QFileDevice
+	return nilthis.MemoryMapFlagsItemName(val)
+}
 
 //  body block end
 

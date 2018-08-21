@@ -163,6 +163,23 @@ const QScrollEvent__ScrollUpdated QScrollEvent__ScrollState = 1
 //
 const QScrollEvent__ScrollFinished QScrollEvent__ScrollState = 2
 
+func (this *QScrollEvent) ScrollStateItemName(val int) string {
+	switch val {
+	case QScrollEvent__ScrollStarted: // 0
+		return "ScrollStarted"
+	case QScrollEvent__ScrollUpdated: // 1
+		return "ScrollUpdated"
+	case QScrollEvent__ScrollFinished: // 2
+		return "ScrollFinished"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QScrollEvent_ScrollStateItemName(val int) string {
+	var nilthis *QScrollEvent
+	return nilthis.ScrollStateItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

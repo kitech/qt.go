@@ -118,6 +118,19 @@ type QStyleOptionMenuItem__StyleOptionType = int
 //
 const QStyleOptionMenuItem__Type QStyleOptionMenuItem__StyleOptionType = 4
 
+func (this *QStyleOptionMenuItem) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionMenuItem__Type: // 4
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionMenuItem_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionMenuItem
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionMenuItem__StyleOptionVersion = int
 
 // 1
 const QStyleOptionMenuItem__Version QStyleOptionMenuItem__StyleOptionVersion = 1
+
+func (this *QStyleOptionMenuItem) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionMenuItem__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionMenuItem_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionMenuItem
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 /*
 
@@ -163,6 +189,33 @@ const QStyleOptionMenuItem__Margin QStyleOptionMenuItem__MenuItemType = 6
 //
 const QStyleOptionMenuItem__EmptyArea QStyleOptionMenuItem__MenuItemType = 7
 
+func (this *QStyleOptionMenuItem) MenuItemTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionMenuItem__Normal: // 0
+		return "Normal"
+	case QStyleOptionMenuItem__DefaultItem: // 1
+		return "DefaultItem"
+	case QStyleOptionMenuItem__Separator: // 2
+		return "Separator"
+	case QStyleOptionMenuItem__SubMenu: // 3
+		return "SubMenu"
+	case QStyleOptionMenuItem__Scroller: // 4
+		return "Scroller"
+	case QStyleOptionMenuItem__TearOff: // 5
+		return "TearOff"
+	case QStyleOptionMenuItem__Margin: // 6
+		return "Margin"
+	case QStyleOptionMenuItem__EmptyArea: // 7
+		return "EmptyArea"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionMenuItem_MenuItemTypeItemName(val int) string {
+	var nilthis *QStyleOptionMenuItem
+	return nilthis.MenuItemTypeItemName(val)
+}
+
 /*
 
 
@@ -177,6 +230,23 @@ const QStyleOptionMenuItem__Exclusive QStyleOptionMenuItem__CheckType = 1
 
 //
 const QStyleOptionMenuItem__NonExclusive QStyleOptionMenuItem__CheckType = 2
+
+func (this *QStyleOptionMenuItem) CheckTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionMenuItem__NotCheckable: // 0
+		return "NotCheckable"
+	case QStyleOptionMenuItem__Exclusive: // 1
+		return "Exclusive"
+	case QStyleOptionMenuItem__NonExclusive: // 2
+		return "NonExclusive"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionMenuItem_CheckTypeItemName(val int) string {
+	var nilthis *QStyleOptionMenuItem
+	return nilthis.CheckTypeItemName(val)
+}
 
 //  body block end
 

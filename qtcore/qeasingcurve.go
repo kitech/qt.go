@@ -858,6 +858,115 @@ const QEasingCurve__Custom QEasingCurve__Type = 47
 //
 const QEasingCurve__NCurveTypes QEasingCurve__Type = 48
 
+func (this *QEasingCurve) TypeItemName(val int) string {
+	switch val {
+	case QEasingCurve__Linear: // 0
+		return "Linear"
+	case QEasingCurve__InQuad: // 1
+		return "InQuad"
+	case QEasingCurve__OutQuad: // 2
+		return "OutQuad"
+	case QEasingCurve__InOutQuad: // 3
+		return "InOutQuad"
+	case QEasingCurve__OutInQuad: // 4
+		return "OutInQuad"
+	case QEasingCurve__InCubic: // 5
+		return "InCubic"
+	case QEasingCurve__OutCubic: // 6
+		return "OutCubic"
+	case QEasingCurve__InOutCubic: // 7
+		return "InOutCubic"
+	case QEasingCurve__OutInCubic: // 8
+		return "OutInCubic"
+	case QEasingCurve__InQuart: // 9
+		return "InQuart"
+	case QEasingCurve__OutQuart: // 10
+		return "OutQuart"
+	case QEasingCurve__InOutQuart: // 11
+		return "InOutQuart"
+	case QEasingCurve__OutInQuart: // 12
+		return "OutInQuart"
+	case QEasingCurve__InQuint: // 13
+		return "InQuint"
+	case QEasingCurve__OutQuint: // 14
+		return "OutQuint"
+	case QEasingCurve__InOutQuint: // 15
+		return "InOutQuint"
+	case QEasingCurve__OutInQuint: // 16
+		return "OutInQuint"
+	case QEasingCurve__InSine: // 17
+		return "InSine"
+	case QEasingCurve__OutSine: // 18
+		return "OutSine"
+	case QEasingCurve__InOutSine: // 19
+		return "InOutSine"
+	case QEasingCurve__OutInSine: // 20
+		return "OutInSine"
+	case QEasingCurve__InExpo: // 21
+		return "InExpo"
+	case QEasingCurve__OutExpo: // 22
+		return "OutExpo"
+	case QEasingCurve__InOutExpo: // 23
+		return "InOutExpo"
+	case QEasingCurve__OutInExpo: // 24
+		return "OutInExpo"
+	case QEasingCurve__InCirc: // 25
+		return "InCirc"
+	case QEasingCurve__OutCirc: // 26
+		return "OutCirc"
+	case QEasingCurve__InOutCirc: // 27
+		return "InOutCirc"
+	case QEasingCurve__OutInCirc: // 28
+		return "OutInCirc"
+	case QEasingCurve__InElastic: // 29
+		return "InElastic"
+	case QEasingCurve__OutElastic: // 30
+		return "OutElastic"
+	case QEasingCurve__InOutElastic: // 31
+		return "InOutElastic"
+	case QEasingCurve__OutInElastic: // 32
+		return "OutInElastic"
+	case QEasingCurve__InBack: // 33
+		return "InBack"
+	case QEasingCurve__OutBack: // 34
+		return "OutBack"
+	case QEasingCurve__InOutBack: // 35
+		return "InOutBack"
+	case QEasingCurve__OutInBack: // 36
+		return "OutInBack"
+	case QEasingCurve__InBounce: // 37
+		return "InBounce"
+	case QEasingCurve__OutBounce: // 38
+		return "OutBounce"
+	case QEasingCurve__InOutBounce: // 39
+		return "InOutBounce"
+	case QEasingCurve__OutInBounce: // 40
+		return "OutInBounce"
+	case QEasingCurve__InCurve: // 41
+		return "InCurve"
+	case QEasingCurve__OutCurve: // 42
+		return "OutCurve"
+	case QEasingCurve__SineCurve: // 43
+		return "SineCurve"
+	case QEasingCurve__CosineCurve: // 44
+		return "CosineCurve"
+	case QEasingCurve__BezierSpline: // 45
+		return "BezierSpline"
+	case QEasingCurve__TCBSpline: // 46
+		return "TCBSpline"
+	case QEasingCurve__Custom: // 47
+		return "Custom"
+	case QEasingCurve__NCurveTypes: // 48
+		return "NCurveTypes"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QEasingCurve_TypeItemName(val int) string {
+	var nilthis *QEasingCurve
+	return nilthis.TypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

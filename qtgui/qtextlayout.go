@@ -866,6 +866,21 @@ const QTextLayout__SkipCharacters QTextLayout__CursorMode = 0
 //
 const QTextLayout__SkipWords QTextLayout__CursorMode = 1
 
+func (this *QTextLayout) CursorModeItemName(val int) string {
+	switch val {
+	case QTextLayout__SkipCharacters: // 0
+		return "SkipCharacters"
+	case QTextLayout__SkipWords: // 1
+		return "SkipWords"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextLayout_CursorModeItemName(val int) string {
+	var nilthis *QTextLayout
+	return nilthis.CursorModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

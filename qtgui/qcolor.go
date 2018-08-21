@@ -2832,6 +2832,27 @@ const QColor__Cmyk QColor__Spec = 3
 //
 const QColor__Hsl QColor__Spec = 4
 
+func (this *QColor) SpecItemName(val int) string {
+	switch val {
+	case QColor__Invalid: // 0
+		return "Invalid"
+	case QColor__Rgb: // 1
+		return "Rgb"
+	case QColor__Hsv: // 2
+		return "Hsv"
+	case QColor__Cmyk: // 3
+		return "Cmyk"
+	case QColor__Hsl: // 4
+		return "Hsl"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QColor_SpecItemName(val int) string {
+	var nilthis *QColor
+	return nilthis.SpecItemName(val)
+}
+
 /*
 How to format the output of the name() function
 
@@ -2847,6 +2868,21 @@ const QColor__HexRgb QColor__NameFormat = 0
 
 // #AARRGGBB A "#" character followed by four two-digit hexadecimal numbers (i.e. #AARRGGBB).
 const QColor__HexArgb QColor__NameFormat = 1
+
+func (this *QColor) NameFormatItemName(val int) string {
+	switch val {
+	case QColor__HexRgb: // 0
+		return "HexRgb"
+	case QColor__HexArgb: // 1
+		return "HexArgb"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QColor_NameFormatItemName(val int) string {
+	var nilthis *QColor
+	return nilthis.NameFormatItemName(val)
+}
 
 //  body block end
 

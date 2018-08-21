@@ -488,6 +488,14 @@ const QGeoPositionInfoSource__UnknownSourceError QGeoPositionInfoSource__Error =
 // No error has occurred.
 const QGeoPositionInfoSource__NoError QGeoPositionInfoSource__Error = 3
 
+func (this *QGeoPositionInfoSource) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGeoPositionInfoSource_ErrorItemName(val int) string {
+	var nilthis *QGeoPositionInfoSource
+	return nilthis.ErrorItemName(val)
+}
+
 /*
 
 
@@ -505,6 +513,14 @@ const QGeoPositionInfoSource__NonSatellitePositioningMethods QGeoPositionInfoSou
 
 //
 const QGeoPositionInfoSource__AllPositioningMethods QGeoPositionInfoSource__PositioningMethod = -1
+
+func (this *QGeoPositionInfoSource) PositioningMethodItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGeoPositionInfoSource_PositioningMethodItemName(val int) string {
+	var nilthis *QGeoPositionInfoSource
+	return nilthis.PositioningMethodItemName(val)
+}
 
 //  body block end
 

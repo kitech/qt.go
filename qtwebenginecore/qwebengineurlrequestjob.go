@@ -205,6 +205,14 @@ const QWebEngineUrlRequestJob__RequestDenied QWebEngineUrlRequestJob__Error = 4
 //
 const QWebEngineUrlRequestJob__RequestFailed QWebEngineUrlRequestJob__Error = 5
 
+func (this *QWebEngineUrlRequestJob) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEngineUrlRequestJob_ErrorItemName(val int) string {
+	var nilthis *QWebEngineUrlRequestJob
+	return nilthis.ErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

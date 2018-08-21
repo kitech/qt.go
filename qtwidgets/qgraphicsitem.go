@@ -5371,6 +5371,57 @@ const QGraphicsItem__ItemStopsFocusHandling QGraphicsItem__GraphicsItemFlag = 26
 //
 const QGraphicsItem__ItemContainsChildrenInShape QGraphicsItem__GraphicsItemFlag = 524288
 
+func (this *QGraphicsItem) GraphicsItemFlagItemName(val int) string {
+	switch val {
+	case QGraphicsItem__ItemIsMovable: // 1
+		return "ItemIsMovable"
+	case QGraphicsItem__ItemIsSelectable: // 2
+		return "ItemIsSelectable"
+	case QGraphicsItem__ItemIsFocusable: // 4
+		return "ItemIsFocusable"
+	case QGraphicsItem__ItemClipsToShape: // 8
+		return "ItemClipsToShape"
+	case QGraphicsItem__ItemClipsChildrenToShape: // 16
+		return "ItemClipsChildrenToShape"
+	case QGraphicsItem__ItemIgnoresTransformations: // 32
+		return "ItemIgnoresTransformations"
+	case QGraphicsItem__ItemIgnoresParentOpacity: // 64
+		return "ItemIgnoresParentOpacity"
+	case QGraphicsItem__ItemDoesntPropagateOpacityToChildren: // 128
+		return "ItemDoesntPropagateOpacityToChildren"
+	case QGraphicsItem__ItemStacksBehindParent: // 256
+		return "ItemStacksBehindParent"
+	case QGraphicsItem__ItemUsesExtendedStyleOption: // 512
+		return "ItemUsesExtendedStyleOption"
+	case QGraphicsItem__ItemHasNoContents: // 1024
+		return "ItemHasNoContents"
+	case QGraphicsItem__ItemSendsGeometryChanges: // 2048
+		return "ItemSendsGeometryChanges"
+	case QGraphicsItem__ItemAcceptsInputMethod: // 4096
+		return "ItemAcceptsInputMethod"
+	case QGraphicsItem__ItemNegativeZStacksBehindParent: // 8192
+		return "ItemNegativeZStacksBehindParent"
+	case QGraphicsItem__ItemIsPanel: // 16384
+		return "ItemIsPanel"
+	case QGraphicsItem__ItemIsFocusScope: // 32768
+		return "ItemIsFocusScope"
+	case QGraphicsItem__ItemSendsScenePositionChanges: // 65536
+		return "ItemSendsScenePositionChanges"
+	case QGraphicsItem__ItemStopsClickFocusPropagation: // 131072
+		return "ItemStopsClickFocusPropagation"
+	case QGraphicsItem__ItemStopsFocusHandling: // 262144
+		return "ItemStopsFocusHandling"
+	case QGraphicsItem__ItemContainsChildrenInShape: // 524288
+		return "ItemContainsChildrenInShape"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsItem_GraphicsItemFlagItemName(val int) string {
+	var nilthis *QGraphicsItem
+	return nilthis.GraphicsItemFlagItemName(val)
+}
+
 /*
 This enum describes the state changes that are notified by QGraphicsItem::itemChange(). The notifications are sent as the state changes, and in some cases, adjustments can be made (see the documentation for each change for details).
 
@@ -5482,6 +5533,85 @@ const QGraphicsItem__ItemTransformOriginPointChange QGraphicsItem__GraphicsItemC
 //
 const QGraphicsItem__ItemTransformOriginPointHasChanged QGraphicsItem__GraphicsItemChange = 33
 
+func (this *QGraphicsItem) GraphicsItemChangeItemName(val int) string {
+	switch val {
+	case QGraphicsItem__ItemPositionChange: // 0
+		return "ItemPositionChange"
+	case QGraphicsItem__ItemMatrixChange: // 1
+		return "ItemMatrixChange"
+	case QGraphicsItem__ItemVisibleChange: // 2
+		return "ItemVisibleChange"
+	case QGraphicsItem__ItemEnabledChange: // 3
+		return "ItemEnabledChange"
+	case QGraphicsItem__ItemSelectedChange: // 4
+		return "ItemSelectedChange"
+	case QGraphicsItem__ItemParentChange: // 5
+		return "ItemParentChange"
+	case QGraphicsItem__ItemChildAddedChange: // 6
+		return "ItemChildAddedChange"
+	case QGraphicsItem__ItemChildRemovedChange: // 7
+		return "ItemChildRemovedChange"
+	case QGraphicsItem__ItemTransformChange: // 8
+		return "ItemTransformChange"
+	case QGraphicsItem__ItemPositionHasChanged: // 9
+		return "ItemPositionHasChanged"
+	case QGraphicsItem__ItemTransformHasChanged: // 10
+		return "ItemTransformHasChanged"
+	case QGraphicsItem__ItemSceneChange: // 11
+		return "ItemSceneChange"
+	case QGraphicsItem__ItemVisibleHasChanged: // 12
+		return "ItemVisibleHasChanged"
+	case QGraphicsItem__ItemEnabledHasChanged: // 13
+		return "ItemEnabledHasChanged"
+	case QGraphicsItem__ItemSelectedHasChanged: // 14
+		return "ItemSelectedHasChanged"
+	case QGraphicsItem__ItemParentHasChanged: // 15
+		return "ItemParentHasChanged"
+	case QGraphicsItem__ItemSceneHasChanged: // 16
+		return "ItemSceneHasChanged"
+	case QGraphicsItem__ItemCursorChange: // 17
+		return "ItemCursorChange"
+	case QGraphicsItem__ItemCursorHasChanged: // 18
+		return "ItemCursorHasChanged"
+	case QGraphicsItem__ItemToolTipChange: // 19
+		return "ItemToolTipChange"
+	case QGraphicsItem__ItemToolTipHasChanged: // 20
+		return "ItemToolTipHasChanged"
+	case QGraphicsItem__ItemFlagsChange: // 21
+		return "ItemFlagsChange"
+	case QGraphicsItem__ItemFlagsHaveChanged: // 22
+		return "ItemFlagsHaveChanged"
+	case QGraphicsItem__ItemZValueChange: // 23
+		return "ItemZValueChange"
+	case QGraphicsItem__ItemZValueHasChanged: // 24
+		return "ItemZValueHasChanged"
+	case QGraphicsItem__ItemOpacityChange: // 25
+		return "ItemOpacityChange"
+	case QGraphicsItem__ItemOpacityHasChanged: // 26
+		return "ItemOpacityHasChanged"
+	case QGraphicsItem__ItemScenePositionHasChanged: // 27
+		return "ItemScenePositionHasChanged"
+	case QGraphicsItem__ItemRotationChange: // 28
+		return "ItemRotationChange"
+	case QGraphicsItem__ItemRotationHasChanged: // 29
+		return "ItemRotationHasChanged"
+	case QGraphicsItem__ItemScaleChange: // 30
+		return "ItemScaleChange"
+	case QGraphicsItem__ItemScaleHasChanged: // 31
+		return "ItemScaleHasChanged"
+	case QGraphicsItem__ItemTransformOriginPointChange: // 32
+		return "ItemTransformOriginPointChange"
+	case QGraphicsItem__ItemTransformOriginPointHasChanged: // 33
+		return "ItemTransformOriginPointHasChanged"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsItem_GraphicsItemChangeItemName(val int) string {
+	var nilthis *QGraphicsItem
+	return nilthis.GraphicsItemChangeItemName(val)
+}
+
 /*
 This enum describes QGraphicsItem's cache modes. Caching is used to speed up rendering by allocating and rendering to an off-screen pixel buffer, which can be reused when the item requires redrawing. For some paint devices, the cache is stored directly in graphics memory, which makes rendering very quick.
 
@@ -5502,6 +5632,23 @@ const QGraphicsItem__ItemCoordinateCache QGraphicsItem__CacheMode = 1
 
 // Caching is enabled at the paint device level, in device coordinates. This mode is for items that can move, but are not rotated, scaled or sheared. If the item is transformed directly or indirectly, the cache will be regenerated automatically. Unlike ItemCoordinateCacheMode, DeviceCoordinateCache always renders at maximum quality.
 const QGraphicsItem__DeviceCoordinateCache QGraphicsItem__CacheMode = 2
+
+func (this *QGraphicsItem) CacheModeItemName(val int) string {
+	switch val {
+	case QGraphicsItem__NoCache: // 0
+		return "NoCache"
+	case QGraphicsItem__ItemCoordinateCache: // 1
+		return "ItemCoordinateCache"
+	case QGraphicsItem__DeviceCoordinateCache: // 2
+		return "DeviceCoordinateCache"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsItem_CacheModeItemName(val int) string {
+	var nilthis *QGraphicsItem
+	return nilthis.CacheModeItemName(val)
+}
 
 /*
 This enum specifies the behavior of a modal panel. A modal panel is one that blocks input to other panels. Note that items that are children of a modal panel are not blocked.
@@ -5526,6 +5673,23 @@ const QGraphicsItem__PanelModal QGraphicsItem__PanelModality = 1
 // The window is modal to the entire scene and blocks input to all panels.
 const QGraphicsItem__SceneModal QGraphicsItem__PanelModality = 2
 
+func (this *QGraphicsItem) PanelModalityItemName(val int) string {
+	switch val {
+	case QGraphicsItem__NonModal: // 0
+		return "NonModal"
+	case QGraphicsItem__PanelModal: // 1
+		return "PanelModal"
+	case QGraphicsItem__SceneModal: // 2
+		return "SceneModal"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsItem_PanelModalityItemName(val int) string {
+	var nilthis *QGraphicsItem
+	return nilthis.PanelModalityItemName(val)
+}
+
 /*
 
 
@@ -5538,6 +5702,21 @@ const QGraphicsItem__Type QGraphicsItem__ = 1
 //
 const QGraphicsItem__UserType QGraphicsItem__ = 65536
 
+func (this *QGraphicsItem) ItemName(val int) string {
+	switch val {
+	case QGraphicsItem__Type: // 1
+		return "Type"
+	case QGraphicsItem__UserType: // 65536
+		return "UserType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsItem_ItemName(val int) string {
+	var nilthis *QGraphicsItem
+	return nilthis.ItemName(val)
+}
+
 /*
 
 
@@ -5546,6 +5725,19 @@ type QGraphicsItem__Extension = int
 
 //
 const QGraphicsItem__UserExtension QGraphicsItem__Extension = -2147483648
+
+func (this *QGraphicsItem) ExtensionItemName(val int) string {
+	switch val {
+	case QGraphicsItem__UserExtension: // -2147483648
+		return "UserExtension"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsItem_ExtensionItemName(val int) string {
+	var nilthis *QGraphicsItem
+	return nilthis.ExtensionItemName(val)
+}
 
 //  body block end
 

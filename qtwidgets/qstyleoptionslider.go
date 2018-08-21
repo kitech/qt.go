@@ -118,6 +118,19 @@ type QStyleOptionSlider__StyleOptionType = int
 //
 const QStyleOptionSlider__Type QStyleOptionSlider__StyleOptionType = 983041
 
+func (this *QStyleOptionSlider) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionSlider__Type: // 983041
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionSlider_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionSlider
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionSlider__StyleOptionVersion = int
 
 // 1
 const QStyleOptionSlider__Version QStyleOptionSlider__StyleOptionVersion = 1
+
+func (this *QStyleOptionSlider) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionSlider__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionSlider_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionSlider
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

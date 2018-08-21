@@ -543,6 +543,19 @@ type QWheelEvent__ = int
 //
 const QWheelEvent__DefaultDeltasPerStep QWheelEvent__ = 120
 
+func (this *QWheelEvent) ItemName(val int) string {
+	switch val {
+	case QWheelEvent__DefaultDeltasPerStep: // 120
+		return "DefaultDeltasPerStep"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWheelEvent_ItemName(val int) string {
+	var nilthis *QWheelEvent
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

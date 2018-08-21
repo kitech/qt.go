@@ -363,6 +363,29 @@ const QGeoPositionInfo__HorizontalAccuracy QGeoPositionInfo__Attribute = 4
 // The accuracy of the provided altitude value, in meters.
 const QGeoPositionInfo__VerticalAccuracy QGeoPositionInfo__Attribute = 5
 
+func (this *QGeoPositionInfo) AttributeItemName(val int) string {
+	switch val {
+	case QGeoPositionInfo__Direction: // 0
+		return "Direction"
+	case QGeoPositionInfo__GroundSpeed: // 1
+		return "GroundSpeed"
+	case QGeoPositionInfo__VerticalSpeed: // 2
+		return "VerticalSpeed"
+	case QGeoPositionInfo__MagneticVariation: // 3
+		return "MagneticVariation"
+	case QGeoPositionInfo__HorizontalAccuracy: // 4
+		return "HorizontalAccuracy"
+	case QGeoPositionInfo__VerticalAccuracy: // 5
+		return "VerticalAccuracy"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGeoPositionInfo_AttributeItemName(val int) string {
+	var nilthis *QGeoPositionInfo
+	return nilthis.AttributeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

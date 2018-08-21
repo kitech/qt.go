@@ -305,6 +305,31 @@ const QOperatingSystemVersion__WatchOS QOperatingSystemVersion__OSType = 5
 // The Google Android operating system.
 const QOperatingSystemVersion__Android QOperatingSystemVersion__OSType = 6
 
+func (this *QOperatingSystemVersion) OSTypeItemName(val int) string {
+	switch val {
+	case QOperatingSystemVersion__Unknown: // 0
+		return "Unknown"
+	case QOperatingSystemVersion__Windows: // 1
+		return "Windows"
+	case QOperatingSystemVersion__MacOS: // 2
+		return "MacOS"
+	case QOperatingSystemVersion__IOS: // 3
+		return "IOS"
+	case QOperatingSystemVersion__TvOS: // 4
+		return "TvOS"
+	case QOperatingSystemVersion__WatchOS: // 5
+		return "WatchOS"
+	case QOperatingSystemVersion__Android: // 6
+		return "Android"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QOperatingSystemVersion_OSTypeItemName(val int) string {
+	var nilthis *QOperatingSystemVersion
+	return nilthis.OSTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

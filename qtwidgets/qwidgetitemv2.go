@@ -196,6 +196,21 @@ const QWidgetItemV2__Dirty QWidgetItemV2__ = -123
 //
 const QWidgetItemV2__HfwCacheMaxSize QWidgetItemV2__ = 3
 
+func (this *QWidgetItemV2) ItemName(val int) string {
+	switch val {
+	case QWidgetItemV2__Dirty: // -123
+		return "Dirty"
+	case QWidgetItemV2__HfwCacheMaxSize: // 3
+		return "HfwCacheMaxSize"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWidgetItemV2_ItemName(val int) string {
+	var nilthis *QWidgetItemV2
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

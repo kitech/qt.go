@@ -604,6 +604,23 @@ const QGraphicsPixmapItem__BoundingRectShape QGraphicsPixmapItem__ShapeMode = 1
 //
 const QGraphicsPixmapItem__HeuristicMaskShape QGraphicsPixmapItem__ShapeMode = 2
 
+func (this *QGraphicsPixmapItem) ShapeModeItemName(val int) string {
+	switch val {
+	case QGraphicsPixmapItem__MaskShape: // 0
+		return "MaskShape"
+	case QGraphicsPixmapItem__BoundingRectShape: // 1
+		return "BoundingRectShape"
+	case QGraphicsPixmapItem__HeuristicMaskShape: // 2
+		return "HeuristicMaskShape"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsPixmapItem_ShapeModeItemName(val int) string {
+	var nilthis *QGraphicsPixmapItem
+	return nilthis.ShapeModeItemName(val)
+}
+
 /*
 
 
@@ -612,6 +629,19 @@ type QGraphicsPixmapItem__ = int
 
 //
 const QGraphicsPixmapItem__Type QGraphicsPixmapItem__ = 7
+
+func (this *QGraphicsPixmapItem) ItemName(val int) string {
+	switch val {
+	case QGraphicsPixmapItem__Type: // 7
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsPixmapItem_ItemName(val int) string {
+	var nilthis *QGraphicsPixmapItem
+	return nilthis.ItemName(val)
+}
 
 //  body block end
 

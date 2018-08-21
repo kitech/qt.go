@@ -138,6 +138,47 @@ const QJsonParseError__DocumentTooLarge QJsonParseError__ParseError = 13
 //
 const QJsonParseError__GarbageAtEnd QJsonParseError__ParseError = 14
 
+func (this *QJsonParseError) ParseErrorItemName(val int) string {
+	switch val {
+	case QJsonParseError__NoError: // 0
+		return "NoError"
+	case QJsonParseError__UnterminatedObject: // 1
+		return "UnterminatedObject"
+	case QJsonParseError__MissingNameSeparator: // 2
+		return "MissingNameSeparator"
+	case QJsonParseError__UnterminatedArray: // 3
+		return "UnterminatedArray"
+	case QJsonParseError__MissingValueSeparator: // 4
+		return "MissingValueSeparator"
+	case QJsonParseError__IllegalValue: // 5
+		return "IllegalValue"
+	case QJsonParseError__TerminationByNumber: // 6
+		return "TerminationByNumber"
+	case QJsonParseError__IllegalNumber: // 7
+		return "IllegalNumber"
+	case QJsonParseError__IllegalEscapeSequence: // 8
+		return "IllegalEscapeSequence"
+	case QJsonParseError__IllegalUTF8String: // 9
+		return "IllegalUTF8String"
+	case QJsonParseError__UnterminatedString: // 10
+		return "UnterminatedString"
+	case QJsonParseError__MissingObject: // 11
+		return "MissingObject"
+	case QJsonParseError__DeepNesting: // 12
+		return "DeepNesting"
+	case QJsonParseError__DocumentTooLarge: // 13
+		return "DocumentTooLarge"
+	case QJsonParseError__GarbageAtEnd: // 14
+		return "GarbageAtEnd"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QJsonParseError_ParseErrorItemName(val int) string {
+	var nilthis *QJsonParseError
+	return nilthis.ParseErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

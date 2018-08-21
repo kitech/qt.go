@@ -1666,6 +1666,23 @@ const QUrl__StrictMode QUrl__ParsingMode = 1
 // QUrl will interpret the URL component in the fully-decoded form, where percent characters stand for themselves, not as the beginning of a percent-encoded sequence. This mode is only valid for the setters setting components of a URL; it is not permitted in the QUrl constructor, in fromEncoded() or in setUrl(). For more information on this mode, see the documentation for QUrl::FullyDecoded.
 const QUrl__DecodedMode QUrl__ParsingMode = 2
 
+func (this *QUrl) ParsingModeItemName(val int) string {
+	switch val {
+	case QUrl__TolerantMode: // 0
+		return "TolerantMode"
+	case QUrl__StrictMode: // 1
+		return "StrictMode"
+	case QUrl__DecodedMode: // 2
+		return "DecodedMode"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QUrl_ParsingModeItemName(val int) string {
+	var nilthis *QUrl
+	return nilthis.ParsingModeItemName(val)
+}
+
 /*
 
 
@@ -1711,6 +1728,43 @@ const QUrl__RemoveFilename QUrl__UrlFormattingOption = 2048
 //
 const QUrl__NormalizePathSegments QUrl__UrlFormattingOption = 4096
 
+func (this *QUrl) UrlFormattingOptionItemName(val int) string {
+	switch val {
+	case QUrl__None: // 0
+		return "None"
+	case QUrl__RemoveScheme: // 1
+		return "RemoveScheme"
+	case QUrl__RemovePassword: // 2
+		return "RemovePassword"
+	case QUrl__RemoveUserInfo: // 6
+		return "RemoveUserInfo"
+	case QUrl__RemovePort: // 8
+		return "RemovePort"
+	case QUrl__RemoveAuthority: // 30
+		return "RemoveAuthority"
+	case QUrl__RemovePath: // 32
+		return "RemovePath"
+	case QUrl__RemoveQuery: // 64
+		return "RemoveQuery"
+	case QUrl__RemoveFragment: // 128
+		return "RemoveFragment"
+	case QUrl__PreferLocalFile: // 512
+		return "PreferLocalFile"
+	case QUrl__StripTrailingSlash: // 1024
+		return "StripTrailingSlash"
+	case QUrl__RemoveFilename: // 2048
+		return "RemoveFilename"
+	case QUrl__NormalizePathSegments: // 4096
+		return "NormalizePathSegments"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QUrl_UrlFormattingOptionItemName(val int) string {
+	var nilthis *QUrl
+	return nilthis.UrlFormattingOptionItemName(val)
+}
+
 /*
 
 
@@ -1741,6 +1795,33 @@ const QUrl__FullyEncoded QUrl__ComponentFormattingOption = 32505856
 //
 const QUrl__FullyDecoded QUrl__ComponentFormattingOption = 133169152
 
+func (this *QUrl) ComponentFormattingOptionItemName(val int) string {
+	switch val {
+	case QUrl__PrettyDecoded: // 0
+		return "PrettyDecoded"
+	case QUrl__EncodeSpaces: // 1048576
+		return "EncodeSpaces"
+	case QUrl__EncodeUnicode: // 2097152
+		return "EncodeUnicode"
+	case QUrl__EncodeDelimiters: // 12582912
+		return "EncodeDelimiters"
+	case QUrl__EncodeReserved: // 16777216
+		return "EncodeReserved"
+	case QUrl__DecodeReserved: // 33554432
+		return "DecodeReserved"
+	case QUrl__FullyEncoded: // 32505856
+		return "FullyEncoded"
+	case QUrl__FullyDecoded: // 133169152
+		return "FullyDecoded"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QUrl_ComponentFormattingOptionItemName(val int) string {
+	var nilthis *QUrl
+	return nilthis.ComponentFormattingOptionItemName(val)
+}
+
 /*
 
 
@@ -1752,6 +1833,21 @@ const QUrl__DefaultResolution QUrl__UserInputResolutionOption = 0
 
 //
 const QUrl__AssumeLocalFile QUrl__UserInputResolutionOption = 1
+
+func (this *QUrl) UserInputResolutionOptionItemName(val int) string {
+	switch val {
+	case QUrl__DefaultResolution: // 0
+		return "DefaultResolution"
+	case QUrl__AssumeLocalFile: // 1
+		return "AssumeLocalFile"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QUrl_UserInputResolutionOptionItemName(val int) string {
+	var nilthis *QUrl
+	return nilthis.UserInputResolutionOptionItemName(val)
+}
 
 //  body block end
 

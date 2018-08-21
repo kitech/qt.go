@@ -1458,6 +1458,21 @@ const QStandardItem__Type QStandardItem__ItemType = 0
 //
 const QStandardItem__UserType QStandardItem__ItemType = 1000
 
+func (this *QStandardItem) ItemTypeItemName(val int) string {
+	switch val {
+	case QStandardItem__Type: // 0
+		return "Type"
+	case QStandardItem__UserType: // 1000
+		return "UserType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStandardItem_ItemTypeItemName(val int) string {
+	var nilthis *QStandardItem
+	return nilthis.ItemTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

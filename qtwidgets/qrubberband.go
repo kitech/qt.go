@@ -421,6 +421,14 @@ const QRubberBand__Line QRubberBand__Shape = 0
 // A QRubberBand can represent a rectangle. Some styles will interpret this as a filled (often semi-transparent) rectangle, or a rectangular outline.
 const QRubberBand__Rectangle QRubberBand__Shape = 1
 
+func (this *QRubberBand) ShapeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QRubberBand_ShapeItemName(val int) string {
+	var nilthis *QRubberBand
+	return nilthis.ShapeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

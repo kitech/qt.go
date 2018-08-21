@@ -270,6 +270,35 @@ const QTextListFormat__ListUpperRoman QTextListFormat__Style = -8
 //
 const QTextListFormat__ListStyleUndefined QTextListFormat__Style = 0
 
+func (this *QTextListFormat) StyleItemName(val int) string {
+	switch val {
+	case QTextListFormat__ListDisc: // -1
+		return "ListDisc"
+	case QTextListFormat__ListCircle: // -2
+		return "ListCircle"
+	case QTextListFormat__ListSquare: // -3
+		return "ListSquare"
+	case QTextListFormat__ListDecimal: // -4
+		return "ListDecimal"
+	case QTextListFormat__ListLowerAlpha: // -5
+		return "ListLowerAlpha"
+	case QTextListFormat__ListUpperAlpha: // -6
+		return "ListUpperAlpha"
+	case QTextListFormat__ListLowerRoman: // -7
+		return "ListLowerRoman"
+	case QTextListFormat__ListUpperRoman: // -8
+		return "ListUpperRoman"
+	case QTextListFormat__ListStyleUndefined: // 0
+		return "ListStyleUndefined"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextListFormat_StyleItemName(val int) string {
+	var nilthis *QTextListFormat
+	return nilthis.StyleItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

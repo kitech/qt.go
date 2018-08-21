@@ -1638,6 +1638,23 @@ const QTextStream__FixedNotation QTextStream__RealNumberNotation = 1
 // Scientific notation (printf()'s %e flag).
 const QTextStream__ScientificNotation QTextStream__RealNumberNotation = 2
 
+func (this *QTextStream) RealNumberNotationItemName(val int) string {
+	switch val {
+	case QTextStream__SmartNotation: // 0
+		return "SmartNotation"
+	case QTextStream__FixedNotation: // 1
+		return "FixedNotation"
+	case QTextStream__ScientificNotation: // 2
+		return "ScientificNotation"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextStream_RealNumberNotationItemName(val int) string {
+	var nilthis *QTextStream
+	return nilthis.RealNumberNotationItemName(val)
+}
+
 /*
 This enum specifies how to align text in fields when the field is wider than the text that occupies it.
 
@@ -1659,6 +1676,25 @@ const QTextStream__AlignCenter QTextStream__FieldAlignment = 2
 
 // Same as AlignRight, except that the sign of a number is flush left.
 const QTextStream__AlignAccountingStyle QTextStream__FieldAlignment = 3
+
+func (this *QTextStream) FieldAlignmentItemName(val int) string {
+	switch val {
+	case QTextStream__AlignLeft: // 0
+		return "AlignLeft"
+	case QTextStream__AlignRight: // 1
+		return "AlignRight"
+	case QTextStream__AlignCenter: // 2
+		return "AlignCenter"
+	case QTextStream__AlignAccountingStyle: // 3
+		return "AlignAccountingStyle"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextStream_FieldAlignmentItemName(val int) string {
+	var nilthis *QTextStream
+	return nilthis.FieldAlignmentItemName(val)
+}
 
 /*
 This enum describes the current status of the text stream.
@@ -1682,6 +1718,25 @@ const QTextStream__ReadCorruptData QTextStream__Status = 2
 // The text stream cannot write to the underlying device.
 const QTextStream__WriteFailed QTextStream__Status = 3
 
+func (this *QTextStream) StatusItemName(val int) string {
+	switch val {
+	case QTextStream__Ok: // 0
+		return "Ok"
+	case QTextStream__ReadPastEnd: // 1
+		return "ReadPastEnd"
+	case QTextStream__ReadCorruptData: // 2
+		return "ReadCorruptData"
+	case QTextStream__WriteFailed: // 3
+		return "WriteFailed"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextStream_StatusItemName(val int) string {
+	var nilthis *QTextStream
+	return nilthis.StatusItemName(val)
+}
+
 /*
 
 
@@ -1702,6 +1757,27 @@ const QTextStream__UppercaseBase QTextStream__NumberFlag = 8
 
 //
 const QTextStream__UppercaseDigits QTextStream__NumberFlag = 16
+
+func (this *QTextStream) NumberFlagItemName(val int) string {
+	switch val {
+	case QTextStream__ShowBase: // 1
+		return "ShowBase"
+	case QTextStream__ForcePoint: // 2
+		return "ForcePoint"
+	case QTextStream__ForceSign: // 4
+		return "ForceSign"
+	case QTextStream__UppercaseBase: // 8
+		return "UppercaseBase"
+	case QTextStream__UppercaseDigits: // 16
+		return "UppercaseDigits"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextStream_NumberFlagItemName(val int) string {
+	var nilthis *QTextStream
+	return nilthis.NumberFlagItemName(val)
+}
 
 //  body block end
 

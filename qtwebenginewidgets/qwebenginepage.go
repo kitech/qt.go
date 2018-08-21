@@ -1665,6 +1665,14 @@ const QWebEnginePage__InsertUnorderedList QWebEnginePage__WebAction = 44
 //
 const QWebEnginePage__WebActionCount QWebEnginePage__WebAction = 45
 
+func (this *QWebEnginePage) WebActionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEnginePage_WebActionItemName(val int) string {
+	var nilthis *QWebEnginePage
+	return nilthis.WebActionItemName(val)
+}
+
 /*
 
 
@@ -1676,6 +1684,14 @@ const QWebEnginePage__FindBackward QWebEnginePage__FindFlag = 1
 
 //
 const QWebEnginePage__FindCaseSensitively QWebEnginePage__FindFlag = 2
+
+func (this *QWebEnginePage) FindFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEnginePage_FindFlagItemName(val int) string {
+	var nilthis *QWebEnginePage
+	return nilthis.FindFlagItemName(val)
+}
 
 /*
 
@@ -1695,6 +1711,14 @@ const QWebEnginePage__WebDialog QWebEnginePage__WebWindowType = 2
 //
 const QWebEnginePage__WebBrowserBackgroundTab QWebEnginePage__WebWindowType = 3
 
+func (this *QWebEnginePage) WebWindowTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEnginePage_WebWindowTypeItemName(val int) string {
+	var nilthis *QWebEnginePage
+	return nilthis.WebWindowTypeItemName(val)
+}
+
 /*
 
 
@@ -1709,6 +1733,14 @@ const QWebEnginePage__PermissionGrantedByUser QWebEnginePage__PermissionPolicy =
 
 //
 const QWebEnginePage__PermissionDeniedByUser QWebEnginePage__PermissionPolicy = 2
+
+func (this *QWebEnginePage) PermissionPolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEnginePage_PermissionPolicyItemName(val int) string {
+	var nilthis *QWebEnginePage
+	return nilthis.PermissionPolicyItemName(val)
+}
 
 /*
 
@@ -1733,6 +1765,14 @@ const QWebEnginePage__NavigationTypeReload QWebEnginePage__NavigationType = 4
 
 //
 const QWebEnginePage__NavigationTypeOther QWebEnginePage__NavigationType = 5
+
+func (this *QWebEnginePage) NavigationTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEnginePage_NavigationTypeItemName(val int) string {
+	var nilthis *QWebEnginePage
+	return nilthis.NavigationTypeItemName(val)
+}
 
 /*
 
@@ -1764,6 +1804,14 @@ const QWebEnginePage__DesktopVideoCapture QWebEnginePage__Feature = 6
 //
 const QWebEnginePage__DesktopAudioVideoCapture QWebEnginePage__Feature = 7
 
+func (this *QWebEnginePage) FeatureItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEnginePage_FeatureItemName(val int) string {
+	var nilthis *QWebEnginePage
+	return nilthis.FeatureItemName(val)
+}
+
 /*
 
 
@@ -1775,6 +1823,14 @@ const QWebEnginePage__FileSelectOpen QWebEnginePage__FileSelectionMode = 0
 
 //
 const QWebEnginePage__FileSelectOpenMultiple QWebEnginePage__FileSelectionMode = 1
+
+func (this *QWebEnginePage) FileSelectionModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEnginePage_FileSelectionModeItemName(val int) string {
+	var nilthis *QWebEnginePage
+	return nilthis.FileSelectionModeItemName(val)
+}
 
 /*
 
@@ -1790,6 +1846,14 @@ const QWebEnginePage__WarningMessageLevel QWebEnginePage__JavaScriptConsoleMessa
 
 //
 const QWebEnginePage__ErrorMessageLevel QWebEnginePage__JavaScriptConsoleMessageLevel = 2
+
+func (this *QWebEnginePage) JavaScriptConsoleMessageLevelItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEnginePage_JavaScriptConsoleMessageLevelItemName(val int) string {
+	var nilthis *QWebEnginePage
+	return nilthis.JavaScriptConsoleMessageLevelItemName(val)
+}
 
 /*
 
@@ -1808,6 +1872,14 @@ const QWebEnginePage__CrashedTerminationStatus QWebEnginePage__RenderProcessTerm
 
 //
 const QWebEnginePage__KilledTerminationStatus QWebEnginePage__RenderProcessTerminationStatus = 3
+
+func (this *QWebEnginePage) RenderProcessTerminationStatusItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEnginePage_RenderProcessTerminationStatusItemName(val int) string {
+	var nilthis *QWebEnginePage
+	return nilthis.RenderProcessTerminationStatusItemName(val)
+}
 
 //  body block end
 

@@ -461,6 +461,14 @@ const QPinchGesture__RotationAngleChanged QPinchGesture__ChangeFlag = 2
 //
 const QPinchGesture__CenterPointChanged QPinchGesture__ChangeFlag = 4
 
+func (this *QPinchGesture) ChangeFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QPinchGesture_ChangeFlagItemName(val int) string {
+	var nilthis *QPinchGesture
+	return nilthis.ChangeFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

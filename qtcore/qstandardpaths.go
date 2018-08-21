@@ -528,6 +528,57 @@ const QStandardPaths__AppConfigLocation QStandardPaths__StandardLocation = 18
 //
 const QStandardPaths__AppLocalDataLocation QStandardPaths__StandardLocation = 9
 
+func (this *QStandardPaths) StandardLocationItemName(val int) string {
+	switch val {
+	case QStandardPaths__DesktopLocation: // 0
+		return "DesktopLocation"
+	case QStandardPaths__DocumentsLocation: // 1
+		return "DocumentsLocation"
+	case QStandardPaths__FontsLocation: // 2
+		return "FontsLocation"
+	case QStandardPaths__ApplicationsLocation: // 3
+		return "ApplicationsLocation"
+	case QStandardPaths__MusicLocation: // 4
+		return "MusicLocation"
+	case QStandardPaths__MoviesLocation: // 5
+		return "MoviesLocation"
+	case QStandardPaths__PicturesLocation: // 6
+		return "PicturesLocation"
+	case QStandardPaths__TempLocation: // 7
+		return "TempLocation"
+	case QStandardPaths__HomeLocation: // 8
+		return "HomeLocation"
+	case QStandardPaths__DataLocation: // 9
+		return "DataLocation,AppLocalDataLocation"
+	case QStandardPaths__CacheLocation: // 10
+		return "CacheLocation"
+	case QStandardPaths__GenericDataLocation: // 11
+		return "GenericDataLocation"
+	case QStandardPaths__RuntimeLocation: // 12
+		return "RuntimeLocation"
+	case QStandardPaths__ConfigLocation: // 13
+		return "ConfigLocation"
+	case QStandardPaths__DownloadLocation: // 14
+		return "DownloadLocation"
+	case QStandardPaths__GenericCacheLocation: // 15
+		return "GenericCacheLocation"
+	case QStandardPaths__GenericConfigLocation: // 16
+		return "GenericConfigLocation"
+	case QStandardPaths__AppDataLocation: // 17
+		return "AppDataLocation"
+	case QStandardPaths__AppConfigLocation: // 18
+		return "AppConfigLocation"
+		// case QStandardPaths__AppLocalDataLocation: // 9
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStandardPaths_StandardLocationItemName(val int) string {
+	var nilthis *QStandardPaths
+	return nilthis.StandardLocationItemName(val)
+}
+
 /*
 
 
@@ -539,6 +590,21 @@ const QStandardPaths__LocateFile QStandardPaths__LocateOption = 0
 
 //
 const QStandardPaths__LocateDirectory QStandardPaths__LocateOption = 1
+
+func (this *QStandardPaths) LocateOptionItemName(val int) string {
+	switch val {
+	case QStandardPaths__LocateFile: // 0
+		return "LocateFile"
+	case QStandardPaths__LocateDirectory: // 1
+		return "LocateDirectory"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStandardPaths_LocateOptionItemName(val int) string {
+	var nilthis *QStandardPaths
+	return nilthis.LocateOptionItemName(val)
+}
 
 //  body block end
 

@@ -497,6 +497,57 @@ const QImageIOHandler__ImageTransformation QImageIOHandler__ImageOption = 18
 //
 const QImageIOHandler__TransformedByDefault QImageIOHandler__ImageOption = 19
 
+func (this *QImageIOHandler) ImageOptionItemName(val int) string {
+	switch val {
+	case QImageIOHandler__Size: // 0
+		return "Size"
+	case QImageIOHandler__ClipRect: // 1
+		return "ClipRect"
+	case QImageIOHandler__Description: // 2
+		return "Description"
+	case QImageIOHandler__ScaledClipRect: // 3
+		return "ScaledClipRect"
+	case QImageIOHandler__ScaledSize: // 4
+		return "ScaledSize"
+	case QImageIOHandler__CompressionRatio: // 5
+		return "CompressionRatio"
+	case QImageIOHandler__Gamma: // 6
+		return "Gamma"
+	case QImageIOHandler__Quality: // 7
+		return "Quality"
+	case QImageIOHandler__Name: // 8
+		return "Name"
+	case QImageIOHandler__SubType: // 9
+		return "SubType"
+	case QImageIOHandler__IncrementalReading: // 10
+		return "IncrementalReading"
+	case QImageIOHandler__Endianness: // 11
+		return "Endianness"
+	case QImageIOHandler__Animation: // 12
+		return "Animation"
+	case QImageIOHandler__BackgroundColor: // 13
+		return "BackgroundColor"
+	case QImageIOHandler__ImageFormat: // 14
+		return "ImageFormat"
+	case QImageIOHandler__SupportedSubTypes: // 15
+		return "SupportedSubTypes"
+	case QImageIOHandler__OptimizedWrite: // 16
+		return "OptimizedWrite"
+	case QImageIOHandler__ProgressiveScanWrite: // 17
+		return "ProgressiveScanWrite"
+	case QImageIOHandler__ImageTransformation: // 18
+		return "ImageTransformation"
+	case QImageIOHandler__TransformedByDefault: // 19
+		return "TransformedByDefault"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QImageIOHandler_ImageOptionItemName(val int) string {
+	var nilthis *QImageIOHandler
+	return nilthis.ImageOptionItemName(val)
+}
+
 /*
 
 
@@ -526,6 +577,33 @@ const QImageIOHandler__TransformationFlipAndRotate90 QImageIOHandler__Transforma
 
 //
 const QImageIOHandler__TransformationRotate270 QImageIOHandler__Transformation = 7
+
+func (this *QImageIOHandler) TransformationItemName(val int) string {
+	switch val {
+	case QImageIOHandler__TransformationNone: // 0
+		return "TransformationNone"
+	case QImageIOHandler__TransformationMirror: // 1
+		return "TransformationMirror"
+	case QImageIOHandler__TransformationFlip: // 2
+		return "TransformationFlip"
+	case QImageIOHandler__TransformationRotate180: // 3
+		return "TransformationRotate180"
+	case QImageIOHandler__TransformationRotate90: // 4
+		return "TransformationRotate90"
+	case QImageIOHandler__TransformationMirrorAndRotate90: // 5
+		return "TransformationMirrorAndRotate90"
+	case QImageIOHandler__TransformationFlipAndRotate90: // 6
+		return "TransformationFlipAndRotate90"
+	case QImageIOHandler__TransformationRotate270: // 7
+		return "TransformationRotate270"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QImageIOHandler_TransformationItemName(val int) string {
+	var nilthis *QImageIOHandler
+	return nilthis.TransformationItemName(val)
+}
 
 //  body block end
 

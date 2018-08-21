@@ -439,6 +439,25 @@ const QIconEngine__IsNullHook QIconEngine__IconEngineHook = 3
 //
 const QIconEngine__ScaledPixmapHook QIconEngine__IconEngineHook = 4
 
+func (this *QIconEngine) IconEngineHookItemName(val int) string {
+	switch val {
+	case QIconEngine__AvailableSizesHook: // 1
+		return "AvailableSizesHook"
+	case QIconEngine__IconNameHook: // 2
+		return "IconNameHook"
+	case QIconEngine__IsNullHook: // 3
+		return "IsNullHook"
+	case QIconEngine__ScaledPixmapHook: // 4
+		return "ScaledPixmapHook"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QIconEngine_IconEngineHookItemName(val int) string {
+	var nilthis *QIconEngine
+	return nilthis.IconEngineHookItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

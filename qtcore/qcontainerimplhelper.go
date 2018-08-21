@@ -107,6 +107,25 @@ const QContainerImplHelper__Full QContainerImplHelper__CutResult = 2
 //
 const QContainerImplHelper__Subset QContainerImplHelper__CutResult = 3
 
+func (this *QContainerImplHelper) CutResultItemName(val int) string {
+	switch val {
+	case QContainerImplHelper__Null: // 0
+		return "Null"
+	case QContainerImplHelper__Empty: // 1
+		return "Empty"
+	case QContainerImplHelper__Full: // 2
+		return "Full"
+	case QContainerImplHelper__Subset: // 3
+		return "Subset"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QContainerImplHelper_CutResultItemName(val int) string {
+	var nilthis *QContainerImplHelper
+	return nilthis.CutResultItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -246,6 +246,33 @@ const QGestureRecognizer__ConsumeEventHint QGestureRecognizer__ResultFlag = 256
 //
 const QGestureRecognizer__ResultHint_Mask QGestureRecognizer__ResultFlag = 65280
 
+func (this *QGestureRecognizer) ResultFlagItemName(val int) string {
+	switch val {
+	case QGestureRecognizer__Ignore: // 1
+		return "Ignore"
+	case QGestureRecognizer__MayBeGesture: // 2
+		return "MayBeGesture"
+	case QGestureRecognizer__TriggerGesture: // 4
+		return "TriggerGesture"
+	case QGestureRecognizer__FinishGesture: // 8
+		return "FinishGesture"
+	case QGestureRecognizer__CancelGesture: // 16
+		return "CancelGesture"
+	case QGestureRecognizer__ResultState_Mask: // 255
+		return "ResultState_Mask"
+	case QGestureRecognizer__ConsumeEventHint: // 256
+		return "ConsumeEventHint"
+	case QGestureRecognizer__ResultHint_Mask: // 65280
+		return "ResultHint_Mask"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGestureRecognizer_ResultFlagItemName(val int) string {
+	var nilthis *QGestureRecognizer
+	return nilthis.ResultFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

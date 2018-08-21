@@ -1068,6 +1068,14 @@ const QAbstractScrollArea__AdjustToContentsOnFirstShow QAbstractScrollArea__Size
 // The scroll area will always adjust to the viewport
 const QAbstractScrollArea__AdjustToContents QAbstractScrollArea__SizeAdjustPolicy = 2
 
+func (this *QAbstractScrollArea) SizeAdjustPolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractScrollArea_SizeAdjustPolicyItemName(val int) string {
+	var nilthis *QAbstractScrollArea
+	return nilthis.SizeAdjustPolicyItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

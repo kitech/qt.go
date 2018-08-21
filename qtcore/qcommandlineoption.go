@@ -586,6 +586,21 @@ const QCommandLineOption__HiddenFromHelp QCommandLineOption__Flag = 1
 //
 const QCommandLineOption__ShortOptionStyle QCommandLineOption__Flag = 2
 
+func (this *QCommandLineOption) FlagItemName(val int) string {
+	switch val {
+	case QCommandLineOption__HiddenFromHelp: // 1
+		return "HiddenFromHelp"
+	case QCommandLineOption__ShortOptionStyle: // 2
+		return "ShortOptionStyle"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QCommandLineOption_FlagItemName(val int) string {
+	var nilthis *QCommandLineOption
+	return nilthis.FlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -947,6 +947,21 @@ const QJSValue__NullValue QJSValue__SpecialValue = 0
 // An undefined value.
 const QJSValue__UndefinedValue QJSValue__SpecialValue = 1
 
+func (this *QJSValue) SpecialValueItemName(val int) string {
+	switch val {
+	case QJSValue__NullValue: // 0
+		return "NullValue"
+	case QJSValue__UndefinedValue: // 1
+		return "UndefinedValue"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QJSValue_SpecialValueItemName(val int) string {
+	var nilthis *QJSValue
+	return nilthis.SpecialValueItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

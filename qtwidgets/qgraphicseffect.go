@@ -570,6 +570,14 @@ const QGraphicsEffect__SourceBoundingRectChanged QGraphicsEffect__ChangeFlag = 4
 //
 const QGraphicsEffect__SourceInvalidated QGraphicsEffect__ChangeFlag = 8
 
+func (this *QGraphicsEffect) ChangeFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsEffect_ChangeFlagItemName(val int) string {
+	var nilthis *QGraphicsEffect
+	return nilthis.ChangeFlagItemName(val)
+}
+
 /*
 This enum describes how the pixmap returned from sourcePixmap should be padded.
 
@@ -585,6 +593,14 @@ const QGraphicsEffect__PadToTransparentBorder QGraphicsEffect__PixmapPadMode = 1
 
 // The pixmap should be padded to match the effective bounding rectangle of the effect.
 const QGraphicsEffect__PadToEffectiveBoundingRect QGraphicsEffect__PixmapPadMode = 2
+
+func (this *QGraphicsEffect) PixmapPadModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsEffect_PixmapPadModeItemName(val int) string {
+	var nilthis *QGraphicsEffect
+	return nilthis.PixmapPadModeItemName(val)
+}
 
 //  body block end
 

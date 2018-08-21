@@ -118,6 +118,19 @@ type QStyleOptionSizeGrip__StyleOptionType = int
 //
 const QStyleOptionSizeGrip__Type QStyleOptionSizeGrip__StyleOptionType = 983047
 
+func (this *QStyleOptionSizeGrip) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionSizeGrip__Type: // 983047
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionSizeGrip_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionSizeGrip
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionSizeGrip__StyleOptionVersion = int
 
 // 1
 const QStyleOptionSizeGrip__Version QStyleOptionSizeGrip__StyleOptionVersion = 1
+
+func (this *QStyleOptionSizeGrip) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionSizeGrip__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionSizeGrip_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionSizeGrip
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

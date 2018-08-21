@@ -118,6 +118,19 @@ type QStyleOptionDockWidget__StyleOptionType = int
 //
 const QStyleOptionDockWidget__Type QStyleOptionDockWidget__StyleOptionType = 9
 
+func (this *QStyleOptionDockWidget) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionDockWidget__Type: // 9
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionDockWidget_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionDockWidget
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionDockWidget__StyleOptionVersion = int
 
 // 1
 const QStyleOptionDockWidget__Version QStyleOptionDockWidget__StyleOptionVersion = 2
+
+func (this *QStyleOptionDockWidget) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionDockWidget__Version: // 2
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionDockWidget_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionDockWidget
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

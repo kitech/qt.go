@@ -261,6 +261,14 @@ const QCameraFeedbackControl__AutoFocusLocked QCameraFeedbackControl__EventType 
 //
 const QCameraFeedbackControl__AutoFocusFailed QCameraFeedbackControl__EventType = 11
 
+func (this *QCameraFeedbackControl) EventTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraFeedbackControl_EventTypeItemName(val int) string {
+	var nilthis *QCameraFeedbackControl
+	return nilthis.EventTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

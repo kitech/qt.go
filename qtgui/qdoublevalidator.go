@@ -386,6 +386,14 @@ const QDoubleValidator__StandardNotation QDoubleValidator__Notation = 0
 //
 const QDoubleValidator__ScientificNotation QDoubleValidator__Notation = 1
 
+func (this *QDoubleValidator) NotationItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QDoubleValidator_NotationItemName(val int) string {
+	var nilthis *QDoubleValidator
+	return nilthis.NotationItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

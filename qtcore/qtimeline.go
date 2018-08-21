@@ -625,6 +625,14 @@ const QTimeLine__Paused QTimeLine__State = 1
 // The timeline is running. While control is in the event loop, QTimeLine will update its current time at regular intervals, emitting valueChanged() and frameChanged() when appropriate.
 const QTimeLine__Running QTimeLine__State = 2
 
+func (this *QTimeLine) StateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTimeLine_StateItemName(val int) string {
+	var nilthis *QTimeLine
+	return nilthis.StateItemName(val)
+}
+
 /*
 This enum describes the direction of the timeline when in Running state.
 
@@ -640,6 +648,14 @@ const QTimeLine__Forward QTimeLine__Direction = 0
 
 //
 const QTimeLine__Backward QTimeLine__Direction = 1
+
+func (this *QTimeLine) DirectionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTimeLine_DirectionItemName(val int) string {
+	var nilthis *QTimeLine
+	return nilthis.DirectionItemName(val)
+}
 
 /*
 This enum describes the default shape of QTimeLine's value curve. The default, shape is EaseInOutCurve. The curve defines the relation between the value and the timeline.
@@ -668,6 +684,14 @@ const QTimeLine__SineCurve QTimeLine__CurveShape = 4
 
 // The value grows cosinusoidally.
 const QTimeLine__CosineCurve QTimeLine__CurveShape = 5
+
+func (this *QTimeLine) CurveShapeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTimeLine_CurveShapeItemName(val int) string {
+	var nilthis *QTimeLine
+	return nilthis.CurveShapeItemName(val)
+}
 
 //  body block end
 

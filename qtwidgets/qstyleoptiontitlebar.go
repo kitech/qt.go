@@ -118,6 +118,19 @@ type QStyleOptionTitleBar__StyleOptionType = int
 //
 const QStyleOptionTitleBar__Type QStyleOptionTitleBar__StyleOptionType = 983045
 
+func (this *QStyleOptionTitleBar) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionTitleBar__Type: // 983045
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTitleBar_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionTitleBar
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionTitleBar__StyleOptionVersion = int
 
 // 1
 const QStyleOptionTitleBar__Version QStyleOptionTitleBar__StyleOptionVersion = 1
+
+func (this *QStyleOptionTitleBar) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionTitleBar__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTitleBar_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionTitleBar
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

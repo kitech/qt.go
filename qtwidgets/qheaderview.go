@@ -2034,6 +2034,14 @@ const QHeaderView__ResizeToContents QHeaderView__ResizeMode = 3
 //
 const QHeaderView__Custom QHeaderView__ResizeMode = 2
 
+func (this *QHeaderView) ResizeModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QHeaderView_ResizeModeItemName(val int) string {
+	var nilthis *QHeaderView
+	return nilthis.ResizeModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

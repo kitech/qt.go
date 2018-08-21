@@ -383,6 +383,21 @@ const QSystemSemaphore__Open QSystemSemaphore__AccessMode = 0
 // QSystemSemaphore takes ownership of the semaphore and sets its resource count to the requested value, regardless of whether the semaphore already exists by having survived a crash. This value should be passed to the constructor, when the first semaphore for a particular key is constructed and you know that if the semaphore already exists it could only be because of a crash. In Windows, where a semaphore can't survive a crash, Create and Open have the same behavior.
 const QSystemSemaphore__Create QSystemSemaphore__AccessMode = 1
 
+func (this *QSystemSemaphore) AccessModeItemName(val int) string {
+	switch val {
+	case QSystemSemaphore__Open: // 0
+		return "Open"
+	case QSystemSemaphore__Create: // 1
+		return "Create"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSystemSemaphore_AccessModeItemName(val int) string {
+	var nilthis *QSystemSemaphore
+	return nilthis.AccessModeItemName(val)
+}
+
 /*
 
  */
@@ -408,6 +423,31 @@ const QSystemSemaphore__OutOfResources QSystemSemaphore__SystemSemaphoreError = 
 
 // Something else happened and it was bad.
 const QSystemSemaphore__UnknownError QSystemSemaphore__SystemSemaphoreError = 6
+
+func (this *QSystemSemaphore) SystemSemaphoreErrorItemName(val int) string {
+	switch val {
+	case QSystemSemaphore__NoError: // 0
+		return "NoError"
+	case QSystemSemaphore__PermissionDenied: // 1
+		return "PermissionDenied"
+	case QSystemSemaphore__KeyError: // 2
+		return "KeyError"
+	case QSystemSemaphore__AlreadyExists: // 3
+		return "AlreadyExists"
+	case QSystemSemaphore__NotFound: // 4
+		return "NotFound"
+	case QSystemSemaphore__OutOfResources: // 5
+		return "OutOfResources"
+	case QSystemSemaphore__UnknownError: // 6
+		return "UnknownError"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSystemSemaphore_SystemSemaphoreErrorItemName(val int) string {
+	var nilthis *QSystemSemaphore
+	return nilthis.SystemSemaphoreErrorItemName(val)
+}
 
 //  body block end
 

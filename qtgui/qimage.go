@@ -3288,6 +3288,21 @@ const QImage__InvertRgb QImage__InvertMode = 0
 // Invert all channels, including the alpha channel.
 const QImage__InvertRgba QImage__InvertMode = 1
 
+func (this *QImage) InvertModeItemName(val int) string {
+	switch val {
+	case QImage__InvertRgb: // 0
+		return "InvertRgb"
+	case QImage__InvertRgba: // 1
+		return "InvertRgba"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QImage_InvertModeItemName(val int) string {
+	var nilthis *QImage
+	return nilthis.InvertModeItemName(val)
+}
+
 /*
 The following image formats are available in Qt. Values from Format_ARGB8565_Premultiplied to Format_ARGB4444_Premultiplied were added in Qt 4.4. Values Format_RGBX8888, Format_RGBA8888 and Format_RGBA8888_Premultiplied were added in Qt 5.2. Values Format_BGR30, Format_A2BGR30_Premultiplied, Format_RGB30, Format_A2RGB30_Premultiplied were added in Qt 5.4. Format_Alpha8 and Format_Grayscale8 were added in Qt 5.5. See the notes after the table.
 
@@ -3379,6 +3394,69 @@ const QImage__Format_Grayscale8 QImage__Format = 24
 
 //
 const QImage__NImageFormats QImage__Format = 25
+
+func (this *QImage) FormatItemName(val int) string {
+	switch val {
+	case QImage__Format_Invalid: // 0
+		return "Format_Invalid"
+	case QImage__Format_Mono: // 1
+		return "Format_Mono"
+	case QImage__Format_MonoLSB: // 2
+		return "Format_MonoLSB"
+	case QImage__Format_Indexed8: // 3
+		return "Format_Indexed8"
+	case QImage__Format_RGB32: // 4
+		return "Format_RGB32"
+	case QImage__Format_ARGB32: // 5
+		return "Format_ARGB32"
+	case QImage__Format_ARGB32_Premultiplied: // 6
+		return "Format_ARGB32_Premultiplied"
+	case QImage__Format_RGB16: // 7
+		return "Format_RGB16"
+	case QImage__Format_ARGB8565_Premultiplied: // 8
+		return "Format_ARGB8565_Premultiplied"
+	case QImage__Format_RGB666: // 9
+		return "Format_RGB666"
+	case QImage__Format_ARGB6666_Premultiplied: // 10
+		return "Format_ARGB6666_Premultiplied"
+	case QImage__Format_RGB555: // 11
+		return "Format_RGB555"
+	case QImage__Format_ARGB8555_Premultiplied: // 12
+		return "Format_ARGB8555_Premultiplied"
+	case QImage__Format_RGB888: // 13
+		return "Format_RGB888"
+	case QImage__Format_RGB444: // 14
+		return "Format_RGB444"
+	case QImage__Format_ARGB4444_Premultiplied: // 15
+		return "Format_ARGB4444_Premultiplied"
+	case QImage__Format_RGBX8888: // 16
+		return "Format_RGBX8888"
+	case QImage__Format_RGBA8888: // 17
+		return "Format_RGBA8888"
+	case QImage__Format_RGBA8888_Premultiplied: // 18
+		return "Format_RGBA8888_Premultiplied"
+	case QImage__Format_BGR30: // 19
+		return "Format_BGR30"
+	case QImage__Format_A2BGR30_Premultiplied: // 20
+		return "Format_A2BGR30_Premultiplied"
+	case QImage__Format_RGB30: // 21
+		return "Format_RGB30"
+	case QImage__Format_A2RGB30_Premultiplied: // 22
+		return "Format_A2RGB30_Premultiplied"
+	case QImage__Format_Alpha8: // 23
+		return "Format_Alpha8"
+	case QImage__Format_Grayscale8: // 24
+		return "Format_Grayscale8"
+	case QImage__NImageFormats: // 25
+		return "NImageFormats"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QImage_FormatItemName(val int) string {
+	var nilthis *QImage
+	return nilthis.FormatItemName(val)
+}
 
 //  body block end
 

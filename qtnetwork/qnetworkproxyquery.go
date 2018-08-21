@@ -782,6 +782,29 @@ const QNetworkProxyQuery__UrlRequest QNetworkProxyQuery__QueryType = 101
 //
 const QNetworkProxyQuery__SctpServer QNetworkProxyQuery__QueryType = 102
 
+func (this *QNetworkProxyQuery) QueryTypeItemName(val int) string {
+	switch val {
+	case QNetworkProxyQuery__TcpSocket: // 0
+		return "TcpSocket"
+	case QNetworkProxyQuery__UdpSocket: // 1
+		return "UdpSocket"
+	case QNetworkProxyQuery__SctpSocket: // 2
+		return "SctpSocket"
+	case QNetworkProxyQuery__TcpServer: // 100
+		return "TcpServer"
+	case QNetworkProxyQuery__UrlRequest: // 101
+		return "UrlRequest"
+	case QNetworkProxyQuery__SctpServer: // 102
+		return "SctpServer"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkProxyQuery_QueryTypeItemName(val int) string {
+	var nilthis *QNetworkProxyQuery
+	return nilthis.QueryTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

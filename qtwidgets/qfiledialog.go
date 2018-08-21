@@ -4394,6 +4394,14 @@ const QFileDialog__Detail QFileDialog__ViewMode = 0
 // Displays only an icon and a name for each item in the directory.
 const QFileDialog__List QFileDialog__ViewMode = 1
 
+func (this *QFileDialog) ViewModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFileDialog_ViewModeItemName(val int) string {
+	var nilthis *QFileDialog
+	return nilthis.ViewModeItemName(val)
+}
+
 /*
 This enum is used to indicate what the user may select in the file dialog; i.e. what the dialog will return if the user clicks OK.
 
@@ -4423,6 +4431,14 @@ const QFileDialog__ExistingFiles QFileDialog__FileMode = 3
 // Use Directory and setOption(ShowDirsOnly, true) instead.
 const QFileDialog__DirectoryOnly QFileDialog__FileMode = 4
 
+func (this *QFileDialog) FileModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFileDialog_FileModeItemName(val int) string {
+	var nilthis *QFileDialog
+	return nilthis.FileModeItemName(val)
+}
+
 /*
 ConstantValue
 QFileDialog::AcceptOpen0
@@ -4436,6 +4452,14 @@ const QFileDialog__AcceptOpen QFileDialog__AcceptMode = 0
 
 //
 const QFileDialog__AcceptSave QFileDialog__AcceptMode = 1
+
+func (this *QFileDialog) AcceptModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFileDialog_AcceptModeItemName(val int) string {
+	var nilthis *QFileDialog
+	return nilthis.AcceptModeItemName(val)
+}
 
 /*
 ConstantValue
@@ -4462,6 +4486,14 @@ const QFileDialog__Accept QFileDialog__DialogLabel = 3
 
 //
 const QFileDialog__Reject QFileDialog__DialogLabel = 4
+
+func (this *QFileDialog) DialogLabelItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFileDialog_DialogLabelItemName(val int) string {
+	var nilthis *QFileDialog
+	return nilthis.DialogLabelItemName(val)
+}
 
 /*
 
@@ -4492,6 +4524,14 @@ const QFileDialog__HideNameFilterDetails QFileDialog__Option = 64
 
 //
 const QFileDialog__DontUseCustomDirectoryIcons QFileDialog__Option = 128
+
+func (this *QFileDialog) OptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFileDialog_OptionItemName(val int) string {
+	var nilthis *QFileDialog
+	return nilthis.OptionItemName(val)
+}
 
 //  body block end
 

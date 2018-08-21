@@ -720,6 +720,14 @@ const QCameraImageCapture__NotSupportedFeatureError QCameraImageCapture__Error =
 // Current format is not supported.
 const QCameraImageCapture__FormatError QCameraImageCapture__Error = 5
 
+func (this *QCameraImageCapture) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraImageCapture_ErrorItemName(val int) string {
+	var nilthis *QCameraImageCapture
+	return nilthis.ErrorItemName(val)
+}
+
 /*
 
  */
@@ -727,6 +735,14 @@ type QCameraImageCapture__DriveMode = int
 
 // Drive mode is capturing a single picture.
 const QCameraImageCapture__SingleImageCapture QCameraImageCapture__DriveMode = 0
+
+func (this *QCameraImageCapture) DriveModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraImageCapture_DriveModeItemName(val int) string {
+	var nilthis *QCameraImageCapture
+	return nilthis.DriveModeItemName(val)
+}
 
 /*
 
@@ -739,6 +755,14 @@ const QCameraImageCapture__CaptureToFile QCameraImageCapture__CaptureDestination
 
 //
 const QCameraImageCapture__CaptureToBuffer QCameraImageCapture__CaptureDestination = 2
+
+func (this *QCameraImageCapture) CaptureDestinationItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraImageCapture_CaptureDestinationItemName(val int) string {
+	var nilthis *QCameraImageCapture
+	return nilthis.CaptureDestinationItemName(val)
+}
 
 //  body block end
 

@@ -371,6 +371,14 @@ const QEventLoop__EventLoopExec QEventLoop__ProcessEventsFlag = 32
 //
 const QEventLoop__DialogExec QEventLoop__ProcessEventsFlag = 64
 
+func (this *QEventLoop) ProcessEventsFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QEventLoop_ProcessEventsFlagItemName(val int) string {
+	var nilthis *QEventLoop
+	return nilthis.ProcessEventsFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

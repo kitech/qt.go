@@ -5422,6 +5422,25 @@ const QByteArray__KeepTrailingEquals QByteArray__Base64Option = 0
 //
 const QByteArray__OmitTrailingEquals QByteArray__Base64Option = 2
 
+func (this *QByteArray) Base64OptionItemName(val int) string {
+	switch val {
+	case QByteArray__Base64Encoding: // 0
+		return "Base64Encoding,KeepTrailingEquals"
+	case QByteArray__Base64UrlEncoding: // 1
+		return "Base64UrlEncoding"
+		// case QByteArray__KeepTrailingEquals: // 0
+		// return ""
+	case QByteArray__OmitTrailingEquals: // 2
+		return "OmitTrailingEquals"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QByteArray_Base64OptionItemName(val int) string {
+	var nilthis *QByteArray
+	return nilthis.Base64OptionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

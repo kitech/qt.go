@@ -454,6 +454,19 @@ type QSysInfo__Sizes = int
 //
 const QSysInfo__WordSize QSysInfo__Sizes = 64
 
+func (this *QSysInfo) SizesItemName(val int) string {
+	switch val {
+	case QSysInfo__WordSize: // 64
+		return "WordSize"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSysInfo_SizesItemName(val int) string {
+	var nilthis *QSysInfo
+	return nilthis.SizesItemName(val)
+}
+
 /*
 QSysInfo::ByteOrderBigEndian or LittleEndianEquals BigEndian or LittleEndian, depending on the platform's byte order.
 
@@ -468,6 +481,23 @@ const QSysInfo__LittleEndian QSysInfo__Endian = 1
 
 //
 const QSysInfo__ByteOrder QSysInfo__Endian = 1
+
+func (this *QSysInfo) EndianItemName(val int) string {
+	switch val {
+	case QSysInfo__BigEndian: // 0
+		return "BigEndian"
+	case QSysInfo__LittleEndian: // 1
+		return "LittleEndian,ByteOrder"
+		// case QSysInfo__ByteOrder: // 1
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSysInfo_EndianItemName(val int) string {
+	var nilthis *QSysInfo
+	return nilthis.EndianItemName(val)
+}
 
 /*
 
@@ -564,6 +594,77 @@ const QSysInfo__WV_CE_6 QSysInfo__WinVersion = 1024
 
 //
 const QSysInfo__WV_CE_based QSysInfo__WinVersion = 3840
+
+func (this *QSysInfo) WinVersionItemName(val int) string {
+	switch val {
+	case QSysInfo__WV_None: // 0
+		return "WV_None"
+	case QSysInfo__WV_32s: // 1
+		return "WV_32s"
+	case QSysInfo__WV_95: // 2
+		return "WV_95"
+	case QSysInfo__WV_98: // 3
+		return "WV_98"
+	case QSysInfo__WV_Me: // 4
+		return "WV_Me"
+	case QSysInfo__WV_DOS_based: // 15
+		return "WV_DOS_based"
+	case QSysInfo__WV_NT: // 16
+		return "WV_NT,WV_4_0"
+	case QSysInfo__WV_2000: // 32
+		return "WV_2000,WV_5_0"
+	case QSysInfo__WV_XP: // 48
+		return "WV_XP,WV_5_1"
+	case QSysInfo__WV_2003: // 64
+		return "WV_2003,WV_5_2"
+	case QSysInfo__WV_VISTA: // 128
+		return "WV_VISTA,WV_6_0"
+	case QSysInfo__WV_WINDOWS7: // 144
+		return "WV_WINDOWS7,WV_6_1"
+	case QSysInfo__WV_WINDOWS8: // 160
+		return "WV_WINDOWS8,WV_6_2"
+	case QSysInfo__WV_WINDOWS8_1: // 176
+		return "WV_WINDOWS8_1,WV_6_3"
+	case QSysInfo__WV_WINDOWS10: // 192
+		return "WV_WINDOWS10,WV_10_0"
+	case QSysInfo__WV_NT_based: // 240
+		return "WV_NT_based"
+		// case QSysInfo__WV_4_0: // 16
+		// return ""
+		// case QSysInfo__WV_5_0: // 32
+		// return ""
+		// case QSysInfo__WV_5_1: // 48
+		// return ""
+		// case QSysInfo__WV_5_2: // 64
+		// return ""
+		// case QSysInfo__WV_6_0: // 128
+		// return ""
+		// case QSysInfo__WV_6_1: // 144
+		// return ""
+		// case QSysInfo__WV_6_2: // 160
+		// return ""
+		// case QSysInfo__WV_6_3: // 176
+		// return ""
+		// case QSysInfo__WV_10_0: // 192
+		// return ""
+	case QSysInfo__WV_CE: // 256
+		return "WV_CE"
+	case QSysInfo__WV_CENET: // 512
+		return "WV_CENET"
+	case QSysInfo__WV_CE_5: // 768
+		return "WV_CE_5"
+	case QSysInfo__WV_CE_6: // 1024
+		return "WV_CE_6"
+	case QSysInfo__WV_CE_based: // 3840
+		return "WV_CE_based"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSysInfo_WinVersionItemName(val int) string {
+	var nilthis *QSysInfo
+	return nilthis.WinVersionItemName(val)
+}
 
 /*
 
@@ -741,6 +842,131 @@ const QSysInfo__MV_WATCHOS_2_2 QSysInfo__MacVersion = 1058
 
 //
 const QSysInfo__MV_WATCHOS_3_0 QSysInfo__MacVersion = 1072
+
+func (this *QSysInfo) MacVersionItemName(val int) string {
+	switch val {
+	case QSysInfo__MV_None: // 65535
+		return "MV_None"
+	case QSysInfo__MV_Unknown: // 0
+		return "MV_Unknown"
+	case QSysInfo__MV_9: // 1
+		return "MV_9"
+	case QSysInfo__MV_10_0: // 2
+		return "MV_10_0,MV_CHEETAH"
+	case QSysInfo__MV_10_1: // 3
+		return "MV_10_1,MV_PUMA"
+	case QSysInfo__MV_10_2: // 4
+		return "MV_10_2,MV_JAGUAR"
+	case QSysInfo__MV_10_3: // 5
+		return "MV_10_3,MV_PANTHER"
+	case QSysInfo__MV_10_4: // 6
+		return "MV_10_4,MV_TIGER"
+	case QSysInfo__MV_10_5: // 7
+		return "MV_10_5,MV_LEOPARD"
+	case QSysInfo__MV_10_6: // 8
+		return "MV_10_6,MV_SNOWLEOPARD"
+	case QSysInfo__MV_10_7: // 9
+		return "MV_10_7,MV_LION"
+	case QSysInfo__MV_10_8: // 10
+		return "MV_10_8,MV_MOUNTAINLION"
+	case QSysInfo__MV_10_9: // 11
+		return "MV_10_9,MV_MAVERICKS"
+	case QSysInfo__MV_10_10: // 12
+		return "MV_10_10,MV_YOSEMITE"
+	case QSysInfo__MV_10_11: // 13
+		return "MV_10_11,MV_ELCAPITAN"
+	case QSysInfo__MV_10_12: // 14
+		return "MV_10_12,MV_SIERRA"
+		// case QSysInfo__MV_CHEETAH: // 2
+		// return ""
+		// case QSysInfo__MV_PUMA: // 3
+		// return ""
+		// case QSysInfo__MV_JAGUAR: // 4
+		// return ""
+		// case QSysInfo__MV_PANTHER: // 5
+		// return ""
+		// case QSysInfo__MV_TIGER: // 6
+		// return ""
+		// case QSysInfo__MV_LEOPARD: // 7
+		// return ""
+		// case QSysInfo__MV_SNOWLEOPARD: // 8
+		// return ""
+		// case QSysInfo__MV_LION: // 9
+		// return ""
+		// case QSysInfo__MV_MOUNTAINLION: // 10
+		// return ""
+		// case QSysInfo__MV_MAVERICKS: // 11
+		// return ""
+		// case QSysInfo__MV_YOSEMITE: // 12
+		// return ""
+		// case QSysInfo__MV_ELCAPITAN: // 13
+		// return ""
+		// case QSysInfo__MV_SIERRA: // 14
+		// return ""
+	case QSysInfo__MV_IOS: // 256
+		return "MV_IOS"
+	case QSysInfo__MV_IOS_4_3: // 323
+		return "MV_IOS_4_3"
+	case QSysInfo__MV_IOS_5_0: // 336
+		return "MV_IOS_5_0"
+	case QSysInfo__MV_IOS_5_1: // 337
+		return "MV_IOS_5_1"
+	case QSysInfo__MV_IOS_6_0: // 352
+		return "MV_IOS_6_0"
+	case QSysInfo__MV_IOS_6_1: // 353
+		return "MV_IOS_6_1"
+	case QSysInfo__MV_IOS_7_0: // 368
+		return "MV_IOS_7_0"
+	case QSysInfo__MV_IOS_7_1: // 369
+		return "MV_IOS_7_1"
+	case QSysInfo__MV_IOS_8_0: // 384
+		return "MV_IOS_8_0"
+	case QSysInfo__MV_IOS_8_1: // 385
+		return "MV_IOS_8_1"
+	case QSysInfo__MV_IOS_8_2: // 386
+		return "MV_IOS_8_2"
+	case QSysInfo__MV_IOS_8_3: // 387
+		return "MV_IOS_8_3"
+	case QSysInfo__MV_IOS_8_4: // 388
+		return "MV_IOS_8_4"
+	case QSysInfo__MV_IOS_9_0: // 400
+		return "MV_IOS_9_0"
+	case QSysInfo__MV_IOS_9_1: // 401
+		return "MV_IOS_9_1"
+	case QSysInfo__MV_IOS_9_2: // 402
+		return "MV_IOS_9_2"
+	case QSysInfo__MV_IOS_9_3: // 403
+		return "MV_IOS_9_3"
+	case QSysInfo__MV_IOS_10_0: // 416
+		return "MV_IOS_10_0"
+	case QSysInfo__MV_TVOS: // 512
+		return "MV_TVOS"
+	case QSysInfo__MV_TVOS_9_0: // 656
+		return "MV_TVOS_9_0"
+	case QSysInfo__MV_TVOS_9_1: // 657
+		return "MV_TVOS_9_1"
+	case QSysInfo__MV_TVOS_9_2: // 658
+		return "MV_TVOS_9_2"
+	case QSysInfo__MV_TVOS_10_0: // 672
+		return "MV_TVOS_10_0"
+	case QSysInfo__MV_WATCHOS: // 1024
+		return "MV_WATCHOS"
+	case QSysInfo__MV_WATCHOS_2_0: // 1056
+		return "MV_WATCHOS_2_0"
+	case QSysInfo__MV_WATCHOS_2_1: // 1057
+		return "MV_WATCHOS_2_1"
+	case QSysInfo__MV_WATCHOS_2_2: // 1058
+		return "MV_WATCHOS_2_2"
+	case QSysInfo__MV_WATCHOS_3_0: // 1072
+		return "MV_WATCHOS_3_0"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSysInfo_MacVersionItemName(val int) string {
+	var nilthis *QSysInfo
+	return nilthis.MacVersionItemName(val)
+}
 
 //  body block end
 

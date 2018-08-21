@@ -1254,6 +1254,31 @@ const QMatrix4x4__Perspective QMatrix4x4__ = 16
 //
 const QMatrix4x4__General QMatrix4x4__ = 31
 
+func (this *QMatrix4x4) ItemName(val int) string {
+	switch val {
+	case QMatrix4x4__Identity: // 0
+		return "Identity"
+	case QMatrix4x4__Translation: // 1
+		return "Translation"
+	case QMatrix4x4__Scale: // 2
+		return "Scale"
+	case QMatrix4x4__Rotation2D: // 4
+		return "Rotation2D"
+	case QMatrix4x4__Rotation: // 8
+		return "Rotation"
+	case QMatrix4x4__Perspective: // 16
+		return "Perspective"
+	case QMatrix4x4__General: // 31
+		return "General"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMatrix4x4_ItemName(val int) string {
+	var nilthis *QMatrix4x4
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

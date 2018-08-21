@@ -376,6 +376,14 @@ const QGeoSatelliteInfoSource__NoError QGeoSatelliteInfoSource__Error = 2
 //
 const QGeoSatelliteInfoSource__UnknownSourceError QGeoSatelliteInfoSource__Error = -1
 
+func (this *QGeoSatelliteInfoSource) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGeoSatelliteInfoSource_ErrorItemName(val int) string {
+	var nilthis *QGeoSatelliteInfoSource
+	return nilthis.ErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

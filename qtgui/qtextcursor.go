@@ -1652,6 +1652,21 @@ const QTextCursor__MoveAnchor QTextCursor__MoveMode = 0
 // Keeps the anchor where it is.
 const QTextCursor__KeepAnchor QTextCursor__MoveMode = 1
 
+func (this *QTextCursor) MoveModeItemName(val int) string {
+	switch val {
+	case QTextCursor__MoveAnchor: // 0
+		return "MoveAnchor"
+	case QTextCursor__KeepAnchor: // 1
+		return "KeepAnchor"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextCursor_MoveModeItemName(val int) string {
+	var nilthis *QTextCursor
+	return nilthis.MoveModeItemName(val)
+}
+
 /*
 
 
@@ -1735,6 +1750,67 @@ const QTextCursor__NextRow QTextCursor__MoveOperation = 23
 //
 const QTextCursor__PreviousRow QTextCursor__MoveOperation = 24
 
+func (this *QTextCursor) MoveOperationItemName(val int) string {
+	switch val {
+	case QTextCursor__NoMove: // 0
+		return "NoMove"
+	case QTextCursor__Start: // 1
+		return "Start"
+	case QTextCursor__Up: // 2
+		return "Up"
+	case QTextCursor__StartOfLine: // 3
+		return "StartOfLine"
+	case QTextCursor__StartOfBlock: // 4
+		return "StartOfBlock"
+	case QTextCursor__StartOfWord: // 5
+		return "StartOfWord"
+	case QTextCursor__PreviousBlock: // 6
+		return "PreviousBlock"
+	case QTextCursor__PreviousCharacter: // 7
+		return "PreviousCharacter"
+	case QTextCursor__PreviousWord: // 8
+		return "PreviousWord"
+	case QTextCursor__Left: // 9
+		return "Left"
+	case QTextCursor__WordLeft: // 10
+		return "WordLeft"
+	case QTextCursor__End: // 11
+		return "End"
+	case QTextCursor__Down: // 12
+		return "Down"
+	case QTextCursor__EndOfLine: // 13
+		return "EndOfLine"
+	case QTextCursor__EndOfWord: // 14
+		return "EndOfWord"
+	case QTextCursor__EndOfBlock: // 15
+		return "EndOfBlock"
+	case QTextCursor__NextBlock: // 16
+		return "NextBlock"
+	case QTextCursor__NextCharacter: // 17
+		return "NextCharacter"
+	case QTextCursor__NextWord: // 18
+		return "NextWord"
+	case QTextCursor__Right: // 19
+		return "Right"
+	case QTextCursor__WordRight: // 20
+		return "WordRight"
+	case QTextCursor__NextCell: // 21
+		return "NextCell"
+	case QTextCursor__PreviousCell: // 22
+		return "PreviousCell"
+	case QTextCursor__NextRow: // 23
+		return "NextRow"
+	case QTextCursor__PreviousRow: // 24
+		return "PreviousRow"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextCursor_MoveOperationItemName(val int) string {
+	var nilthis *QTextCursor
+	return nilthis.MoveOperationItemName(val)
+}
+
 /*
 This enum describes the types of selection that can be applied with the select() function.
 
@@ -1753,6 +1829,25 @@ const QTextCursor__BlockUnderCursor QTextCursor__SelectionType = 2
 
 // Selects the entire document.
 const QTextCursor__Document QTextCursor__SelectionType = 3
+
+func (this *QTextCursor) SelectionTypeItemName(val int) string {
+	switch val {
+	case QTextCursor__WordUnderCursor: // 0
+		return "WordUnderCursor"
+	case QTextCursor__LineUnderCursor: // 1
+		return "LineUnderCursor"
+	case QTextCursor__BlockUnderCursor: // 2
+		return "BlockUnderCursor"
+	case QTextCursor__Document: // 3
+		return "Document"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextCursor_SelectionTypeItemName(val int) string {
+	var nilthis *QTextCursor
+	return nilthis.SelectionTypeItemName(val)
+}
 
 //  body block end
 

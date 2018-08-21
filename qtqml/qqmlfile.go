@@ -592,6 +592,25 @@ const QQmlFile__Error QQmlFile__Status = 2
 //
 const QQmlFile__Loading QQmlFile__Status = 3
 
+func (this *QQmlFile) StatusItemName(val int) string {
+	switch val {
+	case QQmlFile__Null: // 0
+		return "Null"
+	case QQmlFile__Ready: // 1
+		return "Ready"
+	case QQmlFile__Error: // 2
+		return "Error"
+	case QQmlFile__Loading: // 3
+		return "Loading"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QQmlFile_StatusItemName(val int) string {
+	var nilthis *QQmlFile
+	return nilthis.StatusItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

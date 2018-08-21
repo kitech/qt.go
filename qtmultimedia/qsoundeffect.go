@@ -586,6 +586,14 @@ type QSoundEffect__Loop = int
 //
 const QSoundEffect__Infinite QSoundEffect__Loop = -2
 
+func (this *QSoundEffect) LoopItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSoundEffect_LoopItemName(val int) string {
+	var nilthis *QSoundEffect
+	return nilthis.LoopItemName(val)
+}
+
 /*
 
  */
@@ -602,6 +610,14 @@ const QSoundEffect__Ready QSoundEffect__Status = 2
 
 // An error occurred during operation, such as failure of loading the source.
 const QSoundEffect__Error QSoundEffect__Status = 3
+
+func (this *QSoundEffect) StatusItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSoundEffect_StatusItemName(val int) string {
+	var nilthis *QSoundEffect
+	return nilthis.StatusItemName(val)
+}
 
 //  body block end
 

@@ -449,6 +449,25 @@ const QNetworkConfiguration__UserChoice QNetworkConfiguration__Type = 2
 // The configuration is invalid.
 const QNetworkConfiguration__Invalid QNetworkConfiguration__Type = 3
 
+func (this *QNetworkConfiguration) TypeItemName(val int) string {
+	switch val {
+	case QNetworkConfiguration__InternetAccessPoint: // 0
+		return "InternetAccessPoint"
+	case QNetworkConfiguration__ServiceNetwork: // 1
+		return "ServiceNetwork"
+	case QNetworkConfiguration__UserChoice: // 2
+		return "UserChoice"
+	case QNetworkConfiguration__Invalid: // 3
+		return "Invalid"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkConfiguration_TypeItemName(val int) string {
+	var nilthis *QNetworkConfiguration
+	return nilthis.TypeItemName(val)
+}
+
 /*
 Specifies the purpose of the configuration.
 
@@ -468,6 +487,25 @@ const QNetworkConfiguration__PrivatePurpose QNetworkConfiguration__Purpose = 2
 // The configuration can be used for operator specific services (e.g. receiving MMS messages or content streaming).
 const QNetworkConfiguration__ServiceSpecificPurpose QNetworkConfiguration__Purpose = 3
 
+func (this *QNetworkConfiguration) PurposeItemName(val int) string {
+	switch val {
+	case QNetworkConfiguration__UnknownPurpose: // 0
+		return "UnknownPurpose"
+	case QNetworkConfiguration__PublicPurpose: // 1
+		return "PublicPurpose"
+	case QNetworkConfiguration__PrivatePurpose: // 2
+		return "PrivatePurpose"
+	case QNetworkConfiguration__ServiceSpecificPurpose: // 3
+		return "ServiceSpecificPurpose"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkConfiguration_PurposeItemName(val int) string {
+	var nilthis *QNetworkConfiguration
+	return nilthis.PurposeItemName(val)
+}
+
 /*
 
 
@@ -485,6 +523,25 @@ const QNetworkConfiguration__Discovered QNetworkConfiguration__StateFlag = 6
 
 //
 const QNetworkConfiguration__Active QNetworkConfiguration__StateFlag = 14
+
+func (this *QNetworkConfiguration) StateFlagItemName(val int) string {
+	switch val {
+	case QNetworkConfiguration__Undefined: // 1
+		return "Undefined"
+	case QNetworkConfiguration__Defined: // 2
+		return "Defined"
+	case QNetworkConfiguration__Discovered: // 6
+		return "Discovered"
+	case QNetworkConfiguration__Active: // 14
+		return "Active"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkConfiguration_StateFlagItemName(val int) string {
+	var nilthis *QNetworkConfiguration
+	return nilthis.StateFlagItemName(val)
+}
 
 /*
 Specifies the type of bearer used by a configuration.
@@ -531,6 +588,43 @@ const QNetworkConfiguration__Bearer3G QNetworkConfiguration__BearerType = 11
 
 //
 const QNetworkConfiguration__Bearer4G QNetworkConfiguration__BearerType = 12
+
+func (this *QNetworkConfiguration) BearerTypeItemName(val int) string {
+	switch val {
+	case QNetworkConfiguration__BearerUnknown: // 0
+		return "BearerUnknown"
+	case QNetworkConfiguration__BearerEthernet: // 1
+		return "BearerEthernet"
+	case QNetworkConfiguration__BearerWLAN: // 2
+		return "BearerWLAN"
+	case QNetworkConfiguration__Bearer2G: // 3
+		return "Bearer2G"
+	case QNetworkConfiguration__BearerCDMA2000: // 4
+		return "BearerCDMA2000"
+	case QNetworkConfiguration__BearerWCDMA: // 5
+		return "BearerWCDMA"
+	case QNetworkConfiguration__BearerHSPA: // 6
+		return "BearerHSPA"
+	case QNetworkConfiguration__BearerBluetooth: // 7
+		return "BearerBluetooth"
+	case QNetworkConfiguration__BearerWiMAX: // 8
+		return "BearerWiMAX"
+	case QNetworkConfiguration__BearerEVDO: // 9
+		return "BearerEVDO"
+	case QNetworkConfiguration__BearerLTE: // 10
+		return "BearerLTE"
+	case QNetworkConfiguration__Bearer3G: // 11
+		return "Bearer3G"
+	case QNetworkConfiguration__Bearer4G: // 12
+		return "Bearer4G"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkConfiguration_BearerTypeItemName(val int) string {
+	var nilthis *QNetworkConfiguration
+	return nilthis.BearerTypeItemName(val)
+}
 
 //  body block end
 

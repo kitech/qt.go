@@ -1266,6 +1266,14 @@ const QFileSystemModel__FileNameRole QFileSystemModel__Roles = 258
 //
 const QFileSystemModel__FilePermissions QFileSystemModel__Roles = 259
 
+func (this *QFileSystemModel) RolesItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFileSystemModel_RolesItemName(val int) string {
+	var nilthis *QFileSystemModel
+	return nilthis.RolesItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

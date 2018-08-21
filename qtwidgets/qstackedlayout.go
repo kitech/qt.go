@@ -496,6 +496,14 @@ const QStackedLayout__StackOne QStackedLayout__StackingMode = 0
 // All widgets are visible. The current widget is merely raised.
 const QStackedLayout__StackAll QStackedLayout__StackingMode = 1
 
+func (this *QStackedLayout) StackingModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStackedLayout_StackingModeItemName(val int) string {
+	var nilthis *QStackedLayout
+	return nilthis.StackingModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

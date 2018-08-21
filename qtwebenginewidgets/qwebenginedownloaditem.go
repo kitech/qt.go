@@ -448,6 +448,14 @@ const QWebEngineDownloadItem__DownloadCancelled QWebEngineDownloadItem__Download
 //
 const QWebEngineDownloadItem__DownloadInterrupted QWebEngineDownloadItem__DownloadState = 4
 
+func (this *QWebEngineDownloadItem) DownloadStateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEngineDownloadItem_DownloadStateItemName(val int) string {
+	var nilthis *QWebEngineDownloadItem
+	return nilthis.DownloadStateItemName(val)
+}
+
 /*
 
 
@@ -465,6 +473,14 @@ const QWebEngineDownloadItem__CompleteHtmlSaveFormat QWebEngineDownloadItem__Sav
 
 //
 const QWebEngineDownloadItem__MimeHtmlSaveFormat QWebEngineDownloadItem__SavePageFormat = 2
+
+func (this *QWebEngineDownloadItem) SavePageFormatItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEngineDownloadItem_SavePageFormatItemName(val int) string {
+	var nilthis *QWebEngineDownloadItem
+	return nilthis.SavePageFormatItemName(val)
+}
 
 /*
 
@@ -544,6 +560,14 @@ const QWebEngineDownloadItem__ServerUnreachable QWebEngineDownloadItem__Download
 //
 const QWebEngineDownloadItem__UserCanceled QWebEngineDownloadItem__DownloadInterruptReason = 40
 
+func (this *QWebEngineDownloadItem) DownloadInterruptReasonItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEngineDownloadItem_DownloadInterruptReasonItemName(val int) string {
+	var nilthis *QWebEngineDownloadItem
+	return nilthis.DownloadInterruptReasonItemName(val)
+}
+
 /*
 
 
@@ -561,6 +585,14 @@ const QWebEngineDownloadItem__UserRequested QWebEngineDownloadItem__DownloadType
 
 //
 const QWebEngineDownloadItem__SavePage QWebEngineDownloadItem__DownloadType = 3
+
+func (this *QWebEngineDownloadItem) DownloadTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEngineDownloadItem_DownloadTypeItemName(val int) string {
+	var nilthis *QWebEngineDownloadItem
+	return nilthis.DownloadTypeItemName(val)
+}
 
 //  body block end
 

@@ -1005,6 +1005,31 @@ const QTextCharFormat__AlignBottom QTextCharFormat__VerticalAlignment = 5
 //
 const QTextCharFormat__AlignBaseline QTextCharFormat__VerticalAlignment = 6
 
+func (this *QTextCharFormat) VerticalAlignmentItemName(val int) string {
+	switch val {
+	case QTextCharFormat__AlignNormal: // 0
+		return "AlignNormal"
+	case QTextCharFormat__AlignSuperScript: // 1
+		return "AlignSuperScript"
+	case QTextCharFormat__AlignSubScript: // 2
+		return "AlignSubScript"
+	case QTextCharFormat__AlignMiddle: // 3
+		return "AlignMiddle"
+	case QTextCharFormat__AlignTop: // 4
+		return "AlignTop"
+	case QTextCharFormat__AlignBottom: // 5
+		return "AlignBottom"
+	case QTextCharFormat__AlignBaseline: // 6
+		return "AlignBaseline"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextCharFormat_VerticalAlignmentItemName(val int) string {
+	var nilthis *QTextCharFormat
+	return nilthis.VerticalAlignmentItemName(val)
+}
+
 /*
 
 
@@ -1035,6 +1060,33 @@ const QTextCharFormat__WaveUnderline QTextCharFormat__UnderlineStyle = 6
 //
 const QTextCharFormat__SpellCheckUnderline QTextCharFormat__UnderlineStyle = 7
 
+func (this *QTextCharFormat) UnderlineStyleItemName(val int) string {
+	switch val {
+	case QTextCharFormat__NoUnderline: // 0
+		return "NoUnderline"
+	case QTextCharFormat__SingleUnderline: // 1
+		return "SingleUnderline"
+	case QTextCharFormat__DashUnderline: // 2
+		return "DashUnderline"
+	case QTextCharFormat__DotLine: // 3
+		return "DotLine"
+	case QTextCharFormat__DashDotLine: // 4
+		return "DashDotLine"
+	case QTextCharFormat__DashDotDotLine: // 5
+		return "DashDotDotLine"
+	case QTextCharFormat__WaveUnderline: // 6
+		return "WaveUnderline"
+	case QTextCharFormat__SpellCheckUnderline: // 7
+		return "SpellCheckUnderline"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextCharFormat_UnderlineStyleItemName(val int) string {
+	var nilthis *QTextCharFormat
+	return nilthis.UnderlineStyleItemName(val)
+}
+
 /*
 
 
@@ -1046,6 +1098,21 @@ const QTextCharFormat__FontPropertiesSpecifiedOnly QTextCharFormat__FontProperti
 
 //
 const QTextCharFormat__FontPropertiesAll QTextCharFormat__FontPropertiesInheritanceBehavior = 1
+
+func (this *QTextCharFormat) FontPropertiesInheritanceBehaviorItemName(val int) string {
+	switch val {
+	case QTextCharFormat__FontPropertiesSpecifiedOnly: // 0
+		return "FontPropertiesSpecifiedOnly"
+	case QTextCharFormat__FontPropertiesAll: // 1
+		return "FontPropertiesAll"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextCharFormat_FontPropertiesInheritanceBehaviorItemName(val int) string {
+	var nilthis *QTextCharFormat
+	return nilthis.FontPropertiesInheritanceBehaviorItemName(val)
+}
 
 //  body block end
 

@@ -596,6 +596,19 @@ type QGraphicsRectItem__ = int
 //
 const QGraphicsRectItem__Type QGraphicsRectItem__ = 3
 
+func (this *QGraphicsRectItem) ItemName(val int) string {
+	switch val {
+	case QGraphicsRectItem__Type: // 3
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsRectItem_ItemName(val int) string {
+	var nilthis *QGraphicsRectItem
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

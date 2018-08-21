@@ -490,6 +490,23 @@ const QHostInfo__HostNotFound QHostInfo__HostInfoError = 1
 // An unknown error occurred.
 const QHostInfo__UnknownError QHostInfo__HostInfoError = 2
 
+func (this *QHostInfo) HostInfoErrorItemName(val int) string {
+	switch val {
+	case QHostInfo__NoError: // 0
+		return "NoError"
+	case QHostInfo__HostNotFound: // 1
+		return "HostNotFound"
+	case QHostInfo__UnknownError: // 2
+		return "UnknownError"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QHostInfo_HostInfoErrorItemName(val int) string {
+	var nilthis *QHostInfo
+	return nilthis.HostInfoErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

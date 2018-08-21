@@ -513,6 +513,14 @@ const QSharedMemory__ReadOnly QSharedMemory__AccessMode = 0
 // Reading and writing the shared memory segment are both allowed.
 const QSharedMemory__ReadWrite QSharedMemory__AccessMode = 1
 
+func (this *QSharedMemory) AccessModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSharedMemory_AccessModeItemName(val int) string {
+	var nilthis *QSharedMemory
+	return nilthis.AccessModeItemName(val)
+}
+
 /*
 
  */
@@ -544,6 +552,14 @@ const QSharedMemory__OutOfResources QSharedMemory__SharedMemoryError = 7
 
 // Something else happened and it was bad.
 const QSharedMemory__UnknownError QSharedMemory__SharedMemoryError = 8
+
+func (this *QSharedMemory) SharedMemoryErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSharedMemory_SharedMemoryErrorItemName(val int) string {
+	var nilthis *QSharedMemory
+	return nilthis.SharedMemoryErrorItemName(val)
+}
 
 //  body block end
 

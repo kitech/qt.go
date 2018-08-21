@@ -1294,6 +1294,271 @@ const QPageSize__EnvelopeDL QPageSize__PageSizeId = 26
 //
 const QPageSize__Envelope10 QPageSize__PageSizeId = 25
 
+func (this *QPageSize) PageSizeIdItemName(val int) string {
+	switch val {
+	case QPageSize__A4: // 0
+		return "A4"
+	case QPageSize__B5: // 1
+		return "B5"
+	case QPageSize__Letter: // 2
+		return "Letter,AnsiA"
+	case QPageSize__Legal: // 3
+		return "Legal"
+	case QPageSize__Executive: // 4
+		return "Executive"
+	case QPageSize__A0: // 5
+		return "A0"
+	case QPageSize__A1: // 6
+		return "A1"
+	case QPageSize__A2: // 7
+		return "A2"
+	case QPageSize__A3: // 8
+		return "A3"
+	case QPageSize__A5: // 9
+		return "A5"
+	case QPageSize__A6: // 10
+		return "A6"
+	case QPageSize__A7: // 11
+		return "A7"
+	case QPageSize__A8: // 12
+		return "A8"
+	case QPageSize__A9: // 13
+		return "A9"
+	case QPageSize__B0: // 14
+		return "B0"
+	case QPageSize__B1: // 15
+		return "B1"
+	case QPageSize__B10: // 16
+		return "B10"
+	case QPageSize__B2: // 17
+		return "B2"
+	case QPageSize__B3: // 18
+		return "B3"
+	case QPageSize__B4: // 19
+		return "B4"
+	case QPageSize__B6: // 20
+		return "B6"
+	case QPageSize__B7: // 21
+		return "B7"
+	case QPageSize__B8: // 22
+		return "B8"
+	case QPageSize__B9: // 23
+		return "B9"
+	case QPageSize__C5E: // 24
+		return "C5E,EnvelopeC5"
+	case QPageSize__Comm10E: // 25
+		return "Comm10E,Envelope10"
+	case QPageSize__DLE: // 26
+		return "DLE,EnvelopeDL"
+	case QPageSize__Folio: // 27
+		return "Folio"
+	case QPageSize__Ledger: // 28
+		return "Ledger,AnsiB"
+	case QPageSize__Tabloid: // 29
+		return "Tabloid"
+	case QPageSize__Custom: // 30
+		return "Custom"
+	case QPageSize__A10: // 31
+		return "A10"
+	case QPageSize__A3Extra: // 32
+		return "A3Extra"
+	case QPageSize__A4Extra: // 33
+		return "A4Extra"
+	case QPageSize__A4Plus: // 34
+		return "A4Plus"
+	case QPageSize__A4Small: // 35
+		return "A4Small"
+	case QPageSize__A5Extra: // 36
+		return "A5Extra"
+	case QPageSize__B5Extra: // 37
+		return "B5Extra"
+	case QPageSize__JisB0: // 38
+		return "JisB0"
+	case QPageSize__JisB1: // 39
+		return "JisB1"
+	case QPageSize__JisB2: // 40
+		return "JisB2"
+	case QPageSize__JisB3: // 41
+		return "JisB3"
+	case QPageSize__JisB4: // 42
+		return "JisB4"
+	case QPageSize__JisB5: // 43
+		return "JisB5"
+	case QPageSize__JisB6: // 44
+		return "JisB6"
+	case QPageSize__JisB7: // 45
+		return "JisB7"
+	case QPageSize__JisB8: // 46
+		return "JisB8"
+	case QPageSize__JisB9: // 47
+		return "JisB9"
+	case QPageSize__JisB10: // 48
+		return "JisB10"
+	case QPageSize__AnsiC: // 49
+		return "AnsiC"
+	case QPageSize__AnsiD: // 50
+		return "AnsiD"
+	case QPageSize__AnsiE: // 51
+		return "AnsiE"
+	case QPageSize__LegalExtra: // 52
+		return "LegalExtra"
+	case QPageSize__LetterExtra: // 53
+		return "LetterExtra"
+	case QPageSize__LetterPlus: // 54
+		return "LetterPlus"
+	case QPageSize__LetterSmall: // 55
+		return "LetterSmall"
+	case QPageSize__TabloidExtra: // 56
+		return "TabloidExtra"
+	case QPageSize__ArchA: // 57
+		return "ArchA"
+	case QPageSize__ArchB: // 58
+		return "ArchB"
+	case QPageSize__ArchC: // 59
+		return "ArchC"
+	case QPageSize__ArchD: // 60
+		return "ArchD"
+	case QPageSize__ArchE: // 61
+		return "ArchE"
+	case QPageSize__Imperial7x9: // 62
+		return "Imperial7x9"
+	case QPageSize__Imperial8x10: // 63
+		return "Imperial8x10"
+	case QPageSize__Imperial9x11: // 64
+		return "Imperial9x11"
+	case QPageSize__Imperial9x12: // 65
+		return "Imperial9x12"
+	case QPageSize__Imperial10x11: // 66
+		return "Imperial10x11"
+	case QPageSize__Imperial10x13: // 67
+		return "Imperial10x13"
+	case QPageSize__Imperial10x14: // 68
+		return "Imperial10x14"
+	case QPageSize__Imperial12x11: // 69
+		return "Imperial12x11"
+	case QPageSize__Imperial15x11: // 70
+		return "Imperial15x11"
+	case QPageSize__ExecutiveStandard: // 71
+		return "ExecutiveStandard"
+	case QPageSize__Note: // 72
+		return "Note"
+	case QPageSize__Quarto: // 73
+		return "Quarto"
+	case QPageSize__Statement: // 74
+		return "Statement"
+	case QPageSize__SuperA: // 75
+		return "SuperA"
+	case QPageSize__SuperB: // 76
+		return "SuperB"
+	case QPageSize__Postcard: // 77
+		return "Postcard"
+	case QPageSize__DoublePostcard: // 78
+		return "DoublePostcard"
+	case QPageSize__Prc16K: // 79
+		return "Prc16K"
+	case QPageSize__Prc32K: // 80
+		return "Prc32K"
+	case QPageSize__Prc32KBig: // 81
+		return "Prc32KBig"
+	case QPageSize__FanFoldUS: // 82
+		return "FanFoldUS"
+	case QPageSize__FanFoldGerman: // 83
+		return "FanFoldGerman"
+	case QPageSize__FanFoldGermanLegal: // 84
+		return "FanFoldGermanLegal"
+	case QPageSize__EnvelopeB4: // 85
+		return "EnvelopeB4"
+	case QPageSize__EnvelopeB5: // 86
+		return "EnvelopeB5"
+	case QPageSize__EnvelopeB6: // 87
+		return "EnvelopeB6"
+	case QPageSize__EnvelopeC0: // 88
+		return "EnvelopeC0"
+	case QPageSize__EnvelopeC1: // 89
+		return "EnvelopeC1"
+	case QPageSize__EnvelopeC2: // 90
+		return "EnvelopeC2"
+	case QPageSize__EnvelopeC3: // 91
+		return "EnvelopeC3"
+	case QPageSize__EnvelopeC4: // 92
+		return "EnvelopeC4"
+	case QPageSize__EnvelopeC6: // 93
+		return "EnvelopeC6"
+	case QPageSize__EnvelopeC65: // 94
+		return "EnvelopeC65"
+	case QPageSize__EnvelopeC7: // 95
+		return "EnvelopeC7"
+	case QPageSize__Envelope9: // 96
+		return "Envelope9"
+	case QPageSize__Envelope11: // 97
+		return "Envelope11"
+	case QPageSize__Envelope12: // 98
+		return "Envelope12"
+	case QPageSize__Envelope14: // 99
+		return "Envelope14"
+	case QPageSize__EnvelopeMonarch: // 100
+		return "EnvelopeMonarch"
+	case QPageSize__EnvelopePersonal: // 101
+		return "EnvelopePersonal"
+	case QPageSize__EnvelopeChou3: // 102
+		return "EnvelopeChou3"
+	case QPageSize__EnvelopeChou4: // 103
+		return "EnvelopeChou4"
+	case QPageSize__EnvelopeInvite: // 104
+		return "EnvelopeInvite"
+	case QPageSize__EnvelopeItalian: // 105
+		return "EnvelopeItalian"
+	case QPageSize__EnvelopeKaku2: // 106
+		return "EnvelopeKaku2"
+	case QPageSize__EnvelopeKaku3: // 107
+		return "EnvelopeKaku3"
+	case QPageSize__EnvelopePrc1: // 108
+		return "EnvelopePrc1"
+	case QPageSize__EnvelopePrc2: // 109
+		return "EnvelopePrc2"
+	case QPageSize__EnvelopePrc3: // 110
+		return "EnvelopePrc3"
+	case QPageSize__EnvelopePrc4: // 111
+		return "EnvelopePrc4"
+	case QPageSize__EnvelopePrc5: // 112
+		return "EnvelopePrc5"
+	case QPageSize__EnvelopePrc6: // 113
+		return "EnvelopePrc6"
+	case QPageSize__EnvelopePrc7: // 114
+		return "EnvelopePrc7"
+	case QPageSize__EnvelopePrc8: // 115
+		return "EnvelopePrc8"
+	case QPageSize__EnvelopePrc9: // 116
+		return "EnvelopePrc9"
+	case QPageSize__EnvelopePrc10: // 117
+		return "EnvelopePrc10"
+	case QPageSize__EnvelopeYou4: // 118
+		return "EnvelopeYou4,LastPageSize,NPageSize,NPaperSize"
+		// case QPageSize__LastPageSize: // 118
+		// return ""
+		// case QPageSize__NPageSize: // 118
+		// return ""
+		// case QPageSize__NPaperSize: // 118
+		// return ""
+		// case QPageSize__AnsiA: // 2
+		// return ""
+		// case QPageSize__AnsiB: // 28
+		// return ""
+		// case QPageSize__EnvelopeC5: // 24
+		// return ""
+		// case QPageSize__EnvelopeDL: // 26
+		// return ""
+		// case QPageSize__Envelope10: // 25
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPageSize_PageSizeIdItemName(val int) string {
+	var nilthis *QPageSize
+	return nilthis.PageSizeIdItemName(val)
+}
+
 /*
 This enum type is used to specify the measurement unit for page sizes.
 
@@ -1319,6 +1584,29 @@ const QPageSize__Didot QPageSize__Unit = 4
 //
 const QPageSize__Cicero QPageSize__Unit = 5
 
+func (this *QPageSize) UnitItemName(val int) string {
+	switch val {
+	case QPageSize__Millimeter: // 0
+		return "Millimeter"
+	case QPageSize__Point: // 1
+		return "Point"
+	case QPageSize__Inch: // 2
+		return "Inch"
+	case QPageSize__Pica: // 3
+		return "Pica"
+	case QPageSize__Didot: // 4
+		return "Didot"
+	case QPageSize__Cicero: // 5
+		return "Cicero"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPageSize_UnitItemName(val int) string {
+	var nilthis *QPageSize
+	return nilthis.UnitItemName(val)
+}
+
 /*
 
  */
@@ -1332,6 +1620,23 @@ const QPageSize__FuzzyOrientationMatch QPageSize__SizeMatchPolicy = 1
 
 // Only match to a standard page size if the sizes match exactly.
 const QPageSize__ExactMatch QPageSize__SizeMatchPolicy = 2
+
+func (this *QPageSize) SizeMatchPolicyItemName(val int) string {
+	switch val {
+	case QPageSize__FuzzyMatch: // 0
+		return "FuzzyMatch"
+	case QPageSize__FuzzyOrientationMatch: // 1
+		return "FuzzyOrientationMatch"
+	case QPageSize__ExactMatch: // 2
+		return "ExactMatch"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPageSize_SizeMatchPolicyItemName(val int) string {
+	var nilthis *QPageSize
+	return nilthis.SizeMatchPolicyItemName(val)
+}
 
 //  body block end
 

@@ -661,6 +661,14 @@ const QToolButton__MenuButtonPopup QToolButton__ToolButtonPopupMode = 1
 // The menu is displayed, without delay, when the tool button is pressed. In this mode, the button's own action is not triggered.
 const QToolButton__InstantPopup QToolButton__ToolButtonPopupMode = 2
 
+func (this *QToolButton) ToolButtonPopupModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QToolButton_ToolButtonPopupModeItemName(val int) string {
+	var nilthis *QToolButton
+	return nilthis.ToolButtonPopupModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

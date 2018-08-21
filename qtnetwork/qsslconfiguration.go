@@ -767,6 +767,23 @@ const QSslConfiguration__NextProtocolNegotiationNegotiated QSslConfiguration__Ne
 // The client and server could not agree on a common next application protocol.
 const QSslConfiguration__NextProtocolNegotiationUnsupported QSslConfiguration__NextProtocolNegotiationStatus = 2
 
+func (this *QSslConfiguration) NextProtocolNegotiationStatusItemName(val int) string {
+	switch val {
+	case QSslConfiguration__NextProtocolNegotiationNone: // 0
+		return "NextProtocolNegotiationNone"
+	case QSslConfiguration__NextProtocolNegotiationNegotiated: // 1
+		return "NextProtocolNegotiationNegotiated"
+	case QSslConfiguration__NextProtocolNegotiationUnsupported: // 2
+		return "NextProtocolNegotiationUnsupported"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSslConfiguration_NextProtocolNegotiationStatusItemName(val int) string {
+	var nilthis *QSslConfiguration
+	return nilthis.NextProtocolNegotiationStatusItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

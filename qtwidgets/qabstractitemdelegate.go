@@ -539,6 +539,14 @@ const QAbstractItemDelegate__SubmitModelCache QAbstractItemDelegate__EndEditHint
 // If the model caches data, it should discard cached data and replace it with data from the underlying data store.
 const QAbstractItemDelegate__RevertModelCache QAbstractItemDelegate__EndEditHint = 4
 
+func (this *QAbstractItemDelegate) EndEditHintItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemDelegate_EndEditHintItemName(val int) string {
+	var nilthis *QAbstractItemDelegate
+	return nilthis.EndEditHintItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

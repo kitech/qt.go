@@ -722,6 +722,14 @@ const QWebEngineProfile__DiskHttpCache QWebEngineProfile__HttpCacheType = 1
 //
 const QWebEngineProfile__NoCache QWebEngineProfile__HttpCacheType = 2
 
+func (this *QWebEngineProfile) HttpCacheTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEngineProfile_HttpCacheTypeItemName(val int) string {
+	var nilthis *QWebEngineProfile
+	return nilthis.HttpCacheTypeItemName(val)
+}
+
 /*
 
 
@@ -736,6 +744,14 @@ const QWebEngineProfile__AllowPersistentCookies QWebEngineProfile__PersistentCoo
 
 //
 const QWebEngineProfile__ForcePersistentCookies QWebEngineProfile__PersistentCookiesPolicy = 2
+
+func (this *QWebEngineProfile) PersistentCookiesPolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QWebEngineProfile_PersistentCookiesPolicyItemName(val int) string {
+	var nilthis *QWebEngineProfile
+	return nilthis.PersistentCookiesPolicyItemName(val)
+}
 
 //  body block end
 

@@ -314,6 +314,27 @@ const QGeoShape__PathType QGeoShape__ShapeType = 3
 //
 const QGeoShape__PolygonType QGeoShape__ShapeType = 4
 
+func (this *QGeoShape) ShapeTypeItemName(val int) string {
+	switch val {
+	case QGeoShape__UnknownType: // 0
+		return "UnknownType"
+	case QGeoShape__RectangleType: // 1
+		return "RectangleType"
+	case QGeoShape__CircleType: // 2
+		return "CircleType"
+	case QGeoShape__PathType: // 3
+		return "PathType"
+	case QGeoShape__PolygonType: // 4
+		return "PolygonType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGeoShape_ShapeTypeItemName(val int) string {
+	var nilthis *QGeoShape
+	return nilthis.ShapeTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -118,6 +118,19 @@ type QStyleOptionButton__StyleOptionType = int
 //
 const QStyleOptionButton__Type QStyleOptionButton__StyleOptionType = 2
 
+func (this *QStyleOptionButton) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionButton__Type: // 2
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionButton_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionButton
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionButton__StyleOptionVersion = int
 
 // 1
 const QStyleOptionButton__Version QStyleOptionButton__StyleOptionVersion = 1
+
+func (this *QStyleOptionButton) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionButton__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionButton_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionButton
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 /*
 
@@ -156,6 +182,29 @@ const QStyleOptionButton__AutoDefaultButton QStyleOptionButton__ButtonFeature = 
 
 //
 const QStyleOptionButton__CommandLinkButton QStyleOptionButton__ButtonFeature = 16
+
+func (this *QStyleOptionButton) ButtonFeatureItemName(val int) string {
+	switch val {
+	case QStyleOptionButton__None: // 0
+		return "None"
+	case QStyleOptionButton__Flat: // 1
+		return "Flat"
+	case QStyleOptionButton__HasMenu: // 2
+		return "HasMenu"
+	case QStyleOptionButton__DefaultButton: // 4
+		return "DefaultButton"
+	case QStyleOptionButton__AutoDefaultButton: // 8
+		return "AutoDefaultButton"
+	case QStyleOptionButton__CommandLinkButton: // 16
+		return "CommandLinkButton"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionButton_ButtonFeatureItemName(val int) string {
+	var nilthis *QStyleOptionButton
+	return nilthis.ButtonFeatureItemName(val)
+}
 
 //  body block end
 

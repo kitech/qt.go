@@ -672,6 +672,21 @@ const QJsonDocument__Validate QJsonDocument__DataValidation = 0
 // Bypasses data validation. Only use if you received the data from a trusted place and know it's valid, as using of invalid data can crash the application.
 const QJsonDocument__BypassValidation QJsonDocument__DataValidation = 1
 
+func (this *QJsonDocument) DataValidationItemName(val int) string {
+	switch val {
+	case QJsonDocument__Validate: // 0
+		return "Validate"
+	case QJsonDocument__BypassValidation: // 1
+		return "BypassValidation"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QJsonDocument_DataValidationItemName(val int) string {
+	var nilthis *QJsonDocument
+	return nilthis.DataValidationItemName(val)
+}
+
 /*
 This value defines the format of the JSON byte array produced when converting to a QJsonDocument using toJson().
 
@@ -697,6 +712,21 @@ const QJsonDocument__Indented QJsonDocument__JsonFormat = 0
 
 // Defines a compact output as follows:
 const QJsonDocument__Compact QJsonDocument__JsonFormat = 1
+
+func (this *QJsonDocument) JsonFormatItemName(val int) string {
+	switch val {
+	case QJsonDocument__Indented: // 0
+		return "Indented"
+	case QJsonDocument__Compact: // 1
+		return "Compact"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QJsonDocument_JsonFormatItemName(val int) string {
+	var nilthis *QJsonDocument
+	return nilthis.JsonFormatItemName(val)
+}
 
 //  body block end
 

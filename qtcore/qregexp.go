@@ -1176,6 +1176,29 @@ const QRegExp__WildcardUnix QRegExp__PatternSyntax = 4
 //
 const QRegExp__W3CXmlSchema11 QRegExp__PatternSyntax = 5
 
+func (this *QRegExp) PatternSyntaxItemName(val int) string {
+	switch val {
+	case QRegExp__RegExp: // 0
+		return "RegExp"
+	case QRegExp__Wildcard: // 1
+		return "Wildcard"
+	case QRegExp__FixedString: // 2
+		return "FixedString"
+	case QRegExp__RegExp2: // 3
+		return "RegExp2"
+	case QRegExp__WildcardUnix: // 4
+		return "WildcardUnix"
+	case QRegExp__W3CXmlSchema11: // 5
+		return "W3CXmlSchema11"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QRegExp_PatternSyntaxItemName(val int) string {
+	var nilthis *QRegExp
+	return nilthis.PatternSyntaxItemName(val)
+}
+
 /*
 The CaretMode enum defines the different meanings of the caret (^) in a regular expression. The possible values are:
 
@@ -1191,6 +1214,23 @@ const QRegExp__CaretAtOffset QRegExp__CaretMode = 1
 
 // The caret never matches.
 const QRegExp__CaretWontMatch QRegExp__CaretMode = 2
+
+func (this *QRegExp) CaretModeItemName(val int) string {
+	switch val {
+	case QRegExp__CaretAtZero: // 0
+		return "CaretAtZero"
+	case QRegExp__CaretAtOffset: // 1
+		return "CaretAtOffset"
+	case QRegExp__CaretWontMatch: // 2
+		return "CaretWontMatch"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QRegExp_CaretModeItemName(val int) string {
+	var nilthis *QRegExp
+	return nilthis.CaretModeItemName(val)
+}
 
 //  body block end
 

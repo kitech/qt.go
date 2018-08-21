@@ -368,6 +368,14 @@ const QHistoryState__ShallowHistory QHistoryState__HistoryType = 0
 // Nested states are recorded. In this case a transition with the history state as its target will end up in the most deeply nested descendant state the parent was in the last time it was exited.
 const QHistoryState__DeepHistory QHistoryState__HistoryType = 1
 
+func (this *QHistoryState) HistoryTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QHistoryState_HistoryTypeItemName(val int) string {
+	var nilthis *QHistoryState
+	return nilthis.HistoryTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

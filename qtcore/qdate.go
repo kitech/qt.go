@@ -1150,6 +1150,21 @@ const QDate__DateFormat QDate__MonthNameType = 0
 //
 const QDate__StandaloneFormat QDate__MonthNameType = 1
 
+func (this *QDate) MonthNameTypeItemName(val int) string {
+	switch val {
+	case QDate__DateFormat: // 0
+		return "DateFormat"
+	case QDate__StandaloneFormat: // 1
+		return "StandaloneFormat"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QDate_MonthNameTypeItemName(val int) string {
+	var nilthis *QDate
+	return nilthis.MonthNameTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

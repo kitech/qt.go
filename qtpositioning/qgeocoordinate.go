@@ -499,6 +499,23 @@ const QGeoCoordinate__Coordinate2D QGeoCoordinate__CoordinateType = 1
 // A coordinate with valid latitude and longitude values, and also an altitude value.
 const QGeoCoordinate__Coordinate3D QGeoCoordinate__CoordinateType = 2
 
+func (this *QGeoCoordinate) CoordinateTypeItemName(val int) string {
+	switch val {
+	case QGeoCoordinate__InvalidCoordinate: // 0
+		return "InvalidCoordinate"
+	case QGeoCoordinate__Coordinate2D: // 1
+		return "Coordinate2D"
+	case QGeoCoordinate__Coordinate3D: // 2
+		return "Coordinate3D"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGeoCoordinate_CoordinateTypeItemName(val int) string {
+	var nilthis *QGeoCoordinate
+	return nilthis.CoordinateTypeItemName(val)
+}
+
 /*
 Defines the possible formatting options for toString().
 
@@ -526,6 +543,29 @@ const QGeoCoordinate__DegreesMinutesSeconds QGeoCoordinate__CoordinateFormat = 4
 
 // Returns a string representation of the coordinates in degrees-minutes-seconds format, using 'N', 'S', 'E' or 'W' to indicate the hemispheres of the coordinates.
 const QGeoCoordinate__DegreesMinutesSecondsWithHemisphere QGeoCoordinate__CoordinateFormat = 5
+
+func (this *QGeoCoordinate) CoordinateFormatItemName(val int) string {
+	switch val {
+	case QGeoCoordinate__Degrees: // 0
+		return "Degrees"
+	case QGeoCoordinate__DegreesWithHemisphere: // 1
+		return "DegreesWithHemisphere"
+	case QGeoCoordinate__DegreesMinutes: // 2
+		return "DegreesMinutes"
+	case QGeoCoordinate__DegreesMinutesWithHemisphere: // 3
+		return "DegreesMinutesWithHemisphere"
+	case QGeoCoordinate__DegreesMinutesSeconds: // 4
+		return "DegreesMinutesSeconds"
+	case QGeoCoordinate__DegreesMinutesSecondsWithHemisphere: // 5
+		return "DegreesMinutesSecondsWithHemisphere"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGeoCoordinate_CoordinateFormatItemName(val int) string {
+	var nilthis *QGeoCoordinate
+	return nilthis.CoordinateFormatItemName(val)
+}
 
 //  body block end
 

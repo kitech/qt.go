@@ -588,6 +588,21 @@ const QVideoSurfaceFormat__TopToBottom QVideoSurfaceFormat__Direction = 0
 // Scan lines are arranged from the bottom of the frame to the top.
 const QVideoSurfaceFormat__BottomToTop QVideoSurfaceFormat__Direction = 1
 
+func (this *QVideoSurfaceFormat) DirectionItemName(val int) string {
+	switch val {
+	case QVideoSurfaceFormat__TopToBottom: // 0
+		return "TopToBottom"
+	case QVideoSurfaceFormat__BottomToTop: // 1
+		return "BottomToTop"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QVideoSurfaceFormat_DirectionItemName(val int) string {
+	var nilthis *QVideoSurfaceFormat
+	return nilthis.DirectionItemName(val)
+}
+
 /*
 Enumerates the Y'CbCr color space of video frames.
 
@@ -615,6 +630,31 @@ const QVideoSurfaceFormat__YCbCr_JPEG QVideoSurfaceFormat__YCbCrColorSpace = 5
 
 //
 const QVideoSurfaceFormat__YCbCr_CustomMatrix QVideoSurfaceFormat__YCbCrColorSpace = 6
+
+func (this *QVideoSurfaceFormat) YCbCrColorSpaceItemName(val int) string {
+	switch val {
+	case QVideoSurfaceFormat__YCbCr_Undefined: // 0
+		return "YCbCr_Undefined"
+	case QVideoSurfaceFormat__YCbCr_BT601: // 1
+		return "YCbCr_BT601"
+	case QVideoSurfaceFormat__YCbCr_BT709: // 2
+		return "YCbCr_BT709"
+	case QVideoSurfaceFormat__YCbCr_xvYCC601: // 3
+		return "YCbCr_xvYCC601"
+	case QVideoSurfaceFormat__YCbCr_xvYCC709: // 4
+		return "YCbCr_xvYCC709"
+	case QVideoSurfaceFormat__YCbCr_JPEG: // 5
+		return "YCbCr_JPEG"
+	case QVideoSurfaceFormat__YCbCr_CustomMatrix: // 6
+		return "YCbCr_CustomMatrix"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QVideoSurfaceFormat_YCbCrColorSpaceItemName(val int) string {
+	var nilthis *QVideoSurfaceFormat
+	return nilthis.YCbCrColorSpaceItemName(val)
+}
 
 //  body block end
 

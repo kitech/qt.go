@@ -468,6 +468,23 @@ const QDirIterator__FollowSymlinks QDirIterator__IteratorFlag = 1
 //
 const QDirIterator__Subdirectories QDirIterator__IteratorFlag = 2
 
+func (this *QDirIterator) IteratorFlagItemName(val int) string {
+	switch val {
+	case QDirIterator__NoIteratorFlags: // 0
+		return "NoIteratorFlags"
+	case QDirIterator__FollowSymlinks: // 1
+		return "FollowSymlinks"
+	case QDirIterator__Subdirectories: // 2
+		return "Subdirectories"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QDirIterator_IteratorFlagItemName(val int) string {
+	var nilthis *QDirIterator
+	return nilthis.IteratorFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

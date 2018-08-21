@@ -256,6 +256,14 @@ const QCameraImageProcessingControl__ColorFilter QCameraImageProcessingControl__
 //
 const QCameraImageProcessingControl__ExtendedParameter QCameraImageProcessingControl__ProcessingParameter = 1000
 
+func (this *QCameraImageProcessingControl) ProcessingParameterItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraImageProcessingControl_ProcessingParameterItemName(val int) string {
+	var nilthis *QCameraImageProcessingControl
+	return nilthis.ProcessingParameterItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

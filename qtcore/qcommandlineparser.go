@@ -824,6 +824,21 @@ const QCommandLineParser__ParseAsCompactedShortOptions QCommandLineParser__Singl
 // -abc is interpreted as --abc, i.e. as the long option named abc. This is how Qt's own tools (uic, rcc...) have always been parsing arguments. This mode should be used for preserving compatibility in applications that were parsing arguments in such a way. There is an exception if the a option has the QCommandLineOption::ShortOptionStyle flag set, in which case it is still interpreted as -a bc.
 const QCommandLineParser__ParseAsLongOptions QCommandLineParser__SingleDashWordOptionMode = 1
 
+func (this *QCommandLineParser) SingleDashWordOptionModeItemName(val int) string {
+	switch val {
+	case QCommandLineParser__ParseAsCompactedShortOptions: // 0
+		return "ParseAsCompactedShortOptions"
+	case QCommandLineParser__ParseAsLongOptions: // 1
+		return "ParseAsLongOptions"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QCommandLineParser_SingleDashWordOptionModeItemName(val int) string {
+	var nilthis *QCommandLineParser
+	return nilthis.SingleDashWordOptionModeItemName(val)
+}
+
 /*
 This enum describes the way the parser interprets options that occur after positional arguments.
 
@@ -841,6 +856,21 @@ const QCommandLineParser__ParseAsOptions QCommandLineParser__OptionsAfterPositio
 
 // application argument --opt is interpreted as having two positional arguments, argument and --opt. This mode is useful for executables that aim to launch other executables (e.g. wrappers, debugging tools, etc.) or that support internal commands followed by options for the command. argument is the name of the command, and all options occurring after it can be collected and parsed by another command line parser, possibly in another executable.
 const QCommandLineParser__ParseAsPositionalArguments QCommandLineParser__OptionsAfterPositionalArgumentsMode = 1
+
+func (this *QCommandLineParser) OptionsAfterPositionalArgumentsModeItemName(val int) string {
+	switch val {
+	case QCommandLineParser__ParseAsOptions: // 0
+		return "ParseAsOptions"
+	case QCommandLineParser__ParseAsPositionalArguments: // 1
+		return "ParseAsPositionalArguments"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QCommandLineParser_OptionsAfterPositionalArgumentsModeItemName(val int) string {
+	var nilthis *QCommandLineParser
+	return nilthis.OptionsAfterPositionalArgumentsModeItemName(val)
+}
 
 //  body block end
 

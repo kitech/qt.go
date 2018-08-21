@@ -412,6 +412,14 @@ const QSlider__TicksRight QSlider__TickPosition = 2
 // Draw tick marks on both sides of the groove.
 const QSlider__TicksBothSides QSlider__TickPosition = 3
 
+func (this *QSlider) TickPositionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSlider_TickPositionItemName(val int) string {
+	var nilthis *QSlider
+	return nilthis.TickPositionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

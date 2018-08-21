@@ -619,6 +619,35 @@ const QNetworkRequest__UserAgentHeader QNetworkRequest__KnownHeaders = 7
 // The Server header received by HTTP clients.
 const QNetworkRequest__ServerHeader QNetworkRequest__KnownHeaders = 8
 
+func (this *QNetworkRequest) KnownHeadersItemName(val int) string {
+	switch val {
+	case QNetworkRequest__ContentTypeHeader: // 0
+		return "ContentTypeHeader"
+	case QNetworkRequest__ContentLengthHeader: // 1
+		return "ContentLengthHeader"
+	case QNetworkRequest__LocationHeader: // 2
+		return "LocationHeader"
+	case QNetworkRequest__LastModifiedHeader: // 3
+		return "LastModifiedHeader"
+	case QNetworkRequest__CookieHeader: // 4
+		return "CookieHeader"
+	case QNetworkRequest__SetCookieHeader: // 5
+		return "SetCookieHeader"
+	case QNetworkRequest__ContentDispositionHeader: // 6
+		return "ContentDispositionHeader"
+	case QNetworkRequest__UserAgentHeader: // 7
+		return "UserAgentHeader"
+	case QNetworkRequest__ServerHeader: // 8
+		return "ServerHeader"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkRequest_KnownHeadersItemName(val int) string {
+	var nilthis *QNetworkRequest
+	return nilthis.KnownHeadersItemName(val)
+}
+
 /*
 Attribute codes for the QNetworkRequest and QNetworkReply.
 
@@ -717,6 +746,73 @@ const QNetworkRequest__User QNetworkRequest__Attribute = 1000
 //
 const QNetworkRequest__UserMax QNetworkRequest__Attribute = 32767
 
+func (this *QNetworkRequest) AttributeItemName(val int) string {
+	switch val {
+	case QNetworkRequest__HttpStatusCodeAttribute: // 0
+		return "HttpStatusCodeAttribute"
+	case QNetworkRequest__HttpReasonPhraseAttribute: // 1
+		return "HttpReasonPhraseAttribute"
+	case QNetworkRequest__RedirectionTargetAttribute: // 2
+		return "RedirectionTargetAttribute"
+	case QNetworkRequest__ConnectionEncryptedAttribute: // 3
+		return "ConnectionEncryptedAttribute"
+	case QNetworkRequest__CacheLoadControlAttribute: // 4
+		return "CacheLoadControlAttribute"
+	case QNetworkRequest__CacheSaveControlAttribute: // 5
+		return "CacheSaveControlAttribute"
+	case QNetworkRequest__SourceIsFromCacheAttribute: // 6
+		return "SourceIsFromCacheAttribute"
+	case QNetworkRequest__DoNotBufferUploadDataAttribute: // 7
+		return "DoNotBufferUploadDataAttribute"
+	case QNetworkRequest__HttpPipeliningAllowedAttribute: // 8
+		return "HttpPipeliningAllowedAttribute"
+	case QNetworkRequest__HttpPipeliningWasUsedAttribute: // 9
+		return "HttpPipeliningWasUsedAttribute"
+	case QNetworkRequest__CustomVerbAttribute: // 10
+		return "CustomVerbAttribute"
+	case QNetworkRequest__CookieLoadControlAttribute: // 11
+		return "CookieLoadControlAttribute"
+	case QNetworkRequest__AuthenticationReuseAttribute: // 12
+		return "AuthenticationReuseAttribute"
+	case QNetworkRequest__CookieSaveControlAttribute: // 13
+		return "CookieSaveControlAttribute"
+	case QNetworkRequest__MaximumDownloadBufferSizeAttribute: // 14
+		return "MaximumDownloadBufferSizeAttribute"
+	case QNetworkRequest__DownloadBufferAttribute: // 15
+		return "DownloadBufferAttribute"
+	case QNetworkRequest__SynchronousRequestAttribute: // 16
+		return "SynchronousRequestAttribute"
+	case QNetworkRequest__BackgroundRequestAttribute: // 17
+		return "BackgroundRequestAttribute"
+	case QNetworkRequest__SpdyAllowedAttribute: // 18
+		return "SpdyAllowedAttribute"
+	case QNetworkRequest__SpdyWasUsedAttribute: // 19
+		return "SpdyWasUsedAttribute"
+	case QNetworkRequest__EmitAllUploadProgressSignalsAttribute: // 20
+		return "EmitAllUploadProgressSignalsAttribute"
+	case QNetworkRequest__FollowRedirectsAttribute: // 21
+		return "FollowRedirectsAttribute"
+	case QNetworkRequest__HTTP2AllowedAttribute: // 22
+		return "HTTP2AllowedAttribute"
+	case QNetworkRequest__HTTP2WasUsedAttribute: // 23
+		return "HTTP2WasUsedAttribute"
+	case QNetworkRequest__OriginalContentLengthAttribute: // 24
+		return "OriginalContentLengthAttribute"
+	case QNetworkRequest__RedirectPolicyAttribute: // 25
+		return "RedirectPolicyAttribute"
+	case QNetworkRequest__User: // 1000
+		return "User"
+	case QNetworkRequest__UserMax: // 32767
+		return "UserMax"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkRequest_AttributeItemName(val int) string {
+	var nilthis *QNetworkRequest
+	return nilthis.AttributeItemName(val)
+}
+
 /*
 Controls the caching mechanism of QNetworkAccessManager.
 
@@ -736,6 +832,25 @@ const QNetworkRequest__PreferCache QNetworkRequest__CacheLoadControl = 2
 // only load from cache, indicating error if the item was not cached (i.e., off-line mode)
 const QNetworkRequest__AlwaysCache QNetworkRequest__CacheLoadControl = 3
 
+func (this *QNetworkRequest) CacheLoadControlItemName(val int) string {
+	switch val {
+	case QNetworkRequest__AlwaysNetwork: // 0
+		return "AlwaysNetwork"
+	case QNetworkRequest__PreferNetwork: // 1
+		return "PreferNetwork"
+	case QNetworkRequest__PreferCache: // 2
+		return "PreferCache"
+	case QNetworkRequest__AlwaysCache: // 3
+		return "AlwaysCache"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkRequest_CacheLoadControlItemName(val int) string {
+	var nilthis *QNetworkRequest
+	return nilthis.CacheLoadControlItemName(val)
+}
+
 /*
 Indicates if an aspect of the request's loading mechanism has been manually overridden, e.g. by Qt WebKit.
 
@@ -751,6 +866,21 @@ const QNetworkRequest__Automatic QNetworkRequest__LoadControl = 0
 
 // indicates behaviour has been manually overridden.
 const QNetworkRequest__Manual QNetworkRequest__LoadControl = 1
+
+func (this *QNetworkRequest) LoadControlItemName(val int) string {
+	switch val {
+	case QNetworkRequest__Automatic: // 0
+		return "Automatic"
+	case QNetworkRequest__Manual: // 1
+		return "Manual"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkRequest_LoadControlItemName(val int) string {
+	var nilthis *QNetworkRequest
+	return nilthis.LoadControlItemName(val)
+}
 
 /*
 This enum lists the possible network request priorities.
@@ -770,6 +900,23 @@ const QNetworkRequest__NormalPriority QNetworkRequest__Priority = 3
 
 // Low priority
 const QNetworkRequest__LowPriority QNetworkRequest__Priority = 5
+
+func (this *QNetworkRequest) PriorityItemName(val int) string {
+	switch val {
+	case QNetworkRequest__HighPriority: // 1
+		return "HighPriority"
+	case QNetworkRequest__NormalPriority: // 3
+		return "NormalPriority"
+	case QNetworkRequest__LowPriority: // 5
+		return "LowPriority"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkRequest_PriorityItemName(val int) string {
+	var nilthis *QNetworkRequest
+	return nilthis.PriorityItemName(val)
+}
 
 /*
 Indicates whether the Network Access API should automatically follow a HTTP redirect response or not.
@@ -792,6 +939,25 @@ const QNetworkRequest__SameOriginRedirectPolicy QNetworkRequest__RedirectPolicy 
 
 // Client decides whether to follow each redirect by handling the redirected() signal, emitting redirectAllowed() on the QNetworkReply object to allow the redirect or aborting/finishing it to reject the redirect. This can be used, for example, to ask the user whether to accept the redirect, or to decide based on some app-specific configuration.
 const QNetworkRequest__UserVerifiedRedirectPolicy QNetworkRequest__RedirectPolicy = 3
+
+func (this *QNetworkRequest) RedirectPolicyItemName(val int) string {
+	switch val {
+	case QNetworkRequest__ManualRedirectPolicy: // 0
+		return "ManualRedirectPolicy"
+	case QNetworkRequest__NoLessSafeRedirectPolicy: // 1
+		return "NoLessSafeRedirectPolicy"
+	case QNetworkRequest__SameOriginRedirectPolicy: // 2
+		return "SameOriginRedirectPolicy"
+	case QNetworkRequest__UserVerifiedRedirectPolicy: // 3
+		return "UserVerifiedRedirectPolicy"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkRequest_RedirectPolicyItemName(val int) string {
+	var nilthis *QNetworkRequest
+	return nilthis.RedirectPolicyItemName(val)
+}
 
 //  body block end
 

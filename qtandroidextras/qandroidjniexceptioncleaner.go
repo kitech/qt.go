@@ -141,6 +141,21 @@ const QAndroidJniExceptionCleaner__Silent QAndroidJniExceptionCleaner__OutputMod
 //
 const QAndroidJniExceptionCleaner__Verbose QAndroidJniExceptionCleaner__OutputMode = 1
 
+func (this *QAndroidJniExceptionCleaner) OutputModeItemName(val int) string {
+	switch val {
+	case QAndroidJniExceptionCleaner__Silent: // 0
+		return "Silent"
+	case QAndroidJniExceptionCleaner__Verbose: // 1
+		return "Verbose"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAndroidJniExceptionCleaner_OutputModeItemName(val int) string {
+	var nilthis *QAndroidJniExceptionCleaner
+	return nilthis.OutputModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

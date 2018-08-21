@@ -933,6 +933,14 @@ const QMediaPlaylist__Loop QMediaPlaylist__PlaybackMode = 3
 // Play items in random order.
 const QMediaPlaylist__Random QMediaPlaylist__PlaybackMode = 4
 
+func (this *QMediaPlaylist) PlaybackModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMediaPlaylist_PlaybackModeItemName(val int) string {
+	var nilthis *QMediaPlaylist
+	return nilthis.PlaybackModeItemName(val)
+}
+
 /*
 This enum describes the QMediaPlaylist error codes.
 
@@ -954,6 +962,14 @@ const QMediaPlaylist__NetworkError QMediaPlaylist__Error = 3
 
 // Access denied error.
 const QMediaPlaylist__AccessDeniedError QMediaPlaylist__Error = 4
+
+func (this *QMediaPlaylist) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMediaPlaylist_ErrorItemName(val int) string {
+	var nilthis *QMediaPlaylist
+	return nilthis.ErrorItemName(val)
+}
 
 //  body block end
 

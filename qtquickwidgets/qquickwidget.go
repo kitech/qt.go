@@ -917,6 +917,14 @@ const QQuickWidget__SizeViewToRootObject QQuickWidget__ResizeMode = 0
 //
 const QQuickWidget__SizeRootObjectToView QQuickWidget__ResizeMode = 1
 
+func (this *QQuickWidget) ResizeModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickWidget_ResizeModeItemName(val int) string {
+	var nilthis *QQuickWidget
+	return nilthis.ResizeModeItemName(val)
+}
+
 /*
 
 
@@ -934,6 +942,14 @@ const QQuickWidget__Loading QQuickWidget__Status = 2
 
 //
 const QQuickWidget__Error QQuickWidget__Status = 3
+
+func (this *QQuickWidget) StatusItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickWidget_StatusItemName(val int) string {
+	var nilthis *QQuickWidget
+	return nilthis.StatusItemName(val)
+}
 
 //  body block end
 

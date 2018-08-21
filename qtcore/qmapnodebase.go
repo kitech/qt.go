@@ -179,6 +179,21 @@ const QMapNodeBase__Red QMapNodeBase__Color = 0
 //
 const QMapNodeBase__Black QMapNodeBase__Color = 1
 
+func (this *QMapNodeBase) ColorItemName(val int) string {
+	switch val {
+	case QMapNodeBase__Red: // 0
+		return "Red"
+	case QMapNodeBase__Black: // 1
+		return "Black"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMapNodeBase_ColorItemName(val int) string {
+	var nilthis *QMapNodeBase
+	return nilthis.ColorItemName(val)
+}
+
 /*
 
 
@@ -187,6 +202,19 @@ type QMapNodeBase__ = int
 
 //
 const QMapNodeBase__Mask QMapNodeBase__ = 3
+
+func (this *QMapNodeBase) ItemName(val int) string {
+	switch val {
+	case QMapNodeBase__Mask: // 3
+		return "Mask"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMapNodeBase_ItemName(val int) string {
+	var nilthis *QMapNodeBase
+	return nilthis.ItemName(val)
+}
 
 //  body block end
 

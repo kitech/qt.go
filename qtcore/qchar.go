@@ -1698,6 +1698,45 @@ const QChar__LineSeparator QChar__SpecialCharacter = 8232
 //
 const QChar__LastValidCodePoint QChar__SpecialCharacter = 1114111
 
+func (this *QChar) SpecialCharacterItemName(val int) string {
+	switch val {
+	case QChar__Null: // 0
+		return "Null"
+	case QChar__Tabulation: // 9
+		return "Tabulation"
+	case QChar__LineFeed: // 10
+		return "LineFeed"
+	case QChar__CarriageReturn: // 13
+		return "CarriageReturn"
+	case QChar__Space: // 32
+		return "Space"
+	case QChar__Nbsp: // 160
+		return "Nbsp"
+	case QChar__SoftHyphen: // 173
+		return "SoftHyphen"
+	case QChar__ReplacementCharacter: // 65533
+		return "ReplacementCharacter"
+	case QChar__ObjectReplacementCharacter: // 65532
+		return "ObjectReplacementCharacter"
+	case QChar__ByteOrderMark: // 65279
+		return "ByteOrderMark"
+	case QChar__ByteOrderSwapped: // 65534
+		return "ByteOrderSwapped"
+	case QChar__ParagraphSeparator: // 8233
+		return "ParagraphSeparator"
+	case QChar__LineSeparator: // 8232
+		return "LineSeparator"
+	case QChar__LastValidCodePoint: // 1114111
+		return "LastValidCodePoint"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QChar_SpecialCharacterItemName(val int) string {
+	var nilthis *QChar
+	return nilthis.SpecialCharacterItemName(val)
+}
+
 /*
 This enum maps the Unicode character categories.
 
@@ -1803,6 +1842,77 @@ const QChar__Symbol_Modifier QChar__Category = 28
 
 //
 const QChar__Symbol_Other QChar__Category = 29
+
+func (this *QChar) CategoryItemName(val int) string {
+	switch val {
+	case QChar__Mark_NonSpacing: // 0
+		return "Mark_NonSpacing"
+	case QChar__Mark_SpacingCombining: // 1
+		return "Mark_SpacingCombining"
+	case QChar__Mark_Enclosing: // 2
+		return "Mark_Enclosing"
+	case QChar__Number_DecimalDigit: // 3
+		return "Number_DecimalDigit"
+	case QChar__Number_Letter: // 4
+		return "Number_Letter"
+	case QChar__Number_Other: // 5
+		return "Number_Other"
+	case QChar__Separator_Space: // 6
+		return "Separator_Space"
+	case QChar__Separator_Line: // 7
+		return "Separator_Line"
+	case QChar__Separator_Paragraph: // 8
+		return "Separator_Paragraph"
+	case QChar__Other_Control: // 9
+		return "Other_Control"
+	case QChar__Other_Format: // 10
+		return "Other_Format"
+	case QChar__Other_Surrogate: // 11
+		return "Other_Surrogate"
+	case QChar__Other_PrivateUse: // 12
+		return "Other_PrivateUse"
+	case QChar__Other_NotAssigned: // 13
+		return "Other_NotAssigned"
+	case QChar__Letter_Uppercase: // 14
+		return "Letter_Uppercase"
+	case QChar__Letter_Lowercase: // 15
+		return "Letter_Lowercase"
+	case QChar__Letter_Titlecase: // 16
+		return "Letter_Titlecase"
+	case QChar__Letter_Modifier: // 17
+		return "Letter_Modifier"
+	case QChar__Letter_Other: // 18
+		return "Letter_Other"
+	case QChar__Punctuation_Connector: // 19
+		return "Punctuation_Connector"
+	case QChar__Punctuation_Dash: // 20
+		return "Punctuation_Dash"
+	case QChar__Punctuation_Open: // 21
+		return "Punctuation_Open"
+	case QChar__Punctuation_Close: // 22
+		return "Punctuation_Close"
+	case QChar__Punctuation_InitialQuote: // 23
+		return "Punctuation_InitialQuote"
+	case QChar__Punctuation_FinalQuote: // 24
+		return "Punctuation_FinalQuote"
+	case QChar__Punctuation_Other: // 25
+		return "Punctuation_Other"
+	case QChar__Symbol_Math: // 26
+		return "Symbol_Math"
+	case QChar__Symbol_Currency: // 27
+		return "Symbol_Currency"
+	case QChar__Symbol_Modifier: // 28
+		return "Symbol_Modifier"
+	case QChar__Symbol_Other: // 29
+		return "Symbol_Other"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QChar_CategoryItemName(val int) string {
+	var nilthis *QChar
+	return nilthis.CategoryItemName(val)
+}
 
 /*
 This enum type defines the Unicode script property values.
@@ -2219,6 +2329,283 @@ const QChar__Script_SignWriting QChar__Script = 131
 //
 const QChar__ScriptCount QChar__Script = 132
 
+func (this *QChar) ScriptItemName(val int) string {
+	switch val {
+	case QChar__Script_Unknown: // 0
+		return "Script_Unknown"
+	case QChar__Script_Inherited: // 1
+		return "Script_Inherited"
+	case QChar__Script_Common: // 2
+		return "Script_Common"
+	case QChar__Script_Latin: // 3
+		return "Script_Latin"
+	case QChar__Script_Greek: // 4
+		return "Script_Greek"
+	case QChar__Script_Cyrillic: // 5
+		return "Script_Cyrillic"
+	case QChar__Script_Armenian: // 6
+		return "Script_Armenian"
+	case QChar__Script_Hebrew: // 7
+		return "Script_Hebrew"
+	case QChar__Script_Arabic: // 8
+		return "Script_Arabic"
+	case QChar__Script_Syriac: // 9
+		return "Script_Syriac"
+	case QChar__Script_Thaana: // 10
+		return "Script_Thaana"
+	case QChar__Script_Devanagari: // 11
+		return "Script_Devanagari"
+	case QChar__Script_Bengali: // 12
+		return "Script_Bengali"
+	case QChar__Script_Gurmukhi: // 13
+		return "Script_Gurmukhi"
+	case QChar__Script_Gujarati: // 14
+		return "Script_Gujarati"
+	case QChar__Script_Oriya: // 15
+		return "Script_Oriya"
+	case QChar__Script_Tamil: // 16
+		return "Script_Tamil"
+	case QChar__Script_Telugu: // 17
+		return "Script_Telugu"
+	case QChar__Script_Kannada: // 18
+		return "Script_Kannada"
+	case QChar__Script_Malayalam: // 19
+		return "Script_Malayalam"
+	case QChar__Script_Sinhala: // 20
+		return "Script_Sinhala"
+	case QChar__Script_Thai: // 21
+		return "Script_Thai"
+	case QChar__Script_Lao: // 22
+		return "Script_Lao"
+	case QChar__Script_Tibetan: // 23
+		return "Script_Tibetan"
+	case QChar__Script_Myanmar: // 24
+		return "Script_Myanmar"
+	case QChar__Script_Georgian: // 25
+		return "Script_Georgian"
+	case QChar__Script_Hangul: // 26
+		return "Script_Hangul"
+	case QChar__Script_Ethiopic: // 27
+		return "Script_Ethiopic"
+	case QChar__Script_Cherokee: // 28
+		return "Script_Cherokee"
+	case QChar__Script_CanadianAboriginal: // 29
+		return "Script_CanadianAboriginal"
+	case QChar__Script_Ogham: // 30
+		return "Script_Ogham"
+	case QChar__Script_Runic: // 31
+		return "Script_Runic"
+	case QChar__Script_Khmer: // 32
+		return "Script_Khmer"
+	case QChar__Script_Mongolian: // 33
+		return "Script_Mongolian"
+	case QChar__Script_Hiragana: // 34
+		return "Script_Hiragana"
+	case QChar__Script_Katakana: // 35
+		return "Script_Katakana"
+	case QChar__Script_Bopomofo: // 36
+		return "Script_Bopomofo"
+	case QChar__Script_Han: // 37
+		return "Script_Han"
+	case QChar__Script_Yi: // 38
+		return "Script_Yi"
+	case QChar__Script_OldItalic: // 39
+		return "Script_OldItalic"
+	case QChar__Script_Gothic: // 40
+		return "Script_Gothic"
+	case QChar__Script_Deseret: // 41
+		return "Script_Deseret"
+	case QChar__Script_Tagalog: // 42
+		return "Script_Tagalog"
+	case QChar__Script_Hanunoo: // 43
+		return "Script_Hanunoo"
+	case QChar__Script_Buhid: // 44
+		return "Script_Buhid"
+	case QChar__Script_Tagbanwa: // 45
+		return "Script_Tagbanwa"
+	case QChar__Script_Coptic: // 46
+		return "Script_Coptic"
+	case QChar__Script_Limbu: // 47
+		return "Script_Limbu"
+	case QChar__Script_TaiLe: // 48
+		return "Script_TaiLe"
+	case QChar__Script_LinearB: // 49
+		return "Script_LinearB"
+	case QChar__Script_Ugaritic: // 50
+		return "Script_Ugaritic"
+	case QChar__Script_Shavian: // 51
+		return "Script_Shavian"
+	case QChar__Script_Osmanya: // 52
+		return "Script_Osmanya"
+	case QChar__Script_Cypriot: // 53
+		return "Script_Cypriot"
+	case QChar__Script_Braille: // 54
+		return "Script_Braille"
+	case QChar__Script_Buginese: // 55
+		return "Script_Buginese"
+	case QChar__Script_NewTaiLue: // 56
+		return "Script_NewTaiLue"
+	case QChar__Script_Glagolitic: // 57
+		return "Script_Glagolitic"
+	case QChar__Script_Tifinagh: // 58
+		return "Script_Tifinagh"
+	case QChar__Script_SylotiNagri: // 59
+		return "Script_SylotiNagri"
+	case QChar__Script_OldPersian: // 60
+		return "Script_OldPersian"
+	case QChar__Script_Kharoshthi: // 61
+		return "Script_Kharoshthi"
+	case QChar__Script_Balinese: // 62
+		return "Script_Balinese"
+	case QChar__Script_Cuneiform: // 63
+		return "Script_Cuneiform"
+	case QChar__Script_Phoenician: // 64
+		return "Script_Phoenician"
+	case QChar__Script_PhagsPa: // 65
+		return "Script_PhagsPa"
+	case QChar__Script_Nko: // 66
+		return "Script_Nko"
+	case QChar__Script_Sundanese: // 67
+		return "Script_Sundanese"
+	case QChar__Script_Lepcha: // 68
+		return "Script_Lepcha"
+	case QChar__Script_OlChiki: // 69
+		return "Script_OlChiki"
+	case QChar__Script_Vai: // 70
+		return "Script_Vai"
+	case QChar__Script_Saurashtra: // 71
+		return "Script_Saurashtra"
+	case QChar__Script_KayahLi: // 72
+		return "Script_KayahLi"
+	case QChar__Script_Rejang: // 73
+		return "Script_Rejang"
+	case QChar__Script_Lycian: // 74
+		return "Script_Lycian"
+	case QChar__Script_Carian: // 75
+		return "Script_Carian"
+	case QChar__Script_Lydian: // 76
+		return "Script_Lydian"
+	case QChar__Script_Cham: // 77
+		return "Script_Cham"
+	case QChar__Script_TaiTham: // 78
+		return "Script_TaiTham"
+	case QChar__Script_TaiViet: // 79
+		return "Script_TaiViet"
+	case QChar__Script_Avestan: // 80
+		return "Script_Avestan"
+	case QChar__Script_EgyptianHieroglyphs: // 81
+		return "Script_EgyptianHieroglyphs"
+	case QChar__Script_Samaritan: // 82
+		return "Script_Samaritan"
+	case QChar__Script_Lisu: // 83
+		return "Script_Lisu"
+	case QChar__Script_Bamum: // 84
+		return "Script_Bamum"
+	case QChar__Script_Javanese: // 85
+		return "Script_Javanese"
+	case QChar__Script_MeeteiMayek: // 86
+		return "Script_MeeteiMayek"
+	case QChar__Script_ImperialAramaic: // 87
+		return "Script_ImperialAramaic"
+	case QChar__Script_OldSouthArabian: // 88
+		return "Script_OldSouthArabian"
+	case QChar__Script_InscriptionalParthian: // 89
+		return "Script_InscriptionalParthian"
+	case QChar__Script_InscriptionalPahlavi: // 90
+		return "Script_InscriptionalPahlavi"
+	case QChar__Script_OldTurkic: // 91
+		return "Script_OldTurkic"
+	case QChar__Script_Kaithi: // 92
+		return "Script_Kaithi"
+	case QChar__Script_Batak: // 93
+		return "Script_Batak"
+	case QChar__Script_Brahmi: // 94
+		return "Script_Brahmi"
+	case QChar__Script_Mandaic: // 95
+		return "Script_Mandaic"
+	case QChar__Script_Chakma: // 96
+		return "Script_Chakma"
+	case QChar__Script_MeroiticCursive: // 97
+		return "Script_MeroiticCursive"
+	case QChar__Script_MeroiticHieroglyphs: // 98
+		return "Script_MeroiticHieroglyphs"
+	case QChar__Script_Miao: // 99
+		return "Script_Miao"
+	case QChar__Script_Sharada: // 100
+		return "Script_Sharada"
+	case QChar__Script_SoraSompeng: // 101
+		return "Script_SoraSompeng"
+	case QChar__Script_Takri: // 102
+		return "Script_Takri"
+	case QChar__Script_CaucasianAlbanian: // 103
+		return "Script_CaucasianAlbanian"
+	case QChar__Script_BassaVah: // 104
+		return "Script_BassaVah"
+	case QChar__Script_Duployan: // 105
+		return "Script_Duployan"
+	case QChar__Script_Elbasan: // 106
+		return "Script_Elbasan"
+	case QChar__Script_Grantha: // 107
+		return "Script_Grantha"
+	case QChar__Script_PahawhHmong: // 108
+		return "Script_PahawhHmong"
+	case QChar__Script_Khojki: // 109
+		return "Script_Khojki"
+	case QChar__Script_LinearA: // 110
+		return "Script_LinearA"
+	case QChar__Script_Mahajani: // 111
+		return "Script_Mahajani"
+	case QChar__Script_Manichaean: // 112
+		return "Script_Manichaean"
+	case QChar__Script_MendeKikakui: // 113
+		return "Script_MendeKikakui"
+	case QChar__Script_Modi: // 114
+		return "Script_Modi"
+	case QChar__Script_Mro: // 115
+		return "Script_Mro"
+	case QChar__Script_OldNorthArabian: // 116
+		return "Script_OldNorthArabian"
+	case QChar__Script_Nabataean: // 117
+		return "Script_Nabataean"
+	case QChar__Script_Palmyrene: // 118
+		return "Script_Palmyrene"
+	case QChar__Script_PauCinHau: // 119
+		return "Script_PauCinHau"
+	case QChar__Script_OldPermic: // 120
+		return "Script_OldPermic"
+	case QChar__Script_PsalterPahlavi: // 121
+		return "Script_PsalterPahlavi"
+	case QChar__Script_Siddham: // 122
+		return "Script_Siddham"
+	case QChar__Script_Khudawadi: // 123
+		return "Script_Khudawadi"
+	case QChar__Script_Tirhuta: // 124
+		return "Script_Tirhuta"
+	case QChar__Script_WarangCiti: // 125
+		return "Script_WarangCiti"
+	case QChar__Script_Ahom: // 126
+		return "Script_Ahom"
+	case QChar__Script_AnatolianHieroglyphs: // 127
+		return "Script_AnatolianHieroglyphs"
+	case QChar__Script_Hatran: // 128
+		return "Script_Hatran"
+	case QChar__Script_Multani: // 129
+		return "Script_Multani"
+	case QChar__Script_OldHungarian: // 130
+		return "Script_OldHungarian"
+	case QChar__Script_SignWriting: // 131
+		return "Script_SignWriting"
+	case QChar__ScriptCount: // 132
+		return "ScriptCount"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QChar_ScriptItemName(val int) string {
+	var nilthis *QChar
+	return nilthis.ScriptItemName(val)
+}
+
 /*
 This enum type defines the Unicode direction attributes. See the Unicode Standard for a description of the values.
 
@@ -2300,6 +2687,63 @@ const QChar__DirFSI QChar__Direction = 21
 //
 const QChar__DirPDI QChar__Direction = 22
 
+func (this *QChar) DirectionItemName(val int) string {
+	switch val {
+	case QChar__DirL: // 0
+		return "DirL"
+	case QChar__DirR: // 1
+		return "DirR"
+	case QChar__DirEN: // 2
+		return "DirEN"
+	case QChar__DirES: // 3
+		return "DirES"
+	case QChar__DirET: // 4
+		return "DirET"
+	case QChar__DirAN: // 5
+		return "DirAN"
+	case QChar__DirCS: // 6
+		return "DirCS"
+	case QChar__DirB: // 7
+		return "DirB"
+	case QChar__DirS: // 8
+		return "DirS"
+	case QChar__DirWS: // 9
+		return "DirWS"
+	case QChar__DirON: // 10
+		return "DirON"
+	case QChar__DirLRE: // 11
+		return "DirLRE"
+	case QChar__DirLRO: // 12
+		return "DirLRO"
+	case QChar__DirAL: // 13
+		return "DirAL"
+	case QChar__DirRLE: // 14
+		return "DirRLE"
+	case QChar__DirRLO: // 15
+		return "DirRLO"
+	case QChar__DirPDF: // 16
+		return "DirPDF"
+	case QChar__DirNSM: // 17
+		return "DirNSM"
+	case QChar__DirBN: // 18
+		return "DirBN"
+	case QChar__DirLRI: // 19
+		return "DirLRI"
+	case QChar__DirRLI: // 20
+		return "DirRLI"
+	case QChar__DirFSI: // 21
+		return "DirFSI"
+	case QChar__DirPDI: // 22
+		return "DirPDI"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QChar_DirectionItemName(val int) string {
+	var nilthis *QChar
+	return nilthis.DirectionItemName(val)
+}
+
 /*
 This enum type defines the Unicode decomposition attributes. See the Unicode Standard for a description of the values.
 
@@ -2375,6 +2819,53 @@ const QChar__Compat QChar__Decomposition = 16
 // 7
 const QChar__Fraction QChar__Decomposition = 17
 
+func (this *QChar) DecompositionItemName(val int) string {
+	switch val {
+	case QChar__NoDecomposition: // 0
+		return "NoDecomposition"
+	case QChar__Canonical: // 1
+		return "Canonical"
+	case QChar__Font: // 2
+		return "Font"
+	case QChar__NoBreak: // 3
+		return "NoBreak"
+	case QChar__Initial: // 4
+		return "Initial"
+	case QChar__Medial: // 5
+		return "Medial"
+	case QChar__Final: // 6
+		return "Final"
+	case QChar__Isolated: // 7
+		return "Isolated"
+	case QChar__Circle: // 8
+		return "Circle"
+	case QChar__Super: // 9
+		return "Super"
+	case QChar__Sub: // 10
+		return "Sub"
+	case QChar__Vertical: // 11
+		return "Vertical"
+	case QChar__Wide: // 12
+		return "Wide"
+	case QChar__Narrow: // 13
+		return "Narrow"
+	case QChar__Small: // 14
+		return "Small"
+	case QChar__Square: // 15
+		return "Square"
+	case QChar__Compat: // 16
+		return "Compat"
+	case QChar__Fraction: // 17
+		return "Fraction"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QChar_DecompositionItemName(val int) string {
+	var nilthis *QChar
+	return nilthis.DecompositionItemName(val)
+}
+
 /*
 since 5.3
 
@@ -2414,6 +2905,29 @@ const QChar__Joining_Left QChar__JoiningType = 4
 //
 const QChar__Joining_Transparent QChar__JoiningType = 5
 
+func (this *QChar) JoiningTypeItemName(val int) string {
+	switch val {
+	case QChar__Joining_None: // 0
+		return "Joining_None"
+	case QChar__Joining_Causing: // 1
+		return "Joining_Causing"
+	case QChar__Joining_Dual: // 2
+		return "Joining_Dual"
+	case QChar__Joining_Right: // 3
+		return "Joining_Right"
+	case QChar__Joining_Left: // 4
+		return "Joining_Left"
+	case QChar__Joining_Transparent: // 5
+		return "Joining_Transparent"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QChar_JoiningTypeItemName(val int) string {
+	var nilthis *QChar
+	return nilthis.JoiningTypeItemName(val)
+}
+
 /*
 
 
@@ -2431,6 +2945,25 @@ const QChar__Right QChar__Joining = 2
 
 //
 const QChar__Center QChar__Joining = 3
+
+func (this *QChar) JoiningItemName(val int) string {
+	switch val {
+	case QChar__OtherJoining: // 0
+		return "OtherJoining"
+	case QChar__Dual: // 1
+		return "Dual"
+	case QChar__Right: // 2
+		return "Right"
+	case QChar__Center: // 3
+		return "Center"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QChar_JoiningItemName(val int) string {
+	var nilthis *QChar
+	return nilthis.JoiningItemName(val)
+}
 
 /*
 
@@ -2495,6 +3028,55 @@ const QChar__Combining_DoubleAbove QChar__CombiningClass = 234
 //
 const QChar__Combining_IotaSubscript QChar__CombiningClass = 240
 
+func (this *QChar) CombiningClassItemName(val int) string {
+	switch val {
+	case QChar__Combining_BelowLeftAttached: // 200
+		return "Combining_BelowLeftAttached"
+	case QChar__Combining_BelowAttached: // 202
+		return "Combining_BelowAttached"
+	case QChar__Combining_BelowRightAttached: // 204
+		return "Combining_BelowRightAttached"
+	case QChar__Combining_LeftAttached: // 208
+		return "Combining_LeftAttached"
+	case QChar__Combining_RightAttached: // 210
+		return "Combining_RightAttached"
+	case QChar__Combining_AboveLeftAttached: // 212
+		return "Combining_AboveLeftAttached"
+	case QChar__Combining_AboveAttached: // 214
+		return "Combining_AboveAttached"
+	case QChar__Combining_AboveRightAttached: // 216
+		return "Combining_AboveRightAttached"
+	case QChar__Combining_BelowLeft: // 218
+		return "Combining_BelowLeft"
+	case QChar__Combining_Below: // 220
+		return "Combining_Below"
+	case QChar__Combining_BelowRight: // 222
+		return "Combining_BelowRight"
+	case QChar__Combining_Left: // 224
+		return "Combining_Left"
+	case QChar__Combining_Right: // 226
+		return "Combining_Right"
+	case QChar__Combining_AboveLeft: // 228
+		return "Combining_AboveLeft"
+	case QChar__Combining_Above: // 230
+		return "Combining_Above"
+	case QChar__Combining_AboveRight: // 232
+		return "Combining_AboveRight"
+	case QChar__Combining_DoubleBelow: // 233
+		return "Combining_DoubleBelow"
+	case QChar__Combining_DoubleAbove: // 234
+		return "Combining_DoubleAbove"
+	case QChar__Combining_IotaSubscript: // 240
+		return "Combining_IotaSubscript"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QChar_CombiningClassItemName(val int) string {
+	var nilthis *QChar
+	return nilthis.CombiningClassItemName(val)
+}
+
 /*
 Specifies which version of the Unicode standard introduced a certain character.
 
@@ -2558,6 +3140,53 @@ const QChar__Unicode_7_0 QChar__UnicodeVersion = 16
 
 //
 const QChar__Unicode_8_0 QChar__UnicodeVersion = 17
+
+func (this *QChar) UnicodeVersionItemName(val int) string {
+	switch val {
+	case QChar__Unicode_Unassigned: // 0
+		return "Unicode_Unassigned"
+	case QChar__Unicode_1_1: // 1
+		return "Unicode_1_1"
+	case QChar__Unicode_2_0: // 2
+		return "Unicode_2_0"
+	case QChar__Unicode_2_1_2: // 3
+		return "Unicode_2_1_2"
+	case QChar__Unicode_3_0: // 4
+		return "Unicode_3_0"
+	case QChar__Unicode_3_1: // 5
+		return "Unicode_3_1"
+	case QChar__Unicode_3_2: // 6
+		return "Unicode_3_2"
+	case QChar__Unicode_4_0: // 7
+		return "Unicode_4_0"
+	case QChar__Unicode_4_1: // 8
+		return "Unicode_4_1"
+	case QChar__Unicode_5_0: // 9
+		return "Unicode_5_0"
+	case QChar__Unicode_5_1: // 10
+		return "Unicode_5_1"
+	case QChar__Unicode_5_2: // 11
+		return "Unicode_5_2"
+	case QChar__Unicode_6_0: // 12
+		return "Unicode_6_0"
+	case QChar__Unicode_6_1: // 13
+		return "Unicode_6_1"
+	case QChar__Unicode_6_2: // 14
+		return "Unicode_6_2"
+	case QChar__Unicode_6_3: // 15
+		return "Unicode_6_3"
+	case QChar__Unicode_7_0: // 16
+		return "Unicode_7_0"
+	case QChar__Unicode_8_0: // 17
+		return "Unicode_8_0"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QChar_UnicodeVersionItemName(val int) string {
+	var nilthis *QChar
+	return nilthis.UnicodeVersionItemName(val)
+}
 
 //  body block end
 

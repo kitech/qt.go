@@ -635,6 +635,14 @@ const QAudioDecoder__StoppedState QAudioDecoder__State = 0
 // The audio player is currently decoding media.
 const QAudioDecoder__DecodingState QAudioDecoder__State = 1
 
+func (this *QAudioDecoder) StateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAudioDecoder_StateItemName(val int) string {
+	var nilthis *QAudioDecoder
+	return nilthis.StateItemName(val)
+}
+
 /*
 Defines a media player error condition.
 
@@ -656,6 +664,14 @@ const QAudioDecoder__AccessDeniedError QAudioDecoder__Error = 3
 
 // A valid playback service was not found, playback cannot proceed.
 const QAudioDecoder__ServiceMissingError QAudioDecoder__Error = 4
+
+func (this *QAudioDecoder) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAudioDecoder_ErrorItemName(val int) string {
+	var nilthis *QAudioDecoder
+	return nilthis.ErrorItemName(val)
+}
 
 //  body block end
 

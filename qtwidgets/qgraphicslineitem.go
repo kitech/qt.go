@@ -629,6 +629,19 @@ type QGraphicsLineItem__ = int
 //
 const QGraphicsLineItem__Type QGraphicsLineItem__ = 6
 
+func (this *QGraphicsLineItem) ItemName(val int) string {
+	switch val {
+	case QGraphicsLineItem__Type: // 6
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsLineItem_ItemName(val int) string {
+	var nilthis *QGraphicsLineItem
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

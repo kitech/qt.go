@@ -807,6 +807,89 @@ const QFontDatabase__Nko QFontDatabase__WritingSystem = 33
 //
 const QFontDatabase__WritingSystemsCount QFontDatabase__WritingSystem = 34
 
+func (this *QFontDatabase) WritingSystemItemName(val int) string {
+	switch val {
+	case QFontDatabase__Any: // 0
+		return "Any"
+	case QFontDatabase__Latin: // 1
+		return "Latin"
+	case QFontDatabase__Greek: // 2
+		return "Greek"
+	case QFontDatabase__Cyrillic: // 3
+		return "Cyrillic"
+	case QFontDatabase__Armenian: // 4
+		return "Armenian"
+	case QFontDatabase__Hebrew: // 5
+		return "Hebrew"
+	case QFontDatabase__Arabic: // 6
+		return "Arabic"
+	case QFontDatabase__Syriac: // 7
+		return "Syriac"
+	case QFontDatabase__Thaana: // 8
+		return "Thaana"
+	case QFontDatabase__Devanagari: // 9
+		return "Devanagari"
+	case QFontDatabase__Bengali: // 10
+		return "Bengali"
+	case QFontDatabase__Gurmukhi: // 11
+		return "Gurmukhi"
+	case QFontDatabase__Gujarati: // 12
+		return "Gujarati"
+	case QFontDatabase__Oriya: // 13
+		return "Oriya"
+	case QFontDatabase__Tamil: // 14
+		return "Tamil"
+	case QFontDatabase__Telugu: // 15
+		return "Telugu"
+	case QFontDatabase__Kannada: // 16
+		return "Kannada"
+	case QFontDatabase__Malayalam: // 17
+		return "Malayalam"
+	case QFontDatabase__Sinhala: // 18
+		return "Sinhala"
+	case QFontDatabase__Thai: // 19
+		return "Thai"
+	case QFontDatabase__Lao: // 20
+		return "Lao"
+	case QFontDatabase__Tibetan: // 21
+		return "Tibetan"
+	case QFontDatabase__Myanmar: // 22
+		return "Myanmar"
+	case QFontDatabase__Georgian: // 23
+		return "Georgian"
+	case QFontDatabase__Khmer: // 24
+		return "Khmer"
+	case QFontDatabase__SimplifiedChinese: // 25
+		return "SimplifiedChinese"
+	case QFontDatabase__TraditionalChinese: // 26
+		return "TraditionalChinese"
+	case QFontDatabase__Japanese: // 27
+		return "Japanese"
+	case QFontDatabase__Korean: // 28
+		return "Korean"
+	case QFontDatabase__Vietnamese: // 29
+		return "Vietnamese"
+	case QFontDatabase__Symbol: // 30
+		return "Symbol,Other"
+		// case QFontDatabase__Other: // 30
+		// return ""
+	case QFontDatabase__Ogham: // 31
+		return "Ogham"
+	case QFontDatabase__Runic: // 32
+		return "Runic"
+	case QFontDatabase__Nko: // 33
+		return "Nko"
+	case QFontDatabase__WritingSystemsCount: // 34
+		return "WritingSystemsCount"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFontDatabase_WritingSystemItemName(val int) string {
+	var nilthis *QFontDatabase
+	return nilthis.WritingSystemItemName(val)
+}
+
 /*
 
 
@@ -826,6 +909,25 @@ const QFontDatabase__TitleFont QFontDatabase__SystemFont = 2
 
 // The smallest readable system font.
 const QFontDatabase__SmallestReadableFont QFontDatabase__SystemFont = 3
+
+func (this *QFontDatabase) SystemFontItemName(val int) string {
+	switch val {
+	case QFontDatabase__GeneralFont: // 0
+		return "GeneralFont"
+	case QFontDatabase__FixedFont: // 1
+		return "FixedFont"
+	case QFontDatabase__TitleFont: // 2
+		return "TitleFont"
+	case QFontDatabase__SmallestReadableFont: // 3
+		return "SmallestReadableFont"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFontDatabase_SystemFontItemName(val int) string {
+	var nilthis *QFontDatabase
+	return nilthis.SystemFontItemName(val)
+}
 
 //  body block end
 

@@ -1505,6 +1505,14 @@ const QDateTimeEdit__TimeSections_Mask QDateTimeEdit__Section = 31
 //
 const QDateTimeEdit__DateSections_Mask QDateTimeEdit__Section = 1792
 
+func (this *QDateTimeEdit) SectionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QDateTimeEdit_SectionItemName(val int) string {
+	var nilthis *QDateTimeEdit
+	return nilthis.SectionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

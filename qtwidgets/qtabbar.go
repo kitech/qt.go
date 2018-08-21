@@ -1514,6 +1514,14 @@ const QTabBar__TriangularWest QTabBar__Shape = 6
 // Triangular tabs on the right of the pages.
 const QTabBar__TriangularEast QTabBar__Shape = 7
 
+func (this *QTabBar) ShapeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTabBar_ShapeItemName(val int) string {
+	var nilthis *QTabBar
+	return nilthis.ShapeItemName(val)
+}
+
 /*
 This enum type lists the location of the widget on a tab.
 
@@ -1529,6 +1537,14 @@ const QTabBar__LeftSide QTabBar__ButtonPosition = 0
 
 // Right side of the tab.
 const QTabBar__RightSide QTabBar__ButtonPosition = 1
+
+func (this *QTabBar) ButtonPositionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTabBar_ButtonPositionItemName(val int) string {
+	var nilthis *QTabBar
+	return nilthis.ButtonPositionItemName(val)
+}
 
 /*
 This enum type lists the behavior of QTabBar when a tab is removed and the tab being removed is also the current tab.
@@ -1548,6 +1564,14 @@ const QTabBar__SelectRightTab QTabBar__SelectionBehavior = 1
 
 // Select the previously selected tab.
 const QTabBar__SelectPreviousTab QTabBar__SelectionBehavior = 2
+
+func (this *QTabBar) SelectionBehaviorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTabBar_SelectionBehaviorItemName(val int) string {
+	var nilthis *QTabBar
+	return nilthis.SelectionBehaviorItemName(val)
+}
 
 //  body block end
 

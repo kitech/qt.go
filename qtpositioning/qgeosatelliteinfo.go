@@ -322,6 +322,21 @@ const QGeoSatelliteInfo__Elevation QGeoSatelliteInfo__Attribute = 0
 // The azimuth to true north, in degrees.
 const QGeoSatelliteInfo__Azimuth QGeoSatelliteInfo__Attribute = 1
 
+func (this *QGeoSatelliteInfo) AttributeItemName(val int) string {
+	switch val {
+	case QGeoSatelliteInfo__Elevation: // 0
+		return "Elevation"
+	case QGeoSatelliteInfo__Azimuth: // 1
+		return "Azimuth"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGeoSatelliteInfo_AttributeItemName(val int) string {
+	var nilthis *QGeoSatelliteInfo
+	return nilthis.AttributeItemName(val)
+}
+
 /*
 Defines the GNSS system of the satellite.
 
@@ -337,6 +352,23 @@ const QGeoSatelliteInfo__GPS QGeoSatelliteInfo__SatelliteSystem = 1
 
 //
 const QGeoSatelliteInfo__GLONASS QGeoSatelliteInfo__SatelliteSystem = 2
+
+func (this *QGeoSatelliteInfo) SatelliteSystemItemName(val int) string {
+	switch val {
+	case QGeoSatelliteInfo__Undefined: // 0
+		return "Undefined"
+	case QGeoSatelliteInfo__GPS: // 1
+		return "GPS"
+	case QGeoSatelliteInfo__GLONASS: // 2
+		return "GLONASS"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGeoSatelliteInfo_SatelliteSystemItemName(val int) string {
+	var nilthis *QGeoSatelliteInfo
+	return nilthis.SatelliteSystemItemName(val)
+}
 
 //  body block end
 

@@ -623,6 +623,23 @@ const QVersionNumber__InlineSegmentStartIdx QVersionNumber__ = 1
 //
 const QVersionNumber__InlineSegmentCount QVersionNumber__ = 7
 
+func (this *QVersionNumber) ItemName(val int) string {
+	switch val {
+	case QVersionNumber__InlineSegmentMarker: // 0
+		return "InlineSegmentMarker"
+	case QVersionNumber__InlineSegmentStartIdx: // 1
+		return "InlineSegmentStartIdx"
+	case QVersionNumber__InlineSegmentCount: // 7
+		return "InlineSegmentCount"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QVersionNumber_ItemName(val int) string {
+	var nilthis *QVersionNumber
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

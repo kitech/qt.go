@@ -695,6 +695,14 @@ const QLibrary__PreventUnloadHint QLibrary__LoadHint = 8
 //
 const QLibrary__DeepBindHint QLibrary__LoadHint = 16
 
+func (this *QLibrary) LoadHintItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QLibrary_LoadHintItemName(val int) string {
+	var nilthis *QLibrary
+	return nilthis.LoadHintItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

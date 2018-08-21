@@ -826,6 +826,25 @@ const QVideoFrame__BottomField QVideoFrame__FieldType = 2
 // The frame contains a merged top and bottom field.
 const QVideoFrame__InterlacedFrame QVideoFrame__FieldType = 3
 
+func (this *QVideoFrame) FieldTypeItemName(val int) string {
+	switch val {
+	case QVideoFrame__ProgressiveFrame: // 0
+		return "ProgressiveFrame"
+	case QVideoFrame__TopField: // 1
+		return "TopField"
+	case QVideoFrame__BottomField: // 2
+		return "BottomField"
+	case QVideoFrame__InterlacedFrame: // 3
+		return "InterlacedFrame"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QVideoFrame_FieldTypeItemName(val int) string {
+	var nilthis *QVideoFrame
+	return nilthis.FieldTypeItemName(val)
+}
+
 /*
 Enumerates video data types.
 
@@ -937,6 +956,87 @@ const QVideoFrame__NPixelFormats QVideoFrame__PixelFormat = 33
 
 //
 const QVideoFrame__Format_User QVideoFrame__PixelFormat = 1000
+
+func (this *QVideoFrame) PixelFormatItemName(val int) string {
+	switch val {
+	case QVideoFrame__Format_Invalid: // 0
+		return "Format_Invalid"
+	case QVideoFrame__Format_ARGB32: // 1
+		return "Format_ARGB32"
+	case QVideoFrame__Format_ARGB32_Premultiplied: // 2
+		return "Format_ARGB32_Premultiplied"
+	case QVideoFrame__Format_RGB32: // 3
+		return "Format_RGB32"
+	case QVideoFrame__Format_RGB24: // 4
+		return "Format_RGB24"
+	case QVideoFrame__Format_RGB565: // 5
+		return "Format_RGB565"
+	case QVideoFrame__Format_RGB555: // 6
+		return "Format_RGB555"
+	case QVideoFrame__Format_ARGB8565_Premultiplied: // 7
+		return "Format_ARGB8565_Premultiplied"
+	case QVideoFrame__Format_BGRA32: // 8
+		return "Format_BGRA32"
+	case QVideoFrame__Format_BGRA32_Premultiplied: // 9
+		return "Format_BGRA32_Premultiplied"
+	case QVideoFrame__Format_BGR32: // 10
+		return "Format_BGR32"
+	case QVideoFrame__Format_BGR24: // 11
+		return "Format_BGR24"
+	case QVideoFrame__Format_BGR565: // 12
+		return "Format_BGR565"
+	case QVideoFrame__Format_BGR555: // 13
+		return "Format_BGR555"
+	case QVideoFrame__Format_BGRA5658_Premultiplied: // 14
+		return "Format_BGRA5658_Premultiplied"
+	case QVideoFrame__Format_AYUV444: // 15
+		return "Format_AYUV444"
+	case QVideoFrame__Format_AYUV444_Premultiplied: // 16
+		return "Format_AYUV444_Premultiplied"
+	case QVideoFrame__Format_YUV444: // 17
+		return "Format_YUV444"
+	case QVideoFrame__Format_YUV420P: // 18
+		return "Format_YUV420P"
+	case QVideoFrame__Format_YV12: // 19
+		return "Format_YV12"
+	case QVideoFrame__Format_UYVY: // 20
+		return "Format_UYVY"
+	case QVideoFrame__Format_YUYV: // 21
+		return "Format_YUYV"
+	case QVideoFrame__Format_NV12: // 22
+		return "Format_NV12"
+	case QVideoFrame__Format_NV21: // 23
+		return "Format_NV21"
+	case QVideoFrame__Format_IMC1: // 24
+		return "Format_IMC1"
+	case QVideoFrame__Format_IMC2: // 25
+		return "Format_IMC2"
+	case QVideoFrame__Format_IMC3: // 26
+		return "Format_IMC3"
+	case QVideoFrame__Format_IMC4: // 27
+		return "Format_IMC4"
+	case QVideoFrame__Format_Y8: // 28
+		return "Format_Y8"
+	case QVideoFrame__Format_Y16: // 29
+		return "Format_Y16"
+	case QVideoFrame__Format_Jpeg: // 30
+		return "Format_Jpeg"
+	case QVideoFrame__Format_CameraRaw: // 31
+		return "Format_CameraRaw"
+	case QVideoFrame__Format_AdobeDng: // 32
+		return "Format_AdobeDng"
+	case QVideoFrame__NPixelFormats: // 33
+		return "NPixelFormats"
+	case QVideoFrame__Format_User: // 1000
+		return "Format_User"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QVideoFrame_PixelFormatItemName(val int) string {
+	var nilthis *QVideoFrame
+	return nilthis.PixelFormatItemName(val)
+}
 
 //  body block end
 

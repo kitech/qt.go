@@ -587,6 +587,14 @@ const QProgressBar__TopToBottom QProgressBar__Direction = 0
 //
 const QProgressBar__BottomToTop QProgressBar__Direction = 1
 
+func (this *QProgressBar) DirectionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QProgressBar_DirectionItemName(val int) string {
+	var nilthis *QProgressBar
+	return nilthis.DirectionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

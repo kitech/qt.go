@@ -697,6 +697,14 @@ const QClipboard__FindBuffer QClipboard__Mode = 2
 //
 const QClipboard__LastMode QClipboard__Mode = 2
 
+func (this *QClipboard) ModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QClipboard_ModeItemName(val int) string {
+	var nilthis *QClipboard
+	return nilthis.ModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

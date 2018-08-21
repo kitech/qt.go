@@ -797,6 +797,271 @@ const QPagedPaintDevice__EnvelopeDL QPagedPaintDevice__PageSize = 26
 //
 const QPagedPaintDevice__Envelope10 QPagedPaintDevice__PageSize = 25
 
+func (this *QPagedPaintDevice) PageSizeItemName(val int) string {
+	switch val {
+	case QPagedPaintDevice__A4: // 0
+		return "A4"
+	case QPagedPaintDevice__B5: // 1
+		return "B5"
+	case QPagedPaintDevice__Letter: // 2
+		return "Letter,AnsiA"
+	case QPagedPaintDevice__Legal: // 3
+		return "Legal"
+	case QPagedPaintDevice__Executive: // 4
+		return "Executive"
+	case QPagedPaintDevice__A0: // 5
+		return "A0"
+	case QPagedPaintDevice__A1: // 6
+		return "A1"
+	case QPagedPaintDevice__A2: // 7
+		return "A2"
+	case QPagedPaintDevice__A3: // 8
+		return "A3"
+	case QPagedPaintDevice__A5: // 9
+		return "A5"
+	case QPagedPaintDevice__A6: // 10
+		return "A6"
+	case QPagedPaintDevice__A7: // 11
+		return "A7"
+	case QPagedPaintDevice__A8: // 12
+		return "A8"
+	case QPagedPaintDevice__A9: // 13
+		return "A9"
+	case QPagedPaintDevice__B0: // 14
+		return "B0"
+	case QPagedPaintDevice__B1: // 15
+		return "B1"
+	case QPagedPaintDevice__B10: // 16
+		return "B10"
+	case QPagedPaintDevice__B2: // 17
+		return "B2"
+	case QPagedPaintDevice__B3: // 18
+		return "B3"
+	case QPagedPaintDevice__B4: // 19
+		return "B4"
+	case QPagedPaintDevice__B6: // 20
+		return "B6"
+	case QPagedPaintDevice__B7: // 21
+		return "B7"
+	case QPagedPaintDevice__B8: // 22
+		return "B8"
+	case QPagedPaintDevice__B9: // 23
+		return "B9"
+	case QPagedPaintDevice__C5E: // 24
+		return "C5E,EnvelopeC5"
+	case QPagedPaintDevice__Comm10E: // 25
+		return "Comm10E,Envelope10"
+	case QPagedPaintDevice__DLE: // 26
+		return "DLE,EnvelopeDL"
+	case QPagedPaintDevice__Folio: // 27
+		return "Folio"
+	case QPagedPaintDevice__Ledger: // 28
+		return "Ledger,AnsiB"
+	case QPagedPaintDevice__Tabloid: // 29
+		return "Tabloid"
+	case QPagedPaintDevice__Custom: // 30
+		return "Custom"
+	case QPagedPaintDevice__A10: // 31
+		return "A10"
+	case QPagedPaintDevice__A3Extra: // 32
+		return "A3Extra"
+	case QPagedPaintDevice__A4Extra: // 33
+		return "A4Extra"
+	case QPagedPaintDevice__A4Plus: // 34
+		return "A4Plus"
+	case QPagedPaintDevice__A4Small: // 35
+		return "A4Small"
+	case QPagedPaintDevice__A5Extra: // 36
+		return "A5Extra"
+	case QPagedPaintDevice__B5Extra: // 37
+		return "B5Extra"
+	case QPagedPaintDevice__JisB0: // 38
+		return "JisB0"
+	case QPagedPaintDevice__JisB1: // 39
+		return "JisB1"
+	case QPagedPaintDevice__JisB2: // 40
+		return "JisB2"
+	case QPagedPaintDevice__JisB3: // 41
+		return "JisB3"
+	case QPagedPaintDevice__JisB4: // 42
+		return "JisB4"
+	case QPagedPaintDevice__JisB5: // 43
+		return "JisB5"
+	case QPagedPaintDevice__JisB6: // 44
+		return "JisB6"
+	case QPagedPaintDevice__JisB7: // 45
+		return "JisB7"
+	case QPagedPaintDevice__JisB8: // 46
+		return "JisB8"
+	case QPagedPaintDevice__JisB9: // 47
+		return "JisB9"
+	case QPagedPaintDevice__JisB10: // 48
+		return "JisB10"
+	case QPagedPaintDevice__AnsiC: // 49
+		return "AnsiC"
+	case QPagedPaintDevice__AnsiD: // 50
+		return "AnsiD"
+	case QPagedPaintDevice__AnsiE: // 51
+		return "AnsiE"
+	case QPagedPaintDevice__LegalExtra: // 52
+		return "LegalExtra"
+	case QPagedPaintDevice__LetterExtra: // 53
+		return "LetterExtra"
+	case QPagedPaintDevice__LetterPlus: // 54
+		return "LetterPlus"
+	case QPagedPaintDevice__LetterSmall: // 55
+		return "LetterSmall"
+	case QPagedPaintDevice__TabloidExtra: // 56
+		return "TabloidExtra"
+	case QPagedPaintDevice__ArchA: // 57
+		return "ArchA"
+	case QPagedPaintDevice__ArchB: // 58
+		return "ArchB"
+	case QPagedPaintDevice__ArchC: // 59
+		return "ArchC"
+	case QPagedPaintDevice__ArchD: // 60
+		return "ArchD"
+	case QPagedPaintDevice__ArchE: // 61
+		return "ArchE"
+	case QPagedPaintDevice__Imperial7x9: // 62
+		return "Imperial7x9"
+	case QPagedPaintDevice__Imperial8x10: // 63
+		return "Imperial8x10"
+	case QPagedPaintDevice__Imperial9x11: // 64
+		return "Imperial9x11"
+	case QPagedPaintDevice__Imperial9x12: // 65
+		return "Imperial9x12"
+	case QPagedPaintDevice__Imperial10x11: // 66
+		return "Imperial10x11"
+	case QPagedPaintDevice__Imperial10x13: // 67
+		return "Imperial10x13"
+	case QPagedPaintDevice__Imperial10x14: // 68
+		return "Imperial10x14"
+	case QPagedPaintDevice__Imperial12x11: // 69
+		return "Imperial12x11"
+	case QPagedPaintDevice__Imperial15x11: // 70
+		return "Imperial15x11"
+	case QPagedPaintDevice__ExecutiveStandard: // 71
+		return "ExecutiveStandard"
+	case QPagedPaintDevice__Note: // 72
+		return "Note"
+	case QPagedPaintDevice__Quarto: // 73
+		return "Quarto"
+	case QPagedPaintDevice__Statement: // 74
+		return "Statement"
+	case QPagedPaintDevice__SuperA: // 75
+		return "SuperA"
+	case QPagedPaintDevice__SuperB: // 76
+		return "SuperB"
+	case QPagedPaintDevice__Postcard: // 77
+		return "Postcard"
+	case QPagedPaintDevice__DoublePostcard: // 78
+		return "DoublePostcard"
+	case QPagedPaintDevice__Prc16K: // 79
+		return "Prc16K"
+	case QPagedPaintDevice__Prc32K: // 80
+		return "Prc32K"
+	case QPagedPaintDevice__Prc32KBig: // 81
+		return "Prc32KBig"
+	case QPagedPaintDevice__FanFoldUS: // 82
+		return "FanFoldUS"
+	case QPagedPaintDevice__FanFoldGerman: // 83
+		return "FanFoldGerman"
+	case QPagedPaintDevice__FanFoldGermanLegal: // 84
+		return "FanFoldGermanLegal"
+	case QPagedPaintDevice__EnvelopeB4: // 85
+		return "EnvelopeB4"
+	case QPagedPaintDevice__EnvelopeB5: // 86
+		return "EnvelopeB5"
+	case QPagedPaintDevice__EnvelopeB6: // 87
+		return "EnvelopeB6"
+	case QPagedPaintDevice__EnvelopeC0: // 88
+		return "EnvelopeC0"
+	case QPagedPaintDevice__EnvelopeC1: // 89
+		return "EnvelopeC1"
+	case QPagedPaintDevice__EnvelopeC2: // 90
+		return "EnvelopeC2"
+	case QPagedPaintDevice__EnvelopeC3: // 91
+		return "EnvelopeC3"
+	case QPagedPaintDevice__EnvelopeC4: // 92
+		return "EnvelopeC4"
+	case QPagedPaintDevice__EnvelopeC6: // 93
+		return "EnvelopeC6"
+	case QPagedPaintDevice__EnvelopeC65: // 94
+		return "EnvelopeC65"
+	case QPagedPaintDevice__EnvelopeC7: // 95
+		return "EnvelopeC7"
+	case QPagedPaintDevice__Envelope9: // 96
+		return "Envelope9"
+	case QPagedPaintDevice__Envelope11: // 97
+		return "Envelope11"
+	case QPagedPaintDevice__Envelope12: // 98
+		return "Envelope12"
+	case QPagedPaintDevice__Envelope14: // 99
+		return "Envelope14"
+	case QPagedPaintDevice__EnvelopeMonarch: // 100
+		return "EnvelopeMonarch"
+	case QPagedPaintDevice__EnvelopePersonal: // 101
+		return "EnvelopePersonal"
+	case QPagedPaintDevice__EnvelopeChou3: // 102
+		return "EnvelopeChou3"
+	case QPagedPaintDevice__EnvelopeChou4: // 103
+		return "EnvelopeChou4"
+	case QPagedPaintDevice__EnvelopeInvite: // 104
+		return "EnvelopeInvite"
+	case QPagedPaintDevice__EnvelopeItalian: // 105
+		return "EnvelopeItalian"
+	case QPagedPaintDevice__EnvelopeKaku2: // 106
+		return "EnvelopeKaku2"
+	case QPagedPaintDevice__EnvelopeKaku3: // 107
+		return "EnvelopeKaku3"
+	case QPagedPaintDevice__EnvelopePrc1: // 108
+		return "EnvelopePrc1"
+	case QPagedPaintDevice__EnvelopePrc2: // 109
+		return "EnvelopePrc2"
+	case QPagedPaintDevice__EnvelopePrc3: // 110
+		return "EnvelopePrc3"
+	case QPagedPaintDevice__EnvelopePrc4: // 111
+		return "EnvelopePrc4"
+	case QPagedPaintDevice__EnvelopePrc5: // 112
+		return "EnvelopePrc5"
+	case QPagedPaintDevice__EnvelopePrc6: // 113
+		return "EnvelopePrc6"
+	case QPagedPaintDevice__EnvelopePrc7: // 114
+		return "EnvelopePrc7"
+	case QPagedPaintDevice__EnvelopePrc8: // 115
+		return "EnvelopePrc8"
+	case QPagedPaintDevice__EnvelopePrc9: // 116
+		return "EnvelopePrc9"
+	case QPagedPaintDevice__EnvelopePrc10: // 117
+		return "EnvelopePrc10"
+	case QPagedPaintDevice__EnvelopeYou4: // 118
+		return "EnvelopeYou4,LastPageSize,NPageSize,NPaperSize"
+		// case QPagedPaintDevice__LastPageSize: // 118
+		// return ""
+		// case QPagedPaintDevice__NPageSize: // 118
+		// return ""
+		// case QPagedPaintDevice__NPaperSize: // 118
+		// return ""
+		// case QPagedPaintDevice__AnsiA: // 2
+		// return ""
+		// case QPagedPaintDevice__AnsiB: // 28
+		// return ""
+		// case QPagedPaintDevice__EnvelopeC5: // 24
+		// return ""
+		// case QPagedPaintDevice__EnvelopeDL: // 26
+		// return ""
+		// case QPagedPaintDevice__Envelope10: // 25
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPagedPaintDevice_PageSizeItemName(val int) string {
+	var nilthis *QPagedPaintDevice
+	return nilthis.PageSizeItemName(val)
+}
+
 /*
 The PdfVersion enum describes the version of the PDF file that is produced by QPrinter or QPdfWriter.
 
@@ -812,6 +1077,21 @@ const QPagedPaintDevice__PdfVersion_1_4 QPagedPaintDevice__PdfVersion = 0
 
 //
 const QPagedPaintDevice__PdfVersion_A1b QPagedPaintDevice__PdfVersion = 1
+
+func (this *QPagedPaintDevice) PdfVersionItemName(val int) string {
+	switch val {
+	case QPagedPaintDevice__PdfVersion_1_4: // 0
+		return "PdfVersion_1_4"
+	case QPagedPaintDevice__PdfVersion_A1b: // 1
+		return "PdfVersion_A1b"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPagedPaintDevice_PdfVersionItemName(val int) string {
+	var nilthis *QPagedPaintDevice
+	return nilthis.PdfVersionItemName(val)
+}
 
 //  body block end
 

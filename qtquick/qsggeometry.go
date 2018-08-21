@@ -757,6 +757,29 @@ const QSGGeometry__TexCoord1Attribute QSGGeometry__AttributeType = 4
 //
 const QSGGeometry__TexCoord2Attribute QSGGeometry__AttributeType = 5
 
+func (this *QSGGeometry) AttributeTypeItemName(val int) string {
+	switch val {
+	case QSGGeometry__UnknownAttribute: // 0
+		return "UnknownAttribute"
+	case QSGGeometry__PositionAttribute: // 1
+		return "PositionAttribute"
+	case QSGGeometry__ColorAttribute: // 2
+		return "ColorAttribute"
+	case QSGGeometry__TexCoordAttribute: // 3
+		return "TexCoordAttribute"
+	case QSGGeometry__TexCoord1Attribute: // 4
+		return "TexCoord1Attribute"
+	case QSGGeometry__TexCoord2Attribute: // 5
+		return "TexCoord2Attribute"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGGeometry_AttributeTypeItemName(val int) string {
+	var nilthis *QSGGeometry
+	return nilthis.AttributeTypeItemName(val)
+}
+
 /*
 The DataPattern enum is used to specify the use pattern for the vertex and index data in a geometry object.
 
@@ -775,6 +798,25 @@ const QSGGeometry__DynamicPattern QSGGeometry__DataPattern = 2
 
 // The data is modified once and drawn many times. This is a hint that may provide better performance. When set the user must make sure to mark the data as dirty after changing it.
 const QSGGeometry__StaticPattern QSGGeometry__DataPattern = 3
+
+func (this *QSGGeometry) DataPatternItemName(val int) string {
+	switch val {
+	case QSGGeometry__AlwaysUploadPattern: // 0
+		return "AlwaysUploadPattern"
+	case QSGGeometry__StreamPattern: // 1
+		return "StreamPattern"
+	case QSGGeometry__DynamicPattern: // 2
+		return "DynamicPattern"
+	case QSGGeometry__StaticPattern: // 3
+		return "StaticPattern"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGGeometry_DataPatternItemName(val int) string {
+	var nilthis *QSGGeometry
+	return nilthis.DataPatternItemName(val)
+}
 
 /*
 The values correspond to OpenGL enum values like GL_POINTS, GL_LINES, etc. QSGGeometry provies its own type in order to be able to provide the same API with non-OpenGL backends as well.
@@ -805,6 +847,31 @@ const QSGGeometry__DrawTriangleStrip QSGGeometry__DrawingMode = 5
 //
 const QSGGeometry__DrawTriangleFan QSGGeometry__DrawingMode = 6
 
+func (this *QSGGeometry) DrawingModeItemName(val int) string {
+	switch val {
+	case QSGGeometry__DrawPoints: // 0
+		return "DrawPoints"
+	case QSGGeometry__DrawLines: // 1
+		return "DrawLines"
+	case QSGGeometry__DrawLineLoop: // 2
+		return "DrawLineLoop"
+	case QSGGeometry__DrawLineStrip: // 3
+		return "DrawLineStrip"
+	case QSGGeometry__DrawTriangles: // 4
+		return "DrawTriangles"
+	case QSGGeometry__DrawTriangleStrip: // 5
+		return "DrawTriangleStrip"
+	case QSGGeometry__DrawTriangleFan: // 6
+		return "DrawTriangleFan"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGGeometry_DrawingModeItemName(val int) string {
+	var nilthis *QSGGeometry
+	return nilthis.DrawingModeItemName(val)
+}
+
 /*
 The values correspond to OpenGL type constants like GL_BYTE, GL_UNSIGNED_BYTE, etc. QSGGeometry provies its own type in order to be able to provide the same API with non-OpenGL backends as well.
 
@@ -833,6 +900,31 @@ const QSGGeometry__UnsignedIntType QSGGeometry__Type = 5125
 
 //
 const QSGGeometry__FloatType QSGGeometry__Type = 5126
+
+func (this *QSGGeometry) TypeItemName(val int) string {
+	switch val {
+	case QSGGeometry__ByteType: // 5120
+		return "ByteType"
+	case QSGGeometry__UnsignedByteType: // 5121
+		return "UnsignedByteType"
+	case QSGGeometry__ShortType: // 5122
+		return "ShortType"
+	case QSGGeometry__UnsignedShortType: // 5123
+		return "UnsignedShortType"
+	case QSGGeometry__IntType: // 5124
+		return "IntType"
+	case QSGGeometry__UnsignedIntType: // 5125
+		return "UnsignedIntType"
+	case QSGGeometry__FloatType: // 5126
+		return "FloatType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGGeometry_TypeItemName(val int) string {
+	var nilthis *QSGGeometry
+	return nilthis.TypeItemName(val)
+}
 
 //  body block end
 

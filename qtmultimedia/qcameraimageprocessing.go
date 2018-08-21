@@ -428,6 +428,14 @@ const QCameraImageProcessing__WhiteBalanceSunset QCameraImageProcessing__WhiteBa
 //
 const QCameraImageProcessing__WhiteBalanceVendor QCameraImageProcessing__WhiteBalanceMode = 1000
 
+func (this *QCameraImageProcessing) WhiteBalanceModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraImageProcessing_WhiteBalanceModeItemName(val int) string {
+	var nilthis *QCameraImageProcessing
+	return nilthis.WhiteBalanceModeItemName(val)
+}
+
 /*
 
 
@@ -465,6 +473,14 @@ const QCameraImageProcessing__ColorFilterAqua QCameraImageProcessing__ColorFilte
 
 //
 const QCameraImageProcessing__ColorFilterVendor QCameraImageProcessing__ColorFilter = 1000
+
+func (this *QCameraImageProcessing) ColorFilterItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraImageProcessing_ColorFilterItemName(val int) string {
+	var nilthis *QCameraImageProcessing
+	return nilthis.ColorFilterItemName(val)
+}
 
 //  body block end
 

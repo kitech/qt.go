@@ -252,6 +252,14 @@ const QSocketNotifier__Write QSocketNotifier__Type = 1
 // An exception has occurred. We recommend against using this.
 const QSocketNotifier__Exception QSocketNotifier__Type = 2
 
+func (this *QSocketNotifier) TypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSocketNotifier_TypeItemName(val int) string {
+	var nilthis *QSocketNotifier
+	return nilthis.TypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

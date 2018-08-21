@@ -545,6 +545,19 @@ type QGraphicsPathItem__ = int
 //
 const QGraphicsPathItem__Type QGraphicsPathItem__ = 2
 
+func (this *QGraphicsPathItem) ItemName(val int) string {
+	switch val {
+	case QGraphicsPathItem__Type: // 2
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsPathItem_ItemName(val int) string {
+	var nilthis *QGraphicsPathItem
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

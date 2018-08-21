@@ -120,6 +120,19 @@ type QStyleOptionTabWidgetFrame__StyleOptionType = int
 //
 const QStyleOptionTabWidgetFrame__Type QStyleOptionTabWidgetFrame__StyleOptionType = 11
 
+func (this *QStyleOptionTabWidgetFrame) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionTabWidgetFrame__Type: // 11
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTabWidgetFrame_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionTabWidgetFrame
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -134,6 +147,19 @@ type QStyleOptionTabWidgetFrame__StyleOptionVersion = int
 
 // 1
 const QStyleOptionTabWidgetFrame__Version QStyleOptionTabWidgetFrame__StyleOptionVersion = 2
+
+func (this *QStyleOptionTabWidgetFrame) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionTabWidgetFrame__Version: // 2
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionTabWidgetFrame_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionTabWidgetFrame
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 //  body block end
 

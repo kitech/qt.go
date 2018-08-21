@@ -821,6 +821,57 @@ const QPaintEngine__PaintOutsidePaintEvent QPaintEngine__PaintEngineFeature = 53
 //
 const QPaintEngine__AllFeatures QPaintEngine__PaintEngineFeature = -1
 
+func (this *QPaintEngine) PaintEngineFeatureItemName(val int) string {
+	switch val {
+	case QPaintEngine__PrimitiveTransform: // 1
+		return "PrimitiveTransform"
+	case QPaintEngine__PatternTransform: // 2
+		return "PatternTransform"
+	case QPaintEngine__PixmapTransform: // 4
+		return "PixmapTransform"
+	case QPaintEngine__PatternBrush: // 8
+		return "PatternBrush"
+	case QPaintEngine__LinearGradientFill: // 16
+		return "LinearGradientFill"
+	case QPaintEngine__RadialGradientFill: // 32
+		return "RadialGradientFill"
+	case QPaintEngine__ConicalGradientFill: // 64
+		return "ConicalGradientFill"
+	case QPaintEngine__AlphaBlend: // 128
+		return "AlphaBlend"
+	case QPaintEngine__PorterDuff: // 256
+		return "PorterDuff"
+	case QPaintEngine__PainterPaths: // 512
+		return "PainterPaths"
+	case QPaintEngine__Antialiasing: // 1024
+		return "Antialiasing"
+	case QPaintEngine__BrushStroke: // 2048
+		return "BrushStroke"
+	case QPaintEngine__ConstantOpacity: // 4096
+		return "ConstantOpacity"
+	case QPaintEngine__MaskedBrush: // 8192
+		return "MaskedBrush"
+	case QPaintEngine__PerspectiveTransform: // 16384
+		return "PerspectiveTransform"
+	case QPaintEngine__BlendModes: // 32768
+		return "BlendModes"
+	case QPaintEngine__ObjectBoundingModeGradients: // 65536
+		return "ObjectBoundingModeGradients"
+	case QPaintEngine__RasterOpModes: // 131072
+		return "RasterOpModes"
+	case QPaintEngine__PaintOutsidePaintEvent: // 536870912
+		return "PaintOutsidePaintEvent"
+	case QPaintEngine__AllFeatures: // -1
+		return "AllFeatures"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPaintEngine_PaintEngineFeatureItemName(val int) string {
+	var nilthis *QPaintEngine
+	return nilthis.PaintEngineFeatureItemName(val)
+}
+
 /*
 
 
@@ -869,6 +920,45 @@ const QPaintEngine__DirtyOpacity QPaintEngine__DirtyFlag = 4096
 //
 const QPaintEngine__AllDirty QPaintEngine__DirtyFlag = 65535
 
+func (this *QPaintEngine) DirtyFlagItemName(val int) string {
+	switch val {
+	case QPaintEngine__DirtyPen: // 1
+		return "DirtyPen"
+	case QPaintEngine__DirtyBrush: // 2
+		return "DirtyBrush"
+	case QPaintEngine__DirtyBrushOrigin: // 4
+		return "DirtyBrushOrigin"
+	case QPaintEngine__DirtyFont: // 8
+		return "DirtyFont"
+	case QPaintEngine__DirtyBackground: // 16
+		return "DirtyBackground"
+	case QPaintEngine__DirtyBackgroundMode: // 32
+		return "DirtyBackgroundMode"
+	case QPaintEngine__DirtyTransform: // 64
+		return "DirtyTransform"
+	case QPaintEngine__DirtyClipRegion: // 128
+		return "DirtyClipRegion"
+	case QPaintEngine__DirtyClipPath: // 256
+		return "DirtyClipPath"
+	case QPaintEngine__DirtyHints: // 512
+		return "DirtyHints"
+	case QPaintEngine__DirtyCompositionMode: // 1024
+		return "DirtyCompositionMode"
+	case QPaintEngine__DirtyClipEnabled: // 2048
+		return "DirtyClipEnabled"
+	case QPaintEngine__DirtyOpacity: // 4096
+		return "DirtyOpacity"
+	case QPaintEngine__AllDirty: // 65535
+		return "AllDirty"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPaintEngine_DirtyFlagItemName(val int) string {
+	var nilthis *QPaintEngine
+	return nilthis.DirtyFlagItemName(val)
+}
+
 /*
 
  */
@@ -885,6 +975,25 @@ const QPaintEngine__ConvexMode QPaintEngine__PolygonDrawMode = 2
 
 // Only the outline of the polygon should be drawn.
 const QPaintEngine__PolylineMode QPaintEngine__PolygonDrawMode = 3
+
+func (this *QPaintEngine) PolygonDrawModeItemName(val int) string {
+	switch val {
+	case QPaintEngine__OddEvenMode: // 0
+		return "OddEvenMode"
+	case QPaintEngine__WindingMode: // 1
+		return "WindingMode"
+	case QPaintEngine__ConvexMode: // 2
+		return "ConvexMode"
+	case QPaintEngine__PolylineMode: // 3
+		return "PolylineMode"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPaintEngine_PolygonDrawModeItemName(val int) string {
+	var nilthis *QPaintEngine
+	return nilthis.PolygonDrawModeItemName(val)
+}
 
 /*
 
@@ -950,6 +1059,57 @@ const QPaintEngine__User QPaintEngine__Type = 50
 
 //
 const QPaintEngine__MaxUser QPaintEngine__Type = 100
+
+func (this *QPaintEngine) TypeItemName(val int) string {
+	switch val {
+	case QPaintEngine__X11: // 0
+		return "X11"
+	case QPaintEngine__Windows: // 1
+		return "Windows"
+	case QPaintEngine__QuickDraw: // 2
+		return "QuickDraw"
+	case QPaintEngine__CoreGraphics: // 3
+		return "CoreGraphics"
+	case QPaintEngine__MacPrinter: // 4
+		return "MacPrinter"
+	case QPaintEngine__QWindowSystem: // 5
+		return "QWindowSystem"
+	case QPaintEngine__PostScript: // 6
+		return "PostScript"
+	case QPaintEngine__OpenGL: // 7
+		return "OpenGL"
+	case QPaintEngine__Picture: // 8
+		return "Picture"
+	case QPaintEngine__SVG: // 9
+		return "SVG"
+	case QPaintEngine__Raster: // 10
+		return "Raster"
+	case QPaintEngine__Direct3D: // 11
+		return "Direct3D"
+	case QPaintEngine__Pdf: // 12
+		return "Pdf"
+	case QPaintEngine__OpenVG: // 13
+		return "OpenVG"
+	case QPaintEngine__OpenGL2: // 14
+		return "OpenGL2"
+	case QPaintEngine__PaintBuffer: // 15
+		return "PaintBuffer"
+	case QPaintEngine__Blitter: // 16
+		return "Blitter"
+	case QPaintEngine__Direct2D: // 17
+		return "Direct2D"
+	case QPaintEngine__User: // 50
+		return "User"
+	case QPaintEngine__MaxUser: // 100
+		return "MaxUser"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPaintEngine_TypeItemName(val int) string {
+	var nilthis *QPaintEngine
+	return nilthis.TypeItemName(val)
+}
 
 //  body block end
 

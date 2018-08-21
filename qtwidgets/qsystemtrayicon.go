@@ -665,6 +665,14 @@ const QSystemTrayIcon__Trigger QSystemTrayIcon__ActivationReason = 3
 // The system tray entry was clicked with the middle mouse button
 const QSystemTrayIcon__MiddleClick QSystemTrayIcon__ActivationReason = 4
 
+func (this *QSystemTrayIcon) ActivationReasonItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSystemTrayIcon_ActivationReasonItemName(val int) string {
+	var nilthis *QSystemTrayIcon
+	return nilthis.ActivationReasonItemName(val)
+}
+
 /*
 This enum describes the icon that is shown when a balloon message is displayed.
 
@@ -686,6 +694,14 @@ const QSystemTrayIcon__Warning QSystemTrayIcon__MessageIcon = 2
 
 // A critical warning icon is shown.
 const QSystemTrayIcon__Critical QSystemTrayIcon__MessageIcon = 3
+
+func (this *QSystemTrayIcon) MessageIconItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSystemTrayIcon_MessageIconItemName(val int) string {
+	var nilthis *QSystemTrayIcon
+	return nilthis.MessageIconItemName(val)
+}
 
 //  body block end
 

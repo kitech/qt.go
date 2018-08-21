@@ -853,6 +853,21 @@ const QTableWidgetItem__Type QTableWidgetItem__ItemType = 0
 //
 const QTableWidgetItem__UserType QTableWidgetItem__ItemType = 1000
 
+func (this *QTableWidgetItem) ItemTypeItemName(val int) string {
+	switch val {
+	case QTableWidgetItem__Type: // 0
+		return "Type"
+	case QTableWidgetItem__UserType: // 1000
+		return "UserType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTableWidgetItem_ItemTypeItemName(val int) string {
+	var nilthis *QTableWidgetItem
+	return nilthis.ItemTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

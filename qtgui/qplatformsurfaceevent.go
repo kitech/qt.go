@@ -120,6 +120,21 @@ const QPlatformSurfaceEvent__SurfaceCreated QPlatformSurfaceEvent__SurfaceEventT
 //
 const QPlatformSurfaceEvent__SurfaceAboutToBeDestroyed QPlatformSurfaceEvent__SurfaceEventType = 1
 
+func (this *QPlatformSurfaceEvent) SurfaceEventTypeItemName(val int) string {
+	switch val {
+	case QPlatformSurfaceEvent__SurfaceCreated: // 0
+		return "SurfaceCreated"
+	case QPlatformSurfaceEvent__SurfaceAboutToBeDestroyed: // 1
+		return "SurfaceAboutToBeDestroyed"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPlatformSurfaceEvent_SurfaceEventTypeItemName(val int) string {
+	var nilthis *QPlatformSurfaceEvent
+	return nilthis.SurfaceEventTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

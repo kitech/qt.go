@@ -142,6 +142,25 @@ const QQmlAbstractUrlInterceptor__QmldirFile QQmlAbstractUrlInterceptor__DataTyp
 //
 const QQmlAbstractUrlInterceptor__UrlString QQmlAbstractUrlInterceptor__DataType = 4096
 
+func (this *QQmlAbstractUrlInterceptor) DataTypeItemName(val int) string {
+	switch val {
+	case QQmlAbstractUrlInterceptor__QmlFile: // 0
+		return "QmlFile"
+	case QQmlAbstractUrlInterceptor__JavaScriptFile: // 1
+		return "JavaScriptFile"
+	case QQmlAbstractUrlInterceptor__QmldirFile: // 2
+		return "QmldirFile"
+	case QQmlAbstractUrlInterceptor__UrlString: // 4096
+		return "UrlString"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QQmlAbstractUrlInterceptor_DataTypeItemName(val int) string {
+	var nilthis *QQmlAbstractUrlInterceptor
+	return nilthis.DataTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

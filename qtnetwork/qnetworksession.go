@@ -758,6 +758,14 @@ const QNetworkSession__Disconnected QNetworkSession__State = 5
 // The network session is roaming from one access point to another access point.
 const QNetworkSession__Roaming QNetworkSession__State = 6
 
+func (this *QNetworkSession) StateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QNetworkSession_StateItemName(val int) string {
+	var nilthis *QNetworkSession
+	return nilthis.StateItemName(val)
+}
+
 /*
 This enum describes the session errors that can occur.
 
@@ -780,6 +788,14 @@ const QNetworkSession__OperationNotSupportedError QNetworkSession__SessionError 
 // The operation cannot currently be performed for the current configuration.
 const QNetworkSession__InvalidConfigurationError QNetworkSession__SessionError = 4
 
+func (this *QNetworkSession) SessionErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QNetworkSession_SessionErrorItemName(val int) string {
+	var nilthis *QNetworkSession
+	return nilthis.SessionErrorItemName(val)
+}
+
 /*
 
 
@@ -791,6 +807,14 @@ const QNetworkSession__NoPolicy QNetworkSession__UsagePolicy = 0
 
 //
 const QNetworkSession__NoBackgroundTrafficPolicy QNetworkSession__UsagePolicy = 1
+
+func (this *QNetworkSession) UsagePolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QNetworkSession_UsagePolicyItemName(val int) string {
+	var nilthis *QNetworkSession
+	return nilthis.UsagePolicyItemName(val)
+}
 
 //  body block end
 

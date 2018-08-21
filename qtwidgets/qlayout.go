@@ -1150,6 +1150,14 @@ const QLayout__SetMaximumSize QLayout__SizeConstraint = 4
 // The main widget's minimum size is set to minimumSize() and its maximum size is set to maximumSize().
 const QLayout__SetMinAndMaxSize QLayout__SizeConstraint = 5
 
+func (this *QLayout) SizeConstraintItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QLayout_SizeConstraintItemName(val int) string {
+	var nilthis *QLayout
+	return nilthis.SizeConstraintItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

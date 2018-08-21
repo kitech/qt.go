@@ -520,6 +520,155 @@ const QAccessible__AcceleratorChanged QAccessible__Event = 32960
 //
 const QAccessible__InvalidEvent QAccessible__Event = 32961
 
+func (this *QAccessible) EventItemName(val int) string {
+	switch val {
+	case QAccessible__SoundPlayed: // 1
+		return "SoundPlayed"
+	case QAccessible__Alert: // 2
+		return "Alert"
+	case QAccessible__ForegroundChanged: // 3
+		return "ForegroundChanged"
+	case QAccessible__MenuStart: // 4
+		return "MenuStart"
+	case QAccessible__MenuEnd: // 5
+		return "MenuEnd"
+	case QAccessible__PopupMenuStart: // 6
+		return "PopupMenuStart"
+	case QAccessible__PopupMenuEnd: // 7
+		return "PopupMenuEnd"
+	case QAccessible__ContextHelpStart: // 12
+		return "ContextHelpStart"
+	case QAccessible__ContextHelpEnd: // 13
+		return "ContextHelpEnd"
+	case QAccessible__DragDropStart: // 14
+		return "DragDropStart"
+	case QAccessible__DragDropEnd: // 15
+		return "DragDropEnd"
+	case QAccessible__DialogStart: // 16
+		return "DialogStart"
+	case QAccessible__DialogEnd: // 17
+		return "DialogEnd"
+	case QAccessible__ScrollingStart: // 18
+		return "ScrollingStart"
+	case QAccessible__ScrollingEnd: // 19
+		return "ScrollingEnd"
+	case QAccessible__MenuCommand: // 24
+		return "MenuCommand"
+	case QAccessible__ActionChanged: // 257
+		return "ActionChanged"
+	case QAccessible__ActiveDescendantChanged: // 258
+		return "ActiveDescendantChanged"
+	case QAccessible__AttributeChanged: // 259
+		return "AttributeChanged"
+	case QAccessible__DocumentContentChanged: // 260
+		return "DocumentContentChanged"
+	case QAccessible__DocumentLoadComplete: // 261
+		return "DocumentLoadComplete"
+	case QAccessible__DocumentLoadStopped: // 262
+		return "DocumentLoadStopped"
+	case QAccessible__DocumentReload: // 263
+		return "DocumentReload"
+	case QAccessible__HyperlinkEndIndexChanged: // 264
+		return "HyperlinkEndIndexChanged"
+	case QAccessible__HyperlinkNumberOfAnchorsChanged: // 265
+		return "HyperlinkNumberOfAnchorsChanged"
+	case QAccessible__HyperlinkSelectedLinkChanged: // 266
+		return "HyperlinkSelectedLinkChanged"
+	case QAccessible__HypertextLinkActivated: // 267
+		return "HypertextLinkActivated"
+	case QAccessible__HypertextLinkSelected: // 268
+		return "HypertextLinkSelected"
+	case QAccessible__HyperlinkStartIndexChanged: // 269
+		return "HyperlinkStartIndexChanged"
+	case QAccessible__HypertextChanged: // 270
+		return "HypertextChanged"
+	case QAccessible__HypertextNLinksChanged: // 271
+		return "HypertextNLinksChanged"
+	case QAccessible__ObjectAttributeChanged: // 272
+		return "ObjectAttributeChanged"
+	case QAccessible__PageChanged: // 273
+		return "PageChanged"
+	case QAccessible__SectionChanged: // 274
+		return "SectionChanged"
+	case QAccessible__TableCaptionChanged: // 275
+		return "TableCaptionChanged"
+	case QAccessible__TableColumnDescriptionChanged: // 276
+		return "TableColumnDescriptionChanged"
+	case QAccessible__TableColumnHeaderChanged: // 277
+		return "TableColumnHeaderChanged"
+	case QAccessible__TableModelChanged: // 278
+		return "TableModelChanged"
+	case QAccessible__TableRowDescriptionChanged: // 279
+		return "TableRowDescriptionChanged"
+	case QAccessible__TableRowHeaderChanged: // 280
+		return "TableRowHeaderChanged"
+	case QAccessible__TableSummaryChanged: // 281
+		return "TableSummaryChanged"
+	case QAccessible__TextAttributeChanged: // 282
+		return "TextAttributeChanged"
+	case QAccessible__TextCaretMoved: // 283
+		return "TextCaretMoved"
+	case QAccessible__TextColumnChanged: // 285
+		return "TextColumnChanged"
+	case QAccessible__TextInserted: // 286
+		return "TextInserted"
+	case QAccessible__TextRemoved: // 287
+		return "TextRemoved"
+	case QAccessible__TextUpdated: // 288
+		return "TextUpdated"
+	case QAccessible__TextSelectionChanged: // 289
+		return "TextSelectionChanged"
+	case QAccessible__VisibleDataChanged: // 290
+		return "VisibleDataChanged"
+	case QAccessible__ObjectCreated: // 32768
+		return "ObjectCreated"
+	case QAccessible__ObjectDestroyed: // 32769
+		return "ObjectDestroyed"
+	case QAccessible__ObjectShow: // 32770
+		return "ObjectShow"
+	case QAccessible__ObjectHide: // 32771
+		return "ObjectHide"
+	case QAccessible__ObjectReorder: // 32772
+		return "ObjectReorder"
+	case QAccessible__Focus: // 32773
+		return "Focus"
+	case QAccessible__Selection: // 32774
+		return "Selection"
+	case QAccessible__SelectionAdd: // 32775
+		return "SelectionAdd"
+	case QAccessible__SelectionRemove: // 32776
+		return "SelectionRemove"
+	case QAccessible__SelectionWithin: // 32777
+		return "SelectionWithin"
+	case QAccessible__StateChanged: // 32778
+		return "StateChanged"
+	case QAccessible__LocationChanged: // 32779
+		return "LocationChanged"
+	case QAccessible__NameChanged: // 32780
+		return "NameChanged"
+	case QAccessible__DescriptionChanged: // 32781
+		return "DescriptionChanged"
+	case QAccessible__ValueChanged: // 32782
+		return "ValueChanged"
+	case QAccessible__ParentChanged: // 32783
+		return "ParentChanged"
+	case QAccessible__HelpChanged: // 32928
+		return "HelpChanged"
+	case QAccessible__DefaultActionChanged: // 32944
+		return "DefaultActionChanged"
+	case QAccessible__AcceleratorChanged: // 32960
+		return "AcceleratorChanged"
+	case QAccessible__InvalidEvent: // 32961
+		return "InvalidEvent"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAccessible_EventItemName(val int) string {
+	var nilthis *QAccessible
+	return nilthis.EventItemName(val)
+}
+
 /*
 This enum defines the role of an accessible object. The roles are:
 
@@ -755,6 +904,169 @@ const QAccessible__ComplementaryContent QAccessible__Role = 1068
 //
 const QAccessible__UserRole QAccessible__Role = 65535
 
+func (this *QAccessible) RoleItemName(val int) string {
+	switch val {
+	case QAccessible__NoRole: // 0
+		return "NoRole"
+	case QAccessible__TitleBar: // 1
+		return "TitleBar"
+	case QAccessible__MenuBar: // 2
+		return "MenuBar"
+	case QAccessible__ScrollBar: // 3
+		return "ScrollBar"
+	case QAccessible__Grip: // 4
+		return "Grip"
+	case QAccessible__Sound: // 5
+		return "Sound"
+	case QAccessible__Cursor: // 6
+		return "Cursor"
+	case QAccessible__Caret: // 7
+		return "Caret"
+	case QAccessible__AlertMessage: // 8
+		return "AlertMessage"
+	case QAccessible__Window: // 9
+		return "Window"
+	case QAccessible__Client: // 10
+		return "Client"
+	case QAccessible__PopupMenu: // 11
+		return "PopupMenu"
+	case QAccessible__MenuItem: // 12
+		return "MenuItem"
+	case QAccessible__ToolTip: // 13
+		return "ToolTip"
+	case QAccessible__Application: // 14
+		return "Application"
+	case QAccessible__Document: // 15
+		return "Document"
+	case QAccessible__Pane: // 16
+		return "Pane"
+	case QAccessible__Chart: // 17
+		return "Chart"
+	case QAccessible__Dialog: // 18
+		return "Dialog"
+	case QAccessible__Border: // 19
+		return "Border"
+	case QAccessible__Grouping: // 20
+		return "Grouping"
+	case QAccessible__Separator: // 21
+		return "Separator"
+	case QAccessible__ToolBar: // 22
+		return "ToolBar"
+	case QAccessible__StatusBar: // 23
+		return "StatusBar"
+	case QAccessible__Table: // 24
+		return "Table"
+	case QAccessible__ColumnHeader: // 25
+		return "ColumnHeader"
+	case QAccessible__RowHeader: // 26
+		return "RowHeader"
+	case QAccessible__Column: // 27
+		return "Column"
+	case QAccessible__Row: // 28
+		return "Row"
+	case QAccessible__Cell: // 29
+		return "Cell"
+	case QAccessible__Link: // 30
+		return "Link"
+	case QAccessible__HelpBalloon: // 31
+		return "HelpBalloon"
+	case QAccessible__Assistant: // 32
+		return "Assistant"
+	case QAccessible__List: // 33
+		return "List"
+	case QAccessible__ListItem: // 34
+		return "ListItem"
+	case QAccessible__Tree: // 35
+		return "Tree"
+	case QAccessible__TreeItem: // 36
+		return "TreeItem"
+	case QAccessible__PageTab: // 37
+		return "PageTab"
+	case QAccessible__PropertyPage: // 38
+		return "PropertyPage"
+	case QAccessible__Indicator: // 39
+		return "Indicator"
+	case QAccessible__Graphic: // 40
+		return "Graphic"
+	case QAccessible__StaticText: // 41
+		return "StaticText"
+	case QAccessible__EditableText: // 42
+		return "EditableText"
+	case QAccessible__Button: // 43
+		return "Button,PushButton"
+		// case QAccessible__PushButton: // 43
+		// return ""
+	case QAccessible__CheckBox: // 44
+		return "CheckBox"
+	case QAccessible__RadioButton: // 45
+		return "RadioButton"
+	case QAccessible__ComboBox: // 46
+		return "ComboBox"
+	case QAccessible__ProgressBar: // 48
+		return "ProgressBar"
+	case QAccessible__Dial: // 49
+		return "Dial"
+	case QAccessible__HotkeyField: // 50
+		return "HotkeyField"
+	case QAccessible__Slider: // 51
+		return "Slider"
+	case QAccessible__SpinBox: // 52
+		return "SpinBox"
+	case QAccessible__Canvas: // 53
+		return "Canvas"
+	case QAccessible__Animation: // 54
+		return "Animation"
+	case QAccessible__Equation: // 55
+		return "Equation"
+	case QAccessible__ButtonDropDown: // 56
+		return "ButtonDropDown"
+	case QAccessible__ButtonMenu: // 57
+		return "ButtonMenu"
+	case QAccessible__ButtonDropGrid: // 58
+		return "ButtonDropGrid"
+	case QAccessible__Whitespace: // 59
+		return "Whitespace"
+	case QAccessible__PageTabList: // 60
+		return "PageTabList"
+	case QAccessible__Clock: // 61
+		return "Clock"
+	case QAccessible__Splitter: // 62
+		return "Splitter"
+	case QAccessible__LayeredPane: // 128
+		return "LayeredPane"
+	case QAccessible__Terminal: // 129
+		return "Terminal"
+	case QAccessible__Desktop: // 130
+		return "Desktop"
+	case QAccessible__Paragraph: // 131
+		return "Paragraph"
+	case QAccessible__WebDocument: // 132
+		return "WebDocument"
+	case QAccessible__Section: // 133
+		return "Section"
+	case QAccessible__ColorChooser: // 1028
+		return "ColorChooser"
+	case QAccessible__Footer: // 1038
+		return "Footer"
+	case QAccessible__Form: // 1040
+		return "Form"
+	case QAccessible__Heading: // 1044
+		return "Heading"
+	case QAccessible__Note: // 1051
+		return "Note"
+	case QAccessible__ComplementaryContent: // 1068
+		return "ComplementaryContent"
+	case QAccessible__UserRole: // 65535
+		return "UserRole"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAccessible_RoleItemName(val int) string {
+	var nilthis *QAccessible
+	return nilthis.RoleItemName(val)
+}
+
 /*
 This enum specifies string information that an accessible object returns.
 
@@ -783,6 +1095,31 @@ const QAccessible__DebugDescription QAccessible__Text = 5
 //
 const QAccessible__UserText QAccessible__Text = 65535
 
+func (this *QAccessible) TextItemName(val int) string {
+	switch val {
+	case QAccessible__Name: // 0
+		return "Name"
+	case QAccessible__Description: // 1
+		return "Description"
+	case QAccessible__Value: // 2
+		return "Value"
+	case QAccessible__Help: // 3
+		return "Help"
+	case QAccessible__Accelerator: // 4
+		return "Accelerator"
+	case QAccessible__DebugDescription: // 5
+		return "DebugDescription"
+	case QAccessible__UserText: // 65535
+		return "UserText"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAccessible_TextItemName(val int) string {
+	var nilthis *QAccessible
+	return nilthis.TextItemName(val)
+}
+
 /*
 
 
@@ -803,6 +1140,27 @@ const QAccessible__Controlled QAccessible__RelationFlag = 8
 
 //
 const QAccessible__AllRelations QAccessible__RelationFlag = -1
+
+func (this *QAccessible) RelationFlagItemName(val int) string {
+	switch val {
+	case QAccessible__Label: // 1
+		return "Label"
+	case QAccessible__Labelled: // 2
+		return "Labelled"
+	case QAccessible__Controller: // 4
+		return "Controller"
+	case QAccessible__Controlled: // 8
+		return "Controlled"
+	case QAccessible__AllRelations: // -1
+		return "AllRelations"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAccessible_RelationFlagItemName(val int) string {
+	var nilthis *QAccessible
+	return nilthis.RelationFlagItemName(val)
+}
 
 /*
 QAccessibleInterface supports several sub interfaces. In order to provide more information about some objects, their accessible representation should implement one or more of these interfaces.
@@ -837,6 +1195,31 @@ const QAccessible__TableInterface QAccessible__InterfaceType = 5
 // For cells in a TableInterface object.
 const QAccessible__TableCellInterface QAccessible__InterfaceType = 6
 
+func (this *QAccessible) InterfaceTypeItemName(val int) string {
+	switch val {
+	case QAccessible__TextInterface: // 0
+		return "TextInterface"
+	case QAccessible__EditableTextInterface: // 1
+		return "EditableTextInterface"
+	case QAccessible__ValueInterface: // 2
+		return "ValueInterface"
+	case QAccessible__ActionInterface: // 3
+		return "ActionInterface"
+	case QAccessible__ImageInterface: // 4
+		return "ImageInterface"
+	case QAccessible__TableInterface: // 5
+		return "TableInterface"
+	case QAccessible__TableCellInterface: // 6
+		return "TableCellInterface"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAccessible_InterfaceTypeItemName(val int) string {
+	var nilthis *QAccessible
+	return nilthis.InterfaceTypeItemName(val)
+}
+
 /*
 This enum describes different types of text boundaries. It follows the IAccessible2 API and is used in the QAccessibleTextInterface.
 
@@ -864,6 +1247,29 @@ const QAccessible__LineBoundary QAccessible__TextBoundaryType = 4
 
 // No boundary (use the whole text).
 const QAccessible__NoBoundary QAccessible__TextBoundaryType = 5
+
+func (this *QAccessible) TextBoundaryTypeItemName(val int) string {
+	switch val {
+	case QAccessible__CharBoundary: // 0
+		return "CharBoundary"
+	case QAccessible__WordBoundary: // 1
+		return "WordBoundary"
+	case QAccessible__SentenceBoundary: // 2
+		return "SentenceBoundary"
+	case QAccessible__ParagraphBoundary: // 3
+		return "ParagraphBoundary"
+	case QAccessible__LineBoundary: // 4
+		return "LineBoundary"
+	case QAccessible__NoBoundary: // 5
+		return "NoBoundary"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAccessible_TextBoundaryTypeItemName(val int) string {
+	var nilthis *QAccessible
+	return nilthis.TextBoundaryTypeItemName(val)
+}
 
 //  body block end
 

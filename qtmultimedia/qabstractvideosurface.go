@@ -449,6 +449,14 @@ const QAbstractVideoSurface__StoppedError QAbstractVideoSurface__Error = 3
 // The surface could not allocate some resource.
 const QAbstractVideoSurface__ResourceError QAbstractVideoSurface__Error = 4
 
+func (this *QAbstractVideoSurface) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractVideoSurface_ErrorItemName(val int) string {
+	var nilthis *QAbstractVideoSurface
+	return nilthis.ErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

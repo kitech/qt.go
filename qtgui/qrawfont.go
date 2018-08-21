@@ -900,6 +900,21 @@ const QRawFont__PixelAntialiasing QRawFont__AntialiasingType = 0
 // Will rasterize by measuring the coverage of each subpixel, returning a separate alpha value for each of the red, green and blue components of each pixel.
 const QRawFont__SubPixelAntialiasing QRawFont__AntialiasingType = 1
 
+func (this *QRawFont) AntialiasingTypeItemName(val int) string {
+	switch val {
+	case QRawFont__PixelAntialiasing: // 0
+		return "PixelAntialiasing"
+	case QRawFont__SubPixelAntialiasing: // 1
+		return "SubPixelAntialiasing"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QRawFont_AntialiasingTypeItemName(val int) string {
+	var nilthis *QRawFont
+	return nilthis.AntialiasingTypeItemName(val)
+}
+
 /*
 
 
@@ -914,6 +929,23 @@ const QRawFont__KernedAdvances QRawFont__LayoutFlag = 1
 
 //
 const QRawFont__UseDesignMetrics QRawFont__LayoutFlag = 2
+
+func (this *QRawFont) LayoutFlagItemName(val int) string {
+	switch val {
+	case QRawFont__SeparateAdvances: // 0
+		return "SeparateAdvances"
+	case QRawFont__KernedAdvances: // 1
+		return "KernedAdvances"
+	case QRawFont__UseDesignMetrics: // 2
+		return "UseDesignMetrics"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QRawFont_LayoutFlagItemName(val int) string {
+	var nilthis *QRawFont
+	return nilthis.LayoutFlagItemName(val)
+}
 
 //  body block end
 

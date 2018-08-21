@@ -299,6 +299,23 @@ const QQmlIncubator__AsynchronousIfNested QQmlIncubator__IncubationMode = 1
 // The object will be created synchronously.
 const QQmlIncubator__Synchronous QQmlIncubator__IncubationMode = 2
 
+func (this *QQmlIncubator) IncubationModeItemName(val int) string {
+	switch val {
+	case QQmlIncubator__Asynchronous: // 0
+		return "Asynchronous"
+	case QQmlIncubator__AsynchronousIfNested: // 1
+		return "AsynchronousIfNested"
+	case QQmlIncubator__Synchronous: // 2
+		return "Synchronous"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QQmlIncubator_IncubationModeItemName(val int) string {
+	var nilthis *QQmlIncubator
+	return nilthis.IncubationModeItemName(val)
+}
+
 /*
 Specifies the status of the QQmlIncubator.
 
@@ -317,6 +334,25 @@ const QQmlIncubator__Loading QQmlIncubator__Status = 2
 
 // An error occurred. The errors can be access by calling errors().
 const QQmlIncubator__Error QQmlIncubator__Status = 3
+
+func (this *QQmlIncubator) StatusItemName(val int) string {
+	switch val {
+	case QQmlIncubator__Null: // 0
+		return "Null"
+	case QQmlIncubator__Ready: // 1
+		return "Ready"
+	case QQmlIncubator__Loading: // 2
+		return "Loading"
+	case QQmlIncubator__Error: // 3
+		return "Error"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QQmlIncubator_StatusItemName(val int) string {
+	var nilthis *QQmlIncubator
+	return nilthis.StatusItemName(val)
+}
 
 //  body block end
 

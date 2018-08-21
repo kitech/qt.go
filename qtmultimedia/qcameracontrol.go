@@ -322,6 +322,14 @@ const QCameraControl__Viewfinder QCameraControl__PropertyChangeType = 4
 // Viewfinder settings are changed.
 const QCameraControl__ViewfinderSettings QCameraControl__PropertyChangeType = 5
 
+func (this *QCameraControl) PropertyChangeTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraControl_PropertyChangeTypeItemName(val int) string {
+	var nilthis *QCameraControl
+	return nilthis.PropertyChangeTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

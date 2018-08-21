@@ -878,6 +878,25 @@ const QSurfaceFormat__DeprecatedFunctions QSurfaceFormat__FormatOption = 4
 //
 const QSurfaceFormat__ResetNotification QSurfaceFormat__FormatOption = 8
 
+func (this *QSurfaceFormat) FormatOptionItemName(val int) string {
+	switch val {
+	case QSurfaceFormat__StereoBuffers: // 1
+		return "StereoBuffers"
+	case QSurfaceFormat__DebugContext: // 2
+		return "DebugContext"
+	case QSurfaceFormat__DeprecatedFunctions: // 4
+		return "DeprecatedFunctions"
+	case QSurfaceFormat__ResetNotification: // 8
+		return "ResetNotification"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSurfaceFormat_FormatOptionItemName(val int) string {
+	var nilthis *QSurfaceFormat
+	return nilthis.FormatOptionItemName(val)
+}
+
 /*
 This enum is used by QSurfaceFormat to specify the swap behaviour of a surface. The swap behaviour is mostly transparent to the application, but it affects factors such as rendering latency and throughput.
 
@@ -897,6 +916,25 @@ const QSurfaceFormat__DoubleBuffer QSurfaceFormat__SwapBehavior = 2
 // This swap behaviour is sometimes used in order to decrease the risk of skipping a frame when the rendering rate is just barely keeping up with the screen refresh rate. Depending on the platform it might also lead to slightly more efficient use of the GPU due to improved pipelining behaviour. Triple buffering comes at the cost of an extra frame of memory usage and latency, and might not be supported depending on the underlying platform.
 const QSurfaceFormat__TripleBuffer QSurfaceFormat__SwapBehavior = 3
 
+func (this *QSurfaceFormat) SwapBehaviorItemName(val int) string {
+	switch val {
+	case QSurfaceFormat__DefaultSwapBehavior: // 0
+		return "DefaultSwapBehavior"
+	case QSurfaceFormat__SingleBuffer: // 1
+		return "SingleBuffer"
+	case QSurfaceFormat__DoubleBuffer: // 2
+		return "DoubleBuffer"
+	case QSurfaceFormat__TripleBuffer: // 3
+		return "TripleBuffer"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSurfaceFormat_SwapBehaviorItemName(val int) string {
+	var nilthis *QSurfaceFormat
+	return nilthis.SwapBehaviorItemName(val)
+}
+
 /*
 This enum specifies the rendering backend for the surface.
 
@@ -915,6 +953,25 @@ const QSurfaceFormat__OpenGLES QSurfaceFormat__RenderableType = 2
 
 //
 const QSurfaceFormat__OpenVG QSurfaceFormat__RenderableType = 4
+
+func (this *QSurfaceFormat) RenderableTypeItemName(val int) string {
+	switch val {
+	case QSurfaceFormat__DefaultRenderableType: // 0
+		return "DefaultRenderableType"
+	case QSurfaceFormat__OpenGL: // 1
+		return "OpenGL"
+	case QSurfaceFormat__OpenGLES: // 2
+		return "OpenGLES"
+	case QSurfaceFormat__OpenVG: // 4
+		return "OpenVG"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSurfaceFormat_RenderableTypeItemName(val int) string {
+	var nilthis *QSurfaceFormat
+	return nilthis.RenderableTypeItemName(val)
+}
 
 /*
 This enum is used to specify the OpenGL context profile, in conjunction with QSurfaceFormat::setMajorVersion() and QSurfaceFormat::setMinorVersion().
@@ -936,6 +993,23 @@ const QSurfaceFormat__CoreProfile QSurfaceFormat__OpenGLContextProfile = 1
 // Functionality from earlier OpenGL versions is available.
 const QSurfaceFormat__CompatibilityProfile QSurfaceFormat__OpenGLContextProfile = 2
 
+func (this *QSurfaceFormat) OpenGLContextProfileItemName(val int) string {
+	switch val {
+	case QSurfaceFormat__NoProfile: // 0
+		return "NoProfile"
+	case QSurfaceFormat__CoreProfile: // 1
+		return "CoreProfile"
+	case QSurfaceFormat__CompatibilityProfile: // 2
+		return "CompatibilityProfile"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSurfaceFormat_OpenGLContextProfileItemName(val int) string {
+	var nilthis *QSurfaceFormat
+	return nilthis.OpenGLContextProfileItemName(val)
+}
+
 /*
 This enum is used to specify the preferred color space, controlling if the window's associated default framebuffer is able to do updates and blending in a given encoding instead of the standard linear operations.
 
@@ -948,6 +1022,21 @@ const QSurfaceFormat__DefaultColorSpace QSurfaceFormat__ColorSpace = 0
 
 // When GL_ARB_framebuffer_sRGB or GL_EXT_framebuffer_sRGB is supported by the platform and this value is set, the window will be created with an sRGB-capable default framebuffer. Note that some platforms may return windows with a sRGB-capable default framebuffer even when not requested explicitly.
 const QSurfaceFormat__sRGBColorSpace QSurfaceFormat__ColorSpace = 1
+
+func (this *QSurfaceFormat) ColorSpaceItemName(val int) string {
+	switch val {
+	case QSurfaceFormat__DefaultColorSpace: // 0
+		return "DefaultColorSpace"
+	case QSurfaceFormat__sRGBColorSpace: // 1
+		return "sRGBColorSpace"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSurfaceFormat_ColorSpaceItemName(val int) string {
+	var nilthis *QSurfaceFormat
+	return nilthis.ColorSpaceItemName(val)
+}
 
 //  body block end
 

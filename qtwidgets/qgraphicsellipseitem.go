@@ -650,6 +650,19 @@ type QGraphicsEllipseItem__ = int
 //
 const QGraphicsEllipseItem__Type QGraphicsEllipseItem__ = 4
 
+func (this *QGraphicsEllipseItem) ItemName(val int) string {
+	switch val {
+	case QGraphicsEllipseItem__Type: // 4
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QGraphicsEllipseItem_ItemName(val int) string {
+	var nilthis *QGraphicsEllipseItem
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

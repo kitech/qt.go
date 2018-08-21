@@ -572,6 +572,14 @@ const QQuickView__SizeViewToRootObject QQuickView__ResizeMode = 0
 // The view will automatically resize the root item to the size of the view.
 const QQuickView__SizeRootObjectToView QQuickView__ResizeMode = 1
 
+func (this *QQuickView) ResizeModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickView_ResizeModeItemName(val int) string {
+	var nilthis *QQuickView
+	return nilthis.ResizeModeItemName(val)
+}
+
 /*
 Specifies the loading status of the QQuickView.
 
@@ -590,6 +598,14 @@ const QQuickView__Loading QQuickView__Status = 2
 
 // One or more errors has occurred. Call errors() to retrieve a list of errors.
 const QQuickView__Error QQuickView__Status = 3
+
+func (this *QQuickView) StatusItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickView_StatusItemName(val int) string {
+	var nilthis *QQuickView
+	return nilthis.StatusItemName(val)
+}
 
 //  body block end
 

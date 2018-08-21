@@ -502,6 +502,47 @@ const QPixelFormat__UnusedFieldWidth QPixelFormat__FieldWidth = 9
 //
 const QPixelFormat__TotalFieldWidthByWidths QPixelFormat__FieldWidth = 64
 
+func (this *QPixelFormat) FieldWidthItemName(val int) string {
+	switch val {
+	case QPixelFormat__ModelFieldWidth: // 4
+		return "ModelFieldWidth,TypeInterpretationFieldWidth"
+	case QPixelFormat__FirstFieldWidth: // 6
+		return "FirstFieldWidth,SecondFieldWidth,ThirdFieldWidth,FourthFieldWidth,FifthFieldWidth,AlphaFieldWidth,SubEnumFieldWidth"
+		// case QPixelFormat__SecondFieldWidth: // 6
+		// return ""
+		// case QPixelFormat__ThirdFieldWidth: // 6
+		// return ""
+		// case QPixelFormat__FourthFieldWidth: // 6
+		// return ""
+		// case QPixelFormat__FifthFieldWidth: // 6
+		// return ""
+		// case QPixelFormat__AlphaFieldWidth: // 6
+		// return ""
+	case QPixelFormat__AlphaUsageFieldWidth: // 1
+		return "AlphaUsageFieldWidth,AlphaPositionFieldWidth,PremulFieldWidth"
+		// case QPixelFormat__AlphaPositionFieldWidth: // 1
+		// return ""
+		// case QPixelFormat__PremulFieldWidth: // 1
+		// return ""
+		// case QPixelFormat__TypeInterpretationFieldWidth: // 4
+		// return ""
+	case QPixelFormat__ByteOrderFieldWidth: // 2
+		return "ByteOrderFieldWidth"
+		// case QPixelFormat__SubEnumFieldWidth: // 6
+		// return ""
+	case QPixelFormat__UnusedFieldWidth: // 9
+		return "UnusedFieldWidth"
+	case QPixelFormat__TotalFieldWidthByWidths: // 64
+		return "TotalFieldWidthByWidths"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPixelFormat_FieldWidthItemName(val int) string {
+	var nilthis *QPixelFormat
+	return nilthis.FieldWidthItemName(val)
+}
+
 /*
 
 
@@ -553,6 +594,47 @@ const QPixelFormat__UnusedField QPixelFormat__Field = 55
 //
 const QPixelFormat__TotalFieldWidthByOffsets QPixelFormat__Field = 64
 
+func (this *QPixelFormat) FieldItemName(val int) string {
+	switch val {
+	case QPixelFormat__ModelField: // 0
+		return "ModelField"
+	case QPixelFormat__FirstField: // 4
+		return "FirstField"
+	case QPixelFormat__SecondField: // 10
+		return "SecondField"
+	case QPixelFormat__ThirdField: // 16
+		return "ThirdField"
+	case QPixelFormat__FourthField: // 22
+		return "FourthField"
+	case QPixelFormat__FifthField: // 28
+		return "FifthField"
+	case QPixelFormat__AlphaField: // 34
+		return "AlphaField"
+	case QPixelFormat__AlphaUsageField: // 40
+		return "AlphaUsageField"
+	case QPixelFormat__AlphaPositionField: // 41
+		return "AlphaPositionField"
+	case QPixelFormat__PremulField: // 42
+		return "PremulField"
+	case QPixelFormat__TypeInterpretationField: // 43
+		return "TypeInterpretationField"
+	case QPixelFormat__ByteOrderField: // 47
+		return "ByteOrderField"
+	case QPixelFormat__SubEnumField: // 49
+		return "SubEnumField"
+	case QPixelFormat__UnusedField: // 55
+		return "UnusedField"
+	case QPixelFormat__TotalFieldWidthByOffsets: // 64
+		return "TotalFieldWidthByOffsets"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPixelFormat_FieldItemName(val int) string {
+	var nilthis *QPixelFormat
+	return nilthis.FieldItemName(val)
+}
+
 /*
 This enum type is used to describe the color model of the pixelformat. Alpha was added in 5.5.
 
@@ -587,6 +669,35 @@ const QPixelFormat__YUV QPixelFormat__ColorModel = 7
 // There is no color model, only alpha is used.
 const QPixelFormat__Alpha QPixelFormat__ColorModel = 8
 
+func (this *QPixelFormat) ColorModelItemName(val int) string {
+	switch val {
+	case QPixelFormat__RGB: // 0
+		return "RGB"
+	case QPixelFormat__BGR: // 1
+		return "BGR"
+	case QPixelFormat__Indexed: // 2
+		return "Indexed"
+	case QPixelFormat__Grayscale: // 3
+		return "Grayscale"
+	case QPixelFormat__CMYK: // 4
+		return "CMYK"
+	case QPixelFormat__HSL: // 5
+		return "HSL"
+	case QPixelFormat__HSV: // 6
+		return "HSV"
+	case QPixelFormat__YUV: // 7
+		return "YUV"
+	case QPixelFormat__Alpha: // 8
+		return "Alpha"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPixelFormat_ColorModelItemName(val int) string {
+	var nilthis *QPixelFormat
+	return nilthis.ColorModelItemName(val)
+}
+
 /*
 This enum describes if the alpha channel is used or not. Sometimes the pixelformat will have a size for the alpha channel, but the pixel format does actually not use the alpha channel. For example RGB32 is such a format. The RGB channels are 8 bits each, and there is no alpha channel. But the complete size for each pixel is 32. Therefore the alpha channel size is 8, but the alpha channel is ignored. Its important to note that in such situations the position of the alpha channel is significant.
 
@@ -599,6 +710,21 @@ const QPixelFormat__UsesAlpha QPixelFormat__AlphaUsage = 0
 
 // The alpha channel is not used.
 const QPixelFormat__IgnoresAlpha QPixelFormat__AlphaUsage = 1
+
+func (this *QPixelFormat) AlphaUsageItemName(val int) string {
+	switch val {
+	case QPixelFormat__UsesAlpha: // 0
+		return "UsesAlpha"
+	case QPixelFormat__IgnoresAlpha: // 1
+		return "IgnoresAlpha"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPixelFormat_AlphaUsageItemName(val int) string {
+	var nilthis *QPixelFormat
+	return nilthis.AlphaUsageItemName(val)
+}
 
 /*
 This enum type is used to describe the alpha channels position relative to the color channels.
@@ -613,6 +739,21 @@ const QPixelFormat__AtBeginning QPixelFormat__AlphaPosition = 0
 // The alpha channel will be put in the back of the color channels. E.g. RGBA.
 const QPixelFormat__AtEnd QPixelFormat__AlphaPosition = 1
 
+func (this *QPixelFormat) AlphaPositionItemName(val int) string {
+	switch val {
+	case QPixelFormat__AtBeginning: // 0
+		return "AtBeginning"
+	case QPixelFormat__AtEnd: // 1
+		return "AtEnd"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPixelFormat_AlphaPositionItemName(val int) string {
+	var nilthis *QPixelFormat
+	return nilthis.AlphaPositionItemName(val)
+}
+
 /*
 This enum type describes the boolean state if the alpha channel is multiplied into the color channels or not.
 
@@ -625,6 +766,21 @@ const QPixelFormat__NotPremultiplied QPixelFormat__AlphaPremultiplied = 0
 
 // The alpha channel is multiplied into the color channels.
 const QPixelFormat__Premultiplied QPixelFormat__AlphaPremultiplied = 1
+
+func (this *QPixelFormat) AlphaPremultipliedItemName(val int) string {
+	switch val {
+	case QPixelFormat__NotPremultiplied: // 0
+		return "NotPremultiplied"
+	case QPixelFormat__Premultiplied: // 1
+		return "Premultiplied"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPixelFormat_AlphaPremultipliedItemName(val int) string {
+	var nilthis *QPixelFormat
+	return nilthis.AlphaPremultipliedItemName(val)
+}
 
 /*
 This enum describes how each pixel is interpreted. If a pixel is read as a full 32 bit unsigned integer and then each channel is masked out, or if each byte is read as unsigned char values. Typically QImage formats interpret one pixel as an unsigned integer and then the color channels are masked out. OpenGL on the other hand typically interpreted pixels "one byte after the other", Ie. unsigned byte.
@@ -655,6 +811,25 @@ const QPixelFormat__UnsignedByte QPixelFormat__TypeInterpretation = 2
 
 //
 const QPixelFormat__FloatingPoint QPixelFormat__TypeInterpretation = 3
+
+func (this *QPixelFormat) TypeInterpretationItemName(val int) string {
+	switch val {
+	case QPixelFormat__UnsignedInteger: // 0
+		return "UnsignedInteger"
+	case QPixelFormat__UnsignedShort: // 1
+		return "UnsignedShort"
+	case QPixelFormat__UnsignedByte: // 2
+		return "UnsignedByte"
+	case QPixelFormat__FloatingPoint: // 3
+		return "FloatingPoint"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPixelFormat_TypeInterpretationItemName(val int) string {
+	var nilthis *QPixelFormat
+	return nilthis.TypeInterpretationItemName(val)
+}
 
 /*
 YUV is not represented by describing the size of the color channels. This is because YUV often use macro pixels, making the concept of sperate color channels invalid. Instead the different YUV layouts are described with this enum.
@@ -714,6 +889,49 @@ const QPixelFormat__Y8 QPixelFormat__YUVLayout = 14
 // 5
 const QPixelFormat__Y16 QPixelFormat__YUVLayout = 15
 
+func (this *QPixelFormat) YUVLayoutItemName(val int) string {
+	switch val {
+	case QPixelFormat__YUV444: // 0
+		return "YUV444"
+	case QPixelFormat__YUV422: // 1
+		return "YUV422"
+	case QPixelFormat__YUV411: // 2
+		return "YUV411"
+	case QPixelFormat__YUV420P: // 3
+		return "YUV420P"
+	case QPixelFormat__YUV420SP: // 4
+		return "YUV420SP"
+	case QPixelFormat__YV12: // 5
+		return "YV12"
+	case QPixelFormat__UYVY: // 6
+		return "UYVY"
+	case QPixelFormat__YUYV: // 7
+		return "YUYV"
+	case QPixelFormat__NV12: // 8
+		return "NV12"
+	case QPixelFormat__NV21: // 9
+		return "NV21"
+	case QPixelFormat__IMC1: // 10
+		return "IMC1"
+	case QPixelFormat__IMC2: // 11
+		return "IMC2"
+	case QPixelFormat__IMC3: // 12
+		return "IMC3"
+	case QPixelFormat__IMC4: // 13
+		return "IMC4"
+	case QPixelFormat__Y8: // 14
+		return "Y8"
+	case QPixelFormat__Y16: // 15
+		return "Y16"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPixelFormat_YUVLayoutItemName(val int) string {
+	var nilthis *QPixelFormat
+	return nilthis.YUVLayoutItemName(val)
+}
+
 /*
 This enum describes the ByteOrder of the pixel format. This enum is mostly ignored but have some use cases for YUV formats. BGR formats have their own color model, and should not be described by using the opposite endianness on an RGB format.
 
@@ -729,6 +947,23 @@ const QPixelFormat__BigEndian QPixelFormat__ByteOrder = 1
 
 // This enum will not be stored, but is converted in the constructor to the endian enum that matches the enum of the current system.
 const QPixelFormat__CurrentSystemEndian QPixelFormat__ByteOrder = 2
+
+func (this *QPixelFormat) ByteOrderItemName(val int) string {
+	switch val {
+	case QPixelFormat__LittleEndian: // 0
+		return "LittleEndian"
+	case QPixelFormat__BigEndian: // 1
+		return "BigEndian"
+	case QPixelFormat__CurrentSystemEndian: // 2
+		return "CurrentSystemEndian"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPixelFormat_ByteOrderItemName(val int) string {
+	var nilthis *QPixelFormat
+	return nilthis.ByteOrderItemName(val)
+}
 
 //  body block end
 

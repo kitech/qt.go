@@ -469,6 +469,14 @@ const QSessionManager__RestartImmediately QSessionManager__RestartHint = 2
 // The application does not want to be restarted automatically.
 const QSessionManager__RestartNever QSessionManager__RestartHint = 3
 
+func (this *QSessionManager) RestartHintItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QSessionManager_RestartHintItemName(val int) string {
+	var nilthis *QSessionManager
+	return nilthis.RestartHintItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

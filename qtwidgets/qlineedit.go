@@ -1835,6 +1835,14 @@ const QLineEdit__LeadingPosition QLineEdit__ActionPosition = 0
 // The widget is displayed to the right of the text when using layout direction Qt::LeftToRight or to the left when using Qt::RightToLeft, respectively.
 const QLineEdit__TrailingPosition QLineEdit__ActionPosition = 1
 
+func (this *QLineEdit) ActionPositionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QLineEdit_ActionPositionItemName(val int) string {
+	var nilthis *QLineEdit
+	return nilthis.ActionPositionItemName(val)
+}
+
 /*
 This enum type describes how a line edit should display its contents.
 
@@ -1856,6 +1864,14 @@ const QLineEdit__Password QLineEdit__EchoMode = 2
 
 // Display characters as they are entered while editing otherwise display characters as with Password.
 const QLineEdit__PasswordEchoOnEdit QLineEdit__EchoMode = 3
+
+func (this *QLineEdit) EchoModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QLineEdit_EchoModeItemName(val int) string {
+	var nilthis *QLineEdit
+	return nilthis.EchoModeItemName(val)
+}
 
 //  body block end
 

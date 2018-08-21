@@ -1012,6 +1012,14 @@ type QGraphicsProxyWidget__ = int
 //
 const QGraphicsProxyWidget__Type QGraphicsProxyWidget__ = 12
 
+func (this *QGraphicsProxyWidget) ItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsProxyWidget_ItemName(val int) string {
+	var nilthis *QGraphicsProxyWidget
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

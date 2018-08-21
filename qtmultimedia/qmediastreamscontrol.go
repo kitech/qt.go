@@ -260,6 +260,14 @@ const QMediaStreamsControl__SubPictureStream QMediaStreamsControl__StreamType = 
 //
 const QMediaStreamsControl__DataStream QMediaStreamsControl__StreamType = 4
 
+func (this *QMediaStreamsControl) StreamTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMediaStreamsControl_StreamTypeItemName(val int) string {
+	var nilthis *QMediaStreamsControl
+	return nilthis.StreamTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

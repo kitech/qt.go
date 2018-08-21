@@ -1191,6 +1191,14 @@ const QFormLayout__ExpandingFieldsGrow QFormLayout__FieldGrowthPolicy = 1
 // All fields with a size policy that allows them to grow will grow to fill the available space. This is the default policy for most styles.
 const QFormLayout__AllNonFixedFieldsGrow QFormLayout__FieldGrowthPolicy = 2
 
+func (this *QFormLayout) FieldGrowthPolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFormLayout_FieldGrowthPolicyItemName(val int) string {
+	var nilthis *QFormLayout
+	return nilthis.FieldGrowthPolicyItemName(val)
+}
+
 /*
 This enum specifies the different policies that can be used to control the way in which the form's rows wrap.
 
@@ -1210,6 +1218,14 @@ const QFormLayout__WrapLongRows QFormLayout__RowWrapPolicy = 1
 // Fields are always laid out below their label.
 const QFormLayout__WrapAllRows QFormLayout__RowWrapPolicy = 2
 
+func (this *QFormLayout) RowWrapPolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFormLayout_RowWrapPolicyItemName(val int) string {
+	var nilthis *QFormLayout
+	return nilthis.RowWrapPolicyItemName(val)
+}
+
 /*
 This enum specifies the types of widgets (or other layout items) that may appear in a row.
 
@@ -1228,6 +1244,14 @@ const QFormLayout__FieldRole QFormLayout__ItemRole = 1
 
 // A widget that spans label and field columns.
 const QFormLayout__SpanningRole QFormLayout__ItemRole = 2
+
+func (this *QFormLayout) ItemRoleItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFormLayout_ItemRoleItemName(val int) string {
+	var nilthis *QFormLayout
+	return nilthis.ItemRoleItemName(val)
+}
 
 //  body block end
 

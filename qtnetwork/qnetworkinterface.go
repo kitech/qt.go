@@ -389,6 +389,29 @@ const QNetworkInterface__IsPointToPoint QNetworkInterface__InterfaceFlag = 16
 //
 const QNetworkInterface__CanMulticast QNetworkInterface__InterfaceFlag = 32
 
+func (this *QNetworkInterface) InterfaceFlagItemName(val int) string {
+	switch val {
+	case QNetworkInterface__IsUp: // 1
+		return "IsUp"
+	case QNetworkInterface__IsRunning: // 2
+		return "IsRunning"
+	case QNetworkInterface__CanBroadcast: // 4
+		return "CanBroadcast"
+	case QNetworkInterface__IsLoopBack: // 8
+		return "IsLoopBack"
+	case QNetworkInterface__IsPointToPoint: // 16
+		return "IsPointToPoint"
+	case QNetworkInterface__CanMulticast: // 32
+		return "CanMulticast"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkInterface_InterfaceFlagItemName(val int) string {
+	var nilthis *QNetworkInterface
+	return nilthis.InterfaceFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

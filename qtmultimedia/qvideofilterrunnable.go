@@ -115,6 +115,19 @@ type QVideoFilterRunnable__RunFlag = int
 //
 const QVideoFilterRunnable__LastInChain QVideoFilterRunnable__RunFlag = 1
 
+func (this *QVideoFilterRunnable) RunFlagItemName(val int) string {
+	switch val {
+	case QVideoFilterRunnable__LastInChain: // 1
+		return "LastInChain"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QVideoFilterRunnable_RunFlagItemName(val int) string {
+	var nilthis *QVideoFilterRunnable
+	return nilthis.RunFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

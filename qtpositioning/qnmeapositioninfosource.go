@@ -409,6 +409,14 @@ const QNmeaPositionInfoSource__RealTimeMode QNmeaPositionInfoSource__UpdateMode 
 // The data and time information in the NMEA source data is used to provide positional updates at the rate at which the data was originally recorded. Use this mode if the data source contains previously recorded NMEA data and you want to replay the data for simulation purposes.
 const QNmeaPositionInfoSource__SimulationMode QNmeaPositionInfoSource__UpdateMode = 2
 
+func (this *QNmeaPositionInfoSource) UpdateModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QNmeaPositionInfoSource_UpdateModeItemName(val int) string {
+	var nilthis *QNmeaPositionInfoSource
+	return nilthis.UpdateModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

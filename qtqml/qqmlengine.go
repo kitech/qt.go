@@ -845,6 +845,14 @@ const QQmlEngine__CppOwnership QQmlEngine__ObjectOwnership = 0
 // The object is owned by JavaScript. When the object is returned to QML as the return value of a method call, QML will track it and delete it if there are no remaining JavaScript references to it and it has no QObject::parent(). An object tracked by one QQmlEngine will be deleted during that QQmlEngine's destructor. Thus, JavaScript references between objects with JavaScriptOwnership from two different engines will not be valid if one of these engines is deleted. This option is similar to QScriptEngine::ScriptOwnership.
 const QQmlEngine__JavaScriptOwnership QQmlEngine__ObjectOwnership = 1
 
+func (this *QQmlEngine) ObjectOwnershipItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQmlEngine_ObjectOwnershipItemName(val int) string {
+	var nilthis *QQmlEngine
+	return nilthis.ObjectOwnershipItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

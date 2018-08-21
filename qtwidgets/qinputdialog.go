@@ -2613,6 +2613,14 @@ const QInputDialog__UseListViewForComboBoxItems QInputDialog__InputDialogOption 
 //
 const QInputDialog__UsePlainTextEditForTextInput QInputDialog__InputDialogOption = 4
 
+func (this *QInputDialog) InputDialogOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QInputDialog_InputDialogOptionItemName(val int) string {
+	var nilthis *QInputDialog
+	return nilthis.InputDialogOptionItemName(val)
+}
+
 /*
 This enum describes the different modes of input that can be selected for the dialog.
 
@@ -2633,6 +2641,14 @@ const QInputDialog__IntInput QInputDialog__InputMode = 1
 
 // Used to input floating point numbers with double precision accuracy.
 const QInputDialog__DoubleInput QInputDialog__InputMode = 2
+
+func (this *QInputDialog) InputModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QInputDialog_InputModeItemName(val int) string {
+	var nilthis *QInputDialog
+	return nilthis.InputModeItemName(val)
+}
 
 //  body block end
 

@@ -376,6 +376,69 @@ const QSslError__CertificateBlacklisted QSslError__SslError = 24
 //
 const QSslError__UnspecifiedError QSslError__SslError = -1
 
+func (this *QSslError) SslErrorItemName(val int) string {
+	switch val {
+	case QSslError__NoError: // 0
+		return "NoError"
+	case QSslError__UnableToGetIssuerCertificate: // 1
+		return "UnableToGetIssuerCertificate"
+	case QSslError__UnableToDecryptCertificateSignature: // 2
+		return "UnableToDecryptCertificateSignature"
+	case QSslError__UnableToDecodeIssuerPublicKey: // 3
+		return "UnableToDecodeIssuerPublicKey"
+	case QSslError__CertificateSignatureFailed: // 4
+		return "CertificateSignatureFailed"
+	case QSslError__CertificateNotYetValid: // 5
+		return "CertificateNotYetValid"
+	case QSslError__CertificateExpired: // 6
+		return "CertificateExpired"
+	case QSslError__InvalidNotBeforeField: // 7
+		return "InvalidNotBeforeField"
+	case QSslError__InvalidNotAfterField: // 8
+		return "InvalidNotAfterField"
+	case QSslError__SelfSignedCertificate: // 9
+		return "SelfSignedCertificate"
+	case QSslError__SelfSignedCertificateInChain: // 10
+		return "SelfSignedCertificateInChain"
+	case QSslError__UnableToGetLocalIssuerCertificate: // 11
+		return "UnableToGetLocalIssuerCertificate"
+	case QSslError__UnableToVerifyFirstCertificate: // 12
+		return "UnableToVerifyFirstCertificate"
+	case QSslError__CertificateRevoked: // 13
+		return "CertificateRevoked"
+	case QSslError__InvalidCaCertificate: // 14
+		return "InvalidCaCertificate"
+	case QSslError__PathLengthExceeded: // 15
+		return "PathLengthExceeded"
+	case QSslError__InvalidPurpose: // 16
+		return "InvalidPurpose"
+	case QSslError__CertificateUntrusted: // 17
+		return "CertificateUntrusted"
+	case QSslError__CertificateRejected: // 18
+		return "CertificateRejected"
+	case QSslError__SubjectIssuerMismatch: // 19
+		return "SubjectIssuerMismatch"
+	case QSslError__AuthorityIssuerSerialNumberMismatch: // 20
+		return "AuthorityIssuerSerialNumberMismatch"
+	case QSslError__NoPeerCertificate: // 21
+		return "NoPeerCertificate"
+	case QSslError__HostNameMismatch: // 22
+		return "HostNameMismatch"
+	case QSslError__NoSslSupport: // 23
+		return "NoSslSupport"
+	case QSslError__CertificateBlacklisted: // 24
+		return "CertificateBlacklisted"
+	case QSslError__UnspecifiedError: // -1
+		return "UnspecifiedError"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSslError_SslErrorItemName(val int) string {
+	var nilthis *QSslError
+	return nilthis.SslErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

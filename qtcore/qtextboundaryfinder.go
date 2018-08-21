@@ -386,6 +386,25 @@ const QTextBoundaryFinder__Sentence QTextBoundaryFinder__BoundaryType = 2
 // Finds possible positions for breaking the text into multiple lines.
 const QTextBoundaryFinder__Line QTextBoundaryFinder__BoundaryType = 3
 
+func (this *QTextBoundaryFinder) BoundaryTypeItemName(val int) string {
+	switch val {
+	case QTextBoundaryFinder__Grapheme: // 0
+		return "Grapheme"
+	case QTextBoundaryFinder__Word: // 1
+		return "Word"
+	case QTextBoundaryFinder__Sentence: // 2
+		return "Sentence"
+	case QTextBoundaryFinder__Line: // 3
+		return "Line"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextBoundaryFinder_BoundaryTypeItemName(val int) string {
+	var nilthis *QTextBoundaryFinder
+	return nilthis.BoundaryTypeItemName(val)
+}
+
 /*
 
 
@@ -409,6 +428,29 @@ const QTextBoundaryFinder__MandatoryBreak QTextBoundaryFinder__BoundaryReason = 
 
 //
 const QTextBoundaryFinder__SoftHyphen QTextBoundaryFinder__BoundaryReason = 256
+
+func (this *QTextBoundaryFinder) BoundaryReasonItemName(val int) string {
+	switch val {
+	case QTextBoundaryFinder__NotAtBoundary: // 0
+		return "NotAtBoundary"
+	case QTextBoundaryFinder__BreakOpportunity: // 31
+		return "BreakOpportunity"
+	case QTextBoundaryFinder__StartOfItem: // 32
+		return "StartOfItem"
+	case QTextBoundaryFinder__EndOfItem: // 64
+		return "EndOfItem"
+	case QTextBoundaryFinder__MandatoryBreak: // 128
+		return "MandatoryBreak"
+	case QTextBoundaryFinder__SoftHyphen: // 256
+		return "SoftHyphen"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextBoundaryFinder_BoundaryReasonItemName(val int) string {
+	var nilthis *QTextBoundaryFinder
+	return nilthis.BoundaryReasonItemName(val)
+}
 
 //  body block end
 

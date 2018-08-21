@@ -1055,6 +1055,73 @@ const QDataStream__Qt_5_10 QDataStream__Version = 17
 //
 const QDataStream__Qt_DefaultCompiledVersion QDataStream__Version = 17
 
+func (this *QDataStream) VersionItemName(val int) string {
+	switch val {
+	case QDataStream__Qt_1_0: // 1
+		return "Qt_1_0"
+	case QDataStream__Qt_2_0: // 2
+		return "Qt_2_0"
+	case QDataStream__Qt_2_1: // 3
+		return "Qt_2_1"
+	case QDataStream__Qt_3_0: // 4
+		return "Qt_3_0"
+	case QDataStream__Qt_3_1: // 5
+		return "Qt_3_1"
+	case QDataStream__Qt_3_3: // 6
+		return "Qt_3_3"
+	case QDataStream__Qt_4_0: // 7
+		return "Qt_4_0,Qt_4_1"
+		// case QDataStream__Qt_4_1: // 7
+		// return ""
+	case QDataStream__Qt_4_2: // 8
+		return "Qt_4_2"
+	case QDataStream__Qt_4_3: // 9
+		return "Qt_4_3"
+	case QDataStream__Qt_4_4: // 10
+		return "Qt_4_4"
+	case QDataStream__Qt_4_5: // 11
+		return "Qt_4_5"
+	case QDataStream__Qt_4_6: // 12
+		return "Qt_4_6,Qt_4_7,Qt_4_8,Qt_4_9"
+		// case QDataStream__Qt_4_7: // 12
+		// return ""
+		// case QDataStream__Qt_4_8: // 12
+		// return ""
+		// case QDataStream__Qt_4_9: // 12
+		// return ""
+	case QDataStream__Qt_5_0: // 13
+		return "Qt_5_0"
+	case QDataStream__Qt_5_1: // 14
+		return "Qt_5_1"
+	case QDataStream__Qt_5_2: // 15
+		return "Qt_5_2,Qt_5_3"
+		// case QDataStream__Qt_5_3: // 15
+		// return ""
+	case QDataStream__Qt_5_4: // 16
+		return "Qt_5_4,Qt_5_5"
+		// case QDataStream__Qt_5_5: // 16
+		// return ""
+	case QDataStream__Qt_5_6: // 17
+		return "Qt_5_6,Qt_5_7,Qt_5_8,Qt_5_9,Qt_5_10,Qt_DefaultCompiledVersion"
+		// case QDataStream__Qt_5_7: // 17
+		// return ""
+		// case QDataStream__Qt_5_8: // 17
+		// return ""
+		// case QDataStream__Qt_5_9: // 17
+		// return ""
+		// case QDataStream__Qt_5_10: // 17
+		// return ""
+		// case QDataStream__Qt_DefaultCompiledVersion: // 17
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QDataStream_VersionItemName(val int) string {
+	var nilthis *QDataStream
+	return nilthis.VersionItemName(val)
+}
+
 /*
 The byte order used for reading/writing the data.
 
@@ -1069,6 +1136,21 @@ const QDataStream__BigEndian QDataStream__ByteOrder = 0
 
 //
 const QDataStream__LittleEndian QDataStream__ByteOrder = 1
+
+func (this *QDataStream) ByteOrderItemName(val int) string {
+	switch val {
+	case QDataStream__BigEndian: // 0
+		return "BigEndian"
+	case QDataStream__LittleEndian: // 1
+		return "LittleEndian"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QDataStream_ByteOrderItemName(val int) string {
+	var nilthis *QDataStream
+	return nilthis.ByteOrderItemName(val)
+}
 
 /*
 This enum describes the current status of the data stream.
@@ -1089,6 +1171,25 @@ const QDataStream__ReadCorruptData QDataStream__Status = 2
 // The data stream cannot write to the underlying device.
 const QDataStream__WriteFailed QDataStream__Status = 3
 
+func (this *QDataStream) StatusItemName(val int) string {
+	switch val {
+	case QDataStream__Ok: // 0
+		return "Ok"
+	case QDataStream__ReadPastEnd: // 1
+		return "ReadPastEnd"
+	case QDataStream__ReadCorruptData: // 2
+		return "ReadCorruptData"
+	case QDataStream__WriteFailed: // 3
+		return "WriteFailed"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QDataStream_StatusItemName(val int) string {
+	var nilthis *QDataStream
+	return nilthis.StatusItemName(val)
+}
+
 /*
 The precision of floating point numbers used for reading/writing the data. This will only have an effect if the version of the data stream is Qt_4_6 or higher.
 
@@ -1106,6 +1207,21 @@ const QDataStream__SinglePrecision QDataStream__FloatingPointPrecision = 0
 
 //
 const QDataStream__DoublePrecision QDataStream__FloatingPointPrecision = 1
+
+func (this *QDataStream) FloatingPointPrecisionItemName(val int) string {
+	switch val {
+	case QDataStream__SinglePrecision: // 0
+		return "SinglePrecision"
+	case QDataStream__DoublePrecision: // 1
+		return "DoublePrecision"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QDataStream_FloatingPointPrecisionItemName(val int) string {
+	var nilthis *QDataStream
+	return nilthis.FloatingPointPrecisionItemName(val)
+}
 
 //  body block end
 

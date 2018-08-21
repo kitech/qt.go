@@ -402,6 +402,23 @@ const QSGImageNode__MirrorHorizontally QSGImageNode__TextureCoordinatesTransform
 //
 const QSGImageNode__MirrorVertically QSGImageNode__TextureCoordinatesTransformFlag = 2
 
+func (this *QSGImageNode) TextureCoordinatesTransformFlagItemName(val int) string {
+	switch val {
+	case QSGImageNode__NoTransform: // 0
+		return "NoTransform"
+	case QSGImageNode__MirrorHorizontally: // 1
+		return "MirrorHorizontally"
+	case QSGImageNode__MirrorVertically: // 2
+		return "MirrorVertically"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGImageNode_TextureCoordinatesTransformFlagItemName(val int) string {
+	var nilthis *QSGImageNode
+	return nilthis.TextureCoordinatesTransformFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

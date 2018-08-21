@@ -640,6 +640,14 @@ const QScroller__Dragging QScroller__State = 2
 // The scroll area is moving on it's own.
 const QScroller__Scrolling QScroller__State = 3
 
+func (this *QScroller) StateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QScroller_StateItemName(val int) string {
+	var nilthis *QScroller
+	return nilthis.StateItemName(val)
+}
+
 /*
 This enum contains the different gesture types that are supported by the QScroller gesture recognizer.
 
@@ -659,6 +667,14 @@ const QScroller__RightMouseButtonGesture QScroller__ScrollerGestureType = 2
 // The gesture recognizer will only trigger on middle mouse button events.
 const QScroller__MiddleMouseButtonGesture QScroller__ScrollerGestureType = 3
 
+func (this *QScroller) ScrollerGestureTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QScroller_ScrollerGestureTypeItemName(val int) string {
+	var nilthis *QScroller
+	return nilthis.ScrollerGestureTypeItemName(val)
+}
+
 /*
 This enum contains an input device agnostic view of input events that are relevant for QScroller.
 
@@ -674,6 +690,14 @@ const QScroller__InputMove QScroller__Input = 2
 
 // The user released the input device (e.g. QEvent::MouseButtonRelease, QEvent::GraphicsSceneMouseRelease, QEvent::TouchEnd)
 const QScroller__InputRelease QScroller__Input = 3
+
+func (this *QScroller) InputItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QScroller_InputItemName(val int) string {
+	var nilthis *QScroller
+	return nilthis.InputItemName(val)
+}
 
 //  body block end
 

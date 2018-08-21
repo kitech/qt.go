@@ -734,6 +734,31 @@ const QHostAddress__AnyIPv6 QHostAddress__SpecialAddress = 5
 //
 const QHostAddress__AnyIPv4 QHostAddress__SpecialAddress = 6
 
+func (this *QHostAddress) SpecialAddressItemName(val int) string {
+	switch val {
+	case QHostAddress__Null: // 0
+		return "Null"
+	case QHostAddress__Broadcast: // 1
+		return "Broadcast"
+	case QHostAddress__LocalHost: // 2
+		return "LocalHost"
+	case QHostAddress__LocalHostIPv6: // 3
+		return "LocalHostIPv6"
+	case QHostAddress__Any: // 4
+		return "Any"
+	case QHostAddress__AnyIPv6: // 5
+		return "AnyIPv6"
+	case QHostAddress__AnyIPv4: // 6
+		return "AnyIPv4"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QHostAddress_SpecialAddressItemName(val int) string {
+	var nilthis *QHostAddress
+	return nilthis.SpecialAddressItemName(val)
+}
+
 /*
 
 
@@ -757,6 +782,29 @@ const QHostAddress__TolerantConversion QHostAddress__ConversionModeFlag = 255
 
 //
 const QHostAddress__StrictConversion QHostAddress__ConversionModeFlag = 0
+
+func (this *QHostAddress) ConversionModeFlagItemName(val int) string {
+	switch val {
+	case QHostAddress__ConvertV4MappedToIPv4: // 1
+		return "ConvertV4MappedToIPv4"
+	case QHostAddress__ConvertV4CompatToIPv4: // 2
+		return "ConvertV4CompatToIPv4"
+	case QHostAddress__ConvertUnspecifiedAddress: // 4
+		return "ConvertUnspecifiedAddress"
+	case QHostAddress__ConvertLocalHost: // 8
+		return "ConvertLocalHost"
+	case QHostAddress__TolerantConversion: // 255
+		return "TolerantConversion"
+	case QHostAddress__StrictConversion: // 0
+		return "StrictConversion"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QHostAddress_ConversionModeFlagItemName(val int) string {
+	var nilthis *QHostAddress
+	return nilthis.ConversionModeFlagItemName(val)
+}
 
 //  body block end
 

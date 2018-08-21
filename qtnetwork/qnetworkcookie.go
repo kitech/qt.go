@@ -615,6 +615,21 @@ const QNetworkCookie__NameAndValueOnly QNetworkCookie__RawForm = 0
 // makes toRawForm() return the full cookie contents, as suitable for sending to a client in a server's "Set-Cookie:" header.
 const QNetworkCookie__Full QNetworkCookie__RawForm = 1
 
+func (this *QNetworkCookie) RawFormItemName(val int) string {
+	switch val {
+	case QNetworkCookie__NameAndValueOnly: // 0
+		return "NameAndValueOnly"
+	case QNetworkCookie__Full: // 1
+		return "Full"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkCookie_RawFormItemName(val int) string {
+	var nilthis *QNetworkCookie
+	return nilthis.RawFormItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

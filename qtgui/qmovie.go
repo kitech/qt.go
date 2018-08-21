@@ -919,6 +919,14 @@ const QMovie__Paused QMovie__MovieState = 1
 // The movie is running.
 const QMovie__Running QMovie__MovieState = 2
 
+func (this *QMovie) MovieStateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMovie_MovieStateItemName(val int) string {
+	var nilthis *QMovie
+	return nilthis.MovieStateItemName(val)
+}
+
 /*
 This enum describes the different cache modes of QMovie.
 
@@ -931,6 +939,14 @@ const QMovie__CacheNone QMovie__CacheMode = 0
 
 // All frames are cached.
 const QMovie__CacheAll QMovie__CacheMode = 1
+
+func (this *QMovie) CacheModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMovie_CacheModeItemName(val int) string {
+	var nilthis *QMovie
+	return nilthis.CacheModeItemName(val)
+}
 
 //  body block end
 

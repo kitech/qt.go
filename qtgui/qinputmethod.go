@@ -529,6 +529,14 @@ const QInputMethod__Click QInputMethod__Action = 0
 // A context menu click/tap (e.g. right-button or tap-and-hold)
 const QInputMethod__ContextMenu QInputMethod__Action = 1
 
+func (this *QInputMethod) ActionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QInputMethod_ActionItemName(val int) string {
+	var nilthis *QInputMethod
+	return nilthis.ActionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -1606,6 +1606,43 @@ const QFont__Monospace QFont__StyleHint = 7
 //
 const QFont__Fantasy QFont__StyleHint = 8
 
+func (this *QFont) StyleHintItemName(val int) string {
+	switch val {
+	case QFont__Helvetica: // 0
+		return "Helvetica,SansSerif"
+		// case QFont__SansSerif: // 0
+		// return ""
+	case QFont__Times: // 1
+		return "Times,Serif"
+		// case QFont__Serif: // 1
+		// return ""
+	case QFont__Courier: // 2
+		return "Courier,TypeWriter"
+		// case QFont__TypeWriter: // 2
+		// return ""
+	case QFont__OldEnglish: // 3
+		return "OldEnglish,Decorative"
+		// case QFont__Decorative: // 3
+		// return ""
+	case QFont__System: // 4
+		return "System"
+	case QFont__AnyStyle: // 5
+		return "AnyStyle"
+	case QFont__Cursive: // 6
+		return "Cursive"
+	case QFont__Monospace: // 7
+		return "Monospace"
+	case QFont__Fantasy: // 8
+		return "Fantasy"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFont_StyleHintItemName(val int) string {
+	var nilthis *QFont
+	return nilthis.StyleHintItemName(val)
+}
+
 /*
 The style strategy tells the font matching algorithm what type of fonts should be used to find an appropriate default family.
 
@@ -1661,6 +1698,45 @@ const QFont__PreferNoShaping QFont__StyleStrategy = 4096
 //
 const QFont__NoFontMerging QFont__StyleStrategy = 32768
 
+func (this *QFont) StyleStrategyItemName(val int) string {
+	switch val {
+	case QFont__PreferDefault: // 1
+		return "PreferDefault"
+	case QFont__PreferBitmap: // 2
+		return "PreferBitmap"
+	case QFont__PreferDevice: // 4
+		return "PreferDevice"
+	case QFont__PreferOutline: // 8
+		return "PreferOutline"
+	case QFont__ForceOutline: // 16
+		return "ForceOutline"
+	case QFont__PreferMatch: // 32
+		return "PreferMatch"
+	case QFont__PreferQuality: // 64
+		return "PreferQuality"
+	case QFont__PreferAntialias: // 128
+		return "PreferAntialias"
+	case QFont__NoAntialias: // 256
+		return "NoAntialias"
+	case QFont__OpenGLCompatible: // 512
+		return "OpenGLCompatible"
+	case QFont__ForceIntegerMetrics: // 1024
+		return "ForceIntegerMetrics"
+	case QFont__NoSubpixelAntialias: // 2048
+		return "NoSubpixelAntialias"
+	case QFont__PreferNoShaping: // 4096
+		return "PreferNoShaping"
+	case QFont__NoFontMerging: // 32768
+		return "NoFontMerging"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFont_StyleStrategyItemName(val int) string {
+	var nilthis *QFont
+	return nilthis.StyleStrategyItemName(val)
+}
+
 /*
 This enum describes the different levels of hinting that can be applied to glyphs to improve legibility on displays where it might be warranted by the density of pixels.
 
@@ -1694,6 +1770,25 @@ const QFont__PreferVerticalHinting QFont__HintingPreference = 2
 
 // If possible, render text with hinting in both horizontal and vertical directions. The text will be altered to optimize legibility on the target device, but since the metrics will depend on the target size of the text, the positions of glyphs, line breaks, and other typographical detail will not scale, meaning that a text layout may look different on devices with different pixel densities.
 const QFont__PreferFullHinting QFont__HintingPreference = 3
+
+func (this *QFont) HintingPreferenceItemName(val int) string {
+	switch val {
+	case QFont__PreferDefaultHinting: // 0
+		return "PreferDefaultHinting"
+	case QFont__PreferNoHinting: // 1
+		return "PreferNoHinting"
+	case QFont__PreferVerticalHinting: // 2
+		return "PreferVerticalHinting"
+	case QFont__PreferFullHinting: // 3
+		return "PreferFullHinting"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFont_HintingPreferenceItemName(val int) string {
+	var nilthis *QFont
+	return nilthis.HintingPreferenceItemName(val)
+}
 
 /*
 Qt uses a weighting scale from 0 to 99 similar to, but not the same as, the scales used in Windows or CSS. A weight of 0 will be thin, whilst 99 will be extremely black.
@@ -1731,6 +1826,35 @@ const QFont__ExtraBold QFont__Weight = 81
 //
 const QFont__Black QFont__Weight = 87
 
+func (this *QFont) WeightItemName(val int) string {
+	switch val {
+	case QFont__Thin: // 0
+		return "Thin"
+	case QFont__ExtraLight: // 12
+		return "ExtraLight"
+	case QFont__Light: // 25
+		return "Light"
+	case QFont__Normal: // 50
+		return "Normal"
+	case QFont__Medium: // 57
+		return "Medium"
+	case QFont__DemiBold: // 63
+		return "DemiBold"
+	case QFont__Bold: // 75
+		return "Bold"
+	case QFont__ExtraBold: // 81
+		return "ExtraBold"
+	case QFont__Black: // 87
+		return "Black"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFont_WeightItemName(val int) string {
+	var nilthis *QFont
+	return nilthis.WeightItemName(val)
+}
+
 /*
 This enum describes the different styles of glyphs that are used to display text.
 
@@ -1749,6 +1873,23 @@ const QFont__StyleItalic QFont__Style = 1
 
 // Glyphs with an italic appearance that are typically based on the unstyled glyphs, but are not fine-tuned for the purpose of representing italicized text.
 const QFont__StyleOblique QFont__Style = 2
+
+func (this *QFont) StyleItemName(val int) string {
+	switch val {
+	case QFont__StyleNormal: // 0
+		return "StyleNormal"
+	case QFont__StyleItalic: // 1
+		return "StyleItalic"
+	case QFont__StyleOblique: // 2
+		return "StyleOblique"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFont_StyleItemName(val int) string {
+	var nilthis *QFont
+	return nilthis.StyleItemName(val)
+}
 
 /*
 Predefined stretch values that follow the CSS naming convention. The higher the value, the more stretched the text is.
@@ -1790,6 +1931,37 @@ const QFont__ExtraExpanded QFont__Stretch = 150
 //
 const QFont__UltraExpanded QFont__Stretch = 200
 
+func (this *QFont) StretchItemName(val int) string {
+	switch val {
+	case QFont__AnyStretch: // 0
+		return "AnyStretch"
+	case QFont__UltraCondensed: // 50
+		return "UltraCondensed"
+	case QFont__ExtraCondensed: // 62
+		return "ExtraCondensed"
+	case QFont__Condensed: // 75
+		return "Condensed"
+	case QFont__SemiCondensed: // 87
+		return "SemiCondensed"
+	case QFont__Unstretched: // 100
+		return "Unstretched"
+	case QFont__SemiExpanded: // 112
+		return "SemiExpanded"
+	case QFont__Expanded: // 125
+		return "Expanded"
+	case QFont__ExtraExpanded: // 150
+		return "ExtraExpanded"
+	case QFont__UltraExpanded: // 200
+		return "UltraExpanded"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFont_StretchItemName(val int) string {
+	var nilthis *QFont
+	return nilthis.StretchItemName(val)
+}
+
 /*
 Rendering option for text this font applies to.
 
@@ -1815,6 +1987,27 @@ const QFont__SmallCaps QFont__Capitalization = 3
 // This alters the text to be rendered with the first character of each word as an uppercase character.
 const QFont__Capitalize QFont__Capitalization = 4
 
+func (this *QFont) CapitalizationItemName(val int) string {
+	switch val {
+	case QFont__MixedCase: // 0
+		return "MixedCase"
+	case QFont__AllUppercase: // 1
+		return "AllUppercase"
+	case QFont__AllLowercase: // 2
+		return "AllLowercase"
+	case QFont__SmallCaps: // 3
+		return "SmallCaps"
+	case QFont__Capitalize: // 4
+		return "Capitalize"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFont_CapitalizationItemName(val int) string {
+	var nilthis *QFont
+	return nilthis.CapitalizationItemName(val)
+}
+
 /*
 
 
@@ -1828,6 +2021,21 @@ const QFont__PercentageSpacing QFont__SpacingType = 0
 
 // A positive value increases the letter spacing by the corresponding pixels; a negative value decreases the spacing.
 const QFont__AbsoluteSpacing QFont__SpacingType = 1
+
+func (this *QFont) SpacingTypeItemName(val int) string {
+	switch val {
+	case QFont__PercentageSpacing: // 0
+		return "PercentageSpacing"
+	case QFont__AbsoluteSpacing: // 1
+		return "AbsoluteSpacing"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFont_SpacingTypeItemName(val int) string {
+	var nilthis *QFont
+	return nilthis.SpacingTypeItemName(val)
+}
 
 /*
 
@@ -1888,6 +2096,53 @@ const QFont__StyleNameResolved QFont__ResolveProperties = 65536
 
 //
 const QFont__AllPropertiesResolved QFont__ResolveProperties = 131071
+
+func (this *QFont) ResolvePropertiesItemName(val int) string {
+	switch val {
+	case QFont__FamilyResolved: // 1
+		return "FamilyResolved"
+	case QFont__SizeResolved: // 2
+		return "SizeResolved"
+	case QFont__StyleHintResolved: // 4
+		return "StyleHintResolved"
+	case QFont__StyleStrategyResolved: // 8
+		return "StyleStrategyResolved"
+	case QFont__WeightResolved: // 16
+		return "WeightResolved"
+	case QFont__StyleResolved: // 32
+		return "StyleResolved"
+	case QFont__UnderlineResolved: // 64
+		return "UnderlineResolved"
+	case QFont__OverlineResolved: // 128
+		return "OverlineResolved"
+	case QFont__StrikeOutResolved: // 256
+		return "StrikeOutResolved"
+	case QFont__FixedPitchResolved: // 512
+		return "FixedPitchResolved"
+	case QFont__StretchResolved: // 1024
+		return "StretchResolved"
+	case QFont__KerningResolved: // 2048
+		return "KerningResolved"
+	case QFont__CapitalizationResolved: // 4096
+		return "CapitalizationResolved"
+	case QFont__LetterSpacingResolved: // 8192
+		return "LetterSpacingResolved"
+	case QFont__WordSpacingResolved: // 16384
+		return "WordSpacingResolved"
+	case QFont__HintingPreferenceResolved: // 32768
+		return "HintingPreferenceResolved"
+	case QFont__StyleNameResolved: // 65536
+		return "StyleNameResolved"
+	case QFont__AllPropertiesResolved: // 131071
+		return "AllPropertiesResolved"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QFont_ResolvePropertiesItemName(val int) string {
+	var nilthis *QFont
+	return nilthis.ResolvePropertiesItemName(val)
+}
 
 //  body block end
 

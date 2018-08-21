@@ -1041,6 +1041,14 @@ const QNetworkReply__ServiceUnavailableError QNetworkReply__NetworkError = 403
 //
 const QNetworkReply__UnknownServerError QNetworkReply__NetworkError = 499
 
+func (this *QNetworkReply) NetworkErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QNetworkReply_NetworkErrorItemName(val int) string {
+	var nilthis *QNetworkReply
+	return nilthis.NetworkErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

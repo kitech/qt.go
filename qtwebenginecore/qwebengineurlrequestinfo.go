@@ -286,6 +286,57 @@ const QWebEngineUrlRequestInfo__ResourceTypeLast QWebEngineUrlRequestInfo__Resou
 //
 const QWebEngineUrlRequestInfo__ResourceTypeUnknown QWebEngineUrlRequestInfo__ResourceType = 255
 
+func (this *QWebEngineUrlRequestInfo) ResourceTypeItemName(val int) string {
+	switch val {
+	case QWebEngineUrlRequestInfo__ResourceTypeMainFrame: // 0
+		return "ResourceTypeMainFrame"
+	case QWebEngineUrlRequestInfo__ResourceTypeSubFrame: // 1
+		return "ResourceTypeSubFrame"
+	case QWebEngineUrlRequestInfo__ResourceTypeStylesheet: // 2
+		return "ResourceTypeStylesheet"
+	case QWebEngineUrlRequestInfo__ResourceTypeScript: // 3
+		return "ResourceTypeScript"
+	case QWebEngineUrlRequestInfo__ResourceTypeImage: // 4
+		return "ResourceTypeImage"
+	case QWebEngineUrlRequestInfo__ResourceTypeFontResource: // 5
+		return "ResourceTypeFontResource"
+	case QWebEngineUrlRequestInfo__ResourceTypeSubResource: // 6
+		return "ResourceTypeSubResource"
+	case QWebEngineUrlRequestInfo__ResourceTypeObject: // 7
+		return "ResourceTypeObject"
+	case QWebEngineUrlRequestInfo__ResourceTypeMedia: // 8
+		return "ResourceTypeMedia"
+	case QWebEngineUrlRequestInfo__ResourceTypeWorker: // 9
+		return "ResourceTypeWorker"
+	case QWebEngineUrlRequestInfo__ResourceTypeSharedWorker: // 10
+		return "ResourceTypeSharedWorker"
+	case QWebEngineUrlRequestInfo__ResourceTypePrefetch: // 11
+		return "ResourceTypePrefetch"
+	case QWebEngineUrlRequestInfo__ResourceTypeFavicon: // 12
+		return "ResourceTypeFavicon"
+	case QWebEngineUrlRequestInfo__ResourceTypeXhr: // 13
+		return "ResourceTypeXhr"
+	case QWebEngineUrlRequestInfo__ResourceTypePing: // 14
+		return "ResourceTypePing"
+	case QWebEngineUrlRequestInfo__ResourceTypeServiceWorker: // 15
+		return "ResourceTypeServiceWorker"
+	case QWebEngineUrlRequestInfo__ResourceTypeCspReport: // 16
+		return "ResourceTypeCspReport"
+	case QWebEngineUrlRequestInfo__ResourceTypePluginResource: // 17
+		return "ResourceTypePluginResource"
+	case QWebEngineUrlRequestInfo__ResourceTypeLast: // 18
+		return "ResourceTypeLast"
+	case QWebEngineUrlRequestInfo__ResourceTypeUnknown: // 255
+		return "ResourceTypeUnknown"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineUrlRequestInfo_ResourceTypeItemName(val int) string {
+	var nilthis *QWebEngineUrlRequestInfo
+	return nilthis.ResourceTypeItemName(val)
+}
+
 /*
 
 
@@ -309,6 +360,29 @@ const QWebEngineUrlRequestInfo__NavigationTypeReload QWebEngineUrlRequestInfo__N
 
 //
 const QWebEngineUrlRequestInfo__NavigationTypeOther QWebEngineUrlRequestInfo__NavigationType = 5
+
+func (this *QWebEngineUrlRequestInfo) NavigationTypeItemName(val int) string {
+	switch val {
+	case QWebEngineUrlRequestInfo__NavigationTypeLink: // 0
+		return "NavigationTypeLink"
+	case QWebEngineUrlRequestInfo__NavigationTypeTyped: // 1
+		return "NavigationTypeTyped"
+	case QWebEngineUrlRequestInfo__NavigationTypeFormSubmitted: // 2
+		return "NavigationTypeFormSubmitted"
+	case QWebEngineUrlRequestInfo__NavigationTypeBackForward: // 3
+		return "NavigationTypeBackForward"
+	case QWebEngineUrlRequestInfo__NavigationTypeReload: // 4
+		return "NavigationTypeReload"
+	case QWebEngineUrlRequestInfo__NavigationTypeOther: // 5
+		return "NavigationTypeOther"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineUrlRequestInfo_NavigationTypeItemName(val int) string {
+	var nilthis *QWebEngineUrlRequestInfo
+	return nilthis.NavigationTypeItemName(val)
+}
 
 //  body block end
 

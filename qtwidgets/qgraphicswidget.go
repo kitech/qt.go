@@ -1959,6 +1959,14 @@ type QGraphicsWidget__ = int
 //
 const QGraphicsWidget__Type QGraphicsWidget__ = 11
 
+func (this *QGraphicsWidget) ItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsWidget_ItemName(val int) string {
+	var nilthis *QGraphicsWidget
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -808,6 +808,14 @@ const QAbstractSlider__SliderToMaximum QAbstractSlider__SliderAction = 6
 //
 const QAbstractSlider__SliderMove QAbstractSlider__SliderAction = 7
 
+func (this *QAbstractSlider) SliderActionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSlider_SliderActionItemName(val int) string {
+	var nilthis *QAbstractSlider
+	return nilthis.SliderActionItemName(val)
+}
+
 /*
 ConstantValue
 QAbstractSlider::SliderRangeChange0
@@ -829,6 +837,14 @@ const QAbstractSlider__SliderStepsChange QAbstractSlider__SliderChange = 2
 
 //
 const QAbstractSlider__SliderValueChange QAbstractSlider__SliderChange = 3
+
+func (this *QAbstractSlider) SliderChangeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSlider_SliderChangeItemName(val int) string {
+	var nilthis *QAbstractSlider
+	return nilthis.SliderChangeItemName(val)
+}
 
 //  body block end
 

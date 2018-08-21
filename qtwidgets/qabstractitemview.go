@@ -2849,6 +2849,14 @@ const QAbstractItemView__ExtendedSelection QAbstractItemView__SelectionMode = 3
 // When the user selects an item in the usual way, the selection is cleared and the new item selected. However, if the user presses the Shift key while clicking on an item, all items between the current item and the clicked item are selected or unselected, depending on the state of the clicked item.
 const QAbstractItemView__ContiguousSelection QAbstractItemView__SelectionMode = 4
 
+func (this *QAbstractItemView) SelectionModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemView_SelectionModeItemName(val int) string {
+	var nilthis *QAbstractItemView
+	return nilthis.SelectionModeItemName(val)
+}
+
 /*
 
  */
@@ -2862,6 +2870,14 @@ const QAbstractItemView__SelectRows QAbstractItemView__SelectionBehavior = 1
 
 // Selecting only columns.
 const QAbstractItemView__SelectColumns QAbstractItemView__SelectionBehavior = 2
+
+func (this *QAbstractItemView) SelectionBehaviorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemView_SelectionBehaviorItemName(val int) string {
+	var nilthis *QAbstractItemView
+	return nilthis.SelectionBehaviorItemName(val)
+}
 
 /*
 
@@ -2879,6 +2895,14 @@ const QAbstractItemView__PositionAtBottom QAbstractItemView__ScrollHint = 2
 
 // Scroll to position the item at the center of the viewport.
 const QAbstractItemView__PositionAtCenter QAbstractItemView__ScrollHint = 3
+
+func (this *QAbstractItemView) ScrollHintItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemView_ScrollHintItemName(val int) string {
+	var nilthis *QAbstractItemView
+	return nilthis.ScrollHintItemName(val)
+}
 
 /*
 
@@ -2907,6 +2931,14 @@ const QAbstractItemView__AnyKeyPressed QAbstractItemView__EditTrigger = 16
 //
 const QAbstractItemView__AllEditTriggers QAbstractItemView__EditTrigger = 31
 
+func (this *QAbstractItemView) EditTriggerItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemView_EditTriggerItemName(val int) string {
+	var nilthis *QAbstractItemView
+	return nilthis.EditTriggerItemName(val)
+}
+
 /*
 Describes how the scrollbar should behave. When setting the scroll mode to ScrollPerPixel the single step size will adjust automatically unless it was set explicitly using setSingleStep(). The automatic adjustment can be restored by setting the single step size to -1.
 
@@ -2922,6 +2954,14 @@ const QAbstractItemView__ScrollPerItem QAbstractItemView__ScrollMode = 0
 
 // The view will scroll the contents one pixel at a time.
 const QAbstractItemView__ScrollPerPixel QAbstractItemView__ScrollMode = 1
+
+func (this *QAbstractItemView) ScrollModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemView_ScrollModeItemName(val int) string {
+	var nilthis *QAbstractItemView
+	return nilthis.ScrollModeItemName(val)
+}
 
 /*
 Describes the various drag and drop events the view can act upon. By default the view does not support dragging or dropping (NoDragDrop).
@@ -2951,6 +2991,14 @@ const QAbstractItemView__DragDrop QAbstractItemView__DragDropMode = 3
 
 // The view accepts move (not copy) operations only from itself.
 const QAbstractItemView__InternalMove QAbstractItemView__DragDropMode = 4
+
+func (this *QAbstractItemView) DragDropModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemView_DragDropModeItemName(val int) string {
+	var nilthis *QAbstractItemView
+	return nilthis.DragDropModeItemName(val)
+}
 
 /*
 This enum describes the different ways to navigate between items,
@@ -2992,6 +3040,14 @@ const QAbstractItemView__MoveNext QAbstractItemView__CursorAction = 8
 // Move to the item before the current item.
 const QAbstractItemView__MovePrevious QAbstractItemView__CursorAction = 9
 
+func (this *QAbstractItemView) CursorActionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemView_CursorActionItemName(val int) string {
+	var nilthis *QAbstractItemView
+	return nilthis.CursorActionItemName(val)
+}
+
 /*
 Describes the different states the view can be in. This is usually only interesting when reimplementing your own view.
 
@@ -3020,6 +3076,14 @@ const QAbstractItemView__CollapsingState QAbstractItemView__State = 5
 // The item view is performing an animation.
 const QAbstractItemView__AnimatingState QAbstractItemView__State = 6
 
+func (this *QAbstractItemView) StateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemView_StateItemName(val int) string {
+	var nilthis *QAbstractItemView
+	return nilthis.StateItemName(val)
+}
+
 /*
 This enum indicates the position of the drop indicator in relation to the index at the current mouse position:
 
@@ -3038,6 +3102,14 @@ const QAbstractItemView__BelowItem QAbstractItemView__DropIndicatorPosition = 2
 
 // The item will be dropped onto a region of the viewport with no items. The way each view handles items dropped onto the viewport depends on the behavior of the underlying model in use.
 const QAbstractItemView__OnViewport QAbstractItemView__DropIndicatorPosition = 3
+
+func (this *QAbstractItemView) DropIndicatorPositionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemView_DropIndicatorPositionItemName(val int) string {
+	var nilthis *QAbstractItemView
+	return nilthis.DropIndicatorPositionItemName(val)
+}
 
 //  body block end
 

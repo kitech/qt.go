@@ -827,6 +827,14 @@ const QQmlComponent__PreferSynchronous QQmlComponent__CompilationMode = 0
 // Load/compile the component in a background thread.
 const QQmlComponent__Asynchronous QQmlComponent__CompilationMode = 1
 
+func (this *QQmlComponent) CompilationModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQmlComponent_CompilationModeItemName(val int) string {
+	var nilthis *QQmlComponent
+	return nilthis.CompilationModeItemName(val)
+}
+
 /*
 Specifies the loading status of the QQmlComponent.
 
@@ -845,6 +853,14 @@ const QQmlComponent__Loading QQmlComponent__Status = 2
 
 // An error has occurred. Call errors() to retrieve a list of errors.
 const QQmlComponent__Error QQmlComponent__Status = 3
+
+func (this *QQmlComponent) StatusItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQmlComponent_StatusItemName(val int) string {
+	var nilthis *QQmlComponent
+	return nilthis.StatusItemName(val)
+}
 
 //  body block end
 

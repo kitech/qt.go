@@ -3152,6 +3152,14 @@ const QMessageBox__Critical QMessageBox__Icon = 3
 // an icon indicating that the message is asking a question.
 const QMessageBox__Question QMessageBox__Icon = 4
 
+func (this *QMessageBox) IconItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMessageBox_IconItemName(val int) string {
+	var nilthis *QMessageBox
+	return nilthis.IconItemName(val)
+}
+
 /*
 This enum describes the roles that can be used to describe buttons in the button box. Combinations of these roles are as flags used to describe different aspects of their behavior.
 
@@ -3194,6 +3202,14 @@ const QMessageBox__ApplyRole QMessageBox__ButtonRole = 8
 
 //
 const QMessageBox__NRoles QMessageBox__ButtonRole = 9
+
+func (this *QMessageBox) ButtonRoleItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMessageBox_ButtonRoleItemName(val int) string {
+	var nilthis *QMessageBox
+	return nilthis.ButtonRoleItemName(val)
+}
 
 /*
 
@@ -3281,6 +3297,14 @@ const QMessageBox__FlagMask QMessageBox__StandardButton = 768
 
 //
 const QMessageBox__ButtonMask QMessageBox__StandardButton = -769
+
+func (this *QMessageBox) StandardButtonItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QMessageBox_StandardButtonItemName(val int) string {
+	var nilthis *QMessageBox
+	return nilthis.StandardButtonItemName(val)
+}
 
 //  body block end
 

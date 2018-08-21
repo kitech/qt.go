@@ -226,6 +226,47 @@ const QWebEngineCertificateError__CertificateValidityTooLong QWebEngineCertifica
 //
 const QWebEngineCertificateError__CertificateTransparencyRequired QWebEngineCertificateError__Error = -214
 
+func (this *QWebEngineCertificateError) ErrorItemName(val int) string {
+	switch val {
+	case QWebEngineCertificateError__SslPinnedKeyNotInCertificateChain: // -150
+		return "SslPinnedKeyNotInCertificateChain"
+	case QWebEngineCertificateError__CertificateCommonNameInvalid: // -200
+		return "CertificateCommonNameInvalid"
+	case QWebEngineCertificateError__CertificateDateInvalid: // -201
+		return "CertificateDateInvalid"
+	case QWebEngineCertificateError__CertificateAuthorityInvalid: // -202
+		return "CertificateAuthorityInvalid"
+	case QWebEngineCertificateError__CertificateContainsErrors: // -203
+		return "CertificateContainsErrors"
+	case QWebEngineCertificateError__CertificateNoRevocationMechanism: // -204
+		return "CertificateNoRevocationMechanism"
+	case QWebEngineCertificateError__CertificateUnableToCheckRevocation: // -205
+		return "CertificateUnableToCheckRevocation"
+	case QWebEngineCertificateError__CertificateRevoked: // -206
+		return "CertificateRevoked"
+	case QWebEngineCertificateError__CertificateInvalid: // -207
+		return "CertificateInvalid"
+	case QWebEngineCertificateError__CertificateWeakSignatureAlgorithm: // -208
+		return "CertificateWeakSignatureAlgorithm"
+	case QWebEngineCertificateError__CertificateNonUniqueName: // -210
+		return "CertificateNonUniqueName"
+	case QWebEngineCertificateError__CertificateWeakKey: // -211
+		return "CertificateWeakKey"
+	case QWebEngineCertificateError__CertificateNameConstraintViolation: // -212
+		return "CertificateNameConstraintViolation"
+	case QWebEngineCertificateError__CertificateValidityTooLong: // -213
+		return "CertificateValidityTooLong"
+	case QWebEngineCertificateError__CertificateTransparencyRequired: // -214
+		return "CertificateTransparencyRequired"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineCertificateError_ErrorItemName(val int) string {
+	var nilthis *QWebEngineCertificateError
+	return nilthis.ErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -2255,6 +2255,14 @@ const QPlainTextEdit__NoWrap QPlainTextEdit__LineWrapMode = 0
 //
 const QPlainTextEdit__WidgetWidth QPlainTextEdit__LineWrapMode = 1
 
+func (this *QPlainTextEdit) LineWrapModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QPlainTextEdit_LineWrapModeItemName(val int) string {
+	var nilthis *QPlainTextEdit
+	return nilthis.LineWrapModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

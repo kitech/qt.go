@@ -118,6 +118,19 @@ type QStyleOptionToolBar__StyleOptionType = int
 //
 const QStyleOptionToolBar__Type QStyleOptionToolBar__StyleOptionType = 14
 
+func (this *QStyleOptionToolBar) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionToolBar__Type: // 14
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionToolBar_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionToolBar
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionToolBar__StyleOptionVersion = int
 
 // 1
 const QStyleOptionToolBar__Version QStyleOptionToolBar__StyleOptionVersion = 1
+
+func (this *QStyleOptionToolBar) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionToolBar__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionToolBar_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionToolBar
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 /*
 
@@ -151,6 +177,25 @@ const QStyleOptionToolBar__End QStyleOptionToolBar__ToolBarPosition = 2
 //
 const QStyleOptionToolBar__OnlyOne QStyleOptionToolBar__ToolBarPosition = 3
 
+func (this *QStyleOptionToolBar) ToolBarPositionItemName(val int) string {
+	switch val {
+	case QStyleOptionToolBar__Beginning: // 0
+		return "Beginning"
+	case QStyleOptionToolBar__Middle: // 1
+		return "Middle"
+	case QStyleOptionToolBar__End: // 2
+		return "End"
+	case QStyleOptionToolBar__OnlyOne: // 3
+		return "OnlyOne"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionToolBar_ToolBarPositionItemName(val int) string {
+	var nilthis *QStyleOptionToolBar
+	return nilthis.ToolBarPositionItemName(val)
+}
+
 /*
 
 
@@ -162,6 +207,21 @@ const QStyleOptionToolBar__None QStyleOptionToolBar__ToolBarFeature = 0
 
 //
 const QStyleOptionToolBar__Movable QStyleOptionToolBar__ToolBarFeature = 1
+
+func (this *QStyleOptionToolBar) ToolBarFeatureItemName(val int) string {
+	switch val {
+	case QStyleOptionToolBar__None: // 0
+		return "None"
+	case QStyleOptionToolBar__Movable: // 1
+		return "Movable"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionToolBar_ToolBarFeatureItemName(val int) string {
+	var nilthis *QStyleOptionToolBar
+	return nilthis.ToolBarFeatureItemName(val)
+}
 
 //  body block end
 

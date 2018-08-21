@@ -355,6 +355,14 @@ const QAbstractTransition__ExternalTransition QAbstractTransition__TransitionTyp
 // If the target state of a transition is a sub-state of a compound state, and that compound state is the source state, an internal transition will not leave the source state.
 const QAbstractTransition__InternalTransition QAbstractTransition__TransitionType = 1
 
+func (this *QAbstractTransition) TransitionTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractTransition_TransitionTypeItemName(val int) string {
+	var nilthis *QAbstractTransition
+	return nilthis.TransitionTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

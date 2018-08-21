@@ -405,6 +405,14 @@ const QCameraFocus__ContinuousFocus QCameraFocus__FocusMode = 16
 //
 const QCameraFocus__MacroFocus QCameraFocus__FocusMode = 32
 
+func (this *QCameraFocus) FocusModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraFocus_FocusModeItemName(val int) string {
+	var nilthis *QCameraFocus
+	return nilthis.FocusModeItemName(val)
+}
+
 /*
 
  */
@@ -421,6 +429,14 @@ const QCameraFocus__FocusPointFaceDetection QCameraFocus__FocusPointMode = 2
 
 // Focus to the custom point, defined by QCameraFocus::customFocusPoint property.
 const QCameraFocus__FocusPointCustom QCameraFocus__FocusPointMode = 3
+
+func (this *QCameraFocus) FocusPointModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QCameraFocus_FocusPointModeItemName(val int) string {
+	var nilthis *QCameraFocus
+	return nilthis.FocusPointModeItemName(val)
+}
 
 //  body block end
 

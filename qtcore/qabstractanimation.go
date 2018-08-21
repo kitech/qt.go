@@ -581,6 +581,14 @@ const QAbstractAnimation__Forward QAbstractAnimation__Direction = 0
 //
 const QAbstractAnimation__Backward QAbstractAnimation__Direction = 1
 
+func (this *QAbstractAnimation) DirectionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractAnimation_DirectionItemName(val int) string {
+	var nilthis *QAbstractAnimation
+	return nilthis.DirectionItemName(val)
+}
+
 /*
 This enum describes the state of the animation.
 
@@ -600,6 +608,14 @@ const QAbstractAnimation__Paused QAbstractAnimation__State = 1
 // The animation is running. While control is in the event loop, QAbstractAnimation will update its current time at regular intervals, calling updateCurrentTime() when appropriate.
 const QAbstractAnimation__Running QAbstractAnimation__State = 2
 
+func (this *QAbstractAnimation) StateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractAnimation_StateItemName(val int) string {
+	var nilthis *QAbstractAnimation
+	return nilthis.StateItemName(val)
+}
+
 /*
 
  */
@@ -610,6 +626,14 @@ const QAbstractAnimation__KeepWhenStopped QAbstractAnimation__DeletionPolicy = 0
 
 // The animation will be automatically deleted when stopped.
 const QAbstractAnimation__DeleteWhenStopped QAbstractAnimation__DeletionPolicy = 1
+
+func (this *QAbstractAnimation) DeletionPolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractAnimation_DeletionPolicyItemName(val int) string {
+	var nilthis *QAbstractAnimation
+	return nilthis.DeletionPolicyItemName(val)
+}
 
 //  body block end
 

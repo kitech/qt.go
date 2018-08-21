@@ -1975,6 +1975,14 @@ const QProcess__WriteError QProcess__ProcessError = 4
 // An unknown error occurred. This is the default return value of error().
 const QProcess__UnknownError QProcess__ProcessError = 5
 
+func (this *QProcess) ProcessErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QProcess_ProcessErrorItemName(val int) string {
+	var nilthis *QProcess
+	return nilthis.ProcessErrorItemName(val)
+}
+
 /*
 This enum describes the different states of QProcess.
 
@@ -1994,6 +2002,14 @@ const QProcess__Starting QProcess__ProcessState = 1
 // The process is running and is ready for reading and writing.
 const QProcess__Running QProcess__ProcessState = 2
 
+func (this *QProcess) ProcessStateItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QProcess_ProcessStateItemName(val int) string {
+	var nilthis *QProcess
+	return nilthis.ProcessStateItemName(val)
+}
+
 /*
 This enum describes the process channels used by the running process. Pass one of these values to setReadChannel() to set the current read channel of QProcess.
 
@@ -2009,6 +2025,14 @@ const QProcess__StandardOutput QProcess__ProcessChannel = 0
 
 // The standard error (stderr) of the running process.
 const QProcess__StandardError QProcess__ProcessChannel = 1
+
+func (this *QProcess) ProcessChannelItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QProcess_ProcessChannelItemName(val int) string {
+	var nilthis *QProcess
+	return nilthis.ProcessChannelItemName(val)
+}
 
 /*
 This enum describes the process output channel modes of QProcess. Pass one of these values to setProcessChannelMode() to set the current read channel mode.
@@ -2037,6 +2061,14 @@ const QProcess__ForwardedOutputChannel QProcess__ProcessChannelMode = 3
 //
 const QProcess__ForwardedErrorChannel QProcess__ProcessChannelMode = 4
 
+func (this *QProcess) ProcessChannelModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QProcess_ProcessChannelModeItemName(val int) string {
+	var nilthis *QProcess
+	return nilthis.ProcessChannelModeItemName(val)
+}
+
 /*
 This enum describes the process input channel modes of QProcess. Pass one of these values to setInputChannelMode() to set the current write channel mode.
 
@@ -2055,6 +2087,14 @@ const QProcess__ManagedInputChannel QProcess__InputChannelMode = 0
 // QProcess forwards the input of the main process onto the running process. The child process reads its standard input from the same source as the main process. Note that the main process must not try to read its standard input while the child process is running.
 const QProcess__ForwardedInputChannel QProcess__InputChannelMode = 1
 
+func (this *QProcess) InputChannelModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QProcess_InputChannelModeItemName(val int) string {
+	var nilthis *QProcess
+	return nilthis.InputChannelModeItemName(val)
+}
+
 /*
 This enum describes the different exit statuses of QProcess.
 
@@ -2070,6 +2110,14 @@ const QProcess__NormalExit QProcess__ExitStatus = 0
 
 // The process crashed.
 const QProcess__CrashExit QProcess__ExitStatus = 1
+
+func (this *QProcess) ExitStatusItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QProcess_ExitStatusItemName(val int) string {
+	var nilthis *QProcess
+	return nilthis.ExitStatusItemName(val)
+}
 
 //  body block end
 

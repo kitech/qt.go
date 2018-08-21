@@ -455,6 +455,17 @@ func DeleteQRandomGenerator(this *QRandomGenerator) {
  */
 type QRandomGenerator__System = int
 
+func (this *QRandomGenerator) SystemItemName(val int) string {
+	switch val {
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QRandomGenerator_SystemItemName(val int) string {
+	var nilthis *QRandomGenerator
+	return nilthis.SystemItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -1929,6 +1929,14 @@ const QStyle__State_Small QStyle__StateFlag = 67108864
 //
 const QStyle__State_Mini QStyle__StateFlag = 134217728
 
+func (this *QStyle) StateFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStyle_StateFlagItemName(val int) string {
+	var nilthis *QStyle
+	return nilthis.StateFlagItemName(val)
+}
+
 /*
 This enum describes the various primitive elements. A primitive element is a common GUI element, such as a checkbox indicator or button bevel.
 
@@ -2145,6 +2153,14 @@ const QStyle__PE_IndicatorTabTearRight QStyle__PrimitiveElement = 49
 //
 const QStyle__PE_CustomBase QStyle__PrimitiveElement = 251658240
 
+func (this *QStyle) PrimitiveElementItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStyle_PrimitiveElementItemName(val int) string {
+	var nilthis *QStyle
+	return nilthis.PrimitiveElementItemName(val)
+}
+
 /*
 This enum represents a control element. A control element is a part of a widget that performs some action or displays information to the user.
 
@@ -2298,6 +2314,14 @@ const QStyle__CE_ShapedFrame QStyle__ControlElement = 46
 
 //
 const QStyle__CE_CustomBase QStyle__ControlElement = -268435456
+
+func (this *QStyle) ControlElementItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStyle_ControlElementItemName(val int) string {
+	var nilthis *QStyle
+	return nilthis.ControlElementItemName(val)
+}
 
 /*
 This enum represents a sub-area of a widget. Style implementations use these areas to draw the different parts of a widget.
@@ -2524,6 +2548,14 @@ const QStyle__SE_TabBarTearIndicatorRight QStyle__SubElement = 56
 //
 const QStyle__SE_CustomBase QStyle__SubElement = -268435456
 
+func (this *QStyle) SubElementItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStyle_SubElementItemName(val int) string {
+	var nilthis *QStyle
+	return nilthis.SubElementItemName(val)
+}
+
 /*
 This enum describes the available complex controls. Complex controls have different behavior depending upon where the user clicks on them or which keys are pressed.
 
@@ -2563,6 +2595,14 @@ const QStyle__CC_MdiControls QStyle__ComplexControl = 8
 
 //
 const QStyle__CC_CustomBase QStyle__ComplexControl = -268435456
+
+func (this *QStyle) ComplexControlItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStyle_ComplexControlItemName(val int) string {
+	var nilthis *QStyle
+	return nilthis.ComplexControlItemName(val)
+}
 
 /*
 
@@ -2698,6 +2738,14 @@ const QStyle__SC_CustomBase QStyle__SubControl = -268435456
 
 //
 const QStyle__SC_All QStyle__SubControl = -1
+
+func (this *QStyle) SubControlItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStyle_SubControlItemName(val int) string {
+	var nilthis *QStyle
+	return nilthis.SubControlItemName(val)
+}
 
 /*
 This enum describes the various available pixel metrics. A pixel metric is a style dependent size represented by a single pixel value.
@@ -3058,6 +3106,14 @@ const QStyle__PM_TitleBarButtonSize QStyle__PixelMetric = 95
 //
 const QStyle__PM_CustomBase QStyle__PixelMetric = -268435456
 
+func (this *QStyle) PixelMetricItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStyle_PixelMetricItemName(val int) string {
+	var nilthis *QStyle
+	return nilthis.PixelMetricItemName(val)
+}
+
 /*
 This enum describes the available contents types. These are used to calculate sizes for the contents of various widgets.
 
@@ -3140,6 +3196,14 @@ const QStyle__CT_ItemViewItem QStyle__ContentsType = 22
 //
 const QStyle__CT_CustomBase QStyle__ContentsType = -268435456
 
+func (this *QStyle) ContentsTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStyle_ContentsTypeItemName(val int) string {
+	var nilthis *QStyle
+	return nilthis.ContentsTypeItemName(val)
+}
+
 /*
 This enum describes under what circumstances a software input panel will be requested by input capable widgets.
 
@@ -3155,6 +3219,14 @@ const QStyle__RSIP_OnMouseClickAndAlreadyFocused QStyle__RequestSoftwareInputPan
 
 // Requests an input panel if the user clicks on the widget.
 const QStyle__RSIP_OnMouseClick QStyle__RequestSoftwareInputPanel = 1
+
+func (this *QStyle) RequestSoftwareInputPanelItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStyle_RequestSoftwareInputPanelItemName(val int) string {
+	var nilthis *QStyle
+	return nilthis.RequestSoftwareInputPanelItemName(val)
+}
 
 /*
 This enum describes the available style hints. A style hint is a general look and/or feel hint.
@@ -3591,6 +3663,14 @@ const QStyle__SH_Widget_Animation_Duration QStyle__StyleHint = 114
 //
 const QStyle__SH_CustomBase QStyle__StyleHint = -268435456
 
+func (this *QStyle) StyleHintItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStyle_StyleHintItemName(val int) string {
+	var nilthis *QStyle
+	return nilthis.StyleHintItemName(val)
+}
+
 /*
 This enum describes the available standard pixmaps. A standard pixmap is a pixmap that can follow some existing GUI style or guideline.
 
@@ -3816,6 +3896,14 @@ const QStyle__SP_LineEditClearButton QStyle__StandardPixmap = 70
 
 //
 const QStyle__SP_CustomBase QStyle__StandardPixmap = -268435456
+
+func (this *QStyle) StandardPixmapItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStyle_StandardPixmapItemName(val int) string {
+	var nilthis *QStyle
+	return nilthis.StandardPixmapItemName(val)
+}
 
 //  body block end
 

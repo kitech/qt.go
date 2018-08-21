@@ -2517,6 +2517,141 @@ const QVariant__UserType QVariant__Type = 1024
 //
 const QVariant__LastType QVariant__Type = -1
 
+func (this *QVariant) TypeItemName(val int) string {
+	switch val {
+	case QVariant__Invalid: // 0
+		return "Invalid"
+	case QVariant__Bool: // 1
+		return "Bool"
+	case QVariant__Int: // 2
+		return "Int"
+	case QVariant__UInt: // 3
+		return "UInt"
+	case QVariant__LongLong: // 4
+		return "LongLong"
+	case QVariant__ULongLong: // 5
+		return "ULongLong"
+	case QVariant__Double: // 6
+		return "Double"
+	case QVariant__Char: // 7
+		return "Char"
+	case QVariant__Map: // 8
+		return "Map"
+	case QVariant__List: // 9
+		return "List"
+	case QVariant__String: // 10
+		return "String"
+	case QVariant__StringList: // 11
+		return "StringList"
+	case QVariant__ByteArray: // 12
+		return "ByteArray"
+	case QVariant__BitArray: // 13
+		return "BitArray"
+	case QVariant__Date: // 14
+		return "Date"
+	case QVariant__Time: // 15
+		return "Time"
+	case QVariant__DateTime: // 16
+		return "DateTime"
+	case QVariant__Url: // 17
+		return "Url"
+	case QVariant__Locale: // 18
+		return "Locale"
+	case QVariant__Rect: // 19
+		return "Rect"
+	case QVariant__RectF: // 20
+		return "RectF"
+	case QVariant__Size: // 21
+		return "Size"
+	case QVariant__SizeF: // 22
+		return "SizeF"
+	case QVariant__Line: // 23
+		return "Line"
+	case QVariant__LineF: // 24
+		return "LineF"
+	case QVariant__Point: // 25
+		return "Point"
+	case QVariant__PointF: // 26
+		return "PointF"
+	case QVariant__RegExp: // 27
+		return "RegExp"
+	case QVariant__RegularExpression: // 44
+		return "RegularExpression"
+	case QVariant__Hash: // 28
+		return "Hash"
+	case QVariant__EasingCurve: // 29
+		return "EasingCurve"
+	case QVariant__Uuid: // 30
+		return "Uuid"
+	case QVariant__ModelIndex: // 42
+		return "ModelIndex"
+	case QVariant__PersistentModelIndex: // 50
+		return "PersistentModelIndex"
+	case QVariant__LastCoreType: // 51
+		return "LastCoreType"
+	case QVariant__Font: // 64
+		return "Font"
+	case QVariant__Pixmap: // 65
+		return "Pixmap"
+	case QVariant__Brush: // 66
+		return "Brush"
+	case QVariant__Color: // 67
+		return "Color"
+	case QVariant__Palette: // 68
+		return "Palette"
+	case QVariant__Image: // 70
+		return "Image"
+	case QVariant__Polygon: // 71
+		return "Polygon"
+	case QVariant__Region: // 72
+		return "Region"
+	case QVariant__Bitmap: // 73
+		return "Bitmap"
+	case QVariant__Cursor: // 74
+		return "Cursor"
+	case QVariant__KeySequence: // 75
+		return "KeySequence"
+	case QVariant__Pen: // 76
+		return "Pen"
+	case QVariant__TextLength: // 77
+		return "TextLength"
+	case QVariant__TextFormat: // 78
+		return "TextFormat"
+	case QVariant__Matrix: // 79
+		return "Matrix"
+	case QVariant__Transform: // 80
+		return "Transform"
+	case QVariant__Matrix4x4: // 81
+		return "Matrix4x4"
+	case QVariant__Vector2D: // 82
+		return "Vector2D"
+	case QVariant__Vector3D: // 83
+		return "Vector3D"
+	case QVariant__Vector4D: // 84
+		return "Vector4D"
+	case QVariant__Quaternion: // 85
+		return "Quaternion"
+	case QVariant__PolygonF: // 86
+		return "PolygonF,LastGuiType"
+	case QVariant__Icon: // 69
+		return "Icon"
+		// case QVariant__LastGuiType: // 86
+		// return ""
+	case QVariant__SizePolicy: // 121
+		return "SizePolicy"
+	case QVariant__UserType: // 1024
+		return "UserType"
+	case QVariant__LastType: // -1
+		return "LastType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QVariant_TypeItemName(val int) string {
+	var nilthis *QVariant
+	return nilthis.TypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

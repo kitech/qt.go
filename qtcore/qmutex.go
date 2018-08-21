@@ -251,6 +251,21 @@ const QMutex__NonRecursive QMutex__RecursionMode = 0
 // In this mode, a thread can lock the same mutex multiple times and the mutex won't be unlocked until a corresponding number of unlock() calls have been made.
 const QMutex__Recursive QMutex__RecursionMode = 1
 
+func (this *QMutex) RecursionModeItemName(val int) string {
+	switch val {
+	case QMutex__NonRecursive: // 0
+		return "NonRecursive"
+	case QMutex__Recursive: // 1
+		return "Recursive"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QMutex_RecursionModeItemName(val int) string {
+	var nilthis *QMutex
+	return nilthis.RecursionModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

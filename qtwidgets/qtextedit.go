@@ -2463,6 +2463,14 @@ const QTextEdit__FixedPixelWidth QTextEdit__LineWrapMode = 2
 //
 const QTextEdit__FixedColumnWidth QTextEdit__LineWrapMode = 3
 
+func (this *QTextEdit) LineWrapModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTextEdit_LineWrapModeItemName(val int) string {
+	var nilthis *QTextEdit
+	return nilthis.LineWrapModeItemName(val)
+}
+
 /*
 
 
@@ -2477,6 +2485,14 @@ const QTextEdit__AutoBulletList QTextEdit__AutoFormattingFlag = 1
 
 //
 const QTextEdit__AutoAll QTextEdit__AutoFormattingFlag = -1
+
+func (this *QTextEdit) AutoFormattingFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QTextEdit_AutoFormattingFlagItemName(val int) string {
+	var nilthis *QTextEdit
+	return nilthis.AutoFormattingFlagItemName(val)
+}
 
 //  body block end
 

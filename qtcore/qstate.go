@@ -463,6 +463,14 @@ const QState__ExclusiveStates QState__ChildMode = 0
 // The child states are parallel. When the parent state is entered, all its child states are entered in parallel.
 const QState__ParallelStates QState__ChildMode = 1
 
+func (this *QState) ChildModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QState_ChildModeItemName(val int) string {
+	var nilthis *QState
+	return nilthis.ChildModeItemName(val)
+}
+
 /*
 This enum specifies the restore policy type. The restore policy takes effect when the machine enters a state which sets one or more properties. If the restore policy is set to RestoreProperties, the state machine will save the original value of the property before the new value is set.
 
@@ -482,6 +490,14 @@ const QState__DontRestoreProperties QState__RestorePolicy = 0
 
 // The state machine should save the initial values of properties and restore them later.
 const QState__RestoreProperties QState__RestorePolicy = 1
+
+func (this *QState) RestorePolicyItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QState_RestorePolicyItemName(val int) string {
+	var nilthis *QState
+	return nilthis.RestorePolicyItemName(val)
+}
 
 //  body block end
 

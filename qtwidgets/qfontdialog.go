@@ -858,6 +858,14 @@ const QFontDialog__MonospacedFonts QFontDialog__FontDialogOption = 16
 //
 const QFontDialog__ProportionalFonts QFontDialog__FontDialogOption = 32
 
+func (this *QFontDialog) FontDialogOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QFontDialog_FontDialogOptionItemName(val int) string {
+	var nilthis *QFontDialog
+	return nilthis.FontDialogOptionItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

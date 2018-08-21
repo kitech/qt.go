@@ -694,6 +694,14 @@ const QQuickPaintedItem__FramebufferObject QQuickPaintedItem__RenderTarget = 1
 // Exactly as for FramebufferObject above, except once the painting is done, prior to rendering the painted image is flipped about the x-axis so that the top-most pixels are now at the bottom. Since this is done with the OpenGL texture coordinates it is a much faster way to achieve this effect than using a painter transform.
 const QQuickPaintedItem__InvertedYFramebufferObject QQuickPaintedItem__RenderTarget = 2
 
+func (this *QQuickPaintedItem) RenderTargetItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickPaintedItem_RenderTargetItemName(val int) string {
+	var nilthis *QQuickPaintedItem
+	return nilthis.RenderTargetItemName(val)
+}
+
 /*
 
 
@@ -702,6 +710,14 @@ type QQuickPaintedItem__PerformanceHint = int
 
 //
 const QQuickPaintedItem__FastFBOResizing QQuickPaintedItem__PerformanceHint = 1
+
+func (this *QQuickPaintedItem) PerformanceHintItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QQuickPaintedItem_PerformanceHintItemName(val int) string {
+	var nilthis *QQuickPaintedItem
+	return nilthis.PerformanceHintItemName(val)
+}
 
 //  body block end
 

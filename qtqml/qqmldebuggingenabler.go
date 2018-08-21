@@ -317,6 +317,21 @@ const QQmlDebuggingEnabler__DoNotWaitForClient QQmlDebuggingEnabler__StartMode =
 //
 const QQmlDebuggingEnabler__WaitForClient QQmlDebuggingEnabler__StartMode = 1
 
+func (this *QQmlDebuggingEnabler) StartModeItemName(val int) string {
+	switch val {
+	case QQmlDebuggingEnabler__DoNotWaitForClient: // 0
+		return "DoNotWaitForClient"
+	case QQmlDebuggingEnabler__WaitForClient: // 1
+		return "WaitForClient"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QQmlDebuggingEnabler_StartModeItemName(val int) string {
+	var nilthis *QQmlDebuggingEnabler
+	return nilthis.StartModeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

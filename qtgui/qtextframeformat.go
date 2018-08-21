@@ -529,6 +529,23 @@ const QTextFrameFormat__FloatLeft QTextFrameFormat__Position = 1
 //
 const QTextFrameFormat__FloatRight QTextFrameFormat__Position = 2
 
+func (this *QTextFrameFormat) PositionItemName(val int) string {
+	switch val {
+	case QTextFrameFormat__InFlow: // 0
+		return "InFlow"
+	case QTextFrameFormat__FloatLeft: // 1
+		return "FloatLeft"
+	case QTextFrameFormat__FloatRight: // 2
+		return "FloatRight"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextFrameFormat_PositionItemName(val int) string {
+	var nilthis *QTextFrameFormat
+	return nilthis.PositionItemName(val)
+}
+
 /*
 
 
@@ -567,6 +584,39 @@ const QTextFrameFormat__BorderStyle_Inset QTextFrameFormat__BorderStyle = 9
 
 //
 const QTextFrameFormat__BorderStyle_Outset QTextFrameFormat__BorderStyle = 10
+
+func (this *QTextFrameFormat) BorderStyleItemName(val int) string {
+	switch val {
+	case QTextFrameFormat__BorderStyle_None: // 0
+		return "BorderStyle_None"
+	case QTextFrameFormat__BorderStyle_Dotted: // 1
+		return "BorderStyle_Dotted"
+	case QTextFrameFormat__BorderStyle_Dashed: // 2
+		return "BorderStyle_Dashed"
+	case QTextFrameFormat__BorderStyle_Solid: // 3
+		return "BorderStyle_Solid"
+	case QTextFrameFormat__BorderStyle_Double: // 4
+		return "BorderStyle_Double"
+	case QTextFrameFormat__BorderStyle_DotDash: // 5
+		return "BorderStyle_DotDash"
+	case QTextFrameFormat__BorderStyle_DotDotDash: // 6
+		return "BorderStyle_DotDotDash"
+	case QTextFrameFormat__BorderStyle_Groove: // 7
+		return "BorderStyle_Groove"
+	case QTextFrameFormat__BorderStyle_Ridge: // 8
+		return "BorderStyle_Ridge"
+	case QTextFrameFormat__BorderStyle_Inset: // 9
+		return "BorderStyle_Inset"
+	case QTextFrameFormat__BorderStyle_Outset: // 10
+		return "BorderStyle_Outset"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextFrameFormat_BorderStyleItemName(val int) string {
+	var nilthis *QTextFrameFormat
+	return nilthis.BorderStyleItemName(val)
+}
 
 //  body block end
 

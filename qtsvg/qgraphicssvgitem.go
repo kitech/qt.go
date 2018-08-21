@@ -399,6 +399,14 @@ type QGraphicsSvgItem__ = int
 //
 const QGraphicsSvgItem__Type QGraphicsSvgItem__ = 13
 
+func (this *QGraphicsSvgItem) ItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsSvgItem_ItemName(val int) string {
+	var nilthis *QGraphicsSvgItem
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

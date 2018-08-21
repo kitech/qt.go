@@ -590,6 +590,25 @@ const QTextCodec__IgnoreHeader QTextCodec__ConversionFlag = 1
 //
 const QTextCodec__FreeFunction QTextCodec__ConversionFlag = 2
 
+func (this *QTextCodec) ConversionFlagItemName(val int) string {
+	switch val {
+	case QTextCodec__DefaultConversion: // 0
+		return "DefaultConversion"
+	case QTextCodec__ConvertInvalidToNull: // -2147483648
+		return "ConvertInvalidToNull"
+	case QTextCodec__IgnoreHeader: // 1
+		return "IgnoreHeader"
+	case QTextCodec__FreeFunction: // 2
+		return "FreeFunction"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextCodec_ConversionFlagItemName(val int) string {
+	var nilthis *QTextCodec
+	return nilthis.ConversionFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

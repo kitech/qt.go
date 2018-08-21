@@ -118,6 +118,19 @@ type QStyleOptionToolButton__StyleOptionType = int
 //
 const QStyleOptionToolButton__Type QStyleOptionToolButton__StyleOptionType = 983043
 
+func (this *QStyleOptionToolButton) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionToolButton__Type: // 983043
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionToolButton_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionToolButton
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionToolButton__StyleOptionVersion = int
 
 // 1
 const QStyleOptionToolButton__Version QStyleOptionToolButton__StyleOptionVersion = 1
+
+func (this *QStyleOptionToolButton) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionToolButton__Version: // 1
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionToolButton_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionToolButton
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 /*
 
@@ -156,6 +182,29 @@ const QStyleOptionToolButton__PopupDelay QStyleOptionToolButton__ToolButtonFeatu
 
 //
 const QStyleOptionToolButton__HasMenu QStyleOptionToolButton__ToolButtonFeature = 16
+
+func (this *QStyleOptionToolButton) ToolButtonFeatureItemName(val int) string {
+	switch val {
+	case QStyleOptionToolButton__None: // 0
+		return "None"
+	case QStyleOptionToolButton__Arrow: // 1
+		return "Arrow"
+	case QStyleOptionToolButton__Menu: // 4
+		return "Menu,MenuButtonPopup"
+		// case QStyleOptionToolButton__MenuButtonPopup: // 4
+		// return ""
+	case QStyleOptionToolButton__PopupDelay: // 8
+		return "PopupDelay"
+	case QStyleOptionToolButton__HasMenu: // 16
+		return "HasMenu"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionToolButton_ToolButtonFeatureItemName(val int) string {
+	var nilthis *QStyleOptionToolButton
+	return nilthis.ToolButtonFeatureItemName(val)
+}
 
 //  body block end
 

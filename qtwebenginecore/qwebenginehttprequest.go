@@ -418,6 +418,21 @@ const QWebEngineHttpRequest__Get QWebEngineHttpRequest__Method = 0
 //
 const QWebEngineHttpRequest__Post QWebEngineHttpRequest__Method = 1
 
+func (this *QWebEngineHttpRequest) MethodItemName(val int) string {
+	switch val {
+	case QWebEngineHttpRequest__Get: // 0
+		return "Get"
+	case QWebEngineHttpRequest__Post: // 1
+		return "Post"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineHttpRequest_MethodItemName(val int) string {
+	var nilthis *QWebEngineHttpRequest
+	return nilthis.MethodItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

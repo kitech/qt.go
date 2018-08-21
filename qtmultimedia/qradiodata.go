@@ -485,6 +485,14 @@ const QRadioData__OpenError QRadioData__Error = 2
 // An attempt to set a frequency or band that is not supported by radio device.
 const QRadioData__OutOfRangeError QRadioData__Error = 3
 
+func (this *QRadioData) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QRadioData_ErrorItemName(val int) string {
+	var nilthis *QRadioData
+	return nilthis.ErrorItemName(val)
+}
+
 /*
 This property holds the type of the currently playing program as transmitted by the radio station. The value can be any one of the values defined in the table below.
 
@@ -646,6 +654,14 @@ const QRadioData__Public QRadioData__ProgramType = 46
 
 // 7
 const QRadioData__College QRadioData__ProgramType = 47
+
+func (this *QRadioData) ProgramTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QRadioData_ProgramTypeItemName(val int) string {
+	var nilthis *QRadioData
+	return nilthis.ProgramTypeItemName(val)
+}
 
 //  body block end
 

@@ -408,6 +408,27 @@ const QElapsedTimer__MachAbsoluteTime QElapsedTimer__ClockType = 3
 // The high-resolution performance counter provided by Windows. This clock is monotonic and does not overflow.
 const QElapsedTimer__PerformanceCounter QElapsedTimer__ClockType = 4
 
+func (this *QElapsedTimer) ClockTypeItemName(val int) string {
+	switch val {
+	case QElapsedTimer__SystemTime: // 0
+		return "SystemTime"
+	case QElapsedTimer__MonotonicClock: // 1
+		return "MonotonicClock"
+	case QElapsedTimer__TickCounter: // 2
+		return "TickCounter"
+	case QElapsedTimer__MachAbsoluteTime: // 3
+		return "MachAbsoluteTime"
+	case QElapsedTimer__PerformanceCounter: // 4
+		return "PerformanceCounter"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QElapsedTimer_ClockTypeItemName(val int) string {
+	var nilthis *QElapsedTimer
+	return nilthis.ClockTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

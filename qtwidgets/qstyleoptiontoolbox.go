@@ -118,6 +118,19 @@ type QStyleOptionToolBox__StyleOptionType = int
 //
 const QStyleOptionToolBox__Type QStyleOptionToolBox__StyleOptionType = 7
 
+func (this *QStyleOptionToolBox) StyleOptionTypeItemName(val int) string {
+	switch val {
+	case QStyleOptionToolBox__Type: // 7
+		return "Type"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionToolBox_StyleOptionTypeItemName(val int) string {
+	var nilthis *QStyleOptionToolBox
+	return nilthis.StyleOptionTypeItemName(val)
+}
+
 /*
 This enum is used to hold information about the version of the style option, and is defined for each QStyleOption subclass.
 
@@ -132,6 +145,19 @@ type QStyleOptionToolBox__StyleOptionVersion = int
 
 // 1
 const QStyleOptionToolBox__Version QStyleOptionToolBox__StyleOptionVersion = 2
+
+func (this *QStyleOptionToolBox) StyleOptionVersionItemName(val int) string {
+	switch val {
+	case QStyleOptionToolBox__Version: // 2
+		return "Version"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionToolBox_StyleOptionVersionItemName(val int) string {
+	var nilthis *QStyleOptionToolBox
+	return nilthis.StyleOptionVersionItemName(val)
+}
 
 /*
 
@@ -151,6 +177,25 @@ const QStyleOptionToolBox__End QStyleOptionToolBox__TabPosition = 2
 //
 const QStyleOptionToolBox__OnlyOneTab QStyleOptionToolBox__TabPosition = 3
 
+func (this *QStyleOptionToolBox) TabPositionItemName(val int) string {
+	switch val {
+	case QStyleOptionToolBox__Beginning: // 0
+		return "Beginning"
+	case QStyleOptionToolBox__Middle: // 1
+		return "Middle"
+	case QStyleOptionToolBox__End: // 2
+		return "End"
+	case QStyleOptionToolBox__OnlyOneTab: // 3
+		return "OnlyOneTab"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionToolBox_TabPositionItemName(val int) string {
+	var nilthis *QStyleOptionToolBox
+	return nilthis.TabPositionItemName(val)
+}
+
 /*
 
 
@@ -165,6 +210,23 @@ const QStyleOptionToolBox__NextIsSelected QStyleOptionToolBox__SelectedPosition 
 
 //
 const QStyleOptionToolBox__PreviousIsSelected QStyleOptionToolBox__SelectedPosition = 2
+
+func (this *QStyleOptionToolBox) SelectedPositionItemName(val int) string {
+	switch val {
+	case QStyleOptionToolBox__NotAdjacent: // 0
+		return "NotAdjacent"
+	case QStyleOptionToolBox__NextIsSelected: // 1
+		return "NextIsSelected"
+	case QStyleOptionToolBox__PreviousIsSelected: // 2
+		return "PreviousIsSelected"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QStyleOptionToolBox_SelectedPositionItemName(val int) string {
+	var nilthis *QStyleOptionToolBox
+	return nilthis.SelectedPositionItemName(val)
+}
 
 //  body block end
 

@@ -252,6 +252,14 @@ const QHttpMultiPart__FormDataType QHttpMultiPart__ContentType = 2
 //
 const QHttpMultiPart__AlternativeType QHttpMultiPart__ContentType = 3
 
+func (this *QHttpMultiPart) ContentTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QHttpMultiPart_ContentTypeItemName(val int) string {
+	var nilthis *QHttpMultiPart
+	return nilthis.ContentTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

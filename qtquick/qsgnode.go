@@ -554,6 +554,31 @@ const QSGNode__RootNodeType QSGNode__NodeType = 5
 // The type of QSGRenderNode
 const QSGNode__RenderNodeType QSGNode__NodeType = 6
 
+func (this *QSGNode) NodeTypeItemName(val int) string {
+	switch val {
+	case QSGNode__BasicNodeType: // 0
+		return "BasicNodeType"
+	case QSGNode__GeometryNodeType: // 1
+		return "GeometryNodeType"
+	case QSGNode__TransformNodeType: // 2
+		return "TransformNodeType"
+	case QSGNode__ClipNodeType: // 3
+		return "ClipNodeType"
+	case QSGNode__OpacityNodeType: // 4
+		return "OpacityNodeType"
+	case QSGNode__RootNodeType: // 5
+		return "RootNodeType"
+	case QSGNode__RenderNodeType: // 6
+		return "RenderNodeType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGNode_NodeTypeItemName(val int) string {
+	var nilthis *QSGNode
+	return nilthis.NodeTypeItemName(val)
+}
+
 /*
 
 
@@ -577,6 +602,29 @@ const QSGNode__OwnsOpaqueMaterial QSGNode__Flag = 262144
 
 //
 const QSGNode__IsVisitableNode QSGNode__Flag = 16777216
+
+func (this *QSGNode) FlagItemName(val int) string {
+	switch val {
+	case QSGNode__OwnedByParent: // 1
+		return "OwnedByParent"
+	case QSGNode__UsePreprocess: // 2
+		return "UsePreprocess"
+	case QSGNode__OwnsGeometry: // 65536
+		return "OwnsGeometry"
+	case QSGNode__OwnsMaterial: // 131072
+		return "OwnsMaterial"
+	case QSGNode__OwnsOpaqueMaterial: // 262144
+		return "OwnsOpaqueMaterial"
+	case QSGNode__IsVisitableNode: // 16777216
+		return "IsVisitableNode"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGNode_FlagItemName(val int) string {
+	var nilthis *QSGNode
+	return nilthis.FlagItemName(val)
+}
 
 /*
 
@@ -613,6 +661,37 @@ const QSGNode__DirtyUsePreprocess QSGNode__DirtyStateBit = 2
 
 //
 const QSGNode__DirtyPropagationMask QSGNode__DirtyStateBit = 50432
+
+func (this *QSGNode) DirtyStateBitItemName(val int) string {
+	switch val {
+	case QSGNode__DirtySubtreeBlocked: // 128
+		return "DirtySubtreeBlocked"
+	case QSGNode__DirtyMatrix: // 256
+		return "DirtyMatrix"
+	case QSGNode__DirtyNodeAdded: // 1024
+		return "DirtyNodeAdded"
+	case QSGNode__DirtyNodeRemoved: // 2048
+		return "DirtyNodeRemoved"
+	case QSGNode__DirtyGeometry: // 4096
+		return "DirtyGeometry"
+	case QSGNode__DirtyMaterial: // 8192
+		return "DirtyMaterial"
+	case QSGNode__DirtyOpacity: // 16384
+		return "DirtyOpacity"
+	case QSGNode__DirtyForceUpdate: // 32768
+		return "DirtyForceUpdate"
+	case QSGNode__DirtyUsePreprocess: // 2
+		return "DirtyUsePreprocess"
+	case QSGNode__DirtyPropagationMask: // 50432
+		return "DirtyPropagationMask"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSGNode_DirtyStateBitItemName(val int) string {
+	var nilthis *QSGNode
+	return nilthis.DirtyStateBitItemName(val)
+}
 
 //  body block end
 

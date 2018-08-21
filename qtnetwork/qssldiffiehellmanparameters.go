@@ -371,6 +371,23 @@ const QSslDiffieHellmanParameters__InvalidInputDataError QSslDiffieHellmanParame
 // The Diffie-Hellman parameters are unsafe and should not be used.
 const QSslDiffieHellmanParameters__UnsafeParametersError QSslDiffieHellmanParameters__Error = 2
 
+func (this *QSslDiffieHellmanParameters) ErrorItemName(val int) string {
+	switch val {
+	case QSslDiffieHellmanParameters__NoError: // 0
+		return "NoError"
+	case QSslDiffieHellmanParameters__InvalidInputDataError: // 1
+		return "InvalidInputDataError"
+	case QSslDiffieHellmanParameters__UnsafeParametersError: // 2
+		return "UnsafeParametersError"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QSslDiffieHellmanParameters_ErrorItemName(val int) string {
+	var nilthis *QSslDiffieHellmanParameters
+	return nilthis.ErrorItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

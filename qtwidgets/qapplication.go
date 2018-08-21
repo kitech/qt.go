@@ -1550,6 +1550,14 @@ const QApplication__CustomColor QApplication__ColorSpec = 1
 //
 const QApplication__ManyColor QApplication__ColorSpec = 2
 
+func (this *QApplication) ColorSpecItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QApplication_ColorSpecItemName(val int) string {
+	var nilthis *QApplication
+	return nilthis.ColorSpecItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

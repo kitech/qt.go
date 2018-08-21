@@ -1325,6 +1325,14 @@ const QListView__Free QListView__Movement = 1
 // The items snap to the specified grid when moved; see setGridSize().
 const QListView__Snap QListView__Movement = 2
 
+func (this *QListView) MovementItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QListView_MovementItemName(val int) string {
+	var nilthis *QListView
+	return nilthis.MovementItemName(val)
+}
+
 /*
 
  */
@@ -1336,6 +1344,14 @@ const QListView__LeftToRight QListView__Flow = 0
 // The items are laid out in the view from the top to the bottom.
 const QListView__TopToBottom QListView__Flow = 1
 
+func (this *QListView) FlowItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QListView_FlowItemName(val int) string {
+	var nilthis *QListView
+	return nilthis.FlowItemName(val)
+}
+
 /*
 
  */
@@ -1346,6 +1362,14 @@ const QListView__Fixed QListView__ResizeMode = 0
 
 // The items will be laid out every time the view is resized.
 const QListView__Adjust QListView__ResizeMode = 1
+
+func (this *QListView) ResizeModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QListView_ResizeModeItemName(val int) string {
+	var nilthis *QListView
+	return nilthis.ResizeModeItemName(val)
+}
 
 /*
 
@@ -1361,6 +1385,14 @@ const QListView__SinglePass QListView__LayoutMode = 0
 // The items are laid out in batches of batchSize items.
 const QListView__Batched QListView__LayoutMode = 1
 
+func (this *QListView) LayoutModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QListView_LayoutModeItemName(val int) string {
+	var nilthis *QListView
+	return nilthis.LayoutModeItemName(val)
+}
+
 /*
 
  */
@@ -1371,6 +1403,14 @@ const QListView__ListMode QListView__ViewMode = 0
 
 // The items are laid out using LeftToRight flow, with Large size and Free movement
 const QListView__IconMode QListView__ViewMode = 1
+
+func (this *QListView) ViewModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QListView_ViewModeItemName(val int) string {
+	var nilthis *QListView
+	return nilthis.ViewModeItemName(val)
+}
 
 //  body block end
 

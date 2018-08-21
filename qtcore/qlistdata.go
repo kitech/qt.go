@@ -297,6 +297,19 @@ type QListData__ = int
 //
 const QListData__DataHeaderSize QListData__ = 16
 
+func (this *QListData) ItemName(val int) string {
+	switch val {
+	case QListData__DataHeaderSize: // 16
+		return "DataHeaderSize"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QListData_ItemName(val int) string {
+	var nilthis *QListData
+	return nilthis.ItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

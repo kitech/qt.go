@@ -438,6 +438,27 @@ const QTextBlockFormat__MinimumHeight QTextBlockFormat__LineHeightTypes = 3
 //
 const QTextBlockFormat__LineDistanceHeight QTextBlockFormat__LineHeightTypes = 4
 
+func (this *QTextBlockFormat) LineHeightTypesItemName(val int) string {
+	switch val {
+	case QTextBlockFormat__SingleHeight: // 0
+		return "SingleHeight"
+	case QTextBlockFormat__ProportionalHeight: // 1
+		return "ProportionalHeight"
+	case QTextBlockFormat__FixedHeight: // 2
+		return "FixedHeight"
+	case QTextBlockFormat__MinimumHeight: // 3
+		return "MinimumHeight"
+	case QTextBlockFormat__LineDistanceHeight: // 4
+		return "LineDistanceHeight"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTextBlockFormat_LineHeightTypesItemName(val int) string {
+	var nilthis *QTextBlockFormat
+	return nilthis.LineHeightTypesItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

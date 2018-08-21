@@ -279,6 +279,29 @@ const QAccessibleTableModelChangeEvent__RowsRemoved QAccessibleTableModelChangeE
 //
 const QAccessibleTableModelChangeEvent__ColumnsRemoved QAccessibleTableModelChangeEvent__ModelChangeType = 5
 
+func (this *QAccessibleTableModelChangeEvent) ModelChangeTypeItemName(val int) string {
+	switch val {
+	case QAccessibleTableModelChangeEvent__ModelReset: // 0
+		return "ModelReset"
+	case QAccessibleTableModelChangeEvent__DataChanged: // 1
+		return "DataChanged"
+	case QAccessibleTableModelChangeEvent__RowsInserted: // 2
+		return "RowsInserted"
+	case QAccessibleTableModelChangeEvent__ColumnsInserted: // 3
+		return "ColumnsInserted"
+	case QAccessibleTableModelChangeEvent__RowsRemoved: // 4
+		return "RowsRemoved"
+	case QAccessibleTableModelChangeEvent__ColumnsRemoved: // 5
+		return "ColumnsRemoved"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QAccessibleTableModelChangeEvent_ModelChangeTypeItemName(val int) string {
+	var nilthis *QAccessibleTableModelChangeEvent
+	return nilthis.ModelChangeTypeItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

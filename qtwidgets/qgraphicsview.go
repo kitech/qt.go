@@ -2947,6 +2947,14 @@ const QGraphicsView__AnchorViewCenter QGraphicsView__ViewportAnchor = 1
 // The point under the mouse is used as the anchor.
 const QGraphicsView__AnchorUnderMouse QGraphicsView__ViewportAnchor = 2
 
+func (this *QGraphicsView) ViewportAnchorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsView_ViewportAnchorItemName(val int) string {
+	var nilthis *QGraphicsView
+	return nilthis.ViewportAnchorItemName(val)
+}
+
 /*
 
 
@@ -2958,6 +2966,14 @@ const QGraphicsView__CacheNone QGraphicsView__CacheModeFlag = 0
 
 //
 const QGraphicsView__CacheBackground QGraphicsView__CacheModeFlag = 1
+
+func (this *QGraphicsView) CacheModeFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsView_CacheModeFlagItemName(val int) string {
+	var nilthis *QGraphicsView
+	return nilthis.CacheModeFlagItemName(val)
+}
 
 /*
 This enum describes the default action for the view when pressing and dragging the mouse over the viewport.
@@ -2977,6 +2993,14 @@ const QGraphicsView__ScrollHandDrag QGraphicsView__DragMode = 1
 
 // A rubber band will appear. Dragging the mouse will set the rubber band geometry, and all items covered by the rubber band are selected. This mode is disabled for non-interactive views.
 const QGraphicsView__RubberBandDrag QGraphicsView__DragMode = 2
+
+func (this *QGraphicsView) DragModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsView_DragModeItemName(val int) string {
+	var nilthis *QGraphicsView
+	return nilthis.DragModeItemName(val)
+}
 
 /*
 This enum describes how QGraphicsView updates its viewport when the scene contents change or are exposed.
@@ -3005,6 +3029,14 @@ const QGraphicsView__NoViewportUpdate QGraphicsView__ViewportUpdateMode = 3
 // The bounding rectangle of all changes in the viewport will be redrawn. This mode has the advantage that QGraphicsView searches only one region for changes, minimizing time spent determining what needs redrawing. The disadvantage is that areas that have not changed also need to be redrawn.
 const QGraphicsView__BoundingRectViewportUpdate QGraphicsView__ViewportUpdateMode = 4
 
+func (this *QGraphicsView) ViewportUpdateModeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsView_ViewportUpdateModeItemName(val int) string {
+	var nilthis *QGraphicsView
+	return nilthis.ViewportUpdateModeItemName(val)
+}
+
 /*
 
 
@@ -3022,6 +3054,14 @@ const QGraphicsView__DontAdjustForAntialiasing QGraphicsView__OptimizationFlag =
 
 //
 const QGraphicsView__IndirectPainting QGraphicsView__OptimizationFlag = 8
+
+func (this *QGraphicsView) OptimizationFlagItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QGraphicsView_OptimizationFlagItemName(val int) string {
+	var nilthis *QGraphicsView
+	return nilthis.OptimizationFlagItemName(val)
+}
 
 //  body block end
 

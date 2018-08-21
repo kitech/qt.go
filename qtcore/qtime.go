@@ -978,6 +978,19 @@ type QTime__TimeFlag = int
 //
 const QTime__NullTime QTime__TimeFlag = -1
 
+func (this *QTime) TimeFlagItemName(val int) string {
+	switch val {
+	case QTime__NullTime: // -1
+		return "NullTime"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QTime_TimeFlagItemName(val int) string {
+	var nilthis *QTime
+	return nilthis.TimeFlagItemName(val)
+}
+
 //  body block end
 
 //  keep block begin

@@ -725,6 +725,14 @@ const QStateMachine__NormalPriority QStateMachine__EventPriority = 0
 // The event has high priority.
 const QStateMachine__HighPriority QStateMachine__EventPriority = 1
 
+func (this *QStateMachine) EventPriorityItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStateMachine_EventPriorityItemName(val int) string {
+	var nilthis *QStateMachine
+	return nilthis.EventPriorityItemName(val)
+}
+
 /*
 This enum type defines errors that can occur in the state machine at run time. When the state machine encounters an unrecoverable error at run time, it will set the error code returned by error(), the error message returned by errorString(), and enter an error state based on the context of the error.
 
@@ -746,6 +754,14 @@ const QStateMachine__NoDefaultStateInHistoryStateError QStateMachine__Error = 2
 
 // The machine has selected a transition whose source and targets are not part of the same tree of states, and thus are not part of the same state machine. Commonly, this could mean that one of the states has not been given any parent or added to any machine. The context of this error is the source state of the transition.
 const QStateMachine__NoCommonAncestorForTransitionError QStateMachine__Error = 3
+
+func (this *QStateMachine) ErrorItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QStateMachine_ErrorItemName(val int) string {
+	var nilthis *QStateMachine
+	return nilthis.ErrorItemName(val)
+}
 
 //  body block end
 

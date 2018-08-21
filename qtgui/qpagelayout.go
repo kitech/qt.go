@@ -862,6 +862,29 @@ const QPageLayout__Didot QPageLayout__Unit = 4
 //
 const QPageLayout__Cicero QPageLayout__Unit = 5
 
+func (this *QPageLayout) UnitItemName(val int) string {
+	switch val {
+	case QPageLayout__Millimeter: // 0
+		return "Millimeter"
+	case QPageLayout__Point: // 1
+		return "Point"
+	case QPageLayout__Inch: // 2
+		return "Inch"
+	case QPageLayout__Pica: // 3
+		return "Pica"
+	case QPageLayout__Didot: // 4
+		return "Didot"
+	case QPageLayout__Cicero: // 5
+		return "Cicero"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPageLayout_UnitItemName(val int) string {
+	var nilthis *QPageLayout
+	return nilthis.UnitItemName(val)
+}
+
 /*
 This enum type defines the page orientation
 
@@ -878,6 +901,21 @@ const QPageLayout__Portrait QPageLayout__Orientation = 0
 //
 const QPageLayout__Landscape QPageLayout__Orientation = 1
 
+func (this *QPageLayout) OrientationItemName(val int) string {
+	switch val {
+	case QPageLayout__Portrait: // 0
+		return "Portrait"
+	case QPageLayout__Landscape: // 1
+		return "Landscape"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPageLayout_OrientationItemName(val int) string {
+	var nilthis *QPageLayout
+	return nilthis.OrientationItemName(val)
+}
+
 /*
 Defines the page layout mode
 
@@ -890,6 +928,21 @@ const QPageLayout__StandardMode QPageLayout__Mode = 0
 
 // Paint Rect excludes margins, margins can be any value and must be managed manually.
 const QPageLayout__FullPageMode QPageLayout__Mode = 1
+
+func (this *QPageLayout) ModeItemName(val int) string {
+	switch val {
+	case QPageLayout__StandardMode: // 0
+		return "StandardMode"
+	case QPageLayout__FullPageMode: // 1
+		return "FullPageMode"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QPageLayout_ModeItemName(val int) string {
+	var nilthis *QPageLayout
+	return nilthis.ModeItemName(val)
+}
 
 //  body block end
 

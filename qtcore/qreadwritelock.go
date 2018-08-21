@@ -280,6 +280,21 @@ const QReadWriteLock__NonRecursive QReadWriteLock__RecursionMode = 0
 // In this mode, a thread can lock the same QReadWriteLock multiple times. The QReadWriteLock won't be unlocked until a corresponding number of unlock() calls have been made.
 const QReadWriteLock__Recursive QReadWriteLock__RecursionMode = 1
 
+func (this *QReadWriteLock) RecursionModeItemName(val int) string {
+	switch val {
+	case QReadWriteLock__NonRecursive: // 0
+		return "NonRecursive"
+	case QReadWriteLock__Recursive: // 1
+		return "Recursive"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QReadWriteLock_RecursionModeItemName(val int) string {
+	var nilthis *QReadWriteLock
+	return nilthis.RecursionModeItemName(val)
+}
+
 /*
 
 
@@ -297,6 +312,25 @@ const QReadWriteLock__Unlocked QReadWriteLock__StateForWaitCondition = 2
 
 //
 const QReadWriteLock__RecursivelyLocked QReadWriteLock__StateForWaitCondition = 3
+
+func (this *QReadWriteLock) StateForWaitConditionItemName(val int) string {
+	switch val {
+	case QReadWriteLock__LockedForRead: // 0
+		return "LockedForRead"
+	case QReadWriteLock__LockedForWrite: // 1
+		return "LockedForWrite"
+	case QReadWriteLock__Unlocked: // 2
+		return "Unlocked"
+	case QReadWriteLock__RecursivelyLocked: // 3
+		return "RecursivelyLocked"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QReadWriteLock_StateForWaitConditionItemName(val int) string {
+	var nilthis *QReadWriteLock
+	return nilthis.StateForWaitConditionItemName(val)
+}
 
 //  body block end
 
