@@ -23,7 +23,7 @@ func GetClassEnumItemName(this interface{}, val int) string {
 	}
 
 	// get class staticMetaObject
-	smo := GetClassStaticMetaObjectByObject(this)
+	smo := getClassStaticMetaObjectByObject(this)
 	if smo == nil {
 		return defval
 	}
@@ -47,20 +47,29 @@ func GetClassEnumItemName(this interface{}, val int) string {
 	return realval
 }
 
-func GetClassStaticMetaObjectByObject(this interface{}) unsafe.Pointer {
+func getClassStaticMetaObjectByObject(this interface{}) unsafe.Pointer {
 	// eg. _ZN11QColumnView16staticMetaObjectE
-	clsname := GetClassNameByObject(this)
-	return GetClassStaticMetaObjectByName(clsname)
+	clsname := getClassNameByObject(this)
+	return getClassStaticMetaObjectByName(clsname)
 }
 
-func GetClassStaticMetaObjectByName(clsname string) unsafe.Pointer {
+func getClassStaticMetaObjectByName(clsname string) unsafe.Pointer {
 	symname := fmt.Sprintf("_ZN%d%s16staticMetaObjectE", len(clsname), clsname)
 	addr := GetQtSymAddrRaw(symname)
 	return addr
 }
 
-func GetClassNameByObject(this interface{}) string {
+func getClassNameByObject(this interface{}) string {
 	oty := reflect.TypeOf(this)
 	clsname := strings.Split(oty.Elem().String(), ".")[1]
 	return clsname
+}
+
+// must a QObject or subclass
+func getClassNameByCObject(cthis unsafe.Pointer) string {
+	rv, err := InvokeQtFunc6("_ZNK7QObject10metaObjectEv", FFI_TYPE_POINTER, cthis)
+	rv2, err2 := InvokeQtFunc6("_ZNK11QMetaObject9classNameEv", FFI_TYPE_POINTER, unsafe.Pointer(uintptr(rv)))
+	ErrPrint(err, cthis)
+	ErrPrint(err2, cthis)
+	return GoStringI(rv2)
 }

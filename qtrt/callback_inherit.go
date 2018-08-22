@@ -11,6 +11,7 @@ import "C"
 import (
 	"fmt"
 	"log"
+	"os"
 	"reflect"
 	"regexp"
 	"strings"
@@ -31,7 +32,7 @@ func SetAllInheritCallback(cbobj CObjectITF, name string, f interface{}) {
 	if cbobj.GetCthis() != nil {
 	} else { // take as global function call, just no this field
 		if debugDynSlot {
-			log.Println("obj is nil, take as global event", name)
+			log.Println("obj is nil, try as global event", name)
 		}
 	}
 
@@ -161,21 +162,30 @@ debugAllInheritsFilterFunc = func(name string) bool {
 }
 */
 var debugAllInheritsFilterFunc func(name string) bool
+var debugIneritCall bool = false // call from C++ to Go
 
+func init() {
+	dbgval := os.Getenv("QTGO_DEBUG_INHERIT_CALL")
+	if strings.ToLower(dbgval) == "true" || dbgval == "1" {
+		debugIneritCall = true
+	}
+}
 func SetDebugAllinheritsFilterFunc(f func(name string) bool) {
 	debugAllInheritsFilterFunc = f
 }
 
 func callbackAllInheritsGo(cbobj unsafe.Pointer, name string, handled *int, argc int, pargs ...uint64) uint64 {
-	if !strings.Contains(strings.ToLower(name), "event") {
-		if debugFFICall {
-			log.Println(cbobj, name, handled, argc, pargs)
-		}
-	}
+	needDebug := false
 	if debugAllInheritsFilterFunc != nil && debugAllInheritsFilterFunc(name) {
-		if debugFFICall {
-			log.Println(cbobj, name, handled, argc, pargs)
+		if debugIneritCall {
+			needDebug = true
 		}
+	} else if debugIneritCall {
+		needDebug = true
+	}
+	if needDebug {
+		clsname := getClassNameByCObject(cbobj)
+		log.Printf("call: %s*(%v)::%s(%d:%d:%v)\n", clsname, cbobj, name, *handled, argc, pargs)
 	}
 
 	if signal := qt.GetSignal(cbobj, name); signal != nil {
@@ -221,9 +231,8 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 	in := []reflect.Value{} // 构造这个call in
 	for i := 0; i < fv.Type().NumIn(); i++ {
 		argty := fv.Type().In(i)
-		if debugDynSlot {
-			log.Println(i, argty.String(), argty.Kind())
-			log.Println(i, args[i], reflect.TypeOf(args[i]).String())
+		if debugIneritCall {
+			log.Printf("arg%d: type: %s, kind: %v, val: %d\n", i, argty.String(), argty.Kind(), args[i])
 		}
 
 		switch argty.Kind() {
@@ -257,9 +266,6 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 			default:
 				reg := regexp.MustCompile(`^(qt.*\.)?Q[A-Z](.+)`)
 				if reg.MatchString(argd1ty.String()) {
-					if debugDynSlot {
-						log.Println("qt class pointer:")
-					}
 					prmval := reflect.New(argd1ty)
 					prmval.MethodByName("SetCthis").Call([]reflect.Value{
 						reflect.ValueOf(unsafe.Pointer(uintptr(args[i])))})
@@ -271,16 +277,13 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 		}
 	}
 
-	if debugDynSlot {
-		log.Println(len(in), in)
-	}
 	if len(in) != fv.Type().NumIn() {
 		log.Println("can not fill enough parameters,", len(in), fv.Type().NumIn())
 	}
-	Assert(len(in) == fv.Type().NumIn(), "no engouth parameters")
+	Assert(len(in) == fv.Type().NumIn(), "no engouth parameters", len(in), fv.Type().NumIn())
 	if true {
 		out := fv.Call(in)
-		if debugDynSlot {
+		if debugIneritCall {
 			log.Println(len(out), out)
 		}
 		if len(out) > 0 {

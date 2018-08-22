@@ -10,7 +10,7 @@ import (
 func RunCmdOut(name string, arg ...string) (string, error) {
 	cmd := exec.Command(name, arg...)
 	occ, err := cmd.Output() // Output runs the command and returns its standard output.
-	qtrt.ErrPrint(err, name, arg)
+	qtrt.ErrPrint(err, name, arg, occ)
 	if err != nil {
 		return "", err
 	}

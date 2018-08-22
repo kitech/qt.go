@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -14,7 +15,8 @@ import (
 )
 
 var file string
-var filep string // file name without externsion
+var filep string            // file name without externsion
+var pkgname string = "main" // final code's package name
 
 var cp = toolutil.NewCodePager()
 
@@ -26,12 +28,19 @@ const (
 	INSEC_DONE
 )
 
+func init() {
+	flag.StringVar(&pkgname, "pkg", pkgname, "generated code's package name")
+}
+
 // cgo version rcc compile. feature: decrease go compile time RAM usage(~72%, 2.8G=>0.8G). but depend on gcc.
-// usage: go-rcc <rcc.qrc>
+// usage: go-rcc -pkg [name] <rcc.qrc>
 // depend on: /usr/bin/rcc
 func main() {
+	flag.Parse()
+
 	log.SetFlags(log.Flags() | log.Lshortfile)
-	file = os.Args[1]
+	file = flag.Arg(0)
+	log.Println(flag.Arg(0))
 	filep = path.Base(file)[0:strings.LastIndex(path.Base(file), ".")]
 	filep = qtrt.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
 	log.Println(file, filep)
@@ -151,7 +160,7 @@ func saveCode() {
 	cp.APf("bodygo", "func init(){qInitResources()}")
 
 	log.Printf("saving... %s_rc.go...\n", filep)
-	code = "package main\n"
+	code = fmt.Sprintf("package %s\n", pkgname)
 	code += cp.ExportAll()
 	savefile := fmt.Sprintf("%s_rc.go", filep)
 	err := ioutil.WriteFile(savefile, []byte(code), mod)

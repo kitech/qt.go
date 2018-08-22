@@ -55,28 +55,28 @@ func (this *CObject) GetCthis_() unsafe.Pointer {
 }
 
 ///////////
-var DebugFinal bool = false
-var FinalProxyFn = func(f func()) { f() } //
+var DebugFinalize bool = false
+var FinalizeProxyFn = func(f func()) { f() } //
 func init() {
-	dbgval := os.Getenv("QTGO_DEBUG_FINAL")
+	dbgval := os.Getenv("QTGO_DEBUG_FINALIZE")
 	if strings.ToLower(dbgval) == "true" || dbgval == "1" {
-		DebugFinal = true
+		DebugFinalize = true
 	}
 }
 
 func objectFinalBefore(o interface{}) {
-	if DebugFinal {
+	if DebugFinalize {
 		log.Println(o, fmt.Sprintf("%#v", o), o.(GetCthiser).GetCthis())
 	}
 }
 func objectFinalAfter(o interface{}) {
-	if DebugFinal {
+	if DebugFinalize {
 		log.Println(o, fmt.Sprintf("%#v", o), o.(GetCthiser).GetCthis())
 	}
 }
 func SetFinalizer(obj interface{}, finalizer interface{}) {
 	runtime.SetFinalizer(obj, func(o interface{}) {
-		FinalProxyFn(func() {
+		FinalizeProxyFn(func() {
 			objectFinalBefore(o)
 			ov := reflect.ValueOf(o)
 			fv := reflect.ValueOf(finalizer)

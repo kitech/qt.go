@@ -77,6 +77,7 @@ eg-:
 tools:
 	go build -v -o bin/go-uic ./cmd/go-uic
 	go build -v -o bin/go-rcc ./cmd/go-rcc
+	go build -v -o bin/cgo-rcc ./cmd/cgo-rcc
 	go build -v -o bin/go-qmlviewer ./cmd/go-qmlviewer
 	go build -v -o bin/go-dir2qrc ./cmd/dir2qrc
 
