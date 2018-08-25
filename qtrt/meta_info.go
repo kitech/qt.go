@@ -50,10 +50,10 @@ func GetClassEnumItemName(this interface{}, val int) string {
 func getClassStaticMetaObjectByObject(this interface{}) unsafe.Pointer {
 	// eg. _ZN11QColumnView16staticMetaObjectE
 	clsname := getClassNameByObject(this)
-	return getClassStaticMetaObjectByName(clsname)
+	return GetClassStaticMetaObjectByName(clsname)
 }
 
-func getClassStaticMetaObjectByName(clsname string) unsafe.Pointer {
+func GetClassStaticMetaObjectByName(clsname string) unsafe.Pointer {
 	symname := fmt.Sprintf("_ZN%d%s16staticMetaObjectE", len(clsname), clsname)
 	addr := GetQtSymAddrRaw(symname)
 	return addr
