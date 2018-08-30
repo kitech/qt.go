@@ -595,7 +595,7 @@ Note: Signal highlighted is overloaded in this class. To connect to this signal 
 
 
   connect(textBrowser, QOverload<const QUrl &>::of(&QTextBrowser::highlighted),
-      [=](const QUrl &link){ \/* ... *\/ });
+      [=](const QUrl &link){ /-* ... *-/ });
 */
 func (this *QTextBrowser) Highlighted(arg0 qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
@@ -618,7 +618,7 @@ Note: Signal highlighted is overloaded in this class. To connect to this signal 
 
 
   connect(textBrowser, QOverload<const QUrl &>::of(&QTextBrowser::highlighted),
-      [=](const QUrl &link){ \/* ... *\/ });
+      [=](const QUrl &link){ /-* ... *-/ });
 */
 func (this *QTextBrowser) Highlighted_1(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)

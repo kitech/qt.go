@@ -62,8 +62,14 @@ func (this *QObject) FindChildren_1(name string, options int) *QObjectListx {
 	return NewQObjectListxFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
+/*
 func QVersion() string {
 	rv, err := qtrt.InvokeQtFunc6("C_qVersion", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
+}
+*/
+
+type QByteArrayList_ITF interface {
+	QByteArrayList_PTR() qtrt.CObjectITF
 }

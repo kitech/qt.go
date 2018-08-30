@@ -1601,7 +1601,7 @@ Note: Signal activated is overloaded in this class. To connect to this signal by
 
 
   connect(comboBox, QOverload<int>::of(&QComboBox::activated),
-      [=](int index){ \/* ... *\/ });
+      [=](int index){ /-* ... *-/ });
 */
 func (this *QComboBox) Activated(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox9activatedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
@@ -1620,7 +1620,7 @@ Note: Signal activated is overloaded in this class. To connect to this signal by
 
 
   connect(comboBox, QOverload<int>::of(&QComboBox::activated),
-      [=](int index){ \/* ... *\/ });
+      [=](int index){ /-* ... *-/ });
 */
 func (this *QComboBox) Activated_1(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
@@ -1641,7 +1641,7 @@ Note: Signal highlighted is overloaded in this class. To connect to this signal 
 
 
   connect(comboBox, QOverload<int>::of(&QComboBox::highlighted),
-      [=](int index){ \/* ... *\/ });
+      [=](int index){ /-* ... *-/ });
 */
 func (this *QComboBox) Highlighted(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11highlightedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
@@ -1660,7 +1660,7 @@ Note: Signal highlighted is overloaded in this class. To connect to this signal 
 
 
   connect(comboBox, QOverload<int>::of(&QComboBox::highlighted),
-      [=](int index){ \/* ... *\/ });
+      [=](int index){ /-* ... *-/ });
 */
 func (this *QComboBox) Highlighted_1(arg0 string) {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
@@ -1681,7 +1681,7 @@ Note: Signal currentIndexChanged is overloaded in this class. To connect to this
 
 
   connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged),
-      [=](int index){ \/* ... *\/ });
+      [=](int index){ /-* ... *-/ });
 
 
 
@@ -1706,7 +1706,7 @@ Note: Signal currentIndexChanged is overloaded in this class. To connect to this
 
 
   connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged),
-      [=](int index){ \/* ... *\/ });
+      [=](int index){ /-* ... *-/ });
 
 
 

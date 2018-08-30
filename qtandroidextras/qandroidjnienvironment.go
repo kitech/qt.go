@@ -76,10 +76,10 @@ Constructs a new QAndroidJniEnvironment object and attach the current thread to 
 
   bool exceptionCheck()
   {
-      \/*
+      /-*
         The QAndroidJniEnvironment attaches the current thread to the JavaVM on
         creation and detach when it goes out of scope.
-       *\/
+       *-/
       QAndroidJniEnvironment qjniEnv;
       return qjniEnv->ExceptionCheck();
   }

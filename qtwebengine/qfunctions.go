@@ -48,3 +48,19 @@ func init() {
 }
 
 //  header block end
+
+//  body block begin
+// /usr/include/qt/QtWebEngine/qtwebengineglobal.h:59
+// index:0
+// Invalid Visibility=Default Availability=Available
+// [-2] void initialize()
+
+/*
+
+ */
+func Initialize() {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QtWebEngine10initializeEv", qtrt.FFI_TYPE_POINTER)
+	qtrt.ErrPrint(err, rv)
+}
+
+//  body block end

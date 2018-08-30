@@ -395,7 +395,7 @@ Example:
       // ...
   }
 
-  \/*
+  /-*
   This code results in context-dependent help:
 
   $ tool --help
@@ -412,7 +412,7 @@ Example:
 
   Arguments:
     resize         Resize the object to a new size.
-  *\/
+  *-/
 */
 func (this *QCommandLineParser) ClearPositionalArguments() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser24clearPositionalArgumentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

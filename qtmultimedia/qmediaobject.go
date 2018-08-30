@@ -314,7 +314,7 @@ Note: Signal metaDataChanged is overloaded in this class. To connect to this sig
 
 
   connect(mediaObject, QOverload<>::of(&QMediaObject::metaDataChanged),
-      [=](){ \/* ... *\/ });
+      [=](){ /-* ... *-/ });
 */
 func (this *QMediaObject) MetaDataChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMediaObject15metaDataChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -335,7 +335,7 @@ Note: Signal metaDataChanged is overloaded in this class. To connect to this sig
 
 
   connect(mediaObject, QOverload<>::of(&QMediaObject::metaDataChanged),
-      [=](){ \/* ... *\/ });
+      [=](){ /-* ... *-/ });
 */
 func (this *QMediaObject) MetaDataChanged_1(key string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(key)
@@ -360,7 +360,7 @@ Note: Signal availabilityChanged is overloaded in this class. To connect to this
 
 
   connect(mediaObject, QOverload<bool>::of(&QMediaObject::availabilityChanged),
-      [=](bool available){ \/* ... *\/ });
+      [=](bool available){ /-* ... *-/ });
 */
 func (this *QMediaObject) AvailabilityChanged(available bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMediaObject19availabilityChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), available)
@@ -379,7 +379,7 @@ Note: Signal availabilityChanged is overloaded in this class. To connect to this
 
 
   connect(mediaObject, QOverload<bool>::of(&QMediaObject::availabilityChanged),
-      [=](bool available){ \/* ... *\/ });
+      [=](bool available){ /-* ... *-/ });
 */
 func (this *QMediaObject) AvailabilityChanged_1(availability int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMediaObject19availabilityChangedEN11QMultimedia18AvailabilityStatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), availability)

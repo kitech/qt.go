@@ -411,7 +411,7 @@ In most subclasses, the number of columns is independent of the parent.
 For example:
 
 
-  int DomModel::columnCount(const QModelIndex &\/*parent*\/) const
+  int DomModel::columnCount(const QModelIndex &/-*parent*-/) const
   {
       return 3;
   }
@@ -445,7 +445,7 @@ In most subclasses, the number of columns is independent of the parent.
 For example:
 
 
-  int DomModel::columnCount(const QModelIndex &\/*parent*\/) const
+  int DomModel::columnCount(const QModelIndex &/-*parent*-/) const
   {
       return 3;
   }

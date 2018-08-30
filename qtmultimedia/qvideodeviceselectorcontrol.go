@@ -201,7 +201,7 @@ Note: Signal selectedDeviceChanged is overloaded in this class. To connect to th
 
 
   connect(videoDeviceSelectorControl, QOverload<int>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged),
-      [=](int index){ \/* ... *\/ });
+      [=](int index){ /-* ... *-/ });
 */
 func (this *QVideoDeviceSelectorControl) SelectedDeviceChanged(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QVideoDeviceSelectorControl21selectedDeviceChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
@@ -220,7 +220,7 @@ Note: Signal selectedDeviceChanged is overloaded in this class. To connect to th
 
 
   connect(videoDeviceSelectorControl, QOverload<int>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged),
-      [=](int index){ \/* ... *\/ });
+      [=](int index){ /-* ... *-/ });
 */
 func (this *QVideoDeviceSelectorControl) SelectedDeviceChanged_1(deviceName string) {
 	var tmpArg0 = qtcore.NewQString_5(deviceName)

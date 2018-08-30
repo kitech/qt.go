@@ -326,7 +326,7 @@ Note: Signal buttonClicked is overloaded in this class. To connect to this signa
 
 
   connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked),
-      [=](QAbstractButton *button){ \/* ... *\/ });
+      [=](QAbstractButton *button){ /-* ... *-/ });
 
 
 
@@ -353,7 +353,7 @@ Note: Signal buttonClicked is overloaded in this class. To connect to this signa
 
 
   connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked),
-      [=](QAbstractButton *button){ \/* ... *\/ });
+      [=](QAbstractButton *button){ /-* ... *-/ });
 
 
 
@@ -376,7 +376,7 @@ Note: Signal buttonPressed is overloaded in this class. To connect to this signa
 
 
   connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed),
-      [=](QAbstractButton *button){ \/* ... *\/ });
+      [=](QAbstractButton *button){ /-* ... *-/ });
 
 
 
@@ -405,7 +405,7 @@ Note: Signal buttonPressed is overloaded in this class. To connect to this signa
 
 
   connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed),
-      [=](QAbstractButton *button){ \/* ... *\/ });
+      [=](QAbstractButton *button){ /-* ... *-/ });
 
 
 
@@ -430,7 +430,7 @@ Note: Signal buttonReleased is overloaded in this class. To connect to this sign
 
 
   connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased),
-      [=](QAbstractButton *button){ \/* ... *\/ });
+      [=](QAbstractButton *button){ /-* ... *-/ });
 
 
 
@@ -459,7 +459,7 @@ Note: Signal buttonReleased is overloaded in this class. To connect to this sign
 
 
   connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased),
-      [=](QAbstractButton *button){ \/* ... *\/ });
+      [=](QAbstractButton *button){ /-* ... *-/ });
 
 
 
@@ -484,7 +484,7 @@ Note: Signal buttonToggled is overloaded in this class. To connect to this signa
 
 
   connect(buttonGroup, QOverload<QAbstractButton *, bool>::of(&QButtonGroup::buttonToggled),
-      [=](QAbstractButton *button, bool checked){ \/* ... *\/ });
+      [=](QAbstractButton *button, bool checked){ /-* ... *-/ });
 
 
 
@@ -513,7 +513,7 @@ Note: Signal buttonToggled is overloaded in this class. To connect to this signa
 
 
   connect(buttonGroup, QOverload<QAbstractButton *, bool>::of(&QButtonGroup::buttonToggled),
-      [=](QAbstractButton *button, bool checked){ \/* ... *\/ });
+      [=](QAbstractButton *button, bool checked){ /-* ... *-/ });
 
 
 

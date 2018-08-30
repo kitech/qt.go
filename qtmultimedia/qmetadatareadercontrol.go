@@ -158,7 +158,7 @@ Note: Signal metaDataChanged is overloaded in this class. To connect to this sig
 
 
   connect(metaDataReaderControl, QOverload<>::of(&QMetaDataReaderControl::metaDataChanged),
-      [=](){ \/* ... *\/ });
+      [=](){ /-* ... *-/ });
 */
 func (this *QMetaDataReaderControl) MetaDataChanged() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QMetaDataReaderControl15metaDataChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -179,7 +179,7 @@ Note: Signal metaDataChanged is overloaded in this class. To connect to this sig
 
 
   connect(metaDataReaderControl, QOverload<>::of(&QMetaDataReaderControl::metaDataChanged),
-      [=](){ \/* ... *\/ });
+      [=](){ /-* ... *-/ });
 */
 func (this *QMetaDataReaderControl) MetaDataChanged_1(key string, value qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString_5(key)

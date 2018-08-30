@@ -22,6 +22,22 @@ func init() {
 //  header block end
 
 //  body block begin
+// /usr/include/qt/QtPositioning/qgeopositioninfosource.h:110
+// index:86
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QGeoPositionInfoSource::PositioningMethods::enum_type, int)
+
+/*
+
+ */
+func Operator_or_86(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN22QGeoPositionInfoSource17PositioningMethodEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
 // /usr/include/qt/QtPositioning/qgeocoordinate.h:125
 // index:42
 // Invalid Visibility=Default Availability=Available

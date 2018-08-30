@@ -326,7 +326,7 @@ Note: Signal mapped is overloaded in this class. To connect to this signal by us
 
 
   connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
-      [=](int i){ \/* ... *\/ });
+      [=](int i){ /-* ... *-/ });
 
 
 
@@ -349,7 +349,7 @@ Note: Signal mapped is overloaded in this class. To connect to this signal by us
 
 
   connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
-      [=](int i){ \/* ... *\/ });
+      [=](int i){ /-* ... *-/ });
 
 
 
@@ -374,7 +374,7 @@ Note: Signal mapped is overloaded in this class. To connect to this signal by us
 
 
   connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
-      [=](int i){ \/* ... *\/ });
+      [=](int i){ /-* ... *-/ });
 
 
 
@@ -397,7 +397,7 @@ Note: Signal mapped is overloaded in this class. To connect to this signal by us
 
 
   connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
-      [=](int i){ \/* ... *\/ });
+      [=](int i){ /-* ... *-/ });
 
 
 

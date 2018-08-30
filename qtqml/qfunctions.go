@@ -26,6 +26,38 @@ func init() {
 //  header block end
 
 //  body block begin
+// /usr/include/qt/QtQml/qjsengine.h:131
+// index:88
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QJSEngine::Extensions::enum_type, int)
+
+/*
+
+ */
+func Operator_or_88(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN9QJSEngine9ExtensionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtQml/qqmlengine.h:81
+// index:89
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QQmlImageProviderBase::Flags::enum_type, int)
+
+/*
+
+ */
+func Operator_or_89(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN21QQmlImageProviderBase4FlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
 // /usr/include/qt/QtQml/qqml.h:549
 // index:0
 // Invalid Visibility=Default Availability=Available

@@ -1809,7 +1809,7 @@ Note: Signal finished is overloaded in this class. To connect to this signal by 
 
 
   connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-      [=](int exitCode, QProcess::ExitStatus exitStatus){ \/* ... *\/ });
+      [=](int exitCode, QProcess::ExitStatus exitStatus){ /-* ... *-/ });
 
 
 
@@ -1832,7 +1832,7 @@ Note: Signal finished is overloaded in this class. To connect to this signal by 
 
 
   connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-      [=](int exitCode, QProcess::ExitStatus exitStatus){ \/* ... *\/ });
+      [=](int exitCode, QProcess::ExitStatus exitStatus){ /-* ... *-/ });
 
 
 

@@ -44,3 +44,27 @@ func init() {
 }
 
 //  header block end
+
+//  body block begin
+// /usr/include/qt/QtWebEngineCore/qwebenginehttprequest.h:101
+// index:85
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void swap(QWebEngineHttpRequest &, QWebEngineHttpRequest &)
+
+/*
+
+ */
+func Swap_85(value1 QWebEngineHttpRequest_ITF, value2 QWebEngineHttpRequest_ITF) {
+	var convArg0 unsafe.Pointer
+	if value1 != nil && value1.QWebEngineHttpRequest_PTR() != nil {
+		convArg0 = value1.QWebEngineHttpRequest_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if value2 != nil && value2.QWebEngineHttpRequest_PTR() != nil {
+		convArg1 = value2.QWebEngineHttpRequest_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_Z4swapR21QWebEngineHttpRequestS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+//  body block end

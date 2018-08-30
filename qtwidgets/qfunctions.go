@@ -26,6 +26,550 @@ func init() {
 //  header block end
 
 //  body block begin
+// /usr/include/qt/QtWidgets/qtextedit.h:326
+// index:103
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QTextEdit::AutoFormatting::enum_type, int)
+
+/*
+
+ */
+func Operator_or_103(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN9QTextEdit18AutoFormattingFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qmdiarea.h:169
+// index:104
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QMdiArea::AreaOptions::enum_type, int)
+
+/*
+
+ */
+func Operator_or_104(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN8QMdiArea10AreaOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qwizard.h:207
+// index:105
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QWizard::WizardOptions::enum_type, int)
+
+/*
+
+ */
+func Operator_or_105(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN7QWizard12WizardOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:736
+// index:106
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QWidget::RenderFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or_106(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN7QWidget10RenderFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qstyle.h:868
+// index:107
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QStyle::State::enum_type, int)
+
+/*
+
+ */
+func Operator_or_107(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN6QStyle9StateFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qstyle.h:869
+// index:108
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QStyle::SubControls::enum_type, int)
+
+/*
+
+ */
+func Operator_or_108(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN6QStyle10SubControlEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:146
+// index:109
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QTreeWidgetItemIterator::IteratorFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or_109(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN23QTreeWidgetItemIterator12IteratorFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:586
+// index:110
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QStyleOptionToolButton::ToolButtonFeatures::enum_type, int)
+
+/*
+
+ */
+func Operator_or_110(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN22QStyleOptionToolButton17ToolButtonFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:449
+// index:111
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QStyleOptionViewItem::ViewItemFeatures::enum_type, int)
+
+/*
+
+ */
+func Operator_or_111(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN20QStyleOptionViewItem15ViewItemFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:322
+// index:112
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QStyleOptionToolBar::ToolBarFeatures::enum_type, int)
+
+/*
+
+ */
+func Operator_or_112(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN19QStyleOptionToolBar14ToolBarFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:193
+// index:113
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QGraphicsBlurEffect::BlurHints::enum_type, int)
+
+/*
+
+ */
+func Operator_or_113(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN19QGraphicsBlurEffect8BlurHintEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:255
+// index:114
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QStyleOptionButton::ButtonFeatures::enum_type, int)
+
+/*
+
+ */
+func Operator_or_114(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN18QStyleOptionButton13ButtonFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgesturerecognizer.h:89
+// index:115
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QGestureRecognizer::Result::enum_type, int)
+
+/*
+
+ */
+func Operator_or_115(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN18QGestureRecognizer10ResultFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:150
+// index:116
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QStyleOptionFrame::FrameFeatures::enum_type, int)
+
+/*
+
+ */
+func Operator_or_116(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN17QStyleOptionFrame12FrameFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qfileiconprovider.h:78
+// index:117
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QFileIconProvider::Options::enum_type, int)
+
+/*
+
+ */
+func Operator_or_117(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN17QFileIconProvider6OptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qabstractitemview.h:382
+// index:118
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QAbstractItemView::EditTriggers::enum_type, int)
+
+/*
+
+ */
+func Operator_or_118(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN17QAbstractItemView11EditTriggerEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:164
+// index:119
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QDialogButtonBox::StandardButtons::enum_type, int)
+
+/*
+
+ */
+func Operator_or_119(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN16QDialogButtonBox14StandardButtonEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:175
+// index:120
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QAbstractSpinBox::StepEnabled::enum_type, int)
+
+/*
+
+ */
+func Operator_or_120(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN16QAbstractSpinBox15StepEnabledFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qstyleoption.h:292
+// index:121
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QStyleOptionTab::CornerWidgets::enum_type, int)
+
+/*
+
+ */
+func Operator_or_121(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN15QStyleOptionTab12CornerWidgetEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:123
+// index:122
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QGraphicsEffect::ChangeFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or_122(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN15QGraphicsEffect10ChangeFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:328
+// index:123
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QGraphicsScene::SceneLayers::enum_type, int)
+
+/*
+
+ */
+func Operator_or_123(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN14QGraphicsScene10SceneLayerEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgesture.h:198
+// index:124
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QPinchGesture::ChangeFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or_124(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN13QPinchGesture10ChangeFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:146
+// index:125
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QMdiSubWindow::SubWindowOptions::enum_type, int)
+
+/*
+
+ */
+func Operator_or_125(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN13QMdiSubWindow15SubWindowOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:290
+// index:126
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QGraphicsView::OptimizationFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or_126(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN13QGraphicsView16OptimizationFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:289
+// index:127
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QGraphicsView::CacheMode::enum_type, int)
+
+/*
+
+ */
+func Operator_or_127(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN13QGraphicsView13CacheModeFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:489
+// index:128
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QGraphicsItem::GraphicsItemFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or_128(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN13QGraphicsItem16GraphicsItemFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:228
+// index:129
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QDateTimeEdit::Sections::enum_type, int)
+
+/*
+
+ */
+func Operator_or_129(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN13QDateTimeEdit7SectionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qinputdialog.h:218
+// index:130
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QInputDialog::InputDialogOptions::enum_type, int)
+
+/*
+
+ */
+func Operator_or_130(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN12QInputDialog17InputDialogOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qcolordialog.h:125
+// index:131
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QColorDialog::ColorDialogOptions::enum_type, int)
+
+/*
+
+ */
+func Operator_or_131(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN12QColorDialog17ColorDialogOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qsizepolicy.h:234
+// index:132
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QSizePolicy::ControlTypes::enum_type, int)
+
+/*
+
+ */
+func Operator_or_132(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN11QSizePolicy11ControlTypeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:308
+// index:133
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QMessageBox::StandardButtons::enum_type, int)
+
+/*
+
+ */
+func Operator_or_133(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN11QMessageBox14StandardButtonEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qmainwindow.h:215
+// index:134
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QMainWindow::DockOptions::enum_type, int)
+
+/*
+
+ */
+func Operator_or_134(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN11QMainWindow10DockOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:313
+// index:135
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QFileDialog::Options::enum_type, int)
+
+/*
+
+ */
+func Operator_or_135(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN11QFileDialog6OptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qdockwidget.h:134
+// index:136
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QDockWidget::DockWidgetFeatures::enum_type, int)
+
+/*
+
+ */
+func Operator_or_136(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN11QDockWidget17DockWidgetFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qsizepolicy.h:68
 // index:44
 // Invalid inline Visibility=Default Availability=Available

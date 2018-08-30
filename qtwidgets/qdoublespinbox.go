@@ -463,7 +463,7 @@ Note: Signal valueChanged is overloaded in this class. To connect to this signal
 
 
   connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
-      [=](int i){ \/* ... *\/ });
+      [=](int i){ /-* ... *-/ });
 
 
 
@@ -486,7 +486,7 @@ Note: Signal valueChanged is overloaded in this class. To connect to this signal
 
 
   connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
-      [=](int i){ \/* ... *\/ });
+      [=](int i){ /-* ... *-/ });
 
 
 

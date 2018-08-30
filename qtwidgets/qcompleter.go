@@ -832,7 +832,7 @@ Note: Signal activated is overloaded in this class. To connect to this signal by
 
 
   connect(completer, QOverload<const QString &>::of(&QCompleter::activated),
-      [=](const QString &text){ \/* ... *\/ });
+      [=](const QString &text){ /-* ... *-/ });
 */
 func (this *QCompleter) Activated(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
@@ -853,7 +853,7 @@ Note: Signal activated is overloaded in this class. To connect to this signal by
 
 
   connect(completer, QOverload<const QString &>::of(&QCompleter::activated),
-      [=](const QString &text){ \/* ... *\/ });
+      [=](const QString &text){ /-* ... *-/ });
 */
 func (this *QCompleter) Activated_1(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
@@ -876,7 +876,7 @@ Note: Signal highlighted is overloaded in this class. To connect to this signal 
 
 
   connect(completer, QOverload<const QString &>::of(&QCompleter::highlighted),
-      [=](const QString &text){ \/* ... *\/ });
+      [=](const QString &text){ /-* ... *-/ });
 */
 func (this *QCompleter) Highlighted(text string) {
 	var tmpArg0 = qtcore.NewQString_5(text)
@@ -897,7 +897,7 @@ Note: Signal highlighted is overloaded in this class. To connect to this signal 
 
 
   connect(completer, QOverload<const QString &>::of(&QCompleter::highlighted),
-      [=](const QString &text){ \/* ... *\/ });
+      [=](const QString &text){ /-* ... *-/ });
 */
 func (this *QCompleter) Highlighted_1(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer

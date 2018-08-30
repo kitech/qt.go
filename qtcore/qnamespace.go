@@ -8193,83 +8193,6 @@ func future_statusItemName(val int) string {
 }
 
 /*
-
-
- */
-type Qt__DrawingHint = int // widgets
-//
-const Qt__OpaqueTopLeft Qt__DrawingHint = 1
-
-//
-const Qt__OpaqueTop Qt__DrawingHint = 2
-
-//
-const Qt__OpaqueTopRight Qt__DrawingHint = 4
-
-//
-const Qt__OpaqueLeft Qt__DrawingHint = 8
-
-//
-const Qt__OpaqueCenter Qt__DrawingHint = 16
-
-//
-const Qt__OpaqueRight Qt__DrawingHint = 32
-
-//
-const Qt__OpaqueBottomLeft Qt__DrawingHint = 64
-
-//
-const Qt__OpaqueBottom Qt__DrawingHint = 128
-
-//
-const Qt__OpaqueBottomRight Qt__DrawingHint = 256
-
-//
-const Qt__OpaqueCorners Qt__DrawingHint = 325
-
-//
-const Qt__OpaqueEdges Qt__DrawingHint = 170
-
-//
-const Qt__OpaqueFrame Qt__DrawingHint = 495
-
-//
-const Qt__OpaqueAll Qt__DrawingHint = 511
-
-func DrawingHintItemName(val int) string {
-	switch val {
-	case Qt__OpaqueTopLeft: // 1
-		return "OpaqueTopLeft"
-	case Qt__OpaqueTop: // 2
-		return "OpaqueTop"
-	case Qt__OpaqueTopRight: // 4
-		return "OpaqueTopRight"
-	case Qt__OpaqueLeft: // 8
-		return "OpaqueLeft"
-	case Qt__OpaqueCenter: // 16
-		return "OpaqueCenter"
-	case Qt__OpaqueRight: // 32
-		return "OpaqueRight"
-	case Qt__OpaqueBottomLeft: // 64
-		return "OpaqueBottomLeft"
-	case Qt__OpaqueBottom: // 128
-		return "OpaqueBottom"
-	case Qt__OpaqueBottomRight: // 256
-		return "OpaqueBottomRight"
-	case Qt__OpaqueCorners: // 325
-		return "OpaqueCorners"
-	case Qt__OpaqueEdges: // 170
-		return "OpaqueEdges"
-	case Qt__OpaqueFrame: // 495
-		return "OpaqueFrame"
-	case Qt__OpaqueAll: // 511
-		return "OpaqueAll"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-
-/*
 Describes the two types of keys QSslKey supports.
 
 
@@ -8576,6 +8499,83 @@ func RegistrationTypeItemName(val int) string {
 		return "CompositeSingletonRegistration"
 	case Qt__QmlUnitCacheHookRegistration: // 6
 		return "QmlUnitCacheHookRegistration"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__DrawingHint = int // widgets
+//
+const Qt__OpaqueTopLeft Qt__DrawingHint = 1
+
+//
+const Qt__OpaqueTop Qt__DrawingHint = 2
+
+//
+const Qt__OpaqueTopRight Qt__DrawingHint = 4
+
+//
+const Qt__OpaqueLeft Qt__DrawingHint = 8
+
+//
+const Qt__OpaqueCenter Qt__DrawingHint = 16
+
+//
+const Qt__OpaqueRight Qt__DrawingHint = 32
+
+//
+const Qt__OpaqueBottomLeft Qt__DrawingHint = 64
+
+//
+const Qt__OpaqueBottom Qt__DrawingHint = 128
+
+//
+const Qt__OpaqueBottomRight Qt__DrawingHint = 256
+
+//
+const Qt__OpaqueCorners Qt__DrawingHint = 325
+
+//
+const Qt__OpaqueEdges Qt__DrawingHint = 170
+
+//
+const Qt__OpaqueFrame Qt__DrawingHint = 495
+
+//
+const Qt__OpaqueAll Qt__DrawingHint = 511
+
+func DrawingHintItemName(val int) string {
+	switch val {
+	case Qt__OpaqueTopLeft: // 1
+		return "OpaqueTopLeft"
+	case Qt__OpaqueTop: // 2
+		return "OpaqueTop"
+	case Qt__OpaqueTopRight: // 4
+		return "OpaqueTopRight"
+	case Qt__OpaqueLeft: // 8
+		return "OpaqueLeft"
+	case Qt__OpaqueCenter: // 16
+		return "OpaqueCenter"
+	case Qt__OpaqueRight: // 32
+		return "OpaqueRight"
+	case Qt__OpaqueBottomLeft: // 64
+		return "OpaqueBottomLeft"
+	case Qt__OpaqueBottom: // 128
+		return "OpaqueBottom"
+	case Qt__OpaqueBottomRight: // 256
+		return "OpaqueBottomRight"
+	case Qt__OpaqueCorners: // 325
+		return "OpaqueCorners"
+	case Qt__OpaqueEdges: // 170
+		return "OpaqueEdges"
+	case Qt__OpaqueFrame: // 495
+		return "OpaqueFrame"
+	case Qt__OpaqueAll: // 511
+		return "OpaqueAll"
 	default:
 		return fmt.Sprintf("%d", val)
 	}
@@ -8959,6 +8959,2357 @@ func _EXCEPTION_DISPOSITIONItemName(val int) string {
 
 
  */
+type Qt___HEAP_INFORMATION_CLASS = int // stdglobal
+//
+const Qt__HeapCompatibilityInformation Qt___HEAP_INFORMATION_CLASS = 0
+
+func _HEAP_INFORMATION_CLASSItemName(val int) string {
+	switch val {
+	case Qt__HeapCompatibilityInformation: // 0
+		return "HeapCompatibilityInformation"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__IMPORT_OBJECT_TYPE = int // stdglobal
+//
+const Qt__IMPORT_OBJECT_CODE Qt__IMPORT_OBJECT_TYPE = 0
+
+//
+const Qt__IMPORT_OBJECT_DATA Qt__IMPORT_OBJECT_TYPE = 1
+
+//
+const Qt__IMPORT_OBJECT_CONST Qt__IMPORT_OBJECT_TYPE = 2
+
+func IMPORT_OBJECT_TYPEItemName(val int) string {
+	switch val {
+	case Qt__IMPORT_OBJECT_CODE: // 0
+		return "IMPORT_OBJECT_CODE"
+	case Qt__IMPORT_OBJECT_DATA: // 1
+		return "IMPORT_OBJECT_DATA"
+	case Qt__IMPORT_OBJECT_CONST: // 2
+		return "IMPORT_OBJECT_CONST"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__IMPORT_OBJECT_NAME_TYPE = int // stdglobal
+//
+const Qt__IMPORT_OBJECT_ORDINAL Qt__IMPORT_OBJECT_NAME_TYPE = 0
+
+//
+const Qt__IMPORT_OBJECT_NAME Qt__IMPORT_OBJECT_NAME_TYPE = 1
+
+//
+const Qt__IMPORT_OBJECT_NAME_NO_PREFIX Qt__IMPORT_OBJECT_NAME_TYPE = 2
+
+//
+const Qt__IMPORT_OBJECT_NAME_UNDECORATE Qt__IMPORT_OBJECT_NAME_TYPE = 3
+
+func IMPORT_OBJECT_NAME_TYPEItemName(val int) string {
+	switch val {
+	case Qt__IMPORT_OBJECT_ORDINAL: // 0
+		return "IMPORT_OBJECT_ORDINAL"
+	case Qt__IMPORT_OBJECT_NAME: // 1
+		return "IMPORT_OBJECT_NAME"
+	case Qt__IMPORT_OBJECT_NAME_NO_PREFIX: // 2
+		return "IMPORT_OBJECT_NAME_NO_PREFIX"
+	case Qt__IMPORT_OBJECT_NAME_UNDECORATE: // 3
+		return "IMPORT_OBJECT_NAME_UNDECORATE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__ReplacesCorHdrNumericDefines = int // stdglobal
+//
+const Qt__COMIMAGE_FLAGS_ILONLY Qt__ReplacesCorHdrNumericDefines = 1
+
+//
+const Qt__COMIMAGE_FLAGS_32BITREQUIRED Qt__ReplacesCorHdrNumericDefines = 2
+
+//
+const Qt__COMIMAGE_FLAGS_IL_LIBRARY Qt__ReplacesCorHdrNumericDefines = 4
+
+//
+const Qt__COMIMAGE_FLAGS_STRONGNAMESIGNED Qt__ReplacesCorHdrNumericDefines = 8
+
+//
+const Qt__COMIMAGE_FLAGS_NATIVE_ENTRYPOINT Qt__ReplacesCorHdrNumericDefines = 16
+
+//
+const Qt__COMIMAGE_FLAGS_TRACKDEBUGDATA Qt__ReplacesCorHdrNumericDefines = 65536
+
+//
+const Qt__COMIMAGE_FLAGS_32BITPREFERRED Qt__ReplacesCorHdrNumericDefines = 131072
+
+//
+const Qt__COR_VERSION_MAJOR_V2 Qt__ReplacesCorHdrNumericDefines = 2
+
+//
+const Qt__COR_VERSION_MAJOR Qt__ReplacesCorHdrNumericDefines = 2
+
+//
+const Qt__COR_VERSION_MINOR Qt__ReplacesCorHdrNumericDefines = 5
+
+//
+const Qt__COR_DELETED_NAME_LENGTH Qt__ReplacesCorHdrNumericDefines = 8
+
+//
+const Qt__COR_VTABLEGAP_NAME_LENGTH Qt__ReplacesCorHdrNumericDefines = 8
+
+//
+const Qt__NATIVE_TYPE_MAX_CB Qt__ReplacesCorHdrNumericDefines = 1
+
+//
+const Qt__COR_ILMETHOD_SECT_SMALL_MAX_DATASIZE Qt__ReplacesCorHdrNumericDefines = 255
+
+//
+const Qt__IMAGE_COR_MIH_METHODRVA Qt__ReplacesCorHdrNumericDefines = 1
+
+//
+const Qt__IMAGE_COR_MIH_EHRVA Qt__ReplacesCorHdrNumericDefines = 2
+
+//
+const Qt__IMAGE_COR_MIH_BASICBLOCK Qt__ReplacesCorHdrNumericDefines = 8
+
+//
+const Qt__COR_VTABLE_32BIT Qt__ReplacesCorHdrNumericDefines = 1
+
+//
+const Qt__COR_VTABLE_64BIT Qt__ReplacesCorHdrNumericDefines = 2
+
+//
+const Qt__COR_VTABLE_FROM_UNMANAGED Qt__ReplacesCorHdrNumericDefines = 4
+
+//
+const Qt__COR_VTABLE_CALL_MOST_DERIVED Qt__ReplacesCorHdrNumericDefines = 16
+
+//
+const Qt__IMAGE_COR_EATJ_THUNK_SIZE Qt__ReplacesCorHdrNumericDefines = 32
+
+//
+const Qt__MAX_CLASS_NAME Qt__ReplacesCorHdrNumericDefines = 1024
+
+//
+const Qt__MAX_PACKAGE_NAME Qt__ReplacesCorHdrNumericDefines = 1024
+
+func ReplacesCorHdrNumericDefinesItemName(val int) string {
+	switch val {
+	case Qt__COMIMAGE_FLAGS_ILONLY: // 1
+		return "COMIMAGE_FLAGS_ILONLY,NATIVE_TYPE_MAX_CB,IMAGE_COR_MIH_METHODRVA,COR_VTABLE_32BIT"
+	case Qt__COMIMAGE_FLAGS_32BITREQUIRED: // 2
+		return "COMIMAGE_FLAGS_32BITREQUIRED,COR_VERSION_MAJOR_V2,COR_VERSION_MAJOR,IMAGE_COR_MIH_EHRVA,COR_VTABLE_64BIT"
+	case Qt__COMIMAGE_FLAGS_IL_LIBRARY: // 4
+		return "COMIMAGE_FLAGS_IL_LIBRARY,COR_VTABLE_FROM_UNMANAGED"
+	case Qt__COMIMAGE_FLAGS_STRONGNAMESIGNED: // 8
+		return "COMIMAGE_FLAGS_STRONGNAMESIGNED,COR_DELETED_NAME_LENGTH,COR_VTABLEGAP_NAME_LENGTH,IMAGE_COR_MIH_BASICBLOCK"
+	case Qt__COMIMAGE_FLAGS_NATIVE_ENTRYPOINT: // 16
+		return "COMIMAGE_FLAGS_NATIVE_ENTRYPOINT,COR_VTABLE_CALL_MOST_DERIVED"
+	case Qt__COMIMAGE_FLAGS_TRACKDEBUGDATA: // 65536
+		return "COMIMAGE_FLAGS_TRACKDEBUGDATA"
+	case Qt__COMIMAGE_FLAGS_32BITPREFERRED: // 131072
+		return "COMIMAGE_FLAGS_32BITPREFERRED"
+		// case Qt__COR_VERSION_MAJOR_V2: // 2
+		// return ""
+		// case Qt__COR_VERSION_MAJOR: // 2
+		// return ""
+	case Qt__COR_VERSION_MINOR: // 5
+		return "COR_VERSION_MINOR"
+		// case Qt__COR_DELETED_NAME_LENGTH: // 8
+		// return ""
+		// case Qt__COR_VTABLEGAP_NAME_LENGTH: // 8
+		// return ""
+		// case Qt__NATIVE_TYPE_MAX_CB: // 1
+		// return ""
+	case Qt__COR_ILMETHOD_SECT_SMALL_MAX_DATASIZE: // 255
+		return "COR_ILMETHOD_SECT_SMALL_MAX_DATASIZE"
+		// case Qt__IMAGE_COR_MIH_METHODRVA: // 1
+		// return ""
+		// case Qt__IMAGE_COR_MIH_EHRVA: // 2
+		// return ""
+		// case Qt__IMAGE_COR_MIH_BASICBLOCK: // 8
+		// return ""
+		// case Qt__COR_VTABLE_32BIT: // 1
+		// return ""
+		// case Qt__COR_VTABLE_64BIT: // 2
+		// return ""
+		// case Qt__COR_VTABLE_FROM_UNMANAGED: // 4
+		// return ""
+		// case Qt__COR_VTABLE_CALL_MOST_DERIVED: // 16
+		// return ""
+	case Qt__IMAGE_COR_EATJ_THUNK_SIZE: // 32
+		return "IMAGE_COR_EATJ_THUNK_SIZE"
+	case Qt__MAX_CLASS_NAME: // 1024
+		return "MAX_CLASS_NAME,MAX_PACKAGE_NAME"
+		// case Qt__MAX_PACKAGE_NAME: // 1024
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___TOKEN_ELEVATION_TYPE = int // stdglobal
+//
+const Qt__TokenElevationTypeDefault Qt___TOKEN_ELEVATION_TYPE = 1
+
+//
+const Qt__TokenElevationTypeFull Qt___TOKEN_ELEVATION_TYPE = 2
+
+//
+const Qt__TokenElevationTypeLimited Qt___TOKEN_ELEVATION_TYPE = 3
+
+func _TOKEN_ELEVATION_TYPEItemName(val int) string {
+	switch val {
+	case Qt__TokenElevationTypeDefault: // 1
+		return "TokenElevationTypeDefault"
+	case Qt__TokenElevationTypeFull: // 2
+		return "TokenElevationTypeFull"
+	case Qt__TokenElevationTypeLimited: // 3
+		return "TokenElevationTypeLimited"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___TOKEN_INFORMATION_CLASS = int // stdglobal
+//
+const Qt__TokenUser Qt___TOKEN_INFORMATION_CLASS = 1
+
+//
+const Qt__TokenGroups Qt___TOKEN_INFORMATION_CLASS = 2
+
+//
+const Qt__TokenPrivileges Qt___TOKEN_INFORMATION_CLASS = 3
+
+//
+const Qt__TokenOwner Qt___TOKEN_INFORMATION_CLASS = 4
+
+//
+const Qt__TokenPrimaryGroup Qt___TOKEN_INFORMATION_CLASS = 5
+
+//
+const Qt__TokenDefaultDacl Qt___TOKEN_INFORMATION_CLASS = 6
+
+//
+const Qt__TokenSource Qt___TOKEN_INFORMATION_CLASS = 7
+
+//
+const Qt__TokenType Qt___TOKEN_INFORMATION_CLASS = 8
+
+//
+const Qt__TokenImpersonationLevel Qt___TOKEN_INFORMATION_CLASS = 9
+
+//
+const Qt__TokenStatistics Qt___TOKEN_INFORMATION_CLASS = 10
+
+//
+const Qt__TokenRestrictedSids Qt___TOKEN_INFORMATION_CLASS = 11
+
+//
+const Qt__TokenSessionId Qt___TOKEN_INFORMATION_CLASS = 12
+
+//
+const Qt__TokenGroupsAndPrivileges Qt___TOKEN_INFORMATION_CLASS = 13
+
+//
+const Qt__TokenSessionReference Qt___TOKEN_INFORMATION_CLASS = 14
+
+//
+const Qt__TokenSandBoxInert Qt___TOKEN_INFORMATION_CLASS = 15
+
+//
+const Qt__TokenAuditPolicy Qt___TOKEN_INFORMATION_CLASS = 16
+
+//
+const Qt__TokenOrigin Qt___TOKEN_INFORMATION_CLASS = 17
+
+//
+const Qt__TokenElevationType Qt___TOKEN_INFORMATION_CLASS = 18
+
+//
+const Qt__TokenLinkedToken Qt___TOKEN_INFORMATION_CLASS = 19
+
+//
+const Qt__TokenElevation Qt___TOKEN_INFORMATION_CLASS = 20
+
+//
+const Qt__TokenHasRestrictions Qt___TOKEN_INFORMATION_CLASS = 21
+
+//
+const Qt__TokenAccessInformation Qt___TOKEN_INFORMATION_CLASS = 22
+
+//
+const Qt__TokenVirtualizationAllowed Qt___TOKEN_INFORMATION_CLASS = 23
+
+//
+const Qt__TokenVirtualizationEnabled Qt___TOKEN_INFORMATION_CLASS = 24
+
+//
+const Qt__TokenIntegrityLevel Qt___TOKEN_INFORMATION_CLASS = 25
+
+//
+const Qt__TokenUIAccess Qt___TOKEN_INFORMATION_CLASS = 26
+
+//
+const Qt__TokenMandatoryPolicy Qt___TOKEN_INFORMATION_CLASS = 27
+
+//
+const Qt__TokenLogonSid Qt___TOKEN_INFORMATION_CLASS = 28
+
+//
+const Qt__TokenIsAppContainer Qt___TOKEN_INFORMATION_CLASS = 29
+
+//
+const Qt__TokenCapabilities Qt___TOKEN_INFORMATION_CLASS = 30
+
+//
+const Qt__TokenAppContainerSid Qt___TOKEN_INFORMATION_CLASS = 31
+
+//
+const Qt__TokenAppContainerNumber Qt___TOKEN_INFORMATION_CLASS = 32
+
+//
+const Qt__TokenUserClaimAttributes Qt___TOKEN_INFORMATION_CLASS = 33
+
+//
+const Qt__TokenDeviceClaimAttributes Qt___TOKEN_INFORMATION_CLASS = 34
+
+//
+const Qt__TokenRestrictedUserClaimAttributes Qt___TOKEN_INFORMATION_CLASS = 35
+
+//
+const Qt__TokenRestrictedDeviceClaimAttributes Qt___TOKEN_INFORMATION_CLASS = 36
+
+//
+const Qt__TokenDeviceGroups Qt___TOKEN_INFORMATION_CLASS = 37
+
+//
+const Qt__TokenRestrictedDeviceGroups Qt___TOKEN_INFORMATION_CLASS = 38
+
+//
+const Qt__TokenSecurityAttributes Qt___TOKEN_INFORMATION_CLASS = 39
+
+//
+const Qt__TokenIsRestricted Qt___TOKEN_INFORMATION_CLASS = 40
+
+//
+const Qt__TokenProcessTrustLevel Qt___TOKEN_INFORMATION_CLASS = 41
+
+//
+const Qt__MaxTokenInfoClass Qt___TOKEN_INFORMATION_CLASS = 42
+
+func _TOKEN_INFORMATION_CLASSItemName(val int) string {
+	switch val {
+	case Qt__TokenUser: // 1
+		return "TokenUser"
+	case Qt__TokenGroups: // 2
+		return "TokenGroups"
+	case Qt__TokenPrivileges: // 3
+		return "TokenPrivileges"
+	case Qt__TokenOwner: // 4
+		return "TokenOwner"
+	case Qt__TokenPrimaryGroup: // 5
+		return "TokenPrimaryGroup"
+	case Qt__TokenDefaultDacl: // 6
+		return "TokenDefaultDacl"
+	case Qt__TokenSource: // 7
+		return "TokenSource"
+	case Qt__TokenType: // 8
+		return "TokenType"
+	case Qt__TokenImpersonationLevel: // 9
+		return "TokenImpersonationLevel"
+	case Qt__TokenStatistics: // 10
+		return "TokenStatistics"
+	case Qt__TokenRestrictedSids: // 11
+		return "TokenRestrictedSids"
+	case Qt__TokenSessionId: // 12
+		return "TokenSessionId"
+	case Qt__TokenGroupsAndPrivileges: // 13
+		return "TokenGroupsAndPrivileges"
+	case Qt__TokenSessionReference: // 14
+		return "TokenSessionReference"
+	case Qt__TokenSandBoxInert: // 15
+		return "TokenSandBoxInert"
+	case Qt__TokenAuditPolicy: // 16
+		return "TokenAuditPolicy"
+	case Qt__TokenOrigin: // 17
+		return "TokenOrigin"
+	case Qt__TokenElevationType: // 18
+		return "TokenElevationType"
+	case Qt__TokenLinkedToken: // 19
+		return "TokenLinkedToken"
+	case Qt__TokenElevation: // 20
+		return "TokenElevation"
+	case Qt__TokenHasRestrictions: // 21
+		return "TokenHasRestrictions"
+	case Qt__TokenAccessInformation: // 22
+		return "TokenAccessInformation"
+	case Qt__TokenVirtualizationAllowed: // 23
+		return "TokenVirtualizationAllowed"
+	case Qt__TokenVirtualizationEnabled: // 24
+		return "TokenVirtualizationEnabled"
+	case Qt__TokenIntegrityLevel: // 25
+		return "TokenIntegrityLevel"
+	case Qt__TokenUIAccess: // 26
+		return "TokenUIAccess"
+	case Qt__TokenMandatoryPolicy: // 27
+		return "TokenMandatoryPolicy"
+	case Qt__TokenLogonSid: // 28
+		return "TokenLogonSid"
+	case Qt__TokenIsAppContainer: // 29
+		return "TokenIsAppContainer"
+	case Qt__TokenCapabilities: // 30
+		return "TokenCapabilities"
+	case Qt__TokenAppContainerSid: // 31
+		return "TokenAppContainerSid"
+	case Qt__TokenAppContainerNumber: // 32
+		return "TokenAppContainerNumber"
+	case Qt__TokenUserClaimAttributes: // 33
+		return "TokenUserClaimAttributes"
+	case Qt__TokenDeviceClaimAttributes: // 34
+		return "TokenDeviceClaimAttributes"
+	case Qt__TokenRestrictedUserClaimAttributes: // 35
+		return "TokenRestrictedUserClaimAttributes"
+	case Qt__TokenRestrictedDeviceClaimAttributes: // 36
+		return "TokenRestrictedDeviceClaimAttributes"
+	case Qt__TokenDeviceGroups: // 37
+		return "TokenDeviceGroups"
+	case Qt__TokenRestrictedDeviceGroups: // 38
+		return "TokenRestrictedDeviceGroups"
+	case Qt__TokenSecurityAttributes: // 39
+		return "TokenSecurityAttributes"
+	case Qt__TokenIsRestricted: // 40
+		return "TokenIsRestricted"
+	case Qt__TokenProcessTrustLevel: // 41
+		return "TokenProcessTrustLevel"
+	case Qt__MaxTokenInfoClass: // 42
+		return "MaxTokenInfoClass"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___ACL_INFORMATION_CLASS = int // stdglobal
+//
+const Qt__AclRevisionInformation Qt___ACL_INFORMATION_CLASS = 1
+
+//
+const Qt__AclSizeInformation Qt___ACL_INFORMATION_CLASS = 2
+
+func _ACL_INFORMATION_CLASSItemName(val int) string {
+	switch val {
+	case Qt__AclRevisionInformation: // 1
+		return "AclRevisionInformation"
+	case Qt__AclSizeInformation: // 2
+		return "AclSizeInformation"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagTOKEN_TYPE = int // stdglobal
+//
+const Qt__TokenPrimary Qt__tagTOKEN_TYPE = 1
+
+//
+const Qt__TokenImpersonation Qt__tagTOKEN_TYPE = 2
+
+func tagTOKEN_TYPEItemName(val int) string {
+	switch val {
+	case Qt__TokenPrimary: // 1
+		return "TokenPrimary"
+	case Qt__TokenImpersonation: // 2
+		return "TokenImpersonation"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___SECURITY_IMPERSONATION_LEVEL = int // stdglobal
+//
+const Qt__SecurityAnonymous Qt___SECURITY_IMPERSONATION_LEVEL = 0
+
+//
+const Qt__SecurityIdentification Qt___SECURITY_IMPERSONATION_LEVEL = 1
+
+//
+const Qt__SecurityImpersonation Qt___SECURITY_IMPERSONATION_LEVEL = 2
+
+//
+const Qt__SecurityDelegation Qt___SECURITY_IMPERSONATION_LEVEL = 3
+
+func _SECURITY_IMPERSONATION_LEVELItemName(val int) string {
+	switch val {
+	case Qt__SecurityAnonymous: // 0
+		return "SecurityAnonymous"
+	case Qt__SecurityIdentification: // 1
+		return "SecurityIdentification"
+	case Qt__SecurityImpersonation: // 2
+		return "SecurityImpersonation"
+	case Qt__SecurityDelegation: // 3
+		return "SecurityDelegation"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagSID_NAME_USE = int // stdglobal
+//
+const Qt__SidTypeUser Qt__tagSID_NAME_USE = 1
+
+//
+const Qt__SidTypeGroup Qt__tagSID_NAME_USE = 2
+
+//
+const Qt__SidTypeDomain Qt__tagSID_NAME_USE = 3
+
+//
+const Qt__SidTypeAlias Qt__tagSID_NAME_USE = 4
+
+//
+const Qt__SidTypeWellKnownGroup Qt__tagSID_NAME_USE = 5
+
+//
+const Qt__SidTypeDeletedAccount Qt__tagSID_NAME_USE = 6
+
+//
+const Qt__SidTypeInvalid Qt__tagSID_NAME_USE = 7
+
+//
+const Qt__SidTypeUnknown Qt__tagSID_NAME_USE = 8
+
+func tagSID_NAME_USEItemName(val int) string {
+	switch val {
+	case Qt__SidTypeUser: // 1
+		return "SidTypeUser"
+	case Qt__SidTypeGroup: // 2
+		return "SidTypeGroup"
+	case Qt__SidTypeDomain: // 3
+		return "SidTypeDomain"
+	case Qt__SidTypeAlias: // 4
+		return "SidTypeAlias"
+	case Qt__SidTypeWellKnownGroup: // 5
+		return "SidTypeWellKnownGroup"
+	case Qt__SidTypeDeletedAccount: // 6
+		return "SidTypeDeletedAccount"
+	case Qt__SidTypeInvalid: // 7
+		return "SidTypeInvalid"
+	case Qt__SidTypeUnknown: // 8
+		return "SidTypeUnknown"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___LATENCY_TIME = int // stdglobal
+//
+const Qt__LT_DONT_CARE Qt___LATENCY_TIME = 0
+
+//
+const Qt__LT_LOWEST_LATENCY Qt___LATENCY_TIME = 1
+
+func _LATENCY_TIMEItemName(val int) string {
+	switch val {
+	case Qt__LT_DONT_CARE: // 0
+		return "LT_DONT_CARE"
+	case Qt__LT_LOWEST_LATENCY: // 1
+		return "LT_LOWEST_LATENCY"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___POWER_ACTION = int // stdglobal
+//
+const Qt__PowerActionNone Qt___POWER_ACTION = 0
+
+//
+const Qt__PowerActionReserved Qt___POWER_ACTION = 1
+
+//
+const Qt__PowerActionSleep Qt___POWER_ACTION = 2
+
+//
+const Qt__PowerActionHibernate Qt___POWER_ACTION = 3
+
+//
+const Qt__PowerActionShutdown Qt___POWER_ACTION = 4
+
+//
+const Qt__PowerActionShutdownReset Qt___POWER_ACTION = 5
+
+//
+const Qt__PowerActionShutdownOff Qt___POWER_ACTION = 6
+
+//
+const Qt__PowerActionWarmEject Qt___POWER_ACTION = 7
+
+func _POWER_ACTIONItemName(val int) string {
+	switch val {
+	case Qt__PowerActionNone: // 0
+		return "PowerActionNone"
+	case Qt__PowerActionReserved: // 1
+		return "PowerActionReserved"
+	case Qt__PowerActionSleep: // 2
+		return "PowerActionSleep"
+	case Qt__PowerActionHibernate: // 3
+		return "PowerActionHibernate"
+	case Qt__PowerActionShutdown: // 4
+		return "PowerActionShutdown"
+	case Qt__PowerActionShutdownReset: // 5
+		return "PowerActionShutdownReset"
+	case Qt__PowerActionShutdownOff: // 6
+		return "PowerActionShutdownOff"
+	case Qt__PowerActionWarmEject: // 7
+		return "PowerActionWarmEject"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___POWER_PLATFORM_ROLE = int // stdglobal
+//
+const Qt__PlatformRoleUnspecified Qt___POWER_PLATFORM_ROLE = 0
+
+//
+const Qt__PlatformRoleDesktop Qt___POWER_PLATFORM_ROLE = 1
+
+//
+const Qt__PlatformRoleMobile Qt___POWER_PLATFORM_ROLE = 2
+
+//
+const Qt__PlatformRoleWorkstation Qt___POWER_PLATFORM_ROLE = 3
+
+//
+const Qt__PlatformRoleEnterpriseServer Qt___POWER_PLATFORM_ROLE = 4
+
+//
+const Qt__PlatformRoleSOHOServer Qt___POWER_PLATFORM_ROLE = 5
+
+//
+const Qt__PlatformRoleAppliancePC Qt___POWER_PLATFORM_ROLE = 6
+
+//
+const Qt__PlatformRolePerformanceServer Qt___POWER_PLATFORM_ROLE = 7
+
+//
+const Qt__PlatformRoleSlate Qt___POWER_PLATFORM_ROLE = 8
+
+//
+const Qt__PlatformRoleMaximum Qt___POWER_PLATFORM_ROLE = 9
+
+func _POWER_PLATFORM_ROLEItemName(val int) string {
+	switch val {
+	case Qt__PlatformRoleUnspecified: // 0
+		return "PlatformRoleUnspecified"
+	case Qt__PlatformRoleDesktop: // 1
+		return "PlatformRoleDesktop"
+	case Qt__PlatformRoleMobile: // 2
+		return "PlatformRoleMobile"
+	case Qt__PlatformRoleWorkstation: // 3
+		return "PlatformRoleWorkstation"
+	case Qt__PlatformRoleEnterpriseServer: // 4
+		return "PlatformRoleEnterpriseServer"
+	case Qt__PlatformRoleSOHOServer: // 5
+		return "PlatformRoleSOHOServer"
+	case Qt__PlatformRoleAppliancePC: // 6
+		return "PlatformRoleAppliancePC"
+	case Qt__PlatformRolePerformanceServer: // 7
+		return "PlatformRolePerformanceServer"
+	case Qt__PlatformRoleSlate: // 8
+		return "PlatformRoleSlate"
+	case Qt__PlatformRoleMaximum: // 9
+		return "PlatformRoleMaximum"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___SYSTEM_POWER_STATE = int // stdglobal
+//
+const Qt__PowerSystemUnspecified Qt___SYSTEM_POWER_STATE = 0
+
+//
+const Qt__PowerSystemWorking Qt___SYSTEM_POWER_STATE = 1
+
+//
+const Qt__PowerSystemSleeping1 Qt___SYSTEM_POWER_STATE = 2
+
+//
+const Qt__PowerSystemSleeping2 Qt___SYSTEM_POWER_STATE = 3
+
+//
+const Qt__PowerSystemSleeping3 Qt___SYSTEM_POWER_STATE = 4
+
+//
+const Qt__PowerSystemHibernate Qt___SYSTEM_POWER_STATE = 5
+
+//
+const Qt__PowerSystemShutdown Qt___SYSTEM_POWER_STATE = 6
+
+//
+const Qt__PowerSystemMaximum Qt___SYSTEM_POWER_STATE = 7
+
+func _SYSTEM_POWER_STATEItemName(val int) string {
+	switch val {
+	case Qt__PowerSystemUnspecified: // 0
+		return "PowerSystemUnspecified"
+	case Qt__PowerSystemWorking: // 1
+		return "PowerSystemWorking"
+	case Qt__PowerSystemSleeping1: // 2
+		return "PowerSystemSleeping1"
+	case Qt__PowerSystemSleeping2: // 3
+		return "PowerSystemSleeping2"
+	case Qt__PowerSystemSleeping3: // 4
+		return "PowerSystemSleeping3"
+	case Qt__PowerSystemHibernate: // 5
+		return "PowerSystemHibernate"
+	case Qt__PowerSystemShutdown: // 6
+		return "PowerSystemShutdown"
+	case Qt__PowerSystemMaximum: // 7
+		return "PowerSystemMaximum"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___DEVICE_POWER_STATE = int // stdglobal
+//
+const Qt__PowerDeviceUnspecified Qt___DEVICE_POWER_STATE = 0
+
+//
+const Qt__PowerDeviceD0 Qt___DEVICE_POWER_STATE = 1
+
+//
+const Qt__PowerDeviceD1 Qt___DEVICE_POWER_STATE = 2
+
+//
+const Qt__PowerDeviceD2 Qt___DEVICE_POWER_STATE = 3
+
+//
+const Qt__PowerDeviceD3 Qt___DEVICE_POWER_STATE = 4
+
+//
+const Qt__PowerDeviceMaximum Qt___DEVICE_POWER_STATE = 5
+
+func _DEVICE_POWER_STATEItemName(val int) string {
+	switch val {
+	case Qt__PowerDeviceUnspecified: // 0
+		return "PowerDeviceUnspecified"
+	case Qt__PowerDeviceD0: // 1
+		return "PowerDeviceD0"
+	case Qt__PowerDeviceD1: // 2
+		return "PowerDeviceD1"
+	case Qt__PowerDeviceD2: // 3
+		return "PowerDeviceD2"
+	case Qt__PowerDeviceD3: // 4
+		return "PowerDeviceD3"
+	case Qt__PowerDeviceMaximum: // 5
+		return "PowerDeviceMaximum"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___POWER_INFORMATION_LEVEL = int // stdglobal
+//
+const Qt__SystemPowerPolicyAc Qt___POWER_INFORMATION_LEVEL = 0
+
+//
+const Qt__SystemPowerPolicyDc Qt___POWER_INFORMATION_LEVEL = 1
+
+//
+const Qt__VerifySystemPolicyAc Qt___POWER_INFORMATION_LEVEL = 2
+
+//
+const Qt__VerifySystemPolicyDc Qt___POWER_INFORMATION_LEVEL = 3
+
+//
+const Qt__SystemPowerCapabilities Qt___POWER_INFORMATION_LEVEL = 4
+
+//
+const Qt__SystemBatteryState Qt___POWER_INFORMATION_LEVEL = 5
+
+//
+const Qt__SystemPowerStateHandler Qt___POWER_INFORMATION_LEVEL = 6
+
+//
+const Qt__ProcessorStateHandler Qt___POWER_INFORMATION_LEVEL = 7
+
+//
+const Qt__SystemPowerPolicyCurrent Qt___POWER_INFORMATION_LEVEL = 8
+
+//
+const Qt__AdministratorPowerPolicy Qt___POWER_INFORMATION_LEVEL = 9
+
+//
+const Qt__SystemReserveHiberFile Qt___POWER_INFORMATION_LEVEL = 10
+
+//
+const Qt__ProcessorInformation Qt___POWER_INFORMATION_LEVEL = 11
+
+//
+const Qt__SystemPowerInformation Qt___POWER_INFORMATION_LEVEL = 12
+
+//
+const Qt__ProcessorStateHandler2 Qt___POWER_INFORMATION_LEVEL = 13
+
+//
+const Qt__LastWakeTime Qt___POWER_INFORMATION_LEVEL = 14
+
+//
+const Qt__LastSleepTime Qt___POWER_INFORMATION_LEVEL = 15
+
+//
+const Qt__SystemExecutionState Qt___POWER_INFORMATION_LEVEL = 16
+
+//
+const Qt__SystemPowerStateNotifyHandler Qt___POWER_INFORMATION_LEVEL = 17
+
+//
+const Qt__ProcessorPowerPolicyAc Qt___POWER_INFORMATION_LEVEL = 18
+
+//
+const Qt__ProcessorPowerPolicyDc Qt___POWER_INFORMATION_LEVEL = 19
+
+//
+const Qt__VerifyProcessorPowerPolicyAc Qt___POWER_INFORMATION_LEVEL = 20
+
+//
+const Qt__VerifyProcessorPowerPolicyDc Qt___POWER_INFORMATION_LEVEL = 21
+
+//
+const Qt__ProcessorPowerPolicyCurrent Qt___POWER_INFORMATION_LEVEL = 22
+
+func _POWER_INFORMATION_LEVELItemName(val int) string {
+	switch val {
+	case Qt__SystemPowerPolicyAc: // 0
+		return "SystemPowerPolicyAc"
+	case Qt__SystemPowerPolicyDc: // 1
+		return "SystemPowerPolicyDc"
+	case Qt__VerifySystemPolicyAc: // 2
+		return "VerifySystemPolicyAc"
+	case Qt__VerifySystemPolicyDc: // 3
+		return "VerifySystemPolicyDc"
+	case Qt__SystemPowerCapabilities: // 4
+		return "SystemPowerCapabilities"
+	case Qt__SystemBatteryState: // 5
+		return "SystemBatteryState"
+	case Qt__SystemPowerStateHandler: // 6
+		return "SystemPowerStateHandler"
+	case Qt__ProcessorStateHandler: // 7
+		return "ProcessorStateHandler"
+	case Qt__SystemPowerPolicyCurrent: // 8
+		return "SystemPowerPolicyCurrent"
+	case Qt__AdministratorPowerPolicy: // 9
+		return "AdministratorPowerPolicy"
+	case Qt__SystemReserveHiberFile: // 10
+		return "SystemReserveHiberFile"
+	case Qt__ProcessorInformation: // 11
+		return "ProcessorInformation"
+	case Qt__SystemPowerInformation: // 12
+		return "SystemPowerInformation"
+	case Qt__ProcessorStateHandler2: // 13
+		return "ProcessorStateHandler2"
+	case Qt__LastWakeTime: // 14
+		return "LastWakeTime"
+	case Qt__LastSleepTime: // 15
+		return "LastSleepTime"
+	case Qt__SystemExecutionState: // 16
+		return "SystemExecutionState"
+	case Qt__SystemPowerStateNotifyHandler: // 17
+		return "SystemPowerStateNotifyHandler"
+	case Qt__ProcessorPowerPolicyAc: // 18
+		return "ProcessorPowerPolicyAc"
+	case Qt__ProcessorPowerPolicyDc: // 19
+		return "ProcessorPowerPolicyDc"
+	case Qt__VerifyProcessorPowerPolicyAc: // 20
+		return "VerifyProcessorPowerPolicyAc"
+	case Qt__VerifyProcessorPowerPolicyDc: // 21
+		return "VerifyProcessorPowerPolicyDc"
+	case Qt__ProcessorPowerPolicyCurrent: // 22
+		return "ProcessorPowerPolicyCurrent"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___CM_SERVICE_NODE_TYPE = int // stdglobal
+//
+const Qt__DriverType Qt___CM_SERVICE_NODE_TYPE = 1
+
+//
+const Qt__FileSystemType Qt___CM_SERVICE_NODE_TYPE = 2
+
+//
+const Qt__Win32ServiceOwnProcess Qt___CM_SERVICE_NODE_TYPE = 16
+
+//
+const Qt__Win32ServiceShareProcess Qt___CM_SERVICE_NODE_TYPE = 32
+
+//
+const Qt__AdapterType Qt___CM_SERVICE_NODE_TYPE = 4
+
+//
+const Qt__RecognizerType Qt___CM_SERVICE_NODE_TYPE = 8
+
+func _CM_SERVICE_NODE_TYPEItemName(val int) string {
+	switch val {
+	case Qt__DriverType: // 1
+		return "DriverType"
+	case Qt__FileSystemType: // 2
+		return "FileSystemType"
+	case Qt__Win32ServiceOwnProcess: // 16
+		return "Win32ServiceOwnProcess"
+	case Qt__Win32ServiceShareProcess: // 32
+		return "Win32ServiceShareProcess"
+	case Qt__AdapterType: // 4
+		return "AdapterType"
+	case Qt__RecognizerType: // 8
+		return "RecognizerType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___CM_SERVICE_LOAD_TYPE = int // stdglobal
+//
+const Qt__BootLoad Qt___CM_SERVICE_LOAD_TYPE = 0
+
+//
+const Qt__SystemLoad Qt___CM_SERVICE_LOAD_TYPE = 1
+
+//
+const Qt__AutoLoad Qt___CM_SERVICE_LOAD_TYPE = 2
+
+//
+const Qt__DemandLoad Qt___CM_SERVICE_LOAD_TYPE = 3
+
+//
+const Qt__DisableLoad Qt___CM_SERVICE_LOAD_TYPE = 4
+
+func _CM_SERVICE_LOAD_TYPEItemName(val int) string {
+	switch val {
+	case Qt__BootLoad: // 0
+		return "BootLoad"
+	case Qt__SystemLoad: // 1
+		return "SystemLoad"
+	case Qt__AutoLoad: // 2
+		return "AutoLoad"
+	case Qt__DemandLoad: // 3
+		return "DemandLoad"
+	case Qt__DisableLoad: // 4
+		return "DisableLoad"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___CM_ERROR_CONTROL_TYPE = int // stdglobal
+//
+const Qt__IgnoreError Qt___CM_ERROR_CONTROL_TYPE = 0
+
+//
+const Qt__NormalError Qt___CM_ERROR_CONTROL_TYPE = 1
+
+//
+const Qt__SevereError Qt___CM_ERROR_CONTROL_TYPE = 2
+
+//
+const Qt__CriticalError Qt___CM_ERROR_CONTROL_TYPE = 3
+
+func _CM_ERROR_CONTROL_TYPEItemName(val int) string {
+	switch val {
+	case Qt__IgnoreError: // 0
+		return "IgnoreError"
+	case Qt__NormalError: // 1
+		return "NormalError"
+	case Qt__SevereError: // 2
+		return "SevereError"
+	case Qt__CriticalError: // 3
+		return "CriticalError"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___ACTIVATION_CONTEXT_INFO_CLASS = int // stdglobal
+//
+const Qt__ActivationContextBasicInformation Qt___ACTIVATION_CONTEXT_INFO_CLASS = 1
+
+//
+const Qt__ActivationContextDetailedInformation Qt___ACTIVATION_CONTEXT_INFO_CLASS = 2
+
+//
+const Qt__AssemblyDetailedInformationInActivationContext Qt___ACTIVATION_CONTEXT_INFO_CLASS = 3
+
+//
+const Qt__FileInformationInAssemblyOfAssemblyInActivationContext Qt___ACTIVATION_CONTEXT_INFO_CLASS = 4
+
+//
+const Qt__RunlevelInformationInActivationContext Qt___ACTIVATION_CONTEXT_INFO_CLASS = 5
+
+//
+const Qt__CompatibilityInformationInActivationContext Qt___ACTIVATION_CONTEXT_INFO_CLASS = 6
+
+//
+const Qt__ActivationContextManifestResourceName Qt___ACTIVATION_CONTEXT_INFO_CLASS = 7
+
+//
+const Qt__MaxActivationContextInfoClass Qt___ACTIVATION_CONTEXT_INFO_CLASS = 8
+
+//
+const Qt__AssemblyDetailedInformationInActivationContxt Qt___ACTIVATION_CONTEXT_INFO_CLASS = 3
+
+//
+const Qt__FileInformationInAssemblyOfAssemblyInActivationContxt Qt___ACTIVATION_CONTEXT_INFO_CLASS = 4
+
+func _ACTIVATION_CONTEXT_INFO_CLASSItemName(val int) string {
+	switch val {
+	case Qt__ActivationContextBasicInformation: // 1
+		return "ActivationContextBasicInformation"
+	case Qt__ActivationContextDetailedInformation: // 2
+		return "ActivationContextDetailedInformation"
+	case Qt__AssemblyDetailedInformationInActivationContext: // 3
+		return "AssemblyDetailedInformationInActivationContext,AssemblyDetailedInformationInActivationContxt"
+	case Qt__FileInformationInAssemblyOfAssemblyInActivationContext: // 4
+		return "FileInformationInAssemblyOfAssemblyInActivationContext,FileInformationInAssemblyOfAssemblyInActivationContxt"
+	case Qt__RunlevelInformationInActivationContext: // 5
+		return "RunlevelInformationInActivationContext"
+	case Qt__CompatibilityInformationInActivationContext: // 6
+		return "CompatibilityInformationInActivationContext"
+	case Qt__ActivationContextManifestResourceName: // 7
+		return "ActivationContextManifestResourceName"
+	case Qt__MaxActivationContextInfoClass: // 8
+		return "MaxActivationContextInfoClass"
+		// case Qt__AssemblyDetailedInformationInActivationContxt: // 3
+		// return ""
+		// case Qt__FileInformationInAssemblyOfAssemblyInActivationContxt: // 4
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___JOBOBJECTINFOCLASS = int // stdglobal
+//
+const Qt__JobObjectBasicAccountingInformation Qt___JOBOBJECTINFOCLASS = 1
+
+//
+const Qt__JobObjectBasicLimitInformation Qt___JOBOBJECTINFOCLASS = 2
+
+//
+const Qt__JobObjectBasicProcessIdList Qt___JOBOBJECTINFOCLASS = 3
+
+//
+const Qt__JobObjectBasicUIRestrictions Qt___JOBOBJECTINFOCLASS = 4
+
+//
+const Qt__JobObjectSecurityLimitInformation Qt___JOBOBJECTINFOCLASS = 5
+
+//
+const Qt__JobObjectEndOfJobTimeInformation Qt___JOBOBJECTINFOCLASS = 6
+
+//
+const Qt__JobObjectAssociateCompletionPortInformation Qt___JOBOBJECTINFOCLASS = 7
+
+//
+const Qt__JobObjectBasicAndIoAccountingInformation Qt___JOBOBJECTINFOCLASS = 8
+
+//
+const Qt__JobObjectExtendedLimitInformation Qt___JOBOBJECTINFOCLASS = 9
+
+//
+const Qt__JobObjectJobSetInformation Qt___JOBOBJECTINFOCLASS = 10
+
+//
+const Qt__MaxJobObjectInfoClass Qt___JOBOBJECTINFOCLASS = 11
+
+func _JOBOBJECTINFOCLASSItemName(val int) string {
+	switch val {
+	case Qt__JobObjectBasicAccountingInformation: // 1
+		return "JobObjectBasicAccountingInformation"
+	case Qt__JobObjectBasicLimitInformation: // 2
+		return "JobObjectBasicLimitInformation"
+	case Qt__JobObjectBasicProcessIdList: // 3
+		return "JobObjectBasicProcessIdList"
+	case Qt__JobObjectBasicUIRestrictions: // 4
+		return "JobObjectBasicUIRestrictions"
+	case Qt__JobObjectSecurityLimitInformation: // 5
+		return "JobObjectSecurityLimitInformation"
+	case Qt__JobObjectEndOfJobTimeInformation: // 6
+		return "JobObjectEndOfJobTimeInformation"
+	case Qt__JobObjectAssociateCompletionPortInformation: // 7
+		return "JobObjectAssociateCompletionPortInformation"
+	case Qt__JobObjectBasicAndIoAccountingInformation: // 8
+		return "JobObjectBasicAndIoAccountingInformation"
+	case Qt__JobObjectExtendedLimitInformation: // 9
+		return "JobObjectExtendedLimitInformation"
+	case Qt__JobObjectJobSetInformation: // 10
+		return "JobObjectJobSetInformation"
+	case Qt__MaxJobObjectInfoClass: // 11
+		return "MaxJobObjectInfoClass"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___LOGICAL_PROCESSOR_RELATIONSHIP = int // stdglobal
+//
+const Qt__RelationProcessorCore Qt___LOGICAL_PROCESSOR_RELATIONSHIP = 0
+
+//
+const Qt__RelationNumaNode Qt___LOGICAL_PROCESSOR_RELATIONSHIP = 1
+
+//
+const Qt__RelationCache Qt___LOGICAL_PROCESSOR_RELATIONSHIP = 2
+
+//
+const Qt__RelationProcessorPackage Qt___LOGICAL_PROCESSOR_RELATIONSHIP = 3
+
+//
+const Qt__RelationGroup Qt___LOGICAL_PROCESSOR_RELATIONSHIP = 4
+
+//
+const Qt__RelationAll Qt___LOGICAL_PROCESSOR_RELATIONSHIP = 65535
+
+func _LOGICAL_PROCESSOR_RELATIONSHIPItemName(val int) string {
+	switch val {
+	case Qt__RelationProcessorCore: // 0
+		return "RelationProcessorCore"
+	case Qt__RelationNumaNode: // 1
+		return "RelationNumaNode"
+	case Qt__RelationCache: // 2
+		return "RelationCache"
+	case Qt__RelationProcessorPackage: // 3
+		return "RelationProcessorPackage"
+	case Qt__RelationGroup: // 4
+		return "RelationGroup"
+	case Qt__RelationAll: // 65535
+		return "RelationAll"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___PROCESSOR_CACHE_TYPE = int // stdglobal
+//
+const Qt__CacheUnified Qt___PROCESSOR_CACHE_TYPE = 0
+
+//
+const Qt__CacheInstruction Qt___PROCESSOR_CACHE_TYPE = 1
+
+//
+const Qt__CacheData Qt___PROCESSOR_CACHE_TYPE = 2
+
+//
+const Qt__CacheTrace Qt___PROCESSOR_CACHE_TYPE = 3
+
+func _PROCESSOR_CACHE_TYPEItemName(val int) string {
+	switch val {
+	case Qt__CacheUnified: // 0
+		return "CacheUnified"
+	case Qt__CacheInstruction: // 1
+		return "CacheInstruction"
+	case Qt__CacheData: // 2
+		return "CacheData"
+	case Qt__CacheTrace: // 3
+		return "CacheTrace"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___TP_CALLBACK_PRIORITY = int // stdglobal
+//
+const Qt__TP_CALLBACK_PRIORITY_HIGH Qt___TP_CALLBACK_PRIORITY = 0
+
+//
+const Qt__TP_CALLBACK_PRIORITY_NORMAL Qt___TP_CALLBACK_PRIORITY = 1
+
+//
+const Qt__TP_CALLBACK_PRIORITY_LOW Qt___TP_CALLBACK_PRIORITY = 2
+
+//
+const Qt__TP_CALLBACK_PRIORITY_INVALID Qt___TP_CALLBACK_PRIORITY = 3
+
+//
+const Qt__TP_CALLBACK_PRIORITY_COUNT Qt___TP_CALLBACK_PRIORITY = 3
+
+func _TP_CALLBACK_PRIORITYItemName(val int) string {
+	switch val {
+	case Qt__TP_CALLBACK_PRIORITY_HIGH: // 0
+		return "TP_CALLBACK_PRIORITY_HIGH"
+	case Qt__TP_CALLBACK_PRIORITY_NORMAL: // 1
+		return "TP_CALLBACK_PRIORITY_NORMAL"
+	case Qt__TP_CALLBACK_PRIORITY_LOW: // 2
+		return "TP_CALLBACK_PRIORITY_LOW"
+	case Qt__TP_CALLBACK_PRIORITY_INVALID: // 3
+		return "TP_CALLBACK_PRIORITY_INVALID,TP_CALLBACK_PRIORITY_COUNT"
+		// case Qt__TP_CALLBACK_PRIORITY_COUNT: // 3
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___RTL_UMS_THREAD_INFO_CLASS = int // stdglobal
+//
+const Qt__UmsThreadInvalidInfoClass Qt___RTL_UMS_THREAD_INFO_CLASS = 0
+
+//
+const Qt__UmsThreadUserContext Qt___RTL_UMS_THREAD_INFO_CLASS = 1
+
+//
+const Qt__UmsThreadPriority Qt___RTL_UMS_THREAD_INFO_CLASS = 2
+
+//
+const Qt__UmsThreadAffinity Qt___RTL_UMS_THREAD_INFO_CLASS = 3
+
+//
+const Qt__UmsThreadTeb Qt___RTL_UMS_THREAD_INFO_CLASS = 4
+
+//
+const Qt__UmsThreadIsSuspended Qt___RTL_UMS_THREAD_INFO_CLASS = 5
+
+//
+const Qt__UmsThreadIsTerminated Qt___RTL_UMS_THREAD_INFO_CLASS = 6
+
+//
+const Qt__UmsThreadMaxInfoClass Qt___RTL_UMS_THREAD_INFO_CLASS = 7
+
+func _RTL_UMS_THREAD_INFO_CLASSItemName(val int) string {
+	switch val {
+	case Qt__UmsThreadInvalidInfoClass: // 0
+		return "UmsThreadInvalidInfoClass"
+	case Qt__UmsThreadUserContext: // 1
+		return "UmsThreadUserContext"
+	case Qt__UmsThreadPriority: // 2
+		return "UmsThreadPriority"
+	case Qt__UmsThreadAffinity: // 3
+		return "UmsThreadAffinity"
+	case Qt__UmsThreadTeb: // 4
+		return "UmsThreadTeb"
+	case Qt__UmsThreadIsSuspended: // 5
+		return "UmsThreadIsSuspended"
+	case Qt__UmsThreadIsTerminated: // 6
+		return "UmsThreadIsTerminated"
+	case Qt__UmsThreadMaxInfoClass: // 7
+		return "UmsThreadMaxInfoClass"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___RTL_UMS_SCHEDULER_REASON = int // stdglobal
+//
+const Qt__UmsSchedulerStartup Qt___RTL_UMS_SCHEDULER_REASON = 0
+
+//
+const Qt__UmsSchedulerThreadBlocked Qt___RTL_UMS_SCHEDULER_REASON = 1
+
+//
+const Qt__UmsSchedulerThreadYield Qt___RTL_UMS_SCHEDULER_REASON = 2
+
+func _RTL_UMS_SCHEDULER_REASONItemName(val int) string {
+	switch val {
+	case Qt__UmsSchedulerStartup: // 0
+		return "UmsSchedulerStartup"
+	case Qt__UmsSchedulerThreadBlocked: // 1
+		return "UmsSchedulerThreadBlocked"
+	case Qt__UmsSchedulerThreadYield: // 2
+		return "UmsSchedulerThreadYield"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__DPI_AWARENESS = int // stdglobal
+//
+const Qt__DPI_AWARENESS_INVALID Qt__DPI_AWARENESS = -1
+
+//
+const Qt__DPI_AWARENESS_UNAWARE Qt__DPI_AWARENESS = 0
+
+//
+const Qt__DPI_AWARENESS_SYSTEM_AWARE Qt__DPI_AWARENESS = 1
+
+//
+const Qt__DPI_AWARENESS_PER_MONITOR_AWARE Qt__DPI_AWARENESS = 2
+
+func DPI_AWARENESSItemName(val int) string {
+	switch val {
+	case Qt__DPI_AWARENESS_INVALID: // -1
+		return "DPI_AWARENESS_INVALID"
+	case Qt__DPI_AWARENESS_UNAWARE: // 0
+		return "DPI_AWARENESS_UNAWARE"
+	case Qt__DPI_AWARENESS_SYSTEM_AWARE: // 1
+		return "DPI_AWARENESS_SYSTEM_AWARE"
+	case Qt__DPI_AWARENESS_PER_MONITOR_AWARE: // 2
+		return "DPI_AWARENESS_PER_MONITOR_AWARE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___FINDEX_INFO_LEVELS = int // stdglobal
+//
+const Qt__FindExInfoStandard Qt___FINDEX_INFO_LEVELS = 0
+
+//
+const Qt__FindExInfoBasic Qt___FINDEX_INFO_LEVELS = 1
+
+//
+const Qt__FindExInfoMaxInfoLevel Qt___FINDEX_INFO_LEVELS = 2
+
+func _FINDEX_INFO_LEVELSItemName(val int) string {
+	switch val {
+	case Qt__FindExInfoStandard: // 0
+		return "FindExInfoStandard"
+	case Qt__FindExInfoBasic: // 1
+		return "FindExInfoBasic"
+	case Qt__FindExInfoMaxInfoLevel: // 2
+		return "FindExInfoMaxInfoLevel"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___FINDEX_SEARCH_OPS = int // stdglobal
+//
+const Qt__FindExSearchNameMatch Qt___FINDEX_SEARCH_OPS = 0
+
+//
+const Qt__FindExSearchLimitToDirectories Qt___FINDEX_SEARCH_OPS = 1
+
+//
+const Qt__FindExSearchLimitToDevices Qt___FINDEX_SEARCH_OPS = 2
+
+//
+const Qt__FindExSearchMaxSearchOp Qt___FINDEX_SEARCH_OPS = 3
+
+func _FINDEX_SEARCH_OPSItemName(val int) string {
+	switch val {
+	case Qt__FindExSearchNameMatch: // 0
+		return "FindExSearchNameMatch"
+	case Qt__FindExSearchLimitToDirectories: // 1
+		return "FindExSearchLimitToDirectories"
+	case Qt__FindExSearchLimitToDevices: // 2
+		return "FindExSearchLimitToDevices"
+	case Qt__FindExSearchMaxSearchOp: // 3
+		return "FindExSearchMaxSearchOp"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___MEMORY_RESOURCE_NOTIFICATION_TYPE = int // stdglobal
+//
+const Qt__LowMemoryResourceNotification Qt___MEMORY_RESOURCE_NOTIFICATION_TYPE = 0
+
+//
+const Qt__HighMemoryResourceNotification Qt___MEMORY_RESOURCE_NOTIFICATION_TYPE = 1
+
+func _MEMORY_RESOURCE_NOTIFICATION_TYPEItemName(val int) string {
+	switch val {
+	case Qt__LowMemoryResourceNotification: // 0
+		return "LowMemoryResourceNotification"
+	case Qt__HighMemoryResourceNotification: // 1
+		return "HighMemoryResourceNotification"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___FILE_ID_TYPE = int // stdglobal
+//
+const Qt__FileIdType Qt___FILE_ID_TYPE = 0
+
+//
+const Qt__ObjectIdType Qt___FILE_ID_TYPE = 1
+
+//
+const Qt__ExtendedFileIdType Qt___FILE_ID_TYPE = 2
+
+//
+const Qt__MaximumFileIdType Qt___FILE_ID_TYPE = 3
+
+func _FILE_ID_TYPEItemName(val int) string {
+	switch val {
+	case Qt__FileIdType: // 0
+		return "FileIdType"
+	case Qt__ObjectIdType: // 1
+		return "ObjectIdType"
+	case Qt__ExtendedFileIdType: // 2
+		return "ExtendedFileIdType"
+	case Qt__MaximumFileIdType: // 3
+		return "MaximumFileIdType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___FILE_INFO_BY_HANDLE_CLASS = int // stdglobal
+//
+const Qt__FileBasicInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 0
+
+//
+const Qt__FileStandardInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 1
+
+//
+const Qt__FileNameInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 2
+
+//
+const Qt__FileRenameInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 3
+
+//
+const Qt__FileDispositionInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 4
+
+//
+const Qt__FileAllocationInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 5
+
+//
+const Qt__FileEndOfFileInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 6
+
+//
+const Qt__FileStreamInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 7
+
+//
+const Qt__FileCompressionInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 8
+
+//
+const Qt__FileAttributeTagInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 9
+
+//
+const Qt__FileIdBothDirectoryInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 10
+
+//
+const Qt__FileIdBothDirectoryRestartInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 11
+
+//
+const Qt__FileIoPriorityHintInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 12
+
+//
+const Qt__FileRemoteProtocolInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 13
+
+//
+const Qt__FileFullDirectoryInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 14
+
+//
+const Qt__FileFullDirectoryRestartInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 15
+
+//
+const Qt__FileStorageInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 16
+
+//
+const Qt__FileAlignmentInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 17
+
+//
+const Qt__FileIdInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 18
+
+//
+const Qt__FileIdExtdDirectoryInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 19
+
+//
+const Qt__FileIdExtdDirectoryRestartInfo Qt___FILE_INFO_BY_HANDLE_CLASS = 20
+
+//
+const Qt__MaximumFileInfoByHandlesClass Qt___FILE_INFO_BY_HANDLE_CLASS = 21
+
+func _FILE_INFO_BY_HANDLE_CLASSItemName(val int) string {
+	switch val {
+	case Qt__FileBasicInfo: // 0
+		return "FileBasicInfo"
+	case Qt__FileStandardInfo: // 1
+		return "FileStandardInfo"
+	case Qt__FileNameInfo: // 2
+		return "FileNameInfo"
+	case Qt__FileRenameInfo: // 3
+		return "FileRenameInfo"
+	case Qt__FileDispositionInfo: // 4
+		return "FileDispositionInfo"
+	case Qt__FileAllocationInfo: // 5
+		return "FileAllocationInfo"
+	case Qt__FileEndOfFileInfo: // 6
+		return "FileEndOfFileInfo"
+	case Qt__FileStreamInfo: // 7
+		return "FileStreamInfo"
+	case Qt__FileCompressionInfo: // 8
+		return "FileCompressionInfo"
+	case Qt__FileAttributeTagInfo: // 9
+		return "FileAttributeTagInfo"
+	case Qt__FileIdBothDirectoryInfo: // 10
+		return "FileIdBothDirectoryInfo"
+	case Qt__FileIdBothDirectoryRestartInfo: // 11
+		return "FileIdBothDirectoryRestartInfo"
+	case Qt__FileIoPriorityHintInfo: // 12
+		return "FileIoPriorityHintInfo"
+	case Qt__FileRemoteProtocolInfo: // 13
+		return "FileRemoteProtocolInfo"
+	case Qt__FileFullDirectoryInfo: // 14
+		return "FileFullDirectoryInfo"
+	case Qt__FileFullDirectoryRestartInfo: // 15
+		return "FileFullDirectoryRestartInfo"
+	case Qt__FileStorageInfo: // 16
+		return "FileStorageInfo"
+	case Qt__FileAlignmentInfo: // 17
+		return "FileAlignmentInfo"
+	case Qt__FileIdInfo: // 18
+		return "FileIdInfo"
+	case Qt__FileIdExtdDirectoryInfo: // 19
+		return "FileIdExtdDirectoryInfo"
+	case Qt__FileIdExtdDirectoryRestartInfo: // 20
+		return "FileIdExtdDirectoryRestartInfo"
+	case Qt__MaximumFileInfoByHandlesClass: // 21
+		return "MaximumFileInfoByHandlesClass"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___PRIORITY_HINT = int // stdglobal
+//
+const Qt__IoPriorityHintVeryLow Qt___PRIORITY_HINT = 0
+
+//
+const Qt__IoPriorityHintLow Qt___PRIORITY_HINT = 1
+
+//
+const Qt__IoPriorityHintNormal Qt___PRIORITY_HINT = 2
+
+//
+const Qt__MaximumIoPriorityHintType Qt___PRIORITY_HINT = 3
+
+func _PRIORITY_HINTItemName(val int) string {
+	switch val {
+	case Qt__IoPriorityHintVeryLow: // 0
+		return "IoPriorityHintVeryLow"
+	case Qt__IoPriorityHintLow: // 1
+		return "IoPriorityHintLow"
+	case Qt__IoPriorityHintNormal: // 2
+		return "IoPriorityHintNormal"
+	case Qt__MaximumIoPriorityHintType: // 3
+		return "MaximumIoPriorityHintType"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___POWER_REQUEST_TYPE = int // stdglobal
+//
+const Qt__PowerRequestDisplayRequired Qt___POWER_REQUEST_TYPE = 0
+
+//
+const Qt__PowerRequestSystemRequired Qt___POWER_REQUEST_TYPE = 1
+
+//
+const Qt__PowerRequestAwayModeRequired Qt___POWER_REQUEST_TYPE = 2
+
+func _POWER_REQUEST_TYPEItemName(val int) string {
+	switch val {
+	case Qt__PowerRequestDisplayRequired: // 0
+		return "PowerRequestDisplayRequired"
+	case Qt__PowerRequestSystemRequired: // 1
+		return "PowerRequestSystemRequired"
+	case Qt__PowerRequestAwayModeRequired: // 2
+		return "PowerRequestAwayModeRequired"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___GET_FILEEX_INFO_LEVELS = int // stdglobal
+//
+const Qt__GetFileExInfoStandard Qt___GET_FILEEX_INFO_LEVELS = 0
+
+func _GET_FILEEX_INFO_LEVELSItemName(val int) string {
+	switch val {
+	case Qt__GetFileExInfoStandard: // 0
+		return "GetFileExInfoStandard"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___COPYFILE2_MESSAGE_TYPE = int // stdglobal
+//
+const Qt__COPYFILE2_CALLBACK_NONE Qt___COPYFILE2_MESSAGE_TYPE = 0
+
+//
+const Qt__COPYFILE2_CALLBACK_CHUNK_STARTED Qt___COPYFILE2_MESSAGE_TYPE = 1
+
+//
+const Qt__COPYFILE2_CALLBACK_CHUNK_FINISHED Qt___COPYFILE2_MESSAGE_TYPE = 2
+
+//
+const Qt__COPYFILE2_CALLBACK_STREAM_STARTED Qt___COPYFILE2_MESSAGE_TYPE = 3
+
+//
+const Qt__COPYFILE2_CALLBACK_STREAM_FINISHED Qt___COPYFILE2_MESSAGE_TYPE = 4
+
+//
+const Qt__COPYFILE2_CALLBACK_POLL_CONTINUE Qt___COPYFILE2_MESSAGE_TYPE = 5
+
+//
+const Qt__COPYFILE2_CALLBACK_ERROR Qt___COPYFILE2_MESSAGE_TYPE = 6
+
+//
+const Qt__COPYFILE2_CALLBACK_MAX Qt___COPYFILE2_MESSAGE_TYPE = 7
+
+func _COPYFILE2_MESSAGE_TYPEItemName(val int) string {
+	switch val {
+	case Qt__COPYFILE2_CALLBACK_NONE: // 0
+		return "COPYFILE2_CALLBACK_NONE"
+	case Qt__COPYFILE2_CALLBACK_CHUNK_STARTED: // 1
+		return "COPYFILE2_CALLBACK_CHUNK_STARTED"
+	case Qt__COPYFILE2_CALLBACK_CHUNK_FINISHED: // 2
+		return "COPYFILE2_CALLBACK_CHUNK_FINISHED"
+	case Qt__COPYFILE2_CALLBACK_STREAM_STARTED: // 3
+		return "COPYFILE2_CALLBACK_STREAM_STARTED"
+	case Qt__COPYFILE2_CALLBACK_STREAM_FINISHED: // 4
+		return "COPYFILE2_CALLBACK_STREAM_FINISHED"
+	case Qt__COPYFILE2_CALLBACK_POLL_CONTINUE: // 5
+		return "COPYFILE2_CALLBACK_POLL_CONTINUE"
+	case Qt__COPYFILE2_CALLBACK_ERROR: // 6
+		return "COPYFILE2_CALLBACK_ERROR"
+	case Qt__COPYFILE2_CALLBACK_MAX: // 7
+		return "COPYFILE2_CALLBACK_MAX"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___COPYFILE2_MESSAGE_ACTION = int // stdglobal
+//
+const Qt__COPYFILE2_PROGRESS_CONTINUE Qt___COPYFILE2_MESSAGE_ACTION = 0
+
+//
+const Qt__COPYFILE2_PROGRESS_CANCEL Qt___COPYFILE2_MESSAGE_ACTION = 1
+
+//
+const Qt__COPYFILE2_PROGRESS_STOP Qt___COPYFILE2_MESSAGE_ACTION = 2
+
+//
+const Qt__COPYFILE2_PROGRESS_QUIET Qt___COPYFILE2_MESSAGE_ACTION = 3
+
+//
+const Qt__COPYFILE2_PROGRESS_PAUSE Qt___COPYFILE2_MESSAGE_ACTION = 4
+
+func _COPYFILE2_MESSAGE_ACTIONItemName(val int) string {
+	switch val {
+	case Qt__COPYFILE2_PROGRESS_CONTINUE: // 0
+		return "COPYFILE2_PROGRESS_CONTINUE"
+	case Qt__COPYFILE2_PROGRESS_CANCEL: // 1
+		return "COPYFILE2_PROGRESS_CANCEL"
+	case Qt__COPYFILE2_PROGRESS_STOP: // 2
+		return "COPYFILE2_PROGRESS_STOP"
+	case Qt__COPYFILE2_PROGRESS_QUIET: // 3
+		return "COPYFILE2_PROGRESS_QUIET"
+	case Qt__COPYFILE2_PROGRESS_PAUSE: // 4
+		return "COPYFILE2_PROGRESS_PAUSE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___COPYFILE2_COPY_PHASE = int // stdglobal
+//
+const Qt__COPYFILE2_PHASE_NONE Qt___COPYFILE2_COPY_PHASE = 0
+
+//
+const Qt__COPYFILE2_PHASE_PREPARE_SOURCE Qt___COPYFILE2_COPY_PHASE = 1
+
+//
+const Qt__COPYFILE2_PHASE_PREPARE_DEST Qt___COPYFILE2_COPY_PHASE = 2
+
+//
+const Qt__COPYFILE2_PHASE_READ_SOURCE Qt___COPYFILE2_COPY_PHASE = 3
+
+//
+const Qt__COPYFILE2_PHASE_WRITE_DESTINATION Qt___COPYFILE2_COPY_PHASE = 4
+
+//
+const Qt__COPYFILE2_PHASE_SERVER_COPY Qt___COPYFILE2_COPY_PHASE = 5
+
+//
+const Qt__COPYFILE2_PHASE_NAMEGRAFT_COPY Qt___COPYFILE2_COPY_PHASE = 6
+
+//
+const Qt__COPYFILE2_PHASE_MAX Qt___COPYFILE2_COPY_PHASE = 7
+
+func _COPYFILE2_COPY_PHASEItemName(val int) string {
+	switch val {
+	case Qt__COPYFILE2_PHASE_NONE: // 0
+		return "COPYFILE2_PHASE_NONE"
+	case Qt__COPYFILE2_PHASE_PREPARE_SOURCE: // 1
+		return "COPYFILE2_PHASE_PREPARE_SOURCE"
+	case Qt__COPYFILE2_PHASE_PREPARE_DEST: // 2
+		return "COPYFILE2_PHASE_PREPARE_DEST"
+	case Qt__COPYFILE2_PHASE_READ_SOURCE: // 3
+		return "COPYFILE2_PHASE_READ_SOURCE"
+	case Qt__COPYFILE2_PHASE_WRITE_DESTINATION: // 4
+		return "COPYFILE2_PHASE_WRITE_DESTINATION"
+	case Qt__COPYFILE2_PHASE_SERVER_COPY: // 5
+		return "COPYFILE2_PHASE_SERVER_COPY"
+	case Qt__COPYFILE2_PHASE_NAMEGRAFT_COPY: // 6
+		return "COPYFILE2_PHASE_NAMEGRAFT_COPY"
+	case Qt__COPYFILE2_PHASE_MAX: // 7
+		return "COPYFILE2_PHASE_MAX"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___COMPUTER_NAME_FORMAT = int // stdglobal
+//
+const Qt__ComputerNameNetBIOS Qt___COMPUTER_NAME_FORMAT = 0
+
+//
+const Qt__ComputerNameDnsHostname Qt___COMPUTER_NAME_FORMAT = 1
+
+//
+const Qt__ComputerNameDnsDomain Qt___COMPUTER_NAME_FORMAT = 2
+
+//
+const Qt__ComputerNameDnsFullyQualified Qt___COMPUTER_NAME_FORMAT = 3
+
+//
+const Qt__ComputerNamePhysicalNetBIOS Qt___COMPUTER_NAME_FORMAT = 4
+
+//
+const Qt__ComputerNamePhysicalDnsHostname Qt___COMPUTER_NAME_FORMAT = 5
+
+//
+const Qt__ComputerNamePhysicalDnsDomain Qt___COMPUTER_NAME_FORMAT = 6
+
+//
+const Qt__ComputerNamePhysicalDnsFullyQualified Qt___COMPUTER_NAME_FORMAT = 7
+
+//
+const Qt__ComputerNameMax Qt___COMPUTER_NAME_FORMAT = 8
+
+func _COMPUTER_NAME_FORMATItemName(val int) string {
+	switch val {
+	case Qt__ComputerNameNetBIOS: // 0
+		return "ComputerNameNetBIOS"
+	case Qt__ComputerNameDnsHostname: // 1
+		return "ComputerNameDnsHostname"
+	case Qt__ComputerNameDnsDomain: // 2
+		return "ComputerNameDnsDomain"
+	case Qt__ComputerNameDnsFullyQualified: // 3
+		return "ComputerNameDnsFullyQualified"
+	case Qt__ComputerNamePhysicalNetBIOS: // 4
+		return "ComputerNamePhysicalNetBIOS"
+	case Qt__ComputerNamePhysicalDnsHostname: // 5
+		return "ComputerNamePhysicalDnsHostname"
+	case Qt__ComputerNamePhysicalDnsDomain: // 6
+		return "ComputerNamePhysicalDnsDomain"
+	case Qt__ComputerNamePhysicalDnsFullyQualified: // 7
+		return "ComputerNamePhysicalDnsFullyQualified"
+	case Qt__ComputerNameMax: // 8
+		return "ComputerNameMax"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___DEP_SYSTEM_POLICY_TYPE = int // stdglobal
+//
+const Qt__AlwaysOff Qt___DEP_SYSTEM_POLICY_TYPE = 0
+
+//
+const Qt__AlwaysOn Qt___DEP_SYSTEM_POLICY_TYPE = 1
+
+//
+const Qt__OptIn Qt___DEP_SYSTEM_POLICY_TYPE = 2
+
+//
+const Qt__OptOut Qt___DEP_SYSTEM_POLICY_TYPE = 3
+
+func _DEP_SYSTEM_POLICY_TYPEItemName(val int) string {
+	switch val {
+	case Qt__AlwaysOff: // 0
+		return "AlwaysOff"
+	case Qt__AlwaysOn: // 1
+		return "AlwaysOn"
+	case Qt__OptIn: // 2
+		return "OptIn"
+	case Qt__OptOut: // 3
+		return "OptOut"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___PROC_THREAD_ATTRIBUTE_NUM = int // stdglobal
+//
+const Qt__ProcThreadAttributeParentProcess Qt___PROC_THREAD_ATTRIBUTE_NUM = 0
+
+//
+const Qt__ProcThreadAttributeHandleList Qt___PROC_THREAD_ATTRIBUTE_NUM = 2
+
+//
+const Qt__ProcThreadAttributeGroupAffinity Qt___PROC_THREAD_ATTRIBUTE_NUM = 3
+
+//
+const Qt__ProcThreadAttributeIdealProcessor Qt___PROC_THREAD_ATTRIBUTE_NUM = 5
+
+//
+const Qt__ProcThreadAttributeUmsThread Qt___PROC_THREAD_ATTRIBUTE_NUM = 6
+
+//
+const Qt__ProcThreadAttributeMitigationPolicy Qt___PROC_THREAD_ATTRIBUTE_NUM = 7
+
+//
+const Qt__ProcThreadAttributeSecurityCapabilities Qt___PROC_THREAD_ATTRIBUTE_NUM = 9
+
+//
+const Qt__ProcThreadAttributeProtectionLevel Qt___PROC_THREAD_ATTRIBUTE_NUM = 11
+
+//
+const Qt__ProcThreadAttributeJobList Qt___PROC_THREAD_ATTRIBUTE_NUM = 13
+
+//
+const Qt__ProcThreadAttributeChildProcessPolicy Qt___PROC_THREAD_ATTRIBUTE_NUM = 14
+
+//
+const Qt__ProcThreadAttributeAllApplicationPackagesPolicy Qt___PROC_THREAD_ATTRIBUTE_NUM = 15
+
+//
+const Qt__ProcThreadAttributeWin32kFilter Qt___PROC_THREAD_ATTRIBUTE_NUM = 16
+
+//
+const Qt__ProcThreadAttributeSafeOpenPromptOriginClaim Qt___PROC_THREAD_ATTRIBUTE_NUM = 17
+
+func _PROC_THREAD_ATTRIBUTE_NUMItemName(val int) string {
+	switch val {
+	case Qt__ProcThreadAttributeParentProcess: // 0
+		return "ProcThreadAttributeParentProcess"
+	case Qt__ProcThreadAttributeHandleList: // 2
+		return "ProcThreadAttributeHandleList"
+	case Qt__ProcThreadAttributeGroupAffinity: // 3
+		return "ProcThreadAttributeGroupAffinity"
+	case Qt__ProcThreadAttributeIdealProcessor: // 5
+		return "ProcThreadAttributeIdealProcessor"
+	case Qt__ProcThreadAttributeUmsThread: // 6
+		return "ProcThreadAttributeUmsThread"
+	case Qt__ProcThreadAttributeMitigationPolicy: // 7
+		return "ProcThreadAttributeMitigationPolicy"
+	case Qt__ProcThreadAttributeSecurityCapabilities: // 9
+		return "ProcThreadAttributeSecurityCapabilities"
+	case Qt__ProcThreadAttributeProtectionLevel: // 11
+		return "ProcThreadAttributeProtectionLevel"
+	case Qt__ProcThreadAttributeJobList: // 13
+		return "ProcThreadAttributeJobList"
+	case Qt__ProcThreadAttributeChildProcessPolicy: // 14
+		return "ProcThreadAttributeChildProcessPolicy"
+	case Qt__ProcThreadAttributeAllApplicationPackagesPolicy: // 15
+		return "ProcThreadAttributeAllApplicationPackagesPolicy"
+	case Qt__ProcThreadAttributeWin32kFilter: // 16
+		return "ProcThreadAttributeWin32kFilter"
+	case Qt__ProcThreadAttributeSafeOpenPromptOriginClaim: // 17
+		return "ProcThreadAttributeSafeOpenPromptOriginClaim"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagAR_STATE = int // stdglobal
+//
+const Qt__AR_ENABLED Qt__tagAR_STATE = 0
+
+//
+const Qt__AR_DISABLED Qt__tagAR_STATE = 1
+
+//
+const Qt__AR_SUPPRESSED Qt__tagAR_STATE = 2
+
+//
+const Qt__AR_REMOTESESSION Qt__tagAR_STATE = 4
+
+//
+const Qt__AR_MULTIMON Qt__tagAR_STATE = 8
+
+//
+const Qt__AR_NOSENSOR Qt__tagAR_STATE = 16
+
+//
+const Qt__AR_NOT_SUPPORTED Qt__tagAR_STATE = 32
+
+//
+const Qt__AR_DOCKED Qt__tagAR_STATE = 64
+
+//
+const Qt__AR_LAPTOP Qt__tagAR_STATE = 128
+
+func tagAR_STATEItemName(val int) string {
+	switch val {
+	case Qt__AR_ENABLED: // 0
+		return "AR_ENABLED"
+	case Qt__AR_DISABLED: // 1
+		return "AR_DISABLED"
+	case Qt__AR_SUPPRESSED: // 2
+		return "AR_SUPPRESSED"
+	case Qt__AR_REMOTESESSION: // 4
+		return "AR_REMOTESESSION"
+	case Qt__AR_MULTIMON: // 8
+		return "AR_MULTIMON"
+	case Qt__AR_NOSENSOR: // 16
+		return "AR_NOSENSOR"
+	case Qt__AR_NOT_SUPPORTED: // 32
+		return "AR_NOT_SUPPORTED"
+	case Qt__AR_DOCKED: // 64
+		return "AR_DOCKED"
+	case Qt__AR_LAPTOP: // 128
+		return "AR_LAPTOP"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__ORIENTATION_PREFERENCE = int // stdglobal
+//
+const Qt__ORIENTATION_PREFERENCE_NONE Qt__ORIENTATION_PREFERENCE = 0
+
+//
+const Qt__ORIENTATION_PREFERENCE_LANDSCAPE Qt__ORIENTATION_PREFERENCE = 1
+
+//
+const Qt__ORIENTATION_PREFERENCE_PORTRAIT Qt__ORIENTATION_PREFERENCE = 2
+
+//
+const Qt__ORIENTATION_PREFERENCE_LANDSCAPE_FLIPPED Qt__ORIENTATION_PREFERENCE = 4
+
+//
+const Qt__ORIENTATION_PREFERENCE_PORTRAIT_FLIPPED Qt__ORIENTATION_PREFERENCE = 8
+
+func ORIENTATION_PREFERENCEItemName(val int) string {
+	switch val {
+	case Qt__ORIENTATION_PREFERENCE_NONE: // 0
+		return "ORIENTATION_PREFERENCE_NONE"
+	case Qt__ORIENTATION_PREFERENCE_LANDSCAPE: // 1
+		return "ORIENTATION_PREFERENCE_LANDSCAPE"
+	case Qt__ORIENTATION_PREFERENCE_PORTRAIT: // 2
+		return "ORIENTATION_PREFERENCE_PORTRAIT"
+	case Qt__ORIENTATION_PREFERENCE_LANDSCAPE_FLIPPED: // 4
+		return "ORIENTATION_PREFERENCE_LANDSCAPE_FLIPPED"
+	case Qt__ORIENTATION_PREFERENCE_PORTRAIT_FLIPPED: // 8
+		return "ORIENTATION_PREFERENCE_PORTRAIT_FLIPPED"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagPOINTER_DEVICE_TYPE = int // stdglobal
+//
+const Qt__POINTER_DEVICE_TYPE_INTEGRATED_PEN Qt__tagPOINTER_DEVICE_TYPE = 1
+
+//
+const Qt__POINTER_DEVICE_TYPE_EXTERNAL_PEN Qt__tagPOINTER_DEVICE_TYPE = 2
+
+//
+const Qt__POINTER_DEVICE_TYPE_TOUCH Qt__tagPOINTER_DEVICE_TYPE = 3
+
+//
+const Qt__POINTER_DEVICE_TYPE_TOUCH_PAD Qt__tagPOINTER_DEVICE_TYPE = 4
+
+//
+const Qt__POINTER_DEVICE_TYPE_MAX Qt__tagPOINTER_DEVICE_TYPE = -1
+
+func tagPOINTER_DEVICE_TYPEItemName(val int) string {
+	switch val {
+	case Qt__POINTER_DEVICE_TYPE_INTEGRATED_PEN: // 1
+		return "POINTER_DEVICE_TYPE_INTEGRATED_PEN"
+	case Qt__POINTER_DEVICE_TYPE_EXTERNAL_PEN: // 2
+		return "POINTER_DEVICE_TYPE_EXTERNAL_PEN"
+	case Qt__POINTER_DEVICE_TYPE_TOUCH: // 3
+		return "POINTER_DEVICE_TYPE_TOUCH"
+	case Qt__POINTER_DEVICE_TYPE_TOUCH_PAD: // 4
+		return "POINTER_DEVICE_TYPE_TOUCH_PAD"
+	case Qt__POINTER_DEVICE_TYPE_MAX: // -1
+		return "POINTER_DEVICE_TYPE_MAX"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagPOINTER_INPUT_TYPE = int // stdglobal
+//
+const Qt__PT_POINTER Qt__tagPOINTER_INPUT_TYPE = 1
+
+//
+const Qt__PT_TOUCH Qt__tagPOINTER_INPUT_TYPE = 2
+
+//
+const Qt__PT_PEN Qt__tagPOINTER_INPUT_TYPE = 3
+
+//
+const Qt__PT_MOUSE Qt__tagPOINTER_INPUT_TYPE = 4
+
+//
+const Qt__PT_TOUCHPAD Qt__tagPOINTER_INPUT_TYPE = 5
+
+func tagPOINTER_INPUT_TYPEItemName(val int) string {
+	switch val {
+	case Qt__PT_POINTER: // 1
+		return "PT_POINTER"
+	case Qt__PT_TOUCH: // 2
+		return "PT_TOUCH"
+	case Qt__PT_PEN: // 3
+		return "PT_PEN"
+	case Qt__PT_MOUSE: // 4
+		return "PT_MOUSE"
+	case Qt__PT_TOUCHPAD: // 5
+		return "PT_TOUCHPAD"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___NORM_FORM = int // stdglobal
+//
+const Qt__NormalizationOther Qt___NORM_FORM = 0
+
+//
+const Qt__NormalizationC Qt___NORM_FORM = 1
+
+//
+const Qt__NormalizationD Qt___NORM_FORM = 2
+
+//
+const Qt__NormalizationKC Qt___NORM_FORM = 5
+
+//
+const Qt__NormalizationKD Qt___NORM_FORM = 6
+
+func _NORM_FORMItemName(val int) string {
+	switch val {
+	case Qt__NormalizationOther: // 0
+		return "NormalizationOther"
+	case Qt__NormalizationC: // 1
+		return "NormalizationC"
+	case Qt__NormalizationD: // 2
+		return "NormalizationD"
+	case Qt__NormalizationKC: // 5
+		return "NormalizationKC"
+	case Qt__NormalizationKD: // 6
+		return "NormalizationKD"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__SYSGEOTYPE = int // stdglobal
+//
+const Qt__GEO_NATION Qt__SYSGEOTYPE = 1
+
+//
+const Qt__GEO_LATITUDE Qt__SYSGEOTYPE = 2
+
+//
+const Qt__GEO_LONGITUDE Qt__SYSGEOTYPE = 3
+
+//
+const Qt__GEO_ISO2 Qt__SYSGEOTYPE = 4
+
+//
+const Qt__GEO_ISO3 Qt__SYSGEOTYPE = 5
+
+//
+const Qt__GEO_RFC1766 Qt__SYSGEOTYPE = 6
+
+//
+const Qt__GEO_LCID Qt__SYSGEOTYPE = 7
+
+//
+const Qt__GEO_FRIENDLYNAME Qt__SYSGEOTYPE = 8
+
+//
+const Qt__GEO_OFFICIALNAME Qt__SYSGEOTYPE = 9
+
+//
+const Qt__GEO_TIMEZONES Qt__SYSGEOTYPE = 10
+
+//
+const Qt__GEO_OFFICIALLANGUAGES Qt__SYSGEOTYPE = 11
+
+//
+const Qt__GEO_ISO_UN_NUMBER Qt__SYSGEOTYPE = 12
+
+//
+const Qt__GEO_PARENT Qt__SYSGEOTYPE = 13
+
+//
+const Qt__GEO_DIALINGCODE Qt__SYSGEOTYPE = 14
+
+//
+const Qt__GEO_CURRENCYCODE Qt__SYSGEOTYPE = 15
+
+//
+const Qt__GEO_CURRENCYSYMBOL Qt__SYSGEOTYPE = 16
+
+//
+const Qt__GEO_NAME Qt__SYSGEOTYPE = 17
+
+//
+const Qt__GEO_ID Qt__SYSGEOTYPE = 18
+
+func SYSGEOTYPEItemName(val int) string {
+	switch val {
+	case Qt__GEO_NATION: // 1
+		return "GEO_NATION"
+	case Qt__GEO_LATITUDE: // 2
+		return "GEO_LATITUDE"
+	case Qt__GEO_LONGITUDE: // 3
+		return "GEO_LONGITUDE"
+	case Qt__GEO_ISO2: // 4
+		return "GEO_ISO2"
+	case Qt__GEO_ISO3: // 5
+		return "GEO_ISO3"
+	case Qt__GEO_RFC1766: // 6
+		return "GEO_RFC1766"
+	case Qt__GEO_LCID: // 7
+		return "GEO_LCID"
+	case Qt__GEO_FRIENDLYNAME: // 8
+		return "GEO_FRIENDLYNAME"
+	case Qt__GEO_OFFICIALNAME: // 9
+		return "GEO_OFFICIALNAME"
+	case Qt__GEO_TIMEZONES: // 10
+		return "GEO_TIMEZONES"
+	case Qt__GEO_OFFICIALLANGUAGES: // 11
+		return "GEO_OFFICIALLANGUAGES"
+	case Qt__GEO_ISO_UN_NUMBER: // 12
+		return "GEO_ISO_UN_NUMBER"
+	case Qt__GEO_PARENT: // 13
+		return "GEO_PARENT"
+	case Qt__GEO_DIALINGCODE: // 14
+		return "GEO_DIALINGCODE"
+	case Qt__GEO_CURRENCYCODE: // 15
+		return "GEO_CURRENCYCODE"
+	case Qt__GEO_CURRENCYSYMBOL: // 16
+		return "GEO_CURRENCYSYMBOL"
+	case Qt__GEO_NAME: // 17
+		return "GEO_NAME"
+	case Qt__GEO_ID: // 18
+		return "GEO_ID"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__SYSGEOCLASS = int // stdglobal
+//
+const Qt__GEOCLASS_REGION Qt__SYSGEOCLASS = 14
+
+//
+const Qt__GEOCLASS_NATION Qt__SYSGEOCLASS = 16
+
+func SYSGEOCLASSItemName(val int) string {
+	switch val {
+	case Qt__GEOCLASS_REGION: // 14
+		return "GEOCLASS_REGION"
+	case Qt__GEOCLASS_NATION: // 16
+		return "GEOCLASS_NATION"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
 type Qt__tagExtendedErrorParamTypes = int // stdglobal
 //
 const Qt__eeptAnsiString Qt__tagExtendedErrorParamTypes = 1
@@ -9076,6 +11427,5141 @@ func _RPC_ASYNC_EVENTItemName(val int) string {
 		return "RpcClientDisconnect"
 	case Qt__RpcClientCancel: // 4
 		return "RpcClientCancel"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__SHSTOCKICONID = int // stdglobal
+//
+const Qt__SIID_INVALID Qt__SHSTOCKICONID = -1
+
+//
+const Qt__SIID_DOCNOASSOC Qt__SHSTOCKICONID = 0
+
+//
+const Qt__SIID_DOCASSOC Qt__SHSTOCKICONID = 1
+
+//
+const Qt__SIID_APPLICATION Qt__SHSTOCKICONID = 2
+
+//
+const Qt__SIID_FOLDER Qt__SHSTOCKICONID = 3
+
+//
+const Qt__SIID_FOLDEROPEN Qt__SHSTOCKICONID = 4
+
+//
+const Qt__SIID_DRIVE525 Qt__SHSTOCKICONID = 5
+
+//
+const Qt__SIID_DRIVE35 Qt__SHSTOCKICONID = 6
+
+//
+const Qt__SIID_DRIVERREMOVE Qt__SHSTOCKICONID = 7
+
+//
+const Qt__SIID_DRIVERFIXED Qt__SHSTOCKICONID = 8
+
+//
+const Qt__SIID_DRIVERNET Qt__SHSTOCKICONID = 9
+
+//
+const Qt__SIID_DRIVERNETDISABLE Qt__SHSTOCKICONID = 10
+
+//
+const Qt__SIID_DRIVERCD Qt__SHSTOCKICONID = 11
+
+//
+const Qt__SIID_DRIVERRAM Qt__SHSTOCKICONID = 12
+
+//
+const Qt__SIID_WORLD Qt__SHSTOCKICONID = 13
+
+//
+const Qt__SIID_SERVER Qt__SHSTOCKICONID = 15
+
+//
+const Qt__SIID_PRINTER Qt__SHSTOCKICONID = 16
+
+//
+const Qt__SIID_MYNETWORK Qt__SHSTOCKICONID = 17
+
+//
+const Qt__SIID_FIND Qt__SHSTOCKICONID = 22
+
+//
+const Qt__SIID_HELP Qt__SHSTOCKICONID = 23
+
+//
+const Qt__SIID_SHARE Qt__SHSTOCKICONID = 28
+
+//
+const Qt__SIID_LINK Qt__SHSTOCKICONID = 29
+
+//
+const Qt__SIID_SLOWFILE Qt__SHSTOCKICONID = 30
+
+//
+const Qt__SIID_RECYCLER Qt__SHSTOCKICONID = 31
+
+//
+const Qt__SIID_RECYCLERFULL Qt__SHSTOCKICONID = 32
+
+//
+const Qt__SIID_MEDIACDAUDIO Qt__SHSTOCKICONID = 40
+
+//
+const Qt__SIID_LOCK Qt__SHSTOCKICONID = 47
+
+//
+const Qt__SIID_AUTOLIST Qt__SHSTOCKICONID = 49
+
+//
+const Qt__SIID_PRINTERNET Qt__SHSTOCKICONID = 50
+
+//
+const Qt__SIID_SERVERSHARE Qt__SHSTOCKICONID = 51
+
+//
+const Qt__SIID_PRINTERFAX Qt__SHSTOCKICONID = 52
+
+//
+const Qt__SIID_PRINTERFAXNET Qt__SHSTOCKICONID = 53
+
+//
+const Qt__SIID_PRINTERFILE Qt__SHSTOCKICONID = 54
+
+//
+const Qt__SIID_STACK Qt__SHSTOCKICONID = 55
+
+//
+const Qt__SIID_MEDIASVCD Qt__SHSTOCKICONID = 56
+
+//
+const Qt__SIID_STUFFEDFOLDER Qt__SHSTOCKICONID = 57
+
+//
+const Qt__SIID_DRIVEUNKNOWN Qt__SHSTOCKICONID = 58
+
+//
+const Qt__SIID_DRIVEDVD Qt__SHSTOCKICONID = 59
+
+//
+const Qt__SIID_MEDIADVD Qt__SHSTOCKICONID = 60
+
+//
+const Qt__SIID_MEDIADVDRAM Qt__SHSTOCKICONID = 61
+
+//
+const Qt__SIID_MEDIADVDRW Qt__SHSTOCKICONID = 62
+
+//
+const Qt__SIID_MEDIADVDR Qt__SHSTOCKICONID = 63
+
+//
+const Qt__SIID_MEDIADVDROM Qt__SHSTOCKICONID = 64
+
+//
+const Qt__SIID_MEDIACDAUDIOPLUS Qt__SHSTOCKICONID = 65
+
+//
+const Qt__SIID_MEDIACDRW Qt__SHSTOCKICONID = 66
+
+//
+const Qt__SIID_MEDIACDR Qt__SHSTOCKICONID = 67
+
+//
+const Qt__SIID_MEDIACDBURN Qt__SHSTOCKICONID = 68
+
+//
+const Qt__SIID_MEDIABLANKCD Qt__SHSTOCKICONID = 69
+
+//
+const Qt__SIID_MEDIACDROM Qt__SHSTOCKICONID = 70
+
+//
+const Qt__SIID_AUDIOFILES Qt__SHSTOCKICONID = 71
+
+//
+const Qt__SIID_IMAGEFILES Qt__SHSTOCKICONID = 72
+
+//
+const Qt__SIID_VIDEOFILES Qt__SHSTOCKICONID = 73
+
+//
+const Qt__SIID_MIXEDFILES Qt__SHSTOCKICONID = 74
+
+//
+const Qt__SIID_FOLDERBACK Qt__SHSTOCKICONID = 75
+
+//
+const Qt__SIID_FOLDERFRONT Qt__SHSTOCKICONID = 76
+
+//
+const Qt__SIID_SHIELD Qt__SHSTOCKICONID = 77
+
+//
+const Qt__SIID_WARNING Qt__SHSTOCKICONID = 78
+
+//
+const Qt__SIID_INFO Qt__SHSTOCKICONID = 79
+
+//
+const Qt__SIID_ERROR Qt__SHSTOCKICONID = 80
+
+//
+const Qt__SIID_KEY Qt__SHSTOCKICONID = 81
+
+//
+const Qt__SIID_SOFTWARE Qt__SHSTOCKICONID = 82
+
+//
+const Qt__SIID_RENAME Qt__SHSTOCKICONID = 83
+
+//
+const Qt__SIID_DELETE Qt__SHSTOCKICONID = 84
+
+//
+const Qt__SIID_MEDIAAUDIODVD Qt__SHSTOCKICONID = 85
+
+//
+const Qt__SIID_MEDIAMOVIEDVD Qt__SHSTOCKICONID = 86
+
+//
+const Qt__SIID_MEDIAENHANCEDCD Qt__SHSTOCKICONID = 87
+
+//
+const Qt__SIID_MEDIAENHANCEDDVD Qt__SHSTOCKICONID = 88
+
+//
+const Qt__SIID_MEDIAHDDVD Qt__SHSTOCKICONID = 89
+
+//
+const Qt__SIID_MEDIABLUERAY Qt__SHSTOCKICONID = 90
+
+//
+const Qt__SIID_MEDIAVCD Qt__SHSTOCKICONID = 91
+
+//
+const Qt__SIID_MEDIADVDPLUSR Qt__SHSTOCKICONID = 92
+
+//
+const Qt__SIID_MEDIADVDPLUSRW Qt__SHSTOCKICONID = 93
+
+//
+const Qt__SIID_DESKTOPPC Qt__SHSTOCKICONID = 94
+
+//
+const Qt__SIID_MOBILEPC Qt__SHSTOCKICONID = 95
+
+//
+const Qt__SIID_USERS Qt__SHSTOCKICONID = 96
+
+//
+const Qt__SIID_MEDIASMARTMEDIA Qt__SHSTOCKICONID = 97
+
+//
+const Qt__SIID_MEDIACOMPACTFLASH Qt__SHSTOCKICONID = 98
+
+//
+const Qt__SIID_DEVICECELLPHONE Qt__SHSTOCKICONID = 99
+
+//
+const Qt__SIID_DEVICECAMERA Qt__SHSTOCKICONID = 100
+
+//
+const Qt__SIID_DEVICEVIDEOCAMERA Qt__SHSTOCKICONID = 101
+
+//
+const Qt__SIID_DEVICEAUDIOPLAYER Qt__SHSTOCKICONID = 102
+
+//
+const Qt__SIID_NETWORKCONNECT Qt__SHSTOCKICONID = 103
+
+//
+const Qt__SIID_INTERNET Qt__SHSTOCKICONID = 104
+
+//
+const Qt__SIID_ZIPFILE Qt__SHSTOCKICONID = 105
+
+//
+const Qt__SIID_SETTINGS Qt__SHSTOCKICONID = 106
+
+//
+const Qt__SIID_DRIVEHDDVD Qt__SHSTOCKICONID = 132
+
+//
+const Qt__SIID_DRIVEBD Qt__SHSTOCKICONID = 133
+
+//
+const Qt__SIID_MEDIAHDDVDROM Qt__SHSTOCKICONID = 134
+
+//
+const Qt__SIID_MEDIAHDDVDR Qt__SHSTOCKICONID = 135
+
+//
+const Qt__SIID_MEDIAHDDVDRAM Qt__SHSTOCKICONID = 136
+
+//
+const Qt__SIID_MEDIABDROM Qt__SHSTOCKICONID = 137
+
+//
+const Qt__SIID_MEDIABDR Qt__SHSTOCKICONID = 138
+
+//
+const Qt__SIID_MEDIABDRE Qt__SHSTOCKICONID = 139
+
+//
+const Qt__SIID_CLUSTEREDDRIVE Qt__SHSTOCKICONID = 140
+
+//
+const Qt__SIID_MAX_ICONS Qt__SHSTOCKICONID = 181
+
+func SHSTOCKICONIDItemName(val int) string {
+	switch val {
+	case Qt__SIID_INVALID: // -1
+		return "SIID_INVALID"
+	case Qt__SIID_DOCNOASSOC: // 0
+		return "SIID_DOCNOASSOC"
+	case Qt__SIID_DOCASSOC: // 1
+		return "SIID_DOCASSOC"
+	case Qt__SIID_APPLICATION: // 2
+		return "SIID_APPLICATION"
+	case Qt__SIID_FOLDER: // 3
+		return "SIID_FOLDER"
+	case Qt__SIID_FOLDEROPEN: // 4
+		return "SIID_FOLDEROPEN"
+	case Qt__SIID_DRIVE525: // 5
+		return "SIID_DRIVE525"
+	case Qt__SIID_DRIVE35: // 6
+		return "SIID_DRIVE35"
+	case Qt__SIID_DRIVERREMOVE: // 7
+		return "SIID_DRIVERREMOVE"
+	case Qt__SIID_DRIVERFIXED: // 8
+		return "SIID_DRIVERFIXED"
+	case Qt__SIID_DRIVERNET: // 9
+		return "SIID_DRIVERNET"
+	case Qt__SIID_DRIVERNETDISABLE: // 10
+		return "SIID_DRIVERNETDISABLE"
+	case Qt__SIID_DRIVERCD: // 11
+		return "SIID_DRIVERCD"
+	case Qt__SIID_DRIVERRAM: // 12
+		return "SIID_DRIVERRAM"
+	case Qt__SIID_WORLD: // 13
+		return "SIID_WORLD"
+	case Qt__SIID_SERVER: // 15
+		return "SIID_SERVER"
+	case Qt__SIID_PRINTER: // 16
+		return "SIID_PRINTER"
+	case Qt__SIID_MYNETWORK: // 17
+		return "SIID_MYNETWORK"
+	case Qt__SIID_FIND: // 22
+		return "SIID_FIND"
+	case Qt__SIID_HELP: // 23
+		return "SIID_HELP"
+	case Qt__SIID_SHARE: // 28
+		return "SIID_SHARE"
+	case Qt__SIID_LINK: // 29
+		return "SIID_LINK"
+	case Qt__SIID_SLOWFILE: // 30
+		return "SIID_SLOWFILE"
+	case Qt__SIID_RECYCLER: // 31
+		return "SIID_RECYCLER"
+	case Qt__SIID_RECYCLERFULL: // 32
+		return "SIID_RECYCLERFULL"
+	case Qt__SIID_MEDIACDAUDIO: // 40
+		return "SIID_MEDIACDAUDIO"
+	case Qt__SIID_LOCK: // 47
+		return "SIID_LOCK"
+	case Qt__SIID_AUTOLIST: // 49
+		return "SIID_AUTOLIST"
+	case Qt__SIID_PRINTERNET: // 50
+		return "SIID_PRINTERNET"
+	case Qt__SIID_SERVERSHARE: // 51
+		return "SIID_SERVERSHARE"
+	case Qt__SIID_PRINTERFAX: // 52
+		return "SIID_PRINTERFAX"
+	case Qt__SIID_PRINTERFAXNET: // 53
+		return "SIID_PRINTERFAXNET"
+	case Qt__SIID_PRINTERFILE: // 54
+		return "SIID_PRINTERFILE"
+	case Qt__SIID_STACK: // 55
+		return "SIID_STACK"
+	case Qt__SIID_MEDIASVCD: // 56
+		return "SIID_MEDIASVCD"
+	case Qt__SIID_STUFFEDFOLDER: // 57
+		return "SIID_STUFFEDFOLDER"
+	case Qt__SIID_DRIVEUNKNOWN: // 58
+		return "SIID_DRIVEUNKNOWN"
+	case Qt__SIID_DRIVEDVD: // 59
+		return "SIID_DRIVEDVD"
+	case Qt__SIID_MEDIADVD: // 60
+		return "SIID_MEDIADVD"
+	case Qt__SIID_MEDIADVDRAM: // 61
+		return "SIID_MEDIADVDRAM"
+	case Qt__SIID_MEDIADVDRW: // 62
+		return "SIID_MEDIADVDRW"
+	case Qt__SIID_MEDIADVDR: // 63
+		return "SIID_MEDIADVDR"
+	case Qt__SIID_MEDIADVDROM: // 64
+		return "SIID_MEDIADVDROM"
+	case Qt__SIID_MEDIACDAUDIOPLUS: // 65
+		return "SIID_MEDIACDAUDIOPLUS"
+	case Qt__SIID_MEDIACDRW: // 66
+		return "SIID_MEDIACDRW"
+	case Qt__SIID_MEDIACDR: // 67
+		return "SIID_MEDIACDR"
+	case Qt__SIID_MEDIACDBURN: // 68
+		return "SIID_MEDIACDBURN"
+	case Qt__SIID_MEDIABLANKCD: // 69
+		return "SIID_MEDIABLANKCD"
+	case Qt__SIID_MEDIACDROM: // 70
+		return "SIID_MEDIACDROM"
+	case Qt__SIID_AUDIOFILES: // 71
+		return "SIID_AUDIOFILES"
+	case Qt__SIID_IMAGEFILES: // 72
+		return "SIID_IMAGEFILES"
+	case Qt__SIID_VIDEOFILES: // 73
+		return "SIID_VIDEOFILES"
+	case Qt__SIID_MIXEDFILES: // 74
+		return "SIID_MIXEDFILES"
+	case Qt__SIID_FOLDERBACK: // 75
+		return "SIID_FOLDERBACK"
+	case Qt__SIID_FOLDERFRONT: // 76
+		return "SIID_FOLDERFRONT"
+	case Qt__SIID_SHIELD: // 77
+		return "SIID_SHIELD"
+	case Qt__SIID_WARNING: // 78
+		return "SIID_WARNING"
+	case Qt__SIID_INFO: // 79
+		return "SIID_INFO"
+	case Qt__SIID_ERROR: // 80
+		return "SIID_ERROR"
+	case Qt__SIID_KEY: // 81
+		return "SIID_KEY"
+	case Qt__SIID_SOFTWARE: // 82
+		return "SIID_SOFTWARE"
+	case Qt__SIID_RENAME: // 83
+		return "SIID_RENAME"
+	case Qt__SIID_DELETE: // 84
+		return "SIID_DELETE"
+	case Qt__SIID_MEDIAAUDIODVD: // 85
+		return "SIID_MEDIAAUDIODVD"
+	case Qt__SIID_MEDIAMOVIEDVD: // 86
+		return "SIID_MEDIAMOVIEDVD"
+	case Qt__SIID_MEDIAENHANCEDCD: // 87
+		return "SIID_MEDIAENHANCEDCD"
+	case Qt__SIID_MEDIAENHANCEDDVD: // 88
+		return "SIID_MEDIAENHANCEDDVD"
+	case Qt__SIID_MEDIAHDDVD: // 89
+		return "SIID_MEDIAHDDVD"
+	case Qt__SIID_MEDIABLUERAY: // 90
+		return "SIID_MEDIABLUERAY"
+	case Qt__SIID_MEDIAVCD: // 91
+		return "SIID_MEDIAVCD"
+	case Qt__SIID_MEDIADVDPLUSR: // 92
+		return "SIID_MEDIADVDPLUSR"
+	case Qt__SIID_MEDIADVDPLUSRW: // 93
+		return "SIID_MEDIADVDPLUSRW"
+	case Qt__SIID_DESKTOPPC: // 94
+		return "SIID_DESKTOPPC"
+	case Qt__SIID_MOBILEPC: // 95
+		return "SIID_MOBILEPC"
+	case Qt__SIID_USERS: // 96
+		return "SIID_USERS"
+	case Qt__SIID_MEDIASMARTMEDIA: // 97
+		return "SIID_MEDIASMARTMEDIA"
+	case Qt__SIID_MEDIACOMPACTFLASH: // 98
+		return "SIID_MEDIACOMPACTFLASH"
+	case Qt__SIID_DEVICECELLPHONE: // 99
+		return "SIID_DEVICECELLPHONE"
+	case Qt__SIID_DEVICECAMERA: // 100
+		return "SIID_DEVICECAMERA"
+	case Qt__SIID_DEVICEVIDEOCAMERA: // 101
+		return "SIID_DEVICEVIDEOCAMERA"
+	case Qt__SIID_DEVICEAUDIOPLAYER: // 102
+		return "SIID_DEVICEAUDIOPLAYER"
+	case Qt__SIID_NETWORKCONNECT: // 103
+		return "SIID_NETWORKCONNECT"
+	case Qt__SIID_INTERNET: // 104
+		return "SIID_INTERNET"
+	case Qt__SIID_ZIPFILE: // 105
+		return "SIID_ZIPFILE"
+	case Qt__SIID_SETTINGS: // 106
+		return "SIID_SETTINGS"
+	case Qt__SIID_DRIVEHDDVD: // 132
+		return "SIID_DRIVEHDDVD"
+	case Qt__SIID_DRIVEBD: // 133
+		return "SIID_DRIVEBD"
+	case Qt__SIID_MEDIAHDDVDROM: // 134
+		return "SIID_MEDIAHDDVDROM"
+	case Qt__SIID_MEDIAHDDVDR: // 135
+		return "SIID_MEDIAHDDVDR"
+	case Qt__SIID_MEDIAHDDVDRAM: // 136
+		return "SIID_MEDIAHDDVDRAM"
+	case Qt__SIID_MEDIABDROM: // 137
+		return "SIID_MEDIABDROM"
+	case Qt__SIID_MEDIABDR: // 138
+		return "SIID_MEDIABDR"
+	case Qt__SIID_MEDIABDRE: // 139
+		return "SIID_MEDIABDRE"
+	case Qt__SIID_CLUSTEREDDRIVE: // 140
+		return "SIID_CLUSTEREDDRIVE"
+	case Qt__SIID_MAX_ICONS: // 181
+		return "SIID_MAX_ICONS"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagMEMCTX = int // stdglobal
+//
+const Qt__MEMCTX_TASK Qt__tagMEMCTX = 1
+
+//
+const Qt__MEMCTX_SHARED Qt__tagMEMCTX = 2
+
+//
+const Qt__MEMCTX_MACSYSTEM Qt__tagMEMCTX = 3
+
+//
+const Qt__MEMCTX_UNKNOWN Qt__tagMEMCTX = -1
+
+//
+const Qt__MEMCTX_SAME Qt__tagMEMCTX = -2
+
+func tagMEMCTXItemName(val int) string {
+	switch val {
+	case Qt__MEMCTX_TASK: // 1
+		return "MEMCTX_TASK"
+	case Qt__MEMCTX_SHARED: // 2
+		return "MEMCTX_SHARED"
+	case Qt__MEMCTX_MACSYSTEM: // 3
+		return "MEMCTX_MACSYSTEM"
+	case Qt__MEMCTX_UNKNOWN: // -1
+		return "MEMCTX_UNKNOWN"
+	case Qt__MEMCTX_SAME: // -2
+		return "MEMCTX_SAME"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagCLSCTX = int // stdglobal
+//
+const Qt__CLSCTX_INPROC_SERVER Qt__tagCLSCTX = 1
+
+//
+const Qt__CLSCTX_INPROC_HANDLER Qt__tagCLSCTX = 2
+
+//
+const Qt__CLSCTX_LOCAL_SERVER Qt__tagCLSCTX = 4
+
+//
+const Qt__CLSCTX_INPROC_SERVER16 Qt__tagCLSCTX = 8
+
+//
+const Qt__CLSCTX_REMOTE_SERVER Qt__tagCLSCTX = 16
+
+//
+const Qt__CLSCTX_INPROC_HANDLER16 Qt__tagCLSCTX = 32
+
+//
+const Qt__CLSCTX_INPROC_SERVERX86 Qt__tagCLSCTX = 64
+
+//
+const Qt__CLSCTX_INPROC_HANDLERX86 Qt__tagCLSCTX = 128
+
+//
+const Qt__CLSCTX_ESERVER_HANDLER Qt__tagCLSCTX = 256
+
+//
+const Qt__CLSCTX_NO_CODE_DOWNLOAD Qt__tagCLSCTX = 1024
+
+//
+const Qt__CLSCTX_NO_CUSTOM_MARSHAL Qt__tagCLSCTX = 4096
+
+//
+const Qt__CLSCTX_ENABLE_CODE_DOWNLOAD Qt__tagCLSCTX = 8192
+
+//
+const Qt__CLSCTX_NO_FAILURE_LOG Qt__tagCLSCTX = 16384
+
+//
+const Qt__CLSCTX_DISABLE_AAA Qt__tagCLSCTX = 32768
+
+//
+const Qt__CLSCTX_ENABLE_AAA Qt__tagCLSCTX = 65536
+
+//
+const Qt__CLSCTX_FROM_DEFAULT_CONTEXT Qt__tagCLSCTX = 131072
+
+func tagCLSCTXItemName(val int) string {
+	switch val {
+	case Qt__CLSCTX_INPROC_SERVER: // 1
+		return "CLSCTX_INPROC_SERVER"
+	case Qt__CLSCTX_INPROC_HANDLER: // 2
+		return "CLSCTX_INPROC_HANDLER"
+	case Qt__CLSCTX_LOCAL_SERVER: // 4
+		return "CLSCTX_LOCAL_SERVER"
+	case Qt__CLSCTX_INPROC_SERVER16: // 8
+		return "CLSCTX_INPROC_SERVER16"
+	case Qt__CLSCTX_REMOTE_SERVER: // 16
+		return "CLSCTX_REMOTE_SERVER"
+	case Qt__CLSCTX_INPROC_HANDLER16: // 32
+		return "CLSCTX_INPROC_HANDLER16"
+	case Qt__CLSCTX_INPROC_SERVERX86: // 64
+		return "CLSCTX_INPROC_SERVERX86"
+	case Qt__CLSCTX_INPROC_HANDLERX86: // 128
+		return "CLSCTX_INPROC_HANDLERX86"
+	case Qt__CLSCTX_ESERVER_HANDLER: // 256
+		return "CLSCTX_ESERVER_HANDLER"
+	case Qt__CLSCTX_NO_CODE_DOWNLOAD: // 1024
+		return "CLSCTX_NO_CODE_DOWNLOAD"
+	case Qt__CLSCTX_NO_CUSTOM_MARSHAL: // 4096
+		return "CLSCTX_NO_CUSTOM_MARSHAL"
+	case Qt__CLSCTX_ENABLE_CODE_DOWNLOAD: // 8192
+		return "CLSCTX_ENABLE_CODE_DOWNLOAD"
+	case Qt__CLSCTX_NO_FAILURE_LOG: // 16384
+		return "CLSCTX_NO_FAILURE_LOG"
+	case Qt__CLSCTX_DISABLE_AAA: // 32768
+		return "CLSCTX_DISABLE_AAA"
+	case Qt__CLSCTX_ENABLE_AAA: // 65536
+		return "CLSCTX_ENABLE_AAA"
+	case Qt__CLSCTX_FROM_DEFAULT_CONTEXT: // 131072
+		return "CLSCTX_FROM_DEFAULT_CONTEXT"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagMSHLFLAGS = int // stdglobal
+//
+const Qt__MSHLFLAGS_NORMAL Qt__tagMSHLFLAGS = 0
+
+//
+const Qt__MSHLFLAGS_TABLESTRONG Qt__tagMSHLFLAGS = 1
+
+//
+const Qt__MSHLFLAGS_TABLEWEAK Qt__tagMSHLFLAGS = 2
+
+//
+const Qt__MSHLFLAGS_NOPING Qt__tagMSHLFLAGS = 4
+
+func tagMSHLFLAGSItemName(val int) string {
+	switch val {
+	case Qt__MSHLFLAGS_NORMAL: // 0
+		return "MSHLFLAGS_NORMAL"
+	case Qt__MSHLFLAGS_TABLESTRONG: // 1
+		return "MSHLFLAGS_TABLESTRONG"
+	case Qt__MSHLFLAGS_TABLEWEAK: // 2
+		return "MSHLFLAGS_TABLEWEAK"
+	case Qt__MSHLFLAGS_NOPING: // 4
+		return "MSHLFLAGS_NOPING"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagMSHCTX = int // stdglobal
+//
+const Qt__MSHCTX_LOCAL Qt__tagMSHCTX = 0
+
+//
+const Qt__MSHCTX_NOSHAREDMEM Qt__tagMSHCTX = 1
+
+//
+const Qt__MSHCTX_DIFFERENTMACHINE Qt__tagMSHCTX = 2
+
+//
+const Qt__MSHCTX_INPROC Qt__tagMSHCTX = 3
+
+//
+const Qt__MSHCTX_CROSSCTX Qt__tagMSHCTX = 4
+
+func tagMSHCTXItemName(val int) string {
+	switch val {
+	case Qt__MSHCTX_LOCAL: // 0
+		return "MSHCTX_LOCAL"
+	case Qt__MSHCTX_NOSHAREDMEM: // 1
+		return "MSHCTX_NOSHAREDMEM"
+	case Qt__MSHCTX_DIFFERENTMACHINE: // 2
+		return "MSHCTX_DIFFERENTMACHINE"
+	case Qt__MSHCTX_INPROC: // 3
+		return "MSHCTX_INPROC"
+	case Qt__MSHCTX_CROSSCTX: // 4
+		return "MSHCTX_CROSSCTX"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagDVASPECT = int // stdglobal
+//
+const Qt__DVASPECT_CONTENT Qt__tagDVASPECT = 1
+
+//
+const Qt__DVASPECT_THUMBNAIL Qt__tagDVASPECT = 2
+
+//
+const Qt__DVASPECT_ICON Qt__tagDVASPECT = 4
+
+//
+const Qt__DVASPECT_DOCPRINT Qt__tagDVASPECT = 8
+
+func tagDVASPECTItemName(val int) string {
+	switch val {
+	case Qt__DVASPECT_CONTENT: // 1
+		return "DVASPECT_CONTENT"
+	case Qt__DVASPECT_THUMBNAIL: // 2
+		return "DVASPECT_THUMBNAIL"
+	case Qt__DVASPECT_ICON: // 4
+		return "DVASPECT_ICON"
+	case Qt__DVASPECT_DOCPRINT: // 8
+		return "DVASPECT_DOCPRINT"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagSTGC = int // stdglobal
+//
+const Qt__STGC_DEFAULT Qt__tagSTGC = 0
+
+//
+const Qt__STGC_OVERWRITE Qt__tagSTGC = 1
+
+//
+const Qt__STGC_ONLYIFCURRENT Qt__tagSTGC = 2
+
+//
+const Qt__STGC_DANGEROUSLYCOMMITMERELYTODISKCACHE Qt__tagSTGC = 4
+
+//
+const Qt__STGC_CONSOLIDATE Qt__tagSTGC = 8
+
+func tagSTGCItemName(val int) string {
+	switch val {
+	case Qt__STGC_DEFAULT: // 0
+		return "STGC_DEFAULT"
+	case Qt__STGC_OVERWRITE: // 1
+		return "STGC_OVERWRITE"
+	case Qt__STGC_ONLYIFCURRENT: // 2
+		return "STGC_ONLYIFCURRENT"
+	case Qt__STGC_DANGEROUSLYCOMMITMERELYTODISKCACHE: // 4
+		return "STGC_DANGEROUSLYCOMMITMERELYTODISKCACHE"
+	case Qt__STGC_CONSOLIDATE: // 8
+		return "STGC_CONSOLIDATE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagSTGMOVE = int // stdglobal
+//
+const Qt__STGMOVE_MOVE Qt__tagSTGMOVE = 0
+
+//
+const Qt__STGMOVE_COPY Qt__tagSTGMOVE = 1
+
+//
+const Qt__STGMOVE_SHALLOWCOPY Qt__tagSTGMOVE = 2
+
+func tagSTGMOVEItemName(val int) string {
+	switch val {
+	case Qt__STGMOVE_MOVE: // 0
+		return "STGMOVE_MOVE"
+	case Qt__STGMOVE_COPY: // 1
+		return "STGMOVE_COPY"
+	case Qt__STGMOVE_SHALLOWCOPY: // 2
+		return "STGMOVE_SHALLOWCOPY"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagSTATFLAG = int // stdglobal
+//
+const Qt__STATFLAG_DEFAULT Qt__tagSTATFLAG = 0
+
+//
+const Qt__STATFLAG_NONAME Qt__tagSTATFLAG = 1
+
+//
+const Qt__STATFLAG_NOOPEN Qt__tagSTATFLAG = 2
+
+func tagSTATFLAGItemName(val int) string {
+	switch val {
+	case Qt__STATFLAG_DEFAULT: // 0
+		return "STATFLAG_DEFAULT"
+	case Qt__STATFLAG_NONAME: // 1
+		return "STATFLAG_NONAME"
+	case Qt__STATFLAG_NOOPEN: // 2
+		return "STATFLAG_NOOPEN"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__VARENUM = int // stdglobal
+//
+const Qt__VT_EMPTY Qt__VARENUM = 0
+
+//
+const Qt__VT_NULL Qt__VARENUM = 1
+
+//
+const Qt__VT_I2 Qt__VARENUM = 2
+
+//
+const Qt__VT_I4 Qt__VARENUM = 3
+
+//
+const Qt__VT_R4 Qt__VARENUM = 4
+
+//
+const Qt__VT_R8 Qt__VARENUM = 5
+
+//
+const Qt__VT_CY Qt__VARENUM = 6
+
+//
+const Qt__VT_DATE Qt__VARENUM = 7
+
+//
+const Qt__VT_BSTR Qt__VARENUM = 8
+
+//
+const Qt__VT_DISPATCH Qt__VARENUM = 9
+
+//
+const Qt__VT_ERROR Qt__VARENUM = 10
+
+//
+const Qt__VT_BOOL Qt__VARENUM = 11
+
+//
+const Qt__VT_VARIANT Qt__VARENUM = 12
+
+//
+const Qt__VT_UNKNOWN Qt__VARENUM = 13
+
+//
+const Qt__VT_DECIMAL Qt__VARENUM = 14
+
+//
+const Qt__VT_I1 Qt__VARENUM = 16
+
+//
+const Qt__VT_UI1 Qt__VARENUM = 17
+
+//
+const Qt__VT_UI2 Qt__VARENUM = 18
+
+//
+const Qt__VT_UI4 Qt__VARENUM = 19
+
+//
+const Qt__VT_I8 Qt__VARENUM = 20
+
+//
+const Qt__VT_UI8 Qt__VARENUM = 21
+
+//
+const Qt__VT_INT Qt__VARENUM = 22
+
+//
+const Qt__VT_UINT Qt__VARENUM = 23
+
+//
+const Qt__VT_VOID Qt__VARENUM = 24
+
+//
+const Qt__VT_HRESULT Qt__VARENUM = 25
+
+//
+const Qt__VT_PTR Qt__VARENUM = 26
+
+//
+const Qt__VT_SAFEARRAY Qt__VARENUM = 27
+
+//
+const Qt__VT_CARRAY Qt__VARENUM = 28
+
+//
+const Qt__VT_USERDEFINED Qt__VARENUM = 29
+
+//
+const Qt__VT_LPSTR Qt__VARENUM = 30
+
+//
+const Qt__VT_LPWSTR Qt__VARENUM = 31
+
+//
+const Qt__VT_RECORD Qt__VARENUM = 36
+
+//
+const Qt__VT_INT_PTR Qt__VARENUM = 37
+
+//
+const Qt__VT_UINT_PTR Qt__VARENUM = 38
+
+//
+const Qt__VT_FILETIME Qt__VARENUM = 64
+
+//
+const Qt__VT_BLOB Qt__VARENUM = 65
+
+//
+const Qt__VT_STREAM Qt__VARENUM = 66
+
+//
+const Qt__VT_STORAGE Qt__VARENUM = 67
+
+//
+const Qt__VT_STREAMED_OBJECT Qt__VARENUM = 68
+
+//
+const Qt__VT_STORED_OBJECT Qt__VARENUM = 69
+
+//
+const Qt__VT_BLOB_OBJECT Qt__VARENUM = 70
+
+//
+const Qt__VT_CF Qt__VARENUM = 71
+
+//
+const Qt__VT_CLSID Qt__VARENUM = 72
+
+//
+const Qt__VT_VERSIONED_STREAM Qt__VARENUM = 73
+
+//
+const Qt__VT_BSTR_BLOB Qt__VARENUM = 4095
+
+//
+const Qt__VT_VECTOR Qt__VARENUM = 4096
+
+//
+const Qt__VT_ARRAY Qt__VARENUM = 8192
+
+//
+const Qt__VT_BYREF Qt__VARENUM = 16384
+
+//
+const Qt__VT_RESERVED Qt__VARENUM = 32768
+
+//
+const Qt__VT_ILLEGAL Qt__VARENUM = 65535
+
+//
+const Qt__VT_ILLEGALMASKED Qt__VARENUM = 4095
+
+//
+const Qt__VT_TYPEMASK Qt__VARENUM = 4095
+
+func VARENUMItemName(val int) string {
+	switch val {
+	case Qt__VT_EMPTY: // 0
+		return "VT_EMPTY"
+	case Qt__VT_NULL: // 1
+		return "VT_NULL"
+	case Qt__VT_I2: // 2
+		return "VT_I2"
+	case Qt__VT_I4: // 3
+		return "VT_I4"
+	case Qt__VT_R4: // 4
+		return "VT_R4"
+	case Qt__VT_R8: // 5
+		return "VT_R8"
+	case Qt__VT_CY: // 6
+		return "VT_CY"
+	case Qt__VT_DATE: // 7
+		return "VT_DATE"
+	case Qt__VT_BSTR: // 8
+		return "VT_BSTR"
+	case Qt__VT_DISPATCH: // 9
+		return "VT_DISPATCH"
+	case Qt__VT_ERROR: // 10
+		return "VT_ERROR"
+	case Qt__VT_BOOL: // 11
+		return "VT_BOOL"
+	case Qt__VT_VARIANT: // 12
+		return "VT_VARIANT"
+	case Qt__VT_UNKNOWN: // 13
+		return "VT_UNKNOWN"
+	case Qt__VT_DECIMAL: // 14
+		return "VT_DECIMAL"
+	case Qt__VT_I1: // 16
+		return "VT_I1"
+	case Qt__VT_UI1: // 17
+		return "VT_UI1"
+	case Qt__VT_UI2: // 18
+		return "VT_UI2"
+	case Qt__VT_UI4: // 19
+		return "VT_UI4"
+	case Qt__VT_I8: // 20
+		return "VT_I8"
+	case Qt__VT_UI8: // 21
+		return "VT_UI8"
+	case Qt__VT_INT: // 22
+		return "VT_INT"
+	case Qt__VT_UINT: // 23
+		return "VT_UINT"
+	case Qt__VT_VOID: // 24
+		return "VT_VOID"
+	case Qt__VT_HRESULT: // 25
+		return "VT_HRESULT"
+	case Qt__VT_PTR: // 26
+		return "VT_PTR"
+	case Qt__VT_SAFEARRAY: // 27
+		return "VT_SAFEARRAY"
+	case Qt__VT_CARRAY: // 28
+		return "VT_CARRAY"
+	case Qt__VT_USERDEFINED: // 29
+		return "VT_USERDEFINED"
+	case Qt__VT_LPSTR: // 30
+		return "VT_LPSTR"
+	case Qt__VT_LPWSTR: // 31
+		return "VT_LPWSTR"
+	case Qt__VT_RECORD: // 36
+		return "VT_RECORD"
+	case Qt__VT_INT_PTR: // 37
+		return "VT_INT_PTR"
+	case Qt__VT_UINT_PTR: // 38
+		return "VT_UINT_PTR"
+	case Qt__VT_FILETIME: // 64
+		return "VT_FILETIME"
+	case Qt__VT_BLOB: // 65
+		return "VT_BLOB"
+	case Qt__VT_STREAM: // 66
+		return "VT_STREAM"
+	case Qt__VT_STORAGE: // 67
+		return "VT_STORAGE"
+	case Qt__VT_STREAMED_OBJECT: // 68
+		return "VT_STREAMED_OBJECT"
+	case Qt__VT_STORED_OBJECT: // 69
+		return "VT_STORED_OBJECT"
+	case Qt__VT_BLOB_OBJECT: // 70
+		return "VT_BLOB_OBJECT"
+	case Qt__VT_CF: // 71
+		return "VT_CF"
+	case Qt__VT_CLSID: // 72
+		return "VT_CLSID"
+	case Qt__VT_VERSIONED_STREAM: // 73
+		return "VT_VERSIONED_STREAM"
+	case Qt__VT_BSTR_BLOB: // 4095
+		return "VT_BSTR_BLOB,VT_ILLEGALMASKED,VT_TYPEMASK"
+	case Qt__VT_VECTOR: // 4096
+		return "VT_VECTOR"
+	case Qt__VT_ARRAY: // 8192
+		return "VT_ARRAY"
+	case Qt__VT_BYREF: // 16384
+		return "VT_BYREF"
+	case Qt__VT_RESERVED: // 32768
+		return "VT_RESERVED"
+	case Qt__VT_ILLEGAL: // 65535
+		return "VT_ILLEGAL"
+		// case Qt__VT_ILLEGALMASKED: // 4095
+		// return ""
+		// case Qt__VT_TYPEMASK: // 4095
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagTYSPEC = int // stdglobal
+//
+const Qt__TYSPEC_CLSID Qt__tagTYSPEC = 0
+
+//
+const Qt__TYSPEC_FILEEXT Qt__tagTYSPEC = 1
+
+//
+const Qt__TYSPEC_MIMETYPE Qt__tagTYSPEC = 2
+
+//
+const Qt__TYSPEC_PROGID Qt__tagTYSPEC = 3
+
+//
+const Qt__TYSPEC_FILENAME Qt__tagTYSPEC = 4
+
+//
+const Qt__TYSPEC_PACKAGENAME Qt__tagTYSPEC = 5
+
+//
+const Qt__TYSPEC_OBJECTID Qt__tagTYSPEC = 6
+
+func tagTYSPECItemName(val int) string {
+	switch val {
+	case Qt__TYSPEC_CLSID: // 0
+		return "TYSPEC_CLSID"
+	case Qt__TYSPEC_FILEEXT: // 1
+		return "TYSPEC_FILEEXT"
+	case Qt__TYSPEC_MIMETYPE: // 2
+		return "TYSPEC_MIMETYPE"
+	case Qt__TYSPEC_PROGID: // 3
+		return "TYSPEC_PROGID"
+	case Qt__TYSPEC_FILENAME: // 4
+		return "TYSPEC_FILENAME"
+	case Qt__TYSPEC_PACKAGENAME: // 5
+		return "TYSPEC_PACKAGENAME"
+	case Qt__TYSPEC_OBJECTID: // 6
+		return "TYSPEC_OBJECTID"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagEXTCONN = int // stdglobal
+//
+const Qt__EXTCONN_STRONG Qt__tagEXTCONN = 1
+
+//
+const Qt__EXTCONN_WEAK Qt__tagEXTCONN = 2
+
+//
+const Qt__EXTCONN_CALLABLE Qt__tagEXTCONN = 4
+
+func tagEXTCONNItemName(val int) string {
+	switch val {
+	case Qt__EXTCONN_STRONG: // 1
+		return "EXTCONN_STRONG"
+	case Qt__EXTCONN_WEAK: // 2
+		return "EXTCONN_WEAK"
+	case Qt__EXTCONN_CALLABLE: // 4
+		return "EXTCONN_CALLABLE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagBIND_FLAGS = int // stdglobal
+//
+const Qt__BIND_MAYBOTHERUSER Qt__tagBIND_FLAGS = 1
+
+//
+const Qt__BIND_JUSTTESTEXISTENCE Qt__tagBIND_FLAGS = 2
+
+func tagBIND_FLAGSItemName(val int) string {
+	switch val {
+	case Qt__BIND_MAYBOTHERUSER: // 1
+		return "BIND_MAYBOTHERUSER"
+	case Qt__BIND_JUSTTESTEXISTENCE: // 2
+		return "BIND_JUSTTESTEXISTENCE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagMKSYS = int // stdglobal
+//
+const Qt__MKSYS_NONE Qt__tagMKSYS = 0
+
+//
+const Qt__MKSYS_GENERICCOMPOSITE Qt__tagMKSYS = 1
+
+//
+const Qt__MKSYS_FILEMONIKER Qt__tagMKSYS = 2
+
+//
+const Qt__MKSYS_ANTIMONIKER Qt__tagMKSYS = 3
+
+//
+const Qt__MKSYS_ITEMMONIKER Qt__tagMKSYS = 4
+
+//
+const Qt__MKSYS_POINTERMONIKER Qt__tagMKSYS = 5
+
+//
+const Qt__MKSYS_CLASSMONIKER Qt__tagMKSYS = 7
+
+func tagMKSYSItemName(val int) string {
+	switch val {
+	case Qt__MKSYS_NONE: // 0
+		return "MKSYS_NONE"
+	case Qt__MKSYS_GENERICCOMPOSITE: // 1
+		return "MKSYS_GENERICCOMPOSITE"
+	case Qt__MKSYS_FILEMONIKER: // 2
+		return "MKSYS_FILEMONIKER"
+	case Qt__MKSYS_ANTIMONIKER: // 3
+		return "MKSYS_ANTIMONIKER"
+	case Qt__MKSYS_ITEMMONIKER: // 4
+		return "MKSYS_ITEMMONIKER"
+	case Qt__MKSYS_POINTERMONIKER: // 5
+		return "MKSYS_POINTERMONIKER"
+	case Qt__MKSYS_CLASSMONIKER: // 7
+		return "MKSYS_CLASSMONIKER"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagMKREDUCE = int // stdglobal
+//
+const Qt__MKRREDUCE_ONE Qt__tagMKREDUCE = 196608
+
+//
+const Qt__MKRREDUCE_TOUSER Qt__tagMKREDUCE = 131072
+
+//
+const Qt__MKRREDUCE_THROUGHUSER Qt__tagMKREDUCE = 65536
+
+//
+const Qt__MKRREDUCE_ALL Qt__tagMKREDUCE = 0
+
+func tagMKREDUCEItemName(val int) string {
+	switch val {
+	case Qt__MKRREDUCE_ONE: // 196608
+		return "MKRREDUCE_ONE"
+	case Qt__MKRREDUCE_TOUSER: // 131072
+		return "MKRREDUCE_TOUSER"
+	case Qt__MKRREDUCE_THROUGHUSER: // 65536
+		return "MKRREDUCE_THROUGHUSER"
+	case Qt__MKRREDUCE_ALL: // 0
+		return "MKRREDUCE_ALL"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagSTGTY = int // stdglobal
+//
+const Qt__STGTY_STORAGE Qt__tagSTGTY = 1
+
+//
+const Qt__STGTY_STREAM Qt__tagSTGTY = 2
+
+//
+const Qt__STGTY_LOCKBYTES Qt__tagSTGTY = 3
+
+//
+const Qt__STGTY_PROPERTY Qt__tagSTGTY = 4
+
+func tagSTGTYItemName(val int) string {
+	switch val {
+	case Qt__STGTY_STORAGE: // 1
+		return "STGTY_STORAGE"
+	case Qt__STGTY_STREAM: // 2
+		return "STGTY_STREAM"
+	case Qt__STGTY_LOCKBYTES: // 3
+		return "STGTY_LOCKBYTES"
+	case Qt__STGTY_PROPERTY: // 4
+		return "STGTY_PROPERTY"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagSTREAM_SEEK = int // stdglobal
+//
+const Qt__STREAM_SEEK_SET Qt__tagSTREAM_SEEK = 0
+
+//
+const Qt__STREAM_SEEK_CUR Qt__tagSTREAM_SEEK = 1
+
+//
+const Qt__STREAM_SEEK_END Qt__tagSTREAM_SEEK = 2
+
+func tagSTREAM_SEEKItemName(val int) string {
+	switch val {
+	case Qt__STREAM_SEEK_SET: // 0
+		return "STREAM_SEEK_SET"
+	case Qt__STREAM_SEEK_CUR: // 1
+		return "STREAM_SEEK_CUR"
+	case Qt__STREAM_SEEK_END: // 2
+		return "STREAM_SEEK_END"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagLOCKTYPE = int // stdglobal
+//
+const Qt__LOCK_WRITE Qt__tagLOCKTYPE = 1
+
+//
+const Qt__LOCK_EXCLUSIVE Qt__tagLOCKTYPE = 2
+
+//
+const Qt__LOCK_ONLYONCE Qt__tagLOCKTYPE = 4
+
+func tagLOCKTYPEItemName(val int) string {
+	switch val {
+	case Qt__LOCK_WRITE: // 1
+		return "LOCK_WRITE"
+	case Qt__LOCK_EXCLUSIVE: // 2
+		return "LOCK_EXCLUSIVE"
+	case Qt__LOCK_ONLYONCE: // 4
+		return "LOCK_ONLYONCE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagADVF = int // stdglobal
+//
+const Qt__ADVF_NODATA Qt__tagADVF = 1
+
+//
+const Qt__ADVF_PRIMEFIRST Qt__tagADVF = 2
+
+//
+const Qt__ADVF_ONLYONCE Qt__tagADVF = 4
+
+//
+const Qt__ADVF_DATAONSTOP Qt__tagADVF = 64
+
+//
+const Qt__ADVFCACHE_NOHANDLER Qt__tagADVF = 8
+
+//
+const Qt__ADVFCACHE_FORCEBUILTIN Qt__tagADVF = 16
+
+//
+const Qt__ADVFCACHE_ONSAVE Qt__tagADVF = 32
+
+func tagADVFItemName(val int) string {
+	switch val {
+	case Qt__ADVF_NODATA: // 1
+		return "ADVF_NODATA"
+	case Qt__ADVF_PRIMEFIRST: // 2
+		return "ADVF_PRIMEFIRST"
+	case Qt__ADVF_ONLYONCE: // 4
+		return "ADVF_ONLYONCE"
+	case Qt__ADVF_DATAONSTOP: // 64
+		return "ADVF_DATAONSTOP"
+	case Qt__ADVFCACHE_NOHANDLER: // 8
+		return "ADVFCACHE_NOHANDLER"
+	case Qt__ADVFCACHE_FORCEBUILTIN: // 16
+		return "ADVFCACHE_FORCEBUILTIN"
+	case Qt__ADVFCACHE_ONSAVE: // 32
+		return "ADVFCACHE_ONSAVE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagTYMED = int // stdglobal
+//
+const Qt__TYMED_HGLOBAL Qt__tagTYMED = 1
+
+//
+const Qt__TYMED_FILE Qt__tagTYMED = 2
+
+//
+const Qt__TYMED_ISTREAM Qt__tagTYMED = 4
+
+//
+const Qt__TYMED_ISTORAGE Qt__tagTYMED = 8
+
+//
+const Qt__TYMED_GDI Qt__tagTYMED = 16
+
+//
+const Qt__TYMED_MFPICT Qt__tagTYMED = 32
+
+//
+const Qt__TYMED_ENHMF Qt__tagTYMED = 64
+
+//
+const Qt__TYMED_NULL Qt__tagTYMED = 0
+
+func tagTYMEDItemName(val int) string {
+	switch val {
+	case Qt__TYMED_HGLOBAL: // 1
+		return "TYMED_HGLOBAL"
+	case Qt__TYMED_FILE: // 2
+		return "TYMED_FILE"
+	case Qt__TYMED_ISTREAM: // 4
+		return "TYMED_ISTREAM"
+	case Qt__TYMED_ISTORAGE: // 8
+		return "TYMED_ISTORAGE"
+	case Qt__TYMED_GDI: // 16
+		return "TYMED_GDI"
+	case Qt__TYMED_MFPICT: // 32
+		return "TYMED_MFPICT"
+	case Qt__TYMED_ENHMF: // 64
+		return "TYMED_ENHMF"
+	case Qt__TYMED_NULL: // 0
+		return "TYMED_NULL"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagDATADIR = int // stdglobal
+//
+const Qt__DATADIR_GET Qt__tagDATADIR = 1
+
+//
+const Qt__DATADIR_SET Qt__tagDATADIR = 2
+
+func tagDATADIRItemName(val int) string {
+	switch val {
+	case Qt__DATADIR_GET: // 1
+		return "DATADIR_GET"
+	case Qt__DATADIR_SET: // 2
+		return "DATADIR_SET"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagCALLTYPE = int // stdglobal
+//
+const Qt__CALLTYPE_TOPLEVEL Qt__tagCALLTYPE = 1
+
+//
+const Qt__CALLTYPE_NESTED Qt__tagCALLTYPE = 2
+
+//
+const Qt__CALLTYPE_ASYNC Qt__tagCALLTYPE = 3
+
+//
+const Qt__CALLTYPE_TOPLEVEL_CALLPENDING Qt__tagCALLTYPE = 4
+
+//
+const Qt__CALLTYPE_ASYNC_CALLPENDING Qt__tagCALLTYPE = 5
+
+func tagCALLTYPEItemName(val int) string {
+	switch val {
+	case Qt__CALLTYPE_TOPLEVEL: // 1
+		return "CALLTYPE_TOPLEVEL"
+	case Qt__CALLTYPE_NESTED: // 2
+		return "CALLTYPE_NESTED"
+	case Qt__CALLTYPE_ASYNC: // 3
+		return "CALLTYPE_ASYNC"
+	case Qt__CALLTYPE_TOPLEVEL_CALLPENDING: // 4
+		return "CALLTYPE_TOPLEVEL_CALLPENDING"
+	case Qt__CALLTYPE_ASYNC_CALLPENDING: // 5
+		return "CALLTYPE_ASYNC_CALLPENDING"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagSERVERCALL = int // stdglobal
+//
+const Qt__SERVERCALL_ISHANDLED Qt__tagSERVERCALL = 0
+
+//
+const Qt__SERVERCALL_REJECTED Qt__tagSERVERCALL = 1
+
+//
+const Qt__SERVERCALL_RETRYLATER Qt__tagSERVERCALL = 2
+
+func tagSERVERCALLItemName(val int) string {
+	switch val {
+	case Qt__SERVERCALL_ISHANDLED: // 0
+		return "SERVERCALL_ISHANDLED"
+	case Qt__SERVERCALL_REJECTED: // 1
+		return "SERVERCALL_REJECTED"
+	case Qt__SERVERCALL_RETRYLATER: // 2
+		return "SERVERCALL_RETRYLATER"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagPENDINGTYPE = int // stdglobal
+//
+const Qt__PENDINGTYPE_TOPLEVEL Qt__tagPENDINGTYPE = 1
+
+//
+const Qt__PENDINGTYPE_NESTED Qt__tagPENDINGTYPE = 2
+
+func tagPENDINGTYPEItemName(val int) string {
+	switch val {
+	case Qt__PENDINGTYPE_TOPLEVEL: // 1
+		return "PENDINGTYPE_TOPLEVEL"
+	case Qt__PENDINGTYPE_NESTED: // 2
+		return "PENDINGTYPE_NESTED"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagPENDINGMSG = int // stdglobal
+//
+const Qt__PENDINGMSG_CANCELCALL Qt__tagPENDINGMSG = 0
+
+//
+const Qt__PENDINGMSG_WAITNOPROCESS Qt__tagPENDINGMSG = 1
+
+//
+const Qt__PENDINGMSG_WAITDEFPROCESS Qt__tagPENDINGMSG = 2
+
+func tagPENDINGMSGItemName(val int) string {
+	switch val {
+	case Qt__PENDINGMSG_CANCELCALL: // 0
+		return "PENDINGMSG_CANCELCALL"
+	case Qt__PENDINGMSG_WAITNOPROCESS: // 1
+		return "PENDINGMSG_WAITNOPROCESS"
+	case Qt__PENDINGMSG_WAITDEFPROCESS: // 2
+		return "PENDINGMSG_WAITDEFPROCESS"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = int // stdglobal
+//
+const Qt__EOAC_NONE Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 0
+
+//
+const Qt__EOAC_MUTUAL_AUTH Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 1
+
+//
+const Qt__EOAC_SECURE_REFS Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 2
+
+//
+const Qt__EOAC_ACCESS_CONTROL Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 4
+
+//
+const Qt__EOAC_APPID Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 8
+
+//
+const Qt__EOAC_DYNAMIC Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 16
+
+//
+const Qt__EOAC_STATIC_CLOAKING Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 32
+
+//
+const Qt__EOAC_DYNAMIC_CLOAKING Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 64
+
+//
+const Qt__EOAC_ANY_AUTHORITY Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 128
+
+//
+const Qt__EOAC_MAKE_FULLSIC Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 256
+
+//
+const Qt__EOAC_REQUIRE_FULLSIC Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 512
+
+//
+const Qt__EOAC_AUTO_IMPERSONATE Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 1024
+
+//
+const Qt__EOAC_DEFAULT Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 2048
+
+//
+const Qt__EOAC_DISABLE_AAA Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 4096
+
+//
+const Qt__EOAC_NO_CUSTOM_MARSHAL Qt__tagEOLE_AUTHENTICATION_CAPABILITIES = 8192
+
+func tagEOLE_AUTHENTICATION_CAPABILITIESItemName(val int) string {
+	switch val {
+	case Qt__EOAC_NONE: // 0
+		return "EOAC_NONE"
+	case Qt__EOAC_MUTUAL_AUTH: // 1
+		return "EOAC_MUTUAL_AUTH"
+	case Qt__EOAC_SECURE_REFS: // 2
+		return "EOAC_SECURE_REFS"
+	case Qt__EOAC_ACCESS_CONTROL: // 4
+		return "EOAC_ACCESS_CONTROL"
+	case Qt__EOAC_APPID: // 8
+		return "EOAC_APPID"
+	case Qt__EOAC_DYNAMIC: // 16
+		return "EOAC_DYNAMIC"
+	case Qt__EOAC_STATIC_CLOAKING: // 32
+		return "EOAC_STATIC_CLOAKING"
+	case Qt__EOAC_DYNAMIC_CLOAKING: // 64
+		return "EOAC_DYNAMIC_CLOAKING"
+	case Qt__EOAC_ANY_AUTHORITY: // 128
+		return "EOAC_ANY_AUTHORITY"
+	case Qt__EOAC_MAKE_FULLSIC: // 256
+		return "EOAC_MAKE_FULLSIC"
+	case Qt__EOAC_REQUIRE_FULLSIC: // 512
+		return "EOAC_REQUIRE_FULLSIC"
+	case Qt__EOAC_AUTO_IMPERSONATE: // 1024
+		return "EOAC_AUTO_IMPERSONATE"
+	case Qt__EOAC_DEFAULT: // 2048
+		return "EOAC_DEFAULT"
+	case Qt__EOAC_DISABLE_AAA: // 4096
+		return "EOAC_DISABLE_AAA"
+	case Qt__EOAC_NO_CUSTOM_MARSHAL: // 8192
+		return "EOAC_NO_CUSTOM_MARSHAL"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagDCOM_CALL_STATE = int // stdglobal
+//
+const Qt__DCOM_NONE Qt__tagDCOM_CALL_STATE = 0
+
+//
+const Qt__DCOM_CALL_COMPLETE Qt__tagDCOM_CALL_STATE = 1
+
+//
+const Qt__DCOM_CALL_CANCELED Qt__tagDCOM_CALL_STATE = 2
+
+func tagDCOM_CALL_STATEItemName(val int) string {
+	switch val {
+	case Qt__DCOM_NONE: // 0
+		return "DCOM_NONE"
+	case Qt__DCOM_CALL_COMPLETE: // 1
+		return "DCOM_CALL_COMPLETE"
+	case Qt__DCOM_CALL_CANCELED: // 2
+		return "DCOM_CALL_CANCELED"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___APTTYPE = int // stdglobal
+//
+const Qt__APTTYPE_CURRENT Qt___APTTYPE = -1
+
+//
+const Qt__APTTYPE_STA Qt___APTTYPE = 0
+
+//
+const Qt__APTTYPE_MTA Qt___APTTYPE = 1
+
+//
+const Qt__APTTYPE_NA Qt___APTTYPE = 2
+
+//
+const Qt__APTTYPE_MAINSTA Qt___APTTYPE = 3
+
+func _APTTYPEItemName(val int) string {
+	switch val {
+	case Qt__APTTYPE_CURRENT: // -1
+		return "APTTYPE_CURRENT"
+	case Qt__APTTYPE_STA: // 0
+		return "APTTYPE_STA"
+	case Qt__APTTYPE_MTA: // 1
+		return "APTTYPE_MTA"
+	case Qt__APTTYPE_NA: // 2
+		return "APTTYPE_NA"
+	case Qt__APTTYPE_MAINSTA: // 3
+		return "APTTYPE_MAINSTA"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___APTTYPEQUALIFIER = int // stdglobal
+//
+const Qt__APTTYPEQUALIFIER_NONE Qt___APTTYPEQUALIFIER = 0
+
+//
+const Qt__APTTYPEQUALIFIER_IMPLICIT_MTA Qt___APTTYPEQUALIFIER = 1
+
+//
+const Qt__APTTYPEQUALIFIER_NA_ON_MTA Qt___APTTYPEQUALIFIER = 2
+
+//
+const Qt__APTTYPEQUALIFIER_NA_ON_STA Qt___APTTYPEQUALIFIER = 3
+
+//
+const Qt__APTTYPEQUALIFIER_NA_ON_IMPLICIT_MTA Qt___APTTYPEQUALIFIER = 4
+
+//
+const Qt__APTTYPEQUALIFIER_NA_ON_MAINSTA Qt___APTTYPEQUALIFIER = 5
+
+func _APTTYPEQUALIFIERItemName(val int) string {
+	switch val {
+	case Qt__APTTYPEQUALIFIER_NONE: // 0
+		return "APTTYPEQUALIFIER_NONE"
+	case Qt__APTTYPEQUALIFIER_IMPLICIT_MTA: // 1
+		return "APTTYPEQUALIFIER_IMPLICIT_MTA"
+	case Qt__APTTYPEQUALIFIER_NA_ON_MTA: // 2
+		return "APTTYPEQUALIFIER_NA_ON_MTA"
+	case Qt__APTTYPEQUALIFIER_NA_ON_STA: // 3
+		return "APTTYPEQUALIFIER_NA_ON_STA"
+	case Qt__APTTYPEQUALIFIER_NA_ON_IMPLICIT_MTA: // 4
+		return "APTTYPEQUALIFIER_NA_ON_IMPLICIT_MTA"
+	case Qt__APTTYPEQUALIFIER_NA_ON_MAINSTA: // 5
+		return "APTTYPEQUALIFIER_NA_ON_MAINSTA"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___THDTYPE = int // stdglobal
+//
+const Qt__THDTYPE_BLOCKMESSAGES Qt___THDTYPE = 0
+
+//
+const Qt__THDTYPE_PROCESSMESSAGES Qt___THDTYPE = 1
+
+func _THDTYPEItemName(val int) string {
+	switch val {
+	case Qt__THDTYPE_BLOCKMESSAGES: // 0
+		return "THDTYPE_BLOCKMESSAGES"
+	case Qt__THDTYPE_PROCESSMESSAGES: // 1
+		return "THDTYPE_PROCESSMESSAGES"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagGLOBALOPT_PROPERTIES = int // stdglobal
+//
+const Qt__COMGLB_EXCEPTION_HANDLING Qt__tagGLOBALOPT_PROPERTIES = 1
+
+//
+const Qt__COMGLB_APPID Qt__tagGLOBALOPT_PROPERTIES = 2
+
+//
+const Qt__COMGLB_RPC_THREADPOOL_SETTING Qt__tagGLOBALOPT_PROPERTIES = 3
+
+func tagGLOBALOPT_PROPERTIESItemName(val int) string {
+	switch val {
+	case Qt__COMGLB_EXCEPTION_HANDLING: // 1
+		return "COMGLB_EXCEPTION_HANDLING"
+	case Qt__COMGLB_APPID: // 2
+		return "COMGLB_APPID"
+	case Qt__COMGLB_RPC_THREADPOOL_SETTING: // 3
+		return "COMGLB_RPC_THREADPOOL_SETTING"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagGLOBALOPT_EH_VALUES = int // stdglobal
+//
+const Qt__COMGLB_EXCEPTION_HANDLE Qt__tagGLOBALOPT_EH_VALUES = 0
+
+//
+const Qt__COMGLB_EXCEPTION_DONOT_HANDLE_FATAL Qt__tagGLOBALOPT_EH_VALUES = 1
+
+//
+const Qt__COMGLB_EXCEPTION_DONOT_HANDLE Qt__tagGLOBALOPT_EH_VALUES = 1
+
+//
+const Qt__COMGLB_EXCEPTION_DONOT_HANDLE_ANY Qt__tagGLOBALOPT_EH_VALUES = 2
+
+func tagGLOBALOPT_EH_VALUESItemName(val int) string {
+	switch val {
+	case Qt__COMGLB_EXCEPTION_HANDLE: // 0
+		return "COMGLB_EXCEPTION_HANDLE"
+	case Qt__COMGLB_EXCEPTION_DONOT_HANDLE_FATAL: // 1
+		return "COMGLB_EXCEPTION_DONOT_HANDLE_FATAL,COMGLB_EXCEPTION_DONOT_HANDLE"
+		// case Qt__COMGLB_EXCEPTION_DONOT_HANDLE: // 1
+		// return ""
+	case Qt__COMGLB_EXCEPTION_DONOT_HANDLE_ANY: // 2
+		return "COMGLB_EXCEPTION_DONOT_HANDLE_ANY"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagGLOBALOPT_RPCTP_VALUES = int // stdglobal
+//
+const Qt__COMGLB_RPC_THREADPOOL_SETTING_DEFAULT_POOL Qt__tagGLOBALOPT_RPCTP_VALUES = 0
+
+//
+const Qt__COMGLB_RPC_THREADPOOL_SETTING_PRIVATE_POOL Qt__tagGLOBALOPT_RPCTP_VALUES = 1
+
+func tagGLOBALOPT_RPCTP_VALUESItemName(val int) string {
+	switch val {
+	case Qt__COMGLB_RPC_THREADPOOL_SETTING_DEFAULT_POOL: // 0
+		return "COMGLB_RPC_THREADPOOL_SETTING_DEFAULT_POOL"
+	case Qt__COMGLB_RPC_THREADPOOL_SETTING_PRIVATE_POOL: // 1
+		return "COMGLB_RPC_THREADPOOL_SETTING_PRIVATE_POOL"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagCOINIT = int // stdglobal
+//
+const Qt__COINIT_APARTMENTTHREADED Qt__tagCOINIT = 2
+
+//
+const Qt__COINIT_MULTITHREADED Qt__tagCOINIT = 0
+
+//
+const Qt__COINIT_DISABLE_OLE1DDE Qt__tagCOINIT = 4
+
+//
+const Qt__COINIT_SPEED_OVER_MEMORY Qt__tagCOINIT = 8
+
+func tagCOINITItemName(val int) string {
+	switch val {
+	case Qt__COINIT_APARTMENTTHREADED: // 2
+		return "COINIT_APARTMENTTHREADED"
+	case Qt__COINIT_MULTITHREADED: // 0
+		return "COINIT_MULTITHREADED"
+	case Qt__COINIT_DISABLE_OLE1DDE: // 4
+		return "COINIT_DISABLE_OLE1DDE"
+	case Qt__COINIT_SPEED_OVER_MEMORY: // 8
+		return "COINIT_SPEED_OVER_MEMORY"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagREGCLS = int // stdglobal
+//
+const Qt__REGCLS_SINGLEUSE Qt__tagREGCLS = 0
+
+//
+const Qt__REGCLS_MULTIPLEUSE Qt__tagREGCLS = 1
+
+//
+const Qt__REGCLS_MULTI_SEPARATE Qt__tagREGCLS = 2
+
+//
+const Qt__REGCLS_SUSPENDED Qt__tagREGCLS = 4
+
+//
+const Qt__REGCLS_SURROGATE Qt__tagREGCLS = 8
+
+func tagREGCLSItemName(val int) string {
+	switch val {
+	case Qt__REGCLS_SINGLEUSE: // 0
+		return "REGCLS_SINGLEUSE"
+	case Qt__REGCLS_MULTIPLEUSE: // 1
+		return "REGCLS_MULTIPLEUSE"
+	case Qt__REGCLS_MULTI_SEPARATE: // 2
+		return "REGCLS_MULTI_SEPARATE"
+	case Qt__REGCLS_SUSPENDED: // 4
+		return "REGCLS_SUSPENDED"
+	case Qt__REGCLS_SURROGATE: // 8
+		return "REGCLS_SURROGATE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagCOWAIT_FLAGS = int // stdglobal
+//
+const Qt__COWAIT_WAITALL Qt__tagCOWAIT_FLAGS = 1
+
+//
+const Qt__COWAIT_ALERTABLE Qt__tagCOWAIT_FLAGS = 2
+
+//
+const Qt__COWAIT_INPUTAVAILABLE Qt__tagCOWAIT_FLAGS = 4
+
+func tagCOWAIT_FLAGSItemName(val int) string {
+	switch val {
+	case Qt__COWAIT_WAITALL: // 1
+		return "COWAIT_WAITALL"
+	case Qt__COWAIT_ALERTABLE: // 2
+		return "COWAIT_ALERTABLE"
+	case Qt__COWAIT_INPUTAVAILABLE: // 4
+		return "COWAIT_INPUTAVAILABLE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagOLERENDER = int // stdglobal
+//
+const Qt__OLERENDER_NONE Qt__tagOLERENDER = 0
+
+//
+const Qt__OLERENDER_DRAW Qt__tagOLERENDER = 1
+
+//
+const Qt__OLERENDER_FORMAT Qt__tagOLERENDER = 2
+
+//
+const Qt__OLERENDER_ASIS Qt__tagOLERENDER = 3
+
+func tagOLERENDERItemName(val int) string {
+	switch val {
+	case Qt__OLERENDER_NONE: // 0
+		return "OLERENDER_NONE"
+	case Qt__OLERENDER_DRAW: // 1
+		return "OLERENDER_DRAW"
+	case Qt__OLERENDER_FORMAT: // 2
+		return "OLERENDER_FORMAT"
+	case Qt__OLERENDER_ASIS: // 3
+		return "OLERENDER_ASIS"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagBINDSPEED = int // stdglobal
+//
+const Qt__BINDSPEED_INDEFINITE Qt__tagBINDSPEED = 1
+
+//
+const Qt__BINDSPEED_MODERATE Qt__tagBINDSPEED = 2
+
+//
+const Qt__BINDSPEED_IMMEDIATE Qt__tagBINDSPEED = 3
+
+func tagBINDSPEEDItemName(val int) string {
+	switch val {
+	case Qt__BINDSPEED_INDEFINITE: // 1
+		return "BINDSPEED_INDEFINITE"
+	case Qt__BINDSPEED_MODERATE: // 2
+		return "BINDSPEED_MODERATE"
+	case Qt__BINDSPEED_IMMEDIATE: // 3
+		return "BINDSPEED_IMMEDIATE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagOLECONTF = int // stdglobal
+//
+const Qt__OLECONTF_EMBEDDINGS Qt__tagOLECONTF = 1
+
+//
+const Qt__OLECONTF_LINKS Qt__tagOLECONTF = 2
+
+//
+const Qt__OLECONTF_OTHERS Qt__tagOLECONTF = 4
+
+//
+const Qt__OLECONTF_ONLYUSER Qt__tagOLECONTF = 8
+
+//
+const Qt__OLECONTF_ONLYIFRUNNING Qt__tagOLECONTF = 16
+
+func tagOLECONTFItemName(val int) string {
+	switch val {
+	case Qt__OLECONTF_EMBEDDINGS: // 1
+		return "OLECONTF_EMBEDDINGS"
+	case Qt__OLECONTF_LINKS: // 2
+		return "OLECONTF_LINKS"
+	case Qt__OLECONTF_OTHERS: // 4
+		return "OLECONTF_OTHERS"
+	case Qt__OLECONTF_ONLYUSER: // 8
+		return "OLECONTF_ONLYUSER"
+	case Qt__OLECONTF_ONLYIFRUNNING: // 16
+		return "OLECONTF_ONLYIFRUNNING"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagOLEUPDATE = int // stdglobal
+//
+const Qt__OLEUPDATE_ALWAYS Qt__tagOLEUPDATE = 1
+
+//
+const Qt__OLEUPDATE_ONCALL Qt__tagOLEUPDATE = 3
+
+func tagOLEUPDATEItemName(val int) string {
+	switch val {
+	case Qt__OLEUPDATE_ALWAYS: // 1
+		return "OLEUPDATE_ALWAYS"
+	case Qt__OLEUPDATE_ONCALL: // 3
+		return "OLEUPDATE_ONCALL"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagOLELINKBIND = int // stdglobal
+//
+const Qt__OLELINKBIND_EVENIFCLASSDIFF Qt__tagOLELINKBIND = 1
+
+func tagOLELINKBINDItemName(val int) string {
+	switch val {
+	case Qt__OLELINKBIND_EVENIFCLASSDIFF: // 1
+		return "OLELINKBIND_EVENIFCLASSDIFF"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagDISCARDCACHE = int // stdglobal
+//
+const Qt__DISCARDCACHE_SAVEIFDIRTY Qt__tagDISCARDCACHE = 0
+
+//
+const Qt__DISCARDCACHE_NOSAVE Qt__tagDISCARDCACHE = 1
+
+func tagDISCARDCACHEItemName(val int) string {
+	switch val {
+	case Qt__DISCARDCACHE_SAVEIFDIRTY: // 0
+		return "DISCARDCACHE_SAVEIFDIRTY"
+	case Qt__DISCARDCACHE_NOSAVE: // 1
+		return "DISCARDCACHE_NOSAVE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagOLEVERBATTRIB = int // stdglobal
+//
+const Qt__OLEVERBATTRIB_NEVERDIRTIES Qt__tagOLEVERBATTRIB = 1
+
+//
+const Qt__OLEVERBATTRIB_ONCONTAINERMENU Qt__tagOLEVERBATTRIB = 2
+
+func tagOLEVERBATTRIBItemName(val int) string {
+	switch val {
+	case Qt__OLEVERBATTRIB_NEVERDIRTIES: // 1
+		return "OLEVERBATTRIB_NEVERDIRTIES"
+	case Qt__OLEVERBATTRIB_ONCONTAINERMENU: // 2
+		return "OLEVERBATTRIB_ONCONTAINERMENU"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagOLEGETMONIKER = int // stdglobal
+//
+const Qt__OLEGETMONIKER_ONLYIFTHERE Qt__tagOLEGETMONIKER = 1
+
+//
+const Qt__OLEGETMONIKER_FORCEASSIGN Qt__tagOLEGETMONIKER = 2
+
+//
+const Qt__OLEGETMONIKER_UNASSIGN Qt__tagOLEGETMONIKER = 3
+
+//
+const Qt__OLEGETMONIKER_TEMPFORUSER Qt__tagOLEGETMONIKER = 4
+
+func tagOLEGETMONIKERItemName(val int) string {
+	switch val {
+	case Qt__OLEGETMONIKER_ONLYIFTHERE: // 1
+		return "OLEGETMONIKER_ONLYIFTHERE"
+	case Qt__OLEGETMONIKER_FORCEASSIGN: // 2
+		return "OLEGETMONIKER_FORCEASSIGN"
+	case Qt__OLEGETMONIKER_UNASSIGN: // 3
+		return "OLEGETMONIKER_UNASSIGN"
+	case Qt__OLEGETMONIKER_TEMPFORUSER: // 4
+		return "OLEGETMONIKER_TEMPFORUSER"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagOLEWHICHMK = int // stdglobal
+//
+const Qt__OLEWHICHMK_CONTAINER Qt__tagOLEWHICHMK = 1
+
+//
+const Qt__OLEWHICHMK_OBJREL Qt__tagOLEWHICHMK = 2
+
+//
+const Qt__OLEWHICHMK_OBJFULL Qt__tagOLEWHICHMK = 3
+
+func tagOLEWHICHMKItemName(val int) string {
+	switch val {
+	case Qt__OLEWHICHMK_CONTAINER: // 1
+		return "OLEWHICHMK_CONTAINER"
+	case Qt__OLEWHICHMK_OBJREL: // 2
+		return "OLEWHICHMK_OBJREL"
+	case Qt__OLEWHICHMK_OBJFULL: // 3
+		return "OLEWHICHMK_OBJFULL"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagUSERCLASSTYPE = int // stdglobal
+//
+const Qt__USERCLASSTYPE_FULL Qt__tagUSERCLASSTYPE = 1
+
+//
+const Qt__USERCLASSTYPE_SHORT Qt__tagUSERCLASSTYPE = 2
+
+//
+const Qt__USERCLASSTYPE_APPNAME Qt__tagUSERCLASSTYPE = 3
+
+func tagUSERCLASSTYPEItemName(val int) string {
+	switch val {
+	case Qt__USERCLASSTYPE_FULL: // 1
+		return "USERCLASSTYPE_FULL"
+	case Qt__USERCLASSTYPE_SHORT: // 2
+		return "USERCLASSTYPE_SHORT"
+	case Qt__USERCLASSTYPE_APPNAME: // 3
+		return "USERCLASSTYPE_APPNAME"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagOLEMISC = int // stdglobal
+//
+const Qt__OLEMISC_RECOMPOSEONRESIZE Qt__tagOLEMISC = 1
+
+//
+const Qt__OLEMISC_ONLYICONIC Qt__tagOLEMISC = 2
+
+//
+const Qt__OLEMISC_INSERTNOTREPLACE Qt__tagOLEMISC = 4
+
+//
+const Qt__OLEMISC_STATIC Qt__tagOLEMISC = 8
+
+//
+const Qt__OLEMISC_CANTLINKINSIDE Qt__tagOLEMISC = 16
+
+//
+const Qt__OLEMISC_CANLINKBYOLE1 Qt__tagOLEMISC = 32
+
+//
+const Qt__OLEMISC_ISLINKOBJECT Qt__tagOLEMISC = 64
+
+//
+const Qt__OLEMISC_INSIDEOUT Qt__tagOLEMISC = 128
+
+//
+const Qt__OLEMISC_ACTIVATEWHENVISIBLE Qt__tagOLEMISC = 256
+
+//
+const Qt__OLEMISC_RENDERINGISDEVICEINDEPENDENT Qt__tagOLEMISC = 512
+
+//
+const Qt__OLEMISC_INVISIBLEATRUNTIME Qt__tagOLEMISC = 1024
+
+//
+const Qt__OLEMISC_ALWAYSRUN Qt__tagOLEMISC = 2048
+
+//
+const Qt__OLEMISC_ACTSLIKEBUTTON Qt__tagOLEMISC = 4096
+
+//
+const Qt__OLEMISC_ACTSLIKELABEL Qt__tagOLEMISC = 8192
+
+//
+const Qt__OLEMISC_NOUIACTIVATE Qt__tagOLEMISC = 16384
+
+//
+const Qt__OLEMISC_ALIGNABLE Qt__tagOLEMISC = 32768
+
+//
+const Qt__OLEMISC_SIMPLEFRAME Qt__tagOLEMISC = 65536
+
+//
+const Qt__OLEMISC_SETCLIENTSITEFIRST Qt__tagOLEMISC = 131072
+
+//
+const Qt__OLEMISC_IMEMODE Qt__tagOLEMISC = 262144
+
+//
+const Qt__OLEMISC_IGNOREACTIVATEWHENVISIBLE Qt__tagOLEMISC = 524288
+
+//
+const Qt__OLEMISC_WANTSTOMENUMERGE Qt__tagOLEMISC = 1048576
+
+//
+const Qt__OLEMISC_SUPPORTSMULTILEVELUNDO Qt__tagOLEMISC = 2097152
+
+func tagOLEMISCItemName(val int) string {
+	switch val {
+	case Qt__OLEMISC_RECOMPOSEONRESIZE: // 1
+		return "OLEMISC_RECOMPOSEONRESIZE"
+	case Qt__OLEMISC_ONLYICONIC: // 2
+		return "OLEMISC_ONLYICONIC"
+	case Qt__OLEMISC_INSERTNOTREPLACE: // 4
+		return "OLEMISC_INSERTNOTREPLACE"
+	case Qt__OLEMISC_STATIC: // 8
+		return "OLEMISC_STATIC"
+	case Qt__OLEMISC_CANTLINKINSIDE: // 16
+		return "OLEMISC_CANTLINKINSIDE"
+	case Qt__OLEMISC_CANLINKBYOLE1: // 32
+		return "OLEMISC_CANLINKBYOLE1"
+	case Qt__OLEMISC_ISLINKOBJECT: // 64
+		return "OLEMISC_ISLINKOBJECT"
+	case Qt__OLEMISC_INSIDEOUT: // 128
+		return "OLEMISC_INSIDEOUT"
+	case Qt__OLEMISC_ACTIVATEWHENVISIBLE: // 256
+		return "OLEMISC_ACTIVATEWHENVISIBLE"
+	case Qt__OLEMISC_RENDERINGISDEVICEINDEPENDENT: // 512
+		return "OLEMISC_RENDERINGISDEVICEINDEPENDENT"
+	case Qt__OLEMISC_INVISIBLEATRUNTIME: // 1024
+		return "OLEMISC_INVISIBLEATRUNTIME"
+	case Qt__OLEMISC_ALWAYSRUN: // 2048
+		return "OLEMISC_ALWAYSRUN"
+	case Qt__OLEMISC_ACTSLIKEBUTTON: // 4096
+		return "OLEMISC_ACTSLIKEBUTTON"
+	case Qt__OLEMISC_ACTSLIKELABEL: // 8192
+		return "OLEMISC_ACTSLIKELABEL"
+	case Qt__OLEMISC_NOUIACTIVATE: // 16384
+		return "OLEMISC_NOUIACTIVATE"
+	case Qt__OLEMISC_ALIGNABLE: // 32768
+		return "OLEMISC_ALIGNABLE"
+	case Qt__OLEMISC_SIMPLEFRAME: // 65536
+		return "OLEMISC_SIMPLEFRAME"
+	case Qt__OLEMISC_SETCLIENTSITEFIRST: // 131072
+		return "OLEMISC_SETCLIENTSITEFIRST"
+	case Qt__OLEMISC_IMEMODE: // 262144
+		return "OLEMISC_IMEMODE"
+	case Qt__OLEMISC_IGNOREACTIVATEWHENVISIBLE: // 524288
+		return "OLEMISC_IGNOREACTIVATEWHENVISIBLE"
+	case Qt__OLEMISC_WANTSTOMENUMERGE: // 1048576
+		return "OLEMISC_WANTSTOMENUMERGE"
+	case Qt__OLEMISC_SUPPORTSMULTILEVELUNDO: // 2097152
+		return "OLEMISC_SUPPORTSMULTILEVELUNDO"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagOLECLOSE = int // stdglobal
+//
+const Qt__OLECLOSE_SAVEIFDIRTY Qt__tagOLECLOSE = 0
+
+//
+const Qt__OLECLOSE_NOSAVE Qt__tagOLECLOSE = 1
+
+//
+const Qt__OLECLOSE_PROMPTSAVE Qt__tagOLECLOSE = 2
+
+func tagOLECLOSEItemName(val int) string {
+	switch val {
+	case Qt__OLECLOSE_SAVEIFDIRTY: // 0
+		return "OLECLOSE_SAVEIFDIRTY"
+	case Qt__OLECLOSE_NOSAVE: // 1
+		return "OLECLOSE_NOSAVE"
+	case Qt__OLECLOSE_PROMPTSAVE: // 2
+		return "OLECLOSE_PROMPTSAVE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagSF_TYPE = int // stdglobal
+//
+const Qt__SF_ERROR Qt__tagSF_TYPE = 10
+
+//
+const Qt__SF_I1 Qt__tagSF_TYPE = 16
+
+//
+const Qt__SF_I2 Qt__tagSF_TYPE = 2
+
+//
+const Qt__SF_I4 Qt__tagSF_TYPE = 3
+
+//
+const Qt__SF_I8 Qt__tagSF_TYPE = 20
+
+//
+const Qt__SF_BSTR Qt__tagSF_TYPE = 8
+
+//
+const Qt__SF_UNKNOWN Qt__tagSF_TYPE = 13
+
+//
+const Qt__SF_DISPATCH Qt__tagSF_TYPE = 9
+
+//
+const Qt__SF_VARIANT Qt__tagSF_TYPE = 12
+
+//
+const Qt__SF_RECORD Qt__tagSF_TYPE = 36
+
+//
+const Qt__SF_HAVEIID Qt__tagSF_TYPE = 32781
+
+func tagSF_TYPEItemName(val int) string {
+	switch val {
+	case Qt__SF_ERROR: // 10
+		return "SF_ERROR"
+	case Qt__SF_I1: // 16
+		return "SF_I1"
+	case Qt__SF_I2: // 2
+		return "SF_I2"
+	case Qt__SF_I4: // 3
+		return "SF_I4"
+	case Qt__SF_I8: // 20
+		return "SF_I8"
+	case Qt__SF_BSTR: // 8
+		return "SF_BSTR"
+	case Qt__SF_UNKNOWN: // 13
+		return "SF_UNKNOWN"
+	case Qt__SF_DISPATCH: // 9
+		return "SF_DISPATCH"
+	case Qt__SF_VARIANT: // 12
+		return "SF_VARIANT"
+	case Qt__SF_RECORD: // 36
+		return "SF_RECORD"
+	case Qt__SF_HAVEIID: // 32781
+		return "SF_HAVEIID"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagTYPEKIND = int // stdglobal
+//
+const Qt__TKIND_ENUM Qt__tagTYPEKIND = 0
+
+//
+const Qt__TKIND_RECORD Qt__tagTYPEKIND = 1
+
+//
+const Qt__TKIND_MODULE Qt__tagTYPEKIND = 2
+
+//
+const Qt__TKIND_INTERFACE Qt__tagTYPEKIND = 3
+
+//
+const Qt__TKIND_DISPATCH Qt__tagTYPEKIND = 4
+
+//
+const Qt__TKIND_COCLASS Qt__tagTYPEKIND = 5
+
+//
+const Qt__TKIND_ALIAS Qt__tagTYPEKIND = 6
+
+//
+const Qt__TKIND_UNION Qt__tagTYPEKIND = 7
+
+//
+const Qt__TKIND_MAX Qt__tagTYPEKIND = 8
+
+func tagTYPEKINDItemName(val int) string {
+	switch val {
+	case Qt__TKIND_ENUM: // 0
+		return "TKIND_ENUM"
+	case Qt__TKIND_RECORD: // 1
+		return "TKIND_RECORD"
+	case Qt__TKIND_MODULE: // 2
+		return "TKIND_MODULE"
+	case Qt__TKIND_INTERFACE: // 3
+		return "TKIND_INTERFACE"
+	case Qt__TKIND_DISPATCH: // 4
+		return "TKIND_DISPATCH"
+	case Qt__TKIND_COCLASS: // 5
+		return "TKIND_COCLASS"
+	case Qt__TKIND_ALIAS: // 6
+		return "TKIND_ALIAS"
+	case Qt__TKIND_UNION: // 7
+		return "TKIND_UNION"
+	case Qt__TKIND_MAX: // 8
+		return "TKIND_MAX"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagCALLCONV = int // stdglobal
+//
+const Qt__CC_FASTCALL Qt__tagCALLCONV = 0
+
+//
+const Qt__CC_CDECL Qt__tagCALLCONV = 1
+
+//
+const Qt__CC_MSCPASCAL Qt__tagCALLCONV = 2
+
+//
+const Qt__CC_PASCAL Qt__tagCALLCONV = 2
+
+//
+const Qt__CC_MACPASCAL Qt__tagCALLCONV = 3
+
+//
+const Qt__CC_STDCALL Qt__tagCALLCONV = 4
+
+//
+const Qt__CC_FPFASTCALL Qt__tagCALLCONV = 5
+
+//
+const Qt__CC_SYSCALL Qt__tagCALLCONV = 6
+
+//
+const Qt__CC_MPWCDECL Qt__tagCALLCONV = 7
+
+//
+const Qt__CC_MPWPASCAL Qt__tagCALLCONV = 8
+
+//
+const Qt__CC_MAX Qt__tagCALLCONV = 9
+
+func tagCALLCONVItemName(val int) string {
+	switch val {
+	case Qt__CC_FASTCALL: // 0
+		return "CC_FASTCALL"
+	case Qt__CC_CDECL: // 1
+		return "CC_CDECL"
+	case Qt__CC_MSCPASCAL: // 2
+		return "CC_MSCPASCAL,CC_PASCAL"
+		// case Qt__CC_PASCAL: // 2
+		// return ""
+	case Qt__CC_MACPASCAL: // 3
+		return "CC_MACPASCAL"
+	case Qt__CC_STDCALL: // 4
+		return "CC_STDCALL"
+	case Qt__CC_FPFASTCALL: // 5
+		return "CC_FPFASTCALL"
+	case Qt__CC_SYSCALL: // 6
+		return "CC_SYSCALL"
+	case Qt__CC_MPWCDECL: // 7
+		return "CC_MPWCDECL"
+	case Qt__CC_MPWPASCAL: // 8
+		return "CC_MPWPASCAL"
+	case Qt__CC_MAX: // 9
+		return "CC_MAX"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagFUNCKIND = int // stdglobal
+//
+const Qt__FUNC_VIRTUAL Qt__tagFUNCKIND = 0
+
+//
+const Qt__FUNC_PUREVIRTUAL Qt__tagFUNCKIND = 1
+
+//
+const Qt__FUNC_NONVIRTUAL Qt__tagFUNCKIND = 2
+
+//
+const Qt__FUNC_STATIC Qt__tagFUNCKIND = 3
+
+//
+const Qt__FUNC_DISPATCH Qt__tagFUNCKIND = 4
+
+func tagFUNCKINDItemName(val int) string {
+	switch val {
+	case Qt__FUNC_VIRTUAL: // 0
+		return "FUNC_VIRTUAL"
+	case Qt__FUNC_PUREVIRTUAL: // 1
+		return "FUNC_PUREVIRTUAL"
+	case Qt__FUNC_NONVIRTUAL: // 2
+		return "FUNC_NONVIRTUAL"
+	case Qt__FUNC_STATIC: // 3
+		return "FUNC_STATIC"
+	case Qt__FUNC_DISPATCH: // 4
+		return "FUNC_DISPATCH"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagINVOKEKIND = int // stdglobal
+//
+const Qt__INVOKE_FUNC Qt__tagINVOKEKIND = 1
+
+//
+const Qt__INVOKE_PROPERTYGET Qt__tagINVOKEKIND = 2
+
+//
+const Qt__INVOKE_PROPERTYPUT Qt__tagINVOKEKIND = 4
+
+//
+const Qt__INVOKE_PROPERTYPUTREF Qt__tagINVOKEKIND = 8
+
+func tagINVOKEKINDItemName(val int) string {
+	switch val {
+	case Qt__INVOKE_FUNC: // 1
+		return "INVOKE_FUNC"
+	case Qt__INVOKE_PROPERTYGET: // 2
+		return "INVOKE_PROPERTYGET"
+	case Qt__INVOKE_PROPERTYPUT: // 4
+		return "INVOKE_PROPERTYPUT"
+	case Qt__INVOKE_PROPERTYPUTREF: // 8
+		return "INVOKE_PROPERTYPUTREF"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagVARKIND = int // stdglobal
+//
+const Qt__VAR_PERINSTANCE Qt__tagVARKIND = 0
+
+//
+const Qt__VAR_STATIC Qt__tagVARKIND = 1
+
+//
+const Qt__VAR_CONST Qt__tagVARKIND = 2
+
+//
+const Qt__VAR_DISPATCH Qt__tagVARKIND = 3
+
+func tagVARKINDItemName(val int) string {
+	switch val {
+	case Qt__VAR_PERINSTANCE: // 0
+		return "VAR_PERINSTANCE"
+	case Qt__VAR_STATIC: // 1
+		return "VAR_STATIC"
+	case Qt__VAR_CONST: // 2
+		return "VAR_CONST"
+	case Qt__VAR_DISPATCH: // 3
+		return "VAR_DISPATCH"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagTYPEFLAGS = int // stdglobal
+//
+const Qt__TYPEFLAG_FAPPOBJECT Qt__tagTYPEFLAGS = 1
+
+//
+const Qt__TYPEFLAG_FCANCREATE Qt__tagTYPEFLAGS = 2
+
+//
+const Qt__TYPEFLAG_FLICENSED Qt__tagTYPEFLAGS = 4
+
+//
+const Qt__TYPEFLAG_FPREDECLID Qt__tagTYPEFLAGS = 8
+
+//
+const Qt__TYPEFLAG_FHIDDEN Qt__tagTYPEFLAGS = 16
+
+//
+const Qt__TYPEFLAG_FCONTROL Qt__tagTYPEFLAGS = 32
+
+//
+const Qt__TYPEFLAG_FDUAL Qt__tagTYPEFLAGS = 64
+
+//
+const Qt__TYPEFLAG_FNONEXTENSIBLE Qt__tagTYPEFLAGS = 128
+
+//
+const Qt__TYPEFLAG_FOLEAUTOMATION Qt__tagTYPEFLAGS = 256
+
+//
+const Qt__TYPEFLAG_FRESTRICTED Qt__tagTYPEFLAGS = 512
+
+//
+const Qt__TYPEFLAG_FAGGREGATABLE Qt__tagTYPEFLAGS = 1024
+
+//
+const Qt__TYPEFLAG_FREPLACEABLE Qt__tagTYPEFLAGS = 2048
+
+//
+const Qt__TYPEFLAG_FDISPATCHABLE Qt__tagTYPEFLAGS = 4096
+
+//
+const Qt__TYPEFLAG_FREVERSEBIND Qt__tagTYPEFLAGS = 8192
+
+//
+const Qt__TYPEFLAG_FPROXY Qt__tagTYPEFLAGS = 16384
+
+func tagTYPEFLAGSItemName(val int) string {
+	switch val {
+	case Qt__TYPEFLAG_FAPPOBJECT: // 1
+		return "TYPEFLAG_FAPPOBJECT"
+	case Qt__TYPEFLAG_FCANCREATE: // 2
+		return "TYPEFLAG_FCANCREATE"
+	case Qt__TYPEFLAG_FLICENSED: // 4
+		return "TYPEFLAG_FLICENSED"
+	case Qt__TYPEFLAG_FPREDECLID: // 8
+		return "TYPEFLAG_FPREDECLID"
+	case Qt__TYPEFLAG_FHIDDEN: // 16
+		return "TYPEFLAG_FHIDDEN"
+	case Qt__TYPEFLAG_FCONTROL: // 32
+		return "TYPEFLAG_FCONTROL"
+	case Qt__TYPEFLAG_FDUAL: // 64
+		return "TYPEFLAG_FDUAL"
+	case Qt__TYPEFLAG_FNONEXTENSIBLE: // 128
+		return "TYPEFLAG_FNONEXTENSIBLE"
+	case Qt__TYPEFLAG_FOLEAUTOMATION: // 256
+		return "TYPEFLAG_FOLEAUTOMATION"
+	case Qt__TYPEFLAG_FRESTRICTED: // 512
+		return "TYPEFLAG_FRESTRICTED"
+	case Qt__TYPEFLAG_FAGGREGATABLE: // 1024
+		return "TYPEFLAG_FAGGREGATABLE"
+	case Qt__TYPEFLAG_FREPLACEABLE: // 2048
+		return "TYPEFLAG_FREPLACEABLE"
+	case Qt__TYPEFLAG_FDISPATCHABLE: // 4096
+		return "TYPEFLAG_FDISPATCHABLE"
+	case Qt__TYPEFLAG_FREVERSEBIND: // 8192
+		return "TYPEFLAG_FREVERSEBIND"
+	case Qt__TYPEFLAG_FPROXY: // 16384
+		return "TYPEFLAG_FPROXY"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagFUNCFLAGS = int // stdglobal
+//
+const Qt__FUNCFLAG_FRESTRICTED Qt__tagFUNCFLAGS = 1
+
+//
+const Qt__FUNCFLAG_FSOURCE Qt__tagFUNCFLAGS = 2
+
+//
+const Qt__FUNCFLAG_FBINDABLE Qt__tagFUNCFLAGS = 4
+
+//
+const Qt__FUNCFLAG_FREQUESTEDIT Qt__tagFUNCFLAGS = 8
+
+//
+const Qt__FUNCFLAG_FDISPLAYBIND Qt__tagFUNCFLAGS = 16
+
+//
+const Qt__FUNCFLAG_FDEFAULTBIND Qt__tagFUNCFLAGS = 32
+
+//
+const Qt__FUNCFLAG_FHIDDEN Qt__tagFUNCFLAGS = 64
+
+//
+const Qt__FUNCFLAG_FUSESGETLASTERROR Qt__tagFUNCFLAGS = 128
+
+//
+const Qt__FUNCFLAG_FDEFAULTCOLLELEM Qt__tagFUNCFLAGS = 256
+
+//
+const Qt__FUNCFLAG_FUIDEFAULT Qt__tagFUNCFLAGS = 512
+
+//
+const Qt__FUNCFLAG_FNONBROWSABLE Qt__tagFUNCFLAGS = 1024
+
+//
+const Qt__FUNCFLAG_FREPLACEABLE Qt__tagFUNCFLAGS = 2048
+
+//
+const Qt__FUNCFLAG_FIMMEDIATEBIND Qt__tagFUNCFLAGS = 4096
+
+func tagFUNCFLAGSItemName(val int) string {
+	switch val {
+	case Qt__FUNCFLAG_FRESTRICTED: // 1
+		return "FUNCFLAG_FRESTRICTED"
+	case Qt__FUNCFLAG_FSOURCE: // 2
+		return "FUNCFLAG_FSOURCE"
+	case Qt__FUNCFLAG_FBINDABLE: // 4
+		return "FUNCFLAG_FBINDABLE"
+	case Qt__FUNCFLAG_FREQUESTEDIT: // 8
+		return "FUNCFLAG_FREQUESTEDIT"
+	case Qt__FUNCFLAG_FDISPLAYBIND: // 16
+		return "FUNCFLAG_FDISPLAYBIND"
+	case Qt__FUNCFLAG_FDEFAULTBIND: // 32
+		return "FUNCFLAG_FDEFAULTBIND"
+	case Qt__FUNCFLAG_FHIDDEN: // 64
+		return "FUNCFLAG_FHIDDEN"
+	case Qt__FUNCFLAG_FUSESGETLASTERROR: // 128
+		return "FUNCFLAG_FUSESGETLASTERROR"
+	case Qt__FUNCFLAG_FDEFAULTCOLLELEM: // 256
+		return "FUNCFLAG_FDEFAULTCOLLELEM"
+	case Qt__FUNCFLAG_FUIDEFAULT: // 512
+		return "FUNCFLAG_FUIDEFAULT"
+	case Qt__FUNCFLAG_FNONBROWSABLE: // 1024
+		return "FUNCFLAG_FNONBROWSABLE"
+	case Qt__FUNCFLAG_FREPLACEABLE: // 2048
+		return "FUNCFLAG_FREPLACEABLE"
+	case Qt__FUNCFLAG_FIMMEDIATEBIND: // 4096
+		return "FUNCFLAG_FIMMEDIATEBIND"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagVARFLAGS = int // stdglobal
+//
+const Qt__VARFLAG_FREADONLY Qt__tagVARFLAGS = 1
+
+//
+const Qt__VARFLAG_FSOURCE Qt__tagVARFLAGS = 2
+
+//
+const Qt__VARFLAG_FBINDABLE Qt__tagVARFLAGS = 4
+
+//
+const Qt__VARFLAG_FREQUESTEDIT Qt__tagVARFLAGS = 8
+
+//
+const Qt__VARFLAG_FDISPLAYBIND Qt__tagVARFLAGS = 16
+
+//
+const Qt__VARFLAG_FDEFAULTBIND Qt__tagVARFLAGS = 32
+
+//
+const Qt__VARFLAG_FHIDDEN Qt__tagVARFLAGS = 64
+
+//
+const Qt__VARFLAG_FRESTRICTED Qt__tagVARFLAGS = 128
+
+//
+const Qt__VARFLAG_FDEFAULTCOLLELEM Qt__tagVARFLAGS = 256
+
+//
+const Qt__VARFLAG_FUIDEFAULT Qt__tagVARFLAGS = 512
+
+//
+const Qt__VARFLAG_FNONBROWSABLE Qt__tagVARFLAGS = 1024
+
+//
+const Qt__VARFLAG_FREPLACEABLE Qt__tagVARFLAGS = 2048
+
+//
+const Qt__VARFLAG_FIMMEDIATEBIND Qt__tagVARFLAGS = 4096
+
+func tagVARFLAGSItemName(val int) string {
+	switch val {
+	case Qt__VARFLAG_FREADONLY: // 1
+		return "VARFLAG_FREADONLY"
+	case Qt__VARFLAG_FSOURCE: // 2
+		return "VARFLAG_FSOURCE"
+	case Qt__VARFLAG_FBINDABLE: // 4
+		return "VARFLAG_FBINDABLE"
+	case Qt__VARFLAG_FREQUESTEDIT: // 8
+		return "VARFLAG_FREQUESTEDIT"
+	case Qt__VARFLAG_FDISPLAYBIND: // 16
+		return "VARFLAG_FDISPLAYBIND"
+	case Qt__VARFLAG_FDEFAULTBIND: // 32
+		return "VARFLAG_FDEFAULTBIND"
+	case Qt__VARFLAG_FHIDDEN: // 64
+		return "VARFLAG_FHIDDEN"
+	case Qt__VARFLAG_FRESTRICTED: // 128
+		return "VARFLAG_FRESTRICTED"
+	case Qt__VARFLAG_FDEFAULTCOLLELEM: // 256
+		return "VARFLAG_FDEFAULTCOLLELEM"
+	case Qt__VARFLAG_FUIDEFAULT: // 512
+		return "VARFLAG_FUIDEFAULT"
+	case Qt__VARFLAG_FNONBROWSABLE: // 1024
+		return "VARFLAG_FNONBROWSABLE"
+	case Qt__VARFLAG_FREPLACEABLE: // 2048
+		return "VARFLAG_FREPLACEABLE"
+	case Qt__VARFLAG_FIMMEDIATEBIND: // 4096
+		return "VARFLAG_FIMMEDIATEBIND"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagDESCKIND = int // stdglobal
+//
+const Qt__DESCKIND_NONE Qt__tagDESCKIND = 0
+
+//
+const Qt__DESCKIND_FUNCDESC Qt__tagDESCKIND = 1
+
+//
+const Qt__DESCKIND_VARDESC Qt__tagDESCKIND = 2
+
+//
+const Qt__DESCKIND_TYPECOMP Qt__tagDESCKIND = 3
+
+//
+const Qt__DESCKIND_IMPLICITAPPOBJ Qt__tagDESCKIND = 4
+
+//
+const Qt__DESCKIND_MAX Qt__tagDESCKIND = 5
+
+func tagDESCKINDItemName(val int) string {
+	switch val {
+	case Qt__DESCKIND_NONE: // 0
+		return "DESCKIND_NONE"
+	case Qt__DESCKIND_FUNCDESC: // 1
+		return "DESCKIND_FUNCDESC"
+	case Qt__DESCKIND_VARDESC: // 2
+		return "DESCKIND_VARDESC"
+	case Qt__DESCKIND_TYPECOMP: // 3
+		return "DESCKIND_TYPECOMP"
+	case Qt__DESCKIND_IMPLICITAPPOBJ: // 4
+		return "DESCKIND_IMPLICITAPPOBJ"
+	case Qt__DESCKIND_MAX: // 5
+		return "DESCKIND_MAX"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagSYSKIND = int // stdglobal
+//
+const Qt__SYS_WIN16 Qt__tagSYSKIND = 0
+
+//
+const Qt__SYS_WIN32 Qt__tagSYSKIND = 1
+
+//
+const Qt__SYS_MAC Qt__tagSYSKIND = 2
+
+//
+const Qt__SYS_WIN64 Qt__tagSYSKIND = 3
+
+func tagSYSKINDItemName(val int) string {
+	switch val {
+	case Qt__SYS_WIN16: // 0
+		return "SYS_WIN16"
+	case Qt__SYS_WIN32: // 1
+		return "SYS_WIN32"
+	case Qt__SYS_MAC: // 2
+		return "SYS_MAC"
+	case Qt__SYS_WIN64: // 3
+		return "SYS_WIN64"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagLIBFLAGS = int // stdglobal
+//
+const Qt__LIBFLAG_FRESTRICTED Qt__tagLIBFLAGS = 1
+
+//
+const Qt__LIBFLAG_FCONTROL Qt__tagLIBFLAGS = 2
+
+//
+const Qt__LIBFLAG_FHIDDEN Qt__tagLIBFLAGS = 4
+
+//
+const Qt__LIBFLAG_FHASDISKIMAGE Qt__tagLIBFLAGS = 8
+
+func tagLIBFLAGSItemName(val int) string {
+	switch val {
+	case Qt__LIBFLAG_FRESTRICTED: // 1
+		return "LIBFLAG_FRESTRICTED"
+	case Qt__LIBFLAG_FCONTROL: // 2
+		return "LIBFLAG_FCONTROL"
+	case Qt__LIBFLAG_FHIDDEN: // 4
+		return "LIBFLAG_FHIDDEN"
+	case Qt__LIBFLAG_FHASDISKIMAGE: // 8
+		return "LIBFLAG_FHASDISKIMAGE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagCHANGEKIND = int // stdglobal
+//
+const Qt__CHANGEKIND_ADDMEMBER Qt__tagCHANGEKIND = 0
+
+//
+const Qt__CHANGEKIND_DELETEMEMBER Qt__tagCHANGEKIND = 1
+
+//
+const Qt__CHANGEKIND_SETNAMES Qt__tagCHANGEKIND = 2
+
+//
+const Qt__CHANGEKIND_SETDOCUMENTATION Qt__tagCHANGEKIND = 3
+
+//
+const Qt__CHANGEKIND_GENERAL Qt__tagCHANGEKIND = 4
+
+//
+const Qt__CHANGEKIND_INVALIDATE Qt__tagCHANGEKIND = 5
+
+//
+const Qt__CHANGEKIND_CHANGEFAILED Qt__tagCHANGEKIND = 6
+
+//
+const Qt__CHANGEKIND_MAX Qt__tagCHANGEKIND = 7
+
+func tagCHANGEKINDItemName(val int) string {
+	switch val {
+	case Qt__CHANGEKIND_ADDMEMBER: // 0
+		return "CHANGEKIND_ADDMEMBER"
+	case Qt__CHANGEKIND_DELETEMEMBER: // 1
+		return "CHANGEKIND_DELETEMEMBER"
+	case Qt__CHANGEKIND_SETNAMES: // 2
+		return "CHANGEKIND_SETNAMES"
+	case Qt__CHANGEKIND_SETDOCUMENTATION: // 3
+		return "CHANGEKIND_SETDOCUMENTATION"
+	case Qt__CHANGEKIND_GENERAL: // 4
+		return "CHANGEKIND_GENERAL"
+	case Qt__CHANGEKIND_INVALIDATE: // 5
+		return "CHANGEKIND_INVALIDATE"
+	case Qt__CHANGEKIND_CHANGEFAILED: // 6
+		return "CHANGEKIND_CHANGEFAILED"
+	case Qt__CHANGEKIND_MAX: // 7
+		return "CHANGEKIND_MAX"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagDOMNodeType = int // stdglobal
+//
+const Qt__NODE_INVALID Qt__tagDOMNodeType = 0
+
+//
+const Qt__NODE_ELEMENT Qt__tagDOMNodeType = 1
+
+//
+const Qt__NODE_ATTRIBUTE Qt__tagDOMNodeType = 2
+
+//
+const Qt__NODE_TEXT Qt__tagDOMNodeType = 3
+
+//
+const Qt__NODE_CDATA_SECTION Qt__tagDOMNodeType = 4
+
+//
+const Qt__NODE_ENTITY_REFERENCE Qt__tagDOMNodeType = 5
+
+//
+const Qt__NODE_ENTITY Qt__tagDOMNodeType = 6
+
+//
+const Qt__NODE_PROCESSING_INSTRUCTION Qt__tagDOMNodeType = 7
+
+//
+const Qt__NODE_COMMENT Qt__tagDOMNodeType = 8
+
+//
+const Qt__NODE_DOCUMENT Qt__tagDOMNodeType = 9
+
+//
+const Qt__NODE_DOCUMENT_TYPE Qt__tagDOMNodeType = 10
+
+//
+const Qt__NODE_DOCUMENT_FRAGMENT Qt__tagDOMNodeType = 11
+
+//
+const Qt__NODE_NOTATION Qt__tagDOMNodeType = 12
+
+func tagDOMNodeTypeItemName(val int) string {
+	switch val {
+	case Qt__NODE_INVALID: // 0
+		return "NODE_INVALID"
+	case Qt__NODE_ELEMENT: // 1
+		return "NODE_ELEMENT"
+	case Qt__NODE_ATTRIBUTE: // 2
+		return "NODE_ATTRIBUTE"
+	case Qt__NODE_TEXT: // 3
+		return "NODE_TEXT"
+	case Qt__NODE_CDATA_SECTION: // 4
+		return "NODE_CDATA_SECTION"
+	case Qt__NODE_ENTITY_REFERENCE: // 5
+		return "NODE_ENTITY_REFERENCE"
+	case Qt__NODE_ENTITY: // 6
+		return "NODE_ENTITY"
+	case Qt__NODE_PROCESSING_INSTRUCTION: // 7
+		return "NODE_PROCESSING_INSTRUCTION"
+	case Qt__NODE_COMMENT: // 8
+		return "NODE_COMMENT"
+	case Qt__NODE_DOCUMENT: // 9
+		return "NODE_DOCUMENT"
+	case Qt__NODE_DOCUMENT_TYPE: // 10
+		return "NODE_DOCUMENT_TYPE"
+	case Qt__NODE_DOCUMENT_FRAGMENT: // 11
+		return "NODE_DOCUMENT_FRAGMENT"
+	case Qt__NODE_NOTATION: // 12
+		return "NODE_NOTATION"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagXMLEMEM_TYPE = int // stdglobal
+//
+const Qt__XMLELEMTYPE_ELEMENT Qt__tagXMLEMEM_TYPE = 0
+
+//
+const Qt__XMLELEMTYPE_TEXT Qt__tagXMLEMEM_TYPE = 1
+
+//
+const Qt__XMLELEMTYPE_COMMENT Qt__tagXMLEMEM_TYPE = 2
+
+//
+const Qt__XMLELEMTYPE_DOCUMENT Qt__tagXMLEMEM_TYPE = 3
+
+//
+const Qt__XMLELEMTYPE_DTD Qt__tagXMLEMEM_TYPE = 4
+
+//
+const Qt__XMLELEMTYPE_PI Qt__tagXMLEMEM_TYPE = 5
+
+//
+const Qt__XMLELEMTYPE_OTHER Qt__tagXMLEMEM_TYPE = 6
+
+func tagXMLEMEM_TYPEItemName(val int) string {
+	switch val {
+	case Qt__XMLELEMTYPE_ELEMENT: // 0
+		return "XMLELEMTYPE_ELEMENT"
+	case Qt__XMLELEMTYPE_TEXT: // 1
+		return "XMLELEMTYPE_TEXT"
+	case Qt__XMLELEMTYPE_COMMENT: // 2
+		return "XMLELEMTYPE_COMMENT"
+	case Qt__XMLELEMTYPE_DOCUMENT: // 3
+		return "XMLELEMTYPE_DOCUMENT"
+	case Qt__XMLELEMTYPE_DTD: // 4
+		return "XMLELEMTYPE_DTD"
+	case Qt__XMLELEMTYPE_PI: // 5
+		return "XMLELEMTYPE_PI"
+	case Qt__XMLELEMTYPE_OTHER: // 6
+		return "XMLELEMTYPE_OTHER"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_00000002 = int // stdglobal
+//
+const Qt__BINDVERB_GET Qt____WIDL_urlmon_generated_name_00000002 = 0
+
+//
+const Qt__BINDVERB_POST Qt____WIDL_urlmon_generated_name_00000002 = 1
+
+//
+const Qt__BINDVERB_PUT Qt____WIDL_urlmon_generated_name_00000002 = 2
+
+//
+const Qt__BINDVERB_CUSTOM Qt____WIDL_urlmon_generated_name_00000002 = 3
+
+func __WIDL_urlmon_generated_name_00000002ItemName(val int) string {
+	switch val {
+	case Qt__BINDVERB_GET: // 0
+		return "BINDVERB_GET"
+	case Qt__BINDVERB_POST: // 1
+		return "BINDVERB_POST"
+	case Qt__BINDVERB_PUT: // 2
+		return "BINDVERB_PUT"
+	case Qt__BINDVERB_CUSTOM: // 3
+		return "BINDVERB_CUSTOM"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_00000003 = int // stdglobal
+//
+const Qt__BINDINFOF_URLENCODESTGMEDDATA Qt____WIDL_urlmon_generated_name_00000003 = 1
+
+//
+const Qt__BINDINFOF_URLENCODEDEXTRAINFO Qt____WIDL_urlmon_generated_name_00000003 = 2
+
+func __WIDL_urlmon_generated_name_00000003ItemName(val int) string {
+	switch val {
+	case Qt__BINDINFOF_URLENCODESTGMEDDATA: // 1
+		return "BINDINFOF_URLENCODESTGMEDDATA"
+	case Qt__BINDINFOF_URLENCODEDEXTRAINFO: // 2
+		return "BINDINFOF_URLENCODEDEXTRAINFO"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_00000004 = int // stdglobal
+//
+const Qt__BINDF_ASYNCHRONOUS Qt____WIDL_urlmon_generated_name_00000004 = 1
+
+//
+const Qt__BINDF_ASYNCSTORAGE Qt____WIDL_urlmon_generated_name_00000004 = 2
+
+//
+const Qt__BINDF_NOPROGRESSIVERENDERING Qt____WIDL_urlmon_generated_name_00000004 = 4
+
+//
+const Qt__BINDF_OFFLINEOPERATION Qt____WIDL_urlmon_generated_name_00000004 = 8
+
+//
+const Qt__BINDF_GETNEWESTVERSION Qt____WIDL_urlmon_generated_name_00000004 = 16
+
+//
+const Qt__BINDF_NOWRITECACHE Qt____WIDL_urlmon_generated_name_00000004 = 32
+
+//
+const Qt__BINDF_NEEDFILE Qt____WIDL_urlmon_generated_name_00000004 = 64
+
+//
+const Qt__BINDF_PULLDATA Qt____WIDL_urlmon_generated_name_00000004 = 128
+
+//
+const Qt__BINDF_IGNORESECURITYPROBLEM Qt____WIDL_urlmon_generated_name_00000004 = 256
+
+//
+const Qt__BINDF_RESYNCHRONIZE Qt____WIDL_urlmon_generated_name_00000004 = 512
+
+//
+const Qt__BINDF_HYPERLINK Qt____WIDL_urlmon_generated_name_00000004 = 1024
+
+//
+const Qt__BINDF_NO_UI Qt____WIDL_urlmon_generated_name_00000004 = 2048
+
+//
+const Qt__BINDF_SILENTOPERATION Qt____WIDL_urlmon_generated_name_00000004 = 4096
+
+//
+const Qt__BINDF_PRAGMA_NO_CACHE Qt____WIDL_urlmon_generated_name_00000004 = 8192
+
+//
+const Qt__BINDF_GETCLASSOBJECT Qt____WIDL_urlmon_generated_name_00000004 = 16384
+
+//
+const Qt__BINDF_RESERVED_1 Qt____WIDL_urlmon_generated_name_00000004 = 32768
+
+//
+const Qt__BINDF_FREE_THREADED Qt____WIDL_urlmon_generated_name_00000004 = 65536
+
+//
+const Qt__BINDF_DIRECT_READ Qt____WIDL_urlmon_generated_name_00000004 = 131072
+
+//
+const Qt__BINDF_FORMS_SUBMIT Qt____WIDL_urlmon_generated_name_00000004 = 262144
+
+//
+const Qt__BINDF_GETFROMCACHE_IF_NET_FAIL Qt____WIDL_urlmon_generated_name_00000004 = 524288
+
+//
+const Qt__BINDF_FROMURLMON Qt____WIDL_urlmon_generated_name_00000004 = 1048576
+
+//
+const Qt__BINDF_FWD_BACK Qt____WIDL_urlmon_generated_name_00000004 = 2097152
+
+//
+const Qt__BINDF_PREFERDEFAULTHANDLER Qt____WIDL_urlmon_generated_name_00000004 = 4194304
+
+//
+const Qt__BINDF_ENFORCERESTRICTED Qt____WIDL_urlmon_generated_name_00000004 = 8388608
+
+func __WIDL_urlmon_generated_name_00000004ItemName(val int) string {
+	switch val {
+	case Qt__BINDF_ASYNCHRONOUS: // 1
+		return "BINDF_ASYNCHRONOUS"
+	case Qt__BINDF_ASYNCSTORAGE: // 2
+		return "BINDF_ASYNCSTORAGE"
+	case Qt__BINDF_NOPROGRESSIVERENDERING: // 4
+		return "BINDF_NOPROGRESSIVERENDERING"
+	case Qt__BINDF_OFFLINEOPERATION: // 8
+		return "BINDF_OFFLINEOPERATION"
+	case Qt__BINDF_GETNEWESTVERSION: // 16
+		return "BINDF_GETNEWESTVERSION"
+	case Qt__BINDF_NOWRITECACHE: // 32
+		return "BINDF_NOWRITECACHE"
+	case Qt__BINDF_NEEDFILE: // 64
+		return "BINDF_NEEDFILE"
+	case Qt__BINDF_PULLDATA: // 128
+		return "BINDF_PULLDATA"
+	case Qt__BINDF_IGNORESECURITYPROBLEM: // 256
+		return "BINDF_IGNORESECURITYPROBLEM"
+	case Qt__BINDF_RESYNCHRONIZE: // 512
+		return "BINDF_RESYNCHRONIZE"
+	case Qt__BINDF_HYPERLINK: // 1024
+		return "BINDF_HYPERLINK"
+	case Qt__BINDF_NO_UI: // 2048
+		return "BINDF_NO_UI"
+	case Qt__BINDF_SILENTOPERATION: // 4096
+		return "BINDF_SILENTOPERATION"
+	case Qt__BINDF_PRAGMA_NO_CACHE: // 8192
+		return "BINDF_PRAGMA_NO_CACHE"
+	case Qt__BINDF_GETCLASSOBJECT: // 16384
+		return "BINDF_GETCLASSOBJECT"
+	case Qt__BINDF_RESERVED_1: // 32768
+		return "BINDF_RESERVED_1"
+	case Qt__BINDF_FREE_THREADED: // 65536
+		return "BINDF_FREE_THREADED"
+	case Qt__BINDF_DIRECT_READ: // 131072
+		return "BINDF_DIRECT_READ"
+	case Qt__BINDF_FORMS_SUBMIT: // 262144
+		return "BINDF_FORMS_SUBMIT"
+	case Qt__BINDF_GETFROMCACHE_IF_NET_FAIL: // 524288
+		return "BINDF_GETFROMCACHE_IF_NET_FAIL"
+	case Qt__BINDF_FROMURLMON: // 1048576
+		return "BINDF_FROMURLMON"
+	case Qt__BINDF_FWD_BACK: // 2097152
+		return "BINDF_FWD_BACK"
+	case Qt__BINDF_PREFERDEFAULTHANDLER: // 4194304
+		return "BINDF_PREFERDEFAULTHANDLER"
+	case Qt__BINDF_ENFORCERESTRICTED: // 8388608
+		return "BINDF_ENFORCERESTRICTED"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_00000005 = int // stdglobal
+//
+const Qt__URL_ENCODING_NONE Qt____WIDL_urlmon_generated_name_00000005 = 0
+
+//
+const Qt__URL_ENCODING_ENABLE_UTF8 Qt____WIDL_urlmon_generated_name_00000005 = 268435456
+
+//
+const Qt__URL_ENCODING_DISABLE_UTF8 Qt____WIDL_urlmon_generated_name_00000005 = 536870912
+
+func __WIDL_urlmon_generated_name_00000005ItemName(val int) string {
+	switch val {
+	case Qt__URL_ENCODING_NONE: // 0
+		return "URL_ENCODING_NONE"
+	case Qt__URL_ENCODING_ENABLE_UTF8: // 268435456
+		return "URL_ENCODING_ENABLE_UTF8"
+	case Qt__URL_ENCODING_DISABLE_UTF8: // 536870912
+		return "URL_ENCODING_DISABLE_UTF8"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_00000006 = int // stdglobal
+//
+const Qt__BINDINFO_OPTIONS_WININETFLAG Qt____WIDL_urlmon_generated_name_00000006 = 65536
+
+//
+const Qt__BINDINFO_OPTIONS_ENABLE_UTF8 Qt____WIDL_urlmon_generated_name_00000006 = 131072
+
+//
+const Qt__BINDINFO_OPTIONS_DISABLE_UTF8 Qt____WIDL_urlmon_generated_name_00000006 = 262144
+
+//
+const Qt__BINDINFO_OPTIONS_USE_IE_ENCODING Qt____WIDL_urlmon_generated_name_00000006 = 524288
+
+//
+const Qt__BINDINFO_OPTIONS_BINDTOOBJECT Qt____WIDL_urlmon_generated_name_00000006 = 1048576
+
+//
+const Qt__BINDINFO_OPTIONS_SECURITYOPTOUT Qt____WIDL_urlmon_generated_name_00000006 = 2097152
+
+//
+const Qt__BINDINFO_OPTIONS_IGNOREMIMETEXTPLAIN Qt____WIDL_urlmon_generated_name_00000006 = 4194304
+
+//
+const Qt__BINDINFO_OPTIONS_USEBINDSTRINGCREDS Qt____WIDL_urlmon_generated_name_00000006 = 8388608
+
+//
+const Qt__BINDINFO_OPTIONS_IGNOREHTTPHTTPSREDIRECTS Qt____WIDL_urlmon_generated_name_00000006 = 16777216
+
+//
+const Qt__BINDINFO_OPTIONS_IGNORE_SSLERRORS_ONCE Qt____WIDL_urlmon_generated_name_00000006 = 33554432
+
+//
+const Qt__BINDINFO_WPC_DOWNLOADBLOCKED Qt____WIDL_urlmon_generated_name_00000006 = 134217728
+
+//
+const Qt__BINDINFO_WPC_LOGGING_ENABLED Qt____WIDL_urlmon_generated_name_00000006 = 268435456
+
+//
+const Qt__BINDINFO_OPTIONS_ALLOWCONNECTDATA Qt____WIDL_urlmon_generated_name_00000006 = 536870912
+
+//
+const Qt__BINDINFO_OPTIONS_DISABLEAUTOREDIRECTS Qt____WIDL_urlmon_generated_name_00000006 = 1073741824
+
+//
+const Qt__BINDINFO_OPTIONS_SHDOCVW_NAVIGATE Qt____WIDL_urlmon_generated_name_00000006 = -2147483648
+
+func __WIDL_urlmon_generated_name_00000006ItemName(val int) string {
+	switch val {
+	case Qt__BINDINFO_OPTIONS_WININETFLAG: // 65536
+		return "BINDINFO_OPTIONS_WININETFLAG"
+	case Qt__BINDINFO_OPTIONS_ENABLE_UTF8: // 131072
+		return "BINDINFO_OPTIONS_ENABLE_UTF8"
+	case Qt__BINDINFO_OPTIONS_DISABLE_UTF8: // 262144
+		return "BINDINFO_OPTIONS_DISABLE_UTF8"
+	case Qt__BINDINFO_OPTIONS_USE_IE_ENCODING: // 524288
+		return "BINDINFO_OPTIONS_USE_IE_ENCODING"
+	case Qt__BINDINFO_OPTIONS_BINDTOOBJECT: // 1048576
+		return "BINDINFO_OPTIONS_BINDTOOBJECT"
+	case Qt__BINDINFO_OPTIONS_SECURITYOPTOUT: // 2097152
+		return "BINDINFO_OPTIONS_SECURITYOPTOUT"
+	case Qt__BINDINFO_OPTIONS_IGNOREMIMETEXTPLAIN: // 4194304
+		return "BINDINFO_OPTIONS_IGNOREMIMETEXTPLAIN"
+	case Qt__BINDINFO_OPTIONS_USEBINDSTRINGCREDS: // 8388608
+		return "BINDINFO_OPTIONS_USEBINDSTRINGCREDS"
+	case Qt__BINDINFO_OPTIONS_IGNOREHTTPHTTPSREDIRECTS: // 16777216
+		return "BINDINFO_OPTIONS_IGNOREHTTPHTTPSREDIRECTS"
+	case Qt__BINDINFO_OPTIONS_IGNORE_SSLERRORS_ONCE: // 33554432
+		return "BINDINFO_OPTIONS_IGNORE_SSLERRORS_ONCE"
+	case Qt__BINDINFO_WPC_DOWNLOADBLOCKED: // 134217728
+		return "BINDINFO_WPC_DOWNLOADBLOCKED"
+	case Qt__BINDINFO_WPC_LOGGING_ENABLED: // 268435456
+		return "BINDINFO_WPC_LOGGING_ENABLED"
+	case Qt__BINDINFO_OPTIONS_ALLOWCONNECTDATA: // 536870912
+		return "BINDINFO_OPTIONS_ALLOWCONNECTDATA"
+	case Qt__BINDINFO_OPTIONS_DISABLEAUTOREDIRECTS: // 1073741824
+		return "BINDINFO_OPTIONS_DISABLEAUTOREDIRECTS"
+	case Qt__BINDINFO_OPTIONS_SHDOCVW_NAVIGATE: // -2147483648
+		return "BINDINFO_OPTIONS_SHDOCVW_NAVIGATE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_00000007 = int // stdglobal
+//
+const Qt__BSCF_FIRSTDATANOTIFICATION Qt____WIDL_urlmon_generated_name_00000007 = 1
+
+//
+const Qt__BSCF_INTERMEDIATEDATANOTIFICATION Qt____WIDL_urlmon_generated_name_00000007 = 2
+
+//
+const Qt__BSCF_LASTDATANOTIFICATION Qt____WIDL_urlmon_generated_name_00000007 = 4
+
+//
+const Qt__BSCF_DATAFULLYAVAILABLE Qt____WIDL_urlmon_generated_name_00000007 = 8
+
+//
+const Qt__BSCF_AVAILABLEDATASIZEUNKNOWN Qt____WIDL_urlmon_generated_name_00000007 = 16
+
+//
+const Qt__BSCF_SKIPDRAINDATAFORFILEURLS Qt____WIDL_urlmon_generated_name_00000007 = 32
+
+//
+const Qt__BSCF_64BITLENGTHDOWNLOAD Qt____WIDL_urlmon_generated_name_00000007 = 64
+
+func __WIDL_urlmon_generated_name_00000007ItemName(val int) string {
+	switch val {
+	case Qt__BSCF_FIRSTDATANOTIFICATION: // 1
+		return "BSCF_FIRSTDATANOTIFICATION"
+	case Qt__BSCF_INTERMEDIATEDATANOTIFICATION: // 2
+		return "BSCF_INTERMEDIATEDATANOTIFICATION"
+	case Qt__BSCF_LASTDATANOTIFICATION: // 4
+		return "BSCF_LASTDATANOTIFICATION"
+	case Qt__BSCF_DATAFULLYAVAILABLE: // 8
+		return "BSCF_DATAFULLYAVAILABLE"
+	case Qt__BSCF_AVAILABLEDATASIZEUNKNOWN: // 16
+		return "BSCF_AVAILABLEDATASIZEUNKNOWN"
+	case Qt__BSCF_SKIPDRAINDATAFORFILEURLS: // 32
+		return "BSCF_SKIPDRAINDATAFORFILEURLS"
+	case Qt__BSCF_64BITLENGTHDOWNLOAD: // 64
+		return "BSCF_64BITLENGTHDOWNLOAD"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__BINDSTATUS = int // stdglobal
+//
+const Qt__BINDSTATUS_FINDINGRESOURCE Qt__BINDSTATUS = 1
+
+//
+const Qt__BINDSTATUS_CONNECTING Qt__BINDSTATUS = 2
+
+//
+const Qt__BINDSTATUS_REDIRECTING Qt__BINDSTATUS = 3
+
+//
+const Qt__BINDSTATUS_BEGINDOWNLOADDATA Qt__BINDSTATUS = 4
+
+//
+const Qt__BINDSTATUS_DOWNLOADINGDATA Qt__BINDSTATUS = 5
+
+//
+const Qt__BINDSTATUS_ENDDOWNLOADDATA Qt__BINDSTATUS = 6
+
+//
+const Qt__BINDSTATUS_BEGINDOWNLOADCOMPONENTS Qt__BINDSTATUS = 7
+
+//
+const Qt__BINDSTATUS_INSTALLINGCOMPONENTS Qt__BINDSTATUS = 8
+
+//
+const Qt__BINDSTATUS_ENDDOWNLOADCOMPONENTS Qt__BINDSTATUS = 9
+
+//
+const Qt__BINDSTATUS_USINGCACHEDCOPY Qt__BINDSTATUS = 10
+
+//
+const Qt__BINDSTATUS_SENDINGREQUEST Qt__BINDSTATUS = 11
+
+//
+const Qt__BINDSTATUS_CLASSIDAVAILABLE Qt__BINDSTATUS = 12
+
+//
+const Qt__BINDSTATUS_MIMETYPEAVAILABLE Qt__BINDSTATUS = 13
+
+//
+const Qt__BINDSTATUS_CACHEFILENAMEAVAILABLE Qt__BINDSTATUS = 14
+
+//
+const Qt__BINDSTATUS_BEGINSYNCOPERATION Qt__BINDSTATUS = 15
+
+//
+const Qt__BINDSTATUS_ENDSYNCOPERATION Qt__BINDSTATUS = 16
+
+//
+const Qt__BINDSTATUS_BEGINUPLOADDATA Qt__BINDSTATUS = 17
+
+//
+const Qt__BINDSTATUS_UPLOADINGDATA Qt__BINDSTATUS = 18
+
+//
+const Qt__BINDSTATUS_ENDUPLOADINGDATA Qt__BINDSTATUS = 19
+
+//
+const Qt__BINDSTATUS_PROTOCOLCLASSID Qt__BINDSTATUS = 20
+
+//
+const Qt__BINDSTATUS_ENCODING Qt__BINDSTATUS = 21
+
+//
+const Qt__BINDSTATUS_VERIFIEDMIMETYPEAVAILABLE Qt__BINDSTATUS = 22
+
+//
+const Qt__BINDSTATUS_CLASSINSTALLLOCATION Qt__BINDSTATUS = 23
+
+//
+const Qt__BINDSTATUS_DECODING Qt__BINDSTATUS = 24
+
+//
+const Qt__BINDSTATUS_LOADINGMIMEHANDLER Qt__BINDSTATUS = 25
+
+//
+const Qt__BINDSTATUS_CONTENTDISPOSITIONATTACH Qt__BINDSTATUS = 26
+
+//
+const Qt__BINDSTATUS_FILTERREPORTMIMETYPE Qt__BINDSTATUS = 27
+
+//
+const Qt__BINDSTATUS_CLSIDCANINSTANTIATE Qt__BINDSTATUS = 28
+
+//
+const Qt__BINDSTATUS_IUNKNOWNAVAILABLE Qt__BINDSTATUS = 29
+
+//
+const Qt__BINDSTATUS_DIRECTBIND Qt__BINDSTATUS = 30
+
+//
+const Qt__BINDSTATUS_RAWMIMETYPE Qt__BINDSTATUS = 31
+
+//
+const Qt__BINDSTATUS_PROXYDETECTING Qt__BINDSTATUS = 32
+
+//
+const Qt__BINDSTATUS_ACCEPTRANGES Qt__BINDSTATUS = 33
+
+//
+const Qt__BINDSTATUS_COOKIE_SENT Qt__BINDSTATUS = 34
+
+//
+const Qt__BINDSTATUS_COMPACT_POLICY_RECEIVED Qt__BINDSTATUS = 35
+
+//
+const Qt__BINDSTATUS_COOKIE_SUPPRESSED Qt__BINDSTATUS = 36
+
+//
+const Qt__BINDSTATUS_COOKIE_STATE_UNKNOWN Qt__BINDSTATUS = 37
+
+//
+const Qt__BINDSTATUS_COOKIE_STATE_ACCEPT Qt__BINDSTATUS = 38
+
+//
+const Qt__BINDSTATUS_COOKIE_STATE_REJECT Qt__BINDSTATUS = 39
+
+//
+const Qt__BINDSTATUS_COOKIE_STATE_PROMPT Qt__BINDSTATUS = 40
+
+//
+const Qt__BINDSTATUS_COOKIE_STATE_LEASH Qt__BINDSTATUS = 41
+
+//
+const Qt__BINDSTATUS_COOKIE_STATE_DOWNGRADE Qt__BINDSTATUS = 42
+
+//
+const Qt__BINDSTATUS_POLICY_HREF Qt__BINDSTATUS = 43
+
+//
+const Qt__BINDSTATUS_P3P_HEADER Qt__BINDSTATUS = 44
+
+//
+const Qt__BINDSTATUS_SESSION_COOKIE_RECEIVED Qt__BINDSTATUS = 45
+
+//
+const Qt__BINDSTATUS_PERSISTENT_COOKIE_RECEIVED Qt__BINDSTATUS = 46
+
+//
+const Qt__BINDSTATUS_SESSION_COOKIES_ALLOWED Qt__BINDSTATUS = 47
+
+//
+const Qt__BINDSTATUS_CACHECONTROL Qt__BINDSTATUS = 48
+
+//
+const Qt__BINDSTATUS_CONTENTDISPOSITIONFILENAME Qt__BINDSTATUS = 49
+
+//
+const Qt__BINDSTATUS_MIMETEXTPLAINMISMATCH Qt__BINDSTATUS = 50
+
+//
+const Qt__BINDSTATUS_PUBLISHERAVAILABLE Qt__BINDSTATUS = 51
+
+//
+const Qt__BINDSTATUS_DISPLAYNAMEAVAILABLE Qt__BINDSTATUS = 52
+
+//
+const Qt__BINDSTATUS_SSLUX_NAVBLOCKED Qt__BINDSTATUS = 53
+
+//
+const Qt__BINDSTATUS_SERVER_MIMETYPEAVAILABLE Qt__BINDSTATUS = 54
+
+//
+const Qt__BINDSTATUS_SNIFFED_CLASSIDAVAILABLE Qt__BINDSTATUS = 55
+
+//
+const Qt__BINDSTATUS_64BIT_PROGRESS Qt__BINDSTATUS = 56
+
+//
+const Qt__BINDSTATUS_LAST Qt__BINDSTATUS = 56
+
+//
+const Qt__BINDSTATUS_RESERVED_0 Qt__BINDSTATUS = 57
+
+//
+const Qt__BINDSTATUS_RESERVED_1 Qt__BINDSTATUS = 58
+
+//
+const Qt__BINDSTATUS_RESERVED_2 Qt__BINDSTATUS = 59
+
+//
+const Qt__BINDSTATUS_RESERVED_3 Qt__BINDSTATUS = 60
+
+//
+const Qt__BINDSTATUS_RESERVED_4 Qt__BINDSTATUS = 61
+
+//
+const Qt__BINDSTATUS_RESERVED_5 Qt__BINDSTATUS = 62
+
+//
+const Qt__BINDSTATUS_RESERVED_6 Qt__BINDSTATUS = 63
+
+//
+const Qt__BINDSTATUS_RESERVED_7 Qt__BINDSTATUS = 64
+
+//
+const Qt__BINDSTATUS_RESERVED_8 Qt__BINDSTATUS = 65
+
+//
+const Qt__BINDSTATUS_RESERVED_9 Qt__BINDSTATUS = 66
+
+//
+const Qt__BINDSTATUS_LAST_PRIVATE Qt__BINDSTATUS = 66
+
+func BINDSTATUSItemName(val int) string {
+	switch val {
+	case Qt__BINDSTATUS_FINDINGRESOURCE: // 1
+		return "BINDSTATUS_FINDINGRESOURCE"
+	case Qt__BINDSTATUS_CONNECTING: // 2
+		return "BINDSTATUS_CONNECTING"
+	case Qt__BINDSTATUS_REDIRECTING: // 3
+		return "BINDSTATUS_REDIRECTING"
+	case Qt__BINDSTATUS_BEGINDOWNLOADDATA: // 4
+		return "BINDSTATUS_BEGINDOWNLOADDATA"
+	case Qt__BINDSTATUS_DOWNLOADINGDATA: // 5
+		return "BINDSTATUS_DOWNLOADINGDATA"
+	case Qt__BINDSTATUS_ENDDOWNLOADDATA: // 6
+		return "BINDSTATUS_ENDDOWNLOADDATA"
+	case Qt__BINDSTATUS_BEGINDOWNLOADCOMPONENTS: // 7
+		return "BINDSTATUS_BEGINDOWNLOADCOMPONENTS"
+	case Qt__BINDSTATUS_INSTALLINGCOMPONENTS: // 8
+		return "BINDSTATUS_INSTALLINGCOMPONENTS"
+	case Qt__BINDSTATUS_ENDDOWNLOADCOMPONENTS: // 9
+		return "BINDSTATUS_ENDDOWNLOADCOMPONENTS"
+	case Qt__BINDSTATUS_USINGCACHEDCOPY: // 10
+		return "BINDSTATUS_USINGCACHEDCOPY"
+	case Qt__BINDSTATUS_SENDINGREQUEST: // 11
+		return "BINDSTATUS_SENDINGREQUEST"
+	case Qt__BINDSTATUS_CLASSIDAVAILABLE: // 12
+		return "BINDSTATUS_CLASSIDAVAILABLE"
+	case Qt__BINDSTATUS_MIMETYPEAVAILABLE: // 13
+		return "BINDSTATUS_MIMETYPEAVAILABLE"
+	case Qt__BINDSTATUS_CACHEFILENAMEAVAILABLE: // 14
+		return "BINDSTATUS_CACHEFILENAMEAVAILABLE"
+	case Qt__BINDSTATUS_BEGINSYNCOPERATION: // 15
+		return "BINDSTATUS_BEGINSYNCOPERATION"
+	case Qt__BINDSTATUS_ENDSYNCOPERATION: // 16
+		return "BINDSTATUS_ENDSYNCOPERATION"
+	case Qt__BINDSTATUS_BEGINUPLOADDATA: // 17
+		return "BINDSTATUS_BEGINUPLOADDATA"
+	case Qt__BINDSTATUS_UPLOADINGDATA: // 18
+		return "BINDSTATUS_UPLOADINGDATA"
+	case Qt__BINDSTATUS_ENDUPLOADINGDATA: // 19
+		return "BINDSTATUS_ENDUPLOADINGDATA"
+	case Qt__BINDSTATUS_PROTOCOLCLASSID: // 20
+		return "BINDSTATUS_PROTOCOLCLASSID"
+	case Qt__BINDSTATUS_ENCODING: // 21
+		return "BINDSTATUS_ENCODING"
+	case Qt__BINDSTATUS_VERIFIEDMIMETYPEAVAILABLE: // 22
+		return "BINDSTATUS_VERIFIEDMIMETYPEAVAILABLE"
+	case Qt__BINDSTATUS_CLASSINSTALLLOCATION: // 23
+		return "BINDSTATUS_CLASSINSTALLLOCATION"
+	case Qt__BINDSTATUS_DECODING: // 24
+		return "BINDSTATUS_DECODING"
+	case Qt__BINDSTATUS_LOADINGMIMEHANDLER: // 25
+		return "BINDSTATUS_LOADINGMIMEHANDLER"
+	case Qt__BINDSTATUS_CONTENTDISPOSITIONATTACH: // 26
+		return "BINDSTATUS_CONTENTDISPOSITIONATTACH"
+	case Qt__BINDSTATUS_FILTERREPORTMIMETYPE: // 27
+		return "BINDSTATUS_FILTERREPORTMIMETYPE"
+	case Qt__BINDSTATUS_CLSIDCANINSTANTIATE: // 28
+		return "BINDSTATUS_CLSIDCANINSTANTIATE"
+	case Qt__BINDSTATUS_IUNKNOWNAVAILABLE: // 29
+		return "BINDSTATUS_IUNKNOWNAVAILABLE"
+	case Qt__BINDSTATUS_DIRECTBIND: // 30
+		return "BINDSTATUS_DIRECTBIND"
+	case Qt__BINDSTATUS_RAWMIMETYPE: // 31
+		return "BINDSTATUS_RAWMIMETYPE"
+	case Qt__BINDSTATUS_PROXYDETECTING: // 32
+		return "BINDSTATUS_PROXYDETECTING"
+	case Qt__BINDSTATUS_ACCEPTRANGES: // 33
+		return "BINDSTATUS_ACCEPTRANGES"
+	case Qt__BINDSTATUS_COOKIE_SENT: // 34
+		return "BINDSTATUS_COOKIE_SENT"
+	case Qt__BINDSTATUS_COMPACT_POLICY_RECEIVED: // 35
+		return "BINDSTATUS_COMPACT_POLICY_RECEIVED"
+	case Qt__BINDSTATUS_COOKIE_SUPPRESSED: // 36
+		return "BINDSTATUS_COOKIE_SUPPRESSED"
+	case Qt__BINDSTATUS_COOKIE_STATE_UNKNOWN: // 37
+		return "BINDSTATUS_COOKIE_STATE_UNKNOWN"
+	case Qt__BINDSTATUS_COOKIE_STATE_ACCEPT: // 38
+		return "BINDSTATUS_COOKIE_STATE_ACCEPT"
+	case Qt__BINDSTATUS_COOKIE_STATE_REJECT: // 39
+		return "BINDSTATUS_COOKIE_STATE_REJECT"
+	case Qt__BINDSTATUS_COOKIE_STATE_PROMPT: // 40
+		return "BINDSTATUS_COOKIE_STATE_PROMPT"
+	case Qt__BINDSTATUS_COOKIE_STATE_LEASH: // 41
+		return "BINDSTATUS_COOKIE_STATE_LEASH"
+	case Qt__BINDSTATUS_COOKIE_STATE_DOWNGRADE: // 42
+		return "BINDSTATUS_COOKIE_STATE_DOWNGRADE"
+	case Qt__BINDSTATUS_POLICY_HREF: // 43
+		return "BINDSTATUS_POLICY_HREF"
+	case Qt__BINDSTATUS_P3P_HEADER: // 44
+		return "BINDSTATUS_P3P_HEADER"
+	case Qt__BINDSTATUS_SESSION_COOKIE_RECEIVED: // 45
+		return "BINDSTATUS_SESSION_COOKIE_RECEIVED"
+	case Qt__BINDSTATUS_PERSISTENT_COOKIE_RECEIVED: // 46
+		return "BINDSTATUS_PERSISTENT_COOKIE_RECEIVED"
+	case Qt__BINDSTATUS_SESSION_COOKIES_ALLOWED: // 47
+		return "BINDSTATUS_SESSION_COOKIES_ALLOWED"
+	case Qt__BINDSTATUS_CACHECONTROL: // 48
+		return "BINDSTATUS_CACHECONTROL"
+	case Qt__BINDSTATUS_CONTENTDISPOSITIONFILENAME: // 49
+		return "BINDSTATUS_CONTENTDISPOSITIONFILENAME"
+	case Qt__BINDSTATUS_MIMETEXTPLAINMISMATCH: // 50
+		return "BINDSTATUS_MIMETEXTPLAINMISMATCH"
+	case Qt__BINDSTATUS_PUBLISHERAVAILABLE: // 51
+		return "BINDSTATUS_PUBLISHERAVAILABLE"
+	case Qt__BINDSTATUS_DISPLAYNAMEAVAILABLE: // 52
+		return "BINDSTATUS_DISPLAYNAMEAVAILABLE"
+	case Qt__BINDSTATUS_SSLUX_NAVBLOCKED: // 53
+		return "BINDSTATUS_SSLUX_NAVBLOCKED"
+	case Qt__BINDSTATUS_SERVER_MIMETYPEAVAILABLE: // 54
+		return "BINDSTATUS_SERVER_MIMETYPEAVAILABLE"
+	case Qt__BINDSTATUS_SNIFFED_CLASSIDAVAILABLE: // 55
+		return "BINDSTATUS_SNIFFED_CLASSIDAVAILABLE"
+	case Qt__BINDSTATUS_64BIT_PROGRESS: // 56
+		return "BINDSTATUS_64BIT_PROGRESS,BINDSTATUS_LAST"
+		// case Qt__BINDSTATUS_LAST: // 56
+		// return ""
+	case Qt__BINDSTATUS_RESERVED_0: // 57
+		return "BINDSTATUS_RESERVED_0"
+	case Qt__BINDSTATUS_RESERVED_1: // 58
+		return "BINDSTATUS_RESERVED_1"
+	case Qt__BINDSTATUS_RESERVED_2: // 59
+		return "BINDSTATUS_RESERVED_2"
+	case Qt__BINDSTATUS_RESERVED_3: // 60
+		return "BINDSTATUS_RESERVED_3"
+	case Qt__BINDSTATUS_RESERVED_4: // 61
+		return "BINDSTATUS_RESERVED_4"
+	case Qt__BINDSTATUS_RESERVED_5: // 62
+		return "BINDSTATUS_RESERVED_5"
+	case Qt__BINDSTATUS_RESERVED_6: // 63
+		return "BINDSTATUS_RESERVED_6"
+	case Qt__BINDSTATUS_RESERVED_7: // 64
+		return "BINDSTATUS_RESERVED_7"
+	case Qt__BINDSTATUS_RESERVED_8: // 65
+		return "BINDSTATUS_RESERVED_8"
+	case Qt__BINDSTATUS_RESERVED_9: // 66
+		return "BINDSTATUS_RESERVED_9,BINDSTATUS_LAST_PRIVATE"
+		// case Qt__BINDSTATUS_LAST_PRIVATE: // 66
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_00000008 = int // stdglobal
+//
+const Qt__BINDF2_DISABLEBASICOVERHTTP Qt____WIDL_urlmon_generated_name_00000008 = 1
+
+//
+const Qt__BINDF2_DISABLEAUTOCOOKIEHANDLING Qt____WIDL_urlmon_generated_name_00000008 = 2
+
+//
+const Qt__BINDF2_READ_DATA_GREATER_THAN_4GB Qt____WIDL_urlmon_generated_name_00000008 = 4
+
+//
+const Qt__BINDF2_DISABLE_HTTP_REDIRECT_XSECURITYID Qt____WIDL_urlmon_generated_name_00000008 = 8
+
+//
+const Qt__BINDF2_RESERVED_3 Qt____WIDL_urlmon_generated_name_00000008 = 536870912
+
+//
+const Qt__BINDF2_RESERVED_2 Qt____WIDL_urlmon_generated_name_00000008 = 1073741824
+
+//
+const Qt__BINDF2_RESERVED_1 Qt____WIDL_urlmon_generated_name_00000008 = -2147483648
+
+func __WIDL_urlmon_generated_name_00000008ItemName(val int) string {
+	switch val {
+	case Qt__BINDF2_DISABLEBASICOVERHTTP: // 1
+		return "BINDF2_DISABLEBASICOVERHTTP"
+	case Qt__BINDF2_DISABLEAUTOCOOKIEHANDLING: // 2
+		return "BINDF2_DISABLEAUTOCOOKIEHANDLING"
+	case Qt__BINDF2_READ_DATA_GREATER_THAN_4GB: // 4
+		return "BINDF2_READ_DATA_GREATER_THAN_4GB"
+	case Qt__BINDF2_DISABLE_HTTP_REDIRECT_XSECURITYID: // 8
+		return "BINDF2_DISABLE_HTTP_REDIRECT_XSECURITYID"
+	case Qt__BINDF2_RESERVED_3: // 536870912
+		return "BINDF2_RESERVED_3"
+	case Qt__BINDF2_RESERVED_2: // 1073741824
+		return "BINDF2_RESERVED_2"
+	case Qt__BINDF2_RESERVED_1: // -2147483648
+		return "BINDF2_RESERVED_1"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_00000009 = int // stdglobal
+//
+const Qt__CIP_DISK_FULL Qt____WIDL_urlmon_generated_name_00000009 = 0
+
+//
+const Qt__CIP_ACCESS_DENIED Qt____WIDL_urlmon_generated_name_00000009 = 1
+
+//
+const Qt__CIP_NEWER_VERSION_EXISTS Qt____WIDL_urlmon_generated_name_00000009 = 2
+
+//
+const Qt__CIP_OLDER_VERSION_EXISTS Qt____WIDL_urlmon_generated_name_00000009 = 3
+
+//
+const Qt__CIP_NAME_CONFLICT Qt____WIDL_urlmon_generated_name_00000009 = 4
+
+//
+const Qt__CIP_TRUST_VERIFICATION_COMPONENT_MISSING Qt____WIDL_urlmon_generated_name_00000009 = 5
+
+//
+const Qt__CIP_EXE_SELF_REGISTERATION_TIMEOUT Qt____WIDL_urlmon_generated_name_00000009 = 6
+
+//
+const Qt__CIP_UNSAFE_TO_ABORT Qt____WIDL_urlmon_generated_name_00000009 = 7
+
+//
+const Qt__CIP_NEED_REBOOT Qt____WIDL_urlmon_generated_name_00000009 = 8
+
+//
+const Qt__CIP_NEED_REBOOT_UI_PERMISSION Qt____WIDL_urlmon_generated_name_00000009 = 9
+
+func __WIDL_urlmon_generated_name_00000009ItemName(val int) string {
+	switch val {
+	case Qt__CIP_DISK_FULL: // 0
+		return "CIP_DISK_FULL"
+	case Qt__CIP_ACCESS_DENIED: // 1
+		return "CIP_ACCESS_DENIED"
+	case Qt__CIP_NEWER_VERSION_EXISTS: // 2
+		return "CIP_NEWER_VERSION_EXISTS"
+	case Qt__CIP_OLDER_VERSION_EXISTS: // 3
+		return "CIP_OLDER_VERSION_EXISTS"
+	case Qt__CIP_NAME_CONFLICT: // 4
+		return "CIP_NAME_CONFLICT"
+	case Qt__CIP_TRUST_VERIFICATION_COMPONENT_MISSING: // 5
+		return "CIP_TRUST_VERIFICATION_COMPONENT_MISSING"
+	case Qt__CIP_EXE_SELF_REGISTERATION_TIMEOUT: // 6
+		return "CIP_EXE_SELF_REGISTERATION_TIMEOUT"
+	case Qt__CIP_UNSAFE_TO_ABORT: // 7
+		return "CIP_UNSAFE_TO_ABORT"
+	case Qt__CIP_NEED_REBOOT: // 8
+		return "CIP_NEED_REBOOT"
+	case Qt__CIP_NEED_REBOOT_UI_PERMISSION: // 9
+		return "CIP_NEED_REBOOT_UI_PERMISSION"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_0000000A = int // stdglobal
+//
+const Qt__MIMETYPEPROP Qt____WIDL_urlmon_generated_name_0000000A = 0
+
+//
+const Qt__USE_SRC_URL Qt____WIDL_urlmon_generated_name_0000000A = 1
+
+//
+const Qt__CLASSIDPROP Qt____WIDL_urlmon_generated_name_0000000A = 2
+
+//
+const Qt__TRUSTEDDOWNLOADPROP Qt____WIDL_urlmon_generated_name_0000000A = 3
+
+//
+const Qt__POPUPLEVELPROP Qt____WIDL_urlmon_generated_name_0000000A = 4
+
+func __WIDL_urlmon_generated_name_0000000AItemName(val int) string {
+	switch val {
+	case Qt__MIMETYPEPROP: // 0
+		return "MIMETYPEPROP"
+	case Qt__USE_SRC_URL: // 1
+		return "USE_SRC_URL"
+	case Qt__CLASSIDPROP: // 2
+		return "CLASSIDPROP"
+	case Qt__TRUSTEDDOWNLOADPROP: // 3
+		return "TRUSTEDDOWNLOADPROP"
+	case Qt__POPUPLEVELPROP: // 4
+		return "POPUPLEVELPROP"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagBINDSTRING = int // stdglobal
+//
+const Qt__BINDSTRING_HEADERS Qt__tagBINDSTRING = 1
+
+//
+const Qt__BINDSTRING_ACCEPT_MIMES Qt__tagBINDSTRING = 2
+
+//
+const Qt__BINDSTRING_EXTRA_URL Qt__tagBINDSTRING = 3
+
+//
+const Qt__BINDSTRING_LANGUAGE Qt__tagBINDSTRING = 4
+
+//
+const Qt__BINDSTRING_USERNAME Qt__tagBINDSTRING = 5
+
+//
+const Qt__BINDSTRING_PASSWORD Qt__tagBINDSTRING = 6
+
+//
+const Qt__BINDSTRING_UA_PIXELS Qt__tagBINDSTRING = 7
+
+//
+const Qt__BINDSTRING_UA_COLOR Qt__tagBINDSTRING = 8
+
+//
+const Qt__BINDSTRING_OS Qt__tagBINDSTRING = 9
+
+//
+const Qt__BINDSTRING_USER_AGENT Qt__tagBINDSTRING = 10
+
+//
+const Qt__BINDSTRING_ACCEPT_ENCODINGS Qt__tagBINDSTRING = 11
+
+//
+const Qt__BINDSTRING_POST_COOKIE Qt__tagBINDSTRING = 12
+
+//
+const Qt__BINDSTRING_POST_DATA_MIME Qt__tagBINDSTRING = 13
+
+//
+const Qt__BINDSTRING_URL Qt__tagBINDSTRING = 14
+
+//
+const Qt__BINDSTRING_IID Qt__tagBINDSTRING = 15
+
+//
+const Qt__BINDSTRING_FLAG_BIND_TO_OBJECT Qt__tagBINDSTRING = 16
+
+//
+const Qt__BINDSTRING_PTR_BIND_CONTEXT Qt__tagBINDSTRING = 17
+
+//
+const Qt__BINDSTRING_XDR_ORIGIN Qt__tagBINDSTRING = 18
+
+//
+const Qt__BINDSTRING_DOWNLOADPATH Qt__tagBINDSTRING = 19
+
+//
+const Qt__BINDSTRING_ROOTDOC_URL Qt__tagBINDSTRING = 20
+
+//
+const Qt__BINDSTRING_INITIAL_FILENAME Qt__tagBINDSTRING = 21
+
+//
+const Qt__BINDSTRING_PROXY_USERNAME Qt__tagBINDSTRING = 22
+
+//
+const Qt__BINDSTRING_PROXY_PASSWORD Qt__tagBINDSTRING = 23
+
+//
+const Qt__BINDSTRING_ENTERPRISE_ID Qt__tagBINDSTRING = 24
+
+func tagBINDSTRINGItemName(val int) string {
+	switch val {
+	case Qt__BINDSTRING_HEADERS: // 1
+		return "BINDSTRING_HEADERS"
+	case Qt__BINDSTRING_ACCEPT_MIMES: // 2
+		return "BINDSTRING_ACCEPT_MIMES"
+	case Qt__BINDSTRING_EXTRA_URL: // 3
+		return "BINDSTRING_EXTRA_URL"
+	case Qt__BINDSTRING_LANGUAGE: // 4
+		return "BINDSTRING_LANGUAGE"
+	case Qt__BINDSTRING_USERNAME: // 5
+		return "BINDSTRING_USERNAME"
+	case Qt__BINDSTRING_PASSWORD: // 6
+		return "BINDSTRING_PASSWORD"
+	case Qt__BINDSTRING_UA_PIXELS: // 7
+		return "BINDSTRING_UA_PIXELS"
+	case Qt__BINDSTRING_UA_COLOR: // 8
+		return "BINDSTRING_UA_COLOR"
+	case Qt__BINDSTRING_OS: // 9
+		return "BINDSTRING_OS"
+	case Qt__BINDSTRING_USER_AGENT: // 10
+		return "BINDSTRING_USER_AGENT"
+	case Qt__BINDSTRING_ACCEPT_ENCODINGS: // 11
+		return "BINDSTRING_ACCEPT_ENCODINGS"
+	case Qt__BINDSTRING_POST_COOKIE: // 12
+		return "BINDSTRING_POST_COOKIE"
+	case Qt__BINDSTRING_POST_DATA_MIME: // 13
+		return "BINDSTRING_POST_DATA_MIME"
+	case Qt__BINDSTRING_URL: // 14
+		return "BINDSTRING_URL"
+	case Qt__BINDSTRING_IID: // 15
+		return "BINDSTRING_IID"
+	case Qt__BINDSTRING_FLAG_BIND_TO_OBJECT: // 16
+		return "BINDSTRING_FLAG_BIND_TO_OBJECT"
+	case Qt__BINDSTRING_PTR_BIND_CONTEXT: // 17
+		return "BINDSTRING_PTR_BIND_CONTEXT"
+	case Qt__BINDSTRING_XDR_ORIGIN: // 18
+		return "BINDSTRING_XDR_ORIGIN"
+	case Qt__BINDSTRING_DOWNLOADPATH: // 19
+		return "BINDSTRING_DOWNLOADPATH"
+	case Qt__BINDSTRING_ROOTDOC_URL: // 20
+		return "BINDSTRING_ROOTDOC_URL"
+	case Qt__BINDSTRING_INITIAL_FILENAME: // 21
+		return "BINDSTRING_INITIAL_FILENAME"
+	case Qt__BINDSTRING_PROXY_USERNAME: // 22
+		return "BINDSTRING_PROXY_USERNAME"
+	case Qt__BINDSTRING_PROXY_PASSWORD: // 23
+		return "BINDSTRING_PROXY_PASSWORD"
+	case Qt__BINDSTRING_ENTERPRISE_ID: // 24
+		return "BINDSTRING_ENTERPRISE_ID"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___tagPI_FLAGS = int // stdglobal
+//
+const Qt__PI_PARSE_URL Qt___tagPI_FLAGS = 1
+
+//
+const Qt__PI_FILTER_MODE Qt___tagPI_FLAGS = 2
+
+//
+const Qt__PI_FORCE_ASYNC Qt___tagPI_FLAGS = 4
+
+//
+const Qt__PI_USE_WORKERTHREAD Qt___tagPI_FLAGS = 8
+
+//
+const Qt__PI_MIMEVERIFICATION Qt___tagPI_FLAGS = 16
+
+//
+const Qt__PI_CLSIDLOOKUP Qt___tagPI_FLAGS = 32
+
+//
+const Qt__PI_DATAPROGRESS Qt___tagPI_FLAGS = 64
+
+//
+const Qt__PI_SYNCHRONOUS Qt___tagPI_FLAGS = 128
+
+//
+const Qt__PI_APARTMENTTHREADED Qt___tagPI_FLAGS = 256
+
+//
+const Qt__PI_CLASSINSTALL Qt___tagPI_FLAGS = 512
+
+//
+const Qt__PD_FORCE_SWITCH Qt___tagPI_FLAGS = 65536
+
+func _tagPI_FLAGSItemName(val int) string {
+	switch val {
+	case Qt__PI_PARSE_URL: // 1
+		return "PI_PARSE_URL"
+	case Qt__PI_FILTER_MODE: // 2
+		return "PI_FILTER_MODE"
+	case Qt__PI_FORCE_ASYNC: // 4
+		return "PI_FORCE_ASYNC"
+	case Qt__PI_USE_WORKERTHREAD: // 8
+		return "PI_USE_WORKERTHREAD"
+	case Qt__PI_MIMEVERIFICATION: // 16
+		return "PI_MIMEVERIFICATION"
+	case Qt__PI_CLSIDLOOKUP: // 32
+		return "PI_CLSIDLOOKUP"
+	case Qt__PI_DATAPROGRESS: // 64
+		return "PI_DATAPROGRESS"
+	case Qt__PI_SYNCHRONOUS: // 128
+		return "PI_SYNCHRONOUS"
+	case Qt__PI_APARTMENTTHREADED: // 256
+		return "PI_APARTMENTTHREADED"
+	case Qt__PI_CLASSINSTALL: // 512
+		return "PI_CLASSINSTALL"
+	case Qt__PD_FORCE_SWITCH: // 65536
+		return "PD_FORCE_SWITCH"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___tagPARSEACTION = int // stdglobal
+//
+const Qt__PARSE_CANONICALIZE Qt___tagPARSEACTION = 1
+
+//
+const Qt__PARSE_FRIENDLY Qt___tagPARSEACTION = 2
+
+//
+const Qt__PARSE_SECURITY_URL Qt___tagPARSEACTION = 3
+
+//
+const Qt__PARSE_ROOTDOCUMENT Qt___tagPARSEACTION = 4
+
+//
+const Qt__PARSE_DOCUMENT Qt___tagPARSEACTION = 5
+
+//
+const Qt__PARSE_ANCHOR Qt___tagPARSEACTION = 6
+
+//
+const Qt__PARSE_ENCODE Qt___tagPARSEACTION = 7
+
+//
+const Qt__PARSE_DECODE Qt___tagPARSEACTION = 8
+
+//
+const Qt__PARSE_PATH_FROM_URL Qt___tagPARSEACTION = 9
+
+//
+const Qt__PARSE_URL_FROM_PATH Qt___tagPARSEACTION = 10
+
+//
+const Qt__PARSE_MIME Qt___tagPARSEACTION = 11
+
+//
+const Qt__PARSE_SERVER Qt___tagPARSEACTION = 12
+
+//
+const Qt__PARSE_SCHEMA Qt___tagPARSEACTION = 13
+
+//
+const Qt__PARSE_SITE Qt___tagPARSEACTION = 14
+
+//
+const Qt__PARSE_DOMAIN Qt___tagPARSEACTION = 15
+
+//
+const Qt__PARSE_LOCATION Qt___tagPARSEACTION = 16
+
+//
+const Qt__PARSE_SECURITY_DOMAIN Qt___tagPARSEACTION = 17
+
+//
+const Qt__PARSE_ESCAPE Qt___tagPARSEACTION = 18
+
+//
+const Qt__PARSE_UNESCAPE Qt___tagPARSEACTION = 19
+
+func _tagPARSEACTIONItemName(val int) string {
+	switch val {
+	case Qt__PARSE_CANONICALIZE: // 1
+		return "PARSE_CANONICALIZE"
+	case Qt__PARSE_FRIENDLY: // 2
+		return "PARSE_FRIENDLY"
+	case Qt__PARSE_SECURITY_URL: // 3
+		return "PARSE_SECURITY_URL"
+	case Qt__PARSE_ROOTDOCUMENT: // 4
+		return "PARSE_ROOTDOCUMENT"
+	case Qt__PARSE_DOCUMENT: // 5
+		return "PARSE_DOCUMENT"
+	case Qt__PARSE_ANCHOR: // 6
+		return "PARSE_ANCHOR"
+	case Qt__PARSE_ENCODE: // 7
+		return "PARSE_ENCODE"
+	case Qt__PARSE_DECODE: // 8
+		return "PARSE_DECODE"
+	case Qt__PARSE_PATH_FROM_URL: // 9
+		return "PARSE_PATH_FROM_URL"
+	case Qt__PARSE_URL_FROM_PATH: // 10
+		return "PARSE_URL_FROM_PATH"
+	case Qt__PARSE_MIME: // 11
+		return "PARSE_MIME"
+	case Qt__PARSE_SERVER: // 12
+		return "PARSE_SERVER"
+	case Qt__PARSE_SCHEMA: // 13
+		return "PARSE_SCHEMA"
+	case Qt__PARSE_SITE: // 14
+		return "PARSE_SITE"
+	case Qt__PARSE_DOMAIN: // 15
+		return "PARSE_DOMAIN"
+	case Qt__PARSE_LOCATION: // 16
+		return "PARSE_LOCATION"
+	case Qt__PARSE_SECURITY_DOMAIN: // 17
+		return "PARSE_SECURITY_DOMAIN"
+	case Qt__PARSE_ESCAPE: // 18
+		return "PARSE_ESCAPE"
+	case Qt__PARSE_UNESCAPE: // 19
+		return "PARSE_UNESCAPE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___tagPSUACTION = int // stdglobal
+//
+const Qt__PSU_DEFAULT Qt___tagPSUACTION = 1
+
+//
+const Qt__PSU_SECURITY_URL_ONLY Qt___tagPSUACTION = 2
+
+func _tagPSUACTIONItemName(val int) string {
+	switch val {
+	case Qt__PSU_DEFAULT: // 1
+		return "PSU_DEFAULT"
+	case Qt__PSU_SECURITY_URL_ONLY: // 2
+		return "PSU_SECURITY_URL_ONLY"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___tagQUERYOPTION = int // stdglobal
+//
+const Qt__QUERY_EXPIRATION_DATE Qt___tagQUERYOPTION = 1
+
+//
+const Qt__QUERY_TIME_OF_LAST_CHANGE Qt___tagQUERYOPTION = 2
+
+//
+const Qt__QUERY_CONTENT_ENCODING Qt___tagQUERYOPTION = 3
+
+//
+const Qt__QUERY_CONTENT_TYPE Qt___tagQUERYOPTION = 4
+
+//
+const Qt__QUERY_REFRESH Qt___tagQUERYOPTION = 5
+
+//
+const Qt__QUERY_RECOMBINE Qt___tagQUERYOPTION = 6
+
+//
+const Qt__QUERY_CAN_NAVIGATE Qt___tagQUERYOPTION = 7
+
+//
+const Qt__QUERY_USES_NETWORK Qt___tagQUERYOPTION = 8
+
+//
+const Qt__QUERY_IS_CACHED Qt___tagQUERYOPTION = 9
+
+//
+const Qt__QUERY_IS_INSTALLEDENTRY Qt___tagQUERYOPTION = 10
+
+//
+const Qt__QUERY_IS_CACHED_OR_MAPPED Qt___tagQUERYOPTION = 11
+
+//
+const Qt__QUERY_USES_CACHE Qt___tagQUERYOPTION = 12
+
+//
+const Qt__QUERY_IS_SECURE Qt___tagQUERYOPTION = 13
+
+//
+const Qt__QUERY_IS_SAFE Qt___tagQUERYOPTION = 14
+
+//
+const Qt__QUERY_USES_HISTORYFOLDER Qt___tagQUERYOPTION = 15
+
+//
+const Qt__QUERY_IS_CACHED_AND_USABLE_OFFLINE Qt___tagQUERYOPTION = 16
+
+func _tagQUERYOPTIONItemName(val int) string {
+	switch val {
+	case Qt__QUERY_EXPIRATION_DATE: // 1
+		return "QUERY_EXPIRATION_DATE"
+	case Qt__QUERY_TIME_OF_LAST_CHANGE: // 2
+		return "QUERY_TIME_OF_LAST_CHANGE"
+	case Qt__QUERY_CONTENT_ENCODING: // 3
+		return "QUERY_CONTENT_ENCODING"
+	case Qt__QUERY_CONTENT_TYPE: // 4
+		return "QUERY_CONTENT_TYPE"
+	case Qt__QUERY_REFRESH: // 5
+		return "QUERY_REFRESH"
+	case Qt__QUERY_RECOMBINE: // 6
+		return "QUERY_RECOMBINE"
+	case Qt__QUERY_CAN_NAVIGATE: // 7
+		return "QUERY_CAN_NAVIGATE"
+	case Qt__QUERY_USES_NETWORK: // 8
+		return "QUERY_USES_NETWORK"
+	case Qt__QUERY_IS_CACHED: // 9
+		return "QUERY_IS_CACHED"
+	case Qt__QUERY_IS_INSTALLEDENTRY: // 10
+		return "QUERY_IS_INSTALLEDENTRY"
+	case Qt__QUERY_IS_CACHED_OR_MAPPED: // 11
+		return "QUERY_IS_CACHED_OR_MAPPED"
+	case Qt__QUERY_USES_CACHE: // 12
+		return "QUERY_USES_CACHE"
+	case Qt__QUERY_IS_SECURE: // 13
+		return "QUERY_IS_SECURE"
+	case Qt__QUERY_IS_SAFE: // 14
+		return "QUERY_IS_SAFE"
+	case Qt__QUERY_USES_HISTORYFOLDER: // 15
+		return "QUERY_USES_HISTORYFOLDER"
+	case Qt__QUERY_IS_CACHED_AND_USABLE_OFFLINE: // 16
+		return "QUERY_IS_CACHED_AND_USABLE_OFFLINE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___tagOIBDG_FLAGS = int // stdglobal
+//
+const Qt__OIBDG_APARTMENTTHREADED Qt___tagOIBDG_FLAGS = 256
+
+//
+const Qt__OIBDG_DATAONLY Qt___tagOIBDG_FLAGS = 4096
+
+func _tagOIBDG_FLAGSItemName(val int) string {
+	switch val {
+	case Qt__OIBDG_APARTMENTTHREADED: // 256
+		return "OIBDG_APARTMENTTHREADED"
+	case Qt__OIBDG_DATAONLY: // 4096
+		return "OIBDG_DATAONLY"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_0000000B = int // stdglobal
+//
+const Qt__PUAF_DEFAULT Qt____WIDL_urlmon_generated_name_0000000B = 0
+
+//
+const Qt__PUAF_NOUI Qt____WIDL_urlmon_generated_name_0000000B = 1
+
+//
+const Qt__PUAF_ISFILE Qt____WIDL_urlmon_generated_name_0000000B = 2
+
+//
+const Qt__PUAF_WARN_IF_DENIED Qt____WIDL_urlmon_generated_name_0000000B = 4
+
+//
+const Qt__PUAF_FORCEUI_FOREGROUND Qt____WIDL_urlmon_generated_name_0000000B = 8
+
+//
+const Qt__PUAF_CHECK_TIPS Qt____WIDL_urlmon_generated_name_0000000B = 16
+
+func __WIDL_urlmon_generated_name_0000000BItemName(val int) string {
+	switch val {
+	case Qt__PUAF_DEFAULT: // 0
+		return "PUAF_DEFAULT"
+	case Qt__PUAF_NOUI: // 1
+		return "PUAF_NOUI"
+	case Qt__PUAF_ISFILE: // 2
+		return "PUAF_ISFILE"
+	case Qt__PUAF_WARN_IF_DENIED: // 4
+		return "PUAF_WARN_IF_DENIED"
+	case Qt__PUAF_FORCEUI_FOREGROUND: // 8
+		return "PUAF_FORCEUI_FOREGROUND"
+	case Qt__PUAF_CHECK_TIPS: // 16
+		return "PUAF_CHECK_TIPS"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_0000000C = int // stdglobal
+//
+const Qt__SZM_CREATE Qt____WIDL_urlmon_generated_name_0000000C = 0
+
+//
+const Qt__SZM_DELETE Qt____WIDL_urlmon_generated_name_0000000C = 1
+
+func __WIDL_urlmon_generated_name_0000000CItemName(val int) string {
+	switch val {
+	case Qt__SZM_CREATE: // 0
+		return "SZM_CREATE"
+	case Qt__SZM_DELETE: // 1
+		return "SZM_DELETE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagURLZONE = int // stdglobal
+//
+const Qt__URLZONE_INVALID Qt__tagURLZONE = -1
+
+//
+const Qt__URLZONE_PREDEFINED_MIN Qt__tagURLZONE = 0
+
+//
+const Qt__URLZONE_LOCAL_MACHINE Qt__tagURLZONE = 0
+
+//
+const Qt__URLZONE_INTRANET Qt__tagURLZONE = 1
+
+//
+const Qt__URLZONE_TRUSTED Qt__tagURLZONE = 2
+
+//
+const Qt__URLZONE_INTERNET Qt__tagURLZONE = 3
+
+//
+const Qt__URLZONE_UNTRUSTED Qt__tagURLZONE = 4
+
+//
+const Qt__URLZONE_PREDEFINED_MAX Qt__tagURLZONE = 999
+
+//
+const Qt__URLZONE_USER_MIN Qt__tagURLZONE = 1000
+
+//
+const Qt__URLZONE_USER_MAX Qt__tagURLZONE = 10000
+
+func tagURLZONEItemName(val int) string {
+	switch val {
+	case Qt__URLZONE_INVALID: // -1
+		return "URLZONE_INVALID"
+	case Qt__URLZONE_PREDEFINED_MIN: // 0
+		return "URLZONE_PREDEFINED_MIN,URLZONE_LOCAL_MACHINE"
+		// case Qt__URLZONE_LOCAL_MACHINE: // 0
+		// return ""
+	case Qt__URLZONE_INTRANET: // 1
+		return "URLZONE_INTRANET"
+	case Qt__URLZONE_TRUSTED: // 2
+		return "URLZONE_TRUSTED"
+	case Qt__URLZONE_INTERNET: // 3
+		return "URLZONE_INTERNET"
+	case Qt__URLZONE_UNTRUSTED: // 4
+		return "URLZONE_UNTRUSTED"
+	case Qt__URLZONE_PREDEFINED_MAX: // 999
+		return "URLZONE_PREDEFINED_MAX"
+	case Qt__URLZONE_USER_MIN: // 1000
+		return "URLZONE_USER_MIN"
+	case Qt__URLZONE_USER_MAX: // 10000
+		return "URLZONE_USER_MAX"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagURLTEMPLATE = int // stdglobal
+//
+const Qt__URLTEMPLATE_CUSTOM Qt__tagURLTEMPLATE = 0
+
+//
+const Qt__URLTEMPLATE_PREDEFINED_MIN Qt__tagURLTEMPLATE = 65536
+
+//
+const Qt__URLTEMPLATE_LOW Qt__tagURLTEMPLATE = 65536
+
+//
+const Qt__URLTEMPLATE_MEDLOW Qt__tagURLTEMPLATE = 66816
+
+//
+const Qt__URLTEMPLATE_MEDIUM Qt__tagURLTEMPLATE = 69632
+
+//
+const Qt__URLTEMPLATE_MEDHIGH Qt__tagURLTEMPLATE = 70912
+
+//
+const Qt__URLTEMPLATE_HIGH Qt__tagURLTEMPLATE = 73728
+
+//
+const Qt__URLTEMPLATE_PREDEFINED_MAX Qt__tagURLTEMPLATE = 131072
+
+func tagURLTEMPLATEItemName(val int) string {
+	switch val {
+	case Qt__URLTEMPLATE_CUSTOM: // 0
+		return "URLTEMPLATE_CUSTOM"
+	case Qt__URLTEMPLATE_PREDEFINED_MIN: // 65536
+		return "URLTEMPLATE_PREDEFINED_MIN,URLTEMPLATE_LOW"
+		// case Qt__URLTEMPLATE_LOW: // 65536
+		// return ""
+	case Qt__URLTEMPLATE_MEDLOW: // 66816
+		return "URLTEMPLATE_MEDLOW"
+	case Qt__URLTEMPLATE_MEDIUM: // 69632
+		return "URLTEMPLATE_MEDIUM"
+	case Qt__URLTEMPLATE_MEDHIGH: // 70912
+		return "URLTEMPLATE_MEDHIGH"
+	case Qt__URLTEMPLATE_HIGH: // 73728
+		return "URLTEMPLATE_HIGH"
+	case Qt__URLTEMPLATE_PREDEFINED_MAX: // 131072
+		return "URLTEMPLATE_PREDEFINED_MAX"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_0000000D = int // stdglobal
+//
+const Qt__ZAFLAGS_CUSTOM_EDIT Qt____WIDL_urlmon_generated_name_0000000D = 1
+
+//
+const Qt__ZAFLAGS_ADD_SITES Qt____WIDL_urlmon_generated_name_0000000D = 2
+
+//
+const Qt__ZAFLAGS_REQUIRE_VERIFICATION Qt____WIDL_urlmon_generated_name_0000000D = 4
+
+//
+const Qt__ZAFLAGS_INCLUDE_PROXY_OVERRIDE Qt____WIDL_urlmon_generated_name_0000000D = 8
+
+//
+const Qt__ZAFLAGS_INCLUDE_INTRANET_SITES Qt____WIDL_urlmon_generated_name_0000000D = 16
+
+//
+const Qt__ZAFLAGS_NO_UI Qt____WIDL_urlmon_generated_name_0000000D = 32
+
+//
+const Qt__ZAFLAGS_SUPPORTS_VERIFICATION Qt____WIDL_urlmon_generated_name_0000000D = 64
+
+//
+const Qt__ZAFLAGS_UNC_AS_INTRANET Qt____WIDL_urlmon_generated_name_0000000D = 128
+
+//
+const Qt__ZAFLAGS_DETECT_INTRANET Qt____WIDL_urlmon_generated_name_0000000D = 256
+
+//
+const Qt__ZAFLAGS_USE_LOCKED_ZONES Qt____WIDL_urlmon_generated_name_0000000D = 65536
+
+//
+const Qt__ZAFLAGS_VERIFY_TEMPLATE_SETTINGS Qt____WIDL_urlmon_generated_name_0000000D = 131072
+
+//
+const Qt__ZAFLAGS_NO_CACHE Qt____WIDL_urlmon_generated_name_0000000D = 262144
+
+func __WIDL_urlmon_generated_name_0000000DItemName(val int) string {
+	switch val {
+	case Qt__ZAFLAGS_CUSTOM_EDIT: // 1
+		return "ZAFLAGS_CUSTOM_EDIT"
+	case Qt__ZAFLAGS_ADD_SITES: // 2
+		return "ZAFLAGS_ADD_SITES"
+	case Qt__ZAFLAGS_REQUIRE_VERIFICATION: // 4
+		return "ZAFLAGS_REQUIRE_VERIFICATION"
+	case Qt__ZAFLAGS_INCLUDE_PROXY_OVERRIDE: // 8
+		return "ZAFLAGS_INCLUDE_PROXY_OVERRIDE"
+	case Qt__ZAFLAGS_INCLUDE_INTRANET_SITES: // 16
+		return "ZAFLAGS_INCLUDE_INTRANET_SITES"
+	case Qt__ZAFLAGS_NO_UI: // 32
+		return "ZAFLAGS_NO_UI"
+	case Qt__ZAFLAGS_SUPPORTS_VERIFICATION: // 64
+		return "ZAFLAGS_SUPPORTS_VERIFICATION"
+	case Qt__ZAFLAGS_UNC_AS_INTRANET: // 128
+		return "ZAFLAGS_UNC_AS_INTRANET"
+	case Qt__ZAFLAGS_DETECT_INTRANET: // 256
+		return "ZAFLAGS_DETECT_INTRANET"
+	case Qt__ZAFLAGS_USE_LOCKED_ZONES: // 65536
+		return "ZAFLAGS_USE_LOCKED_ZONES"
+	case Qt__ZAFLAGS_VERIFY_TEMPLATE_SETTINGS: // 131072
+		return "ZAFLAGS_VERIFY_TEMPLATE_SETTINGS"
+	case Qt__ZAFLAGS_NO_CACHE: // 262144
+		return "ZAFLAGS_NO_CACHE"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___URLZONEREG = int // stdglobal
+//
+const Qt__URLZONEREG_DEFAULT Qt___URLZONEREG = 0
+
+//
+const Qt__URLZONEREG_HKLM Qt___URLZONEREG = 1
+
+//
+const Qt__URLZONEREG_HKCU Qt___URLZONEREG = 2
+
+func _URLZONEREGItemName(val int) string {
+	switch val {
+	case Qt__URLZONEREG_DEFAULT: // 0
+		return "URLZONEREG_DEFAULT"
+	case Qt__URLZONEREG_HKLM: // 1
+		return "URLZONEREG_HKLM"
+	case Qt__URLZONEREG_HKCU: // 2
+		return "URLZONEREG_HKCU"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___tagINTERNETFEATURELIST = int // stdglobal
+//
+const Qt__FEATURE_OBJECT_CACHING Qt___tagINTERNETFEATURELIST = 0
+
+//
+const Qt__FEATURE_ZONE_ELEVATION Qt___tagINTERNETFEATURELIST = 1
+
+//
+const Qt__FEATURE_MIME_HANDLING Qt___tagINTERNETFEATURELIST = 2
+
+//
+const Qt__FEATURE_MIME_SNIFFING Qt___tagINTERNETFEATURELIST = 3
+
+//
+const Qt__FEATURE_WINDOW_RESTRICTIONS Qt___tagINTERNETFEATURELIST = 4
+
+//
+const Qt__FEATURE_WEBOC_POPUPMANAGEMENT Qt___tagINTERNETFEATURELIST = 5
+
+//
+const Qt__FEATURE_BEHAVIORS Qt___tagINTERNETFEATURELIST = 6
+
+//
+const Qt__FEATURE_DISABLE_MK_PROTOCOL Qt___tagINTERNETFEATURELIST = 7
+
+//
+const Qt__FEATURE_LOCALMACHINE_LOCKDOWN Qt___tagINTERNETFEATURELIST = 8
+
+//
+const Qt__FEATURE_SECURITYBAND Qt___tagINTERNETFEATURELIST = 9
+
+//
+const Qt__FEATURE_RESTRICT_ACTIVEXINSTALL Qt___tagINTERNETFEATURELIST = 10
+
+//
+const Qt__FEATURE_VALIDATE_NAVIGATE_URL Qt___tagINTERNETFEATURELIST = 11
+
+//
+const Qt__FEATURE_RESTRICT_FILEDOWNLOAD Qt___tagINTERNETFEATURELIST = 12
+
+//
+const Qt__FEATURE_ADDON_MANAGEMENT Qt___tagINTERNETFEATURELIST = 13
+
+//
+const Qt__FEATURE_PROTOCOL_LOCKDOWN Qt___tagINTERNETFEATURELIST = 14
+
+//
+const Qt__FEATURE_HTTP_USERNAME_PASSWORD_DISABLE Qt___tagINTERNETFEATURELIST = 15
+
+//
+const Qt__FEATURE_SAFE_BINDTOOBJECT Qt___tagINTERNETFEATURELIST = 16
+
+//
+const Qt__FEATURE_UNC_SAVEDFILECHECK Qt___tagINTERNETFEATURELIST = 17
+
+//
+const Qt__FEATURE_GET_URL_DOM_FILEPATH_UNENCODED Qt___tagINTERNETFEATURELIST = 18
+
+//
+const Qt__FEATURE_TABBED_BROWSING Qt___tagINTERNETFEATURELIST = 19
+
+//
+const Qt__FEATURE_SSLUX Qt___tagINTERNETFEATURELIST = 20
+
+//
+const Qt__FEATURE_DISABLE_NAVIGATION_SOUNDS Qt___tagINTERNETFEATURELIST = 21
+
+//
+const Qt__FEATURE_DISABLE_LEGACY_COMPRESSION Qt___tagINTERNETFEATURELIST = 22
+
+//
+const Qt__FEATURE_FORCE_ADDR_AND_STATUS Qt___tagINTERNETFEATURELIST = 23
+
+//
+const Qt__FEATURE_XMLHTTP Qt___tagINTERNETFEATURELIST = 24
+
+//
+const Qt__FEATURE_DISABLE_TELNET_PROTOCOL Qt___tagINTERNETFEATURELIST = 25
+
+//
+const Qt__FEATURE_FEEDS Qt___tagINTERNETFEATURELIST = 26
+
+//
+const Qt__FEATURE_BLOCK_INPUT_PROMPTS Qt___tagINTERNETFEATURELIST = 27
+
+//
+const Qt__FEATURE_ENTRY_COUNT Qt___tagINTERNETFEATURELIST = 28
+
+func _tagINTERNETFEATURELISTItemName(val int) string {
+	switch val {
+	case Qt__FEATURE_OBJECT_CACHING: // 0
+		return "FEATURE_OBJECT_CACHING"
+	case Qt__FEATURE_ZONE_ELEVATION: // 1
+		return "FEATURE_ZONE_ELEVATION"
+	case Qt__FEATURE_MIME_HANDLING: // 2
+		return "FEATURE_MIME_HANDLING"
+	case Qt__FEATURE_MIME_SNIFFING: // 3
+		return "FEATURE_MIME_SNIFFING"
+	case Qt__FEATURE_WINDOW_RESTRICTIONS: // 4
+		return "FEATURE_WINDOW_RESTRICTIONS"
+	case Qt__FEATURE_WEBOC_POPUPMANAGEMENT: // 5
+		return "FEATURE_WEBOC_POPUPMANAGEMENT"
+	case Qt__FEATURE_BEHAVIORS: // 6
+		return "FEATURE_BEHAVIORS"
+	case Qt__FEATURE_DISABLE_MK_PROTOCOL: // 7
+		return "FEATURE_DISABLE_MK_PROTOCOL"
+	case Qt__FEATURE_LOCALMACHINE_LOCKDOWN: // 8
+		return "FEATURE_LOCALMACHINE_LOCKDOWN"
+	case Qt__FEATURE_SECURITYBAND: // 9
+		return "FEATURE_SECURITYBAND"
+	case Qt__FEATURE_RESTRICT_ACTIVEXINSTALL: // 10
+		return "FEATURE_RESTRICT_ACTIVEXINSTALL"
+	case Qt__FEATURE_VALIDATE_NAVIGATE_URL: // 11
+		return "FEATURE_VALIDATE_NAVIGATE_URL"
+	case Qt__FEATURE_RESTRICT_FILEDOWNLOAD: // 12
+		return "FEATURE_RESTRICT_FILEDOWNLOAD"
+	case Qt__FEATURE_ADDON_MANAGEMENT: // 13
+		return "FEATURE_ADDON_MANAGEMENT"
+	case Qt__FEATURE_PROTOCOL_LOCKDOWN: // 14
+		return "FEATURE_PROTOCOL_LOCKDOWN"
+	case Qt__FEATURE_HTTP_USERNAME_PASSWORD_DISABLE: // 15
+		return "FEATURE_HTTP_USERNAME_PASSWORD_DISABLE"
+	case Qt__FEATURE_SAFE_BINDTOOBJECT: // 16
+		return "FEATURE_SAFE_BINDTOOBJECT"
+	case Qt__FEATURE_UNC_SAVEDFILECHECK: // 17
+		return "FEATURE_UNC_SAVEDFILECHECK"
+	case Qt__FEATURE_GET_URL_DOM_FILEPATH_UNENCODED: // 18
+		return "FEATURE_GET_URL_DOM_FILEPATH_UNENCODED"
+	case Qt__FEATURE_TABBED_BROWSING: // 19
+		return "FEATURE_TABBED_BROWSING"
+	case Qt__FEATURE_SSLUX: // 20
+		return "FEATURE_SSLUX"
+	case Qt__FEATURE_DISABLE_NAVIGATION_SOUNDS: // 21
+		return "FEATURE_DISABLE_NAVIGATION_SOUNDS"
+	case Qt__FEATURE_DISABLE_LEGACY_COMPRESSION: // 22
+		return "FEATURE_DISABLE_LEGACY_COMPRESSION"
+	case Qt__FEATURE_FORCE_ADDR_AND_STATUS: // 23
+		return "FEATURE_FORCE_ADDR_AND_STATUS"
+	case Qt__FEATURE_XMLHTTP: // 24
+		return "FEATURE_XMLHTTP"
+	case Qt__FEATURE_DISABLE_TELNET_PROTOCOL: // 25
+		return "FEATURE_DISABLE_TELNET_PROTOCOL"
+	case Qt__FEATURE_FEEDS: // 26
+		return "FEATURE_FEEDS"
+	case Qt__FEATURE_BLOCK_INPUT_PROMPTS: // 27
+		return "FEATURE_BLOCK_INPUT_PROMPTS"
+	case Qt__FEATURE_ENTRY_COUNT: // 28
+		return "FEATURE_ENTRY_COUNT"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_0000000E = int // stdglobal
+//
+const Qt__Uri_PROPERTY_ABSOLUTE_URI Qt____WIDL_urlmon_generated_name_0000000E = 0
+
+//
+const Qt__Uri_PROPERTY_STRING_START Qt____WIDL_urlmon_generated_name_0000000E = 0
+
+//
+const Qt__Uri_PROPERTY_AUTHORITY Qt____WIDL_urlmon_generated_name_0000000E = 1
+
+//
+const Qt__Uri_PROPERTY_DISPLAY_URI Qt____WIDL_urlmon_generated_name_0000000E = 2
+
+//
+const Qt__Uri_PROPERTY_DOMAIN Qt____WIDL_urlmon_generated_name_0000000E = 3
+
+//
+const Qt__Uri_PROPERTY_EXTENSION Qt____WIDL_urlmon_generated_name_0000000E = 4
+
+//
+const Qt__Uri_PROPERTY_FRAGMENT Qt____WIDL_urlmon_generated_name_0000000E = 5
+
+//
+const Qt__Uri_PROPERTY_HOST Qt____WIDL_urlmon_generated_name_0000000E = 6
+
+//
+const Qt__Uri_PROPERTY_PASSWORD Qt____WIDL_urlmon_generated_name_0000000E = 7
+
+//
+const Qt__Uri_PROPERTY_PATH Qt____WIDL_urlmon_generated_name_0000000E = 8
+
+//
+const Qt__Uri_PROPERTY_PATH_AND_QUERY Qt____WIDL_urlmon_generated_name_0000000E = 9
+
+//
+const Qt__Uri_PROPERTY_QUERY Qt____WIDL_urlmon_generated_name_0000000E = 10
+
+//
+const Qt__Uri_PROPERTY_RAW_URI Qt____WIDL_urlmon_generated_name_0000000E = 11
+
+//
+const Qt__Uri_PROPERTY_SCHEME_NAME Qt____WIDL_urlmon_generated_name_0000000E = 12
+
+//
+const Qt__Uri_PROPERTY_USER_INFO Qt____WIDL_urlmon_generated_name_0000000E = 13
+
+//
+const Qt__Uri_PROPERTY_USER_NAME Qt____WIDL_urlmon_generated_name_0000000E = 14
+
+//
+const Qt__Uri_PROPERTY_STRING_LAST Qt____WIDL_urlmon_generated_name_0000000E = 14
+
+//
+const Qt__Uri_PROPERTY_HOST_TYPE Qt____WIDL_urlmon_generated_name_0000000E = 15
+
+//
+const Qt__Uri_PROPERTY_DWORD_START Qt____WIDL_urlmon_generated_name_0000000E = 15
+
+//
+const Qt__Uri_PROPERTY_PORT Qt____WIDL_urlmon_generated_name_0000000E = 16
+
+//
+const Qt__Uri_PROPERTY_SCHEME Qt____WIDL_urlmon_generated_name_0000000E = 17
+
+//
+const Qt__Uri_PROPERTY_ZONE Qt____WIDL_urlmon_generated_name_0000000E = 18
+
+//
+const Qt__Uri_PROPERTY_DWORD_LAST Qt____WIDL_urlmon_generated_name_0000000E = 18
+
+func __WIDL_urlmon_generated_name_0000000EItemName(val int) string {
+	switch val {
+	case Qt__Uri_PROPERTY_ABSOLUTE_URI: // 0
+		return "Uri_PROPERTY_ABSOLUTE_URI,Uri_PROPERTY_STRING_START"
+		// case Qt__Uri_PROPERTY_STRING_START: // 0
+		// return ""
+	case Qt__Uri_PROPERTY_AUTHORITY: // 1
+		return "Uri_PROPERTY_AUTHORITY"
+	case Qt__Uri_PROPERTY_DISPLAY_URI: // 2
+		return "Uri_PROPERTY_DISPLAY_URI"
+	case Qt__Uri_PROPERTY_DOMAIN: // 3
+		return "Uri_PROPERTY_DOMAIN"
+	case Qt__Uri_PROPERTY_EXTENSION: // 4
+		return "Uri_PROPERTY_EXTENSION"
+	case Qt__Uri_PROPERTY_FRAGMENT: // 5
+		return "Uri_PROPERTY_FRAGMENT"
+	case Qt__Uri_PROPERTY_HOST: // 6
+		return "Uri_PROPERTY_HOST"
+	case Qt__Uri_PROPERTY_PASSWORD: // 7
+		return "Uri_PROPERTY_PASSWORD"
+	case Qt__Uri_PROPERTY_PATH: // 8
+		return "Uri_PROPERTY_PATH"
+	case Qt__Uri_PROPERTY_PATH_AND_QUERY: // 9
+		return "Uri_PROPERTY_PATH_AND_QUERY"
+	case Qt__Uri_PROPERTY_QUERY: // 10
+		return "Uri_PROPERTY_QUERY"
+	case Qt__Uri_PROPERTY_RAW_URI: // 11
+		return "Uri_PROPERTY_RAW_URI"
+	case Qt__Uri_PROPERTY_SCHEME_NAME: // 12
+		return "Uri_PROPERTY_SCHEME_NAME"
+	case Qt__Uri_PROPERTY_USER_INFO: // 13
+		return "Uri_PROPERTY_USER_INFO"
+	case Qt__Uri_PROPERTY_USER_NAME: // 14
+		return "Uri_PROPERTY_USER_NAME,Uri_PROPERTY_STRING_LAST"
+		// case Qt__Uri_PROPERTY_STRING_LAST: // 14
+		// return ""
+	case Qt__Uri_PROPERTY_HOST_TYPE: // 15
+		return "Uri_PROPERTY_HOST_TYPE,Uri_PROPERTY_DWORD_START"
+		// case Qt__Uri_PROPERTY_DWORD_START: // 15
+		// return ""
+	case Qt__Uri_PROPERTY_PORT: // 16
+		return "Uri_PROPERTY_PORT"
+	case Qt__Uri_PROPERTY_SCHEME: // 17
+		return "Uri_PROPERTY_SCHEME"
+	case Qt__Uri_PROPERTY_ZONE: // 18
+		return "Uri_PROPERTY_ZONE,Uri_PROPERTY_DWORD_LAST"
+		// case Qt__Uri_PROPERTY_DWORD_LAST: // 18
+		// return ""
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_0000000F = int // stdglobal
+//
+const Qt__Uri_HOST_UNKNOWN Qt____WIDL_urlmon_generated_name_0000000F = 0
+
+//
+const Qt__Uri_HOST_DNS Qt____WIDL_urlmon_generated_name_0000000F = 1
+
+//
+const Qt__Uri_HOST_IPV4 Qt____WIDL_urlmon_generated_name_0000000F = 2
+
+//
+const Qt__Uri_HOST_IPV6 Qt____WIDL_urlmon_generated_name_0000000F = 3
+
+//
+const Qt__Uri_HOST_IDN Qt____WIDL_urlmon_generated_name_0000000F = 4
+
+func __WIDL_urlmon_generated_name_0000000FItemName(val int) string {
+	switch val {
+	case Qt__Uri_HOST_UNKNOWN: // 0
+		return "Uri_HOST_UNKNOWN"
+	case Qt__Uri_HOST_DNS: // 1
+		return "Uri_HOST_DNS"
+	case Qt__Uri_HOST_IPV4: // 2
+		return "Uri_HOST_IPV4"
+	case Qt__Uri_HOST_IPV6: // 3
+		return "Uri_HOST_IPV6"
+	case Qt__Uri_HOST_IDN: // 4
+		return "Uri_HOST_IDN"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt____WIDL_urlmon_generated_name_00000010 = int // stdglobal
+//
+const Qt__BINDHANDLETYPES_APPCACHE Qt____WIDL_urlmon_generated_name_00000010 = 0
+
+//
+const Qt__BINDHANDLETYPES_DEPENDENCY Qt____WIDL_urlmon_generated_name_00000010 = 1
+
+//
+const Qt__BINDHANDLETYPES_COUNT Qt____WIDL_urlmon_generated_name_00000010 = 2
+
+func __WIDL_urlmon_generated_name_00000010ItemName(val int) string {
+	switch val {
+	case Qt__BINDHANDLETYPES_APPCACHE: // 0
+		return "BINDHANDLETYPES_APPCACHE"
+	case Qt__BINDHANDLETYPES_DEPENDENCY: // 1
+		return "BINDHANDLETYPES_DEPENDENCY"
+	case Qt__BINDHANDLETYPES_COUNT: // 2
+		return "BINDHANDLETYPES_COUNT"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagREGKIND = int // stdglobal
+//
+const Qt__REGKIND_DEFAULT Qt__tagREGKIND = 0
+
+//
+const Qt__REGKIND_REGISTER Qt__tagREGKIND = 1
+
+//
+const Qt__REGKIND_NONE Qt__tagREGKIND = 2
+
+func tagREGKINDItemName(val int) string {
+	switch val {
+	case Qt__REGKIND_DEFAULT: // 0
+		return "REGKIND_DEFAULT"
+	case Qt__REGKIND_REGISTER: // 1
+		return "REGKIND_REGISTER"
+	case Qt__REGKIND_NONE: // 2
+		return "REGKIND_NONE"
 	default:
 		return fmt.Sprintf("%d", val)
 	}
@@ -9203,6 +16689,72 @@ func _MEDIA_TYPEItemName(val int) string {
 		return "F3_230Mb_512"
 	case Qt__F8_256_128: // 22
 		return "F8_256_128"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___SC_STATUS_TYPE = int // stdglobal
+//
+const Qt__SC_STATUS_PROCESS_INFO Qt___SC_STATUS_TYPE = 0
+
+func _SC_STATUS_TYPEItemName(val int) string {
+	switch val {
+	case Qt__SC_STATUS_PROCESS_INFO: // 0
+		return "SC_STATUS_PROCESS_INFO"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___SC_ENUM_TYPE = int // stdglobal
+//
+const Qt__SC_ENUM_PROCESS_INFO Qt___SC_ENUM_TYPE = 0
+
+func _SC_ENUM_TYPEItemName(val int) string {
+	switch val {
+	case Qt__SC_ENUM_PROCESS_INFO: // 0
+		return "SC_ENUM_PROCESS_INFO"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___SC_ACTION_TYPE = int // stdglobal
+//
+const Qt__SC_ACTION_NONE Qt___SC_ACTION_TYPE = 0
+
+//
+const Qt__SC_ACTION_RESTART Qt___SC_ACTION_TYPE = 1
+
+//
+const Qt__SC_ACTION_REBOOT Qt___SC_ACTION_TYPE = 2
+
+//
+const Qt__SC_ACTION_RUN_COMMAND Qt___SC_ACTION_TYPE = 3
+
+func _SC_ACTION_TYPEItemName(val int) string {
+	switch val {
+	case Qt__SC_ACTION_NONE: // 0
+		return "SC_ACTION_NONE"
+	case Qt__SC_ACTION_RESTART: // 1
+		return "SC_ACTION_RESTART"
+	case Qt__SC_ACTION_REBOOT: // 2
+		return "SC_ACTION_REBOOT"
+	case Qt__SC_ACTION_RUN_COMMAND: // 3
+		return "SC_ACTION_RUN_COMMAND"
 	default:
 		return fmt.Sprintf("%d", val)
 	}

@@ -9,7 +9,7 @@ import (
 	"github.com/kitech/qt.go/qtrt"
 )
 
-func AndroidActivity() *QAndroidJniObject {
+func AndroidActivity_() *QAndroidJniObject {
 	rv, err := qtrt.InvokeQtFunc6("QtAndroid_androidActivity", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -17,7 +17,7 @@ func AndroidActivity() *QAndroidJniObject {
 	return gothis
 }
 
-func AndroidContext() *QAndroidJniObject {
+func AndroidContext_() *QAndroidJniObject {
 	rv, err := qtrt.InvokeQtFunc6("QtAndroid_androidContext", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -25,13 +25,13 @@ func AndroidContext() *QAndroidJniObject {
 	return gothis
 }
 
-func AndroidSdkVersion() int {
+func AndroidSdkVersion_() int {
 	rv, err := qtrt.InvokeQtFunc6("QtAndroid_androidAdkVersion", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
-func AndroidService() *QAndroidJniObject {
+func AndroidService_() *QAndroidJniObject {
 	rv, err := qtrt.InvokeQtFunc6("QtAndroid_androidService", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -39,7 +39,7 @@ func AndroidService() *QAndroidJniObject {
 	return gothis
 }
 
-func BindService(serviceIntent *QAndroidIntent, serviceConnection *QAndroidServiceConnection, flags int) bool {
+func BindService_(serviceIntent *QAndroidIntent, serviceConnection *QAndroidServiceConnection, flags int) bool {
 	var convArg0 = serviceIntent.GetCthis()
 	var convArg1 = serviceConnection.GetCthis()
 	var convArg2 = flags
@@ -49,7 +49,7 @@ func BindService(serviceIntent *QAndroidIntent, serviceConnection *QAndroidServi
 	return qtrt.IfElse(rv == 0, false, true).(bool)
 }
 
-func CheckPermission(permission string) int {
+func CheckPermission_(permission string) int {
 	var tmpArg0 = qtcore.NewQString_5(permission)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("QtAndroid_checkPermission", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -57,7 +57,7 @@ func CheckPermission(permission string) int {
 	return int(rv)
 }
 
-func HideSplashScreen() {
+func HideSplashScreen_() {
 	rv, err := qtrt.InvokeQtFunc6("QtAndroid_hideSplashScreen", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 }
@@ -77,7 +77,7 @@ func RunOnAndroidThread(runnable unsafe.Pointer) {
 }
 */
 // Note: can not callback to go scope, or it's will crash or blocked
-func RunOnAndroidThread(runnable func()) {
+func RunOnAndroidThread_(runnable func()) {
 	if runnable == nil {
 		return
 	}
@@ -102,7 +102,7 @@ func RunOnAndroidThreadSync(runnable unsafe.Pointer, timeoutMS int) {
 	qtrt.ErrPrint(err, rv)
 }
 */
-func RunOnAndroidThreadSync(runnable func(), timeoutMS int) {
+func RunOnAndroidThreadSync_(runnable func(), timeoutMS int) {
 	if runnable == nil {
 		return
 	}
@@ -121,7 +121,7 @@ func ShouldShowRequestPermissionRationale_handby(permission string) int {
 	return int(rv)
 }
 
-func StartActivity(intent *QAndroidJniObject, receiverRequestCode int, resultReceiver *QAndroidActivityResultReceiver) {
+func StartActivity_(intent *QAndroidJniObject, receiverRequestCode int, resultReceiver *QAndroidActivityResultReceiver) {
 	var convArg0 = intent.GetCthis()
 	var convArg1 = receiverRequestCode
 	var convArg2 = resultReceiver.GetCthis()
@@ -129,7 +129,7 @@ func StartActivity(intent *QAndroidJniObject, receiverRequestCode int, resultRec
 	qtrt.ErrPrint(err, rv)
 }
 
-func StartIntentSender(intentSender *QAndroidJniObject, receiverRequestCode int, resultReceiver *QAndroidActivityResultReceiver) {
+func StartIntentSender_(intentSender *QAndroidJniObject, receiverRequestCode int, resultReceiver *QAndroidActivityResultReceiver) {
 	var convArg0 = intentSender.GetCthis()
 	var convArg1 = receiverRequestCode
 	var convArg2 = resultReceiver.GetCthis()

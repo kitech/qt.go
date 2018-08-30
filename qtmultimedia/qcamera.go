@@ -840,7 +840,7 @@ Note: Signal lockStatusChanged is overloaded in this class. To connect to this s
 
 
   connect(camera, QOverload<QCamera::LockStatus, QCamera::LockChangeReason>::of(&QCamera::lockStatusChanged),
-      [=](QCamera::LockStatus status, QCamera::LockChangeReason reason){ \/* ... *\/ });
+      [=](QCamera::LockStatus status, QCamera::LockChangeReason reason){ /-* ... *-/ });
 
 
 
@@ -863,7 +863,7 @@ Note: Signal lockStatusChanged is overloaded in this class. To connect to this s
 
 
   connect(camera, QOverload<QCamera::LockStatus, QCamera::LockChangeReason>::of(&QCamera::lockStatusChanged),
-      [=](QCamera::LockStatus status, QCamera::LockChangeReason reason){ \/* ... *\/ });
+      [=](QCamera::LockStatus status, QCamera::LockChangeReason reason){ /-* ... *-/ });
 
 
 
