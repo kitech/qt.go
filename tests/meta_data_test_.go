@@ -5,6 +5,7 @@ import (
 	"os"
 	"testing"
 	"time"
+	"unsafe"
 
 	"github.com/kitech/qt.go/qtcore"
 	"github.com/kitech/qt.go/qtmeta"
@@ -69,7 +70,8 @@ func Test0(t *testing.T) {
 		//*
 		for i := 0; i < qmetaobj.MethodCount(); i++ {
 			qmetamth := qmetaobj.Method(i)
-			log.Println(i, qmetamth.ParameterCount(), qmetamth.Name().Data_fix(), qmetamth.MethodSignature().Data_fix())
+
+			log.Println(i, qmetamth.ParameterCount(), qmetamth.MethodType(), qmetamth.Name().Data_fix(), qmetamth.MethodSignature().Data_fix())
 		}
 		//*/
 		log.Println("===========")
@@ -82,11 +84,31 @@ func Test0(t *testing.T) {
 	log.Println(qmetaobj.ClassName())
 	dumpMetaObj(qmetaobj)
 
-	// qtrt.Connect(objdat, "Clicked123(bool)", func(b bool) { log.Println(b) })
+	objdat2 := qtmeta.NewQMetaObjectData2().SetData(objdat.Superdata, objdat.Stringdata, objdat.Data, objdat.Static_metacall)
+	cobj := qtmeta.DMetaObject_new(objdat2, nil, nil)
+	log.Println(cobj)
+	cgoobj := newFakeQObjectFromPointer(cobj)
+
+	qtrt.ConnectRaw(cgoobj.GetCthis(), qtrt.QSIGNAL("Clicked123h(bool)"),
+		tmer.GetCthis(), qtrt.QSLOT("start()"))
 
 	time.AfterFunc(3*time.Second, func() { qapp.Quit() })
 	qapp.Exec()
 }
+
+type FakeQObject struct {
+	*qtrt.CObject
+}
+
+func newFakeQObjectFromPointer(cthis unsafe.Pointer) *FakeQObject {
+	this := &FakeQObject{}
+	this.CObject = &qtrt.CObject{}
+	this.CObject.Cthis = cthis
+	return this
+}
+
+func (this *FakeQObject) GetCthis() unsafe.Pointer      { return this.Cthis }
+func (this *FakeQObject) SetCthis(cthis unsafe.Pointer) { this.Cthis = cthis }
 
 func Test1(t *testing.T) {
 
