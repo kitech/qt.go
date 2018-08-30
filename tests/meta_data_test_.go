@@ -84,13 +84,8 @@ func Test0(t *testing.T) {
 	log.Println(qmetaobj.ClassName())
 	dumpMetaObj(qmetaobj)
 
-	objdat2 := qtmeta.NewQMetaObjectData2().SetData(objdat.Superdata, objdat.Stringdata, objdat.Data, objdat.Static_metacall)
-	cobj := qtmeta.DMetaObject_new(objdat2, nil, nil)
-	log.Println(cobj)
-	cgoobj := newFakeQObjectFromPointer(cobj)
-
-	qtrt.ConnectRaw(cgoobj.GetCthis(), qtrt.QSIGNAL("Clicked123h(bool)"),
-		tmer.GetCthis(), qtrt.QSLOT("start()"))
+	// qtrt.ConnectRaw(cgoobj.GetCthis(), qtrt.QSIGNAL("Clicked123h(bool)"),
+	//	tmer.GetCthis(), qtrt.QSLOT("start()"))
 
 	time.AfterFunc(3*time.Second, func() { qapp.Quit() })
 	qapp.Exec()
