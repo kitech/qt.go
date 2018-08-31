@@ -92,6 +92,9 @@ func (this *QSvgWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 /*
 Constructs a new SVG display widget with the given parent.
 */
+func (*QSvgWidget) NewForInherit(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QSvgWidget {
+	return NewQSvgWidget(parent)
+}
 func NewQSvgWidget(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QSvgWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -112,6 +115,9 @@ func NewQSvgWidget(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QSvgWidget {
 /*
 Constructs a new SVG display widget with the given parent.
 */
+func (*QSvgWidget) NewForInherit__() *QSvgWidget {
+	return NewQSvgWidget__()
+}
 func NewQSvgWidget__() *QSvgWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -130,6 +136,9 @@ func NewQSvgWidget__() *QSvgWidget {
 /*
 Constructs a new SVG display widget with the given parent.
 */
+func (*QSvgWidget) NewForInherit_1(file string, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QSvgWidget {
+	return NewQSvgWidget_1(file, parent)
+}
 func NewQSvgWidget_1(file string, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QSvgWidget {
 	var tmpArg0 = qtcore.NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()
@@ -152,6 +161,9 @@ func NewQSvgWidget_1(file string, parent qtwidgets.QWidget_ITF /*777 QWidget **/
 /*
 Constructs a new SVG display widget with the given parent.
 */
+func (*QSvgWidget) NewForInherit_1_(file string) *QSvgWidget {
+	return NewQSvgWidget_1_(file)
+}
 func NewQSvgWidget_1_(file string) *QSvgWidget {
 	var tmpArg0 = qtcore.NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()

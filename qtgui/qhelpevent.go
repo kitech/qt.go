@@ -71,6 +71,9 @@ func (*QHelpEvent) NewFromPointer(cthis unsafe.Pointer) *QHelpEvent {
 /*
 
  */
+func (*QHelpEvent) NewForInherit(type_ int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF) *QHelpEvent {
+	return NewQHelpEvent(type_, pos, globalPos)
+}
 func NewQHelpEvent(type_ int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF) *QHelpEvent {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {

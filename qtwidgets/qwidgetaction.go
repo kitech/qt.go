@@ -106,6 +106,9 @@ func (this *QWidgetAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 Constructs an action with parent.
 */
+func (*QWidgetAction) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QWidgetAction {
+	return NewQWidgetAction(parent)
+}
 func NewQWidgetAction(parent qtcore.QObject_ITF /*777 QObject **/) *QWidgetAction {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

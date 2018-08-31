@@ -93,6 +93,9 @@ func (this *QGraphicsDropShadowEffect) MetaObject() *qtcore.QMetaObject /*777 co
 /*
 
  */
+func (*QGraphicsDropShadowEffect) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsDropShadowEffect {
+	return NewQGraphicsDropShadowEffect(parent)
+}
 func NewQGraphicsDropShadowEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsDropShadowEffect {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -113,6 +116,9 @@ func NewQGraphicsDropShadowEffect(parent qtcore.QObject_ITF /*777 QObject **/) *
 /*
 
  */
+func (*QGraphicsDropShadowEffect) NewForInherit__() *QGraphicsDropShadowEffect {
+	return NewQGraphicsDropShadowEffect__()
+}
 func NewQGraphicsDropShadowEffect__() *QGraphicsDropShadowEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

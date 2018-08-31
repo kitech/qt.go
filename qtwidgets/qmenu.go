@@ -168,6 +168,9 @@ Constructs a menu with parent parent.
 
 Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
 */
+func (*QMenu) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QMenu {
+	return NewQMenu(parent)
+}
 func NewQMenu(parent QWidget_ITF /*777 QWidget **/) *QMenu {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -190,6 +193,9 @@ Constructs a menu with parent parent.
 
 Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
 */
+func (*QMenu) NewForInherit__() *QMenu {
+	return NewQMenu__()
+}
 func NewQMenu__() *QMenu {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -210,6 +216,9 @@ Constructs a menu with parent parent.
 
 Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
 */
+func (*QMenu) NewForInherit_1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
+	return NewQMenu_1(title, parent)
+}
 func NewQMenu_1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -234,6 +243,9 @@ Constructs a menu with parent parent.
 
 Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
 */
+func (*QMenu) NewForInherit_1_(title string) *QMenu {
+	return NewQMenu_1_(title)
+}
 func NewQMenu_1_(title string) *QMenu {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()

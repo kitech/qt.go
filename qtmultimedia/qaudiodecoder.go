@@ -87,6 +87,9 @@ func (this *QAudioDecoder) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 Construct an QAudioDecoder instance parented to parent.
 */
+func (*QAudioDecoder) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioDecoder {
+	return NewQAudioDecoder(parent)
+}
 func NewQAudioDecoder(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioDecoder {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQAudioDecoder(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioDecode
 /*
 Construct an QAudioDecoder instance parented to parent.
 */
+func (*QAudioDecoder) NewForInherit__() *QAudioDecoder {
+	return NewQAudioDecoder__()
+}
 func NewQAudioDecoder__() *QAudioDecoder {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

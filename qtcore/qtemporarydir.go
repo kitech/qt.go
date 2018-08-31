@@ -74,6 +74,9 @@ Constructs a QTemporaryDir using as template the application name returned by QC
 
 See also QDir::tempPath().
 */
+func (*QTemporaryDir) NewForInherit() *QTemporaryDir {
+	return NewQTemporaryDir()
+}
 func NewQTemporaryDir() *QTemporaryDir {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDirC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs a QTemporaryDir using as template the application name returned by QC
 
 See also QDir::tempPath().
 */
+func (*QTemporaryDir) NewForInherit_1(templateName string) *QTemporaryDir {
+	return NewQTemporaryDir_1(templateName)
+}
 func NewQTemporaryDir_1(templateName string) *QTemporaryDir {
 	var tmpArg0 = NewQString_5(templateName)
 	var convArg0 = tmpArg0.GetCthis()

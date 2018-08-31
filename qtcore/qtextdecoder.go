@@ -72,6 +72,9 @@ func (*QTextDecoder) NewFromPointer(cthis unsafe.Pointer) *QTextDecoder {
 /*
 
  */
+func (*QTextDecoder) NewForInherit(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextDecoder {
+	return NewQTextDecoder(codec)
+}
 func NewQTextDecoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextDecoder {
 	var convArg0 unsafe.Pointer
 	if codec != nil && codec.QTextCodec_PTR() != nil {
@@ -92,6 +95,9 @@ func NewQTextDecoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextDeco
 /*
 
  */
+func (*QTextDecoder) NewForInherit_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextDecoder {
+	return NewQTextDecoder_1(codec, flags)
+}
 func NewQTextDecoder_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextDecoder {
 	var convArg0 unsafe.Pointer
 	if codec != nil && codec.QTextCodec_PTR() != nil {

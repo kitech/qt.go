@@ -86,6 +86,9 @@ Constructs a shared memory object with the given parent and with its key set to 
 
 See also setKey(), create(), and attach().
 */
+func (*QSharedMemory) NewForInherit(parent QObject_ITF /*777 QObject **/) *QSharedMemory {
+	return NewQSharedMemory(parent)
+}
 func NewQSharedMemory(parent QObject_ITF /*777 QObject **/) *QSharedMemory {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -108,6 +111,9 @@ Constructs a shared memory object with the given parent and with its key set to 
 
 See also setKey(), create(), and attach().
 */
+func (*QSharedMemory) NewForInherit__() *QSharedMemory {
+	return NewQSharedMemory__()
+}
 func NewQSharedMemory__() *QSharedMemory {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -128,6 +134,9 @@ Constructs a shared memory object with the given parent and with its key set to 
 
 See also setKey(), create(), and attach().
 */
+func (*QSharedMemory) NewForInherit_1(key string, parent QObject_ITF /*777 QObject **/) *QSharedMemory {
+	return NewQSharedMemory_1(key, parent)
+}
 func NewQSharedMemory_1(key string, parent QObject_ITF /*777 QObject **/) *QSharedMemory {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -152,6 +161,9 @@ Constructs a shared memory object with the given parent and with its key set to 
 
 See also setKey(), create(), and attach().
 */
+func (*QSharedMemory) NewForInherit_1_(key string) *QSharedMemory {
+	return NewQSharedMemory_1_(key)
+}
 func NewQSharedMemory_1_(key string) *QSharedMemory {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()

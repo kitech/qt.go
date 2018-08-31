@@ -73,6 +73,9 @@ func (*QDnsHostAddressRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsHostAddr
 /*
 
  */
+func (*QDnsHostAddressRecord) NewForInherit() *QDnsHostAddressRecord {
+	return NewQDnsHostAddressRecord()
+}
 func NewQDnsHostAddressRecord() *QDnsHostAddressRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QDnsHostAddressRecordC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

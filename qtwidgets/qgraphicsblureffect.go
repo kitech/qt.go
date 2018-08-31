@@ -91,6 +91,9 @@ func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*777 const QM
 /*
 
  */
+func (*QGraphicsBlurEffect) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsBlurEffect {
+	return NewQGraphicsBlurEffect(parent)
+}
 func NewQGraphicsBlurEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsBlurEffect {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -111,6 +114,9 @@ func NewQGraphicsBlurEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraph
 /*
 
  */
+func (*QGraphicsBlurEffect) NewForInherit__() *QGraphicsBlurEffect {
+	return NewQGraphicsBlurEffect__()
+}
 func NewQGraphicsBlurEffect__() *QGraphicsBlurEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

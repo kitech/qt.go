@@ -111,6 +111,9 @@ func (this *QCommandLinkButton) MetaObject() *qtcore.QMetaObject /*777 const QMe
 /*
 Constructs a command link with no text and a parent.
 */
+func (*QCommandLinkButton) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
+	return NewQCommandLinkButton(parent)
+}
 func NewQCommandLinkButton(parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -131,6 +134,9 @@ func NewQCommandLinkButton(parent QWidget_ITF /*777 QWidget **/) *QCommandLinkBu
 /*
 Constructs a command link with no text and a parent.
 */
+func (*QCommandLinkButton) NewForInherit__() *QCommandLinkButton {
+	return NewQCommandLinkButton__()
+}
 func NewQCommandLinkButton__() *QCommandLinkButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -149,6 +155,9 @@ func NewQCommandLinkButton__() *QCommandLinkButton {
 /*
 Constructs a command link with no text and a parent.
 */
+func (*QCommandLinkButton) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
+	return NewQCommandLinkButton_1(text, parent)
+}
 func NewQCommandLinkButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -171,6 +180,9 @@ func NewQCommandLinkButton_1(text string, parent QWidget_ITF /*777 QWidget **/) 
 /*
 Constructs a command link with no text and a parent.
 */
+func (*QCommandLinkButton) NewForInherit_1_(text string) *QCommandLinkButton {
+	return NewQCommandLinkButton_1_(text)
+}
 func NewQCommandLinkButton_1_(text string) *QCommandLinkButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -191,6 +203,9 @@ func NewQCommandLinkButton_1_(text string) *QCommandLinkButton {
 /*
 Constructs a command link with no text and a parent.
 */
+func (*QCommandLinkButton) NewForInherit_2(text string, description string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
+	return NewQCommandLinkButton_2(text, description, parent)
+}
 func NewQCommandLinkButton_2(text string, description string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -215,6 +230,9 @@ func NewQCommandLinkButton_2(text string, description string, parent QWidget_ITF
 /*
 Constructs a command link with no text and a parent.
 */
+func (*QCommandLinkButton) NewForInherit_2_(text string, description string) *QCommandLinkButton {
+	return NewQCommandLinkButton_2_(text, description)
+}
 func NewQCommandLinkButton_2_(text string, description string) *QCommandLinkButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()

@@ -75,6 +75,9 @@ Constructs an empty SSL configuration. This configuration contains no valid sett
 
 Once any setter methods are called, isNull() will return false.
 */
+func (*QSslConfiguration) NewForInherit() *QSslConfiguration {
+	return NewQSslConfiguration()
+}
 func NewQSslConfiguration() *QSslConfiguration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfigurationC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -74,6 +74,9 @@ func (*QGraphicsSceneResizeEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphic
 /*
 
  */
+func (*QGraphicsSceneResizeEvent) NewForInherit() *QGraphicsSceneResizeEvent {
+	return NewQGraphicsSceneResizeEvent()
+}
 func NewQGraphicsSceneResizeEvent() *QGraphicsSceneResizeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

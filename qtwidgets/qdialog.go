@@ -127,6 +127,9 @@ The widget flags f are passed on to the QWidget constructor. If, for example, yo
 
 See also QWidget::setWindowFlags().
 */
+func (*QDialog) NewForInherit(parent QWidget_ITF /*777 QWidget **/, f int) *QDialog {
+	return NewQDialog(parent, f)
+}
 func NewQDialog(parent QWidget_ITF /*777 QWidget **/, f int) *QDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -153,6 +156,9 @@ The widget flags f are passed on to the QWidget constructor. If, for example, yo
 
 See also QWidget::setWindowFlags().
 */
+func (*QDialog) NewForInherit__() *QDialog {
+	return NewQDialog__()
+}
 func NewQDialog__() *QDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -179,6 +185,9 @@ The widget flags f are passed on to the QWidget constructor. If, for example, yo
 
 See also QWidget::setWindowFlags().
 */
+func (*QDialog) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QDialog {
+	return NewQDialog__1(parent)
+}
 func NewQDialog__1(parent QWidget_ITF /*777 QWidget **/) *QDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

@@ -216,6 +216,9 @@ func (this *QGraphicsView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 Constructs a QGraphicsView. parent is passed to QWidget's constructor.
 */
+func (*QGraphicsView) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
+	return NewQGraphicsView(parent)
+}
 func NewQGraphicsView(parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -236,6 +239,9 @@ func NewQGraphicsView(parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
 /*
 Constructs a QGraphicsView. parent is passed to QWidget's constructor.
 */
+func (*QGraphicsView) NewForInherit__() *QGraphicsView {
+	return NewQGraphicsView__()
+}
 func NewQGraphicsView__() *QGraphicsView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -254,6 +260,9 @@ func NewQGraphicsView__() *QGraphicsView {
 /*
 Constructs a QGraphicsView. parent is passed to QWidget's constructor.
 */
+func (*QGraphicsView) NewForInherit_1(scene QGraphicsScene_ITF /*777 QGraphicsScene **/, parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
+	return NewQGraphicsView_1(scene, parent)
+}
 func NewQGraphicsView_1(scene QGraphicsScene_ITF /*777 QGraphicsScene **/, parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
 	var convArg0 unsafe.Pointer
 	if scene != nil && scene.QGraphicsScene_PTR() != nil {
@@ -278,6 +287,9 @@ func NewQGraphicsView_1(scene QGraphicsScene_ITF /*777 QGraphicsScene **/, paren
 /*
 Constructs a QGraphicsView. parent is passed to QWidget's constructor.
 */
+func (*QGraphicsView) NewForInherit_1_(scene QGraphicsScene_ITF /*777 QGraphicsScene **/) *QGraphicsView {
+	return NewQGraphicsView_1_(scene)
+}
 func NewQGraphicsView_1_(scene QGraphicsScene_ITF /*777 QGraphicsScene **/) *QGraphicsView {
 	var convArg0 unsafe.Pointer
 	if scene != nil && scene.QGraphicsScene_PTR() != nil {

@@ -377,6 +377,9 @@ func (this *QMediaRecorderControl) SetVolume(volume float64) {
 /*
 Constructs a media recorder control with the given parent.
 */
+func (*QMediaRecorderControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaRecorderControl {
+	return NewQMediaRecorderControl(parent)
+}
 func NewQMediaRecorderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaRecorderControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -397,6 +400,9 @@ func NewQMediaRecorderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMed
 /*
 Constructs a media recorder control with the given parent.
 */
+func (*QMediaRecorderControl) NewForInherit__() *QMediaRecorderControl {
+	return NewQMediaRecorderControl__()
+}
 func NewQMediaRecorderControl__() *QMediaRecorderControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

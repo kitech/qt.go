@@ -121,6 +121,9 @@ func (this *QGraphicsEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 /*
 Constructs a new QGraphicsEffect instance having the specified parent.
 */
+func (*QGraphicsEffect) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsEffect {
+	return NewQGraphicsEffect(parent)
+}
 func NewQGraphicsEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsEffect {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -141,6 +144,9 @@ func NewQGraphicsEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsE
 /*
 Constructs a new QGraphicsEffect instance having the specified parent.
 */
+func (*QGraphicsEffect) NewForInherit__() *QGraphicsEffect {
+	return NewQGraphicsEffect__()
+}
 func NewQGraphicsEffect__() *QGraphicsEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

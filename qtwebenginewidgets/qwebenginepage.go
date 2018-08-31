@@ -135,6 +135,9 @@ func (this *QWebEnginePage) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 /*
 
  */
+func (*QWebEnginePage) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QWebEnginePage {
+	return NewQWebEnginePage(parent)
+}
 func NewQWebEnginePage(parent qtcore.QObject_ITF /*777 QObject **/) *QWebEnginePage {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -155,6 +158,9 @@ func NewQWebEnginePage(parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineP
 /*
 
  */
+func (*QWebEnginePage) NewForInherit__() *QWebEnginePage {
+	return NewQWebEnginePage__()
+}
 func NewQWebEnginePage__() *QWebEnginePage {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -173,6 +179,9 @@ func NewQWebEnginePage__() *QWebEnginePage {
 /*
 
  */
+func (*QWebEnginePage) NewForInherit_1(profile QWebEngineProfile_ITF /*777 QWebEngineProfile **/, parent qtcore.QObject_ITF /*777 QObject **/) *QWebEnginePage {
+	return NewQWebEnginePage_1(profile, parent)
+}
 func NewQWebEnginePage_1(profile QWebEngineProfile_ITF /*777 QWebEngineProfile **/, parent qtcore.QObject_ITF /*777 QObject **/) *QWebEnginePage {
 	var convArg0 unsafe.Pointer
 	if profile != nil && profile.QWebEngineProfile_PTR() != nil {
@@ -197,6 +206,9 @@ func NewQWebEnginePage_1(profile QWebEngineProfile_ITF /*777 QWebEngineProfile *
 /*
 
  */
+func (*QWebEnginePage) NewForInherit_1_(profile QWebEngineProfile_ITF /*777 QWebEngineProfile **/) *QWebEnginePage {
+	return NewQWebEnginePage_1_(profile)
+}
 func NewQWebEnginePage_1_(profile QWebEngineProfile_ITF /*777 QWebEngineProfile **/) *QWebEnginePage {
 	var convArg0 unsafe.Pointer
 	if profile != nil && profile.QWebEngineProfile_PTR() != nil {

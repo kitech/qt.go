@@ -93,6 +93,9 @@ func (this *QPlainTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 con
 /*
 
  */
+func (*QPlainTextDocumentLayout) NewForInherit(document qtgui.QTextDocument_ITF /*777 QTextDocument **/) *QPlainTextDocumentLayout {
+	return NewQPlainTextDocumentLayout(document)
+}
 func NewQPlainTextDocumentLayout(document qtgui.QTextDocument_ITF /*777 QTextDocument **/) *QPlainTextDocumentLayout {
 	var convArg0 unsafe.Pointer
 	if document != nil && document.QTextDocument_PTR() != nil {

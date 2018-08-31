@@ -136,6 +136,9 @@ func (this *QTabWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 /*
 Constructs a tabbed widget with parent parent.
 */
+func (*QTabWidget) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTabWidget {
+	return NewQTabWidget(parent)
+}
 func NewQTabWidget(parent QWidget_ITF /*777 QWidget **/) *QTabWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -156,6 +159,9 @@ func NewQTabWidget(parent QWidget_ITF /*777 QWidget **/) *QTabWidget {
 /*
 Constructs a tabbed widget with parent parent.
 */
+func (*QTabWidget) NewForInherit__() *QTabWidget {
+	return NewQTabWidget__()
+}
 func NewQTabWidget__() *QTabWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

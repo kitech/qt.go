@@ -73,6 +73,9 @@ func (*QPageLayout) NewFromPointer(cthis unsafe.Pointer) *QPageLayout {
 /*
 Creates an invalid QPageLayout.
 */
+func (*QPageLayout) NewForInherit() *QPageLayout {
+	return NewQPageLayout()
+}
 func NewQPageLayout() *QPageLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQPageLayout() *QPageLayout {
 /*
 Creates an invalid QPageLayout.
 */
+func (*QPageLayout) NewForInherit_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int, minMargins qtcore.QMarginsF_ITF) *QPageLayout {
+	return NewQPageLayout_1(pageSize, orientation, margins, units, minMargins)
+}
 func NewQPageLayout_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int, minMargins qtcore.QMarginsF_ITF) *QPageLayout {
 	var convArg0 unsafe.Pointer
 	if pageSize != nil && pageSize.QPageSize_PTR() != nil {
@@ -117,6 +123,9 @@ func NewQPageLayout_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QM
 /*
 Creates an invalid QPageLayout.
 */
+func (*QPageLayout) NewForInherit_1_(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF) *QPageLayout {
+	return NewQPageLayout_1_(pageSize, orientation, margins)
+}
 func NewQPageLayout_1_(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF) *QPageLayout {
 	var convArg0 unsafe.Pointer
 	if pageSize != nil && pageSize.QPageSize_PTR() != nil {
@@ -145,6 +154,9 @@ func NewQPageLayout_1_(pageSize QPageSize_ITF, orientation int, margins qtcore.Q
 /*
 Creates an invalid QPageLayout.
 */
+func (*QPageLayout) NewForInherit_1_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int) *QPageLayout {
+	return NewQPageLayout_1_1(pageSize, orientation, margins, units)
+}
 func NewQPageLayout_1_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int) *QPageLayout {
 	var convArg0 unsafe.Pointer
 	if pageSize != nil && pageSize.QPageSize_PTR() != nil {

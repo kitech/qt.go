@@ -75,6 +75,9 @@ Constructs an invalid configuration object.
 
 See also isValid().
 */
+func (*QNetworkConfiguration) NewForInherit() *QNetworkConfiguration {
+	return NewQNetworkConfiguration()
+}
 func NewQNetworkConfiguration() *QNetworkConfiguration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkConfigurationC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

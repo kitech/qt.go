@@ -75,6 +75,9 @@ func (*QAndroidServiceConnection) NewFromPointer(cthis unsafe.Pointer) *QAndroid
 /*
 Creates a new object
 */
+func (*QAndroidServiceConnection) NewForInherit() *QAndroidServiceConnection {
+	return NewQAndroidServiceConnection()
+}
 func NewQAndroidServiceConnection() *QAndroidServiceConnection {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnectionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +94,9 @@ func NewQAndroidServiceConnection() *QAndroidServiceConnection {
 /*
 Creates a new object
 */
+func (*QAndroidServiceConnection) NewForInherit_1(serviceConnection QAndroidJniObject_ITF) *QAndroidServiceConnection {
+	return NewQAndroidServiceConnection_1(serviceConnection)
+}
 func NewQAndroidServiceConnection_1(serviceConnection QAndroidJniObject_ITF) *QAndroidServiceConnection {
 	var convArg0 unsafe.Pointer
 	if serviceConnection != nil && serviceConnection.QAndroidJniObject_PTR() != nil {

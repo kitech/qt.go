@@ -104,6 +104,9 @@ func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*777 const QMetaObjec
 /*
 
  */
+func (*QFutureWatcherBase) NewForInherit(parent QObject_ITF /*777 QObject **/) *QFutureWatcherBase {
+	return NewQFutureWatcherBase(parent)
+}
 func NewQFutureWatcherBase(parent QObject_ITF /*777 QObject **/) *QFutureWatcherBase {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -124,6 +127,9 @@ func NewQFutureWatcherBase(parent QObject_ITF /*777 QObject **/) *QFutureWatcher
 /*
 
  */
+func (*QFutureWatcherBase) NewForInherit__() *QFutureWatcherBase {
+	return NewQFutureWatcherBase__()
+}
 func NewQFutureWatcherBase__() *QFutureWatcherBase {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

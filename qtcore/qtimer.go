@@ -89,6 +89,9 @@ func (this *QTimer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs a timer with the given parent.
 */
+func (*QTimer) NewForInherit(parent QObject_ITF /*777 QObject **/) *QTimer {
+	return NewQTimer(parent)
+}
 func NewQTimer(parent QObject_ITF /*777 QObject **/) *QTimer {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -109,6 +112,9 @@ func NewQTimer(parent QObject_ITF /*777 QObject **/) *QTimer {
 /*
 Constructs a timer with the given parent.
 */
+func (*QTimer) NewForInherit__() *QTimer {
+	return NewQTimer__()
+}
 func NewQTimer__() *QTimer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

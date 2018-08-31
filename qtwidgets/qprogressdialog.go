@@ -124,6 +124,9 @@ The parent argument is dialog's parent widget. The widget flags, f, are passed t
 
 See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
 */
+func (*QProgressDialog) NewForInherit(parent QWidget_ITF /*777 QWidget **/, flags int) *QProgressDialog {
+	return NewQProgressDialog(parent, flags)
+}
 func NewQProgressDialog(parent QWidget_ITF /*777 QWidget **/, flags int) *QProgressDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -157,6 +160,9 @@ The parent argument is dialog's parent widget. The widget flags, f, are passed t
 
 See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
 */
+func (*QProgressDialog) NewForInherit__() *QProgressDialog {
+	return NewQProgressDialog__()
+}
 func NewQProgressDialog__() *QProgressDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -190,6 +196,9 @@ The parent argument is dialog's parent widget. The widget flags, f, are passed t
 
 See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
 */
+func (*QProgressDialog) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
+	return NewQProgressDialog__1(parent)
+}
 func NewQProgressDialog__1(parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -225,6 +234,9 @@ The parent argument is dialog's parent widget. The widget flags, f, are passed t
 
 See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
 */
+func (*QProgressDialog) NewForInherit_1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/, flags int) *QProgressDialog {
+	return NewQProgressDialog_1(labelText, cancelButtonText, minimum, maximum, parent, flags)
+}
 func NewQProgressDialog_1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/, flags int) *QProgressDialog {
 	var tmpArg0 = qtcore.NewQString_5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
@@ -262,6 +274,9 @@ The parent argument is dialog's parent widget. The widget flags, f, are passed t
 
 See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
 */
+func (*QProgressDialog) NewForInherit_1_(labelText string, cancelButtonText string, minimum int, maximum int) *QProgressDialog {
+	return NewQProgressDialog_1_(labelText, cancelButtonText, minimum, maximum)
+}
 func NewQProgressDialog_1_(labelText string, cancelButtonText string, minimum int, maximum int) *QProgressDialog {
 	var tmpArg0 = qtcore.NewQString_5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
@@ -299,6 +314,9 @@ The parent argument is dialog's parent widget. The widget flags, f, are passed t
 
 See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
 */
+func (*QProgressDialog) NewForInherit_1_1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
+	return NewQProgressDialog_1_1(labelText, cancelButtonText, minimum, maximum, parent)
+}
 func NewQProgressDialog_1_1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
 	var tmpArg0 = qtcore.NewQString_5(labelText)
 	var convArg0 = tmpArg0.GetCthis()

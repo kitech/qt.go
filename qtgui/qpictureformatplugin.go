@@ -85,6 +85,9 @@ func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*777 const Q
 /*
 Constructs an picture format plugin with the given parent. This is invoked automatically by the moc generated code that exports the plugin.
 */
+func (*QPictureFormatPlugin) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QPictureFormatPlugin {
+	return NewQPictureFormatPlugin(parent)
+}
 func NewQPictureFormatPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QPictureFormatPlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -105,6 +108,9 @@ func NewQPictureFormatPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QPict
 /*
 Constructs an picture format plugin with the given parent. This is invoked automatically by the moc generated code that exports the plugin.
 */
+func (*QPictureFormatPlugin) NewForInherit__() *QPictureFormatPlugin {
+	return NewQPictureFormatPlugin__()
+}
 func NewQPictureFormatPlugin__() *QPictureFormatPlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

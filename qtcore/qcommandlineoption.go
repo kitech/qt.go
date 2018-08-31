@@ -76,6 +76,9 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
+func (*QCommandLineOption) NewForInherit(name string) *QCommandLineOption {
+	return NewQCommandLineOption(name)
+}
 func NewQCommandLineOption(name string) *QCommandLineOption {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -98,6 +101,9 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
+func (*QCommandLineOption) NewForInherit_1(names QStringList_ITF) *QCommandLineOption {
+	return NewQCommandLineOption_1(names)
+}
 func NewQCommandLineOption_1(names QStringList_ITF) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {
@@ -122,6 +128,9 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
+func (*QCommandLineOption) NewForInherit_2(name string, description string, valueName string, defaultValue string) *QCommandLineOption {
+	return NewQCommandLineOption_2(name, description, valueName, defaultValue)
+}
 func NewQCommandLineOption_2(name string, description string, valueName string, defaultValue string) *QCommandLineOption {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -150,6 +159,9 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
+func (*QCommandLineOption) NewForInherit_2_(name string, description string) *QCommandLineOption {
+	return NewQCommandLineOption_2_(name, description)
+}
 func NewQCommandLineOption_2_(name string, description string) *QCommandLineOption {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -178,6 +190,9 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
+func (*QCommandLineOption) NewForInherit_2_1(name string, description string, valueName string) *QCommandLineOption {
+	return NewQCommandLineOption_2_1(name, description, valueName)
+}
 func NewQCommandLineOption_2_1(name string, description string, valueName string) *QCommandLineOption {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -206,6 +221,9 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
+func (*QCommandLineOption) NewForInherit_3(names QStringList_ITF, description string, valueName string, defaultValue string) *QCommandLineOption {
+	return NewQCommandLineOption_3(names, description, valueName, defaultValue)
+}
 func NewQCommandLineOption_3(names QStringList_ITF, description string, valueName string, defaultValue string) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {
@@ -236,6 +254,9 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
+func (*QCommandLineOption) NewForInherit_3_(names QStringList_ITF, description string) *QCommandLineOption {
+	return NewQCommandLineOption_3_(names, description)
+}
 func NewQCommandLineOption_3_(names QStringList_ITF, description string) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {
@@ -266,6 +287,9 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
+func (*QCommandLineOption) NewForInherit_3_1(names QStringList_ITF, description string, valueName string) *QCommandLineOption {
+	return NewQCommandLineOption_3_1(names, description, valueName)
+}
 func NewQCommandLineOption_3_1(names QStringList_ITF, description string, valueName string) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {

@@ -132,6 +132,9 @@ Constructs a QSyntaxHighlighter with the given parent.
 
 If the parent is a QTextEdit, it installs the syntax highlighter on the parents document. The specified QTextEdit also becomes the owner of the QSyntaxHighlighter.
 */
+func (*QSyntaxHighlighter) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QSyntaxHighlighter {
+	return NewQSyntaxHighlighter(parent)
+}
 func NewQSyntaxHighlighter(parent qtcore.QObject_ITF /*777 QObject **/) *QSyntaxHighlighter {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -154,6 +157,9 @@ Constructs a QSyntaxHighlighter with the given parent.
 
 If the parent is a QTextEdit, it installs the syntax highlighter on the parents document. The specified QTextEdit also becomes the owner of the QSyntaxHighlighter.
 */
+func (*QSyntaxHighlighter) NewForInherit_1(parent QTextDocument_ITF /*777 QTextDocument **/) *QSyntaxHighlighter {
+	return NewQSyntaxHighlighter_1(parent)
+}
 func NewQSyntaxHighlighter_1(parent QTextDocument_ITF /*777 QTextDocument **/) *QSyntaxHighlighter {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QTextDocument_PTR() != nil {

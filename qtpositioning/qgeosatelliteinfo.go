@@ -73,6 +73,9 @@ func (*QGeoSatelliteInfo) NewFromPointer(cthis unsafe.Pointer) *QGeoSatelliteInf
 /*
 Creates a satellite information object.
 */
+func (*QGeoSatelliteInfo) NewForInherit() *QGeoSatelliteInfo {
+	return NewQGeoSatelliteInfo()
+}
 func NewQGeoSatelliteInfo() *QGeoSatelliteInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGeoSatelliteInfoC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -72,6 +72,9 @@ func (*QTextBoundaryFinder) NewFromPointer(cthis unsafe.Pointer) *QTextBoundaryF
 /*
 Constructs an invalid QTextBoundaryFinder object.
 */
+func (*QTextBoundaryFinder) NewForInherit() *QTextBoundaryFinder {
+	return NewQTextBoundaryFinder()
+}
 func NewQTextBoundaryFinder() *QTextBoundaryFinder {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQTextBoundaryFinder() *QTextBoundaryFinder {
 /*
 Constructs an invalid QTextBoundaryFinder object.
 */
+func (*QTextBoundaryFinder) NewForInherit_1(type_ int, string string) *QTextBoundaryFinder {
+	return NewQTextBoundaryFinder_1(type_, string)
+}
 func NewQTextBoundaryFinder_1(type_ int, string string) *QTextBoundaryFinder {
 	var tmpArg1 = NewQString_5(string)
 	var convArg1 = tmpArg1.GetCthis()
@@ -106,6 +112,9 @@ func NewQTextBoundaryFinder_1(type_ int, string string) *QTextBoundaryFinder {
 /*
 Constructs an invalid QTextBoundaryFinder object.
 */
+func (*QTextBoundaryFinder) NewForInherit_2(type_ int, chars QChar_ITF /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/, bufferSize int) *QTextBoundaryFinder {
+	return NewQTextBoundaryFinder_2(type_, chars, length, buffer, bufferSize)
+}
 func NewQTextBoundaryFinder_2(type_ int, chars QChar_ITF /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/, bufferSize int) *QTextBoundaryFinder {
 	var convArg1 unsafe.Pointer
 	if chars != nil && chars.QChar_PTR() != nil {
@@ -126,6 +135,9 @@ func NewQTextBoundaryFinder_2(type_ int, chars QChar_ITF /*777 const QChar **/, 
 /*
 Constructs an invalid QTextBoundaryFinder object.
 */
+func (*QTextBoundaryFinder) NewForInherit_2_(type_ int, chars QChar_ITF /*777 const QChar **/, length int) *QTextBoundaryFinder {
+	return NewQTextBoundaryFinder_2_(type_, chars, length)
+}
 func NewQTextBoundaryFinder_2_(type_ int, chars QChar_ITF /*777 const QChar **/, length int) *QTextBoundaryFinder {
 	var convArg1 unsafe.Pointer
 	if chars != nil && chars.QChar_PTR() != nil {
@@ -150,6 +162,9 @@ func NewQTextBoundaryFinder_2_(type_ int, chars QChar_ITF /*777 const QChar **/,
 /*
 Constructs an invalid QTextBoundaryFinder object.
 */
+func (*QTextBoundaryFinder) NewForInherit_2_1(type_ int, chars QChar_ITF /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/) *QTextBoundaryFinder {
+	return NewQTextBoundaryFinder_2_1(type_, chars, length, buffer)
+}
 func NewQTextBoundaryFinder_2_1(type_ int, chars QChar_ITF /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/) *QTextBoundaryFinder {
 	var convArg1 unsafe.Pointer
 	if chars != nil && chars.QChar_PTR() != nil {

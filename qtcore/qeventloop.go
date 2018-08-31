@@ -84,6 +84,9 @@ func (this *QEventLoop) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs an event loop object with the given parent.
 */
+func (*QEventLoop) NewForInherit(parent QObject_ITF /*777 QObject **/) *QEventLoop {
+	return NewQEventLoop(parent)
+}
 func NewQEventLoop(parent QObject_ITF /*777 QObject **/) *QEventLoop {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -104,6 +107,9 @@ func NewQEventLoop(parent QObject_ITF /*777 QObject **/) *QEventLoop {
 /*
 Constructs an event loop object with the given parent.
 */
+func (*QEventLoop) NewForInherit__() *QEventLoop {
+	return NewQEventLoop__()
+}
 func NewQEventLoop__() *QEventLoop {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

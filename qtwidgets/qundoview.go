@@ -86,6 +86,9 @@ func (this *QUndoView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 /*
 Constructs a new view with parent parent.
 */
+func (*QUndoView) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QUndoView {
+	return NewQUndoView(parent)
+}
 func NewQUndoView(parent QWidget_ITF /*777 QWidget **/) *QUndoView {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQUndoView(parent QWidget_ITF /*777 QWidget **/) *QUndoView {
 /*
 Constructs a new view with parent parent.
 */
+func (*QUndoView) NewForInherit__() *QUndoView {
+	return NewQUndoView__()
+}
 func NewQUndoView__() *QUndoView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -124,6 +130,9 @@ func NewQUndoView__() *QUndoView {
 /*
 Constructs a new view with parent parent.
 */
+func (*QUndoView) NewForInherit_1(stack QUndoStack_ITF /*777 QUndoStack **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
+	return NewQUndoView_1(stack, parent)
+}
 func NewQUndoView_1(stack QUndoStack_ITF /*777 QUndoStack **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
 	var convArg0 unsafe.Pointer
 	if stack != nil && stack.QUndoStack_PTR() != nil {
@@ -148,6 +157,9 @@ func NewQUndoView_1(stack QUndoStack_ITF /*777 QUndoStack **/, parent QWidget_IT
 /*
 Constructs a new view with parent parent.
 */
+func (*QUndoView) NewForInherit_1_(stack QUndoStack_ITF /*777 QUndoStack **/) *QUndoView {
+	return NewQUndoView_1_(stack)
+}
 func NewQUndoView_1_(stack QUndoStack_ITF /*777 QUndoStack **/) *QUndoView {
 	var convArg0 unsafe.Pointer
 	if stack != nil && stack.QUndoStack_PTR() != nil {
@@ -170,6 +182,9 @@ func NewQUndoView_1_(stack QUndoStack_ITF /*777 QUndoStack **/) *QUndoView {
 /*
 Constructs a new view with parent parent.
 */
+func (*QUndoView) NewForInherit_2(group QUndoGroup_ITF /*777 QUndoGroup **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
+	return NewQUndoView_2(group, parent)
+}
 func NewQUndoView_2(group QUndoGroup_ITF /*777 QUndoGroup **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
 	var convArg0 unsafe.Pointer
 	if group != nil && group.QUndoGroup_PTR() != nil {
@@ -194,6 +209,9 @@ func NewQUndoView_2(group QUndoGroup_ITF /*777 QUndoGroup **/, parent QWidget_IT
 /*
 Constructs a new view with parent parent.
 */
+func (*QUndoView) NewForInherit_2_(group QUndoGroup_ITF /*777 QUndoGroup **/) *QUndoView {
+	return NewQUndoView_2_(group)
+}
 func NewQUndoView_2_(group QUndoGroup_ITF /*777 QUndoGroup **/) *QUndoView {
 	var convArg0 unsafe.Pointer
 	if group != nil && group.QUndoGroup_PTR() != nil {

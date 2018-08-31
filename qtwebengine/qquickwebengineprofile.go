@@ -92,6 +92,9 @@ func (this *QQuickWebEngineProfile) MetaObject() *qtcore.QMetaObject /*777 const
 /*
 Constructs a new profile with the parent parent.
 */
+func (*QQuickWebEngineProfile) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickWebEngineProfile {
+	return NewQQuickWebEngineProfile(parent)
+}
 func NewQQuickWebEngineProfile(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickWebEngineProfile {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -112,6 +115,9 @@ func NewQQuickWebEngineProfile(parent qtcore.QObject_ITF /*777 QObject **/) *QQu
 /*
 Constructs a new profile with the parent parent.
 */
+func (*QQuickWebEngineProfile) NewForInherit__() *QQuickWebEngineProfile {
+	return NewQQuickWebEngineProfile__()
+}
 func NewQQuickWebEngineProfile__() *QQuickWebEngineProfile {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

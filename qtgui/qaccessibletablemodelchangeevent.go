@@ -73,6 +73,9 @@ func (*QAccessibleTableModelChangeEvent) NewFromPointer(cthis unsafe.Pointer) *Q
 /*
 
  */
+func (*QAccessibleTableModelChangeEvent) NewForInherit(obj qtcore.QObject_ITF /*777 QObject **/, changeType int) *QAccessibleTableModelChangeEvent {
+	return NewQAccessibleTableModelChangeEvent(obj, changeType)
+}
 func NewQAccessibleTableModelChangeEvent(obj qtcore.QObject_ITF /*777 QObject **/, changeType int) *QAccessibleTableModelChangeEvent {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -93,6 +96,9 @@ func NewQAccessibleTableModelChangeEvent(obj qtcore.QObject_ITF /*777 QObject **
 /*
 
  */
+func (*QAccessibleTableModelChangeEvent) NewForInherit_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
+	return NewQAccessibleTableModelChangeEvent_1(iface, changeType)
+}
 func NewQAccessibleTableModelChangeEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {

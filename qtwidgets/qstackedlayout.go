@@ -90,6 +90,9 @@ This QStackedLayout must be installed on a widget later on to become effective.
 
 See also addWidget() and insertWidget().
 */
+func (*QStackedLayout) NewForInherit() *QStackedLayout {
+	return NewQStackedLayout()
+}
 func NewQStackedLayout() *QStackedLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +113,9 @@ This QStackedLayout must be installed on a widget later on to become effective.
 
 See also addWidget() and insertWidget().
 */
+func (*QStackedLayout) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/) *QStackedLayout {
+	return NewQStackedLayout_1(parent)
+}
 func NewQStackedLayout_1(parent QWidget_ITF /*777 QWidget **/) *QStackedLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -134,6 +140,9 @@ This QStackedLayout must be installed on a widget later on to become effective.
 
 See also addWidget() and insertWidget().
 */
+func (*QStackedLayout) NewForInherit_2(parentLayout QLayout_ITF /*777 QLayout **/) *QStackedLayout {
+	return NewQStackedLayout_2(parentLayout)
+}
 func NewQStackedLayout_2(parentLayout QLayout_ITF /*777 QLayout **/) *QStackedLayout {
 	var convArg0 unsafe.Pointer
 	if parentLayout != nil && parentLayout.QLayout_PTR() != nil {

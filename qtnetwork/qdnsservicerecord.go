@@ -73,6 +73,9 @@ func (*QDnsServiceRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsServiceRecor
 /*
 
  */
+func (*QDnsServiceRecord) NewForInherit() *QDnsServiceRecord {
+	return NewQDnsServiceRecord()
+}
 func NewQDnsServiceRecord() *QDnsServiceRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QDnsServiceRecordC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

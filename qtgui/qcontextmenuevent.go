@@ -71,6 +71,9 @@ func (*QContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QContextMenuEven
 /*
 
  */
+func (*QContextMenuEvent) NewForInherit(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF, modifiers int) *QContextMenuEvent {
+	return NewQContextMenuEvent(reason, pos, globalPos, modifiers)
+}
 func NewQContextMenuEvent(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF, modifiers int) *QContextMenuEvent {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -95,6 +98,9 @@ func NewQContextMenuEvent(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QP
 /*
 
  */
+func (*QContextMenuEvent) NewForInherit_1(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF) *QContextMenuEvent {
+	return NewQContextMenuEvent_1(reason, pos, globalPos)
+}
 func NewQContextMenuEvent_1(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF) *QContextMenuEvent {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -119,6 +125,9 @@ func NewQContextMenuEvent_1(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.
 /*
 
  */
+func (*QContextMenuEvent) NewForInherit_2(reason int, pos qtcore.QPoint_ITF) *QContextMenuEvent {
+	return NewQContextMenuEvent_2(reason, pos)
+}
 func NewQContextMenuEvent_2(reason int, pos qtcore.QPoint_ITF) *QContextMenuEvent {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {

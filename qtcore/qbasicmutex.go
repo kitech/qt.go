@@ -72,6 +72,9 @@ func (*QBasicMutex) NewFromPointer(cthis unsafe.Pointer) *QBasicMutex {
 /*
 
  */
+func (*QBasicMutex) NewForInherit() *QBasicMutex {
+	return NewQBasicMutex()
+}
 func NewQBasicMutex() *QBasicMutex {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutexC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

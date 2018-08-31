@@ -79,6 +79,9 @@ func (*QStaticByteArrayMatcherBase) NewFromPointer(cthis unsafe.Pointer) *QStati
 /*
 
  */
+func (*QStaticByteArrayMatcherBase) NewForInherit(pattern string, n uint) *QStaticByteArrayMatcherBase {
+	return NewQStaticByteArrayMatcherBase(pattern, n)
+}
 func NewQStaticByteArrayMatcherBase(pattern string, n uint) *QStaticByteArrayMatcherBase {
 	var convArg0 = qtrt.CString(pattern)
 	defer qtrt.FreeMem(convArg0)

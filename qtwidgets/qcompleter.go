@@ -96,6 +96,9 @@ func (this *QCompleter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 /*
 Constructs a completer object with the given parent.
 */
+func (*QCompleter) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
+	return NewQCompleter(parent)
+}
 func NewQCompleter(parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -116,6 +119,9 @@ func NewQCompleter(parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
 /*
 Constructs a completer object with the given parent.
 */
+func (*QCompleter) NewForInherit__() *QCompleter {
+	return NewQCompleter__()
+}
 func NewQCompleter__() *QCompleter {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -134,6 +140,9 @@ func NewQCompleter__() *QCompleter {
 /*
 Constructs a completer object with the given parent.
 */
+func (*QCompleter) NewForInherit_1(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
+	return NewQCompleter_1(model, parent)
+}
 func NewQCompleter_1(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
@@ -158,6 +167,9 @@ func NewQCompleter_1(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemMode
 /*
 Constructs a completer object with the given parent.
 */
+func (*QCompleter) NewForInherit_1_(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) *QCompleter {
+	return NewQCompleter_1_(model)
+}
 func NewQCompleter_1_(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) *QCompleter {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
@@ -180,6 +192,9 @@ func NewQCompleter_1_(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemMod
 /*
 Constructs a completer object with the given parent.
 */
+func (*QCompleter) NewForInherit_2(completions qtcore.QStringList_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
+	return NewQCompleter_2(completions, parent)
+}
 func NewQCompleter_2(completions qtcore.QStringList_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
 	var convArg0 unsafe.Pointer
 	if completions != nil && completions.QStringList_PTR() != nil {
@@ -204,6 +219,9 @@ func NewQCompleter_2(completions qtcore.QStringList_ITF, parent qtcore.QObject_I
 /*
 Constructs a completer object with the given parent.
 */
+func (*QCompleter) NewForInherit_2_(completions qtcore.QStringList_ITF) *QCompleter {
+	return NewQCompleter_2_(completions)
+}
 func NewQCompleter_2_(completions qtcore.QStringList_ITF) *QCompleter {
 	var convArg0 unsafe.Pointer
 	if completions != nil && completions.QStringList_PTR() != nil {

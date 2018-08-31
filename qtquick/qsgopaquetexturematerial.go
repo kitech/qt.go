@@ -76,6 +76,9 @@ func (*QSGOpaqueTextureMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGOpaque
 /*
 
  */
+func (*QSGOpaqueTextureMaterial) NewForInherit() *QSGOpaqueTextureMaterial {
+	return NewQSGOpaqueTextureMaterial()
+}
 func NewQSGOpaqueTextureMaterial() *QSGOpaqueTextureMaterial {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSGOpaqueTextureMaterialC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

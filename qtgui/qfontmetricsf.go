@@ -73,6 +73,9 @@ func (*QFontMetricsF) NewFromPointer(cthis unsafe.Pointer) *QFontMetricsF {
 /*
 
  */
+func (*QFontMetricsF) NewForInherit(arg0 QFont_ITF) *QFontMetricsF {
+	return NewQFontMetricsF(arg0)
+}
 func NewQFontMetricsF(arg0 QFont_ITF) *QFontMetricsF {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {
@@ -93,6 +96,9 @@ func NewQFontMetricsF(arg0 QFont_ITF) *QFontMetricsF {
 /*
 
  */
+func (*QFontMetricsF) NewForInherit_1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFontMetricsF {
+	return NewQFontMetricsF_1(arg0, pd)
+}
 func NewQFontMetricsF_1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFontMetricsF {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {
@@ -117,6 +123,9 @@ func NewQFontMetricsF_1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice *
 /*
 
  */
+func (*QFontMetricsF) NewForInherit_2(arg0 QFontMetrics_ITF) *QFontMetricsF {
+	return NewQFontMetricsF_2(arg0)
+}
 func NewQFontMetricsF_2(arg0 QFontMetrics_ITF) *QFontMetricsF {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFontMetrics_PTR() != nil {

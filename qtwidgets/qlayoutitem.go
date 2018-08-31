@@ -74,6 +74,9 @@ func (*QLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QLayoutItem {
 /*
 Constructs a layout item with an alignment. Not all subclasses support alignment.
 */
+func (*QLayoutItem) NewForInherit(alignment int) *QLayoutItem {
+	return NewQLayoutItem(alignment)
+}
 func NewQLayoutItem(alignment int) *QLayoutItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QLayoutItemC2E6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, alignment)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQLayoutItem(alignment int) *QLayoutItem {
 /*
 Constructs a layout item with an alignment. Not all subclasses support alignment.
 */
+func (*QLayoutItem) NewForInherit__() *QLayoutItem {
+	return NewQLayoutItem__()
+}
 func NewQLayoutItem__() *QLayoutItem {
 	// arg: 0, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>, Unexposed
 	alignment := 0

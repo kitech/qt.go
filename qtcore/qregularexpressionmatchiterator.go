@@ -74,6 +74,9 @@ func (*QRegularExpressionMatchIterator) NewFromPointer(cthis unsafe.Pointer) *QR
 /*
 
  */
+func (*QRegularExpressionMatchIterator) NewForInherit() *QRegularExpressionMatchIterator {
+	return NewQRegularExpressionMatchIterator()
+}
 func NewQRegularExpressionMatchIterator() *QRegularExpressionMatchIterator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIteratorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

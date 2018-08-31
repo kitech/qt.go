@@ -77,6 +77,9 @@ func (*QGraphicsAnchorLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnc
 /*
 Constructs a QGraphicsAnchorLayout instance. parent is passed to QGraphicsLayout's constructor.
 */
+func (*QGraphicsAnchorLayout) NewForInherit(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsAnchorLayout {
+	return NewQGraphicsAnchorLayout(parent)
+}
 func NewQGraphicsAnchorLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsAnchorLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
@@ -97,6 +100,9 @@ func NewQGraphicsAnchorLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayo
 /*
 Constructs a QGraphicsAnchorLayout instance. parent is passed to QGraphicsLayout's constructor.
 */
+func (*QGraphicsAnchorLayout) NewForInherit__() *QGraphicsAnchorLayout {
+	return NewQGraphicsAnchorLayout__()
+}
 func NewQGraphicsAnchorLayout__() *QGraphicsAnchorLayout {
 	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer

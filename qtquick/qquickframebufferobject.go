@@ -93,6 +93,9 @@ func (this *QQuickFramebufferObject) MetaObject() *qtcore.QMetaObject /*777 cons
 /*
 Constructs a new QQuickFramebufferObject with parent parent.
 */
+func (*QQuickFramebufferObject) NewForInherit(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickFramebufferObject {
+	return NewQQuickFramebufferObject(parent)
+}
 func NewQQuickFramebufferObject(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickFramebufferObject {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQuickItem_PTR() != nil {
@@ -113,6 +116,9 @@ func NewQQuickFramebufferObject(parent QQuickItem_ITF /*777 QQuickItem **/) *QQu
 /*
 Constructs a new QQuickFramebufferObject with parent parent.
 */
+func (*QQuickFramebufferObject) NewForInherit__() *QQuickFramebufferObject {
+	return NewQQuickFramebufferObject__()
+}
 func NewQQuickFramebufferObject__() *QQuickFramebufferObject {
 	// arg: 0, QQuickItem *=Pointer, QQuickItem=Record, , Invalid
 	var convArg0 unsafe.Pointer

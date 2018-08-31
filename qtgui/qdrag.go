@@ -85,6 +85,9 @@ func (this *QDrag) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ 
 /*
 Constructs a new drag object for the widget specified by dragSource.
 */
+func (*QDrag) NewForInherit(dragSource qtcore.QObject_ITF /*777 QObject **/) *QDrag {
+	return NewQDrag(dragSource)
+}
 func NewQDrag(dragSource qtcore.QObject_ITF /*777 QObject **/) *QDrag {
 	var convArg0 unsafe.Pointer
 	if dragSource != nil && dragSource.QObject_PTR() != nil {

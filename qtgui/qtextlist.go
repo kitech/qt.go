@@ -85,6 +85,9 @@ func (this *QTextList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 /*
 
  */
+func (*QTextList) NewForInherit(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextList {
+	return NewQTextList(doc)
+}
 func NewQTextList(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextList {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {

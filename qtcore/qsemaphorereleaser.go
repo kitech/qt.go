@@ -72,6 +72,9 @@ func (*QSemaphoreReleaser) NewFromPointer(cthis unsafe.Pointer) *QSemaphoreRelea
 /*
 
  */
+func (*QSemaphoreReleaser) NewForInherit() *QSemaphoreReleaser {
+	return NewQSemaphoreReleaser()
+}
 func NewQSemaphoreReleaser() *QSemaphoreReleaser {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQSemaphoreReleaser() *QSemaphoreReleaser {
 /*
 
  */
+func (*QSemaphoreReleaser) NewForInherit_1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
+	return NewQSemaphoreReleaser_1(sem, n)
+}
 func NewQSemaphoreReleaser_1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {
@@ -108,6 +114,9 @@ func NewQSemaphoreReleaser_1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
 /*
 
  */
+func (*QSemaphoreReleaser) NewForInherit_1_(sem QSemaphore_ITF) *QSemaphoreReleaser {
+	return NewQSemaphoreReleaser_1_(sem)
+}
 func NewQSemaphoreReleaser_1_(sem QSemaphore_ITF) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {
@@ -130,6 +139,9 @@ func NewQSemaphoreReleaser_1_(sem QSemaphore_ITF) *QSemaphoreReleaser {
 /*
 
  */
+func (*QSemaphoreReleaser) NewForInherit_2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
+	return NewQSemaphoreReleaser_2(sem, n)
+}
 func NewQSemaphoreReleaser_2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {
@@ -150,6 +162,9 @@ func NewQSemaphoreReleaser_2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QS
 /*
 
  */
+func (*QSemaphoreReleaser) NewForInherit_2_(sem QSemaphore_ITF /*777 QSemaphore **/) *QSemaphoreReleaser {
+	return NewQSemaphoreReleaser_2_(sem)
+}
 func NewQSemaphoreReleaser_2_(sem QSemaphore_ITF /*777 QSemaphore **/) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {

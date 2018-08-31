@@ -71,6 +71,9 @@ func (*QResizeEvent) NewFromPointer(cthis unsafe.Pointer) *QResizeEvent {
 /*
 
  */
+func (*QResizeEvent) NewForInherit(size qtcore.QSize_ITF, oldSize qtcore.QSize_ITF) *QResizeEvent {
+	return NewQResizeEvent(size, oldSize)
+}
 func NewQResizeEvent(size qtcore.QSize_ITF, oldSize qtcore.QSize_ITF) *QResizeEvent {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {

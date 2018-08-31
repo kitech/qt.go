@@ -84,6 +84,9 @@ func (this *QIdentityProxyModel) MetaObject() *QMetaObject /*777 const QMetaObje
 /*
 Constructs an identity model with the given parent.
 */
+func (*QIdentityProxyModel) NewForInherit(parent QObject_ITF /*777 QObject **/) *QIdentityProxyModel {
+	return NewQIdentityProxyModel(parent)
+}
 func NewQIdentityProxyModel(parent QObject_ITF /*777 QObject **/) *QIdentityProxyModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -104,6 +107,9 @@ func NewQIdentityProxyModel(parent QObject_ITF /*777 QObject **/) *QIdentityProx
 /*
 Constructs an identity model with the given parent.
 */
+func (*QIdentityProxyModel) NewForInherit__() *QIdentityProxyModel {
+	return NewQIdentityProxyModel__()
+}
 func NewQIdentityProxyModel__() *QIdentityProxyModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

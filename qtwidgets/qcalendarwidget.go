@@ -130,6 +130,9 @@ The widget is initialized with the current month and year, and the currently sel
 
 See also setCurrentPage().
 */
+func (*QCalendarWidget) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QCalendarWidget {
+	return NewQCalendarWidget(parent)
+}
 func NewQCalendarWidget(parent QWidget_ITF /*777 QWidget **/) *QCalendarWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -154,6 +157,9 @@ The widget is initialized with the current month and year, and the currently sel
 
 See also setCurrentPage().
 */
+func (*QCalendarWidget) NewForInherit__() *QCalendarWidget {
+	return NewQCalendarWidget__()
+}
 func NewQCalendarWidget__() *QCalendarWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

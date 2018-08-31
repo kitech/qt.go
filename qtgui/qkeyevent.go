@@ -71,6 +71,9 @@ func (*QKeyEvent) NewFromPointer(cthis unsafe.Pointer) *QKeyEvent {
 /*
 
  */
+func (*QKeyEvent) NewForInherit(type_ int, key int, modifiers int, text string, autorep bool, count uint16) *QKeyEvent {
+	return NewQKeyEvent(type_, key, modifiers, text, autorep, count)
+}
 func NewQKeyEvent(type_ int, key int, modifiers int, text string, autorep bool, count uint16) *QKeyEvent {
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
@@ -89,6 +92,9 @@ func NewQKeyEvent(type_ int, key int, modifiers int, text string, autorep bool, 
 /*
 
  */
+func (*QKeyEvent) NewForInherit__(type_ int, key int, modifiers int) *QKeyEvent {
+	return NewQKeyEvent__(type_, key, modifiers)
+}
 func NewQKeyEvent__(type_ int, key int, modifiers int) *QKeyEvent {
 	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
@@ -111,6 +117,9 @@ func NewQKeyEvent__(type_ int, key int, modifiers int) *QKeyEvent {
 /*
 
  */
+func (*QKeyEvent) NewForInherit__1(type_ int, key int, modifiers int, text string) *QKeyEvent {
+	return NewQKeyEvent__1(type_, key, modifiers, text)
+}
 func NewQKeyEvent__1(type_ int, key int, modifiers int, text string) *QKeyEvent {
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
@@ -133,6 +142,9 @@ func NewQKeyEvent__1(type_ int, key int, modifiers int, text string) *QKeyEvent 
 /*
 
  */
+func (*QKeyEvent) NewForInherit__2(type_ int, key int, modifiers int, text string, autorep bool) *QKeyEvent {
+	return NewQKeyEvent__2(type_, key, modifiers, text, autorep)
+}
 func NewQKeyEvent__2(type_ int, key int, modifiers int, text string, autorep bool) *QKeyEvent {
 	var tmpArg3 = qtcore.NewQString_5(text)
 	var convArg3 = tmpArg3.GetCthis()
@@ -153,6 +165,9 @@ func NewQKeyEvent__2(type_ int, key int, modifiers int, text string, autorep boo
 /*
 
  */
+func (*QKeyEvent) NewForInherit_1(type_ int, key int, modifiers int, nativeScanCode uint, nativeVirtualKey uint, nativeModifiers uint, text string, autorep bool, count uint16) *QKeyEvent {
+	return NewQKeyEvent_1(type_, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, text, autorep, count)
+}
 func NewQKeyEvent_1(type_ int, key int, modifiers int, nativeScanCode uint, nativeVirtualKey uint, nativeModifiers uint, text string, autorep bool, count uint16) *QKeyEvent {
 	var tmpArg6 = qtcore.NewQString_5(text)
 	var convArg6 = tmpArg6.GetCthis()
@@ -171,6 +186,9 @@ func NewQKeyEvent_1(type_ int, key int, modifiers int, nativeScanCode uint, nati
 /*
 
  */
+func (*QKeyEvent) NewForInherit_1_(type_ int, key int, modifiers int, nativeScanCode uint, nativeVirtualKey uint, nativeModifiers uint) *QKeyEvent {
+	return NewQKeyEvent_1_(type_, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers)
+}
 func NewQKeyEvent_1_(type_ int, key int, modifiers int, nativeScanCode uint, nativeVirtualKey uint, nativeModifiers uint) *QKeyEvent {
 	// arg: 6, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg6 = qtcore.NewQString()
@@ -193,6 +211,9 @@ func NewQKeyEvent_1_(type_ int, key int, modifiers int, nativeScanCode uint, nat
 /*
 
  */
+func (*QKeyEvent) NewForInherit_1_1(type_ int, key int, modifiers int, nativeScanCode uint, nativeVirtualKey uint, nativeModifiers uint, text string) *QKeyEvent {
+	return NewQKeyEvent_1_1(type_, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, text)
+}
 func NewQKeyEvent_1_1(type_ int, key int, modifiers int, nativeScanCode uint, nativeVirtualKey uint, nativeModifiers uint, text string) *QKeyEvent {
 	var tmpArg6 = qtcore.NewQString_5(text)
 	var convArg6 = tmpArg6.GetCthis()
@@ -215,6 +236,9 @@ func NewQKeyEvent_1_1(type_ int, key int, modifiers int, nativeScanCode uint, na
 /*
 
  */
+func (*QKeyEvent) NewForInherit_1_2(type_ int, key int, modifiers int, nativeScanCode uint, nativeVirtualKey uint, nativeModifiers uint, text string, autorep bool) *QKeyEvent {
+	return NewQKeyEvent_1_2(type_, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, text, autorep)
+}
 func NewQKeyEvent_1_2(type_ int, key int, modifiers int, nativeScanCode uint, nativeVirtualKey uint, nativeModifiers uint, text string, autorep bool) *QKeyEvent {
 	var tmpArg6 = qtcore.NewQString_5(text)
 	var convArg6 = tmpArg6.GetCthis()

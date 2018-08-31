@@ -72,6 +72,9 @@ func (*QEventLoopLocker) NewFromPointer(cthis unsafe.Pointer) *QEventLoopLocker 
 /*
 
  */
+func (*QEventLoopLocker) NewForInherit() *QEventLoopLocker {
+	return NewQEventLoopLocker()
+}
 func NewQEventLoopLocker() *QEventLoopLocker {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventLoopLockerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQEventLoopLocker() *QEventLoopLocker {
 /*
 
  */
+func (*QEventLoopLocker) NewForInherit_1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoopLocker {
+	return NewQEventLoopLocker_1(loop)
+}
 func NewQEventLoopLocker_1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoopLocker {
 	var convArg0 unsafe.Pointer
 	if loop != nil && loop.QEventLoop_PTR() != nil {
@@ -108,6 +114,9 @@ func NewQEventLoopLocker_1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoop
 /*
 
  */
+func (*QEventLoopLocker) NewForInherit_2(thread QThread_ITF /*777 QThread **/) *QEventLoopLocker {
+	return NewQEventLoopLocker_2(thread)
+}
 func NewQEventLoopLocker_2(thread QThread_ITF /*777 QThread **/) *QEventLoopLocker {
 	var convArg0 unsafe.Pointer
 	if thread != nil && thread.QThread_PTR() != nil {

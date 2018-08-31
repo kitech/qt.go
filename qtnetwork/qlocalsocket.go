@@ -95,6 +95,9 @@ func (this *QLocalSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 /*
 Creates a new local socket. The parent argument is passed to QObject's constructor.
 */
+func (*QLocalSocket) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalSocket {
+	return NewQLocalSocket(parent)
+}
 func NewQLocalSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalSocket {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -115,6 +118,9 @@ func NewQLocalSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalSocket 
 /*
 Creates a new local socket. The parent argument is passed to QObject's constructor.
 */
+func (*QLocalSocket) NewForInherit__() *QLocalSocket {
+	return NewQLocalSocket__()
+}
 func NewQLocalSocket__() *QLocalSocket {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

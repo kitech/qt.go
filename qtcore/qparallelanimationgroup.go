@@ -104,6 +104,9 @@ func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMeta
 /*
 Constructs a QParallelAnimationGroup. parent is passed to QObject's constructor.
 */
+func (*QParallelAnimationGroup) NewForInherit(parent QObject_ITF /*777 QObject **/) *QParallelAnimationGroup {
+	return NewQParallelAnimationGroup(parent)
+}
 func NewQParallelAnimationGroup(parent QObject_ITF /*777 QObject **/) *QParallelAnimationGroup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -124,6 +127,9 @@ func NewQParallelAnimationGroup(parent QObject_ITF /*777 QObject **/) *QParallel
 /*
 Constructs a QParallelAnimationGroup. parent is passed to QObject's constructor.
 */
+func (*QParallelAnimationGroup) NewForInherit__() *QParallelAnimationGroup {
+	return NewQParallelAnimationGroup__()
+}
 func NewQParallelAnimationGroup__() *QParallelAnimationGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

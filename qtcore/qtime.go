@@ -72,6 +72,9 @@ func (*QTime) NewFromPointer(cthis unsafe.Pointer) *QTime {
 /*
 
  */
+func (*QTime) NewForInherit() *QTime {
+	return NewQTime()
+}
 func NewQTime() *QTime {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQTime() *QTime {
 /*
 
  */
+func (*QTime) NewForInherit_1(h int, m int, s int, ms int) *QTime {
+	return NewQTime_1(h, m, s, ms)
+}
 func NewQTime_1(h int, m int, s int, ms int) *QTime {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
 	qtrt.ErrPrint(err, rv)
@@ -104,6 +110,9 @@ func NewQTime_1(h int, m int, s int, ms int) *QTime {
 /*
 
  */
+func (*QTime) NewForInherit_1_(h int, m int) *QTime {
+	return NewQTime_1_(h, m)
+}
 func NewQTime_1_(h int, m int) *QTime {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	s := int(0)
@@ -124,6 +133,9 @@ func NewQTime_1_(h int, m int) *QTime {
 /*
 
  */
+func (*QTime) NewForInherit_1_1(h int, m int, s int) *QTime {
+	return NewQTime_1_1(h, m, s)
+}
 func NewQTime_1_1(h int, m int, s int) *QTime {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	ms := int(0)

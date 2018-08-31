@@ -73,6 +73,9 @@ func (*QGeoShape) NewFromPointer(cthis unsafe.Pointer) *QGeoShape {
 /*
 Constructs a new invalid geo shape of UnknownType.
 */
+func (*QGeoShape) NewForInherit() *QGeoShape {
+	return NewQGeoShape()
+}
 func NewQGeoShape() *QGeoShape {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGeoShapeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

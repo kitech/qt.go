@@ -84,6 +84,9 @@ func (*QSGVertexColorMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGVertexCo
 /*
 Creates a new vertex color material.
 */
+func (*QSGVertexColorMaterial) NewForInherit() *QSGVertexColorMaterial {
+	return NewQSGVertexColorMaterial()
+}
 func NewQSGVertexColorMaterial() *QSGVertexColorMaterial {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QSGVertexColorMaterialC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

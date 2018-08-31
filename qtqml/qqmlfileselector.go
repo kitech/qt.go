@@ -86,6 +86,9 @@ func (this *QQmlFileSelector) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 /*
 Creates a new QQmlFileSelector with parent object parent, which includes its own QFileSelector. engine is the QQmlEngine you wish to apply file selectors to. It will also take ownership of the QQmlFileSelector.
 */
+func (*QQmlFileSelector) NewForInherit(engine QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlFileSelector {
+	return NewQQmlFileSelector(engine, parent)
+}
 func NewQQmlFileSelector(engine QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlFileSelector {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QQmlEngine_PTR() != nil {
@@ -110,6 +113,9 @@ func NewQQmlFileSelector(engine QQmlEngine_ITF /*777 QQmlEngine **/, parent qtco
 /*
 Creates a new QQmlFileSelector with parent object parent, which includes its own QFileSelector. engine is the QQmlEngine you wish to apply file selectors to. It will also take ownership of the QQmlFileSelector.
 */
+func (*QQmlFileSelector) NewForInherit__(engine QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlFileSelector {
+	return NewQQmlFileSelector__(engine)
+}
 func NewQQmlFileSelector__(engine QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlFileSelector {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QQmlEngine_PTR() != nil {

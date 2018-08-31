@@ -130,6 +130,9 @@ The parent argument is sent to the QWidget constructor.
 
 The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
 */
+func (*QAbstractSlider) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QAbstractSlider {
+	return NewQAbstractSlider(parent)
+}
 func NewQAbstractSlider(parent QWidget_ITF /*777 QWidget **/) *QAbstractSlider {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -154,6 +157,9 @@ The parent argument is sent to the QWidget constructor.
 
 The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
 */
+func (*QAbstractSlider) NewForInherit__() *QAbstractSlider {
+	return NewQAbstractSlider__()
+}
 func NewQAbstractSlider__() *QAbstractSlider {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

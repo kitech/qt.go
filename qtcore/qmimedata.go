@@ -89,6 +89,9 @@ func (this *QMimeData) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs a new MIME data object with no data in it.
 */
+func (*QMimeData) NewForInherit() *QMimeData {
+	return NewQMimeData()
+}
 func NewQMimeData() *QMimeData {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeDataC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

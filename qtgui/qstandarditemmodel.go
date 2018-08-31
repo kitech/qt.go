@@ -85,6 +85,9 @@ func (this *QStandardItemModel) MetaObject() *qtcore.QMetaObject /*777 const QMe
 /*
 Constructs a new item model with the given parent.
 */
+func (*QStandardItemModel) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QStandardItemModel {
+	return NewQStandardItemModel(parent)
+}
 func NewQStandardItemModel(parent qtcore.QObject_ITF /*777 QObject **/) *QStandardItemModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -105,6 +108,9 @@ func NewQStandardItemModel(parent qtcore.QObject_ITF /*777 QObject **/) *QStanda
 /*
 Constructs a new item model with the given parent.
 */
+func (*QStandardItemModel) NewForInherit__() *QStandardItemModel {
+	return NewQStandardItemModel__()
+}
 func NewQStandardItemModel__() *QStandardItemModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -123,6 +129,9 @@ func NewQStandardItemModel__() *QStandardItemModel {
 /*
 Constructs a new item model with the given parent.
 */
+func (*QStandardItemModel) NewForInherit_1(rows int, columns int, parent qtcore.QObject_ITF /*777 QObject **/) *QStandardItemModel {
+	return NewQStandardItemModel_1(rows, columns, parent)
+}
 func NewQStandardItemModel_1(rows int, columns int, parent qtcore.QObject_ITF /*777 QObject **/) *QStandardItemModel {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -143,6 +152,9 @@ func NewQStandardItemModel_1(rows int, columns int, parent qtcore.QObject_ITF /*
 /*
 Constructs a new item model with the given parent.
 */
+func (*QStandardItemModel) NewForInherit_1_(rows int, columns int) *QStandardItemModel {
+	return NewQStandardItemModel_1_(rows, columns)
+}
 func NewQStandardItemModel_1_(rows int, columns int) *QStandardItemModel {
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer

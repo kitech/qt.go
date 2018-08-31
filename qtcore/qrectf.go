@@ -72,6 +72,9 @@ func (*QRectF) NewFromPointer(cthis unsafe.Pointer) *QRectF {
 /*
 
  */
+func (*QRectF) NewForInherit() *QRectF {
+	return NewQRectF()
+}
 func NewQRectF() *QRectF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QRectFC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQRectF() *QRectF {
 /*
 
  */
+func (*QRectF) NewForInherit_1(topleft QPointF_ITF, size QSizeF_ITF) *QRectF {
+	return NewQRectF_1(topleft, size)
+}
 func NewQRectF_1(topleft QPointF_ITF, size QSizeF_ITF) *QRectF {
 	var convArg0 unsafe.Pointer
 	if topleft != nil && topleft.QPointF_PTR() != nil {
@@ -112,6 +118,9 @@ func NewQRectF_1(topleft QPointF_ITF, size QSizeF_ITF) *QRectF {
 /*
 
  */
+func (*QRectF) NewForInherit_2(topleft QPointF_ITF, bottomRight QPointF_ITF) *QRectF {
+	return NewQRectF_2(topleft, bottomRight)
+}
 func NewQRectF_2(topleft QPointF_ITF, bottomRight QPointF_ITF) *QRectF {
 	var convArg0 unsafe.Pointer
 	if topleft != nil && topleft.QPointF_PTR() != nil {
@@ -136,6 +145,9 @@ func NewQRectF_2(topleft QPointF_ITF, bottomRight QPointF_ITF) *QRectF {
 /*
 
  */
+func (*QRectF) NewForInherit_3(left float64, top float64, width float64, height float64) *QRectF {
+	return NewQRectF_3(left, top, width, height)
+}
 func NewQRectF_3(left float64, top float64, width float64, height float64) *QRectF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QRectFC2Edddd", qtrt.FFI_TYPE_POINTER, left, top, width, height)
 	qtrt.ErrPrint(err, rv)
@@ -152,6 +164,9 @@ func NewQRectF_3(left float64, top float64, width float64, height float64) *QRec
 /*
 
  */
+func (*QRectF) NewForInherit_4(rect QRect_ITF) *QRectF {
+	return NewQRectF_4(rect)
+}
 func NewQRectF_4(rect QRect_ITF) *QRectF {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {

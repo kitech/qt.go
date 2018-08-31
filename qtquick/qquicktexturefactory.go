@@ -74,6 +74,9 @@ func (*QQuickTextureFactory) NewFromPointer(cthis unsafe.Pointer) *QQuickTexture
 /*
 
  */
+func (*QQuickTextureFactory) NewForInherit() *QQuickTextureFactory {
+	return NewQQuickTextureFactory()
+}
 func NewQQuickTextureFactory() *QQuickTextureFactory {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickTextureFactoryC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

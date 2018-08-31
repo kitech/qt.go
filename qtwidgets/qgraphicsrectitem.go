@@ -87,6 +87,9 @@ func (*QGraphicsRectItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsRectIte
 /*
 
  */
+func (*QGraphicsRectItem) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
+	return NewQGraphicsRectItem(parent)
+}
 func NewQGraphicsRectItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQGraphicsRectItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 /*
 
  */
+func (*QGraphicsRectItem) NewForInherit__() *QGraphicsRectItem {
+	return NewQGraphicsRectItem__()
+}
 func NewQGraphicsRectItem__() *QGraphicsRectItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -125,6 +131,9 @@ func NewQGraphicsRectItem__() *QGraphicsRectItem {
 /*
 
  */
+func (*QGraphicsRectItem) NewForInherit_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
+	return NewQGraphicsRectItem_1(rect, parent)
+}
 func NewQGraphicsRectItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -149,6 +158,9 @@ func NewQGraphicsRectItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*7
 /*
 
  */
+func (*QGraphicsRectItem) NewForInherit_1_(rect qtcore.QRectF_ITF) *QGraphicsRectItem {
+	return NewQGraphicsRectItem_1_(rect)
+}
 func NewQGraphicsRectItem_1_(rect qtcore.QRectF_ITF) *QGraphicsRectItem {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -171,6 +183,9 @@ func NewQGraphicsRectItem_1_(rect qtcore.QRectF_ITF) *QGraphicsRectItem {
 /*
 
  */
+func (*QGraphicsRectItem) NewForInherit_2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
+	return NewQGraphicsRectItem_2(x, y, w, h, parent)
+}
 func NewQGraphicsRectItem_2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -191,6 +206,9 @@ func NewQGraphicsRectItem_2(x float64, y float64, w float64, h float64, parent Q
 /*
 
  */
+func (*QGraphicsRectItem) NewForInherit_2_(x float64, y float64, w float64, h float64) *QGraphicsRectItem {
+	return NewQGraphicsRectItem_2_(x, y, w, h)
+}
 func NewQGraphicsRectItem_2_(x float64, y float64, w float64, h float64) *QGraphicsRectItem {
 	// arg: 4, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg4 unsafe.Pointer

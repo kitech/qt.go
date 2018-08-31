@@ -242,6 +242,9 @@ func (this *QCameraExposureControl) ParameterRangeChanged(parameter int) {
 /*
 Constructs a camera exposure control object with parent.
 */
+func (*QCameraExposureControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraExposureControl {
+	return NewQCameraExposureControl(parent)
+}
 func NewQCameraExposureControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraExposureControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -262,6 +265,9 @@ func NewQCameraExposureControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCa
 /*
 Constructs a camera exposure control object with parent.
 */
+func (*QCameraExposureControl) NewForInherit__() *QCameraExposureControl {
+	return NewQCameraExposureControl__()
+}
 func NewQCameraExposureControl__() *QCameraExposureControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

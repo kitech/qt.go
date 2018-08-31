@@ -75,6 +75,9 @@ func (*QAndroidActivityResultReceiver) NewFromPointer(cthis unsafe.Pointer) *QAn
 /*
 
  */
+func (*QAndroidActivityResultReceiver) NewForInherit() *QAndroidActivityResultReceiver {
+	return NewQAndroidActivityResultReceiver()
+}
 func NewQAndroidActivityResultReceiver() *QAndroidActivityResultReceiver {
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QAndroidActivityResultReceiverC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

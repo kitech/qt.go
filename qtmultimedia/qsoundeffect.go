@@ -87,6 +87,9 @@ func (this *QSoundEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 /*
 Creates a QSoundEffect with the given parent.
 */
+func (*QSoundEffect) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QSoundEffect {
+	return NewQSoundEffect(parent)
+}
 func NewQSoundEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QSoundEffect {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQSoundEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QSoundEffect 
 /*
 Creates a QSoundEffect with the given parent.
 */
+func (*QSoundEffect) NewForInherit__() *QSoundEffect {
+	return NewQSoundEffect__()
+}
 func NewQSoundEffect__() *QSoundEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

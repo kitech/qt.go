@@ -198,6 +198,9 @@ func (this *QGraphicsTextItem) MetaObject() *qtcore.QMetaObject /*777 const QMet
 /*
 
  */
+func (*QGraphicsTextItem) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsTextItem {
+	return NewQGraphicsTextItem(parent)
+}
 func NewQGraphicsTextItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsTextItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -218,6 +221,9 @@ func NewQGraphicsTextItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 /*
 
  */
+func (*QGraphicsTextItem) NewForInherit__() *QGraphicsTextItem {
+	return NewQGraphicsTextItem__()
+}
 func NewQGraphicsTextItem__() *QGraphicsTextItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -236,6 +242,9 @@ func NewQGraphicsTextItem__() *QGraphicsTextItem {
 /*
 
  */
+func (*QGraphicsTextItem) NewForInherit_1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsTextItem {
+	return NewQGraphicsTextItem_1(text, parent)
+}
 func NewQGraphicsTextItem_1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsTextItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -258,6 +267,9 @@ func NewQGraphicsTextItem_1(text string, parent QGraphicsItem_ITF /*777 QGraphic
 /*
 
  */
+func (*QGraphicsTextItem) NewForInherit_1_(text string) *QGraphicsTextItem {
+	return NewQGraphicsTextItem_1_(text)
+}
 func NewQGraphicsTextItem_1_(text string) *QGraphicsTextItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()

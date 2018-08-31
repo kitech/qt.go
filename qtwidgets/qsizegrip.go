@@ -131,6 +131,9 @@ func (this *QSizeGrip) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 /*
 Constructs a resize corner as a child widget of the given parent.
 */
+func (*QSizeGrip) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QSizeGrip {
+	return NewQSizeGrip(parent)
+}
 func NewQSizeGrip(parent QWidget_ITF /*777 QWidget **/) *QSizeGrip {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

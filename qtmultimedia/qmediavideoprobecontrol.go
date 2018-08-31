@@ -132,6 +132,9 @@ func (this *QMediaVideoProbeControl) Flush() {
 /*
 Create a new media video probe control object with the given parent.
 */
+func (*QMediaVideoProbeControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaVideoProbeControl {
+	return NewQMediaVideoProbeControl(parent)
+}
 func NewQMediaVideoProbeControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaVideoProbeControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -152,6 +155,9 @@ func NewQMediaVideoProbeControl(parent qtcore.QObject_ITF /*777 QObject **/) *QM
 /*
 Create a new media video probe control object with the given parent.
 */
+func (*QMediaVideoProbeControl) NewForInherit__() *QMediaVideoProbeControl {
+	return NewQMediaVideoProbeControl__()
+}
 func NewQMediaVideoProbeControl__() *QMediaVideoProbeControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

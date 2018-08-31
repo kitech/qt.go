@@ -677,6 +677,9 @@ Creates a QNetworkReply object with parent parent.
 
 You cannot directly instantiate QNetworkReply objects. Use QNetworkAccessManager functions to do that.
 */
+func (*QNetworkReply) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkReply {
+	return NewQNetworkReply(parent)
+}
 func NewQNetworkReply(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkReply {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -699,6 +702,9 @@ Creates a QNetworkReply object with parent parent.
 
 You cannot directly instantiate QNetworkReply objects. Use QNetworkAccessManager functions to do that.
 */
+func (*QNetworkReply) NewForInherit__() *QNetworkReply {
+	return NewQNetworkReply__()
+}
 func NewQNetworkReply__() *QNetworkReply {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -72,6 +72,9 @@ func (*QMessageLogger) NewFromPointer(cthis unsafe.Pointer) *QMessageLogger {
 /*
 
  */
+func (*QMessageLogger) NewForInherit() *QMessageLogger {
+	return NewQMessageLogger()
+}
 func NewQMessageLogger() *QMessageLogger {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMessageLoggerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQMessageLogger() *QMessageLogger {
 /*
 
  */
+func (*QMessageLogger) NewForInherit_1(file string, line int, function string) *QMessageLogger {
+	return NewQMessageLogger_1(file, line, function)
+}
 func NewQMessageLogger_1(file string, line int, function string) *QMessageLogger {
 	var convArg0 = qtrt.CString(file)
 	defer qtrt.FreeMem(convArg0)
@@ -108,6 +114,9 @@ func NewQMessageLogger_1(file string, line int, function string) *QMessageLogger
 /*
 
  */
+func (*QMessageLogger) NewForInherit_2(file string, line int, function string, category string) *QMessageLogger {
+	return NewQMessageLogger_2(file, line, function, category)
+}
 func NewQMessageLogger_2(file string, line int, function string, category string) *QMessageLogger {
 	var convArg0 = qtrt.CString(file)
 	defer qtrt.FreeMem(convArg0)

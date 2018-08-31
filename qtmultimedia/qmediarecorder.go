@@ -98,6 +98,9 @@ Constructs a media recorder which records the media produced by mediaObject.
 
 The parent is passed to QMediaObject.
 */
+func (*QMediaRecorder) NewForInherit(mediaObject QMediaObject_ITF /*777 QMediaObject **/, parent qtcore.QObject_ITF /*777 QObject **/) *QMediaRecorder {
+	return NewQMediaRecorder(mediaObject, parent)
+}
 func NewQMediaRecorder(mediaObject QMediaObject_ITF /*777 QMediaObject **/, parent qtcore.QObject_ITF /*777 QObject **/) *QMediaRecorder {
 	var convArg0 unsafe.Pointer
 	if mediaObject != nil && mediaObject.QMediaObject_PTR() != nil {
@@ -124,6 +127,9 @@ Constructs a media recorder which records the media produced by mediaObject.
 
 The parent is passed to QMediaObject.
 */
+func (*QMediaRecorder) NewForInherit__(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QMediaRecorder {
+	return NewQMediaRecorder__(mediaObject)
+}
 func NewQMediaRecorder__(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QMediaRecorder {
 	var convArg0 unsafe.Pointer
 	if mediaObject != nil && mediaObject.QMediaObject_PTR() != nil {

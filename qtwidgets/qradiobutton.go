@@ -113,6 +113,9 @@ Constructs a radio button with the given parent, but with no text or pixmap.
 
 The parent argument is passed on to the QAbstractButton constructor.
 */
+func (*QRadioButton) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
+	return NewQRadioButton(parent)
+}
 func NewQRadioButton(parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -135,6 +138,9 @@ Constructs a radio button with the given parent, but with no text or pixmap.
 
 The parent argument is passed on to the QAbstractButton constructor.
 */
+func (*QRadioButton) NewForInherit__() *QRadioButton {
+	return NewQRadioButton__()
+}
 func NewQRadioButton__() *QRadioButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -155,6 +161,9 @@ Constructs a radio button with the given parent, but with no text or pixmap.
 
 The parent argument is passed on to the QAbstractButton constructor.
 */
+func (*QRadioButton) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
+	return NewQRadioButton_1(text, parent)
+}
 func NewQRadioButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -179,6 +188,9 @@ Constructs a radio button with the given parent, but with no text or pixmap.
 
 The parent argument is passed on to the QAbstractButton constructor.
 */
+func (*QRadioButton) NewForInherit_1_(text string) *QRadioButton {
+	return NewQRadioButton_1_(text)
+}
 func NewQRadioButton_1_(text string) *QRadioButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()

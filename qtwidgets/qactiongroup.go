@@ -88,6 +88,9 @@ Constructs an action group for the parent object.
 
 The action group is exclusive by default. Call setExclusive(false) to make the action group non-exclusive.
 */
+func (*QActionGroup) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QActionGroup {
+	return NewQActionGroup(parent)
+}
 func NewQActionGroup(parent qtcore.QObject_ITF /*777 QObject **/) *QActionGroup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

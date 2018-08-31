@@ -76,6 +76,9 @@ func (*QSGNode) NewFromPointer(cthis unsafe.Pointer) *QSGNode {
 /*
 Constructs a new node
 */
+func (*QSGNode) NewForInherit() *QSGNode {
+	return NewQSGNode()
+}
 func NewQSGNode() *QSGNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ func NewQSGNode() *QSGNode {
 /*
 Constructs a new node
 */
+func (*QSGNode) NewForInherit_1(type_ int) *QSGNode {
+	return NewQSGNode_1(type_)
+}
 func NewQSGNode_1(type_ int) *QSGNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNodeC2ENS_8NodeTypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

@@ -72,6 +72,9 @@ func (*QRandomGenerator) NewFromPointer(cthis unsafe.Pointer) *QRandomGenerator 
 /*
 
  */
+func (*QRandomGenerator) NewForInherit(seedValue uint) *QRandomGenerator {
+	return NewQRandomGenerator(seedValue)
+}
 func NewQRandomGenerator(seedValue uint) *QRandomGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2Ej", qtrt.FFI_TYPE_POINTER, seedValue)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQRandomGenerator(seedValue uint) *QRandomGenerator {
 /*
 
  */
+func (*QRandomGenerator) NewForInherit__() *QRandomGenerator {
+	return NewQRandomGenerator__()
+}
 func NewQRandomGenerator__() *QRandomGenerator {
 	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int, UInt
 	seedValue := uint(1)
@@ -106,6 +112,9 @@ func NewQRandomGenerator__() *QRandomGenerator {
 /*
 
  */
+func (*QRandomGenerator) NewForInherit_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRandomGenerator {
+	return NewQRandomGenerator_1(seedBuffer, len_)
+}
 func NewQRandomGenerator_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRandomGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjx", qtrt.FFI_TYPE_POINTER, seedBuffer, len_)
 	qtrt.ErrPrint(err, rv)
@@ -122,6 +131,9 @@ func NewQRandomGenerator_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRand
 /*
 
  */
+func (*QRandomGenerator) NewForInherit_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator {
+	return NewQRandomGenerator_2(begin, end)
+}
 func NewQRandomGenerator_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjS1_", qtrt.FFI_TYPE_POINTER, begin, end)
 	qtrt.ErrPrint(err, rv)
@@ -138,6 +150,9 @@ func NewQRandomGenerator_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*66
 /*
 
  */
+func (*QRandomGenerator) NewForInherit_3(arg0 int) *QRandomGenerator {
+	return NewQRandomGenerator_3(arg0)
+}
 func NewQRandomGenerator_3(arg0 int) *QRandomGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2ENS_6SystemE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)

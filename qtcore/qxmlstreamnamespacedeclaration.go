@@ -74,6 +74,9 @@ func (*QXmlStreamNamespaceDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXm
 /*
 
  */
+func (*QXmlStreamNamespaceDeclaration) NewForInherit() *QXmlStreamNamespaceDeclaration {
+	return NewQXmlStreamNamespaceDeclaration()
+}
 func NewQXmlStreamNamespaceDeclaration() *QXmlStreamNamespaceDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQXmlStreamNamespaceDeclaration() *QXmlStreamNamespaceDeclaration {
 /*
 
  */
+func (*QXmlStreamNamespaceDeclaration) NewForInherit_1(prefix string, namespaceUri string) *QXmlStreamNamespaceDeclaration {
+	return NewQXmlStreamNamespaceDeclaration_1(prefix, namespaceUri)
+}
 func NewQXmlStreamNamespaceDeclaration_1(prefix string, namespaceUri string) *QXmlStreamNamespaceDeclaration {
 	var tmpArg0 = NewQString_5(prefix)
 	var convArg0 = tmpArg0.GetCthis()

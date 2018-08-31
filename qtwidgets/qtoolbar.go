@@ -115,6 +115,9 @@ The given window title identifies the toolbar and is shown in the context menu p
 
 See also setWindowTitle().
 */
+func (*QToolBar) NewForInherit(title string, parent QWidget_ITF /*777 QWidget **/) *QToolBar {
+	return NewQToolBar(title, parent)
+}
 func NewQToolBar(title string, parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -141,6 +144,9 @@ The given window title identifies the toolbar and is shown in the context menu p
 
 See also setWindowTitle().
 */
+func (*QToolBar) NewForInherit__(title string) *QToolBar {
+	return NewQToolBar__(title)
+}
 func NewQToolBar__(title string) *QToolBar {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -165,6 +171,9 @@ The given window title identifies the toolbar and is shown in the context menu p
 
 See also setWindowTitle().
 */
+func (*QToolBar) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
+	return NewQToolBar_1(parent)
+}
 func NewQToolBar_1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -189,6 +198,9 @@ The given window title identifies the toolbar and is shown in the context menu p
 
 See also setWindowTitle().
 */
+func (*QToolBar) NewForInherit_1_() *QToolBar {
+	return NewQToolBar_1_()
+}
 func NewQToolBar_1_() *QToolBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

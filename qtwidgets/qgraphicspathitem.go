@@ -87,6 +87,9 @@ func (*QGraphicsPathItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPathIte
 /*
 
  */
+func (*QGraphicsPathItem) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPathItem {
+	return NewQGraphicsPathItem(parent)
+}
 func NewQGraphicsPathItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPathItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQGraphicsPathItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 /*
 
  */
+func (*QGraphicsPathItem) NewForInherit__() *QGraphicsPathItem {
+	return NewQGraphicsPathItem__()
+}
 func NewQGraphicsPathItem__() *QGraphicsPathItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -125,6 +131,9 @@ func NewQGraphicsPathItem__() *QGraphicsPathItem {
 /*
 
  */
+func (*QGraphicsPathItem) NewForInherit_1(path qtgui.QPainterPath_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPathItem {
+	return NewQGraphicsPathItem_1(path, parent)
+}
 func NewQGraphicsPathItem_1(path qtgui.QPainterPath_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPathItem {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
@@ -149,6 +158,9 @@ func NewQGraphicsPathItem_1(path qtgui.QPainterPath_ITF, parent QGraphicsItem_IT
 /*
 
  */
+func (*QGraphicsPathItem) NewForInherit_1_(path qtgui.QPainterPath_ITF) *QGraphicsPathItem {
+	return NewQGraphicsPathItem_1_(path)
+}
 func NewQGraphicsPathItem_1_(path qtgui.QPainterPath_ITF) *QGraphicsPathItem {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {

@@ -74,6 +74,9 @@ Constructs a null datetime (i.e. null date and null time). A null datetime is in
 
 See also isValid().
 */
+func (*QDateTime) NewForInherit() *QDateTime {
+	return NewQDateTime()
+}
 func NewQDateTime() *QDateTime {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTimeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs a null datetime (i.e. null date and null time). A null datetime is in
 
 See also isValid().
 */
+func (*QDateTime) NewForInherit_1(arg0 QDate_ITF) *QDateTime {
+	return NewQDateTime_1(arg0)
+}
 func NewQDateTime_1(arg0 QDate_ITF) *QDateTime {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDate_PTR() != nil {
@@ -114,6 +120,9 @@ Constructs a null datetime (i.e. null date and null time). A null datetime is in
 
 See also isValid().
 */
+func (*QDateTime) NewForInherit_2(arg0 QDate_ITF, arg1 QTime_ITF, spec int) *QDateTime {
+	return NewQDateTime_2(arg0, arg1, spec)
+}
 func NewQDateTime_2(arg0 QDate_ITF, arg1 QTime_ITF, spec int) *QDateTime {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDate_PTR() != nil {
@@ -140,6 +149,9 @@ Constructs a null datetime (i.e. null date and null time). A null datetime is in
 
 See also isValid().
 */
+func (*QDateTime) NewForInherit_2_(arg0 QDate_ITF, arg1 QTime_ITF) *QDateTime {
+	return NewQDateTime_2_(arg0, arg1)
+}
 func NewQDateTime_2_(arg0 QDate_ITF, arg1 QTime_ITF) *QDateTime {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDate_PTR() != nil {
@@ -168,6 +180,9 @@ Constructs a null datetime (i.e. null date and null time). A null datetime is in
 
 See also isValid().
 */
+func (*QDateTime) NewForInherit_3(date QDate_ITF, time QTime_ITF, spec int, offsetSeconds int) *QDateTime {
+	return NewQDateTime_3(date, time, spec, offsetSeconds)
+}
 func NewQDateTime_3(date QDate_ITF, time QTime_ITF, spec int, offsetSeconds int) *QDateTime {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
@@ -194,6 +209,9 @@ Constructs a null datetime (i.e. null date and null time). A null datetime is in
 
 See also isValid().
 */
+func (*QDateTime) NewForInherit_4(date QDate_ITF, time QTime_ITF, timeZone QTimeZone_ITF) *QDateTime {
+	return NewQDateTime_4(date, time, timeZone)
+}
 func NewQDateTime_4(date QDate_ITF, time QTime_ITF, timeZone QTimeZone_ITF) *QDateTime {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {

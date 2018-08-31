@@ -75,6 +75,9 @@ Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined 
 
 See also setType() and setApplicationProxy().
 */
+func (*QNetworkProxy) NewForInherit() *QNetworkProxy {
+	return NewQNetworkProxy()
+}
 func NewQNetworkProxy() *QNetworkProxy {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkProxyC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined 
 
 See also setType() and setApplicationProxy().
 */
+func (*QNetworkProxy) NewForInherit_1(type_ int, hostName string, port uint16, user string, password string) *QNetworkProxy {
+	return NewQNetworkProxy_1(type_, hostName, port, user, password)
+}
 func NewQNetworkProxy_1(type_ int, hostName string, port uint16, user string, password string) *QNetworkProxy {
 	var tmpArg1 = qtcore.NewQString_5(hostName)
 	var convArg1 = tmpArg1.GetCthis()
@@ -117,6 +123,9 @@ Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined 
 
 See also setType() and setApplicationProxy().
 */
+func (*QNetworkProxy) NewForInherit_1_(type_ int) *QNetworkProxy {
+	return NewQNetworkProxy_1_(type_)
+}
 func NewQNetworkProxy_1_(type_ int) *QNetworkProxy {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
@@ -143,6 +152,9 @@ Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined 
 
 See also setType() and setApplicationProxy().
 */
+func (*QNetworkProxy) NewForInherit_1_1(type_ int, hostName string) *QNetworkProxy {
+	return NewQNetworkProxy_1_1(type_, hostName)
+}
 func NewQNetworkProxy_1_1(type_ int, hostName string) *QNetworkProxy {
 	var tmpArg1 = qtcore.NewQString_5(hostName)
 	var convArg1 = tmpArg1.GetCthis()
@@ -169,6 +181,9 @@ Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined 
 
 See also setType() and setApplicationProxy().
 */
+func (*QNetworkProxy) NewForInherit_1_2(type_ int, hostName string, port uint16) *QNetworkProxy {
+	return NewQNetworkProxy_1_2(type_, hostName, port)
+}
 func NewQNetworkProxy_1_2(type_ int, hostName string, port uint16) *QNetworkProxy {
 	var tmpArg1 = qtcore.NewQString_5(hostName)
 	var convArg1 = tmpArg1.GetCthis()
@@ -193,6 +208,9 @@ Constructs a QNetworkProxy with DefaultProxy type; the proxy type is determined 
 
 See also setType() and setApplicationProxy().
 */
+func (*QNetworkProxy) NewForInherit_1_3(type_ int, hostName string, port uint16, user string) *QNetworkProxy {
+	return NewQNetworkProxy_1_3(type_, hostName, port, user)
+}
 func NewQNetworkProxy_1_3(type_ int, hostName string, port uint16, user string) *QNetworkProxy {
 	var tmpArg1 = qtcore.NewQString_5(hostName)
 	var convArg1 = tmpArg1.GetCthis()

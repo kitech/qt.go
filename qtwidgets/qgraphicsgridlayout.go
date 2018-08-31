@@ -72,6 +72,9 @@ func (*QGraphicsGridLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsGridL
 /*
 Constructs a QGraphicsGridLayout instance. parent is passed to QGraphicsLayout's constructor.
 */
+func (*QGraphicsGridLayout) NewForInherit(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsGridLayout {
+	return NewQGraphicsGridLayout(parent)
+}
 func NewQGraphicsGridLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsGridLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
@@ -92,6 +95,9 @@ func NewQGraphicsGridLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayout
 /*
 Constructs a QGraphicsGridLayout instance. parent is passed to QGraphicsLayout's constructor.
 */
+func (*QGraphicsGridLayout) NewForInherit__() *QGraphicsGridLayout {
+	return NewQGraphicsGridLayout__()
+}
 func NewQGraphicsGridLayout__() *QGraphicsGridLayout {
 	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer

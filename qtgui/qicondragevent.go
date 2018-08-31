@@ -71,6 +71,9 @@ func (*QIconDragEvent) NewFromPointer(cthis unsafe.Pointer) *QIconDragEvent {
 /*
 
  */
+func (*QIconDragEvent) NewForInherit() *QIconDragEvent {
+	return NewQIconDragEvent()
+}
 func NewQIconDragEvent() *QIconDragEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QIconDragEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

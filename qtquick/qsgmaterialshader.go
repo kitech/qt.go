@@ -106,6 +106,9 @@ func (*QSGMaterialShader) NewFromPointer(cthis unsafe.Pointer) *QSGMaterialShade
 /*
 
  */
+func (*QSGMaterialShader) NewForInherit() *QSGMaterialShader {
+	return NewQSGMaterialShader()
+}
 func NewQSGMaterialShader() *QSGMaterialShader {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShaderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

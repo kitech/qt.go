@@ -88,6 +88,9 @@ Constructs a new, empty button group with the given parent.
 
 See also addButton() and setExclusive().
 */
+func (*QButtonGroup) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QButtonGroup {
+	return NewQButtonGroup(parent)
+}
 func NewQButtonGroup(parent qtcore.QObject_ITF /*777 QObject **/) *QButtonGroup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -110,6 +113,9 @@ Constructs a new, empty button group with the given parent.
 
 See also addButton() and setExclusive().
 */
+func (*QButtonGroup) NewForInherit__() *QButtonGroup {
+	return NewQButtonGroup__()
+}
 func NewQButtonGroup__() *QButtonGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

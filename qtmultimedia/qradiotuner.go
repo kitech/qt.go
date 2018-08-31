@@ -89,6 +89,9 @@ Constructs a radio tuner based on a media service allocated by the default media
 
 The parent is passed to QMediaObject.
 */
+func (*QRadioTuner) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QRadioTuner {
+	return NewQRadioTuner(parent)
+}
 func NewQRadioTuner(parent qtcore.QObject_ITF /*777 QObject **/) *QRadioTuner {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -111,6 +114,9 @@ Constructs a radio tuner based on a media service allocated by the default media
 
 The parent is passed to QMediaObject.
 */
+func (*QRadioTuner) NewForInherit__() *QRadioTuner {
+	return NewQRadioTuner__()
+}
 func NewQRadioTuner__() *QRadioTuner {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

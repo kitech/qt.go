@@ -86,6 +86,9 @@ func (this *QAbstractEventDispatcher) MetaObject() *QMetaObject /*777 const QMet
 /*
 Constructs a new event dispatcher with the given parent.
 */
+func (*QAbstractEventDispatcher) NewForInherit(parent QObject_ITF /*777 QObject **/) *QAbstractEventDispatcher {
+	return NewQAbstractEventDispatcher(parent)
+}
 func NewQAbstractEventDispatcher(parent QObject_ITF /*777 QObject **/) *QAbstractEventDispatcher {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQAbstractEventDispatcher(parent QObject_ITF /*777 QObject **/) *QAbstrac
 /*
 Constructs a new event dispatcher with the given parent.
 */
+func (*QAbstractEventDispatcher) NewForInherit__() *QAbstractEventDispatcher {
+	return NewQAbstractEventDispatcher__()
+}
 func NewQAbstractEventDispatcher__() *QAbstractEventDispatcher {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

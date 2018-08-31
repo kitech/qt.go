@@ -75,6 +75,9 @@ func (*QMediaResource) NewFromPointer(cthis unsafe.Pointer) *QMediaResource {
 /*
 Constructs a null media resource.
 */
+func (*QMediaResource) NewForInherit() *QMediaResource {
+	return NewQMediaResource()
+}
 func NewQMediaResource() *QMediaResource {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaResourceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +94,9 @@ func NewQMediaResource() *QMediaResource {
 /*
 Constructs a null media resource.
 */
+func (*QMediaResource) NewForInherit_1(url qtcore.QUrl_ITF, mimeType string) *QMediaResource {
+	return NewQMediaResource_1(url, mimeType)
+}
 func NewQMediaResource_1(url qtcore.QUrl_ITF, mimeType string) *QMediaResource {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -113,6 +119,9 @@ func NewQMediaResource_1(url qtcore.QUrl_ITF, mimeType string) *QMediaResource {
 /*
 Constructs a null media resource.
 */
+func (*QMediaResource) NewForInherit_1_(url qtcore.QUrl_ITF) *QMediaResource {
+	return NewQMediaResource_1_(url)
+}
 func NewQMediaResource_1_(url qtcore.QUrl_ITF) *QMediaResource {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -135,6 +144,9 @@ func NewQMediaResource_1_(url qtcore.QUrl_ITF) *QMediaResource {
 /*
 Constructs a null media resource.
 */
+func (*QMediaResource) NewForInherit_2(request qtnetwork.QNetworkRequest_ITF, mimeType string) *QMediaResource {
+	return NewQMediaResource_2(request, mimeType)
+}
 func NewQMediaResource_2(request qtnetwork.QNetworkRequest_ITF, mimeType string) *QMediaResource {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
@@ -157,6 +169,9 @@ func NewQMediaResource_2(request qtnetwork.QNetworkRequest_ITF, mimeType string)
 /*
 Constructs a null media resource.
 */
+func (*QMediaResource) NewForInherit_2_(request qtnetwork.QNetworkRequest_ITF) *QMediaResource {
+	return NewQMediaResource_2_(request)
+}
 func NewQMediaResource_2_(request qtnetwork.QNetworkRequest_ITF) *QMediaResource {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {

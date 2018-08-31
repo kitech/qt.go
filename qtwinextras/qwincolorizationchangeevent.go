@@ -74,6 +74,9 @@ func (*QWinColorizationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWinCo
 /*
 
  */
+func (*QWinColorizationChangeEvent) NewForInherit(color uint, opaque bool) *QWinColorizationChangeEvent {
+	return NewQWinColorizationChangeEvent(color, opaque)
+}
 func NewQWinColorizationChangeEvent(color uint, opaque bool) *QWinColorizationChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QWinColorizationChangeEventC2Ejb", qtrt.FFI_TYPE_POINTER, color, opaque)
 	qtrt.ErrPrint(err, rv)

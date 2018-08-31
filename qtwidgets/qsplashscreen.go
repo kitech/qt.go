@@ -103,6 +103,9 @@ Construct a splash screen that will display the pixmap.
 
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
+func (*QSplashScreen) NewForInherit(pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
+	return NewQSplashScreen(pixmap, f)
+}
 func NewQSplashScreen(pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -125,6 +128,9 @@ Construct a splash screen that will display the pixmap.
 
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
+func (*QSplashScreen) NewForInherit__() *QSplashScreen {
+	return NewQSplashScreen__()
+}
 func NewQSplashScreen__() *QSplashScreen {
 	// arg: 0, const QPixmap &=LValueReference, QPixmap=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -147,6 +153,9 @@ Construct a splash screen that will display the pixmap.
 
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
+func (*QSplashScreen) NewForInherit__1(pixmap qtgui.QPixmap_ITF) *QSplashScreen {
+	return NewQSplashScreen__1(pixmap)
+}
 func NewQSplashScreen__1(pixmap qtgui.QPixmap_ITF) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -171,6 +180,9 @@ Construct a splash screen that will display the pixmap.
 
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
+func (*QSplashScreen) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
+	return NewQSplashScreen_1(parent, pixmap, f)
+}
 func NewQSplashScreen_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -197,6 +209,9 @@ Construct a splash screen that will display the pixmap.
 
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
+func (*QSplashScreen) NewForInherit_1_(parent QWidget_ITF /*777 QWidget **/) *QSplashScreen {
+	return NewQSplashScreen_1_(parent)
+}
 func NewQSplashScreen_1_(parent QWidget_ITF /*777 QWidget **/) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -223,6 +238,9 @@ Construct a splash screen that will display the pixmap.
 
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
+func (*QSplashScreen) NewForInherit_1_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF) *QSplashScreen {
+	return NewQSplashScreen_1_1(parent, pixmap)
+}
 func NewQSplashScreen_1_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

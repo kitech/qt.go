@@ -87,6 +87,9 @@ func (this *QVideoProbe) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Creates a new QVideoProbe class with parent. After setting the source to monitor with setSource(), the videoFrameProbed() signal will be emitted when video frames are flowing in the source media object.
 */
+func (*QVideoProbe) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoProbe {
+	return NewQVideoProbe(parent)
+}
 func NewQVideoProbe(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoProbe {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQVideoProbe(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoProbe {
 /*
 Creates a new QVideoProbe class with parent. After setting the source to monitor with setSource(), the videoFrameProbed() signal will be emitted when video frames are flowing in the source media object.
 */
+func (*QVideoProbe) NewForInherit__() *QVideoProbe {
+	return NewQVideoProbe__()
+}
 func NewQVideoProbe__() *QVideoProbe {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -109,6 +109,9 @@ func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() bool {
 /*
 
  */
+func (*QAbstractOpenGLFunctions) NewForInherit() *QAbstractOpenGLFunctions {
+	return NewQAbstractOpenGLFunctions()
+}
 func NewQAbstractOpenGLFunctions() *QAbstractOpenGLFunctions {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

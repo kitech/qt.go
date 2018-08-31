@@ -87,6 +87,9 @@ func (this *QSvgRenderer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 /*
 Constructs a new renderer with the given parent.
 */
+func (*QSvgRenderer) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
+	return NewQSvgRenderer(parent)
+}
 func NewQSvgRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQSvgRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer 
 /*
 Constructs a new renderer with the given parent.
 */
+func (*QSvgRenderer) NewForInherit__() *QSvgRenderer {
+	return NewQSvgRenderer__()
+}
 func NewQSvgRenderer__() *QSvgRenderer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -125,6 +131,9 @@ func NewQSvgRenderer__() *QSvgRenderer {
 /*
 Constructs a new renderer with the given parent.
 */
+func (*QSvgRenderer) NewForInherit_1(filename string, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
+	return NewQSvgRenderer_1(filename, parent)
+}
 func NewQSvgRenderer_1(filename string, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
 	var tmpArg0 = qtcore.NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
@@ -147,6 +156,9 @@ func NewQSvgRenderer_1(filename string, parent qtcore.QObject_ITF /*777 QObject 
 /*
 Constructs a new renderer with the given parent.
 */
+func (*QSvgRenderer) NewForInherit_1_(filename string) *QSvgRenderer {
+	return NewQSvgRenderer_1_(filename)
+}
 func NewQSvgRenderer_1_(filename string) *QSvgRenderer {
 	var tmpArg0 = qtcore.NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
@@ -167,6 +179,9 @@ func NewQSvgRenderer_1_(filename string) *QSvgRenderer {
 /*
 Constructs a new renderer with the given parent.
 */
+func (*QSvgRenderer) NewForInherit_2(contents qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
+	return NewQSvgRenderer_2(contents, parent)
+}
 func NewQSvgRenderer_2(contents qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
 	var convArg0 unsafe.Pointer
 	if contents != nil && contents.QByteArray_PTR() != nil {
@@ -191,6 +206,9 @@ func NewQSvgRenderer_2(contents qtcore.QByteArray_ITF, parent qtcore.QObject_ITF
 /*
 Constructs a new renderer with the given parent.
 */
+func (*QSvgRenderer) NewForInherit_2_(contents qtcore.QByteArray_ITF) *QSvgRenderer {
+	return NewQSvgRenderer_2_(contents)
+}
 func NewQSvgRenderer_2_(contents qtcore.QByteArray_ITF) *QSvgRenderer {
 	var convArg0 unsafe.Pointer
 	if contents != nil && contents.QByteArray_PTR() != nil {
@@ -213,6 +231,9 @@ func NewQSvgRenderer_2_(contents qtcore.QByteArray_ITF) *QSvgRenderer {
 /*
 Constructs a new renderer with the given parent.
 */
+func (*QSvgRenderer) NewForInherit_3(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
+	return NewQSvgRenderer_3(contents, parent)
+}
 func NewQSvgRenderer_3(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
 	var convArg0 unsafe.Pointer
 	if contents != nil && contents.QXmlStreamReader_PTR() != nil {
@@ -237,6 +258,9 @@ func NewQSvgRenderer_3(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamRead
 /*
 Constructs a new renderer with the given parent.
 */
+func (*QSvgRenderer) NewForInherit_3_(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/) *QSvgRenderer {
+	return NewQSvgRenderer_3_(contents)
+}
 func NewQSvgRenderer_3_(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/) *QSvgRenderer {
 	var convArg0 unsafe.Pointer
 	if contents != nil && contents.QXmlStreamReader_PTR() != nil {

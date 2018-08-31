@@ -74,6 +74,9 @@ func (*QGestureRecognizer) NewFromPointer(cthis unsafe.Pointer) *QGestureRecogni
 /*
 Constructs a new gesture recognizer object.
 */
+func (*QGestureRecognizer) NewForInherit() *QGestureRecognizer {
+	return NewQGestureRecognizer()
+}
 func NewQGestureRecognizer() *QGestureRecognizer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

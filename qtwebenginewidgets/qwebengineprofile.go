@@ -95,6 +95,9 @@ func (this *QWebEngineProfile) MetaObject() *qtcore.QMetaObject /*777 const QMet
 /*
 
  */
+func (*QWebEngineProfile) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineProfile {
+	return NewQWebEngineProfile(parent)
+}
 func NewQWebEngineProfile(parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineProfile {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -115,6 +118,9 @@ func NewQWebEngineProfile(parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngi
 /*
 
  */
+func (*QWebEngineProfile) NewForInherit__() *QWebEngineProfile {
+	return NewQWebEngineProfile__()
+}
 func NewQWebEngineProfile__() *QWebEngineProfile {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -133,6 +139,9 @@ func NewQWebEngineProfile__() *QWebEngineProfile {
 /*
 
  */
+func (*QWebEngineProfile) NewForInherit_1(name string, parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineProfile {
+	return NewQWebEngineProfile_1(name, parent)
+}
 func NewQWebEngineProfile_1(name string, parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineProfile {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -155,6 +164,9 @@ func NewQWebEngineProfile_1(name string, parent qtcore.QObject_ITF /*777 QObject
 /*
 
  */
+func (*QWebEngineProfile) NewForInherit_1_(name string) *QWebEngineProfile {
+	return NewQWebEngineProfile_1_(name)
+}
 func NewQWebEngineProfile_1_(name string) *QWebEngineProfile {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()

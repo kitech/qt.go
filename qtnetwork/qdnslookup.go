@@ -87,6 +87,9 @@ Constructs a QDnsLookup object and sets parent as the parent object.
 
 The type property will default to QDnsLookup::A.
 */
+func (*QDnsLookup) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
+	return NewQDnsLookup(parent)
+}
 func NewQDnsLookup(parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -109,6 +112,9 @@ Constructs a QDnsLookup object and sets parent as the parent object.
 
 The type property will default to QDnsLookup::A.
 */
+func (*QDnsLookup) NewForInherit__() *QDnsLookup {
+	return NewQDnsLookup__()
+}
 func NewQDnsLookup__() *QDnsLookup {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -129,6 +135,9 @@ Constructs a QDnsLookup object and sets parent as the parent object.
 
 The type property will default to QDnsLookup::A.
 */
+func (*QDnsLookup) NewForInherit_1(type_ int, name string, parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
+	return NewQDnsLookup_1(type_, name, parent)
+}
 func NewQDnsLookup_1(type_ int, name string, parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
@@ -153,6 +162,9 @@ Constructs a QDnsLookup object and sets parent as the parent object.
 
 The type property will default to QDnsLookup::A.
 */
+func (*QDnsLookup) NewForInherit_1_(type_ int, name string) *QDnsLookup {
+	return NewQDnsLookup_1_(type_, name)
+}
 func NewQDnsLookup_1_(type_ int, name string) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
@@ -175,6 +187,9 @@ Constructs a QDnsLookup object and sets parent as the parent object.
 
 The type property will default to QDnsLookup::A.
 */
+func (*QDnsLookup) NewForInherit_2(type_ int, name string, nameserver QHostAddress_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
+	return NewQDnsLookup_2(type_, name, nameserver, parent)
+}
 func NewQDnsLookup_2(type_ int, name string, nameserver QHostAddress_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()
@@ -203,6 +218,9 @@ Constructs a QDnsLookup object and sets parent as the parent object.
 
 The type property will default to QDnsLookup::A.
 */
+func (*QDnsLookup) NewForInherit_2_(type_ int, name string, nameserver QHostAddress_ITF) *QDnsLookup {
+	return NewQDnsLookup_2_(type_, name, nameserver)
+}
 func NewQDnsLookup_2_(type_ int, name string, nameserver QHostAddress_ITF) *QDnsLookup {
 	var tmpArg1 = qtcore.NewQString_5(name)
 	var convArg1 = tmpArg1.GetCthis()

@@ -131,6 +131,9 @@ func (this *QMediaAvailabilityControl) AvailabilityChanged(availability int) {
 /*
 Constructs an availability control object with parent.
 */
+func (*QMediaAvailabilityControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaAvailabilityControl {
+	return NewQMediaAvailabilityControl(parent)
+}
 func NewQMediaAvailabilityControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaAvailabilityControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -151,6 +154,9 @@ func NewQMediaAvailabilityControl(parent qtcore.QObject_ITF /*777 QObject **/) *
 /*
 Constructs an availability control object with parent.
 */
+func (*QMediaAvailabilityControl) NewForInherit__() *QMediaAvailabilityControl {
+	return NewQMediaAvailabilityControl__()
+}
 func NewQMediaAvailabilityControl__() *QMediaAvailabilityControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

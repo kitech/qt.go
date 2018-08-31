@@ -100,6 +100,9 @@ The mediaObject should be an instance of QRadioTuner. It is preferable to use th
 
 During construction, this class is bound to the mediaObject using the bind() method.
 */
+func (*QRadioData) NewForInherit(mediaObject QMediaObject_ITF /*777 QMediaObject **/, parent qtcore.QObject_ITF /*777 QObject **/) *QRadioData {
+	return NewQRadioData(mediaObject, parent)
+}
 func NewQRadioData(mediaObject QMediaObject_ITF /*777 QMediaObject **/, parent qtcore.QObject_ITF /*777 QObject **/) *QRadioData {
 	var convArg0 unsafe.Pointer
 	if mediaObject != nil && mediaObject.QMediaObject_PTR() != nil {
@@ -128,6 +131,9 @@ The mediaObject should be an instance of QRadioTuner. It is preferable to use th
 
 During construction, this class is bound to the mediaObject using the bind() method.
 */
+func (*QRadioData) NewForInherit__(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QRadioData {
+	return NewQRadioData__(mediaObject)
+}
 func NewQRadioData__(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QRadioData {
 	var convArg0 unsafe.Pointer
 	if mediaObject != nil && mediaObject.QMediaObject_PTR() != nil {

@@ -89,6 +89,9 @@ func (this *QItemSelectionModel) MetaObject() *QMetaObject /*777 const QMetaObje
 /*
 Constructs a selection model that operates on the specified item model.
 */
+func (*QItemSelectionModel) NewForInherit(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/) *QItemSelectionModel {
+	return NewQItemSelectionModel(model)
+}
 func NewQItemSelectionModel(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/) *QItemSelectionModel {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
@@ -109,6 +112,9 @@ func NewQItemSelectionModel(model QAbstractItemModel_ITF /*777 QAbstractItemMode
 /*
 Constructs a selection model that operates on the specified item model.
 */
+func (*QItemSelectionModel) NewForInherit__() *QItemSelectionModel {
+	return NewQItemSelectionModel__()
+}
 func NewQItemSelectionModel__() *QItemSelectionModel {
 	// arg: 0, QAbstractItemModel *=Pointer, QAbstractItemModel=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -127,6 +133,9 @@ func NewQItemSelectionModel__() *QItemSelectionModel {
 /*
 Constructs a selection model that operates on the specified item model.
 */
+func (*QItemSelectionModel) NewForInherit_1(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent QObject_ITF /*777 QObject **/) *QItemSelectionModel {
+	return NewQItemSelectionModel_1(model, parent)
+}
 func NewQItemSelectionModel_1(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent QObject_ITF /*777 QObject **/) *QItemSelectionModel {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {

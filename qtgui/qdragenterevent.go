@@ -71,6 +71,9 @@ func (*QDragEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QDragEnterEvent {
 /*
 
  */
+func (*QDragEnterEvent) NewForInherit(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragEnterEvent {
+	return NewQDragEnterEvent(pos, actions, data, buttons, modifiers)
+}
 func NewQDragEnterEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragEnterEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {

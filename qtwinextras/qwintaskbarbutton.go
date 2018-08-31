@@ -88,6 +88,9 @@ Constructs a QWinTaskbarButton with the specified parent.
 
 If parent is an instance of QWindow, it is automatically assigned as the taskbar button's window.
 */
+func (*QWinTaskbarButton) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTaskbarButton {
+	return NewQWinTaskbarButton(parent)
+}
 func NewQWinTaskbarButton(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTaskbarButton {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -110,6 +113,9 @@ Constructs a QWinTaskbarButton with the specified parent.
 
 If parent is an instance of QWindow, it is automatically assigned as the taskbar button's window.
 */
+func (*QWinTaskbarButton) NewForInherit__() *QWinTaskbarButton {
+	return NewQWinTaskbarButton__()
+}
 func NewQWinTaskbarButton__() *QWinTaskbarButton {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

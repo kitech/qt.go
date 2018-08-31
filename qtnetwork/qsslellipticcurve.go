@@ -75,6 +75,9 @@ Constructs an invalid elliptic curve.
 
 See also isValid() and QSslConfiguration::supportedEllipticCurves().
 */
+func (*QSslEllipticCurve) NewForInherit() *QSslEllipticCurve {
+	return NewQSslEllipticCurve()
+}
 func NewQSslEllipticCurve() *QSslEllipticCurve {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurveC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

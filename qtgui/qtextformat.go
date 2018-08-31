@@ -75,6 +75,9 @@ Creates a new text format with an InvalidFormat.
 
 See also FormatType.
 */
+func (*QTextFormat) NewForInherit() *QTextFormat {
+	return NewQTextFormat()
+}
 func NewQTextFormat() *QTextFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Creates a new text format with an InvalidFormat.
 
 See also FormatType.
 */
+func (*QTextFormat) NewForInherit_1(type_ int) *QTextFormat {
+	return NewQTextFormat_1(type_)
+}
 func NewQTextFormat_1(type_ int) *QTextFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormatC2Ei", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

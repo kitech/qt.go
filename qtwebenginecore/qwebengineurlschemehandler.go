@@ -93,6 +93,9 @@ func (this *QWebEngineUrlSchemeHandler) MetaObject() *qtcore.QMetaObject /*777 c
 /*
 
  */
+func (*QWebEngineUrlSchemeHandler) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineUrlSchemeHandler {
+	return NewQWebEngineUrlSchemeHandler(parent)
+}
 func NewQWebEngineUrlSchemeHandler(parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineUrlSchemeHandler {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -113,6 +116,9 @@ func NewQWebEngineUrlSchemeHandler(parent qtcore.QObject_ITF /*777 QObject **/) 
 /*
 
  */
+func (*QWebEngineUrlSchemeHandler) NewForInherit__() *QWebEngineUrlSchemeHandler {
+	return NewQWebEngineUrlSchemeHandler__()
+}
 func NewQWebEngineUrlSchemeHandler__() *QWebEngineUrlSchemeHandler {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

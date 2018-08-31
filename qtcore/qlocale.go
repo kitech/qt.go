@@ -74,6 +74,9 @@ Constructs a QLocale object initialized with the default locale. If no default l
 
 See also setDefault().
 */
+func (*QLocale) NewForInherit() *QLocale {
+	return NewQLocale()
+}
 func NewQLocale() *QLocale {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs a QLocale object initialized with the default locale. If no default l
 
 See also setDefault().
 */
+func (*QLocale) NewForInherit_1(name string) *QLocale {
+	return NewQLocale_1(name)
+}
 func NewQLocale_1(name string) *QLocale {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -112,6 +118,9 @@ Constructs a QLocale object initialized with the default locale. If no default l
 
 See also setDefault().
 */
+func (*QLocale) NewForInherit_2(language int, country int) *QLocale {
+	return NewQLocale_2(language, country)
+}
 func NewQLocale_2(language int, country int) *QLocale {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_7CountryE", qtrt.FFI_TYPE_POINTER, language, country)
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +139,9 @@ Constructs a QLocale object initialized with the default locale. If no default l
 
 See also setDefault().
 */
+func (*QLocale) NewForInherit_2_(language int) *QLocale {
+	return NewQLocale_2_(language)
+}
 func NewQLocale_2_(language int) *QLocale {
 	// arg: 1, QLocale::Country=Enum, QLocale::Country=Enum, , Invalid
 	country := 0
@@ -150,6 +162,9 @@ Constructs a QLocale object initialized with the default locale. If no default l
 
 See also setDefault().
 */
+func (*QLocale) NewForInherit_3(language int, script int, country int) *QLocale {
+	return NewQLocale_3(language, script, country)
+}
 func NewQLocale_3(language int, script int, country int) *QLocale {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_6ScriptENS_7CountryE", qtrt.FFI_TYPE_POINTER, language, script, country)
 	qtrt.ErrPrint(err, rv)

@@ -85,6 +85,9 @@ func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 /*
 
  */
+func (*QImageIOPlugin) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QImageIOPlugin {
+	return NewQImageIOPlugin(parent)
+}
 func NewQImageIOPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QImageIOPlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -105,6 +108,9 @@ func NewQImageIOPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QImageIOPlu
 /*
 
  */
+func (*QImageIOPlugin) NewForInherit__() *QImageIOPlugin {
+	return NewQImageIOPlugin__()
+}
 func NewQImageIOPlugin__() *QImageIOPlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

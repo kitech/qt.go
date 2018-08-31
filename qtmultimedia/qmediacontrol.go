@@ -102,6 +102,9 @@ func DeleteQMediaControl(this *QMediaControl) {
 /*
 Constructs a media control with the given parent.
 */
+func (*QMediaControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaControl {
+	return NewQMediaControl(parent)
+}
 func NewQMediaControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -122,6 +125,9 @@ func NewQMediaControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaContro
 /*
 Constructs a media control with the given parent.
 */
+func (*QMediaControl) NewForInherit__() *QMediaControl {
+	return NewQMediaControl__()
+}
 func NewQMediaControl__() *QMediaControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

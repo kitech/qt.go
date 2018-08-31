@@ -73,6 +73,9 @@ func (*QTextLine) NewFromPointer(cthis unsafe.Pointer) *QTextLine {
 /*
 
  */
+func (*QTextLine) NewForInherit() *QTextLine {
+	return NewQTextLine()
+}
 func NewQTextLine() *QTextLine {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextLineC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

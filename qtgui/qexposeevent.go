@@ -71,6 +71,9 @@ func (*QExposeEvent) NewFromPointer(cthis unsafe.Pointer) *QExposeEvent {
 /*
 
  */
+func (*QExposeEvent) NewForInherit(rgn QRegion_ITF) *QExposeEvent {
+	return NewQExposeEvent(rgn)
+}
 func NewQExposeEvent(rgn QRegion_ITF) *QExposeEvent {
 	var convArg0 unsafe.Pointer
 	if rgn != nil && rgn.QRegion_PTR() != nil {

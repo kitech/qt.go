@@ -74,6 +74,9 @@ Constructs a null rectangle.
 
 See also isNull().
 */
+func (*QRect) NewForInherit() *QRect {
+	return NewQRect()
+}
 func NewQRect() *QRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QRectC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs a null rectangle.
 
 See also isNull().
 */
+func (*QRect) NewForInherit_1(topleft QPoint_ITF, bottomright QPoint_ITF) *QRect {
+	return NewQRect_1(topleft, bottomright)
+}
 func NewQRect_1(topleft QPoint_ITF, bottomright QPoint_ITF) *QRect {
 	var convArg0 unsafe.Pointer
 	if topleft != nil && topleft.QPoint_PTR() != nil {
@@ -118,6 +124,9 @@ Constructs a null rectangle.
 
 See also isNull().
 */
+func (*QRect) NewForInherit_2(topleft QPoint_ITF, size QSize_ITF) *QRect {
+	return NewQRect_2(topleft, size)
+}
 func NewQRect_2(topleft QPoint_ITF, size QSize_ITF) *QRect {
 	var convArg0 unsafe.Pointer
 	if topleft != nil && topleft.QPoint_PTR() != nil {
@@ -144,6 +153,9 @@ Constructs a null rectangle.
 
 See also isNull().
 */
+func (*QRect) NewForInherit_3(left int, top int, width int, height int) *QRect {
+	return NewQRect_3(left, top, width, height)
+}
 func NewQRect_3(left int, top int, width int, height int) *QRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QRectC2Eiiii", qtrt.FFI_TYPE_POINTER, left, top, width, height)
 	qtrt.ErrPrint(err, rv)

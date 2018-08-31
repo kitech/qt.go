@@ -161,6 +161,9 @@ func (this *QCameraViewfinderSettingsControl) SetViewfinderParameter(parameter i
 /*
 Constructs a camera viewfinder control object with parent.
 */
+func (*QCameraViewfinderSettingsControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraViewfinderSettingsControl {
+	return NewQCameraViewfinderSettingsControl(parent)
+}
 func NewQCameraViewfinderSettingsControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraViewfinderSettingsControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -181,6 +184,9 @@ func NewQCameraViewfinderSettingsControl(parent qtcore.QObject_ITF /*777 QObject
 /*
 Constructs a camera viewfinder control object with parent.
 */
+func (*QCameraViewfinderSettingsControl) NewForInherit__() *QCameraViewfinderSettingsControl {
+	return NewQCameraViewfinderSettingsControl__()
+}
 func NewQCameraViewfinderSettingsControl__() *QCameraViewfinderSettingsControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

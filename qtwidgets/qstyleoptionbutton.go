@@ -72,6 +72,9 @@ func (*QStyleOptionButton) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionBut
 /*
 
  */
+func (*QStyleOptionButton) NewForInherit() *QStyleOptionButton {
+	return NewQStyleOptionButton()
+}
 func NewQStyleOptionButton() *QStyleOptionButton {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionButtonC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStyleOptionButton() *QStyleOptionButton {
 /*
 
  */
+func (*QStyleOptionButton) NewForInherit_1(version int) *QStyleOptionButton {
+	return NewQStyleOptionButton_1(version)
+}
 func NewQStyleOptionButton_1(version int) *QStyleOptionButton {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionButtonC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)

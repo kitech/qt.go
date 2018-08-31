@@ -74,6 +74,9 @@ Constructs a QLoggingCategory object with the provided category name. All messag
 
 If category is 0, the category name is changed to "default".
 */
+func (*QLoggingCategory) NewForInherit(category string) *QLoggingCategory {
+	return NewQLoggingCategory(category)
+}
 func NewQLoggingCategory(category string) *QLoggingCategory {
 	var convArg0 = qtrt.CString(category)
 	defer qtrt.FreeMem(convArg0)
@@ -94,6 +97,9 @@ Constructs a QLoggingCategory object with the provided category name. All messag
 
 If category is 0, the category name is changed to "default".
 */
+func (*QLoggingCategory) NewForInherit_1(category string, severityLevel int) *QLoggingCategory {
+	return NewQLoggingCategory_1(category, severityLevel)
+}
 func NewQLoggingCategory_1(category string, severityLevel int) *QLoggingCategory {
 	var convArg0 = qtrt.CString(category)
 	defer qtrt.FreeMem(convArg0)

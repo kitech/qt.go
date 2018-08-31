@@ -101,6 +101,9 @@ func (this *QStyledItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const QM
 /*
 Constructs an item delegate with the given parent.
 */
+func (*QStyledItemDelegate) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QStyledItemDelegate {
+	return NewQStyledItemDelegate(parent)
+}
 func NewQStyledItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QStyledItemDelegate {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -121,6 +124,9 @@ func NewQStyledItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QStyle
 /*
 Constructs an item delegate with the given parent.
 */
+func (*QStyledItemDelegate) NewForInherit__() *QStyledItemDelegate {
+	return NewQStyledItemDelegate__()
+}
 func NewQStyledItemDelegate__() *QStyledItemDelegate {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

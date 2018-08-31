@@ -93,6 +93,9 @@ func (this *QQuickTransform) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 /*
 
  */
+func (*QQuickTransform) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickTransform {
+	return NewQQuickTransform(parent)
+}
 func NewQQuickTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickTransform {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -113,6 +116,9 @@ func NewQQuickTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickTran
 /*
 
  */
+func (*QQuickTransform) NewForInherit__() *QQuickTransform {
+	return NewQQuickTransform__()
+}
 func NewQQuickTransform__() *QQuickTransform {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

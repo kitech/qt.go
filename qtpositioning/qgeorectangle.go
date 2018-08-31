@@ -71,6 +71,9 @@ func (*QGeoRectangle) NewFromPointer(cthis unsafe.Pointer) *QGeoRectangle {
 /*
 Constructs a new, invalid geo rectangle.
 */
+func (*QGeoRectangle) NewForInherit() *QGeoRectangle {
+	return NewQGeoRectangle()
+}
 func NewQGeoRectangle() *QGeoRectangle {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGeoRectangleC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +90,9 @@ func NewQGeoRectangle() *QGeoRectangle {
 /*
 Constructs a new, invalid geo rectangle.
 */
+func (*QGeoRectangle) NewForInherit_1(center QGeoCoordinate_ITF, degreesWidth float64, degreesHeight float64) *QGeoRectangle {
+	return NewQGeoRectangle_1(center, degreesWidth, degreesHeight)
+}
 func NewQGeoRectangle_1(center QGeoCoordinate_ITF, degreesWidth float64, degreesHeight float64) *QGeoRectangle {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QGeoCoordinate_PTR() != nil {
@@ -107,6 +113,9 @@ func NewQGeoRectangle_1(center QGeoCoordinate_ITF, degreesWidth float64, degrees
 /*
 Constructs a new, invalid geo rectangle.
 */
+func (*QGeoRectangle) NewForInherit_2(topLeft QGeoCoordinate_ITF, bottomRight QGeoCoordinate_ITF) *QGeoRectangle {
+	return NewQGeoRectangle_2(topLeft, bottomRight)
+}
 func NewQGeoRectangle_2(topLeft QGeoCoordinate_ITF, bottomRight QGeoCoordinate_ITF) *QGeoRectangle {
 	var convArg0 unsafe.Pointer
 	if topLeft != nil && topLeft.QGeoCoordinate_PTR() != nil {
@@ -131,6 +140,9 @@ func NewQGeoRectangle_2(topLeft QGeoCoordinate_ITF, bottomRight QGeoCoordinate_I
 /*
 Constructs a new, invalid geo rectangle.
 */
+func (*QGeoRectangle) NewForInherit_3(other QGeoShape_ITF) *QGeoRectangle {
+	return NewQGeoRectangle_3(other)
+}
 func NewQGeoRectangle_3(other QGeoShape_ITF) *QGeoRectangle {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGeoShape_PTR() != nil {

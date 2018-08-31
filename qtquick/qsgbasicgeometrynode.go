@@ -196,6 +196,9 @@ func (this *QSGBasicGeometryNode) SetRendererClipList(c QSGClipNode_ITF /*777 co
 /*
 
  */
+func (*QSGBasicGeometryNode) NewForInherit(type_ int) *QSGBasicGeometryNode {
+	return NewQSGBasicGeometryNode(type_)
+}
 func NewQSGBasicGeometryNode(type_ int) *QSGBasicGeometryNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGBasicGeometryNodeC2EN7QSGNode8NodeTypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

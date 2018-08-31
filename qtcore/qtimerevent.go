@@ -70,6 +70,9 @@ func (*QTimerEvent) NewFromPointer(cthis unsafe.Pointer) *QTimerEvent {
 /*
 
  */
+func (*QTimerEvent) NewForInherit(timerId int) *QTimerEvent {
+	return NewQTimerEvent(timerId)
+}
 func NewQTimerEvent(timerId int) *QTimerEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTimerEventC2Ei", qtrt.FFI_TYPE_POINTER, timerId)
 	qtrt.ErrPrint(err, rv)

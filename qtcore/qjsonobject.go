@@ -74,6 +74,9 @@ Constructs an empty JSON object.
 
 See also isEmpty().
 */
+func (*QJsonObject) NewForInherit() *QJsonObject {
+	return NewQJsonObject()
+}
 func NewQJsonObject() *QJsonObject {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObjectC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

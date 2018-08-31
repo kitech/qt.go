@@ -71,6 +71,9 @@ func (*QMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QMoveEvent {
 /*
 
  */
+func (*QMoveEvent) NewForInherit(pos qtcore.QPoint_ITF, oldPos qtcore.QPoint_ITF) *QMoveEvent {
+	return NewQMoveEvent(pos, oldPos)
+}
 func NewQMoveEvent(pos qtcore.QPoint_ITF, oldPos qtcore.QPoint_ITF) *QMoveEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {

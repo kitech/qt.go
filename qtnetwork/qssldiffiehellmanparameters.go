@@ -102,6 +102,9 @@ If an empty QSslDiffieHellmanParameters instance is set on a QSslConfiguration o
 
 See also isValid() and QSslConfiguration.
 */
+func (*QSslDiffieHellmanParameters) NewForInherit() *QSslDiffieHellmanParameters {
+	return NewQSslDiffieHellmanParameters()
+}
 func NewQSslDiffieHellmanParameters() *QSslDiffieHellmanParameters {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParametersC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

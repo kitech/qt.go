@@ -88,6 +88,9 @@ Creates an empty QUndoGroup object with parent parent.
 
 See also addStack().
 */
+func (*QUndoGroup) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QUndoGroup {
+	return NewQUndoGroup(parent)
+}
 func NewQUndoGroup(parent qtcore.QObject_ITF /*777 QObject **/) *QUndoGroup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -110,6 +113,9 @@ Creates an empty QUndoGroup object with parent parent.
 
 See also addStack().
 */
+func (*QUndoGroup) NewForInherit__() *QUndoGroup {
+	return NewQUndoGroup__()
+}
 func NewQUndoGroup__() *QUndoGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

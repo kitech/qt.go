@@ -79,6 +79,9 @@ The font info object holds the information for the font that is passed in the co
 
 Use QPainter::fontInfo() to get the font info when painting. This will give correct results also when painting on paint device that is not screen-compatible.
 */
+func (*QFontInfo) NewForInherit(arg0 QFont_ITF) *QFontInfo {
+	return NewQFontInfo(arg0)
+}
 func NewQFontInfo(arg0 QFont_ITF) *QFontInfo {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {

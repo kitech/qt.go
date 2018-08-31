@@ -73,6 +73,9 @@ func (*QStaticText) NewFromPointer(cthis unsafe.Pointer) *QStaticText {
 /*
 Constructs an empty QStaticText
 */
+func (*QStaticText) NewForInherit() *QStaticText {
+	return NewQStaticText()
+}
 func NewQStaticText() *QStaticText {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticTextC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQStaticText() *QStaticText {
 /*
 Constructs an empty QStaticText
 */
+func (*QStaticText) NewForInherit_1(text string) *QStaticText {
+	return NewQStaticText_1(text)
+}
 func NewQStaticText_1(text string) *QStaticText {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()

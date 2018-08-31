@@ -74,6 +74,9 @@ func (*QListWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QListWidgetItem {
 /*
 
  */
+func (*QListWidgetItem) NewForInherit(view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
+	return NewQListWidgetItem(view, type_)
+}
 func NewQListWidgetItem(view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if view != nil && view.QListWidget_PTR() != nil {
@@ -94,6 +97,9 @@ func NewQListWidgetItem(view QListWidget_ITF /*777 QListWidget **/, type_ int) *
 /*
 
  */
+func (*QListWidgetItem) NewForInherit__() *QListWidgetItem {
+	return NewQListWidgetItem__()
+}
 func NewQListWidgetItem__() *QListWidgetItem {
 	// arg: 0, QListWidget *=Pointer, QListWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -114,6 +120,9 @@ func NewQListWidgetItem__() *QListWidgetItem {
 /*
 
  */
+func (*QListWidgetItem) NewForInherit__1(view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
+	return NewQListWidgetItem__1(view)
+}
 func NewQListWidgetItem__1(view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if view != nil && view.QListWidget_PTR() != nil {
@@ -136,6 +145,9 @@ func NewQListWidgetItem__1(view QListWidget_ITF /*777 QListWidget **/) *QListWid
 /*
 
  */
+func (*QListWidgetItem) NewForInherit_1(text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
+	return NewQListWidgetItem_1(text, view, type_)
+}
 func NewQListWidgetItem_1(text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -158,6 +170,9 @@ func NewQListWidgetItem_1(text string, view QListWidget_ITF /*777 QListWidget **
 /*
 
  */
+func (*QListWidgetItem) NewForInherit_1_(text string) *QListWidgetItem {
+	return NewQListWidgetItem_1_(text)
+}
 func NewQListWidgetItem_1_(text string) *QListWidgetItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -180,6 +195,9 @@ func NewQListWidgetItem_1_(text string) *QListWidgetItem {
 /*
 
  */
+func (*QListWidgetItem) NewForInherit_1_1(text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
+	return NewQListWidgetItem_1_1(text, view)
+}
 func NewQListWidgetItem_1_1(text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -204,6 +222,9 @@ func NewQListWidgetItem_1_1(text string, view QListWidget_ITF /*777 QListWidget 
 /*
 
  */
+func (*QListWidgetItem) NewForInherit_2(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
+	return NewQListWidgetItem_2(icon, text, view, type_)
+}
 func NewQListWidgetItem_2(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -230,6 +251,9 @@ func NewQListWidgetItem_2(icon qtgui.QIcon_ITF, text string, view QListWidget_IT
 /*
 
  */
+func (*QListWidgetItem) NewForInherit_2_(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
+	return NewQListWidgetItem_2_(icon, text)
+}
 func NewQListWidgetItem_2_(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -256,6 +280,9 @@ func NewQListWidgetItem_2_(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
 /*
 
  */
+func (*QListWidgetItem) NewForInherit_2_1(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
+	return NewQListWidgetItem_2_1(icon, text, view)
+}
 func NewQListWidgetItem_2_1(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {

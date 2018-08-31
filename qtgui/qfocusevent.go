@@ -71,6 +71,9 @@ func (*QFocusEvent) NewFromPointer(cthis unsafe.Pointer) *QFocusEvent {
 /*
 
  */
+func (*QFocusEvent) NewForInherit(type_ int, reason int) *QFocusEvent {
+	return NewQFocusEvent(type_, reason)
+}
 func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, type_, reason)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +90,9 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 /*
 
  */
+func (*QFocusEvent) NewForInherit__(type_ int) *QFocusEvent {
+	return NewQFocusEvent__(type_)
+}
 func NewQFocusEvent__(type_ int) *QFocusEvent {
 	// arg: 1, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum, , Invalid
 	reason := 0

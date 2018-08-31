@@ -186,6 +186,9 @@ func (this *QAbstractSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 /*
 Constructs an abstract spinbox with the given parent with default wrapping, and alignment properties.
 */
+func (*QAbstractSpinBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QAbstractSpinBox {
+	return NewQAbstractSpinBox(parent)
+}
 func NewQAbstractSpinBox(parent QWidget_ITF /*777 QWidget **/) *QAbstractSpinBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -206,6 +209,9 @@ func NewQAbstractSpinBox(parent QWidget_ITF /*777 QWidget **/) *QAbstractSpinBox
 /*
 Constructs an abstract spinbox with the given parent with default wrapping, and alignment properties.
 */
+func (*QAbstractSpinBox) NewForInherit__() *QAbstractSpinBox {
+	return NewQAbstractSpinBox__()
+}
 func NewQAbstractSpinBox__() *QAbstractSpinBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

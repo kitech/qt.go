@@ -73,6 +73,9 @@ func (*QTouchDevice) NewFromPointer(cthis unsafe.Pointer) *QTouchDevice {
 /*
 Creates a new touch device instance. By default the name is empty, the only capability is Position and type is TouchScreen.
 */
+func (*QTouchDevice) NewForInherit() *QTouchDevice {
+	return NewQTouchDevice()
+}
 func NewQTouchDevice() *QTouchDevice {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTouchDeviceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

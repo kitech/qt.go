@@ -72,6 +72,9 @@ func (*QJsonDocument) NewFromPointer(cthis unsafe.Pointer) *QJsonDocument {
 /*
 Constructs an empty and invalid document.
 */
+func (*QJsonDocument) NewForInherit() *QJsonDocument {
+	return NewQJsonDocument()
+}
 func NewQJsonDocument() *QJsonDocument {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocumentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQJsonDocument() *QJsonDocument {
 /*
 Constructs an empty and invalid document.
 */
+func (*QJsonDocument) NewForInherit_1(object QJsonObject_ITF) *QJsonDocument {
+	return NewQJsonDocument_1(object)
+}
 func NewQJsonDocument_1(object QJsonObject_ITF) *QJsonDocument {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QJsonObject_PTR() != nil {
@@ -108,6 +114,9 @@ func NewQJsonDocument_1(object QJsonObject_ITF) *QJsonDocument {
 /*
 Constructs an empty and invalid document.
 */
+func (*QJsonDocument) NewForInherit_2(array QJsonArray_ITF) *QJsonDocument {
+	return NewQJsonDocument_2(array)
+}
 func NewQJsonDocument_2(array QJsonArray_ITF) *QJsonDocument {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QJsonArray_PTR() != nil {

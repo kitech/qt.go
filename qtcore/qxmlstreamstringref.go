@@ -72,6 +72,9 @@ func (*QXmlStreamStringRef) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamStri
 /*
 
  */
+func (*QXmlStreamStringRef) NewForInherit() *QXmlStreamStringRef {
+	return NewQXmlStreamStringRef()
+}
 func NewQXmlStreamStringRef() *QXmlStreamStringRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQXmlStreamStringRef() *QXmlStreamStringRef {
 /*
 
  */
+func (*QXmlStreamStringRef) NewForInherit_1(aString QStringRef_ITF) *QXmlStreamStringRef {
+	return NewQXmlStreamStringRef_1(aString)
+}
 func NewQXmlStreamStringRef_1(aString QStringRef_ITF) *QXmlStreamStringRef {
 	var convArg0 unsafe.Pointer
 	if aString != nil && aString.QStringRef_PTR() != nil {
@@ -108,6 +114,9 @@ func NewQXmlStreamStringRef_1(aString QStringRef_ITF) *QXmlStreamStringRef {
 /*
 
  */
+func (*QXmlStreamStringRef) NewForInherit_2(aString string) *QXmlStreamStringRef {
+	return NewQXmlStreamStringRef_2(aString)
+}
 func NewQXmlStreamStringRef_2(aString string) *QXmlStreamStringRef {
 	var tmpArg0 = NewQString_5(aString)
 	var convArg0 = tmpArg0.GetCthis()
@@ -126,6 +135,9 @@ func NewQXmlStreamStringRef_2(aString string) *QXmlStreamStringRef {
 /*
 
  */
+func (*QXmlStreamStringRef) NewForInherit_3(aString unsafe.Pointer /*333*/) *QXmlStreamStringRef {
+	return NewQXmlStreamStringRef_3(aString)
+}
 func NewQXmlStreamStringRef_3(aString unsafe.Pointer /*333*/) *QXmlStreamStringRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2EO7QString", qtrt.FFI_TYPE_POINTER, aString)
 	qtrt.ErrPrint(err, rv)

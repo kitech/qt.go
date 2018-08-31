@@ -239,6 +239,9 @@ func (this *QMediaGaplessPlaybackControl) AdvancedToNextMedia() {
 /*
 Constructs a new gapless playback control with the given parent.
 */
+func (*QMediaGaplessPlaybackControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaGaplessPlaybackControl {
+	return NewQMediaGaplessPlaybackControl(parent)
+}
 func NewQMediaGaplessPlaybackControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaGaplessPlaybackControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -259,6 +262,9 @@ func NewQMediaGaplessPlaybackControl(parent qtcore.QObject_ITF /*777 QObject **/
 /*
 Constructs a new gapless playback control with the given parent.
 */
+func (*QMediaGaplessPlaybackControl) NewForInherit__() *QMediaGaplessPlaybackControl {
+	return NewQMediaGaplessPlaybackControl__()
+}
 func NewQMediaGaplessPlaybackControl__() *QMediaGaplessPlaybackControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

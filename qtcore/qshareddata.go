@@ -72,6 +72,9 @@ func (*QSharedData) NewFromPointer(cthis unsafe.Pointer) *QSharedData {
 /*
 Constructs a QSharedData object with a reference count of 0.
 */
+func (*QSharedData) NewForInherit() *QSharedData {
+	return NewQSharedData()
+}
 func NewQSharedData() *QSharedData {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSharedDataC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -98,6 +98,9 @@ This application object must be constructed before any paint devices (including 
 
 Note: argc and argv might be changed as Qt removes command line arguments that it recognizes.
 */
+func (*QGuiApplication) NewForInherit(argc int, argv []string, arg2 int) *QGuiApplication {
+	return NewQGuiApplication(argc, argv, arg2)
+}
 func NewQGuiApplication(argc int, argv []string, arg2 int) *QGuiApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
@@ -123,6 +126,9 @@ This application object must be constructed before any paint devices (including 
 
 Note: argc and argv might be changed as Qt removes command line arguments that it recognizes.
 */
+func (*QGuiApplication) NewForInherit__(argc int, argv []string) *QGuiApplication {
+	return NewQGuiApplication__(argc, argv)
+}
 func NewQGuiApplication__(argc int, argv []string) *QGuiApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	// arg: 2, int=Int, =Invalid, , Invalid

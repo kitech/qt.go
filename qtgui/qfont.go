@@ -75,6 +75,9 @@ Constructs a font object that uses the application's default font.
 
 See also QGuiApplication::setFont() and QGuiApplication::font().
 */
+func (*QFont) NewForInherit() *QFont {
+	return NewQFont()
+}
 func NewQFont() *QFont {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs a font object that uses the application's default font.
 
 See also QGuiApplication::setFont() and QGuiApplication::font().
 */
+func (*QFont) NewForInherit_1(family string, pointSize int, weight int, italic bool) *QFont {
+	return NewQFont_1(family, pointSize, weight, italic)
+}
 func NewQFont_1(family string, pointSize int, weight int, italic bool) *QFont {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -113,6 +119,9 @@ Constructs a font object that uses the application's default font.
 
 See also QGuiApplication::setFont() and QGuiApplication::font().
 */
+func (*QFont) NewForInherit_1_(family string) *QFont {
+	return NewQFont_1_(family)
+}
 func NewQFont_1_(family string) *QFont {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -139,6 +148,9 @@ Constructs a font object that uses the application's default font.
 
 See also QGuiApplication::setFont() and QGuiApplication::font().
 */
+func (*QFont) NewForInherit_1_1(family string, pointSize int) *QFont {
+	return NewQFont_1_1(family, pointSize)
+}
 func NewQFont_1_1(family string, pointSize int) *QFont {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -163,6 +175,9 @@ Constructs a font object that uses the application's default font.
 
 See also QGuiApplication::setFont() and QGuiApplication::font().
 */
+func (*QFont) NewForInherit_1_2(family string, pointSize int, weight int) *QFont {
+	return NewQFont_1_2(family, pointSize, weight)
+}
 func NewQFont_1_2(family string, pointSize int, weight int) *QFont {
 	var tmpArg0 = qtcore.NewQString_5(family)
 	var convArg0 = tmpArg0.GetCthis()
@@ -185,6 +200,9 @@ Constructs a font object that uses the application's default font.
 
 See also QGuiApplication::setFont() and QGuiApplication::font().
 */
+func (*QFont) NewForInherit_2(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFont {
+	return NewQFont_2(arg0, pd)
+}
 func NewQFont_2(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFont {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {

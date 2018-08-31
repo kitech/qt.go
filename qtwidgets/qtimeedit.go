@@ -86,6 +86,9 @@ func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 /*
 
  */
+func (*QTimeEdit) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
+	return NewQTimeEdit(parent)
+}
 func NewQTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
 /*
 
  */
+func (*QTimeEdit) NewForInherit__() *QTimeEdit {
+	return NewQTimeEdit__()
+}
 func NewQTimeEdit__() *QTimeEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -124,6 +130,9 @@ func NewQTimeEdit__() *QTimeEdit {
 /*
 
  */
+func (*QTimeEdit) NewForInherit_1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
+	return NewQTimeEdit_1(time, parent)
+}
 func NewQTimeEdit_1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {
@@ -148,6 +157,9 @@ func NewQTimeEdit_1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/)
 /*
 
  */
+func (*QTimeEdit) NewForInherit_1_(time qtcore.QTime_ITF) *QTimeEdit {
+	return NewQTimeEdit_1_(time)
+}
 func NewQTimeEdit_1_(time qtcore.QTime_ITF) *QTimeEdit {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {

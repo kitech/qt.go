@@ -118,6 +118,9 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
+func (*QMessageBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
+	return NewQMessageBox(parent)
+}
 func NewQMessageBox(parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -140,6 +143,9 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
+func (*QMessageBox) NewForInherit__() *QMessageBox {
+	return NewQMessageBox__()
+}
 func NewQMessageBox__() *QMessageBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -160,6 +166,9 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
+func (*QMessageBox) NewForInherit_1(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/, flags int) *QMessageBox {
+	return NewQMessageBox_1(icon, title, text, buttons, parent, flags)
+}
 func NewQMessageBox_1(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/, flags int) *QMessageBox {
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
@@ -186,6 +195,9 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
+func (*QMessageBox) NewForInherit_1_(icon int, title string, text string) *QMessageBox {
+	return NewQMessageBox_1_(icon, title, text)
+}
 func NewQMessageBox_1_(icon int, title string, text string) *QMessageBox {
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
@@ -214,6 +226,9 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
+func (*QMessageBox) NewForInherit_1_1(icon int, title string, text string, buttons int) *QMessageBox {
+	return NewQMessageBox_1_1(icon, title, text, buttons)
+}
 func NewQMessageBox_1_1(icon int, title string, text string, buttons int) *QMessageBox {
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
@@ -240,6 +255,9 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
+func (*QMessageBox) NewForInherit_1_2(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
+	return NewQMessageBox_1_2(icon, title, text, buttons, parent)
+}
 func NewQMessageBox_1_2(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
 	var tmpArg1 = qtcore.NewQString_5(title)
 	var convArg1 = tmpArg1.GetCthis()
@@ -268,6 +286,9 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
+func (*QMessageBox) NewForInherit_2(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/, f int) *QMessageBox {
+	return NewQMessageBox_2(title, text, icon, button0, button1, button2, parent, f)
+}
 func NewQMessageBox_2(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/, f int) *QMessageBox {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -294,6 +315,9 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
+func (*QMessageBox) NewForInherit_2_(title string, text string, icon int, button0 int, button1 int, button2 int) *QMessageBox {
+	return NewQMessageBox_2_(title, text, icon, button0, button1, button2)
+}
 func NewQMessageBox_2_(title string, text string, icon int, button0 int, button1 int, button2 int) *QMessageBox {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -320,6 +344,9 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
+func (*QMessageBox) NewForInherit_2_1(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
+	return NewQMessageBox_2_1(title, text, icon, button0, button1, button2, parent)
+}
 func NewQMessageBox_2_1(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()

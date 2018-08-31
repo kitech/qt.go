@@ -72,6 +72,9 @@ func (*QXmlStreamAttributes) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamAtt
 /*
 
  */
+func (*QXmlStreamAttributes) NewForInherit() *QXmlStreamAttributes {
+	return NewQXmlStreamAttributes()
+}
 func NewQXmlStreamAttributes() *QXmlStreamAttributes {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QXmlStreamAttributesC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

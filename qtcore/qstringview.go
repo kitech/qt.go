@@ -74,6 +74,9 @@ Constructs a null string view.
 
 See also isNull().
 */
+func (*QStringView) NewForInherit() *QStringView {
+	return NewQStringView()
+}
 func NewQStringView() *QStringView {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringViewC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

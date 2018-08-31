@@ -76,6 +76,9 @@ Objects created with the default constructor will be invalid and therefore not r
 
 See also setPath(), isReady(), and isValid().
 */
+func (*QStorageInfo) NewForInherit() *QStorageInfo {
+	return NewQStorageInfo()
+}
 func NewQStorageInfo() *QStorageInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStorageInfoC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -96,6 +99,9 @@ Objects created with the default constructor will be invalid and therefore not r
 
 See also setPath(), isReady(), and isValid().
 */
+func (*QStorageInfo) NewForInherit_1(path string) *QStorageInfo {
+	return NewQStorageInfo_1(path)
+}
 func NewQStorageInfo_1(path string) *QStorageInfo {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -118,6 +124,9 @@ Objects created with the default constructor will be invalid and therefore not r
 
 See also setPath(), isReady(), and isValid().
 */
+func (*QStorageInfo) NewForInherit_2(dir QDir_ITF) *QStorageInfo {
+	return NewQStorageInfo_2(dir)
+}
 func NewQStorageInfo_2(dir QDir_ITF) *QStorageInfo {
 	var convArg0 unsafe.Pointer
 	if dir != nil && dir.QDir_PTR() != nil {

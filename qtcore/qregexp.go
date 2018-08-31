@@ -74,6 +74,9 @@ Constructs an empty regexp.
 
 See also isValid() and errorString().
 */
+func (*QRegExp) NewForInherit() *QRegExp {
+	return NewQRegExp()
+}
 func NewQRegExp() *QRegExp {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExpC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs an empty regexp.
 
 See also isValid() and errorString().
 */
+func (*QRegExp) NewForInherit_1(pattern string, cs int, syntax int) *QRegExp {
+	return NewQRegExp_1(pattern, cs, syntax)
+}
 func NewQRegExp_1(pattern string, cs int, syntax int) *QRegExp {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
@@ -112,6 +118,9 @@ Constructs an empty regexp.
 
 See also isValid() and errorString().
 */
+func (*QRegExp) NewForInherit_1_(pattern string) *QRegExp {
+	return NewQRegExp_1_(pattern)
+}
 func NewQRegExp_1_(pattern string) *QRegExp {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
@@ -136,6 +145,9 @@ Constructs an empty regexp.
 
 See also isValid() and errorString().
 */
+func (*QRegExp) NewForInherit_1_1(pattern string, cs int) *QRegExp {
+	return NewQRegExp_1_1(pattern, cs)
+}
 func NewQRegExp_1_1(pattern string, cs int) *QRegExp {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()

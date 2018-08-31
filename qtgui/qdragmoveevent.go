@@ -71,6 +71,9 @@ func (*QDragMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 /*
 
  */
+func (*QDragMoveEvent) NewForInherit(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDragMoveEvent {
+	return NewQDragMoveEvent(pos, actions, data, buttons, modifiers, type_)
+}
 func NewQDragMoveEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDragMoveEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
@@ -95,6 +98,9 @@ func NewQDragMoveEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData
 /*
 
  */
+func (*QDragMoveEvent) NewForInherit__(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragMoveEvent {
+	return NewQDragMoveEvent__(pos, actions, data, buttons, modifiers)
+}
 func NewQDragMoveEvent__(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragMoveEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {

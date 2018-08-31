@@ -72,6 +72,9 @@ func (*QPointF) NewFromPointer(cthis unsafe.Pointer) *QPointF {
 /*
 
  */
+func (*QPointF) NewForInherit() *QPointF {
+	return NewQPointF()
+}
 func NewQPointF() *QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointFC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQPointF() *QPointF {
 /*
 
  */
+func (*QPointF) NewForInherit_1(p QPoint_ITF) *QPointF {
+	return NewQPointF_1(p)
+}
 func NewQPointF_1(p QPoint_ITF) *QPointF {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
@@ -108,6 +114,9 @@ func NewQPointF_1(p QPoint_ITF) *QPointF {
 /*
 
  */
+func (*QPointF) NewForInherit_2(xpos float64, ypos float64) *QPointF {
+	return NewQPointF_2(xpos, ypos)
+}
 func NewQPointF_2(xpos float64, ypos float64) *QPointF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPointFC2Edd", qtrt.FFI_TYPE_POINTER, xpos, ypos)
 	qtrt.ErrPrint(err, rv)

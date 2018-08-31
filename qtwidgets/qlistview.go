@@ -236,6 +236,9 @@ func (this *QListView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 /*
 Creates a new QListView with the given parent to view a model. Use setModel() to set the model.
 */
+func (*QListView) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QListView {
+	return NewQListView(parent)
+}
 func NewQListView(parent QWidget_ITF /*777 QWidget **/) *QListView {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -256,6 +259,9 @@ func NewQListView(parent QWidget_ITF /*777 QWidget **/) *QListView {
 /*
 Creates a new QListView with the given parent to view a model. Use setModel() to set the model.
 */
+func (*QListView) NewForInherit__() *QListView {
+	return NewQListView__()
+}
 func NewQListView__() *QListView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

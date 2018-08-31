@@ -122,6 +122,9 @@ Constructs a new top-level QLayout, with parent parent. parent may not be 0.
 
 There can be only one top-level layout for a widget. It is returned by QWidget::layout().
 */
+func (*QLayout) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QLayout {
+	return NewQLayout(parent)
+}
 func NewQLayout(parent QWidget_ITF /*777 QWidget **/) *QLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -144,6 +147,9 @@ Constructs a new top-level QLayout, with parent parent. parent may not be 0.
 
 There can be only one top-level layout for a widget. It is returned by QWidget::layout().
 */
+func (*QLayout) NewForInherit_1() *QLayout {
+	return NewQLayout_1()
+}
 func NewQLayout_1() *QLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

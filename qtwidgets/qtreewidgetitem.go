@@ -79,6 +79,9 @@ func (*QTreeWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QTreeWidgetItem {
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit(type_ int) *QTreeWidgetItem {
+	return NewQTreeWidgetItem(type_)
+}
 func NewQTreeWidgetItem(type_ int) *QTreeWidgetItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2Ei", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -95,6 +98,9 @@ func NewQTreeWidgetItem(type_ int) *QTreeWidgetItem {
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit__() *QTreeWidgetItem {
+	return NewQTreeWidgetItem__()
+}
 func NewQTreeWidgetItem__() *QTreeWidgetItem {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
@@ -113,6 +119,9 @@ func NewQTreeWidgetItem__() *QTreeWidgetItem {
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_1(strings qtcore.QStringList_ITF, type_ int) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_1(strings, type_)
+}
 func NewQTreeWidgetItem_1(strings qtcore.QStringList_ITF, type_ int) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {
@@ -133,6 +142,9 @@ func NewQTreeWidgetItem_1(strings qtcore.QStringList_ITF, type_ int) *QTreeWidge
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_1_(strings qtcore.QStringList_ITF) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_1_(strings)
+}
 func NewQTreeWidgetItem_1_(strings qtcore.QStringList_ITF) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {
@@ -155,6 +167,9 @@ func NewQTreeWidgetItem_1_(strings qtcore.QStringList_ITF) *QTreeWidgetItem {
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_2(view QTreeWidget_ITF /*777 QTreeWidget **/, type_ int) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_2(view, type_)
+}
 func NewQTreeWidgetItem_2(view QTreeWidget_ITF /*777 QTreeWidget **/, type_ int) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if view != nil && view.QTreeWidget_PTR() != nil {
@@ -175,6 +190,9 @@ func NewQTreeWidgetItem_2(view QTreeWidget_ITF /*777 QTreeWidget **/, type_ int)
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_2_(view QTreeWidget_ITF /*777 QTreeWidget **/) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_2_(view)
+}
 func NewQTreeWidgetItem_2_(view QTreeWidget_ITF /*777 QTreeWidget **/) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if view != nil && view.QTreeWidget_PTR() != nil {
@@ -197,6 +215,9 @@ func NewQTreeWidgetItem_2_(view QTreeWidget_ITF /*777 QTreeWidget **/) *QTreeWid
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_3(view QTreeWidget_ITF /*777 QTreeWidget **/, strings qtcore.QStringList_ITF, type_ int) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_3(view, strings, type_)
+}
 func NewQTreeWidgetItem_3(view QTreeWidget_ITF /*777 QTreeWidget **/, strings qtcore.QStringList_ITF, type_ int) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if view != nil && view.QTreeWidget_PTR() != nil {
@@ -221,6 +242,9 @@ func NewQTreeWidgetItem_3(view QTreeWidget_ITF /*777 QTreeWidget **/, strings qt
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_3_(view QTreeWidget_ITF /*777 QTreeWidget **/, strings qtcore.QStringList_ITF) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_3_(view, strings)
+}
 func NewQTreeWidgetItem_3_(view QTreeWidget_ITF /*777 QTreeWidget **/, strings qtcore.QStringList_ITF) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if view != nil && view.QTreeWidget_PTR() != nil {
@@ -247,6 +271,9 @@ func NewQTreeWidgetItem_3_(view QTreeWidget_ITF /*777 QTreeWidget **/, strings q
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_4(view QTreeWidget_ITF /*777 QTreeWidget **/, after QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_4(view, after, type_)
+}
 func NewQTreeWidgetItem_4(view QTreeWidget_ITF /*777 QTreeWidget **/, after QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if view != nil && view.QTreeWidget_PTR() != nil {
@@ -271,6 +298,9 @@ func NewQTreeWidgetItem_4(view QTreeWidget_ITF /*777 QTreeWidget **/, after QTre
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_4_(view QTreeWidget_ITF /*777 QTreeWidget **/, after QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_4_(view, after)
+}
 func NewQTreeWidgetItem_4_(view QTreeWidget_ITF /*777 QTreeWidget **/, after QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if view != nil && view.QTreeWidget_PTR() != nil {
@@ -297,6 +327,9 @@ func NewQTreeWidgetItem_4_(view QTreeWidget_ITF /*777 QTreeWidget **/, after QTr
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_5(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_5(parent, type_)
+}
 func NewQTreeWidgetItem_5(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QTreeWidgetItem_PTR() != nil {
@@ -317,6 +350,9 @@ func NewQTreeWidgetItem_5(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, 
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_5_(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_5_(parent)
+}
 func NewQTreeWidgetItem_5_(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QTreeWidgetItem_PTR() != nil {
@@ -339,6 +375,9 @@ func NewQTreeWidgetItem_5_(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/)
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_6(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, strings qtcore.QStringList_ITF, type_ int) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_6(parent, strings, type_)
+}
 func NewQTreeWidgetItem_6(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, strings qtcore.QStringList_ITF, type_ int) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QTreeWidgetItem_PTR() != nil {
@@ -363,6 +402,9 @@ func NewQTreeWidgetItem_6(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, 
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_6_(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, strings qtcore.QStringList_ITF) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_6_(parent, strings)
+}
 func NewQTreeWidgetItem_6_(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, strings qtcore.QStringList_ITF) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QTreeWidgetItem_PTR() != nil {
@@ -389,6 +431,9 @@ func NewQTreeWidgetItem_6_(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/,
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_7(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, after QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_7(parent, after, type_)
+}
 func NewQTreeWidgetItem_7(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, after QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QTreeWidgetItem_PTR() != nil {
@@ -413,6 +458,9 @@ func NewQTreeWidgetItem_7(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, 
 /*
 
  */
+func (*QTreeWidgetItem) NewForInherit_7_(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, after QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItem {
+	return NewQTreeWidgetItem_7_(parent, after)
+}
 func NewQTreeWidgetItem_7_(parent QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, after QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QTreeWidgetItem_PTR() != nil {

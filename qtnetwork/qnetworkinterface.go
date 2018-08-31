@@ -73,6 +73,9 @@ func (*QNetworkInterface) NewFromPointer(cthis unsafe.Pointer) *QNetworkInterfac
 /*
 Constructs an empty network interface object.
 */
+func (*QNetworkInterface) NewForInherit() *QNetworkInterface {
+	return NewQNetworkInterface()
+}
 func NewQNetworkInterface() *QNetworkInterface {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterfaceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

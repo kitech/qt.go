@@ -86,6 +86,9 @@ This function is deprecated.
 
 Constructs a QSignalMapper with parent parent.
 */
+func (*QSignalMapper) NewForInherit(parent QObject_ITF /*777 QObject **/) *QSignalMapper {
+	return NewQSignalMapper(parent)
+}
 func NewQSignalMapper(parent QObject_ITF /*777 QObject **/) *QSignalMapper {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -108,6 +111,9 @@ This function is deprecated.
 
 Constructs a QSignalMapper with parent parent.
 */
+func (*QSignalMapper) NewForInherit__() *QSignalMapper {
+	return NewQSignalMapper__()
+}
 func NewQSignalMapper__() *QSignalMapper {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

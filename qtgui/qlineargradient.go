@@ -71,6 +71,9 @@ func (*QLinearGradient) NewFromPointer(cthis unsafe.Pointer) *QLinearGradient {
 /*
 
  */
+func (*QLinearGradient) NewForInherit() *QLinearGradient {
+	return NewQLinearGradient()
+}
 func NewQLinearGradient() *QLinearGradient {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QLinearGradientC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +90,9 @@ func NewQLinearGradient() *QLinearGradient {
 /*
 
  */
+func (*QLinearGradient) NewForInherit_1(start qtcore.QPointF_ITF, finalStop qtcore.QPointF_ITF) *QLinearGradient {
+	return NewQLinearGradient_1(start, finalStop)
+}
 func NewQLinearGradient_1(start qtcore.QPointF_ITF, finalStop qtcore.QPointF_ITF) *QLinearGradient {
 	var convArg0 unsafe.Pointer
 	if start != nil && start.QPointF_PTR() != nil {
@@ -111,6 +117,9 @@ func NewQLinearGradient_1(start qtcore.QPointF_ITF, finalStop qtcore.QPointF_ITF
 /*
 
  */
+func (*QLinearGradient) NewForInherit_2(xStart float64, yStart float64, xFinalStop float64, yFinalStop float64) *QLinearGradient {
+	return NewQLinearGradient_2(xStart, yStart, xFinalStop, yFinalStop)
+}
 func NewQLinearGradient_2(xStart float64, yStart float64, xFinalStop float64, yFinalStop float64) *QLinearGradient {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QLinearGradientC2Edddd", qtrt.FFI_TYPE_POINTER, xStart, yStart, xFinalStop, yFinalStop)
 	qtrt.ErrPrint(err, rv)

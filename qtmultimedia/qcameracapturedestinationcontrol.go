@@ -162,6 +162,9 @@ func (this *QCameraCaptureDestinationControl) CaptureDestinationChanged(arg0 int
 /*
 Constructs a new image capture destination control object with the given parent
 */
+func (*QCameraCaptureDestinationControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraCaptureDestinationControl {
+	return NewQCameraCaptureDestinationControl(parent)
+}
 func NewQCameraCaptureDestinationControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraCaptureDestinationControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -182,6 +185,9 @@ func NewQCameraCaptureDestinationControl(parent qtcore.QObject_ITF /*777 QObject
 /*
 Constructs a new image capture destination control object with the given parent
 */
+func (*QCameraCaptureDestinationControl) NewForInherit__() *QCameraCaptureDestinationControl {
+	return NewQCameraCaptureDestinationControl__()
+}
 func NewQCameraCaptureDestinationControl__() *QCameraCaptureDestinationControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -79,6 +79,9 @@ func (*QWebEngineHttpRequest) NewFromPointer(cthis unsafe.Pointer) *QWebEngineHt
 /*
 
  */
+func (*QWebEngineHttpRequest) NewForInherit(url qtcore.QUrl_ITF, method int) *QWebEngineHttpRequest {
+	return NewQWebEngineHttpRequest(url, method)
+}
 func NewQWebEngineHttpRequest(url qtcore.QUrl_ITF, method int) *QWebEngineHttpRequest {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -99,6 +102,9 @@ func NewQWebEngineHttpRequest(url qtcore.QUrl_ITF, method int) *QWebEngineHttpRe
 /*
 
  */
+func (*QWebEngineHttpRequest) NewForInherit__() *QWebEngineHttpRequest {
+	return NewQWebEngineHttpRequest__()
+}
 func NewQWebEngineHttpRequest__() *QWebEngineHttpRequest {
 	// arg: 0, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg0 = qtcore.NewQUrl()
@@ -119,6 +125,9 @@ func NewQWebEngineHttpRequest__() *QWebEngineHttpRequest {
 /*
 
  */
+func (*QWebEngineHttpRequest) NewForInherit__1(url qtcore.QUrl_ITF) *QWebEngineHttpRequest {
+	return NewQWebEngineHttpRequest__1(url)
+}
 func NewQWebEngineHttpRequest__1(url qtcore.QUrl_ITF) *QWebEngineHttpRequest {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {

@@ -71,6 +71,9 @@ func (*QInputMethodQueryEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMetho
 /*
 
  */
+func (*QInputMethodQueryEvent) NewForInherit(queries int) *QInputMethodQueryEvent {
+	return NewQInputMethodQueryEvent(queries)
+}
 func NewQInputMethodQueryEvent(queries int) *QInputMethodQueryEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QInputMethodQueryEventC2E6QFlagsIN2Qt16InputMethodQueryEE", qtrt.FFI_TYPE_POINTER, queries)
 	qtrt.ErrPrint(err, rv)

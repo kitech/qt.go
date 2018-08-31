@@ -84,6 +84,9 @@ Constructs a new QAndroidJniEnvironment object and attach the current thread to 
       return qjniEnv->ExceptionCheck();
   }
 */
+func (*QAndroidJniEnvironment) NewForInherit() *QAndroidJniEnvironment {
+	return NewQAndroidJniEnvironment()
+}
 func NewQAndroidJniEnvironment() *QAndroidJniEnvironment {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QAndroidJniEnvironmentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

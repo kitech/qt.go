@@ -91,6 +91,9 @@ func (this *QGridLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Constructs a new QGridLayout with parent widget, parent. The layout has one row and one column initially, and will expand when new items are inserted.
 */
+func (*QGridLayout) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QGridLayout {
+	return NewQGridLayout(parent)
+}
 func NewQGridLayout(parent QWidget_ITF /*777 QWidget **/) *QGridLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -111,6 +114,9 @@ func NewQGridLayout(parent QWidget_ITF /*777 QWidget **/) *QGridLayout {
 /*
 Constructs a new QGridLayout with parent widget, parent. The layout has one row and one column initially, and will expand when new items are inserted.
 */
+func (*QGridLayout) NewForInherit_1() *QGridLayout {
+	return NewQGridLayout_1()
+}
 func NewQGridLayout_1() *QGridLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

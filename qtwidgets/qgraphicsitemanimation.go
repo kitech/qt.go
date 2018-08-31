@@ -96,6 +96,9 @@ func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*777 const
 /*
 Constructs an animation object with the given parent.
 */
+func (*QGraphicsItemAnimation) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsItemAnimation {
+	return NewQGraphicsItemAnimation(parent)
+}
 func NewQGraphicsItemAnimation(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsItemAnimation {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -116,6 +119,9 @@ func NewQGraphicsItemAnimation(parent qtcore.QObject_ITF /*777 QObject **/) *QGr
 /*
 Constructs an animation object with the given parent.
 */
+func (*QGraphicsItemAnimation) NewForInherit__() *QGraphicsItemAnimation {
+	return NewQGraphicsItemAnimation__()
+}
 func NewQGraphicsItemAnimation__() *QGraphicsItemAnimation {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

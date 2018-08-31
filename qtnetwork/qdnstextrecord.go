@@ -73,6 +73,9 @@ func (*QDnsTextRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsTextRecord {
 /*
 
  */
+func (*QDnsTextRecord) NewForInherit() *QDnsTextRecord {
+	return NewQDnsTextRecord()
+}
 func NewQDnsTextRecord() *QDnsTextRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDnsTextRecordC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

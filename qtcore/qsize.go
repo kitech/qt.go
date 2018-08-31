@@ -74,6 +74,9 @@ Constructs a size with an invalid width and height (i.e., isValid() returns fals
 
 See also isValid().
 */
+func (*QSize) NewForInherit() *QSize {
+	return NewQSize()
+}
 func NewQSize() *QSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSizeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs a size with an invalid width and height (i.e., isValid() returns fals
 
 See also isValid().
 */
+func (*QSize) NewForInherit_1(w int, h int) *QSize {
+	return NewQSize_1(w, h)
+}
 func NewQSize_1(w int, h int) *QSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSizeC2Eii", qtrt.FFI_TYPE_POINTER, w, h)
 	qtrt.ErrPrint(err, rv)

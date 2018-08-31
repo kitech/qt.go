@@ -74,6 +74,9 @@ func (*QSGClipNode) NewFromPointer(cthis unsafe.Pointer) *QSGClipNode {
 /*
 
  */
+func (*QSGClipNode) NewForInherit() *QSGClipNode {
+	return NewQSGClipNode()
+}
 func NewQSGClipNode() *QSGClipNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGClipNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

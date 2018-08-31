@@ -73,6 +73,9 @@ func (*QAuthenticator) NewFromPointer(cthis unsafe.Pointer) *QAuthenticator {
 /*
 Constructs an empty authentication object.
 */
+func (*QAuthenticator) NewForInherit() *QAuthenticator {
+	return NewQAuthenticator()
+}
 func NewQAuthenticator() *QAuthenticator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAuthenticatorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

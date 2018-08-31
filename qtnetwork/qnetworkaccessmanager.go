@@ -95,6 +95,9 @@ func (this *QNetworkAccessManager) MetaObject() *qtcore.QMetaObject /*777 const 
 /*
 Constructs a QNetworkAccessManager object that is the center of the Network Access API and sets parent as the parent object.
 */
+func (*QNetworkAccessManager) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkAccessManager {
+	return NewQNetworkAccessManager(parent)
+}
 func NewQNetworkAccessManager(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkAccessManager {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -115,6 +118,9 @@ func NewQNetworkAccessManager(parent qtcore.QObject_ITF /*777 QObject **/) *QNet
 /*
 Constructs a QNetworkAccessManager object that is the center of the Network Access API and sets parent as the parent object.
 */
+func (*QNetworkAccessManager) NewForInherit__() *QNetworkAccessManager {
+	return NewQNetworkAccessManager__()
+}
 func NewQNetworkAccessManager__() *QNetworkAccessManager {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

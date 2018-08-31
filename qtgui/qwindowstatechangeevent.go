@@ -71,6 +71,9 @@ func (*QWindowStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWindowSta
 /*
 
  */
+func (*QWindowStateChangeEvent) NewForInherit(aOldState int, isOverride bool) *QWindowStateChangeEvent {
+	return NewQWindowStateChangeEvent(aOldState, isOverride)
+}
 func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWindowStateChangeEventC2E6QFlagsIN2Qt11WindowStateEEb", qtrt.FFI_TYPE_POINTER, aOldState, isOverride)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +90,9 @@ func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateCha
 /*
 
  */
+func (*QWindowStateChangeEvent) NewForInherit__(aOldState int) *QWindowStateChangeEvent {
+	return NewQWindowStateChangeEvent__(aOldState)
+}
 func NewQWindowStateChangeEvent__(aOldState int) *QWindowStateChangeEvent {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	isOverride := false

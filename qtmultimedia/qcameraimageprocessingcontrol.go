@@ -179,6 +179,9 @@ func (this *QCameraImageProcessingControl) SetParameter(parameter int, value qtc
 /*
 Constructs an image processing control object with parent.
 */
+func (*QCameraImageProcessingControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraImageProcessingControl {
+	return NewQCameraImageProcessingControl(parent)
+}
 func NewQCameraImageProcessingControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraImageProcessingControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -199,6 +202,9 @@ func NewQCameraImageProcessingControl(parent qtcore.QObject_ITF /*777 QObject **
 /*
 Constructs an image processing control object with parent.
 */
+func (*QCameraImageProcessingControl) NewForInherit__() *QCameraImageProcessingControl {
+	return NewQCameraImageProcessingControl__()
+}
 func NewQCameraImageProcessingControl__() *QCameraImageProcessingControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

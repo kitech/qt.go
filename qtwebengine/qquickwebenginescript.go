@@ -97,6 +97,9 @@ func (this *QQuickWebEngineScript) MetaObject() *qtcore.QMetaObject /*777 const 
 /*
 Constructs a new QQuickWebEngineScript with the parent parent.
 */
+func (*QQuickWebEngineScript) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickWebEngineScript {
+	return NewQQuickWebEngineScript(parent)
+}
 func NewQQuickWebEngineScript(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickWebEngineScript {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -117,6 +120,9 @@ func NewQQuickWebEngineScript(parent qtcore.QObject_ITF /*777 QObject **/) *QQui
 /*
 Constructs a new QQuickWebEngineScript with the parent parent.
 */
+func (*QQuickWebEngineScript) NewForInherit__() *QQuickWebEngineScript {
+	return NewQQuickWebEngineScript__()
+}
 func NewQQuickWebEngineScript__() *QQuickWebEngineScript {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

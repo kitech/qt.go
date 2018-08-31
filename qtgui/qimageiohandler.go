@@ -73,6 +73,9 @@ func (*QImageIOHandler) NewFromPointer(cthis unsafe.Pointer) *QImageIOHandler {
 /*
 Constructs a QImageIOHandler object.
 */
+func (*QImageIOHandler) NewForInherit() *QImageIOHandler {
+	return NewQImageIOHandler()
+}
 func NewQImageIOHandler() *QImageIOHandler {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandlerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

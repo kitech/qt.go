@@ -72,6 +72,9 @@ func (*QXmlStreamReader) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamReader 
 /*
 
  */
+func (*QXmlStreamReader) NewForInherit() *QXmlStreamReader {
+	return NewQXmlStreamReader()
+}
 func NewQXmlStreamReader() *QXmlStreamReader {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQXmlStreamReader() *QXmlStreamReader {
 /*
 
  */
+func (*QXmlStreamReader) NewForInherit_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStreamReader {
+	return NewQXmlStreamReader_1(device)
+}
 func NewQXmlStreamReader_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStreamReader {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -108,6 +114,9 @@ func NewQXmlStreamReader_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStream
 /*
 
  */
+func (*QXmlStreamReader) NewForInherit_2(data QByteArray_ITF) *QXmlStreamReader {
+	return NewQXmlStreamReader_2(data)
+}
 func NewQXmlStreamReader_2(data QByteArray_ITF) *QXmlStreamReader {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -128,6 +137,9 @@ func NewQXmlStreamReader_2(data QByteArray_ITF) *QXmlStreamReader {
 /*
 
  */
+func (*QXmlStreamReader) NewForInherit_3(data string) *QXmlStreamReader {
+	return NewQXmlStreamReader_3(data)
+}
 func NewQXmlStreamReader_3(data string) *QXmlStreamReader {
 	var tmpArg0 = NewQString_5(data)
 	var convArg0 = tmpArg0.GetCthis()
@@ -146,6 +158,9 @@ func NewQXmlStreamReader_3(data string) *QXmlStreamReader {
 /*
 
  */
+func (*QXmlStreamReader) NewForInherit_4(data string) *QXmlStreamReader {
+	return NewQXmlStreamReader_4(data)
+}
 func NewQXmlStreamReader_4(data string) *QXmlStreamReader {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)

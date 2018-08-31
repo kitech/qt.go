@@ -146,6 +146,9 @@ func (this *QDateTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 Constructs an empty date time editor with a parent.
 */
+func (*QDateTimeEdit) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+	return NewQDateTimeEdit(parent)
+}
 func NewQDateTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -166,6 +169,9 @@ func NewQDateTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 /*
 Constructs an empty date time editor with a parent.
 */
+func (*QDateTimeEdit) NewForInherit__() *QDateTimeEdit {
+	return NewQDateTimeEdit__()
+}
 func NewQDateTimeEdit__() *QDateTimeEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -184,6 +190,9 @@ func NewQDateTimeEdit__() *QDateTimeEdit {
 /*
 Constructs an empty date time editor with a parent.
 */
+func (*QDateTimeEdit) NewForInherit_1(dt qtcore.QDateTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+	return NewQDateTimeEdit_1(dt, parent)
+}
 func NewQDateTimeEdit_1(dt qtcore.QDateTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if dt != nil && dt.QDateTime_PTR() != nil {
@@ -208,6 +217,9 @@ func NewQDateTimeEdit_1(dt qtcore.QDateTime_ITF, parent QWidget_ITF /*777 QWidge
 /*
 Constructs an empty date time editor with a parent.
 */
+func (*QDateTimeEdit) NewForInherit_1_(dt qtcore.QDateTime_ITF) *QDateTimeEdit {
+	return NewQDateTimeEdit_1_(dt)
+}
 func NewQDateTimeEdit_1_(dt qtcore.QDateTime_ITF) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if dt != nil && dt.QDateTime_PTR() != nil {
@@ -230,6 +242,9 @@ func NewQDateTimeEdit_1_(dt qtcore.QDateTime_ITF) *QDateTimeEdit {
 /*
 Constructs an empty date time editor with a parent.
 */
+func (*QDateTimeEdit) NewForInherit_2(d qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+	return NewQDateTimeEdit_2(d, parent)
+}
 func NewQDateTimeEdit_2(d qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if d != nil && d.QDate_PTR() != nil {
@@ -254,6 +269,9 @@ func NewQDateTimeEdit_2(d qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/
 /*
 Constructs an empty date time editor with a parent.
 */
+func (*QDateTimeEdit) NewForInherit_2_(d qtcore.QDate_ITF) *QDateTimeEdit {
+	return NewQDateTimeEdit_2_(d)
+}
 func NewQDateTimeEdit_2_(d qtcore.QDate_ITF) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if d != nil && d.QDate_PTR() != nil {
@@ -276,6 +294,9 @@ func NewQDateTimeEdit_2_(d qtcore.QDate_ITF) *QDateTimeEdit {
 /*
 Constructs an empty date time editor with a parent.
 */
+func (*QDateTimeEdit) NewForInherit_3(t qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+	return NewQDateTimeEdit_3(t, parent)
+}
 func NewQDateTimeEdit_3(t qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QTime_PTR() != nil {
@@ -300,6 +321,9 @@ func NewQDateTimeEdit_3(t qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/
 /*
 Constructs an empty date time editor with a parent.
 */
+func (*QDateTimeEdit) NewForInherit_3_(t qtcore.QTime_ITF) *QDateTimeEdit {
+	return NewQDateTimeEdit_3_(t)
+}
 func NewQDateTimeEdit_3_(t qtcore.QTime_ITF) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QTime_PTR() != nil {
@@ -322,6 +346,9 @@ func NewQDateTimeEdit_3_(t qtcore.QTime_ITF) *QDateTimeEdit {
 /*
 Constructs an empty date time editor with a parent.
 */
+func (*QDateTimeEdit) NewForInherit_4(val qtcore.QVariant_ITF, parserType int, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+	return NewQDateTimeEdit_4(val, parserType, parent)
+}
 func NewQDateTimeEdit_4(val qtcore.QVariant_ITF, parserType int, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if val != nil && val.QVariant_PTR() != nil {
@@ -346,6 +373,9 @@ func NewQDateTimeEdit_4(val qtcore.QVariant_ITF, parserType int, parent QWidget_
 /*
 Constructs an empty date time editor with a parent.
 */
+func (*QDateTimeEdit) NewForInherit_4_(val qtcore.QVariant_ITF, parserType int) *QDateTimeEdit {
+	return NewQDateTimeEdit_4_(val, parserType)
+}
 func NewQDateTimeEdit_4_(val qtcore.QVariant_ITF, parserType int) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if val != nil && val.QVariant_PTR() != nil {

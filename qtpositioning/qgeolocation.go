@@ -73,6 +73,9 @@ func (*QGeoLocation) NewFromPointer(cthis unsafe.Pointer) *QGeoLocation {
 /*
 Constructs an new location object.
 */
+func (*QGeoLocation) NewForInherit() *QGeoLocation {
+	return NewQGeoLocation()
+}
 func NewQGeoLocation() *QGeoLocation {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QGeoLocationC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

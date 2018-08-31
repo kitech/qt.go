@@ -146,6 +146,9 @@ func (this *QToolButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Constructs an empty tool button with parent parent.
 */
+func (*QToolButton) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QToolButton {
+	return NewQToolButton(parent)
+}
 func NewQToolButton(parent QWidget_ITF /*777 QWidget **/) *QToolButton {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -166,6 +169,9 @@ func NewQToolButton(parent QWidget_ITF /*777 QWidget **/) *QToolButton {
 /*
 Constructs an empty tool button with parent parent.
 */
+func (*QToolButton) NewForInherit__() *QToolButton {
+	return NewQToolButton__()
+}
 func NewQToolButton__() *QToolButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

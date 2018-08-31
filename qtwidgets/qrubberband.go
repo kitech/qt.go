@@ -123,6 +123,9 @@ Constructs a rubber band of shape s, with parent p.
 
 By default a rectangular rubber band (s is Rectangle) will use a mask, so that a small border of the rectangle is all that is visible. Some styles (e.g., native macOS) will change this and call QWidget::setWindowOpacity() to make a semi-transparent filled selection rectangle.
 */
+func (*QRubberBand) NewForInherit(arg0 int, arg1 QWidget_ITF /*777 QWidget **/) *QRubberBand {
+	return NewQRubberBand(arg0, arg1)
+}
 func NewQRubberBand(arg0 int, arg1 QWidget_ITF /*777 QWidget **/) *QRubberBand {
 	var convArg1 unsafe.Pointer
 	if arg1 != nil && arg1.QWidget_PTR() != nil {
@@ -145,6 +148,9 @@ Constructs a rubber band of shape s, with parent p.
 
 By default a rectangular rubber band (s is Rectangle) will use a mask, so that a small border of the rectangle is all that is visible. Some styles (e.g., native macOS) will change this and call QWidget::setWindowOpacity() to make a semi-transparent filled selection rectangle.
 */
+func (*QRubberBand) NewForInherit__(arg0 int) *QRubberBand {
+	return NewQRubberBand__(arg0)
+}
 func NewQRubberBand__(arg0 int) *QRubberBand {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer

@@ -73,6 +73,9 @@ func (*QTextInlineObject) NewFromPointer(cthis unsafe.Pointer) *QTextInlineObjec
 /*
 
  */
+func (*QTextInlineObject) NewForInherit() *QTextInlineObject {
+	return NewQTextInlineObject()
+}
 func NewQTextInlineObject() *QTextInlineObject {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QTextInlineObjectC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

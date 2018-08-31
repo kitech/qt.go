@@ -88,6 +88,9 @@ Constructs an empty undo stack with the parent parent. The stack will initially 
 
 See also push().
 */
+func (*QUndoStack) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QUndoStack {
+	return NewQUndoStack(parent)
+}
 func NewQUndoStack(parent qtcore.QObject_ITF /*777 QObject **/) *QUndoStack {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -110,6 +113,9 @@ Constructs an empty undo stack with the parent parent. The stack will initially 
 
 See also push().
 */
+func (*QUndoStack) NewForInherit__() *QUndoStack {
+	return NewQUndoStack__()
+}
 func NewQUndoStack__() *QUndoStack {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

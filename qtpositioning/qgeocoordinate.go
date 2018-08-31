@@ -73,6 +73,9 @@ func (*QGeoCoordinate) NewFromPointer(cthis unsafe.Pointer) *QGeoCoordinate {
 /*
 Constructs a coordinate. The coordinate will be invalid until setLatitude() and setLongitude() have been called.
 */
+func (*QGeoCoordinate) NewForInherit() *QGeoCoordinate {
+	return NewQGeoCoordinate()
+}
 func NewQGeoCoordinate() *QGeoCoordinate {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGeoCoordinateC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQGeoCoordinate() *QGeoCoordinate {
 /*
 Constructs a coordinate. The coordinate will be invalid until setLatitude() and setLongitude() have been called.
 */
+func (*QGeoCoordinate) NewForInherit_1(latitude float64, longitude float64) *QGeoCoordinate {
+	return NewQGeoCoordinate_1(latitude, longitude)
+}
 func NewQGeoCoordinate_1(latitude float64, longitude float64) *QGeoCoordinate {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGeoCoordinateC2Edd", qtrt.FFI_TYPE_POINTER, latitude, longitude)
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +111,9 @@ func NewQGeoCoordinate_1(latitude float64, longitude float64) *QGeoCoordinate {
 /*
 Constructs a coordinate. The coordinate will be invalid until setLatitude() and setLongitude() have been called.
 */
+func (*QGeoCoordinate) NewForInherit_2(latitude float64, longitude float64, altitude float64) *QGeoCoordinate {
+	return NewQGeoCoordinate_2(latitude, longitude, altitude)
+}
 func NewQGeoCoordinate_2(latitude float64, longitude float64, altitude float64) *QGeoCoordinate {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGeoCoordinateC2Eddd", qtrt.FFI_TYPE_POINTER, latitude, longitude, altitude)
 	qtrt.ErrPrint(err, rv)

@@ -85,6 +85,9 @@ func (this *QTextTable) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 /*
 
  */
+func (*QTextTable) NewForInherit(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextTable {
+	return NewQTextTable(doc)
+}
 func NewQTextTable(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextTable {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {

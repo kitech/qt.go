@@ -72,6 +72,9 @@ func (*QRegularExpressionMatch) NewFromPointer(cthis unsafe.Pointer) *QRegularEx
 /*
 
  */
+func (*QRegularExpressionMatch) NewForInherit() *QRegularExpressionMatch {
+	return NewQRegularExpressionMatch()
+}
 func NewQRegularExpressionMatch() *QRegularExpressionMatch {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QRegularExpressionMatchC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

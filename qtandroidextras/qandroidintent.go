@@ -73,6 +73,9 @@ func (*QAndroidIntent) NewFromPointer(cthis unsafe.Pointer) *QAndroidIntent {
 /*
 Create a new intent
 */
+func (*QAndroidIntent) NewForInherit() *QAndroidIntent {
+	return NewQAndroidIntent()
+}
 func NewQAndroidIntent() *QAndroidIntent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQAndroidIntent() *QAndroidIntent {
 /*
 Create a new intent
 */
+func (*QAndroidIntent) NewForInherit_1(intent QAndroidJniObject_ITF) *QAndroidIntent {
+	return NewQAndroidIntent_1(intent)
+}
 func NewQAndroidIntent_1(intent QAndroidJniObject_ITF) *QAndroidIntent {
 	var convArg0 unsafe.Pointer
 	if intent != nil && intent.QAndroidJniObject_PTR() != nil {
@@ -109,6 +115,9 @@ func NewQAndroidIntent_1(intent QAndroidJniObject_ITF) *QAndroidIntent {
 /*
 Create a new intent
 */
+func (*QAndroidIntent) NewForInherit_2(action string) *QAndroidIntent {
+	return NewQAndroidIntent_2(action)
+}
 func NewQAndroidIntent_2(action string) *QAndroidIntent {
 	var tmpArg0 = qtcore.NewQString_5(action)
 	var convArg0 = tmpArg0.GetCthis()
@@ -127,6 +136,9 @@ func NewQAndroidIntent_2(action string) *QAndroidIntent {
 /*
 Create a new intent
 */
+func (*QAndroidIntent) NewForInherit_3(packageContext QAndroidJniObject_ITF, className string) *QAndroidIntent {
+	return NewQAndroidIntent_3(packageContext, className)
+}
 func NewQAndroidIntent_3(packageContext QAndroidJniObject_ITF, className string) *QAndroidIntent {
 	var convArg0 unsafe.Pointer
 	if packageContext != nil && packageContext.QAndroidJniObject_PTR() != nil {

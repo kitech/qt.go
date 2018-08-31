@@ -74,6 +74,9 @@ func (*QQmlDebuggingEnabler) NewFromPointer(cthis unsafe.Pointer) *QQmlDebugging
 /*
 
  */
+func (*QQmlDebuggingEnabler) NewForInherit(printWarning bool) *QQmlDebuggingEnabler {
+	return NewQQmlDebuggingEnabler(printWarning)
+}
 func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnablerC2Eb", qtrt.FFI_TYPE_POINTER, printWarning)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 /*
 
  */
+func (*QQmlDebuggingEnabler) NewForInherit__() *QQmlDebuggingEnabler {
+	return NewQQmlDebuggingEnabler__()
+}
 func NewQQmlDebuggingEnabler__() *QQmlDebuggingEnabler {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	printWarning := true

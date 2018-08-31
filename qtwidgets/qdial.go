@@ -128,6 +128,9 @@ Constructs a dial.
 
 The parent argument is sent to the QAbstractSlider constructor.
 */
+func (*QDial) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QDial {
+	return NewQDial(parent)
+}
 func NewQDial(parent QWidget_ITF /*777 QWidget **/) *QDial {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -150,6 +153,9 @@ Constructs a dial.
 
 The parent argument is sent to the QAbstractSlider constructor.
 */
+func (*QDial) NewForInherit__() *QDial {
+	return NewQDial__()
+}
 func NewQDial__() *QDial {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -137,6 +137,9 @@ func (this *QMediaNetworkAccessControl) ConfigurationChanged(configuration qtnet
 /*
 
  */
+func (*QMediaNetworkAccessControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaNetworkAccessControl {
+	return NewQMediaNetworkAccessControl(parent)
+}
 func NewQMediaNetworkAccessControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaNetworkAccessControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -157,6 +160,9 @@ func NewQMediaNetworkAccessControl(parent qtcore.QObject_ITF /*777 QObject **/) 
 /*
 
  */
+func (*QMediaNetworkAccessControl) NewForInherit__() *QMediaNetworkAccessControl {
+	return NewQMediaNetworkAccessControl__()
+}
 func NewQMediaNetworkAccessControl__() *QMediaNetworkAccessControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

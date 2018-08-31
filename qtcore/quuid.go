@@ -72,6 +72,9 @@ func (*QUuid) NewFromPointer(cthis unsafe.Pointer) *QUuid {
 /*
 Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
 */
+func (*QUuid) NewForInherit() *QUuid {
+	return NewQUuid()
+}
 func NewQUuid() *QUuid {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuidC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQUuid() *QUuid {
 /*
 Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
 */
+func (*QUuid) NewForInherit_1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte, b5 byte, b6 byte, b7 byte, b8 byte) *QUuid {
+	return NewQUuid_1(l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
+}
 func NewQUuid_1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte, b5 byte, b6 byte, b7 byte, b8 byte) *QUuid {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuidC2Ejtthhhhhhhh", qtrt.FFI_TYPE_POINTER, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 	qtrt.ErrPrint(err, rv)
@@ -104,6 +110,9 @@ func NewQUuid_1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte
 /*
 Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
 */
+func (*QUuid) NewForInherit_2(arg0 string) *QUuid {
+	return NewQUuid_2(arg0)
+}
 func NewQUuid_2(arg0 string) *QUuid {
 	var tmpArg0 = NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -122,6 +131,9 @@ func NewQUuid_2(arg0 string) *QUuid {
 /*
 Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
 */
+func (*QUuid) NewForInherit_3(arg0 string) *QUuid {
+	return NewQUuid_3(arg0)
+}
 func NewQUuid_3(arg0 string) *QUuid {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
@@ -140,6 +152,9 @@ func NewQUuid_3(arg0 string) *QUuid {
 /*
 Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
 */
+func (*QUuid) NewForInherit_4(arg0 QByteArray_ITF) *QUuid {
+	return NewQUuid_4(arg0)
+}
 func NewQUuid_4(arg0 QByteArray_ITF) *QUuid {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QByteArray_PTR() != nil {

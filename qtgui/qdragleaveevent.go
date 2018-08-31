@@ -71,6 +71,9 @@ func (*QDragLeaveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragLeaveEvent {
 /*
 
  */
+func (*QDragLeaveEvent) NewForInherit() *QDragLeaveEvent {
+	return NewQDragLeaveEvent()
+}
 func NewQDragLeaveEvent() *QDragLeaveEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QDragLeaveEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -367,6 +367,9 @@ func QPaintDevice_DevicePixelRatioFScale() float64 {
 /*
 Constructs a paint device. This constructor can be invoked only from subclasses of QPaintDevice.
 */
+func (*QPaintDevice) NewForInherit() *QPaintDevice {
+	return NewQPaintDevice()
+}
 func NewQPaintDevice() *QPaintDevice {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintDeviceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -383,6 +386,9 @@ func NewQPaintDevice() *QPaintDevice {
 /*
 Constructs a paint device. This constructor can be invoked only from subclasses of QPaintDevice.
 */
+func (*QPaintDevice) NewForInherit_1(arg0 QPaintDevice_ITF) *QPaintDevice {
+	return NewQPaintDevice_1(arg0)
+}
 func NewQPaintDevice_1(arg0 QPaintDevice_ITF) *QPaintDevice {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintDevice_PTR() != nil {

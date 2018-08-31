@@ -73,6 +73,9 @@ func (*QNetworkProxyQuery) NewFromPointer(cthis unsafe.Pointer) *QNetworkProxyQu
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit() *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery()
+}
 func NewQNetworkProxyQuery() *QNetworkProxyQuery {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QNetworkProxyQueryC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQNetworkProxyQuery() *QNetworkProxyQuery {
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_1(requestUrl qtcore.QUrl_ITF, queryType int) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_1(requestUrl, queryType)
+}
 func NewQNetworkProxyQuery_1(requestUrl qtcore.QUrl_ITF, queryType int) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if requestUrl != nil && requestUrl.QUrl_PTR() != nil {
@@ -109,6 +115,9 @@ func NewQNetworkProxyQuery_1(requestUrl qtcore.QUrl_ITF, queryType int) *QNetwor
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_1_(requestUrl qtcore.QUrl_ITF) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_1_(requestUrl)
+}
 func NewQNetworkProxyQuery_1_(requestUrl qtcore.QUrl_ITF) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if requestUrl != nil && requestUrl.QUrl_PTR() != nil {
@@ -131,6 +140,9 @@ func NewQNetworkProxyQuery_1_(requestUrl qtcore.QUrl_ITF) *QNetworkProxyQuery {
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_2(hostname string, port int, protocolTag string, queryType int) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_2(hostname, port, protocolTag, queryType)
+}
 func NewQNetworkProxyQuery_2(hostname string, port int, protocolTag string, queryType int) *QNetworkProxyQuery {
 	var tmpArg0 = qtcore.NewQString_5(hostname)
 	var convArg0 = tmpArg0.GetCthis()
@@ -151,6 +163,9 @@ func NewQNetworkProxyQuery_2(hostname string, port int, protocolTag string, quer
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_2_(hostname string, port int) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_2_(hostname, port)
+}
 func NewQNetworkProxyQuery_2_(hostname string, port int) *QNetworkProxyQuery {
 	var tmpArg0 = qtcore.NewQString_5(hostname)
 	var convArg0 = tmpArg0.GetCthis()
@@ -173,6 +188,9 @@ func NewQNetworkProxyQuery_2_(hostname string, port int) *QNetworkProxyQuery {
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_2_1(hostname string, port int, protocolTag string) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_2_1(hostname, port, protocolTag)
+}
 func NewQNetworkProxyQuery_2_1(hostname string, port int, protocolTag string) *QNetworkProxyQuery {
 	var tmpArg0 = qtcore.NewQString_5(hostname)
 	var convArg0 = tmpArg0.GetCthis()
@@ -195,6 +213,9 @@ func NewQNetworkProxyQuery_2_1(hostname string, port int, protocolTag string) *Q
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_3(bindPort uint16, protocolTag string, queryType int) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_3(bindPort, protocolTag, queryType)
+}
 func NewQNetworkProxyQuery_3(bindPort uint16, protocolTag string, queryType int) *QNetworkProxyQuery {
 	var tmpArg1 = qtcore.NewQString_5(protocolTag)
 	var convArg1 = tmpArg1.GetCthis()
@@ -213,6 +234,9 @@ func NewQNetworkProxyQuery_3(bindPort uint16, protocolTag string, queryType int)
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_3_(bindPort uint16) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_3_(bindPort)
+}
 func NewQNetworkProxyQuery_3_(bindPort uint16) *QNetworkProxyQuery {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
@@ -233,6 +257,9 @@ func NewQNetworkProxyQuery_3_(bindPort uint16) *QNetworkProxyQuery {
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_3_1(bindPort uint16, protocolTag string) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_3_1(bindPort, protocolTag)
+}
 func NewQNetworkProxyQuery_3_1(bindPort uint16, protocolTag string) *QNetworkProxyQuery {
 	var tmpArg1 = qtcore.NewQString_5(protocolTag)
 	var convArg1 = tmpArg1.GetCthis()
@@ -253,6 +280,9 @@ func NewQNetworkProxyQuery_3_1(bindPort uint16, protocolTag string) *QNetworkPro
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_4(networkConfiguration QNetworkConfiguration_ITF, requestUrl qtcore.QUrl_ITF, queryType int) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_4(networkConfiguration, requestUrl, queryType)
+}
 func NewQNetworkProxyQuery_4(networkConfiguration QNetworkConfiguration_ITF, requestUrl qtcore.QUrl_ITF, queryType int) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -277,6 +307,9 @@ func NewQNetworkProxyQuery_4(networkConfiguration QNetworkConfiguration_ITF, req
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_4_(networkConfiguration QNetworkConfiguration_ITF, requestUrl qtcore.QUrl_ITF) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_4_(networkConfiguration, requestUrl)
+}
 func NewQNetworkProxyQuery_4_(networkConfiguration QNetworkConfiguration_ITF, requestUrl qtcore.QUrl_ITF) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -303,6 +336,9 @@ func NewQNetworkProxyQuery_4_(networkConfiguration QNetworkConfiguration_ITF, re
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_5(networkConfiguration QNetworkConfiguration_ITF, hostname string, port int, protocolTag string, queryType int) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_5(networkConfiguration, hostname, port, protocolTag, queryType)
+}
 func NewQNetworkProxyQuery_5(networkConfiguration QNetworkConfiguration_ITF, hostname string, port int, protocolTag string, queryType int) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -327,6 +363,9 @@ func NewQNetworkProxyQuery_5(networkConfiguration QNetworkConfiguration_ITF, hos
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_5_(networkConfiguration QNetworkConfiguration_ITF, hostname string, port int) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_5_(networkConfiguration, hostname, port)
+}
 func NewQNetworkProxyQuery_5_(networkConfiguration QNetworkConfiguration_ITF, hostname string, port int) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -353,6 +392,9 @@ func NewQNetworkProxyQuery_5_(networkConfiguration QNetworkConfiguration_ITF, ho
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_5_1(networkConfiguration QNetworkConfiguration_ITF, hostname string, port int, protocolTag string) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_5_1(networkConfiguration, hostname, port, protocolTag)
+}
 func NewQNetworkProxyQuery_5_1(networkConfiguration QNetworkConfiguration_ITF, hostname string, port int, protocolTag string) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -379,6 +421,9 @@ func NewQNetworkProxyQuery_5_1(networkConfiguration QNetworkConfiguration_ITF, h
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_6(networkConfiguration QNetworkConfiguration_ITF, bindPort uint16, protocolTag string, queryType int) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_6(networkConfiguration, bindPort, protocolTag, queryType)
+}
 func NewQNetworkProxyQuery_6(networkConfiguration QNetworkConfiguration_ITF, bindPort uint16, protocolTag string, queryType int) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -401,6 +446,9 @@ func NewQNetworkProxyQuery_6(networkConfiguration QNetworkConfiguration_ITF, bin
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_6_(networkConfiguration QNetworkConfiguration_ITF, bindPort uint16) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_6_(networkConfiguration, bindPort)
+}
 func NewQNetworkProxyQuery_6_(networkConfiguration QNetworkConfiguration_ITF, bindPort uint16) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {
@@ -425,6 +473,9 @@ func NewQNetworkProxyQuery_6_(networkConfiguration QNetworkConfiguration_ITF, bi
 /*
 
  */
+func (*QNetworkProxyQuery) NewForInherit_6_1(networkConfiguration QNetworkConfiguration_ITF, bindPort uint16, protocolTag string) *QNetworkProxyQuery {
+	return NewQNetworkProxyQuery_6_1(networkConfiguration, bindPort, protocolTag)
+}
 func NewQNetworkProxyQuery_6_1(networkConfiguration QNetworkConfiguration_ITF, bindPort uint16, protocolTag string) *QNetworkProxyQuery {
 	var convArg0 unsafe.Pointer
 	if networkConfiguration != nil && networkConfiguration.QNetworkConfiguration_PTR() != nil {

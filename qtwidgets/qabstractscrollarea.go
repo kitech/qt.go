@@ -188,6 +188,9 @@ Constructs a viewport.
 
 The parent argument is sent to the QWidget constructor.
 */
+func (*QAbstractScrollArea) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QAbstractScrollArea {
+	return NewQAbstractScrollArea(parent)
+}
 func NewQAbstractScrollArea(parent QWidget_ITF /*777 QWidget **/) *QAbstractScrollArea {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -210,6 +213,9 @@ Constructs a viewport.
 
 The parent argument is sent to the QWidget constructor.
 */
+func (*QAbstractScrollArea) NewForInherit__() *QAbstractScrollArea {
+	return NewQAbstractScrollArea__()
+}
 func NewQAbstractScrollArea__() *QAbstractScrollArea {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

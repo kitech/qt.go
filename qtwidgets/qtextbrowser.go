@@ -126,6 +126,9 @@ func (this *QTextBrowser) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 /*
 Constructs an empty QTextBrowser with parent parent.
 */
+func (*QTextBrowser) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTextBrowser {
+	return NewQTextBrowser(parent)
+}
 func NewQTextBrowser(parent QWidget_ITF /*777 QWidget **/) *QTextBrowser {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -146,6 +149,9 @@ func NewQTextBrowser(parent QWidget_ITF /*777 QWidget **/) *QTextBrowser {
 /*
 Constructs an empty QTextBrowser with parent parent.
 */
+func (*QTextBrowser) NewForInherit__() *QTextBrowser {
+	return NewQTextBrowser__()
+}
 func NewQTextBrowser__() *QTextBrowser {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -72,6 +72,9 @@ func (*QGraphicsItemGroup) NewFromPointer(cthis unsafe.Pointer) *QGraphicsItemGr
 /*
 
  */
+func (*QGraphicsItemGroup) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsItemGroup {
+	return NewQGraphicsItemGroup(parent)
+}
 func NewQGraphicsItemGroup(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsItemGroup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -92,6 +95,9 @@ func NewQGraphicsItemGroup(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QG
 /*
 
  */
+func (*QGraphicsItemGroup) NewForInherit__() *QGraphicsItemGroup {
+	return NewQGraphicsItemGroup__()
+}
 func NewQGraphicsItemGroup__() *QGraphicsItemGroup {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer

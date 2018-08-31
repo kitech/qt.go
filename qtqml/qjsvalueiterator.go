@@ -74,6 +74,9 @@ func (*QJSValueIterator) NewFromPointer(cthis unsafe.Pointer) *QJSValueIterator 
 /*
 Constructs an iterator for traversing object. The iterator is set to be at the front of the sequence of properties (before the first property).
 */
+func (*QJSValueIterator) NewForInherit(value QJSValue_ITF) *QJSValueIterator {
+	return NewQJSValueIterator(value)
+}
 func NewQJSValueIterator(value QJSValue_ITF) *QJSValueIterator {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QJSValue_PTR() != nil {

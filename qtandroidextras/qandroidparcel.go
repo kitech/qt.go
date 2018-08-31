@@ -73,6 +73,9 @@ func (*QAndroidParcel) NewFromPointer(cthis unsafe.Pointer) *QAndroidParcel {
 /*
 Creates a new object.
 */
+func (*QAndroidParcel) NewForInherit() *QAndroidParcel {
+	return NewQAndroidParcel()
+}
 func NewQAndroidParcel() *QAndroidParcel {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidParcelC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQAndroidParcel() *QAndroidParcel {
 /*
 Creates a new object.
 */
+func (*QAndroidParcel) NewForInherit_1(parcel QAndroidJniObject_ITF) *QAndroidParcel {
+	return NewQAndroidParcel_1(parcel)
+}
 func NewQAndroidParcel_1(parcel QAndroidJniObject_ITF) *QAndroidParcel {
 	var convArg0 unsafe.Pointer
 	if parcel != nil && parcel.QAndroidJniObject_PTR() != nil {

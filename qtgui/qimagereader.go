@@ -73,6 +73,9 @@ func (*QImageReader) NewFromPointer(cthis unsafe.Pointer) *QImageReader {
 /*
 Constructs an empty QImageReader object. Before reading an image, call setDevice() or setFileName().
 */
+func (*QImageReader) NewForInherit() *QImageReader {
+	return NewQImageReader()
+}
 func NewQImageReader() *QImageReader {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReaderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQImageReader() *QImageReader {
 /*
 Constructs an empty QImageReader object. Before reading an image, call setDevice() or setFileName().
 */
+func (*QImageReader) NewForInherit_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageReader {
+	return NewQImageReader_1(device, format)
+}
 func NewQImageReader_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageReader {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -113,6 +119,9 @@ func NewQImageReader_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format q
 /*
 Constructs an empty QImageReader object. Before reading an image, call setDevice() or setFileName().
 */
+func (*QImageReader) NewForInherit_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QImageReader {
+	return NewQImageReader_1_(device)
+}
 func NewQImageReader_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QImageReader {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -135,6 +144,9 @@ func NewQImageReader_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QImage
 /*
 Constructs an empty QImageReader object. Before reading an image, call setDevice() or setFileName().
 */
+func (*QImageReader) NewForInherit_2(fileName string, format qtcore.QByteArray_ITF) *QImageReader {
+	return NewQImageReader_2(fileName, format)
+}
 func NewQImageReader_2(fileName string, format qtcore.QByteArray_ITF) *QImageReader {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -157,6 +169,9 @@ func NewQImageReader_2(fileName string, format qtcore.QByteArray_ITF) *QImageRea
 /*
 Constructs an empty QImageReader object. Before reading an image, call setDevice() or setFileName().
 */
+func (*QImageReader) NewForInherit_2_(fileName string) *QImageReader {
+	return NewQImageReader_2_(fileName)
+}
 func NewQImageReader_2_(fileName string) *QImageReader {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

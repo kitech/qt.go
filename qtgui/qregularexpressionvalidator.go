@@ -87,6 +87,9 @@ func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*777 
 /*
 
  */
+func (*QRegularExpressionValidator) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
+	return NewQRegularExpressionValidator(parent)
+}
 func NewQRegularExpressionValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQRegularExpressionValidator(parent qtcore.QObject_ITF /*777 QObject **/)
 /*
 
  */
+func (*QRegularExpressionValidator) NewForInherit__() *QRegularExpressionValidator {
+	return NewQRegularExpressionValidator__()
+}
 func NewQRegularExpressionValidator__() *QRegularExpressionValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -125,6 +131,9 @@ func NewQRegularExpressionValidator__() *QRegularExpressionValidator {
 /*
 
  */
+func (*QRegularExpressionValidator) NewForInherit_1(re qtcore.QRegularExpression_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
+	return NewQRegularExpressionValidator_1(re, parent)
+}
 func NewQRegularExpressionValidator_1(re qtcore.QRegularExpression_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
@@ -149,6 +158,9 @@ func NewQRegularExpressionValidator_1(re qtcore.QRegularExpression_ITF, parent q
 /*
 
  */
+func (*QRegularExpressionValidator) NewForInherit_1_(re qtcore.QRegularExpression_ITF) *QRegularExpressionValidator {
+	return NewQRegularExpressionValidator_1_(re)
+}
 func NewQRegularExpressionValidator_1_(re qtcore.QRegularExpression_ITF) *QRegularExpressionValidator {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {

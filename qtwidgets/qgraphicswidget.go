@@ -211,6 +211,9 @@ func (this *QGraphicsWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 /*
 Constructs a QGraphicsWidget instance. The optional parent argument is passed to QGraphicsItem's constructor. The optional wFlags argument specifies the widget's window flags (e.g., whether the widget should be a window, a tool, a popup, etc).
 */
+func (*QGraphicsWidget) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, wFlags int) *QGraphicsWidget {
+	return NewQGraphicsWidget(parent, wFlags)
+}
 func NewQGraphicsWidget(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, wFlags int) *QGraphicsWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -231,6 +234,9 @@ func NewQGraphicsWidget(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, wFlags
 /*
 Constructs a QGraphicsWidget instance. The optional parent argument is passed to QGraphicsItem's constructor. The optional wFlags argument specifies the widget's window flags (e.g., whether the widget should be a window, a tool, a popup, etc).
 */
+func (*QGraphicsWidget) NewForInherit__() *QGraphicsWidget {
+	return NewQGraphicsWidget__()
+}
 func NewQGraphicsWidget__() *QGraphicsWidget {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -251,6 +257,9 @@ func NewQGraphicsWidget__() *QGraphicsWidget {
 /*
 Constructs a QGraphicsWidget instance. The optional parent argument is passed to QGraphicsItem's constructor. The optional wFlags argument specifies the widget's window flags (e.g., whether the widget should be a window, a tool, a popup, etc).
 */
+func (*QGraphicsWidget) NewForInherit__1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsWidget {
+	return NewQGraphicsWidget__1(parent)
+}
 func NewQGraphicsWidget__1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {

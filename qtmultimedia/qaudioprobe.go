@@ -87,6 +87,9 @@ func (this *QAudioProbe) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Creates a new QAudioProbe class with a parent. After setting the source to monitor with setSource(), the audioBufferProbed() signal will be emitted when audio buffers are flowing in the source media object.
 */
+func (*QAudioProbe) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioProbe {
+	return NewQAudioProbe(parent)
+}
 func NewQAudioProbe(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioProbe {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQAudioProbe(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioProbe {
 /*
 Creates a new QAudioProbe class with a parent. After setting the source to monitor with setSource(), the audioBufferProbed() signal will be emitted when audio buffers are flowing in the source media object.
 */
+func (*QAudioProbe) NewForInherit__() *QAudioProbe {
+	return NewQAudioProbe__()
+}
 func NewQAudioProbe__() *QAudioProbe {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

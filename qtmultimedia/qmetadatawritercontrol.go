@@ -265,6 +265,9 @@ func (this *QMetaDataWriterControl) MetaDataAvailableChanged(available bool) {
 /*
 Construct a QMetaDataWriterControl with parent. This class is meant as a base class for service specific meta data providers so this constructor is protected.
 */
+func (*QMetaDataWriterControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMetaDataWriterControl {
+	return NewQMetaDataWriterControl(parent)
+}
 func NewQMetaDataWriterControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMetaDataWriterControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -285,6 +288,9 @@ func NewQMetaDataWriterControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMe
 /*
 Construct a QMetaDataWriterControl with parent. This class is meant as a base class for service specific meta data providers so this constructor is protected.
 */
+func (*QMetaDataWriterControl) NewForInherit__() *QMetaDataWriterControl {
+	return NewQMetaDataWriterControl__()
+}
 func NewQMetaDataWriterControl__() *QMetaDataWriterControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

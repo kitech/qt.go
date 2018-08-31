@@ -169,6 +169,9 @@ func (this *QCameraLocksControl) LockStatusChanged(type_ int, status int, reason
 /*
 Constructs a camera locks control object with parent.
 */
+func (*QCameraLocksControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraLocksControl {
+	return NewQCameraLocksControl(parent)
+}
 func NewQCameraLocksControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraLocksControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -189,6 +192,9 @@ func NewQCameraLocksControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCamer
 /*
 Constructs a camera locks control object with parent.
 */
+func (*QCameraLocksControl) NewForInherit__() *QCameraLocksControl {
+	return NewQCameraLocksControl__()
+}
 func NewQCameraLocksControl__() *QCameraLocksControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

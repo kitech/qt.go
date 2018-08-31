@@ -71,6 +71,9 @@ func (*QInputMethodEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMethodEven
 /*
 
  */
+func (*QInputMethodEvent) NewForInherit() *QInputMethodEvent {
+	return NewQInputMethodEvent()
+}
 func NewQInputMethodEvent() *QInputMethodEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QInputMethodEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

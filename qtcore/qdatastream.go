@@ -74,6 +74,9 @@ Constructs a data stream that has no I/O device.
 
 See also setDevice().
 */
+func (*QDataStream) NewForInherit() *QDataStream {
+	return NewQDataStream()
+}
 func NewQDataStream() *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs a data stream that has no I/O device.
 
 See also setDevice().
 */
+func (*QDataStream) NewForInherit_1(arg0 QIODevice_ITF /*777 QIODevice **/) *QDataStream {
+	return NewQDataStream_1(arg0)
+}
 func NewQDataStream_1(arg0 QIODevice_ITF /*777 QIODevice **/) *QDataStream {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QIODevice_PTR() != nil {
@@ -114,6 +120,9 @@ Constructs a data stream that has no I/O device.
 
 See also setDevice().
 */
+func (*QDataStream) NewForInherit_2(arg0 QByteArray_ITF /*777 QByteArray **/, flags int) *QDataStream {
+	return NewQDataStream_2(arg0, flags)
+}
 func NewQDataStream_2(arg0 QByteArray_ITF /*777 QByteArray **/, flags int) *QDataStream {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QByteArray_PTR() != nil {
@@ -136,6 +145,9 @@ Constructs a data stream that has no I/O device.
 
 See also setDevice().
 */
+func (*QDataStream) NewForInherit_3(arg0 QByteArray_ITF) *QDataStream {
+	return NewQDataStream_3(arg0)
+}
 func NewQDataStream_3(arg0 QByteArray_ITF) *QDataStream {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QByteArray_PTR() != nil {

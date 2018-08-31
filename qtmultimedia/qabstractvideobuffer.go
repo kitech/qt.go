@@ -75,6 +75,9 @@ func (*QAbstractVideoBuffer) NewFromPointer(cthis unsafe.Pointer) *QAbstractVide
 /*
 Constructs an abstract video buffer of the given type.
 */
+func (*QAbstractVideoBuffer) NewForInherit(type_ int) *QAbstractVideoBuffer {
+	return NewQAbstractVideoBuffer(type_)
+}
 func NewQAbstractVideoBuffer(type_ int) *QAbstractVideoBuffer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAbstractVideoBufferC2ENS_10HandleTypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

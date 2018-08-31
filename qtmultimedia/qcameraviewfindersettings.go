@@ -77,6 +77,9 @@ func (*QCameraViewfinderSettings) NewFromPointer(cthis unsafe.Pointer) *QCameraV
 /*
 Constructs a null viewfinder settings object.
 */
+func (*QCameraViewfinderSettings) NewForInherit() *QCameraViewfinderSettings {
+	return NewQCameraViewfinderSettings()
+}
 func NewQCameraViewfinderSettings() *QCameraViewfinderSettings {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QCameraViewfinderSettingsC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

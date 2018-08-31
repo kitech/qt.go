@@ -398,6 +398,9 @@ The parent is passed to QObject.
 
 This class is meant as a base class for multimedia objects so this constructor is protected.
 */
+func (*QMediaObject) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/, service QMediaService_ITF /*777 QMediaService **/) *QMediaObject {
+	return NewQMediaObject(parent, service)
+}
 func NewQMediaObject(parent qtcore.QObject_ITF /*777 QObject **/, service QMediaService_ITF /*777 QMediaService **/) *QMediaObject {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

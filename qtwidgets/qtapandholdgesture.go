@@ -86,6 +86,9 @@ func (this *QTapAndHoldGesture) MetaObject() *qtcore.QMetaObject /*777 const QMe
 /*
 
  */
+func (*QTapAndHoldGesture) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QTapAndHoldGesture {
+	return NewQTapAndHoldGesture(parent)
+}
 func NewQTapAndHoldGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QTapAndHoldGesture {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQTapAndHoldGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QTapAnd
 /*
 
  */
+func (*QTapAndHoldGesture) NewForInherit__() *QTapAndHoldGesture {
+	return NewQTapAndHoldGesture__()
+}
 func NewQTapAndHoldGesture__() *QTapAndHoldGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

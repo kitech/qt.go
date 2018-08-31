@@ -74,6 +74,9 @@ func (*QMessageAuthenticationCode) NewFromPointer(cthis unsafe.Pointer) *QMessag
 /*
 Constructs an object that can be used to create a cryptographic hash from data using method method and key key.
 */
+func (*QMessageAuthenticationCode) NewForInherit(method int, key QByteArray_ITF) *QMessageAuthenticationCode {
+	return NewQMessageAuthenticationCode(method, key)
+}
 func NewQMessageAuthenticationCode(method int, key QByteArray_ITF) *QMessageAuthenticationCode {
 	var convArg1 unsafe.Pointer
 	if key != nil && key.QByteArray_PTR() != nil {
@@ -94,6 +97,9 @@ func NewQMessageAuthenticationCode(method int, key QByteArray_ITF) *QMessageAuth
 /*
 Constructs an object that can be used to create a cryptographic hash from data using method method and key key.
 */
+func (*QMessageAuthenticationCode) NewForInherit__(method int) *QMessageAuthenticationCode {
+	return NewQMessageAuthenticationCode__(method)
+}
 func NewQMessageAuthenticationCode__(method int) *QMessageAuthenticationCode {
 	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = NewQByteArray()

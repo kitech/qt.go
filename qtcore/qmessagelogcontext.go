@@ -72,6 +72,9 @@ func (*QMessageLogContext) NewFromPointer(cthis unsafe.Pointer) *QMessageLogCont
 /*
 
  */
+func (*QMessageLogContext) NewForInherit() *QMessageLogContext {
+	return NewQMessageLogContext()
+}
 func NewQMessageLogContext() *QMessageLogContext {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMessageLogContextC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQMessageLogContext() *QMessageLogContext {
 /*
 
  */
+func (*QMessageLogContext) NewForInherit_1(fileName string, lineNumber int, functionName string, categoryName string) *QMessageLogContext {
+	return NewQMessageLogContext_1(fileName, lineNumber, functionName, categoryName)
+}
 func NewQMessageLogContext_1(fileName string, lineNumber int, functionName string, categoryName string) *QMessageLogContext {
 	var convArg0 = qtrt.CString(fileName)
 	defer qtrt.FreeMem(convArg0)

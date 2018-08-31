@@ -87,6 +87,9 @@ Constructs a QMovie object, passing the parent object to QObject's constructor.
 
 See also setFileName(), setDevice(), and setFormat().
 */
+func (*QMovie) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMovie {
+	return NewQMovie(parent)
+}
 func NewQMovie(parent qtcore.QObject_ITF /*777 QObject **/) *QMovie {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -109,6 +112,9 @@ Constructs a QMovie object, passing the parent object to QObject's constructor.
 
 See also setFileName(), setDevice(), and setFormat().
 */
+func (*QMovie) NewForInherit__() *QMovie {
+	return NewQMovie__()
+}
 func NewQMovie__() *QMovie {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -129,6 +135,9 @@ Constructs a QMovie object, passing the parent object to QObject's constructor.
 
 See also setFileName(), setDevice(), and setFormat().
 */
+func (*QMovie) NewForInherit_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QMovie {
+	return NewQMovie_1(device, format, parent)
+}
 func NewQMovie_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QMovie {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -159,6 +168,9 @@ Constructs a QMovie object, passing the parent object to QObject's constructor.
 
 See also setFileName(), setDevice(), and setFormat().
 */
+func (*QMovie) NewForInherit_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QMovie {
+	return NewQMovie_1_(device)
+}
 func NewQMovie_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QMovie {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -185,6 +197,9 @@ Constructs a QMovie object, passing the parent object to QObject's constructor.
 
 See also setFileName(), setDevice(), and setFormat().
 */
+func (*QMovie) NewForInherit_1_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QMovie {
+	return NewQMovie_1_1(device, format)
+}
 func NewQMovie_1_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QMovie {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -213,6 +228,9 @@ Constructs a QMovie object, passing the parent object to QObject's constructor.
 
 See also setFileName(), setDevice(), and setFormat().
 */
+func (*QMovie) NewForInherit_2(fileName string, format qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QMovie {
+	return NewQMovie_2(fileName, format, parent)
+}
 func NewQMovie_2(fileName string, format qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QMovie {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -241,6 +259,9 @@ Constructs a QMovie object, passing the parent object to QObject's constructor.
 
 See also setFileName(), setDevice(), and setFormat().
 */
+func (*QMovie) NewForInherit_2_(fileName string) *QMovie {
+	return NewQMovie_2_(fileName)
+}
 func NewQMovie_2_(fileName string) *QMovie {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -265,6 +286,9 @@ Constructs a QMovie object, passing the parent object to QObject's constructor.
 
 See also setFileName(), setDevice(), and setFormat().
 */
+func (*QMovie) NewForInherit_2_1(fileName string, format qtcore.QByteArray_ITF) *QMovie {
+	return NewQMovie_2_1(fileName, format)
+}
 func NewQMovie_2_1(fileName string, format qtcore.QByteArray_ITF) *QMovie {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

@@ -85,6 +85,9 @@ func (this *QValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 /*
 Sets up the validator. The parent parameter is passed on to the QObject constructor.
 */
+func (*QValidator) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QValidator {
+	return NewQValidator(parent)
+}
 func NewQValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QValidator {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -105,6 +108,9 @@ func NewQValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QValidator {
 /*
 Sets up the validator. The parent parameter is passed on to the QObject constructor.
 */
+func (*QValidator) NewForInherit__() *QValidator {
+	return NewQValidator__()
+}
 func NewQValidator__() *QValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

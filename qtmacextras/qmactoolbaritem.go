@@ -86,6 +86,9 @@ func (this *QMacToolBarItem) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 /*
 Constructs a QMacToolBarItem with parent.
 */
+func (*QMacToolBarItem) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBarItem {
+	return NewQMacToolBarItem(parent)
+}
 func NewQMacToolBarItem(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBarItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQMacToolBarItem(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBa
 /*
 Constructs a QMacToolBarItem with parent.
 */
+func (*QMacToolBarItem) NewForInherit__() *QMacToolBarItem {
+	return NewQMacToolBarItem__()
+}
 func NewQMacToolBarItem__() *QMacToolBarItem {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

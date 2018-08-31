@@ -88,6 +88,9 @@ Constructs a new QBoxLayout with direction dir and parent widget parent.
 
 See also direction().
 */
+func (*QBoxLayout) NewForInherit(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QBoxLayout {
+	return NewQBoxLayout(arg0, parent)
+}
 func NewQBoxLayout(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QBoxLayout {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -110,6 +113,9 @@ Constructs a new QBoxLayout with direction dir and parent widget parent.
 
 See also direction().
 */
+func (*QBoxLayout) NewForInherit__(arg0 int) *QBoxLayout {
+	return NewQBoxLayout__(arg0)
+}
 func NewQBoxLayout__(arg0 int) *QBoxLayout {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer

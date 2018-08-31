@@ -86,6 +86,9 @@ func (this *QSwipeGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 
  */
+func (*QSwipeGesture) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QSwipeGesture {
+	return NewQSwipeGesture(parent)
+}
 func NewQSwipeGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QSwipeGesture {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQSwipeGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QSwipeGestur
 /*
 
  */
+func (*QSwipeGesture) NewForInherit__() *QSwipeGesture {
+	return NewQSwipeGesture__()
+}
 func NewQSwipeGesture__() *QSwipeGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -73,6 +73,9 @@ func (*QImageWriter) NewFromPointer(cthis unsafe.Pointer) *QImageWriter {
 /*
 Constructs an empty QImageWriter object. Before writing, you must call setFormat() to set an image format, then setDevice() or setFileName().
 */
+func (*QImageWriter) NewForInherit() *QImageWriter {
+	return NewQImageWriter()
+}
 func NewQImageWriter() *QImageWriter {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriterC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQImageWriter() *QImageWriter {
 /*
 Constructs an empty QImageWriter object. Before writing, you must call setFormat() to set an image format, then setDevice() or setFileName().
 */
+func (*QImageWriter) NewForInherit_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageWriter {
+	return NewQImageWriter_1(device, format)
+}
 func NewQImageWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageWriter {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -113,6 +119,9 @@ func NewQImageWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format q
 /*
 Constructs an empty QImageWriter object. Before writing, you must call setFormat() to set an image format, then setDevice() or setFileName().
 */
+func (*QImageWriter) NewForInherit_2(fileName string, format qtcore.QByteArray_ITF) *QImageWriter {
+	return NewQImageWriter_2(fileName, format)
+}
 func NewQImageWriter_2(fileName string, format qtcore.QByteArray_ITF) *QImageWriter {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -135,6 +144,9 @@ func NewQImageWriter_2(fileName string, format qtcore.QByteArray_ITF) *QImageWri
 /*
 Constructs an empty QImageWriter object. Before writing, you must call setFormat() to set an image format, then setDevice() or setFileName().
 */
+func (*QImageWriter) NewForInherit_2_(fileName string) *QImageWriter {
+	return NewQImageWriter_2_(fileName)
+}
 func NewQImageWriter_2_(fileName string) *QImageWriter {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

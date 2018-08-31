@@ -161,6 +161,9 @@ func (this *QMenuBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 /*
 Constructs a menu bar with parent parent.
 */
+func (*QMenuBar) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QMenuBar {
+	return NewQMenuBar(parent)
+}
 func NewQMenuBar(parent QWidget_ITF /*777 QWidget **/) *QMenuBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -181,6 +184,9 @@ func NewQMenuBar(parent QWidget_ITF /*777 QWidget **/) *QMenuBar {
 /*
 Constructs a menu bar with parent parent.
 */
+func (*QMenuBar) NewForInherit__() *QMenuBar {
+	return NewQMenuBar__()
+}
 func NewQMenuBar__() *QMenuBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

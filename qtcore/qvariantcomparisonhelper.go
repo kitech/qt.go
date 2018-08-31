@@ -74,6 +74,9 @@ func (*QVariantComparisonHelper) NewFromPointer(cthis unsafe.Pointer) *QVariantC
 /*
 
  */
+func (*QVariantComparisonHelper) NewForInherit(var_ QVariant_ITF) *QVariantComparisonHelper {
+	return NewQVariantComparisonHelper(var_)
+}
 func NewQVariantComparisonHelper(var_ QVariant_ITF) *QVariantComparisonHelper {
 	var convArg0 unsafe.Pointer
 	if var_ != nil && var_.QVariant_PTR() != nil {

@@ -109,6 +109,9 @@ func (this *QSortFilterProxyModel) MetaObject() *QMetaObject /*777 const QMetaOb
 /*
 Constructs a sorting filter model with the given parent.
 */
+func (*QSortFilterProxyModel) NewForInherit(parent QObject_ITF /*777 QObject **/) *QSortFilterProxyModel {
+	return NewQSortFilterProxyModel(parent)
+}
 func NewQSortFilterProxyModel(parent QObject_ITF /*777 QObject **/) *QSortFilterProxyModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -129,6 +132,9 @@ func NewQSortFilterProxyModel(parent QObject_ITF /*777 QObject **/) *QSortFilter
 /*
 Constructs a sorting filter model with the given parent.
 */
+func (*QSortFilterProxyModel) NewForInherit__() *QSortFilterProxyModel {
+	return NewQSortFilterProxyModel__()
+}
 func NewQSortFilterProxyModel__() *QSortFilterProxyModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

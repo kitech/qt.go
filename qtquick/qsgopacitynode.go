@@ -74,6 +74,9 @@ func (*QSGOpacityNode) NewFromPointer(cthis unsafe.Pointer) *QSGOpacityNode {
 /*
 
  */
+func (*QSGOpacityNode) NewForInherit() *QSGOpacityNode {
+	return NewQSGOpacityNode()
+}
 func NewQSGOpacityNode() *QSGOpacityNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGOpacityNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -176,6 +176,9 @@ func (this *QCameraFlashControl) FlashReady(arg0 bool) {
 /*
 Constructs a camera flash control object with parent.
 */
+func (*QCameraFlashControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraFlashControl {
+	return NewQCameraFlashControl(parent)
+}
 func NewQCameraFlashControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraFlashControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -196,6 +199,9 @@ func NewQCameraFlashControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCamer
 /*
 Constructs a camera flash control object with parent.
 */
+func (*QCameraFlashControl) NewForInherit__() *QCameraFlashControl {
+	return NewQCameraFlashControl__()
+}
 func NewQCameraFlashControl__() *QCameraFlashControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

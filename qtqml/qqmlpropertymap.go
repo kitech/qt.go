@@ -91,6 +91,9 @@ func (this *QQmlPropertyMap) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 /*
 Constructs a bindable map with parent object parent.
 */
+func (*QQmlPropertyMap) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlPropertyMap {
+	return NewQQmlPropertyMap(parent)
+}
 func NewQQmlPropertyMap(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlPropertyMap {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -111,6 +114,9 @@ func NewQQmlPropertyMap(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlProper
 /*
 Constructs a bindable map with parent object parent.
 */
+func (*QQmlPropertyMap) NewForInherit__() *QQmlPropertyMap {
+	return NewQQmlPropertyMap__()
+}
 func NewQQmlPropertyMap__() *QQmlPropertyMap {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

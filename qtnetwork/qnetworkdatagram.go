@@ -77,6 +77,9 @@ The payload can be modified by using setData() and the destination address can b
 
 If the destination address is left undefined, QUdpSocket::writeDatagram() will attempt to send the datagram to the address last associated with, by using QUdpSocket::connectToHost().
 */
+func (*QNetworkDatagram) NewForInherit() *QNetworkDatagram {
+	return NewQNetworkDatagram()
+}
 func NewQNetworkDatagram() *QNetworkDatagram {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagramC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +100,9 @@ The payload can be modified by using setData() and the destination address can b
 
 If the destination address is left undefined, QUdpSocket::writeDatagram() will attempt to send the datagram to the address last associated with, by using QUdpSocket::connectToHost().
 */
+func (*QNetworkDatagram) NewForInherit_1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF, port uint16) *QNetworkDatagram {
+	return NewQNetworkDatagram_1(data, destinationAddress, port)
+}
 func NewQNetworkDatagram_1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF, port uint16) *QNetworkDatagram {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -125,6 +131,9 @@ The payload can be modified by using setData() and the destination address can b
 
 If the destination address is left undefined, QUdpSocket::writeDatagram() will attempt to send the datagram to the address last associated with, by using QUdpSocket::connectToHost().
 */
+func (*QNetworkDatagram) NewForInherit_1_(data qtcore.QByteArray_ITF) *QNetworkDatagram {
+	return NewQNetworkDatagram_1_(data)
+}
 func NewQNetworkDatagram_1_(data qtcore.QByteArray_ITF) *QNetworkDatagram {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -153,6 +162,9 @@ The payload can be modified by using setData() and the destination address can b
 
 If the destination address is left undefined, QUdpSocket::writeDatagram() will attempt to send the datagram to the address last associated with, by using QUdpSocket::connectToHost().
 */
+func (*QNetworkDatagram) NewForInherit_1_1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF) *QNetworkDatagram {
+	return NewQNetworkDatagram_1_1(data, destinationAddress)
+}
 func NewQNetworkDatagram_1_1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF) *QNetworkDatagram {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {

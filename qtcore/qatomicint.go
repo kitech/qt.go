@@ -72,6 +72,9 @@ func (*QAtomicInt) NewFromPointer(cthis unsafe.Pointer) *QAtomicInt {
 /*
 
  */
+func (*QAtomicInt) NewForInherit(value int) *QAtomicInt {
+	return NewQAtomicInt(value)
+}
 func NewQAtomicInt(value int) *QAtomicInt {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QAtomicIntC2Ei", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQAtomicInt(value int) *QAtomicInt {
 /*
 
  */
+func (*QAtomicInt) NewForInherit__() *QAtomicInt {
+	return NewQAtomicInt__()
+}
 func NewQAtomicInt__() *QAtomicInt {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	value := int(0)

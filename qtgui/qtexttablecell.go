@@ -73,6 +73,9 @@ func (*QTextTableCell) NewFromPointer(cthis unsafe.Pointer) *QTextTableCell {
 /*
 
  */
+func (*QTextTableCell) NewForInherit() *QTextTableCell {
+	return NewQTextTableCell()
+}
 func NewQTextTableCell() *QTextTableCell {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTextTableCellC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

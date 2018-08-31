@@ -79,6 +79,9 @@ The font metrics object holds the information for the font that is passed in the
 
 Use QFontMetrics(const QFont &, QPaintDevice *) to get the font metrics that are compatible with a certain paint device.
 */
+func (*QFontMetrics) NewForInherit(arg0 QFont_ITF) *QFontMetrics {
+	return NewQFontMetrics(arg0)
+}
 func NewQFontMetrics(arg0 QFont_ITF) *QFontMetrics {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {
@@ -105,6 +108,9 @@ The font metrics object holds the information for the font that is passed in the
 
 Use QFontMetrics(const QFont &, QPaintDevice *) to get the font metrics that are compatible with a certain paint device.
 */
+func (*QFontMetrics) NewForInherit_1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFontMetrics {
+	return NewQFontMetrics_1(arg0, pd)
+}
 func NewQFontMetrics_1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFontMetrics {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {

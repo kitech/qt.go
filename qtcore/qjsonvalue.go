@@ -74,6 +74,9 @@ Creates a QJsonValue of type type.
 
 The default is to create a Null value.
 */
+func (*QJsonValue) NewForInherit(arg0 int) *QJsonValue {
+	return NewQJsonValue(arg0)
+}
 func NewQJsonValue(arg0 int) *QJsonValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValueC2ENS_4TypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Creates a QJsonValue of type type.
 
 The default is to create a Null value.
 */
+func (*QJsonValue) NewForInherit__() *QJsonValue {
+	return NewQJsonValue__()
+}
 func NewQJsonValue__() *QJsonValue {
 	// arg: 0, QJsonValue::Type=Enum, QJsonValue::Type=Enum, , Invalid
 	arg0 := 0
@@ -112,6 +118,9 @@ Creates a QJsonValue of type type.
 
 The default is to create a Null value.
 */
+func (*QJsonValue) NewForInherit_1(b bool) *QJsonValue {
+	return NewQJsonValue_1(b)
+}
 func NewQJsonValue_1(b bool) *QJsonValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValueC2Eb", qtrt.FFI_TYPE_POINTER, b)
 	qtrt.ErrPrint(err, rv)
@@ -130,6 +139,9 @@ Creates a QJsonValue of type type.
 
 The default is to create a Null value.
 */
+func (*QJsonValue) NewForInherit_2(n float64) *QJsonValue {
+	return NewQJsonValue_2(n)
+}
 func NewQJsonValue_2(n float64) *QJsonValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValueC2Ed", qtrt.FFI_TYPE_POINTER, n)
 	qtrt.ErrPrint(err, rv)
@@ -148,6 +160,9 @@ Creates a QJsonValue of type type.
 
 The default is to create a Null value.
 */
+func (*QJsonValue) NewForInherit_3(n int) *QJsonValue {
+	return NewQJsonValue_3(n)
+}
 func NewQJsonValue_3(n int) *QJsonValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValueC2Ei", qtrt.FFI_TYPE_POINTER, n)
 	qtrt.ErrPrint(err, rv)
@@ -166,6 +181,9 @@ Creates a QJsonValue of type type.
 
 The default is to create a Null value.
 */
+func (*QJsonValue) NewForInherit_4(n int64) *QJsonValue {
+	return NewQJsonValue_4(n)
+}
 func NewQJsonValue_4(n int64) *QJsonValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValueC2Ex", qtrt.FFI_TYPE_POINTER, n)
 	qtrt.ErrPrint(err, rv)
@@ -184,6 +202,9 @@ Creates a QJsonValue of type type.
 
 The default is to create a Null value.
 */
+func (*QJsonValue) NewForInherit_5(s string) *QJsonValue {
+	return NewQJsonValue_5(s)
+}
 func NewQJsonValue_5(s string) *QJsonValue {
 	var tmpArg0 = NewQString_5(s)
 	var convArg0 = tmpArg0.GetCthis()
@@ -204,6 +225,9 @@ Creates a QJsonValue of type type.
 
 The default is to create a Null value.
 */
+func (*QJsonValue) NewForInherit_6(s QLatin1String_ITF /*123*/) *QJsonValue {
+	return NewQJsonValue_6(s)
+}
 func NewQJsonValue_6(s QLatin1String_ITF /*123*/) *QJsonValue {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
@@ -226,6 +250,9 @@ Creates a QJsonValue of type type.
 
 The default is to create a Null value.
 */
+func (*QJsonValue) NewForInherit_7(s string) *QJsonValue {
+	return NewQJsonValue_7(s)
+}
 func NewQJsonValue_7(s string) *QJsonValue {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
@@ -246,6 +273,9 @@ Creates a QJsonValue of type type.
 
 The default is to create a Null value.
 */
+func (*QJsonValue) NewForInherit_8(a QJsonArray_ITF) *QJsonValue {
+	return NewQJsonValue_8(a)
+}
 func NewQJsonValue_8(a QJsonArray_ITF) *QJsonValue {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QJsonArray_PTR() != nil {
@@ -268,6 +298,9 @@ Creates a QJsonValue of type type.
 
 The default is to create a Null value.
 */
+func (*QJsonValue) NewForInherit_9(o QJsonObject_ITF) *QJsonValue {
+	return NewQJsonValue_9(o)
+}
 func NewQJsonValue_9(o QJsonObject_ITF) *QJsonValue {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QJsonObject_PTR() != nil {

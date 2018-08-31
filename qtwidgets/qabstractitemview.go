@@ -376,6 +376,9 @@ func (this *QAbstractItemView) MetaObject() *qtcore.QMetaObject /*777 const QMet
 /*
 Constructs an abstract item view with the given parent.
 */
+func (*QAbstractItemView) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QAbstractItemView {
+	return NewQAbstractItemView(parent)
+}
 func NewQAbstractItemView(parent QWidget_ITF /*777 QWidget **/) *QAbstractItemView {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -396,6 +399,9 @@ func NewQAbstractItemView(parent QWidget_ITF /*777 QWidget **/) *QAbstractItemVi
 /*
 Constructs an abstract item view with the given parent.
 */
+func (*QAbstractItemView) NewForInherit__() *QAbstractItemView {
+	return NewQAbstractItemView__()
+}
 func NewQAbstractItemView__() *QAbstractItemView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

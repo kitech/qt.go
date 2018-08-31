@@ -76,6 +76,9 @@ Creates a native event filter.
 
 By default this doesn't do anything. Remember to install it on the application object.
 */
+func (*QAbstractNativeEventFilter) NewForInherit() *QAbstractNativeEventFilter {
+	return NewQAbstractNativeEventFilter()
+}
 func NewQAbstractNativeEventFilter() *QAbstractNativeEventFilter {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilterC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

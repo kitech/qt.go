@@ -88,6 +88,9 @@ func (this *QQuickImageResponse) MetaObject() *qtcore.QMetaObject /*777 const QM
 /*
 
  */
+func (*QQuickImageResponse) NewForInherit() *QQuickImageResponse {
+	return NewQQuickImageResponse()
+}
 func NewQQuickImageResponse() *QQuickImageResponse {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageResponseC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

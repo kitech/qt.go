@@ -73,6 +73,9 @@ func (*QTextCursor) NewFromPointer(cthis unsafe.Pointer) *QTextCursor {
 /*
 Constructs a null cursor.
 */
+func (*QTextCursor) NewForInherit() *QTextCursor {
+	return NewQTextCursor()
+}
 func NewQTextCursor() *QTextCursor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQTextCursor() *QTextCursor {
 /*
 Constructs a null cursor.
 */
+func (*QTextCursor) NewForInherit_1(document QTextDocument_ITF /*777 QTextDocument **/) *QTextCursor {
+	return NewQTextCursor_1(document)
+}
 func NewQTextCursor_1(document QTextDocument_ITF /*777 QTextDocument **/) *QTextCursor {
 	var convArg0 unsafe.Pointer
 	if document != nil && document.QTextDocument_PTR() != nil {
@@ -109,6 +115,9 @@ func NewQTextCursor_1(document QTextDocument_ITF /*777 QTextDocument **/) *QText
 /*
 Constructs a null cursor.
 */
+func (*QTextCursor) NewForInherit_2(frame QTextFrame_ITF /*777 QTextFrame **/) *QTextCursor {
+	return NewQTextCursor_2(frame)
+}
 func NewQTextCursor_2(frame QTextFrame_ITF /*777 QTextFrame **/) *QTextCursor {
 	var convArg0 unsafe.Pointer
 	if frame != nil && frame.QTextFrame_PTR() != nil {
@@ -129,6 +138,9 @@ func NewQTextCursor_2(frame QTextFrame_ITF /*777 QTextFrame **/) *QTextCursor {
 /*
 Constructs a null cursor.
 */
+func (*QTextCursor) NewForInherit_3(block QTextBlock_ITF) *QTextCursor {
+	return NewQTextCursor_3(block)
+}
 func NewQTextCursor_3(block QTextBlock_ITF) *QTextCursor {
 	var convArg0 unsafe.Pointer
 	if block != nil && block.QTextBlock_PTR() != nil {

@@ -75,6 +75,9 @@ Constructs a null key.
 
 See also isNull().
 */
+func (*QSslKey) NewForInherit() *QSslKey {
+	return NewQSslKey()
+}
 func NewQSslKey() *QSslKey {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs a null key.
 
 See also isNull().
 */
+func (*QSslKey) NewForInherit_1(encoded qtcore.QByteArray_ITF, algorithm int, format int, type_ int, passPhrase qtcore.QByteArray_ITF) *QSslKey {
+	return NewQSslKey_1(encoded, algorithm, format, type_, passPhrase)
+}
 func NewQSslKey_1(encoded qtcore.QByteArray_ITF, algorithm int, format int, type_ int, passPhrase qtcore.QByteArray_ITF) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
@@ -119,6 +125,9 @@ Constructs a null key.
 
 See also isNull().
 */
+func (*QSslKey) NewForInherit_1_(encoded qtcore.QByteArray_ITF, algorithm int) *QSslKey {
+	return NewQSslKey_1_(encoded, algorithm)
+}
 func NewQSslKey_1_(encoded qtcore.QByteArray_ITF, algorithm int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
@@ -147,6 +156,9 @@ Constructs a null key.
 
 See also isNull().
 */
+func (*QSslKey) NewForInherit_1_1(encoded qtcore.QByteArray_ITF, algorithm int, format int) *QSslKey {
+	return NewQSslKey_1_1(encoded, algorithm, format)
+}
 func NewQSslKey_1_1(encoded qtcore.QByteArray_ITF, algorithm int, format int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
@@ -173,6 +185,9 @@ Constructs a null key.
 
 See also isNull().
 */
+func (*QSslKey) NewForInherit_1_2(encoded qtcore.QByteArray_ITF, algorithm int, format int, type_ int) *QSslKey {
+	return NewQSslKey_1_2(encoded, algorithm, format, type_)
+}
 func NewQSslKey_1_2(encoded qtcore.QByteArray_ITF, algorithm int, format int, type_ int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
@@ -197,6 +212,9 @@ Constructs a null key.
 
 See also isNull().
 */
+func (*QSslKey) NewForInherit_2(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int, format int, type_ int, passPhrase qtcore.QByteArray_ITF) *QSslKey {
+	return NewQSslKey_2(device, algorithm, format, type_, passPhrase)
+}
 func NewQSslKey_2(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int, format int, type_ int, passPhrase qtcore.QByteArray_ITF) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -223,6 +241,9 @@ Constructs a null key.
 
 See also isNull().
 */
+func (*QSslKey) NewForInherit_2_(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int) *QSslKey {
+	return NewQSslKey_2_(device, algorithm)
+}
 func NewQSslKey_2_(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -251,6 +272,9 @@ Constructs a null key.
 
 See also isNull().
 */
+func (*QSslKey) NewForInherit_2_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int, format int) *QSslKey {
+	return NewQSslKey_2_1(device, algorithm, format)
+}
 func NewQSslKey_2_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int, format int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -277,6 +301,9 @@ Constructs a null key.
 
 See also isNull().
 */
+func (*QSslKey) NewForInherit_2_2(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int, format int, type_ int) *QSslKey {
+	return NewQSslKey_2_2(device, algorithm, format, type_)
+}
 func NewQSslKey_2_2(device qtcore.QIODevice_ITF /*777 QIODevice **/, algorithm int, format int, type_ int) *QSslKey {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {

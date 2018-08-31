@@ -123,6 +123,9 @@ Constructs a checkbox with the given parent, but with no text.
 
 parent is passed on to the QAbstractButton constructor.
 */
+func (*QCheckBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
+	return NewQCheckBox(parent)
+}
 func NewQCheckBox(parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -145,6 +148,9 @@ Constructs a checkbox with the given parent, but with no text.
 
 parent is passed on to the QAbstractButton constructor.
 */
+func (*QCheckBox) NewForInherit__() *QCheckBox {
+	return NewQCheckBox__()
+}
 func NewQCheckBox__() *QCheckBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -165,6 +171,9 @@ Constructs a checkbox with the given parent, but with no text.
 
 parent is passed on to the QAbstractButton constructor.
 */
+func (*QCheckBox) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
+	return NewQCheckBox_1(text, parent)
+}
 func NewQCheckBox_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -189,6 +198,9 @@ Constructs a checkbox with the given parent, but with no text.
 
 parent is passed on to the QAbstractButton constructor.
 */
+func (*QCheckBox) NewForInherit_1_(text string) *QCheckBox {
+	return NewQCheckBox_1_(text)
+}
 func NewQCheckBox_1_(text string) *QCheckBox {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()

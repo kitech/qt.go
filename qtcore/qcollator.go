@@ -74,6 +74,9 @@ Constructs a QCollator from locale. If locale is not specified the system's defa
 
 See also setLocale().
 */
+func (*QCollator) NewForInherit(locale QLocale_ITF) *QCollator {
+	return NewQCollator(locale)
+}
 func NewQCollator(locale QLocale_ITF) *QCollator {
 	var convArg0 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
@@ -96,6 +99,9 @@ Constructs a QCollator from locale. If locale is not specified the system's defa
 
 See also setLocale().
 */
+func (*QCollator) NewForInherit__() *QCollator {
+	return NewQCollator__()
+}
 func NewQCollator__() *QCollator {
 	// arg: 0, const QLocale &=LValueReference, QLocale=Record, , Invalid
 	var convArg0 unsafe.Pointer

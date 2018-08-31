@@ -72,6 +72,9 @@ func (*QStyleHintReturnMask) NewFromPointer(cthis unsafe.Pointer) *QStyleHintRet
 /*
 
  */
+func (*QStyleHintReturnMask) NewForInherit() *QStyleHintReturnMask {
+	return NewQStyleHintReturnMask()
+}
 func NewQStyleHintReturnMask() *QStyleHintReturnMask {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleHintReturnMaskC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

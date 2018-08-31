@@ -84,6 +84,9 @@ func (this *QPluginLoader) MetaObject() *QMetaObject /*777 const QMetaObject **/
 /*
 Constructs a plugin loader with the given parent.
 */
+func (*QPluginLoader) NewForInherit(parent QObject_ITF /*777 QObject **/) *QPluginLoader {
+	return NewQPluginLoader(parent)
+}
 func NewQPluginLoader(parent QObject_ITF /*777 QObject **/) *QPluginLoader {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -104,6 +107,9 @@ func NewQPluginLoader(parent QObject_ITF /*777 QObject **/) *QPluginLoader {
 /*
 Constructs a plugin loader with the given parent.
 */
+func (*QPluginLoader) NewForInherit__() *QPluginLoader {
+	return NewQPluginLoader__()
+}
 func NewQPluginLoader__() *QPluginLoader {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -122,6 +128,9 @@ func NewQPluginLoader__() *QPluginLoader {
 /*
 Constructs a plugin loader with the given parent.
 */
+func (*QPluginLoader) NewForInherit_1(fileName string, parent QObject_ITF /*777 QObject **/) *QPluginLoader {
+	return NewQPluginLoader_1(fileName, parent)
+}
 func NewQPluginLoader_1(fileName string, parent QObject_ITF /*777 QObject **/) *QPluginLoader {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -144,6 +153,9 @@ func NewQPluginLoader_1(fileName string, parent QObject_ITF /*777 QObject **/) *
 /*
 Constructs a plugin loader with the given parent.
 */
+func (*QPluginLoader) NewForInherit_1_(fileName string) *QPluginLoader {
+	return NewQPluginLoader_1_(fileName)
+}
 func NewQPluginLoader_1_(fileName string) *QPluginLoader {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

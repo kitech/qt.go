@@ -99,6 +99,9 @@ func (this *QAnimationDriver) MetaObject() *QMetaObject /*777 const QMetaObject 
 /*
 
  */
+func (*QAnimationDriver) NewForInherit(parent QObject_ITF /*777 QObject **/) *QAnimationDriver {
+	return NewQAnimationDriver(parent)
+}
 func NewQAnimationDriver(parent QObject_ITF /*777 QObject **/) *QAnimationDriver {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -119,6 +122,9 @@ func NewQAnimationDriver(parent QObject_ITF /*777 QObject **/) *QAnimationDriver
 /*
 
  */
+func (*QAnimationDriver) NewForInherit__() *QAnimationDriver {
+	return NewQAnimationDriver__()
+}
 func NewQAnimationDriver__() *QAnimationDriver {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

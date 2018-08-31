@@ -72,6 +72,9 @@ func (*QFlag) NewFromPointer(cthis unsafe.Pointer) *QFlag {
 /*
 
  */
+func (*QFlag) NewForInherit(ai int) *QFlag {
+	return NewQFlag(ai)
+}
 func NewQFlag(ai int) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ei", qtrt.FFI_TYPE_POINTER, ai)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQFlag(ai int) *QFlag {
 /*
 
  */
+func (*QFlag) NewForInherit_1(ai uint) *QFlag {
+	return NewQFlag_1(ai)
+}
 func NewQFlag_1(ai uint) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ej", qtrt.FFI_TYPE_POINTER, ai)
 	qtrt.ErrPrint(err, rv)
@@ -104,6 +110,9 @@ func NewQFlag_1(ai uint) *QFlag {
 /*
 
  */
+func (*QFlag) NewForInherit_2(ai int16) *QFlag {
+	return NewQFlag_2(ai)
+}
 func NewQFlag_2(ai int16) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Es", qtrt.FFI_TYPE_POINTER, ai)
 	qtrt.ErrPrint(err, rv)
@@ -120,6 +129,9 @@ func NewQFlag_2(ai int16) *QFlag {
 /*
 
  */
+func (*QFlag) NewForInherit_3(ai uint16) *QFlag {
+	return NewQFlag_3(ai)
+}
 func NewQFlag_3(ai uint16) *QFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Et", qtrt.FFI_TYPE_POINTER, ai)
 	qtrt.ErrPrint(err, rv)

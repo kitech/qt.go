@@ -84,6 +84,9 @@ func (this *QTranslator) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs an empty message file object with parent parent that is not connected to any file.
 */
+func (*QTranslator) NewForInherit(parent QObject_ITF /*777 QObject **/) *QTranslator {
+	return NewQTranslator(parent)
+}
 func NewQTranslator(parent QObject_ITF /*777 QObject **/) *QTranslator {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -104,6 +107,9 @@ func NewQTranslator(parent QObject_ITF /*777 QObject **/) *QTranslator {
 /*
 Constructs an empty message file object with parent parent that is not connected to any file.
 */
+func (*QTranslator) NewForInherit__() *QTranslator {
+	return NewQTranslator__()
+}
 func NewQTranslator__() *QTranslator {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

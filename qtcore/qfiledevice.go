@@ -463,6 +463,9 @@ func (this *QFileDevice) SetFileTime(newDate QDateTime_ITF, fileTime int) bool {
 /*
 
  */
+func (*QFileDevice) NewForInherit() *QFileDevice {
+	return NewQFileDevice()
+}
 func NewQFileDevice() *QFileDevice {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDeviceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -479,6 +482,9 @@ func NewQFileDevice() *QFileDevice {
 /*
 
  */
+func (*QFileDevice) NewForInherit_1(parent QObject_ITF /*777 QObject **/) *QFileDevice {
+	return NewQFileDevice_1(parent)
+}
 func NewQFileDevice_1(parent QObject_ITF /*777 QObject **/) *QFileDevice {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

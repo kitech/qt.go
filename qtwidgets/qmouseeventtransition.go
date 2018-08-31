@@ -96,6 +96,9 @@ func (this *QMouseEventTransition) MetaObject() *qtcore.QMetaObject /*777 const 
 /*
 Constructs a new mouse event transition with the given sourceState.
 */
+func (*QMouseEventTransition) NewForInherit(sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
+	return NewQMouseEventTransition(sourceState)
+}
 func NewQMouseEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
 	var convArg0 unsafe.Pointer
 	if sourceState != nil && sourceState.QState_PTR() != nil {
@@ -116,6 +119,9 @@ func NewQMouseEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *Q
 /*
 Constructs a new mouse event transition with the given sourceState.
 */
+func (*QMouseEventTransition) NewForInherit__() *QMouseEventTransition {
+	return NewQMouseEventTransition__()
+}
 func NewQMouseEventTransition__() *QMouseEventTransition {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -134,6 +140,9 @@ func NewQMouseEventTransition__() *QMouseEventTransition {
 /*
 Constructs a new mouse event transition with the given sourceState.
 */
+func (*QMouseEventTransition) NewForInherit_1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int, sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
+	return NewQMouseEventTransition_1(object, type_, button, sourceState)
+}
 func NewQMouseEventTransition_1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int, sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -158,6 +167,9 @@ func NewQMouseEventTransition_1(object qtcore.QObject_ITF /*777 QObject **/, typ
 /*
 Constructs a new mouse event transition with the given sourceState.
 */
+func (*QMouseEventTransition) NewForInherit_1_(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int) *QMouseEventTransition {
+	return NewQMouseEventTransition_1_(object, type_, button)
+}
 func NewQMouseEventTransition_1_(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int) *QMouseEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {

@@ -90,6 +90,9 @@ func (this *QNetworkDiskCache) MetaObject() *qtcore.QMetaObject /*777 const QMet
 /*
 Creates a new disk cache. The parent argument is passed to QAbstractNetworkCache's constructor.
 */
+func (*QNetworkDiskCache) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkDiskCache {
+	return NewQNetworkDiskCache(parent)
+}
 func NewQNetworkDiskCache(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkDiskCache {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -110,6 +113,9 @@ func NewQNetworkDiskCache(parent qtcore.QObject_ITF /*777 QObject **/) *QNetwork
 /*
 Creates a new disk cache. The parent argument is passed to QAbstractNetworkCache's constructor.
 */
+func (*QNetworkDiskCache) NewForInherit__() *QNetworkDiskCache {
+	return NewQNetworkDiskCache__()
+}
 func NewQNetworkDiskCache__() *QNetworkDiskCache {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

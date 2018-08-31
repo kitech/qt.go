@@ -74,6 +74,9 @@ func (*QGraphicsSceneDragDropEvent) NewFromPointer(cthis unsafe.Pointer) *QGraph
 /*
 
  */
+func (*QGraphicsSceneDragDropEvent) NewForInherit(type_ int) *QGraphicsSceneDragDropEvent {
+	return NewQGraphicsSceneDragDropEvent(type_)
+}
 func NewQGraphicsSceneDragDropEvent(type_ int) *QGraphicsSceneDragDropEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQGraphicsSceneDragDropEvent(type_ int) *QGraphicsSceneDragDropEvent {
 /*
 
  */
+func (*QGraphicsSceneDragDropEvent) NewForInherit__() *QGraphicsSceneDragDropEvent {
+	return NewQGraphicsSceneDragDropEvent__()
+}
 func NewQGraphicsSceneDragDropEvent__() *QGraphicsSceneDragDropEvent {
 	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum, , Invalid
 	type_ := 0

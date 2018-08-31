@@ -72,6 +72,9 @@ func (*QWriteLocker) NewFromPointer(cthis unsafe.Pointer) *QWriteLocker {
 /*
 
  */
+func (*QWriteLocker) NewForInherit(readWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) *QWriteLocker {
+	return NewQWriteLocker(readWriteLock)
+}
 func NewQWriteLocker(readWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) *QWriteLocker {
 	var convArg0 unsafe.Pointer
 	if readWriteLock != nil && readWriteLock.QReadWriteLock_PTR() != nil {

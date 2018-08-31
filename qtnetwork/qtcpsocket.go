@@ -89,6 +89,9 @@ parent is passed on to the QObject constructor.
 
 See also socketType().
 */
+func (*QTcpSocket) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QTcpSocket {
+	return NewQTcpSocket(parent)
+}
 func NewQTcpSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QTcpSocket {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -113,6 +116,9 @@ parent is passed on to the QObject constructor.
 
 See also socketType().
 */
+func (*QTcpSocket) NewForInherit__() *QTcpSocket {
+	return NewQTcpSocket__()
+}
 func NewQTcpSocket__() *QTcpSocket {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

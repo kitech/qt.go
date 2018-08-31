@@ -95,6 +95,9 @@ Note for Windows users: The socket passed to QSocketNotifier will become non-blo
 
 See also setEnabled() and isEnabled().
 */
+func (*QSocketNotifier) NewForInherit(socket int64, arg1 int, parent QObject_ITF /*777 QObject **/) *QSocketNotifier {
+	return NewQSocketNotifier(socket, arg1, parent)
+}
 func NewQSocketNotifier(socket int64, arg1 int, parent QObject_ITF /*777 QObject **/) *QSocketNotifier {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -121,6 +124,9 @@ Note for Windows users: The socket passed to QSocketNotifier will become non-blo
 
 See also setEnabled() and isEnabled().
 */
+func (*QSocketNotifier) NewForInherit__(socket int64, arg1 int) *QSocketNotifier {
+	return NewQSocketNotifier__(socket, arg1)
+}
 func NewQSocketNotifier__(socket int64, arg1 int) *QSocketNotifier {
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer

@@ -76,6 +76,9 @@ Constructs a new flat color material.
 
 The default color is white.
 */
+func (*QSGFlatColorMaterial) NewForInherit() *QSGFlatColorMaterial {
+	return NewQSGFlatColorMaterial()
+}
 func NewQSGFlatColorMaterial() *QSGFlatColorMaterial {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGFlatColorMaterialC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -74,6 +74,9 @@ func (*QWinJumpListCategory) NewFromPointer(cthis unsafe.Pointer) *QWinJumpListC
 /*
 Constructs a custom QWinJumpListCategory with the specified title.
 */
+func (*QWinJumpListCategory) NewForInherit(title string) *QWinJumpListCategory {
+	return NewQWinJumpListCategory(title)
+}
 func NewQWinJumpListCategory(title string) *QWinJumpListCategory {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -92,6 +95,9 @@ func NewQWinJumpListCategory(title string) *QWinJumpListCategory {
 /*
 Constructs a custom QWinJumpListCategory with the specified title.
 */
+func (*QWinJumpListCategory) NewForInherit__() *QWinJumpListCategory {
+	return NewQWinJumpListCategory__()
+}
 func NewQWinJumpListCategory__() *QWinJumpListCategory {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = qtcore.NewQString()

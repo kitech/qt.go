@@ -106,6 +106,9 @@ func (this *QWizardPage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 
  */
+func (*QWizardPage) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QWizardPage {
+	return NewQWizardPage(parent)
+}
 func NewQWizardPage(parent QWidget_ITF /*777 QWidget **/) *QWizardPage {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -126,6 +129,9 @@ func NewQWizardPage(parent QWidget_ITF /*777 QWidget **/) *QWizardPage {
 /*
 
  */
+func (*QWizardPage) NewForInherit__() *QWizardPage {
+	return NewQWizardPage__()
+}
 func NewQWizardPage__() *QWizardPage {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

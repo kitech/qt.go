@@ -74,6 +74,9 @@ Constructs a QMimeDatabase object.
 
 It is perfectly OK to create an instance of QMimeDatabase every time you need to perform a lookup. The parsing of mimetypes is done on demand (when shared-mime-info is installed) or when the very first instance is constructed (when parsing XML files directly).
 */
+func (*QMimeDatabase) NewForInherit() *QMimeDatabase {
+	return NewQMimeDatabase()
+}
 func NewQMimeDatabase() *QMimeDatabase {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMimeDatabaseC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -99,6 +99,9 @@ func (this *QHistoryState) MetaObject() *QMetaObject /*777 const QMetaObject **/
 /*
 Constructs a new shallow history state with the given parent state.
 */
+func (*QHistoryState) NewForInherit(parent QState_ITF /*777 QState **/) *QHistoryState {
+	return NewQHistoryState(parent)
+}
 func NewQHistoryState(parent QState_ITF /*777 QState **/) *QHistoryState {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QState_PTR() != nil {
@@ -119,6 +122,9 @@ func NewQHistoryState(parent QState_ITF /*777 QState **/) *QHistoryState {
 /*
 Constructs a new shallow history state with the given parent state.
 */
+func (*QHistoryState) NewForInherit__() *QHistoryState {
+	return NewQHistoryState__()
+}
 func NewQHistoryState__() *QHistoryState {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -137,6 +143,9 @@ func NewQHistoryState__() *QHistoryState {
 /*
 Constructs a new shallow history state with the given parent state.
 */
+func (*QHistoryState) NewForInherit_1(type_ int, parent QState_ITF /*777 QState **/) *QHistoryState {
+	return NewQHistoryState_1(type_, parent)
+}
 func NewQHistoryState_1(type_ int, parent QState_ITF /*777 QState **/) *QHistoryState {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QState_PTR() != nil {
@@ -157,6 +166,9 @@ func NewQHistoryState_1(type_ int, parent QState_ITF /*777 QState **/) *QHistory
 /*
 Constructs a new shallow history state with the given parent state.
 */
+func (*QHistoryState) NewForInherit_1_(type_ int) *QHistoryState {
+	return NewQHistoryState_1_(type_)
+}
 func NewQHistoryState_1_(type_ int) *QHistoryState {
 	// arg: 1, QState *=Pointer, QState=Record, , Invalid
 	var convArg1 unsafe.Pointer

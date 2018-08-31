@@ -73,6 +73,9 @@ func (*QTextBlock) NewFromPointer(cthis unsafe.Pointer) *QTextBlock {
 /*
 
  */
+func (*QTextBlock) NewForInherit() *QTextBlock {
+	return NewQTextBlock()
+}
 func NewQTextBlock() *QTextBlock {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextBlockC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

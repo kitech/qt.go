@@ -71,6 +71,9 @@ func (*QAndroidService) NewFromPointer(cthis unsafe.Pointer) *QAndroidService {
 /*
 Default constructs an instance of QAndroidService.
 */
+func (*QAndroidService) NewForInherit(argc int, argv []string, flags int) *QAndroidService {
+	return NewQAndroidService(argc, argv, flags)
+}
 func NewQAndroidService(argc int, argv []string, flags int) *QAndroidService {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidServiceC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, flags)
@@ -88,6 +91,9 @@ func NewQAndroidService(argc int, argv []string, flags int) *QAndroidService {
 /*
 Default constructs an instance of QAndroidService.
 */
+func (*QAndroidService) NewForInherit__(argc int, argv []string) *QAndroidService {
+	return NewQAndroidService__(argc, argv)
+}
 func NewQAndroidService__(argc int, argv []string) *QAndroidService {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	// arg: 2, int=Int, =Invalid, , Invalid

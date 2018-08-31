@@ -106,6 +106,9 @@ func (this *QSequentialAnimationGroup) MetaObject() *QMetaObject /*777 const QMe
 /*
 Constructs a QSequentialAnimationGroup. parent is passed to QObject's constructor.
 */
+func (*QSequentialAnimationGroup) NewForInherit(parent QObject_ITF /*777 QObject **/) *QSequentialAnimationGroup {
+	return NewQSequentialAnimationGroup(parent)
+}
 func NewQSequentialAnimationGroup(parent QObject_ITF /*777 QObject **/) *QSequentialAnimationGroup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -126,6 +129,9 @@ func NewQSequentialAnimationGroup(parent QObject_ITF /*777 QObject **/) *QSequen
 /*
 Constructs a QSequentialAnimationGroup. parent is passed to QObject's constructor.
 */
+func (*QSequentialAnimationGroup) NewForInherit__() *QSequentialAnimationGroup {
+	return NewQSequentialAnimationGroup__()
+}
 func NewQSequentialAnimationGroup__() *QSequentialAnimationGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

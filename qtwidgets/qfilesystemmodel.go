@@ -147,6 +147,9 @@ func (this *QFileSystemModel) DirectoryLoaded(path string) {
 /*
 Constructs a file system model with the given parent.
 */
+func (*QFileSystemModel) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QFileSystemModel {
+	return NewQFileSystemModel(parent)
+}
 func NewQFileSystemModel(parent qtcore.QObject_ITF /*777 QObject **/) *QFileSystemModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -167,6 +170,9 @@ func NewQFileSystemModel(parent qtcore.QObject_ITF /*777 QObject **/) *QFileSyst
 /*
 Constructs a file system model with the given parent.
 */
+func (*QFileSystemModel) NewForInherit__() *QFileSystemModel {
+	return NewQFileSystemModel__()
+}
 func NewQFileSystemModel__() *QFileSystemModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

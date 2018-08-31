@@ -72,6 +72,9 @@ func (*QWidgetItemV2) NewFromPointer(cthis unsafe.Pointer) *QWidgetItemV2 {
 /*
 
  */
+func (*QWidgetItemV2) NewForInherit(widget QWidget_ITF /*777 QWidget **/) *QWidgetItemV2 {
+	return NewQWidgetItemV2(widget)
+}
 func NewQWidgetItemV2(widget QWidget_ITF /*777 QWidget **/) *QWidgetItemV2 {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {

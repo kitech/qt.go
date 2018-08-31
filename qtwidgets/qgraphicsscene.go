@@ -196,6 +196,9 @@ func (this *QGraphicsScene) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 /*
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
+func (*QGraphicsScene) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
+	return NewQGraphicsScene(parent)
+}
 func NewQGraphicsScene(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -216,6 +219,9 @@ func NewQGraphicsScene(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsSc
 /*
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
+func (*QGraphicsScene) NewForInherit__() *QGraphicsScene {
+	return NewQGraphicsScene__()
+}
 func NewQGraphicsScene__() *QGraphicsScene {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -234,6 +240,9 @@ func NewQGraphicsScene__() *QGraphicsScene {
 /*
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
+func (*QGraphicsScene) NewForInherit_1(sceneRect qtcore.QRectF_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
+	return NewQGraphicsScene_1(sceneRect, parent)
+}
 func NewQGraphicsScene_1(sceneRect qtcore.QRectF_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
 	var convArg0 unsafe.Pointer
 	if sceneRect != nil && sceneRect.QRectF_PTR() != nil {
@@ -258,6 +267,9 @@ func NewQGraphicsScene_1(sceneRect qtcore.QRectF_ITF, parent qtcore.QObject_ITF 
 /*
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
+func (*QGraphicsScene) NewForInherit_1_(sceneRect qtcore.QRectF_ITF) *QGraphicsScene {
+	return NewQGraphicsScene_1_(sceneRect)
+}
 func NewQGraphicsScene_1_(sceneRect qtcore.QRectF_ITF) *QGraphicsScene {
 	var convArg0 unsafe.Pointer
 	if sceneRect != nil && sceneRect.QRectF_PTR() != nil {
@@ -280,6 +292,9 @@ func NewQGraphicsScene_1_(sceneRect qtcore.QRectF_ITF) *QGraphicsScene {
 /*
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
+func (*QGraphicsScene) NewForInherit_2(x float64, y float64, width float64, height float64, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
+	return NewQGraphicsScene_2(x, y, width, height, parent)
+}
 func NewQGraphicsScene_2(x float64, y float64, width float64, height float64, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -300,6 +315,9 @@ func NewQGraphicsScene_2(x float64, y float64, width float64, height float64, pa
 /*
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
+func (*QGraphicsScene) NewForInherit_2_(x float64, y float64, width float64, height float64) *QGraphicsScene {
+	return NewQGraphicsScene_2_(x, y, width, height)
+}
 func NewQGraphicsScene_2_(x float64, y float64, width float64, height float64) *QGraphicsScene {
 	// arg: 4, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg4 unsafe.Pointer

@@ -71,6 +71,9 @@ func (*QTextFrameFormat) NewFromPointer(cthis unsafe.Pointer) *QTextFrameFormat 
 /*
 
  */
+func (*QTextFrameFormat) NewForInherit() *QTextFrameFormat {
+	return NewQTextFrameFormat()
+}
 func NewQTextFrameFormat() *QTextFrameFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +90,9 @@ func NewQTextFrameFormat() *QTextFrameFormat {
 /*
 
  */
+func (*QTextFrameFormat) NewForInherit_1(fmt_ QTextFormat_ITF) *QTextFrameFormat {
+	return NewQTextFrameFormat_1(fmt_)
+}
 func NewQTextFrameFormat_1(fmt_ QTextFormat_ITF) *QTextFrameFormat {
 	var convArg0 unsafe.Pointer
 	if fmt_ != nil && fmt_.QTextFormat_PTR() != nil {

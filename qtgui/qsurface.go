@@ -164,6 +164,9 @@ func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 /*
 Creates a surface with the given type.
 */
+func (*QSurface) NewForInherit(type_ int) *QSurface {
+	return NewQSurface(type_)
+}
 func NewQSurface(type_ int) *QSurface {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSurfaceC2ENS_12SurfaceClassE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

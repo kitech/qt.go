@@ -86,6 +86,9 @@ func (this *QDoubleSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 /*
 
  */
+func (*QDoubleSpinBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QDoubleSpinBox {
+	return NewQDoubleSpinBox(parent)
+}
 func NewQDoubleSpinBox(parent QWidget_ITF /*777 QWidget **/) *QDoubleSpinBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQDoubleSpinBox(parent QWidget_ITF /*777 QWidget **/) *QDoubleSpinBox {
 /*
 
  */
+func (*QDoubleSpinBox) NewForInherit__() *QDoubleSpinBox {
+	return NewQDoubleSpinBox__()
+}
 func NewQDoubleSpinBox__() *QDoubleSpinBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

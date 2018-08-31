@@ -95,6 +95,9 @@ func (this *QSslSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 /*
 Constructs a QSslSocket object. parent is passed to QObject's constructor. The new socket's cipher suite is set to the one returned by the static method defaultCiphers().
 */
+func (*QSslSocket) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QSslSocket {
+	return NewQSslSocket(parent)
+}
 func NewQSslSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QSslSocket {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -115,6 +118,9 @@ func NewQSslSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QSslSocket {
 /*
 Constructs a QSslSocket object. parent is passed to QObject's constructor. The new socket's cipher suite is set to the one returned by the static method defaultCiphers().
 */
+func (*QSslSocket) NewForInherit__() *QSslSocket {
+	return NewQSslSocket__()
+}
 func NewQSslSocket__() *QSslSocket {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

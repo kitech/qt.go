@@ -72,6 +72,9 @@ func (*QStylePainter) NewFromPointer(cthis unsafe.Pointer) *QStylePainter {
 /*
 Constructs a QStylePainter.
 */
+func (*QStylePainter) NewForInherit() *QStylePainter {
+	return NewQStylePainter()
+}
 func NewQStylePainter() *QStylePainter {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainterC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStylePainter() *QStylePainter {
 /*
 Constructs a QStylePainter.
 */
+func (*QStylePainter) NewForInherit_1(w QWidget_ITF /*777 QWidget **/) *QStylePainter {
+	return NewQStylePainter_1(w)
+}
 func NewQStylePainter_1(w QWidget_ITF /*777 QWidget **/) *QStylePainter {
 	var convArg0 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -108,6 +114,9 @@ func NewQStylePainter_1(w QWidget_ITF /*777 QWidget **/) *QStylePainter {
 /*
 Constructs a QStylePainter.
 */
+func (*QStylePainter) NewForInherit_2(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, w QWidget_ITF /*777 QWidget **/) *QStylePainter {
+	return NewQStylePainter_2(pd, w)
+}
 func NewQStylePainter_2(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, w QWidget_ITF /*777 QWidget **/) *QStylePainter {
 	var convArg0 unsafe.Pointer
 	if pd != nil && pd.QPaintDevice_PTR() != nil {

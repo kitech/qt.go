@@ -77,6 +77,9 @@ Constructs a camera info object from a camera device name.
 
 If no such device exists, the QCameraInfo object will be invalid and isNull() will return true.
 */
+func (*QCameraInfo) NewForInherit(name qtcore.QByteArray_ITF) *QCameraInfo {
+	return NewQCameraInfo(name)
+}
 func NewQCameraInfo(name qtcore.QByteArray_ITF) *QCameraInfo {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QByteArray_PTR() != nil {
@@ -99,6 +102,9 @@ Constructs a camera info object from a camera device name.
 
 If no such device exists, the QCameraInfo object will be invalid and isNull() will return true.
 */
+func (*QCameraInfo) NewForInherit__() *QCameraInfo {
+	return NewQCameraInfo__()
+}
 func NewQCameraInfo__() *QCameraInfo {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
@@ -119,6 +125,9 @@ Constructs a camera info object from a camera device name.
 
 If no such device exists, the QCameraInfo object will be invalid and isNull() will return true.
 */
+func (*QCameraInfo) NewForInherit_1(camera QCamera_ITF) *QCameraInfo {
+	return NewQCameraInfo_1(camera)
+}
 func NewQCameraInfo_1(camera QCamera_ITF) *QCameraInfo {
 	var convArg0 unsafe.Pointer
 	if camera != nil && camera.QCamera_PTR() != nil {

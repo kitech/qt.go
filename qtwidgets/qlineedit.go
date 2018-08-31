@@ -177,6 +177,9 @@ The parent argument is sent to the QWidget constructor.
 
 See also setText() and setMaxLength().
 */
+func (*QLineEdit) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QLineEdit {
+	return NewQLineEdit(parent)
+}
 func NewQLineEdit(parent QWidget_ITF /*777 QWidget **/) *QLineEdit {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -203,6 +206,9 @@ The parent argument is sent to the QWidget constructor.
 
 See also setText() and setMaxLength().
 */
+func (*QLineEdit) NewForInherit__() *QLineEdit {
+	return NewQLineEdit__()
+}
 func NewQLineEdit__() *QLineEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -227,6 +233,9 @@ The parent argument is sent to the QWidget constructor.
 
 See also setText() and setMaxLength().
 */
+func (*QLineEdit) NewForInherit_1(arg0 string, parent QWidget_ITF /*777 QWidget **/) *QLineEdit {
+	return NewQLineEdit_1(arg0, parent)
+}
 func NewQLineEdit_1(arg0 string, parent QWidget_ITF /*777 QWidget **/) *QLineEdit {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -255,6 +264,9 @@ The parent argument is sent to the QWidget constructor.
 
 See also setText() and setMaxLength().
 */
+func (*QLineEdit) NewForInherit_1_(arg0 string) *QLineEdit {
+	return NewQLineEdit_1_(arg0)
+}
 func NewQLineEdit_1_(arg0 string) *QLineEdit {
 	var tmpArg0 = qtcore.NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()

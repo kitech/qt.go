@@ -86,6 +86,9 @@ func (this *QMacToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Constructs a QMacToolBar with the given parent
 */
+func (*QMacToolBar) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
+	return NewQMacToolBar(parent)
+}
 func NewQMacToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQMacToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 /*
 Constructs a QMacToolBar with the given parent
 */
+func (*QMacToolBar) NewForInherit__() *QMacToolBar {
+	return NewQMacToolBar__()
+}
 func NewQMacToolBar__() *QMacToolBar {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -124,6 +130,9 @@ func NewQMacToolBar__() *QMacToolBar {
 /*
 Constructs a QMacToolBar with the given parent
 */
+func (*QMacToolBar) NewForInherit_1(identifier string, parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
+	return NewQMacToolBar_1(identifier, parent)
+}
 func NewQMacToolBar_1(identifier string, parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 	var tmpArg0 = qtcore.NewQString_5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
@@ -146,6 +155,9 @@ func NewQMacToolBar_1(identifier string, parent qtcore.QObject_ITF /*777 QObject
 /*
 Constructs a QMacToolBar with the given parent
 */
+func (*QMacToolBar) NewForInherit_1_(identifier string) *QMacToolBar {
+	return NewQMacToolBar_1_(identifier)
+}
 func NewQMacToolBar_1_(identifier string) *QMacToolBar {
 	var tmpArg0 = qtcore.NewQString_5(identifier)
 	var convArg0 = tmpArg0.GetCthis()

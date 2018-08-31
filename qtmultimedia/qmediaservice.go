@@ -139,6 +139,9 @@ func (this *QMediaService) ReleaseControl(control QMediaControl_ITF /*777 QMedia
 /*
 Construct a media service with the given parent. This class is meant as a base class for Multimedia services so this constructor is protected.
 */
+func (*QMediaService) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaService {
+	return NewQMediaService(parent)
+}
 func NewQMediaService(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaService {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

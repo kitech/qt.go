@@ -84,6 +84,9 @@ sampleSize() = -1
 byteOrder() = QAudioFormat::Endian(QSysInfo::ByteOrder)
 sampleType() = QAudioFormat::Unknown codec() = ""
 */
+func (*QAudioFormat) NewForInherit() *QAudioFormat {
+	return NewQAudioFormat()
+}
 func NewQAudioFormat() *QAudioFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QAudioFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

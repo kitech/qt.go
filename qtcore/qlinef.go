@@ -72,6 +72,9 @@ func (*QLineF) NewFromPointer(cthis unsafe.Pointer) *QLineF {
 /*
 
  */
+func (*QLineF) NewForInherit() *QLineF {
+	return NewQLineF()
+}
 func NewQLineF() *QLineF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineFC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQLineF() *QLineF {
 /*
 
  */
+func (*QLineF) NewForInherit_1(pt1 QPointF_ITF, pt2 QPointF_ITF) *QLineF {
+	return NewQLineF_1(pt1, pt2)
+}
 func NewQLineF_1(pt1 QPointF_ITF, pt2 QPointF_ITF) *QLineF {
 	var convArg0 unsafe.Pointer
 	if pt1 != nil && pt1.QPointF_PTR() != nil {
@@ -112,6 +118,9 @@ func NewQLineF_1(pt1 QPointF_ITF, pt2 QPointF_ITF) *QLineF {
 /*
 
  */
+func (*QLineF) NewForInherit_2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
+	return NewQLineF_2(x1, y1, x2, y2)
+}
 func NewQLineF_2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineFC2Edddd", qtrt.FFI_TYPE_POINTER, x1, y1, x2, y2)
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +137,9 @@ func NewQLineF_2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
 /*
 
  */
+func (*QLineF) NewForInherit_3(line QLine_ITF) *QLineF {
+	return NewQLineF_3(line)
+}
 func NewQLineF_3(line QLine_ITF) *QLineF {
 	var convArg0 unsafe.Pointer
 	if line != nil && line.QLine_PTR() != nil {

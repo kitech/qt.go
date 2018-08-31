@@ -72,6 +72,9 @@ func (*VariantData) NewFromPointer(cthis unsafe.Pointer) *VariantData {
 /*
 
  */
+func (*VariantData) NewForInherit(metaTypeId_ int, data_ unsafe.Pointer /*666*/, flags_ uint) *VariantData {
+	return NewVariantData(metaTypeId_, data_, flags_)
+}
 func NewVariantData(metaTypeId_ int, data_ unsafe.Pointer /*666*/, flags_ uint) *VariantData {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QtMetaTypePrivate11VariantDataC2EiPKvj", qtrt.FFI_TYPE_POINTER, metaTypeId_, data_, flags_)
 	qtrt.ErrPrint(err, rv)

@@ -74,6 +74,9 @@ func (*QWinMime) NewFromPointer(cthis unsafe.Pointer) *QWinMime {
 /*
 Constructs a new conversion object, adding it to the globally accessed list of available converters.
 */
+func (*QWinMime) NewForInherit() *QWinMime {
+	return NewQWinMime()
+}
 func NewQWinMime() *QWinMime {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QWinMimeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

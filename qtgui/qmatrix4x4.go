@@ -73,6 +73,9 @@ func (*QMatrix4x4) NewFromPointer(cthis unsafe.Pointer) *QMatrix4x4 {
 /*
 Constructs an identity matrix.
 */
+func (*QMatrix4x4) NewForInherit() *QMatrix4x4 {
+	return NewQMatrix4x4()
+}
 func NewQMatrix4x4() *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQMatrix4x4() *QMatrix4x4 {
 /*
 Constructs an identity matrix.
 */
+func (*QMatrix4x4) NewForInherit_1(arg0 int) *QMatrix4x4 {
+	return NewQMatrix4x4_1(arg0)
+}
 func NewQMatrix4x4_1(arg0 int) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +111,9 @@ func NewQMatrix4x4_1(arg0 int) *QMatrix4x4 {
 /*
 Constructs an identity matrix.
 */
+func (*QMatrix4x4) NewForInherit_2(values unsafe.Pointer /*666*/) *QMatrix4x4 {
+	return NewQMatrix4x4_2(values)
+}
 func NewQMatrix4x4_2(values unsafe.Pointer /*666*/) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2EPKf", qtrt.FFI_TYPE_POINTER, values)
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +130,9 @@ func NewQMatrix4x4_2(values unsafe.Pointer /*666*/) *QMatrix4x4 {
 /*
 Constructs an identity matrix.
 */
+func (*QMatrix4x4) NewForInherit_3(m11 float32, m12 float32, m13 float32, m14 float32, m21 float32, m22 float32, m23 float32, m24 float32, m31 float32, m32 float32, m33 float32, m34 float32, m41 float32, m42 float32, m43 float32, m44 float32) *QMatrix4x4 {
+	return NewQMatrix4x4_3(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44)
+}
 func NewQMatrix4x4_3(m11 float32, m12 float32, m13 float32, m14 float32, m21 float32, m22 float32, m23 float32, m24 float32, m31 float32, m32 float32, m33 float32, m34 float32, m41 float32, m42 float32, m43 float32, m44 float32) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2Effffffffffffffff", qtrt.FFI_TYPE_POINTER, m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44)
 	qtrt.ErrPrint(err, rv)
@@ -137,6 +149,9 @@ func NewQMatrix4x4_3(m11 float32, m12 float32, m13 float32, m14 float32, m21 flo
 /*
 Constructs an identity matrix.
 */
+func (*QMatrix4x4) NewForInherit_4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix4x4 {
+	return NewQMatrix4x4_4(values, cols, rows)
+}
 func NewQMatrix4x4_4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2EPKfii", qtrt.FFI_TYPE_POINTER, values, cols, rows)
 	qtrt.ErrPrint(err, rv)
@@ -153,6 +168,9 @@ func NewQMatrix4x4_4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix
 /*
 Constructs an identity matrix.
 */
+func (*QMatrix4x4) NewForInherit_5(transform QTransform_ITF) *QMatrix4x4 {
+	return NewQMatrix4x4_5(transform)
+}
 func NewQMatrix4x4_5(transform QTransform_ITF) *QMatrix4x4 {
 	var convArg0 unsafe.Pointer
 	if transform != nil && transform.QTransform_PTR() != nil {
@@ -173,6 +191,9 @@ func NewQMatrix4x4_5(transform QTransform_ITF) *QMatrix4x4 {
 /*
 Constructs an identity matrix.
 */
+func (*QMatrix4x4) NewForInherit_6(matrix QMatrix_ITF) *QMatrix4x4 {
+	return NewQMatrix4x4_6(matrix)
+}
 func NewQMatrix4x4_6(matrix QMatrix_ITF) *QMatrix4x4 {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix_PTR() != nil {

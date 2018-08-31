@@ -73,6 +73,9 @@ func (*QPolygonF) NewFromPointer(cthis unsafe.Pointer) *QPolygonF {
 /*
 
  */
+func (*QPolygonF) NewForInherit() *QPolygonF {
+	return NewQPolygonF()
+}
 func NewQPolygonF() *QPolygonF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQPolygonF() *QPolygonF {
 /*
 
  */
+func (*QPolygonF) NewForInherit_1(size int) *QPolygonF {
+	return NewQPolygonF_1(size)
+}
 func NewQPolygonF_1(size int) *QPolygonF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFC2Ei", qtrt.FFI_TYPE_POINTER, size)
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +111,9 @@ func NewQPolygonF_1(size int) *QPolygonF {
 /*
 
  */
+func (*QPolygonF) NewForInherit_2(r qtcore.QRectF_ITF) *QPolygonF {
+	return NewQPolygonF_2(r)
+}
 func NewQPolygonF_2(r qtcore.QRectF_ITF) *QPolygonF {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
@@ -125,6 +134,9 @@ func NewQPolygonF_2(r qtcore.QRectF_ITF) *QPolygonF {
 /*
 
  */
+func (*QPolygonF) NewForInherit_3(a QPolygon_ITF) *QPolygonF {
+	return NewQPolygonF_3(a)
+}
 func NewQPolygonF_3(a QPolygon_ITF) *QPolygonF {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QPolygon_PTR() != nil {

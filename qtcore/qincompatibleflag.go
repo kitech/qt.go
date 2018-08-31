@@ -72,6 +72,9 @@ func (*QIncompatibleFlag) NewFromPointer(cthis unsafe.Pointer) *QIncompatibleFla
 /*
 
  */
+func (*QIncompatibleFlag) NewForInherit(i int) *QIncompatibleFlag {
+	return NewQIncompatibleFlag(i)
+}
 func NewQIncompatibleFlag(i int) *QIncompatibleFlag {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QIncompatibleFlagC2Ei", qtrt.FFI_TYPE_POINTER, i)
 	qtrt.ErrPrint(err, rv)

@@ -89,6 +89,9 @@ func (this *QAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject *
 /*
 Constructs a QAnimationGroup. parent is passed to QObject's constructor.
 */
+func (*QAnimationGroup) NewForInherit(parent QObject_ITF /*777 QObject **/) *QAnimationGroup {
+	return NewQAnimationGroup(parent)
+}
 func NewQAnimationGroup(parent QObject_ITF /*777 QObject **/) *QAnimationGroup {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -109,6 +112,9 @@ func NewQAnimationGroup(parent QObject_ITF /*777 QObject **/) *QAnimationGroup {
 /*
 Constructs a QAnimationGroup. parent is passed to QObject's constructor.
 */
+func (*QAnimationGroup) NewForInherit__() *QAnimationGroup {
+	return NewQAnimationGroup__()
+}
 func NewQAnimationGroup__() *QAnimationGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

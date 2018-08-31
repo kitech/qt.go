@@ -71,6 +71,9 @@ func (*QPlatformSurfaceEvent) NewFromPointer(cthis unsafe.Pointer) *QPlatformSur
 /*
 
  */
+func (*QPlatformSurfaceEvent) NewForInherit(surfaceEventType int) *QPlatformSurfaceEvent {
+	return NewQPlatformSurfaceEvent(surfaceEventType)
+}
 func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", qtrt.FFI_TYPE_POINTER, surfaceEventType)
 	qtrt.ErrPrint(err, rv)

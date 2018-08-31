@@ -81,6 +81,9 @@ parent is passed to QGraphicsLayoutItem's constructor and the QGraphicsLayoutIte
 
 If parent is a QGraphicsWidget the layout will be installed on that widget. (Note that installing a layout will delete the old one installed.)
 */
+func (*QGraphicsLayout) NewForInherit(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLayout {
+	return NewQGraphicsLayout(parent)
+}
 func NewQGraphicsLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
@@ -105,6 +108,9 @@ parent is passed to QGraphicsLayoutItem's constructor and the QGraphicsLayoutIte
 
 If parent is a QGraphicsWidget the layout will be installed on that widget. (Note that installing a layout will delete the old one installed.)
 */
+func (*QGraphicsLayout) NewForInherit__() *QGraphicsLayout {
+	return NewQGraphicsLayout__()
+}
 func NewQGraphicsLayout__() *QGraphicsLayout {
 	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer

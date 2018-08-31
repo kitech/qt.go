@@ -73,6 +73,9 @@ func (*QPainterPathStroker) NewFromPointer(cthis unsafe.Pointer) *QPainterPathSt
 /*
 
  */
+func (*QPainterPathStroker) NewForInherit() *QPainterPathStroker {
+	return NewQPainterPathStroker()
+}
 func NewQPainterPathStroker() *QPainterPathStroker {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QPainterPathStrokerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQPainterPathStroker() *QPainterPathStroker {
 /*
 
  */
+func (*QPainterPathStroker) NewForInherit_1(pen QPen_ITF) *QPainterPathStroker {
+	return NewQPainterPathStroker_1(pen)
+}
 func NewQPainterPathStroker_1(pen QPen_ITF) *QPainterPathStroker {
 	var convArg0 unsafe.Pointer
 	if pen != nil && pen.QPen_PTR() != nil {

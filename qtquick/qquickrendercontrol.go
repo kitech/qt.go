@@ -88,6 +88,9 @@ func (this *QQuickRenderControl) MetaObject() *qtcore.QMetaObject /*777 const QM
 /*
 Constructs a QQuickRenderControl object, with parent object parent.
 */
+func (*QQuickRenderControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickRenderControl {
+	return NewQQuickRenderControl(parent)
+}
 func NewQQuickRenderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QQuickRenderControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -108,6 +111,9 @@ func NewQQuickRenderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QQuick
 /*
 Constructs a QQuickRenderControl object, with parent object parent.
 */
+func (*QQuickRenderControl) NewForInherit__() *QQuickRenderControl {
+	return NewQQuickRenderControl__()
+}
 func NewQQuickRenderControl__() *QQuickRenderControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

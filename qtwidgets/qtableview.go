@@ -213,6 +213,9 @@ Constructs a table view with a parent to represent the data.
 
 See also QAbstractItemModel.
 */
+func (*QTableView) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTableView {
+	return NewQTableView(parent)
+}
 func NewQTableView(parent QWidget_ITF /*777 QWidget **/) *QTableView {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -235,6 +238,9 @@ Constructs a table view with a parent to represent the data.
 
 See also QAbstractItemModel.
 */
+func (*QTableView) NewForInherit__() *QTableView {
+	return NewQTableView__()
+}
 func NewQTableView__() *QTableView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -87,6 +87,9 @@ Constructs a QHttpMultiPart with content type MixedType and sets parent as the p
 
 See also QHttpMultiPart::ContentType.
 */
+func (*QHttpMultiPart) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
+	return NewQHttpMultiPart(parent)
+}
 func NewQHttpMultiPart(parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -109,6 +112,9 @@ Constructs a QHttpMultiPart with content type MixedType and sets parent as the p
 
 See also QHttpMultiPart::ContentType.
 */
+func (*QHttpMultiPart) NewForInherit__() *QHttpMultiPart {
+	return NewQHttpMultiPart__()
+}
 func NewQHttpMultiPart__() *QHttpMultiPart {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -129,6 +135,9 @@ Constructs a QHttpMultiPart with content type MixedType and sets parent as the p
 
 See also QHttpMultiPart::ContentType.
 */
+func (*QHttpMultiPart) NewForInherit_1(contentType int, parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
+	return NewQHttpMultiPart_1(contentType, parent)
+}
 func NewQHttpMultiPart_1(contentType int, parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -151,6 +160,9 @@ Constructs a QHttpMultiPart with content type MixedType and sets parent as the p
 
 See also QHttpMultiPart::ContentType.
 */
+func (*QHttpMultiPart) NewForInherit_1_(contentType int) *QHttpMultiPart {
+	return NewQHttpMultiPart_1_(contentType)
+}
 func NewQHttpMultiPart_1_(contentType int) *QHttpMultiPart {
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer

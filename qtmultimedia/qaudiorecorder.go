@@ -87,6 +87,9 @@ func (this *QAudioRecorder) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 /*
 Constructs an audio recorder. The parent is passed to QMediaObject.
 */
+func (*QAudioRecorder) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioRecorder {
+	return NewQAudioRecorder(parent)
+}
 func NewQAudioRecorder(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioRecorder {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQAudioRecorder(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioRecor
 /*
 Constructs an audio recorder. The parent is passed to QMediaObject.
 */
+func (*QAudioRecorder) NewForInherit__() *QAudioRecorder {
+	return NewQAudioRecorder__()
+}
 func NewQAudioRecorder__() *QAudioRecorder {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

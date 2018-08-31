@@ -224,6 +224,9 @@ func (this *QImageEncoderControl) SetImageSettings(settings QImageEncoderSetting
 /*
 Constructs a new image encoder control object with the given parent
 */
+func (*QImageEncoderControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QImageEncoderControl {
+	return NewQImageEncoderControl(parent)
+}
 func NewQImageEncoderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QImageEncoderControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -244,6 +247,9 @@ func NewQImageEncoderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QImag
 /*
 Constructs a new image encoder control object with the given parent
 */
+func (*QImageEncoderControl) NewForInherit__() *QImageEncoderControl {
+	return NewQImageEncoderControl__()
+}
 func NewQImageEncoderControl__() *QImageEncoderControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

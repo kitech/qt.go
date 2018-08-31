@@ -86,6 +86,9 @@ func (this *QDirModel) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 /*
 Constructs a new directory model with the given parent. Only those files matching the nameFilters and the filters are included in the model. The sort order is given by the sort flags.
 */
+func (*QDirModel) NewForInherit(nameFilters qtcore.QStringList_ITF, filters int, sort int, parent qtcore.QObject_ITF /*777 QObject **/) *QDirModel {
+	return NewQDirModel(nameFilters, filters, sort, parent)
+}
 func NewQDirModel(nameFilters qtcore.QStringList_ITF, filters int, sort int, parent qtcore.QObject_ITF /*777 QObject **/) *QDirModel {
 	var convArg0 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
@@ -110,6 +113,9 @@ func NewQDirModel(nameFilters qtcore.QStringList_ITF, filters int, sort int, par
 /*
 Constructs a new directory model with the given parent. Only those files matching the nameFilters and the filters are included in the model. The sort order is given by the sort flags.
 */
+func (*QDirModel) NewForInherit__(nameFilters qtcore.QStringList_ITF, filters int, sort int) *QDirModel {
+	return NewQDirModel__(nameFilters, filters, sort)
+}
 func NewQDirModel__(nameFilters qtcore.QStringList_ITF, filters int, sort int) *QDirModel {
 	var convArg0 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
@@ -132,6 +138,9 @@ func NewQDirModel__(nameFilters qtcore.QStringList_ITF, filters int, sort int) *
 /*
 Constructs a new directory model with the given parent. Only those files matching the nameFilters and the filters are included in the model. The sort order is given by the sort flags.
 */
+func (*QDirModel) NewForInherit_1(parent qtcore.QObject_ITF /*777 QObject **/) *QDirModel {
+	return NewQDirModel_1(parent)
+}
 func NewQDirModel_1(parent qtcore.QObject_ITF /*777 QObject **/) *QDirModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -152,6 +161,9 @@ func NewQDirModel_1(parent qtcore.QObject_ITF /*777 QObject **/) *QDirModel {
 /*
 Constructs a new directory model with the given parent. Only those files matching the nameFilters and the filters are included in the model. The sort order is given by the sort flags.
 */
+func (*QDirModel) NewForInherit_1_() *QDirModel {
+	return NewQDirModel_1_()
+}
 func NewQDirModel_1_() *QDirModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

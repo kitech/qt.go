@@ -74,6 +74,9 @@ func (*QQmlError) NewFromPointer(cthis unsafe.Pointer) *QQmlError {
 /*
 Creates an empty error object.
 */
+func (*QQmlError) NewForInherit() *QQmlError {
+	return NewQQmlError()
+}
 func NewQQmlError() *QQmlError {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QQmlErrorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

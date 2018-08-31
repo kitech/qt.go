@@ -82,6 +82,9 @@ func (*QFutureInterfaceBase) NewFromPointer(cthis unsafe.Pointer) *QFutureInterf
 /*
 
  */
+func (*QFutureInterfaceBase) NewForInherit(initialState int) *QFutureInterfaceBase {
+	return NewQFutureInterfaceBase(initialState)
+}
 func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseC2ENS_5StateE", qtrt.FFI_TYPE_POINTER, initialState)
 	qtrt.ErrPrint(err, rv)
@@ -98,6 +101,9 @@ func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
 /*
 
  */
+func (*QFutureInterfaceBase) NewForInherit__() *QFutureInterfaceBase {
+	return NewQFutureInterfaceBase__()
+}
 func NewQFutureInterfaceBase__() *QFutureInterfaceBase {
 	// arg: 0, QFutureInterfaceBase::State=Enum, QFutureInterfaceBase::State=Enum, , Invalid
 	initialState := 0

@@ -113,6 +113,9 @@ Constructs an empty scroll area with the given parent.
 
 See also setWidget().
 */
+func (*QScrollArea) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QScrollArea {
+	return NewQScrollArea(parent)
+}
 func NewQScrollArea(parent QWidget_ITF /*777 QWidget **/) *QScrollArea {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -135,6 +138,9 @@ Constructs an empty scroll area with the given parent.
 
 See also setWidget().
 */
+func (*QScrollArea) NewForInherit__() *QScrollArea {
+	return NewQScrollArea__()
+}
 func NewQScrollArea__() *QScrollArea {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

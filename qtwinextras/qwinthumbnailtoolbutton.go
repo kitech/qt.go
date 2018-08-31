@@ -86,6 +86,9 @@ func (this *QWinThumbnailToolButton) MetaObject() *qtcore.QMetaObject /*777 cons
 /*
 Constructs a QWinThumbnailToolButton with the specified parent.
 */
+func (*QWinThumbnailToolButton) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QWinThumbnailToolButton {
+	return NewQWinThumbnailToolButton(parent)
+}
 func NewQWinThumbnailToolButton(parent qtcore.QObject_ITF /*777 QObject **/) *QWinThumbnailToolButton {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQWinThumbnailToolButton(parent qtcore.QObject_ITF /*777 QObject **/) *QW
 /*
 Constructs a QWinThumbnailToolButton with the specified parent.
 */
+func (*QWinThumbnailToolButton) NewForInherit__() *QWinThumbnailToolButton {
+	return NewQWinThumbnailToolButton__()
+}
 func NewQWinThumbnailToolButton__() *QWinThumbnailToolButton {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

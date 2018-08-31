@@ -72,6 +72,9 @@ func (*QWinEvent) NewFromPointer(cthis unsafe.Pointer) *QWinEvent {
 /*
 
  */
+func (*QWinEvent) NewForInherit(type_ int) *QWinEvent {
+	return NewQWinEvent(type_)
+}
 func NewQWinEvent(type_ int) *QWinEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QWinEventC2Ei", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

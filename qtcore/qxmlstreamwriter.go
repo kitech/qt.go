@@ -72,6 +72,9 @@ func (*QXmlStreamWriter) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamWriter 
 /*
 
  */
+func (*QXmlStreamWriter) NewForInherit() *QXmlStreamWriter {
+	return NewQXmlStreamWriter()
+}
 func NewQXmlStreamWriter() *QXmlStreamWriter {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQXmlStreamWriter() *QXmlStreamWriter {
 /*
 
  */
+func (*QXmlStreamWriter) NewForInherit_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStreamWriter {
+	return NewQXmlStreamWriter_1(device)
+}
 func NewQXmlStreamWriter_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStreamWriter {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -108,6 +114,9 @@ func NewQXmlStreamWriter_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStream
 /*
 
  */
+func (*QXmlStreamWriter) NewForInherit_2(array QByteArray_ITF /*777 QByteArray **/) *QXmlStreamWriter {
+	return NewQXmlStreamWriter_2(array)
+}
 func NewQXmlStreamWriter_2(array QByteArray_ITF /*777 QByteArray **/) *QXmlStreamWriter {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
@@ -128,6 +137,9 @@ func NewQXmlStreamWriter_2(array QByteArray_ITF /*777 QByteArray **/) *QXmlStrea
 /*
 
  */
+func (*QXmlStreamWriter) NewForInherit_3(string string) *QXmlStreamWriter {
+	return NewQXmlStreamWriter_3(string)
+}
 func NewQXmlStreamWriter_3(string string) *QXmlStreamWriter {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()

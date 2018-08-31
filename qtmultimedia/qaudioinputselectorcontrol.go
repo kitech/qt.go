@@ -204,6 +204,9 @@ func (this *QAudioInputSelectorControl) AvailableInputsChanged() {
 /*
 Constructs a new audio input selector control with the given parent.
 */
+func (*QAudioInputSelectorControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioInputSelectorControl {
+	return NewQAudioInputSelectorControl(parent)
+}
 func NewQAudioInputSelectorControl(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioInputSelectorControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -224,6 +227,9 @@ func NewQAudioInputSelectorControl(parent qtcore.QObject_ITF /*777 QObject **/) 
 /*
 Constructs a new audio input selector control with the given parent.
 */
+func (*QAudioInputSelectorControl) NewForInherit__() *QAudioInputSelectorControl {
+	return NewQAudioInputSelectorControl__()
+}
 func NewQAudioInputSelectorControl__() *QAudioInputSelectorControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

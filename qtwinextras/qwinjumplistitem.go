@@ -74,6 +74,9 @@ func (*QWinJumpListItem) NewFromPointer(cthis unsafe.Pointer) *QWinJumpListItem 
 /*
 Constructs a QWinJumpListItem with the specified type.
 */
+func (*QWinJumpListItem) NewForInherit(type_ int) *QWinJumpListItem {
+	return NewQWinJumpListItem(type_)
+}
 func NewQWinJumpListItem(type_ int) *QWinJumpListItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItemC2ENS_4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

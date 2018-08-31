@@ -84,6 +84,9 @@ func (this *QStringListModel) MetaObject() *QMetaObject /*777 const QMetaObject 
 /*
 Constructs a string list model with the given parent.
 */
+func (*QStringListModel) NewForInherit(parent QObject_ITF /*777 QObject **/) *QStringListModel {
+	return NewQStringListModel(parent)
+}
 func NewQStringListModel(parent QObject_ITF /*777 QObject **/) *QStringListModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -104,6 +107,9 @@ func NewQStringListModel(parent QObject_ITF /*777 QObject **/) *QStringListModel
 /*
 Constructs a string list model with the given parent.
 */
+func (*QStringListModel) NewForInherit__() *QStringListModel {
+	return NewQStringListModel__()
+}
 func NewQStringListModel__() *QStringListModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -122,6 +128,9 @@ func NewQStringListModel__() *QStringListModel {
 /*
 Constructs a string list model with the given parent.
 */
+func (*QStringListModel) NewForInherit_1(strings QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QStringListModel {
+	return NewQStringListModel_1(strings, parent)
+}
 func NewQStringListModel_1(strings QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QStringListModel {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {
@@ -146,6 +155,9 @@ func NewQStringListModel_1(strings QStringList_ITF, parent QObject_ITF /*777 QOb
 /*
 Constructs a string list model with the given parent.
 */
+func (*QStringListModel) NewForInherit_1_(strings QStringList_ITF) *QStringListModel {
+	return NewQStringListModel_1_(strings)
+}
 func NewQStringListModel_1_(strings QStringList_ITF) *QStringListModel {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {

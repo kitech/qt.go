@@ -71,6 +71,9 @@ func (*QTabletEvent) NewFromPointer(cthis unsafe.Pointer) *QTabletEvent {
 /*
 
  */
+func (*QTabletEvent) NewForInherit(t int, pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64) *QTabletEvent {
+	return NewQTabletEvent(t, pos, globalPos, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID)
+}
 func NewQTabletEvent(t int, pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64) *QTabletEvent {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -95,6 +98,9 @@ func NewQTabletEvent(t int, pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF
 /*
 
  */
+func (*QTabletEvent) NewForInherit_1(t int, pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64, button int, buttons int) *QTabletEvent {
+	return NewQTabletEvent_1(t, pos, globalPos, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID, button, buttons)
+}
 func NewQTabletEvent_1(t int, pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64, button int, buttons int) *QTabletEvent {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {

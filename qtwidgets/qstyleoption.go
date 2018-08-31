@@ -80,6 +80,9 @@ The state member variable is initialized to QStyle::State_None.
 
 See also version and type.
 */
+func (*QStyleOption) NewForInherit(version int, type_ int) *QStyleOption {
+	return NewQStyleOption(version, type_)
+}
 func NewQStyleOption(version int, type_ int) *QStyleOption {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStyleOptionC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +105,9 @@ The state member variable is initialized to QStyle::State_None.
 
 See also version and type.
 */
+func (*QStyleOption) NewForInherit__() *QStyleOption {
+	return NewQStyleOption__()
+}
 func NewQStyleOption__() *QStyleOption {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	version := 0 /*QStyleOption::Version*/
@@ -128,6 +134,9 @@ The state member variable is initialized to QStyle::State_None.
 
 See also version and type.
 */
+func (*QStyleOption) NewForInherit__1(version int) *QStyleOption {
+	return NewQStyleOption__1(version)
+}
 func NewQStyleOption__1(version int) *QStyleOption {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := QStyleOption__SO_Default

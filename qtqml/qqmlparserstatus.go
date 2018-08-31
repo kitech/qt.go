@@ -74,6 +74,9 @@ func (*QQmlParserStatus) NewFromPointer(cthis unsafe.Pointer) *QQmlParserStatus 
 /*
 
  */
+func (*QQmlParserStatus) NewForInherit() *QQmlParserStatus {
+	return NewQQmlParserStatus()
+}
 func NewQQmlParserStatus() *QQmlParserStatus {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlParserStatusC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

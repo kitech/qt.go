@@ -272,6 +272,9 @@ func (this *QCameraControl) CaptureModeChanged(arg0 int) {
 /*
 Constructs a camera control object with parent.
 */
+func (*QCameraControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraControl {
+	return NewQCameraControl(parent)
+}
 func NewQCameraControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -292,6 +295,9 @@ func NewQCameraControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraCont
 /*
 Constructs a camera control object with parent.
 */
+func (*QCameraControl) NewForInherit__() *QCameraControl {
+	return NewQCameraControl__()
+}
 func NewQCameraControl__() *QCameraControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

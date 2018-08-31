@@ -115,6 +115,9 @@ The window title is set to title. This title is used when the QDockWidget is doc
 
 See also setWindowTitle().
 */
+func (*QDockWidget) NewForInherit(title string, parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
+	return NewQDockWidget(title, parent, flags)
+}
 func NewQDockWidget(title string, parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -141,6 +144,9 @@ The window title is set to title. This title is used when the QDockWidget is doc
 
 See also setWindowTitle().
 */
+func (*QDockWidget) NewForInherit__(title string) *QDockWidget {
+	return NewQDockWidget__(title)
+}
 func NewQDockWidget__(title string) *QDockWidget {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -167,6 +173,9 @@ The window title is set to title. This title is used when the QDockWidget is doc
 
 See also setWindowTitle().
 */
+func (*QDockWidget) NewForInherit__1(title string, parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
+	return NewQDockWidget__1(title, parent)
+}
 func NewQDockWidget__1(title string, parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -195,6 +204,9 @@ The window title is set to title. This title is used when the QDockWidget is doc
 
 See also setWindowTitle().
 */
+func (*QDockWidget) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
+	return NewQDockWidget_1(parent, flags)
+}
 func NewQDockWidget_1(parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -219,6 +231,9 @@ The window title is set to title. This title is used when the QDockWidget is doc
 
 See also setWindowTitle().
 */
+func (*QDockWidget) NewForInherit_1_() *QDockWidget {
+	return NewQDockWidget_1_()
+}
 func NewQDockWidget_1_() *QDockWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -243,6 +258,9 @@ The window title is set to title. This title is used when the QDockWidget is doc
 
 See also setWindowTitle().
 */
+func (*QDockWidget) NewForInherit_1_1(parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
+	return NewQDockWidget_1_1(parent)
+}
 func NewQDockWidget_1_1(parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

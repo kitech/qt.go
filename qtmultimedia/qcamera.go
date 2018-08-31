@@ -87,6 +87,9 @@ func (this *QCamera) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 /*
 Construct a QCamera with a parent.
 */
+func (*QCamera) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
+	return NewQCamera(parent)
+}
 func NewQCamera(parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQCamera(parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
 /*
 Construct a QCamera with a parent.
 */
+func (*QCamera) NewForInherit__() *QCamera {
+	return NewQCamera__()
+}
 func NewQCamera__() *QCamera {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -125,6 +131,9 @@ func NewQCamera__() *QCamera {
 /*
 Construct a QCamera with a parent.
 */
+func (*QCamera) NewForInherit_1(deviceName qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
+	return NewQCamera_1(deviceName, parent)
+}
 func NewQCamera_1(deviceName qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
 	var convArg0 unsafe.Pointer
 	if deviceName != nil && deviceName.QByteArray_PTR() != nil {
@@ -149,6 +158,9 @@ func NewQCamera_1(deviceName qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*
 /*
 Construct a QCamera with a parent.
 */
+func (*QCamera) NewForInherit_1_(deviceName qtcore.QByteArray_ITF) *QCamera {
+	return NewQCamera_1_(deviceName)
+}
 func NewQCamera_1_(deviceName qtcore.QByteArray_ITF) *QCamera {
 	var convArg0 unsafe.Pointer
 	if deviceName != nil && deviceName.QByteArray_PTR() != nil {
@@ -171,6 +183,9 @@ func NewQCamera_1_(deviceName qtcore.QByteArray_ITF) *QCamera {
 /*
 Construct a QCamera with a parent.
 */
+func (*QCamera) NewForInherit_2(cameraInfo QCameraInfo_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
+	return NewQCamera_2(cameraInfo, parent)
+}
 func NewQCamera_2(cameraInfo QCameraInfo_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
 	var convArg0 unsafe.Pointer
 	if cameraInfo != nil && cameraInfo.QCameraInfo_PTR() != nil {
@@ -195,6 +210,9 @@ func NewQCamera_2(cameraInfo QCameraInfo_ITF, parent qtcore.QObject_ITF /*777 QO
 /*
 Construct a QCamera with a parent.
 */
+func (*QCamera) NewForInherit_2_(cameraInfo QCameraInfo_ITF) *QCamera {
+	return NewQCamera_2_(cameraInfo)
+}
 func NewQCamera_2_(cameraInfo QCameraInfo_ITF) *QCamera {
 	var convArg0 unsafe.Pointer
 	if cameraInfo != nil && cameraInfo.QCameraInfo_PTR() != nil {
@@ -217,6 +235,9 @@ func NewQCamera_2_(cameraInfo QCameraInfo_ITF) *QCamera {
 /*
 Construct a QCamera with a parent.
 */
+func (*QCamera) NewForInherit_3(position int, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
+	return NewQCamera_3(position, parent)
+}
 func NewQCamera_3(position int, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -237,6 +258,9 @@ func NewQCamera_3(position int, parent qtcore.QObject_ITF /*777 QObject **/) *QC
 /*
 Construct a QCamera with a parent.
 */
+func (*QCamera) NewForInherit_3_(position int) *QCamera {
+	return NewQCamera_3_(position)
+}
 func NewQCamera_3_(position int) *QCamera {
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer

@@ -72,6 +72,9 @@ func (*QStyleOptionRubberBand) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 /*
 
  */
+func (*QStyleOptionRubberBand) NewForInherit() *QStyleOptionRubberBand {
+	return NewQStyleOptionRubberBand()
+}
 func NewQStyleOptionRubberBand() *QStyleOptionRubberBand {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStyleOptionRubberBand() *QStyleOptionRubberBand {
 /*
 
  */
+func (*QStyleOptionRubberBand) NewForInherit_1(version int) *QStyleOptionRubberBand {
+	return NewQStyleOptionRubberBand_1(version)
+}
 func NewQStyleOptionRubberBand_1(version int) *QStyleOptionRubberBand {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)

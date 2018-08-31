@@ -85,6 +85,9 @@ func (this *QRegExpValidator) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 /*
 
  */
+func (*QRegExpValidator) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
+	return NewQRegExpValidator(parent)
+}
 func NewQRegExpValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -105,6 +108,9 @@ func NewQRegExpValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpVa
 /*
 
  */
+func (*QRegExpValidator) NewForInherit__() *QRegExpValidator {
+	return NewQRegExpValidator__()
+}
 func NewQRegExpValidator__() *QRegExpValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -123,6 +129,9 @@ func NewQRegExpValidator__() *QRegExpValidator {
 /*
 
  */
+func (*QRegExpValidator) NewForInherit_1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
+	return NewQRegExpValidator_1(rx, parent)
+}
 func NewQRegExpValidator_1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
@@ -147,6 +156,9 @@ func NewQRegExpValidator_1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*77
 /*
 
  */
+func (*QRegExpValidator) NewForInherit_1_(rx qtcore.QRegExp_ITF) *QRegExpValidator {
+	return NewQRegExpValidator_1_(rx)
+}
 func NewQRegExpValidator_1_(rx qtcore.QRegExp_ITF) *QRegExpValidator {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {

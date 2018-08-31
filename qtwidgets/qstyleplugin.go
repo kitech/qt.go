@@ -88,6 +88,9 @@ Constructs a style plugin with the given parent.
 
 Note that this constructor is invoked automatically by the moc generated code that exports the plugin, so there is no need for calling it explicitly.
 */
+func (*QStylePlugin) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QStylePlugin {
+	return NewQStylePlugin(parent)
+}
 func NewQStylePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QStylePlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -110,6 +113,9 @@ Constructs a style plugin with the given parent.
 
 Note that this constructor is invoked automatically by the moc generated code that exports the plugin, so there is no need for calling it explicitly.
 */
+func (*QStylePlugin) NewForInherit__() *QStylePlugin {
+	return NewQStylePlugin__()
+}
 func NewQStylePlugin__() *QStylePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

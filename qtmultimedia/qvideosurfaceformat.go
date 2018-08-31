@@ -75,6 +75,9 @@ func (*QVideoSurfaceFormat) NewFromPointer(cthis unsafe.Pointer) *QVideoSurfaceF
 /*
 Constructs a null video stream format.
 */
+func (*QVideoSurfaceFormat) NewForInherit() *QVideoSurfaceFormat {
+	return NewQVideoSurfaceFormat()
+}
 func NewQVideoSurfaceFormat() *QVideoSurfaceFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QVideoSurfaceFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +94,9 @@ func NewQVideoSurfaceFormat() *QVideoSurfaceFormat {
 /*
 Constructs a null video stream format.
 */
+func (*QVideoSurfaceFormat) NewForInherit_1(size qtcore.QSize_ITF, pixelFormat int, handleType int) *QVideoSurfaceFormat {
+	return NewQVideoSurfaceFormat_1(size, pixelFormat, handleType)
+}
 func NewQVideoSurfaceFormat_1(size qtcore.QSize_ITF, pixelFormat int, handleType int) *QVideoSurfaceFormat {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -111,6 +117,9 @@ func NewQVideoSurfaceFormat_1(size qtcore.QSize_ITF, pixelFormat int, handleType
 /*
 Constructs a null video stream format.
 */
+func (*QVideoSurfaceFormat) NewForInherit_1_(size qtcore.QSize_ITF, pixelFormat int) *QVideoSurfaceFormat {
+	return NewQVideoSurfaceFormat_1_(size, pixelFormat)
+}
 func NewQVideoSurfaceFormat_1_(size qtcore.QSize_ITF, pixelFormat int) *QVideoSurfaceFormat {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {

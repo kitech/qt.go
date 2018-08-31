@@ -75,6 +75,9 @@ Create a new QNetworkCookie object, initializing the cookie name to name and its
 
 A cookie is only valid if it has a name. However, the value is opaque to the application and being empty may have significance to the remote server.
 */
+func (*QNetworkCookie) NewForInherit(name qtcore.QByteArray_ITF, value qtcore.QByteArray_ITF) *QNetworkCookie {
+	return NewQNetworkCookie(name, value)
+}
 func NewQNetworkCookie(name qtcore.QByteArray_ITF, value qtcore.QByteArray_ITF) *QNetworkCookie {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QByteArray_PTR() != nil {
@@ -101,6 +104,9 @@ Create a new QNetworkCookie object, initializing the cookie name to name and its
 
 A cookie is only valid if it has a name. However, the value is opaque to the application and being empty may have significance to the remote server.
 */
+func (*QNetworkCookie) NewForInherit__() *QNetworkCookie {
+	return NewQNetworkCookie__()
+}
 func NewQNetworkCookie__() *QNetworkCookie {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
@@ -123,6 +129,9 @@ Create a new QNetworkCookie object, initializing the cookie name to name and its
 
 A cookie is only valid if it has a name. However, the value is opaque to the application and being empty may have significance to the remote server.
 */
+func (*QNetworkCookie) NewForInherit__1(name qtcore.QByteArray_ITF) *QNetworkCookie {
+	return NewQNetworkCookie__1(name)
+}
 func NewQNetworkCookie__1(name qtcore.QByteArray_ITF) *QNetworkCookie {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QByteArray_PTR() != nil {

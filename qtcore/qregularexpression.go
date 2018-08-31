@@ -105,6 +105,9 @@ Constructs a QRegularExpression object with an empty pattern and no pattern opti
 
 See also setPattern() and setPatternOptions().
 */
+func (*QRegularExpression) NewForInherit() *QRegularExpression {
+	return NewQRegularExpression()
+}
 func NewQRegularExpression() *QRegularExpression {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpressionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -123,6 +126,9 @@ Constructs a QRegularExpression object with an empty pattern and no pattern opti
 
 See also setPattern() and setPatternOptions().
 */
+func (*QRegularExpression) NewForInherit_1(pattern string, options int) *QRegularExpression {
+	return NewQRegularExpression_1(pattern, options)
+}
 func NewQRegularExpression_1(pattern string, options int) *QRegularExpression {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
@@ -143,6 +149,9 @@ Constructs a QRegularExpression object with an empty pattern and no pattern opti
 
 See also setPattern() and setPatternOptions().
 */
+func (*QRegularExpression) NewForInherit_1_(pattern string) *QRegularExpression {
+	return NewQRegularExpression_1_(pattern)
+}
 func NewQRegularExpression_1_(pattern string) *QRegularExpression {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()

@@ -91,6 +91,9 @@ func (this *QGraphicsTransform) MetaObject() *qtcore.QMetaObject /*777 const QMe
 /*
 Constructs a new QGraphicsTransform with the given parent.
 */
+func (*QGraphicsTransform) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsTransform {
+	return NewQGraphicsTransform(parent)
+}
 func NewQGraphicsTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsTransform {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -111,6 +114,9 @@ func NewQGraphicsTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphi
 /*
 Constructs a new QGraphicsTransform with the given parent.
 */
+func (*QGraphicsTransform) NewForInherit__() *QGraphicsTransform {
+	return NewQGraphicsTransform__()
+}
 func NewQGraphicsTransform__() *QGraphicsTransform {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

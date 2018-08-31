@@ -128,6 +128,9 @@ Constructs a horizontal splitter with the parent argument passed on to the QFram
 
 See also setOrientation().
 */
+func (*QSplitter) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QSplitter {
+	return NewQSplitter(parent)
+}
 func NewQSplitter(parent QWidget_ITF /*777 QWidget **/) *QSplitter {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -150,6 +153,9 @@ Constructs a horizontal splitter with the parent argument passed on to the QFram
 
 See also setOrientation().
 */
+func (*QSplitter) NewForInherit__() *QSplitter {
+	return NewQSplitter__()
+}
 func NewQSplitter__() *QSplitter {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -170,6 +176,9 @@ Constructs a horizontal splitter with the parent argument passed on to the QFram
 
 See also setOrientation().
 */
+func (*QSplitter) NewForInherit_1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QSplitter {
+	return NewQSplitter_1(arg0, parent)
+}
 func NewQSplitter_1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QSplitter {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -192,6 +201,9 @@ Constructs a horizontal splitter with the parent argument passed on to the QFram
 
 See also setOrientation().
 */
+func (*QSplitter) NewForInherit_1_(arg0 int) *QSplitter {
+	return NewQSplitter_1_(arg0)
+}
 func NewQSplitter_1_(arg0 int) *QSplitter {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer

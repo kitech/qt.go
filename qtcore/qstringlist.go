@@ -72,6 +72,9 @@ func (*QStringList) NewFromPointer(cthis unsafe.Pointer) *QStringList {
 /*
 Constructs an empty string list.
 */
+func (*QStringList) NewForInherit() *QStringList {
+	return NewQStringList()
+}
 func NewQStringList() *QStringList {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStringList() *QStringList {
 /*
 Constructs an empty string list.
 */
+func (*QStringList) NewForInherit_1(i string) *QStringList {
+	return NewQStringList_1(i)
+}
 func NewQStringList_1(i string) *QStringList {
 	var tmpArg0 = NewQString_5(i)
 	var convArg0 = tmpArg0.GetCthis()

@@ -72,6 +72,9 @@ func (*QSpacerItem) NewFromPointer(cthis unsafe.Pointer) *QSpacerItem {
 /*
 
  */
+func (*QSpacerItem) NewForInherit(w int, h int, hData int, vData int) *QSpacerItem {
+	return NewQSpacerItem(w, h, hData, vData)
+}
 func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, w, h, hData, vData)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 /*
 
  */
+func (*QSpacerItem) NewForInherit__(w int, h int) *QSpacerItem {
+	return NewQSpacerItem__(w, h)
+}
 func NewQSpacerItem__(w int, h int) *QSpacerItem {
 	// arg: 2, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	hData := 0
@@ -108,6 +114,9 @@ func NewQSpacerItem__(w int, h int) *QSpacerItem {
 /*
 
  */
+func (*QSpacerItem) NewForInherit__1(w int, h int, hData int) *QSpacerItem {
+	return NewQSpacerItem__1(w, h, hData)
+}
 func NewQSpacerItem__1(w int, h int, hData int) *QSpacerItem {
 	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	vData := 0

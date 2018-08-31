@@ -72,6 +72,9 @@ func (*QUrl) NewFromPointer(cthis unsafe.Pointer) *QUrl {
 /*
 Constructs an empty QUrl object.
 */
+func (*QUrl) NewForInherit() *QUrl {
+	return NewQUrl()
+}
 func NewQUrl() *QUrl {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrlC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQUrl() *QUrl {
 /*
 Constructs an empty QUrl object.
 */
+func (*QUrl) NewForInherit_1(url string, mode int) *QUrl {
+	return NewQUrl_1(url, mode)
+}
 func NewQUrl_1(url string, mode int) *QUrl {
 	var tmpArg0 = NewQString_5(url)
 	var convArg0 = tmpArg0.GetCthis()
@@ -106,6 +112,9 @@ func NewQUrl_1(url string, mode int) *QUrl {
 /*
 Constructs an empty QUrl object.
 */
+func (*QUrl) NewForInherit_1_(url string) *QUrl {
+	return NewQUrl_1_(url)
+}
 func NewQUrl_1_(url string) *QUrl {
 	var tmpArg0 = NewQString_5(url)
 	var convArg0 = tmpArg0.GetCthis()

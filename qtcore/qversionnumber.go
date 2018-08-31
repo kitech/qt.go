@@ -74,6 +74,9 @@ Produces a null version.
 
 See also isNull().
 */
+func (*QVersionNumber) NewForInherit() *QVersionNumber {
+	return NewQVersionNumber()
+}
 func NewQVersionNumber() *QVersionNumber {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumberC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Produces a null version.
 
 See also isNull().
 */
+func (*QVersionNumber) NewForInherit_1(maj int) *QVersionNumber {
+	return NewQVersionNumber_1(maj)
+}
 func NewQVersionNumber_1(maj int) *QVersionNumber {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumberC2Ei", qtrt.FFI_TYPE_POINTER, maj)
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +116,9 @@ Produces a null version.
 
 See also isNull().
 */
+func (*QVersionNumber) NewForInherit_2(maj int, min int) *QVersionNumber {
+	return NewQVersionNumber_2(maj, min)
+}
 func NewQVersionNumber_2(maj int, min int) *QVersionNumber {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumberC2Eii", qtrt.FFI_TYPE_POINTER, maj, min)
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +137,9 @@ Produces a null version.
 
 See also isNull().
 */
+func (*QVersionNumber) NewForInherit_3(maj int, min int, mic int) *QVersionNumber {
+	return NewQVersionNumber_3(maj, min, mic)
+}
 func NewQVersionNumber_3(maj int, min int, mic int) *QVersionNumber {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumberC2Eiii", qtrt.FFI_TYPE_POINTER, maj, min, mic)
 	qtrt.ErrPrint(err, rv)

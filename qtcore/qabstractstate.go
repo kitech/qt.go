@@ -179,6 +179,9 @@ func (this *QAbstractState) ActiveChanged(active bool) {
 /*
 Constructs a new state with the given parent state.
 */
+func (*QAbstractState) NewForInherit(parent QState_ITF /*777 QState **/) *QAbstractState {
+	return NewQAbstractState(parent)
+}
 func NewQAbstractState(parent QState_ITF /*777 QState **/) *QAbstractState {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QState_PTR() != nil {
@@ -199,6 +202,9 @@ func NewQAbstractState(parent QState_ITF /*777 QState **/) *QAbstractState {
 /*
 Constructs a new state with the given parent state.
 */
+func (*QAbstractState) NewForInherit__() *QAbstractState {
+	return NewQAbstractState__()
+}
 func NewQAbstractState__() *QAbstractState {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer

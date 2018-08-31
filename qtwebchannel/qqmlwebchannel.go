@@ -87,6 +87,9 @@ func (this *QQmlWebChannel) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 /*
 
  */
+func (*QQmlWebChannel) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlWebChannel {
+	return NewQQmlWebChannel(parent)
+}
 func NewQQmlWebChannel(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlWebChannel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQQmlWebChannel(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlWebChan
 /*
 
  */
+func (*QQmlWebChannel) NewForInherit__() *QQmlWebChannel {
+	return NewQQmlWebChannel__()
+}
 func NewQQmlWebChannel__() *QQmlWebChannel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

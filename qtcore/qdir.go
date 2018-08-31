@@ -74,6 +74,9 @@ Constructs a QDir object that is a copy of the QDir object for directory dir.
 
 See also operator=().
 */
+func (*QDir) NewForInherit(path string) *QDir {
+	return NewQDir(path)
+}
 func NewQDir(path string) *QDir {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -94,6 +97,9 @@ Constructs a QDir object that is a copy of the QDir object for directory dir.
 
 See also operator=().
 */
+func (*QDir) NewForInherit__() *QDir {
+	return NewQDir__()
+}
 func NewQDir__() *QDir {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = NewQString()
@@ -114,6 +120,9 @@ Constructs a QDir object that is a copy of the QDir object for directory dir.
 
 See also operator=().
 */
+func (*QDir) NewForInherit_1(path string, nameFilter string, sort int, filter int) *QDir {
+	return NewQDir_1(path, nameFilter, sort, filter)
+}
 func NewQDir_1(path string, nameFilter string, sort int, filter int) *QDir {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -136,6 +145,9 @@ Constructs a QDir object that is a copy of the QDir object for directory dir.
 
 See also operator=().
 */
+func (*QDir) NewForInherit_1_(path string, nameFilter string) *QDir {
+	return NewQDir_1_(path, nameFilter)
+}
 func NewQDir_1_(path string, nameFilter string) *QDir {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -162,6 +174,9 @@ Constructs a QDir object that is a copy of the QDir object for directory dir.
 
 See also operator=().
 */
+func (*QDir) NewForInherit_1_1(path string, nameFilter string, sort int) *QDir {
+	return NewQDir_1_1(path, nameFilter, sort)
+}
 func NewQDir_1_1(path string, nameFilter string, sort int) *QDir {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()

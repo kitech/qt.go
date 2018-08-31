@@ -461,6 +461,9 @@ func (this *QAudioDecoderControl) DurationChanged(duration int64) {
 /*
 Constructs a new audio decoder control with the given parent.
 */
+func (*QAudioDecoderControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioDecoderControl {
+	return NewQAudioDecoderControl(parent)
+}
 func NewQAudioDecoderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioDecoderControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -481,6 +484,9 @@ func NewQAudioDecoderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QAudi
 /*
 Constructs a new audio decoder control with the given parent.
 */
+func (*QAudioDecoderControl) NewForInherit__() *QAudioDecoderControl {
+	return NewQAudioDecoderControl__()
+}
 func NewQAudioDecoderControl__() *QAudioDecoderControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

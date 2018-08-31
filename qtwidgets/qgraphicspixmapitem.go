@@ -87,6 +87,9 @@ func (*QGraphicsPixmapItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPixma
 /*
 
  */
+func (*QGraphicsPixmapItem) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPixmapItem {
+	return NewQGraphicsPixmapItem(parent)
+}
 func NewQGraphicsPixmapItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPixmapItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQGraphicsPixmapItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *Q
 /*
 
  */
+func (*QGraphicsPixmapItem) NewForInherit__() *QGraphicsPixmapItem {
+	return NewQGraphicsPixmapItem__()
+}
 func NewQGraphicsPixmapItem__() *QGraphicsPixmapItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -125,6 +131,9 @@ func NewQGraphicsPixmapItem__() *QGraphicsPixmapItem {
 /*
 
  */
+func (*QGraphicsPixmapItem) NewForInherit_1(pixmap qtgui.QPixmap_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPixmapItem {
+	return NewQGraphicsPixmapItem_1(pixmap, parent)
+}
 func NewQGraphicsPixmapItem_1(pixmap qtgui.QPixmap_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPixmapItem {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -149,6 +158,9 @@ func NewQGraphicsPixmapItem_1(pixmap qtgui.QPixmap_ITF, parent QGraphicsItem_ITF
 /*
 
  */
+func (*QGraphicsPixmapItem) NewForInherit_1_(pixmap qtgui.QPixmap_ITF) *QGraphicsPixmapItem {
+	return NewQGraphicsPixmapItem_1_(pixmap)
+}
 func NewQGraphicsPixmapItem_1_(pixmap qtgui.QPixmap_ITF) *QGraphicsPixmapItem {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {

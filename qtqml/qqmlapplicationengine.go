@@ -86,6 +86,9 @@ func (this *QQmlApplicationEngine) MetaObject() *qtcore.QMetaObject /*777 const 
 /*
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
+func (*QQmlApplicationEngine) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
+	return NewQQmlApplicationEngine(parent)
+}
 func NewQQmlApplicationEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQQmlApplicationEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QQml
 /*
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
+func (*QQmlApplicationEngine) NewForInherit__() *QQmlApplicationEngine {
+	return NewQQmlApplicationEngine__()
+}
 func NewQQmlApplicationEngine__() *QQmlApplicationEngine {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -124,6 +130,9 @@ func NewQQmlApplicationEngine__() *QQmlApplicationEngine {
 /*
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
+func (*QQmlApplicationEngine) NewForInherit_1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
+	return NewQQmlApplicationEngine_1(url, parent)
+}
 func NewQQmlApplicationEngine_1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -148,6 +157,9 @@ func NewQQmlApplicationEngine_1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /
 /*
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
+func (*QQmlApplicationEngine) NewForInherit_1_(url qtcore.QUrl_ITF) *QQmlApplicationEngine {
+	return NewQQmlApplicationEngine_1_(url)
+}
 func NewQQmlApplicationEngine_1_(url qtcore.QUrl_ITF) *QQmlApplicationEngine {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -170,6 +182,9 @@ func NewQQmlApplicationEngine_1_(url qtcore.QUrl_ITF) *QQmlApplicationEngine {
 /*
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
+func (*QQmlApplicationEngine) NewForInherit_2(filePath string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
+	return NewQQmlApplicationEngine_2(filePath, parent)
+}
 func NewQQmlApplicationEngine_2(filePath string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
@@ -192,6 +207,9 @@ func NewQQmlApplicationEngine_2(filePath string, parent qtcore.QObject_ITF /*777
 /*
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
+func (*QQmlApplicationEngine) NewForInherit_2_(filePath string) *QQmlApplicationEngine {
+	return NewQQmlApplicationEngine_2_(filePath)
+}
 func NewQQmlApplicationEngine_2_(filePath string) *QQmlApplicationEngine {
 	var tmpArg0 = qtcore.NewQString_5(filePath)
 	var convArg0 = tmpArg0.GetCthis()

@@ -73,6 +73,9 @@ func (*QBackingStore) NewFromPointer(cthis unsafe.Pointer) *QBackingStore {
 /*
 Constructs an empty surface for the given top-level window.
 */
+func (*QBackingStore) NewForInherit(window QWindow_ITF /*777 QWindow **/) *QBackingStore {
+	return NewQBackingStore(window)
+}
 func NewQBackingStore(window QWindow_ITF /*777 QWindow **/) *QBackingStore {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {

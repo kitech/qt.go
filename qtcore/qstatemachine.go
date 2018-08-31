@@ -119,6 +119,9 @@ func (this *QStateMachine) MetaObject() *QMetaObject /*777 const QMetaObject **/
 /*
 Constructs a new state machine with the given parent.
 */
+func (*QStateMachine) NewForInherit(parent QObject_ITF /*777 QObject **/) *QStateMachine {
+	return NewQStateMachine(parent)
+}
 func NewQStateMachine(parent QObject_ITF /*777 QObject **/) *QStateMachine {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -139,6 +142,9 @@ func NewQStateMachine(parent QObject_ITF /*777 QObject **/) *QStateMachine {
 /*
 Constructs a new state machine with the given parent.
 */
+func (*QStateMachine) NewForInherit__() *QStateMachine {
+	return NewQStateMachine__()
+}
 func NewQStateMachine__() *QStateMachine {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -157,6 +163,9 @@ func NewQStateMachine__() *QStateMachine {
 /*
 Constructs a new state machine with the given parent.
 */
+func (*QStateMachine) NewForInherit_1(childMode int, parent QObject_ITF /*777 QObject **/) *QStateMachine {
+	return NewQStateMachine_1(childMode, parent)
+}
 func NewQStateMachine_1(childMode int, parent QObject_ITF /*777 QObject **/) *QStateMachine {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -177,6 +186,9 @@ func NewQStateMachine_1(childMode int, parent QObject_ITF /*777 QObject **/) *QS
 /*
 Constructs a new state machine with the given parent.
 */
+func (*QStateMachine) NewForInherit_1_(childMode int) *QStateMachine {
+	return NewQStateMachine_1_(childMode)
+}
 func NewQStateMachine_1_(childMode int) *QStateMachine {
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer

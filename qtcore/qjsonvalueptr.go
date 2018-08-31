@@ -72,6 +72,9 @@ func (*QJsonValuePtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
 /*
 
  */
+func (*QJsonValuePtr) NewForInherit(val QJsonValue_ITF) *QJsonValuePtr {
+	return NewQJsonValuePtr(val)
+}
 func NewQJsonValuePtr(val QJsonValue_ITF) *QJsonValuePtr {
 	var convArg0 unsafe.Pointer
 	if val != nil && val.QJsonValue_PTR() != nil {

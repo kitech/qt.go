@@ -116,6 +116,9 @@ func (this *QPushButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Constructs a push button with no text and a parent.
 */
+func (*QPushButton) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QPushButton {
+	return NewQPushButton(parent)
+}
 func NewQPushButton(parent QWidget_ITF /*777 QWidget **/) *QPushButton {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -136,6 +139,9 @@ func NewQPushButton(parent QWidget_ITF /*777 QWidget **/) *QPushButton {
 /*
 Constructs a push button with no text and a parent.
 */
+func (*QPushButton) NewForInherit__() *QPushButton {
+	return NewQPushButton__()
+}
 func NewQPushButton__() *QPushButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -154,6 +160,9 @@ func NewQPushButton__() *QPushButton {
 /*
 Constructs a push button with no text and a parent.
 */
+func (*QPushButton) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
+	return NewQPushButton_1(text, parent)
+}
 func NewQPushButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -176,6 +185,9 @@ func NewQPushButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushB
 /*
 Constructs a push button with no text and a parent.
 */
+func (*QPushButton) NewForInherit_1_(text string) *QPushButton {
+	return NewQPushButton_1_(text)
+}
 func NewQPushButton_1_(text string) *QPushButton {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -196,6 +208,9 @@ func NewQPushButton_1_(text string) *QPushButton {
 /*
 Constructs a push button with no text and a parent.
 */
+func (*QPushButton) NewForInherit_2(icon qtgui.QIcon_ITF, text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
+	return NewQPushButton_2(icon, text, parent)
+}
 func NewQPushButton_2(icon qtgui.QIcon_ITF, text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -222,6 +237,9 @@ func NewQPushButton_2(icon qtgui.QIcon_ITF, text string, parent QWidget_ITF /*77
 /*
 Constructs a push button with no text and a parent.
 */
+func (*QPushButton) NewForInherit_2_(icon qtgui.QIcon_ITF, text string) *QPushButton {
+	return NewQPushButton_2_(icon, text)
+}
 func NewQPushButton_2_(icon qtgui.QIcon_ITF, text string) *QPushButton {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {

@@ -70,6 +70,9 @@ func (*QDeferredDeleteEvent) NewFromPointer(cthis unsafe.Pointer) *QDeferredDele
 /*
 
  */
+func (*QDeferredDeleteEvent) NewForInherit() *QDeferredDeleteEvent {
+	return NewQDeferredDeleteEvent()
+}
 func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QDeferredDeleteEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -146,6 +146,9 @@ func (this *QAudioRoleControl) AudioRoleChanged(role int) {
 /*
 Construct a QAudioRoleControl with the given parent.
 */
+func (*QAudioRoleControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioRoleControl {
+	return NewQAudioRoleControl(parent)
+}
 func NewQAudioRoleControl(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioRoleControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -166,6 +169,9 @@ func NewQAudioRoleControl(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioRo
 /*
 Construct a QAudioRoleControl with the given parent.
 */
+func (*QAudioRoleControl) NewForInherit__() *QAudioRoleControl {
+	return NewQAudioRoleControl__()
+}
 func NewQAudioRoleControl__() *QAudioRoleControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

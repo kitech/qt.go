@@ -73,6 +73,9 @@ func (*QNetworkProxyFactory) NewFromPointer(cthis unsafe.Pointer) *QNetworkProxy
 /*
 
  */
+func (*QNetworkProxyFactory) NewForInherit() *QNetworkProxyFactory {
+	return NewQNetworkProxyFactory()
+}
 func NewQNetworkProxyFactory() *QNetworkProxyFactory {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

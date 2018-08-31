@@ -84,6 +84,9 @@ func (this *QFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs a QFile object.
 */
+func (*QFile) NewForInherit() *QFile {
+	return NewQFile()
+}
 func NewQFile() *QFile {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -100,6 +103,9 @@ func NewQFile() *QFile {
 /*
 Constructs a QFile object.
 */
+func (*QFile) NewForInherit_1(name string) *QFile {
+	return NewQFile_1(name)
+}
 func NewQFile_1(name string) *QFile {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -118,6 +124,9 @@ func NewQFile_1(name string) *QFile {
 /*
 Constructs a QFile object.
 */
+func (*QFile) NewForInherit_2(parent QObject_ITF /*777 QObject **/) *QFile {
+	return NewQFile_2(parent)
+}
 func NewQFile_2(parent QObject_ITF /*777 QObject **/) *QFile {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -138,6 +147,9 @@ func NewQFile_2(parent QObject_ITF /*777 QObject **/) *QFile {
 /*
 Constructs a QFile object.
 */
+func (*QFile) NewForInherit_3(name string, parent QObject_ITF /*777 QObject **/) *QFile {
+	return NewQFile_3(name, parent)
+}
 func NewQFile_3(name string, parent QObject_ITF /*777 QObject **/) *QFile {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()

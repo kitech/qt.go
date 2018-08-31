@@ -73,6 +73,9 @@ func (*QAccessibleApplication) NewFromPointer(cthis unsafe.Pointer) *QAccessible
 /*
 
  */
+func (*QAccessibleApplication) NewForInherit() *QAccessibleApplication {
+	return NewQAccessibleApplication()
+}
 func NewQAccessibleApplication() *QAccessibleApplication {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QAccessibleApplicationC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

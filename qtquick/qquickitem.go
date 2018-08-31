@@ -257,6 +257,9 @@ func (this *QQuickItem) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 /*
 Constructs a QQuickItem with the given parent.
 */
+func (*QQuickItem) NewForInherit(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickItem {
+	return NewQQuickItem(parent)
+}
 func NewQQuickItem(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQuickItem_PTR() != nil {
@@ -277,6 +280,9 @@ func NewQQuickItem(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickItem {
 /*
 Constructs a QQuickItem with the given parent.
 */
+func (*QQuickItem) NewForInherit__() *QQuickItem {
+	return NewQQuickItem__()
+}
 func NewQQuickItem__() *QQuickItem {
 	// arg: 0, QQuickItem *=Pointer, QQuickItem=Record, , Invalid
 	var convArg0 unsafe.Pointer

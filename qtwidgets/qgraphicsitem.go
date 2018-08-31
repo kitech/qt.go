@@ -223,6 +223,9 @@ If parent is 0, you can add the item to a scene by calling QGraphicsScene::addIt
 
 See also QGraphicsScene::addItem() and setParentItem().
 */
+func (*QGraphicsItem) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsItem {
+	return NewQGraphicsItem(parent)
+}
 func NewQGraphicsItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -247,6 +250,9 @@ If parent is 0, you can add the item to a scene by calling QGraphicsScene::addIt
 
 See also QGraphicsScene::addItem() and setParentItem().
 */
+func (*QGraphicsItem) NewForInherit__() *QGraphicsItem {
+	return NewQGraphicsItem__()
+}
 func NewQGraphicsItem__() *QGraphicsItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer

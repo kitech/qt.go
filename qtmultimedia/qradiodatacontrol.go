@@ -343,6 +343,9 @@ func (this *QRadioDataControl) AlternativeFrequenciesEnabledChanged(enabled bool
 /*
 Constructs a radio data control with the given parent.
 */
+func (*QRadioDataControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QRadioDataControl {
+	return NewQRadioDataControl(parent)
+}
 func NewQRadioDataControl(parent qtcore.QObject_ITF /*777 QObject **/) *QRadioDataControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -363,6 +366,9 @@ func NewQRadioDataControl(parent qtcore.QObject_ITF /*777 QObject **/) *QRadioDa
 /*
 Constructs a radio data control with the given parent.
 */
+func (*QRadioDataControl) NewForInherit__() *QRadioDataControl {
+	return NewQRadioDataControl__()
+}
 func NewQRadioDataControl__() *QRadioDataControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

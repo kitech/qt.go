@@ -91,6 +91,9 @@ func (this *QDesktopWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 /*
 
  */
+func (*QDesktopWidget) NewForInherit() *QDesktopWidget {
+	return NewQDesktopWidget()
+}
 func NewQDesktopWidget() *QDesktopWidget {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidgetC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

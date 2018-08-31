@@ -549,6 +549,9 @@ func (this *QTextCodec) MibEnum() int {
 /*
 Constructs a QTextCodec, and gives it the highest precedence. The QTextCodec should always be constructed on the heap (i.e. with new). Qt takes ownership and will delete it when the application terminates.
 */
+func (*QTextCodec) NewForInherit() *QTextCodec {
+	return NewQTextCodec()
+}
 func NewQTextCodec() *QTextCodec {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextCodecC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

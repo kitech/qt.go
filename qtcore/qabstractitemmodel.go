@@ -179,6 +179,9 @@ func (this *QAbstractItemModel) MetaObject() *QMetaObject /*777 const QMetaObjec
 /*
 Constructs an abstract item model with the given parent.
 */
+func (*QAbstractItemModel) NewForInherit(parent QObject_ITF /*777 QObject **/) *QAbstractItemModel {
+	return NewQAbstractItemModel(parent)
+}
 func NewQAbstractItemModel(parent QObject_ITF /*777 QObject **/) *QAbstractItemModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -199,6 +202,9 @@ func NewQAbstractItemModel(parent QObject_ITF /*777 QObject **/) *QAbstractItemM
 /*
 Constructs an abstract item model with the given parent.
 */
+func (*QAbstractItemModel) NewForInherit__() *QAbstractItemModel {
+	return NewQAbstractItemModel__()
+}
 func NewQAbstractItemModel__() *QAbstractItemModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

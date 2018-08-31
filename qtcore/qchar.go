@@ -74,6 +74,9 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
+func (*QChar) NewForInherit() *QChar {
+	return NewQChar()
+}
 func NewQChar() *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
+func (*QChar) NewForInherit_1(rc uint16) *QChar {
+	return NewQChar_1(rc)
+}
 func NewQChar_1(rc uint16) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Et", qtrt.FFI_TYPE_POINTER, rc)
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +116,9 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
+func (*QChar) NewForInherit_2(c byte, r byte) *QChar {
+	return NewQChar_2(c, r)
+}
 func NewQChar_2(c byte, r byte) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ehh", qtrt.FFI_TYPE_POINTER, c, r)
 	qtrt.ErrPrint(err, rv)
@@ -128,6 +137,9 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
+func (*QChar) NewForInherit_3(rc int16) *QChar {
+	return NewQChar_3(rc)
+}
 func NewQChar_3(rc int16) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Es", qtrt.FFI_TYPE_POINTER, rc)
 	qtrt.ErrPrint(err, rv)
@@ -146,6 +158,9 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
+func (*QChar) NewForInherit_4(rc uint) *QChar {
+	return NewQChar_4(rc)
+}
 func NewQChar_4(rc uint) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ej", qtrt.FFI_TYPE_POINTER, rc)
 	qtrt.ErrPrint(err, rv)
@@ -164,6 +179,9 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
+func (*QChar) NewForInherit_5(rc int) *QChar {
+	return NewQChar_5(rc)
+}
 func NewQChar_5(rc int) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ei", qtrt.FFI_TYPE_POINTER, rc)
 	qtrt.ErrPrint(err, rv)
@@ -182,6 +200,9 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
+func (*QChar) NewForInherit_6(s int) *QChar {
+	return NewQChar_6(s)
+}
 func NewQChar_6(s int) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2ENS_16SpecialCharacterE", qtrt.FFI_TYPE_POINTER, s)
 	qtrt.ErrPrint(err, rv)
@@ -200,6 +221,9 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
+func (*QChar) NewForInherit_7(ch int16) *QChar {
+	return NewQChar_7(ch)
+}
 func NewQChar_7(ch int16) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2EDs", qtrt.FFI_TYPE_POINTER, ch)
 	qtrt.ErrPrint(err, rv)
@@ -218,6 +242,9 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
+func (*QChar) NewForInherit_8(c byte) *QChar {
+	return NewQChar_8(c)
+}
 func NewQChar_8(c byte) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ec", qtrt.FFI_TYPE_POINTER, c)
 	qtrt.ErrPrint(err, rv)
@@ -236,6 +263,9 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
+func (*QChar) NewForInherit_9(c byte) *QChar {
+	return NewQChar_9(c)
+}
 func NewQChar_9(c byte) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Eh", qtrt.FFI_TYPE_POINTER, c)
 	qtrt.ErrPrint(err, rv)

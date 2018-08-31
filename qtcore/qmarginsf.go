@@ -72,6 +72,9 @@ func (*QMarginsF) NewFromPointer(cthis unsafe.Pointer) *QMarginsF {
 /*
 
  */
+func (*QMarginsF) NewForInherit() *QMarginsF {
+	return NewQMarginsF()
+}
 func NewQMarginsF() *QMarginsF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQMarginsF() *QMarginsF {
 /*
 
  */
+func (*QMarginsF) NewForInherit_1(left float64, top float64, right float64, bottom float64) *QMarginsF {
+	return NewQMarginsF_1(left, top, right, bottom)
+}
 func NewQMarginsF_1(left float64, top float64, right float64, bottom float64) *QMarginsF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFC2Edddd", qtrt.FFI_TYPE_POINTER, left, top, right, bottom)
 	qtrt.ErrPrint(err, rv)
@@ -104,6 +110,9 @@ func NewQMarginsF_1(left float64, top float64, right float64, bottom float64) *Q
 /*
 
  */
+func (*QMarginsF) NewForInherit_2(margins QMargins_ITF) *QMarginsF {
+	return NewQMarginsF_2(margins)
+}
 func NewQMarginsF_2(margins QMargins_ITF) *QMarginsF {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {

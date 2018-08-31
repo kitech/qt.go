@@ -95,6 +95,9 @@ The icon is initially invisible.
 
 See also visible.
 */
+func (*QSystemTrayIcon) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTrayIcon {
+	return NewQSystemTrayIcon(parent)
+}
 func NewQSystemTrayIcon(parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTrayIcon {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -119,6 +122,9 @@ The icon is initially invisible.
 
 See also visible.
 */
+func (*QSystemTrayIcon) NewForInherit__() *QSystemTrayIcon {
+	return NewQSystemTrayIcon__()
+}
 func NewQSystemTrayIcon__() *QSystemTrayIcon {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -141,6 +147,9 @@ The icon is initially invisible.
 
 See also visible.
 */
+func (*QSystemTrayIcon) NewForInherit_1(icon qtgui.QIcon_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTrayIcon {
+	return NewQSystemTrayIcon_1(icon, parent)
+}
 func NewQSystemTrayIcon_1(icon qtgui.QIcon_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTrayIcon {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -169,6 +178,9 @@ The icon is initially invisible.
 
 See also visible.
 */
+func (*QSystemTrayIcon) NewForInherit_1_(icon qtgui.QIcon_ITF) *QSystemTrayIcon {
+	return NewQSystemTrayIcon_1_(icon)
+}
 func NewQSystemTrayIcon_1_(icon qtgui.QIcon_ITF) *QSystemTrayIcon {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {

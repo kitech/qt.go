@@ -75,6 +75,9 @@ func (*QAbstractPlanarVideoBuffer) NewFromPointer(cthis unsafe.Pointer) *QAbstra
 /*
 
  */
+func (*QAbstractPlanarVideoBuffer) NewForInherit(type_ int) *QAbstractPlanarVideoBuffer {
+	return NewQAbstractPlanarVideoBuffer(type_)
+}
 func NewQAbstractPlanarVideoBuffer(type_ int) *QAbstractPlanarVideoBuffer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractPlanarVideoBufferC2EN20QAbstractVideoBuffer10HandleTypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

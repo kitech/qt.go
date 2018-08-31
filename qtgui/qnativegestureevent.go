@@ -71,6 +71,9 @@ func (*QNativeGestureEvent) NewFromPointer(cthis unsafe.Pointer) *QNativeGesture
 /*
 
  */
+func (*QNativeGestureEvent) NewForInherit(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
+	return NewQNativeGestureEvent(type_, localPos, windowPos, screenPos, value, sequenceId, intArgument)
+}
 func NewQNativeGestureEvent(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
 	var convArg1 unsafe.Pointer
 	if localPos != nil && localPos.QPointF_PTR() != nil {
@@ -99,6 +102,9 @@ func NewQNativeGestureEvent(type_ int, localPos qtcore.QPointF_ITF, windowPos qt
 /*
 
  */
+func (*QNativeGestureEvent) NewForInherit_1(type_ int, dev QTouchDevice_ITF /*777 const QTouchDevice **/, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
+	return NewQNativeGestureEvent_1(type_, dev, localPos, windowPos, screenPos, value, sequenceId, intArgument)
+}
 func NewQNativeGestureEvent_1(type_ int, dev QTouchDevice_ITF /*777 const QTouchDevice **/, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
 	var convArg1 unsafe.Pointer
 	if dev != nil && dev.QTouchDevice_PTR() != nil {

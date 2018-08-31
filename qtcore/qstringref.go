@@ -72,6 +72,9 @@ func (*QStringRef) NewFromPointer(cthis unsafe.Pointer) *QStringRef {
 /*
 
  */
+func (*QStringRef) NewForInherit() *QStringRef {
+	return NewQStringRef()
+}
 func NewQStringRef() *QStringRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStringRefC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStringRef() *QStringRef {
 /*
 
  */
+func (*QStringRef) NewForInherit_1(string string, position int, size int) *QStringRef {
+	return NewQStringRef_1(string, position, size)
+}
 func NewQStringRef_1(string string, position int, size int) *QStringRef {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
@@ -106,6 +112,9 @@ func NewQStringRef_1(string string, position int, size int) *QStringRef {
 /*
 
  */
+func (*QStringRef) NewForInherit_2(string string) *QStringRef {
+	return NewQStringRef_2(string)
+}
 func NewQStringRef_2(string string) *QStringRef {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()

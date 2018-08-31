@@ -75,6 +75,9 @@ func (*QImageEncoderSettings) NewFromPointer(cthis unsafe.Pointer) *QImageEncode
 /*
 
  */
+func (*QImageEncoderSettings) NewForInherit() *QImageEncoderSettings {
+	return NewQImageEncoderSettings()
+}
 func NewQImageEncoderSettings() *QImageEncoderSettings {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QImageEncoderSettingsC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

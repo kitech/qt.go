@@ -72,6 +72,9 @@ func (*QSizeF) NewFromPointer(cthis unsafe.Pointer) *QSizeF {
 /*
 
  */
+func (*QSizeF) NewForInherit() *QSizeF {
+	return NewQSizeF()
+}
 func NewQSizeF() *QSizeF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QSizeFC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQSizeF() *QSizeF {
 /*
 
  */
+func (*QSizeF) NewForInherit_1(sz QSize_ITF) *QSizeF {
+	return NewQSizeF_1(sz)
+}
 func NewQSizeF_1(sz QSize_ITF) *QSizeF {
 	var convArg0 unsafe.Pointer
 	if sz != nil && sz.QSize_PTR() != nil {
@@ -108,6 +114,9 @@ func NewQSizeF_1(sz QSize_ITF) *QSizeF {
 /*
 
  */
+func (*QSizeF) NewForInherit_2(w float64, h float64) *QSizeF {
+	return NewQSizeF_2(w, h)
+}
 func NewQSizeF_2(w float64, h float64) *QSizeF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QSizeFC2Edd", qtrt.FFI_TYPE_POINTER, w, h)
 	qtrt.ErrPrint(err, rv)

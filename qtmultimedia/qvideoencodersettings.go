@@ -75,6 +75,9 @@ func (*QVideoEncoderSettings) NewFromPointer(cthis unsafe.Pointer) *QVideoEncode
 /*
 
  */
+func (*QVideoEncoderSettings) NewForInherit() *QVideoEncoderSettings {
+	return NewQVideoEncoderSettings()
+}
 func NewQVideoEncoderSettings() *QVideoEncoderSettings {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QVideoEncoderSettingsC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

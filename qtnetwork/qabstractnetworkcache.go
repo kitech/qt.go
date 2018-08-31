@@ -258,6 +258,9 @@ func (this *QAbstractNetworkCache) Clear() {
 /*
 Constructs an abstract network cache with the given parent.
 */
+func (*QAbstractNetworkCache) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractNetworkCache {
+	return NewQAbstractNetworkCache(parent)
+}
 func NewQAbstractNetworkCache(parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractNetworkCache {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -278,6 +281,9 @@ func NewQAbstractNetworkCache(parent qtcore.QObject_ITF /*777 QObject **/) *QAbs
 /*
 Constructs an abstract network cache with the given parent.
 */
+func (*QAbstractNetworkCache) NewForInherit__() *QAbstractNetworkCache {
+	return NewQAbstractNetworkCache__()
+}
 func NewQAbstractNetworkCache__() *QAbstractNetworkCache {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

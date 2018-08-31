@@ -91,6 +91,9 @@ func (this *QQmlEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 /*
 Create a new QQmlEngine with the given parent.
 */
+func (*QQmlEngine) NewForInherit(p qtcore.QObject_ITF /*777 QObject **/) *QQmlEngine {
+	return NewQQmlEngine(p)
+}
 func NewQQmlEngine(p qtcore.QObject_ITF /*777 QObject **/) *QQmlEngine {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QObject_PTR() != nil {
@@ -111,6 +114,9 @@ func NewQQmlEngine(p qtcore.QObject_ITF /*777 QObject **/) *QQmlEngine {
 /*
 Create a new QQmlEngine with the given parent.
 */
+func (*QQmlEngine) NewForInherit__() *QQmlEngine {
+	return NewQQmlEngine__()
+}
 func NewQQmlEngine__() *QQmlEngine {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

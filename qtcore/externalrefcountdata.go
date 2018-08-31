@@ -72,6 +72,9 @@ func (*ExternalRefCountData) NewFromPointer(cthis unsafe.Pointer) *ExternalRefCo
 /*
 
  */
+func (*ExternalRefCountData) NewForInherit(arg0 int) *ExternalRefCountData {
+	return NewExternalRefCountData(arg0)
+}
 func NewExternalRefCountData(arg0 int) *ExternalRefCountData {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)

@@ -74,6 +74,9 @@ func (*QSGGeometryNode) NewFromPointer(cthis unsafe.Pointer) *QSGGeometryNode {
 /*
 
  */
+func (*QSGGeometryNode) NewForInherit() *QSGGeometryNode {
+	return NewQSGGeometryNode()
+}
 func NewQSGGeometryNode() *QSGGeometryNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSGGeometryNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

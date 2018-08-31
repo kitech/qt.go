@@ -85,6 +85,9 @@ func (*QWebEngineCertificateError) NewFromPointer(cthis unsafe.Pointer) *QWebEng
 /*
 
  */
+func (*QWebEngineCertificateError) NewForInherit(error int, url qtcore.QUrl_ITF /*123*/, overridable bool, errorDescription string) *QWebEngineCertificateError {
+	return NewQWebEngineCertificateError(error, url, overridable, errorDescription)
+}
 func NewQWebEngineCertificateError(error int, url qtcore.QUrl_ITF /*123*/, overridable bool, errorDescription string) *QWebEngineCertificateError {
 	var convArg1 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {

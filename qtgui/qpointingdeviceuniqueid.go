@@ -73,6 +73,9 @@ func (*QPointingDeviceUniqueId) NewFromPointer(cthis unsafe.Pointer) *QPointingD
 /*
 
  */
+func (*QPointingDeviceUniqueId) NewForInherit() *QPointingDeviceUniqueId {
+	return NewQPointingDeviceUniqueId()
+}
 func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueIdC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

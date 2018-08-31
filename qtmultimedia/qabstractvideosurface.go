@@ -97,6 +97,9 @@ func (this *QAbstractVideoSurface) MetaObject() *qtcore.QMetaObject /*777 const 
 /*
 Constructs a video surface with the given parent.
 */
+func (*QAbstractVideoSurface) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractVideoSurface {
+	return NewQAbstractVideoSurface(parent)
+}
 func NewQAbstractVideoSurface(parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractVideoSurface {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -117,6 +120,9 @@ func NewQAbstractVideoSurface(parent qtcore.QObject_ITF /*777 QObject **/) *QAbs
 /*
 Constructs a video surface with the given parent.
 */
+func (*QAbstractVideoSurface) NewForInherit__() *QAbstractVideoSurface {
+	return NewQAbstractVideoSurface__()
+}
 func NewQAbstractVideoSurface__() *QAbstractVideoSurface {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

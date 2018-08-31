@@ -86,6 +86,9 @@ func (this *QAbstractItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const 
 /*
 Creates a new abstract item delegate with the given parent.
 */
+func (*QAbstractItemDelegate) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractItemDelegate {
+	return NewQAbstractItemDelegate(parent)
+}
 func NewQAbstractItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractItemDelegate {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQAbstractItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QAbs
 /*
 Creates a new abstract item delegate with the given parent.
 */
+func (*QAbstractItemDelegate) NewForInherit__() *QAbstractItemDelegate {
+	return NewQAbstractItemDelegate__()
+}
 func NewQAbstractItemDelegate__() *QAbstractItemDelegate {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -88,6 +88,9 @@ Constructs a new form layout with the given parent widget.
 
 See also QWidget::setLayout().
 */
+func (*QFormLayout) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QFormLayout {
+	return NewQFormLayout(parent)
+}
 func NewQFormLayout(parent QWidget_ITF /*777 QWidget **/) *QFormLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -110,6 +113,9 @@ Constructs a new form layout with the given parent widget.
 
 See also QWidget::setLayout().
 */
+func (*QFormLayout) NewForInherit__() *QFormLayout {
+	return NewQFormLayout__()
+}
 func NewQFormLayout__() *QFormLayout {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

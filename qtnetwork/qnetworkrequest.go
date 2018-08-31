@@ -75,6 +75,9 @@ Constructs a QNetworkRequest object with url as the URL to be requested.
 
 See also url() and setUrl().
 */
+func (*QNetworkRequest) NewForInherit(url qtcore.QUrl_ITF) *QNetworkRequest {
+	return NewQNetworkRequest(url)
+}
 func NewQNetworkRequest(url qtcore.QUrl_ITF) *QNetworkRequest {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -97,6 +100,9 @@ Constructs a QNetworkRequest object with url as the URL to be requested.
 
 See also url() and setUrl().
 */
+func (*QNetworkRequest) NewForInherit__() *QNetworkRequest {
+	return NewQNetworkRequest__()
+}
 func NewQNetworkRequest__() *QNetworkRequest {
 	// arg: 0, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg0 = qtcore.NewQUrl()

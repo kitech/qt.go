@@ -72,6 +72,9 @@ func (*QProcessEnvironment) NewFromPointer(cthis unsafe.Pointer) *QProcessEnviro
 /*
 
  */
+func (*QProcessEnvironment) NewForInherit() *QProcessEnvironment {
+	return NewQProcessEnvironment()
+}
 func NewQProcessEnvironment() *QProcessEnvironment {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironmentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

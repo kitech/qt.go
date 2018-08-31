@@ -73,6 +73,9 @@ func (*QAccessibleTextInsertEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 /*
 
  */
+func (*QAccessibleTextInsertEvent) NewForInherit(obj qtcore.QObject_ITF /*777 QObject **/, position int, text string) *QAccessibleTextInsertEvent {
+	return NewQAccessibleTextInsertEvent(obj, position, text)
+}
 func NewQAccessibleTextInsertEvent(obj qtcore.QObject_ITF /*777 QObject **/, position int, text string) *QAccessibleTextInsertEvent {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -95,6 +98,9 @@ func NewQAccessibleTextInsertEvent(obj qtcore.QObject_ITF /*777 QObject **/, pos
 /*
 
  */
+func (*QAccessibleTextInsertEvent) NewForInherit_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, position int, text string) *QAccessibleTextInsertEvent {
+	return NewQAccessibleTextInsertEvent_1(iface, position, text)
+}
 func NewQAccessibleTextInsertEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, position int, text string) *QAccessibleTextInsertEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {

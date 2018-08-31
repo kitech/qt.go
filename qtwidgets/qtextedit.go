@@ -226,6 +226,9 @@ func (this *QTextEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 /*
 Constructs an empty QTextEdit with parent parent.
 */
+func (*QTextEdit) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTextEdit {
+	return NewQTextEdit(parent)
+}
 func NewQTextEdit(parent QWidget_ITF /*777 QWidget **/) *QTextEdit {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -246,6 +249,9 @@ func NewQTextEdit(parent QWidget_ITF /*777 QWidget **/) *QTextEdit {
 /*
 Constructs an empty QTextEdit with parent parent.
 */
+func (*QTextEdit) NewForInherit__() *QTextEdit {
+	return NewQTextEdit__()
+}
 func NewQTextEdit__() *QTextEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -264,6 +270,9 @@ func NewQTextEdit__() *QTextEdit {
 /*
 Constructs an empty QTextEdit with parent parent.
 */
+func (*QTextEdit) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QTextEdit {
+	return NewQTextEdit_1(text, parent)
+}
 func NewQTextEdit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QTextEdit {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -286,6 +295,9 @@ func NewQTextEdit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QTextEdi
 /*
 Constructs an empty QTextEdit with parent parent.
 */
+func (*QTextEdit) NewForInherit_1_(text string) *QTextEdit {
+	return NewQTextEdit_1_(text)
+}
 func NewQTextEdit_1_(text string) *QTextEdit {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()

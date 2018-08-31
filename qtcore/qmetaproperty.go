@@ -72,6 +72,9 @@ func (*QMetaProperty) NewFromPointer(cthis unsafe.Pointer) *QMetaProperty {
 /*
 
  */
+func (*QMetaProperty) NewForInherit() *QMetaProperty {
+	return NewQMetaProperty()
+}
 func NewQMetaProperty() *QMetaProperty {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMetaPropertyC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

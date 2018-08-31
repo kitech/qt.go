@@ -73,6 +73,9 @@ func (*QRawFont) NewFromPointer(cthis unsafe.Pointer) *QRawFont {
 /*
 Constructs an invalid QRawFont.
 */
+func (*QRawFont) NewForInherit() *QRawFont {
+	return NewQRawFont()
+}
 func NewQRawFont() *QRawFont {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFontC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQRawFont() *QRawFont {
 /*
 Constructs an invalid QRawFont.
 */
+func (*QRawFont) NewForInherit_1(fileName string, pixelSize float64, hintingPreference int) *QRawFont {
+	return NewQRawFont_1(fileName, pixelSize, hintingPreference)
+}
 func NewQRawFont_1(fileName string, pixelSize float64, hintingPreference int) *QRawFont {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -107,6 +113,9 @@ func NewQRawFont_1(fileName string, pixelSize float64, hintingPreference int) *Q
 /*
 Constructs an invalid QRawFont.
 */
+func (*QRawFont) NewForInherit_1_(fileName string, pixelSize float64) *QRawFont {
+	return NewQRawFont_1_(fileName, pixelSize)
+}
 func NewQRawFont_1_(fileName string, pixelSize float64) *QRawFont {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -127,6 +136,9 @@ func NewQRawFont_1_(fileName string, pixelSize float64) *QRawFont {
 /*
 Constructs an invalid QRawFont.
 */
+func (*QRawFont) NewForInherit_2(fontData qtcore.QByteArray_ITF, pixelSize float64, hintingPreference int) *QRawFont {
+	return NewQRawFont_2(fontData, pixelSize, hintingPreference)
+}
 func NewQRawFont_2(fontData qtcore.QByteArray_ITF, pixelSize float64, hintingPreference int) *QRawFont {
 	var convArg0 unsafe.Pointer
 	if fontData != nil && fontData.QByteArray_PTR() != nil {
@@ -147,6 +159,9 @@ func NewQRawFont_2(fontData qtcore.QByteArray_ITF, pixelSize float64, hintingPre
 /*
 Constructs an invalid QRawFont.
 */
+func (*QRawFont) NewForInherit_2_(fontData qtcore.QByteArray_ITF, pixelSize float64) *QRawFont {
+	return NewQRawFont_2_(fontData, pixelSize)
+}
 func NewQRawFont_2_(fontData qtcore.QByteArray_ITF, pixelSize float64) *QRawFont {
 	var convArg0 unsafe.Pointer
 	if fontData != nil && fontData.QByteArray_PTR() != nil {

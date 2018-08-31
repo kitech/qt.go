@@ -99,6 +99,9 @@ func (this *QState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs a new state with the given parent state.
 */
+func (*QState) NewForInherit(parent QState_ITF /*777 QState **/) *QState {
+	return NewQState(parent)
+}
 func NewQState(parent QState_ITF /*777 QState **/) *QState {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QState_PTR() != nil {
@@ -119,6 +122,9 @@ func NewQState(parent QState_ITF /*777 QState **/) *QState {
 /*
 Constructs a new state with the given parent state.
 */
+func (*QState) NewForInherit__() *QState {
+	return NewQState__()
+}
 func NewQState__() *QState {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -137,6 +143,9 @@ func NewQState__() *QState {
 /*
 Constructs a new state with the given parent state.
 */
+func (*QState) NewForInherit_1(childMode int, parent QState_ITF /*777 QState **/) *QState {
+	return NewQState_1(childMode, parent)
+}
 func NewQState_1(childMode int, parent QState_ITF /*777 QState **/) *QState {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QState_PTR() != nil {
@@ -157,6 +166,9 @@ func NewQState_1(childMode int, parent QState_ITF /*777 QState **/) *QState {
 /*
 Constructs a new state with the given parent state.
 */
+func (*QState) NewForInherit_1_(childMode int) *QState {
+	return NewQState_1_(childMode)
+}
 func NewQState_1_(childMode int) *QState {
 	// arg: 1, QState *=Pointer, QState=Record, , Invalid
 	var convArg1 unsafe.Pointer

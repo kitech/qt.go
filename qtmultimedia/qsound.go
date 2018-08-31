@@ -125,6 +125,9 @@ Constructs a QSound object from the file specified by the given filename and wit
 
 See also play().
 */
+func (*QSound) NewForInherit(filename string, parent qtcore.QObject_ITF /*777 QObject **/) *QSound {
+	return NewQSound(filename, parent)
+}
 func NewQSound(filename string, parent qtcore.QObject_ITF /*777 QObject **/) *QSound {
 	var tmpArg0 = qtcore.NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
@@ -149,6 +152,9 @@ Constructs a QSound object from the file specified by the given filename and wit
 
 See also play().
 */
+func (*QSound) NewForInherit__(filename string) *QSound {
+	return NewQSound__(filename)
+}
 func NewQSound__(filename string) *QSound {
 	var tmpArg0 = qtcore.NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()

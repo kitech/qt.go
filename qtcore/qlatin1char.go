@@ -72,6 +72,9 @@ func (*QLatin1Char) NewFromPointer(cthis unsafe.Pointer) *QLatin1Char {
 /*
 
  */
+func (*QLatin1Char) NewForInherit(c byte) *QLatin1Char {
+	return NewQLatin1Char(c)
+}
 func NewQLatin1Char(c byte) *QLatin1Char {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QLatin1CharC2Ec", qtrt.FFI_TYPE_POINTER, c)
 	qtrt.ErrPrint(err, rv)

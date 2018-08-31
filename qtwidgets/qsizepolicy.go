@@ -78,6 +78,9 @@ The policies can be altered using the setHorizontalPolicy() and setVerticalPolic
 
 See also setHorizontalStretch() and setVerticalStretch().
 */
+func (*QSizePolicy) NewForInherit() *QSizePolicy {
+	return NewQSizePolicy()
+}
 func NewQSizePolicy() *QSizePolicy {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSizePolicyC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -98,6 +101,9 @@ The policies can be altered using the setHorizontalPolicy() and setVerticalPolic
 
 See also setHorizontalStretch() and setVerticalStretch().
 */
+func (*QSizePolicy) NewForInherit_1(horizontal int, vertical int, type_ int) *QSizePolicy {
+	return NewQSizePolicy_1(horizontal, vertical, type_)
+}
 func NewQSizePolicy_1(horizontal int, vertical int, type_ int) *QSizePolicy {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSizePolicyC2ENS_6PolicyES0_NS_11ControlTypeE", qtrt.FFI_TYPE_POINTER, horizontal, vertical, type_)
 	qtrt.ErrPrint(err, rv)
@@ -118,6 +124,9 @@ The policies can be altered using the setHorizontalPolicy() and setVerticalPolic
 
 See also setHorizontalStretch() and setVerticalStretch().
 */
+func (*QSizePolicy) NewForInherit_1_(horizontal int, vertical int) *QSizePolicy {
+	return NewQSizePolicy_1_(horizontal, vertical)
+}
 func NewQSizePolicy_1_(horizontal int, vertical int) *QSizePolicy {
 	// arg: 2, QSizePolicy::ControlType=Enum, QSizePolicy::ControlType=Enum, , Invalid
 	type_ := 0

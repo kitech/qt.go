@@ -74,6 +74,9 @@ func (*QStyleHintReturn) NewFromPointer(cthis unsafe.Pointer) *QStyleHintReturn 
 /*
 
  */
+func (*QStyleHintReturn) NewForInherit(version int, type_ int) *QStyleHintReturn {
+	return NewQStyleHintReturn(version, type_)
+}
 func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 /*
 
  */
+func (*QStyleHintReturn) NewForInherit__() *QStyleHintReturn {
+	return NewQStyleHintReturn__()
+}
 func NewQStyleHintReturn__() *QStyleHintReturn {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	version := 0 /*QStyleOption::Version*/
@@ -110,6 +116,9 @@ func NewQStyleHintReturn__() *QStyleHintReturn {
 /*
 
  */
+func (*QStyleHintReturn) NewForInherit__1(version int) *QStyleHintReturn {
+	return NewQStyleHintReturn__1(version)
+}
 func NewQStyleHintReturn__1(version int) *QStyleHintReturn {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := QStyleHintReturn__SH_Default

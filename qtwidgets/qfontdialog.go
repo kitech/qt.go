@@ -109,6 +109,9 @@ This function was introduced in  Qt 4.5.
 
 See also getFont().
 */
+func (*QFontDialog) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
+	return NewQFontDialog(parent)
+}
 func NewQFontDialog(parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -137,6 +140,9 @@ This function was introduced in  Qt 4.5.
 
 See also getFont().
 */
+func (*QFontDialog) NewForInherit__() *QFontDialog {
+	return NewQFontDialog__()
+}
 func NewQFontDialog__() *QFontDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -163,6 +169,9 @@ This function was introduced in  Qt 4.5.
 
 See also getFont().
 */
+func (*QFontDialog) NewForInherit_1(initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
+	return NewQFontDialog_1(initial, parent)
+}
 func NewQFontDialog_1(initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
@@ -195,6 +204,9 @@ This function was introduced in  Qt 4.5.
 
 See also getFont().
 */
+func (*QFontDialog) NewForInherit_1_(initial qtgui.QFont_ITF) *QFontDialog {
+	return NewQFontDialog_1_(initial)
+}
 func NewQFontDialog_1_(initial qtgui.QFont_ITF) *QFontDialog {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {

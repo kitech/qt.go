@@ -109,6 +109,9 @@ func (this *QIODevice) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs a QIODevice object.
 */
+func (*QIODevice) NewForInherit() *QIODevice {
+	return NewQIODevice()
+}
 func NewQIODevice() *QIODevice {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODeviceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -125,6 +128,9 @@ func NewQIODevice() *QIODevice {
 /*
 Constructs a QIODevice object.
 */
+func (*QIODevice) NewForInherit_1(parent QObject_ITF /*777 QObject **/) *QIODevice {
+	return NewQIODevice_1(parent)
+}
 func NewQIODevice_1(parent QObject_ITF /*777 QObject **/) *QIODevice {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

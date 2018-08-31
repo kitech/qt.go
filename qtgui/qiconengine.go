@@ -75,6 +75,9 @@ Constructs the icon engine.
 
 This function was introduced in  Qt 5.6.
 */
+func (*QIconEngine) NewForInherit() *QIconEngine {
+	return NewQIconEngine()
+}
 func NewQIconEngine() *QIconEngine {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngineC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

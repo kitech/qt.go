@@ -73,6 +73,9 @@ func (*QQuaternion) NewFromPointer(cthis unsafe.Pointer) *QQuaternion {
 /*
 Constructs an identity quaternion (1, 0, 0, 0), i.e. with the vector (0, 0, 0) and scalar 1.
 */
+func (*QQuaternion) NewForInherit() *QQuaternion {
+	return NewQQuaternion()
+}
 func NewQQuaternion() *QQuaternion {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQQuaternion() *QQuaternion {
 /*
 Constructs an identity quaternion (1, 0, 0, 0), i.e. with the vector (0, 0, 0) and scalar 1.
 */
+func (*QQuaternion) NewForInherit_1(arg0 int) *QQuaternion {
+	return NewQQuaternion_1(arg0)
+}
 func NewQQuaternion_1(arg0 int) *QQuaternion {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternionC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +111,9 @@ func NewQQuaternion_1(arg0 int) *QQuaternion {
 /*
 Constructs an identity quaternion (1, 0, 0, 0), i.e. with the vector (0, 0, 0) and scalar 1.
 */
+func (*QQuaternion) NewForInherit_2(scalar float32, xpos float32, ypos float32, zpos float32) *QQuaternion {
+	return NewQQuaternion_2(scalar, xpos, ypos, zpos)
+}
 func NewQQuaternion_2(scalar float32, xpos float32, ypos float32, zpos float32) *QQuaternion {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternionC2Effff", qtrt.FFI_TYPE_POINTER, scalar, xpos, ypos, zpos)
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +130,9 @@ func NewQQuaternion_2(scalar float32, xpos float32, ypos float32, zpos float32) 
 /*
 Constructs an identity quaternion (1, 0, 0, 0), i.e. with the vector (0, 0, 0) and scalar 1.
 */
+func (*QQuaternion) NewForInherit_3(scalar float32, vector QVector3D_ITF) *QQuaternion {
+	return NewQQuaternion_3(scalar, vector)
+}
 func NewQQuaternion_3(scalar float32, vector QVector3D_ITF) *QQuaternion {
 	var convArg1 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
@@ -141,6 +153,9 @@ func NewQQuaternion_3(scalar float32, vector QVector3D_ITF) *QQuaternion {
 /*
 Constructs an identity quaternion (1, 0, 0, 0), i.e. with the vector (0, 0, 0) and scalar 1.
 */
+func (*QQuaternion) NewForInherit_4(vector QVector4D_ITF) *QQuaternion {
+	return NewQQuaternion_4(vector)
+}
 func NewQQuaternion_4(vector QVector4D_ITF) *QQuaternion {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector4D_PTR() != nil {

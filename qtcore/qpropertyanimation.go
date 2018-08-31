@@ -99,6 +99,9 @@ func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 /*
 Construct a QPropertyAnimation object. parent is passed to QObject's constructor.
 */
+func (*QPropertyAnimation) NewForInherit(parent QObject_ITF /*777 QObject **/) *QPropertyAnimation {
+	return NewQPropertyAnimation(parent)
+}
 func NewQPropertyAnimation(parent QObject_ITF /*777 QObject **/) *QPropertyAnimation {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -119,6 +122,9 @@ func NewQPropertyAnimation(parent QObject_ITF /*777 QObject **/) *QPropertyAnima
 /*
 Construct a QPropertyAnimation object. parent is passed to QObject's constructor.
 */
+func (*QPropertyAnimation) NewForInherit__() *QPropertyAnimation {
+	return NewQPropertyAnimation__()
+}
 func NewQPropertyAnimation__() *QPropertyAnimation {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -137,6 +143,9 @@ func NewQPropertyAnimation__() *QPropertyAnimation {
 /*
 Construct a QPropertyAnimation object. parent is passed to QObject's constructor.
 */
+func (*QPropertyAnimation) NewForInherit_1(target QObject_ITF /*777 QObject **/, propertyName QByteArray_ITF, parent QObject_ITF /*777 QObject **/) *QPropertyAnimation {
+	return NewQPropertyAnimation_1(target, propertyName, parent)
+}
 func NewQPropertyAnimation_1(target QObject_ITF /*777 QObject **/, propertyName QByteArray_ITF, parent QObject_ITF /*777 QObject **/) *QPropertyAnimation {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QObject_PTR() != nil {
@@ -165,6 +174,9 @@ func NewQPropertyAnimation_1(target QObject_ITF /*777 QObject **/, propertyName 
 /*
 Construct a QPropertyAnimation object. parent is passed to QObject's constructor.
 */
+func (*QPropertyAnimation) NewForInherit_1_(target QObject_ITF /*777 QObject **/, propertyName QByteArray_ITF) *QPropertyAnimation {
+	return NewQPropertyAnimation_1_(target, propertyName)
+}
 func NewQPropertyAnimation_1_(target QObject_ITF /*777 QObject **/, propertyName QByteArray_ITF) *QPropertyAnimation {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QObject_PTR() != nil {

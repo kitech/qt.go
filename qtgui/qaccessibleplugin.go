@@ -85,6 +85,9 @@ func (this *QAccessiblePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMet
 /*
 Constructs an accessibility plugin with the given parent. This is invoked automatically by the plugin loader.
 */
+func (*QAccessiblePlugin) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAccessiblePlugin {
+	return NewQAccessiblePlugin(parent)
+}
 func NewQAccessiblePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QAccessiblePlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -105,6 +108,9 @@ func NewQAccessiblePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QAccessi
 /*
 Constructs an accessibility plugin with the given parent. This is invoked automatically by the plugin loader.
 */
+func (*QAccessiblePlugin) NewForInherit__() *QAccessiblePlugin {
+	return NewQAccessiblePlugin__()
+}
 func NewQAccessiblePlugin__() *QAccessiblePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

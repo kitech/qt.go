@@ -74,6 +74,9 @@ func (*QFileIconProvider) NewFromPointer(cthis unsafe.Pointer) *QFileIconProvide
 /*
 Constructs a file icon provider.
 */
+func (*QFileIconProvider) NewForInherit() *QFileIconProvider {
+	return NewQFileIconProvider()
+}
 func NewQFileIconProvider() *QFileIconProvider {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QFileIconProviderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -74,6 +74,9 @@ Constructs an empty byte array.
 
 See also isEmpty().
 */
+func (*QByteArray) NewForInherit() *QByteArray {
+	return NewQByteArray()
+}
 func NewQByteArray() *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs an empty byte array.
 
 See also isEmpty().
 */
+func (*QByteArray) NewForInherit_1(arg0 string, size int) *QByteArray {
+	return NewQByteArray_1(arg0, size)
+}
 func NewQByteArray_1(arg0 string, size int) *QByteArray {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
@@ -112,6 +118,9 @@ Constructs an empty byte array.
 
 See also isEmpty().
 */
+func (*QByteArray) NewForInherit_1_(arg0 string) *QByteArray {
+	return NewQByteArray_1_(arg0)
+}
 func NewQByteArray_1_(arg0 string) *QByteArray {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
@@ -134,6 +143,9 @@ Constructs an empty byte array.
 
 See also isEmpty().
 */
+func (*QByteArray) NewForInherit_2(size int, c byte) *QByteArray {
+	return NewQByteArray_2(size, c)
+}
 func NewQByteArray_2(size int, c byte) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayC2Eic", qtrt.FFI_TYPE_POINTER, size, c)
 	qtrt.ErrPrint(err, rv)
@@ -152,6 +164,9 @@ Constructs an empty byte array.
 
 See also isEmpty().
 */
+func (*QByteArray) NewForInherit_3(size int, arg1 int) *QByteArray {
+	return NewQByteArray_3(size, arg1)
+}
 func NewQByteArray_3(size int, arg1 int) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayC2EiN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, size, arg1)
 	qtrt.ErrPrint(err, rv)

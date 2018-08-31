@@ -72,6 +72,9 @@ func (*QGraphicsSceneEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScene
 /*
 
  */
+func (*QGraphicsSceneEvent) NewForInherit(type_ int) *QGraphicsSceneEvent {
+	return NewQGraphicsSceneEvent(type_)
+}
 func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)

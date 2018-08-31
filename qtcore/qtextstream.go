@@ -74,6 +74,9 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
+func (*QTextStream) NewForInherit() *QTextStream {
+	return NewQTextStream()
+}
 func NewQTextStream() *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
+func (*QTextStream) NewForInherit_1(device QIODevice_ITF /*777 QIODevice **/) *QTextStream {
+	return NewQTextStream_1(device)
+}
 func NewQTextStream_1(device QIODevice_ITF /*777 QIODevice **/) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -114,6 +120,9 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
+func (*QTextStream) NewForInherit_2(string string, openMode int) *QTextStream {
+	return NewQTextStream_2(string, openMode)
+}
 func NewQTextStream_2(string string, openMode int) *QTextStream {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
@@ -134,6 +143,9 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
+func (*QTextStream) NewForInherit_2_(string string) *QTextStream {
+	return NewQTextStream_2_(string)
+}
 func NewQTextStream_2_(string string) *QTextStream {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
@@ -156,6 +168,9 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
+func (*QTextStream) NewForInherit_3(array QByteArray_ITF /*777 QByteArray **/, openMode int) *QTextStream {
+	return NewQTextStream_3(array, openMode)
+}
 func NewQTextStream_3(array QByteArray_ITF /*777 QByteArray **/, openMode int) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
@@ -178,6 +193,9 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
+func (*QTextStream) NewForInherit_3_(array QByteArray_ITF /*777 QByteArray **/) *QTextStream {
+	return NewQTextStream_3_(array)
+}
 func NewQTextStream_3_(array QByteArray_ITF /*777 QByteArray **/) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
@@ -202,6 +220,9 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
+func (*QTextStream) NewForInherit_4(array QByteArray_ITF, openMode int) *QTextStream {
+	return NewQTextStream_4(array, openMode)
+}
 func NewQTextStream_4(array QByteArray_ITF, openMode int) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
@@ -224,6 +245,9 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
+func (*QTextStream) NewForInherit_4_(array QByteArray_ITF) *QTextStream {
+	return NewQTextStream_4_(array)
+}
 func NewQTextStream_4_(array QByteArray_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {

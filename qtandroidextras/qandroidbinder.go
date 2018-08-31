@@ -75,6 +75,9 @@ Creates a new object which can be used to perform IPC.
 
 See also onTransact and transact.
 */
+func (*QAndroidBinder) NewForInherit() *QAndroidBinder {
+	return NewQAndroidBinder()
+}
 func NewQAndroidBinder() *QAndroidBinder {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidBinderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Creates a new object which can be used to perform IPC.
 
 See also onTransact and transact.
 */
+func (*QAndroidBinder) NewForInherit_1(binder QAndroidJniObject_ITF) *QAndroidBinder {
+	return NewQAndroidBinder_1(binder)
+}
 func NewQAndroidBinder_1(binder QAndroidJniObject_ITF) *QAndroidBinder {
 	var convArg0 unsafe.Pointer
 	if binder != nil && binder.QAndroidJniObject_PTR() != nil {

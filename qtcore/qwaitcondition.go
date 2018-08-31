@@ -72,6 +72,9 @@ func (*QWaitCondition) NewFromPointer(cthis unsafe.Pointer) *QWaitCondition {
 /*
 Constructs a new wait condition object.
 */
+func (*QWaitCondition) NewForInherit() *QWaitCondition {
+	return NewQWaitCondition()
+}
 func NewQWaitCondition() *QWaitCondition {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitConditionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

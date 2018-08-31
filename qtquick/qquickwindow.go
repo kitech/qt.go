@@ -158,6 +158,9 @@ func (this *QQuickWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 /*
 Constructs a window for displaying a QML scene with parent window parent.
 */
+func (*QQuickWindow) NewForInherit(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickWindow {
+	return NewQQuickWindow(parent)
+}
 func NewQQuickWindow(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWindow_PTR() != nil {
@@ -178,6 +181,9 @@ func NewQQuickWindow(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickWindow {
 /*
 Constructs a window for displaying a QML scene with parent window parent.
 */
+func (*QQuickWindow) NewForInherit__() *QQuickWindow {
+	return NewQQuickWindow__()
+}
 func NewQQuickWindow__() *QQuickWindow {
 	// arg: 0, QWindow *=Pointer, QWindow=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -196,6 +202,9 @@ func NewQQuickWindow__() *QQuickWindow {
 /*
 Constructs a window for displaying a QML scene with parent window parent.
 */
+func (*QQuickWindow) NewForInherit_1(renderControl QQuickRenderControl_ITF /*777 QQuickRenderControl **/) *QQuickWindow {
+	return NewQQuickWindow_1(renderControl)
+}
 func NewQQuickWindow_1(renderControl QQuickRenderControl_ITF /*777 QQuickRenderControl **/) *QQuickWindow {
 	var convArg0 unsafe.Pointer
 	if renderControl != nil && renderControl.QQuickRenderControl_PTR() != nil {

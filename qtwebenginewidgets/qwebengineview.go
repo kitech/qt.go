@@ -140,6 +140,9 @@ func (this *QWebEngineView) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 /*
 
  */
+func (*QWebEngineView) NewForInherit(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QWebEngineView {
+	return NewQWebEngineView(parent)
+}
 func NewQWebEngineView(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QWebEngineView {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -160,6 +163,9 @@ func NewQWebEngineView(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QWebEngi
 /*
 
  */
+func (*QWebEngineView) NewForInherit__() *QWebEngineView {
+	return NewQWebEngineView__()
+}
 func NewQWebEngineView__() *QWebEngineView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

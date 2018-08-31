@@ -74,6 +74,9 @@ func (*QTableWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QTableWidgetItem 
 /*
 
  */
+func (*QTableWidgetItem) NewForInherit(type_ int) *QTableWidgetItem {
+	return NewQTableWidgetItem(type_)
+}
 func NewQTableWidgetItem(type_ int) *QTableWidgetItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItemC2Ei", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQTableWidgetItem(type_ int) *QTableWidgetItem {
 /*
 
  */
+func (*QTableWidgetItem) NewForInherit__() *QTableWidgetItem {
+	return NewQTableWidgetItem__()
+}
 func NewQTableWidgetItem__() *QTableWidgetItem {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
@@ -108,6 +114,9 @@ func NewQTableWidgetItem__() *QTableWidgetItem {
 /*
 
  */
+func (*QTableWidgetItem) NewForInherit_1(text string, type_ int) *QTableWidgetItem {
+	return NewQTableWidgetItem_1(text, type_)
+}
 func NewQTableWidgetItem_1(text string, type_ int) *QTableWidgetItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -126,6 +135,9 @@ func NewQTableWidgetItem_1(text string, type_ int) *QTableWidgetItem {
 /*
 
  */
+func (*QTableWidgetItem) NewForInherit_1_(text string) *QTableWidgetItem {
+	return NewQTableWidgetItem_1_(text)
+}
 func NewQTableWidgetItem_1_(text string) *QTableWidgetItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -146,6 +158,9 @@ func NewQTableWidgetItem_1_(text string) *QTableWidgetItem {
 /*
 
  */
+func (*QTableWidgetItem) NewForInherit_2(icon qtgui.QIcon_ITF, text string, type_ int) *QTableWidgetItem {
+	return NewQTableWidgetItem_2(icon, text, type_)
+}
 func NewQTableWidgetItem_2(icon qtgui.QIcon_ITF, text string, type_ int) *QTableWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -168,6 +183,9 @@ func NewQTableWidgetItem_2(icon qtgui.QIcon_ITF, text string, type_ int) *QTable
 /*
 
  */
+func (*QTableWidgetItem) NewForInherit_2_(icon qtgui.QIcon_ITF, text string) *QTableWidgetItem {
+	return NewQTableWidgetItem_2_(icon, text)
+}
 func NewQTableWidgetItem_2_(icon qtgui.QIcon_ITF, text string) *QTableWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {

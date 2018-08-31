@@ -118,6 +118,9 @@ Constructs a status bar with a size grip and the given parent.
 
 See also setSizeGripEnabled().
 */
+func (*QStatusBar) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QStatusBar {
+	return NewQStatusBar(parent)
+}
 func NewQStatusBar(parent QWidget_ITF /*777 QWidget **/) *QStatusBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -140,6 +143,9 @@ Constructs a status bar with a size grip and the given parent.
 
 See also setSizeGripEnabled().
 */
+func (*QStatusBar) NewForInherit__() *QStatusBar {
+	return NewQStatusBar__()
+}
 func NewQStatusBar__() *QStatusBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

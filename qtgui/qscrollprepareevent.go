@@ -71,6 +71,9 @@ func (*QScrollPrepareEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollPrepare
 /*
 
  */
+func (*QScrollPrepareEvent) NewForInherit(startPos qtcore.QPointF_ITF) *QScrollPrepareEvent {
+	return NewQScrollPrepareEvent(startPos)
+}
 func NewQScrollPrepareEvent(startPos qtcore.QPointF_ITF) *QScrollPrepareEvent {
 	var convArg0 unsafe.Pointer
 	if startPos != nil && startPos.QPointF_PTR() != nil {

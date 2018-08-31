@@ -88,6 +88,9 @@ Constructs a new QDataWidgetMapper with parent object parent. By default, the or
 
 See also setOrientation() and setSubmitPolicy().
 */
+func (*QDataWidgetMapper) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QDataWidgetMapper {
+	return NewQDataWidgetMapper(parent)
+}
 func NewQDataWidgetMapper(parent qtcore.QObject_ITF /*777 QObject **/) *QDataWidgetMapper {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -110,6 +113,9 @@ Constructs a new QDataWidgetMapper with parent object parent. By default, the or
 
 See also setOrientation() and setSubmitPolicy().
 */
+func (*QDataWidgetMapper) NewForInherit__() *QDataWidgetMapper {
+	return NewQDataWidgetMapper__()
+}
 func NewQDataWidgetMapper__() *QDataWidgetMapper {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -75,6 +75,9 @@ Constructs a default initialized QSurfaceFormat.
 
 Note: By default OpenGL 2.0 is requested since this provides the highest grade of portability between platforms and OpenGL implementations.
 */
+func (*QSurfaceFormat) NewForInherit() *QSurfaceFormat {
+	return NewQSurfaceFormat()
+}
 func NewQSurfaceFormat() *QSurfaceFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs a default initialized QSurfaceFormat.
 
 Note: By default OpenGL 2.0 is requested since this provides the highest grade of portability between platforms and OpenGL implementations.
 */
+func (*QSurfaceFormat) NewForInherit_1(options int) *QSurfaceFormat {
+	return NewQSurfaceFormat_1(options)
+}
 func NewQSurfaceFormat_1(options int) *QSurfaceFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormatC2E6QFlagsINS_12FormatOptionEE", qtrt.FFI_TYPE_POINTER, options)
 	qtrt.ErrPrint(err, rv)

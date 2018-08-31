@@ -89,6 +89,9 @@ Constructs a QResource pointing to file. locale is used to load a specific local
 
 See also QFileInfo, QDir::searchPaths(), setFileName(), and setLocale().
 */
+func (*QResource) NewForInherit(file string, locale QLocale_ITF) *QResource {
+	return NewQResource(file, locale)
+}
 func NewQResource(file string, locale QLocale_ITF) *QResource {
 	var tmpArg0 = NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()
@@ -113,6 +116,9 @@ Constructs a QResource pointing to file. locale is used to load a specific local
 
 See also QFileInfo, QDir::searchPaths(), setFileName(), and setLocale().
 */
+func (*QResource) NewForInherit__() *QResource {
+	return NewQResource__()
+}
 func NewQResource__() *QResource {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = NewQString()
@@ -135,6 +141,9 @@ Constructs a QResource pointing to file. locale is used to load a specific local
 
 See also QFileInfo, QDir::searchPaths(), setFileName(), and setLocale().
 */
+func (*QResource) NewForInherit__1(file string) *QResource {
+	return NewQResource__1(file)
+}
 func NewQResource__1(file string) *QResource {
 	var tmpArg0 = NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()

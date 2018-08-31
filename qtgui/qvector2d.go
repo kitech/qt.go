@@ -73,6 +73,9 @@ func (*QVector2D) NewFromPointer(cthis unsafe.Pointer) *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
+func (*QVector2D) NewForInherit() *QVector2D {
+	return NewQVector2D()
+}
 func NewQVector2D() *QVector2D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQVector2D() *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
+func (*QVector2D) NewForInherit_1(arg0 int) *QVector2D {
+	return NewQVector2D_1(arg0)
+}
 func NewQVector2D_1(arg0 int) *QVector2D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +111,9 @@ func NewQVector2D_1(arg0 int) *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
+func (*QVector2D) NewForInherit_2(xpos float32, ypos float32) *QVector2D {
+	return NewQVector2D_2(xpos, ypos)
+}
 func NewQVector2D_2(xpos float32, ypos float32) *QVector2D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2Eff", qtrt.FFI_TYPE_POINTER, xpos, ypos)
 	qtrt.ErrPrint(err, rv)
@@ -121,6 +130,9 @@ func NewQVector2D_2(xpos float32, ypos float32) *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
+func (*QVector2D) NewForInherit_3(point qtcore.QPoint_ITF) *QVector2D {
+	return NewQVector2D_3(point)
+}
 func NewQVector2D_3(point qtcore.QPoint_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
@@ -141,6 +153,9 @@ func NewQVector2D_3(point qtcore.QPoint_ITF) *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
+func (*QVector2D) NewForInherit_4(point qtcore.QPointF_ITF) *QVector2D {
+	return NewQVector2D_4(point)
+}
 func NewQVector2D_4(point qtcore.QPointF_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
@@ -161,6 +176,9 @@ func NewQVector2D_4(point qtcore.QPointF_ITF) *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
+func (*QVector2D) NewForInherit_5(vector QVector3D_ITF) *QVector2D {
+	return NewQVector2D_5(vector)
+}
 func NewQVector2D_5(vector QVector3D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
@@ -181,6 +199,9 @@ func NewQVector2D_5(vector QVector3D_ITF) *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
+func (*QVector2D) NewForInherit_6(vector QVector4D_ITF) *QVector2D {
+	return NewQVector2D_6(vector)
+}
 func NewQVector2D_6(vector QVector4D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector4D_PTR() != nil {

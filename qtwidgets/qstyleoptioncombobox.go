@@ -72,6 +72,9 @@ func (*QStyleOptionComboBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionC
 /*
 
  */
+func (*QStyleOptionComboBox) NewForInherit() *QStyleOptionComboBox {
+	return NewQStyleOptionComboBox()
+}
 func NewQStyleOptionComboBox() *QStyleOptionComboBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStyleOptionComboBox() *QStyleOptionComboBox {
 /*
 
  */
+func (*QStyleOptionComboBox) NewForInherit_1(version int) *QStyleOptionComboBox {
+	return NewQStyleOptionComboBox_1(version)
+}
 func NewQStyleOptionComboBox_1(version int) *QStyleOptionComboBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)

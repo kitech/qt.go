@@ -86,6 +86,9 @@ func (this *QPanGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 
  */
+func (*QPanGesture) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QPanGesture {
+	return NewQPanGesture(parent)
+}
 func NewQPanGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPanGesture {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQPanGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPanGesture {
 /*
 
  */
+func (*QPanGesture) NewForInherit__() *QPanGesture {
+	return NewQPanGesture__()
+}
 func NewQPanGesture__() *QPanGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

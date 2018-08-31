@@ -86,6 +86,9 @@ func (this *QCommonStyle) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 /*
 Constructs a QCommonStyle.
 */
+func (*QCommonStyle) NewForInherit() *QCommonStyle {
+	return NewQCommonStyle()
+}
 func NewQCommonStyle() *QCommonStyle {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QCommonStyleC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

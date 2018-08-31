@@ -73,6 +73,9 @@ Constructs a null bitmap.
 
 See also QPixmap::isNull().
 */
+func (*QBitmap) NewForInherit() *QBitmap {
+	return NewQBitmap()
+}
 func NewQBitmap() *QBitmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +94,9 @@ Constructs a null bitmap.
 
 See also QPixmap::isNull().
 */
+func (*QBitmap) NewForInherit_1(arg0 QPixmap_ITF) *QBitmap {
+	return NewQBitmap_1(arg0)
+}
 func NewQBitmap_1(arg0 QPixmap_ITF) *QBitmap {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPixmap_PTR() != nil {
@@ -113,6 +119,9 @@ Constructs a null bitmap.
 
 See also QPixmap::isNull().
 */
+func (*QBitmap) NewForInherit_2(w int, h int) *QBitmap {
+	return NewQBitmap_2(w, h)
+}
 func NewQBitmap_2(w int, h int) *QBitmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2Eii", qtrt.FFI_TYPE_POINTER, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -131,6 +140,9 @@ Constructs a null bitmap.
 
 See also QPixmap::isNull().
 */
+func (*QBitmap) NewForInherit_3(arg0 qtcore.QSize_ITF) *QBitmap {
+	return NewQBitmap_3(arg0)
+}
 func NewQBitmap_3(arg0 qtcore.QSize_ITF) *QBitmap {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSize_PTR() != nil {
@@ -153,6 +165,9 @@ Constructs a null bitmap.
 
 See also QPixmap::isNull().
 */
+func (*QBitmap) NewForInherit_4(fileName string, format string) *QBitmap {
+	return NewQBitmap_4(fileName, format)
+}
 func NewQBitmap_4(fileName string, format string) *QBitmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -175,6 +190,9 @@ Constructs a null bitmap.
 
 See also QPixmap::isNull().
 */
+func (*QBitmap) NewForInherit_4_(fileName string) *QBitmap {
+	return NewQBitmap_4_(fileName)
+}
 func NewQBitmap_4_(fileName string) *QBitmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

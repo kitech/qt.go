@@ -132,6 +132,9 @@ func (this *QMediaAudioProbeControl) Flush() {
 /*
 Create a new media audio probe control object with the given parent.
 */
+func (*QMediaAudioProbeControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaAudioProbeControl {
+	return NewQMediaAudioProbeControl(parent)
+}
 func NewQMediaAudioProbeControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaAudioProbeControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -152,6 +155,9 @@ func NewQMediaAudioProbeControl(parent qtcore.QObject_ITF /*777 QObject **/) *QM
 /*
 Create a new media audio probe control object with the given parent.
 */
+func (*QMediaAudioProbeControl) NewForInherit__() *QMediaAudioProbeControl {
+	return NewQMediaAudioProbeControl__()
+}
 func NewQMediaAudioProbeControl__() *QMediaAudioProbeControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -86,6 +86,9 @@ func (this *QGraphicsRotation) MetaObject() *qtcore.QMetaObject /*777 const QMet
 /*
 
  */
+func (*QGraphicsRotation) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsRotation {
+	return NewQGraphicsRotation(parent)
+}
 func NewQGraphicsRotation(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsRotation {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQGraphicsRotation(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphic
 /*
 
  */
+func (*QGraphicsRotation) NewForInherit__() *QGraphicsRotation {
+	return NewQGraphicsRotation__()
+}
 func NewQGraphicsRotation__() *QGraphicsRotation {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

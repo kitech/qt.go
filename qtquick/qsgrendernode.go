@@ -74,6 +74,9 @@ func (*QSGRenderNode) NewFromPointer(cthis unsafe.Pointer) *QSGRenderNode {
 /*
 Default constructs an instance of QSGRenderNode.
 */
+func (*QSGRenderNode) NewForInherit() *QSGRenderNode {
+	return NewQSGRenderNode()
+}
 func NewQSGRenderNode() *QSGRenderNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSGRenderNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

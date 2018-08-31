@@ -434,6 +434,9 @@ func (this *QSGAbstractRenderer) SceneGraphChanged() {
 /*
 
  */
+func (*QSGAbstractRenderer) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QSGAbstractRenderer {
+	return NewQSGAbstractRenderer(parent)
+}
 func NewQSGAbstractRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSGAbstractRenderer {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -454,6 +457,9 @@ func NewQSGAbstractRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSGAbs
 /*
 
  */
+func (*QSGAbstractRenderer) NewForInherit__() *QSGAbstractRenderer {
+	return NewQSGAbstractRenderer__()
+}
 func NewQSGAbstractRenderer__() *QSGAbstractRenderer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

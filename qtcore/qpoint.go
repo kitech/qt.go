@@ -74,6 +74,9 @@ Constructs a null point, i.e. with coordinates (0, 0)
 
 See also isNull().
 */
+func (*QPoint) NewForInherit() *QPoint {
+	return NewQPoint()
+}
 func NewQPoint() *QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs a null point, i.e. with coordinates (0, 0)
 
 See also isNull().
 */
+func (*QPoint) NewForInherit_1(xpos int, ypos int) *QPoint {
+	return NewQPoint_1(xpos, ypos)
+}
 func NewQPoint_1(xpos int, ypos int) *QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointC2Eii", qtrt.FFI_TYPE_POINTER, xpos, ypos)
 	qtrt.ErrPrint(err, rv)

@@ -74,6 +74,9 @@ func (*QUndoCommand) NewFromPointer(cthis unsafe.Pointer) *QUndoCommand {
 /*
 
  */
+func (*QUndoCommand) NewForInherit(parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
+	return NewQUndoCommand(parent)
+}
 func NewQUndoCommand(parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QUndoCommand_PTR() != nil {
@@ -94,6 +97,9 @@ func NewQUndoCommand(parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoComma
 /*
 
  */
+func (*QUndoCommand) NewForInherit__() *QUndoCommand {
+	return NewQUndoCommand__()
+}
 func NewQUndoCommand__() *QUndoCommand {
 	// arg: 0, QUndoCommand *=Pointer, QUndoCommand=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -112,6 +118,9 @@ func NewQUndoCommand__() *QUndoCommand {
 /*
 
  */
+func (*QUndoCommand) NewForInherit_1(text string, parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
+	return NewQUndoCommand_1(text, parent)
+}
 func NewQUndoCommand_1(text string, parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -134,6 +143,9 @@ func NewQUndoCommand_1(text string, parent QUndoCommand_ITF /*777 QUndoCommand *
 /*
 
  */
+func (*QUndoCommand) NewForInherit_1_(text string) *QUndoCommand {
+	return NewQUndoCommand_1_(text)
+}
 func NewQUndoCommand_1_(text string) *QUndoCommand {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()

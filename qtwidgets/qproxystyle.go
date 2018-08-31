@@ -93,6 +93,9 @@ Constructs a QProxyStyle object for overriding behavior in the specified style, 
 
 Ownership of style is transferred to QProxyStyle.
 */
+func (*QProxyStyle) NewForInherit(style QStyle_ITF /*777 QStyle **/) *QProxyStyle {
+	return NewQProxyStyle(style)
+}
 func NewQProxyStyle(style QStyle_ITF /*777 QStyle **/) *QProxyStyle {
 	var convArg0 unsafe.Pointer
 	if style != nil && style.QStyle_PTR() != nil {
@@ -115,6 +118,9 @@ Constructs a QProxyStyle object for overriding behavior in the specified style, 
 
 Ownership of style is transferred to QProxyStyle.
 */
+func (*QProxyStyle) NewForInherit__() *QProxyStyle {
+	return NewQProxyStyle__()
+}
 func NewQProxyStyle__() *QProxyStyle {
 	// arg: 0, QStyle *=Pointer, QStyle=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -135,6 +141,9 @@ Constructs a QProxyStyle object for overriding behavior in the specified style, 
 
 Ownership of style is transferred to QProxyStyle.
 */
+func (*QProxyStyle) NewForInherit_1(key string) *QProxyStyle {
+	return NewQProxyStyle_1(key)
+}
 func NewQProxyStyle_1(key string) *QProxyStyle {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()

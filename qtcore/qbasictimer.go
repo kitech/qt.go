@@ -74,6 +74,9 @@ Contructs a basic timer.
 
 See also start().
 */
+func (*QBasicTimer) NewForInherit() *QBasicTimer {
+	return NewQBasicTimer()
+}
 func NewQBasicTimer() *QBasicTimer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicTimerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

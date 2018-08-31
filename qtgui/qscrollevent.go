@@ -71,6 +71,9 @@ func (*QScrollEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollEvent {
 /*
 
  */
+func (*QScrollEvent) NewForInherit(contentPos qtcore.QPointF_ITF, overshoot qtcore.QPointF_ITF, scrollState int) *QScrollEvent {
+	return NewQScrollEvent(contentPos, overshoot, scrollState)
+}
 func NewQScrollEvent(contentPos qtcore.QPointF_ITF, overshoot qtcore.QPointF_ITF, scrollState int) *QScrollEvent {
 	var convArg0 unsafe.Pointer
 	if contentPos != nil && contentPos.QPointF_PTR() != nil {

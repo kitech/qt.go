@@ -74,6 +74,9 @@ func (*QSGSimpleRectNode) NewFromPointer(cthis unsafe.Pointer) *QSGSimpleRectNod
 /*
 Constructs a QSGSimpleRectNode instance which is spanning rect with the color color.
 */
+func (*QSGSimpleRectNode) NewForInherit(rect qtcore.QRectF_ITF, color qtgui.QColor_ITF) *QSGSimpleRectNode {
+	return NewQSGSimpleRectNode(rect, color)
+}
 func NewQSGSimpleRectNode(rect qtcore.QRectF_ITF, color qtgui.QColor_ITF) *QSGSimpleRectNode {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -98,6 +101,9 @@ func NewQSGSimpleRectNode(rect qtcore.QRectF_ITF, color qtgui.QColor_ITF) *QSGSi
 /*
 Constructs a QSGSimpleRectNode instance which is spanning rect with the color color.
 */
+func (*QSGSimpleRectNode) NewForInherit_1() *QSGSimpleRectNode {
+	return NewQSGSimpleRectNode_1()
+}
 func NewQSGSimpleRectNode_1() *QSGSimpleRectNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGSimpleRectNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -75,6 +75,9 @@ Constructs a painter.
 
 See also begin() and end().
 */
+func (*QPainter) NewForInherit() *QPainter {
+	return NewQPainter()
+}
 func NewQPainter() *QPainter {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainterC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs a painter.
 
 See also begin() and end().
 */
+func (*QPainter) NewForInherit_1(arg0 QPaintDevice_ITF /*777 QPaintDevice **/) *QPainter {
+	return NewQPainter_1(arg0)
+}
 func NewQPainter_1(arg0 QPaintDevice_ITF /*777 QPaintDevice **/) *QPainter {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintDevice_PTR() != nil {

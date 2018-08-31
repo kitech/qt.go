@@ -101,6 +101,9 @@ func (this *QFileDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Constructs a file dialog with the given parent and widget flags.
 */
+func (*QFileDialog) NewForInherit(parent QWidget_ITF /*777 QWidget **/, f int) *QFileDialog {
+	return NewQFileDialog(parent, f)
+}
 func NewQFileDialog(parent QWidget_ITF /*777 QWidget **/, f int) *QFileDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -121,6 +124,9 @@ func NewQFileDialog(parent QWidget_ITF /*777 QWidget **/, f int) *QFileDialog {
 /*
 Constructs a file dialog with the given parent and widget flags.
 */
+func (*QFileDialog) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/, caption string, directory string, filter string) *QFileDialog {
+	return NewQFileDialog_1(parent, caption, directory, filter)
+}
 func NewQFileDialog_1(parent QWidget_ITF /*777 QWidget **/, caption string, directory string, filter string) *QFileDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -147,6 +153,9 @@ func NewQFileDialog_1(parent QWidget_ITF /*777 QWidget **/, caption string, dire
 /*
 Constructs a file dialog with the given parent and widget flags.
 */
+func (*QFileDialog) NewForInherit_1_() *QFileDialog {
+	return NewQFileDialog_1_()
+}
 func NewQFileDialog_1_() *QFileDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -171,6 +180,9 @@ func NewQFileDialog_1_() *QFileDialog {
 /*
 Constructs a file dialog with the given parent and widget flags.
 */
+func (*QFileDialog) NewForInherit_1_1(parent QWidget_ITF /*777 QWidget **/) *QFileDialog {
+	return NewQFileDialog_1_1(parent)
+}
 func NewQFileDialog_1_1(parent QWidget_ITF /*777 QWidget **/) *QFileDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -197,6 +209,9 @@ func NewQFileDialog_1_1(parent QWidget_ITF /*777 QWidget **/) *QFileDialog {
 /*
 Constructs a file dialog with the given parent and widget flags.
 */
+func (*QFileDialog) NewForInherit_1_2(parent QWidget_ITF /*777 QWidget **/, caption string) *QFileDialog {
+	return NewQFileDialog_1_2(parent, caption)
+}
 func NewQFileDialog_1_2(parent QWidget_ITF /*777 QWidget **/, caption string) *QFileDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -223,6 +238,9 @@ func NewQFileDialog_1_2(parent QWidget_ITF /*777 QWidget **/, caption string) *Q
 /*
 Constructs a file dialog with the given parent and widget flags.
 */
+func (*QFileDialog) NewForInherit_1_3(parent QWidget_ITF /*777 QWidget **/, caption string, directory string) *QFileDialog {
+	return NewQFileDialog_1_3(parent, caption, directory)
+}
 func NewQFileDialog_1_3(parent QWidget_ITF /*777 QWidget **/, caption string, directory string) *QFileDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

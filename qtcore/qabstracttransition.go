@@ -99,6 +99,9 @@ func (this *QAbstractTransition) MetaObject() *QMetaObject /*777 const QMetaObje
 /*
 Constructs a new QAbstractTransition object with the given sourceState.
 */
+func (*QAbstractTransition) NewForInherit(sourceState QState_ITF /*777 QState **/) *QAbstractTransition {
+	return NewQAbstractTransition(sourceState)
+}
 func NewQAbstractTransition(sourceState QState_ITF /*777 QState **/) *QAbstractTransition {
 	var convArg0 unsafe.Pointer
 	if sourceState != nil && sourceState.QState_PTR() != nil {
@@ -119,6 +122,9 @@ func NewQAbstractTransition(sourceState QState_ITF /*777 QState **/) *QAbstractT
 /*
 Constructs a new QAbstractTransition object with the given sourceState.
 */
+func (*QAbstractTransition) NewForInherit__() *QAbstractTransition {
+	return NewQAbstractTransition__()
+}
 func NewQAbstractTransition__() *QAbstractTransition {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer

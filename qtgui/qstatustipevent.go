@@ -71,6 +71,9 @@ func (*QStatusTipEvent) NewFromPointer(cthis unsafe.Pointer) *QStatusTipEvent {
 /*
 
  */
+func (*QStatusTipEvent) NewForInherit(tip string) *QStatusTipEvent {
+	return NewQStatusTipEvent(tip)
+}
 func NewQStatusTipEvent(tip string) *QStatusTipEvent {
 	var tmpArg0 = qtcore.NewQString_5(tip)
 	var convArg0 = tmpArg0.GetCthis()

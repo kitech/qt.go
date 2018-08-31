@@ -72,6 +72,9 @@ func (*QStyleOptionSlider) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSli
 /*
 
  */
+func (*QStyleOptionSlider) NewForInherit() *QStyleOptionSlider {
+	return NewQStyleOptionSlider()
+}
 func NewQStyleOptionSlider() *QStyleOptionSlider {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionSliderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStyleOptionSlider() *QStyleOptionSlider {
 /*
 
  */
+func (*QStyleOptionSlider) NewForInherit_1(version int) *QStyleOptionSlider {
+	return NewQStyleOptionSlider_1(version)
+}
 func NewQStyleOptionSlider_1(version int) *QStyleOptionSlider {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionSliderC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)

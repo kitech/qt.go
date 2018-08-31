@@ -137,6 +137,9 @@ func (this *QVideoRendererControl) SetSurface(surface QAbstractVideoSurface_ITF 
 /*
 Constructs a new video renderer media end point with the given parent.
 */
+func (*QVideoRendererControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoRendererControl {
+	return NewQVideoRendererControl(parent)
+}
 func NewQVideoRendererControl(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoRendererControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -157,6 +160,9 @@ func NewQVideoRendererControl(parent qtcore.QObject_ITF /*777 QObject **/) *QVid
 /*
 Constructs a new video renderer media end point with the given parent.
 */
+func (*QVideoRendererControl) NewForInherit__() *QVideoRendererControl {
+	return NewQVideoRendererControl__()
+}
 func NewQVideoRendererControl__() *QVideoRendererControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -88,6 +88,9 @@ func (this *QSGEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 /*
 Constructs a new QSGEngine with its parent
 */
+func (*QSGEngine) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QSGEngine {
+	return NewQSGEngine(parent)
+}
 func NewQSGEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QSGEngine {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -108,6 +111,9 @@ func NewQSGEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QSGEngine {
 /*
 Constructs a new QSGEngine with its parent
 */
+func (*QSGEngine) NewForInherit__() *QSGEngine {
+	return NewQSGEngine__()
+}
 func NewQSGEngine__() *QSGEngine {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -73,6 +73,9 @@ func (*QPageSize) NewFromPointer(cthis unsafe.Pointer) *QPageSize {
 /*
 Creates a null QPageSize.
 */
+func (*QPageSize) NewForInherit() *QPageSize {
+	return NewQPageSize()
+}
 func NewQPageSize() *QPageSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQPageSize() *QPageSize {
 /*
 Creates a null QPageSize.
 */
+func (*QPageSize) NewForInherit_1(pageSizeId int) *QPageSize {
+	return NewQPageSize_1(pageSizeId)
+}
 func NewQPageSize_1(pageSizeId int) *QPageSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ENS_10PageSizeIdE", qtrt.FFI_TYPE_POINTER, pageSizeId)
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +111,9 @@ func NewQPageSize_1(pageSizeId int) *QPageSize {
 /*
 Creates a null QPageSize.
 */
+func (*QPageSize) NewForInherit_2(pointSize qtcore.QSize_ITF, name string, matchPolicy int) *QPageSize {
+	return NewQPageSize_2(pointSize, name, matchPolicy)
+}
 func NewQPageSize_2(pointSize qtcore.QSize_ITF, name string, matchPolicy int) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if pointSize != nil && pointSize.QSize_PTR() != nil {
@@ -127,6 +136,9 @@ func NewQPageSize_2(pointSize qtcore.QSize_ITF, name string, matchPolicy int) *Q
 /*
 Creates a null QPageSize.
 */
+func (*QPageSize) NewForInherit_2_(pointSize qtcore.QSize_ITF) *QPageSize {
+	return NewQPageSize_2_(pointSize)
+}
 func NewQPageSize_2_(pointSize qtcore.QSize_ITF) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if pointSize != nil && pointSize.QSize_PTR() != nil {
@@ -151,6 +163,9 @@ func NewQPageSize_2_(pointSize qtcore.QSize_ITF) *QPageSize {
 /*
 Creates a null QPageSize.
 */
+func (*QPageSize) NewForInherit_2_1(pointSize qtcore.QSize_ITF, name string) *QPageSize {
+	return NewQPageSize_2_1(pointSize, name)
+}
 func NewQPageSize_2_1(pointSize qtcore.QSize_ITF, name string) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if pointSize != nil && pointSize.QSize_PTR() != nil {
@@ -175,6 +190,9 @@ func NewQPageSize_2_1(pointSize qtcore.QSize_ITF, name string) *QPageSize {
 /*
 Creates a null QPageSize.
 */
+func (*QPageSize) NewForInherit_3(size qtcore.QSizeF_ITF, units int, name string, matchPolicy int) *QPageSize {
+	return NewQPageSize_3(size, units, name, matchPolicy)
+}
 func NewQPageSize_3(size qtcore.QSizeF_ITF, units int, name string, matchPolicy int) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
@@ -197,6 +215,9 @@ func NewQPageSize_3(size qtcore.QSizeF_ITF, units int, name string, matchPolicy 
 /*
 Creates a null QPageSize.
 */
+func (*QPageSize) NewForInherit_3_(size qtcore.QSizeF_ITF, units int) *QPageSize {
+	return NewQPageSize_3_(size, units)
+}
 func NewQPageSize_3_(size qtcore.QSizeF_ITF, units int) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
@@ -221,6 +242,9 @@ func NewQPageSize_3_(size qtcore.QSizeF_ITF, units int) *QPageSize {
 /*
 Creates a null QPageSize.
 */
+func (*QPageSize) NewForInherit_3_1(size qtcore.QSizeF_ITF, units int, name string) *QPageSize {
+	return NewQPageSize_3_1(size, units, name)
+}
 func NewQPageSize_3_1(size qtcore.QSizeF_ITF, units int, name string) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {

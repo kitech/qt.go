@@ -87,6 +87,9 @@ func (*QGraphicsPolygonItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPoly
 /*
 
  */
+func (*QGraphicsPolygonItem) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPolygonItem {
+	return NewQGraphicsPolygonItem(parent)
+}
 func NewQGraphicsPolygonItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPolygonItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQGraphicsPolygonItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *
 /*
 
  */
+func (*QGraphicsPolygonItem) NewForInherit__() *QGraphicsPolygonItem {
+	return NewQGraphicsPolygonItem__()
+}
 func NewQGraphicsPolygonItem__() *QGraphicsPolygonItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -125,6 +131,9 @@ func NewQGraphicsPolygonItem__() *QGraphicsPolygonItem {
 /*
 
  */
+func (*QGraphicsPolygonItem) NewForInherit_1(polygon qtgui.QPolygonF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPolygonItem {
+	return NewQGraphicsPolygonItem_1(polygon, parent)
+}
 func NewQGraphicsPolygonItem_1(polygon qtgui.QPolygonF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPolygonItem {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
@@ -149,6 +158,9 @@ func NewQGraphicsPolygonItem_1(polygon qtgui.QPolygonF_ITF, parent QGraphicsItem
 /*
 
  */
+func (*QGraphicsPolygonItem) NewForInherit_1_(polygon qtgui.QPolygonF_ITF) *QGraphicsPolygonItem {
+	return NewQGraphicsPolygonItem_1_(polygon)
+}
 func NewQGraphicsPolygonItem_1_(polygon qtgui.QPolygonF_ITF) *QGraphicsPolygonItem {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {

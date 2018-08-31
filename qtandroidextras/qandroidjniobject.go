@@ -75,6 +75,9 @@ Constructs an invalid QAndroidJniObject.
 
 See also isValid().
 */
+func (*QAndroidJniObject) NewForInherit() *QAndroidJniObject {
+	return NewQAndroidJniObject()
+}
 func NewQAndroidJniObject() *QAndroidJniObject {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObjectC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs an invalid QAndroidJniObject.
 
 See also isValid().
 */
+func (*QAndroidJniObject) NewForInherit_1(className string) *QAndroidJniObject {
+	return NewQAndroidJniObject_1(className)
+}
 func NewQAndroidJniObject_1(className string) *QAndroidJniObject {
 	var convArg0 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg0)

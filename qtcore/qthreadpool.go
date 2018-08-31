@@ -84,6 +84,9 @@ func (this *QThreadPool) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs a thread pool with the given parent.
 */
+func (*QThreadPool) NewForInherit(parent QObject_ITF /*777 QObject **/) *QThreadPool {
+	return NewQThreadPool(parent)
+}
 func NewQThreadPool(parent QObject_ITF /*777 QObject **/) *QThreadPool {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -104,6 +107,9 @@ func NewQThreadPool(parent QObject_ITF /*777 QObject **/) *QThreadPool {
 /*
 Constructs a thread pool with the given parent.
 */
+func (*QThreadPool) NewForInherit__() *QThreadPool {
+	return NewQThreadPool__()
+}
 func NewQThreadPool__() *QThreadPool {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

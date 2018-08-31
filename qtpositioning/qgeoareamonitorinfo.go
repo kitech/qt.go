@@ -75,6 +75,9 @@ Constructs a QGeoAreaMonitorInfo object with the specified name.
 
 See also name().
 */
+func (*QGeoAreaMonitorInfo) NewForInherit(name string) *QGeoAreaMonitorInfo {
+	return NewQGeoAreaMonitorInfo(name)
+}
 func NewQGeoAreaMonitorInfo(name string) *QGeoAreaMonitorInfo {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -95,6 +98,9 @@ Constructs a QGeoAreaMonitorInfo object with the specified name.
 
 See also name().
 */
+func (*QGeoAreaMonitorInfo) NewForInherit__() *QGeoAreaMonitorInfo {
+	return NewQGeoAreaMonitorInfo__()
+}
 func NewQGeoAreaMonitorInfo__() *QGeoAreaMonitorInfo {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = qtcore.NewQString()

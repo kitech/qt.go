@@ -74,6 +74,9 @@ func (*QWinCompositionChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWinCom
 /*
 
  */
+func (*QWinCompositionChangeEvent) NewForInherit(enabled bool) *QWinCompositionChangeEvent {
+	return NewQWinCompositionChangeEvent(enabled)
+}
 func NewQWinCompositionChangeEvent(enabled bool) *QWinCompositionChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QWinCompositionChangeEventC2Eb", qtrt.FFI_TYPE_POINTER, enabled)
 	qtrt.ErrPrint(err, rv)

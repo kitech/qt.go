@@ -74,6 +74,9 @@ func (*QQmlScriptString) NewFromPointer(cthis unsafe.Pointer) *QQmlScriptString 
 /*
 Constructs an empty instance.
 */
+func (*QQmlScriptString) NewForInherit() *QQmlScriptString {
+	return NewQQmlScriptString()
+}
 func NewQQmlScriptString() *QQmlScriptString {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlScriptStringC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -76,6 +76,9 @@ func (*QPagedPaintDevice) NewFromPointer(cthis unsafe.Pointer) *QPagedPaintDevic
 /*
 Constructs a new paged paint device.
 */
+func (*QPagedPaintDevice) NewForInherit() *QPagedPaintDevice {
+	return NewQPagedPaintDevice()
+}
 func NewQPagedPaintDevice() *QPagedPaintDevice {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDeviceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

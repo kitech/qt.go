@@ -85,6 +85,9 @@ func (this *QIconEnginePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMet
 /*
 Constructs a icon engine plugin with the given parent. This is invoked automatically by the plugin loader.
 */
+func (*QIconEnginePlugin) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QIconEnginePlugin {
+	return NewQIconEnginePlugin(parent)
+}
 func NewQIconEnginePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QIconEnginePlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -105,6 +108,9 @@ func NewQIconEnginePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QIconEng
 /*
 Constructs a icon engine plugin with the given parent. This is invoked automatically by the plugin loader.
 */
+func (*QIconEnginePlugin) NewForInherit__() *QIconEnginePlugin {
+	return NewQIconEnginePlugin__()
+}
 func NewQIconEnginePlugin__() *QIconEnginePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

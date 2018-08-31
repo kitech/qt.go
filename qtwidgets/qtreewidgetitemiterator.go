@@ -74,6 +74,9 @@ func (*QTreeWidgetItemIterator) NewFromPointer(cthis unsafe.Pointer) *QTreeWidge
 /*
 Constructs an iterator for the same QTreeWidget as it. The current iterator item is set to point on the current item of it.
 */
+func (*QTreeWidgetItemIterator) NewForInherit(widget QTreeWidget_ITF /*777 QTreeWidget **/, flags int) *QTreeWidgetItemIterator {
+	return NewQTreeWidgetItemIterator(widget, flags)
+}
 func NewQTreeWidgetItemIterator(widget QTreeWidget_ITF /*777 QTreeWidget **/, flags int) *QTreeWidgetItemIterator {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QTreeWidget_PTR() != nil {
@@ -94,6 +97,9 @@ func NewQTreeWidgetItemIterator(widget QTreeWidget_ITF /*777 QTreeWidget **/, fl
 /*
 Constructs an iterator for the same QTreeWidget as it. The current iterator item is set to point on the current item of it.
 */
+func (*QTreeWidgetItemIterator) NewForInherit__(widget QTreeWidget_ITF /*777 QTreeWidget **/) *QTreeWidgetItemIterator {
+	return NewQTreeWidgetItemIterator__(widget)
+}
 func NewQTreeWidgetItemIterator__(widget QTreeWidget_ITF /*777 QTreeWidget **/) *QTreeWidgetItemIterator {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QTreeWidget_PTR() != nil {
@@ -116,6 +122,9 @@ func NewQTreeWidgetItemIterator__(widget QTreeWidget_ITF /*777 QTreeWidget **/) 
 /*
 Constructs an iterator for the same QTreeWidget as it. The current iterator item is set to point on the current item of it.
 */
+func (*QTreeWidgetItemIterator) NewForInherit_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, flags int) *QTreeWidgetItemIterator {
+	return NewQTreeWidgetItemIterator_1(item, flags)
+}
 func NewQTreeWidgetItemIterator_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, flags int) *QTreeWidgetItemIterator {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
@@ -136,6 +145,9 @@ func NewQTreeWidgetItemIterator_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem
 /*
 Constructs an iterator for the same QTreeWidget as it. The current iterator item is set to point on the current item of it.
 */
+func (*QTreeWidgetItemIterator) NewForInherit_1_(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItemIterator {
+	return NewQTreeWidgetItemIterator_1_(item)
+}
 func NewQTreeWidgetItemIterator_1_(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItemIterator {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {

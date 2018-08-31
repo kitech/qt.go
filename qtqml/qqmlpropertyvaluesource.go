@@ -74,6 +74,9 @@ func (*QQmlPropertyValueSource) NewFromPointer(cthis unsafe.Pointer) *QQmlProper
 /*
 Constructs a QQmlPropertyValueSource.
 */
+func (*QQmlPropertyValueSource) NewForInherit() *QQmlPropertyValueSource {
+	return NewQQmlPropertyValueSource()
+}
 func NewQQmlPropertyValueSource() *QQmlPropertyValueSource {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQmlPropertyValueSourceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

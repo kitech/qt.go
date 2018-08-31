@@ -71,6 +71,9 @@ func (*QGeoPath) NewFromPointer(cthis unsafe.Pointer) *QGeoPath {
 /*
 Constructs a new, empty geo path.
 */
+func (*QGeoPath) NewForInherit() *QGeoPath {
+	return NewQGeoPath()
+}
 func NewQGeoPath() *QGeoPath {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QGeoPathC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +90,9 @@ func NewQGeoPath() *QGeoPath {
 /*
 Constructs a new, empty geo path.
 */
+func (*QGeoPath) NewForInherit_1(other QGeoShape_ITF) *QGeoPath {
+	return NewQGeoPath_1(other)
+}
 func NewQGeoPath_1(other QGeoShape_ITF) *QGeoPath {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGeoShape_PTR() != nil {

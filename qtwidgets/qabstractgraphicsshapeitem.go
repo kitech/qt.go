@@ -74,6 +74,9 @@ func (*QAbstractGraphicsShapeItem) NewFromPointer(cthis unsafe.Pointer) *QAbstra
 /*
 
  */
+func (*QAbstractGraphicsShapeItem) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QAbstractGraphicsShapeItem {
+	return NewQAbstractGraphicsShapeItem(parent)
+}
 func NewQAbstractGraphicsShapeItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QAbstractGraphicsShapeItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -94,6 +97,9 @@ func NewQAbstractGraphicsShapeItem(parent QGraphicsItem_ITF /*777 QGraphicsItem 
 /*
 
  */
+func (*QAbstractGraphicsShapeItem) NewForInherit__() *QAbstractGraphicsShapeItem {
+	return NewQAbstractGraphicsShapeItem__()
+}
 func NewQAbstractGraphicsShapeItem__() *QAbstractGraphicsShapeItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer

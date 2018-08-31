@@ -77,6 +77,9 @@ All elements are set to zero except m11 and m22 (specifying the scale), which ar
 
 See also reset().
 */
+func (*QMatrix) NewForInherit(arg0 int) *QMatrix {
+	return NewQMatrix(arg0)
+}
 func NewQMatrix(arg0 int) *QMatrix {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QMatrixC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +100,9 @@ All elements are set to zero except m11 and m22 (specifying the scale), which ar
 
 See also reset().
 */
+func (*QMatrix) NewForInherit_1() *QMatrix {
+	return NewQMatrix_1()
+}
 func NewQMatrix_1() *QMatrix {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QMatrixC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -117,6 +123,9 @@ All elements are set to zero except m11 and m22 (specifying the scale), which ar
 
 See also reset().
 */
+func (*QMatrix) NewForInherit_2(m11 float64, m12 float64, m21 float64, m22 float64, dx float64, dy float64) *QMatrix {
+	return NewQMatrix_2(m11, m12, m21, m22, dx, dy)
+}
 func NewQMatrix_2(m11 float64, m12 float64, m21 float64, m22 float64, dx float64, dy float64) *QMatrix {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QMatrixC2Edddddd", qtrt.FFI_TYPE_POINTER, m11, m12, m21, m22, dx, dy)
 	qtrt.ErrPrint(err, rv)

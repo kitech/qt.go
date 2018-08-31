@@ -207,6 +207,9 @@ func (this *QMediaStreamsControl) ActiveStreamsChanged() {
 /*
 Constructs a new media streams control with the given parent.
 */
+func (*QMediaStreamsControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaStreamsControl {
+	return NewQMediaStreamsControl(parent)
+}
 func NewQMediaStreamsControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaStreamsControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -227,6 +230,9 @@ func NewQMediaStreamsControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMedi
 /*
 Constructs a new media streams control with the given parent.
 */
+func (*QMediaStreamsControl) NewForInherit__() *QMediaStreamsControl {
+	return NewQMediaStreamsControl__()
+}
 func NewQMediaStreamsControl__() *QMediaStreamsControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -72,6 +72,9 @@ func (*QStyleOptionTitleBar) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionT
 /*
 
  */
+func (*QStyleOptionTitleBar) NewForInherit() *QStyleOptionTitleBar {
+	return NewQStyleOptionTitleBar()
+}
 func NewQStyleOptionTitleBar() *QStyleOptionTitleBar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStyleOptionTitleBar() *QStyleOptionTitleBar {
 /*
 
  */
+func (*QStyleOptionTitleBar) NewForInherit_1(version int) *QStyleOptionTitleBar {
+	return NewQStyleOptionTitleBar_1(version)
+}
 func NewQStyleOptionTitleBar_1(version int) *QStyleOptionTitleBar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)

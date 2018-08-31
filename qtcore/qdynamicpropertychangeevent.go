@@ -72,6 +72,9 @@ func (*QDynamicPropertyChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QDynam
 /*
 
  */
+func (*QDynamicPropertyChangeEvent) NewForInherit(name QByteArray_ITF) *QDynamicPropertyChangeEvent {
+	return NewQDynamicPropertyChangeEvent(name)
+}
 func NewQDynamicPropertyChangeEvent(name QByteArray_ITF) *QDynamicPropertyChangeEvent {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QByteArray_PTR() != nil {

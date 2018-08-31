@@ -113,6 +113,9 @@ All Qt programs automatically support the following command line options:
 
 See also QCoreApplication::arguments().
 */
+func (*QApplication) NewForInherit(argc int, argv []string, arg2 int) *QApplication {
+	return NewQApplication(argc, argv, arg2)
+}
 func NewQApplication(argc int, argv []string, arg2 int) *QApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
@@ -152,6 +155,9 @@ All Qt programs automatically support the following command line options:
 
 See also QCoreApplication::arguments().
 */
+func (*QApplication) NewForInherit__(argc int, argv []string) *QApplication {
+	return NewQApplication__(argc, argv)
+}
 func NewQApplication__(argc int, argv []string) *QApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	// arg: 2, int=Int, =Invalid, , Invalid

@@ -106,6 +106,9 @@ Constructs an empty buffer with the given parent. You can call setData() to fill
 
 See also open().
 */
+func (*QBuffer) NewForInherit(parent QObject_ITF /*777 QObject **/) *QBuffer {
+	return NewQBuffer(parent)
+}
 func NewQBuffer(parent QObject_ITF /*777 QObject **/) *QBuffer {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -128,6 +131,9 @@ Constructs an empty buffer with the given parent. You can call setData() to fill
 
 See also open().
 */
+func (*QBuffer) NewForInherit__() *QBuffer {
+	return NewQBuffer__()
+}
 func NewQBuffer__() *QBuffer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -148,6 +154,9 @@ Constructs an empty buffer with the given parent. You can call setData() to fill
 
 See also open().
 */
+func (*QBuffer) NewForInherit_1(buf QByteArray_ITF /*777 QByteArray **/, parent QObject_ITF /*777 QObject **/) *QBuffer {
+	return NewQBuffer_1(buf, parent)
+}
 func NewQBuffer_1(buf QByteArray_ITF /*777 QByteArray **/, parent QObject_ITF /*777 QObject **/) *QBuffer {
 	var convArg0 unsafe.Pointer
 	if buf != nil && buf.QByteArray_PTR() != nil {
@@ -174,6 +183,9 @@ Constructs an empty buffer with the given parent. You can call setData() to fill
 
 See also open().
 */
+func (*QBuffer) NewForInherit_1_(buf QByteArray_ITF /*777 QByteArray **/) *QBuffer {
+	return NewQBuffer_1_(buf)
+}
 func NewQBuffer_1_(buf QByteArray_ITF /*777 QByteArray **/) *QBuffer {
 	var convArg0 unsafe.Pointer
 	if buf != nil && buf.QByteArray_PTR() != nil {

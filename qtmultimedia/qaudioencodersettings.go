@@ -75,6 +75,9 @@ func (*QAudioEncoderSettings) NewFromPointer(cthis unsafe.Pointer) *QAudioEncode
 /*
 
  */
+func (*QAudioEncoderSettings) NewForInherit() *QAudioEncoderSettings {
+	return NewQAudioEncoderSettings()
+}
 func NewQAudioEncoderSettings() *QAudioEncoderSettings {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAudioEncoderSettingsC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

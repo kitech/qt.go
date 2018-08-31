@@ -191,6 +191,9 @@ func (this *QCameraFeedbackControl) SetEventFeedbackSound(arg0 int, filePath str
 /*
 Constructs a camera feedback control object with parent.
 */
+func (*QCameraFeedbackControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraFeedbackControl {
+	return NewQCameraFeedbackControl(parent)
+}
 func NewQCameraFeedbackControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraFeedbackControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -211,6 +214,9 @@ func NewQCameraFeedbackControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCa
 /*
 Constructs a camera feedback control object with parent.
 */
+func (*QCameraFeedbackControl) NewForInherit__() *QCameraFeedbackControl {
+	return NewQCameraFeedbackControl__()
+}
 func NewQCameraFeedbackControl__() *QCameraFeedbackControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

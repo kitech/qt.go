@@ -89,6 +89,9 @@ func (this *QAbstractProxyModel) MetaObject() *QMetaObject /*777 const QMetaObje
 /*
 Constructs a proxy model with the given parent.
 */
+func (*QAbstractProxyModel) NewForInherit(parent QObject_ITF /*777 QObject **/) *QAbstractProxyModel {
+	return NewQAbstractProxyModel(parent)
+}
 func NewQAbstractProxyModel(parent QObject_ITF /*777 QObject **/) *QAbstractProxyModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -109,6 +112,9 @@ func NewQAbstractProxyModel(parent QObject_ITF /*777 QObject **/) *QAbstractProx
 /*
 Constructs a proxy model with the given parent.
 */
+func (*QAbstractProxyModel) NewForInherit__() *QAbstractProxyModel {
+	return NewQAbstractProxyModel__()
+}
 func NewQAbstractProxyModel__() *QAbstractProxyModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

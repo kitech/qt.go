@@ -99,6 +99,9 @@ func (this *QPdfWriter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 /*
 Constructs a PDF writer that will write the pdf to filename.
 */
+func (*QPdfWriter) NewForInherit(filename string) *QPdfWriter {
+	return NewQPdfWriter(filename)
+}
 func NewQPdfWriter(filename string) *QPdfWriter {
 	var tmpArg0 = qtcore.NewQString_5(filename)
 	var convArg0 = tmpArg0.GetCthis()
@@ -117,6 +120,9 @@ func NewQPdfWriter(filename string) *QPdfWriter {
 /*
 Constructs a PDF writer that will write the pdf to filename.
 */
+func (*QPdfWriter) NewForInherit_1(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QPdfWriter {
+	return NewQPdfWriter_1(device)
+}
 func NewQPdfWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QPdfWriter {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {

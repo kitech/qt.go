@@ -75,6 +75,9 @@ func (*QSslCertificateExtension) NewFromPointer(cthis unsafe.Pointer) *QSslCerti
 /*
 Constructs a QSslCertificateExtension.
 */
+func (*QSslCertificateExtension) NewForInherit() *QSslCertificateExtension {
+	return NewQSslCertificateExtension()
+}
 func NewQSslCertificateExtension() *QSslCertificateExtension {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QSslCertificateExtensionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -76,6 +76,9 @@ func (*QQuickAsyncImageProvider) NewFromPointer(cthis unsafe.Pointer) *QQuickAsy
 /*
 
  */
+func (*QQuickAsyncImageProvider) NewForInherit() *QQuickAsyncImageProvider {
+	return NewQQuickAsyncImageProvider()
+}
 func NewQQuickAsyncImageProvider() *QQuickAsyncImageProvider {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

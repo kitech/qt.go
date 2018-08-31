@@ -72,6 +72,9 @@ func (*QMetaMethod) NewFromPointer(cthis unsafe.Pointer) *QMetaMethod {
 /*
 
  */
+func (*QMetaMethod) NewForInherit() *QMetaMethod {
+	return NewQMetaMethod()
+}
 func NewQMetaMethod() *QMetaMethod {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMetaMethodC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -285,6 +285,9 @@ func (this *QCameraZoomControl) CurrentDigitalZoomChanged(digitalZoom float64) {
 /*
 Constructs a camera zoom control object with parent.
 */
+func (*QCameraZoomControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraZoomControl {
+	return NewQCameraZoomControl(parent)
+}
 func NewQCameraZoomControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraZoomControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -305,6 +308,9 @@ func NewQCameraZoomControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCamera
 /*
 Constructs a camera zoom control object with parent.
 */
+func (*QCameraZoomControl) NewForInherit__() *QCameraZoomControl {
+	return NewQCameraZoomControl__()
+}
 func NewQCameraZoomControl__() *QCameraZoomControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

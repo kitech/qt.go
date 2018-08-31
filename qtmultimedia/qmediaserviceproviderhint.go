@@ -77,6 +77,9 @@ func (*QMediaServiceProviderHint) NewFromPointer(cthis unsafe.Pointer) *QMediaSe
 /*
 
  */
+func (*QMediaServiceProviderHint) NewForInherit() *QMediaServiceProviderHint {
+	return NewQMediaServiceProviderHint()
+}
 func NewQMediaServiceProviderHint() *QMediaServiceProviderHint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QMediaServiceProviderHintC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ func NewQMediaServiceProviderHint() *QMediaServiceProviderHint {
 /*
 
  */
+func (*QMediaServiceProviderHint) NewForInherit_1(mimeType string, codecs qtcore.QStringList_ITF) *QMediaServiceProviderHint {
+	return NewQMediaServiceProviderHint_1(mimeType, codecs)
+}
 func NewQMediaServiceProviderHint_1(mimeType string, codecs qtcore.QStringList_ITF) *QMediaServiceProviderHint {
 	var tmpArg0 = qtcore.NewQString_5(mimeType)
 	var convArg0 = tmpArg0.GetCthis()
@@ -115,6 +121,9 @@ func NewQMediaServiceProviderHint_1(mimeType string, codecs qtcore.QStringList_I
 /*
 
  */
+func (*QMediaServiceProviderHint) NewForInherit_2(device qtcore.QByteArray_ITF) *QMediaServiceProviderHint {
+	return NewQMediaServiceProviderHint_2(device)
+}
 func NewQMediaServiceProviderHint_2(device qtcore.QByteArray_ITF) *QMediaServiceProviderHint {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QByteArray_PTR() != nil {
@@ -135,6 +144,9 @@ func NewQMediaServiceProviderHint_2(device qtcore.QByteArray_ITF) *QMediaService
 /*
 
  */
+func (*QMediaServiceProviderHint) NewForInherit_3(position int) *QMediaServiceProviderHint {
+	return NewQMediaServiceProviderHint_3(position)
+}
 func NewQMediaServiceProviderHint_3(position int) *QMediaServiceProviderHint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QMediaServiceProviderHintC2EN7QCamera8PositionE", qtrt.FFI_TYPE_POINTER, position)
 	qtrt.ErrPrint(err, rv)
@@ -151,6 +163,9 @@ func NewQMediaServiceProviderHint_3(position int) *QMediaServiceProviderHint {
 /*
 
  */
+func (*QMediaServiceProviderHint) NewForInherit_4(features int) *QMediaServiceProviderHint {
+	return NewQMediaServiceProviderHint_4(features)
+}
 func NewQMediaServiceProviderHint_4(features int) *QMediaServiceProviderHint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QMediaServiceProviderHintC2E6QFlagsINS_7FeatureEE", qtrt.FFI_TYPE_POINTER, features)
 	qtrt.ErrPrint(err, rv)

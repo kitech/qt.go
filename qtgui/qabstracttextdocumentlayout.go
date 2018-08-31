@@ -117,6 +117,9 @@ func (this *QAbstractTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 
 /*
 Creates a new text document layout for the given document.
 */
+func (*QAbstractTextDocumentLayout) NewForInherit(doc QTextDocument_ITF /*777 QTextDocument **/) *QAbstractTextDocumentLayout {
+	return NewQAbstractTextDocumentLayout(doc)
+}
 func NewQAbstractTextDocumentLayout(doc QTextDocument_ITF /*777 QTextDocument **/) *QAbstractTextDocumentLayout {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {

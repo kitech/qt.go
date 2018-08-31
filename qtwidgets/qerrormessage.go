@@ -96,6 +96,9 @@ func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 Constructs and installs an error handler window with the given parent.
 */
+func (*QErrorMessage) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QErrorMessage {
+	return NewQErrorMessage(parent)
+}
 func NewQErrorMessage(parent QWidget_ITF /*777 QWidget **/) *QErrorMessage {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -116,6 +119,9 @@ func NewQErrorMessage(parent QWidget_ITF /*777 QWidget **/) *QErrorMessage {
 /*
 Constructs and installs an error handler window with the given parent.
 */
+func (*QErrorMessage) NewForInherit__() *QErrorMessage {
+	return NewQErrorMessage__()
+}
 func NewQErrorMessage__() *QErrorMessage {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

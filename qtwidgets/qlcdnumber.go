@@ -100,6 +100,9 @@ The parent argument is passed to the QFrame constructor.
 
 See also setDigitCount() and setSmallDecimalPoint().
 */
+func (*QLCDNumber) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QLCDNumber {
+	return NewQLCDNumber(parent)
+}
 func NewQLCDNumber(parent QWidget_ITF /*777 QWidget **/) *QLCDNumber {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -124,6 +127,9 @@ The parent argument is passed to the QFrame constructor.
 
 See also setDigitCount() and setSmallDecimalPoint().
 */
+func (*QLCDNumber) NewForInherit__() *QLCDNumber {
+	return NewQLCDNumber__()
+}
 func NewQLCDNumber__() *QLCDNumber {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -146,6 +152,9 @@ The parent argument is passed to the QFrame constructor.
 
 See also setDigitCount() and setSmallDecimalPoint().
 */
+func (*QLCDNumber) NewForInherit_1(numDigits uint, parent QWidget_ITF /*777 QWidget **/) *QLCDNumber {
+	return NewQLCDNumber_1(numDigits, parent)
+}
 func NewQLCDNumber_1(numDigits uint, parent QWidget_ITF /*777 QWidget **/) *QLCDNumber {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -170,6 +179,9 @@ The parent argument is passed to the QFrame constructor.
 
 See also setDigitCount() and setSmallDecimalPoint().
 */
+func (*QLCDNumber) NewForInherit_1_(numDigits uint) *QLCDNumber {
+	return NewQLCDNumber_1_(numDigits)
+}
 func NewQLCDNumber_1_(numDigits uint) *QLCDNumber {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer

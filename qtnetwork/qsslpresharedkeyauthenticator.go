@@ -77,6 +77,9 @@ Constructs a default QSslPreSharedKeyAuthenticator object.
 
 The identity hint, the identity and the key will be initialized to empty byte arrays; the maximum length for both the identity and the key will be initialized to 0.
 */
+func (*QSslPreSharedKeyAuthenticator) NewForInherit() *QSslPreSharedKeyAuthenticator {
+	return NewQSslPreSharedKeyAuthenticator()
+}
 func NewQSslPreSharedKeyAuthenticator() *QSslPreSharedKeyAuthenticator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticatorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -71,6 +71,9 @@ func (*QEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QEnterEvent {
 /*
 
  */
+func (*QEnterEvent) NewForInherit(localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF) *QEnterEvent {
+	return NewQEnterEvent(localPos, windowPos, screenPos)
+}
 func NewQEnterEvent(localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF) *QEnterEvent {
 	var convArg0 unsafe.Pointer
 	if localPos != nil && localPos.QPointF_PTR() != nil {

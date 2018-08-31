@@ -74,6 +74,9 @@ func (*QStyleOptionTabWidgetFrame) NewFromPointer(cthis unsafe.Pointer) *QStyleO
 /*
 
  */
+func (*QStyleOptionTabWidgetFrame) NewForInherit() *QStyleOptionTabWidgetFrame {
+	return NewQStyleOptionTabWidgetFrame()
+}
 func NewQStyleOptionTabWidgetFrame() *QStyleOptionTabWidgetFrame {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQStyleOptionTabWidgetFrame() *QStyleOptionTabWidgetFrame {
 /*
 
  */
+func (*QStyleOptionTabWidgetFrame) NewForInherit_1(version int) *QStyleOptionTabWidgetFrame {
+	return NewQStyleOptionTabWidgetFrame_1(version)
+}
 func NewQStyleOptionTabWidgetFrame_1(version int) *QStyleOptionTabWidgetFrame {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)

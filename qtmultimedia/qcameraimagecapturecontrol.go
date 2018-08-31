@@ -299,6 +299,9 @@ func (this *QCameraImageCaptureControl) Error(id int, error int, errorString str
 /*
 Constructs a new image capture control object with the given parent
 */
+func (*QCameraImageCaptureControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraImageCaptureControl {
+	return NewQCameraImageCaptureControl(parent)
+}
 func NewQCameraImageCaptureControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraImageCaptureControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -319,6 +322,9 @@ func NewQCameraImageCaptureControl(parent qtcore.QObject_ITF /*777 QObject **/) 
 /*
 Constructs a new image capture control object with the given parent
 */
+func (*QCameraImageCaptureControl) NewForInherit__() *QCameraImageCaptureControl {
+	return NewQCameraImageCaptureControl__()
+}
 func NewQCameraImageCaptureControl__() *QCameraImageCaptureControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

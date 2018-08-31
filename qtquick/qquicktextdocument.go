@@ -88,6 +88,9 @@ func (this *QQuickTextDocument) MetaObject() *qtcore.QMetaObject /*777 const QMe
 /*
 Constructs a QQuickTextDocument object with parent as the parent object.
 */
+func (*QQuickTextDocument) NewForInherit(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickTextDocument {
+	return NewQQuickTextDocument(parent)
+}
 func NewQQuickTextDocument(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickTextDocument {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQuickItem_PTR() != nil {

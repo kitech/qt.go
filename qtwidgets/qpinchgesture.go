@@ -86,6 +86,9 @@ func (this *QPinchGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 
  */
+func (*QPinchGesture) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QPinchGesture {
+	return NewQPinchGesture(parent)
+}
 func NewQPinchGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPinchGesture {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQPinchGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPinchGestur
 /*
 
  */
+func (*QPinchGesture) NewForInherit__() *QPinchGesture {
+	return NewQPinchGesture__()
+}
 func NewQPinchGesture__() *QPinchGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -73,6 +73,9 @@ func (*QIcon) NewFromPointer(cthis unsafe.Pointer) *QIcon {
 /*
 Constructs a null icon.
 */
+func (*QIcon) NewForInherit() *QIcon {
+	return NewQIcon()
+}
 func NewQIcon() *QIcon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIconC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQIcon() *QIcon {
 /*
 Constructs a null icon.
 */
+func (*QIcon) NewForInherit_1(pixmap QPixmap_ITF) *QIcon {
+	return NewQIcon_1(pixmap)
+}
 func NewQIcon_1(pixmap QPixmap_ITF) *QIcon {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -109,6 +115,9 @@ func NewQIcon_1(pixmap QPixmap_ITF) *QIcon {
 /*
 Constructs a null icon.
 */
+func (*QIcon) NewForInherit_2(fileName string) *QIcon {
+	return NewQIcon_2(fileName)
+}
 func NewQIcon_2(fileName string) *QIcon {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -127,6 +136,9 @@ func NewQIcon_2(fileName string) *QIcon {
 /*
 Constructs a null icon.
 */
+func (*QIcon) NewForInherit_3(engine QIconEngine_ITF /*777 QIconEngine **/) *QIcon {
+	return NewQIcon_3(engine)
+}
 func NewQIcon_3(engine QIconEngine_ITF /*777 QIconEngine **/) *QIcon {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QIconEngine_PTR() != nil {

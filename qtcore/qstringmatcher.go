@@ -72,6 +72,9 @@ func (*QStringMatcher) NewFromPointer(cthis unsafe.Pointer) *QStringMatcher {
 /*
 Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
+func (*QStringMatcher) NewForInherit() *QStringMatcher {
+	return NewQStringMatcher()
+}
 func NewQStringMatcher() *QStringMatcher {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStringMatcher() *QStringMatcher {
 /*
 Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
+func (*QStringMatcher) NewForInherit_1(pattern string, cs int) *QStringMatcher {
+	return NewQStringMatcher_1(pattern, cs)
+}
 func NewQStringMatcher_1(pattern string, cs int) *QStringMatcher {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
@@ -106,6 +112,9 @@ func NewQStringMatcher_1(pattern string, cs int) *QStringMatcher {
 /*
 Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
+func (*QStringMatcher) NewForInherit_1_(pattern string) *QStringMatcher {
+	return NewQStringMatcher_1_(pattern)
+}
 func NewQStringMatcher_1_(pattern string) *QStringMatcher {
 	var tmpArg0 = NewQString_5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
@@ -126,6 +135,9 @@ func NewQStringMatcher_1_(pattern string) *QStringMatcher {
 /*
 Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
+func (*QStringMatcher) NewForInherit_2(uc QChar_ITF /*777 const QChar **/, len_ int, cs int) *QStringMatcher {
+	return NewQStringMatcher_2(uc, len_, cs)
+}
 func NewQStringMatcher_2(uc QChar_ITF /*777 const QChar **/, len_ int, cs int) *QStringMatcher {
 	var convArg0 unsafe.Pointer
 	if uc != nil && uc.QChar_PTR() != nil {
@@ -146,6 +158,9 @@ func NewQStringMatcher_2(uc QChar_ITF /*777 const QChar **/, len_ int, cs int) *
 /*
 Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
+func (*QStringMatcher) NewForInherit_2_(uc QChar_ITF /*777 const QChar **/, len_ int) *QStringMatcher {
+	return NewQStringMatcher_2_(uc, len_)
+}
 func NewQStringMatcher_2_(uc QChar_ITF /*777 const QChar **/, len_ int) *QStringMatcher {
 	var convArg0 unsafe.Pointer
 	if uc != nil && uc.QChar_PTR() != nil {

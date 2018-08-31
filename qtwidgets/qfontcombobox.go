@@ -91,6 +91,9 @@ func (this *QFontComboBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 Constructs a font combobox with the given parent.
 */
+func (*QFontComboBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QFontComboBox {
+	return NewQFontComboBox(parent)
+}
 func NewQFontComboBox(parent QWidget_ITF /*777 QWidget **/) *QFontComboBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -111,6 +114,9 @@ func NewQFontComboBox(parent QWidget_ITF /*777 QWidget **/) *QFontComboBox {
 /*
 Constructs a font combobox with the given parent.
 */
+func (*QFontComboBox) NewForInherit__() *QFontComboBox {
+	return NewQFontComboBox__()
+}
 func NewQFontComboBox__() *QFontComboBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

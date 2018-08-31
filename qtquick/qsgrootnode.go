@@ -74,6 +74,9 @@ func (*QSGRootNode) NewFromPointer(cthis unsafe.Pointer) *QSGRootNode {
 /*
 
  */
+func (*QSGRootNode) NewForInherit() *QSGRootNode {
+	return NewQSGRootNode()
+}
 func NewQSGRootNode() *QSGRootNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGRootNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -73,6 +73,9 @@ func (*QHttpPart) NewFromPointer(cthis unsafe.Pointer) *QHttpPart {
 /*
 
  */
+func (*QHttpPart) NewForInherit() *QHttpPart {
+	return NewQHttpPart()
+}
 func NewQHttpPart() *QHttpPart {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPartC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

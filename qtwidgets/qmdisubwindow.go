@@ -199,6 +199,9 @@ Note that only QMdiSubWindows can be set as children of QMdiArea; you cannot, fo
 
 See also QMdiArea::addSubWindow().
 */
+func (*QMdiSubWindow) NewForInherit(parent QWidget_ITF /*777 QWidget **/, flags int) *QMdiSubWindow {
+	return NewQMdiSubWindow(parent, flags)
+}
 func NewQMdiSubWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMdiSubWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -232,6 +235,9 @@ Note that only QMdiSubWindows can be set as children of QMdiArea; you cannot, fo
 
 See also QMdiArea::addSubWindow().
 */
+func (*QMdiSubWindow) NewForInherit__() *QMdiSubWindow {
+	return NewQMdiSubWindow__()
+}
 func NewQMdiSubWindow__() *QMdiSubWindow {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -265,6 +271,9 @@ Note that only QMdiSubWindows can be set as children of QMdiArea; you cannot, fo
 
 See also QMdiArea::addSubWindow().
 */
+func (*QMdiSubWindow) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QMdiSubWindow {
+	return NewQMdiSubWindow__1(parent)
+}
 func NewQMdiSubWindow__1(parent QWidget_ITF /*777 QWidget **/) *QMdiSubWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

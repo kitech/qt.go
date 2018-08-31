@@ -98,6 +98,9 @@ Constructs a color dialog with the given parent.
 
 This function was introduced in  Qt 4.5.
 */
+func (*QColorDialog) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QColorDialog {
+	return NewQColorDialog(parent)
+}
 func NewQColorDialog(parent QWidget_ITF /*777 QWidget **/) *QColorDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -120,6 +123,9 @@ Constructs a color dialog with the given parent.
 
 This function was introduced in  Qt 4.5.
 */
+func (*QColorDialog) NewForInherit__() *QColorDialog {
+	return NewQColorDialog__()
+}
 func NewQColorDialog__() *QColorDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -140,6 +146,9 @@ Constructs a color dialog with the given parent.
 
 This function was introduced in  Qt 4.5.
 */
+func (*QColorDialog) NewForInherit_1(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QWidget **/) *QColorDialog {
+	return NewQColorDialog_1(initial, parent)
+}
 func NewQColorDialog_1(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QWidget **/) *QColorDialog {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QColor_PTR() != nil {
@@ -166,6 +175,9 @@ Constructs a color dialog with the given parent.
 
 This function was introduced in  Qt 4.5.
 */
+func (*QColorDialog) NewForInherit_1_(initial qtgui.QColor_ITF) *QColorDialog {
+	return NewQColorDialog_1_(initial)
+}
 func NewQColorDialog_1_(initial qtgui.QColor_ITF) *QColorDialog {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QColor_PTR() != nil {

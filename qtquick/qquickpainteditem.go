@@ -93,6 +93,9 @@ func (this *QQuickPaintedItem) MetaObject() *qtcore.QMetaObject /*777 const QMet
 /*
 Constructs a QQuickPaintedItem with the given parent item.
 */
+func (*QQuickPaintedItem) NewForInherit(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickPaintedItem {
+	return NewQQuickPaintedItem(parent)
+}
 func NewQQuickPaintedItem(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickPaintedItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQuickItem_PTR() != nil {
@@ -113,6 +116,9 @@ func NewQQuickPaintedItem(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickPai
 /*
 Constructs a QQuickPaintedItem with the given parent item.
 */
+func (*QQuickPaintedItem) NewForInherit__() *QQuickPaintedItem {
+	return NewQQuickPaintedItem__()
+}
 func NewQQuickPaintedItem__() *QQuickPaintedItem {
 	// arg: 0, QQuickItem *=Pointer, QQuickItem=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -85,6 +85,9 @@ func (this *QAccessibleBridgePlugin) MetaObject() *qtcore.QMetaObject /*777 cons
 /*
 
  */
+func (*QAccessibleBridgePlugin) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAccessibleBridgePlugin {
+	return NewQAccessibleBridgePlugin(parent)
+}
 func NewQAccessibleBridgePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QAccessibleBridgePlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -105,6 +108,9 @@ func NewQAccessibleBridgePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QA
 /*
 
  */
+func (*QAccessibleBridgePlugin) NewForInherit__() *QAccessibleBridgePlugin {
+	return NewQAccessibleBridgePlugin__()
+}
 func NewQAccessibleBridgePlugin__() *QAccessibleBridgePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -87,6 +87,9 @@ func (*QGraphicsSimpleTextItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsS
 /*
 
  */
+func (*QGraphicsSimpleTextItem) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSimpleTextItem {
+	return NewQGraphicsSimpleTextItem(parent)
+}
 func NewQGraphicsSimpleTextItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSimpleTextItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQGraphicsSimpleTextItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/
 /*
 
  */
+func (*QGraphicsSimpleTextItem) NewForInherit__() *QGraphicsSimpleTextItem {
+	return NewQGraphicsSimpleTextItem__()
+}
 func NewQGraphicsSimpleTextItem__() *QGraphicsSimpleTextItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -125,6 +131,9 @@ func NewQGraphicsSimpleTextItem__() *QGraphicsSimpleTextItem {
 /*
 
  */
+func (*QGraphicsSimpleTextItem) NewForInherit_1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSimpleTextItem {
+	return NewQGraphicsSimpleTextItem_1(text, parent)
+}
 func NewQGraphicsSimpleTextItem_1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSimpleTextItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -147,6 +156,9 @@ func NewQGraphicsSimpleTextItem_1(text string, parent QGraphicsItem_ITF /*777 QG
 /*
 
  */
+func (*QGraphicsSimpleTextItem) NewForInherit_1_(text string) *QGraphicsSimpleTextItem {
+	return NewQGraphicsSimpleTextItem_1_(text)
+}
 func NewQGraphicsSimpleTextItem_1_(text string) *QGraphicsSimpleTextItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()

@@ -91,6 +91,9 @@ func (this *QGraphicsOpacityEffect) MetaObject() *qtcore.QMetaObject /*777 const
 /*
 
  */
+func (*QGraphicsOpacityEffect) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsOpacityEffect {
+	return NewQGraphicsOpacityEffect(parent)
+}
 func NewQGraphicsOpacityEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsOpacityEffect {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -111,6 +114,9 @@ func NewQGraphicsOpacityEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGr
 /*
 
  */
+func (*QGraphicsOpacityEffect) NewForInherit__() *QGraphicsOpacityEffect {
+	return NewQGraphicsOpacityEffect__()
+}
 func NewQGraphicsOpacityEffect__() *QGraphicsOpacityEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

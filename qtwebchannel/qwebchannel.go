@@ -89,6 +89,9 @@ Constructs the QWebChannel object with the given parent.
 
 Note that a QWebChannel is only fully operational once you connect it to a QWebChannelAbstractTransport. The HTML clients also need to be setup appropriately using qwebchannel.js.
 */
+func (*QWebChannel) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QWebChannel {
+	return NewQWebChannel(parent)
+}
 func NewQWebChannel(parent qtcore.QObject_ITF /*777 QObject **/) *QWebChannel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -111,6 +114,9 @@ Constructs the QWebChannel object with the given parent.
 
 Note that a QWebChannel is only fully operational once you connect it to a QWebChannelAbstractTransport. The HTML clients also need to be setup appropriately using qwebchannel.js.
 */
+func (*QWebChannel) NewForInherit__() *QWebChannel {
+	return NewQWebChannel__()
+}
 func NewQWebChannel__() *QWebChannel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -72,6 +72,9 @@ func (*QStyleOptionSpinBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSp
 /*
 
  */
+func (*QStyleOptionSpinBox) NewForInherit() *QStyleOptionSpinBox {
+	return NewQStyleOptionSpinBox()
+}
 func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
 /*
 
  */
+func (*QStyleOptionSpinBox) NewForInherit_1(version int) *QStyleOptionSpinBox {
+	return NewQStyleOptionSpinBox_1(version)
+}
 func NewQStyleOptionSpinBox_1(version int) *QStyleOptionSpinBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)

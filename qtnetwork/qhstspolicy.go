@@ -73,6 +73,9 @@ func (*QHstsPolicy) NewFromPointer(cthis unsafe.Pointer) *QHstsPolicy {
 /*
 Constructs an invalid (expired) policy with empty host name and subdomains not included.
 */
+func (*QHstsPolicy) NewForInherit() *QHstsPolicy {
+	return NewQHstsPolicy()
+}
 func NewQHstsPolicy() *QHstsPolicy {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQHstsPolicy() *QHstsPolicy {
 /*
 Constructs an invalid (expired) policy with empty host name and subdomains not included.
 */
+func (*QHstsPolicy) NewForInherit_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode int) *QHstsPolicy {
+	return NewQHstsPolicy_1(expiry, flags, host, mode)
+}
 func NewQHstsPolicy_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode int) *QHstsPolicy {
 	var convArg0 unsafe.Pointer
 	if expiry != nil && expiry.QDateTime_PTR() != nil {
@@ -111,6 +117,9 @@ func NewQHstsPolicy_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode 
 /*
 Constructs an invalid (expired) policy with empty host name and subdomains not included.
 */
+func (*QHstsPolicy) NewForInherit_1_(expiry qtcore.QDateTime_ITF, flags int, host string) *QHstsPolicy {
+	return NewQHstsPolicy_1_(expiry, flags, host)
+}
 func NewQHstsPolicy_1_(expiry qtcore.QDateTime_ITF, flags int, host string) *QHstsPolicy {
 	var convArg0 unsafe.Pointer
 	if expiry != nil && expiry.QDateTime_PTR() != nil {

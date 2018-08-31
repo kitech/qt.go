@@ -87,6 +87,9 @@ func (this *QAbstractVideoFilter) MetaObject() *qtcore.QMetaObject /*777 const Q
 /*
 Constructs a new QAbstractVideoFilter instance with parent object parent.
 */
+func (*QAbstractVideoFilter) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractVideoFilter {
+	return NewQAbstractVideoFilter(parent)
+}
 func NewQAbstractVideoFilter(parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractVideoFilter {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQAbstractVideoFilter(parent qtcore.QObject_ITF /*777 QObject **/) *QAbst
 /*
 Constructs a new QAbstractVideoFilter instance with parent object parent.
 */
+func (*QAbstractVideoFilter) NewForInherit__() *QAbstractVideoFilter {
+	return NewQAbstractVideoFilter__()
+}
 func NewQAbstractVideoFilter__() *QAbstractVideoFilter {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -96,6 +96,9 @@ func (this *QMediaPlaylist) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 /*
 Create a new playlist object with the given parent.
 */
+func (*QMediaPlaylist) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlaylist {
+	return NewQMediaPlaylist(parent)
+}
 func NewQMediaPlaylist(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlaylist {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -116,6 +119,9 @@ func NewQMediaPlaylist(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlayl
 /*
 Create a new playlist object with the given parent.
 */
+func (*QMediaPlaylist) NewForInherit__() *QMediaPlaylist {
+	return NewQMediaPlaylist__()
+}
 func NewQMediaPlaylist__() *QMediaPlaylist {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -71,6 +71,9 @@ func (*QGeoCircle) NewFromPointer(cthis unsafe.Pointer) *QGeoCircle {
 /*
 Constructs a new, invalid geo circle.
 */
+func (*QGeoCircle) NewForInherit() *QGeoCircle {
+	return NewQGeoCircle()
+}
 func NewQGeoCircle() *QGeoCircle {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QGeoCircleC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +90,9 @@ func NewQGeoCircle() *QGeoCircle {
 /*
 Constructs a new, invalid geo circle.
 */
+func (*QGeoCircle) NewForInherit_1(center QGeoCoordinate_ITF, radius float64) *QGeoCircle {
+	return NewQGeoCircle_1(center, radius)
+}
 func NewQGeoCircle_1(center QGeoCoordinate_ITF, radius float64) *QGeoCircle {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QGeoCoordinate_PTR() != nil {
@@ -107,6 +113,9 @@ func NewQGeoCircle_1(center QGeoCoordinate_ITF, radius float64) *QGeoCircle {
 /*
 Constructs a new, invalid geo circle.
 */
+func (*QGeoCircle) NewForInherit_1_(center QGeoCoordinate_ITF) *QGeoCircle {
+	return NewQGeoCircle_1_(center)
+}
 func NewQGeoCircle_1_(center QGeoCoordinate_ITF) *QGeoCircle {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QGeoCoordinate_PTR() != nil {
@@ -129,6 +138,9 @@ func NewQGeoCircle_1_(center QGeoCoordinate_ITF) *QGeoCircle {
 /*
 Constructs a new, invalid geo circle.
 */
+func (*QGeoCircle) NewForInherit_2(other QGeoShape_ITF) *QGeoCircle {
+	return NewQGeoCircle_2(other)
+}
 func NewQGeoCircle_2(other QGeoShape_ITF) *QGeoCircle {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGeoShape_PTR() != nil {

@@ -73,6 +73,9 @@ func (*QGradient) NewFromPointer(cthis unsafe.Pointer) *QGradient {
 /*
 
  */
+func (*QGradient) NewForInherit() *QGradient {
+	return NewQGradient()
+}
 func NewQGradient() *QGradient {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradientC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

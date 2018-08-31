@@ -183,6 +183,9 @@ The window is not shown until setVisible(true), show(), or similar is called.
 
 See also setScreen().
 */
+func (*QWindow) NewForInherit(screen QScreen_ITF /*777 QScreen **/) *QWindow {
+	return NewQWindow(screen)
+}
 func NewQWindow(screen QScreen_ITF /*777 QScreen **/) *QWindow {
 	var convArg0 unsafe.Pointer
 	if screen != nil && screen.QScreen_PTR() != nil {
@@ -207,6 +210,9 @@ The window is not shown until setVisible(true), show(), or similar is called.
 
 See also setScreen().
 */
+func (*QWindow) NewForInherit__() *QWindow {
+	return NewQWindow__()
+}
 func NewQWindow__() *QWindow {
 	// arg: 0, QScreen *=Pointer, QScreen=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -229,6 +235,9 @@ The window is not shown until setVisible(true), show(), or similar is called.
 
 See also setScreen().
 */
+func (*QWindow) NewForInherit_1(parent QWindow_ITF /*777 QWindow **/) *QWindow {
+	return NewQWindow_1(parent)
+}
 func NewQWindow_1(parent QWindow_ITF /*777 QWindow **/) *QWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWindow_PTR() != nil {

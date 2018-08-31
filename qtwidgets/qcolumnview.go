@@ -167,6 +167,9 @@ Constructs a column view with a parent to represent a model's data. Use setModel
 
 See also QAbstractItemModel.
 */
+func (*QColumnView) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QColumnView {
+	return NewQColumnView(parent)
+}
 func NewQColumnView(parent QWidget_ITF /*777 QWidget **/) *QColumnView {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -189,6 +192,9 @@ Constructs a column view with a parent to represent a model's data. Use setModel
 
 See also QAbstractItemModel.
 */
+func (*QColumnView) NewForInherit__() *QColumnView {
+	return NewQColumnView__()
+}
 func NewQColumnView__() *QColumnView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

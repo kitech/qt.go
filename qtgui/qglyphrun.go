@@ -73,6 +73,9 @@ func (*QGlyphRun) NewFromPointer(cthis unsafe.Pointer) *QGlyphRun {
 /*
 Constructs an empty QGlyphRun object.
 */
+func (*QGlyphRun) NewForInherit() *QGlyphRun {
+	return NewQGlyphRun()
+}
 func NewQGlyphRun() *QGlyphRun {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRunC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

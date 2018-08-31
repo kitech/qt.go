@@ -75,6 +75,9 @@ func (*QMediaTimeInterval) NewFromPointer(cthis unsafe.Pointer) *QMediaTimeInter
 /*
 
  */
+func (*QMediaTimeInterval) NewForInherit() *QMediaTimeInterval {
+	return NewQMediaTimeInterval()
+}
 func NewQMediaTimeInterval() *QMediaTimeInterval {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMediaTimeIntervalC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +94,9 @@ func NewQMediaTimeInterval() *QMediaTimeInterval {
 /*
 
  */
+func (*QMediaTimeInterval) NewForInherit_1(start int64, end int64) *QMediaTimeInterval {
+	return NewQMediaTimeInterval_1(start, end)
+}
 func NewQMediaTimeInterval_1(start int64, end int64) *QMediaTimeInterval {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMediaTimeIntervalC2Exx", qtrt.FFI_TYPE_POINTER, start, end)
 	qtrt.ErrPrint(err, rv)

@@ -89,6 +89,9 @@ func (this *QTimeLine) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs a timeline with a duration of duration milliseconds. parent is passed to QObject's constructor. The default duration is 1000 milliseconds.
 */
+func (*QTimeLine) NewForInherit(duration int, parent QObject_ITF /*777 QObject **/) *QTimeLine {
+	return NewQTimeLine(duration, parent)
+}
 func NewQTimeLine(duration int, parent QObject_ITF /*777 QObject **/) *QTimeLine {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -109,6 +112,9 @@ func NewQTimeLine(duration int, parent QObject_ITF /*777 QObject **/) *QTimeLine
 /*
 Constructs a timeline with a duration of duration milliseconds. parent is passed to QObject's constructor. The default duration is 1000 milliseconds.
 */
+func (*QTimeLine) NewForInherit__() *QTimeLine {
+	return NewQTimeLine__()
+}
 func NewQTimeLine__() *QTimeLine {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	duration := int(1000)
@@ -129,6 +135,9 @@ func NewQTimeLine__() *QTimeLine {
 /*
 Constructs a timeline with a duration of duration milliseconds. parent is passed to QObject's constructor. The default duration is 1000 milliseconds.
 */
+func (*QTimeLine) NewForInherit__1(duration int) *QTimeLine {
+	return NewQTimeLine__1(duration)
+}
 func NewQTimeLine__1(duration int) *QTimeLine {
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer

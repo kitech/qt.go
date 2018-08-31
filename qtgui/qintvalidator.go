@@ -85,6 +85,9 @@ func (this *QIntValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 
  */
+func (*QIntValidator) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
+	return NewQIntValidator(parent)
+}
 func NewQIntValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -105,6 +108,9 @@ func NewQIntValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidato
 /*
 
  */
+func (*QIntValidator) NewForInherit__() *QIntValidator {
+	return NewQIntValidator__()
+}
 func NewQIntValidator__() *QIntValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -123,6 +129,9 @@ func NewQIntValidator__() *QIntValidator {
 /*
 
  */
+func (*QIntValidator) NewForInherit_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
+	return NewQIntValidator_1(bottom, top, parent)
+}
 func NewQIntValidator_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -143,6 +152,9 @@ func NewQIntValidator_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QOb
 /*
 
  */
+func (*QIntValidator) NewForInherit_1_(bottom int, top int) *QIntValidator {
+	return NewQIntValidator_1_(bottom, top)
+}
 func NewQIntValidator_1_(bottom int, top int) *QIntValidator {
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer

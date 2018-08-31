@@ -674,6 +674,9 @@ func (this *QMediaPlayerControl) Error(error int, errorString string) {
 /*
 Constructs a new media player control with the given parent.
 */
+func (*QMediaPlayerControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlayerControl {
+	return NewQMediaPlayerControl(parent)
+}
 func NewQMediaPlayerControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlayerControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -694,6 +697,9 @@ func NewQMediaPlayerControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMedia
 /*
 Constructs a new media player control with the given parent.
 */
+func (*QMediaPlayerControl) NewForInherit__() *QMediaPlayerControl {
+	return NewQMediaPlayerControl__()
+}
 func NewQMediaPlayerControl__() *QMediaPlayerControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

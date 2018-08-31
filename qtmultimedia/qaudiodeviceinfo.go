@@ -75,6 +75,9 @@ func (*QAudioDeviceInfo) NewFromPointer(cthis unsafe.Pointer) *QAudioDeviceInfo 
 /*
 Constructs an empty QAudioDeviceInfo object.
 */
+func (*QAudioDeviceInfo) NewForInherit() *QAudioDeviceInfo {
+	return NewQAudioDeviceInfo()
+}
 func NewQAudioDeviceInfo() *QAudioDeviceInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAudioDeviceInfoC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

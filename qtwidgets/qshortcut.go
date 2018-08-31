@@ -93,6 +93,9 @@ Constructs a QShortcut object for the parent widget. Since no shortcut key seque
 
 See also setKey().
 */
+func (*QShortcut) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QShortcut {
+	return NewQShortcut(parent)
+}
 func NewQShortcut(parent QWidget_ITF /*777 QWidget **/) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -115,6 +118,9 @@ Constructs a QShortcut object for the parent widget. Since no shortcut key seque
 
 See also setKey().
 */
+func (*QShortcut) NewForInherit_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string, context int) *QShortcut {
+	return NewQShortcut_1(key, parent, member, ambiguousMember, context)
+}
 func NewQShortcut_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string, context int) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
@@ -145,6 +151,9 @@ Constructs a QShortcut object for the parent widget. Since no shortcut key seque
 
 See also setKey().
 */
+func (*QShortcut) NewForInherit_1_(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QShortcut {
+	return NewQShortcut_1_(key, parent)
+}
 func NewQShortcut_1_(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
@@ -177,6 +186,9 @@ Constructs a QShortcut object for the parent widget. Since no shortcut key seque
 
 See also setKey().
 */
+func (*QShortcut) NewForInherit_1_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string) *QShortcut {
+	return NewQShortcut_1_1(key, parent, member)
+}
 func NewQShortcut_1_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
@@ -209,6 +221,9 @@ Constructs a QShortcut object for the parent widget. Since no shortcut key seque
 
 See also setKey().
 */
+func (*QShortcut) NewForInherit_1_2(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string) *QShortcut {
+	return NewQShortcut_1_2(key, parent, member, ambiguousMember)
+}
 func NewQShortcut_1_2(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {

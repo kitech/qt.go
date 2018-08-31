@@ -75,6 +75,9 @@ func (*QVideoFrame) NewFromPointer(cthis unsafe.Pointer) *QVideoFrame {
 /*
 Constructs a null video frame.
 */
+func (*QVideoFrame) NewForInherit() *QVideoFrame {
+	return NewQVideoFrame()
+}
 func NewQVideoFrame() *QVideoFrame {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QVideoFrameC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +94,9 @@ func NewQVideoFrame() *QVideoFrame {
 /*
 Constructs a null video frame.
 */
+func (*QVideoFrame) NewForInherit_1(buffer QAbstractVideoBuffer_ITF /*777 QAbstractVideoBuffer **/, size qtcore.QSize_ITF, format int) *QVideoFrame {
+	return NewQVideoFrame_1(buffer, size, format)
+}
 func NewQVideoFrame_1(buffer QAbstractVideoBuffer_ITF /*777 QAbstractVideoBuffer **/, size qtcore.QSize_ITF, format int) *QVideoFrame {
 	var convArg0 unsafe.Pointer
 	if buffer != nil && buffer.QAbstractVideoBuffer_PTR() != nil {
@@ -115,6 +121,9 @@ func NewQVideoFrame_1(buffer QAbstractVideoBuffer_ITF /*777 QAbstractVideoBuffer
 /*
 Constructs a null video frame.
 */
+func (*QVideoFrame) NewForInherit_2(bytes int, size qtcore.QSize_ITF, bytesPerLine int, format int) *QVideoFrame {
+	return NewQVideoFrame_2(bytes, size, bytesPerLine, format)
+}
 func NewQVideoFrame_2(bytes int, size qtcore.QSize_ITF, bytesPerLine int, format int) *QVideoFrame {
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -135,6 +144,9 @@ func NewQVideoFrame_2(bytes int, size qtcore.QSize_ITF, bytesPerLine int, format
 /*
 Constructs a null video frame.
 */
+func (*QVideoFrame) NewForInherit_3(image qtgui.QImage_ITF) *QVideoFrame {
+	return NewQVideoFrame_3(image)
+}
 func NewQVideoFrame_3(image qtgui.QImage_ITF) *QVideoFrame {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {

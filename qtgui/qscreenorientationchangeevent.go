@@ -73,6 +73,9 @@ func (*QScreenOrientationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QScr
 /*
 
  */
+func (*QScreenOrientationChangeEvent) NewForInherit(screen QScreen_ITF /*777 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
+	return NewQScreenOrientationChangeEvent(screen, orientation)
+}
 func NewQScreenOrientationChangeEvent(screen QScreen_ITF /*777 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
 	var convArg0 unsafe.Pointer
 	if screen != nil && screen.QScreen_PTR() != nil {

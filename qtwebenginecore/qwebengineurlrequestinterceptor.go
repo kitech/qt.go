@@ -93,6 +93,9 @@ func (this *QWebEngineUrlRequestInterceptor) MetaObject() *qtcore.QMetaObject /*
 /*
 
  */
+func (*QWebEngineUrlRequestInterceptor) NewForInherit(p qtcore.QObject_ITF /*777 QObject **/) *QWebEngineUrlRequestInterceptor {
+	return NewQWebEngineUrlRequestInterceptor(p)
+}
 func NewQWebEngineUrlRequestInterceptor(p qtcore.QObject_ITF /*777 QObject **/) *QWebEngineUrlRequestInterceptor {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QObject_PTR() != nil {
@@ -113,6 +116,9 @@ func NewQWebEngineUrlRequestInterceptor(p qtcore.QObject_ITF /*777 QObject **/) 
 /*
 
  */
+func (*QWebEngineUrlRequestInterceptor) NewForInherit__() *QWebEngineUrlRequestInterceptor {
+	return NewQWebEngineUrlRequestInterceptor__()
+}
 func NewQWebEngineUrlRequestInterceptor__() *QWebEngineUrlRequestInterceptor {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -73,6 +73,9 @@ func (*QAccessibleTextSelectionEvent) NewFromPointer(cthis unsafe.Pointer) *QAcc
 /*
 
  */
+func (*QAccessibleTextSelectionEvent) NewForInherit(obj qtcore.QObject_ITF /*777 QObject **/, start int, end int) *QAccessibleTextSelectionEvent {
+	return NewQAccessibleTextSelectionEvent(obj, start, end)
+}
 func NewQAccessibleTextSelectionEvent(obj qtcore.QObject_ITF /*777 QObject **/, start int, end int) *QAccessibleTextSelectionEvent {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -93,6 +96,9 @@ func NewQAccessibleTextSelectionEvent(obj qtcore.QObject_ITF /*777 QObject **/, 
 /*
 
  */
+func (*QAccessibleTextSelectionEvent) NewForInherit_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, start int, end int) *QAccessibleTextSelectionEvent {
+	return NewQAccessibleTextSelectionEvent_1(iface, start, end)
+}
 func NewQAccessibleTextSelectionEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, start int, end int) *QAccessibleTextSelectionEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {

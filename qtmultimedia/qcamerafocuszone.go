@@ -75,6 +75,9 @@ func (*QCameraFocusZone) NewFromPointer(cthis unsafe.Pointer) *QCameraFocusZone 
 /*
 
  */
+func (*QCameraFocusZone) NewForInherit() *QCameraFocusZone {
+	return NewQCameraFocusZone()
+}
 func NewQCameraFocusZone() *QCameraFocusZone {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCameraFocusZoneC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +94,9 @@ func NewQCameraFocusZone() *QCameraFocusZone {
 /*
 
  */
+func (*QCameraFocusZone) NewForInherit_1(area qtcore.QRectF_ITF, status int) *QCameraFocusZone {
+	return NewQCameraFocusZone_1(area, status)
+}
 func NewQCameraFocusZone_1(area qtcore.QRectF_ITF, status int) *QCameraFocusZone {
 	var convArg0 unsafe.Pointer
 	if area != nil && area.QRectF_PTR() != nil {
@@ -111,6 +117,9 @@ func NewQCameraFocusZone_1(area qtcore.QRectF_ITF, status int) *QCameraFocusZone
 /*
 
  */
+func (*QCameraFocusZone) NewForInherit_1_(area qtcore.QRectF_ITF) *QCameraFocusZone {
+	return NewQCameraFocusZone_1_(area)
+}
 func NewQCameraFocusZone_1_(area qtcore.QRectF_ITF) *QCameraFocusZone {
 	var convArg0 unsafe.Pointer
 	if area != nil && area.QRectF_PTR() != nil {

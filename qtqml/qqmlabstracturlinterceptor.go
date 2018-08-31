@@ -76,6 +76,9 @@ func (*QQmlAbstractUrlInterceptor) NewFromPointer(cthis unsafe.Pointer) *QQmlAbs
 /*
 Constructor for QQmlAbstractUrlInterceptor.
 */
+func (*QQmlAbstractUrlInterceptor) NewForInherit() *QQmlAbstractUrlInterceptor {
+	return NewQQmlAbstractUrlInterceptor()
+}
 func NewQQmlAbstractUrlInterceptor() *QQmlAbstractUrlInterceptor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

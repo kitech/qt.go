@@ -86,6 +86,9 @@ func (this *QQmlContext) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Create a new QQmlContext as a child of engine's root context, and the QObject parent.
 */
+func (*QQmlContext) NewForInherit(parent QQmlEngine_ITF /*777 QQmlEngine **/, objParent qtcore.QObject_ITF /*777 QObject **/) *QQmlContext {
+	return NewQQmlContext(parent, objParent)
+}
 func NewQQmlContext(parent QQmlEngine_ITF /*777 QQmlEngine **/, objParent qtcore.QObject_ITF /*777 QObject **/) *QQmlContext {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQmlEngine_PTR() != nil {
@@ -110,6 +113,9 @@ func NewQQmlContext(parent QQmlEngine_ITF /*777 QQmlEngine **/, objParent qtcore
 /*
 Create a new QQmlContext as a child of engine's root context, and the QObject parent.
 */
+func (*QQmlContext) NewForInherit__(parent QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlContext {
+	return NewQQmlContext__(parent)
+}
 func NewQQmlContext__(parent QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlContext {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQmlEngine_PTR() != nil {
@@ -132,6 +138,9 @@ func NewQQmlContext__(parent QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlContext {
 /*
 Create a new QQmlContext as a child of engine's root context, and the QObject parent.
 */
+func (*QQmlContext) NewForInherit_1(parent QQmlContext_ITF /*777 QQmlContext **/, objParent qtcore.QObject_ITF /*777 QObject **/) *QQmlContext {
+	return NewQQmlContext_1(parent, objParent)
+}
 func NewQQmlContext_1(parent QQmlContext_ITF /*777 QQmlContext **/, objParent qtcore.QObject_ITF /*777 QObject **/) *QQmlContext {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQmlContext_PTR() != nil {
@@ -156,6 +165,9 @@ func NewQQmlContext_1(parent QQmlContext_ITF /*777 QQmlContext **/, objParent qt
 /*
 Create a new QQmlContext as a child of engine's root context, and the QObject parent.
 */
+func (*QQmlContext) NewForInherit_1_(parent QQmlContext_ITF /*777 QQmlContext **/) *QQmlContext {
+	return NewQQmlContext_1_(parent)
+}
 func NewQQmlContext_1_(parent QQmlContext_ITF /*777 QQmlContext **/) *QQmlContext {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQmlContext_PTR() != nil {

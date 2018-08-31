@@ -73,6 +73,9 @@ func (*QSslCertificate) NewFromPointer(cthis unsafe.Pointer) *QSslCertificate {
 /*
 Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
 */
+func (*QSslCertificate) NewForInherit(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslCertificate {
+	return NewQSslCertificate(device, format)
+}
 func NewQSslCertificate(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -93,6 +96,9 @@ func NewQSslCertificate(device qtcore.QIODevice_ITF /*777 QIODevice **/, format 
 /*
 Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
 */
+func (*QSslCertificate) NewForInherit__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslCertificate {
+	return NewQSslCertificate__(device)
+}
 func NewQSslCertificate__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -115,6 +121,9 @@ func NewQSslCertificate__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSsl
 /*
 Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
 */
+func (*QSslCertificate) NewForInherit_1(data qtcore.QByteArray_ITF, format int) *QSslCertificate {
+	return NewQSslCertificate_1(data, format)
+}
 func NewQSslCertificate_1(data qtcore.QByteArray_ITF, format int) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -135,6 +144,9 @@ func NewQSslCertificate_1(data qtcore.QByteArray_ITF, format int) *QSslCertifica
 /*
 Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
 */
+func (*QSslCertificate) NewForInherit_1_() *QSslCertificate {
+	return NewQSslCertificate_1_()
+}
 func NewQSslCertificate_1_() *QSslCertificate {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
@@ -155,6 +167,9 @@ func NewQSslCertificate_1_() *QSslCertificate {
 /*
 Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
 */
+func (*QSslCertificate) NewForInherit_1_1(data qtcore.QByteArray_ITF) *QSslCertificate {
+	return NewQSslCertificate_1_1(data)
+}
 func NewQSslCertificate_1_1(data qtcore.QByteArray_ITF) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {

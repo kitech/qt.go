@@ -75,6 +75,9 @@ Constructs an empty host info object with lookup ID id.
 
 See also lookupId().
 */
+func (*QHostInfo) NewForInherit(lookupId int) *QHostInfo {
+	return NewQHostInfo(lookupId)
+}
 func NewQHostInfo(lookupId int) *QHostInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfoC2Ei", qtrt.FFI_TYPE_POINTER, lookupId)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs an empty host info object with lookup ID id.
 
 See also lookupId().
 */
+func (*QHostInfo) NewForInherit__() *QHostInfo {
+	return NewQHostInfo__()
+}
 func NewQHostInfo__() *QHostInfo {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	lookupId := int(-1)

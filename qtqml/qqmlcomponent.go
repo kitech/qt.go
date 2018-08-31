@@ -86,6 +86,9 @@ func (this *QQmlComponent) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+	return NewQQmlComponent(parent)
+}
 func NewQQmlComponent(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQQmlComponent(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponen
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit__() *QQmlComponent {
+	return NewQQmlComponent__()
+}
 func NewQQmlComponent__() *QQmlComponent {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -124,6 +130,9 @@ func NewQQmlComponent__() *QQmlComponent {
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+	return NewQQmlComponent_1(arg0, parent)
+}
 func NewQQmlComponent_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -148,6 +157,9 @@ func NewQQmlComponent_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit_1_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlComponent {
+	return NewQQmlComponent_1_(arg0)
+}
 func NewQQmlComponent_1_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -170,6 +182,9 @@ func NewQQmlComponent_1_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlComponen
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+	return NewQQmlComponent_2(arg0, fileName, parent)
+}
 func NewQQmlComponent_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -196,6 +211,9 @@ func NewQQmlComponent_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName strin
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit_2_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string) *QQmlComponent {
+	return NewQQmlComponent_2_(arg0, fileName)
+}
 func NewQQmlComponent_2_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -220,6 +238,9 @@ func NewQQmlComponent_2_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName stri
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit_3(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+	return NewQQmlComponent_3(arg0, fileName, mode, parent)
+}
 func NewQQmlComponent_3(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -246,6 +267,9 @@ func NewQQmlComponent_3(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName strin
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit_3_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int) *QQmlComponent {
+	return NewQQmlComponent_3_(arg0, fileName, mode)
+}
 func NewQQmlComponent_3_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -270,6 +294,9 @@ func NewQQmlComponent_3_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName stri
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit_4(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+	return NewQQmlComponent_4(arg0, url, parent)
+}
 func NewQQmlComponent_4(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -298,6 +325,9 @@ func NewQQmlComponent_4(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUr
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit_4_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF) *QQmlComponent {
+	return NewQQmlComponent_4_(arg0, url)
+}
 func NewQQmlComponent_4_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -324,6 +354,9 @@ func NewQQmlComponent_4_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QU
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit_5(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+	return NewQQmlComponent_5(arg0, url, mode, parent)
+}
 func NewQQmlComponent_5(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -352,6 +385,9 @@ func NewQQmlComponent_5(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUr
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
+func (*QQmlComponent) NewForInherit_5_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int) *QQmlComponent {
+	return NewQQmlComponent_5_(arg0, url, mode)
+}
 func NewQQmlComponent_5_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {

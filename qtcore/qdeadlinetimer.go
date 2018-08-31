@@ -76,6 +76,9 @@ The timer type timerType may be ignored, since the timer is already expired. Sim
 
 See also hasExpired(), remainingTime(), Qt::TimerType, and current().
 */
+func (*QDeadlineTimer) NewForInherit(type_ int) *QDeadlineTimer {
+	return NewQDeadlineTimer(type_)
+}
 func NewQDeadlineTimer(type_ int) *QDeadlineTimer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimerC2EN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -96,6 +99,9 @@ The timer type timerType may be ignored, since the timer is already expired. Sim
 
 See also hasExpired(), remainingTime(), Qt::TimerType, and current().
 */
+func (*QDeadlineTimer) NewForInherit__() *QDeadlineTimer {
+	return NewQDeadlineTimer__()
+}
 func NewQDeadlineTimer__() *QDeadlineTimer {
 	// arg: 0, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	type_ := 0
@@ -118,6 +124,9 @@ The timer type timerType may be ignored, since the timer is already expired. Sim
 
 See also hasExpired(), remainingTime(), Qt::TimerType, and current().
 */
+func (*QDeadlineTimer) NewForInherit_1(arg0 int, type_ int) *QDeadlineTimer {
+	return NewQDeadlineTimer_1(arg0, type_)
+}
 func NewQDeadlineTimer_1(arg0 int, type_ int) *QDeadlineTimer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimerC2ENS_15ForeverConstantEN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, arg0, type_)
 	qtrt.ErrPrint(err, rv)
@@ -138,6 +147,9 @@ The timer type timerType may be ignored, since the timer is already expired. Sim
 
 See also hasExpired(), remainingTime(), Qt::TimerType, and current().
 */
+func (*QDeadlineTimer) NewForInherit_1_(arg0 int) *QDeadlineTimer {
+	return NewQDeadlineTimer_1_(arg0)
+}
 func NewQDeadlineTimer_1_(arg0 int) *QDeadlineTimer {
 	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	type_ := 0
@@ -160,6 +172,9 @@ The timer type timerType may be ignored, since the timer is already expired. Sim
 
 See also hasExpired(), remainingTime(), Qt::TimerType, and current().
 */
+func (*QDeadlineTimer) NewForInherit_2(msecs int64, type_ int) *QDeadlineTimer {
+	return NewQDeadlineTimer_2(msecs, type_)
+}
 func NewQDeadlineTimer_2(msecs int64, type_ int) *QDeadlineTimer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDeadlineTimerC2ExN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, msecs, type_)
 	qtrt.ErrPrint(err, rv)
@@ -180,6 +195,9 @@ The timer type timerType may be ignored, since the timer is already expired. Sim
 
 See also hasExpired(), remainingTime(), Qt::TimerType, and current().
 */
+func (*QDeadlineTimer) NewForInherit_2_(msecs int64) *QDeadlineTimer {
+	return NewQDeadlineTimer_2_(msecs)
+}
 func NewQDeadlineTimer_2_(msecs int64) *QDeadlineTimer {
 	// arg: 1, Qt::TimerType=Elaborated, Qt::TimerType=Enum, , Invalid
 	type_ := 0

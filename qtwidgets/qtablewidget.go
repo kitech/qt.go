@@ -121,6 +121,9 @@ func (this *QTableWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 /*
 Creates a new table view with the given parent.
 */
+func (*QTableWidget) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
+	return NewQTableWidget(parent)
+}
 func NewQTableWidget(parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -141,6 +144,9 @@ func NewQTableWidget(parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
 /*
 Creates a new table view with the given parent.
 */
+func (*QTableWidget) NewForInherit__() *QTableWidget {
+	return NewQTableWidget__()
+}
 func NewQTableWidget__() *QTableWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -159,6 +165,9 @@ func NewQTableWidget__() *QTableWidget {
 /*
 Creates a new table view with the given parent.
 */
+func (*QTableWidget) NewForInherit_1(rows int, columns int, parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
+	return NewQTableWidget_1(rows, columns, parent)
+}
 func NewQTableWidget_1(rows int, columns int, parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -179,6 +188,9 @@ func NewQTableWidget_1(rows int, columns int, parent QWidget_ITF /*777 QWidget *
 /*
 Creates a new table view with the given parent.
 */
+func (*QTableWidget) NewForInherit_1_(rows int, columns int) *QTableWidget {
+	return NewQTableWidget_1_(rows, columns)
+}
 func NewQTableWidget_1_(rows int, columns int) *QTableWidget {
 	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer

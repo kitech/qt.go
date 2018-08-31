@@ -72,6 +72,9 @@ func (*QJsonArray) NewFromPointer(cthis unsafe.Pointer) *QJsonArray {
 /*
 Creates an empty array.
 */
+func (*QJsonArray) NewForInherit() *QJsonArray {
+	return NewQJsonArray()
+}
 func NewQJsonArray() *QJsonArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonArrayC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -75,6 +75,9 @@ Constructs an empty QTextDocumentFragment.
 
 See also isEmpty().
 */
+func (*QTextDocumentFragment) NewForInherit() *QTextDocumentFragment {
+	return NewQTextDocumentFragment()
+}
 func NewQTextDocumentFragment() *QTextDocumentFragment {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs an empty QTextDocumentFragment.
 
 See also isEmpty().
 */
+func (*QTextDocumentFragment) NewForInherit_1(document QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment {
+	return NewQTextDocumentFragment_1(document)
+}
 func NewQTextDocumentFragment_1(document QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment {
 	var convArg0 unsafe.Pointer
 	if document != nil && document.QTextDocument_PTR() != nil {
@@ -115,6 +121,9 @@ Constructs an empty QTextDocumentFragment.
 
 See also isEmpty().
 */
+func (*QTextDocumentFragment) NewForInherit_2(range_ QTextCursor_ITF) *QTextDocumentFragment {
+	return NewQTextDocumentFragment_2(range_)
+}
 func NewQTextDocumentFragment_2(range_ QTextCursor_ITF) *QTextDocumentFragment {
 	var convArg0 unsafe.Pointer
 	if range_ != nil && range_.QTextCursor_PTR() != nil {

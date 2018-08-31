@@ -71,6 +71,9 @@ func (*QFileOpenEvent) NewFromPointer(cthis unsafe.Pointer) *QFileOpenEvent {
 /*
 
  */
+func (*QFileOpenEvent) NewForInherit(file string) *QFileOpenEvent {
+	return NewQFileOpenEvent(file)
+}
 func NewQFileOpenEvent(file string) *QFileOpenEvent {
 	var tmpArg0 = qtcore.NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()
@@ -89,6 +92,9 @@ func NewQFileOpenEvent(file string) *QFileOpenEvent {
 /*
 
  */
+func (*QFileOpenEvent) NewForInherit_1(url qtcore.QUrl_ITF) *QFileOpenEvent {
+	return NewQFileOpenEvent_1(url)
+}
 func NewQFileOpenEvent_1(url qtcore.QUrl_ITF) *QFileOpenEvent {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {

@@ -98,6 +98,9 @@ Constructs a QMainWindow with the given parent and the specified widget flags.
 
 QMainWindow sets the Qt::Window flag itself, and will hence always be created as a top-level widget.
 */
+func (*QMainWindow) NewForInherit(parent QWidget_ITF /*777 QWidget **/, flags int) *QMainWindow {
+	return NewQMainWindow(parent, flags)
+}
 func NewQMainWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMainWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -120,6 +123,9 @@ Constructs a QMainWindow with the given parent and the specified widget flags.
 
 QMainWindow sets the Qt::Window flag itself, and will hence always be created as a top-level widget.
 */
+func (*QMainWindow) NewForInherit__() *QMainWindow {
+	return NewQMainWindow__()
+}
 func NewQMainWindow__() *QMainWindow {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -142,6 +148,9 @@ Constructs a QMainWindow with the given parent and the specified widget flags.
 
 QMainWindow sets the Qt::Window flag itself, and will hence always be created as a top-level widget.
 */
+func (*QMainWindow) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
+	return NewQMainWindow__1(parent)
+}
 func NewQMainWindow__1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

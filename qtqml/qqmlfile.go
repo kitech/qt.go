@@ -74,6 +74,9 @@ func (*QQmlFile) NewFromPointer(cthis unsafe.Pointer) *QQmlFile {
 /*
 
  */
+func (*QQmlFile) NewForInherit() *QQmlFile {
+	return NewQQmlFile()
+}
 func NewQQmlFile() *QQmlFile {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFileC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQQmlFile() *QQmlFile {
 /*
 
  */
+func (*QQmlFile) NewForInherit_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_ITF) *QQmlFile {
+	return NewQQmlFile_1(arg0, arg1)
+}
 func NewQQmlFile_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_ITF) *QQmlFile {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
@@ -114,6 +120,9 @@ func NewQQmlFile_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_IT
 /*
 
  */
+func (*QQmlFile) NewForInherit_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) *QQmlFile {
+	return NewQQmlFile_2(arg0, arg1)
+}
 func NewQQmlFile_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) *QQmlFile {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {

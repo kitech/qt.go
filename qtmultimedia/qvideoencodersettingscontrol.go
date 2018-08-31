@@ -230,6 +230,9 @@ func (this *QVideoEncoderSettingsControl) SetVideoSettings(settings QVideoEncode
 /*
 Create a new video encoder settings control object with the given parent.
 */
+func (*QVideoEncoderSettingsControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoEncoderSettingsControl {
+	return NewQVideoEncoderSettingsControl(parent)
+}
 func NewQVideoEncoderSettingsControl(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoEncoderSettingsControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -250,6 +253,9 @@ func NewQVideoEncoderSettingsControl(parent qtcore.QObject_ITF /*777 QObject **/
 /*
 Create a new video encoder settings control object with the given parent.
 */
+func (*QVideoEncoderSettingsControl) NewForInherit__() *QVideoEncoderSettingsControl {
+	return NewQVideoEncoderSettingsControl__()
+}
 func NewQVideoEncoderSettingsControl__() *QVideoEncoderSettingsControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

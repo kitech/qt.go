@@ -86,6 +86,9 @@ func (this *QVBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 
  */
+func (*QVBoxLayout) NewForInherit() *QVBoxLayout {
+	return NewQVBoxLayout()
+}
 func NewQVBoxLayout() *QVBoxLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QVBoxLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -102,6 +105,9 @@ func NewQVBoxLayout() *QVBoxLayout {
 /*
 
  */
+func (*QVBoxLayout) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/) *QVBoxLayout {
+	return NewQVBoxLayout_1(parent)
+}
 func NewQVBoxLayout_1(parent QWidget_ITF /*777 QWidget **/) *QVBoxLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

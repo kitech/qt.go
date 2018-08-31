@@ -74,6 +74,9 @@ Constructs an empty bit array.
 
 See also isEmpty().
 */
+func (*QBitArray) NewForInherit() *QBitArray {
+	return NewQBitArray()
+}
 func NewQBitArray() *QBitArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArrayC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs an empty bit array.
 
 See also isEmpty().
 */
+func (*QBitArray) NewForInherit_1(size int, val bool) *QBitArray {
+	return NewQBitArray_1(size, val)
+}
 func NewQBitArray_1(size int, val bool) *QBitArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArrayC2Eib", qtrt.FFI_TYPE_POINTER, size, val)
 	qtrt.ErrPrint(err, rv)
@@ -110,6 +116,9 @@ Constructs an empty bit array.
 
 See also isEmpty().
 */
+func (*QBitArray) NewForInherit_1_(size int) *QBitArray {
+	return NewQBitArray_1_(size)
+}
 func NewQBitArray_1_(size int) *QBitArray {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	val := false

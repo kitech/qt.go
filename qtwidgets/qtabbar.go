@@ -176,6 +176,9 @@ func (this *QTabBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 /*
 Creates a new tab bar with the given parent.
 */
+func (*QTabBar) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTabBar {
+	return NewQTabBar(parent)
+}
 func NewQTabBar(parent QWidget_ITF /*777 QWidget **/) *QTabBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -196,6 +199,9 @@ func NewQTabBar(parent QWidget_ITF /*777 QWidget **/) *QTabBar {
 /*
 Creates a new tab bar with the given parent.
 */
+func (*QTabBar) NewForInherit__() *QTabBar {
+	return NewQTabBar__()
+}
 func NewQTabBar__() *QTabBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

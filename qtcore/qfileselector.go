@@ -86,6 +86,9 @@ Create a QFileSelector instance. This instance will have the same static selecto
 
 If supplied, it will have the given QObject parent.
 */
+func (*QFileSelector) NewForInherit(parent QObject_ITF /*777 QObject **/) *QFileSelector {
+	return NewQFileSelector(parent)
+}
 func NewQFileSelector(parent QObject_ITF /*777 QObject **/) *QFileSelector {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -108,6 +111,9 @@ Create a QFileSelector instance. This instance will have the same static selecto
 
 If supplied, it will have the given QObject parent.
 */
+func (*QFileSelector) NewForInherit__() *QFileSelector {
+	return NewQFileSelector__()
+}
 func NewQFileSelector__() *QFileSelector {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

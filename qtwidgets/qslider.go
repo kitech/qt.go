@@ -111,6 +111,9 @@ func (this *QSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 /*
 Constructs a vertical slider with the given parent.
 */
+func (*QSlider) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QSlider {
+	return NewQSlider(parent)
+}
 func NewQSlider(parent QWidget_ITF /*777 QWidget **/) *QSlider {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -131,6 +134,9 @@ func NewQSlider(parent QWidget_ITF /*777 QWidget **/) *QSlider {
 /*
 Constructs a vertical slider with the given parent.
 */
+func (*QSlider) NewForInherit__() *QSlider {
+	return NewQSlider__()
+}
 func NewQSlider__() *QSlider {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -149,6 +155,9 @@ func NewQSlider__() *QSlider {
 /*
 Constructs a vertical slider with the given parent.
 */
+func (*QSlider) NewForInherit_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlider {
+	return NewQSlider_1(orientation, parent)
+}
 func NewQSlider_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlider {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -169,6 +178,9 @@ func NewQSlider_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlide
 /*
 Constructs a vertical slider with the given parent.
 */
+func (*QSlider) NewForInherit_1_(orientation int) *QSlider {
+	return NewQSlider_1_(orientation)
+}
 func NewQSlider_1_(orientation int) *QSlider {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer

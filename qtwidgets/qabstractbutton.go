@@ -156,6 +156,9 @@ func (this *QAbstractButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 /*
 Constructs an abstract button with a parent.
 */
+func (*QAbstractButton) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QAbstractButton {
+	return NewQAbstractButton(parent)
+}
 func NewQAbstractButton(parent QWidget_ITF /*777 QWidget **/) *QAbstractButton {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -176,6 +179,9 @@ func NewQAbstractButton(parent QWidget_ITF /*777 QWidget **/) *QAbstractButton {
 /*
 Constructs an abstract button with a parent.
 */
+func (*QAbstractButton) NewForInherit__() *QAbstractButton {
+	return NewQAbstractButton__()
+}
 func NewQAbstractButton__() *QAbstractButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

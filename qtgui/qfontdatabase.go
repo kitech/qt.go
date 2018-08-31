@@ -73,6 +73,9 @@ func (*QFontDatabase) NewFromPointer(cthis unsafe.Pointer) *QFontDatabase {
 /*
 Creates a font database object.
 */
+func (*QFontDatabase) NewForInherit() *QFontDatabase {
+	return NewQFontDatabase()
+}
 func NewQFontDatabase() *QFontDatabase {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabaseC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

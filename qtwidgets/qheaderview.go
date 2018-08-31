@@ -231,6 +231,9 @@ func (this *QHeaderView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Creates a new generic header with the given orientation and parent.
 */
+func (*QHeaderView) NewForInherit(orientation int, parent QWidget_ITF /*777 QWidget **/) *QHeaderView {
+	return NewQHeaderView(orientation, parent)
+}
 func NewQHeaderView(orientation int, parent QWidget_ITF /*777 QWidget **/) *QHeaderView {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -251,6 +254,9 @@ func NewQHeaderView(orientation int, parent QWidget_ITF /*777 QWidget **/) *QHea
 /*
 Creates a new generic header with the given orientation and parent.
 */
+func (*QHeaderView) NewForInherit__(orientation int) *QHeaderView {
+	return NewQHeaderView__(orientation)
+}
 func NewQHeaderView__(orientation int) *QHeaderView {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer

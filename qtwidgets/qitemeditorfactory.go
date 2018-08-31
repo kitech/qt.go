@@ -74,6 +74,9 @@ func (*QItemEditorFactory) NewFromPointer(cthis unsafe.Pointer) *QItemEditorFact
 /*
 Constructs a new item editor factory.
 */
+func (*QItemEditorFactory) NewForInherit() *QItemEditorFactory {
+	return NewQItemEditorFactory()
+}
 func NewQItemEditorFactory() *QItemEditorFactory {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QItemEditorFactoryC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

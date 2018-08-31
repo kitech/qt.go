@@ -84,6 +84,9 @@ func (this *QObjectCleanupHandler) MetaObject() *QMetaObject /*777 const QMetaOb
 /*
 Constructs an empty QObjectCleanupHandler.
 */
+func (*QObjectCleanupHandler) NewForInherit() *QObjectCleanupHandler {
+	return NewQObjectCleanupHandler()
+}
 func NewQObjectCleanupHandler() *QObjectCleanupHandler {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

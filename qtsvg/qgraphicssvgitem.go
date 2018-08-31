@@ -89,6 +89,9 @@ func (this *QGraphicsSvgItem) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 /*
 Constructs a new SVG item with the given parent.
 */
+func (*QGraphicsSvgItem) NewForInherit(parentItem qtwidgets.QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSvgItem {
+	return NewQGraphicsSvgItem(parentItem)
+}
 func NewQGraphicsSvgItem(parentItem qtwidgets.QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSvgItem {
 	var convArg0 unsafe.Pointer
 	if parentItem != nil && parentItem.QGraphicsItem_PTR() != nil {
@@ -109,6 +112,9 @@ func NewQGraphicsSvgItem(parentItem qtwidgets.QGraphicsItem_ITF /*777 QGraphicsI
 /*
 Constructs a new SVG item with the given parent.
 */
+func (*QGraphicsSvgItem) NewForInherit__() *QGraphicsSvgItem {
+	return NewQGraphicsSvgItem__()
+}
 func NewQGraphicsSvgItem__() *QGraphicsSvgItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -127,6 +133,9 @@ func NewQGraphicsSvgItem__() *QGraphicsSvgItem {
 /*
 Constructs a new SVG item with the given parent.
 */
+func (*QGraphicsSvgItem) NewForInherit_1(fileName string, parentItem qtwidgets.QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSvgItem {
+	return NewQGraphicsSvgItem_1(fileName, parentItem)
+}
 func NewQGraphicsSvgItem_1(fileName string, parentItem qtwidgets.QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSvgItem {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -149,6 +158,9 @@ func NewQGraphicsSvgItem_1(fileName string, parentItem qtwidgets.QGraphicsItem_I
 /*
 Constructs a new SVG item with the given parent.
 */
+func (*QGraphicsSvgItem) NewForInherit_1_(fileName string) *QGraphicsSvgItem {
+	return NewQGraphicsSvgItem_1_(fileName)
+}
 func NewQGraphicsSvgItem_1_(fileName string) *QGraphicsSvgItem {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

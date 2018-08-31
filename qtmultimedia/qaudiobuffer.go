@@ -75,6 +75,9 @@ func (*QAudioBuffer) NewFromPointer(cthis unsafe.Pointer) *QAudioBuffer {
 /*
 Create a new, empty, invalid buffer.
 */
+func (*QAudioBuffer) NewForInherit() *QAudioBuffer {
+	return NewQAudioBuffer()
+}
 func NewQAudioBuffer() *QAudioBuffer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QAudioBufferC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +94,9 @@ func NewQAudioBuffer() *QAudioBuffer {
 /*
 Create a new, empty, invalid buffer.
 */
+func (*QAudioBuffer) NewForInherit_1(data qtcore.QByteArray_ITF, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
+	return NewQAudioBuffer_1(data, format, startTime)
+}
 func NewQAudioBuffer_1(data qtcore.QByteArray_ITF, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -115,6 +121,9 @@ func NewQAudioBuffer_1(data qtcore.QByteArray_ITF, format QAudioFormat_ITF, star
 /*
 Create a new, empty, invalid buffer.
 */
+func (*QAudioBuffer) NewForInherit_1_(data qtcore.QByteArray_ITF, format QAudioFormat_ITF) *QAudioBuffer {
+	return NewQAudioBuffer_1_(data, format)
+}
 func NewQAudioBuffer_1_(data qtcore.QByteArray_ITF, format QAudioFormat_ITF) *QAudioBuffer {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -141,6 +150,9 @@ func NewQAudioBuffer_1_(data qtcore.QByteArray_ITF, format QAudioFormat_ITF) *QA
 /*
 Create a new, empty, invalid buffer.
 */
+func (*QAudioBuffer) NewForInherit_2(numFrames int, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
+	return NewQAudioBuffer_2(numFrames, format, startTime)
+}
 func NewQAudioBuffer_2(numFrames int, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
 	var convArg1 unsafe.Pointer
 	if format != nil && format.QAudioFormat_PTR() != nil {
@@ -161,6 +173,9 @@ func NewQAudioBuffer_2(numFrames int, format QAudioFormat_ITF, startTime int64) 
 /*
 Create a new, empty, invalid buffer.
 */
+func (*QAudioBuffer) NewForInherit_2_(numFrames int, format QAudioFormat_ITF) *QAudioBuffer {
+	return NewQAudioBuffer_2_(numFrames, format)
+}
 func NewQAudioBuffer_2_(numFrames int, format QAudioFormat_ITF) *QAudioBuffer {
 	var convArg1 unsafe.Pointer
 	if format != nil && format.QAudioFormat_PTR() != nil {

@@ -89,6 +89,9 @@ func (this *QSaveFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs a new file object to represent the file with the given name.
 */
+func (*QSaveFile) NewForInherit(name string) *QSaveFile {
+	return NewQSaveFile(name)
+}
 func NewQSaveFile(name string) *QSaveFile {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -107,6 +110,9 @@ func NewQSaveFile(name string) *QSaveFile {
 /*
 Constructs a new file object to represent the file with the given name.
 */
+func (*QSaveFile) NewForInherit_1(parent QObject_ITF /*777 QObject **/) *QSaveFile {
+	return NewQSaveFile_1(parent)
+}
 func NewQSaveFile_1(parent QObject_ITF /*777 QObject **/) *QSaveFile {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -127,6 +133,9 @@ func NewQSaveFile_1(parent QObject_ITF /*777 QObject **/) *QSaveFile {
 /*
 Constructs a new file object to represent the file with the given name.
 */
+func (*QSaveFile) NewForInherit_1_() *QSaveFile {
+	return NewQSaveFile_1_()
+}
 func NewQSaveFile_1_() *QSaveFile {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -145,6 +154,9 @@ func NewQSaveFile_1_() *QSaveFile {
 /*
 Constructs a new file object to represent the file with the given name.
 */
+func (*QSaveFile) NewForInherit_2(name string, parent QObject_ITF /*777 QObject **/) *QSaveFile {
+	return NewQSaveFile_2(name, parent)
+}
 func NewQSaveFile_2(name string, parent QObject_ITF /*777 QObject **/) *QSaveFile {
 	var tmpArg0 = NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()

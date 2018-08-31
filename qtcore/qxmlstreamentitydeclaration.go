@@ -74,6 +74,9 @@ func (*QXmlStreamEntityDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXmlSt
 /*
 
  */
+func (*QXmlStreamEntityDeclaration) NewForInherit() *QXmlStreamEntityDeclaration {
+	return NewQXmlStreamEntityDeclaration()
+}
 func NewQXmlStreamEntityDeclaration() *QXmlStreamEntityDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

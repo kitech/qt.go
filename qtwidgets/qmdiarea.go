@@ -136,6 +136,9 @@ func (this *QMdiArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 /*
 Constructs an empty mdi area. parent is passed to QWidget's constructor.
 */
+func (*QMdiArea) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QMdiArea {
+	return NewQMdiArea(parent)
+}
 func NewQMdiArea(parent QWidget_ITF /*777 QWidget **/) *QMdiArea {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -156,6 +159,9 @@ func NewQMdiArea(parent QWidget_ITF /*777 QWidget **/) *QMdiArea {
 /*
 Constructs an empty mdi area. parent is passed to QWidget's constructor.
 */
+func (*QMdiArea) NewForInherit__() *QMdiArea {
+	return NewQMdiArea__()
+}
 func NewQMdiArea__() *QMdiArea {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

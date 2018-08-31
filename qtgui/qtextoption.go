@@ -73,6 +73,9 @@ func (*QTextOption) NewFromPointer(cthis unsafe.Pointer) *QTextOption {
 /*
 Constructs a text option with default properties for text. The text alignment property is set to Qt::AlignLeft. The word wrap property is set to QTextOption::WordWrap. The using of design metrics flag is set to false.
 */
+func (*QTextOption) NewForInherit() *QTextOption {
+	return NewQTextOption()
+}
 func NewQTextOption() *QTextOption {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextOptionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQTextOption() *QTextOption {
 /*
 Constructs a text option with default properties for text. The text alignment property is set to Qt::AlignLeft. The word wrap property is set to QTextOption::WordWrap. The using of design metrics flag is set to false.
 */
+func (*QTextOption) NewForInherit_1(alignment int) *QTextOption {
+	return NewQTextOption_1(alignment)
+}
 func NewQTextOption_1(alignment int) *QTextOption {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextOptionC2E6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, alignment)
 	qtrt.ErrPrint(err, rv)

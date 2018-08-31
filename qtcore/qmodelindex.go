@@ -72,6 +72,9 @@ func (*QModelIndex) NewFromPointer(cthis unsafe.Pointer) *QModelIndex {
 /*
 
  */
+func (*QModelIndex) NewForInherit() *QModelIndex {
+	return NewQModelIndex()
+}
 func NewQModelIndex() *QModelIndex {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QModelIndexC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

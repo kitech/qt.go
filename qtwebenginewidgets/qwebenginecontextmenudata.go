@@ -85,6 +85,9 @@ func (*QWebEngineContextMenuData) NewFromPointer(cthis unsafe.Pointer) *QWebEngi
 /*
 
  */
+func (*QWebEngineContextMenuData) NewForInherit() *QWebEngineContextMenuData {
+	return NewQWebEngineContextMenuData()
+}
 func NewQWebEngineContextMenuData() *QWebEngineContextMenuData {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QWebEngineContextMenuDataC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

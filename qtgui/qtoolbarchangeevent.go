@@ -71,6 +71,9 @@ func (*QToolBarChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QToolBarChange
 /*
 
  */
+func (*QToolBarChangeEvent) NewForInherit(t bool) *QToolBarChangeEvent {
+	return NewQToolBarChangeEvent(t)
+}
 func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", qtrt.FFI_TYPE_POINTER, t)
 	qtrt.ErrPrint(err, rv)

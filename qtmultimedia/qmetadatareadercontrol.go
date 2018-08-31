@@ -213,6 +213,9 @@ func (this *QMetaDataReaderControl) MetaDataAvailableChanged(available bool) {
 /*
 Construct a QMetaDataReaderControl with parent. This class is meant as a base class for service specific meta data providers so this constructor is protected.
 */
+func (*QMetaDataReaderControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMetaDataReaderControl {
+	return NewQMetaDataReaderControl(parent)
+}
 func NewQMetaDataReaderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMetaDataReaderControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -233,6 +236,9 @@ func NewQMetaDataReaderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMe
 /*
 Construct a QMetaDataReaderControl with parent. This class is meant as a base class for service specific meta data providers so this constructor is protected.
 */
+func (*QMetaDataReaderControl) NewForInherit__() *QMetaDataReaderControl {
+	return NewQMetaDataReaderControl__()
+}
 func NewQMetaDataReaderControl__() *QMetaDataReaderControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

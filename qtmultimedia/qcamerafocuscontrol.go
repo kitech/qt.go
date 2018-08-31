@@ -314,6 +314,9 @@ func (this *QCameraFocusControl) FocusZonesChanged() {
 /*
 Constructs a camera control object with parent.
 */
+func (*QCameraFocusControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraFocusControl {
+	return NewQCameraFocusControl(parent)
+}
 func NewQCameraFocusControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraFocusControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -334,6 +337,9 @@ func NewQCameraFocusControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCamer
 /*
 Constructs a camera control object with parent.
 */
+func (*QCameraFocusControl) NewForInherit__() *QCameraFocusControl {
+	return NewQCameraFocusControl__()
+}
 func NewQCameraFocusControl__() *QCameraFocusControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

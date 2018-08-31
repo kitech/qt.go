@@ -71,6 +71,9 @@ func (*QShowEvent) NewFromPointer(cthis unsafe.Pointer) *QShowEvent {
 /*
 
  */
+func (*QShowEvent) NewForInherit() *QShowEvent {
+	return NewQShowEvent()
+}
 func NewQShowEvent() *QShowEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QShowEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

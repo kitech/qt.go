@@ -91,6 +91,9 @@ func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*777 cons
 /*
 
  */
+func (*QGraphicsColorizeEffect) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsColorizeEffect {
+	return NewQGraphicsColorizeEffect(parent)
+}
 func NewQGraphicsColorizeEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsColorizeEffect {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -111,6 +114,9 @@ func NewQGraphicsColorizeEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QG
 /*
 
  */
+func (*QGraphicsColorizeEffect) NewForInherit__() *QGraphicsColorizeEffect {
+	return NewQGraphicsColorizeEffect__()
+}
 func NewQGraphicsColorizeEffect__() *QGraphicsColorizeEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

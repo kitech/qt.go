@@ -72,6 +72,9 @@ func (*QItemSelectionRange) NewFromPointer(cthis unsafe.Pointer) *QItemSelection
 /*
 
  */
+func (*QItemSelectionRange) NewForInherit() *QItemSelectionRange {
+	return NewQItemSelectionRange()
+}
 func NewQItemSelectionRange() *QItemSelectionRange {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionRangeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQItemSelectionRange() *QItemSelectionRange {
 /*
 
  */
+func (*QItemSelectionRange) NewForInherit_1(topL QModelIndex_ITF, bottomR QModelIndex_ITF) *QItemSelectionRange {
+	return NewQItemSelectionRange_1(topL, bottomR)
+}
 func NewQItemSelectionRange_1(topL QModelIndex_ITF, bottomR QModelIndex_ITF) *QItemSelectionRange {
 	var convArg0 unsafe.Pointer
 	if topL != nil && topL.QModelIndex_PTR() != nil {
@@ -112,6 +118,9 @@ func NewQItemSelectionRange_1(topL QModelIndex_ITF, bottomR QModelIndex_ITF) *QI
 /*
 
  */
+func (*QItemSelectionRange) NewForInherit_2(index QModelIndex_ITF) *QItemSelectionRange {
+	return NewQItemSelectionRange_2(index)
+}
 func NewQItemSelectionRange_2(index QModelIndex_ITF) *QItemSelectionRange {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {

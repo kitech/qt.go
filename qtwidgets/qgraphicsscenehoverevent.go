@@ -74,6 +74,9 @@ func (*QGraphicsSceneHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 /*
 
  */
+func (*QGraphicsSceneHoverEvent) NewForInherit(type_ int) *QGraphicsSceneHoverEvent {
+	return NewQGraphicsSceneHoverEvent(type_)
+}
 func NewQGraphicsSceneHoverEvent(type_ int) *QGraphicsSceneHoverEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQGraphicsSceneHoverEvent(type_ int) *QGraphicsSceneHoverEvent {
 /*
 
  */
+func (*QGraphicsSceneHoverEvent) NewForInherit__() *QGraphicsSceneHoverEvent {
+	return NewQGraphicsSceneHoverEvent__()
+}
 func NewQGraphicsSceneHoverEvent__() *QGraphicsSceneHoverEvent {
 	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum, , Invalid
 	type_ := 0

@@ -73,6 +73,9 @@ func (*QTextFragment) NewFromPointer(cthis unsafe.Pointer) *QTextFragment {
 /*
 
  */
+func (*QTextFragment) NewForInherit() *QTextFragment {
+	return NewQTextFragment()
+}
 func NewQTextFragment() *QTextFragment {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextFragmentC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

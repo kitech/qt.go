@@ -75,6 +75,9 @@ func (*QAndroidJniExceptionCleaner) NewFromPointer(cthis unsafe.Pointer) *QAndro
 /*
 
  */
+func (*QAndroidJniExceptionCleaner) NewForInherit(outputMode int) *QAndroidJniExceptionCleaner {
+	return NewQAndroidJniExceptionCleaner(outputMode)
+}
 func NewQAndroidJniExceptionCleaner(outputMode int) *QAndroidJniExceptionCleaner {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAndroidJniExceptionCleanerC2ENS_10OutputModeE", qtrt.FFI_TYPE_POINTER, outputMode)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +94,9 @@ func NewQAndroidJniExceptionCleaner(outputMode int) *QAndroidJniExceptionCleaner
 /*
 
  */
+func (*QAndroidJniExceptionCleaner) NewForInherit__() *QAndroidJniExceptionCleaner {
+	return NewQAndroidJniExceptionCleaner__()
+}
 func NewQAndroidJniExceptionCleaner__() *QAndroidJniExceptionCleaner {
 	// arg: 0, QAndroidJniExceptionCleaner::OutputMode=Enum, QAndroidJniExceptionCleaner::OutputMode=Enum, , Invalid
 	outputMode := 0

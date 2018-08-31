@@ -77,6 +77,9 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
+func (*QColor) NewForInherit() *QColor {
+	return NewQColor()
+}
 func NewQColor() *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +100,9 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
+func (*QColor) NewForInherit_1(color int) *QColor {
+	return NewQColor_1(color)
+}
 func NewQColor_1(color int) *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2EN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, color)
 	qtrt.ErrPrint(err, rv)
@@ -117,6 +123,9 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
+func (*QColor) NewForInherit_2(r int, g int, b int, a int) *QColor {
+	return NewQColor_2(r, g, b, a)
+}
 func NewQColor_2(r int, g int, b int, a int) *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2Eiiii", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	qtrt.ErrPrint(err, rv)
@@ -137,6 +146,9 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
+func (*QColor) NewForInherit_2_(r int, g int, b int) *QColor {
+	return NewQColor_2_(r, g, b)
+}
 func NewQColor_2_(r int, g int, b int) *QColor {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	a := int(255)
@@ -159,6 +171,9 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
+func (*QColor) NewForInherit_3(rgb uint) *QColor {
+	return NewQColor_3(rgb)
+}
 func NewQColor_3(rgb uint) *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2Ej", qtrt.FFI_TYPE_POINTER, rgb)
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +194,9 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
+func (*QColor) NewForInherit_4(rgba64 QRgba64_ITF /*123*/) *QColor {
+	return NewQColor_4(rgba64)
+}
 func NewQColor_4(rgba64 QRgba64_ITF /*123*/) *QColor {
 	var convArg0 unsafe.Pointer
 	if rgba64 != nil && rgba64.QRgba64_PTR() != nil {
@@ -203,6 +221,9 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
+func (*QColor) NewForInherit_5(name string) *QColor {
+	return NewQColor_5(name)
+}
 func NewQColor_5(name string) *QColor {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -225,6 +246,9 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
+func (*QColor) NewForInherit_6(name qtcore.QStringView_ITF /*123*/) *QColor {
+	return NewQColor_6(name)
+}
 func NewQColor_6(name qtcore.QStringView_ITF /*123*/) *QColor {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QStringView_PTR() != nil {
@@ -249,6 +273,9 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
+func (*QColor) NewForInherit_7(aname string) *QColor {
+	return NewQColor_7(aname)
+}
 func NewQColor_7(aname string) *QColor {
 	var convArg0 = qtrt.CString(aname)
 	defer qtrt.FreeMem(convArg0)
@@ -271,6 +298,9 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
+func (*QColor) NewForInherit_8(name qtcore.QLatin1String_ITF /*123*/) *QColor {
+	return NewQColor_8(name)
+}
 func NewQColor_8(name qtcore.QLatin1String_ITF /*123*/) *QColor {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QLatin1String_PTR() != nil {
@@ -295,6 +325,9 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
+func (*QColor) NewForInherit_9(spec int) *QColor {
+	return NewQColor_9(spec)
+}
 func NewQColor_9(spec int) *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2ENS_4SpecE", qtrt.FFI_TYPE_POINTER, spec)
 	qtrt.ErrPrint(err, rv)

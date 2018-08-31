@@ -74,6 +74,9 @@ func (*QJSValue) NewFromPointer(cthis unsafe.Pointer) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
+func (*QJSValue) NewForInherit(value int) *QJSValue {
+	return NewQJSValue(value)
+}
 func NewQJSValue(value int) *QJSValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2ENS_12SpecialValueE", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQJSValue(value int) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
+func (*QJSValue) NewForInherit__() *QJSValue {
+	return NewQJSValue__()
+}
 func NewQJSValue__() *QJSValue {
 	// arg: 0, QJSValue::SpecialValue=Enum, QJSValue::SpecialValue=Enum, , Invalid
 	value := 0
@@ -108,6 +114,9 @@ func NewQJSValue__() *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
+func (*QJSValue) NewForInherit_1(value bool) *QJSValue {
+	return NewQJSValue_1(value)
+}
 func NewQJSValue_1(value bool) *QJSValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Eb", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
@@ -124,6 +133,9 @@ func NewQJSValue_1(value bool) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
+func (*QJSValue) NewForInherit_2(value int) *QJSValue {
+	return NewQJSValue_2(value)
+}
 func NewQJSValue_2(value int) *QJSValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Ei", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +152,9 @@ func NewQJSValue_2(value int) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
+func (*QJSValue) NewForInherit_3(value uint) *QJSValue {
+	return NewQJSValue_3(value)
+}
 func NewQJSValue_3(value uint) *QJSValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Ej", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
@@ -156,6 +171,9 @@ func NewQJSValue_3(value uint) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
+func (*QJSValue) NewForInherit_4(value float64) *QJSValue {
+	return NewQJSValue_4(value)
+}
 func NewQJSValue_4(value float64) *QJSValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Ed", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
@@ -172,6 +190,9 @@ func NewQJSValue_4(value float64) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
+func (*QJSValue) NewForInherit_5(value string) *QJSValue {
+	return NewQJSValue_5(value)
+}
 func NewQJSValue_5(value string) *QJSValue {
 	var tmpArg0 = qtcore.NewQString_5(value)
 	var convArg0 = tmpArg0.GetCthis()
@@ -190,6 +211,9 @@ func NewQJSValue_5(value string) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
+func (*QJSValue) NewForInherit_6(value qtcore.QLatin1String_ITF) *QJSValue {
+	return NewQJSValue_6(value)
+}
 func NewQJSValue_6(value qtcore.QLatin1String_ITF) *QJSValue {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QLatin1String_PTR() != nil {
@@ -210,6 +234,9 @@ func NewQJSValue_6(value qtcore.QLatin1String_ITF) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
+func (*QJSValue) NewForInherit_7(str string) *QJSValue {
+	return NewQJSValue_7(str)
+}
 func NewQJSValue_7(str string) *QJSValue {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)

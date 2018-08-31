@@ -71,6 +71,9 @@ func (*QWhatsThisClickedEvent) NewFromPointer(cthis unsafe.Pointer) *QWhatsThisC
 /*
 
  */
+func (*QWhatsThisClickedEvent) NewForInherit(href string) *QWhatsThisClickedEvent {
+	return NewQWhatsThisClickedEvent(href)
+}
 func NewQWhatsThisClickedEvent(href string) *QWhatsThisClickedEvent {
 	var tmpArg0 = qtcore.NewQString_5(href)
 	var convArg0 = tmpArg0.GetCthis()

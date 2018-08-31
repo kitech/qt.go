@@ -74,6 +74,9 @@ func (*QSGSimpleTextureNode) NewFromPointer(cthis unsafe.Pointer) *QSGSimpleText
 /*
 Constructs a new simple texture node
 */
+func (*QSGSimpleTextureNode) NewForInherit() *QSGSimpleTextureNode {
+	return NewQSGSimpleTextureNode()
+}
 func NewQSGSimpleTextureNode() *QSGSimpleTextureNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

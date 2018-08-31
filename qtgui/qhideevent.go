@@ -71,6 +71,9 @@ func (*QHideEvent) NewFromPointer(cthis unsafe.Pointer) *QHideEvent {
 /*
 
  */
+func (*QHideEvent) NewForInherit() *QHideEvent {
+	return NewQHideEvent()
+}
 func NewQHideEvent() *QHideEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QHideEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

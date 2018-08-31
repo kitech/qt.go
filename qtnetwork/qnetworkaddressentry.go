@@ -73,6 +73,9 @@ func (*QNetworkAddressEntry) NewFromPointer(cthis unsafe.Pointer) *QNetworkAddre
 /*
 
  */
+func (*QNetworkAddressEntry) NewForInherit() *QNetworkAddressEntry {
+	return NewQNetworkAddressEntry()
+}
 func NewQNetworkAddressEntry() *QNetworkAddressEntry {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntryC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

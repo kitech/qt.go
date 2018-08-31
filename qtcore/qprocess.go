@@ -104,6 +104,9 @@ func (this *QProcess) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs a QProcess object with the given parent.
 */
+func (*QProcess) NewForInherit(parent QObject_ITF /*777 QObject **/) *QProcess {
+	return NewQProcess(parent)
+}
 func NewQProcess(parent QObject_ITF /*777 QObject **/) *QProcess {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -124,6 +127,9 @@ func NewQProcess(parent QObject_ITF /*777 QObject **/) *QProcess {
 /*
 Constructs a QProcess object with the given parent.
 */
+func (*QProcess) NewForInherit__() *QProcess {
+	return NewQProcess__()
+}
 func NewQProcess__() *QProcess {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

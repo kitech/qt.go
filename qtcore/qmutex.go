@@ -76,6 +76,9 @@ Recursive mutexes are slower and take more memory than non-recursive ones.
 
 See also lock() and unlock().
 */
+func (*QMutex) NewForInherit(mode int) *QMutex {
+	return NewQMutex(mode)
+}
 func NewQMutex(mode int) *QMutex {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMutexC2ENS_13RecursionModeE", qtrt.FFI_TYPE_POINTER, mode)
 	qtrt.ErrPrint(err, rv)
@@ -98,6 +101,9 @@ Recursive mutexes are slower and take more memory than non-recursive ones.
 
 See also lock() and unlock().
 */
+func (*QMutex) NewForInherit__() *QMutex {
+	return NewQMutex__()
+}
 func NewQMutex__() *QMutex {
 	// arg: 0, QMutex::RecursionMode=Enum, QMutex::RecursionMode=Enum, , Invalid
 	mode := 0

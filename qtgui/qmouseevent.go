@@ -71,6 +71,9 @@ func (*QMouseEvent) NewFromPointer(cthis unsafe.Pointer) *QMouseEvent {
 /*
 
  */
+func (*QMouseEvent) NewForInherit(type_ int, localPos qtcore.QPointF_ITF, button int, buttons int, modifiers int) *QMouseEvent {
+	return NewQMouseEvent(type_, localPos, button, buttons, modifiers)
+}
 func NewQMouseEvent(type_ int, localPos qtcore.QPointF_ITF, button int, buttons int, modifiers int) *QMouseEvent {
 	var convArg1 unsafe.Pointer
 	if localPos != nil && localPos.QPointF_PTR() != nil {
@@ -91,6 +94,9 @@ func NewQMouseEvent(type_ int, localPos qtcore.QPointF_ITF, button int, buttons 
 /*
 
  */
+func (*QMouseEvent) NewForInherit_1(type_ int, localPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, button int, buttons int, modifiers int) *QMouseEvent {
+	return NewQMouseEvent_1(type_, localPos, screenPos, button, buttons, modifiers)
+}
 func NewQMouseEvent_1(type_ int, localPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, button int, buttons int, modifiers int) *QMouseEvent {
 	var convArg1 unsafe.Pointer
 	if localPos != nil && localPos.QPointF_PTR() != nil {
@@ -115,6 +121,9 @@ func NewQMouseEvent_1(type_ int, localPos qtcore.QPointF_ITF, screenPos qtcore.Q
 /*
 
  */
+func (*QMouseEvent) NewForInherit_2(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, button int, buttons int, modifiers int) *QMouseEvent {
+	return NewQMouseEvent_2(type_, localPos, windowPos, screenPos, button, buttons, modifiers)
+}
 func NewQMouseEvent_2(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, button int, buttons int, modifiers int) *QMouseEvent {
 	var convArg1 unsafe.Pointer
 	if localPos != nil && localPos.QPointF_PTR() != nil {
@@ -143,6 +152,9 @@ func NewQMouseEvent_2(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.Q
 /*
 
  */
+func (*QMouseEvent) NewForInherit_3(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, button int, buttons int, modifiers int, source int) *QMouseEvent {
+	return NewQMouseEvent_3(type_, localPos, windowPos, screenPos, button, buttons, modifiers, source)
+}
 func NewQMouseEvent_3(type_ int, localPos qtcore.QPointF_ITF, windowPos qtcore.QPointF_ITF, screenPos qtcore.QPointF_ITF, button int, buttons int, modifiers int, source int) *QMouseEvent {
 	var convArg1 unsafe.Pointer
 	if localPos != nil && localPos.QPointF_PTR() != nil {

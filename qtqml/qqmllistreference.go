@@ -74,6 +74,9 @@ func (*QQmlListReference) NewFromPointer(cthis unsafe.Pointer) *QQmlListReferenc
 /*
 
  */
+func (*QQmlListReference) NewForInherit() *QQmlListReference {
+	return NewQQmlListReference()
+}
 func NewQQmlListReference() *QQmlListReference {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQmlListReferenceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQQmlListReference() *QQmlListReference {
 /*
 
  */
+func (*QQmlListReference) NewForInherit_1(arg0 qtcore.QObject_ITF /*777 QObject **/, property string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlListReference {
+	return NewQQmlListReference_1(arg0, property, arg2)
+}
 func NewQQmlListReference_1(arg0 qtcore.QObject_ITF /*777 QObject **/, property string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlListReference {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -116,6 +122,9 @@ func NewQQmlListReference_1(arg0 qtcore.QObject_ITF /*777 QObject **/, property 
 /*
 
  */
+func (*QQmlListReference) NewForInherit_1_(arg0 qtcore.QObject_ITF /*777 QObject **/, property string) *QQmlListReference {
+	return NewQQmlListReference_1_(arg0, property)
+}
 func NewQQmlListReference_1_(arg0 qtcore.QObject_ITF /*777 QObject **/, property string) *QQmlListReference {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {

@@ -73,6 +73,9 @@ func (*QGeoAddress) NewFromPointer(cthis unsafe.Pointer) *QGeoAddress {
 /*
 Default constructor.
 */
+func (*QGeoAddress) NewForInherit() *QGeoAddress {
+	return NewQGeoAddress()
+}
 func NewQGeoAddress() *QGeoAddress {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGeoAddressC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

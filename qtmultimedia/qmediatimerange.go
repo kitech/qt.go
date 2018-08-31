@@ -75,6 +75,9 @@ func (*QMediaTimeRange) NewFromPointer(cthis unsafe.Pointer) *QMediaTimeRange {
 /*
 Constructs an empty time range.
 */
+func (*QMediaTimeRange) NewForInherit() *QMediaTimeRange {
+	return NewQMediaTimeRange()
+}
 func NewQMediaTimeRange() *QMediaTimeRange {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QMediaTimeRangeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -91,6 +94,9 @@ func NewQMediaTimeRange() *QMediaTimeRange {
 /*
 Constructs an empty time range.
 */
+func (*QMediaTimeRange) NewForInherit_1(start int64, end int64) *QMediaTimeRange {
+	return NewQMediaTimeRange_1(start, end)
+}
 func NewQMediaTimeRange_1(start int64, end int64) *QMediaTimeRange {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QMediaTimeRangeC2Exx", qtrt.FFI_TYPE_POINTER, start, end)
 	qtrt.ErrPrint(err, rv)
@@ -107,6 +113,9 @@ func NewQMediaTimeRange_1(start int64, end int64) *QMediaTimeRange {
 /*
 Constructs an empty time range.
 */
+func (*QMediaTimeRange) NewForInherit_2(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
+	return NewQMediaTimeRange_2(arg0)
+}
 func NewQMediaTimeRange_2(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeInterval_PTR() != nil {

@@ -85,6 +85,9 @@ func (this *QTextFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 /*
 
  */
+func (*QTextFrame) NewForInherit(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextFrame {
+	return NewQTextFrame(doc)
+}
 func NewQTextFrame(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextFrame {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {

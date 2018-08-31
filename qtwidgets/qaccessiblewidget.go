@@ -89,6 +89,9 @@ func (*QAccessibleWidget) NewFromPointer(cthis unsafe.Pointer) *QAccessibleWidge
 /*
 Creates a QAccessibleWidget object for widget w. role and name are optional parameters that set the object's role and name properties.
 */
+func (*QAccessibleWidget) NewForInherit(o QWidget_ITF /*777 QWidget **/, r int, name string) *QAccessibleWidget {
+	return NewQAccessibleWidget(o, r, name)
+}
 func NewQAccessibleWidget(o QWidget_ITF /*777 QWidget **/, r int, name string) *QAccessibleWidget {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QWidget_PTR() != nil {
@@ -111,6 +114,9 @@ func NewQAccessibleWidget(o QWidget_ITF /*777 QWidget **/, r int, name string) *
 /*
 Creates a QAccessibleWidget object for widget w. role and name are optional parameters that set the object's role and name properties.
 */
+func (*QAccessibleWidget) NewForInherit__(o QWidget_ITF /*777 QWidget **/) *QAccessibleWidget {
+	return NewQAccessibleWidget__(o)
+}
 func NewQAccessibleWidget__(o QWidget_ITF /*777 QWidget **/) *QAccessibleWidget {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QWidget_PTR() != nil {
@@ -135,6 +141,9 @@ func NewQAccessibleWidget__(o QWidget_ITF /*777 QWidget **/) *QAccessibleWidget 
 /*
 Creates a QAccessibleWidget object for widget w. role and name are optional parameters that set the object's role and name properties.
 */
+func (*QAccessibleWidget) NewForInherit__1(o QWidget_ITF /*777 QWidget **/, r int) *QAccessibleWidget {
+	return NewQAccessibleWidget__1(o, r)
+}
 func NewQAccessibleWidget__1(o QWidget_ITF /*777 QWidget **/, r int) *QAccessibleWidget {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QWidget_PTR() != nil {

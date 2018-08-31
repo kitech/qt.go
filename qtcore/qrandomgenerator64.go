@@ -98,6 +98,9 @@ func (this *QRandomGenerator64) Operator_fncall() uint64 {
 /*
 
  */
+func (*QRandomGenerator64) NewForInherit(seedValue uint) *QRandomGenerator64 {
+	return NewQRandomGenerator64(seedValue)
+}
 func NewQRandomGenerator64(seedValue uint) *QRandomGenerator64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2Ej", qtrt.FFI_TYPE_POINTER, seedValue)
 	qtrt.ErrPrint(err, rv)
@@ -114,6 +117,9 @@ func NewQRandomGenerator64(seedValue uint) *QRandomGenerator64 {
 /*
 
  */
+func (*QRandomGenerator64) NewForInherit__() *QRandomGenerator64 {
+	return NewQRandomGenerator64__()
+}
 func NewQRandomGenerator64__() *QRandomGenerator64 {
 	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int, UInt
 	seedValue := uint(1)
@@ -132,6 +138,9 @@ func NewQRandomGenerator64__() *QRandomGenerator64 {
 /*
 
  */
+func (*QRandomGenerator64) NewForInherit_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRandomGenerator64 {
+	return NewQRandomGenerator64_1(seedBuffer, len_)
+}
 func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRandomGenerator64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjx", qtrt.FFI_TYPE_POINTER, seedBuffer, len_)
 	qtrt.ErrPrint(err, rv)
@@ -148,6 +157,9 @@ func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRa
 /*
 
  */
+func (*QRandomGenerator64) NewForInherit_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator64 {
+	return NewQRandomGenerator64_2(begin, end)
+}
 func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjS1_", qtrt.FFI_TYPE_POINTER, begin, end)
 	qtrt.ErrPrint(err, rv)
@@ -164,6 +176,9 @@ func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*
 /*
 
  */
+func (*QRandomGenerator64) NewForInherit_3(other QRandomGenerator_ITF) *QRandomGenerator64 {
+	return NewQRandomGenerator64_3(other)
+}
 func NewQRandomGenerator64_3(other QRandomGenerator_ITF) *QRandomGenerator64 {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QRandomGenerator_PTR() != nil {

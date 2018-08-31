@@ -100,6 +100,9 @@ func (this *QTextBlockGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 /*
 
  */
+func (*QTextBlockGroup) NewForInherit(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextBlockGroup {
+	return NewQTextBlockGroup(doc)
+}
 func NewQTextBlockGroup(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextBlockGroup {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {

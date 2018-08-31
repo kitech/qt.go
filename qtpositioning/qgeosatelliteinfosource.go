@@ -85,6 +85,9 @@ func (this *QGeoSatelliteInfoSource) MetaObject() *qtcore.QMetaObject /*777 cons
 /*
 Creates a satellite source with the specified parent.
 */
+func (*QGeoSatelliteInfoSource) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGeoSatelliteInfoSource {
+	return NewQGeoSatelliteInfoSource(parent)
+}
 func NewQGeoSatelliteInfoSource(parent qtcore.QObject_ITF /*777 QObject **/) *QGeoSatelliteInfoSource {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

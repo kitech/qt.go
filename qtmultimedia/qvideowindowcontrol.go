@@ -479,6 +479,9 @@ func (this *QVideoWindowControl) NativeSizeChanged() {
 /*
 Constructs a new video window control with the given parent.
 */
+func (*QVideoWindowControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoWindowControl {
+	return NewQVideoWindowControl(parent)
+}
 func NewQVideoWindowControl(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoWindowControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -499,6 +502,9 @@ func NewQVideoWindowControl(parent qtcore.QObject_ITF /*777 QObject **/) *QVideo
 /*
 Constructs a new video window control with the given parent.
 */
+func (*QVideoWindowControl) NewForInherit__() *QVideoWindowControl {
+	return NewQVideoWindowControl__()
+}
 func NewQVideoWindowControl__() *QVideoWindowControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

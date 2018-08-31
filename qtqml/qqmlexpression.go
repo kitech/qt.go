@@ -88,6 +88,9 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
+func (*QQmlExpression) NewForInherit() *QQmlExpression {
+	return NewQQmlExpression()
+}
 func NewQQmlExpression() *QQmlExpression {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -106,6 +109,9 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
+func (*QQmlExpression) NewForInherit_1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+	return NewQQmlExpression_1(arg0, arg1, arg2, arg3)
+}
 func NewQQmlExpression_1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlContext_PTR() != nil {
@@ -138,6 +144,9 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
+func (*QQmlExpression) NewForInherit_1_(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string) *QQmlExpression {
+	return NewQQmlExpression_1_(arg0, arg1, arg2)
+}
 func NewQQmlExpression_1_(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlContext_PTR() != nil {
@@ -168,6 +177,9 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
+func (*QQmlExpression) NewForInherit_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+	return NewQQmlExpression_2(arg0, arg1, arg2, arg3)
+}
 func NewQQmlExpression_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
@@ -202,6 +214,9 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
+func (*QQmlExpression) NewForInherit_2_(arg0 QQmlScriptString_ITF) *QQmlExpression {
+	return NewQQmlExpression_2_(arg0)
+}
 func NewQQmlExpression_2_(arg0 QQmlScriptString_ITF) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
@@ -230,6 +245,9 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
+func (*QQmlExpression) NewForInherit_2_1(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlExpression {
+	return NewQQmlExpression_2_1(arg0, arg1)
+}
 func NewQQmlExpression_2_1(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
@@ -260,6 +278,9 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
+func (*QQmlExpression) NewForInherit_2_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+	return NewQQmlExpression_2_2(arg0, arg1, arg2)
+}
 func NewQQmlExpression_2_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {

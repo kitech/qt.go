@@ -93,6 +93,9 @@ Constructs an action with parent. If parent is an action group the action will b
 
 Note: The parent argument is optional since Qt 5.7.
 */
+func (*QAction) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
+	return NewQAction(parent)
+}
 func NewQAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -115,6 +118,9 @@ Constructs an action with parent. If parent is an action group the action will b
 
 Note: The parent argument is optional since Qt 5.7.
 */
+func (*QAction) NewForInherit__() *QAction {
+	return NewQAction__()
+}
 func NewQAction__() *QAction {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -135,6 +141,9 @@ Constructs an action with parent. If parent is an action group the action will b
 
 Note: The parent argument is optional since Qt 5.7.
 */
+func (*QAction) NewForInherit_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
+	return NewQAction_1(text, parent)
+}
 func NewQAction_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -159,6 +168,9 @@ Constructs an action with parent. If parent is an action group the action will b
 
 Note: The parent argument is optional since Qt 5.7.
 */
+func (*QAction) NewForInherit_1_(text string) *QAction {
+	return NewQAction_1_(text)
+}
 func NewQAction_1_(text string) *QAction {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -181,6 +193,9 @@ Constructs an action with parent. If parent is an action group the action will b
 
 Note: The parent argument is optional since Qt 5.7.
 */
+func (*QAction) NewForInherit_2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
+	return NewQAction_2(icon, text, parent)
+}
 func NewQAction_2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -209,6 +224,9 @@ Constructs an action with parent. If parent is an action group the action will b
 
 Note: The parent argument is optional since Qt 5.7.
 */
+func (*QAction) NewForInherit_2_(icon qtgui.QIcon_ITF, text string) *QAction {
+	return NewQAction_2_(icon, text)
+}
 func NewQAction_2_(icon qtgui.QIcon_ITF, text string) *QAction {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {

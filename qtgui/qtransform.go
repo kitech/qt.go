@@ -77,6 +77,9 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 
 See also reset().
 */
+func (*QTransform) NewForInherit(arg0 int) *QTransform {
+	return NewQTransform(arg0)
+}
 func NewQTransform(arg0 int) *QTransform {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
@@ -97,6 +100,9 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 
 See also reset().
 */
+func (*QTransform) NewForInherit_1() *QTransform {
+	return NewQTransform_1()
+}
 func NewQTransform_1() *QTransform {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -117,6 +123,9 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 
 See also reset().
 */
+func (*QTransform) NewForInherit_2(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64, h33 float64) *QTransform {
+	return NewQTransform_2(h11, h12, h13, h21, h22, h23, h31, h32, h33)
+}
 func NewQTransform_2(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64, h33 float64) *QTransform {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2Eddddddddd", qtrt.FFI_TYPE_POINTER, h11, h12, h13, h21, h22, h23, h31, h32, h33)
 	qtrt.ErrPrint(err, rv)
@@ -137,6 +146,9 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 
 See also reset().
 */
+func (*QTransform) NewForInherit_2_(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64) *QTransform {
+	return NewQTransform_2_(h11, h12, h13, h21, h22, h23, h31, h32)
+}
 func NewQTransform_2_(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64) *QTransform {
 	// arg: 8, qreal=Typedef, qreal=Typedef, double, Double
 	h33 := float64(1.0)
@@ -159,6 +171,9 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 
 See also reset().
 */
+func (*QTransform) NewForInherit_3(h11 float64, h12 float64, h21 float64, h22 float64, dx float64, dy float64) *QTransform {
+	return NewQTransform_3(h11, h12, h21, h22, dx, dy)
+}
 func NewQTransform_3(h11 float64, h12 float64, h21 float64, h22 float64, dx float64, dy float64) *QTransform {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2Edddddd", qtrt.FFI_TYPE_POINTER, h11, h12, h21, h22, dx, dy)
 	qtrt.ErrPrint(err, rv)
@@ -179,6 +194,9 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 
 See also reset().
 */
+func (*QTransform) NewForInherit_4(mtx QMatrix_ITF) *QTransform {
+	return NewQTransform_4(mtx)
+}
 func NewQTransform_4(mtx QMatrix_ITF) *QTransform {
 	var convArg0 unsafe.Pointer
 	if mtx != nil && mtx.QMatrix_PTR() != nil {

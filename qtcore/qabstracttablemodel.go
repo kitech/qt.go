@@ -84,6 +84,9 @@ func (this *QAbstractTableModel) MetaObject() *QMetaObject /*777 const QMetaObje
 /*
 
  */
+func (*QAbstractTableModel) NewForInherit(parent QObject_ITF /*777 QObject **/) *QAbstractTableModel {
+	return NewQAbstractTableModel(parent)
+}
 func NewQAbstractTableModel(parent QObject_ITF /*777 QObject **/) *QAbstractTableModel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -104,6 +107,9 @@ func NewQAbstractTableModel(parent QObject_ITF /*777 QObject **/) *QAbstractTabl
 /*
 
  */
+func (*QAbstractTableModel) NewForInherit__() *QAbstractTableModel {
+	return NewQAbstractTableModel__()
+}
 func NewQAbstractTableModel__() *QAbstractTableModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

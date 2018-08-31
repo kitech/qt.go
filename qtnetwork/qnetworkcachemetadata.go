@@ -73,6 +73,9 @@ func (*QNetworkCacheMetaData) NewFromPointer(cthis unsafe.Pointer) *QNetworkCach
 /*
 
  */
+func (*QNetworkCacheMetaData) NewForInherit() *QNetworkCacheMetaData {
+	return NewQNetworkCacheMetaData()
+}
 func NewQNetworkCacheMetaData() *QNetworkCacheMetaData {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkCacheMetaDataC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

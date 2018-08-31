@@ -99,6 +99,9 @@ func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs a new QFinalState object with the given parent state.
 */
+func (*QFinalState) NewForInherit(parent QState_ITF /*777 QState **/) *QFinalState {
+	return NewQFinalState(parent)
+}
 func NewQFinalState(parent QState_ITF /*777 QState **/) *QFinalState {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QState_PTR() != nil {
@@ -119,6 +122,9 @@ func NewQFinalState(parent QState_ITF /*777 QState **/) *QFinalState {
 /*
 Constructs a new QFinalState object with the given parent state.
 */
+func (*QFinalState) NewForInherit__() *QFinalState {
+	return NewQFinalState__()
+}
 func NewQFinalState__() *QFinalState {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer

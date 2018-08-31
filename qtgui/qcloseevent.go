@@ -71,6 +71,9 @@ func (*QCloseEvent) NewFromPointer(cthis unsafe.Pointer) *QCloseEvent {
 /*
 
  */
+func (*QCloseEvent) NewForInherit() *QCloseEvent {
+	return NewQCloseEvent()
+}
 func NewQCloseEvent() *QCloseEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QCloseEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -105,6 +105,9 @@ By default, the minimum step value is set to 0, and the maximum to 100.
 
 See also setRange().
 */
+func (*QProgressBar) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QProgressBar {
+	return NewQProgressBar(parent)
+}
 func NewQProgressBar(parent QWidget_ITF /*777 QWidget **/) *QProgressBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -129,6 +132,9 @@ By default, the minimum step value is set to 0, and the maximum to 100.
 
 See also setRange().
 */
+func (*QProgressBar) NewForInherit__() *QProgressBar {
+	return NewQProgressBar__()
+}
 func NewQProgressBar__() *QProgressBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

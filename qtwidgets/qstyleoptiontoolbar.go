@@ -72,6 +72,9 @@ func (*QStyleOptionToolBar) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionTo
 /*
 
  */
+func (*QStyleOptionToolBar) NewForInherit() *QStyleOptionToolBar {
+	return NewQStyleOptionToolBar()
+}
 func NewQStyleOptionToolBar() *QStyleOptionToolBar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionToolBarC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStyleOptionToolBar() *QStyleOptionToolBar {
 /*
 
  */
+func (*QStyleOptionToolBar) NewForInherit_1(version int) *QStyleOptionToolBar {
+	return NewQStyleOptionToolBar_1(version)
+}
 func NewQStyleOptionToolBar_1(version int) *QStyleOptionToolBar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionToolBarC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)

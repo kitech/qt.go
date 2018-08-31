@@ -137,6 +137,9 @@ Creates a new abstract socket of type socketType. The parent argument is passed 
 
 See also socketType(), QTcpSocket, and QUdpSocket.
 */
+func (*QAbstractSocket) NewForInherit(socketType int, parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractSocket {
+	return NewQAbstractSocket(socketType, parent)
+}
 func NewQAbstractSocket(socketType int, parent qtcore.QObject_ITF /*777 QObject **/) *QAbstractSocket {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

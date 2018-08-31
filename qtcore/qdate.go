@@ -72,6 +72,9 @@ func (*QDate) NewFromPointer(cthis unsafe.Pointer) *QDate {
 /*
 
  */
+func (*QDate) NewForInherit() *QDate {
+	return NewQDate()
+}
 func NewQDate() *QDate {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDateC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQDate() *QDate {
 /*
 
  */
+func (*QDate) NewForInherit_1(y int, m int, d int) *QDate {
+	return NewQDate_1(y, m, d)
+}
 func NewQDate_1(y int, m int, d int) *QDate {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDateC2Eiii", qtrt.FFI_TYPE_POINTER, y, m, d)
 	qtrt.ErrPrint(err, rv)

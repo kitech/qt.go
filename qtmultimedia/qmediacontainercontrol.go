@@ -173,6 +173,9 @@ func (this *QMediaContainerControl) ContainerDescription(formatMimeType string) 
 /*
 Constructs a new media container control with the given parent.
 */
+func (*QMediaContainerControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaContainerControl {
+	return NewQMediaContainerControl(parent)
+}
 func NewQMediaContainerControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaContainerControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -193,6 +196,9 @@ func NewQMediaContainerControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMe
 /*
 Constructs a new media container control with the given parent.
 */
+func (*QMediaContainerControl) NewForInherit__() *QMediaContainerControl {
+	return NewQMediaContainerControl__()
+}
 func NewQMediaContainerControl__() *QMediaContainerControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -88,6 +88,9 @@ Constructs a QWinThumbnailToolBar with the specified parent.
 
 If parent is an instance of QWindow, it is automatically assigned as the thumbnail toolbar's window.
 */
+func (*QWinThumbnailToolBar) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QWinThumbnailToolBar {
+	return NewQWinThumbnailToolBar(parent)
+}
 func NewQWinThumbnailToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QWinThumbnailToolBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -110,6 +113,9 @@ Constructs a QWinThumbnailToolBar with the specified parent.
 
 If parent is an instance of QWindow, it is automatically assigned as the thumbnail toolbar's window.
 */
+func (*QWinThumbnailToolBar) NewForInherit__() *QWinThumbnailToolBar {
+	return NewQWinThumbnailToolBar__()
+}
 func NewQWinThumbnailToolBar__() *QWinThumbnailToolBar {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

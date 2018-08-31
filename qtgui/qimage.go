@@ -113,6 +113,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit() *QImage {
+	return NewQImage()
+}
 func NewQImage() *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -131,6 +134,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_1(size qtcore.QSize_ITF, format int) *QImage {
+	return NewQImage_1(size, format)
+}
 func NewQImage_1(size qtcore.QSize_ITF, format int) *QImage {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -153,6 +159,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_2(width int, height int, format int) *QImage {
+	return NewQImage_2(width, height, format)
+}
 func NewQImage_2(width int, height int, format int) *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EiiNS_6FormatE", qtrt.FFI_TYPE_POINTER, width, height, format)
 	qtrt.ErrPrint(err, rv)
@@ -171,6 +180,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_3(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	return NewQImage_3(data, width, height, format, cleanupFunction, cleanupInfo)
+}
 func NewQImage_3(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
 	qtrt.ErrPrint(err, rv)
@@ -189,6 +201,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_3_(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
+	return NewQImage_3_(data, width, height, format)
+}
 func NewQImage_3_(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
 	// arg: 4, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
 	var cleanupFunction unsafe.Pointer
@@ -211,6 +226,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_3_1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	return NewQImage_3_1(data, width, height, format, cleanupFunction)
+}
 func NewQImage_3_1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
 	// arg: 5, void *=Pointer, =Invalid, , Invalid
 	var cleanupInfo unsafe.Pointer
@@ -231,6 +249,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_4(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	return NewQImage_4(data, width, height, format, cleanupFunction, cleanupInfo)
+}
 func NewQImage_4(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
 	qtrt.ErrPrint(err, rv)
@@ -249,6 +270,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_4_(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
+	return NewQImage_4_(data, width, height, format)
+}
 func NewQImage_4_(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
 	// arg: 4, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
 	var cleanupFunction unsafe.Pointer
@@ -271,6 +295,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_4_1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	return NewQImage_4_1(data, width, height, format, cleanupFunction)
+}
 func NewQImage_4_1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
 	// arg: 5, void *=Pointer, =Invalid, , Invalid
 	var cleanupInfo unsafe.Pointer
@@ -291,6 +318,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_5(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	return NewQImage_5(data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
+}
 func NewQImage_5(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
 	qtrt.ErrPrint(err, rv)
@@ -309,6 +339,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_5_(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
+	return NewQImage_5_(data, width, height, bytesPerLine, format)
+}
 func NewQImage_5_(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
 	// arg: 5, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
 	var cleanupFunction unsafe.Pointer
@@ -331,6 +364,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_5_1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	return NewQImage_5_1(data, width, height, bytesPerLine, format, cleanupFunction)
+}
 func NewQImage_5_1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
 	// arg: 6, void *=Pointer, =Invalid, , Invalid
 	var cleanupInfo unsafe.Pointer
@@ -351,6 +387,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_6(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	return NewQImage_6(data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
+}
 func NewQImage_6(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
 	qtrt.ErrPrint(err, rv)
@@ -369,6 +408,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_6_(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
+	return NewQImage_6_(data, width, height, bytesPerLine, format)
+}
 func NewQImage_6_(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
 	// arg: 5, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
 	var cleanupFunction unsafe.Pointer
@@ -391,6 +433,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_6_1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	return NewQImage_6_1(data, width, height, bytesPerLine, format, cleanupFunction)
+}
 func NewQImage_6_1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
 	// arg: 6, void *=Pointer, =Invalid, , Invalid
 	var cleanupInfo unsafe.Pointer
@@ -411,6 +456,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_7(xpm []string) *QImage {
+	return NewQImage_7(xpm)
+}
 func NewQImage_7(xpm []string) *QImage {
 	var convArg0 = qtrt.StringSliceToCCharPP(xpm)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -430,6 +478,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_8(fileName string, format string) *QImage {
+	return NewQImage_8(fileName, format)
+}
 func NewQImage_8(fileName string, format string) *QImage {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -452,6 +503,9 @@ Constructs a null image.
 
 See also isNull().
 */
+func (*QImage) NewForInherit_8_(fileName string) *QImage {
+	return NewQImage_8_(fileName)
+}
 func NewQImage_8_(fileName string) *QImage {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

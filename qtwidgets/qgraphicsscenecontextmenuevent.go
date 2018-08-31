@@ -74,6 +74,9 @@ func (*QGraphicsSceneContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QGr
 /*
 
  */
+func (*QGraphicsSceneContextMenuEvent) NewForInherit(type_ int) *QGraphicsSceneContextMenuEvent {
+	return NewQGraphicsSceneContextMenuEvent(type_)
+}
 func NewQGraphicsSceneContextMenuEvent(type_ int) *QGraphicsSceneContextMenuEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQGraphicsSceneContextMenuEvent(type_ int) *QGraphicsSceneContextMenuEven
 /*
 
  */
+func (*QGraphicsSceneContextMenuEvent) NewForInherit__() *QGraphicsSceneContextMenuEvent {
+	return NewQGraphicsSceneContextMenuEvent__()
+}
 func NewQGraphicsSceneContextMenuEvent__() *QGraphicsSceneContextMenuEvent {
 	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum, , Invalid
 	type_ := 0

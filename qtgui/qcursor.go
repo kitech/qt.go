@@ -73,6 +73,9 @@ func (*QCursor) NewFromPointer(cthis unsafe.Pointer) *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
+func (*QCursor) NewForInherit() *QCursor {
+	return NewQCursor()
+}
 func NewQCursor() *QCursor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQCursor() *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
+func (*QCursor) NewForInherit_1(shape int) *QCursor {
+	return NewQCursor_1(shape)
+}
 func NewQCursor_1(shape int) *QCursor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2EN2Qt11CursorShapeE", qtrt.FFI_TYPE_POINTER, shape)
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +111,9 @@ func NewQCursor_1(shape int) *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
+func (*QCursor) NewForInherit_2(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int, hotY int) *QCursor {
+	return NewQCursor_2(bitmap, mask, hotX, hotY)
+}
 func NewQCursor_2(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int, hotY int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
@@ -129,6 +138,9 @@ func NewQCursor_2(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int, hotY int) *QCu
 /*
 Constructs a cursor with the default arrow shape.
 */
+func (*QCursor) NewForInherit_2_(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
+	return NewQCursor_2_(bitmap, mask)
+}
 func NewQCursor_2_(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
 	var convArg0 unsafe.Pointer
 	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
@@ -157,6 +169,9 @@ func NewQCursor_2_(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
+func (*QCursor) NewForInherit_2_1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
+	return NewQCursor_2_1(bitmap, mask, hotX)
+}
 func NewQCursor_2_1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
@@ -183,6 +198,9 @@ func NewQCursor_2_1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
+func (*QCursor) NewForInherit_3(pixmap QPixmap_ITF, hotX int, hotY int) *QCursor {
+	return NewQCursor_3(pixmap, hotX, hotY)
+}
 func NewQCursor_3(pixmap QPixmap_ITF, hotX int, hotY int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -203,6 +221,9 @@ func NewQCursor_3(pixmap QPixmap_ITF, hotX int, hotY int) *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
+func (*QCursor) NewForInherit_3_(pixmap QPixmap_ITF) *QCursor {
+	return NewQCursor_3_(pixmap)
+}
 func NewQCursor_3_(pixmap QPixmap_ITF) *QCursor {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -227,6 +248,9 @@ func NewQCursor_3_(pixmap QPixmap_ITF) *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
+func (*QCursor) NewForInherit_3_1(pixmap QPixmap_ITF, hotX int) *QCursor {
+	return NewQCursor_3_1(pixmap, hotX)
+}
 func NewQCursor_3_1(pixmap QPixmap_ITF, hotX int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {

@@ -83,6 +83,9 @@ Constructs a null pixmap.
 
 See also isNull().
 */
+func (*QPixmap) NewForInherit() *QPixmap {
+	return NewQPixmap()
+}
 func NewQPixmap() *QPixmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmapC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -101,6 +104,9 @@ Constructs a null pixmap.
 
 See also isNull().
 */
+func (*QPixmap) NewForInherit_1(w int, h int) *QPixmap {
+	return NewQPixmap_1(w, h)
+}
 func NewQPixmap_1(w int, h int) *QPixmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmapC2Eii", qtrt.FFI_TYPE_POINTER, w, h)
 	qtrt.ErrPrint(err, rv)
@@ -119,6 +125,9 @@ Constructs a null pixmap.
 
 See also isNull().
 */
+func (*QPixmap) NewForInherit_2(arg0 qtcore.QSize_ITF) *QPixmap {
+	return NewQPixmap_2(arg0)
+}
 func NewQPixmap_2(arg0 qtcore.QSize_ITF) *QPixmap {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSize_PTR() != nil {
@@ -141,6 +150,9 @@ Constructs a null pixmap.
 
 See also isNull().
 */
+func (*QPixmap) NewForInherit_3(fileName string, format string, flags int) *QPixmap {
+	return NewQPixmap_3(fileName, format, flags)
+}
 func NewQPixmap_3(fileName string, format string, flags int) *QPixmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -163,6 +175,9 @@ Constructs a null pixmap.
 
 See also isNull().
 */
+func (*QPixmap) NewForInherit_3_(fileName string) *QPixmap {
+	return NewQPixmap_3_(fileName)
+}
 func NewQPixmap_3_(fileName string) *QPixmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -187,6 +202,9 @@ Constructs a null pixmap.
 
 See also isNull().
 */
+func (*QPixmap) NewForInherit_3_1(fileName string, format string) *QPixmap {
+	return NewQPixmap_3_1(fileName, format)
+}
 func NewQPixmap_3_1(fileName string, format string) *QPixmap {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -211,6 +229,9 @@ Constructs a null pixmap.
 
 See also isNull().
 */
+func (*QPixmap) NewForInherit_4(xpm []string) *QPixmap {
+	return NewQPixmap_4(xpm)
+}
 func NewQPixmap_4(xpm []string) *QPixmap {
 	var convArg0 = qtrt.StringSliceToCCharPP(xpm)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QPixmapC2EPKPKc", qtrt.FFI_TYPE_POINTER, convArg0)

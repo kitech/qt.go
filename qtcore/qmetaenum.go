@@ -72,6 +72,9 @@ func (*QMetaEnum) NewFromPointer(cthis unsafe.Pointer) *QMetaEnum {
 /*
 
  */
+func (*QMetaEnum) NewForInherit() *QMetaEnum {
+	return NewQMetaEnum()
+}
 func NewQMetaEnum() *QMetaEnum {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMetaEnumC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

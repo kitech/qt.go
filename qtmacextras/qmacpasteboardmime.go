@@ -74,6 +74,9 @@ func (*QMacPasteboardMime) NewFromPointer(cthis unsafe.Pointer) *QMacPasteboardM
 /*
 Constructs a new conversion object of type t, adding it to the globally accessed list of available converters.
 */
+func (*QMacPasteboardMime) NewForInherit(arg0 byte) *QMacPasteboardMime {
+	return NewQMacPasteboardMime(arg0)
+}
 func NewQMacPasteboardMime(arg0 byte) *QMacPasteboardMime {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMimeC2Ec", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)

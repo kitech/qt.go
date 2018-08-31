@@ -74,6 +74,9 @@ Constructs a null string. Null strings are also empty.
 
 See also isEmpty().
 */
+func (*QString) NewForInherit() *QString {
+	return NewQString()
+}
 func NewQString() *QString {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs a null string. Null strings are also empty.
 
 See also isEmpty().
 */
+func (*QString) NewForInherit_1(unicode QChar_ITF /*777 const QChar **/, size int) *QString {
+	return NewQString_1(unicode, size)
+}
 func NewQString_1(unicode QChar_ITF /*777 const QChar **/, size int) *QString {
 	var convArg0 unsafe.Pointer
 	if unicode != nil && unicode.QChar_PTR() != nil {
@@ -114,6 +120,9 @@ Constructs a null string. Null strings are also empty.
 
 See also isEmpty().
 */
+func (*QString) NewForInherit_1_(unicode QChar_ITF /*777 const QChar **/) *QString {
+	return NewQString_1_(unicode)
+}
 func NewQString_1_(unicode QChar_ITF /*777 const QChar **/) *QString {
 	var convArg0 unsafe.Pointer
 	if unicode != nil && unicode.QChar_PTR() != nil {
@@ -138,6 +147,9 @@ Constructs a null string. Null strings are also empty.
 
 See also isEmpty().
 */
+func (*QString) NewForInherit_2(c QChar_ITF /*123*/) *QString {
+	return NewQString_2(c)
+}
 func NewQString_2(c QChar_ITF /*123*/) *QString {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
@@ -160,6 +172,9 @@ Constructs a null string. Null strings are also empty.
 
 See also isEmpty().
 */
+func (*QString) NewForInherit_3(size int, c QChar_ITF /*123*/) *QString {
+	return NewQString_3(size, c)
+}
 func NewQString_3(size int, c QChar_ITF /*123*/) *QString {
 	var convArg1 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
@@ -182,6 +197,9 @@ Constructs a null string. Null strings are also empty.
 
 See also isEmpty().
 */
+func (*QString) NewForInherit_4(latin1 QLatin1String_ITF /*123*/) *QString {
+	return NewQString_4(latin1)
+}
 func NewQString_4(latin1 QLatin1String_ITF /*123*/) *QString {
 	var convArg0 unsafe.Pointer
 	if latin1 != nil && latin1.QLatin1String_PTR() != nil {
@@ -204,6 +222,9 @@ Constructs a null string. Null strings are also empty.
 
 See also isEmpty().
 */
+func (*QString) NewForInherit_5(ch string) *QString {
+	return NewQString_5(ch)
+}
 func NewQString_5(ch string) *QString {
 	var convArg0 = qtrt.CString(ch)
 	defer qtrt.FreeMem(convArg0)
@@ -224,6 +245,9 @@ Constructs a null string. Null strings are also empty.
 
 See also isEmpty().
 */
+func (*QString) NewForInherit_6(a QByteArray_ITF) *QString {
+	return NewQString_6(a)
+}
 func NewQString_6(a QByteArray_ITF) *QString {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
@@ -246,6 +270,9 @@ Constructs a null string. Null strings are also empty.
 
 See also isEmpty().
 */
+func (*QString) NewForInherit_7(size int, arg1 int) *QString {
+	return NewQString_7(size, arg1)
+}
 func NewQString_7(size int, arg1 int) *QString {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QStringC2EiN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, size, arg1)
 	qtrt.ErrPrint(err, rv)

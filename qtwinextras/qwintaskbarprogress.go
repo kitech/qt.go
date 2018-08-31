@@ -86,6 +86,9 @@ func (this *QWinTaskbarProgress) MetaObject() *qtcore.QMetaObject /*777 const QM
 /*
 Constructs a QWinTaskbarProgress with the parent object parent.
 */
+func (*QWinTaskbarProgress) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTaskbarProgress {
+	return NewQWinTaskbarProgress(parent)
+}
 func NewQWinTaskbarProgress(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTaskbarProgress {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQWinTaskbarProgress(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTa
 /*
 Constructs a QWinTaskbarProgress with the parent object parent.
 */
+func (*QWinTaskbarProgress) NewForInherit__() *QWinTaskbarProgress {
+	return NewQWinTaskbarProgress__()
+}
 func NewQWinTaskbarProgress__() *QWinTaskbarProgress {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

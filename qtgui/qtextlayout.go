@@ -75,6 +75,9 @@ Constructs an empty text layout.
 
 See also setText().
 */
+func (*QTextLayout) NewForInherit() *QTextLayout {
+	return NewQTextLayout()
+}
 func NewQTextLayout() *QTextLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs an empty text layout.
 
 See also setText().
 */
+func (*QTextLayout) NewForInherit_1(text string) *QTextLayout {
+	return NewQTextLayout_1(text)
+}
 func NewQTextLayout_1(text string) *QTextLayout {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -113,6 +119,9 @@ Constructs an empty text layout.
 
 See also setText().
 */
+func (*QTextLayout) NewForInherit_2(text string, font QFont_ITF, paintdevice QPaintDevice_ITF /*777 QPaintDevice **/) *QTextLayout {
+	return NewQTextLayout_2(text, font, paintdevice)
+}
 func NewQTextLayout_2(text string, font QFont_ITF, paintdevice QPaintDevice_ITF /*777 QPaintDevice **/) *QTextLayout {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -141,6 +150,9 @@ Constructs an empty text layout.
 
 See also setText().
 */
+func (*QTextLayout) NewForInherit_2_(text string, font QFont_ITF) *QTextLayout {
+	return NewQTextLayout_2_(text, font)
+}
 func NewQTextLayout_2_(text string, font QFont_ITF) *QTextLayout {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -167,6 +179,9 @@ Constructs an empty text layout.
 
 See also setText().
 */
+func (*QTextLayout) NewForInherit_3(b QTextBlock_ITF) *QTextLayout {
+	return NewQTextLayout_3(b)
+}
 func NewQTextLayout_3(b QTextBlock_ITF) *QTextLayout {
 	var convArg0 unsafe.Pointer
 	if b != nil && b.QTextBlock_PTR() != nil {

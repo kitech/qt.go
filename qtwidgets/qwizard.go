@@ -118,6 +118,9 @@ Constructs a wizard with the given parent and window flags.
 
 See also parent() and windowFlags().
 */
+func (*QWizard) NewForInherit(parent QWidget_ITF /*777 QWidget **/, flags int) *QWizard {
+	return NewQWizard(parent, flags)
+}
 func NewQWizard(parent QWidget_ITF /*777 QWidget **/, flags int) *QWizard {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -140,6 +143,9 @@ Constructs a wizard with the given parent and window flags.
 
 See also parent() and windowFlags().
 */
+func (*QWizard) NewForInherit__() *QWizard {
+	return NewQWizard__()
+}
 func NewQWizard__() *QWizard {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -162,6 +168,9 @@ Constructs a wizard with the given parent and window flags.
 
 See also parent() and windowFlags().
 */
+func (*QWizard) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QWizard {
+	return NewQWizard__1(parent)
+}
 func NewQWizard__1(parent QWidget_ITF /*777 QWidget **/) *QWizard {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

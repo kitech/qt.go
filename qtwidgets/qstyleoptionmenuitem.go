@@ -72,6 +72,9 @@ func (*QStyleOptionMenuItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionM
 /*
 
  */
+func (*QStyleOptionMenuItem) NewForInherit() *QStyleOptionMenuItem {
+	return NewQStyleOptionMenuItem()
+}
 func NewQStyleOptionMenuItem() *QStyleOptionMenuItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStyleOptionMenuItem() *QStyleOptionMenuItem {
 /*
 
  */
+func (*QStyleOptionMenuItem) NewForInherit_1(version int) *QStyleOptionMenuItem {
+	return NewQStyleOptionMenuItem_1(version)
+}
 func NewQStyleOptionMenuItem_1(version int) *QStyleOptionMenuItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)

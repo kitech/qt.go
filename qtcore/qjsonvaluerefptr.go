@@ -72,6 +72,9 @@ func (*QJsonValueRefPtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValueRefPtr 
 /*
 
  */
+func (*QJsonValueRefPtr) NewForInherit(array QJsonArray_ITF /*777 QJsonArray **/, idx int) *QJsonValueRefPtr {
+	return NewQJsonValueRefPtr(array, idx)
+}
 func NewQJsonValueRefPtr(array QJsonArray_ITF /*777 QJsonArray **/, idx int) *QJsonValueRefPtr {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QJsonArray_PTR() != nil {
@@ -92,6 +95,9 @@ func NewQJsonValueRefPtr(array QJsonArray_ITF /*777 QJsonArray **/, idx int) *QJ
 /*
 
  */
+func (*QJsonValueRefPtr) NewForInherit_1(object QJsonObject_ITF /*777 QJsonObject **/, idx int) *QJsonValueRefPtr {
+	return NewQJsonValueRefPtr_1(object, idx)
+}
 func NewQJsonValueRefPtr_1(object QJsonObject_ITF /*777 QJsonObject **/, idx int) *QJsonValueRefPtr {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QJsonObject_PTR() != nil {

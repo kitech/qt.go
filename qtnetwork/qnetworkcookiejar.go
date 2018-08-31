@@ -92,6 +92,9 @@ Creates a QNetworkCookieJar object and sets the parent object to be parent.
 
 The cookie jar is initialized to empty.
 */
+func (*QNetworkCookieJar) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkCookieJar {
+	return NewQNetworkCookieJar(parent)
+}
 func NewQNetworkCookieJar(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkCookieJar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -114,6 +117,9 @@ Creates a QNetworkCookieJar object and sets the parent object to be parent.
 
 The cookie jar is initialized to empty.
 */
+func (*QNetworkCookieJar) NewForInherit__() *QNetworkCookieJar {
+	return NewQNetworkCookieJar__()
+}
 func NewQNetworkCookieJar__() *QNetworkCookieJar {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

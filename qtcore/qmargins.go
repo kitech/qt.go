@@ -74,6 +74,9 @@ Constructs a margins object with all margins set to 0.
 
 See also isNull().
 */
+func (*QMargins) NewForInherit() *QMargins {
+	return NewQMargins()
+}
 func NewQMargins() *QMargins {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs a margins object with all margins set to 0.
 
 See also isNull().
 */
+func (*QMargins) NewForInherit_1(left int, top int, right int, bottom int) *QMargins {
+	return NewQMargins_1(left, top, right, bottom)
+}
 func NewQMargins_1(left int, top int, right int, bottom int) *QMargins {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsC2Eiiii", qtrt.FFI_TYPE_POINTER, left, top, right, bottom)
 	qtrt.ErrPrint(err, rv)

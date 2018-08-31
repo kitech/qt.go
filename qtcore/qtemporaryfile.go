@@ -91,6 +91,9 @@ Constructs a QTemporaryFile using as file template the application name returned
 
 See also setFileTemplate() and QDir::tempPath().
 */
+func (*QTemporaryFile) NewForInherit() *QTemporaryFile {
+	return NewQTemporaryFile()
+}
 func NewQTemporaryFile() *QTemporaryFile {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFileC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -109,6 +112,9 @@ Constructs a QTemporaryFile using as file template the application name returned
 
 See also setFileTemplate() and QDir::tempPath().
 */
+func (*QTemporaryFile) NewForInherit_1(templateName string) *QTemporaryFile {
+	return NewQTemporaryFile_1(templateName)
+}
 func NewQTemporaryFile_1(templateName string) *QTemporaryFile {
 	var tmpArg0 = NewQString_5(templateName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -129,6 +135,9 @@ Constructs a QTemporaryFile using as file template the application name returned
 
 See also setFileTemplate() and QDir::tempPath().
 */
+func (*QTemporaryFile) NewForInherit_2(parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
+	return NewQTemporaryFile_2(parent)
+}
 func NewQTemporaryFile_2(parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -151,6 +160,9 @@ Constructs a QTemporaryFile using as file template the application name returned
 
 See also setFileTemplate() and QDir::tempPath().
 */
+func (*QTemporaryFile) NewForInherit_3(templateName string, parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
+	return NewQTemporaryFile_3(templateName, parent)
+}
 func NewQTemporaryFile_3(templateName string, parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
 	var tmpArg0 = NewQString_5(templateName)
 	var convArg0 = tmpArg0.GetCthis()

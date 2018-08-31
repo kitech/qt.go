@@ -113,6 +113,9 @@ Constructs a spin box with 0 as minimum value and 99 as maximum value, a step va
 
 See also setMinimum(), setMaximum(), and setSingleStep().
 */
+func (*QSpinBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QSpinBox {
+	return NewQSpinBox(parent)
+}
 func NewQSpinBox(parent QWidget_ITF /*777 QWidget **/) *QSpinBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -135,6 +138,9 @@ Constructs a spin box with 0 as minimum value and 99 as maximum value, a step va
 
 See also setMinimum(), setMaximum(), and setSingleStep().
 */
+func (*QSpinBox) NewForInherit__() *QSpinBox {
+	return NewQSpinBox__()
+}
 func NewQSpinBox__() *QSpinBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

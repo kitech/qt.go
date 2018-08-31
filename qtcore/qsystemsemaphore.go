@@ -82,6 +82,9 @@ The mode parameter is only used in Unix systems to handle the case where a semap
 
 See also acquire() and key().
 */
+func (*QSystemSemaphore) NewForInherit(key string, initialValue int, mode int) *QSystemSemaphore {
+	return NewQSystemSemaphore(key, initialValue, mode)
+}
 func NewQSystemSemaphore(key string, initialValue int, mode int) *QSystemSemaphore {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -110,6 +113,9 @@ The mode parameter is only used in Unix systems to handle the case where a semap
 
 See also acquire() and key().
 */
+func (*QSystemSemaphore) NewForInherit__(key string) *QSystemSemaphore {
+	return NewQSystemSemaphore__(key)
+}
 func NewQSystemSemaphore__(key string) *QSystemSemaphore {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -142,6 +148,9 @@ The mode parameter is only used in Unix systems to handle the case where a semap
 
 See also acquire() and key().
 */
+func (*QSystemSemaphore) NewForInherit__1(key string, initialValue int) *QSystemSemaphore {
+	return NewQSystemSemaphore__1(key, initialValue)
+}
 func NewQSystemSemaphore__1(key string, initialValue int) *QSystemSemaphore {
 	var tmpArg0 = NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()

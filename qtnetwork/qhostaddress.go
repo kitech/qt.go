@@ -75,6 +75,9 @@ Constructs a null host address object, i.e. an address which is not valid for an
 
 See also clear().
 */
+func (*QHostAddress) NewForInherit() *QHostAddress {
+	return NewQHostAddress()
+}
 func NewQHostAddress() *QHostAddress {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs a null host address object, i.e. an address which is not valid for an
 
 See also clear().
 */
+func (*QHostAddress) NewForInherit_1(ip4Addr uint) *QHostAddress {
+	return NewQHostAddress_1(ip4Addr)
+}
 func NewQHostAddress_1(ip4Addr uint) *QHostAddress {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2Ej", qtrt.FFI_TYPE_POINTER, ip4Addr)
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +117,9 @@ Constructs a null host address object, i.e. an address which is not valid for an
 
 See also clear().
 */
+func (*QHostAddress) NewForInherit_2(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
+	return NewQHostAddress_2(ip6Addr)
+}
 func NewQHostAddress_2(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2EPh", qtrt.FFI_TYPE_POINTER, ip6Addr)
 	qtrt.ErrPrint(err, rv)
@@ -129,6 +138,9 @@ Constructs a null host address object, i.e. an address which is not valid for an
 
 See also clear().
 */
+func (*QHostAddress) NewForInherit_3(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
+	return NewQHostAddress_3(ip6Addr)
+}
 func NewQHostAddress_3(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2EPKh", qtrt.FFI_TYPE_POINTER, ip6Addr)
 	qtrt.ErrPrint(err, rv)
@@ -147,6 +159,9 @@ Constructs a null host address object, i.e. an address which is not valid for an
 
 See also clear().
 */
+func (*QHostAddress) NewForInherit_4(address string) *QHostAddress {
+	return NewQHostAddress_4(address)
+}
 func NewQHostAddress_4(address string) *QHostAddress {
 	var tmpArg0 = qtcore.NewQString_5(address)
 	var convArg0 = tmpArg0.GetCthis()
@@ -167,6 +182,9 @@ Constructs a null host address object, i.e. an address which is not valid for an
 
 See also clear().
 */
+func (*QHostAddress) NewForInherit_5(address int) *QHostAddress {
+	return NewQHostAddress_5(address)
+}
 func NewQHostAddress_5(address int) *QHostAddress {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2ENS_14SpecialAddressE", qtrt.FFI_TYPE_POINTER, address)
 	qtrt.ErrPrint(err, rv)

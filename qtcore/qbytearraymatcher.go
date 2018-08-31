@@ -72,6 +72,9 @@ func (*QByteArrayMatcher) NewFromPointer(cthis unsafe.Pointer) *QByteArrayMatche
 /*
 Constructs an empty byte array matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
+func (*QByteArrayMatcher) NewForInherit() *QByteArrayMatcher {
+	return NewQByteArrayMatcher()
+}
 func NewQByteArrayMatcher() *QByteArrayMatcher {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQByteArrayMatcher() *QByteArrayMatcher {
 /*
 Constructs an empty byte array matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
+func (*QByteArrayMatcher) NewForInherit_1(pattern QByteArray_ITF) *QByteArrayMatcher {
+	return NewQByteArrayMatcher_1(pattern)
+}
 func NewQByteArrayMatcher_1(pattern QByteArray_ITF) *QByteArrayMatcher {
 	var convArg0 unsafe.Pointer
 	if pattern != nil && pattern.QByteArray_PTR() != nil {
@@ -108,6 +114,9 @@ func NewQByteArrayMatcher_1(pattern QByteArray_ITF) *QByteArrayMatcher {
 /*
 Constructs an empty byte array matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
+func (*QByteArrayMatcher) NewForInherit_2(pattern string, length int) *QByteArrayMatcher {
+	return NewQByteArrayMatcher_2(pattern, length)
+}
 func NewQByteArrayMatcher_2(pattern string, length int) *QByteArrayMatcher {
 	var convArg0 = qtrt.CString(pattern)
 	defer qtrt.FreeMem(convArg0)

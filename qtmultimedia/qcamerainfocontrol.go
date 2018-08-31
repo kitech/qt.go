@@ -136,6 +136,9 @@ func (this *QCameraInfoControl) CameraOrientation(deviceName string) int {
 /*
 Constructs a camera info control with the given parent.
 */
+func (*QCameraInfoControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraInfoControl {
+	return NewQCameraInfoControl(parent)
+}
 func NewQCameraInfoControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraInfoControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -156,6 +159,9 @@ func NewQCameraInfoControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCamera
 /*
 Constructs a camera info control with the given parent.
 */
+func (*QCameraInfoControl) NewForInherit__() *QCameraInfoControl {
+	return NewQCameraInfoControl__()
+}
 func NewQCameraInfoControl__() *QCameraInfoControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

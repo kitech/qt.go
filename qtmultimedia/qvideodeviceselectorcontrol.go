@@ -250,6 +250,9 @@ func (this *QVideoDeviceSelectorControl) DevicesChanged() {
 /*
 Constructs a video device selector control with the given parent.
 */
+func (*QVideoDeviceSelectorControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoDeviceSelectorControl {
+	return NewQVideoDeviceSelectorControl(parent)
+}
 func NewQVideoDeviceSelectorControl(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoDeviceSelectorControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -270,6 +273,9 @@ func NewQVideoDeviceSelectorControl(parent qtcore.QObject_ITF /*777 QObject **/)
 /*
 Constructs a video device selector control with the given parent.
 */
+func (*QVideoDeviceSelectorControl) NewForInherit__() *QVideoDeviceSelectorControl {
+	return NewQVideoDeviceSelectorControl__()
+}
 func NewQVideoDeviceSelectorControl__() *QVideoDeviceSelectorControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

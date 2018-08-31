@@ -99,6 +99,9 @@ func (this *QEventTransition) MetaObject() *QMetaObject /*777 const QMetaObject 
 /*
 Constructs a new QEventTransition object with the given sourceState.
 */
+func (*QEventTransition) NewForInherit(sourceState QState_ITF /*777 QState **/) *QEventTransition {
+	return NewQEventTransition(sourceState)
+}
 func NewQEventTransition(sourceState QState_ITF /*777 QState **/) *QEventTransition {
 	var convArg0 unsafe.Pointer
 	if sourceState != nil && sourceState.QState_PTR() != nil {
@@ -119,6 +122,9 @@ func NewQEventTransition(sourceState QState_ITF /*777 QState **/) *QEventTransit
 /*
 Constructs a new QEventTransition object with the given sourceState.
 */
+func (*QEventTransition) NewForInherit__() *QEventTransition {
+	return NewQEventTransition__()
+}
 func NewQEventTransition__() *QEventTransition {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -137,6 +143,9 @@ func NewQEventTransition__() *QEventTransition {
 /*
 Constructs a new QEventTransition object with the given sourceState.
 */
+func (*QEventTransition) NewForInherit_1(object QObject_ITF /*777 QObject **/, type_ int, sourceState QState_ITF /*777 QState **/) *QEventTransition {
+	return NewQEventTransition_1(object, type_, sourceState)
+}
 func NewQEventTransition_1(object QObject_ITF /*777 QObject **/, type_ int, sourceState QState_ITF /*777 QState **/) *QEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -161,6 +170,9 @@ func NewQEventTransition_1(object QObject_ITF /*777 QObject **/, type_ int, sour
 /*
 Constructs a new QEventTransition object with the given sourceState.
 */
+func (*QEventTransition) NewForInherit_1_(object QObject_ITF /*777 QObject **/, type_ int) *QEventTransition {
+	return NewQEventTransition_1_(object, type_)
+}
 func NewQEventTransition_1_(object QObject_ITF /*777 QObject **/, type_ int) *QEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {

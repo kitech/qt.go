@@ -109,6 +109,9 @@ func (this *QVariantAnimation) MetaObject() *QMetaObject /*777 const QMetaObject
 /*
 Construct a QVariantAnimation object. parent is passed to QAbstractAnimation's constructor.
 */
+func (*QVariantAnimation) NewForInherit(parent QObject_ITF /*777 QObject **/) *QVariantAnimation {
+	return NewQVariantAnimation(parent)
+}
 func NewQVariantAnimation(parent QObject_ITF /*777 QObject **/) *QVariantAnimation {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -129,6 +132,9 @@ func NewQVariantAnimation(parent QObject_ITF /*777 QObject **/) *QVariantAnimati
 /*
 Construct a QVariantAnimation object. parent is passed to QAbstractAnimation's constructor.
 */
+func (*QVariantAnimation) NewForInherit__() *QVariantAnimation {
+	return NewQVariantAnimation__()
+}
 func NewQVariantAnimation__() *QVariantAnimation {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

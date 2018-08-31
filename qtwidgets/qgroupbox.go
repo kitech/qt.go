@@ -136,6 +136,9 @@ func (this *QGroupBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 /*
 Constructs a group box widget with the given parent but with no title.
 */
+func (*QGroupBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
+	return NewQGroupBox(parent)
+}
 func NewQGroupBox(parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -156,6 +159,9 @@ func NewQGroupBox(parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
 /*
 Constructs a group box widget with the given parent but with no title.
 */
+func (*QGroupBox) NewForInherit__() *QGroupBox {
+	return NewQGroupBox__()
+}
 func NewQGroupBox__() *QGroupBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -174,6 +180,9 @@ func NewQGroupBox__() *QGroupBox {
 /*
 Constructs a group box widget with the given parent but with no title.
 */
+func (*QGroupBox) NewForInherit_1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
+	return NewQGroupBox_1(title, parent)
+}
 func NewQGroupBox_1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()
@@ -196,6 +205,9 @@ func NewQGroupBox_1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupB
 /*
 Constructs a group box widget with the given parent but with no title.
 */
+func (*QGroupBox) NewForInherit_1_(title string) *QGroupBox {
+	return NewQGroupBox_1_(title)
+}
 func NewQGroupBox_1_(title string) *QGroupBox {
 	var tmpArg0 = qtcore.NewQString_5(title)
 	var convArg0 = tmpArg0.GetCthis()

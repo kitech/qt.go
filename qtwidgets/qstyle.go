@@ -86,6 +86,9 @@ func (this *QStyle) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 /*
 Constructs a style object.
 */
+func (*QStyle) NewForInherit() *QStyle {
+	return NewQStyle()
+}
 func NewQStyle() *QStyle {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QStyleC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

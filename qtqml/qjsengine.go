@@ -88,6 +88,9 @@ Constructs a QJSEngine object.
 
 The globalObject() is initialized to have properties as described in ECMA-262, Section 15.1.
 */
+func (*QJSEngine) NewForInherit() *QJSEngine {
+	return NewQJSEngine()
+}
 func NewQJSEngine() *QJSEngine {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngineC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -106,6 +109,9 @@ Constructs a QJSEngine object.
 
 The globalObject() is initialized to have properties as described in ECMA-262, Section 15.1.
 */
+func (*QJSEngine) NewForInherit_1(parent qtcore.QObject_ITF /*777 QObject **/) *QJSEngine {
+	return NewQJSEngine_1(parent)
+}
 func NewQJSEngine_1(parent qtcore.QObject_ITF /*777 QObject **/) *QJSEngine {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

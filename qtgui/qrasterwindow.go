@@ -95,6 +95,9 @@ func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 Constructs a new QRasterWindow with parent.
 */
+func (*QRasterWindow) NewForInherit(parent QWindow_ITF /*777 QWindow **/) *QRasterWindow {
+	return NewQRasterWindow(parent)
+}
 func NewQRasterWindow(parent QWindow_ITF /*777 QWindow **/) *QRasterWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWindow_PTR() != nil {
@@ -115,6 +118,9 @@ func NewQRasterWindow(parent QWindow_ITF /*777 QWindow **/) *QRasterWindow {
 /*
 Constructs a new QRasterWindow with parent.
 */
+func (*QRasterWindow) NewForInherit__() *QRasterWindow {
+	return NewQRasterWindow__()
+}
 func NewQRasterWindow__() *QRasterWindow {
 	// arg: 0, QWindow *=Pointer, QWindow=Record, , Invalid
 	var convArg0 unsafe.Pointer

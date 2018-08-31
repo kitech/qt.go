@@ -72,6 +72,9 @@ func (*QCryptographicHash) NewFromPointer(cthis unsafe.Pointer) *QCryptographicH
 /*
 Constructs an object that can be used to create a cryptographic hash from data using method.
 */
+func (*QCryptographicHash) NewForInherit(method int) *QCryptographicHash {
+	return NewQCryptographicHash(method)
+}
 func NewQCryptographicHash(method int) *QCryptographicHash {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCryptographicHashC2ENS_9AlgorithmE", qtrt.FFI_TYPE_POINTER, method)
 	qtrt.ErrPrint(err, rv)

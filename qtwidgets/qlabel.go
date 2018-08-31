@@ -145,6 +145,9 @@ The parent and widget flag f, arguments are passed to the QFrame constructor.
 
 See also setAlignment(), setFrameStyle(), and setIndent().
 */
+func (*QLabel) NewForInherit(parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
+	return NewQLabel(parent, f)
+}
 func NewQLabel(parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -169,6 +172,9 @@ The parent and widget flag f, arguments are passed to the QFrame constructor.
 
 See also setAlignment(), setFrameStyle(), and setIndent().
 */
+func (*QLabel) NewForInherit__() *QLabel {
+	return NewQLabel__()
+}
 func NewQLabel__() *QLabel {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -193,6 +199,9 @@ The parent and widget flag f, arguments are passed to the QFrame constructor.
 
 See also setAlignment(), setFrameStyle(), and setIndent().
 */
+func (*QLabel) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QLabel {
+	return NewQLabel__1(parent)
+}
 func NewQLabel__1(parent QWidget_ITF /*777 QWidget **/) *QLabel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -219,6 +228,9 @@ The parent and widget flag f, arguments are passed to the QFrame constructor.
 
 See also setAlignment(), setFrameStyle(), and setIndent().
 */
+func (*QLabel) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
+	return NewQLabel_1(text, parent, f)
+}
 func NewQLabel_1(text string, parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -245,6 +257,9 @@ The parent and widget flag f, arguments are passed to the QFrame constructor.
 
 See also setAlignment(), setFrameStyle(), and setIndent().
 */
+func (*QLabel) NewForInherit_1_(text string) *QLabel {
+	return NewQLabel_1_(text)
+}
 func NewQLabel_1_(text string) *QLabel {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -271,6 +286,9 @@ The parent and widget flag f, arguments are passed to the QFrame constructor.
 
 See also setAlignment(), setFrameStyle(), and setIndent().
 */
+func (*QLabel) NewForInherit_1_1(text string, parent QWidget_ITF /*777 QWidget **/) *QLabel {
+	return NewQLabel_1_1(text, parent)
+}
 func NewQLabel_1_1(text string, parent QWidget_ITF /*777 QWidget **/) *QLabel {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()

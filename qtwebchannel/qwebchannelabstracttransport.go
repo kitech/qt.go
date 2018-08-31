@@ -89,6 +89,9 @@ func (this *QWebChannelAbstractTransport) MetaObject() *qtcore.QMetaObject /*777
 /*
 Constructs a transport object with the given parent.
 */
+func (*QWebChannelAbstractTransport) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QWebChannelAbstractTransport {
+	return NewQWebChannelAbstractTransport(parent)
+}
 func NewQWebChannelAbstractTransport(parent qtcore.QObject_ITF /*777 QObject **/) *QWebChannelAbstractTransport {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -109,6 +112,9 @@ func NewQWebChannelAbstractTransport(parent qtcore.QObject_ITF /*777 QObject **/
 /*
 Constructs a transport object with the given parent.
 */
+func (*QWebChannelAbstractTransport) NewForInherit__() *QWebChannelAbstractTransport {
+	return NewQWebChannelAbstractTransport__()
+}
 func NewQWebChannelAbstractTransport__() *QWebChannelAbstractTransport {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

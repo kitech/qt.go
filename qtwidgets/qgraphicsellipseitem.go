@@ -87,6 +87,9 @@ func (*QGraphicsEllipseItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsElli
 /*
 
  */
+func (*QGraphicsEllipseItem) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItem(parent)
+}
 func NewQGraphicsEllipseItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQGraphicsEllipseItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *
 /*
 
  */
+func (*QGraphicsEllipseItem) NewForInherit__() *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItem__()
+}
 func NewQGraphicsEllipseItem__() *QGraphicsEllipseItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -125,6 +131,9 @@ func NewQGraphicsEllipseItem__() *QGraphicsEllipseItem {
 /*
 
  */
+func (*QGraphicsEllipseItem) NewForInherit_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItem_1(rect, parent)
+}
 func NewQGraphicsEllipseItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -149,6 +158,9 @@ func NewQGraphicsEllipseItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF 
 /*
 
  */
+func (*QGraphicsEllipseItem) NewForInherit_1_(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItem_1_(rect)
+}
 func NewQGraphicsEllipseItem_1_(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -171,6 +183,9 @@ func NewQGraphicsEllipseItem_1_(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem {
 /*
 
  */
+func (*QGraphicsEllipseItem) NewForInherit_2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItem_2(x, y, w, h, parent)
+}
 func NewQGraphicsEllipseItem_2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -191,6 +206,9 @@ func NewQGraphicsEllipseItem_2(x float64, y float64, w float64, h float64, paren
 /*
 
  */
+func (*QGraphicsEllipseItem) NewForInherit_2_(x float64, y float64, w float64, h float64) *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItem_2_(x, y, w, h)
+}
 func NewQGraphicsEllipseItem_2_(x float64, y float64, w float64, h float64) *QGraphicsEllipseItem {
 	// arg: 4, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg4 unsafe.Pointer

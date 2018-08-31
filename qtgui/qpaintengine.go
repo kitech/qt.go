@@ -73,6 +73,9 @@ func (*QPaintEngine) NewFromPointer(cthis unsafe.Pointer) *QPaintEngine {
 /*
 Creates a paint engine with the featureset specified by caps.
 */
+func (*QPaintEngine) NewForInherit(features int) *QPaintEngine {
+	return NewQPaintEngine(features)
+}
 func NewQPaintEngine(features int) *QPaintEngine {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngineC2E6QFlagsINS_18PaintEngineFeatureEE", qtrt.FFI_TYPE_POINTER, features)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQPaintEngine(features int) *QPaintEngine {
 /*
 Creates a paint engine with the featureset specified by caps.
 */
+func (*QPaintEngine) NewForInherit__() *QPaintEngine {
+	return NewQPaintEngine__()
+}
 func NewQPaintEngine__() *QPaintEngine {
 	// arg: 0, QPaintEngine::PaintEngineFeatures=Typedef, QPaintEngine::PaintEngineFeatures=Typedef, QFlags<QPaintEngine::PaintEngineFeature>, Unexposed
 	features := 0

@@ -76,6 +76,9 @@ func (*QSGMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGMaterial {
 /*
 
  */
+func (*QSGMaterial) NewForInherit() *QSGMaterial {
+	return NewQSGMaterial()
+}
 func NewQSGMaterial() *QSGMaterial {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGMaterialC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

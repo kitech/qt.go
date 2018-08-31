@@ -75,6 +75,9 @@ Constructs a palette object that uses the application's default palette.
 
 See also QApplication::setPalette() and QApplication::palette().
 */
+func (*QPalette) NewForInherit() *QPalette {
+	return NewQPalette()
+}
 func NewQPalette() *QPalette {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs a palette object that uses the application's default palette.
 
 See also QApplication::setPalette() and QApplication::palette().
 */
+func (*QPalette) NewForInherit_1(button QColor_ITF) *QPalette {
+	return NewQPalette_1(button)
+}
 func NewQPalette_1(button QColor_ITF) *QPalette {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QColor_PTR() != nil {
@@ -115,6 +121,9 @@ Constructs a palette object that uses the application's default palette.
 
 See also QApplication::setPalette() and QApplication::palette().
 */
+func (*QPalette) NewForInherit_2(button int) *QPalette {
+	return NewQPalette_2(button)
+}
 func NewQPalette_2(button int) *QPalette {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2EN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, button)
 	qtrt.ErrPrint(err, rv)
@@ -133,6 +142,9 @@ Constructs a palette object that uses the application's default palette.
 
 See also QApplication::setPalette() and QApplication::palette().
 */
+func (*QPalette) NewForInherit_3(button QColor_ITF, window QColor_ITF) *QPalette {
+	return NewQPalette_3(button, window)
+}
 func NewQPalette_3(button QColor_ITF, window QColor_ITF) *QPalette {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QColor_PTR() != nil {
@@ -159,6 +171,9 @@ Constructs a palette object that uses the application's default palette.
 
 See also QApplication::setPalette() and QApplication::palette().
 */
+func (*QPalette) NewForInherit_4(windowText QBrush_ITF, button QBrush_ITF, light QBrush_ITF, dark QBrush_ITF, mid QBrush_ITF, text QBrush_ITF, bright_text QBrush_ITF, base QBrush_ITF, window QBrush_ITF) *QPalette {
+	return NewQPalette_4(windowText, button, light, dark, mid, text, bright_text, base, window)
+}
 func NewQPalette_4(windowText QBrush_ITF, button QBrush_ITF, light QBrush_ITF, dark QBrush_ITF, mid QBrush_ITF, text QBrush_ITF, bright_text QBrush_ITF, base QBrush_ITF, window QBrush_ITF) *QPalette {
 	var convArg0 unsafe.Pointer
 	if windowText != nil && windowText.QBrush_PTR() != nil {
@@ -213,6 +228,9 @@ Constructs a palette object that uses the application's default palette.
 
 See also QApplication::setPalette() and QApplication::palette().
 */
+func (*QPalette) NewForInherit_5(windowText QColor_ITF, window QColor_ITF, light QColor_ITF, dark QColor_ITF, mid QColor_ITF, text QColor_ITF, base QColor_ITF) *QPalette {
+	return NewQPalette_5(windowText, window, light, dark, mid, text, base)
+}
 func NewQPalette_5(windowText QColor_ITF, window QColor_ITF, light QColor_ITF, dark QColor_ITF, mid QColor_ITF, text QColor_ITF, base QColor_ITF) *QPalette {
 	var convArg0 unsafe.Pointer
 	if windowText != nil && windowText.QColor_PTR() != nil {

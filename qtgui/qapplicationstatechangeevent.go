@@ -73,6 +73,9 @@ func (*QApplicationStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAppl
 /*
 
  */
+func (*QApplicationStateChangeEvent) NewForInherit(state int) *QApplicationStateChangeEvent {
+	return NewQApplicationStateChangeEvent(state)
+}
 func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventC2EN2Qt16ApplicationStateE", qtrt.FFI_TYPE_POINTER, state)
 	qtrt.ErrPrint(err, rv)

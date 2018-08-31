@@ -74,6 +74,9 @@ Constructs an empty QUrlQuery object. A query can be set afterwards by calling s
 
 See also setQuery() and addQueryItem().
 */
+func (*QUrlQuery) NewForInherit() *QUrlQuery {
+	return NewQUrlQuery()
+}
 func NewQUrlQuery() *QUrlQuery {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Constructs an empty QUrlQuery object. A query can be set afterwards by calling s
 
 See also setQuery() and addQueryItem().
 */
+func (*QUrlQuery) NewForInherit_1(url QUrl_ITF) *QUrlQuery {
+	return NewQUrlQuery_1(url)
+}
 func NewQUrlQuery_1(url QUrl_ITF) *QUrlQuery {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -114,6 +120,9 @@ Constructs an empty QUrlQuery object. A query can be set afterwards by calling s
 
 See also setQuery() and addQueryItem().
 */
+func (*QUrlQuery) NewForInherit_2(queryString string) *QUrlQuery {
+	return NewQUrlQuery_2(queryString)
+}
 func NewQUrlQuery_2(queryString string) *QUrlQuery {
 	var tmpArg0 = NewQString_5(queryString)
 	var convArg0 = tmpArg0.GetCthis()

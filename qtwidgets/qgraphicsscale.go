@@ -86,6 +86,9 @@ func (this *QGraphicsScale) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 /*
 
  */
+func (*QGraphicsScale) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScale {
+	return NewQGraphicsScale(parent)
+}
 func NewQGraphicsScale(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScale {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQGraphicsScale(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsSc
 /*
 
  */
+func (*QGraphicsScale) NewForInherit__() *QGraphicsScale {
+	return NewQGraphicsScale__()
+}
 func NewQGraphicsScale__() *QGraphicsScale {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

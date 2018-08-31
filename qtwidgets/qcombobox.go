@@ -161,6 +161,9 @@ func (this *QComboBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 /*
 Constructs a combobox with the given parent, using the default model QStandardItemModel.
 */
+func (*QComboBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QComboBox {
+	return NewQComboBox(parent)
+}
 func NewQComboBox(parent QWidget_ITF /*777 QWidget **/) *QComboBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -181,6 +184,9 @@ func NewQComboBox(parent QWidget_ITF /*777 QWidget **/) *QComboBox {
 /*
 Constructs a combobox with the given parent, using the default model QStandardItemModel.
 */
+func (*QComboBox) NewForInherit__() *QComboBox {
+	return NewQComboBox__()
+}
 func NewQComboBox__() *QComboBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -81,6 +81,9 @@ func (*QQmlIncubationController) NewFromPointer(cthis unsafe.Pointer) *QQmlIncub
 /*
 
  */
+func (*QQmlIncubationController) NewForInherit() *QQmlIncubationController {
+	return NewQQmlIncubationController()
+}
 func NewQQmlIncubationController() *QQmlIncubationController {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQmlIncubationControllerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

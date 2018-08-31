@@ -92,6 +92,9 @@ Creates a new QTextObject for the given document.
 
 Warning: This function should never be called directly, but only from QTextDocument::createObject().
 */
+func (*QTextObject) NewForInherit(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextObject {
+	return NewQTextObject(doc)
+}
 func NewQTextObject(doc QTextDocument_ITF /*777 QTextDocument **/) *QTextObject {
 	var convArg0 unsafe.Pointer
 	if doc != nil && doc.QTextDocument_PTR() != nil {

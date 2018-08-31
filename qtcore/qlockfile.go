@@ -74,6 +74,9 @@ Constructs a new lock file object. The object is created in an unlocked state. W
 
 See also lock() and unlock().
 */
+func (*QLockFile) NewForInherit(fileName string) *QLockFile {
+	return NewQLockFile(fileName)
+}
 func NewQLockFile(fileName string) *QLockFile {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

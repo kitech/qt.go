@@ -87,6 +87,9 @@ func (*QGraphicsLineItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLineIte
 /*
 
  */
+func (*QGraphicsLineItem) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
+	return NewQGraphicsLineItem(parent)
+}
 func NewQGraphicsLineItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQGraphicsLineItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 /*
 
  */
+func (*QGraphicsLineItem) NewForInherit__() *QGraphicsLineItem {
+	return NewQGraphicsLineItem__()
+}
 func NewQGraphicsLineItem__() *QGraphicsLineItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -125,6 +131,9 @@ func NewQGraphicsLineItem__() *QGraphicsLineItem {
 /*
 
  */
+func (*QGraphicsLineItem) NewForInherit_1(line qtcore.QLineF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
+	return NewQGraphicsLineItem_1(line, parent)
+}
 func NewQGraphicsLineItem_1(line qtcore.QLineF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
 	var convArg0 unsafe.Pointer
 	if line != nil && line.QLineF_PTR() != nil {
@@ -149,6 +158,9 @@ func NewQGraphicsLineItem_1(line qtcore.QLineF_ITF, parent QGraphicsItem_ITF /*7
 /*
 
  */
+func (*QGraphicsLineItem) NewForInherit_1_(line qtcore.QLineF_ITF) *QGraphicsLineItem {
+	return NewQGraphicsLineItem_1_(line)
+}
 func NewQGraphicsLineItem_1_(line qtcore.QLineF_ITF) *QGraphicsLineItem {
 	var convArg0 unsafe.Pointer
 	if line != nil && line.QLineF_PTR() != nil {
@@ -171,6 +183,9 @@ func NewQGraphicsLineItem_1_(line qtcore.QLineF_ITF) *QGraphicsLineItem {
 /*
 
  */
+func (*QGraphicsLineItem) NewForInherit_2(x1 float64, y1 float64, x2 float64, y2 float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
+	return NewQGraphicsLineItem_2(x1, y1, x2, y2, parent)
+}
 func NewQGraphicsLineItem_2(x1 float64, y1 float64, x2 float64, y2 float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -191,6 +206,9 @@ func NewQGraphicsLineItem_2(x1 float64, y1 float64, x2 float64, y2 float64, pare
 /*
 
  */
+func (*QGraphicsLineItem) NewForInherit_2_(x1 float64, y1 float64, x2 float64, y2 float64) *QGraphicsLineItem {
+	return NewQGraphicsLineItem_2_(x1, y1, x2, y2)
+}
 func NewQGraphicsLineItem_2_(x1 float64, y1 float64, x2 float64, y2 float64) *QGraphicsLineItem {
 	// arg: 4, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg4 unsafe.Pointer

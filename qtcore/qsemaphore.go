@@ -74,6 +74,9 @@ Creates a new semaphore and initializes the number of resources it guards to n (
 
 See also release() and available().
 */
+func (*QSemaphore) NewForInherit(n int) *QSemaphore {
+	return NewQSemaphore(n)
+}
 func NewQSemaphore(n int) *QSemaphore {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphoreC2Ei", qtrt.FFI_TYPE_POINTER, n)
 	qtrt.ErrPrint(err, rv)
@@ -92,6 +95,9 @@ Creates a new semaphore and initializes the number of resources it guards to n (
 
 See also release() and available().
 */
+func (*QSemaphore) NewForInherit__() *QSemaphore {
+	return NewQSemaphore__()
+}
 func NewQSemaphore__() *QSemaphore {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	n := int(0)

@@ -83,6 +83,9 @@ func (*QSvgGenerator) NewFromPointer(cthis unsafe.Pointer) *QSvgGenerator {
 /*
 Constructs a new generator.
 */
+func (*QSvgGenerator) NewForInherit() *QSvgGenerator {
+	return NewQSvgGenerator()
+}
 func NewQSvgGenerator() *QSvgGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSvgGeneratorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

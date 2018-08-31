@@ -83,6 +83,9 @@ func (*QWebEngineScript) NewFromPointer(cthis unsafe.Pointer) *QWebEngineScript 
 /*
 
  */
+func (*QWebEngineScript) NewForInherit() *QWebEngineScript {
+	return NewQWebEngineScript()
+}
 func NewQWebEngineScript() *QWebEngineScript {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWebEngineScriptC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

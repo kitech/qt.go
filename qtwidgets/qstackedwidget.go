@@ -93,6 +93,9 @@ Constructs a QStackedWidget with the given parent.
 
 See also addWidget() and insertWidget().
 */
+func (*QStackedWidget) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QStackedWidget {
+	return NewQStackedWidget(parent)
+}
 func NewQStackedWidget(parent QWidget_ITF /*777 QWidget **/) *QStackedWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -115,6 +118,9 @@ Constructs a QStackedWidget with the given parent.
 
 See also addWidget() and insertWidget().
 */
+func (*QStackedWidget) NewForInherit__() *QStackedWidget {
+	return NewQStackedWidget__()
+}
 func NewQStackedWidget__() *QStackedWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

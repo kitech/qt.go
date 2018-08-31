@@ -99,6 +99,9 @@ func (this *QSignalTransition) MetaObject() *QMetaObject /*777 const QMetaObject
 /*
 Constructs a new signal transition with the given sourceState.
 */
+func (*QSignalTransition) NewForInherit(sourceState QState_ITF /*777 QState **/) *QSignalTransition {
+	return NewQSignalTransition(sourceState)
+}
 func NewQSignalTransition(sourceState QState_ITF /*777 QState **/) *QSignalTransition {
 	var convArg0 unsafe.Pointer
 	if sourceState != nil && sourceState.QState_PTR() != nil {
@@ -119,6 +122,9 @@ func NewQSignalTransition(sourceState QState_ITF /*777 QState **/) *QSignalTrans
 /*
 Constructs a new signal transition with the given sourceState.
 */
+func (*QSignalTransition) NewForInherit__() *QSignalTransition {
+	return NewQSignalTransition__()
+}
 func NewQSignalTransition__() *QSignalTransition {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -137,6 +143,9 @@ func NewQSignalTransition__() *QSignalTransition {
 /*
 Constructs a new signal transition with the given sourceState.
 */
+func (*QSignalTransition) NewForInherit_1(sender QObject_ITF /*777 const QObject **/, signal string, sourceState QState_ITF /*777 QState **/) *QSignalTransition {
+	return NewQSignalTransition_1(sender, signal, sourceState)
+}
 func NewQSignalTransition_1(sender QObject_ITF /*777 const QObject **/, signal string, sourceState QState_ITF /*777 QState **/) *QSignalTransition {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
@@ -163,6 +172,9 @@ func NewQSignalTransition_1(sender QObject_ITF /*777 const QObject **/, signal s
 /*
 Constructs a new signal transition with the given sourceState.
 */
+func (*QSignalTransition) NewForInherit_1_(sender QObject_ITF /*777 const QObject **/, signal string) *QSignalTransition {
+	return NewQSignalTransition_1_(sender, signal)
+}
 func NewQSignalTransition_1_(sender QObject_ITF /*777 const QObject **/, signal string) *QSignalTransition {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {

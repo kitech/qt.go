@@ -86,6 +86,9 @@ func (this *QDateEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 /*
 
  */
+func (*QDateEdit) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
+	return NewQDateEdit(parent)
+}
 func NewQDateEdit(parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQDateEdit(parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
 /*
 
  */
+func (*QDateEdit) NewForInherit__() *QDateEdit {
+	return NewQDateEdit__()
+}
 func NewQDateEdit__() *QDateEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -124,6 +130,9 @@ func NewQDateEdit__() *QDateEdit {
 /*
 
  */
+func (*QDateEdit) NewForInherit_1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
+	return NewQDateEdit_1(date, parent)
+}
 func NewQDateEdit_1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
@@ -148,6 +157,9 @@ func NewQDateEdit_1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/)
 /*
 
  */
+func (*QDateEdit) NewForInherit_1_(date qtcore.QDate_ITF) *QDateEdit {
+	return NewQDateEdit_1_(date)
+}
 func NewQDateEdit_1_(date qtcore.QDate_ITF) *QDateEdit {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {

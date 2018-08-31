@@ -86,6 +86,9 @@ func (this *QWinJumpList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 /*
 Constructs a QWinJumpList with the parent object parent.
 */
+func (*QWinJumpList) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QWinJumpList {
+	return NewQWinJumpList(parent)
+}
 func NewQWinJumpList(parent qtcore.QObject_ITF /*777 QObject **/) *QWinJumpList {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -106,6 +109,9 @@ func NewQWinJumpList(parent qtcore.QObject_ITF /*777 QObject **/) *QWinJumpList 
 /*
 Constructs a QWinJumpList with the parent object parent.
 */
+func (*QWinJumpList) NewForInherit__() *QWinJumpList {
+	return NewQWinJumpList__()
+}
 func NewQWinJumpList__() *QWinJumpList {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

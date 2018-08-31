@@ -106,6 +106,9 @@ func (this *QKeySequenceEdit) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 /*
 Constructs a QKeySequenceEdit widget with the given parent.
 */
+func (*QKeySequenceEdit) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
+	return NewQKeySequenceEdit(parent)
+}
 func NewQKeySequenceEdit(parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -126,6 +129,9 @@ func NewQKeySequenceEdit(parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit
 /*
 Constructs a QKeySequenceEdit widget with the given parent.
 */
+func (*QKeySequenceEdit) NewForInherit__() *QKeySequenceEdit {
+	return NewQKeySequenceEdit__()
+}
 func NewQKeySequenceEdit__() *QKeySequenceEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -144,6 +150,9 @@ func NewQKeySequenceEdit__() *QKeySequenceEdit {
 /*
 Constructs a QKeySequenceEdit widget with the given parent.
 */
+func (*QKeySequenceEdit) NewForInherit_1(keySequence qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
+	return NewQKeySequenceEdit_1(keySequence, parent)
+}
 func NewQKeySequenceEdit_1(keySequence qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
 	var convArg0 unsafe.Pointer
 	if keySequence != nil && keySequence.QKeySequence_PTR() != nil {
@@ -168,6 +177,9 @@ func NewQKeySequenceEdit_1(keySequence qtgui.QKeySequence_ITF, parent QWidget_IT
 /*
 Constructs a QKeySequenceEdit widget with the given parent.
 */
+func (*QKeySequenceEdit) NewForInherit_1_(keySequence qtgui.QKeySequence_ITF) *QKeySequenceEdit {
+	return NewQKeySequenceEdit_1_(keySequence)
+}
 func NewQKeySequenceEdit_1_(keySequence qtgui.QKeySequence_ITF) *QKeySequenceEdit {
 	var convArg0 unsafe.Pointer
 	if keySequence != nil && keySequence.QKeySequence_PTR() != nil {

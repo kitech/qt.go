@@ -72,6 +72,9 @@ func (*QPersistentModelIndex) NewFromPointer(cthis unsafe.Pointer) *QPersistentM
 /*
 
  */
+func (*QPersistentModelIndex) NewForInherit() *QPersistentModelIndex {
+	return NewQPersistentModelIndex()
+}
 func NewQPersistentModelIndex() *QPersistentModelIndex {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QPersistentModelIndexC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQPersistentModelIndex() *QPersistentModelIndex {
 /*
 
  */
+func (*QPersistentModelIndex) NewForInherit_1(index QModelIndex_ITF) *QPersistentModelIndex {
+	return NewQPersistentModelIndex_1(index)
+}
 func NewQPersistentModelIndex_1(index QModelIndex_ITF) *QPersistentModelIndex {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {

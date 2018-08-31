@@ -74,6 +74,9 @@ func (*QGraphicsSceneMouseEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 /*
 
  */
+func (*QGraphicsSceneMouseEvent) NewForInherit(type_ int) *QGraphicsSceneMouseEvent {
+	return NewQGraphicsSceneMouseEvent(type_)
+}
 func NewQGraphicsSceneMouseEvent(type_ int) *QGraphicsSceneMouseEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQGraphicsSceneMouseEvent(type_ int) *QGraphicsSceneMouseEvent {
 /*
 
  */
+func (*QGraphicsSceneMouseEvent) NewForInherit__() *QGraphicsSceneMouseEvent {
+	return NewQGraphicsSceneMouseEvent__()
+}
 func NewQGraphicsSceneMouseEvent__() *QGraphicsSceneMouseEvent {
 	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum, , Invalid
 	type_ := 0

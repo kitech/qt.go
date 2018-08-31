@@ -74,6 +74,9 @@ func (*QScrollerProperties) NewFromPointer(cthis unsafe.Pointer) *QScrollerPrope
 /*
 Constructs new scroller properties.
 */
+func (*QScrollerProperties) NewForInherit() *QScrollerProperties {
+	return NewQScrollerProperties()
+}
 func NewQScrollerProperties() *QScrollerProperties {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QScrollerPropertiesC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

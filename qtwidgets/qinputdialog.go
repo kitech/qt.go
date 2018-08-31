@@ -88,6 +88,9 @@ Constructs a new input dialog with the given parent and window flags.
 
 This function was introduced in  Qt 4.5.
 */
+func (*QInputDialog) NewForInherit(parent QWidget_ITF /*777 QWidget **/, flags int) *QInputDialog {
+	return NewQInputDialog(parent, flags)
+}
 func NewQInputDialog(parent QWidget_ITF /*777 QWidget **/, flags int) *QInputDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -110,6 +113,9 @@ Constructs a new input dialog with the given parent and window flags.
 
 This function was introduced in  Qt 4.5.
 */
+func (*QInputDialog) NewForInherit__() *QInputDialog {
+	return NewQInputDialog__()
+}
 func NewQInputDialog__() *QInputDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -132,6 +138,9 @@ Constructs a new input dialog with the given parent and window flags.
 
 This function was introduced in  Qt 4.5.
 */
+func (*QInputDialog) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QInputDialog {
+	return NewQInputDialog__1(parent)
+}
 func NewQInputDialog__1(parent QWidget_ITF /*777 QWidget **/) *QInputDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

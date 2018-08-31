@@ -72,6 +72,9 @@ func (*QTimeZone) NewFromPointer(cthis unsafe.Pointer) *QTimeZone {
 /*
 Create a null/invalid time zone instance.
 */
+func (*QTimeZone) NewForInherit() *QTimeZone {
+	return NewQTimeZone()
+}
 func NewQTimeZone() *QTimeZone {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZoneC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQTimeZone() *QTimeZone {
 /*
 Create a null/invalid time zone instance.
 */
+func (*QTimeZone) NewForInherit_1(ianaId QByteArray_ITF) *QTimeZone {
+	return NewQTimeZone_1(ianaId)
+}
 func NewQTimeZone_1(ianaId QByteArray_ITF) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if ianaId != nil && ianaId.QByteArray_PTR() != nil {
@@ -108,6 +114,9 @@ func NewQTimeZone_1(ianaId QByteArray_ITF) *QTimeZone {
 /*
 Create a null/invalid time zone instance.
 */
+func (*QTimeZone) NewForInherit_2(offsetSeconds int) *QTimeZone {
+	return NewQTimeZone_2(offsetSeconds)
+}
 func NewQTimeZone_2(offsetSeconds int) *QTimeZone {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZoneC2Ei", qtrt.FFI_TYPE_POINTER, offsetSeconds)
 	qtrt.ErrPrint(err, rv)
@@ -124,6 +133,9 @@ func NewQTimeZone_2(offsetSeconds int) *QTimeZone {
 /*
 Create a null/invalid time zone instance.
 */
+func (*QTimeZone) NewForInherit_3(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int, comment string) *QTimeZone {
+	return NewQTimeZone_3(zoneId, offsetSeconds, name, abbreviation, country, comment)
+}
 func NewQTimeZone_3(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int, comment string) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if zoneId != nil && zoneId.QByteArray_PTR() != nil {
@@ -150,6 +162,9 @@ func NewQTimeZone_3(zoneId QByteArray_ITF, offsetSeconds int, name string, abbre
 /*
 Create a null/invalid time zone instance.
 */
+func (*QTimeZone) NewForInherit_3_(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string) *QTimeZone {
+	return NewQTimeZone_3_(zoneId, offsetSeconds, name, abbreviation)
+}
 func NewQTimeZone_3_(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if zoneId != nil && zoneId.QByteArray_PTR() != nil {
@@ -178,6 +193,9 @@ func NewQTimeZone_3_(zoneId QByteArray_ITF, offsetSeconds int, name string, abbr
 /*
 Create a null/invalid time zone instance.
 */
+func (*QTimeZone) NewForInherit_3_1(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int) *QTimeZone {
+	return NewQTimeZone_3_1(zoneId, offsetSeconds, name, abbreviation, country)
+}
 func NewQTimeZone_3_1(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if zoneId != nil && zoneId.QByteArray_PTR() != nil {

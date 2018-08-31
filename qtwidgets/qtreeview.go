@@ -263,6 +263,9 @@ Constructs a tree view with a parent to represent a model's data. Use setModel()
 
 See also QAbstractItemModel.
 */
+func (*QTreeView) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTreeView {
+	return NewQTreeView(parent)
+}
 func NewQTreeView(parent QWidget_ITF /*777 QWidget **/) *QTreeView {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -285,6 +288,9 @@ Constructs a tree view with a parent to represent a model's data. Use setModel()
 
 See also QAbstractItemModel.
 */
+func (*QTreeView) NewForInherit__() *QTreeView {
+	return NewQTreeView__()
+}
 func NewQTreeView__() *QTreeView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

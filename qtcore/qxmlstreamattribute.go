@@ -72,6 +72,9 @@ func (*QXmlStreamAttribute) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamAttr
 /*
 
  */
+func (*QXmlStreamAttribute) NewForInherit() *QXmlStreamAttribute {
+	return NewQXmlStreamAttribute()
+}
 func NewQXmlStreamAttribute() *QXmlStreamAttribute {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamAttributeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQXmlStreamAttribute() *QXmlStreamAttribute {
 /*
 
  */
+func (*QXmlStreamAttribute) NewForInherit_1(qualifiedName string, value string) *QXmlStreamAttribute {
+	return NewQXmlStreamAttribute_1(qualifiedName, value)
+}
 func NewQXmlStreamAttribute_1(qualifiedName string, value string) *QXmlStreamAttribute {
 	var tmpArg0 = NewQString_5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -108,6 +114,9 @@ func NewQXmlStreamAttribute_1(qualifiedName string, value string) *QXmlStreamAtt
 /*
 
  */
+func (*QXmlStreamAttribute) NewForInherit_2(namespaceUri string, name string, value string) *QXmlStreamAttribute {
+	return NewQXmlStreamAttribute_2(namespaceUri, name, value)
+}
 func NewQXmlStreamAttribute_2(namespaceUri string, name string, value string) *QXmlStreamAttribute {
 	var tmpArg0 = NewQString_5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()

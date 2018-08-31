@@ -71,6 +71,9 @@ func (*QPaintEvent) NewFromPointer(cthis unsafe.Pointer) *QPaintEvent {
 /*
 
  */
+func (*QPaintEvent) NewForInherit(paintRegion QRegion_ITF) *QPaintEvent {
+	return NewQPaintEvent(paintRegion)
+}
 func NewQPaintEvent(paintRegion QRegion_ITF) *QPaintEvent {
 	var convArg0 unsafe.Pointer
 	if paintRegion != nil && paintRegion.QRegion_PTR() != nil {
@@ -91,6 +94,9 @@ func NewQPaintEvent(paintRegion QRegion_ITF) *QPaintEvent {
 /*
 
  */
+func (*QPaintEvent) NewForInherit_1(paintRect qtcore.QRect_ITF) *QPaintEvent {
+	return NewQPaintEvent_1(paintRect)
+}
 func NewQPaintEvent_1(paintRect qtcore.QRect_ITF) *QPaintEvent {
 	var convArg0 unsafe.Pointer
 	if paintRect != nil && paintRect.QRect_PTR() != nil {

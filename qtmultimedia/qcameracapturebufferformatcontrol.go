@@ -148,6 +148,9 @@ func (this *QCameraCaptureBufferFormatControl) BufferFormatChanged(arg0 int) {
 /*
 Constructs a new image buffer capture format control object with the given parent
 */
+func (*QCameraCaptureBufferFormatControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraCaptureBufferFormatControl {
+	return NewQCameraCaptureBufferFormatControl(parent)
+}
 func NewQCameraCaptureBufferFormatControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraCaptureBufferFormatControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -168,6 +171,9 @@ func NewQCameraCaptureBufferFormatControl(parent qtcore.QObject_ITF /*777 QObjec
 /*
 Constructs a new image buffer capture format control object with the given parent
 */
+func (*QCameraCaptureBufferFormatControl) NewForInherit__() *QCameraCaptureBufferFormatControl {
+	return NewQCameraCaptureBufferFormatControl__()
+}
 func NewQCameraCaptureBufferFormatControl__() *QCameraCaptureBufferFormatControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -76,6 +76,9 @@ Note that an empty QFileInfo object contain no file reference.
 
 See also setFile().
 */
+func (*QFileInfo) NewForInherit() *QFileInfo {
+	return NewQFileInfo()
+}
 func NewQFileInfo() *QFileInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfoC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -96,6 +99,9 @@ Note that an empty QFileInfo object contain no file reference.
 
 See also setFile().
 */
+func (*QFileInfo) NewForInherit_1(file string) *QFileInfo {
+	return NewQFileInfo_1(file)
+}
 func NewQFileInfo_1(file string) *QFileInfo {
 	var tmpArg0 = NewQString_5(file)
 	var convArg0 = tmpArg0.GetCthis()
@@ -118,6 +124,9 @@ Note that an empty QFileInfo object contain no file reference.
 
 See also setFile().
 */
+func (*QFileInfo) NewForInherit_2(file QFile_ITF) *QFileInfo {
+	return NewQFileInfo_2(file)
+}
 func NewQFileInfo_2(file QFile_ITF) *QFileInfo {
 	var convArg0 unsafe.Pointer
 	if file != nil && file.QFile_PTR() != nil {
@@ -142,6 +151,9 @@ Note that an empty QFileInfo object contain no file reference.
 
 See also setFile().
 */
+func (*QFileInfo) NewForInherit_3(dir QDir_ITF, file string) *QFileInfo {
+	return NewQFileInfo_3(dir, file)
+}
 func NewQFileInfo_3(dir QDir_ITF, file string) *QFileInfo {
 	var convArg0 unsafe.Pointer
 	if dir != nil && dir.QDir_PTR() != nil {

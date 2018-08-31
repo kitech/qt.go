@@ -178,6 +178,9 @@ func (this *QAudioEncoderSettingsControl) SetAudioSettings(arg0 QAudioEncoderSet
 /*
 Create a new audio encoder settings control object with the given parent.
 */
+func (*QAudioEncoderSettingsControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioEncoderSettingsControl {
+	return NewQAudioEncoderSettingsControl(parent)
+}
 func NewQAudioEncoderSettingsControl(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioEncoderSettingsControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -198,6 +201,9 @@ func NewQAudioEncoderSettingsControl(parent qtcore.QObject_ITF /*777 QObject **/
 /*
 Create a new audio encoder settings control object with the given parent.
 */
+func (*QAudioEncoderSettingsControl) NewForInherit__() *QAudioEncoderSettingsControl {
+	return NewQAudioEncoderSettingsControl__()
+}
 func NewQAudioEncoderSettingsControl__() *QAudioEncoderSettingsControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

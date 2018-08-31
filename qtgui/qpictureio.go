@@ -73,6 +73,9 @@ func (*QPictureIO) NewFromPointer(cthis unsafe.Pointer) *QPictureIO {
 /*
 
  */
+func (*QPictureIO) NewForInherit() *QPictureIO {
+	return NewQPictureIO()
+}
 func NewQPictureIO() *QPictureIO {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIOC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQPictureIO() *QPictureIO {
 /*
 
  */
+func (*QPictureIO) NewForInherit_1(ioDevice qtcore.QIODevice_ITF /*777 QIODevice **/, format string) *QPictureIO {
+	return NewQPictureIO_1(ioDevice, format)
+}
 func NewQPictureIO_1(ioDevice qtcore.QIODevice_ITF /*777 QIODevice **/, format string) *QPictureIO {
 	var convArg0 unsafe.Pointer
 	if ioDevice != nil && ioDevice.QIODevice_PTR() != nil {
@@ -111,6 +117,9 @@ func NewQPictureIO_1(ioDevice qtcore.QIODevice_ITF /*777 QIODevice **/, format s
 /*
 
  */
+func (*QPictureIO) NewForInherit_2(fileName string, format string) *QPictureIO {
+	return NewQPictureIO_2(fileName, format)
+}
 func NewQPictureIO_2(fileName string, format string) *QPictureIO {
 	var tmpArg0 = qtcore.NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

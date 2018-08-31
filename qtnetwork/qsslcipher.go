@@ -73,6 +73,9 @@ func (*QSslCipher) NewFromPointer(cthis unsafe.Pointer) *QSslCipher {
 /*
 Constructs an empty QSslCipher object.
 */
+func (*QSslCipher) NewForInherit() *QSslCipher {
+	return NewQSslCipher()
+}
 func NewQSslCipher() *QSslCipher {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslCipherC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQSslCipher() *QSslCipher {
 /*
 Constructs an empty QSslCipher object.
 */
+func (*QSslCipher) NewForInherit_1(name string) *QSslCipher {
+	return NewQSslCipher_1(name)
+}
 func NewQSslCipher_1(name string) *QSslCipher {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()
@@ -107,6 +113,9 @@ func NewQSslCipher_1(name string) *QSslCipher {
 /*
 Constructs an empty QSslCipher object.
 */
+func (*QSslCipher) NewForInherit_2(name string, protocol int) *QSslCipher {
+	return NewQSslCipher_2(name, protocol)
+}
 func NewQSslCipher_2(name string, protocol int) *QSslCipher {
 	var tmpArg0 = qtcore.NewQString_5(name)
 	var convArg0 = tmpArg0.GetCthis()

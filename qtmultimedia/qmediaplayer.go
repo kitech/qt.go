@@ -87,6 +87,9 @@ func (this *QMediaPlayer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 /*
 Construct a QMediaPlayer instance parented to parent and with flags.
 */
+func (*QMediaPlayer) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/, flags int) *QMediaPlayer {
+	return NewQMediaPlayer(parent, flags)
+}
 func NewQMediaPlayer(parent qtcore.QObject_ITF /*777 QObject **/, flags int) *QMediaPlayer {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQMediaPlayer(parent qtcore.QObject_ITF /*777 QObject **/, flags int) *QM
 /*
 Construct a QMediaPlayer instance parented to parent and with flags.
 */
+func (*QMediaPlayer) NewForInherit__() *QMediaPlayer {
+	return NewQMediaPlayer__()
+}
 func NewQMediaPlayer__() *QMediaPlayer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -127,6 +133,9 @@ func NewQMediaPlayer__() *QMediaPlayer {
 /*
 Construct a QMediaPlayer instance parented to parent and with flags.
 */
+func (*QMediaPlayer) NewForInherit__1(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlayer {
+	return NewQMediaPlayer__1(parent)
+}
 func NewQMediaPlayer__1(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlayer {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

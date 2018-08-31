@@ -121,6 +121,9 @@ func (this *QTreeWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Constructs a tree widget with the given parent.
 */
+func (*QTreeWidget) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTreeWidget {
+	return NewQTreeWidget(parent)
+}
 func NewQTreeWidget(parent QWidget_ITF /*777 QWidget **/) *QTreeWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -141,6 +144,9 @@ func NewQTreeWidget(parent QWidget_ITF /*777 QWidget **/) *QTreeWidget {
 /*
 Constructs a tree widget with the given parent.
 */
+func (*QTreeWidget) NewForInherit__() *QTreeWidget {
+	return NewQTreeWidget__()
+}
 func NewQTreeWidget__() *QTreeWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

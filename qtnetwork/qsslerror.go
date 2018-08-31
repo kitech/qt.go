@@ -73,6 +73,9 @@ func (*QSslError) NewFromPointer(cthis unsafe.Pointer) *QSslError {
 /*
 Constructs a QSslError object with no error and default certificate.
 */
+func (*QSslError) NewForInherit() *QSslError {
+	return NewQSslError()
+}
 func NewQSslError() *QSslError {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQSslError() *QSslError {
 /*
 Constructs a QSslError object with no error and default certificate.
 */
+func (*QSslError) NewForInherit_1(error int) *QSslError {
+	return NewQSslError_1(error)
+}
 func NewQSslError_1(error int) *QSslError {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorE", qtrt.FFI_TYPE_POINTER, error)
 	qtrt.ErrPrint(err, rv)
@@ -105,6 +111,9 @@ func NewQSslError_1(error int) *QSslError {
 /*
 Constructs a QSslError object with no error and default certificate.
 */
+func (*QSslError) NewForInherit_2(error int, certificate QSslCertificate_ITF) *QSslError {
+	return NewQSslError_2(error, certificate)
+}
 func NewQSslError_2(error int, certificate QSslCertificate_ITF) *QSslError {
 	var convArg1 unsafe.Pointer
 	if certificate != nil && certificate.QSslCertificate_PTR() != nil {

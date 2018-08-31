@@ -185,6 +185,9 @@ func (this *QQuickWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 /*
 
  */
+func (*QQuickWidget) NewForInherit(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
+	return NewQQuickWidget(parent)
+}
 func NewQQuickWidget(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -205,6 +208,9 @@ func NewQQuickWidget(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidg
 /*
 
  */
+func (*QQuickWidget) NewForInherit__() *QQuickWidget {
+	return NewQQuickWidget__()
+}
 func NewQQuickWidget__() *QQuickWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -223,6 +229,9 @@ func NewQQuickWidget__() *QQuickWidget {
 /*
 
  */
+func (*QQuickWidget) NewForInherit_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
+	return NewQQuickWidget_1(engine, parent)
+}
 func NewQQuickWidget_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QQmlEngine_PTR() != nil {
@@ -247,6 +256,9 @@ func NewQQuickWidget_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent 
 /*
 
  */
+func (*QQuickWidget) NewForInherit_2(source qtcore.QUrl_ITF, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
+	return NewQQuickWidget_2(source, parent)
+}
 func NewQQuickWidget_2(source qtcore.QUrl_ITF, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
 	var convArg0 unsafe.Pointer
 	if source != nil && source.QUrl_PTR() != nil {
@@ -271,6 +283,9 @@ func NewQQuickWidget_2(source qtcore.QUrl_ITF, parent qtwidgets.QWidget_ITF /*77
 /*
 
  */
+func (*QQuickWidget) NewForInherit_2_(source qtcore.QUrl_ITF) *QQuickWidget {
+	return NewQQuickWidget_2_(source)
+}
 func NewQQuickWidget_2_(source qtcore.QUrl_ITF) *QQuickWidget {
 	var convArg0 unsafe.Pointer
 	if source != nil && source.QUrl_PTR() != nil {

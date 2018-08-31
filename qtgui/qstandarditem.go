@@ -83,6 +83,9 @@ func (*QStandardItem) NewFromPointer(cthis unsafe.Pointer) *QStandardItem {
 /*
 
  */
+func (*QStandardItem) NewForInherit() *QStandardItem {
+	return NewQStandardItem()
+}
 func NewQStandardItem() *QStandardItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -99,6 +102,9 @@ func NewQStandardItem() *QStandardItem {
 /*
 
  */
+func (*QStandardItem) NewForInherit_1(text string) *QStandardItem {
+	return NewQStandardItem_1(text)
+}
 func NewQStandardItem_1(text string) *QStandardItem {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -117,6 +123,9 @@ func NewQStandardItem_1(text string) *QStandardItem {
 /*
 
  */
+func (*QStandardItem) NewForInherit_2(icon QIcon_ITF, text string) *QStandardItem {
+	return NewQStandardItem_2(icon, text)
+}
 func NewQStandardItem_2(icon QIcon_ITF, text string) *QStandardItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -139,6 +148,9 @@ func NewQStandardItem_2(icon QIcon_ITF, text string) *QStandardItem {
 /*
 
  */
+func (*QStandardItem) NewForInherit_3(rows int, columns int) *QStandardItem {
+	return NewQStandardItem_3(rows, columns)
+}
 func NewQStandardItem_3(rows int, columns int) *QStandardItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemC2Eii", qtrt.FFI_TYPE_POINTER, rows, columns)
 	qtrt.ErrPrint(err, rv)
@@ -155,6 +167,9 @@ func NewQStandardItem_3(rows int, columns int) *QStandardItem {
 /*
 
  */
+func (*QStandardItem) NewForInherit_3_(rows int) *QStandardItem {
+	return NewQStandardItem_3_(rows)
+}
 func NewQStandardItem_3_(rows int) *QStandardItem {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	columns := int(1)

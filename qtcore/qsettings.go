@@ -100,6 +100,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit(organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
+	return NewQSettings(organization, application, parent)
+}
 func NewQSettings(organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
 	var tmpArg0 = NewQString_5(organization)
 	var convArg0 = tmpArg0.GetCthis()
@@ -135,6 +138,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit__(organization string) *QSettings {
+	return NewQSettings__(organization)
+}
 func NewQSettings__(organization string) *QSettings {
 	var tmpArg0 = NewQString_5(organization)
 	var convArg0 = tmpArg0.GetCthis()
@@ -168,6 +174,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit__1(organization string, application string) *QSettings {
+	return NewQSettings__1(organization, application)
+}
 func NewQSettings__1(organization string, application string) *QSettings {
 	var tmpArg0 = NewQString_5(organization)
 	var convArg0 = tmpArg0.GetCthis()
@@ -201,6 +210,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit_1(scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
+	return NewQSettings_1(scope, organization, application, parent)
+}
 func NewQSettings_1(scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
 	var tmpArg1 = NewQString_5(organization)
 	var convArg1 = tmpArg1.GetCthis()
@@ -236,6 +248,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit_1_(scope int, organization string) *QSettings {
+	return NewQSettings_1_(scope, organization)
+}
 func NewQSettings_1_(scope int, organization string) *QSettings {
 	var tmpArg1 = NewQString_5(organization)
 	var convArg1 = tmpArg1.GetCthis()
@@ -269,6 +284,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit_1_1(scope int, organization string, application string) *QSettings {
+	return NewQSettings_1_1(scope, organization, application)
+}
 func NewQSettings_1_1(scope int, organization string, application string) *QSettings {
 	var tmpArg1 = NewQString_5(organization)
 	var convArg1 = tmpArg1.GetCthis()
@@ -302,6 +320,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit_2(format int, scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
+	return NewQSettings_2(format, scope, organization, application, parent)
+}
 func NewQSettings_2(format int, scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
 	var tmpArg2 = NewQString_5(organization)
 	var convArg2 = tmpArg2.GetCthis()
@@ -337,6 +358,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit_2_(format int, scope int, organization string) *QSettings {
+	return NewQSettings_2_(format, scope, organization)
+}
 func NewQSettings_2_(format int, scope int, organization string) *QSettings {
 	var tmpArg2 = NewQString_5(organization)
 	var convArg2 = tmpArg2.GetCthis()
@@ -370,6 +394,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit_2_1(format int, scope int, organization string, application string) *QSettings {
+	return NewQSettings_2_1(format, scope, organization, application)
+}
 func NewQSettings_2_1(format int, scope int, organization string, application string) *QSettings {
 	var tmpArg2 = NewQString_5(organization)
 	var convArg2 = tmpArg2.GetCthis()
@@ -403,6 +430,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit_3(fileName string, format int, parent QObject_ITF /*777 QObject **/) *QSettings {
+	return NewQSettings_3(fileName, format, parent)
+}
 func NewQSettings_3(fileName string, format int, parent QObject_ITF /*777 QObject **/) *QSettings {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -436,6 +466,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit_3_(fileName string, format int) *QSettings {
+	return NewQSettings_3_(fileName, format)
+}
 func NewQSettings_3_(fileName string, format int) *QSettings {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -467,6 +500,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit_4(parent QObject_ITF /*777 QObject **/) *QSettings {
+	return NewQSettings_4(parent)
+}
 func NewQSettings_4(parent QObject_ITF /*777 QObject **/) *QSettings {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -498,6 +534,9 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
+func (*QSettings) NewForInherit_4_() *QSettings {
+	return NewQSettings_4_()
+}
 func NewQSettings_4_() *QSettings {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

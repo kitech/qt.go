@@ -73,6 +73,9 @@ func (*QDnsMailExchangeRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsMailExc
 /*
 
  */
+func (*QDnsMailExchangeRecord) NewForInherit() *QDnsMailExchangeRecord {
+	return NewQDnsMailExchangeRecord()
+}
 func NewQDnsMailExchangeRecord() *QDnsMailExchangeRecord {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QDnsMailExchangeRecordC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -73,6 +73,9 @@ func (*QPainterPath) NewFromPointer(cthis unsafe.Pointer) *QPainterPath {
 /*
 Constructs an empty QPainterPath object.
 */
+func (*QPainterPath) NewForInherit() *QPainterPath {
+	return NewQPainterPath()
+}
 func NewQPainterPath() *QPainterPath {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPathC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQPainterPath() *QPainterPath {
 /*
 Constructs an empty QPainterPath object.
 */
+func (*QPainterPath) NewForInherit_1(startPoint qtcore.QPointF_ITF) *QPainterPath {
+	return NewQPainterPath_1(startPoint)
+}
 func NewQPainterPath_1(startPoint qtcore.QPointF_ITF) *QPainterPath {
 	var convArg0 unsafe.Pointer
 	if startPoint != nil && startPoint.QPointF_PTR() != nil {

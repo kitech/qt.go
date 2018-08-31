@@ -74,6 +74,9 @@ func (*QQmlProperty) NewFromPointer(cthis unsafe.Pointer) *QQmlProperty {
 /*
 Create an invalid QQmlProperty.
 */
+func (*QQmlProperty) NewForInherit() *QQmlProperty {
+	return NewQQmlProperty()
+}
 func NewQQmlProperty() *QQmlProperty {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -90,6 +93,9 @@ func NewQQmlProperty() *QQmlProperty {
 /*
 Create an invalid QQmlProperty.
 */
+func (*QQmlProperty) NewForInherit_1(arg0 qtcore.QObject_ITF /*777 QObject **/) *QQmlProperty {
+	return NewQQmlProperty_1(arg0)
+}
 func NewQQmlProperty_1(arg0 qtcore.QObject_ITF /*777 QObject **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -110,6 +116,9 @@ func NewQQmlProperty_1(arg0 qtcore.QObject_ITF /*777 QObject **/) *QQmlProperty 
 /*
 Create an invalid QQmlProperty.
 */
+func (*QQmlProperty) NewForInherit_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
+	return NewQQmlProperty_2(arg0, arg1)
+}
 func NewQQmlProperty_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -134,6 +143,9 @@ func NewQQmlProperty_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlConte
 /*
 Create an invalid QQmlProperty.
 */
+func (*QQmlProperty) NewForInherit_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
+	return NewQQmlProperty_3(arg0, arg1)
+}
 func NewQQmlProperty_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -158,6 +170,9 @@ func NewQQmlProperty_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlEngin
 /*
 Create an invalid QQmlProperty.
 */
+func (*QQmlProperty) NewForInherit_4(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) *QQmlProperty {
+	return NewQQmlProperty_4(arg0, arg1)
+}
 func NewQQmlProperty_4(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -180,6 +195,9 @@ func NewQQmlProperty_4(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) *
 /*
 Create an invalid QQmlProperty.
 */
+func (*QQmlProperty) NewForInherit_5(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
+	return NewQQmlProperty_5(arg0, arg1, arg2)
+}
 func NewQQmlProperty_5(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -206,6 +224,9 @@ func NewQQmlProperty_5(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, a
 /*
 Create an invalid QQmlProperty.
 */
+func (*QQmlProperty) NewForInherit_6(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
+	return NewQQmlProperty_6(arg0, arg1, arg2)
+}
 func NewQQmlProperty_6(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {

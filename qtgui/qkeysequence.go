@@ -73,6 +73,9 @@ func (*QKeySequence) NewFromPointer(cthis unsafe.Pointer) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
+func (*QKeySequence) NewForInherit() *QKeySequence {
+	return NewQKeySequence()
+}
 func NewQKeySequence() *QKeySequence {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQKeySequence() *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
+func (*QKeySequence) NewForInherit_1(key string, format int) *QKeySequence {
+	return NewQKeySequence_1(key, format)
+}
 func NewQKeySequence_1(key string, format int) *QKeySequence {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -107,6 +113,9 @@ func NewQKeySequence_1(key string, format int) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
+func (*QKeySequence) NewForInherit_1_(key string) *QKeySequence {
+	return NewQKeySequence_1_(key)
+}
 func NewQKeySequence_1_(key string) *QKeySequence {
 	var tmpArg0 = qtcore.NewQString_5(key)
 	var convArg0 = tmpArg0.GetCthis()
@@ -127,6 +136,9 @@ func NewQKeySequence_1_(key string) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
+func (*QKeySequence) NewForInherit_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
+	return NewQKeySequence_2(k1, k2, k3, k4)
+}
 func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
 	qtrt.ErrPrint(err, rv)
@@ -143,6 +155,9 @@ func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
+func (*QKeySequence) NewForInherit_2_(k1 int) *QKeySequence {
+	return NewQKeySequence_2_(k1)
+}
 func NewQKeySequence_2_(k1 int) *QKeySequence {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	k2 := int(0)
@@ -165,6 +180,9 @@ func NewQKeySequence_2_(k1 int) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
+func (*QKeySequence) NewForInherit_2_1(k1 int, k2 int) *QKeySequence {
+	return NewQKeySequence_2_1(k1, k2)
+}
 func NewQKeySequence_2_1(k1 int, k2 int) *QKeySequence {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	k3 := int(0)
@@ -185,6 +203,9 @@ func NewQKeySequence_2_1(k1 int, k2 int) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
+func (*QKeySequence) NewForInherit_2_2(k1 int, k2 int, k3 int) *QKeySequence {
+	return NewQKeySequence_2_2(k1, k2, k3)
+}
 func NewQKeySequence_2_2(k1 int, k2 int, k3 int) *QKeySequence {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	k4 := int(0)
@@ -203,6 +224,9 @@ func NewQKeySequence_2_2(k1 int, k2 int, k3 int) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
+func (*QKeySequence) NewForInherit_3(key int) *QKeySequence {
+	return NewQKeySequence_3(key)
+}
 func NewQKeySequence_3(key int) *QKeySequence {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2ENS_11StandardKeyE", qtrt.FFI_TYPE_POINTER, key)
 	qtrt.ErrPrint(err, rv)

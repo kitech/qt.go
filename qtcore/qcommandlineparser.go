@@ -72,6 +72,9 @@ func (*QCommandLineParser) NewFromPointer(cthis unsafe.Pointer) *QCommandLinePar
 /*
 Constructs a command line parser object.
 */
+func (*QCommandLineParser) NewForInherit() *QCommandLineParser {
+	return NewQCommandLineParser()
+}
 func NewQCommandLineParser() *QCommandLineParser {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParserC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

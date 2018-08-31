@@ -87,6 +87,9 @@ func (this *QAudioInput) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Construct a new audio input and attach it to parent. The default audio input device is used with the output format parameters.
 */
+func (*QAudioInput) NewForInherit(format QAudioFormat_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QAudioInput {
+	return NewQAudioInput(format, parent)
+}
 func NewQAudioInput(format QAudioFormat_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QAudioInput {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QAudioFormat_PTR() != nil {
@@ -111,6 +114,9 @@ func NewQAudioInput(format QAudioFormat_ITF, parent qtcore.QObject_ITF /*777 QOb
 /*
 Construct a new audio input and attach it to parent. The default audio input device is used with the output format parameters.
 */
+func (*QAudioInput) NewForInherit__() *QAudioInput {
+	return NewQAudioInput__()
+}
 func NewQAudioInput__() *QAudioInput {
 	// arg: 0, const QAudioFormat &=LValueReference, QAudioFormat=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -131,6 +137,9 @@ func NewQAudioInput__() *QAudioInput {
 /*
 Construct a new audio input and attach it to parent. The default audio input device is used with the output format parameters.
 */
+func (*QAudioInput) NewForInherit__1(format QAudioFormat_ITF) *QAudioInput {
+	return NewQAudioInput__1(format)
+}
 func NewQAudioInput__1(format QAudioFormat_ITF) *QAudioInput {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QAudioFormat_PTR() != nil {
@@ -153,6 +162,9 @@ func NewQAudioInput__1(format QAudioFormat_ITF) *QAudioInput {
 /*
 Construct a new audio input and attach it to parent. The default audio input device is used with the output format parameters.
 */
+func (*QAudioInput) NewForInherit_1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QAudioInput {
+	return NewQAudioInput_1(audioDeviceInfo, format, parent)
+}
 func NewQAudioInput_1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QAudioInput {
 	var convArg0 unsafe.Pointer
 	if audioDeviceInfo != nil && audioDeviceInfo.QAudioDeviceInfo_PTR() != nil {
@@ -181,6 +193,9 @@ func NewQAudioInput_1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_
 /*
 Construct a new audio input and attach it to parent. The default audio input device is used with the output format parameters.
 */
+func (*QAudioInput) NewForInherit_1_(audioDeviceInfo QAudioDeviceInfo_ITF) *QAudioInput {
+	return NewQAudioInput_1_(audioDeviceInfo)
+}
 func NewQAudioInput_1_(audioDeviceInfo QAudioDeviceInfo_ITF) *QAudioInput {
 	var convArg0 unsafe.Pointer
 	if audioDeviceInfo != nil && audioDeviceInfo.QAudioDeviceInfo_PTR() != nil {
@@ -205,6 +220,9 @@ func NewQAudioInput_1_(audioDeviceInfo QAudioDeviceInfo_ITF) *QAudioInput {
 /*
 Construct a new audio input and attach it to parent. The default audio input device is used with the output format parameters.
 */
+func (*QAudioInput) NewForInherit_1_1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF) *QAudioInput {
+	return NewQAudioInput_1_1(audioDeviceInfo, format)
+}
 func NewQAudioInput_1_1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF) *QAudioInput {
 	var convArg0 unsafe.Pointer
 	if audioDeviceInfo != nil && audioDeviceInfo.QAudioDeviceInfo_PTR() != nil {

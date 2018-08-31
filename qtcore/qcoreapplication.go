@@ -93,6 +93,9 @@ The argc and argv arguments are processed by the application, and made available
 
 Warning: The data referred to by argc and argv must stay valid for the entire lifetime of the QCoreApplication object. In addition, argc must be greater than zero and argv must contain at least one valid character string.
 */
+func (*QCoreApplication) NewForInherit(argc int, argv []string, arg2 int) *QCoreApplication {
+	return NewQCoreApplication(argc, argv, arg2)
+}
 func NewQCoreApplication(argc int, argv []string, arg2 int) *QCoreApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplicationC2ERiPPci", qtrt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
@@ -114,6 +117,9 @@ The argc and argv arguments are processed by the application, and made available
 
 Warning: The data referred to by argc and argv must stay valid for the entire lifetime of the QCoreApplication object. In addition, argc must be greater than zero and argv must contain at least one valid character string.
 */
+func (*QCoreApplication) NewForInherit__(argc int, argv []string) *QCoreApplication {
+	return NewQCoreApplication__(argc, argv)
+}
 func NewQCoreApplication__(argc int, argv []string) *QCoreApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	// arg: 2, int=Int, =Invalid, , Invalid

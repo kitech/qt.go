@@ -111,6 +111,9 @@ func (this *QToolBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 /*
 Constructs a new toolbox with the given parent and the flags, f.
 */
+func (*QToolBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/, f int) *QToolBox {
+	return NewQToolBox(parent, f)
+}
 func NewQToolBox(parent QWidget_ITF /*777 QWidget **/, f int) *QToolBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -131,6 +134,9 @@ func NewQToolBox(parent QWidget_ITF /*777 QWidget **/, f int) *QToolBox {
 /*
 Constructs a new toolbox with the given parent and the flags, f.
 */
+func (*QToolBox) NewForInherit__() *QToolBox {
+	return NewQToolBox__()
+}
 func NewQToolBox__() *QToolBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -151,6 +157,9 @@ func NewQToolBox__() *QToolBox {
 /*
 Constructs a new toolbox with the given parent and the flags, f.
 */
+func (*QToolBox) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QToolBox {
+	return NewQToolBox__1(parent)
+}
 func NewQToolBox__1(parent QWidget_ITF /*777 QWidget **/) *QToolBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

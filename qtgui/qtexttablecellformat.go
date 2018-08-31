@@ -71,6 +71,9 @@ func (*QTextTableCellFormat) NewFromPointer(cthis unsafe.Pointer) *QTextTableCel
 /*
 
  */
+func (*QTextTableCellFormat) NewForInherit() *QTextTableCellFormat {
+	return NewQTextTableCellFormat()
+}
 func NewQTextTableCellFormat() *QTextTableCellFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QTextTableCellFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +90,9 @@ func NewQTextTableCellFormat() *QTextTableCellFormat {
 /*
 
  */
+func (*QTextTableCellFormat) NewForInherit_1(fmt_ QTextFormat_ITF) *QTextTableCellFormat {
+	return NewQTextTableCellFormat_1(fmt_)
+}
 func NewQTextTableCellFormat_1(fmt_ QTextFormat_ITF) *QTextTableCellFormat {
 	var convArg0 unsafe.Pointer
 	if fmt_ != nil && fmt_.QTextFormat_PTR() != nil {

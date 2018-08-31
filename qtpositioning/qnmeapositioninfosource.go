@@ -90,6 +90,9 @@ func (this *QNmeaPositionInfoSource) MetaObject() *qtcore.QMetaObject /*777 cons
 /*
 Constructs a QNmeaPositionInfoSource instance with the given parent and updateMode.
 */
+func (*QNmeaPositionInfoSource) NewForInherit(updateMode int, parent qtcore.QObject_ITF /*777 QObject **/) *QNmeaPositionInfoSource {
+	return NewQNmeaPositionInfoSource(updateMode, parent)
+}
 func NewQNmeaPositionInfoSource(updateMode int, parent qtcore.QObject_ITF /*777 QObject **/) *QNmeaPositionInfoSource {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -110,6 +113,9 @@ func NewQNmeaPositionInfoSource(updateMode int, parent qtcore.QObject_ITF /*777 
 /*
 Constructs a QNmeaPositionInfoSource instance with the given parent and updateMode.
 */
+func (*QNmeaPositionInfoSource) NewForInherit__(updateMode int) *QNmeaPositionInfoSource {
+	return NewQNmeaPositionInfoSource__(updateMode)
+}
 func NewQNmeaPositionInfoSource__(updateMode int) *QNmeaPositionInfoSource {
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer

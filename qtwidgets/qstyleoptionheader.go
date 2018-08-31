@@ -72,6 +72,9 @@ func (*QStyleOptionHeader) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionHea
 /*
 
  */
+func (*QStyleOptionHeader) NewForInherit() *QStyleOptionHeader {
+	return NewQStyleOptionHeader()
+}
 func NewQStyleOptionHeader() *QStyleOptionHeader {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStyleOptionHeader() *QStyleOptionHeader {
 /*
 
  */
+func (*QStyleOptionHeader) NewForInherit_1(version int) *QStyleOptionHeader {
+	return NewQStyleOptionHeader_1(version)
+}
 func NewQStyleOptionHeader_1(version int) *QStyleOptionHeader {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)

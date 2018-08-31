@@ -290,6 +290,9 @@ Note that the X11 version of Qt may not be able to deliver all combinations of s
 
 See also windowFlags.
 */
+func (*QWidget) NewForInherit(parent QWidget_ITF /*777 QWidget **/, f int) *QWidget {
+	return NewQWidget(parent, f)
+}
 func NewQWidget(parent QWidget_ITF /*777 QWidget **/, f int) *QWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -320,6 +323,9 @@ Note that the X11 version of Qt may not be able to deliver all combinations of s
 
 See also windowFlags.
 */
+func (*QWidget) NewForInherit__() *QWidget {
+	return NewQWidget__()
+}
 func NewQWidget__() *QWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -350,6 +356,9 @@ Note that the X11 version of Qt may not be able to deliver all combinations of s
 
 See also windowFlags.
 */
+func (*QWidget) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QWidget {
+	return NewQWidget__1(parent)
+}
 func NewQWidget__1(parent QWidget_ITF /*777 QWidget **/) *QWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {

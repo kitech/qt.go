@@ -126,6 +126,9 @@ func (this *QSplitterHandle) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 /*
 
  */
+func (*QSplitterHandle) NewForInherit(o int, parent QSplitter_ITF /*777 QSplitter **/) *QSplitterHandle {
+	return NewQSplitterHandle(o, parent)
+}
 func NewQSplitterHandle(o int, parent QSplitter_ITF /*777 QSplitter **/) *QSplitterHandle {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QSplitter_PTR() != nil {

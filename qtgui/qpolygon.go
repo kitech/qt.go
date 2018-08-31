@@ -75,6 +75,9 @@ Constructs a polygon with no points.
 
 See also QVector::isEmpty().
 */
+func (*QPolygon) NewForInherit() *QPolygon {
+	return NewQPolygon()
+}
 func NewQPolygon() *QPolygon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygonC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs a polygon with no points.
 
 See also QVector::isEmpty().
 */
+func (*QPolygon) NewForInherit_1(size int) *QPolygon {
+	return NewQPolygon_1(size)
+}
 func NewQPolygon_1(size int) *QPolygon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygonC2Ei", qtrt.FFI_TYPE_POINTER, size)
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +117,9 @@ Constructs a polygon with no points.
 
 See also QVector::isEmpty().
 */
+func (*QPolygon) NewForInherit_2(r qtcore.QRect_ITF, closed bool) *QPolygon {
+	return NewQPolygon_2(r, closed)
+}
 func NewQPolygon_2(r qtcore.QRect_ITF, closed bool) *QPolygon {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -133,6 +142,9 @@ Constructs a polygon with no points.
 
 See also QVector::isEmpty().
 */
+func (*QPolygon) NewForInherit_2_(r qtcore.QRect_ITF) *QPolygon {
+	return NewQPolygon_2_(r)
+}
 func NewQPolygon_2_(r qtcore.QRect_ITF) *QPolygon {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -157,6 +169,9 @@ Constructs a polygon with no points.
 
 See also QVector::isEmpty().
 */
+func (*QPolygon) NewForInherit_3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
+	return NewQPolygon_3(nPoints, points)
+}
 func NewQPolygon_3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygonC2EiPKi", qtrt.FFI_TYPE_POINTER, nPoints, points)
 	qtrt.ErrPrint(err, rv)

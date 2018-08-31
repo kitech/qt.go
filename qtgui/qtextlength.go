@@ -73,6 +73,9 @@ func (*QTextLength) NewFromPointer(cthis unsafe.Pointer) *QTextLength {
 /*
 
  */
+func (*QTextLength) NewForInherit() *QTextLength {
+	return NewQTextLength()
+}
 func NewQTextLength() *QTextLength {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLengthC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -89,6 +92,9 @@ func NewQTextLength() *QTextLength {
 /*
 
  */
+func (*QTextLength) NewForInherit_1(type_ int, value float64) *QTextLength {
+	return NewQTextLength_1(type_, value)
+}
 func NewQTextLength_1(type_ int, value float64) *QTextLength {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLengthC2ENS_4TypeEd", qtrt.FFI_TYPE_POINTER, type_, value)
 	qtrt.ErrPrint(err, rv)

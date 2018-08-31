@@ -85,6 +85,9 @@ func (this *QDoubleValidator) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 /*
 
  */
+func (*QDoubleValidator) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleValidator {
+	return NewQDoubleValidator(parent)
+}
 func NewQDoubleValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleValidator {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -105,6 +108,9 @@ func NewQDoubleValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleVa
 /*
 
  */
+func (*QDoubleValidator) NewForInherit__() *QDoubleValidator {
+	return NewQDoubleValidator__()
+}
 func NewQDoubleValidator__() *QDoubleValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -123,6 +129,9 @@ func NewQDoubleValidator__() *QDoubleValidator {
 /*
 
  */
+func (*QDoubleValidator) NewForInherit_1(bottom float64, top float64, decimals int, parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleValidator {
+	return NewQDoubleValidator_1(bottom, top, decimals, parent)
+}
 func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleValidator {
 	var convArg3 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -143,6 +152,9 @@ func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent qtc
 /*
 
  */
+func (*QDoubleValidator) NewForInherit_1_(bottom float64, top float64, decimals int) *QDoubleValidator {
+	return NewQDoubleValidator_1_(bottom, top, decimals)
+}
 func NewQDoubleValidator_1_(bottom float64, top float64, decimals int) *QDoubleValidator {
 	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer

@@ -106,6 +106,9 @@ Constructs the QAbstractAnimation base class, and passes parent to QObject's con
 
 See also QVariantAnimation and QAnimationGroup.
 */
+func (*QAbstractAnimation) NewForInherit(parent QObject_ITF /*777 QObject **/) *QAbstractAnimation {
+	return NewQAbstractAnimation(parent)
+}
 func NewQAbstractAnimation(parent QObject_ITF /*777 QObject **/) *QAbstractAnimation {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -128,6 +131,9 @@ Constructs the QAbstractAnimation base class, and passes parent to QObject's con
 
 See also QVariantAnimation and QAnimationGroup.
 */
+func (*QAbstractAnimation) NewForInherit__() *QAbstractAnimation {
+	return NewQAbstractAnimation__()
+}
 func NewQAbstractAnimation__() *QAbstractAnimation {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

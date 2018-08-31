@@ -157,6 +157,9 @@ Setting parent to 0 constructs an object with no parent. If the object is a widg
 
 See also parent(), findChild(), and findChildren().
 */
+func (*QObject) NewForInherit(parent QObject_ITF /*777 QObject **/) *QObject {
+	return NewQObject(parent)
+}
 func NewQObject(parent QObject_ITF /*777 QObject **/) *QObject {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -185,6 +188,9 @@ Setting parent to 0 constructs an object with no parent. If the object is a widg
 
 See also parent(), findChild(), and findChildren().
 */
+func (*QObject) NewForInherit__() *QObject {
+	return NewQObject__()
+}
 func NewQObject__() *QObject {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -98,6 +98,9 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
+func (*QDialogButtonBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+	return NewQDialogButtonBox(parent)
+}
 func NewQDialogButtonBox(parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -120,6 +123,9 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
+func (*QDialogButtonBox) NewForInherit__() *QDialogButtonBox {
+	return NewQDialogButtonBox__()
+}
 func NewQDialogButtonBox__() *QDialogButtonBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -140,6 +146,9 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
+func (*QDialogButtonBox) NewForInherit_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+	return NewQDialogButtonBox_1(orientation, parent)
+}
 func NewQDialogButtonBox_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -162,6 +171,9 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
+func (*QDialogButtonBox) NewForInherit_1_(orientation int) *QDialogButtonBox {
+	return NewQDialogButtonBox_1_(orientation)
+}
 func NewQDialogButtonBox_1_(orientation int) *QDialogButtonBox {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -182,6 +194,9 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
+func (*QDialogButtonBox) NewForInherit_2(buttons int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+	return NewQDialogButtonBox_2(buttons, parent)
+}
 func NewQDialogButtonBox_2(buttons int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -204,6 +219,9 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
+func (*QDialogButtonBox) NewForInherit_2_(buttons int) *QDialogButtonBox {
+	return NewQDialogButtonBox_2_(buttons)
+}
 func NewQDialogButtonBox_2_(buttons int) *QDialogButtonBox {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -224,6 +242,9 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
+func (*QDialogButtonBox) NewForInherit_3(buttons int, orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+	return NewQDialogButtonBox_3(buttons, orientation, parent)
+}
 func NewQDialogButtonBox_3(buttons int, orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -246,6 +267,9 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
+func (*QDialogButtonBox) NewForInherit_3_(buttons int, orientation int) *QDialogButtonBox {
+	return NewQDialogButtonBox_3_(buttons, orientation)
+}
 func NewQDialogButtonBox_3_(buttons int, orientation int) *QDialogButtonBox {
 	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer

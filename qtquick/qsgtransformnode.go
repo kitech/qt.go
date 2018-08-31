@@ -74,6 +74,9 @@ func (*QSGTransformNode) NewFromPointer(cthis unsafe.Pointer) *QSGTransformNode 
 /*
 
  */
+func (*QSGTransformNode) NewForInherit() *QSGTransformNode {
+	return NewQSGTransformNode()
+}
 func NewQSGTransformNode() *QSGTransformNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGTransformNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

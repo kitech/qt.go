@@ -85,6 +85,9 @@ func (this *QGeoAreaMonitorSource) MetaObject() *qtcore.QMetaObject /*777 const 
 /*
 Creates a monitor with the given parent.
 */
+func (*QGeoAreaMonitorSource) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGeoAreaMonitorSource {
+	return NewQGeoAreaMonitorSource(parent)
+}
 func NewQGeoAreaMonitorSource(parent qtcore.QObject_ITF /*777 QObject **/) *QGeoAreaMonitorSource {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

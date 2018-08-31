@@ -71,6 +71,9 @@ func (*QInputEvent) NewFromPointer(cthis unsafe.Pointer) *QInputEvent {
 /*
 
  */
+func (*QInputEvent) NewForInherit(type_ int, modifiers int) *QInputEvent {
+	return NewQInputEvent(type_, modifiers)
+}
 func NewQInputEvent(type_ int, modifiers int) *QInputEvent {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QInputEventC2EN6QEvent4TypeE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, type_, modifiers)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +90,9 @@ func NewQInputEvent(type_ int, modifiers int) *QInputEvent {
 /*
 
  */
+func (*QInputEvent) NewForInherit__(type_ int) *QInputEvent {
+	return NewQInputEvent__(type_)
+}
 func NewQInputEvent__(type_ int) *QInputEvent {
 	// arg: 1, Qt::KeyboardModifiers=Elaborated, Qt::KeyboardModifiers=Typedef, QFlags<Qt::KeyboardModifier>, Unexposed
 	modifiers := 0

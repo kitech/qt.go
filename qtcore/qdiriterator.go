@@ -80,6 +80,9 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
+func (*QDirIterator) NewForInherit(dir QDir_ITF, flags int) *QDirIterator {
+	return NewQDirIterator(dir, flags)
+}
 func NewQDirIterator(dir QDir_ITF, flags int) *QDirIterator {
 	var convArg0 unsafe.Pointer
 	if dir != nil && dir.QDir_PTR() != nil {
@@ -108,6 +111,9 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
+func (*QDirIterator) NewForInherit__(dir QDir_ITF) *QDirIterator {
+	return NewQDirIterator__(dir)
+}
 func NewQDirIterator__(dir QDir_ITF) *QDirIterator {
 	var convArg0 unsafe.Pointer
 	if dir != nil && dir.QDir_PTR() != nil {
@@ -138,6 +144,9 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
+func (*QDirIterator) NewForInherit_1(path string, flags int) *QDirIterator {
+	return NewQDirIterator_1(path, flags)
+}
 func NewQDirIterator_1(path string, flags int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -164,6 +173,9 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
+func (*QDirIterator) NewForInherit_1_(path string) *QDirIterator {
+	return NewQDirIterator_1_(path)
+}
 func NewQDirIterator_1_(path string) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -192,6 +204,9 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
+func (*QDirIterator) NewForInherit_2(path string, filter int, flags int) *QDirIterator {
+	return NewQDirIterator_2(path, filter, flags)
+}
 func NewQDirIterator_2(path string, filter int, flags int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -218,6 +233,9 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
+func (*QDirIterator) NewForInherit_2_(path string, filter int) *QDirIterator {
+	return NewQDirIterator_2_(path, filter)
+}
 func NewQDirIterator_2_(path string, filter int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -246,6 +264,9 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
+func (*QDirIterator) NewForInherit_3(path string, nameFilters QStringList_ITF, filters int, flags int) *QDirIterator {
+	return NewQDirIterator_3(path, nameFilters, filters, flags)
+}
 func NewQDirIterator_3(path string, nameFilters QStringList_ITF, filters int, flags int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -276,6 +297,9 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
+func (*QDirIterator) NewForInherit_3_(path string, nameFilters QStringList_ITF) *QDirIterator {
+	return NewQDirIterator_3_(path, nameFilters)
+}
 func NewQDirIterator_3_(path string, nameFilters QStringList_ITF) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()
@@ -310,6 +334,9 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
+func (*QDirIterator) NewForInherit_3_1(path string, nameFilters QStringList_ITF, filters int) *QDirIterator {
+	return NewQDirIterator_3_1(path, nameFilters, filters)
+}
 func NewQDirIterator_3_1(path string, nameFilters QStringList_ITF, filters int) *QDirIterator {
 	var tmpArg0 = NewQString_5(path)
 	var convArg0 = tmpArg0.GetCthis()

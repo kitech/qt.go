@@ -71,6 +71,9 @@ func (*QHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QHoverEvent {
 /*
 
  */
+func (*QHoverEvent) NewForInherit(type_ int, pos qtcore.QPointF_ITF, oldPos qtcore.QPointF_ITF, modifiers int) *QHoverEvent {
+	return NewQHoverEvent(type_, pos, oldPos, modifiers)
+}
 func NewQHoverEvent(type_ int, pos qtcore.QPointF_ITF, oldPos qtcore.QPointF_ITF, modifiers int) *QHoverEvent {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -95,6 +98,9 @@ func NewQHoverEvent(type_ int, pos qtcore.QPointF_ITF, oldPos qtcore.QPointF_ITF
 /*
 
  */
+func (*QHoverEvent) NewForInherit__(type_ int, pos qtcore.QPointF_ITF, oldPos qtcore.QPointF_ITF) *QHoverEvent {
+	return NewQHoverEvent__(type_, pos, oldPos)
+}
 func NewQHoverEvent__(type_ int, pos qtcore.QPointF_ITF, oldPos qtcore.QPointF_ITF) *QHoverEvent {
 	var convArg1 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {

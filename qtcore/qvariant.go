@@ -92,6 +92,9 @@ func (*QVariant) NewFromPointer(cthis unsafe.Pointer) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit() *QVariant {
+	return NewQVariant()
+}
 func NewQVariant() *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -108,6 +111,9 @@ func NewQVariant() *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_1(type_ int) *QVariant {
+	return NewQVariant_1(type_)
+}
 func NewQVariant_1(type_ int) *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ENS_4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
@@ -124,6 +130,9 @@ func NewQVariant_1(type_ int) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_2(typeId int, copy unsafe.Pointer /*666*/) *QVariant {
+	return NewQVariant_2(typeId, copy)
+}
 func NewQVariant_2(typeId int, copy unsafe.Pointer /*666*/) *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2EiPKv", qtrt.FFI_TYPE_POINTER, typeId, copy)
 	qtrt.ErrPrint(err, rv)
@@ -140,6 +149,9 @@ func NewQVariant_2(typeId int, copy unsafe.Pointer /*666*/) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_3(typeId int, copy unsafe.Pointer /*666*/, flags uint) *QVariant {
+	return NewQVariant_3(typeId, copy, flags)
+}
 func NewQVariant_3(typeId int, copy unsafe.Pointer /*666*/, flags uint) *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2EiPKvj", qtrt.FFI_TYPE_POINTER, typeId, copy, flags)
 	qtrt.ErrPrint(err, rv)
@@ -156,6 +168,9 @@ func NewQVariant_3(typeId int, copy unsafe.Pointer /*666*/, flags uint) *QVarian
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_4(s QDataStream_ITF) *QVariant {
+	return NewQVariant_4(s)
+}
 func NewQVariant_4(s QDataStream_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QDataStream_PTR() != nil {
@@ -176,6 +191,9 @@ func NewQVariant_4(s QDataStream_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_5(i int) *QVariant {
+	return NewQVariant_5(i)
+}
 func NewQVariant_5(i int) *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2Ei", qtrt.FFI_TYPE_POINTER, i)
 	qtrt.ErrPrint(err, rv)
@@ -192,6 +210,9 @@ func NewQVariant_5(i int) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_6(ui uint) *QVariant {
+	return NewQVariant_6(ui)
+}
 func NewQVariant_6(ui uint) *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2Ej", qtrt.FFI_TYPE_POINTER, ui)
 	qtrt.ErrPrint(err, rv)
@@ -208,6 +229,9 @@ func NewQVariant_6(ui uint) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_7(ll int64) *QVariant {
+	return NewQVariant_7(ll)
+}
 func NewQVariant_7(ll int64) *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2Ex", qtrt.FFI_TYPE_POINTER, ll)
 	qtrt.ErrPrint(err, rv)
@@ -224,6 +248,9 @@ func NewQVariant_7(ll int64) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_8(ull uint64) *QVariant {
+	return NewQVariant_8(ull)
+}
 func NewQVariant_8(ull uint64) *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2Ey", qtrt.FFI_TYPE_POINTER, ull)
 	qtrt.ErrPrint(err, rv)
@@ -240,6 +267,9 @@ func NewQVariant_8(ull uint64) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_9(b bool) *QVariant {
+	return NewQVariant_9(b)
+}
 func NewQVariant_9(b bool) *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2Eb", qtrt.FFI_TYPE_POINTER, b)
 	qtrt.ErrPrint(err, rv)
@@ -256,6 +286,9 @@ func NewQVariant_9(b bool) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_10(d float64) *QVariant {
+	return NewQVariant_10(d)
+}
 func NewQVariant_10(d float64) *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2Ed", qtrt.FFI_TYPE_POINTER, d)
 	qtrt.ErrPrint(err, rv)
@@ -272,6 +305,9 @@ func NewQVariant_10(d float64) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_11(f float32) *QVariant {
+	return NewQVariant_11(f)
+}
 func NewQVariant_11(f float32) *QVariant {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2Ef", qtrt.FFI_TYPE_POINTER, f)
 	qtrt.ErrPrint(err, rv)
@@ -288,6 +324,9 @@ func NewQVariant_11(f float32) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_12(str string) *QVariant {
+	return NewQVariant_12(str)
+}
 func NewQVariant_12(str string) *QVariant {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
@@ -306,6 +345,9 @@ func NewQVariant_12(str string) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_13(bytearray QByteArray_ITF) *QVariant {
+	return NewQVariant_13(bytearray)
+}
 func NewQVariant_13(bytearray QByteArray_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if bytearray != nil && bytearray.QByteArray_PTR() != nil {
@@ -326,6 +368,9 @@ func NewQVariant_13(bytearray QByteArray_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_14(bitarray QBitArray_ITF) *QVariant {
+	return NewQVariant_14(bitarray)
+}
 func NewQVariant_14(bitarray QBitArray_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if bitarray != nil && bitarray.QBitArray_PTR() != nil {
@@ -346,6 +391,9 @@ func NewQVariant_14(bitarray QBitArray_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_15(string string) *QVariant {
+	return NewQVariant_15(string)
+}
 func NewQVariant_15(string string) *QVariant {
 	var tmpArg0 = NewQString_5(string)
 	var convArg0 = tmpArg0.GetCthis()
@@ -364,6 +412,9 @@ func NewQVariant_15(string string) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_16(string QLatin1String_ITF /*123*/) *QVariant {
+	return NewQVariant_16(string)
+}
 func NewQVariant_16(string QLatin1String_ITF /*123*/) *QVariant {
 	var convArg0 unsafe.Pointer
 	if string != nil && string.QLatin1String_PTR() != nil {
@@ -384,6 +435,9 @@ func NewQVariant_16(string QLatin1String_ITF /*123*/) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_17(stringlist QStringList_ITF) *QVariant {
+	return NewQVariant_17(stringlist)
+}
 func NewQVariant_17(stringlist QStringList_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if stringlist != nil && stringlist.QStringList_PTR() != nil {
@@ -404,6 +458,9 @@ func NewQVariant_17(stringlist QStringList_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_18(qchar QChar_ITF /*123*/) *QVariant {
+	return NewQVariant_18(qchar)
+}
 func NewQVariant_18(qchar QChar_ITF /*123*/) *QVariant {
 	var convArg0 unsafe.Pointer
 	if qchar != nil && qchar.QChar_PTR() != nil {
@@ -424,6 +481,9 @@ func NewQVariant_18(qchar QChar_ITF /*123*/) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_19(date QDate_ITF) *QVariant {
+	return NewQVariant_19(date)
+}
 func NewQVariant_19(date QDate_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
@@ -444,6 +504,9 @@ func NewQVariant_19(date QDate_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_20(time QTime_ITF) *QVariant {
+	return NewQVariant_20(time)
+}
 func NewQVariant_20(time QTime_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {
@@ -464,6 +527,9 @@ func NewQVariant_20(time QTime_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_21(datetime QDateTime_ITF) *QVariant {
+	return NewQVariant_21(datetime)
+}
 func NewQVariant_21(datetime QDateTime_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if datetime != nil && datetime.QDateTime_PTR() != nil {
@@ -484,6 +550,9 @@ func NewQVariant_21(datetime QDateTime_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_22(size QSize_ITF) *QVariant {
+	return NewQVariant_22(size)
+}
 func NewQVariant_22(size QSize_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -504,6 +573,9 @@ func NewQVariant_22(size QSize_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_23(size QSizeF_ITF) *QVariant {
+	return NewQVariant_23(size)
+}
 func NewQVariant_23(size QSizeF_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
@@ -524,6 +596,9 @@ func NewQVariant_23(size QSizeF_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_24(pt QPoint_ITF) *QVariant {
+	return NewQVariant_24(pt)
+}
 func NewQVariant_24(pt QPoint_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPoint_PTR() != nil {
@@ -544,6 +619,9 @@ func NewQVariant_24(pt QPoint_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_25(pt QPointF_ITF) *QVariant {
+	return NewQVariant_25(pt)
+}
 func NewQVariant_25(pt QPointF_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPointF_PTR() != nil {
@@ -564,6 +642,9 @@ func NewQVariant_25(pt QPointF_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_26(line QLine_ITF) *QVariant {
+	return NewQVariant_26(line)
+}
 func NewQVariant_26(line QLine_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if line != nil && line.QLine_PTR() != nil {
@@ -584,6 +665,9 @@ func NewQVariant_26(line QLine_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_27(line QLineF_ITF) *QVariant {
+	return NewQVariant_27(line)
+}
 func NewQVariant_27(line QLineF_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if line != nil && line.QLineF_PTR() != nil {
@@ -604,6 +688,9 @@ func NewQVariant_27(line QLineF_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_28(rect QRect_ITF) *QVariant {
+	return NewQVariant_28(rect)
+}
 func NewQVariant_28(rect QRect_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
@@ -624,6 +711,9 @@ func NewQVariant_28(rect QRect_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_29(rect QRectF_ITF) *QVariant {
+	return NewQVariant_29(rect)
+}
 func NewQVariant_29(rect QRectF_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
@@ -644,6 +734,9 @@ func NewQVariant_29(rect QRectF_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_30(locale QLocale_ITF) *QVariant {
+	return NewQVariant_30(locale)
+}
 func NewQVariant_30(locale QLocale_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
@@ -664,6 +757,9 @@ func NewQVariant_30(locale QLocale_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_31(regExp QRegExp_ITF) *QVariant {
+	return NewQVariant_31(regExp)
+}
 func NewQVariant_31(regExp QRegExp_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if regExp != nil && regExp.QRegExp_PTR() != nil {
@@ -684,6 +780,9 @@ func NewQVariant_31(regExp QRegExp_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_32(re QRegularExpression_ITF) *QVariant {
+	return NewQVariant_32(re)
+}
 func NewQVariant_32(re QRegularExpression_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
@@ -704,6 +803,9 @@ func NewQVariant_32(re QRegularExpression_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_33(url QUrl_ITF) *QVariant {
+	return NewQVariant_33(url)
+}
 func NewQVariant_33(url QUrl_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
@@ -724,6 +826,9 @@ func NewQVariant_33(url QUrl_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_34(easing QEasingCurve_ITF) *QVariant {
+	return NewQVariant_34(easing)
+}
 func NewQVariant_34(easing QEasingCurve_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if easing != nil && easing.QEasingCurve_PTR() != nil {
@@ -744,6 +849,9 @@ func NewQVariant_34(easing QEasingCurve_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_35(uuid QUuid_ITF) *QVariant {
+	return NewQVariant_35(uuid)
+}
 func NewQVariant_35(uuid QUuid_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if uuid != nil && uuid.QUuid_PTR() != nil {
@@ -764,6 +872,9 @@ func NewQVariant_35(uuid QUuid_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_36(modelIndex QModelIndex_ITF) *QVariant {
+	return NewQVariant_36(modelIndex)
+}
 func NewQVariant_36(modelIndex QModelIndex_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if modelIndex != nil && modelIndex.QModelIndex_PTR() != nil {
@@ -784,6 +895,9 @@ func NewQVariant_36(modelIndex QModelIndex_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_37(modelIndex QPersistentModelIndex_ITF) *QVariant {
+	return NewQVariant_37(modelIndex)
+}
 func NewQVariant_37(modelIndex QPersistentModelIndex_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if modelIndex != nil && modelIndex.QPersistentModelIndex_PTR() != nil {
@@ -804,6 +918,9 @@ func NewQVariant_37(modelIndex QPersistentModelIndex_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_38(jsonValue QJsonValue_ITF) *QVariant {
+	return NewQVariant_38(jsonValue)
+}
 func NewQVariant_38(jsonValue QJsonValue_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if jsonValue != nil && jsonValue.QJsonValue_PTR() != nil {
@@ -824,6 +941,9 @@ func NewQVariant_38(jsonValue QJsonValue_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_39(jsonObject QJsonObject_ITF) *QVariant {
+	return NewQVariant_39(jsonObject)
+}
 func NewQVariant_39(jsonObject QJsonObject_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if jsonObject != nil && jsonObject.QJsonObject_PTR() != nil {
@@ -844,6 +964,9 @@ func NewQVariant_39(jsonObject QJsonObject_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_40(jsonArray QJsonArray_ITF) *QVariant {
+	return NewQVariant_40(jsonArray)
+}
 func NewQVariant_40(jsonArray QJsonArray_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if jsonArray != nil && jsonArray.QJsonArray_PTR() != nil {
@@ -864,6 +987,9 @@ func NewQVariant_40(jsonArray QJsonArray_ITF) *QVariant {
 /*
 Constructs an invalid variant.
 */
+func (*QVariant) NewForInherit_41(jsonDocument QJsonDocument_ITF) *QVariant {
+	return NewQVariant_41(jsonDocument)
+}
 func NewQVariant_41(jsonDocument QJsonDocument_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if jsonDocument != nil && jsonDocument.QJsonDocument_PTR() != nil {

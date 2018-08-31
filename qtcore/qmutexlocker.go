@@ -72,6 +72,9 @@ func (*QMutexLocker) NewFromPointer(cthis unsafe.Pointer) *QMutexLocker {
 /*
 
  */
+func (*QMutexLocker) NewForInherit(m QBasicMutex_ITF /*777 QBasicMutex **/) *QMutexLocker {
+	return NewQMutexLocker(m)
+}
 func NewQMutexLocker(m QBasicMutex_ITF /*777 QBasicMutex **/) *QMutexLocker {
 	var convArg0 unsafe.Pointer
 	if m != nil && m.QBasicMutex_PTR() != nil {

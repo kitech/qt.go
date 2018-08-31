@@ -236,6 +236,9 @@ func (this *QGraphicsProxyWidget) MetaObject() *qtcore.QMetaObject /*777 const Q
 /*
 Constructs a new QGraphicsProxy widget. parent and wFlags are passed to QGraphicsItem's constructor.
 */
+func (*QGraphicsProxyWidget) NewForInherit(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, wFlags int) *QGraphicsProxyWidget {
+	return NewQGraphicsProxyWidget(parent, wFlags)
+}
 func NewQGraphicsProxyWidget(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, wFlags int) *QGraphicsProxyWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -256,6 +259,9 @@ func NewQGraphicsProxyWidget(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, w
 /*
 Constructs a new QGraphicsProxy widget. parent and wFlags are passed to QGraphicsItem's constructor.
 */
+func (*QGraphicsProxyWidget) NewForInherit__() *QGraphicsProxyWidget {
+	return NewQGraphicsProxyWidget__()
+}
 func NewQGraphicsProxyWidget__() *QGraphicsProxyWidget {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -276,6 +282,9 @@ func NewQGraphicsProxyWidget__() *QGraphicsProxyWidget {
 /*
 Constructs a new QGraphicsProxy widget. parent and wFlags are passed to QGraphicsItem's constructor.
 */
+func (*QGraphicsProxyWidget) NewForInherit__1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsProxyWidget {
+	return NewQGraphicsProxyWidget__1(parent)
+}
 func NewQGraphicsProxyWidget__1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsProxyWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {

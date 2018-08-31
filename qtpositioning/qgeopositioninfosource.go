@@ -85,6 +85,9 @@ func (this *QGeoPositionInfoSource) MetaObject() *qtcore.QMetaObject /*777 const
 /*
 Creates a position source with the specified parent.
 */
+func (*QGeoPositionInfoSource) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QGeoPositionInfoSource {
+	return NewQGeoPositionInfoSource(parent)
+}
 func NewQGeoPositionInfoSource(parent qtcore.QObject_ITF /*777 QObject **/) *QGeoPositionInfoSource {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {

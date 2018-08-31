@@ -75,6 +75,9 @@ Constructs an empty region.
 
 See also isEmpty().
 */
+func (*QRegion) NewForInherit() *QRegion {
+	return NewQRegion()
+}
 func NewQRegion() *QRegion {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -93,6 +96,9 @@ Constructs an empty region.
 
 See also isEmpty().
 */
+func (*QRegion) NewForInherit_1(x int, y int, w int, h int, t int) *QRegion {
+	return NewQRegion_1(x, y, w, h, t)
+}
 func NewQRegion_1(x int, y int, w int, h int, t int) *QRegion {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegionC2EiiiiNS_10RegionTypeE", qtrt.FFI_TYPE_POINTER, x, y, w, h, t)
 	qtrt.ErrPrint(err, rv)
@@ -111,6 +117,9 @@ Constructs an empty region.
 
 See also isEmpty().
 */
+func (*QRegion) NewForInherit_1_(x int, y int, w int, h int) *QRegion {
+	return NewQRegion_1_(x, y, w, h)
+}
 func NewQRegion_1_(x int, y int, w int, h int) *QRegion {
 	// arg: 4, QRegion::RegionType=Enum, QRegion::RegionType=Enum, , Invalid
 	t := 0
@@ -131,6 +140,9 @@ Constructs an empty region.
 
 See also isEmpty().
 */
+func (*QRegion) NewForInherit_2(r qtcore.QRect_ITF, t int) *QRegion {
+	return NewQRegion_2(r, t)
+}
 func NewQRegion_2(r qtcore.QRect_ITF, t int) *QRegion {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -153,6 +165,9 @@ Constructs an empty region.
 
 See also isEmpty().
 */
+func (*QRegion) NewForInherit_2_(r qtcore.QRect_ITF) *QRegion {
+	return NewQRegion_2_(r)
+}
 func NewQRegion_2_(r qtcore.QRect_ITF) *QRegion {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
@@ -177,6 +192,9 @@ Constructs an empty region.
 
 See also isEmpty().
 */
+func (*QRegion) NewForInherit_3(pa QPolygon_ITF, fillRule int) *QRegion {
+	return NewQRegion_3(pa, fillRule)
+}
 func NewQRegion_3(pa QPolygon_ITF, fillRule int) *QRegion {
 	var convArg0 unsafe.Pointer
 	if pa != nil && pa.QPolygon_PTR() != nil {
@@ -199,6 +217,9 @@ Constructs an empty region.
 
 See also isEmpty().
 */
+func (*QRegion) NewForInherit_3_(pa QPolygon_ITF) *QRegion {
+	return NewQRegion_3_(pa)
+}
 func NewQRegion_3_(pa QPolygon_ITF) *QRegion {
 	var convArg0 unsafe.Pointer
 	if pa != nil && pa.QPolygon_PTR() != nil {
@@ -223,6 +244,9 @@ Constructs an empty region.
 
 See also isEmpty().
 */
+func (*QRegion) NewForInherit_4(bitmap QBitmap_ITF) *QRegion {
+	return NewQRegion_4(bitmap)
+}
 func NewQRegion_4(bitmap QBitmap_ITF) *QRegion {
 	var convArg0 unsafe.Pointer
 	if bitmap != nil && bitmap.QBitmap_PTR() != nil {

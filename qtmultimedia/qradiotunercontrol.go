@@ -634,6 +634,9 @@ func (this *QRadioTunerControl) AntennaConnectedChanged(connectionStatus bool) {
 /*
 Constructs a radio tuner control with the given parent.
 */
+func (*QRadioTunerControl) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QRadioTunerControl {
+	return NewQRadioTunerControl(parent)
+}
 func NewQRadioTunerControl(parent qtcore.QObject_ITF /*777 QObject **/) *QRadioTunerControl {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -654,6 +657,9 @@ func NewQRadioTunerControl(parent qtcore.QObject_ITF /*777 QObject **/) *QRadioT
 /*
 Constructs a radio tuner control with the given parent.
 */
+func (*QRadioTunerControl) NewForInherit__() *QRadioTunerControl {
+	return NewQRadioTunerControl__()
+}
 func NewQRadioTunerControl__() *QRadioTunerControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

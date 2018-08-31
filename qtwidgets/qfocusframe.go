@@ -110,6 +110,9 @@ The focus frame will not monitor parent for updates but rather can be placed man
 
 See also QFocusFrame::setWidget().
 */
+func (*QFocusFrame) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QFocusFrame {
+	return NewQFocusFrame(parent)
+}
 func NewQFocusFrame(parent QWidget_ITF /*777 QWidget **/) *QFocusFrame {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -134,6 +137,9 @@ The focus frame will not monitor parent for updates but rather can be placed man
 
 See also QFocusFrame::setWidget().
 */
+func (*QFocusFrame) NewForInherit__() *QFocusFrame {
+	return NewQFocusFrame__()
+}
 func NewQFocusFrame__() *QFocusFrame {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

@@ -73,6 +73,9 @@ func (*QAccessibleEvent) NewFromPointer(cthis unsafe.Pointer) *QAccessibleEvent 
 /*
 
  */
+func (*QAccessibleEvent) NewForInherit(obj qtcore.QObject_ITF /*777 QObject **/, typ int) *QAccessibleEvent {
+	return NewQAccessibleEvent(obj, typ)
+}
 func NewQAccessibleEvent(obj qtcore.QObject_ITF /*777 QObject **/, typ int) *QAccessibleEvent {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
@@ -93,6 +96,9 @@ func NewQAccessibleEvent(obj qtcore.QObject_ITF /*777 QObject **/, typ int) *QAc
 /*
 
  */
+func (*QAccessibleEvent) NewForInherit_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
+	return NewQAccessibleEvent_1(iface, typ)
+}
 func NewQAccessibleEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {

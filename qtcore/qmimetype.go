@@ -72,6 +72,9 @@ func (*QMimeType) NewFromPointer(cthis unsafe.Pointer) *QMimeType {
 /*
 Constructs this QMimeType object initialized with default property values that indicate an invalid MIME type.
 */
+func (*QMimeType) NewForInherit() *QMimeType {
+	return NewQMimeType()
+}
 func NewQMimeType() *QMimeType {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeTypeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

@@ -73,6 +73,9 @@ func (*QRgba64) NewFromPointer(cthis unsafe.Pointer) *QRgba64 {
 /*
 Default constructs an instance of QRgba64.
 */
+func (*QRgba64) NewForInherit() *QRgba64 {
+	return NewQRgba64()
+}
 func NewQRgba64() *QRgba64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRgba64C2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

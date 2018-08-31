@@ -107,6 +107,9 @@ Create a new local socket server with the given parent.
 
 See also listen().
 */
+func (*QLocalServer) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalServer {
+	return NewQLocalServer(parent)
+}
 func NewQLocalServer(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalServer {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -129,6 +132,9 @@ Create a new local socket server with the given parent.
 
 See also listen().
 */
+func (*QLocalServer) NewForInherit__() *QLocalServer {
+	return NewQLocalServer__()
+}
 func NewQLocalServer__() *QLocalServer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

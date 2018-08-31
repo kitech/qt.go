@@ -72,6 +72,9 @@ func (*QItemSelection) NewFromPointer(cthis unsafe.Pointer) *QItemSelection {
 /*
 
  */
+func (*QItemSelection) NewForInherit() *QItemSelection {
+	return NewQItemSelection()
+}
 func NewQItemSelection() *QItemSelection {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelectionC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQItemSelection() *QItemSelection {
 /*
 
  */
+func (*QItemSelection) NewForInherit_1(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) *QItemSelection {
+	return NewQItemSelection_1(topLeft, bottomRight)
+}
 func NewQItemSelection_1(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) *QItemSelection {
 	var convArg0 unsafe.Pointer
 	if topLeft != nil && topLeft.QModelIndex_PTR() != nil {

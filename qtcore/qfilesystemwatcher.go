@@ -84,6 +84,9 @@ func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*777 const QMetaObjec
 /*
 Constructs a new file system watcher object with the given parent.
 */
+func (*QFileSystemWatcher) NewForInherit(parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
+	return NewQFileSystemWatcher(parent)
+}
 func NewQFileSystemWatcher(parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -104,6 +107,9 @@ func NewQFileSystemWatcher(parent QObject_ITF /*777 QObject **/) *QFileSystemWat
 /*
 Constructs a new file system watcher object with the given parent.
 */
+func (*QFileSystemWatcher) NewForInherit__() *QFileSystemWatcher {
+	return NewQFileSystemWatcher__()
+}
 func NewQFileSystemWatcher__() *QFileSystemWatcher {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -122,6 +128,9 @@ func NewQFileSystemWatcher__() *QFileSystemWatcher {
 /*
 Constructs a new file system watcher object with the given parent.
 */
+func (*QFileSystemWatcher) NewForInherit_1(paths QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
+	return NewQFileSystemWatcher_1(paths, parent)
+}
 func NewQFileSystemWatcher_1(paths QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
 	var convArg0 unsafe.Pointer
 	if paths != nil && paths.QStringList_PTR() != nil {
@@ -146,6 +155,9 @@ func NewQFileSystemWatcher_1(paths QStringList_ITF, parent QObject_ITF /*777 QOb
 /*
 Constructs a new file system watcher object with the given parent.
 */
+func (*QFileSystemWatcher) NewForInherit_1_(paths QStringList_ITF) *QFileSystemWatcher {
+	return NewQFileSystemWatcher_1_(paths)
+}
 func NewQFileSystemWatcher_1_(paths QStringList_ITF) *QFileSystemWatcher {
 	var convArg0 unsafe.Pointer
 	if paths != nil && paths.QStringList_PTR() != nil {

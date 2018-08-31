@@ -72,6 +72,9 @@ func (*QMetaClassInfo) NewFromPointer(cthis unsafe.Pointer) *QMetaClassInfo {
 /*
 
  */
+func (*QMetaClassInfo) NewForInherit() *QMetaClassInfo {
+	return NewQMetaClassInfo()
+}
 func NewQMetaClassInfo() *QMetaClassInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMetaClassInfoC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

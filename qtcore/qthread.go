@@ -179,6 +179,9 @@ Constructs a new QThread to manage a new thread. The parent takes ownership of t
 
 See also start().
 */
+func (*QThread) NewForInherit(parent QObject_ITF /*777 QObject **/) *QThread {
+	return NewQThread(parent)
+}
 func NewQThread(parent QObject_ITF /*777 QObject **/) *QThread {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -201,6 +204,9 @@ Constructs a new QThread to manage a new thread. The parent takes ownership of t
 
 See also start().
 */
+func (*QThread) NewForInherit__() *QThread {
+	return NewQThread__()
+}
 func NewQThread__() *QThread {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

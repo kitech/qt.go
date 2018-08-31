@@ -92,6 +92,9 @@ Constructs a QML extension plugin with the given parent.
 
 Note that this constructor is invoked automatically by the Q_PLUGIN_METADATA() macro, so there is no need for calling it explicitly.
 */
+func (*QQmlExtensionPlugin) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlExtensionPlugin {
+	return NewQQmlExtensionPlugin(parent)
+}
 func NewQQmlExtensionPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlExtensionPlugin {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -114,6 +117,9 @@ Constructs a QML extension plugin with the given parent.
 
 Note that this constructor is invoked automatically by the Q_PLUGIN_METADATA() macro, so there is no need for calling it explicitly.
 */
+func (*QQmlExtensionPlugin) NewForInherit__() *QQmlExtensionPlugin {
+	return NewQQmlExtensionPlugin__()
+}
 func NewQQmlExtensionPlugin__() *QQmlExtensionPlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer

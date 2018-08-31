@@ -84,6 +84,9 @@ func (this *QLibrary) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 Constructs a library with the given parent.
 */
+func (*QLibrary) NewForInherit(parent QObject_ITF /*777 QObject **/) *QLibrary {
+	return NewQLibrary(parent)
+}
 func NewQLibrary(parent QObject_ITF /*777 QObject **/) *QLibrary {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -104,6 +107,9 @@ func NewQLibrary(parent QObject_ITF /*777 QObject **/) *QLibrary {
 /*
 Constructs a library with the given parent.
 */
+func (*QLibrary) NewForInherit__() *QLibrary {
+	return NewQLibrary__()
+}
 func NewQLibrary__() *QLibrary {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -122,6 +128,9 @@ func NewQLibrary__() *QLibrary {
 /*
 Constructs a library with the given parent.
 */
+func (*QLibrary) NewForInherit_1(fileName string, parent QObject_ITF /*777 QObject **/) *QLibrary {
+	return NewQLibrary_1(fileName, parent)
+}
 func NewQLibrary_1(fileName string, parent QObject_ITF /*777 QObject **/) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -144,6 +153,9 @@ func NewQLibrary_1(fileName string, parent QObject_ITF /*777 QObject **/) *QLibr
 /*
 Constructs a library with the given parent.
 */
+func (*QLibrary) NewForInherit_1_(fileName string) *QLibrary {
+	return NewQLibrary_1_(fileName)
+}
 func NewQLibrary_1_(fileName string) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -164,6 +176,9 @@ func NewQLibrary_1_(fileName string) *QLibrary {
 /*
 Constructs a library with the given parent.
 */
+func (*QLibrary) NewForInherit_2(fileName string, verNum int, parent QObject_ITF /*777 QObject **/) *QLibrary {
+	return NewQLibrary_2(fileName, verNum, parent)
+}
 func NewQLibrary_2(fileName string, verNum int, parent QObject_ITF /*777 QObject **/) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -186,6 +201,9 @@ func NewQLibrary_2(fileName string, verNum int, parent QObject_ITF /*777 QObject
 /*
 Constructs a library with the given parent.
 */
+func (*QLibrary) NewForInherit_2_(fileName string, verNum int) *QLibrary {
+	return NewQLibrary_2_(fileName, verNum)
+}
 func NewQLibrary_2_(fileName string, verNum int) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -206,6 +224,9 @@ func NewQLibrary_2_(fileName string, verNum int) *QLibrary {
 /*
 Constructs a library with the given parent.
 */
+func (*QLibrary) NewForInherit_3(fileName string, version string, parent QObject_ITF /*777 QObject **/) *QLibrary {
+	return NewQLibrary_3(fileName, version, parent)
+}
 func NewQLibrary_3(fileName string, version string, parent QObject_ITF /*777 QObject **/) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
@@ -230,6 +251,9 @@ func NewQLibrary_3(fileName string, version string, parent QObject_ITF /*777 QOb
 /*
 Constructs a library with the given parent.
 */
+func (*QLibrary) NewForInherit_3_(fileName string, version string) *QLibrary {
+	return NewQLibrary_3_(fileName, version)
+}
 func NewQLibrary_3_(fileName string, version string) *QLibrary {
 	var tmpArg0 = NewQString_5(fileName)
 	var convArg0 = tmpArg0.GetCthis()

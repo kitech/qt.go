@@ -74,6 +74,9 @@ func (*QXmlStreamNotationDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXml
 /*
 
  */
+func (*QXmlStreamNotationDeclaration) NewForInherit() *QXmlStreamNotationDeclaration {
+	return NewQXmlStreamNotationDeclaration()
+}
 func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

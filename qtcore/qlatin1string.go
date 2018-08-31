@@ -72,6 +72,9 @@ func (*QLatin1String) NewFromPointer(cthis unsafe.Pointer) *QLatin1String {
 /*
 
  */
+func (*QLatin1String) NewForInherit() *QLatin1String {
+	return NewQLatin1String()
+}
 func NewQLatin1String() *QLatin1String {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1StringC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQLatin1String() *QLatin1String {
 /*
 
  */
+func (*QLatin1String) NewForInherit_1(s string) *QLatin1String {
+	return NewQLatin1String_1(s)
+}
 func NewQLatin1String_1(s string) *QLatin1String {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
@@ -106,6 +112,9 @@ func NewQLatin1String_1(s string) *QLatin1String {
 /*
 
  */
+func (*QLatin1String) NewForInherit_2(f string, l string) *QLatin1String {
+	return NewQLatin1String_2(f, l)
+}
 func NewQLatin1String_2(f string, l string) *QLatin1String {
 	var convArg0 = qtrt.CString(f)
 	defer qtrt.FreeMem(convArg0)
@@ -126,6 +135,9 @@ func NewQLatin1String_2(f string, l string) *QLatin1String {
 /*
 
  */
+func (*QLatin1String) NewForInherit_3(s string, sz int) *QLatin1String {
+	return NewQLatin1String_3(s, sz)
+}
 func NewQLatin1String_3(s string, sz int) *QLatin1String {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
@@ -144,6 +156,9 @@ func NewQLatin1String_3(s string, sz int) *QLatin1String {
 /*
 
  */
+func (*QLatin1String) NewForInherit_4(s QByteArray_ITF) *QLatin1String {
+	return NewQLatin1String_4(s)
+}
 func NewQLatin1String_4(s QByteArray_ITF) *QLatin1String {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {

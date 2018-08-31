@@ -76,6 +76,9 @@ This function was introduced in  Qt 5.4.
 
 See also isValid() and start().
 */
+func (*QElapsedTimer) NewForInherit() *QElapsedTimer {
+	return NewQElapsedTimer()
+}
 func NewQElapsedTimer() *QElapsedTimer {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimerC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

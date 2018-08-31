@@ -72,6 +72,9 @@ func (*QStyleOptionSizeGrip) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionS
 /*
 
  */
+func (*QStyleOptionSizeGrip) NewForInherit() *QStyleOptionSizeGrip {
+	return NewQStyleOptionSizeGrip()
+}
 func NewQStyleOptionSizeGrip() *QStyleOptionSizeGrip {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -88,6 +91,9 @@ func NewQStyleOptionSizeGrip() *QStyleOptionSizeGrip {
 /*
 
  */
+func (*QStyleOptionSizeGrip) NewForInherit_1(version int) *QStyleOptionSizeGrip {
+	return NewQStyleOptionSizeGrip_1(version)
+}
 func NewQStyleOptionSizeGrip_1(version int) *QStyleOptionSizeGrip {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)

@@ -95,6 +95,9 @@ func (this *QTextDocument) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 /*
 Constructs an empty QTextDocument with the given parent.
 */
+func (*QTextDocument) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocument {
+	return NewQTextDocument(parent)
+}
 func NewQTextDocument(parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocument {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -115,6 +118,9 @@ func NewQTextDocument(parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocumen
 /*
 Constructs an empty QTextDocument with the given parent.
 */
+func (*QTextDocument) NewForInherit__() *QTextDocument {
+	return NewQTextDocument__()
+}
 func NewQTextDocument__() *QTextDocument {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -133,6 +139,9 @@ func NewQTextDocument__() *QTextDocument {
 /*
 Constructs an empty QTextDocument with the given parent.
 */
+func (*QTextDocument) NewForInherit_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocument {
+	return NewQTextDocument_1(text, parent)
+}
 func NewQTextDocument_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocument {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()
@@ -155,6 +164,9 @@ func NewQTextDocument_1(text string, parent qtcore.QObject_ITF /*777 QObject **/
 /*
 Constructs an empty QTextDocument with the given parent.
 */
+func (*QTextDocument) NewForInherit_1_(text string) *QTextDocument {
+	return NewQTextDocument_1_(text)
+}
 func NewQTextDocument_1_(text string) *QTextDocument {
 	var tmpArg0 = qtcore.NewQString_5(text)
 	var convArg0 = tmpArg0.GetCthis()

@@ -116,6 +116,9 @@ func (this *QListWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 /*
 Constructs an empty QListWidget with the given parent.
 */
+func (*QListWidget) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QListWidget {
+	return NewQListWidget(parent)
+}
 func NewQListWidget(parent QWidget_ITF /*777 QWidget **/) *QListWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -136,6 +139,9 @@ func NewQListWidget(parent QWidget_ITF /*777 QWidget **/) *QListWidget {
 /*
 Constructs an empty QListWidget with the given parent.
 */
+func (*QListWidget) NewForInherit__() *QListWidget {
+	return NewQListWidget__()
+}
 func NewQListWidget__() *QListWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer

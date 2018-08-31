@@ -89,6 +89,9 @@ func (*QGraphicsLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayou
 /*
 Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
 */
+func (*QGraphicsLayoutItem) NewForInherit(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, isLayout bool) *QGraphicsLayoutItem {
+	return NewQGraphicsLayoutItem(parent, isLayout)
+}
 func NewQGraphicsLayoutItem(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, isLayout bool) *QGraphicsLayoutItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
@@ -109,6 +112,9 @@ func NewQGraphicsLayoutItem(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayout
 /*
 Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
 */
+func (*QGraphicsLayoutItem) NewForInherit__() *QGraphicsLayoutItem {
+	return NewQGraphicsLayoutItem__()
+}
 func NewQGraphicsLayoutItem__() *QGraphicsLayoutItem {
 	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -129,6 +135,9 @@ func NewQGraphicsLayoutItem__() *QGraphicsLayoutItem {
 /*
 Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
 */
+func (*QGraphicsLayoutItem) NewForInherit__1(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLayoutItem {
+	return NewQGraphicsLayoutItem__1(parent)
+}
 func NewQGraphicsLayoutItem__1(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLayoutItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {

@@ -97,6 +97,9 @@ Constructs a session based on connectionConfig with the given parent.
 
 See also QNetworkConfiguration.
 */
+func (*QNetworkSession) NewForInherit(connConfig QNetworkConfiguration_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkSession {
+	return NewQNetworkSession(connConfig, parent)
+}
 func NewQNetworkSession(connConfig QNetworkConfiguration_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkSession {
 	var convArg0 unsafe.Pointer
 	if connConfig != nil && connConfig.QNetworkConfiguration_PTR() != nil {
@@ -123,6 +126,9 @@ Constructs a session based on connectionConfig with the given parent.
 
 See also QNetworkConfiguration.
 */
+func (*QNetworkSession) NewForInherit__(connConfig QNetworkConfiguration_ITF) *QNetworkSession {
+	return NewQNetworkSession__(connConfig)
+}
 func NewQNetworkSession__(connConfig QNetworkConfiguration_ITF) *QNetworkSession {
 	var convArg0 unsafe.Pointer
 	if connConfig != nil && connConfig.QNetworkConfiguration_PTR() != nil {

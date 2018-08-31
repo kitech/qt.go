@@ -71,6 +71,9 @@ func (*QWheelEvent) NewFromPointer(cthis unsafe.Pointer) *QWheelEvent {
 /*
 
  */
+func (*QWheelEvent) NewForInherit(pos qtcore.QPointF_ITF, delta int, buttons int, modifiers int, orient int) *QWheelEvent {
+	return NewQWheelEvent(pos, delta, buttons, modifiers, orient)
+}
 func NewQWheelEvent(pos qtcore.QPointF_ITF, delta int, buttons int, modifiers int, orient int) *QWheelEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -91,6 +94,9 @@ func NewQWheelEvent(pos qtcore.QPointF_ITF, delta int, buttons int, modifiers in
 /*
 
  */
+func (*QWheelEvent) NewForInherit__(pos qtcore.QPointF_ITF, delta int, buttons int, modifiers int) *QWheelEvent {
+	return NewQWheelEvent__(pos, delta, buttons, modifiers)
+}
 func NewQWheelEvent__(pos qtcore.QPointF_ITF, delta int, buttons int, modifiers int) *QWheelEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -113,6 +119,9 @@ func NewQWheelEvent__(pos qtcore.QPointF_ITF, delta int, buttons int, modifiers 
 /*
 
  */
+func (*QWheelEvent) NewForInherit_1(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, delta int, buttons int, modifiers int, orient int) *QWheelEvent {
+	return NewQWheelEvent_1(pos, globalPos, delta, buttons, modifiers, orient)
+}
 func NewQWheelEvent_1(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, delta int, buttons int, modifiers int, orient int) *QWheelEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -137,6 +146,9 @@ func NewQWheelEvent_1(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, delt
 /*
 
  */
+func (*QWheelEvent) NewForInherit_1_(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, delta int, buttons int, modifiers int) *QWheelEvent {
+	return NewQWheelEvent_1_(pos, globalPos, delta, buttons, modifiers)
+}
 func NewQWheelEvent_1_(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, delta int, buttons int, modifiers int) *QWheelEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -163,6 +175,9 @@ func NewQWheelEvent_1_(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, del
 /*
 
  */
+func (*QWheelEvent) NewForInherit_2(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int) *QWheelEvent {
+	return NewQWheelEvent_2(pos, globalPos, pixelDelta, angleDelta, qt4Delta, qt4Orientation, buttons, modifiers)
+}
 func NewQWheelEvent_2(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int) *QWheelEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -195,6 +210,9 @@ func NewQWheelEvent_2(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixe
 /*
 
  */
+func (*QWheelEvent) NewForInherit_3(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int) *QWheelEvent {
+	return NewQWheelEvent_3(pos, globalPos, pixelDelta, angleDelta, qt4Delta, qt4Orientation, buttons, modifiers, phase)
+}
 func NewQWheelEvent_3(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int) *QWheelEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -227,6 +245,9 @@ func NewQWheelEvent_3(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixe
 /*
 
  */
+func (*QWheelEvent) NewForInherit_4(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int, source int) *QWheelEvent {
+	return NewQWheelEvent_4(pos, globalPos, pixelDelta, angleDelta, qt4Delta, qt4Orientation, buttons, modifiers, phase, source)
+}
 func NewQWheelEvent_4(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int, source int) *QWheelEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -259,6 +280,9 @@ func NewQWheelEvent_4(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixe
 /*
 
  */
+func (*QWheelEvent) NewForInherit_5(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int, source int, inverted bool) *QWheelEvent {
+	return NewQWheelEvent_5(pos, globalPos, pixelDelta, angleDelta, qt4Delta, qt4Orientation, buttons, modifiers, phase, source, inverted)
+}
 func NewQWheelEvent_5(pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF, pixelDelta qtcore.QPoint_ITF /*123*/, angleDelta qtcore.QPoint_ITF /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int, source int, inverted bool) *QWheelEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {

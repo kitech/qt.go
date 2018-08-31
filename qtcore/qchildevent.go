@@ -70,6 +70,9 @@ func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
 /*
 
  */
+func (*QChildEvent) NewForInherit(type_ int, child QObject_ITF /*777 QObject **/) *QChildEvent {
+	return NewQChildEvent(type_, child)
+}
 func NewQChildEvent(type_ int, child QObject_ITF /*777 QObject **/) *QChildEvent {
 	var convArg1 unsafe.Pointer
 	if child != nil && child.QObject_PTR() != nil {

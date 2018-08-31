@@ -88,6 +88,9 @@ func (this *QSGTexture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 /*
 Constructs the QSGTexture base class.
 */
+func (*QSGTexture) NewForInherit() *QSGTexture {
+	return NewQSGTexture()
+}
 func NewQSGTexture() *QSGTexture {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTextureC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)

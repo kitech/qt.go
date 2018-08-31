@@ -71,6 +71,9 @@ func (*QDropEvent) NewFromPointer(cthis unsafe.Pointer) *QDropEvent {
 /*
 
  */
+func (*QDropEvent) NewForInherit(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDropEvent {
+	return NewQDropEvent(pos, actions, data, buttons, modifiers, type_)
+}
 func NewQDropEvent(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDropEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
@@ -95,6 +98,9 @@ func NewQDropEvent(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_IT
 /*
 
  */
+func (*QDropEvent) NewForInherit__(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDropEvent {
+	return NewQDropEvent__(pos, actions, data, buttons, modifiers)
+}
 func NewQDropEvent__(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDropEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {

@@ -71,6 +71,9 @@ func (*QTextListFormat) NewFromPointer(cthis unsafe.Pointer) *QTextListFormat {
 /*
 
  */
+func (*QTextListFormat) NewForInherit() *QTextListFormat {
+	return NewQTextListFormat()
+}
 func NewQTextListFormat() *QTextListFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -87,6 +90,9 @@ func NewQTextListFormat() *QTextListFormat {
 /*
 
  */
+func (*QTextListFormat) NewForInherit_1(fmt_ QTextFormat_ITF) *QTextListFormat {
+	return NewQTextListFormat_1(fmt_)
+}
 func NewQTextListFormat_1(fmt_ QTextFormat_ITF) *QTextListFormat {
 	var convArg0 unsafe.Pointer
 	if fmt_ != nil && fmt_.QTextFormat_PTR() != nil {

@@ -72,6 +72,9 @@ func (*QGraphicsLinearLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLin
 /*
 Constructs a QGraphicsLinearLayout instance using Qt::Horizontal orientation. parent is passed to QGraphicsLayout's constructor.
 */
+func (*QGraphicsLinearLayout) NewForInherit(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
+	return NewQGraphicsLinearLayout(parent)
+}
 func NewQGraphicsLinearLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
@@ -92,6 +95,9 @@ func NewQGraphicsLinearLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayo
 /*
 Constructs a QGraphicsLinearLayout instance using Qt::Horizontal orientation. parent is passed to QGraphicsLayout's constructor.
 */
+func (*QGraphicsLinearLayout) NewForInherit__() *QGraphicsLinearLayout {
+	return NewQGraphicsLinearLayout__()
+}
 func NewQGraphicsLinearLayout__() *QGraphicsLinearLayout {
 	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
@@ -110,6 +116,9 @@ func NewQGraphicsLinearLayout__() *QGraphicsLinearLayout {
 /*
 Constructs a QGraphicsLinearLayout instance using Qt::Horizontal orientation. parent is passed to QGraphicsLayout's constructor.
 */
+func (*QGraphicsLinearLayout) NewForInherit_1(orientation int, parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
+	return NewQGraphicsLinearLayout_1(orientation, parent)
+}
 func NewQGraphicsLinearLayout_1(orientation int, parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
@@ -130,6 +139,9 @@ func NewQGraphicsLinearLayout_1(orientation int, parent QGraphicsLayoutItem_ITF 
 /*
 Constructs a QGraphicsLinearLayout instance using Qt::Horizontal orientation. parent is passed to QGraphicsLayout's constructor.
 */
+func (*QGraphicsLinearLayout) NewForInherit_1_(orientation int) *QGraphicsLinearLayout {
+	return NewQGraphicsLinearLayout_1_(orientation)
+}
 func NewQGraphicsLinearLayout_1_(orientation int) *QGraphicsLinearLayout {
 	// arg: 1, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg1 unsafe.Pointer

@@ -87,6 +87,9 @@ func (this *QNetworkConfigurationManager) MetaObject() *qtcore.QMetaObject /*777
 /*
 
  */
+func (*QNetworkConfigurationManager) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkConfigurationManager {
+	return NewQNetworkConfigurationManager(parent)
+}
 func NewQNetworkConfigurationManager(parent qtcore.QObject_ITF /*777 QObject **/) *QNetworkConfigurationManager {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -107,6 +110,9 @@ func NewQNetworkConfigurationManager(parent qtcore.QObject_ITF /*777 QObject **/
 /*
 
  */
+func (*QNetworkConfigurationManager) NewForInherit__() *QNetworkConfigurationManager {
+	return NewQNetworkConfigurationManager__()
+}
 func NewQNetworkConfigurationManager__() *QNetworkConfigurationManager {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
