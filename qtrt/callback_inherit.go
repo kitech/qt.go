@@ -264,6 +264,7 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 			case reflect.Int:
 			case reflect.Ptr:
 			default:
+				// TODO see also IsQtclass
 				reg := regexp.MustCompile(`^(qt.*\.)?Q[A-Z](.+)`)
 				if reg.MatchString(argd1ty.String()) {
 					prmval := reflect.New(argd1ty)
@@ -309,4 +310,18 @@ func IntAsFloat64(v uint64) (n float64) {
 func IntAsFloat32(v uint64) (n float32) {
 	C.memcpy((unsafe.Pointer(&n)), (unsafe.Pointer(&v)), 4)
 	return
+}
+
+func IsQtclass(tystr string) bool {
+	reg := regexp.MustCompile(`^(qt.*\.)?Q[A-Z](.+)`)
+	return  reg.MatchString(tystr)
+}
+func GetQtclassName (tystr string) string {
+	reg := regexp.MustCompile(`^(qt[a-z]+\.)?(Q[A-Z](.+))`)
+	if reg.MatchString(tystr) {
+		// qt classes
+		mats := reg.FindAllStringSubmatch(tystr, -1)
+		return mats[0][2]
+	}
+	return ""
 }

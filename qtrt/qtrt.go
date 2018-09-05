@@ -54,6 +54,19 @@ func (this *CObject) GetCthis_() unsafe.Pointer {
 	}
 }
 
+// some fixed internal names
+const GetCthisName = "GetCthis"
+const SetCthisName = "SetCthis"
+const DtorCthisName = "DtorCthis"
+const NewCthisName = "NewCthis"
+const SetInitStObjName = "C_%s_init_staticMetaObject"
+
+func GetCthis(obj interface{}) unsafe.Pointer{
+	objval := reflect.ValueOf(obj).Elem()
+	retx := objval.MethodByName(GetCthisName).Call(nil)
+	return retx[0].Interface().(unsafe.Pointer)
+}
+
 ///////////
 var DebugFinalize bool = false
 var FinalizeProxyFn = func(f func()) { f() } //

@@ -191,6 +191,23 @@ func connectqq_impl(sender CObjectITF, signal string, receiver CObjectITF, membe
 	// return int(rv)
 }
 
+func ConnectRaw(sender unsafe.Pointer, signal string, receiver unsafe.Pointer, member string) {
+
+	var convArg0 = sender
+	var convArg1 = CString(signal)
+	defer FreeMem(convArg1)
+	var convArg2 = receiver
+	var convArg3 = CString(member)
+	defer FreeMem(convArg3)
+	var arg4 int = 2 // Qt::QueuedConnection	2
+	rv, err := InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
+	ErrPrint(err, rv)
+
+	// manually fix memory leak of return
+	InvokeQtFunc6("_ZN11QMetaObject10ConnectionD2Ev", FFI_TYPE_VOID, unsafe.Pointer(uintptr(rv)))
+	// return int(rv)
+}
+
 // 这个可以简化connect时的书写。仅在只有一个同名的情况下适用。
 func QObjectGetSignatureByName(qobj CObjectITF, name string) (string, error) {
 	var convArg1 = CString(name)

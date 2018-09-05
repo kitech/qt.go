@@ -11,22 +11,27 @@ func Derive(obj interface{}, pargs ...[]interface{}) {
 func Underive(obj interface{}) {}
 
 type WantAsQClass struct {
-	*qtcore.QThread  `qt:inherit` // 要继承的类
-	*qtcore.QProcess `qt:inherit`
+	*qtcore.QThread  `qt:"inherit"` // 要继承的类
+	*qtcore.QProcess `qt:"inherit"`
 
-	_ struct{} `qt:classinfo,appName=12345s`  //
-	_ struct{} `qt:classinfo,appCorp=hehehhe` //
+	_ struct{} `qt:"classinfo" key:"12345s" value:"hehehhe"` //
 
-	Prop123 int    `qt:property,123` // 最后字段为默认值
-	Prop456 string `qt:property,"testv123"`
-	Enum123 AType  `qt:enum` // 就怕无法支持
+	Prop123 int    `qt:"property" value:"123"` // 最后字段为默认值
+	Prop456 string `qt:"property" value:"testv123"`
+	// Enum123 AType  `qt:enum` // 就怕无法支持
 
-	_          Q_SIGNALS_BEGIN
-	Clicked123 func(bool) `qt:signal`
+	_          qtmeta.Q_SIGNALS_BEGIN
+	Clicked123 func(bool) `qt:"signal"`
 
-	_ func(int)     `qt:slot,SlotFunc1` // 如果为小写则为私有slot, 大写为公有slot
-	_ func(float32) `qt:slot,SlotFunc2`
+	_SlotFunc1 func(int)     `qt:"slot"` // Prefix _ of real method name
+	_SlotFunc2 func(float32) `qt:"slot"`
+	_SlotFunc3 func()        `qt:"slot"`
 }
+
+func (this *WantAsQClass) SlotFunc1(int) {}
+func (this *WantAsQClass) SlotFunc2(float32) {}
+func (this *WantAsQClass) SlotFunc3() {}
+
 
 func NewWantAsQClass() *WantAsQClass {
 	this := &WantAsQClass{}
