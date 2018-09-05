@@ -56,16 +56,10 @@ type QArrayData struct {
 type QByteArrayData QArrayData
 type QByteArrayData2 [24]byte
 
-type SliceHeader struct {
-	Data uintptr
-	Len  int
-	Cap  int
-}
 
 // Data 是 StringData0的索引
 // 用于存储元数据中的字符串
 // new, append, final, get/count, to*, dump
-type QtMetaStringDataRaw []byte
 type QtMetaStringData struct {
 	Data        []QByteArrayData
 	StringData0 []byte
@@ -75,7 +69,6 @@ type QtMetaStringData struct {
 }
 
 func NewQtMetaStringData() *QtMetaStringData {
-	// ptr := make([]byte, n*int(unsafe.Sizeof(QByteArrayData{})))
 	this := &QtMetaStringData{}
 	this.Data = make([]QByteArrayData, 0)
 	this.StrMap = make(map[string]int)
@@ -94,7 +87,7 @@ func (this *QtMetaStringData) Append(s string) int {
 	this.nextOffset = int64(len(this.StringData0)) + int64(len(s)+1)
 	this.Data[idx] = bav
 	bav = this.Data[idx]
-	log.Println(idx, this.nextOffset, len(s), bav.Offset, bav.Size, bav.Alloc, bav.RefCount, s)
+	// log.Println(idx, this.nextOffset, len(s), bav.Offset, bav.Size, bav.Alloc, bav.RefCount, s)
 	this.StringData0 = append(this.StringData0, []byte(s)...)
 	this.StringData0 = append(this.StringData0, 0)
 
@@ -130,11 +123,9 @@ func memdup(src unsafe.Pointer, len, cap int) unsafe.Pointer {
 
 func (this *QtMetaStringData) ToC() unsafe.Pointer {
 	dptr := unsafe.Pointer(&this.Data[0])
-	log.Println(dptr)
 	f1sz := len(this.StrMap) * int(unsafe.Sizeof(QByteArrayData{}))
 	f2sz := len(this.StringData0)
 	tsz := f1sz + f2sz
-	log.Println(tsz)
 
 	cptr := C.calloc(1, (C.size_t)(tsz))
 	C.memcpy(cptr, dptr, (C.size_t)(f1sz))
@@ -192,8 +183,8 @@ func (this *QtMetaStringData) Dump() string {
 		instrofs += da.Size + 1
 	}
 
+	splen := fmt.Sprintf("len: %d\n", len(this.StringData0))
 	sp2 := ""
-	sp2 += fmt.Sprintf("len: %d\n", len(this.StringData0))
 	for _, c := range string(this.StringData0) {
 		if c == 0 {
 			sp2 += "\\0"
@@ -201,7 +192,7 @@ func (this *QtMetaStringData) Dump() string {
 			sp2 += string(c)
 		}
 	}
-	s := sp1 + "\n" + `"` + sp2 + `"`
+	s := sp1 + "\n" + splen + `"` + sp2 + `"`
 	return s
 }
 
@@ -218,7 +209,7 @@ type QtMetaData struct {
 	MethodCount       uint32
 	MethodOffset      uint32
 	PropertyCount     uint32
-	ProperTyOffset    uint32
+	PropertyOffset    uint32
 	EnumCount         uint32
 	EnumOffset        uint32
 	ConstructorCount  uint32 // always 0
@@ -358,7 +349,6 @@ func (this *QtMetaData) _AddParameter(mth *Method, argty reflect.Type, idx int) 
 	if argty.Kind() == reflect.Ptr && reg.MatchString(argty.Elem().String()) {
 		// qt classes
 		mats := reg.FindAllStringSubmatch(argty.Elem().String(), -1)
-		log.Println(mth.Name, mats)
 		typeid, found := isqtpodty(mats[0][2])
 		if found {
 			prm.TypeId = uint32(typeid)
@@ -386,18 +376,27 @@ func (this *QtMetaData) FinalPass() {
 
 	// calc indexs
 	curpos := uint32(14)
-	this.ClassInfoOffset = curpos
-	this.MethodOffset = curpos + this.ClassInfoCount*2
-	curpos = this.MethodOffset + 5*this.MethodCount
+	if this.ClassInfoCount>0{
+		this.ClassInfoOffset = curpos
+	}
+	curpos += this.ClassInfoCount*2
+	if this.MethodCount > 0 {
+		this.MethodOffset = curpos
+	}
+	curpos +=   5*this.MethodCount
 	for _, mth := range this.Signals {
 		curpos += 1 /*ret*/ + mth.Argc*2
 	}
 	for _, mth := range this.Slots {
 		curpos += 1 /*ret*/ + mth.Argc*2
 	}
-	this.ProperTyOffset = curpos
+	if this.PropertyCount > 0 {
+		this.PropertyOffset = curpos
+	}
 	curpos = curpos + this.PropertyCount*3
-	this.EnumOffset = curpos
+	if this.EnumCount > 0 {
+		this.EnumOffset = curpos
+	}
 
 	// header
 	ivec_append(this.Revision)
@@ -407,7 +406,7 @@ func (this *QtMetaData) FinalPass() {
 	ivec_append(this.MethodCount)
 	ivec_append(this.MethodOffset)
 	ivec_append(this.PropertyCount)
-	ivec_append(this.ProperTyOffset)
+	ivec_append(this.PropertyOffset)
 	ivec_append(this.EnumCount)
 	ivec_append(this.EnumOffset)
 	ivec_append(this.ConstructorCount)
@@ -432,7 +431,6 @@ func (this *QtMetaData) FinalPass() {
 		ivec_append(mth.Flags)   // flags
 	}
 	for midx, mth := range mths {
-		log.Println(midx, len(ivec))
 		mths[midx].ParamOffset = uint32(len(ivec))
 		mthofs := int(this.MethodOffset) + midx*5 + 2
 		ivec_set(mthofs, mths[midx].ParamOffset)
@@ -460,8 +458,8 @@ func (this *QtMetaData) FinalPass() {
 	}
 
 	ivec_append(0) // eof
-	log.Println("meta data total count:", len(ivec), len(ivec)*4,
-		this.MetaStrDat.Count(), len(this.MetaStrDat.ToCs()))
+	// log.Println("meta data total count:", len(ivec), len(ivec)*4,
+	//	this.MetaStrDat.Count(), len(this.MetaStrDat.ToCs()))
 	this.RawData = ivec
 }
 
@@ -487,7 +485,7 @@ func (this *QtMetaData) Dump() string {
 
 	mdo := this
 	s += fmt.Sprintf(hdrfmt, mdo.Revision, mdo.ClassNameIdx, mdo.ClassInfoCount, mdo.ClassInfoOffset,
-		mdo.MethodCount, mdo.MethodOffset, mdo.PropertyCount, mdo.ProperTyOffset,
+		mdo.MethodCount, mdo.MethodOffset, mdo.PropertyCount, mdo.PropertyOffset,
 		mdo.EnumCount, mdo.EnumOffset, mdo.ConstructorCount, mdo.ConstructorOffset,
 		mdo.Flags, mdo.SignalCount)
 
