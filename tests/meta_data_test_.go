@@ -1,11 +1,13 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"testing"
 	"time"
 	"unsafe"
+	"runtime"
 
 	"github.com/kitech/qt.go/qtcore"
 	"github.com/kitech/qt.go/qtmeta"
@@ -29,6 +31,9 @@ type WantAsQClass struct {
 	_SlotFunc2 func(float32) `qt:"slot"`
 	_SlotFunc3 func()        `qt:"slot"`
 }
+func (this *WantAsQClass) SlotFunc1(int) {}
+func (this *WantAsQClass) SlotFunc2(float32) {}
+func (this *WantAsQClass) SlotFunc3() {}
 
 func Test0(t *testing.T) {
 	mdo := qtmeta.NewQtMetaData()
@@ -114,10 +119,15 @@ func Test1(t *testing.T) {
 	log.Println(a.QProcess.GetCthis())
 	log.Println(a.QProcess.MetaObject().ClassName())
 
-	tobj := a.QThread.GetCthis()
-	tmer := qtcore.NewQTimer__()
-	qtrt.ConnectRaw(tmer.GetCthis(), qtrt.QSIGNAL("timeout()"), tobj, qtrt.QSLOT("SlotFunc3()"))
-	tmer.Start(1200)
+	if false {
+		tobj := a.QThread.GetCthis()
+		tmer := qtcore.NewQTimer__()
+		qtrt.ConnectRaw(tmer.GetCthis(), qtrt.QSIGNAL("timeout()"), tobj, qtrt.QSLOT("SlotFunc3()"))
+		tmer.Start(1200)
+
+		a.Clicked123(true)
+	}
+	qtmeta.Underive(a)
 }
 
 func main() {
@@ -128,6 +138,11 @@ func main() {
 	} else {
 		Test1(t)
 	}
+	s := ""
+	for i := 0; i < 100000; i ++ {
+		s += fmt.Sprintf("the num: %d", i)
+	}
+	runtime.GC()
 	if true {
 		qapp.Exec()
 	}

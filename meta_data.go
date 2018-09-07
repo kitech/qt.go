@@ -345,6 +345,7 @@ func (this *QtMetaData) _AddParameter(mth *Method, argty reflect.Type, idx int) 
 		}
 		return
 	}
+	// TODO see also qtrt.GetQtclassName
 	reg := regexp.MustCompile(`^(qt[a-z]+\.)?(Q[A-Z](.+))`)
 	if argty.Kind() == reflect.Ptr && reg.MatchString(argty.Elem().String()) {
 		// qt classes
