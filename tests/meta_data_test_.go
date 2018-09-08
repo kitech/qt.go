@@ -32,9 +32,9 @@ type WantAsQClass struct {
 	_SlotFunc3 func()        `qt:"slot"`
 }
 
-func (this *WantAsQClass) SlotFunc1(int)     {}
-func (this *WantAsQClass) SlotFunc2(float32) {}
-func (this *WantAsQClass) SlotFunc3()        {}
+func (this *WantAsQClass) SlotFunc1(int)     { log.Println("SlotFunc1 called") }
+func (this *WantAsQClass) SlotFunc2(float32) { log.Println("SlotFunc2 called") }
+func (this *WantAsQClass) SlotFunc3()        { log.Println("SlotFunc3 called") }
 
 func Test0(t *testing.T) {
 	mdo := qtmeta.NewQtMetaData()
@@ -121,15 +121,23 @@ func Test1(t *testing.T) interface{} {
 	// log.Println(a.QProcess.MetaObject().ClassName())
 	// a.QProcess == nil
 
-	if false {
+	if true {
 		tobj := a.QThread.GetCthis()
 		tmer := qtcore.NewQTimer__()
+		tmer.SetInterval(3456)
+		// trigger by go side signal, then timeout() invoke go side slot
+		qtrt.ConnectRaw(tobj, qtrt.QSIGNAL("Clicked123(bool)"), tmer.GetCthis(), qtrt.QSLOT("start()"))
 		qtrt.ConnectRaw(tmer.GetCthis(), qtrt.QSIGNAL("timeout()"), tobj, qtrt.QSLOT("SlotFunc3()"))
-		tmer.Start(1200)
+		// tmer.Start(1200)
+
+		// TODO next stop support both syntax: (merge with current)
+		// qtrt.Connect(a, "Clicked123(bool)", tmer, "start()")
+		// qtrt.Connect(a, "Clicked123(bool)", f interface{})
 
 		a.Clicked123(true)
 	}
-	qtmeta.Underive(a)
+
+	// qtmeta.Underive(a)
 	_ = unsafe.Pointer(a)
 	return a
 }
@@ -147,8 +155,14 @@ func main() {
 	for i := 0; i < 10000; i++ {
 		s += fmt.Sprintf("the num: %d", i)
 	}
-	mao = nil
-	log.Println("GC...", mao)
+	go func() {
+		time.Sleep(12 * time.Second)
+		a := mao.(*WantAsQClass)
+		qtmeta.Underive(a)
+		a = nil
+		mao = nil
+	}()
+	log.Println("GC...", mao == nil, len(s))
 	go func() {
 		runtime.GC()
 		time.Sleep(3 * time.Second)

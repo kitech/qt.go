@@ -26,10 +26,10 @@ func qt_static_meta_call_cgo(_o unsafe.Pointer, _c C.int, _id C.int, _a unsafe.P
 	qt_static_meta_call_go(_o, int(_c), int(_id), _a)
 }
 func qt_static_meta_call_go(_o unsafe.Pointer, _c int, _id int, _a unsafe.Pointer) {
-	log.Println(_o, _c, _id, _a)
+	// log.Println(_o, _c, _CallTypeName(_c), _id, _a)
 	objx, found := mdcache.GetC2go(_o)
 	if !found {
-		log.Println("coresponding goobj not found:", _o)
+		log.Println("coresponding goobj not found:", _o, _CallTypeName(_c), _id)
 		return
 	}
 
@@ -42,22 +42,26 @@ func qt_static_meta_call_go(_o unsafe.Pointer, _c int, _id int, _a unsafe.Pointe
 		if _id < sigcnt {
 			sigfn := mdcache.GetSignal(objx, _id)
 			retsx := reflect.ValueOf(sigfn).Call([]reflect.Value{})
-			log.Println(retsx)
+			if len(retsx) > 0 {
+				log.Println(retsx)
+			}
 		} else {
 			slotfn := mdcache.GetSlot(objx, _id-sigcnt)
 			retsx := reflect.ValueOf(slotfn).Call([]reflect.Value{})
-			log.Println(retsx)
+			if len(retsx) > 0 {
+				log.Println(retsx)
+			}
 		}
 
 	case RegisterMethodArgumentMetaType:
-		log.Println("not supported meta call:", _c, _CallTypeName(_c))
+		fallthrough
 
 	case IndexOfMethod:
-		log.Println("not supported meta call:", _c, _CallTypeName(_c))
 		// arg0, result, 返回方法的索引序号
 		// arg1, 方法指针。好像在这没法用。
+		fallthrough
 	default:
-		log.Println("not supported meta call:", _c, _CallTypeName(_c))
+		log.Println("not supported meta call:", _c, _CallTypeName(_c), _id)
 	}
 }
 
@@ -91,11 +95,11 @@ func qt_meta_cast_cgo(_o unsafe.Pointer, _clname *C.char) unsafe.Pointer {
 func qt_meta_call_cgo(_o unsafe.Pointer, _c C.int, _id C.int, _a unsafe.Pointer) C.int {
 	return C.int(qt_meta_call_go(_o, int(_c), int(_id), _a))
 }
-func qt_meta_call_go(_o unsafe.Pointer, _c int, _id int, _a unsafe.Pointer) C.int {
-	log.Println(_o, _c, _id, _a)
+func qt_meta_call_go(_o unsafe.Pointer, _c int, _id int, _a unsafe.Pointer) int {
+	// log.Println(_o, _c, _CallTypeName(_c), _id, _a)
 	objx, found := mdcache.GetC2go(_o)
 	if !found {
-		log.Println("coresponding goobj not found:", _o)
+		log.Println("coresponding goobj not found:", _o, _CallTypeName(_c), _id)
 		return 0
 	}
 
@@ -115,9 +119,9 @@ func qt_meta_call_go(_o unsafe.Pointer, _c int, _id int, _a unsafe.Pointer) C.in
 		}
 		_id -= mthcnt
 	default:
-		log.Println("not supported meta call:", _c, _CallTypeName(_c))
+		log.Println("not supported meta call:", _c, _CallTypeName(_c), _id)
 	}
-	return 0
+	return _id
 }
 
 /////

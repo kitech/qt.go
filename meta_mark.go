@@ -58,9 +58,16 @@ func Underive(obj interface{}) {
 		fldo := objty.Field(i)
 		switch fldo.Tag.Get("qt") {
 		case "inherit":
-			// fldv := objval.Elem().Field(i)
+			fldv := objval.Elem().Field(i)
 			// fldv.Set(reflect.New(fldv.Type()).Elem())
 			// 不能再此清0,finalizer的时候析构
+			// 但是可以把其信号全部停掉吧
+			cthis := GetCthis(fldv.Interface())
+			qtrt.Assert(cthis != nil, "")
+
+			var zeroptr unsafe.Pointer
+			// QObject::disconnect(QObject const*, char const*, QObject const*, char const*)
+			qtrt.InvokeQtFunc6("C_ZN7QObject10disconnectEPKS_PKcS1_S3_", qtrt.FFI_TYPE_POINTER, cthis, zeroptr, zeroptr, zeroptr)
 		case "classinfo":
 		case "property":
 			// TODO clear property default value
@@ -68,7 +75,10 @@ func Underive(obj interface{}) {
 			fldv := objval.Elem().Field(i)
 			fldv.Set(reflect.New(fldv.Type()).Elem())
 		case "slot":
+		default:
 		}
+
+		break //only process first one
 	}
 }
 
