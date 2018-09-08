@@ -17,6 +17,7 @@ Qt5 binding for Go (Golang) without CGO that aims to achieve Go's native compile
 * protected method override support
 * default arguments and value wrapper functions
 * Class/Method/Function/Enum comment for godoc
+* Go side signal/slot definition (experimental)
 
 
 ### Multiple platforms support
@@ -74,6 +75,8 @@ Arch based:
     }
 
 More complex examples: https://github.com/qtchina/qt.go.demos/
+
+Go side signal/slot: [syntax document](https://github.com/kitech/qt.go/blob/master/docs/qt_meta_data_mark_syntax_for_go.md) [usage demo](https://github.com/kitech/qt.go/blob/master/qtmeta/tests/meta_data_test_.go)
 
 ### Internals
 
