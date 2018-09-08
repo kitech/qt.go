@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"runtime"
 	"strings"
-	"sync"
+	"time"
 	"unsafe"
 
 	"github.com/kitech/qt.go/qtrt"
@@ -38,10 +38,38 @@ func Derive(obj interface{}, bargs ...[]interface{}) {
 	// 所有的public方法都是slot
 	_DeriveImpl(obj, bargs...)
 }
+func GetCthis(obj interface{}) unsafe.Pointer {
+	objval := reflect.ValueOf(obj).Elem()
+	retx := objval.MethodByName(qtrt.GetCthisName + "_").Call(nil)
+	return retx[0].Interface().(unsafe.Pointer)
+}
+
 func Underive(obj interface{}) {
+	mdcache.ClearSignal(obj) // decrease obj's refcnt
+	mdcache.ClearSlot(obj)   // decrease obj's refcnt
+
 	objval := reflect.ValueOf(obj)
+	bclsfld := objval.Elem().Field(0).Interface()
+	mdcache.RemoveC2go(GetCthis(bclsfld))
+
 	objty := objval.Type().Elem()
-	mdcache.ClearSlot(objty.String()) // decrease obj's refcnt
+	fldcnt := objty.NumField()
+	for i := 0; i < fldcnt; i++ {
+		fldo := objty.Field(i)
+		switch fldo.Tag.Get("qt") {
+		case "inherit":
+			// fldv := objval.Elem().Field(i)
+			// fldv.Set(reflect.New(fldv.Type()).Elem())
+			// 不能再此清0,finalizer的时候析构
+		case "classinfo":
+		case "property":
+			// TODO clear property default value
+		case "signal":
+			fldv := objval.Elem().Field(i)
+			fldv.Set(reflect.New(fldv.Type()).Elem())
+		case "slot":
+		}
+	}
 }
 
 func _DeriveImpl(obj interface{}, bargs ...[]interface{}) bool {
@@ -83,6 +111,9 @@ func newDeriveContext(obj interface{}, bargs ...[]interface{}) *deriveContext {
 	this.mdo.SetClassName(this.objty.Name())
 	this.fldcnt = this.objty.NumField()
 
+	var dctx_dtored = false
+	runtime.SetFinalizer(this, func(obj interface{}) { dctx_dtored = true })
+	time.AfterFunc(5*time.Second, func() { qtrt.Assert(dctx_dtored, "dctx not success dtor") })
 	return this
 }
 
@@ -107,7 +138,7 @@ func derive_precheck(dctx *deriveContext) bool {
 }
 
 func derive_collect_metadata(dctx *deriveContext) {
-	_, objval, objty, fcnt, mdo := dctx.obj, dctx.objval, dctx.objty, dctx.fldcnt, dctx.mdo
+	obj, objval, objty, fcnt, mdo := dctx.obj, dctx.objval, dctx.objty, dctx.fldcnt, dctx.mdo
 
 	// collect meta info
 	for i := 0; i < fcnt; i++ {
@@ -130,7 +161,8 @@ func derive_collect_metadata(dctx *deriveContext) {
 			if mtho.IsValid() {
 				// TODO hold main object's reference, can not GCed
 				slotfn := mtho.Interface()
-				mdcache.AddSlot(objty.Name(), slotfn) // the only line cause obj not finalize
+				mdcache.AddSlot(obj, slotfn) // the only line cause obj not finalize
+				_ = obj
 				if !matchSignature(mtho.Type(), fldo.Type) {
 					log.Panicln("coresponding slot func impl signature not match:", fldo.Type, mtho.Type())
 				}
@@ -147,7 +179,7 @@ func derive_collect_metadata(dctx *deriveContext) {
 }
 
 func derive_create_cobject(dctx *deriveContext) {
-	_, bargs, objval, objty, fcnt, mdo :=
+	obj, bargs, objval, objty, fcnt, mdo :=
 		dctx.obj, dctx.bargs, dctx.objval, dctx.objty, dctx.fldcnt, dctx.mdo
 
 	// new foreign object
@@ -178,13 +210,17 @@ func derive_create_cobject(dctx *deriveContext) {
 				mdo.MetaStrDat.ToC(), mdo.ToC(), staticMetaCallFn(), metaCastFn(), metaCallFn())
 			cmdo = unsafe.Pointer(uintptr(rv))
 		}
+		break //only process first one
 	}
 	dctx.cobjptr = cobjptr
 	dctx.cmdo = cmdo
+	mdcache.AddC2go(cobjptr, obj)
+	_ = obj
+	// TODO need think about destroyed() handler. see qdynslotobject.go:258 wtf
 }
 
 func derive_fill_signals(dctx *deriveContext) {
-	_, _, objval, objty, fcnt, _, cobjptr, cmdo :=
+	obj, _, objval, objty, fcnt, _, cobjptr, cmdo :=
 		dctx.obj, dctx.bargs, dctx.objval, dctx.objty, dctx.fldcnt, dctx.mdo, dctx.cobjptr, dctx.cmdo
 
 	// collect meta info
@@ -194,15 +230,19 @@ func derive_fill_signals(dctx *deriveContext) {
 		switch fldo.Tag.Get("qt") {
 		case "signal":
 			// TODO hold main object's reference, so obj can not GCed
-			signalfn := reflect.MakeFunc(fldo.Type, mksignalfn(objty.String(), cobjptr, cmdo, signal_index, fldo.Name))
+			signalfn := reflect.MakeFunc(fldo.Type,
+				mksignalfn(objty.String(), cobjptr, cmdo, signal_index, fldo.Name))
 			objval.Elem().Field(i).Set(signalfn)
 			signal_index += 1
+			mdcache.AddSignal(obj, signalfn)
+			_ = obj
 		}
 	}
 }
 
 func derive_finalize(dctx *deriveContext) {
-	runtime.SetFinalizer(dctx.obj, dtor_derived_obj)
+	obj := dctx.obj
+	runtime.SetFinalizer(obj, dtor_derived_obj)
 }
 func dtor_derived_obj(dobj interface{}) {
 	objval := reflect.ValueOf(dobj)
@@ -297,11 +337,23 @@ func mksignalfn(thisty string, cobjptr unsafe.Pointer, cmdo unsafe.Pointer, sign
 	}
 }
 
-var mdcache = &_QtMetaDatas{}
+/////
+var mdcache = &_QtMetaDatas{
+	mdos:      RwMap(),
+	signalfns: RwMap(),
+	slotfns:   RwMap(),
+	c2gomap:   RwMap(),
+}
 
+// sync.Map有坑，即使delete也可能还是持有引用！！！// 换用这个了
+type syncMap = Map
+
+// Derive后，会在该类持有obj的3个引用，需要解引用
 type _QtMetaDatas struct {
-	mdos    sync.Map // go struct name (class name) => *QtMetaData
-	slotfns sync.Map // go struct name (class name) = > []interface{}
+	mdos      syncMap // go struct name (class name) => *QtMetaData
+	signalfns syncMap // go struct object (class object) = > []reflect.Value.Interface()
+	slotfns   syncMap // go struct object (class object) = > []reflect.Value.Interface()
+	c2gomap   syncMap // c object pointer => interface{}, go object pointer interface{}
 }
 
 func (this *_QtMetaDatas) Add(name string, mdo *QtMetaData) {
@@ -325,6 +377,13 @@ func (this *_QtMetaDatas) Get(name string) *QtMetaData {
 	}
 	return nil
 }
+func (this *_QtMetaDatas) GetByObj(objx interface{}) *QtMetaData {
+	objval := reflect.ValueOf(objx)
+	objty := objval.Type().Elem()
+	tycanname := mdcache.canName(objty.Name())
+	tymeta := mdcache.Get(tycanname)
+	return tymeta
+}
 func (this *_QtMetaDatas) canName(name string) string {
 	if strings.Index(name, ".") >= 0 {
 		segs := strings.Split(name, ".")
@@ -332,19 +391,17 @@ func (this *_QtMetaDatas) canName(name string) string {
 	}
 	return name
 }
-func (this *_QtMetaDatas) AddSlot(name string, fn interface{}) {
-	name = this.canName(name)
+func (this *_QtMetaDatas) AddSignal(obj interface{}, fnval interface{}) {
 	var fns []interface{}
-	fnsx, ok := this.slotfns.Load(name)
+	fnsx, ok := this.signalfns.Load(obj)
 	if ok {
 		fns = fnsx.([]interface{})
 	}
-	fns = append(fns, fn)
-	this.slotfns.Store(name, fns)
+	fns = append(fns, fnval)
+	this.signalfns.Store(obj, fns)
 }
-func (this *_QtMetaDatas) GetSlot(name string, idx int) interface{} {
-	name = this.canName(name)
-	fnsx, ok := this.slotfns.Load(name)
+func (this *_QtMetaDatas) GetSignal(obj interface{}, idx int) interface{} {
+	fnsx, ok := this.signalfns.Load(obj)
 	if ok {
 		fns := fnsx.([]interface{})
 		if idx >= 0 && idx < len(fns) {
@@ -353,17 +410,61 @@ func (this *_QtMetaDatas) GetSlot(name string, idx int) interface{} {
 	}
 	return nil
 }
-func (this *_QtMetaDatas) ClearSlot(name string) {
-	name = this.canName(name)
-	fnsx, ok := this.slotfns.Load(name)
+func (this *_QtMetaDatas) ClearSignal(obj interface{}) {
+	fnsx, ok := this.signalfns.Load(obj)
 	if ok {
 		fns := fnsx.([]interface{})
 		for i := 0; i < len(fns); i++ {
 			fns[i] = nil
 		}
-		this.slotfns.Store(name, fns)
+		this.signalfns.Store(obj, fns)
+		this.signalfns.Delete(obj)
 	}
 }
+func (this *_QtMetaDatas) AddSlot(obj interface{}, fnval interface{}) {
+	var fns []interface{}
+	fnsx, ok := this.slotfns.Load(obj)
+	if ok {
+		fns = fnsx.([]interface{})
+	}
+	fns = append(fns, fnval)
+	this.slotfns.Store(obj, fns)
+}
+func (this *_QtMetaDatas) GetSlot(obj interface{}, idx int) interface{} {
+	fnsx, ok := this.slotfns.Load(obj)
+	if ok {
+		fns := fnsx.([]interface{})
+		if idx >= 0 && idx < len(fns) {
+			return fns[idx]
+		}
+	}
+	return nil
+}
+func (this *_QtMetaDatas) ClearSlot(obj interface{}) {
+	fnsx, ok := this.slotfns.Load(obj)
+	if ok {
+		fns := fnsx.([]interface{})
+		for i := 0; i < len(fns); i++ {
+			fns[i] = nil
+		}
+		this.slotfns.Store(obj, fns)
+		this.slotfns.Delete(obj)
+	}
+}
+func (this *_QtMetaDatas) AddC2go(cobj unsafe.Pointer, goobj interface{}) {
+	this.c2gomap.Store(cobj, goobj)
+}
+func (this *_QtMetaDatas) HasC2go(cobj unsafe.Pointer) bool {
+	_, ok := this.c2gomap.Load(cobj)
+	return ok
+}
+func (this *_QtMetaDatas) RemoveC2go(cobj unsafe.Pointer) {
+	this.c2gomap.Delete(cobj)
+}
+func (this *_QtMetaDatas) GetC2go(cobj unsafe.Pointer) (interface{}, bool) {
+	return this.c2gomap.Load(cobj)
+}
+func countSyncMap(m syncMap) int { return m.Len() }
 
 ///
 type QMetaObjectData struct {

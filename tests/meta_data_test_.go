@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"runtime"
 	"testing"
 	"time"
 	"unsafe"
-	"runtime"
 
 	"github.com/kitech/qt.go/qtcore"
 	"github.com/kitech/qt.go/qtmeta"
@@ -31,9 +31,10 @@ type WantAsQClass struct {
 	_SlotFunc2 func(float32) `qt:"slot"`
 	_SlotFunc3 func()        `qt:"slot"`
 }
-func (this *WantAsQClass) SlotFunc1(int) {}
+
+func (this *WantAsQClass) SlotFunc1(int)     {}
 func (this *WantAsQClass) SlotFunc2(float32) {}
-func (this *WantAsQClass) SlotFunc3() {}
+func (this *WantAsQClass) SlotFunc3()        {}
 
 func Test0(t *testing.T) {
 	mdo := qtmeta.NewQtMetaData()
@@ -111,13 +112,14 @@ func (this *FakeQObject) GetCthis() unsafe.Pointer      { return this.Cthis }
 func (this *FakeQObject) SetCthis(cthis unsafe.Pointer) { this.Cthis = cthis }
 
 //////
-func Test1(t *testing.T) {
+func Test1(t *testing.T) interface{} {
 	a := &WantAsQClass{}
 	qtmeta.Derive(a)
 	log.Println(a.QThread.GetCthis())
 	log.Println(a.QThread.MetaObject().ClassName())
-	log.Println(a.QProcess.GetCthis())
-	log.Println(a.QProcess.MetaObject().ClassName())
+	// log.Println(a.QProcess.GetCthis())
+	// log.Println(a.QProcess.MetaObject().ClassName())
+	// a.QProcess == nil
 
 	if false {
 		tobj := a.QThread.GetCthis()
@@ -128,21 +130,30 @@ func Test1(t *testing.T) {
 		a.Clicked123(true)
 	}
 	qtmeta.Underive(a)
+	_ = unsafe.Pointer(a)
+	return a
 }
 
 func main() {
 	qapp := qtcore.NewQCoreApplication(len(os.Args), os.Args, 0)
 	t := &testing.T{}
+	var mao interface{}
 	if false {
 		Test0(t)
 	} else {
-		Test1(t)
+		mao = Test1(t)
 	}
 	s := ""
-	for i := 0; i < 100000; i ++ {
+	for i := 0; i < 10000; i++ {
 		s += fmt.Sprintf("the num: %d", i)
 	}
-	runtime.GC()
+	mao = nil
+	log.Println("GC...", mao)
+	go func() {
+		runtime.GC()
+		time.Sleep(3 * time.Second)
+	}()
+
 	if true {
 		qapp.Exec()
 	}
