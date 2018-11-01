@@ -78,6 +78,13 @@ More complex examples: https://github.com/qtchina/qt.go.demos/
 
 Go side signal/slot: [syntax document](https://github.com/kitech/qt.go/blob/master/docs/qt_meta_data_mark_syntax_for_go.md) [usage demo](https://github.com/kitech/qt.go/blob/master/qtmeta/tests/meta_data_test_.go)
 
+
+### Community
+
+  * QQ groupchat 933636020
+  * Telegram room https://t.me/qtdevjiaoliu (Thanks https://github.com/xiayesuifeng)
+
+
 ### Internals
 
 Qt.Go uses FFI to call wrapped Qt functions and methods, so there is no compile/link time dependency on Qt, only a run time dependency.
