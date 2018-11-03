@@ -6,7 +6,7 @@ set -e -o pipefail
 ./.travis/build-osx.sh
 
 pwd
-wget https://github.com/kitech/qt.inline/releases/download/v1.0-rc2/qt510_macos_x64_xcode8.3.tar.bz2
+wget https://github.com/kitech/qt.inline/releases/download/v1.0-rc4/qt510_macos_x64_xcode8.3.tar.bz2
 
 tar xvf qt510_macos_x64_xcode8.3.tar.bz2
 
