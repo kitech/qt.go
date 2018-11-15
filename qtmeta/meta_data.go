@@ -9,12 +9,13 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
-	"gopp"
 	"log"
 	"reflect"
 	"regexp"
 	"strings"
 	"unsafe"
+
+	"github.com/kitech/qt.go/qtrt"
 )
 
 func init() { log.SetFlags(log.Flags() | log.Lshortfile) }
@@ -55,7 +56,6 @@ type QArrayData struct {
 }
 type QByteArrayData QArrayData
 type QByteArrayData2 [24]byte
-
 
 // Data 是 StringData0的索引
 // 用于存储元数据中的字符串
@@ -276,7 +276,7 @@ func (this *QtMetaData) _AddMethod(name string, rettys, argtys []reflect.Type, i
 	mth.NameIdx = uint32(nameIdx)
 	mth.Argc = uint32(len(argtys))
 	mth.IsSignal = issignal
-	mth.Flags = uint32(gopp.IfElseInt(issignal, 0x06, 0x0a))
+	mth.Flags = uint32(qtrt.IfElseInt(issignal, 0x06, 0x0a))
 	mth.Tag = uint32(tagIdx)
 
 	var prm Parameter
@@ -377,14 +377,14 @@ func (this *QtMetaData) FinalPass() {
 
 	// calc indexs
 	curpos := uint32(14)
-	if this.ClassInfoCount>0{
+	if this.ClassInfoCount > 0 {
 		this.ClassInfoOffset = curpos
 	}
-	curpos += this.ClassInfoCount*2
+	curpos += this.ClassInfoCount * 2
 	if this.MethodCount > 0 {
 		this.MethodOffset = curpos
 	}
-	curpos +=   5*this.MethodCount
+	curpos += 5 * this.MethodCount
 	for _, mth := range this.Signals {
 		curpos += 1 /*ret*/ + mth.Argc*2
 	}
@@ -586,7 +586,7 @@ type Parameter struct {
 func NewMethod(name string, nameIdx int, rettys, argtys []reflect.Type, issignal bool) Method {
 	mth := Method{}
 	mth.IsSignal = issignal
-	mth.Flags = uint32(gopp.IfElseInt(issignal, 0x06, 0x0a))
+	mth.Flags = uint32(qtrt.IfElseInt(issignal, 0x06, 0x0a))
 
 	return mth
 }
