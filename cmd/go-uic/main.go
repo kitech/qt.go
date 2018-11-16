@@ -264,7 +264,7 @@ func onSetupUi(line string) {
 			case "MaxVisibleItems", "ModelColumn", "VerticalSpacing":
 			case "Orientation", "TextFormat":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
-			case "TextInteractionFlags":
+			case "TextInteractionFlags", "InputMethodHints":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 				refmtval = strings.Replace(refmtval, "|", "|qtcore.", -1)
 			case "AutoRaise", "WidgetResizable", "AlternatingRowColors",
@@ -272,7 +272,7 @@ func onSetupUi(line string) {
 				"Checked", "Flat", "AutoFillBackground":
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
 			case "Bold", "OpenExternalLinks", "WordWrap", "Frame", "Editable",
-				"DragDropOverwriteMode", "ReadOnly",
+				"DragDropOverwriteMode", "ReadOnly", "AcceptDrops",
 				"AcceptRichText", "Checkable", "MouseTracking", "Enabled":
 				refmtval = untitle(refmtval) // True => true
 			case "ToolButtonStyle":
@@ -288,7 +288,8 @@ func onSetupUi(line string) {
 			case "HorizontalScrollBarPolicy", "VerticalScrollBarPolicy", "ContextMenuPolicy":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "SizeAdjustPolicy", "SizeConstraint", "FrameShape", "FrameShadow",
-				"SelectionBehavior", "SelectionMode":
+				"SelectionBehavior", "SelectionMode", "DragDropMode",
+				"VerticalScrollMode", "HorizontalScrollMode":
 				refmtval = "qtwidgets." + strings.Replace(refmtval, ":", "_", -1)
 			case "ResizeMode":
 				refmtval = "qtquickwidgets." + strings.Replace(refmtval, ":", "_", -1)
