@@ -199,7 +199,7 @@ func onSetupUi(line string) {
 			pkgname := "qtwidgets"
 			switch mats[0][2] {
 			case "QAction":
-				refmtval = fmt.Sprintf("%s", refmtval)
+				refmtval = fmt.Sprintf("this.%s", refmtval)
 			case "QWidget":
 				if refmtval != "" {
 					refmtval = fmt.Sprintf("this.%s, 0", refmtval)
@@ -260,9 +260,13 @@ func onSetupUi(line string) {
 			switch mats[0][2] {
 			case "Spacing", "HorizontalStretch", "VerticalStretch":
 			case "PointSize", "Weight", "ColumnCount", "RowCount": // do nothing
-			case "ContentsMargins", "CurrentIndex", "LineWidth":
+			case "ContentsMargins", "CurrentIndex", "LineWidth",
+				"AutoScrollMargin", "MidLineWidth", "ToolTipDuration",
+				"Margin", "Indent", "Value", "Minimum", "Maximum",
+				"LineWrapColumnOrWidth", "TabStopWidth", "CursorWidth",
+				"DigitCount": // num no change
 			case "MaxVisibleItems", "ModelColumn", "VerticalSpacing":
-			case "Orientation", "TextFormat":
+			case "Orientation", "TextFormat", "TextElideMode", "LayoutDirection":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "TextInteractionFlags", "InputMethodHints":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
@@ -273,9 +277,14 @@ func onSetupUi(line string) {
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
 			case "Bold", "OpenExternalLinks", "WordWrap", "Frame", "Editable",
 				"DragDropOverwriteMode", "ReadOnly", "AcceptDrops",
-				"AcceptRichText", "Checkable", "MouseTracking", "Enabled":
+				"AcceptRichText", "Checkable", "MouseTracking", "Enabled",
+				"UsesScrollButtons", "AutoScroll", "CornerButtonEnabled",
+				"DragEnabled", "SortingEnabled", "ShowGrid", "TabKeyNavigation",
+				"TabletTracking", "InvertedAppearance", "TextVisible",
+				"TabChangesFocus", "UndoRedoEnabled", "OverwriteMode",
+				"OpenLinks", "SmallDecimalPoint":
 				refmtval = untitle(refmtval) // True => true
-			case "ToolButtonStyle":
+			case "ToolButtonStyle", "GridStyle", "DefaultDropAction":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "Alignment", "FocusPolicy", "ArrowType":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
@@ -289,7 +298,9 @@ func onSetupUi(line string) {
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "SizeAdjustPolicy", "SizeConstraint", "FrameShape", "FrameShadow",
 				"SelectionBehavior", "SelectionMode", "DragDropMode",
-				"VerticalScrollMode", "HorizontalScrollMode":
+				"VerticalScrollMode", "HorizontalScrollMode", "EchoMode",
+				"TextDirection", "AutoFormatting", "LineWrapMode", "Mode",
+				"SegmentStyle":
 				refmtval = "qtwidgets." + strings.Replace(refmtval, ":", "_", -1)
 			case "ResizeMode":
 				refmtval = "qtquickwidgets." + strings.Replace(refmtval, ":", "_", -1)
@@ -304,6 +315,9 @@ func onSetupUi(line string) {
 			case "Source": // QQuickWidget
 				refmtval = mats[0][3]
 				refmtval = fmt.Sprintf("qtcore.NewQUrl_1(\"%s\", 0)", strings.Split(refmtval, "\"")[1])
+			case "StyleSheet": // QQuickWidget
+				refmtval = mats[0][3]
+				refmtval = fmt.Sprintf("\"%s\"", strings.Split(refmtval, "\"")[1])
 			case "HeightForWidth":
 				refmtval = "this." + strings.Replace(refmtval, "->", ".", -1)
 			case "HorizontalHeaderItem", "VerticalHeaderItem":
@@ -313,8 +327,11 @@ func onSetupUi(line string) {
 			// break
 			case "Property":
 				refmtval = mats[0][3]
+				numreg := regexp.MustCompile(`QVariant\([e\+\d]+\)`)
 				if strings.Contains(refmtval, "(false)") || strings.Contains(refmtval, "(true)") {
 					refmtval = strings.Replace(refmtval, "QVariant", "qtcore.NewQVariant_9", -1)
+				} else if numreg.MatchString(refmtval) {
+					refmtval = strings.Replace(refmtval, "QVariant", "qtcore.NewQVariant_5", -1)
 				}
 			default:
 				log.Println(line, refmtname)
@@ -346,8 +363,13 @@ func onSetupUi(line string) {
 			case "addLayout":
 				refmtval = fmt.Sprintf("this.%s, 0", refmtval)
 			case "addItem":
+				// toolbox
+				tbreg := regexp.MustCompile(`(.+)\, QStringLiteral\((.+)\)`)
 				if strings.HasPrefix(refmtval, "QString") { // QComboBox
 					refmtval = fmt.Sprintf("\"\", qtcore.NewQVariant_12(\"wtf\")")
+				} else if tbreg.MatchString(refmtval) {
+					tbmats := tbreg.FindAllStringSubmatch(refmtval, -1)
+					refmtval = fmt.Sprintf("this.%s, %s", tbmats[0][1], tbmats[0][2])
 				} else {
 					refmtval = fmt.Sprintf("this.%s", refmtval)
 				}
@@ -364,6 +386,8 @@ func onSetupUi(line string) {
 				refmtname = "AddFile"
 			case "addTab":
 				refmtval = fmt.Sprintf("this.%s, \"\"", strings.Split(refmtval, ",")[0])
+			case "addAction":
+				refmtval = fmt.Sprintf("this.%s", strings.Replace(refmtval, "->", ".", -1))
 			default:
 				refmtval = "this." + refmtval
 			}
