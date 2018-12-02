@@ -94,11 +94,11 @@ func NewQMediaTimeRange() *QMediaTimeRange {
 /*
 Constructs an empty time range.
 */
-func (*QMediaTimeRange) NewForInherit_1(start int64, end int64) *QMediaTimeRange {
-	return NewQMediaTimeRange_1(start, end)
+func (*QMediaTimeRange) NewForInherit_1(start int64, end_ int64) *QMediaTimeRange {
+	return NewQMediaTimeRange_1(start, end_)
 }
-func NewQMediaTimeRange_1(start int64, end int64) *QMediaTimeRange {
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QMediaTimeRangeC2Exx", qtrt.FFI_TYPE_POINTER, start, end)
+func NewQMediaTimeRange_1(start int64, end_ int64) *QMediaTimeRange {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QMediaTimeRangeC2Exx", qtrt.FFI_TYPE_POINTER, start, end_)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMediaTimeRangeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMediaTimeRange)
@@ -279,8 +279,8 @@ This operation takes linear time.
 
 See also removeInterval().
 */
-func (this *QMediaTimeRange) AddInterval(start int64, end int64) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QMediaTimeRange11addIntervalExx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
+func (this *QMediaTimeRange) AddInterval(start int64, end_ int64) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QMediaTimeRange11addIntervalExx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -344,8 +344,8 @@ This operation takes linear time.
 
 See also addInterval().
 */
-func (this *QMediaTimeRange) RemoveInterval(start int64, end int64) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QMediaTimeRange14removeIntervalExx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
+func (this *QMediaTimeRange) RemoveInterval(start int64, end_ int64) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QMediaTimeRange14removeIntervalExx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 

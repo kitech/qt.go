@@ -64,12 +64,12 @@ func (this *QTreeView) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) 
 }
 
 // void rowsInserted(const QModelIndex &, int, int)
-func (this *QTreeView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
+func (this *QTreeView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end_ int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
 // void rowsAboutToBeRemoved(const QModelIndex &, int, int)
-func (this *QTreeView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
+func (this *QTreeView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end_ int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsAboutToBeRemoved", f)
 }
 
@@ -1448,12 +1448,12 @@ Reimplemented from QAbstractItemView::rowsInserted().
 
 Informs the view that the rows from the start row to the end row inclusive have been inserted into the parent model item.
 */
-func (this *QTreeView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end int) {
+func (this *QTreeView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end_ int) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
 		convArg0 = parent.QModelIndex_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -1467,12 +1467,12 @@ Reimplemented from QAbstractItemView::rowsAboutToBeRemoved().
 
 Informs the view that the rows from the start row to the end row inclusive are about to removed from the given parent model item.
 */
-func (this *QTreeView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_ITF, start int, end int) {
+func (this *QTreeView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_ITF, start int, end_ int) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
 		convArg0 = parent.QModelIndex_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView20rowsAboutToBeRemovedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView20rowsAboutToBeRemovedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 

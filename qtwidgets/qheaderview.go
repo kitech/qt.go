@@ -134,7 +134,7 @@ func (this *QHeaderView) InheritScrollContentsBy(f func(dx int, dy int) /*void*/
 }
 
 // void rowsInserted(const QModelIndex &, int, int)
-func (this *QHeaderView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
+func (this *QHeaderView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end_ int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
@@ -1592,8 +1592,8 @@ func (this *QHeaderView) InitializeSections() {
 /*
 
  */
-func (this *QHeaderView) InitializeSections_1(start int, end int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QHeaderView18initializeSectionsEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
+func (this *QHeaderView) InitializeSections_1(start int, end_ int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHeaderView18initializeSectionsEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -1850,12 +1850,12 @@ func (this *QHeaderView) ScrollContentsBy(dx int, dy int) {
 /*
 
  */
-func (this *QHeaderView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end int) {
+func (this *QHeaderView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end_ int) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
 		convArg0 = parent.QModelIndex_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QHeaderView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHeaderView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 

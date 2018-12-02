@@ -319,7 +319,7 @@ func (this *QMediaResource) MimeType() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMediaResource8mimeTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -340,7 +340,7 @@ func (this *QMediaResource) Language() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMediaResource8languageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -378,7 +378,7 @@ func (this *QMediaResource) AudioCodec() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMediaResource10audioCodecEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -416,7 +416,7 @@ func (this *QMediaResource) VideoCodec() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMediaResource10videoCodecEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }

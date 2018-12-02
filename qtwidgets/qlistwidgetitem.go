@@ -439,7 +439,7 @@ func (this *QListWidgetItem) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -504,7 +504,7 @@ func (this *QListWidgetItem) StatusTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem9statusTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -536,7 +536,7 @@ func (this *QListWidgetItem) ToolTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem7toolTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -568,7 +568,7 @@ func (this *QListWidgetItem) WhatsThis() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem9whatsThisEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -916,10 +916,10 @@ func (this *QListWidgetItem) Read(in qtcore.QDataStream_ITF) {
 /*
 
  */
-func (this *QListWidgetItem) Write(out qtcore.QDataStream_ITF) {
+func (this *QListWidgetItem) Write(out_ qtcore.QDataStream_ITF) {
 	var convArg0 unsafe.Pointer
-	if out != nil && out.QDataStream_PTR() != nil {
-		convArg0 = out.QDataStream_PTR().GetCthis()
+	if out_ != nil && out_.QDataStream_PTR() != nil {
+		convArg0 = out_.QDataStream_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem5writeER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

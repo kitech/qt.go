@@ -445,24 +445,6 @@ func QmlRegisterBaseTypes(uri string, versionMajor int, versionMinor int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qjsengine.h:133
-// index:0
-// Invalid inline Visibility=Default Availability=Available
-// [1] bool qjsvalue_cast_helper(const QJSValue &, int, void *)
-
-/*
-
- */
-func Qjsvalue_cast_helper(value QJSValue_ITF, type_ int, ptr unsafe.Pointer /*666*/) bool {
-	var convArg0 unsafe.Pointer
-	if value != nil && value.QJSValue_PTR() != nil {
-		convArg0 = value.QJSValue_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z20qjsvalue_cast_helperRK8QJSValueiPv", qtrt.FFI_TYPE_POINTER, convArg0, type_, ptr)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
 // /usr/include/qt/QtQml/qqml.h:567
 // index:0
 // Invalid Visibility=Default Availability=Available

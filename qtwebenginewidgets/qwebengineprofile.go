@@ -206,7 +206,7 @@ func (this *QWebEngineProfile) StorageName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWebEngineProfile11storageNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -237,7 +237,7 @@ func (this *QWebEngineProfile) PersistentStoragePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWebEngineProfile21persistentStoragePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -269,7 +269,7 @@ func (this *QWebEngineProfile) CachePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWebEngineProfile9cachePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -301,7 +301,7 @@ func (this *QWebEngineProfile) HttpUserAgent() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWebEngineProfile13httpUserAgentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -375,7 +375,7 @@ func (this *QWebEngineProfile) HttpAcceptLanguage() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWebEngineProfile18httpAcceptLanguageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }

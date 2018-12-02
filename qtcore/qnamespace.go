@@ -8193,6 +8193,83 @@ func future_statusItemName(val int) string {
 }
 
 /*
+
+
+ */
+type Qt__DrawingHint = int // widgets
+//
+const Qt__OpaqueTopLeft Qt__DrawingHint = 1
+
+//
+const Qt__OpaqueTop Qt__DrawingHint = 2
+
+//
+const Qt__OpaqueTopRight Qt__DrawingHint = 4
+
+//
+const Qt__OpaqueLeft Qt__DrawingHint = 8
+
+//
+const Qt__OpaqueCenter Qt__DrawingHint = 16
+
+//
+const Qt__OpaqueRight Qt__DrawingHint = 32
+
+//
+const Qt__OpaqueBottomLeft Qt__DrawingHint = 64
+
+//
+const Qt__OpaqueBottom Qt__DrawingHint = 128
+
+//
+const Qt__OpaqueBottomRight Qt__DrawingHint = 256
+
+//
+const Qt__OpaqueCorners Qt__DrawingHint = 325
+
+//
+const Qt__OpaqueEdges Qt__DrawingHint = 170
+
+//
+const Qt__OpaqueFrame Qt__DrawingHint = 495
+
+//
+const Qt__OpaqueAll Qt__DrawingHint = 511
+
+func DrawingHintItemName(val int) string {
+	switch val {
+	case Qt__OpaqueTopLeft: // 1
+		return "OpaqueTopLeft"
+	case Qt__OpaqueTop: // 2
+		return "OpaqueTop"
+	case Qt__OpaqueTopRight: // 4
+		return "OpaqueTopRight"
+	case Qt__OpaqueLeft: // 8
+		return "OpaqueLeft"
+	case Qt__OpaqueCenter: // 16
+		return "OpaqueCenter"
+	case Qt__OpaqueRight: // 32
+		return "OpaqueRight"
+	case Qt__OpaqueBottomLeft: // 64
+		return "OpaqueBottomLeft"
+	case Qt__OpaqueBottom: // 128
+		return "OpaqueBottom"
+	case Qt__OpaqueBottomRight: // 256
+		return "OpaqueBottomRight"
+	case Qt__OpaqueCorners: // 325
+		return "OpaqueCorners"
+	case Qt__OpaqueEdges: // 170
+		return "OpaqueEdges"
+	case Qt__OpaqueFrame: // 495
+		return "OpaqueFrame"
+	case Qt__OpaqueAll: // 511
+		return "OpaqueAll"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
 Describes the two types of keys QSslKey supports.
 
 
@@ -8499,83 +8576,6 @@ func RegistrationTypeItemName(val int) string {
 		return "CompositeSingletonRegistration"
 	case Qt__QmlUnitCacheHookRegistration: // 6
 		return "QmlUnitCacheHookRegistration"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-
-/*
-
-
- */
-type Qt__DrawingHint = int // widgets
-//
-const Qt__OpaqueTopLeft Qt__DrawingHint = 1
-
-//
-const Qt__OpaqueTop Qt__DrawingHint = 2
-
-//
-const Qt__OpaqueTopRight Qt__DrawingHint = 4
-
-//
-const Qt__OpaqueLeft Qt__DrawingHint = 8
-
-//
-const Qt__OpaqueCenter Qt__DrawingHint = 16
-
-//
-const Qt__OpaqueRight Qt__DrawingHint = 32
-
-//
-const Qt__OpaqueBottomLeft Qt__DrawingHint = 64
-
-//
-const Qt__OpaqueBottom Qt__DrawingHint = 128
-
-//
-const Qt__OpaqueBottomRight Qt__DrawingHint = 256
-
-//
-const Qt__OpaqueCorners Qt__DrawingHint = 325
-
-//
-const Qt__OpaqueEdges Qt__DrawingHint = 170
-
-//
-const Qt__OpaqueFrame Qt__DrawingHint = 495
-
-//
-const Qt__OpaqueAll Qt__DrawingHint = 511
-
-func DrawingHintItemName(val int) string {
-	switch val {
-	case Qt__OpaqueTopLeft: // 1
-		return "OpaqueTopLeft"
-	case Qt__OpaqueTop: // 2
-		return "OpaqueTop"
-	case Qt__OpaqueTopRight: // 4
-		return "OpaqueTopRight"
-	case Qt__OpaqueLeft: // 8
-		return "OpaqueLeft"
-	case Qt__OpaqueCenter: // 16
-		return "OpaqueCenter"
-	case Qt__OpaqueRight: // 32
-		return "OpaqueRight"
-	case Qt__OpaqueBottomLeft: // 64
-		return "OpaqueBottomLeft"
-	case Qt__OpaqueBottom: // 128
-		return "OpaqueBottom"
-	case Qt__OpaqueBottomRight: // 256
-		return "OpaqueBottomRight"
-	case Qt__OpaqueCorners: // 325
-		return "OpaqueCorners"
-	case Qt__OpaqueEdges: // 170
-		return "OpaqueEdges"
-	case Qt__OpaqueFrame: // 495
-		return "OpaqueFrame"
-	case Qt__OpaqueAll: // 511
-		return "OpaqueAll"
 	default:
 		return fmt.Sprintf("%d", val)
 	}
@@ -10322,6 +10322,98 @@ func _RTL_UMS_SCHEDULER_REASONItemName(val int) string {
 		return "UmsSchedulerThreadBlocked"
 	case Qt__UmsSchedulerThreadYield: // 2
 		return "UmsSchedulerThreadYield"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt___PROCESS_MITIGATION_POLICY = int // stdglobal
+//
+const Qt__ProcessDEPPolicy Qt___PROCESS_MITIGATION_POLICY = 0
+
+//
+const Qt__ProcessASLRPolicy Qt___PROCESS_MITIGATION_POLICY = 1
+
+//
+const Qt__ProcessDynamicCodePolicy Qt___PROCESS_MITIGATION_POLICY = 2
+
+//
+const Qt__ProcessStrictHandleCheckPolicy Qt___PROCESS_MITIGATION_POLICY = 3
+
+//
+const Qt__ProcessSystemCallDisablePolicy Qt___PROCESS_MITIGATION_POLICY = 4
+
+//
+const Qt__ProcessMitigationOptionsMask Qt___PROCESS_MITIGATION_POLICY = 5
+
+//
+const Qt__ProcessExtensionPointDisablePolicy Qt___PROCESS_MITIGATION_POLICY = 6
+
+//
+const Qt__ProcessControlFlowGuardPolicy Qt___PROCESS_MITIGATION_POLICY = 7
+
+//
+const Qt__ProcessSignaturePolicy Qt___PROCESS_MITIGATION_POLICY = 8
+
+//
+const Qt__ProcessFontDisablePolicy Qt___PROCESS_MITIGATION_POLICY = 9
+
+//
+const Qt__ProcessImageLoadPolicy Qt___PROCESS_MITIGATION_POLICY = 10
+
+//
+const Qt__ProcessSystemCallFilterPolicy Qt___PROCESS_MITIGATION_POLICY = 11
+
+//
+const Qt__ProcessPayloadRestrictionPolicy Qt___PROCESS_MITIGATION_POLICY = 12
+
+//
+const Qt__ProcessChildProcessPolicy Qt___PROCESS_MITIGATION_POLICY = 13
+
+//
+const Qt__ProcessSideChannelIsolationPolicy Qt___PROCESS_MITIGATION_POLICY = 14
+
+//
+const Qt__MaxProcessMitigationPolicy Qt___PROCESS_MITIGATION_POLICY = 15
+
+func _PROCESS_MITIGATION_POLICYItemName(val int) string {
+	switch val {
+	case Qt__ProcessDEPPolicy: // 0
+		return "ProcessDEPPolicy"
+	case Qt__ProcessASLRPolicy: // 1
+		return "ProcessASLRPolicy"
+	case Qt__ProcessDynamicCodePolicy: // 2
+		return "ProcessDynamicCodePolicy"
+	case Qt__ProcessStrictHandleCheckPolicy: // 3
+		return "ProcessStrictHandleCheckPolicy"
+	case Qt__ProcessSystemCallDisablePolicy: // 4
+		return "ProcessSystemCallDisablePolicy"
+	case Qt__ProcessMitigationOptionsMask: // 5
+		return "ProcessMitigationOptionsMask"
+	case Qt__ProcessExtensionPointDisablePolicy: // 6
+		return "ProcessExtensionPointDisablePolicy"
+	case Qt__ProcessControlFlowGuardPolicy: // 7
+		return "ProcessControlFlowGuardPolicy"
+	case Qt__ProcessSignaturePolicy: // 8
+		return "ProcessSignaturePolicy"
+	case Qt__ProcessFontDisablePolicy: // 9
+		return "ProcessFontDisablePolicy"
+	case Qt__ProcessImageLoadPolicy: // 10
+		return "ProcessImageLoadPolicy"
+	case Qt__ProcessSystemCallFilterPolicy: // 11
+		return "ProcessSystemCallFilterPolicy"
+	case Qt__ProcessPayloadRestrictionPolicy: // 12
+		return "ProcessPayloadRestrictionPolicy"
+	case Qt__ProcessChildProcessPolicy: // 13
+		return "ProcessChildProcessPolicy"
+	case Qt__ProcessSideChannelIsolationPolicy: // 14
+		return "ProcessSideChannelIsolationPolicy"
+	case Qt__MaxProcessMitigationPolicy: // 15
+		return "MaxProcessMitigationPolicy"
 	default:
 		return fmt.Sprintf("%d", val)
 	}

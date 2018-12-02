@@ -723,7 +723,7 @@ func (this *QTreeWidgetItem) Text(column int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTreeWidgetItem4textEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -788,7 +788,7 @@ func (this *QTreeWidgetItem) StatusTip(column int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTreeWidgetItem9statusTipEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -820,7 +820,7 @@ func (this *QTreeWidgetItem) ToolTip(column int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTreeWidgetItem7toolTipEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -852,7 +852,7 @@ func (this *QTreeWidgetItem) WhatsThis(column int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTreeWidgetItem9whatsThisEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -1200,10 +1200,10 @@ func (this *QTreeWidgetItem) Read(in qtcore.QDataStream_ITF) {
 /*
 
  */
-func (this *QTreeWidgetItem) Write(out qtcore.QDataStream_ITF) {
+func (this *QTreeWidgetItem) Write(out_ qtcore.QDataStream_ITF) {
 	var convArg0 unsafe.Pointer
-	if out != nil && out.QDataStream_PTR() != nil {
-		convArg0 = out.QDataStream_PTR().GetCthis()
+	if out_ != nil && out_.QDataStream_PTR() != nil {
+		convArg0 = out_.QDataStream_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTreeWidgetItem5writeER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

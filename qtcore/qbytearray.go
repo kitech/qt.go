@@ -3781,14 +3781,14 @@ This function was introduced in  Qt 4.4.
 
 See also fromPercentEncoding() and QUrl::toPercentEncoding().
 */
-func (this *QByteArray) ToPercentEncoding(exclude QByteArray_ITF, include QByteArray_ITF, percent byte) *QByteArray /*123*/ {
+func (this *QByteArray) ToPercentEncoding(exclude QByteArray_ITF, include_ QByteArray_ITF, percent byte) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if exclude != nil && exclude.QByteArray_PTR() != nil {
 		convArg0 = exclude.QByteArray_PTR().GetCthis()
 	}
 	var convArg1 unsafe.Pointer
-	if include != nil && include.QByteArray_PTR() != nil {
-		convArg1 = include.QByteArray_PTR().GetCthis()
+	if include_ != nil && include_.QByteArray_PTR() != nil {
+		convArg1 = include_.QByteArray_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray17toPercentEncodingERKS_S1_c", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, percent)
 	qtrt.ErrPrint(err, rv)
@@ -3917,14 +3917,14 @@ This function was introduced in  Qt 4.4.
 
 See also fromPercentEncoding() and QUrl::toPercentEncoding().
 */
-func (this *QByteArray) ToPercentEncoding__2(exclude QByteArray_ITF, include QByteArray_ITF) *QByteArray /*123*/ {
+func (this *QByteArray) ToPercentEncoding__2(exclude QByteArray_ITF, include_ QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if exclude != nil && exclude.QByteArray_PTR() != nil {
 		convArg0 = exclude.QByteArray_PTR().GetCthis()
 	}
 	var convArg1 unsafe.Pointer
-	if include != nil && include.QByteArray_PTR() != nil {
-		convArg1 = include.QByteArray_PTR().GetCthis()
+	if include_ != nil && include_.QByteArray_PTR() != nil {
+		convArg1 = include_.QByteArray_PTR().GetCthis()
 	}
 	// arg: 2, char=Char_S, =Invalid, , Invalid
 	percent := '%'

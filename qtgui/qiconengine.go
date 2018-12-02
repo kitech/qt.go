@@ -210,7 +210,7 @@ func (this *QIconEngine) Key() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -259,10 +259,10 @@ Writes the contents of this engine to the QDataStream out. Returns true if the c
 
 QIconEngine's default implementation always return false.
 */
-func (this *QIconEngine) Write(out qtcore.QDataStream_ITF) bool {
+func (this *QIconEngine) Write(out_ qtcore.QDataStream_ITF) bool {
 	var convArg0 unsafe.Pointer
-	if out != nil && out.QDataStream_PTR() != nil {
-		convArg0 = out.QDataStream_PTR().GetCthis()
+	if out_ != nil && out_.QDataStream_PTR() != nil {
+		convArg0 = out_.QDataStream_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine5writeER11QDataStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -348,7 +348,7 @@ func (this *QIconEngine) IconName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine8iconNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }

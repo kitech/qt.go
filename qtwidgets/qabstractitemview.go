@@ -34,12 +34,12 @@ import "github.com/kitech/qt.go/qtgui"
 //  body block begin
 
 // void rowsInserted(const QModelIndex &, int, int)
-func (this *QAbstractItemView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
+func (this *QAbstractItemView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end_ int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
 // void rowsAboutToBeRemoved(const QModelIndex &, int, int)
-func (this *QAbstractItemView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
+func (this *QAbstractItemView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end_ int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsAboutToBeRemoved", f)
 }
 
@@ -1680,12 +1680,12 @@ This slot is called when rows are inserted. The new rows are those under the giv
 
 See also rowsAboutToBeRemoved().
 */
-func (this *QAbstractItemView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end int) {
+func (this *QAbstractItemView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end_ int) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
 		convArg0 = parent.QModelIndex_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -1699,12 +1699,12 @@ This slot is called when rows are about to be removed. The deleted rows are thos
 
 See also rowsInserted().
 */
-func (this *QAbstractItemView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_ITF, start int, end int) {
+func (this *QAbstractItemView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_ITF, start int, end_ int) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
 		convArg0 = parent.QModelIndex_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView20rowsAboutToBeRemovedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView20rowsAboutToBeRemovedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 

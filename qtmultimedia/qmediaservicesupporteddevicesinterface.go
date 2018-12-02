@@ -104,7 +104,7 @@ func (this *QMediaServiceSupportedDevicesInterface) DeviceDescription(service qt
 	rv, err := qtrt.InvokeQtFunc6("_ZN38QMediaServiceSupportedDevicesInterface17deviceDescriptionERK10QByteArrayS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }

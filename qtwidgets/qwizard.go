@@ -585,7 +585,7 @@ func (this *QWizard) ButtonText(which int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWizard10buttonTextENS_12WizardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }

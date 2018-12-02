@@ -157,11 +157,11 @@ func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRa
 /*
 
  */
-func (*QRandomGenerator64) NewForInherit_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator64 {
-	return NewQRandomGenerator64_2(begin, end)
+func (*QRandomGenerator64) NewForInherit_2(begin_ unsafe.Pointer /*666*/, end_ unsafe.Pointer /*666*/) *QRandomGenerator64 {
+	return NewQRandomGenerator64_2(begin_, end_)
 }
-func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjS1_", qtrt.FFI_TYPE_POINTER, begin, end)
+func NewQRandomGenerator64_2(begin_ unsafe.Pointer /*666*/, end_ unsafe.Pointer /*666*/) *QRandomGenerator64 {
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjS1_", qtrt.FFI_TYPE_POINTER, begin_, end_)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)

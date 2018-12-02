@@ -124,7 +124,7 @@ func (this *QImageEncoderControl) ImageCodecDescription(codecName string) string
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QImageEncoderControl21imageCodecDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }

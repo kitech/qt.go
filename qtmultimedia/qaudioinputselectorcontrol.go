@@ -110,7 +110,7 @@ func (this *QAudioInputSelectorControl) InputDescription(name string) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAudioInputSelectorControl16inputDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -127,7 +127,7 @@ func (this *QAudioInputSelectorControl) DefaultInput() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAudioInputSelectorControl12defaultInputEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -146,7 +146,7 @@ func (this *QAudioInputSelectorControl) ActiveInput() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAudioInputSelectorControl11activeInputEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }

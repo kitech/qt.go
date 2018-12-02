@@ -448,7 +448,7 @@ func (this *QUrl) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QUrl11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
 }
@@ -535,7 +535,7 @@ func (this *QUrl) Scheme() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QUrl6schemeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
 }
@@ -1262,7 +1262,7 @@ func (this *QUrl) ToLocalFile() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QUrl11toLocalFileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
 }
@@ -1366,7 +1366,7 @@ func (this *QUrl) FromPercentEncoding(arg0 QByteArray_ITF) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl19fromPercentEncodingERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
 }
@@ -1391,7 +1391,7 @@ Unreserved is defined as: ALPHA / DIGIT / "-" / "." / "_" / "~"
   qDebug(ba.constData());
   // prints "{a fi%73hy %73tring%3F}"
 */
-func (this *QUrl) ToPercentEncoding(arg0 string, exclude QByteArray_ITF, include QByteArray_ITF) *QByteArray /*123*/ {
+func (this *QUrl) ToPercentEncoding(arg0 string, exclude QByteArray_ITF, include_ QByteArray_ITF) *QByteArray /*123*/ {
 	var tmpArg0 = NewQString_5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
@@ -1399,8 +1399,8 @@ func (this *QUrl) ToPercentEncoding(arg0 string, exclude QByteArray_ITF, include
 		convArg1 = exclude.QByteArray_PTR().GetCthis()
 	}
 	var convArg2 unsafe.Pointer
-	if include != nil && include.QByteArray_PTR() != nil {
-		convArg2 = include.QByteArray_PTR().GetCthis()
+	if include_ != nil && include_.QByteArray_PTR() != nil {
+		convArg2 = include_.QByteArray_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -1408,9 +1408,9 @@ func (this *QUrl) ToPercentEncoding(arg0 string, exclude QByteArray_ITF, include
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QUrl_ToPercentEncoding(arg0 string, exclude QByteArray_ITF, include QByteArray_ITF) *QByteArray /*123*/ {
+func QUrl_ToPercentEncoding(arg0 string, exclude QByteArray_ITF, include_ QByteArray_ITF) *QByteArray /*123*/ {
 	var nilthis *QUrl
-	rv := nilthis.ToPercentEncoding(arg0, exclude, include)
+	rv := nilthis.ToPercentEncoding(arg0, exclude, include_)
 	return rv
 }
 
@@ -1496,7 +1496,7 @@ func (this *QUrl) FromAce(arg0 QByteArray_ITF) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl7fromAceERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
 }

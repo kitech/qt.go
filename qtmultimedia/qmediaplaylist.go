@@ -446,8 +446,8 @@ Remove the item from the playlist at position pos.
 
 Returns true if the operation is successful, otherwise return false.
 */
-func (this *QMediaPlaylist) RemoveMedia_1(start int, end int) bool {
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist11removeMediaEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
+func (this *QMediaPlaylist) RemoveMedia_1(start int, end_ int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist11removeMediaEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -698,7 +698,7 @@ func (this *QMediaPlaylist) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMediaPlaylist11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -816,8 +816,8 @@ func (this *QMediaPlaylist) CurrentMediaChanged(arg0 QMediaContent_ITF) {
 /*
 Signal emitted when items are to be inserted at start and ending at end.
 */
-func (this *QMediaPlaylist) MediaAboutToBeInserted(start int, end int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist22mediaAboutToBeInsertedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
+func (this *QMediaPlaylist) MediaAboutToBeInserted(start int, end_ int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist22mediaAboutToBeInsertedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -829,8 +829,8 @@ func (this *QMediaPlaylist) MediaAboutToBeInserted(start int, end int) {
 /*
 This signal is emitted after media has been inserted into the playlist. The new items are those between start and end inclusive.
 */
-func (this *QMediaPlaylist) MediaInserted(start int, end int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist13mediaInsertedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
+func (this *QMediaPlaylist) MediaInserted(start int, end_ int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist13mediaInsertedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -842,8 +842,8 @@ func (this *QMediaPlaylist) MediaInserted(start int, end int) {
 /*
 Signal emitted when item are to be deleted at start and ending at end.
 */
-func (this *QMediaPlaylist) MediaAboutToBeRemoved(start int, end int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist21mediaAboutToBeRemovedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
+func (this *QMediaPlaylist) MediaAboutToBeRemoved(start int, end_ int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist21mediaAboutToBeRemovedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -855,8 +855,8 @@ func (this *QMediaPlaylist) MediaAboutToBeRemoved(start int, end int) {
 /*
 This signal is emitted after media has been removed from the playlist. The removed items are those between start and end inclusive.
 */
-func (this *QMediaPlaylist) MediaRemoved(start int, end int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist12mediaRemovedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
+func (this *QMediaPlaylist) MediaRemoved(start int, end_ int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist12mediaRemovedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -868,8 +868,8 @@ func (this *QMediaPlaylist) MediaRemoved(start int, end int) {
 /*
 This signal is emitted after media has been changed in the playlist between start and end positions inclusive.
 */
-func (this *QMediaPlaylist) MediaChanged(start int, end int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist12mediaChangedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
+func (this *QMediaPlaylist) MediaChanged(start int, end_ int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist12mediaChangedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 

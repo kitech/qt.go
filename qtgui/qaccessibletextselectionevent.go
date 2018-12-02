@@ -73,15 +73,15 @@ func (*QAccessibleTextSelectionEvent) NewFromPointer(cthis unsafe.Pointer) *QAcc
 /*
 
  */
-func (*QAccessibleTextSelectionEvent) NewForInherit(obj qtcore.QObject_ITF /*777 QObject **/, start int, end int) *QAccessibleTextSelectionEvent {
-	return NewQAccessibleTextSelectionEvent(obj, start, end)
+func (*QAccessibleTextSelectionEvent) NewForInherit(obj qtcore.QObject_ITF /*777 QObject **/, start int, end_ int) *QAccessibleTextSelectionEvent {
+	return NewQAccessibleTextSelectionEvent(obj, start, end_)
 }
-func NewQAccessibleTextSelectionEvent(obj qtcore.QObject_ITF /*777 QObject **/, start int, end int) *QAccessibleTextSelectionEvent {
+func NewQAccessibleTextSelectionEvent(obj qtcore.QObject_ITF /*777 QObject **/, start int, end_ int) *QAccessibleTextSelectionEvent {
 	var convArg0 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
 		convArg0 = obj.QObject_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP7QObjectii", qtrt.FFI_TYPE_POINTER, convArg0, start, end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP7QObjectii", qtrt.FFI_TYPE_POINTER, convArg0, start, end_)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextSelectionEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextSelectionEvent)
@@ -96,15 +96,15 @@ func NewQAccessibleTextSelectionEvent(obj qtcore.QObject_ITF /*777 QObject **/, 
 /*
 
  */
-func (*QAccessibleTextSelectionEvent) NewForInherit_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, start int, end int) *QAccessibleTextSelectionEvent {
-	return NewQAccessibleTextSelectionEvent_1(iface, start, end)
+func (*QAccessibleTextSelectionEvent) NewForInherit_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, start int, end_ int) *QAccessibleTextSelectionEvent {
+	return NewQAccessibleTextSelectionEvent_1(iface, start, end_)
 }
-func NewQAccessibleTextSelectionEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, start int, end int) *QAccessibleTextSelectionEvent {
+func NewQAccessibleTextSelectionEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, start int, end_ int) *QAccessibleTextSelectionEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
 		convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii", qtrt.FFI_TYPE_POINTER, convArg0, start, end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii", qtrt.FFI_TYPE_POINTER, convArg0, start, end_)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextSelectionEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextSelectionEvent)
@@ -134,8 +134,8 @@ func DeleteQAccessibleTextSelectionEvent(this *QAccessibleTextSelectionEvent) {
 /*
 
  */
-func (this *QAccessibleTextSelectionEvent) SetSelection(start int, end int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEvent12setSelectionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
+func (this *QAccessibleTextSelectionEvent) SetSelection(start int, end_ int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEvent12setSelectionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 

@@ -18,7 +18,7 @@ package qtquickwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 25
+// extern C begin: 5
 */
 // import "C"
 import "unsafe"

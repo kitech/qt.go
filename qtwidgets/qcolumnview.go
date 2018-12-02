@@ -69,7 +69,7 @@ func (this *QColumnView) InheritVerticalOffset(f func() int) {
 }
 
 // void rowsInserted(const QModelIndex &, int, int)
-func (this *QColumnView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
+func (this *QColumnView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end_ int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
@@ -566,12 +566,12 @@ func (this *QColumnView) VerticalOffset() int {
 /*
 Reimplemented from QAbstractItemView::rowsInserted().
 */
-func (this *QColumnView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end int) {
+func (this *QColumnView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end_ int) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
 		convArg0 = parent.QModelIndex_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QColumnView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QColumnView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 

@@ -287,8 +287,8 @@ Sets whether subdomains are included for this policy to include.
 
 See also includesSubDomains().
 */
-func (this *QHstsPolicy) SetIncludesSubDomains(include bool) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy21setIncludesSubDomainsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), include)
+func (this *QHstsPolicy) SetIncludesSubDomains(include_ bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy21setIncludesSubDomainsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), include_)
 	qtrt.ErrPrint(err, rv)
 }
 

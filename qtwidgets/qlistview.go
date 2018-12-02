@@ -54,12 +54,12 @@ func (this *QListView) InheritContentsSize(f func() unsafe.Pointer) {
 }
 
 // void rowsInserted(const QModelIndex &, int, int)
-func (this *QListView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
+func (this *QListView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end_ int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
 // void rowsAboutToBeRemoved(const QModelIndex &, int, int)
-func (this *QListView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
+func (this *QListView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end_ int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsAboutToBeRemoved", f)
 }
 
@@ -875,12 +875,12 @@ func (this *QListView) ContentsSize() *qtcore.QSize /*123*/ {
 /*
 Reimplemented from QAbstractItemView::rowsInserted().
 */
-func (this *QListView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end int) {
+func (this *QListView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, end_ int) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
 		convArg0 = parent.QModelIndex_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView12rowsInsertedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -892,12 +892,12 @@ func (this *QListView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, en
 /*
 Reimplemented from QAbstractItemView::rowsAboutToBeRemoved().
 */
-func (this *QListView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_ITF, start int, end int) {
+func (this *QListView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_ITF, start int, end_ int) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
 		convArg0 = parent.QModelIndex_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView20rowsAboutToBeRemovedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView20rowsAboutToBeRemovedERK11QModelIndexii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end_)
 	qtrt.ErrPrint(err, rv)
 }
 

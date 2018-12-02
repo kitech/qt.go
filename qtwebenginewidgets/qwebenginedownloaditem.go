@@ -186,7 +186,7 @@ func (this *QWebEngineDownloadItem) MimeType() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QWebEngineDownloadItem8mimeTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -203,7 +203,7 @@ func (this *QWebEngineDownloadItem) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QWebEngineDownloadItem4pathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -318,7 +318,7 @@ func (this *QWebEngineDownloadItem) InterruptReasonString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QWebEngineDownloadItem21interruptReasonStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }

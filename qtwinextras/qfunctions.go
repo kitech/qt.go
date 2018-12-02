@@ -144,6 +144,23 @@ func SetWindowExcludedFromPeek(window qtgui.QWindow_ITF /*777 QWindow **/, exclu
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:124
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void setWindowExcludedFromPeek(QWidget *, bool)
+
+/*
+
+ */
+func SetWindowExcludedFromPeek_1(window qtwidgets.QWidget_ITF /*777 QWidget **/, exclude bool) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin25setWindowExcludedFromPeekEP7QWidgetb", qtrt.FFI_TYPE_POINTER, convArg0, exclude)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:102
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -182,6 +199,44 @@ func ExtendFrameIntoClientArea_1(window qtgui.QWindow_ITF /*777 QWindow **/, mar
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:172
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void extendFrameIntoClientArea(QWidget *, int, int, int, int)
+
+/*
+
+ */
+func ExtendFrameIntoClientArea_2(window qtwidgets.QWidget_ITF /*777 QWidget **/, left int, top int, right int, bottom int) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin25extendFrameIntoClientAreaEP7QWidgetiiii", qtrt.FFI_TYPE_POINTER, convArg0, left, top, right, bottom)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:166
+// index:3
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void extendFrameIntoClientArea(QWidget *, const QMargins &)
+
+/*
+
+ */
+func ExtendFrameIntoClientArea_3(window qtwidgets.QWidget_ITF /*777 QWidget **/, margins qtcore.QMargins_ITF) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if margins != nil && margins.QMargins_PTR() != nil {
+		convArg1 = margins.QMargins_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin25extendFrameIntoClientAreaEP7QWidgetRK8QMargins", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:96
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -196,6 +251,24 @@ func IsWindowExcludedFromPeek(window qtgui.QWindow_ITF /*777 QWindow **/) bool {
 		convArg0 = window.QWindow_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin24isWindowExcludedFromPeekEP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:130
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool isWindowExcludedFromPeek(QWidget *)
+
+/*
+
+ */
+func IsWindowExcludedFromPeek_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) bool {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin24isWindowExcludedFromPeekEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -217,6 +290,23 @@ func DisableBlurBehindWindow(window qtgui.QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:196
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void disableBlurBehindWindow(QWidget *)
+
+/*
+
+ */
+func DisableBlurBehindWindow_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin23disableBlurBehindWindowEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:98
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -235,6 +325,24 @@ func IsWindowPeekDisallowed(window qtgui.QWindow_ITF /*777 QWindow **/) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:144
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool isWindowPeekDisallowed(QWidget *)
+
+/*
+
+ */
+func IsWindowPeekDisallowed_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) bool {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin22isWindowPeekDisallowedEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:90
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -247,7 +355,7 @@ func ErrorStringFromHresult(hresult int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin22errorStringFromHresultEi", qtrt.FFI_TYPE_POINTER, hresult)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -290,6 +398,44 @@ func EnableBlurBehindWindow_1(window qtgui.QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:184
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void enableBlurBehindWindow(QWidget *, const QRegion &)
+
+/*
+
+ */
+func EnableBlurBehindWindow_2(window qtwidgets.QWidget_ITF /*777 QWidget **/, region qtgui.QRegion_ITF) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if region != nil && region.QRegion_PTR() != nil {
+		convArg1 = region.QRegion_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin22enableBlurBehindWindowEP7QWidgetRK7QRegion", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:190
+// index:3
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void enableBlurBehindWindow(QWidget *)
+
+/*
+
+ */
+func EnableBlurBehindWindow_3(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin22enableBlurBehindWindowEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:119
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -304,6 +450,23 @@ func TaskbarActivateTabAlt(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 		convArg0 = arg0.QWindow_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin21taskbarActivateTabAltEP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:214
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void taskbarActivateTabAlt(QWidget *)
+
+/*
+
+ */
+func TaskbarActivateTabAlt_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin21taskbarActivateTabAltEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -324,6 +487,23 @@ func SetWindowFlip3DPolicy(window qtgui.QWindow_ITF /*777 QWindow **/, policy in
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:152
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void setWindowFlip3DPolicy(QWidget *, QtWin::WindowFlip3DPolicy)
+
+/*
+
+ */
+func SetWindowFlip3DPolicy_1(window qtwidgets.QWidget_ITF /*777 QWidget **/, policy int) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin21setWindowFlip3DPolicyEP7QWidgetNS_18WindowFlip3DPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, policy)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:97
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -338,6 +518,23 @@ func SetWindowDisallowPeek(window qtgui.QWindow_ITF /*777 QWindow **/, disallow 
 		convArg0 = window.QWindow_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin21setWindowDisallowPeekEP7QWindowb", qtrt.FFI_TYPE_POINTER, convArg0, disallow)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:138
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void setWindowDisallowPeek(QWidget *, bool)
+
+/*
+
+ */
+func SetWindowDisallowPeek_1(window qtwidgets.QWidget_ITF /*777 QWidget **/, disallow bool) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin21setWindowDisallowPeekEP7QWidgetb", qtrt.FFI_TYPE_POINTER, convArg0, disallow)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -387,6 +584,23 @@ func MarkFullscreenWindow(arg0 qtgui.QWindow_ITF /*777 QWindow **/, fullscreen b
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:202
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void markFullscreenWindow(QWidget *, bool)
+
+/*
+
+ */
+func MarkFullscreenWindow_1(window qtwidgets.QWidget_ITF /*777 QWidget **/, fullscreen bool) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin20markFullscreenWindowEP7QWidgetb", qtrt.FFI_TYPE_POINTER, convArg0, fullscreen)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:110
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -433,6 +647,24 @@ func WindowFlip3DPolicy(arg0 qtgui.QWindow_ITF /*777 QWindow **/) int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:158
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [4] QtWin::WindowFlip3DPolicy windowFlip3DPolicy(QWidget *)
+
+/*
+
+ */
+func WindowFlip3DPolicy_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) int {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin18windowFlip3DPolicyEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return int(rv)
+}
+
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:118
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -447,6 +679,23 @@ func TaskbarActivateTab(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 		convArg0 = arg0.QWindow_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin18taskbarActivateTabEP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:208
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void taskbarActivateTab(QWidget *)
+
+/*
+
+ */
+func TaskbarActivateTab_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin18taskbarActivateTabEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -467,6 +716,23 @@ func ResetExtendedFrame(window qtgui.QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:178
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void resetExtendedFrame(QWidget *)
+
+/*
+
+ */
+func ResetExtendedFrame_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin18resetExtendedFrameEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:89
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -479,7 +745,7 @@ func StringFromHresult(hresult int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin17stringFromHresultEi", qtrt.FFI_TYPE_POINTER, hresult)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToLocal8Bit().Data()
+	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
@@ -517,6 +783,23 @@ func TaskbarDeleteTab(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:226
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void taskbarDeleteTab(QWidget *)
+
+/*
+
+ */
+func TaskbarDeleteTab_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin16taskbarDeleteTabEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:84
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -547,6 +830,23 @@ func TaskbarAddTab(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 		convArg0 = arg0.QWindow_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin13taskbarAddTabEP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:220
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void taskbarAddTab(QWidget *)
+
+/*
+
+ */
+func TaskbarAddTab_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if window != nil && window.QWidget_PTR() != nil {
+		convArg0 = window.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin13taskbarAddTabEP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
 
