@@ -3,10 +3,10 @@ package qtmeta
 import (
 	"fmt"
 	"log"
+	"os"
 	"reflect"
 	"runtime"
 	"strings"
-	"time"
 	"unsafe"
 
 	"github.com/kitech/qt.go/qtrt"
@@ -123,7 +123,8 @@ func newDeriveContext(obj interface{}, bargs ...[]interface{}) *deriveContext {
 
 	var dctx_dtored = false
 	runtime.SetFinalizer(this, func(obj interface{}) { dctx_dtored = true })
-	time.AfterFunc(5*time.Second, func() { qtrt.Assert(dctx_dtored, "dctx not success dtor") })
+	// we sure it will be GCed. But maybe need long to GCed
+	// time.AfterFunc(5*time.Second, func() { qtrt.Assert(dctx_dtored, "dctx not success dtored") })
 	return this
 }
 
@@ -340,11 +341,19 @@ func mksignalfn(thisty string, cobjptr unsafe.Pointer, cmdo unsafe.Pointer, sign
 			log.Panicln("wtf", cobjptr, cmdo, args)
 		}
 		qtrt.InvokeQtFunc6("C_ZN11QMetaObject8activateEP7QObjectPKS_iPPv", qtrt.FFI_TYPE_POINTER, cobjptr, cmdo, signal_index, args_)
-		log.Printf("emited signal: %s(%p)::%s:%d(%v|%v)\n", thisty, cobjptr, signal_name, signal_index, args, fullargs)
+		if DebugQtMeta {
+			log.Printf("emited signal: %s(%p)::%s:%d(%v|%v)\n", thisty, cobjptr, signal_name, signal_index, args, fullargs)
+		}
 		// void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
 		// QMetaObject::activate(this, &staticMetaObject, 0, _a);
 		return nil
 	}
+}
+
+var DebugQtMeta = false
+
+func init() {
+	DebugQtMeta = os.Getenv("QTGO_DEBUG_QTMETA") == "1" || os.Getenv("QTGO_DEBUG_QTMETA") == "true"
 }
 
 /////
