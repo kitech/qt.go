@@ -36,6 +36,17 @@ All platforms should be supported, for now some of them are tested:
 * libffi
 * dlfcn (windows)
 
+
+##### FFI
+
+Make sure libffi is installed
+
+Debian based: `apt-get install libffi-dev`
+
+Arch based: `pacman -S libffi`
+
+MacOS: `brew install libffi`
+
 ##### qt.go:
 
     go get -v -u github.com/kitech/qt.go
@@ -48,17 +59,10 @@ All platforms should be supported, for now some of them are tested:
     make
     cp libQt5Inline.so /usr/lib/libQt5Inline.so
 
-##### FFI
+##### uic/rcc
 
-Make sure libffi is installed
-    
-Debian based:
-
-    apt-get install libffi-dev
-    
-Arch based:
-
-    pacman -S libffi
+    go get -v -u github.com/kitech/qt.go/cmd/go-uic
+    go get -v -u github.com/kitech/qt.go/cmd/go-rcc
 
 [Full Installation](https://github.com/kitech/qt.go/blob/master/install.md)
 
@@ -74,7 +78,7 @@ Arch based:
         app.Exec()
     }
 
-More complex examples: https://github.com/qtchina/qt.go.demos/
+More complex examples: https://github.com/kitech/qt.go/examples/ https://github.com/qtchina/qt.go.demos/ 
 
 Go side signal/slot: [syntax document](https://github.com/kitech/qt.go/blob/master/docs/qt_meta_data_mark_syntax_for_go.md) [usage demo](https://github.com/kitech/qt.go/blob/master/qtmeta/tests/meta_data_test_.go)
 

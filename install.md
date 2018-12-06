@@ -65,8 +65,8 @@ extract to $HOME/qtenv/libQt5Inline.dylib
 
 ##### libffi
 
-* archlinux: pacman -S libffi
-* ubuntu/debian: apt-get install libffi-dev
+* archlinux: `pacman -S libffi`
+* ubuntu/debian: `apt-get install libffi-dev`
 
 ##### Qt5Inline.so
 

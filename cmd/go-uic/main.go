@@ -217,7 +217,7 @@ func onSetupUi(line string) {
 				} else {
 					refmtval = "this." + refmtval
 				}
-			case "QLabel", "QFrame":
+			case "QLabel", "QFrame", "QToolBox":
 				refmtval = "this." + refmtval + ", 0"
 			case "QTableWidgetItem":
 				parts := strings.Split(refmtname, "*")
@@ -259,6 +259,9 @@ func onSetupUi(line string) {
 			refmtsuf := ""
 			switch mats[0][2] {
 			case "Spacing", "HorizontalStretch", "VerticalStretch":
+				if mats[0][1] == "layout()" { // toolBox->layout()->setSpacing(60);
+					mats[0][1] = line[:strings.Index(line, mats[0][1])-2] + "." + strings.Title(mats[0][1])
+				}
 			case "PointSize", "Weight", "ColumnCount", "RowCount": // do nothing
 			case "ContentsMargins", "CurrentIndex", "LineWidth",
 				"AutoScrollMargin", "MidLineWidth", "ToolTipDuration",
@@ -388,6 +391,7 @@ func onSetupUi(line string) {
 				refmtval = fmt.Sprintf("this.%s, \"\"", strings.Split(refmtval, ",")[0])
 			case "addAction":
 				refmtval = fmt.Sprintf("this.%s", strings.Replace(refmtval, "->", ".", -1))
+				refmtname = "QWidget." + refmtname
 			default:
 				refmtval = "this." + refmtval
 			}
