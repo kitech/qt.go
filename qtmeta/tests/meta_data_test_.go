@@ -138,7 +138,7 @@ func Test1(t *testing.T) interface{} {
 	}
 
 	// qtmeta.Underive(a)
-	_ = unsafe.Pointer(a)
+
 	return a
 }
 

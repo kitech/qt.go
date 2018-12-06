@@ -27,7 +27,7 @@ open cmd.exe:
     go get github.com/kitech/qt.go
 
     cd D:/qtenv
-    go build -o bin/button.exe %GOPATH%/src/github.com/kitech/qt.go/eg/button.go
+    go build -o bin/button.exe %GOPATH%/src/github.com/kitech/qt.go/examples/button.go
 
     bin\button.exe
 
@@ -56,7 +56,7 @@ extract to $HOME/qtenv/libQt5Inline.dylib
     go get github.com/kitech/dl
     go get github.com/kitech/qt.go
 
-    go build $GOPATH/src/github.com/kitech/qt.go/eg/button.go
+    go build $GOPATH/src/github.com/kitech/qt.go/examples/button.go
 
     LD_LIBRARY_PATH=$HOME/qtenv:/usr/local/opt/qt/lib ./button 
 
@@ -81,7 +81,7 @@ Note: thus not need install Qt yourself.
     go get github.com/kitech/dl
     go get github.com/kitech/qt.go
 
-    go build $GOPATH/src/github.com/kitech/qt.go/eg/button.go
+    go build $GOPATH/src/github.com/kitech/qt.go/examples/button.go
 
     LD_LIBRARY_PATH=$HOME/qtenv ./button 
 
