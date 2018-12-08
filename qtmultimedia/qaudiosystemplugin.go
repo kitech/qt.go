@@ -114,10 +114,10 @@ func NewQAudioSystemPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioS
 /*
 Construct a new audio plugin with parent. This is invoked automatically by the Q_PLUGIN_METADATA() macro.
 */
-func (*QAudioSystemPlugin) NewForInherit__() *QAudioSystemPlugin {
-	return NewQAudioSystemPlugin__()
+func (*QAudioSystemPlugin) NewForInheritp() *QAudioSystemPlugin {
+	return NewQAudioSystemPluginp()
 }
-func NewQAudioSystemPlugin__() *QAudioSystemPlugin {
+func NewQAudioSystemPluginp() *QAudioSystemPlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAudioSystemPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

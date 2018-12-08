@@ -148,7 +148,7 @@ If the item type is QWinJumpListItem::Link, filePath is the path to an executabl
 See also filePath(), setWorkingDirectory(), and setArguments().
 */
 func (this *QWinJumpListItem) SetFilePath(filePath string) {
-	var tmpArg0 = qtcore.NewQString_5(filePath)
+	var tmpArg0 = qtcore.NewQString5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem11setFilePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -186,7 +186,7 @@ This value is used only if the type of this item is QWinJumpListItem::Link.
 See also workingDirectory() and setFilePath().
 */
 func (this *QWinJumpListItem) SetWorkingDirectory(workingDirectory string) {
-	var tmpArg0 = qtcore.NewQString_5(workingDirectory)
+	var tmpArg0 = qtcore.NewQString5(workingDirectory)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem19setWorkingDirectoryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -263,7 +263,7 @@ This value is used only if the type of this item is QWinJumpListItem::Link.
 See also title().
 */
 func (this *QWinJumpListItem) SetTitle(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -301,7 +301,7 @@ This value is used only if the type of this item is QWinJumpListItem::Link.
 See also description().
 */
 func (this *QWinJumpListItem) SetDescription(description string) {
-	var tmpArg0 = qtcore.NewQString_5(description)
+	var tmpArg0 = qtcore.NewQString5(description)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem14setDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

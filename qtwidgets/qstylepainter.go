@@ -91,10 +91,10 @@ func NewQStylePainter() *QStylePainter {
 /*
 Constructs a QStylePainter.
 */
-func (*QStylePainter) NewForInherit_1(w QWidget_ITF /*777 QWidget **/) *QStylePainter {
-	return NewQStylePainter_1(w)
+func (*QStylePainter) NewForInherit1(w QWidget_ITF /*777 QWidget **/) *QStylePainter {
+	return NewQStylePainter1(w)
 }
-func NewQStylePainter_1(w QWidget_ITF /*777 QWidget **/) *QStylePainter {
+func NewQStylePainter1(w QWidget_ITF /*777 QWidget **/) *QStylePainter {
 	var convArg0 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
 		convArg0 = w.QWidget_PTR().GetCthis()
@@ -114,10 +114,10 @@ func NewQStylePainter_1(w QWidget_ITF /*777 QWidget **/) *QStylePainter {
 /*
 Constructs a QStylePainter.
 */
-func (*QStylePainter) NewForInherit_2(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, w QWidget_ITF /*777 QWidget **/) *QStylePainter {
-	return NewQStylePainter_2(pd, w)
+func (*QStylePainter) NewForInherit2(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, w QWidget_ITF /*777 QWidget **/) *QStylePainter {
+	return NewQStylePainter2(pd, w)
 }
-func NewQStylePainter_2(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, w QWidget_ITF /*777 QWidget **/) *QStylePainter {
+func NewQStylePainter2(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, w QWidget_ITF /*777 QWidget **/) *QStylePainter {
 	var convArg0 unsafe.Pointer
 	if pd != nil && pd.QPaintDevice_PTR() != nil {
 		convArg0 = pd.QPaintDevice_PTR().GetCthis()
@@ -163,7 +163,7 @@ Begin painting operations on the specified widget. Returns true if the painter i
 
 This is automatically called by the constructor that takes a QWidget.
 */
-func (this *QStylePainter) Begin_1(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, w QWidget_ITF /*777 QWidget **/) bool {
+func (this *QStylePainter) Begin1(pd qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, w QWidget_ITF /*777 QWidget **/) bool {
 	var convArg0 unsafe.Pointer
 	if pd != nil && pd.QPaintDevice_PTR() != nil {
 		convArg0 = pd.QPaintDevice_PTR().GetCthis()
@@ -255,7 +255,7 @@ func (this *QStylePainter) DrawItemText(r qtcore.QRect_ITF, flags int, pal qtgui
 	if pal != nil && pal.QPalette_PTR() != nil {
 		convArg2 = pal.QPalette_PTR().GetCthis()
 	}
-	var tmpArg4 = qtcore.NewQString_5(text)
+	var tmpArg4 = qtcore.NewQString5(text)
 	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStylePainter12drawItemTextERK5QRectiRK8QPalettebRK7QStringNS3_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2, enabled, convArg4, textRole)
 	qtrt.ErrPrint(err, rv)
@@ -273,7 +273,7 @@ The pen color is specified with textRole. The enabled bool indicates whether or 
 
 See also QStyle::drawItemText() and Qt::Alignment.
 */
-func (this *QStylePainter) DrawItemText__(r qtcore.QRect_ITF, flags int, pal qtgui.QPalette_ITF, enabled bool, text string) {
+func (this *QStylePainter) DrawItemTextp(r qtcore.QRect_ITF, flags int, pal qtgui.QPalette_ITF, enabled bool, text string) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -282,7 +282,7 @@ func (this *QStylePainter) DrawItemText__(r qtcore.QRect_ITF, flags int, pal qtg
 	if pal != nil && pal.QPalette_PTR() != nil {
 		convArg2 = pal.QPalette_PTR().GetCthis()
 	}
-	var tmpArg4 = qtcore.NewQString_5(text)
+	var tmpArg4 = qtcore.NewQString5(text)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, QPalette::ColorRole=Elaborated, QPalette::ColorRole=Enum, , Invalid
 	textRole := 0

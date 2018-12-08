@@ -95,10 +95,10 @@ Produces a null version.
 
 See also isNull().
 */
-func (*QVersionNumber) NewForInherit_1(maj int) *QVersionNumber {
-	return NewQVersionNumber_1(maj)
+func (*QVersionNumber) NewForInherit1(maj int) *QVersionNumber {
+	return NewQVersionNumber1(maj)
 }
-func NewQVersionNumber_1(maj int) *QVersionNumber {
+func NewQVersionNumber1(maj int) *QVersionNumber {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumberC2Ei", qtrt.FFI_TYPE_POINTER, maj)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,10 +116,10 @@ Produces a null version.
 
 See also isNull().
 */
-func (*QVersionNumber) NewForInherit_2(maj int, min int) *QVersionNumber {
-	return NewQVersionNumber_2(maj, min)
+func (*QVersionNumber) NewForInherit2(maj int, min int) *QVersionNumber {
+	return NewQVersionNumber2(maj, min)
 }
-func NewQVersionNumber_2(maj int, min int) *QVersionNumber {
+func NewQVersionNumber2(maj int, min int) *QVersionNumber {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumberC2Eii", qtrt.FFI_TYPE_POINTER, maj, min)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -137,10 +137,10 @@ Produces a null version.
 
 See also isNull().
 */
-func (*QVersionNumber) NewForInherit_3(maj int, min int, mic int) *QVersionNumber {
-	return NewQVersionNumber_3(maj, min, mic)
+func (*QVersionNumber) NewForInherit3(maj int, min int, mic int) *QVersionNumber {
+	return NewQVersionNumber3(maj, min, mic)
 }
-func NewQVersionNumber_3(maj int, min int, mic int) *QVersionNumber {
+func NewQVersionNumber3(maj int, min int, mic int) *QVersionNumber {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumberC2Eiii", qtrt.FFI_TYPE_POINTER, maj, min, mic)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -421,7 +421,7 @@ Once the numerical segments have been parsed, the remainder of the string is con
 See also isNull().
 */
 func (this *QVersionNumber) FromString(string string, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringERK7QStringPi", qtrt.FFI_TYPE_POINTER, convArg0, suffixIndex)
 	qtrt.ErrPrint(err, rv)
@@ -456,8 +456,8 @@ Once the numerical segments have been parsed, the remainder of the string is con
 
 See also isNull().
 */
-func (this *QVersionNumber) FromString__(string string) *QVersionNumber /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+func (this *QVersionNumber) FromStringp(string string) *QVersionNumber /*123*/ {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int *=Pointer, =Invalid, , Invalid
 	var suffixIndex unsafe.Pointer
@@ -489,7 +489,7 @@ Once the numerical segments have been parsed, the remainder of the string is con
 
 See also isNull().
 */
-func (this *QVersionNumber) FromString_1(string QLatin1String_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
+func (this *QVersionNumber) FromString1(string QLatin1String_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
 	var convArg0 unsafe.Pointer
 	if string != nil && string.QLatin1String_PTR() != nil {
 		convArg0 = string.QLatin1String_PTR().GetCthis()
@@ -500,9 +500,9 @@ func (this *QVersionNumber) FromString_1(string QLatin1String_ITF /*123*/, suffi
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
 	return rv2
 }
-func QVersionNumber_FromString_1(string QLatin1String_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
+func QVersionNumber_FromString1(string QLatin1String_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
 	var nilthis *QVersionNumber
-	rv := nilthis.FromString_1(string, suffixIndex)
+	rv := nilthis.FromString1(string, suffixIndex)
 	return rv
 }
 
@@ -527,7 +527,7 @@ Once the numerical segments have been parsed, the remainder of the string is con
 
 See also isNull().
 */
-func (this *QVersionNumber) FromString_1_(string QLatin1String_ITF /*123*/) *QVersionNumber /*123*/ {
+func (this *QVersionNumber) FromString1p(string QLatin1String_ITF /*123*/) *QVersionNumber /*123*/ {
 	var convArg0 unsafe.Pointer
 	if string != nil && string.QLatin1String_PTR() != nil {
 		convArg0 = string.QLatin1String_PTR().GetCthis()
@@ -562,7 +562,7 @@ Once the numerical segments have been parsed, the remainder of the string is con
 
 See also isNull().
 */
-func (this *QVersionNumber) FromString_2(string QStringView_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
+func (this *QVersionNumber) FromString2(string QStringView_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
 	var convArg0 unsafe.Pointer
 	if string != nil && string.QStringView_PTR() != nil {
 		convArg0 = string.QStringView_PTR().GetCthis()
@@ -573,9 +573,9 @@ func (this *QVersionNumber) FromString_2(string QStringView_ITF /*123*/, suffixI
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
 	return rv2
 }
-func QVersionNumber_FromString_2(string QStringView_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
+func QVersionNumber_FromString2(string QStringView_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
 	var nilthis *QVersionNumber
-	rv := nilthis.FromString_2(string, suffixIndex)
+	rv := nilthis.FromString2(string, suffixIndex)
 	return rv
 }
 
@@ -600,7 +600,7 @@ Once the numerical segments have been parsed, the remainder of the string is con
 
 See also isNull().
 */
-func (this *QVersionNumber) FromString_2_(string QStringView_ITF /*123*/) *QVersionNumber /*123*/ {
+func (this *QVersionNumber) FromString2p(string QStringView_ITF /*123*/) *QVersionNumber /*123*/ {
 	var convArg0 unsafe.Pointer
 	if string != nil && string.QStringView_PTR() != nil {
 		convArg0 = string.QStringView_PTR().GetCthis()

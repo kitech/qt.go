@@ -100,10 +100,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit_1(color int) *QColor {
-	return NewQColor_1(color)
+func (*QColor) NewForInherit1(color int) *QColor {
+	return NewQColor1(color)
 }
-func NewQColor_1(color int) *QColor {
+func NewQColor1(color int) *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2EN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, color)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -123,10 +123,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit_2(r int, g int, b int, a int) *QColor {
-	return NewQColor_2(r, g, b, a)
+func (*QColor) NewForInherit2(r int, g int, b int, a int) *QColor {
+	return NewQColor2(r, g, b, a)
 }
-func NewQColor_2(r int, g int, b int, a int) *QColor {
+func NewQColor2(r int, g int, b int, a int) *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2Eiiii", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -146,10 +146,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit_2_(r int, g int, b int) *QColor {
-	return NewQColor_2_(r, g, b)
+func (*QColor) NewForInherit2p(r int, g int, b int) *QColor {
+	return NewQColor2p(r, g, b)
 }
-func NewQColor_2_(r int, g int, b int) *QColor {
+func NewQColor2p(r int, g int, b int) *QColor {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2Eiiii", qtrt.FFI_TYPE_POINTER, r, g, b, a)
@@ -171,10 +171,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit_3(rgb uint) *QColor {
-	return NewQColor_3(rgb)
+func (*QColor) NewForInherit3(rgb uint) *QColor {
+	return NewQColor3(rgb)
 }
-func NewQColor_3(rgb uint) *QColor {
+func NewQColor3(rgb uint) *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2Ej", qtrt.FFI_TYPE_POINTER, rgb)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -194,10 +194,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit_4(rgba64 QRgba64_ITF /*123*/) *QColor {
-	return NewQColor_4(rgba64)
+func (*QColor) NewForInherit4(rgba64 QRgba64_ITF /*123*/) *QColor {
+	return NewQColor4(rgba64)
 }
-func NewQColor_4(rgba64 QRgba64_ITF /*123*/) *QColor {
+func NewQColor4(rgba64 QRgba64_ITF /*123*/) *QColor {
 	var convArg0 unsafe.Pointer
 	if rgba64 != nil && rgba64.QRgba64_PTR() != nil {
 		convArg0 = rgba64.QRgba64_PTR().GetCthis()
@@ -221,11 +221,11 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit_5(name string) *QColor {
-	return NewQColor_5(name)
+func (*QColor) NewForInherit5(name string) *QColor {
+	return NewQColor5(name)
 }
-func NewQColor_5(name string) *QColor {
-	var tmpArg0 = qtcore.NewQString_5(name)
+func NewQColor5(name string) *QColor {
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -246,10 +246,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit_6(name qtcore.QStringView_ITF /*123*/) *QColor {
-	return NewQColor_6(name)
+func (*QColor) NewForInherit6(name qtcore.QStringView_ITF /*123*/) *QColor {
+	return NewQColor6(name)
 }
-func NewQColor_6(name qtcore.QStringView_ITF /*123*/) *QColor {
+func NewQColor6(name qtcore.QStringView_ITF /*123*/) *QColor {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QStringView_PTR() != nil {
 		convArg0 = name.QStringView_PTR().GetCthis()
@@ -273,10 +273,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit_7(aname string) *QColor {
-	return NewQColor_7(aname)
+func (*QColor) NewForInherit7(aname string) *QColor {
+	return NewQColor7(aname)
 }
-func NewQColor_7(aname string) *QColor {
+func NewQColor7(aname string) *QColor {
 	var convArg0 = qtrt.CString(aname)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -298,10 +298,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit_8(name qtcore.QLatin1String_ITF /*123*/) *QColor {
-	return NewQColor_8(name)
+func (*QColor) NewForInherit8(name qtcore.QLatin1String_ITF /*123*/) *QColor {
+	return NewQColor8(name)
 }
-func NewQColor_8(name qtcore.QLatin1String_ITF /*123*/) *QColor {
+func NewQColor8(name qtcore.QLatin1String_ITF /*123*/) *QColor {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QLatin1String_PTR() != nil {
 		convArg0 = name.QLatin1String_PTR().GetCthis()
@@ -325,10 +325,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit_9(spec int) *QColor {
-	return NewQColor_9(spec)
+func (*QColor) NewForInherit9(spec int) *QColor {
+	return NewQColor9(spec)
 }
-func NewQColor_9(spec int) *QColor {
+func NewQColor9(spec int) *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2ENS_4SpecE", qtrt.FFI_TYPE_POINTER, spec)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -360,7 +360,7 @@ func (this *QColor) Operator_equal(other unsafe.Pointer /*333*/) *QColor {
 /*
 
  */
-func (this *QColor) Operator_equal_1(arg0 QColor_ITF) *QColor {
+func (this *QColor) Operator_equal1(arg0 QColor_ITF) *QColor {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QColor_PTR() != nil {
 		convArg0 = arg0.QColor_PTR().GetCthis()
@@ -380,7 +380,7 @@ func (this *QColor) Operator_equal_1(arg0 QColor_ITF) *QColor {
 /*
 
  */
-func (this *QColor) Operator_equal_2(color int) *QColor {
+func (this *QColor) Operator_equal2(color int) *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColoraSEN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), color)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -431,7 +431,7 @@ Returns the name of the color in the format "#RRGGBB"; i.e. a "#" character foll
 
 See also setNamedColor().
 */
-func (this *QColor) Name_1(format int) string {
+func (this *QColor) Name1(format int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4nameENS_10NameFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -463,7 +463,7 @@ The color is invalid if name cannot be parsed.
 See also QColor(), name(), and isValid().
 */
 func (this *QColor) SetNamedColor(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor13setNamedColorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -491,7 +491,7 @@ The color is invalid if name cannot be parsed.
 
 See also QColor(), name(), and isValid().
 */
-func (this *QColor) SetNamedColor_1(name qtcore.QStringView_ITF /*123*/) {
+func (this *QColor) SetNamedColor1(name qtcore.QStringView_ITF /*123*/) {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QStringView_PTR() != nil {
 		convArg0 = name.QStringView_PTR().GetCthis()
@@ -522,7 +522,7 @@ The color is invalid if name cannot be parsed.
 
 See also QColor(), name(), and isValid().
 */
-func (this *QColor) SetNamedColor_2(name qtcore.QLatin1String_ITF /*123*/) {
+func (this *QColor) SetNamedColor2(name qtcore.QLatin1String_ITF /*123*/) {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QLatin1String_PTR() != nil {
 		convArg0 = name.QLatin1String_PTR().GetCthis()
@@ -847,7 +847,7 @@ These components can be retrieved individually using the red(), green(), blue() 
 
 See also rgb() and setRgb().
 */
-func (this *QColor) GetRgb__(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, b unsafe.Pointer /*666*/) {
+func (this *QColor) GetRgbp(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, b unsafe.Pointer /*666*/) {
 	// arg: 3, int *=Pointer, =Invalid, , Invalid
 	var a unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getRgbEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
@@ -883,7 +883,7 @@ All the values must be in the range 0-255.
 
 See also rgb(), getRgb(), and setRgbF().
 */
-func (this *QColor) SetRgb__(r int, g int, b int) {
+func (this *QColor) SetRgbp(r int, g int, b int) {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setRgbEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
@@ -902,7 +902,7 @@ All the values must be in the range 0-255.
 
 See also rgb(), getRgb(), and setRgbF().
 */
-func (this *QColor) SetRgb_1(rgb uint) {
+func (this *QColor) SetRgb1(rgb uint) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setRgbEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rgb)
 	qtrt.ErrPrint(err, rv)
 }
@@ -936,7 +936,7 @@ These components can be retrieved individually using the redF(), greenF(), blueF
 
 See also rgb() and setRgb().
 */
-func (this *QColor) GetRgbF__(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, b unsafe.Pointer /*666*/) {
+func (this *QColor) GetRgbFp(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, b unsafe.Pointer /*666*/) {
 	// arg: 3, qreal *=Pointer, qreal=Typedef, double, Double
 	a := unsafe.Pointer(nil)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getRgbFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
@@ -972,7 +972,7 @@ All values must be in the range 0.0-1.0.
 
 See also rgb(), getRgbF(), and setRgb().
 */
-func (this *QColor) SetRgbF__(r float64, g float64, b float64) {
+func (this *QColor) SetRgbFp(r float64, g float64, b float64) {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double, Double
 	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setRgbFEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
@@ -1268,7 +1268,7 @@ These components can be retrieved individually using the hue(), saturation(), va
 
 See also setHsv() and The HSV Color Model.
 */
-func (this *QColor) GetHsv__(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, v unsafe.Pointer /*666*/) {
+func (this *QColor) GetHsvp(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, v unsafe.Pointer /*666*/) {
 	// arg: 3, int *=Pointer, =Invalid, , Invalid
 	var a unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getHsvEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
@@ -1304,7 +1304,7 @@ The saturation, value and alpha-channel values must be in the range 0-255, and t
 
 See also getHsv(), setHsvF(), and The HSV Color Model.
 */
-func (this *QColor) SetHsv__(h int, s int, v int) {
+func (this *QColor) SetHsvp(h int, s int, v int) {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setHsvEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
@@ -1340,7 +1340,7 @@ These components can be retrieved individually using the hueF(), saturationF(), 
 
 See also setHsv() and The HSV Color Model.
 */
-func (this *QColor) GetHsvF__(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, v unsafe.Pointer /*666*/) {
+func (this *QColor) GetHsvFp(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, v unsafe.Pointer /*666*/) {
 	// arg: 3, qreal *=Pointer, qreal=Typedef, double, Double
 	a := unsafe.Pointer(nil)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getHsvFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
@@ -1376,7 +1376,7 @@ All the values must be in the range 0.0-1.0.
 
 See also getHsvF(), setHsv(), and The HSV Color Model.
 */
-func (this *QColor) SetHsvF__(h float64, s float64, v float64) {
+func (this *QColor) SetHsvFp(h float64, s float64, v float64) {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double, Double
 	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setHsvFEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
@@ -1540,7 +1540,7 @@ These components can be retrieved individually using the cyan(), magenta(), yell
 
 See also setCmyk() and The CMYK Color Model.
 */
-func (this *QColor) GetCmyk__(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, k unsafe.Pointer /*666*/) {
+func (this *QColor) GetCmykp(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, k unsafe.Pointer /*666*/) {
 	// arg: 4, int *=Pointer, =Invalid, , Invalid
 	var a unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7getCmykEPiS0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
@@ -1576,7 +1576,7 @@ All the values must be in the range 0-255.
 
 See also getCmyk(), setCmykF(), and The CMYK Color Model.
 */
-func (this *QColor) SetCmyk__(c int, m int, y int, k int) {
+func (this *QColor) SetCmykp(c int, m int, y int, k int) {
 	// arg: 4, int=Int, =Invalid, , Invalid
 	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setCmykEiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
@@ -1612,7 +1612,7 @@ These components can be retrieved individually using the cyanF(), magentaF(), ye
 
 See also setCmykF() and The CMYK Color Model.
 */
-func (this *QColor) GetCmykF__(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, k unsafe.Pointer /*666*/) {
+func (this *QColor) GetCmykFp(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, k unsafe.Pointer /*666*/) {
 	// arg: 4, qreal *=Pointer, qreal=Typedef, double, Double
 	a := unsafe.Pointer(nil)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8getCmykFEPdS0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
@@ -1652,7 +1652,7 @@ All the values must be in the range 0.0-1.0.
 
 See also getCmykF(), setCmyk(), and The CMYK Color Model.
 */
-func (this *QColor) SetCmykF__(c float64, m float64, y float64, k float64) {
+func (this *QColor) SetCmykFp(c float64, m float64, y float64, k float64) {
 	// arg: 4, qreal=Typedef, qreal=Typedef, double, Double
 	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8setCmykFEddddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
@@ -1800,7 +1800,7 @@ This function was introduced in  Qt 4.6.
 
 See also setHsl().
 */
-func (this *QColor) GetHsl__(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, l unsafe.Pointer /*666*/) {
+func (this *QColor) GetHslp(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, l unsafe.Pointer /*666*/) {
 	// arg: 3, int *=Pointer, =Invalid, , Invalid
 	var a unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getHslEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
@@ -1840,7 +1840,7 @@ This function was introduced in  Qt 4.6.
 
 See also getHsl() and setHslF().
 */
-func (this *QColor) SetHsl__(h int, s int, l int) {
+func (this *QColor) SetHslp(h int, s int, l int) {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setHslEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
@@ -1880,7 +1880,7 @@ This function was introduced in  Qt 4.6.
 
 See also setHsl().
 */
-func (this *QColor) GetHslF__(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, l unsafe.Pointer /*666*/) {
+func (this *QColor) GetHslFp(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, l unsafe.Pointer /*666*/) {
 	// arg: 3, qreal *=Pointer, qreal=Typedef, double, Double
 	a := unsafe.Pointer(nil)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getHslFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
@@ -1920,7 +1920,7 @@ This function was introduced in  Qt 4.6.
 
 See also getHslF() and setHsl().
 */
-func (this *QColor) SetHslF__(h float64, s float64, l float64) {
+func (this *QColor) SetHslFp(h float64, s float64, l float64) {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double, Double
 	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setHslFEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
@@ -2054,16 +2054,16 @@ The alpha component of rgb is ignored (i.e. it is automatically set to 255), use
 
 See also fromRgba(), fromRgbF(), toRgb(), and isValid().
 */
-func (this *QColor) FromRgb_1(r int, g int, b int, a int) *QColor /*123*/ {
+func (this *QColor) FromRgb1(r int, g int, b int, a int) *QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7fromRgbEiiii", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColor)
 	return rv2
 }
-func QColor_FromRgb_1(r int, g int, b int, a int) *QColor /*123*/ {
+func QColor_FromRgb1(r int, g int, b int, a int) *QColor /*123*/ {
 	var nilthis *QColor
-	rv := nilthis.FromRgb_1(r, g, b, a)
+	rv := nilthis.FromRgb1(r, g, b, a)
 	return rv
 }
 
@@ -2079,7 +2079,7 @@ The alpha component of rgb is ignored (i.e. it is automatically set to 255), use
 
 See also fromRgba(), fromRgbF(), toRgb(), and isValid().
 */
-func (this *QColor) FromRgb_1_(r int, g int, b int) *QColor /*123*/ {
+func (this *QColor) FromRgb1p(r int, g int, b int) *QColor /*123*/ {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7fromRgbEiiii", qtrt.FFI_TYPE_POINTER, r, g, b, a)
@@ -2151,7 +2151,7 @@ All the values must be in the range 0.0-1.0.
 
 See also fromRgb(), fromRgba64(), toRgb(), and isValid().
 */
-func (this *QColor) FromRgbF__(r float64, g float64, b float64) *QColor /*123*/ {
+func (this *QColor) FromRgbFp(r float64, g float64, b float64) *QColor /*123*/ {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double, Double
 	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromRgbFEdddd", qtrt.FFI_TYPE_POINTER, r, g, b, a)
@@ -2198,7 +2198,7 @@ This function was introduced in  Qt 5.6.
 
 See also fromRgb(), fromRgbF(), toRgb(), and isValid().
 */
-func (this *QColor) FromRgba64__(r uint16, g uint16, b uint16) *QColor /*123*/ {
+func (this *QColor) FromRgba64p(r uint16, g uint16, b uint16) *QColor /*123*/ {
 	// arg: 3, ushort=Typedef, ushort=Typedef, unsigned short, UShort
 	a := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor10fromRgba64Etttt", qtrt.FFI_TYPE_POINTER, r, g, b, a)
@@ -2220,7 +2220,7 @@ This function was introduced in  Qt 5.6.
 
 See also fromRgb(), fromRgbF(), toRgb(), and isValid().
 */
-func (this *QColor) FromRgba64_1(rgba QRgba64_ITF /*123*/) *QColor /*123*/ {
+func (this *QColor) FromRgba641(rgba QRgba64_ITF /*123*/) *QColor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rgba != nil && rgba.QRgba64_PTR() != nil {
 		convArg0 = rgba.QRgba64_PTR().GetCthis()
@@ -2231,9 +2231,9 @@ func (this *QColor) FromRgba64_1(rgba QRgba64_ITF /*123*/) *QColor /*123*/ {
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColor)
 	return rv2
 }
-func QColor_FromRgba64_1(rgba QRgba64_ITF /*123*/) *QColor /*123*/ {
+func QColor_FromRgba641(rgba QRgba64_ITF /*123*/) *QColor /*123*/ {
 	var nilthis *QColor
-	rv := nilthis.FromRgba64_1(rgba)
+	rv := nilthis.FromRgba641(rgba)
 	return rv
 }
 
@@ -2274,7 +2274,7 @@ The value of s, v, and a must all be in the range 0-255; the value of h must be 
 
 See also toHsv(), fromHsvF(), isValid(), and The HSV Color Model.
 */
-func (this *QColor) FromHsv__(h int, s int, v int) *QColor /*123*/ {
+func (this *QColor) FromHsvp(h int, s int, v int) *QColor /*123*/ {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7fromHsvEiiii", qtrt.FFI_TYPE_POINTER, h, s, v, a)
@@ -2325,7 +2325,7 @@ All the values must be in the range 0.0-1.0.
 
 See also toHsv(), fromHsv(), isValid(), and The HSV Color Model.
 */
-func (this *QColor) FromHsvF__(h float64, s float64, v float64) *QColor /*123*/ {
+func (this *QColor) FromHsvFp(h float64, s float64, v float64) *QColor /*123*/ {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double, Double
 	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromHsvFEdddd", qtrt.FFI_TYPE_POINTER, h, s, v, a)
@@ -2372,7 +2372,7 @@ All the values must be in the range 0-255.
 
 See also toCmyk(), fromCmykF(), isValid(), and The CMYK Color Model.
 */
-func (this *QColor) FromCmyk__(c int, m int, y int, k int) *QColor /*123*/ {
+func (this *QColor) FromCmykp(c int, m int, y int, k int) *QColor /*123*/ {
 	// arg: 4, int=Int, =Invalid, , Invalid
 	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromCmykEiiiii", qtrt.FFI_TYPE_POINTER, c, m, y, k, a)
@@ -2423,7 +2423,7 @@ All the values must be in the range 0.0-1.0.
 
 See also toCmyk(), fromCmyk(), isValid(), and The CMYK Color Model.
 */
-func (this *QColor) FromCmykF__(c float64, m float64, y float64, k float64) *QColor /*123*/ {
+func (this *QColor) FromCmykFp(c float64, m float64, y float64, k float64) *QColor /*123*/ {
 	// arg: 4, qreal=Typedef, qreal=Typedef, double, Double
 	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor9fromCmykFEddddd", qtrt.FFI_TYPE_POINTER, c, m, y, k, a)
@@ -2474,7 +2474,7 @@ This function was introduced in  Qt 4.6.
 
 See also toHsl(), fromHslF(), and isValid().
 */
-func (this *QColor) FromHsl__(h int, s int, l int) *QColor /*123*/ {
+func (this *QColor) FromHslp(h int, s int, l int) *QColor /*123*/ {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	a := int(255)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7fromHslEiiii", qtrt.FFI_TYPE_POINTER, h, s, l, a)
@@ -2529,7 +2529,7 @@ This function was introduced in  Qt 4.6.
 
 See also toHsl(), fromHsl(), and isValid().
 */
-func (this *QColor) FromHslF__(h float64, s float64, l float64) *QColor /*123*/ {
+func (this *QColor) FromHslFp(h float64, s float64, l float64) *QColor /*123*/ {
 	// arg: 3, qreal=Typedef, qreal=Typedef, double, Double
 	a := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromHslFEdddd", qtrt.FFI_TYPE_POINTER, h, s, l, a)
@@ -2563,7 +2563,7 @@ func (this *QColor) Light(f int) *QColor /*123*/ {
 /*
 
  */
-func (this *QColor) Light__() *QColor /*123*/ {
+func (this *QColor) Lightp() *QColor /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	f := int(150)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5lightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
@@ -2613,7 +2613,7 @@ This function was introduced in  Qt 4.3.
 
 See also darker() and isValid().
 */
-func (this *QColor) Lighter__() *QColor /*123*/ {
+func (this *QColor) Lighterp() *QColor /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	f := int(150)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7lighterEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
@@ -2647,7 +2647,7 @@ func (this *QColor) Dark(f int) *QColor /*123*/ {
 /*
 
  */
-func (this *QColor) Dark__() *QColor /*123*/ {
+func (this *QColor) Darkp() *QColor /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	f := int(200)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4darkEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
@@ -2697,7 +2697,7 @@ This function was introduced in  Qt 4.3.
 
 See also lighter() and isValid().
 */
-func (this *QColor) Darker__() *QColor /*123*/ {
+func (this *QColor) Darkerp() *QColor /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	f := int(200)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6darkerEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
@@ -2758,7 +2758,7 @@ This function was introduced in  Qt 4.7.
 See also setNamedColor().
 */
 func (this *QColor) IsValidColor(name string) bool {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor12isValidColorERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2784,7 +2784,7 @@ This function was introduced in  Qt 4.7.
 
 See also setNamedColor().
 */
-func (this *QColor) IsValidColor_1(arg0 qtcore.QStringView_ITF /*123*/) bool {
+func (this *QColor) IsValidColor1(arg0 qtcore.QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QStringView_PTR() != nil {
 		convArg0 = arg0.QStringView_PTR().GetCthis()
@@ -2793,9 +2793,9 @@ func (this *QColor) IsValidColor_1(arg0 qtcore.QStringView_ITF /*123*/) bool {
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QColor_IsValidColor_1(arg0 qtcore.QStringView_ITF /*123*/) bool {
+func QColor_IsValidColor1(arg0 qtcore.QStringView_ITF /*123*/) bool {
 	var nilthis *QColor
-	rv := nilthis.IsValidColor_1(arg0)
+	rv := nilthis.IsValidColor1(arg0)
 	return rv
 }
 
@@ -2813,7 +2813,7 @@ This function was introduced in  Qt 4.7.
 
 See also setNamedColor().
 */
-func (this *QColor) IsValidColor_2(arg0 qtcore.QLatin1String_ITF /*123*/) bool {
+func (this *QColor) IsValidColor2(arg0 qtcore.QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QLatin1String_PTR() != nil {
 		convArg0 = arg0.QLatin1String_PTR().GetCthis()
@@ -2822,9 +2822,9 @@ func (this *QColor) IsValidColor_2(arg0 qtcore.QLatin1String_ITF /*123*/) bool {
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QColor_IsValidColor_2(arg0 qtcore.QLatin1String_ITF /*123*/) bool {
+func QColor_IsValidColor2(arg0 qtcore.QLatin1String_ITF /*123*/) bool {
 	var nilthis *QColor
-	rv := nilthis.IsValidColor_2(arg0)
+	rv := nilthis.IsValidColor2(arg0)
 	return rv
 }
 

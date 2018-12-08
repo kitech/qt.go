@@ -91,10 +91,10 @@ func NewQByteArrayMatcher() *QByteArrayMatcher {
 /*
 Constructs an empty byte array matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
-func (*QByteArrayMatcher) NewForInherit_1(pattern QByteArray_ITF) *QByteArrayMatcher {
-	return NewQByteArrayMatcher_1(pattern)
+func (*QByteArrayMatcher) NewForInherit1(pattern QByteArray_ITF) *QByteArrayMatcher {
+	return NewQByteArrayMatcher1(pattern)
 }
-func NewQByteArrayMatcher_1(pattern QByteArray_ITF) *QByteArrayMatcher {
+func NewQByteArrayMatcher1(pattern QByteArray_ITF) *QByteArrayMatcher {
 	var convArg0 unsafe.Pointer
 	if pattern != nil && pattern.QByteArray_PTR() != nil {
 		convArg0 = pattern.QByteArray_PTR().GetCthis()
@@ -114,10 +114,10 @@ func NewQByteArrayMatcher_1(pattern QByteArray_ITF) *QByteArrayMatcher {
 /*
 Constructs an empty byte array matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
-func (*QByteArrayMatcher) NewForInherit_2(pattern string, length int) *QByteArrayMatcher {
-	return NewQByteArrayMatcher_2(pattern, length)
+func (*QByteArrayMatcher) NewForInherit2(pattern string, length int) *QByteArrayMatcher {
+	return NewQByteArrayMatcher2(pattern, length)
 }
-func NewQByteArrayMatcher_2(pattern string, length int) *QByteArrayMatcher {
+func NewQByteArrayMatcher2(pattern string, length int) *QByteArrayMatcher {
 	var convArg0 = qtrt.CString(pattern)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2EPKci", qtrt.FFI_TYPE_POINTER, convArg0, length)
@@ -207,7 +207,7 @@ func (this *QByteArrayMatcher) IndexIn(ba QByteArray_ITF, from int) int {
 /*
 Searches the byte array ba, from byte position from (default 0, i.e. from the first byte), for the byte array pattern() that was set in the constructor or in the most recent call to setPattern(). Returns the position where the pattern() matched in ba, or -1 if no match was found.
 */
-func (this *QByteArrayMatcher) IndexIn__(ba QByteArray_ITF) int {
+func (this *QByteArrayMatcher) IndexInp(ba QByteArray_ITF) int {
 	var convArg0 unsafe.Pointer
 	if ba != nil && ba.QByteArray_PTR() != nil {
 		convArg0 = ba.QByteArray_PTR().GetCthis()
@@ -227,7 +227,7 @@ func (this *QByteArrayMatcher) IndexIn__(ba QByteArray_ITF) int {
 /*
 Searches the byte array ba, from byte position from (default 0, i.e. from the first byte), for the byte array pattern() that was set in the constructor or in the most recent call to setPattern(). Returns the position where the pattern() matched in ba, or -1 if no match was found.
 */
-func (this *QByteArrayMatcher) IndexIn_1(str string, len_ int, from int) int {
+func (this *QByteArrayMatcher) IndexIn1(str string, len_ int, from int) int {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInEPKcii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_, from)
@@ -243,7 +243,7 @@ func (this *QByteArrayMatcher) IndexIn_1(str string, len_ int, from int) int {
 /*
 Searches the byte array ba, from byte position from (default 0, i.e. from the first byte), for the byte array pattern() that was set in the constructor or in the most recent call to setPattern(). Returns the position where the pattern() matched in ba, or -1 if no match was found.
 */
-func (this *QByteArrayMatcher) IndexIn_1_(str string, len_ int) int {
+func (this *QByteArrayMatcher) IndexIn1p(str string, len_ int) int {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
 	// arg: 2, int=Int, =Invalid, , Invalid

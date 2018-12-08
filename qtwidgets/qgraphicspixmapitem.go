@@ -110,10 +110,10 @@ func NewQGraphicsPixmapItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *Q
 /*
 
  */
-func (*QGraphicsPixmapItem) NewForInherit__() *QGraphicsPixmapItem {
-	return NewQGraphicsPixmapItem__()
+func (*QGraphicsPixmapItem) NewForInheritp() *QGraphicsPixmapItem {
+	return NewQGraphicsPixmapItemp()
 }
-func NewQGraphicsPixmapItem__() *QGraphicsPixmapItem {
+func NewQGraphicsPixmapItemp() *QGraphicsPixmapItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsPixmapItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -131,10 +131,10 @@ func NewQGraphicsPixmapItem__() *QGraphicsPixmapItem {
 /*
 
  */
-func (*QGraphicsPixmapItem) NewForInherit_1(pixmap qtgui.QPixmap_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPixmapItem {
-	return NewQGraphicsPixmapItem_1(pixmap, parent)
+func (*QGraphicsPixmapItem) NewForInherit1(pixmap qtgui.QPixmap_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPixmapItem {
+	return NewQGraphicsPixmapItem1(pixmap, parent)
 }
-func NewQGraphicsPixmapItem_1(pixmap qtgui.QPixmap_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPixmapItem {
+func NewQGraphicsPixmapItem1(pixmap qtgui.QPixmap_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPixmapItem {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
@@ -158,10 +158,10 @@ func NewQGraphicsPixmapItem_1(pixmap qtgui.QPixmap_ITF, parent QGraphicsItem_ITF
 /*
 
  */
-func (*QGraphicsPixmapItem) NewForInherit_1_(pixmap qtgui.QPixmap_ITF) *QGraphicsPixmapItem {
-	return NewQGraphicsPixmapItem_1_(pixmap)
+func (*QGraphicsPixmapItem) NewForInherit1p(pixmap qtgui.QPixmap_ITF) *QGraphicsPixmapItem {
+	return NewQGraphicsPixmapItem1p(pixmap)
 }
-func NewQGraphicsPixmapItem_1_(pixmap qtgui.QPixmap_ITF) *QGraphicsPixmapItem {
+func NewQGraphicsPixmapItem1p(pixmap qtgui.QPixmap_ITF) *QGraphicsPixmapItem {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
@@ -291,7 +291,7 @@ func (this *QGraphicsPixmapItem) SetOffset(offset qtcore.QPointF_ITF) {
 /*
 
  */
-func (this *QGraphicsPixmapItem) SetOffset_1(x float64, y float64) {
+func (this *QGraphicsPixmapItem) SetOffset1(x float64, y float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsPixmapItem9setOffsetEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 }

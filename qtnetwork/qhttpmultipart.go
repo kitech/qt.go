@@ -112,10 +112,10 @@ Constructs a QHttpMultiPart with content type MixedType and sets parent as the p
 
 See also QHttpMultiPart::ContentType.
 */
-func (*QHttpMultiPart) NewForInherit__() *QHttpMultiPart {
-	return NewQHttpMultiPart__()
+func (*QHttpMultiPart) NewForInheritp() *QHttpMultiPart {
+	return NewQHttpMultiPartp()
 }
-func NewQHttpMultiPart__() *QHttpMultiPart {
+func NewQHttpMultiPartp() *QHttpMultiPart {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -135,10 +135,10 @@ Constructs a QHttpMultiPart with content type MixedType and sets parent as the p
 
 See also QHttpMultiPart::ContentType.
 */
-func (*QHttpMultiPart) NewForInherit_1(contentType int, parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
-	return NewQHttpMultiPart_1(contentType, parent)
+func (*QHttpMultiPart) NewForInherit1(contentType int, parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
+	return NewQHttpMultiPart1(contentType, parent)
 }
-func NewQHttpMultiPart_1(contentType int, parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
+func NewQHttpMultiPart1(contentType int, parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiPart {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg1 = parent.QObject_PTR().GetCthis()
@@ -160,10 +160,10 @@ Constructs a QHttpMultiPart with content type MixedType and sets parent as the p
 
 See also QHttpMultiPart::ContentType.
 */
-func (*QHttpMultiPart) NewForInherit_1_(contentType int) *QHttpMultiPart {
-	return NewQHttpMultiPart_1_(contentType)
+func (*QHttpMultiPart) NewForInherit1p(contentType int) *QHttpMultiPart {
+	return NewQHttpMultiPart1p(contentType)
 }
-func NewQHttpMultiPart_1_(contentType int) *QHttpMultiPart {
+func NewQHttpMultiPart1p(contentType int) *QHttpMultiPart {
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QHttpMultiPartC2ENS_11ContentTypeEP7QObject", qtrt.FFI_TYPE_POINTER, contentType, convArg1)

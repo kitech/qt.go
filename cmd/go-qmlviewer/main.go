@@ -34,12 +34,12 @@ func main() {
 		log.Println("app mod qml:")
 		qmle := qtqml.NewQQmlApplicationEngine(nil)
 		qmle.AddImportPath("./")
-		qmle.Load_1(file)
+		qmle.Load1(file)
 	} else {
 		log.Println("rect mod qml:")
 		qw := qtquickwidgets.NewQQuickWidget(nil)
 		qw.Engine().AddImportPath("./")
-		qw.SetSource(qtcore.NewQUrl_1(file, 0))
+		qw.SetSource(qtcore.NewQUrl1(file, 0))
 		qw.Show()
 	}
 

@@ -97,10 +97,10 @@ func NewQAbstractGraphicsShapeItem(parent QGraphicsItem_ITF /*777 QGraphicsItem 
 /*
 
  */
-func (*QAbstractGraphicsShapeItem) NewForInherit__() *QAbstractGraphicsShapeItem {
-	return NewQAbstractGraphicsShapeItem__()
+func (*QAbstractGraphicsShapeItem) NewForInheritp() *QAbstractGraphicsShapeItem {
+	return NewQAbstractGraphicsShapeItemp()
 }
-func NewQAbstractGraphicsShapeItem__() *QAbstractGraphicsShapeItem {
+func NewQAbstractGraphicsShapeItemp() *QAbstractGraphicsShapeItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)

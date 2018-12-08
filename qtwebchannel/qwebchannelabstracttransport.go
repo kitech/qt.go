@@ -112,10 +112,10 @@ func NewQWebChannelAbstractTransport(parent qtcore.QObject_ITF /*777 QObject **/
 /*
 Constructs a transport object with the given parent.
 */
-func (*QWebChannelAbstractTransport) NewForInherit__() *QWebChannelAbstractTransport {
-	return NewQWebChannelAbstractTransport__()
+func (*QWebChannelAbstractTransport) NewForInheritp() *QWebChannelAbstractTransport {
+	return NewQWebChannelAbstractTransportp()
 }
-func NewQWebChannelAbstractTransport__() *QWebChannelAbstractTransport {
+func NewQWebChannelAbstractTransportp() *QWebChannelAbstractTransport {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QWebChannelAbstractTransportC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

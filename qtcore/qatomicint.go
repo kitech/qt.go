@@ -91,10 +91,10 @@ func NewQAtomicInt(value int) *QAtomicInt {
 /*
 
  */
-func (*QAtomicInt) NewForInherit__() *QAtomicInt {
-	return NewQAtomicInt__()
+func (*QAtomicInt) NewForInheritp() *QAtomicInt {
+	return NewQAtomicIntp()
 }
-func NewQAtomicInt__() *QAtomicInt {
+func NewQAtomicIntp() *QAtomicInt {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	value := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QAtomicIntC2Ei", qtrt.FFI_TYPE_POINTER, value)

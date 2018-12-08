@@ -95,11 +95,11 @@ Constructs an empty regexp.
 
 See also isValid() and errorString().
 */
-func (*QRegExp) NewForInherit_1(pattern string, cs int, syntax int) *QRegExp {
-	return NewQRegExp_1(pattern, cs, syntax)
+func (*QRegExp) NewForInherit1(pattern string, cs int, syntax int) *QRegExp {
+	return NewQRegExp1(pattern, cs, syntax)
 }
-func NewQRegExp_1(pattern string, cs int, syntax int) *QRegExp {
-	var tmpArg0 = NewQString_5(pattern)
+func NewQRegExp1(pattern string, cs int, syntax int) *QRegExp {
+	var tmpArg0 = NewQString5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExpC2ERK7QStringN2Qt15CaseSensitivityENS_13PatternSyntaxE", qtrt.FFI_TYPE_POINTER, convArg0, cs, syntax)
 	qtrt.ErrPrint(err, rv)
@@ -118,11 +118,11 @@ Constructs an empty regexp.
 
 See also isValid() and errorString().
 */
-func (*QRegExp) NewForInherit_1_(pattern string) *QRegExp {
-	return NewQRegExp_1_(pattern)
+func (*QRegExp) NewForInherit1p(pattern string) *QRegExp {
+	return NewQRegExp1p(pattern)
 }
-func NewQRegExp_1_(pattern string) *QRegExp {
-	var tmpArg0 = NewQString_5(pattern)
+func NewQRegExp1p(pattern string) *QRegExp {
+	var tmpArg0 = NewQString5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
@@ -145,11 +145,11 @@ Constructs an empty regexp.
 
 See also isValid() and errorString().
 */
-func (*QRegExp) NewForInherit_1_1(pattern string, cs int) *QRegExp {
-	return NewQRegExp_1_1(pattern, cs)
+func (*QRegExp) NewForInherit1p1(pattern string, cs int) *QRegExp {
+	return NewQRegExp1p1(pattern, cs)
 }
-func NewQRegExp_1_1(pattern string, cs int) *QRegExp {
-	var tmpArg0 = NewQString_5(pattern)
+func NewQRegExp1p1(pattern string, cs int) *QRegExp {
+	var tmpArg0 = NewQString5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QRegExp::PatternSyntax=Enum, QRegExp::PatternSyntax=Enum, , Invalid
 	syntax := 0
@@ -203,7 +203,7 @@ func (this *QRegExp) Operator_equal(rx QRegExp_ITF) *QRegExp {
 /*
 
  */
-func (this *QRegExp) Operator_equal_1(other unsafe.Pointer /*333*/) *QRegExp {
+func (this *QRegExp) Operator_equal1(other unsafe.Pointer /*333*/) *QRegExp {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExpaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -334,7 +334,7 @@ Sets the pattern string to pattern. The case sensitivity, wildcard, and minimal 
 See also pattern(), setPatternSyntax(), and setCaseSensitivity().
 */
 func (this *QRegExp) SetPattern(pattern string) {
-	var tmpArg0 = NewQString_5(pattern)
+	var tmpArg0 = NewQString5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp10setPatternERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -458,7 +458,7 @@ Although const, this function sets matchedLength(), capturedTexts(), and pos().
 See also indexIn() and lastIndexIn().
 */
 func (this *QRegExp) ExactMatch(str string) bool {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp10exactMatchERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -501,7 +501,7 @@ If the QRegExp is a wildcard expression (see setPatternSyntax()) and want to tes
 See also lastIndexIn() and exactMatch().
 */
 func (this *QRegExp) IndexIn(str string, offset int, caretMode int) int {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp7indexInERK7QStringiNS_9CaretModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
 	qtrt.ErrPrint(err, rv)
@@ -543,8 +543,8 @@ If the QRegExp is a wildcard expression (see setPatternSyntax()) and want to tes
 
 See also lastIndexIn() and exactMatch().
 */
-func (this *QRegExp) IndexIn__(str string) int {
-	var tmpArg0 = NewQString_5(str)
+func (this *QRegExp) IndexInp(str string) int {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	offset := int(0)
@@ -590,8 +590,8 @@ If the QRegExp is a wildcard expression (see setPatternSyntax()) and want to tes
 
 See also lastIndexIn() and exactMatch().
 */
-func (this *QRegExp) IndexIn__1(str string, offset int) int {
-	var tmpArg0 = NewQString_5(str)
+func (this *QRegExp) IndexInp1(str string, offset int) int {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum, , Invalid
 	caretMode := 0
@@ -619,7 +619,7 @@ Warning: Searching backwards is much slower than searching forwards.
 See also indexIn() and exactMatch().
 */
 func (this *QRegExp) LastIndexIn(str string, offset int, caretMode int) int {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp11lastIndexInERK7QStringiNS_9CaretModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
 	qtrt.ErrPrint(err, rv)
@@ -644,8 +644,8 @@ Warning: Searching backwards is much slower than searching forwards.
 
 See also indexIn() and exactMatch().
 */
-func (this *QRegExp) LastIndexIn__(str string) int {
-	var tmpArg0 = NewQString_5(str)
+func (this *QRegExp) LastIndexInp(str string) int {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	offset := int(-1)
@@ -674,8 +674,8 @@ Warning: Searching backwards is much slower than searching forwards.
 
 See also indexIn() and exactMatch().
 */
-func (this *QRegExp) LastIndexIn__1(str string, offset int) int {
-	var tmpArg0 = NewQString_5(str)
+func (this *QRegExp) LastIndexInp1(str string, offset int) int {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QRegExp::CaretMode=Enum, QRegExp::CaretMode=Enum, , Invalid
 	caretMode := 0
@@ -820,7 +820,7 @@ The order of elements in the string list is as follows. The first element is the
 
 See also cap() and pos().
 */
-func (this *QRegExp) CapturedTexts_1() *QStringList /*123*/ {
+func (this *QRegExp) CapturedTexts1() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp13capturedTextsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -883,7 +883,7 @@ The order of elements matched by cap() is as follows. The first element, cap(0),
 
 See also capturedTexts() and pos().
 */
-func (this *QRegExp) Cap__() string {
+func (this *QRegExp) Capp() string {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp3capEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
@@ -917,7 +917,7 @@ The order of elements matched by cap() is as follows. The first element, cap(0),
 
 See also capturedTexts() and pos().
 */
-func (this *QRegExp) Cap_1(nth int) string {
+func (this *QRegExp) Cap1(nth int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp3capEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -949,7 +949,7 @@ The order of elements matched by cap() is as follows. The first element, cap(0),
 
 See also capturedTexts() and pos().
 */
-func (this *QRegExp) Cap_1_() string {
+func (this *QRegExp) Cap1p() string {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp3capEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
@@ -1012,7 +1012,7 @@ For zero-length matches, pos() always returns -1. (For example, if cap(4) would 
 
 See also cap() and capturedTexts().
 */
-func (this *QRegExp) Pos__() int {
+func (this *QRegExp) Posp() int {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp3posEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
@@ -1043,7 +1043,7 @@ For zero-length matches, pos() always returns -1. (For example, if cap(4) would 
 
 See also cap() and capturedTexts().
 */
-func (this *QRegExp) Pos_1(nth int) int {
+func (this *QRegExp) Pos1(nth int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp3posEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1072,7 +1072,7 @@ For zero-length matches, pos() always returns -1. (For example, if cap(4) would 
 
 See also cap() and capturedTexts().
 */
-func (this *QRegExp) Pos_1_() int {
+func (this *QRegExp) Pos1p() int {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp3posEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
@@ -1109,7 +1109,7 @@ Returns a text string that explains why a regexp pattern is invalid the case bei
 
 See also isValid().
 */
-func (this *QRegExp) ErrorString_1() string {
+func (this *QRegExp) ErrorString1() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1145,7 +1145,7 @@ This function is useful to construct regexp patterns dynamically:
 See also setPatternSyntax().
 */
 func (this *QRegExp) Escape(str string) string {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp6escapeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

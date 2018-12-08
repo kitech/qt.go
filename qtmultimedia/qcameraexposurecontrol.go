@@ -265,10 +265,10 @@ func NewQCameraExposureControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCa
 /*
 Constructs a camera exposure control object with parent.
 */
-func (*QCameraExposureControl) NewForInherit__() *QCameraExposureControl {
-	return NewQCameraExposureControl__()
+func (*QCameraExposureControl) NewForInheritp() *QCameraExposureControl {
+	return NewQCameraExposureControlp()
 }
-func NewQCameraExposureControl__() *QCameraExposureControl {
+func NewQCameraExposureControlp() *QCameraExposureControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QCameraExposureControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

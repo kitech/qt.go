@@ -108,7 +108,7 @@ func (this *QGlyphRun) Operator_equal(other unsafe.Pointer /*333*/) *QGlyphRun {
 /*
 
  */
-func (this *QGlyphRun) Operator_equal_1(other QGlyphRun_ITF) *QGlyphRun {
+func (this *QGlyphRun) Operator_equal1(other QGlyphRun_ITF) *QGlyphRun {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGlyphRun_PTR() != nil {
 		convArg0 = other.QGlyphRun_PTR().GetCthis()
@@ -416,7 +416,7 @@ This function was introduced in  Qt 5.0.
 
 See also flags() and setFlags().
 */
-func (this *QGlyphRun) SetFlag__(flag int) {
+func (this *QGlyphRun) SetFlagp(flag int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun7setFlagENS_12GlyphRunFlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)

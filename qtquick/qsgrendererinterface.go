@@ -137,7 +137,7 @@ Note: The ownership of the returned pointer is never transferred to the caller.
 
 Note: This function must only be called on the render thread.
 */
-func (this *QSGRendererInterface) GetResource_1(window QQuickWindow_ITF /*777 QQuickWindow **/, resource string) unsafe.Pointer /*666*/ {
+func (this *QSGRendererInterface) GetResource1(window QQuickWindow_ITF /*777 QQuickWindow **/, resource string) unsafe.Pointer /*666*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QQuickWindow_PTR() != nil {
 		convArg0 = window.QQuickWindow_PTR().GetCthis()

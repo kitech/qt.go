@@ -238,10 +238,10 @@ Constructs a table view with a parent to represent the data.
 
 See also QAbstractItemModel.
 */
-func (*QTableView) NewForInherit__() *QTableView {
-	return NewQTableView__()
+func (*QTableView) NewForInheritp() *QTableView {
+	return NewQTableViewp()
 }
-func NewQTableView__() *QTableView {
+func NewQTableViewp() *QTableView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -763,7 +763,7 @@ func (this *QTableView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 /*
 
  */
-func (this *QTableView) ScrollTo__(index qtcore.QModelIndex_ITF) {
+func (this *QTableView) ScrollTop(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -895,7 +895,7 @@ This function was introduced in  Qt 4.2.
 
 See also sortingEnabled.
 */
-func (this *QTableView) SortByColumn_1(column int) {
+func (this *QTableView) SortByColumn1(column int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView12sortByColumnEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
 }

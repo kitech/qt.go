@@ -131,7 +131,7 @@ func (this *QSslPreSharedKeyAuthenticator) Operator_equal(authenticator QSslPreS
 /*
 
  */
-func (this *QSslPreSharedKeyAuthenticator) Operator_equal_1(other unsafe.Pointer /*333*/) *QSslPreSharedKeyAuthenticator {
+func (this *QSslPreSharedKeyAuthenticator) Operator_equal1(other unsafe.Pointer /*333*/) *QSslPreSharedKeyAuthenticator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticatoraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSslPreSharedKeyAuthenticatorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

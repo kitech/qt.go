@@ -92,10 +92,10 @@ func NewQPolygonF() *QPolygonF {
 /*
 
  */
-func (*QPolygonF) NewForInherit_1(size int) *QPolygonF {
-	return NewQPolygonF_1(size)
+func (*QPolygonF) NewForInherit1(size int) *QPolygonF {
+	return NewQPolygonF1(size)
 }
-func NewQPolygonF_1(size int) *QPolygonF {
+func NewQPolygonF1(size int) *QPolygonF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPolygonFC2Ei", qtrt.FFI_TYPE_POINTER, size)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQPolygonF_1(size int) *QPolygonF {
 /*
 
  */
-func (*QPolygonF) NewForInherit_2(r qtcore.QRectF_ITF) *QPolygonF {
-	return NewQPolygonF_2(r)
+func (*QPolygonF) NewForInherit2(r qtcore.QRectF_ITF) *QPolygonF {
+	return NewQPolygonF2(r)
 }
-func NewQPolygonF_2(r qtcore.QRectF_ITF) *QPolygonF {
+func NewQPolygonF2(r qtcore.QRectF_ITF) *QPolygonF {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
@@ -134,10 +134,10 @@ func NewQPolygonF_2(r qtcore.QRectF_ITF) *QPolygonF {
 /*
 
  */
-func (*QPolygonF) NewForInherit_3(a QPolygon_ITF) *QPolygonF {
-	return NewQPolygonF_3(a)
+func (*QPolygonF) NewForInherit3(a QPolygon_ITF) *QPolygonF {
+	return NewQPolygonF3(a)
 }
-func NewQPolygonF_3(a QPolygon_ITF) *QPolygonF {
+func NewQPolygonF3(a QPolygon_ITF) *QPolygonF {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QPolygon_PTR() != nil {
 		convArg0 = a.QPolygon_PTR().GetCthis()
@@ -188,7 +188,7 @@ func (this *QPolygonF) Operator_equal(other unsafe.Pointer /*333*/) *QPolygonF {
 /*
 
  */
-func (this *QPolygonF) Operator_equal_1(other QPolygonF_ITF) *QPolygonF {
+func (this *QPolygonF) Operator_equal1(other QPolygonF_ITF) *QPolygonF {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPolygonF_PTR() != nil {
 		convArg0 = other.QPolygonF_PTR().GetCthis()
@@ -244,7 +244,7 @@ Translates all points in the polygon by (dx, dy).
 
 See also translated().
 */
-func (this *QPolygonF) Translate_1(offset qtcore.QPointF_ITF) {
+func (this *QPolygonF) Translate1(offset qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPointF_PTR() != nil {
 		convArg0 = offset.QPointF_PTR().GetCthis()
@@ -285,7 +285,7 @@ This function was introduced in  Qt 4.6.
 
 See also translate().
 */
-func (this *QPolygonF) Translated_1(offset qtcore.QPointF_ITF) *QPolygonF /*123*/ {
+func (this *QPolygonF) Translated1(offset qtcore.QPointF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPointF_PTR() != nil {
 		convArg0 = offset.QPointF_PTR().GetCthis()

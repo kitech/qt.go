@@ -91,10 +91,10 @@ func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 /*
 
  */
-func (*QSpacerItem) NewForInherit__(w int, h int) *QSpacerItem {
-	return NewQSpacerItem__(w, h)
+func (*QSpacerItem) NewForInheritp(w int, h int) *QSpacerItem {
+	return NewQSpacerItemp(w, h)
 }
-func NewQSpacerItem__(w int, h int) *QSpacerItem {
+func NewQSpacerItemp(w int, h int) *QSpacerItem {
 	// arg: 2, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	hData := 0
 	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
@@ -114,10 +114,10 @@ func NewQSpacerItem__(w int, h int) *QSpacerItem {
 /*
 
  */
-func (*QSpacerItem) NewForInherit__1(w int, h int, hData int) *QSpacerItem {
-	return NewQSpacerItem__1(w, h, hData)
+func (*QSpacerItem) NewForInheritp1(w int, h int, hData int) *QSpacerItem {
+	return NewQSpacerItemp1(w, h, hData)
 }
-func NewQSpacerItem__1(w int, h int, hData int) *QSpacerItem {
+func NewQSpacerItemp1(w int, h int, hData int) *QSpacerItem {
 	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	vData := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, w, h, hData, vData)
@@ -163,7 +163,7 @@ func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
 /*
 
  */
-func (this *QSpacerItem) ChangeSize__(w int, h int) {
+func (this *QSpacerItem) ChangeSizep(w int, h int) {
 	// arg: 2, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	hData := 0
 	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
@@ -180,7 +180,7 @@ func (this *QSpacerItem) ChangeSize__(w int, h int) {
 /*
 
  */
-func (this *QSpacerItem) ChangeSize__1(w int, h int, hData int) {
+func (this *QSpacerItem) ChangeSizep1(w int, h int, hData int) {
 	// arg: 3, QSizePolicy::Policy=Elaborated, QSizePolicy::Policy=Enum, , Invalid
 	vData := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, hData, vData)

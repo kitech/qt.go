@@ -114,10 +114,10 @@ Constructs the QWebChannel object with the given parent.
 
 Note that a QWebChannel is only fully operational once you connect it to a QWebChannelAbstractTransport. The HTML clients also need to be setup appropriately using qwebchannel.js.
 */
-func (*QWebChannel) NewForInherit__() *QWebChannel {
-	return NewQWebChannel__()
+func (*QWebChannel) NewForInheritp() *QWebChannel {
+	return NewQWebChannelp()
 }
-func NewQWebChannel__() *QWebChannel {
+func NewQWebChannelp() *QWebChannel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWebChannelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -157,7 +157,7 @@ Note: A current limitation is that objects must be registered before any client 
 See also QWebChannel::registerObjects(), QWebChannel::deregisterObject(), and QWebChannel::registeredObjects().
 */
 func (this *QWebChannel) RegisterObject(id string, object qtcore.QObject_ITF /*777 QObject **/) {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {

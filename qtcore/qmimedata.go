@@ -182,7 +182,7 @@ Sets text as the plain text (MIME type text/plain) used to represent the data.
 See also text(), hasText(), setHtml(), and setData().
 */
 func (this *QMimeData) SetText(text string) {
-	var tmpArg0 = NewQString_5(text)
+	var tmpArg0 = NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -234,7 +234,7 @@ Sets html as the HTML (MIME type text/html) used to represent the data.
 See also html(), hasHtml(), setText(), and setData().
 */
 func (this *QMimeData) SetHtml(html string) {
-	var tmpArg0 = NewQString_5(html)
+	var tmpArg0 = NewQString5(html)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData7setHtmlERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -402,7 +402,7 @@ Returns the data stored in the object in the format described by the MIME type s
 See also setData().
 */
 func (this *QMimeData) Data(mimetype string) *QByteArray /*123*/ {
-	var tmpArg0 = NewQString_5(mimetype)
+	var tmpArg0 = NewQString5(mimetype)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData4dataERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -426,7 +426,7 @@ Note that if you want to use a custom data type in an item view drag and drop op
 See also data(), hasFormat(), QMetaType, and qRegisterMetaTypeStreamOperators().
 */
 func (this *QMimeData) SetData(mimetype string, data QByteArray_ITF) {
-	var tmpArg0 = NewQString_5(mimetype)
+	var tmpArg0 = NewQString5(mimetype)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -447,7 +447,7 @@ Removes the data entry for mimeType in the object.
 This function was introduced in  Qt 4.4.
 */
 func (this *QMimeData) RemoveFormat(mimetype string) {
-	var tmpArg0 = NewQString_5(mimetype)
+	var tmpArg0 = NewQString5(mimetype)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData12removeFormatERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -466,7 +466,7 @@ For the most common types of data, you can call the higher-level functions hasTe
 See also formats(), setData(), and data().
 */
 func (this *QMimeData) HasFormat(mimetype string) bool {
-	var tmpArg0 = NewQString_5(mimetype)
+	var tmpArg0 = NewQString5(mimetype)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData9hasFormatERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -519,7 +519,7 @@ This function is called by the general data() getter and by the convenience gett
 See also data().
 */
 func (this *QMimeData) RetrieveData(mimetype string, preferredType int) *QVariant /*123*/ {
-	var tmpArg0 = NewQString_5(mimetype)
+	var tmpArg0 = NewQString5(mimetype)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData12retrieveDataERK7QStringN8QVariant4TypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, preferredType)
 	qtrt.ErrPrint(err, rv)

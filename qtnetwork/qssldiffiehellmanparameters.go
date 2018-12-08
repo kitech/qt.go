@@ -156,7 +156,7 @@ func (this *QSslDiffieHellmanParameters) Operator_equal(other QSslDiffieHellmanP
 /*
 
  */
-func (this *QSslDiffieHellmanParameters) Operator_equal_1(other unsafe.Pointer /*333*/) *QSslDiffieHellmanParameters {
+func (this *QSslDiffieHellmanParameters) Operator_equal1(other unsafe.Pointer /*333*/) *QSslDiffieHellmanParameters {
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParametersaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQSslDiffieHellmanParametersFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -222,7 +222,7 @@ Use the isValid() method on the returned object to check whether the Diffie-Hell
 
 See also isValid() and QSslConfiguration.
 */
-func (this *QSslDiffieHellmanParameters) FromEncoded__(encoded qtcore.QByteArray_ITF) *QSslDiffieHellmanParameters /*123*/ {
+func (this *QSslDiffieHellmanParameters) FromEncodedp(encoded qtcore.QByteArray_ITF) *QSslDiffieHellmanParameters /*123*/ {
 	var convArg0 unsafe.Pointer
 	if encoded != nil && encoded.QByteArray_PTR() != nil {
 		convArg0 = encoded.QByteArray_PTR().GetCthis()
@@ -248,7 +248,7 @@ Use the isValid() method on the returned object to check whether the Diffie-Hell
 
 See also isValid() and QSslConfiguration.
 */
-func (this *QSslDiffieHellmanParameters) FromEncoded_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
+func (this *QSslDiffieHellmanParameters) FromEncoded1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -259,9 +259,9 @@ func (this *QSslDiffieHellmanParameters) FromEncoded_1(device qtcore.QIODevice_I
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslDiffieHellmanParameters)
 	return rv2
 }
-func QSslDiffieHellmanParameters_FromEncoded_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
+func QSslDiffieHellmanParameters_FromEncoded1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
 	var nilthis *QSslDiffieHellmanParameters
-	rv := nilthis.FromEncoded_1(device, format)
+	rv := nilthis.FromEncoded1(device, format)
 	return rv
 }
 
@@ -277,7 +277,7 @@ Use the isValid() method on the returned object to check whether the Diffie-Hell
 
 See also isValid() and QSslConfiguration.
 */
-func (this *QSslDiffieHellmanParameters) FromEncoded_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslDiffieHellmanParameters /*123*/ {
+func (this *QSslDiffieHellmanParameters) FromEncoded1p(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslDiffieHellmanParameters /*123*/ {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()

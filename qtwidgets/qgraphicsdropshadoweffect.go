@@ -116,10 +116,10 @@ func NewQGraphicsDropShadowEffect(parent qtcore.QObject_ITF /*777 QObject **/) *
 /*
 
  */
-func (*QGraphicsDropShadowEffect) NewForInherit__() *QGraphicsDropShadowEffect {
-	return NewQGraphicsDropShadowEffect__()
+func (*QGraphicsDropShadowEffect) NewForInheritp() *QGraphicsDropShadowEffect {
+	return NewQGraphicsDropShadowEffectp()
 }
-func NewQGraphicsDropShadowEffect__() *QGraphicsDropShadowEffect {
+func NewQGraphicsDropShadowEffectp() *QGraphicsDropShadowEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -265,7 +265,7 @@ func (this *QGraphicsDropShadowEffect) SetOffset(ofs qtcore.QPointF_ITF) {
 /*
 
  */
-func (this *QGraphicsDropShadowEffect) SetOffset_1(dx float64, dy float64) {
+func (this *QGraphicsDropShadowEffect) SetOffset1(dx float64, dy float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect9setOffsetEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
 }
@@ -278,7 +278,7 @@ func (this *QGraphicsDropShadowEffect) SetOffset_1(dx float64, dy float64) {
 /*
 
  */
-func (this *QGraphicsDropShadowEffect) SetOffset_2(d float64) {
+func (this *QGraphicsDropShadowEffect) SetOffset2(d float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect9setOffsetEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), d)
 	qtrt.ErrPrint(err, rv)
 }

@@ -73,7 +73,7 @@ MacOS: `brew install libffi`
     import "github.com/kitech/qt.go/qtwidgets"
     func main() {
         app := qtwidgets.NewQApplication(len(os.Args), os.Args, 0)
-        btn := qtwidgets.NewQPushButton_1("hello qt.go", nil)
+        btn := qtwidgets.NewQPushButton1("hello qt.go", nil)
         btn.Show()
         app.Exec()
     }

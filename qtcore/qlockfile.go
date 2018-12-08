@@ -78,7 +78,7 @@ func (*QLockFile) NewForInherit(fileName string) *QLockFile {
 	return NewQLockFile(fileName)
 }
 func NewQLockFile(fileName string) *QLockFile {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFileC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ Calling this function multiple times on the same lock from the same thread witho
 
 See also lock() and unlock().
 */
-func (this *QLockFile) TryLock__() bool {
+func (this *QLockFile) TryLockp() bool {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	timeout := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile7tryLockEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
@@ -259,9 +259,9 @@ This can be used to inform users about the existing lock file and give them the 
 This function returns true if the information could be successfully retrieved, false if the lock file doesn't exist or doesn't contain the expected data. This can happen if the lock file was deleted between the time where tryLock() failed and the call to this function. Simply call tryLock() again if this happens.
 */
 func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname string, appname string) bool {
-	var tmpArg1 = NewQString_5(hostname)
+	var tmpArg1 = NewQString5(hostname)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(appname)
+	var tmpArg2 = NewQString5(appname)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile11getLockInfoEPxP7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pid, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)

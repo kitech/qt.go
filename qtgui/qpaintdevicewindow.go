@@ -134,7 +134,7 @@ Note: Subsequent calls to this function before the next paint event will get ign
 
 Note: For non-exposed windows the update is deferred until the window becomes exposed again.
 */
-func (this *QPaintDeviceWindow) Update_1(region QRegion_ITF) {
+func (this *QPaintDeviceWindow) Update1(region QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if region != nil && region.QRegion_PTR() != nil {
 		convArg0 = region.QRegion_PTR().GetCthis()
@@ -155,7 +155,7 @@ Note: Subsequent calls to this function before the next paint event will get ign
 
 Note: For non-exposed windows the update is deferred until the window becomes exposed again.
 */
-func (this *QPaintDeviceWindow) Update_2() {
+func (this *QPaintDeviceWindow) Update2() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }

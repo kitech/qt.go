@@ -151,7 +151,7 @@ Creates and returns a source with the given parent, by loading the plugin named 
 Returns 0 if the plugin cannot be found.
 */
 func (this *QGeoSatelliteInfoSource) CreateSource(sourceName string, parent qtcore.QObject_ITF /*777 QObject **/) *QGeoSatelliteInfoSource /*777 QGeoSatelliteInfoSource **/ {
-	var tmpArg0 = qtcore.NewQString_5(sourceName)
+	var tmpArg0 = qtcore.NewQString5(sourceName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -274,7 +274,7 @@ Returns the last error that occurred.
 
 This signal is not emitted when a requestTimeout() has occurred.
 */
-func (this *QGeoSatelliteInfoSource) Error_1(arg0 int) {
+func (this *QGeoSatelliteInfoSource) Error1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGeoSatelliteInfoSource5errorENS_5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -338,7 +338,7 @@ If the timeout is zero, the timeout defaults to a reasonable timeout period as a
 
 This does nothing if another update request is in progress. However it can be called even if startUpdates() has already been called and regular updates are in progress.
 */
-func (this *QGeoSatelliteInfoSource) RequestUpdate__() {
+func (this *QGeoSatelliteInfoSource) RequestUpdatep() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	timeout := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGeoSatelliteInfoSource13requestUpdateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)

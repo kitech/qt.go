@@ -113,10 +113,10 @@ Constructs a new input dialog with the given parent and window flags.
 
 This function was introduced in  Qt 4.5.
 */
-func (*QInputDialog) NewForInherit__() *QInputDialog {
-	return NewQInputDialog__()
+func (*QInputDialog) NewForInheritp() *QInputDialog {
+	return NewQInputDialogp()
 }
-func NewQInputDialog__() *QInputDialog {
+func NewQInputDialogp() *QInputDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -138,10 +138,10 @@ Constructs a new input dialog with the given parent and window flags.
 
 This function was introduced in  Qt 4.5.
 */
-func (*QInputDialog) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QInputDialog {
-	return NewQInputDialog__1(parent)
+func (*QInputDialog) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QInputDialog {
+	return NewQInputDialogp1(parent)
 }
-func NewQInputDialog__1(parent QWidget_ITF /*777 QWidget **/) *QInputDialog {
+func NewQInputDialogp1(parent QWidget_ITF /*777 QWidget **/) *QInputDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -206,7 +206,7 @@ func (this *QInputDialog) InputMode() int {
 
  */
 func (this *QInputDialog) SetLabelText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog12setLabelTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -254,7 +254,7 @@ Sets the given option to be enabled if on is true; otherwise, clears the given o
 
 See also options and testOption().
 */
-func (this *QInputDialog) SetOption__(option int) {
+func (this *QInputDialog) SetOptionp(option int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9setOptionENS_17InputDialogOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
@@ -313,7 +313,7 @@ func (this *QInputDialog) Options() int {
 
  */
 func (this *QInputDialog) SetTextValue(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog12setTextValueERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -674,7 +674,7 @@ func (this *QInputDialog) DoubleDecimals() int {
 
  */
 func (this *QInputDialog) SetOkButtonText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog15setOkButtonTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -706,7 +706,7 @@ func (this *QInputDialog) OkButtonText() string {
 
  */
 func (this *QInputDialog) SetCancelButtonText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog19setCancelButtonTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -839,11 +839,11 @@ func (this *QInputDialog) GetText(parent QWidget_ITF /*777 QWidget **/, title st
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(text)
+	var tmpArg4 = qtcore.NewQString5(text)
 	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog7getTextEP7QWidgetRK7QStringS4_N9QLineEdit8EchoModeES4_Pb6QFlagsIN2Qt10WindowTypeEES8_INS9_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, echo, convArg4, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -886,14 +886,14 @@ Use this static function like this:
 
 See also getInt(), getDouble(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetText__(parent QWidget_ITF /*777 QWidget **/, title string, label string) string {
+func (this *QInputDialog) GetTextp(parent QWidget_ITF /*777 QWidget **/, title string, label string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QLineEdit::EchoMode=Elaborated, QLineEdit::EchoMode=Enum, , Invalid
 	echo := 0
@@ -941,14 +941,14 @@ Use this static function like this:
 
 See also getInt(), getDouble(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetText__1(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int) string {
+func (this *QInputDialog) GetTextp1(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
@@ -994,16 +994,16 @@ Use this static function like this:
 
 See also getInt(), getDouble(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetText__2(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string) string {
+func (this *QInputDialog) GetTextp2(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(text)
+	var tmpArg4 = qtcore.NewQString5(text)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -1047,16 +1047,16 @@ Use this static function like this:
 
 See also getInt(), getDouble(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetText__3(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string, ok *bool) string {
+func (this *QInputDialog) GetTextp3(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string, ok *bool) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(text)
+	var tmpArg4 = qtcore.NewQString5(text)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 6, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
@@ -1098,16 +1098,16 @@ Use this static function like this:
 
 See also getInt(), getDouble(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetText__4(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string, ok *bool, flags int) string {
+func (this *QInputDialog) GetTextp4(parent QWidget_ITF /*777 QWidget **/, title string, label string, echo int, text string, ok *bool, flags int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(text)
+	var tmpArg4 = qtcore.NewQString5(text)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 7, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
@@ -1153,11 +1153,11 @@ func (this *QInputDialog) GetMultiLineText(parent QWidget_ITF /*777 QWidget **/,
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(text)
+	var tmpArg3 = qtcore.NewQString5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16getMultiLineTextEP7QWidgetRK7QStringS4_S4_Pb6QFlagsIN2Qt10WindowTypeEES6_INS7_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, ok, flags, inputMethodHints)
 	qtrt.ErrPrint(err, rv)
@@ -1201,14 +1201,14 @@ This function was introduced in  Qt 5.2.
 
 See also getInt(), getDouble(), getItem(), and getText().
 */
-func (this *QInputDialog) GetMultiLineText__(parent QWidget_ITF /*777 QWidget **/, title string, label string) string {
+func (this *QInputDialog) GetMultiLineTextp(parent QWidget_ITF /*777 QWidget **/, title string, label string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
@@ -1255,16 +1255,16 @@ This function was introduced in  Qt 5.2.
 
 See also getInt(), getDouble(), getItem(), and getText().
 */
-func (this *QInputDialog) GetMultiLineText__1(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string) string {
+func (this *QInputDialog) GetMultiLineTextp1(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(text)
+	var tmpArg3 = qtcore.NewQString5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -1309,16 +1309,16 @@ This function was introduced in  Qt 5.2.
 
 See also getInt(), getDouble(), getItem(), and getText().
 */
-func (this *QInputDialog) GetMultiLineText__2(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string, ok *bool) string {
+func (this *QInputDialog) GetMultiLineTextp2(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string, ok *bool) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(text)
+	var tmpArg3 = qtcore.NewQString5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 5, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
@@ -1361,16 +1361,16 @@ This function was introduced in  Qt 5.2.
 
 See also getInt(), getDouble(), getItem(), and getText().
 */
-func (this *QInputDialog) GetMultiLineText__3(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string, ok *bool, flags int) string {
+func (this *QInputDialog) GetMultiLineTextp3(parent QWidget_ITF /*777 QWidget **/, title string, label string, text string, ok *bool, flags int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(text)
+	var tmpArg3 = qtcore.NewQString5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 6, Qt::InputMethodHints=Elaborated, Qt::InputMethodHints=Typedef, QFlags<Qt::InputMethodHint>, Unexposed
 	inputMethodHints := 0
@@ -1419,9 +1419,9 @@ func (this *QInputDialog) GetItem(parent QWidget_ITF /*777 QWidget **/, title st
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if items != nil && items.QStringList_PTR() != nil {
@@ -1472,14 +1472,14 @@ Use this static function like this:
 
 See also getText(), getInt(), getDouble(), and getMultiLineText().
 */
-func (this *QInputDialog) GetItem__(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF) string {
+func (this *QInputDialog) GetItemp(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if items != nil && items.QStringList_PTR() != nil {
@@ -1535,14 +1535,14 @@ Use this static function like this:
 
 See also getText(), getInt(), getDouble(), and getMultiLineText().
 */
-func (this *QInputDialog) GetItem__1(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int) string {
+func (this *QInputDialog) GetItemp1(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if items != nil && items.QStringList_PTR() != nil {
@@ -1596,14 +1596,14 @@ Use this static function like this:
 
 See also getText(), getInt(), getDouble(), and getMultiLineText().
 */
-func (this *QInputDialog) GetItem__2(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool) string {
+func (this *QInputDialog) GetItemp2(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if items != nil && items.QStringList_PTR() != nil {
@@ -1655,14 +1655,14 @@ Use this static function like this:
 
 See also getText(), getInt(), getDouble(), and getMultiLineText().
 */
-func (this *QInputDialog) GetItem__3(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool, ok *bool) string {
+func (this *QInputDialog) GetItemp3(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool, ok *bool) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if items != nil && items.QStringList_PTR() != nil {
@@ -1712,14 +1712,14 @@ Use this static function like this:
 
 See also getText(), getInt(), getDouble(), and getMultiLineText().
 */
-func (this *QInputDialog) GetItem__4(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool, ok *bool, flags int) string {
+func (this *QInputDialog) GetItemp4(parent QWidget_ITF /*777 QWidget **/, title string, label string, items qtcore.QStringList_ITF, current int, editable bool, ok *bool, flags int) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if items != nil && items.QStringList_PTR() != nil {
@@ -1769,9 +1769,9 @@ func (this *QInputDialog) GetInt(parent QWidget_ITF /*777 QWidget **/, title str
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, step, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -1812,14 +1812,14 @@ This function was introduced in  Qt 4.5.
 
 See also getText(), getDouble(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetInt__(parent QWidget_ITF /*777 QWidget **/, title string, label string) int {
+func (this *QInputDialog) GetIntp(parent QWidget_ITF /*777 QWidget **/, title string, label string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, int=Int, =Invalid, , Invalid
 	value := int(0)
@@ -1867,14 +1867,14 @@ This function was introduced in  Qt 4.5.
 
 See also getText(), getDouble(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetInt__1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int) int {
+func (this *QInputDialog) GetIntp1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, int=Int, =Invalid, , Invalid
 	minValue := int(-2147483647)
@@ -1920,14 +1920,14 @@ This function was introduced in  Qt 4.5.
 
 See also getText(), getDouble(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetInt__2(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int) int {
+func (this *QInputDialog) GetIntp2(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 5, int=Int, =Invalid, , Invalid
 	maxValue := int(2147483647)
@@ -1971,14 +1971,14 @@ This function was introduced in  Qt 4.5.
 
 See also getText(), getDouble(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetInt__3(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int) int {
+func (this *QInputDialog) GetIntp3(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 6, int=Int, =Invalid, , Invalid
 	step := int(1)
@@ -2020,14 +2020,14 @@ This function was introduced in  Qt 4.5.
 
 See also getText(), getDouble(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetInt__4(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int, step int) int {
+func (this *QInputDialog) GetIntp4(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int, step int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -2067,14 +2067,14 @@ This function was introduced in  Qt 4.5.
 
 See also getText(), getDouble(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetInt__5(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int, step int, ok *bool) int {
+func (this *QInputDialog) GetIntp5(parent QWidget_ITF /*777 QWidget **/, title string, label string, value int, minValue int, maxValue int, step int, ok *bool) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
@@ -2115,9 +2115,9 @@ func (this *QInputDialog) GetDouble(parent QWidget_ITF /*777 QWidget **/, title 
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, ok, flags)
 	qtrt.ErrPrint(err, rv)
@@ -2156,14 +2156,14 @@ Use this static function like this:
 
 See also getText(), getInt(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetDouble__(parent QWidget_ITF /*777 QWidget **/, title string, label string) float64 {
+func (this *QInputDialog) GetDoublep(parent QWidget_ITF /*777 QWidget **/, title string, label string) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, double=Double, =Invalid, , Invalid
 	value := float64(0)
@@ -2209,14 +2209,14 @@ Use this static function like this:
 
 See also getText(), getInt(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetDouble__1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64) float64 {
+func (this *QInputDialog) GetDoublep1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, double=Double, =Invalid, , Invalid
 	minValue := float64(-2147483647)
@@ -2260,14 +2260,14 @@ Use this static function like this:
 
 See also getText(), getInt(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetDouble__2(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64) float64 {
+func (this *QInputDialog) GetDoublep2(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 5, double=Double, =Invalid, , Invalid
 	maxValue := float64(2147483647)
@@ -2309,14 +2309,14 @@ Use this static function like this:
 
 See also getText(), getInt(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetDouble__3(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64) float64 {
+func (this *QInputDialog) GetDoublep3(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 6, int=Int, =Invalid, , Invalid
 	decimals := int(1)
@@ -2356,14 +2356,14 @@ Use this static function like this:
 
 See also getText(), getInt(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetDouble__4(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int) float64 {
+func (this *QInputDialog) GetDoublep4(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 7, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -2401,14 +2401,14 @@ Use this static function like this:
 
 See also getText(), getInt(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetDouble__5(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool) float64 {
+func (this *QInputDialog) GetDoublep5(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 8, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
@@ -2444,22 +2444,22 @@ Use this static function like this:
 
 See also getText(), getInt(), getItem(), and getMultiLineText().
 */
-func (this *QInputDialog) GetDouble_1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int, step float64) float64 {
+func (this *QInputDialog) GetDouble1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int, step float64) float64 {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEEd", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, ok, flags, step)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
-func QInputDialog_GetDouble_1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int, step float64) float64 {
+func QInputDialog_GetDouble1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int, step float64) float64 {
 	var nilthis *QInputDialog
-	rv := nilthis.GetDouble_1(parent, title, label, value, minValue, maxValue, decimals, ok, flags, step)
+	rv := nilthis.GetDouble1(parent, title, label, value, minValue, maxValue, decimals, ok, flags, step)
 	return rv
 }
 
@@ -2503,7 +2503,7 @@ This signal is only relevant when the input dialog is used in TextInput mode.
 Note: Notifier signal for property textValue.
 */
 func (this *QInputDialog) TextValueChanged(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog16textValueChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2520,7 +2520,7 @@ This signal is emitted whenever the user selects a text string by accepting the 
 This signal is only relevant when the input dialog is used in TextInput mode.
 */
 func (this *QInputDialog) TextValueSelected(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog17textValueSelectedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

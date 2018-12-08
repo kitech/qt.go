@@ -110,7 +110,7 @@ func (this *QNetworkConfiguration) Operator_equal(other unsafe.Pointer /*333*/) 
 /*
 
  */
-func (this *QNetworkConfiguration) Operator_equal_1(other QNetworkConfiguration_ITF) *QNetworkConfiguration {
+func (this *QNetworkConfiguration) Operator_equal1(other QNetworkConfiguration_ITF) *QNetworkConfiguration {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkConfiguration_PTR() != nil {
 		convArg0 = other.QNetworkConfiguration_PTR().GetCthis()

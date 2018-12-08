@@ -75,7 +75,7 @@ func (*QStatusTipEvent) NewForInherit(tip string) *QStatusTipEvent {
 	return NewQStatusTipEvent(tip)
 }
 func NewQStatusTipEvent(tip string) *QStatusTipEvent {
-	var tmpArg0 = qtcore.NewQString_5(tip)
+	var tmpArg0 = qtcore.NewQString5(tip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QStatusTipEventC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -96,10 +96,10 @@ Constructs an empty region.
 
 See also isEmpty().
 */
-func (*QRegion) NewForInherit_1(x int, y int, w int, h int, t int) *QRegion {
-	return NewQRegion_1(x, y, w, h, t)
+func (*QRegion) NewForInherit1(x int, y int, w int, h int, t int) *QRegion {
+	return NewQRegion1(x, y, w, h, t)
 }
-func NewQRegion_1(x int, y int, w int, h int, t int) *QRegion {
+func NewQRegion1(x int, y int, w int, h int, t int) *QRegion {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegionC2EiiiiNS_10RegionTypeE", qtrt.FFI_TYPE_POINTER, x, y, w, h, t)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,10 +117,10 @@ Constructs an empty region.
 
 See also isEmpty().
 */
-func (*QRegion) NewForInherit_1_(x int, y int, w int, h int) *QRegion {
-	return NewQRegion_1_(x, y, w, h)
+func (*QRegion) NewForInherit1p(x int, y int, w int, h int) *QRegion {
+	return NewQRegion1p(x, y, w, h)
 }
-func NewQRegion_1_(x int, y int, w int, h int) *QRegion {
+func NewQRegion1p(x int, y int, w int, h int) *QRegion {
 	// arg: 4, QRegion::RegionType=Enum, QRegion::RegionType=Enum, , Invalid
 	t := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegionC2EiiiiNS_10RegionTypeE", qtrt.FFI_TYPE_POINTER, x, y, w, h, t)
@@ -140,10 +140,10 @@ Constructs an empty region.
 
 See also isEmpty().
 */
-func (*QRegion) NewForInherit_2(r qtcore.QRect_ITF, t int) *QRegion {
-	return NewQRegion_2(r, t)
+func (*QRegion) NewForInherit2(r qtcore.QRect_ITF, t int) *QRegion {
+	return NewQRegion2(r, t)
 }
-func NewQRegion_2(r qtcore.QRect_ITF, t int) *QRegion {
+func NewQRegion2(r qtcore.QRect_ITF, t int) *QRegion {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -165,10 +165,10 @@ Constructs an empty region.
 
 See also isEmpty().
 */
-func (*QRegion) NewForInherit_2_(r qtcore.QRect_ITF) *QRegion {
-	return NewQRegion_2_(r)
+func (*QRegion) NewForInherit2p(r qtcore.QRect_ITF) *QRegion {
+	return NewQRegion2p(r)
 }
-func NewQRegion_2_(r qtcore.QRect_ITF) *QRegion {
+func NewQRegion2p(r qtcore.QRect_ITF) *QRegion {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -192,10 +192,10 @@ Constructs an empty region.
 
 See also isEmpty().
 */
-func (*QRegion) NewForInherit_3(pa QPolygon_ITF, fillRule int) *QRegion {
-	return NewQRegion_3(pa, fillRule)
+func (*QRegion) NewForInherit3(pa QPolygon_ITF, fillRule int) *QRegion {
+	return NewQRegion3(pa, fillRule)
 }
-func NewQRegion_3(pa QPolygon_ITF, fillRule int) *QRegion {
+func NewQRegion3(pa QPolygon_ITF, fillRule int) *QRegion {
 	var convArg0 unsafe.Pointer
 	if pa != nil && pa.QPolygon_PTR() != nil {
 		convArg0 = pa.QPolygon_PTR().GetCthis()
@@ -217,10 +217,10 @@ Constructs an empty region.
 
 See also isEmpty().
 */
-func (*QRegion) NewForInherit_3_(pa QPolygon_ITF) *QRegion {
-	return NewQRegion_3_(pa)
+func (*QRegion) NewForInherit3p(pa QPolygon_ITF) *QRegion {
+	return NewQRegion3p(pa)
 }
-func NewQRegion_3_(pa QPolygon_ITF) *QRegion {
+func NewQRegion3p(pa QPolygon_ITF) *QRegion {
 	var convArg0 unsafe.Pointer
 	if pa != nil && pa.QPolygon_PTR() != nil {
 		convArg0 = pa.QPolygon_PTR().GetCthis()
@@ -244,10 +244,10 @@ Constructs an empty region.
 
 See also isEmpty().
 */
-func (*QRegion) NewForInherit_4(bitmap QBitmap_ITF) *QRegion {
-	return NewQRegion_4(bitmap)
+func (*QRegion) NewForInherit4(bitmap QBitmap_ITF) *QRegion {
+	return NewQRegion4(bitmap)
 }
-func NewQRegion_4(bitmap QBitmap_ITF) *QRegion {
+func NewQRegion4(bitmap QBitmap_ITF) *QRegion {
 	var convArg0 unsafe.Pointer
 	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
 		convArg0 = bitmap.QBitmap_PTR().GetCthis()
@@ -302,7 +302,7 @@ func (this *QRegion) Operator_equal(arg0 QRegion_ITF) *QRegion {
 /*
 
  */
-func (this *QRegion) Operator_equal_1(other unsafe.Pointer /*333*/) *QRegion {
+func (this *QRegion) Operator_equal1(other unsafe.Pointer /*333*/) *QRegion {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegionaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -475,7 +475,7 @@ func (this *QRegion) Contains(p qtcore.QPoint_ITF) bool {
 /*
 Returns true if the region contains the point p; otherwise returns false.
 */
-func (this *QRegion) Contains_1(r qtcore.QRect_ITF) bool {
+func (this *QRegion) Contains1(r qtcore.QRect_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -506,7 +506,7 @@ func (this *QRegion) Translate(dx int, dy int) {
 /*
 Translates (moves) the region dx along the X axis and dy along the Y axis.
 */
-func (this *QRegion) Translate_1(p qtcore.QPoint_ITF) {
+func (this *QRegion) Translate1(p qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -547,7 +547,7 @@ This function was introduced in  Qt 4.1.
 
 See also translate().
 */
-func (this *QRegion) Translated_1(p qtcore.QPoint_ITF) *QRegion /*123*/ {
+func (this *QRegion) Translated1(p qtcore.QPoint_ITF) *QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -603,7 +603,7 @@ This function was introduced in  Qt 4.2.
 
 See also intersected(), subtracted(), and xored().
 */
-func (this *QRegion) United_1(r qtcore.QRect_ITF) *QRegion /*123*/ {
+func (this *QRegion) United1(r qtcore.QRect_ITF) *QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -659,7 +659,7 @@ This function was introduced in  Qt 4.2.
 
 See also subtracted(), united(), and xored().
 */
-func (this *QRegion) Intersected_1(r qtcore.QRect_ITF) *QRegion /*123*/ {
+func (this *QRegion) Intersected1(r qtcore.QRect_ITF) *QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -757,7 +757,7 @@ Returns true if this region intersects with region, otherwise returns false.
 
 This function was introduced in  Qt 4.2.
 */
-func (this *QRegion) Intersects_1(r qtcore.QRect_ITF) bool {
+func (this *QRegion) Intersects1(r qtcore.QRect_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -873,7 +873,7 @@ func (this *QRegion) Operator_add(r QRegion_ITF) *QRegion /*123*/ {
 /*
 
  */
-func (this *QRegion) Operator_add_1(r qtcore.QRect_ITF) *QRegion /*123*/ {
+func (this *QRegion) Operator_add1(r qtcore.QRect_ITF) *QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -913,7 +913,7 @@ func (this *QRegion) Operator_and(r QRegion_ITF) *QRegion /*123*/ {
 /*
 
  */
-func (this *QRegion) Operator_and_1(r qtcore.QRect_ITF) *QRegion /*123*/ {
+func (this *QRegion) Operator_and1(r qtcore.QRect_ITF) *QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -1015,7 +1015,7 @@ func (this *QRegion) Operator_add_equal(r QRegion_ITF) *QRegion {
 /*
 
  */
-func (this *QRegion) Operator_add_equal_1(r qtcore.QRect_ITF) *QRegion {
+func (this *QRegion) Operator_add_equal1(r qtcore.QRect_ITF) *QRegion {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -1055,7 +1055,7 @@ func (this *QRegion) Operator_and_equal(r QRegion_ITF) *QRegion {
 /*
 
  */
-func (this *QRegion) Operator_and_equal_1(r qtcore.QRect_ITF) *QRegion {
+func (this *QRegion) Operator_and_equal1(r qtcore.QRect_ITF) *QRegion {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()

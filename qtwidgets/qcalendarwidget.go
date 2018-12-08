@@ -157,10 +157,10 @@ The widget is initialized with the current month and year, and the currently sel
 
 See also setCurrentPage().
 */
-func (*QCalendarWidget) NewForInherit__() *QCalendarWidget {
-	return NewQCalendarWidget__()
+func (*QCalendarWidget) NewForInheritp() *QCalendarWidget {
+	return NewQCalendarWidgetp()
 }
-func NewQCalendarWidget__() *QCalendarWidget {
+func NewQCalendarWidgetp() *QCalendarWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QCalendarWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)

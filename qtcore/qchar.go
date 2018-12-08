@@ -95,10 +95,10 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
-func (*QChar) NewForInherit_1(rc uint16) *QChar {
-	return NewQChar_1(rc)
+func (*QChar) NewForInherit1(rc uint16) *QChar {
+	return NewQChar1(rc)
 }
-func NewQChar_1(rc uint16) *QChar {
+func NewQChar1(rc uint16) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Et", qtrt.FFI_TYPE_POINTER, rc)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,10 +116,10 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
-func (*QChar) NewForInherit_2(c byte, r byte) *QChar {
-	return NewQChar_2(c, r)
+func (*QChar) NewForInherit2(c byte, r byte) *QChar {
+	return NewQChar2(c, r)
 }
-func NewQChar_2(c byte, r byte) *QChar {
+func NewQChar2(c byte, r byte) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ehh", qtrt.FFI_TYPE_POINTER, c, r)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -137,10 +137,10 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
-func (*QChar) NewForInherit_3(rc int16) *QChar {
-	return NewQChar_3(rc)
+func (*QChar) NewForInherit3(rc int16) *QChar {
+	return NewQChar3(rc)
 }
-func NewQChar_3(rc int16) *QChar {
+func NewQChar3(rc int16) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Es", qtrt.FFI_TYPE_POINTER, rc)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -158,10 +158,10 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
-func (*QChar) NewForInherit_4(rc uint) *QChar {
-	return NewQChar_4(rc)
+func (*QChar) NewForInherit4(rc uint) *QChar {
+	return NewQChar4(rc)
 }
-func NewQChar_4(rc uint) *QChar {
+func NewQChar4(rc uint) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ej", qtrt.FFI_TYPE_POINTER, rc)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -179,10 +179,10 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
-func (*QChar) NewForInherit_5(rc int) *QChar {
-	return NewQChar_5(rc)
+func (*QChar) NewForInherit5(rc int) *QChar {
+	return NewQChar5(rc)
 }
-func NewQChar_5(rc int) *QChar {
+func NewQChar5(rc int) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ei", qtrt.FFI_TYPE_POINTER, rc)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -200,10 +200,10 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
-func (*QChar) NewForInherit_6(s int) *QChar {
-	return NewQChar_6(s)
+func (*QChar) NewForInherit6(s int) *QChar {
+	return NewQChar6(s)
 }
-func NewQChar_6(s int) *QChar {
+func NewQChar6(s int) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2ENS_16SpecialCharacterE", qtrt.FFI_TYPE_POINTER, s)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -221,10 +221,10 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
-func (*QChar) NewForInherit_7(ch int16) *QChar {
-	return NewQChar_7(ch)
+func (*QChar) NewForInherit7(ch int16) *QChar {
+	return NewQChar7(ch)
 }
-func NewQChar_7(ch int16) *QChar {
+func NewQChar7(ch int16) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2EDs", qtrt.FFI_TYPE_POINTER, ch)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -242,10 +242,10 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
-func (*QChar) NewForInherit_8(c byte) *QChar {
-	return NewQChar_8(c)
+func (*QChar) NewForInherit8(c byte) *QChar {
+	return NewQChar8(c)
 }
-func NewQChar_8(c byte) *QChar {
+func NewQChar8(c byte) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ec", qtrt.FFI_TYPE_POINTER, c)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -263,10 +263,10 @@ Constructs a null QChar ('\0').
 
 See also isNull().
 */
-func (*QChar) NewForInherit_9(c byte) *QChar {
-	return NewQChar_9(c)
+func (*QChar) NewForInherit9(c byte) *QChar {
+	return NewQChar9(c)
 }
-func NewQChar_9(c byte) *QChar {
+func NewQChar9(c byte) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Eh", qtrt.FFI_TYPE_POINTER, c)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -296,14 +296,14 @@ func (this *QChar) Category() int {
 /*
 Returns the character's category.
 */
-func (this *QChar) Category_1(ucs4 uint) int {
+func (this *QChar) Category1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar8categoryEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QChar_Category_1(ucs4 uint) int {
+func QChar_Category1(ucs4 uint) int {
 	var nilthis *QChar
-	rv := nilthis.Category_1(ucs4)
+	rv := nilthis.Category1(ucs4)
 	return rv
 }
 
@@ -329,14 +329,14 @@ func (this *QChar) Direction() int {
 /*
 Returns the character's direction.
 */
-func (this *QChar) Direction_1(ucs4 uint) int {
+func (this *QChar) Direction1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar9directionEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QChar_Direction_1(ucs4 uint) int {
+func QChar_Direction1(ucs4 uint) int {
 	var nilthis *QChar
-	rv := nilthis.Direction_1(ucs4)
+	rv := nilthis.Direction1(ucs4)
 	return rv
 }
 
@@ -366,14 +366,14 @@ Returns information about the joining type attributes of the character (needed f
 
 This function was introduced in  Qt 5.3.
 */
-func (this *QChar) JoiningType_1(ucs4 uint) int {
+func (this *QChar) JoiningType1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar11joiningTypeEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QChar_JoiningType_1(ucs4 uint) int {
+func QChar_JoiningType1(ucs4 uint) int {
 	var nilthis *QChar
-	rv := nilthis.JoiningType_1(ucs4)
+	rv := nilthis.JoiningType1(ucs4)
 	return rv
 }
 
@@ -399,14 +399,14 @@ func (this *QChar) Joining() int {
 /*
 
  */
-func (this *QChar) Joining_1(ucs4 uint) int {
+func (this *QChar) Joining1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7joiningEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QChar_Joining_1(ucs4 uint) int {
+func QChar_Joining1(ucs4 uint) int {
 	var nilthis *QChar
-	rv := nilthis.Joining_1(ucs4)
+	rv := nilthis.Joining1(ucs4)
 	return rv
 }
 
@@ -436,14 +436,14 @@ Returns the combining class for the character as defined in the Unicode standard
 
 The Qt text rendering engine uses this information to correctly position non-spacing marks around a base character.
 */
-func (this *QChar) CombiningClass_1(ucs4 uint) byte {
+func (this *QChar) CombiningClass1(ucs4 uint) byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar14combiningClassEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
-func QChar_CombiningClass_1(ucs4 uint) byte {
+func QChar_CombiningClass1(ucs4 uint) byte {
 	var nilthis *QChar
-	rv := nilthis.CombiningClass_1(ucs4)
+	rv := nilthis.CombiningClass1(ucs4)
 	return rv
 }
 
@@ -475,14 +475,14 @@ Returns the mirrored character if this character is a mirrored character; otherw
 
 See also hasMirrored().
 */
-func (this *QChar) MirroredChar_1(ucs4 uint) uint {
+func (this *QChar) MirroredChar1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar12mirroredCharEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
-func QChar_MirroredChar_1(ucs4 uint) uint {
+func QChar_MirroredChar1(ucs4 uint) uint {
 	var nilthis *QChar
-	rv := nilthis.MirroredChar_1(ucs4)
+	rv := nilthis.MirroredChar1(ucs4)
 	return rv
 }
 
@@ -516,14 +516,14 @@ A bit faster equivalent of (ch.mirroredChar() != ch).
 
 See also mirroredChar().
 */
-func (this *QChar) HasMirrored_1(ucs4 uint) bool {
+func (this *QChar) HasMirrored1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar11hasMirroredEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_HasMirrored_1(ucs4 uint) bool {
+func QChar_HasMirrored1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.HasMirrored_1(ucs4)
+	rv := nilthis.HasMirrored1(ucs4)
 	return rv
 }
 
@@ -552,7 +552,7 @@ func (this *QChar) Decomposition() string {
 /*
 Decomposes a character into it's constituent parts. Returns an empty string if no decomposition exists.
 */
-func (this *QChar) Decomposition_1(ucs4 uint) string {
+func (this *QChar) Decomposition1(ucs4 uint) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar13decompositionEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -560,9 +560,9 @@ func (this *QChar) Decomposition_1(ucs4 uint) string {
 	/*==*/ DeleteQString(rv2)
 	return rv3
 }
-func QChar_Decomposition_1(ucs4 uint) string {
+func QChar_Decomposition1(ucs4 uint) string {
 	var nilthis *QChar
-	rv := nilthis.Decomposition_1(ucs4)
+	rv := nilthis.Decomposition1(ucs4)
 	return rv
 }
 
@@ -588,14 +588,14 @@ func (this *QChar) DecompositionTag() int {
 /*
 Returns the tag defining the composition of the character. Returns QChar::NoDecomposition if no decomposition exists.
 */
-func (this *QChar) DecompositionTag_1(ucs4 uint) int {
+func (this *QChar) DecompositionTag1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar16decompositionTagEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QChar_DecompositionTag_1(ucs4 uint) int {
+func QChar_DecompositionTag1(ucs4 uint) int {
 	var nilthis *QChar
-	rv := nilthis.DecompositionTag_1(ucs4)
+	rv := nilthis.DecompositionTag1(ucs4)
 	return rv
 }
 
@@ -621,14 +621,14 @@ func (this *QChar) DigitValue() int {
 /*
 Returns the numeric value of the digit, or -1 if the character is not a digit.
 */
-func (this *QChar) DigitValue_1(ucs4 uint) int {
+func (this *QChar) DigitValue1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar10digitValueEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QChar_DigitValue_1(ucs4 uint) int {
+func QChar_DigitValue1(ucs4 uint) int {
 	var nilthis *QChar
-	rv := nilthis.DigitValue_1(ucs4)
+	rv := nilthis.DigitValue1(ucs4)
 	return rv
 }
 
@@ -656,14 +656,14 @@ func (this *QChar) ToLower() *QChar /*123*/ {
 /*
 Returns the lowercase equivalent if the character is uppercase or titlecase; otherwise returns the character itself.
 */
-func (this *QChar) ToLower_1(ucs4 uint) uint {
+func (this *QChar) ToLower1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7toLowerEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
-func QChar_ToLower_1(ucs4 uint) uint {
+func QChar_ToLower1(ucs4 uint) uint {
 	var nilthis *QChar
-	rv := nilthis.ToLower_1(ucs4)
+	rv := nilthis.ToLower1(ucs4)
 	return rv
 }
 
@@ -691,14 +691,14 @@ func (this *QChar) ToUpper() *QChar /*123*/ {
 /*
 Returns the uppercase equivalent if the character is lowercase or titlecase; otherwise returns the character itself.
 */
-func (this *QChar) ToUpper_1(ucs4 uint) uint {
+func (this *QChar) ToUpper1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7toUpperEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
-func QChar_ToUpper_1(ucs4 uint) uint {
+func QChar_ToUpper1(ucs4 uint) uint {
 	var nilthis *QChar
-	rv := nilthis.ToUpper_1(ucs4)
+	rv := nilthis.ToUpper1(ucs4)
 	return rv
 }
 
@@ -726,14 +726,14 @@ func (this *QChar) ToTitleCase() *QChar /*123*/ {
 /*
 Returns the title case equivalent if the character is lowercase or uppercase; otherwise returns the character itself.
 */
-func (this *QChar) ToTitleCase_1(ucs4 uint) uint {
+func (this *QChar) ToTitleCase1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar11toTitleCaseEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
-func QChar_ToTitleCase_1(ucs4 uint) uint {
+func QChar_ToTitleCase1(ucs4 uint) uint {
 	var nilthis *QChar
-	rv := nilthis.ToTitleCase_1(ucs4)
+	rv := nilthis.ToTitleCase1(ucs4)
 	return rv
 }
 
@@ -761,14 +761,14 @@ func (this *QChar) ToCaseFolded() *QChar /*123*/ {
 /*
 Returns the case folded equivalent of the character. For most Unicode characters this is the same as toLower().
 */
-func (this *QChar) ToCaseFolded_1(ucs4 uint) uint {
+func (this *QChar) ToCaseFolded1(ucs4 uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar12toCaseFoldedEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
-func QChar_ToCaseFolded_1(ucs4 uint) uint {
+func QChar_ToCaseFolded1(ucs4 uint) uint {
 	var nilthis *QChar
-	rv := nilthis.ToCaseFolded_1(ucs4)
+	rv := nilthis.ToCaseFolded1(ucs4)
 	return rv
 }
 
@@ -798,14 +798,14 @@ Returns the Unicode script property value for this character.
 
 This function was introduced in  Qt 5.1.
 */
-func (this *QChar) Script_1(ucs4 uint) int {
+func (this *QChar) Script1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar6scriptEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QChar_Script_1(ucs4 uint) int {
+func QChar_Script1(ucs4 uint) int {
 	var nilthis *QChar
-	rv := nilthis.Script_1(ucs4)
+	rv := nilthis.Script1(ucs4)
 	return rv
 }
 
@@ -831,14 +831,14 @@ func (this *QChar) UnicodeVersion() int {
 /*
 Returns the Unicode version that introduced this character.
 */
-func (this *QChar) UnicodeVersion_1(ucs4 uint) int {
+func (this *QChar) UnicodeVersion1(ucs4 uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar14unicodeVersionEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QChar_UnicodeVersion_1(ucs4 uint) int {
+func QChar_UnicodeVersion1(ucs4 uint) int {
 	var nilthis *QChar
-	rv := nilthis.UnicodeVersion_1(ucs4)
+	rv := nilthis.UnicodeVersion1(ucs4)
 	return rv
 }
 
@@ -882,7 +882,7 @@ func (this *QChar) Unicode() uint16 {
 /*
 Returns the numeric Unicode value of the QChar.
 */
-func (this *QChar) Unicode_1() uint16 {
+func (this *QChar) Unicode1() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv)
@@ -953,14 +953,14 @@ Returns true if the character is a printable character; otherwise returns false.
 
 Note that this gives no indication of whether the character is available in a particular font.
 */
-func (this *QChar) IsPrint_1(ucs4 uint) bool {
+func (this *QChar) IsPrint1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isPrintEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsPrint_1(ucs4 uint) bool {
+func QChar_IsPrint1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsPrint_1(ucs4)
+	rv := nilthis.IsPrint1(ucs4)
 	return rv
 }
 
@@ -986,14 +986,14 @@ func (this *QChar) IsSpace() bool {
 /*
 Returns true if the character is a separator character (Separator_* categories or certain code points from Other_Control category); otherwise returns false.
 */
-func (this *QChar) IsSpace_1(ucs4 uint) bool {
+func (this *QChar) IsSpace1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isSpaceEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsSpace_1(ucs4 uint) bool {
+func QChar_IsSpace1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsSpace_1(ucs4)
+	rv := nilthis.IsSpace1(ucs4)
 	return rv
 }
 
@@ -1023,14 +1023,14 @@ Returns true if the character is a mark (Mark_* categories); otherwise returns f
 
 See QChar::Category for more information regarding marks.
 */
-func (this *QChar) IsMark_1(ucs4 uint) bool {
+func (this *QChar) IsMark1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar6isMarkEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsMark_1(ucs4 uint) bool {
+func QChar_IsMark1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsMark_1(ucs4)
+	rv := nilthis.IsMark1(ucs4)
 	return rv
 }
 
@@ -1056,14 +1056,14 @@ func (this *QChar) IsPunct() bool {
 /*
 Returns true if the character is a punctuation mark (Punctuation_* categories); otherwise returns false.
 */
-func (this *QChar) IsPunct_1(ucs4 uint) bool {
+func (this *QChar) IsPunct1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isPunctEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsPunct_1(ucs4 uint) bool {
+func QChar_IsPunct1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsPunct_1(ucs4)
+	rv := nilthis.IsPunct1(ucs4)
 	return rv
 }
 
@@ -1089,14 +1089,14 @@ func (this *QChar) IsSymbol() bool {
 /*
 Returns true if the character is a symbol (Symbol_* categories); otherwise returns false.
 */
-func (this *QChar) IsSymbol_1(ucs4 uint) bool {
+func (this *QChar) IsSymbol1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar8isSymbolEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsSymbol_1(ucs4 uint) bool {
+func QChar_IsSymbol1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsSymbol_1(ucs4)
+	rv := nilthis.IsSymbol1(ucs4)
 	return rv
 }
 
@@ -1122,14 +1122,14 @@ func (this *QChar) IsLetter() bool {
 /*
 Returns true if the character is a letter (Letter_* categories); otherwise returns false.
 */
-func (this *QChar) IsLetter_1(ucs4 uint) bool {
+func (this *QChar) IsLetter1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar8isLetterEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsLetter_1(ucs4 uint) bool {
+func QChar_IsLetter1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsLetter_1(ucs4)
+	rv := nilthis.IsLetter1(ucs4)
 	return rv
 }
 
@@ -1159,14 +1159,14 @@ Returns true if the character is a number (Number_* categories, not just 0-9); o
 
 See also isDigit().
 */
-func (this *QChar) IsNumber_1(ucs4 uint) bool {
+func (this *QChar) IsNumber1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar8isNumberEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsNumber_1(ucs4 uint) bool {
+func QChar_IsNumber1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsNumber_1(ucs4)
+	rv := nilthis.IsNumber1(ucs4)
 	return rv
 }
 
@@ -1192,14 +1192,14 @@ func (this *QChar) IsLetterOrNumber() bool {
 /*
 Returns true if the character is a letter or number (Letter_* or Number_* categories); otherwise returns false.
 */
-func (this *QChar) IsLetterOrNumber_1(ucs4 uint) bool {
+func (this *QChar) IsLetterOrNumber1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar16isLetterOrNumberEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsLetterOrNumber_1(ucs4 uint) bool {
+func QChar_IsLetterOrNumber1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsLetterOrNumber_1(ucs4)
+	rv := nilthis.IsLetterOrNumber1(ucs4)
 	return rv
 }
 
@@ -1229,14 +1229,14 @@ Returns true if the character is a decimal digit (Number_DecimalDigit); otherwis
 
 See also isNumber().
 */
-func (this *QChar) IsDigit_1(ucs4 uint) bool {
+func (this *QChar) IsDigit1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isDigitEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsDigit_1(ucs4 uint) bool {
+func QChar_IsDigit1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsDigit_1(ucs4)
+	rv := nilthis.IsDigit1(ucs4)
 	return rv
 }
 
@@ -1266,14 +1266,14 @@ Returns true if the character is a lowercase letter, for example category() is L
 
 See also isUpper(), toLower(), and toUpper().
 */
-func (this *QChar) IsLower_1(ucs4 uint) bool {
+func (this *QChar) IsLower1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isLowerEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsLower_1(ucs4 uint) bool {
+func QChar_IsLower1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsLower_1(ucs4)
+	rv := nilthis.IsLower1(ucs4)
 	return rv
 }
 
@@ -1303,14 +1303,14 @@ Returns true if the character is an uppercase letter, for example category() is 
 
 See also isLower(), toUpper(), and toLower().
 */
-func (this *QChar) IsUpper_1(ucs4 uint) bool {
+func (this *QChar) IsUpper1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar7isUpperEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsUpper_1(ucs4 uint) bool {
+func QChar_IsUpper1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsUpper_1(ucs4)
+	rv := nilthis.IsUpper1(ucs4)
 	return rv
 }
 
@@ -1340,14 +1340,14 @@ Returns true if the character is a titlecase letter, for example category() is L
 
 See also isLower(), toUpper(), toLower(), and toTitleCase().
 */
-func (this *QChar) IsTitleCase_1(ucs4 uint) bool {
+func (this *QChar) IsTitleCase1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar11isTitleCaseEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsTitleCase_1(ucs4 uint) bool {
+func QChar_IsTitleCase1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsTitleCase_1(ucs4)
+	rv := nilthis.IsTitleCase1(ucs4)
 	return rv
 }
 
@@ -1381,14 +1381,14 @@ Unicode has a certain number of code points that are classified as "non-characte
 
 This function was introduced in  Qt 5.0.
 */
-func (this *QChar) IsNonCharacter_1(ucs4 uint) bool {
+func (this *QChar) IsNonCharacter1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar14isNonCharacterEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsNonCharacter_1(ucs4 uint) bool {
+func QChar_IsNonCharacter1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsNonCharacter_1(ucs4)
+	rv := nilthis.IsNonCharacter1(ucs4)
 	return rv
 }
 
@@ -1414,14 +1414,14 @@ func (this *QChar) IsHighSurrogate() bool {
 /*
 Returns true if the QChar is the high part of a UTF16 surrogate (for example if its code point is in range [0xd800..0xdbff]); false otherwise.
 */
-func (this *QChar) IsHighSurrogate_1(ucs4 uint) bool {
+func (this *QChar) IsHighSurrogate1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar15isHighSurrogateEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsHighSurrogate_1(ucs4 uint) bool {
+func QChar_IsHighSurrogate1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsHighSurrogate_1(ucs4)
+	rv := nilthis.IsHighSurrogate1(ucs4)
 	return rv
 }
 
@@ -1447,14 +1447,14 @@ func (this *QChar) IsLowSurrogate() bool {
 /*
 Returns true if the QChar is the low part of a UTF16 surrogate (for example if its code point is in range [0xdc00..0xdfff]); false otherwise.
 */
-func (this *QChar) IsLowSurrogate_1(ucs4 uint) bool {
+func (this *QChar) IsLowSurrogate1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar14isLowSurrogateEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsLowSurrogate_1(ucs4 uint) bool {
+func QChar_IsLowSurrogate1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsLowSurrogate_1(ucs4)
+	rv := nilthis.IsLowSurrogate1(ucs4)
 	return rv
 }
 
@@ -1484,14 +1484,14 @@ Returns true if the QChar contains a code point that is in either the high or th
 
 This function was introduced in  Qt 5.0.
 */
-func (this *QChar) IsSurrogate_1(ucs4 uint) bool {
+func (this *QChar) IsSurrogate1(ucs4 uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QChar11isSurrogateEj", qtrt.FFI_TYPE_POINTER, ucs4)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QChar_IsSurrogate_1(ucs4 uint) bool {
+func QChar_IsSurrogate1(ucs4 uint) bool {
 	var nilthis *QChar
-	rv := nilthis.IsSurrogate_1(ucs4)
+	rv := nilthis.IsSurrogate1(ucs4)
 	return rv
 }
 
@@ -1599,7 +1599,7 @@ func QChar_SurrogateToUcs4(high uint16, low uint16) uint {
 /*
 Converts a UTF16 surrogate pair with the given high and low values to it's UCS-4-encoded code point.
 */
-func (this *QChar) SurrogateToUcs4_1(high QChar_ITF /*123*/, low QChar_ITF /*123*/) uint {
+func (this *QChar) SurrogateToUcs41(high QChar_ITF /*123*/, low QChar_ITF /*123*/) uint {
 	var convArg0 unsafe.Pointer
 	if high != nil && high.QChar_PTR() != nil {
 		convArg0 = high.QChar_PTR().GetCthis()
@@ -1612,9 +1612,9 @@ func (this *QChar) SurrogateToUcs4_1(high QChar_ITF /*123*/, low QChar_ITF /*123
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
-func QChar_SurrogateToUcs4_1(high QChar_ITF /*123*/, low QChar_ITF /*123*/) uint {
+func QChar_SurrogateToUcs41(high QChar_ITF /*123*/, low QChar_ITF /*123*/) uint {
 	var nilthis *QChar
-	rv := nilthis.SurrogateToUcs4_1(high, low)
+	rv := nilthis.SurrogateToUcs41(high, low)
 	return rv
 }
 

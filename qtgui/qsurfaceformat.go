@@ -96,10 +96,10 @@ Constructs a default initialized QSurfaceFormat.
 
 Note: By default OpenGL 2.0 is requested since this provides the highest grade of portability between platforms and OpenGL implementations.
 */
-func (*QSurfaceFormat) NewForInherit_1(options int) *QSurfaceFormat {
-	return NewQSurfaceFormat_1(options)
+func (*QSurfaceFormat) NewForInherit1(options int) *QSurfaceFormat {
+	return NewQSurfaceFormat1(options)
 }
-func NewQSurfaceFormat_1(options int) *QSurfaceFormat {
+func NewQSurfaceFormat1(options int) *QSurfaceFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormatC2E6QFlagsINS_12FormatOptionEE", qtrt.FFI_TYPE_POINTER, options)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -631,7 +631,7 @@ This function was introduced in  Qt 5.3.
 
 See also setOptions(), options(), and testOption().
 */
-func (this *QSurfaceFormat) SetOption_1(option int, on bool) {
+func (this *QSurfaceFormat) SetOption1(option int, on bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionENS_12FormatOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	qtrt.ErrPrint(err, rv)
 }
@@ -648,7 +648,7 @@ This function was introduced in  Qt 5.3.
 
 See also setOptions(), options(), and testOption().
 */
-func (this *QSurfaceFormat) SetOption_1_(option int) {
+func (this *QSurfaceFormat) SetOption1p(option int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionENS_12FormatOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
@@ -685,7 +685,7 @@ This function was introduced in  Qt 5.3.
 
 See also options().
 */
-func (this *QSurfaceFormat) TestOption_1(option int) bool {
+func (this *QSurfaceFormat) TestOption1(option int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat10testOptionENS_12FormatOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

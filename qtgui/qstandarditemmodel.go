@@ -108,10 +108,10 @@ func NewQStandardItemModel(parent qtcore.QObject_ITF /*777 QObject **/) *QStanda
 /*
 Constructs a new item model with the given parent.
 */
-func (*QStandardItemModel) NewForInherit__() *QStandardItemModel {
-	return NewQStandardItemModel__()
+func (*QStandardItemModel) NewForInheritp() *QStandardItemModel {
+	return NewQStandardItemModelp()
 }
-func NewQStandardItemModel__() *QStandardItemModel {
+func NewQStandardItemModelp() *QStandardItemModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -129,10 +129,10 @@ func NewQStandardItemModel__() *QStandardItemModel {
 /*
 Constructs a new item model with the given parent.
 */
-func (*QStandardItemModel) NewForInherit_1(rows int, columns int, parent qtcore.QObject_ITF /*777 QObject **/) *QStandardItemModel {
-	return NewQStandardItemModel_1(rows, columns, parent)
+func (*QStandardItemModel) NewForInherit1(rows int, columns int, parent qtcore.QObject_ITF /*777 QObject **/) *QStandardItemModel {
+	return NewQStandardItemModel1(rows, columns, parent)
 }
-func NewQStandardItemModel_1(rows int, columns int, parent qtcore.QObject_ITF /*777 QObject **/) *QStandardItemModel {
+func NewQStandardItemModel1(rows int, columns int, parent qtcore.QObject_ITF /*777 QObject **/) *QStandardItemModel {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg2 = parent.QObject_PTR().GetCthis()
@@ -152,10 +152,10 @@ func NewQStandardItemModel_1(rows int, columns int, parent qtcore.QObject_ITF /*
 /*
 Constructs a new item model with the given parent.
 */
-func (*QStandardItemModel) NewForInherit_1_(rows int, columns int) *QStandardItemModel {
-	return NewQStandardItemModel_1_(rows, columns)
+func (*QStandardItemModel) NewForInherit1p(rows int, columns int) *QStandardItemModel {
+	return NewQStandardItemModel1p(rows, columns)
 }
-func NewQStandardItemModel_1_(rows int, columns int) *QStandardItemModel {
+func NewQStandardItemModel1p(rows int, columns int) *QStandardItemModel {
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModelC2EiiP7QObject", qtrt.FFI_TYPE_POINTER, rows, columns, convArg2)
@@ -208,7 +208,7 @@ func (this *QStandardItemModel) Index(row int, column int, parent qtcore.QModelI
 /*
 Reimplemented from QAbstractItemModel::index().
 */
-func (this *QStandardItemModel) Index__(row int, column int) *qtcore.QModelIndex /*123*/ {
+func (this *QStandardItemModel) Indexp(row int, column int) *qtcore.QModelIndex /*123*/ {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
@@ -268,7 +268,7 @@ Reimplemented from QAbstractItemModel::rowCount().
 
 See also setRowCount().
 */
-func (this *QStandardItemModel) RowCount__() int {
+func (this *QStandardItemModel) RowCountp() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -306,7 +306,7 @@ Reimplemented from QAbstractItemModel::columnCount().
 
 See also setColumnCount().
 */
-func (this *QStandardItemModel) ColumnCount__() int {
+func (this *QStandardItemModel) ColumnCountp() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel11columnCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -340,7 +340,7 @@ func (this *QStandardItemModel) HasChildren(parent qtcore.QModelIndex_ITF) bool 
 /*
 Reimplemented from QAbstractItemModel::hasChildren().
 */
-func (this *QStandardItemModel) HasChildren__() bool {
+func (this *QStandardItemModel) HasChildrenp() bool {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel11hasChildrenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -400,7 +400,7 @@ Reimplemented from QAbstractItemModel::data().
 
 See also setData().
 */
-func (this *QStandardItemModel) Data__(index qtcore.QModelIndex_ITF) *qtcore.QVariant /*123*/ {
+func (this *QStandardItemModel) Datap(index qtcore.QModelIndex_ITF) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -448,7 +448,7 @@ Reimplemented from QAbstractItemModel::setData().
 
 See also data().
 */
-func (this *QStandardItemModel) SetData__(index qtcore.QModelIndex_ITF, value qtcore.QVariant_ITF) bool {
+func (this *QStandardItemModel) SetDatap(index qtcore.QModelIndex_ITF, value qtcore.QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -492,7 +492,7 @@ Reimplemented from QAbstractItemModel::headerData().
 
 See also setHeaderData().
 */
-func (this *QStandardItemModel) HeaderData__(section int, orientation int) *qtcore.QVariant /*123*/ {
+func (this *QStandardItemModel) HeaderDatap(section int, orientation int) *qtcore.QVariant /*123*/ {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
@@ -532,7 +532,7 @@ Reimplemented from QAbstractItemModel::setHeaderData().
 
 See also headerData().
 */
-func (this *QStandardItemModel) SetHeaderData__(section int, orientation int, value qtcore.QVariant_ITF) bool {
+func (this *QStandardItemModel) SetHeaderDatap(section int, orientation int, value qtcore.QVariant_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg2 = value.QVariant_PTR().GetCthis()
@@ -570,7 +570,7 @@ func (this *QStandardItemModel) InsertRows(row int, count int, parent qtcore.QMo
 /*
 Reimplemented from QAbstractItemModel::insertRows().
 */
-func (this *QStandardItemModel) InsertRows__(row int, count int) bool {
+func (this *QStandardItemModel) InsertRowsp(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel10insertRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
@@ -604,7 +604,7 @@ func (this *QStandardItemModel) InsertColumns(column int, count int, parent qtco
 /*
 Reimplemented from QAbstractItemModel::insertColumns().
 */
-func (this *QStandardItemModel) InsertColumns__(column int, count int) bool {
+func (this *QStandardItemModel) InsertColumnsp(column int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel13insertColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
@@ -638,7 +638,7 @@ func (this *QStandardItemModel) RemoveRows(row int, count int, parent qtcore.QMo
 /*
 Reimplemented from QAbstractItemModel::removeRows().
 */
-func (this *QStandardItemModel) RemoveRows__(row int, count int) bool {
+func (this *QStandardItemModel) RemoveRowsp(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel10removeRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
@@ -672,7 +672,7 @@ func (this *QStandardItemModel) RemoveColumns(column int, count int, parent qtco
 /*
 Reimplemented from QAbstractItemModel::removeColumns().
 */
-func (this *QStandardItemModel) RemoveColumns__(column int, count int) bool {
+func (this *QStandardItemModel) RemoveColumnsp(column int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel13removeColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
@@ -750,7 +750,7 @@ func (this *QStandardItemModel) Sort(column int, order int) {
 /*
 Reimplemented from QAbstractItemModel::sort().
 */
-func (this *QStandardItemModel) Sort__(column int) {
+func (this *QStandardItemModel) Sortp(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
@@ -841,7 +841,7 @@ This function was introduced in  Qt 4.2.
 
 See also setItem(), takeItem(), and itemFromIndex().
 */
-func (this *QStandardItemModel) Item__(row int) *QStandardItem /*777 QStandardItem **/ {
+func (this *QStandardItemModel) Itemp(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel4itemEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
@@ -882,7 +882,7 @@ This function was introduced in  Qt 4.2.
 
 See also item().
 */
-func (this *QStandardItemModel) SetItem_1(row int, item QStandardItem_ITF /*777 QStandardItem **/) {
+func (this *QStandardItemModel) SetItem1(row int, item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg1 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
 		convArg1 = item.QStandardItem_PTR().GetCthis()
@@ -1119,7 +1119,7 @@ This function was introduced in  Qt 4.2.
 
 See also takeRow(), appendRow(), and insertColumn().
 */
-func (this *QStandardItemModel) InsertRow_1(row int, parent qtcore.QModelIndex_ITF) bool {
+func (this *QStandardItemModel) InsertRow1(row int, parent qtcore.QModelIndex_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QModelIndex_PTR() != nil {
 		convArg1 = parent.QModelIndex_PTR().GetCthis()
@@ -1141,7 +1141,7 @@ This function was introduced in  Qt 4.2.
 
 See also takeRow(), appendRow(), and insertColumn().
 */
-func (this *QStandardItemModel) InsertRow_1_(row int) bool {
+func (this *QStandardItemModel) InsertRow1p(row int) bool {
 	// arg: 1, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg1 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel9insertRowEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
@@ -1183,7 +1183,7 @@ This function was introduced in  Qt 4.2.
 
 See also takeColumn(), appendColumn(), and insertRow().
 */
-func (this *QStandardItemModel) InsertColumn__(column int) bool {
+func (this *QStandardItemModel) InsertColumnp(column int) bool {
 	// arg: 1, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg1 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel12insertColumnEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
@@ -1221,7 +1221,7 @@ This function was introduced in  Qt 4.2.
 
 See also item(), takeRow(), and takeColumn().
 */
-func (this *QStandardItemModel) TakeItem__(row int) *QStandardItem /*777 QStandardItem **/ {
+func (this *QStandardItemModel) TakeItemp(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStandardItemModel8takeItemEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)

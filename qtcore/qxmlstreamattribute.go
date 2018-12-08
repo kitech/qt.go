@@ -91,13 +91,13 @@ func NewQXmlStreamAttribute() *QXmlStreamAttribute {
 /*
 
  */
-func (*QXmlStreamAttribute) NewForInherit_1(qualifiedName string, value string) *QXmlStreamAttribute {
-	return NewQXmlStreamAttribute_1(qualifiedName, value)
+func (*QXmlStreamAttribute) NewForInherit1(qualifiedName string, value string) *QXmlStreamAttribute {
+	return NewQXmlStreamAttribute1(qualifiedName, value)
 }
-func NewQXmlStreamAttribute_1(qualifiedName string, value string) *QXmlStreamAttribute {
-	var tmpArg0 = NewQString_5(qualifiedName)
+func NewQXmlStreamAttribute1(qualifiedName string, value string) *QXmlStreamAttribute {
+	var tmpArg0 = NewQString5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(value)
+	var tmpArg1 = NewQString5(value)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamAttributeC2ERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -114,15 +114,15 @@ func NewQXmlStreamAttribute_1(qualifiedName string, value string) *QXmlStreamAtt
 /*
 
  */
-func (*QXmlStreamAttribute) NewForInherit_2(namespaceUri string, name string, value string) *QXmlStreamAttribute {
-	return NewQXmlStreamAttribute_2(namespaceUri, name, value)
+func (*QXmlStreamAttribute) NewForInherit2(namespaceUri string, name string, value string) *QXmlStreamAttribute {
+	return NewQXmlStreamAttribute2(namespaceUri, name, value)
 }
-func NewQXmlStreamAttribute_2(namespaceUri string, name string, value string) *QXmlStreamAttribute {
-	var tmpArg0 = NewQString_5(namespaceUri)
+func NewQXmlStreamAttribute2(namespaceUri string, name string, value string) *QXmlStreamAttribute {
+	var tmpArg0 = NewQString5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(name)
+	var tmpArg1 = NewQString5(name)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(value)
+	var tmpArg2 = NewQString5(value)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamAttributeC2ERK7QStringS2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func (this *QXmlStreamAttribute) Operator_equal(other unsafe.Pointer /*333*/) *Q
 /*
 
  */
-func (this *QXmlStreamAttribute) Operator_equal_1(arg0 QXmlStreamAttribute_ITF) *QXmlStreamAttribute {
+func (this *QXmlStreamAttribute) Operator_equal1(arg0 QXmlStreamAttribute_ITF) *QXmlStreamAttribute {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QXmlStreamAttribute_PTR() != nil {
 		convArg0 = arg0.QXmlStreamAttribute_PTR().GetCthis()

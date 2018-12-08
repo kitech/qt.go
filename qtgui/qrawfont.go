@@ -92,11 +92,11 @@ func NewQRawFont() *QRawFont {
 /*
 Constructs an invalid QRawFont.
 */
-func (*QRawFont) NewForInherit_1(fileName string, pixelSize float64, hintingPreference int) *QRawFont {
-	return NewQRawFont_1(fileName, pixelSize, hintingPreference)
+func (*QRawFont) NewForInherit1(fileName string, pixelSize float64, hintingPreference int) *QRawFont {
+	return NewQRawFont1(fileName, pixelSize, hintingPreference)
 }
-func NewQRawFont_1(fileName string, pixelSize float64, hintingPreference int) *QRawFont {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQRawFont1(fileName string, pixelSize float64, hintingPreference int) *QRawFont {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFontC2ERK7QStringdN5QFont17HintingPreferenceE", qtrt.FFI_TYPE_POINTER, convArg0, pixelSize, hintingPreference)
 	qtrt.ErrPrint(err, rv)
@@ -113,11 +113,11 @@ func NewQRawFont_1(fileName string, pixelSize float64, hintingPreference int) *Q
 /*
 Constructs an invalid QRawFont.
 */
-func (*QRawFont) NewForInherit_1_(fileName string, pixelSize float64) *QRawFont {
-	return NewQRawFont_1_(fileName, pixelSize)
+func (*QRawFont) NewForInherit1p(fileName string, pixelSize float64) *QRawFont {
+	return NewQRawFont1p(fileName, pixelSize)
 }
-func NewQRawFont_1_(fileName string, pixelSize float64) *QRawFont {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQRawFont1p(fileName string, pixelSize float64) *QRawFont {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QFont::HintingPreference=Elaborated, QFont::HintingPreference=Enum, , Invalid
 	hintingPreference := 0
@@ -136,10 +136,10 @@ func NewQRawFont_1_(fileName string, pixelSize float64) *QRawFont {
 /*
 Constructs an invalid QRawFont.
 */
-func (*QRawFont) NewForInherit_2(fontData qtcore.QByteArray_ITF, pixelSize float64, hintingPreference int) *QRawFont {
-	return NewQRawFont_2(fontData, pixelSize, hintingPreference)
+func (*QRawFont) NewForInherit2(fontData qtcore.QByteArray_ITF, pixelSize float64, hintingPreference int) *QRawFont {
+	return NewQRawFont2(fontData, pixelSize, hintingPreference)
 }
-func NewQRawFont_2(fontData qtcore.QByteArray_ITF, pixelSize float64, hintingPreference int) *QRawFont {
+func NewQRawFont2(fontData qtcore.QByteArray_ITF, pixelSize float64, hintingPreference int) *QRawFont {
 	var convArg0 unsafe.Pointer
 	if fontData != nil && fontData.QByteArray_PTR() != nil {
 		convArg0 = fontData.QByteArray_PTR().GetCthis()
@@ -159,10 +159,10 @@ func NewQRawFont_2(fontData qtcore.QByteArray_ITF, pixelSize float64, hintingPre
 /*
 Constructs an invalid QRawFont.
 */
-func (*QRawFont) NewForInherit_2_(fontData qtcore.QByteArray_ITF, pixelSize float64) *QRawFont {
-	return NewQRawFont_2_(fontData, pixelSize)
+func (*QRawFont) NewForInherit2p(fontData qtcore.QByteArray_ITF, pixelSize float64) *QRawFont {
+	return NewQRawFont2p(fontData, pixelSize)
 }
-func NewQRawFont_2_(fontData qtcore.QByteArray_ITF, pixelSize float64) *QRawFont {
+func NewQRawFont2p(fontData qtcore.QByteArray_ITF, pixelSize float64) *QRawFont {
 	var convArg0 unsafe.Pointer
 	if fontData != nil && fontData.QByteArray_PTR() != nil {
 		convArg0 = fontData.QByteArray_PTR().GetCthis()
@@ -200,7 +200,7 @@ func (this *QRawFont) Operator_equal(other unsafe.Pointer /*333*/) *QRawFont {
 /*
 
  */
-func (this *QRawFont) Operator_equal_1(other QRawFont_ITF) *QRawFont {
+func (this *QRawFont) Operator_equal1(other QRawFont_ITF) *QRawFont {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QRawFont_PTR() != nil {
 		convArg0 = other.QRawFont_PTR().GetCthis()
@@ -418,7 +418,7 @@ This function was introduced in  Qt 5.1.
 
 See also QTextLine::horizontalAdvance() and QFontMetricsF::width().
 */
-func (this *QRawFont) AdvancesForGlyphIndexes_1(glyphIndexes unsafe.Pointer /*666*/, advances qtcore.QPointF_ITF /*777 QPointF **/, numGlyphs int, layoutFlags int) bool {
+func (this *QRawFont) AdvancesForGlyphIndexes1(glyphIndexes unsafe.Pointer /*666*/, advances qtcore.QPointF_ITF /*777 QPointF **/, numGlyphs int, layoutFlags int) bool {
 	var convArg1 unsafe.Pointer
 	if advances != nil && advances.QPointF_PTR() != nil {
 		convArg1 = advances.QPointF_PTR().GetCthis()
@@ -468,7 +468,7 @@ Otherwise, if antialiasingType is set to QRawFont::SubPixelAntialiasing, then th
 
 See also pathForGlyph() and QPainter::drawGlyphRun().
 */
-func (this *QRawFont) AlphaMapForGlyph__(glyphIndex uint) *QImage /*123*/ {
+func (this *QRawFont) AlphaMapForGlyphp(glyphIndex uint) *QImage /*123*/ {
 	// arg: 1, QRawFont::AntialiasingType=Enum, QRawFont::AntialiasingType=Enum, , Invalid
 	antialiasingType := 0
 	// arg: 2, const QTransform &=LValueReference, QTransform=Record, , Invalid
@@ -494,7 +494,7 @@ Otherwise, if antialiasingType is set to QRawFont::SubPixelAntialiasing, then th
 
 See also pathForGlyph() and QPainter::drawGlyphRun().
 */
-func (this *QRawFont) AlphaMapForGlyph__1(glyphIndex uint, antialiasingType int) *QImage /*123*/ {
+func (this *QRawFont) AlphaMapForGlyphp1(glyphIndex uint, antialiasingType int) *QImage /*123*/ {
 	// arg: 2, const QTransform &=LValueReference, QTransform=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QRawFont16alphaMapForGlyphEjNS_16AntialiasingTypeERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), glyphIndex, antialiasingType, convArg2)
@@ -770,7 +770,7 @@ The file must reference a TrueType or OpenType font.
 See also loadFromData().
 */
 func (this *QRawFont) LoadFromFile(fileName string, pixelSize float64, hintingPreference int) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QRawFont12loadFromFileERK7QStringdN5QFont17HintingPreferenceE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pixelSize, hintingPreference)
 	qtrt.ErrPrint(err, rv)
@@ -823,7 +823,7 @@ Returns true if the font has a glyph that corresponds to the given character.
 
 See also supportedWritingSystems().
 */
-func (this *QRawFont) SupportsCharacter_1(character qtcore.QChar_ITF /*123*/) bool {
+func (this *QRawFont) SupportsCharacter1(character qtcore.QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if character != nil && character.QChar_PTR() != nil {
 		convArg0 = character.QChar_PTR().GetCthis()
@@ -888,7 +888,7 @@ Fetches the physical representation based on a font query. The physical font ret
 
 Warning: This function is potentially expensive and should not be called in performance sensitive code.
 */
-func (this *QRawFont) FromFont__(font QFont_ITF) *QRawFont /*123*/ {
+func (this *QRawFont) FromFontp(font QFont_ITF) *QRawFont /*123*/ {
 	var convArg0 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
 		convArg0 = font.QFont_PTR().GetCthis()

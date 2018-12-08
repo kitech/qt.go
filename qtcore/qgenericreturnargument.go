@@ -91,10 +91,10 @@ func NewQGenericReturnArgument(aName string, aData unsafe.Pointer /*666*/) *QGen
 /*
 
  */
-func (*QGenericReturnArgument) NewForInherit__() *QGenericReturnArgument {
-	return NewQGenericReturnArgument__()
+func (*QGenericReturnArgument) NewForInheritp() *QGenericReturnArgument {
+	return NewQGenericReturnArgumentp()
 }
-func NewQGenericReturnArgument__() *QGenericReturnArgument {
+func NewQGenericReturnArgumentp() *QGenericReturnArgument {
 	// arg: 0, const char *=Pointer, =Invalid, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, void *=Pointer, =Invalid, , Invalid
@@ -114,10 +114,10 @@ func NewQGenericReturnArgument__() *QGenericReturnArgument {
 /*
 
  */
-func (*QGenericReturnArgument) NewForInherit__1(aName string) *QGenericReturnArgument {
-	return NewQGenericReturnArgument__1(aName)
+func (*QGenericReturnArgument) NewForInheritp1(aName string) *QGenericReturnArgument {
+	return NewQGenericReturnArgumentp1(aName)
 }
-func NewQGenericReturnArgument__1(aName string) *QGenericReturnArgument {
+func NewQGenericReturnArgumentp1(aName string) *QGenericReturnArgument {
 	var convArg0 = qtrt.CString(aName)
 	defer qtrt.FreeMem(convArg0)
 	// arg: 1, void *=Pointer, =Invalid, , Invalid

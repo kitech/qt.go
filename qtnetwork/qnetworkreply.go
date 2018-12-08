@@ -289,7 +289,7 @@ Returns the error that was found during the processing of this request. If no er
 
 See also setError().
 */
-func (this *QNetworkReply) Error_1(arg0 int) {
+func (this *QNetworkReply) Error1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply5errorENS_12NetworkErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -702,10 +702,10 @@ Creates a QNetworkReply object with parent parent.
 
 You cannot directly instantiate QNetworkReply objects. Use QNetworkAccessManager functions to do that.
 */
-func (*QNetworkReply) NewForInherit__() *QNetworkReply {
-	return NewQNetworkReply__()
+func (*QNetworkReply) NewForInheritp() *QNetworkReply {
+	return NewQNetworkReplyp()
 }
-func NewQNetworkReply__() *QNetworkReply {
+func NewQNetworkReplyp() *QNetworkReply {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReplyC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -782,7 +782,7 @@ Calling setError() does not emit the error(QNetworkReply::NetworkError) signal.
 See also error() and errorString().
 */
 func (this *QNetworkReply) SetError(errorCode int, errorString string) {
-	var tmpArg1 = qtcore.NewQString_5(errorString)
+	var tmpArg1 = qtcore.NewQString5(errorString)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReply8setErrorENS_12NetworkErrorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), errorCode, convArg1)
 	qtrt.ErrPrint(err, rv)

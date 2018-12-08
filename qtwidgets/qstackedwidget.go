@@ -118,10 +118,10 @@ Constructs a QStackedWidget with the given parent.
 
 See also addWidget() and insertWidget().
 */
-func (*QStackedWidget) NewForInherit__() *QStackedWidget {
-	return NewQStackedWidget__()
+func (*QStackedWidget) NewForInheritp() *QStackedWidget {
+	return NewQStackedWidgetp()
 }
-func NewQStackedWidget__() *QStackedWidget {
+func NewQStackedWidgetp() *QStackedWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStackedWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)

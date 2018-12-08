@@ -158,7 +158,7 @@ The Camera service should save all the capture parameters like exposure settings
 Returns the capture request id number, which is used later with imageExposed(), imageCaptured() and imageSaved() signals.
 */
 func (this *QCameraImageCaptureControl) Capture(fileName string) int {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl7captureERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -232,7 +232,7 @@ Signals that a metadata for an image with request id is available. Signal also c
 This signal should be emitted between imageExposed and imageSaved signals.
 */
 func (this *QCameraImageCaptureControl) ImageMetadataAvailable(id int, key string, value qtcore.QVariant_ITF) {
-	var tmpArg1 = qtcore.NewQString_5(key)
+	var tmpArg1 = qtcore.NewQString5(key)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -268,7 +268,7 @@ func (this *QCameraImageCaptureControl) ImageAvailable(id int, buffer QVideoFram
 Signals that a captured image with a requestId has been saved to fileName.
 */
 func (this *QCameraImageCaptureControl) ImageSaved(id int, fileName string) {
-	var tmpArg1 = qtcore.NewQString_5(fileName)
+	var tmpArg1 = qtcore.NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl10imageSavedEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -285,7 +285,7 @@ Signals the capture request id failed with error code and message errorString.
 See also QCameraImageCapture::Error.
 */
 func (this *QCameraImageCaptureControl) Error(id int, error int, errorString string) {
-	var tmpArg2 = qtcore.NewQString_5(errorString)
+	var tmpArg2 = qtcore.NewQString5(errorString)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl5errorEiiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, error, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -322,10 +322,10 @@ func NewQCameraImageCaptureControl(parent qtcore.QObject_ITF /*777 QObject **/) 
 /*
 Constructs a new image capture control object with the given parent
 */
-func (*QCameraImageCaptureControl) NewForInherit__() *QCameraImageCaptureControl {
-	return NewQCameraImageCaptureControl__()
+func (*QCameraImageCaptureControl) NewForInheritp() *QCameraImageCaptureControl {
+	return NewQCameraImageCaptureControlp()
 }
-func NewQCameraImageCaptureControl__() *QCameraImageCaptureControl {
+func NewQCameraImageCaptureControlp() *QCameraImageCaptureControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

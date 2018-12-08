@@ -90,10 +90,10 @@ func NewQTextCharFormat() *QTextCharFormat {
 /*
 
  */
-func (*QTextCharFormat) NewForInherit_1(fmt_ QTextFormat_ITF) *QTextCharFormat {
-	return NewQTextCharFormat_1(fmt_)
+func (*QTextCharFormat) NewForInherit1(fmt_ QTextFormat_ITF) *QTextCharFormat {
+	return NewQTextCharFormat1(fmt_)
 }
-func NewQTextCharFormat_1(fmt_ QTextFormat_ITF) *QTextCharFormat {
+func NewQTextCharFormat1(fmt_ QTextFormat_ITF) *QTextCharFormat {
 	var convArg0 unsafe.Pointer
 	if fmt_ != nil && fmt_.QTextFormat_PTR() != nil {
 		convArg0 = fmt_.QTextFormat_PTR().GetCthis()
@@ -144,7 +144,7 @@ func (this *QTextCharFormat) SetFont(font QFont_ITF, behavior int) {
 /*
 
  */
-func (this *QTextCharFormat) SetFont_1(font QFont_ITF) {
+func (this *QTextCharFormat) SetFont1(font QFont_ITF) {
 	var convArg0 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
 		convArg0 = font.QFont_PTR().GetCthis()
@@ -178,7 +178,7 @@ func (this *QTextCharFormat) Font() *QFont /*123*/ {
 
  */
 func (this *QTextCharFormat) SetFontFamily(family string) {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat13setFontFamilyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -579,7 +579,7 @@ func (this *QTextCharFormat) SetFontStyleHint(hint int, strategy int) {
 /*
 
  */
-func (this *QTextCharFormat) SetFontStyleHint__(hint int) {
+func (this *QTextCharFormat) SetFontStyleHintp(hint int) {
 	// arg: 1, QFont::StyleStrategy=Elaborated, QFont::StyleStrategy=Enum, , Invalid
 	strategy := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat16setFontStyleHintEN5QFont9StyleHintENS0_13StyleStrategyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, strategy)
@@ -777,7 +777,7 @@ func (this *QTextCharFormat) TextOutline() *QPen /*123*/ {
 
  */
 func (this *QTextCharFormat) SetToolTip(tip string) {
-	var tmpArg0 = qtcore.NewQString_5(tip)
+	var tmpArg0 = qtcore.NewQString5(tip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -836,7 +836,7 @@ func (this *QTextCharFormat) IsAnchor() bool {
 
  */
 func (this *QTextCharFormat) SetAnchorHref(value string) {
-	var tmpArg0 = qtcore.NewQString_5(value)
+	var tmpArg0 = qtcore.NewQString5(value)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat13setAnchorHrefERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -868,7 +868,7 @@ func (this *QTextCharFormat) AnchorHref() string {
 
  */
 func (this *QTextCharFormat) SetAnchorName(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat13setAnchorNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

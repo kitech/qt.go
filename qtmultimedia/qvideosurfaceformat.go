@@ -94,10 +94,10 @@ func NewQVideoSurfaceFormat() *QVideoSurfaceFormat {
 /*
 Constructs a null video stream format.
 */
-func (*QVideoSurfaceFormat) NewForInherit_1(size qtcore.QSize_ITF, pixelFormat int, handleType int) *QVideoSurfaceFormat {
-	return NewQVideoSurfaceFormat_1(size, pixelFormat, handleType)
+func (*QVideoSurfaceFormat) NewForInherit1(size qtcore.QSize_ITF, pixelFormat int, handleType int) *QVideoSurfaceFormat {
+	return NewQVideoSurfaceFormat1(size, pixelFormat, handleType)
 }
-func NewQVideoSurfaceFormat_1(size qtcore.QSize_ITF, pixelFormat int, handleType int) *QVideoSurfaceFormat {
+func NewQVideoSurfaceFormat1(size qtcore.QSize_ITF, pixelFormat int, handleType int) *QVideoSurfaceFormat {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
@@ -117,10 +117,10 @@ func NewQVideoSurfaceFormat_1(size qtcore.QSize_ITF, pixelFormat int, handleType
 /*
 Constructs a null video stream format.
 */
-func (*QVideoSurfaceFormat) NewForInherit_1_(size qtcore.QSize_ITF, pixelFormat int) *QVideoSurfaceFormat {
-	return NewQVideoSurfaceFormat_1_(size, pixelFormat)
+func (*QVideoSurfaceFormat) NewForInherit1p(size qtcore.QSize_ITF, pixelFormat int) *QVideoSurfaceFormat {
+	return NewQVideoSurfaceFormat1p(size, pixelFormat)
 }
-func NewQVideoSurfaceFormat_1_(size qtcore.QSize_ITF, pixelFormat int) *QVideoSurfaceFormat {
+func NewQVideoSurfaceFormat1p(size qtcore.QSize_ITF, pixelFormat int) *QVideoSurfaceFormat {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
@@ -302,7 +302,7 @@ This will reset the viewport() to fill the entire frame.
 
 See also frameSize().
 */
-func (this *QVideoSurfaceFormat) SetFrameSize_1(width int, height int) {
+func (this *QVideoSurfaceFormat) SetFrameSize1(width int, height int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QVideoSurfaceFormat12setFrameSizeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, height)
 	qtrt.ErrPrint(err, rv)
 }
@@ -487,7 +487,7 @@ Sets a video stream's pixel aspect ratio.
 
 See also pixelAspectRatio().
 */
-func (this *QVideoSurfaceFormat) SetPixelAspectRatio_1(width int, height int) {
+func (this *QVideoSurfaceFormat) SetPixelAspectRatio1(width int, height int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QVideoSurfaceFormat19setPixelAspectRatioEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, height)
 	qtrt.ErrPrint(err, rv)
 }

@@ -166,7 +166,7 @@ Sets rect as the geometry of the surface being rendered to.
 
 See also deviceRect().
 */
-func (this *QSGAbstractRenderer) SetDeviceRect_1(size qtcore.QSize_ITF) {
+func (this *QSGAbstractRenderer) SetDeviceRect1(size qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
@@ -222,7 +222,7 @@ Sets rect as the geometry of the viewport to render on the surface.
 
 See also viewportRect().
 */
-func (this *QSGAbstractRenderer) SetViewportRect_1(size qtcore.QSize_ITF) {
+func (this *QSGAbstractRenderer) SetViewportRect1(size qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
@@ -406,7 +406,7 @@ The framebuffer specified by fboId will be bound automatically.
 
 See also QOpenGLContext::swapBuffers() and QOpenGLFramebufferObject::handle().
 */
-func (this *QSGAbstractRenderer) RenderScene__() {
+func (this *QSGAbstractRenderer) RenderScenep() {
 	// arg: 0, uint=Typedef, uint=Typedef, unsigned int, UInt
 	fboId := uint(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRenderer11renderSceneEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fboId)
@@ -457,10 +457,10 @@ func NewQSGAbstractRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSGAbs
 /*
 
  */
-func (*QSGAbstractRenderer) NewForInherit__() *QSGAbstractRenderer {
-	return NewQSGAbstractRenderer__()
+func (*QSGAbstractRenderer) NewForInheritp() *QSGAbstractRenderer {
+	return NewQSGAbstractRendererp()
 }
-func NewQSGAbstractRenderer__() *QSGAbstractRenderer {
+func NewQSGAbstractRendererp() *QSGAbstractRenderer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QSGAbstractRendererC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

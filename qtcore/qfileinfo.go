@@ -99,11 +99,11 @@ Note that an empty QFileInfo object contain no file reference.
 
 See also setFile().
 */
-func (*QFileInfo) NewForInherit_1(file string) *QFileInfo {
-	return NewQFileInfo_1(file)
+func (*QFileInfo) NewForInherit1(file string) *QFileInfo {
+	return NewQFileInfo1(file)
 }
-func NewQFileInfo_1(file string) *QFileInfo {
-	var tmpArg0 = NewQString_5(file)
+func NewQFileInfo1(file string) *QFileInfo {
+	var tmpArg0 = NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfoC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -124,10 +124,10 @@ Note that an empty QFileInfo object contain no file reference.
 
 See also setFile().
 */
-func (*QFileInfo) NewForInherit_2(file QFile_ITF) *QFileInfo {
-	return NewQFileInfo_2(file)
+func (*QFileInfo) NewForInherit2(file QFile_ITF) *QFileInfo {
+	return NewQFileInfo2(file)
 }
-func NewQFileInfo_2(file QFile_ITF) *QFileInfo {
+func NewQFileInfo2(file QFile_ITF) *QFileInfo {
 	var convArg0 unsafe.Pointer
 	if file != nil && file.QFile_PTR() != nil {
 		convArg0 = file.QFile_PTR().GetCthis()
@@ -151,15 +151,15 @@ Note that an empty QFileInfo object contain no file reference.
 
 See also setFile().
 */
-func (*QFileInfo) NewForInherit_3(dir QDir_ITF, file string) *QFileInfo {
-	return NewQFileInfo_3(dir, file)
+func (*QFileInfo) NewForInherit3(dir QDir_ITF, file string) *QFileInfo {
+	return NewQFileInfo3(dir, file)
 }
-func NewQFileInfo_3(dir QDir_ITF, file string) *QFileInfo {
+func NewQFileInfo3(dir QDir_ITF, file string) *QFileInfo {
 	var convArg0 unsafe.Pointer
 	if dir != nil && dir.QDir_PTR() != nil {
 		convArg0 = dir.QDir_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(file)
+	var tmpArg1 = NewQString5(file)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfoC2ERK4QDirRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -211,7 +211,7 @@ func (this *QFileInfo) Operator_equal(fileinfo QFileInfo_ITF) *QFileInfo {
 /*
 
  */
-func (this *QFileInfo) Operator_equal_1(other unsafe.Pointer /*333*/) *QFileInfo {
+func (this *QFileInfo) Operator_equal1(other unsafe.Pointer /*333*/) *QFileInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfoaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFileInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -304,7 +304,7 @@ Example:
 See also isFile(), isRelative(), QDir::setCurrent(), and QDir::isRelativePath().
 */
 func (this *QFileInfo) SetFile(file string) {
-	var tmpArg0 = NewQString_5(file)
+	var tmpArg0 = NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfo7setFileERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -339,7 +339,7 @@ Example:
 
 See also isFile(), isRelative(), QDir::setCurrent(), and QDir::isRelativePath().
 */
-func (this *QFileInfo) SetFile_1(file QFile_ITF) {
+func (this *QFileInfo) SetFile1(file QFile_ITF) {
 	var convArg0 unsafe.Pointer
 	if file != nil && file.QFile_PTR() != nil {
 		convArg0 = file.QFile_PTR().GetCthis()
@@ -377,12 +377,12 @@ Example:
 
 See also isFile(), isRelative(), QDir::setCurrent(), and QDir::isRelativePath().
 */
-func (this *QFileInfo) SetFile_2(dir QDir_ITF, file string) {
+func (this *QFileInfo) SetFile2(dir QDir_ITF, file string) {
 	var convArg0 unsafe.Pointer
 	if dir != nil && dir.QDir_PTR() != nil {
 		convArg0 = dir.QDir_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(file)
+	var tmpArg1 = NewQString5(file)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfo7setFileERK4QDirRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -414,16 +414,16 @@ Returns true if the file exists; otherwise returns false.
 
 Note: If the file is a symlink that points to a non-existing file, false is returned.
 */
-func (this *QFileInfo) Exists_1(file string) bool {
-	var tmpArg0 = NewQString_5(file)
+func (this *QFileInfo) Exists1(file string) bool {
+	var tmpArg0 = NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QFileInfo6existsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QFileInfo_Exists_1(file string) bool {
+func QFileInfo_Exists1(file string) bool {
 	var nilthis *QFileInfo
-	rv := nilthis.Exists_1(file)
+	rv := nilthis.Exists1(file)
 	return rv
 }
 

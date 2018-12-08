@@ -120,10 +120,10 @@ func NewQAbstractVideoSurface(parent qtcore.QObject_ITF /*777 QObject **/) *QAbs
 /*
 Constructs a video surface with the given parent.
 */
-func (*QAbstractVideoSurface) NewForInherit__() *QAbstractVideoSurface {
-	return NewQAbstractVideoSurface__()
+func (*QAbstractVideoSurface) NewForInheritp() *QAbstractVideoSurface {
+	return NewQAbstractVideoSurfacep()
 }
-func NewQAbstractVideoSurface__() *QAbstractVideoSurface {
+func NewQAbstractVideoSurfacep() *QAbstractVideoSurface {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractVideoSurfaceC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

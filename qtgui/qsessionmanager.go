@@ -377,9 +377,9 @@ Low-level write access to the application's identification and state record are 
 The property called name has its value set to the string list value.
 */
 func (this *QSessionManager) SetManagerProperty(name string, value string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(value)
+	var tmpArg1 = qtcore.NewQString5(value)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager18setManagerPropertyERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -395,8 +395,8 @@ Low-level write access to the application's identification and state record are 
 
 The property called name has its value set to the string list value.
 */
-func (this *QSessionManager) SetManagerProperty_1(name string, value qtcore.QStringList_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+func (this *QSessionManager) SetManagerProperty1(name string, value qtcore.QStringList_ITF) {
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QStringList_PTR() != nil {

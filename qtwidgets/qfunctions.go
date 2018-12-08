@@ -34,7 +34,7 @@ func init() {
 /*
 
  */
-func Operator_or_103(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or103(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN9QTextEdit18AutoFormattingFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -50,7 +50,7 @@ func Operator_or_103(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_104(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or104(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN8QMdiArea10AreaOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -66,7 +66,7 @@ func Operator_or_104(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_105(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or105(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN7QWizard12WizardOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -82,7 +82,7 @@ func Operator_or_105(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_106(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or106(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN7QWidget10RenderFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -98,7 +98,7 @@ func Operator_or_106(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_107(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or107(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN6QStyle9StateFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -114,7 +114,7 @@ func Operator_or_107(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_108(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or108(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN6QStyle10SubControlEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -130,7 +130,7 @@ func Operator_or_108(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_109(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or109(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN23QTreeWidgetItemIterator12IteratorFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -146,7 +146,7 @@ func Operator_or_109(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_110(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or110(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN22QStyleOptionToolButton17ToolButtonFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -162,7 +162,7 @@ func Operator_or_110(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_111(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or111(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN20QStyleOptionViewItem15ViewItemFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -178,7 +178,7 @@ func Operator_or_111(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_112(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or112(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN19QStyleOptionToolBar14ToolBarFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -194,7 +194,7 @@ func Operator_or_112(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_113(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or113(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN19QGraphicsBlurEffect8BlurHintEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -210,7 +210,7 @@ func Operator_or_113(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_114(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or114(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN18QStyleOptionButton13ButtonFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -226,7 +226,7 @@ func Operator_or_114(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_115(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or115(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN18QGestureRecognizer10ResultFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -242,7 +242,7 @@ func Operator_or_115(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_116(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or116(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN17QStyleOptionFrame12FrameFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -258,7 +258,7 @@ func Operator_or_116(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_117(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or117(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN17QFileIconProvider6OptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -274,7 +274,7 @@ func Operator_or_117(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_118(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or118(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN17QAbstractItemView11EditTriggerEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -290,7 +290,7 @@ func Operator_or_118(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_119(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or119(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN16QDialogButtonBox14StandardButtonEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -306,7 +306,7 @@ func Operator_or_119(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_120(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or120(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN16QAbstractSpinBox15StepEnabledFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -322,7 +322,7 @@ func Operator_or_120(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_121(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or121(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN15QStyleOptionTab12CornerWidgetEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -338,7 +338,7 @@ func Operator_or_121(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_122(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or122(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN15QGraphicsEffect10ChangeFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -354,7 +354,7 @@ func Operator_or_122(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_123(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or123(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN14QGraphicsScene10SceneLayerEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -370,7 +370,7 @@ func Operator_or_123(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_124(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or124(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN13QPinchGesture10ChangeFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -386,7 +386,7 @@ func Operator_or_124(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_125(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or125(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN13QMdiSubWindow15SubWindowOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -402,7 +402,7 @@ func Operator_or_125(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_126(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or126(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN13QGraphicsView16OptimizationFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -418,7 +418,7 @@ func Operator_or_126(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_127(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or127(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN13QGraphicsView13CacheModeFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -434,7 +434,7 @@ func Operator_or_127(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_128(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or128(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN13QGraphicsItem16GraphicsItemFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -450,7 +450,7 @@ func Operator_or_128(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_129(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or129(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN13QDateTimeEdit7SectionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -466,7 +466,7 @@ func Operator_or_129(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_130(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or130(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN12QInputDialog17InputDialogOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -482,7 +482,7 @@ func Operator_or_130(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_131(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or131(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN12QColorDialog17ColorDialogOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -498,7 +498,7 @@ func Operator_or_131(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_132(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or132(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QSizePolicy11ControlTypeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -514,7 +514,7 @@ func Operator_or_132(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_133(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or133(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QMessageBox14StandardButtonEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -530,7 +530,7 @@ func Operator_or_133(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_134(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or134(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QMainWindow10DockOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -546,7 +546,7 @@ func Operator_or_134(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_135(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or135(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QFileDialog6OptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -562,7 +562,7 @@ func Operator_or_135(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_136(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or136(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QDockWidget17DockWidgetFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -580,7 +580,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash_44(key QSizePolicy_ITF /*123*/, seed uint) uint {
+func QHash44(key QSizePolicy_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QSizePolicy_PTR() != nil {
 		convArg0 = key.QSizePolicy_PTR().GetCthis()
@@ -639,7 +639,7 @@ func QDrawBorderPixmap(painter qtgui.QPainter_ITF /*777 QPainter **/, targetRect
 /*
 
  */
-func QDrawBorderPixmap_1(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRect_ITF, margins qtcore.QMargins_ITF, pixmap qtgui.QPixmap_ITF) {
+func QDrawBorderPixmap1(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRect_ITF, margins qtcore.QMargins_ITF, pixmap qtgui.QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -693,7 +693,7 @@ func QDrawShadePanel(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w in
 /*
 
  */
-func QDrawShadePanel_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
+func QDrawShadePanel1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
 		convArg0 = p.QPainter_PTR().GetCthis()
@@ -747,7 +747,7 @@ func QDrawWinButton(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int
 /*
 
  */
-func QDrawWinButton_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
+func QDrawWinButton1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
 		convArg0 = p.QPainter_PTR().GetCthis()
@@ -801,7 +801,7 @@ func QDrawShadeRect(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int
 /*
 
  */
-func QDrawShadeRect_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, midLineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
+func QDrawShadeRect1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, midLineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
 		convArg0 = p.QPainter_PTR().GetCthis()
@@ -851,7 +851,7 @@ func QDrawShadeLine(p qtgui.QPainter_ITF /*777 QPainter **/, x1 int, y1 int, x2 
 /*
 
  */
-func QDrawShadeLine_1(p qtgui.QPainter_ITF /*777 QPainter **/, p1 qtcore.QPoint_ITF, p2 qtcore.QPoint_ITF, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, midLineWidth int) {
+func QDrawShadeLine1(p qtgui.QPainter_ITF /*777 QPainter **/, p1 qtcore.QPoint_ITF, p2 qtcore.QPoint_ITF, pal qtgui.QPalette_ITF, sunken bool, lineWidth int, midLineWidth int) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
 		convArg0 = p.QPainter_PTR().GetCthis()
@@ -905,7 +905,7 @@ func QDrawPlainRect(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int
 /*
 
  */
-func QDrawPlainRect_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, arg2 qtgui.QColor_ITF, lineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
+func QDrawPlainRect1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, arg2 qtgui.QColor_ITF, lineWidth int, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
 		convArg0 = p.QPainter_PTR().GetCthis()
@@ -959,7 +959,7 @@ func QDrawWinPanel(p qtgui.QPainter_ITF /*777 QPainter **/, x int, y int, w int,
 /*
 
  */
-func QDrawWinPanel_1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
+func QDrawWinPanel1(p qtgui.QPainter_ITF /*777 QPainter **/, r qtcore.QRect_ITF, pal qtgui.QPalette_ITF, sunken bool, fill qtgui.QBrush_ITF /*777 const QBrush **/) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
 		convArg0 = p.QPainter_PTR().GetCthis()

@@ -92,10 +92,10 @@ func NewQVector2D() *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
-func (*QVector2D) NewForInherit_1(arg0 int) *QVector2D {
-	return NewQVector2D_1(arg0)
+func (*QVector2D) NewForInherit1(arg0 int) *QVector2D {
+	return NewQVector2D1(arg0)
 }
-func NewQVector2D_1(arg0 int) *QVector2D {
+func NewQVector2D1(arg0 int) *QVector2D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQVector2D_1(arg0 int) *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
-func (*QVector2D) NewForInherit_2(xpos float32, ypos float32) *QVector2D {
-	return NewQVector2D_2(xpos, ypos)
+func (*QVector2D) NewForInherit2(xpos float32, ypos float32) *QVector2D {
+	return NewQVector2D2(xpos, ypos)
 }
-func NewQVector2D_2(xpos float32, ypos float32) *QVector2D {
+func NewQVector2D2(xpos float32, ypos float32) *QVector2D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector2DC2Eff", qtrt.FFI_TYPE_POINTER, xpos, ypos)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -130,10 +130,10 @@ func NewQVector2D_2(xpos float32, ypos float32) *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
-func (*QVector2D) NewForInherit_3(point qtcore.QPoint_ITF) *QVector2D {
-	return NewQVector2D_3(point)
+func (*QVector2D) NewForInherit3(point qtcore.QPoint_ITF) *QVector2D {
+	return NewQVector2D3(point)
 }
-func NewQVector2D_3(point qtcore.QPoint_ITF) *QVector2D {
+func NewQVector2D3(point qtcore.QPoint_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
 		convArg0 = point.QPoint_PTR().GetCthis()
@@ -153,10 +153,10 @@ func NewQVector2D_3(point qtcore.QPoint_ITF) *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
-func (*QVector2D) NewForInherit_4(point qtcore.QPointF_ITF) *QVector2D {
-	return NewQVector2D_4(point)
+func (*QVector2D) NewForInherit4(point qtcore.QPointF_ITF) *QVector2D {
+	return NewQVector2D4(point)
 }
-func NewQVector2D_4(point qtcore.QPointF_ITF) *QVector2D {
+func NewQVector2D4(point qtcore.QPointF_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
 		convArg0 = point.QPointF_PTR().GetCthis()
@@ -176,10 +176,10 @@ func NewQVector2D_4(point qtcore.QPointF_ITF) *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
-func (*QVector2D) NewForInherit_5(vector QVector3D_ITF) *QVector2D {
-	return NewQVector2D_5(vector)
+func (*QVector2D) NewForInherit5(vector QVector3D_ITF) *QVector2D {
+	return NewQVector2D5(vector)
 }
-func NewQVector2D_5(vector QVector3D_ITF) *QVector2D {
+func NewQVector2D5(vector QVector3D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
 		convArg0 = vector.QVector3D_PTR().GetCthis()
@@ -199,10 +199,10 @@ func NewQVector2D_5(vector QVector3D_ITF) *QVector2D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0).
 */
-func (*QVector2D) NewForInherit_6(vector QVector4D_ITF) *QVector2D {
-	return NewQVector2D_6(vector)
+func (*QVector2D) NewForInherit6(vector QVector4D_ITF) *QVector2D {
+	return NewQVector2D6(vector)
 }
-func NewQVector2D_6(vector QVector4D_ITF) *QVector2D {
+func NewQVector2D6(vector QVector4D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector4D_PTR() != nil {
 		convArg0 = vector.QVector4D_PTR().GetCthis()
@@ -312,7 +312,7 @@ func (this *QVector2D) Operator_get_index(i int) float32 {
 /*
 
  */
-func (this *QVector2D) Operator_get_index_1(i int) float32 {
+func (this *QVector2D) Operator_get_index1(i int) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector2DixEi", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -499,7 +499,7 @@ func (this *QVector2D) Operator_mul_equal(factor float32) *QVector2D {
 /*
 
  */
-func (this *QVector2D) Operator_mul_equal_1(vector QVector2D_ITF) *QVector2D {
+func (this *QVector2D) Operator_mul_equal1(vector QVector2D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector2D_PTR() != nil {
 		convArg0 = vector.QVector2D_PTR().GetCthis()
@@ -535,7 +535,7 @@ func (this *QVector2D) Operator_div_equal(divisor float32) *QVector2D {
 /*
 
  */
-func (this *QVector2D) Operator_div_equal_1(vector QVector2D_ITF) *QVector2D {
+func (this *QVector2D) Operator_div_equal1(vector QVector2D_ITF) *QVector2D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector2D_PTR() != nil {
 		convArg0 = vector.QVector2D_PTR().GetCthis()

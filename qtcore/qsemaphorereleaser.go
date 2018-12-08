@@ -91,10 +91,10 @@ func NewQSemaphoreReleaser() *QSemaphoreReleaser {
 /*
 
  */
-func (*QSemaphoreReleaser) NewForInherit_1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
-	return NewQSemaphoreReleaser_1(sem, n)
+func (*QSemaphoreReleaser) NewForInherit1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
+	return NewQSemaphoreReleaser1(sem, n)
 }
-func NewQSemaphoreReleaser_1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
+func NewQSemaphoreReleaser1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {
 		convArg0 = sem.QSemaphore_PTR().GetCthis()
@@ -114,10 +114,10 @@ func NewQSemaphoreReleaser_1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
 /*
 
  */
-func (*QSemaphoreReleaser) NewForInherit_1_(sem QSemaphore_ITF) *QSemaphoreReleaser {
-	return NewQSemaphoreReleaser_1_(sem)
+func (*QSemaphoreReleaser) NewForInherit1p(sem QSemaphore_ITF) *QSemaphoreReleaser {
+	return NewQSemaphoreReleaser1p(sem)
 }
-func NewQSemaphoreReleaser_1_(sem QSemaphore_ITF) *QSemaphoreReleaser {
+func NewQSemaphoreReleaser1p(sem QSemaphore_ITF) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {
 		convArg0 = sem.QSemaphore_PTR().GetCthis()
@@ -139,10 +139,10 @@ func NewQSemaphoreReleaser_1_(sem QSemaphore_ITF) *QSemaphoreReleaser {
 /*
 
  */
-func (*QSemaphoreReleaser) NewForInherit_2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
-	return NewQSemaphoreReleaser_2(sem, n)
+func (*QSemaphoreReleaser) NewForInherit2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
+	return NewQSemaphoreReleaser2(sem, n)
 }
-func NewQSemaphoreReleaser_2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
+func NewQSemaphoreReleaser2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {
 		convArg0 = sem.QSemaphore_PTR().GetCthis()
@@ -162,10 +162,10 @@ func NewQSemaphoreReleaser_2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QS
 /*
 
  */
-func (*QSemaphoreReleaser) NewForInherit_2_(sem QSemaphore_ITF /*777 QSemaphore **/) *QSemaphoreReleaser {
-	return NewQSemaphoreReleaser_2_(sem)
+func (*QSemaphoreReleaser) NewForInherit2p(sem QSemaphore_ITF /*777 QSemaphore **/) *QSemaphoreReleaser {
+	return NewQSemaphoreReleaser2p(sem)
 }
-func NewQSemaphoreReleaser_2_(sem QSemaphore_ITF /*777 QSemaphore **/) *QSemaphoreReleaser {
+func NewQSemaphoreReleaser2p(sem QSemaphore_ITF /*777 QSemaphore **/) *QSemaphoreReleaser {
 	var convArg0 unsafe.Pointer
 	if sem != nil && sem.QSemaphore_PTR() != nil {
 		convArg0 = sem.QSemaphore_PTR().GetCthis()

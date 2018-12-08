@@ -92,10 +92,10 @@ func NewQPageLayout() *QPageLayout {
 /*
 Creates an invalid QPageLayout.
 */
-func (*QPageLayout) NewForInherit_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int, minMargins qtcore.QMarginsF_ITF) *QPageLayout {
-	return NewQPageLayout_1(pageSize, orientation, margins, units, minMargins)
+func (*QPageLayout) NewForInherit1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int, minMargins qtcore.QMarginsF_ITF) *QPageLayout {
+	return NewQPageLayout1(pageSize, orientation, margins, units, minMargins)
 }
-func NewQPageLayout_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int, minMargins qtcore.QMarginsF_ITF) *QPageLayout {
+func NewQPageLayout1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int, minMargins qtcore.QMarginsF_ITF) *QPageLayout {
 	var convArg0 unsafe.Pointer
 	if pageSize != nil && pageSize.QPageSize_PTR() != nil {
 		convArg0 = pageSize.QPageSize_PTR().GetCthis()
@@ -123,10 +123,10 @@ func NewQPageLayout_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QM
 /*
 Creates an invalid QPageLayout.
 */
-func (*QPageLayout) NewForInherit_1_(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF) *QPageLayout {
-	return NewQPageLayout_1_(pageSize, orientation, margins)
+func (*QPageLayout) NewForInherit1p(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF) *QPageLayout {
+	return NewQPageLayout1p(pageSize, orientation, margins)
 }
-func NewQPageLayout_1_(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF) *QPageLayout {
+func NewQPageLayout1p(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF) *QPageLayout {
 	var convArg0 unsafe.Pointer
 	if pageSize != nil && pageSize.QPageSize_PTR() != nil {
 		convArg0 = pageSize.QPageSize_PTR().GetCthis()
@@ -154,10 +154,10 @@ func NewQPageLayout_1_(pageSize QPageSize_ITF, orientation int, margins qtcore.Q
 /*
 Creates an invalid QPageLayout.
 */
-func (*QPageLayout) NewForInherit_1_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int) *QPageLayout {
-	return NewQPageLayout_1_1(pageSize, orientation, margins, units)
+func (*QPageLayout) NewForInherit1p1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int) *QPageLayout {
+	return NewQPageLayout1p1(pageSize, orientation, margins, units)
 }
-func NewQPageLayout_1_1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int) *QPageLayout {
+func NewQPageLayout1p1(pageSize QPageSize_ITF, orientation int, margins qtcore.QMarginsF_ITF, units int) *QPageLayout {
 	var convArg0 unsafe.Pointer
 	if pageSize != nil && pageSize.QPageSize_PTR() != nil {
 		convArg0 = pageSize.QPageSize_PTR().GetCthis()
@@ -199,7 +199,7 @@ func (this *QPageLayout) Operator_equal(other unsafe.Pointer /*333*/) *QPageLayo
 /*
 
  */
-func (this *QPageLayout) Operator_equal_1(other QPageLayout_ITF) *QPageLayout {
+func (this *QPageLayout) Operator_equal1(other QPageLayout_ITF) *QPageLayout {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPageLayout_PTR() != nil {
 		convArg0 = other.QPageLayout_PTR().GetCthis()
@@ -347,7 +347,7 @@ If StandardMode is set then the existing margins will be clamped to the new mini
 
 See also pageSize().
 */
-func (this *QPageLayout) SetPageSize__(pageSize QPageSize_ITF) {
+func (this *QPageLayout) SetPageSizep(pageSize QPageSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if pageSize != nil && pageSize.QPageSize_PTR() != nil {
 		convArg0 = pageSize.QPageSize_PTR().GetCthis()
@@ -584,7 +584,7 @@ Returns the margins of the page layout using the currently set units.
 
 See also setMargins() and units().
 */
-func (this *QPageLayout) Margins_1(units int) *qtcore.QMarginsF /*123*/ {
+func (this *QPageLayout) Margins1(units int) *qtcore.QMarginsF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout7marginsENS_4UnitE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), units)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -721,7 +721,7 @@ The page rectangle takes into account the page size and page orientation, but no
 
 See also paintRect() and units().
 */
-func (this *QPageLayout) FullRect_1(units int) *qtcore.QRectF /*123*/ {
+func (this *QPageLayout) FullRect1(units int) *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout8fullRectENS_4UnitE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), units)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -801,7 +801,7 @@ The paintable rectangle takes into account the page size, orientation and margin
 
 If the FullPageMode mode is set then the fullRect() is returned and the margins must be manually managed.
 */
-func (this *QPageLayout) PaintRect_1(units int) *qtcore.QRectF /*123*/ {
+func (this *QPageLayout) PaintRect1(units int) *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout9paintRectENS_4UnitE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), units)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333

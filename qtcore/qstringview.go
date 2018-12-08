@@ -291,7 +291,7 @@ Note: The behavior is undefined when start < 0 or start > size().
 
 See also left(), right(), chopped(), chop(), and truncate().
 */
-func (this *QStringView) Mid_1(pos int64, n int64) *QStringView /*123*/ {
+func (this *QStringView) Mid1(pos int64, n int64) *QStringView /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView3midExx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, n)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringViewFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -451,7 +451,7 @@ If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwis
 
 See also endsWith().
 */
-func (this *QStringView) StartsWith__(s QStringView_ITF /*123*/) bool {
+func (this *QStringView) StartsWithp(s QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -475,7 +475,7 @@ If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwis
 
 See also endsWith().
 */
-func (this *QStringView) StartsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
+func (this *QStringView) StartsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -497,7 +497,7 @@ If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwis
 
 See also endsWith().
 */
-func (this *QStringView) StartsWith_1_(s QLatin1String_ITF /*123*/) bool {
+func (this *QStringView) StartsWith1p(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -521,7 +521,7 @@ If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwis
 
 See also endsWith().
 */
-func (this *QStringView) StartsWith_2(c QChar_ITF /*123*/) bool {
+func (this *QStringView) StartsWith2(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -543,7 +543,7 @@ If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwis
 
 See also endsWith().
 */
-func (this *QStringView) StartsWith_3(c QChar_ITF /*123*/, cs int) bool {
+func (this *QStringView) StartsWith3(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -587,7 +587,7 @@ If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwis
 
 See also startsWith().
 */
-func (this *QStringView) EndsWith__(s QStringView_ITF /*123*/) bool {
+func (this *QStringView) EndsWithp(s QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -611,7 +611,7 @@ If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwis
 
 See also startsWith().
 */
-func (this *QStringView) EndsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
+func (this *QStringView) EndsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -633,7 +633,7 @@ If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwis
 
 See also startsWith().
 */
-func (this *QStringView) EndsWith_1_(s QLatin1String_ITF /*123*/) bool {
+func (this *QStringView) EndsWith1p(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -657,7 +657,7 @@ If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwis
 
 See also startsWith().
 */
-func (this *QStringView) EndsWith_2(c QChar_ITF /*123*/) bool {
+func (this *QStringView) EndsWith2(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -679,7 +679,7 @@ If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwis
 
 See also startsWith().
 */
-func (this *QStringView) EndsWith_3(c QChar_ITF /*123*/, cs int) bool {
+func (this *QStringView) EndsWith3(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()

@@ -101,9 +101,9 @@ Note that the keys are case-insensitive.
 See also keys().
 */
 func (this *QGenericPluginFactory) Create(arg0 string, arg1 string) *qtcore.QObject /*777 QObject **/ {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGenericPluginFactory6createERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

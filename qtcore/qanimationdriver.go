@@ -122,10 +122,10 @@ func NewQAnimationDriver(parent QObject_ITF /*777 QObject **/) *QAnimationDriver
 /*
 
  */
-func (*QAnimationDriver) NewForInherit__() *QAnimationDriver {
-	return NewQAnimationDriver__()
+func (*QAnimationDriver) NewForInheritp() *QAnimationDriver {
+	return NewQAnimationDriverp()
 }
-func NewQAnimationDriver__() *QAnimationDriver {
+func NewQAnimationDriverp() *QAnimationDriver {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriverC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -291,7 +291,7 @@ func (this *QAnimationDriver) AdvanceAnimation(timeStep int64) {
 /*
 
  */
-func (this *QAnimationDriver) AdvanceAnimation__() {
+func (this *QAnimationDriver) AdvanceAnimationp() {
 	// arg: 0, qint64=Typedef, qint64=Typedef, long long, LongLong
 	timeStep := int64(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver16advanceAnimationEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeStep)

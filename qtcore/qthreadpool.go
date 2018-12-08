@@ -107,10 +107,10 @@ func NewQThreadPool(parent QObject_ITF /*777 QObject **/) *QThreadPool {
 /*
 Constructs a thread pool with the given parent.
 */
-func (*QThreadPool) NewForInherit__() *QThreadPool {
-	return NewQThreadPool__()
+func (*QThreadPool) NewForInheritp() *QThreadPool {
+	return NewQThreadPoolp()
 }
-func NewQThreadPool__() *QThreadPool {
+func NewQThreadPoolp() *QThreadPool {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPoolC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -183,7 +183,7 @@ Reserves a thread and uses it to run runnable, unless this thread will make the 
 
 Note that the thread pool takes ownership of the runnable if runnable->autoDelete() returns true, and the runnable will be deleted automatically by the thread pool after the runnable->run() returns. If runnable->autoDelete() returns false, ownership of runnable remains with the caller. Note that changing the auto-deletion on runnable after calling this functions results in undefined behavior.
 */
-func (this *QThreadPool) Start__(runnable QRunnable_ITF /*777 QRunnable **/) {
+func (this *QThreadPool) Startp(runnable QRunnable_ITF /*777 QRunnable **/) {
 	var convArg0 unsafe.Pointer
 	if runnable != nil && runnable.QRunnable_PTR() != nil {
 		convArg0 = runnable.QRunnable_PTR().GetCthis()
@@ -369,7 +369,7 @@ func (this *QThreadPool) WaitForDone(msecs int) bool {
 /*
 Waits up to msecs milliseconds for all threads to exit and removes all threads from the thread pool. Returns true if all threads were removed; otherwise it returns false. If msecs is -1 (the default), the timeout is ignored (waits for the last thread to exit).
 */
-func (this *QThreadPool) WaitForDone__() bool {
+func (this *QThreadPool) WaitForDonep() bool {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool11waitForDoneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)

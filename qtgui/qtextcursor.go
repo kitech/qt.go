@@ -92,10 +92,10 @@ func NewQTextCursor() *QTextCursor {
 /*
 Constructs a null cursor.
 */
-func (*QTextCursor) NewForInherit_1(document QTextDocument_ITF /*777 QTextDocument **/) *QTextCursor {
-	return NewQTextCursor_1(document)
+func (*QTextCursor) NewForInherit1(document QTextDocument_ITF /*777 QTextDocument **/) *QTextCursor {
+	return NewQTextCursor1(document)
 }
-func NewQTextCursor_1(document QTextDocument_ITF /*777 QTextDocument **/) *QTextCursor {
+func NewQTextCursor1(document QTextDocument_ITF /*777 QTextDocument **/) *QTextCursor {
 	var convArg0 unsafe.Pointer
 	if document != nil && document.QTextDocument_PTR() != nil {
 		convArg0 = document.QTextDocument_PTR().GetCthis()
@@ -115,10 +115,10 @@ func NewQTextCursor_1(document QTextDocument_ITF /*777 QTextDocument **/) *QText
 /*
 Constructs a null cursor.
 */
-func (*QTextCursor) NewForInherit_2(frame QTextFrame_ITF /*777 QTextFrame **/) *QTextCursor {
-	return NewQTextCursor_2(frame)
+func (*QTextCursor) NewForInherit2(frame QTextFrame_ITF /*777 QTextFrame **/) *QTextCursor {
+	return NewQTextCursor2(frame)
 }
-func NewQTextCursor_2(frame QTextFrame_ITF /*777 QTextFrame **/) *QTextCursor {
+func NewQTextCursor2(frame QTextFrame_ITF /*777 QTextFrame **/) *QTextCursor {
 	var convArg0 unsafe.Pointer
 	if frame != nil && frame.QTextFrame_PTR() != nil {
 		convArg0 = frame.QTextFrame_PTR().GetCthis()
@@ -138,10 +138,10 @@ func NewQTextCursor_2(frame QTextFrame_ITF /*777 QTextFrame **/) *QTextCursor {
 /*
 Constructs a null cursor.
 */
-func (*QTextCursor) NewForInherit_3(block QTextBlock_ITF) *QTextCursor {
-	return NewQTextCursor_3(block)
+func (*QTextCursor) NewForInherit3(block QTextBlock_ITF) *QTextCursor {
+	return NewQTextCursor3(block)
 }
-func NewQTextCursor_3(block QTextBlock_ITF) *QTextCursor {
+func NewQTextCursor3(block QTextBlock_ITF) *QTextCursor {
 	var convArg0 unsafe.Pointer
 	if block != nil && block.QTextBlock_PTR() != nil {
 		convArg0 = block.QTextBlock_PTR().GetCthis()
@@ -177,7 +177,7 @@ func (this *QTextCursor) Operator_equal(other unsafe.Pointer /*333*/) *QTextCurs
 /*
 
  */
-func (this *QTextCursor) Operator_equal_1(other QTextCursor_ITF) *QTextCursor {
+func (this *QTextCursor) Operator_equal1(other QTextCursor_ITF) *QTextCursor {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QTextCursor_PTR() != nil {
 		convArg0 = other.QTextCursor_PTR().GetCthis()
@@ -262,7 +262,7 @@ Moves the cursor to the absolute position in the document specified by pos using
 
 See also position(), movePosition(), and anchor().
 */
-func (this *QTextCursor) SetPosition__(pos int) {
+func (this *QTextCursor) SetPositionp(pos int) {
 	// arg: 1, QTextCursor::MoveMode=Enum, QTextCursor::MoveMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11setPositionEiNS_8MoveModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, mode)
@@ -345,7 +345,7 @@ Any ASCII linefeed characters (\n) in the inserted text are transformed into uni
 See also charFormat() and hasSelection().
 */
 func (this *QTextCursor) InsertText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor10insertTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -374,8 +374,8 @@ Any ASCII linefeed characters (\n) in the inserted text are transformed into uni
 
 See also charFormat() and hasSelection().
 */
-func (this *QTextCursor) InsertText_1(text string, format QTextCharFormat_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QTextCursor) InsertText1(text string, format QTextCharFormat_ITF) {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if format != nil && format.QTextCharFormat_PTR() != nil {
@@ -423,7 +423,7 @@ If mode is KeepAnchor, the cursor selects the text it moves over. This is the sa
 
 See also setVisualNavigation().
 */
-func (this *QTextCursor) MovePosition__(op int) bool {
+func (this *QTextCursor) MovePositionp(op int) bool {
 	// arg: 1, QTextCursor::MoveMode=Enum, QTextCursor::MoveMode=Enum, , Invalid
 	arg1 := 0
 	// arg: 2, int=Int, =Invalid, , Invalid
@@ -449,7 +449,7 @@ If mode is KeepAnchor, the cursor selects the text it moves over. This is the sa
 
 See also setVisualNavigation().
 */
-func (this *QTextCursor) MovePosition__1(op int, arg1 int) bool {
+func (this *QTextCursor) MovePositionp1(op int, arg1 int) bool {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor12movePositionENS_13MoveOperationENS_8MoveModeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), op, arg1, n)
@@ -1046,7 +1046,7 @@ Inserts a new empty block at the cursor position() with the current blockFormat(
 
 See also setBlockFormat().
 */
-func (this *QTextCursor) InsertBlock_1(format QTextBlockFormat_ITF) {
+func (this *QTextCursor) InsertBlock1(format QTextBlockFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QTextBlockFormat_PTR() != nil {
 		convArg0 = format.QTextBlockFormat_PTR().GetCthis()
@@ -1065,7 +1065,7 @@ Inserts a new empty block at the cursor position() with the current blockFormat(
 
 See also setBlockFormat().
 */
-func (this *QTextCursor) InsertBlock_2(format QTextBlockFormat_ITF, charFormat QTextCharFormat_ITF) {
+func (this *QTextCursor) InsertBlock2(format QTextBlockFormat_ITF, charFormat QTextCharFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QTextBlockFormat_PTR() != nil {
 		convArg0 = format.QTextBlockFormat_PTR().GetCthis()
@@ -1108,7 +1108,7 @@ Inserts a new block at the current position and makes it the first list item of 
 
 See also currentList(), createList(), and insertBlock().
 */
-func (this *QTextCursor) InsertList_1(style int) *QTextList /*777 QTextList **/ {
+func (this *QTextCursor) InsertList1(style int) *QTextList /*777 QTextList **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor10insertListEN15QTextListFormat5StyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextListFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -1144,7 +1144,7 @@ Creates and returns a new list with the given format, and makes the current para
 
 See also insertList() and currentList().
 */
-func (this *QTextCursor) CreateList_1(style int) *QTextList /*777 QTextList **/ {
+func (this *QTextCursor) CreateList1(style int) *QTextList /*777 QTextList **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor10createListEN15QTextListFormat5StyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextListFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -1200,7 +1200,7 @@ There must be at least one row and one column in the table.
 
 See also currentTable().
 */
-func (this *QTextCursor) InsertTable_1(rows int, cols int) *QTextTable /*777 QTextTable **/ {
+func (this *QTextCursor) InsertTable1(rows int, cols int) *QTextTable /*777 QTextTable **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertTableEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rows, cols)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextTableFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -1290,7 +1290,7 @@ Note: When using this function with a style sheet, the style sheet will only app
 This function was introduced in  Qt 4.2.
 */
 func (this *QTextCursor) InsertHtml(html string) {
-	var tmpArg0 = qtcore.NewQString_5(html)
+	var tmpArg0 = qtcore.NewQString5(html)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor10insertHtmlERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1321,7 +1321,7 @@ func (this *QTextCursor) InsertImage(format QTextImageFormat_ITF, alignment int)
 /*
 Inserts the image defined by format at the current position().
 */
-func (this *QTextCursor) InsertImage_1(format QTextImageFormat_ITF) {
+func (this *QTextCursor) InsertImage1(format QTextImageFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QTextImageFormat_PTR() != nil {
 		convArg0 = format.QTextImageFormat_PTR().GetCthis()
@@ -1338,8 +1338,8 @@ func (this *QTextCursor) InsertImage_1(format QTextImageFormat_ITF) {
 /*
 Inserts the image defined by format at the current position().
 */
-func (this *QTextCursor) InsertImage_2(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+func (this *QTextCursor) InsertImage2(name string) {
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1353,12 +1353,12 @@ func (this *QTextCursor) InsertImage_2(name string) {
 /*
 Inserts the image defined by format at the current position().
 */
-func (this *QTextCursor) InsertImage_3(image QImage_ITF, name string) {
+func (this *QTextCursor) InsertImage3(image QImage_ITF, name string) {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(name)
+	var tmpArg1 = qtcore.NewQString5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK6QImageRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1372,7 +1372,7 @@ func (this *QTextCursor) InsertImage_3(image QImage_ITF, name string) {
 /*
 Inserts the image defined by format at the current position().
 */
-func (this *QTextCursor) InsertImage_3_(image QImage_ITF) {
+func (this *QTextCursor) InsertImage3p(image QImage_ITF) {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()

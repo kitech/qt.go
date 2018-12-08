@@ -91,10 +91,10 @@ func NewQPersistentModelIndex() *QPersistentModelIndex {
 /*
 
  */
-func (*QPersistentModelIndex) NewForInherit_1(index QModelIndex_ITF) *QPersistentModelIndex {
-	return NewQPersistentModelIndex_1(index)
+func (*QPersistentModelIndex) NewForInherit1(index QModelIndex_ITF) *QPersistentModelIndex {
+	return NewQPersistentModelIndex1(index)
 }
-func NewQPersistentModelIndex_1(index QModelIndex_ITF) *QPersistentModelIndex {
+func NewQPersistentModelIndex1(index QModelIndex_ITF) *QPersistentModelIndex {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -165,7 +165,7 @@ func (this *QPersistentModelIndex) Operator_equal_equal(other QPersistentModelIn
 /*
 
  */
-func (this *QPersistentModelIndex) Operator_equal_equal_1(other QModelIndex_ITF) bool {
+func (this *QPersistentModelIndex) Operator_equal_equal1(other QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QModelIndex_PTR() != nil {
 		convArg0 = other.QModelIndex_PTR().GetCthis()
@@ -201,7 +201,7 @@ func (this *QPersistentModelIndex) Operator_not_equal(other QPersistentModelInde
 /*
 
  */
-func (this *QPersistentModelIndex) Operator_not_equal_1(other QModelIndex_ITF) bool {
+func (this *QPersistentModelIndex) Operator_not_equal1(other QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QModelIndex_PTR() != nil {
 		convArg0 = other.QModelIndex_PTR().GetCthis()
@@ -239,7 +239,7 @@ func (this *QPersistentModelIndex) Operator_equal(other QPersistentModelIndex_IT
 /*
 
  */
-func (this *QPersistentModelIndex) Operator_equal_1(other unsafe.Pointer /*333*/) *QPersistentModelIndex {
+func (this *QPersistentModelIndex) Operator_equal1(other unsafe.Pointer /*333*/) *QPersistentModelIndex {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QPersistentModelIndexaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -255,7 +255,7 @@ func (this *QPersistentModelIndex) Operator_equal_1(other unsafe.Pointer /*333*/
 /*
 
  */
-func (this *QPersistentModelIndex) Operator_equal_2(other QModelIndex_ITF) *QPersistentModelIndex {
+func (this *QPersistentModelIndex) Operator_equal2(other QModelIndex_ITF) *QPersistentModelIndex {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QModelIndex_PTR() != nil {
 		convArg0 = other.QModelIndex_PTR().GetCthis()
@@ -432,7 +432,7 @@ Note: If you do not have a value to return, return an invalid QVariant instead o
 
 See also Qt::ItemDataRole, setData(), and headerData().
 */
-func (this *QPersistentModelIndex) Data__() *QVariant /*123*/ {
+func (this *QPersistentModelIndex) Datap() *QVariant /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex4dataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)

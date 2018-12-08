@@ -90,10 +90,10 @@ func NewQTextTableCellFormat() *QTextTableCellFormat {
 /*
 
  */
-func (*QTextTableCellFormat) NewForInherit_1(fmt_ QTextFormat_ITF) *QTextTableCellFormat {
-	return NewQTextTableCellFormat_1(fmt_)
+func (*QTextTableCellFormat) NewForInherit1(fmt_ QTextFormat_ITF) *QTextTableCellFormat {
+	return NewQTextTableCellFormat1(fmt_)
 }
-func NewQTextTableCellFormat_1(fmt_ QTextFormat_ITF) *QTextTableCellFormat {
+func NewQTextTableCellFormat1(fmt_ QTextFormat_ITF) *QTextTableCellFormat {
 	var convArg0 unsafe.Pointer
 	if fmt_ != nil && fmt_.QTextFormat_PTR() != nil {
 		convArg0 = fmt_.QTextFormat_PTR().GetCthis()

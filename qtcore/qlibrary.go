@@ -107,10 +107,10 @@ func NewQLibrary(parent QObject_ITF /*777 QObject **/) *QLibrary {
 /*
 Constructs a library with the given parent.
 */
-func (*QLibrary) NewForInherit__() *QLibrary {
-	return NewQLibrary__()
+func (*QLibrary) NewForInheritp() *QLibrary {
+	return NewQLibraryp()
 }
-func NewQLibrary__() *QLibrary {
+func NewQLibraryp() *QLibrary {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibraryC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -128,11 +128,11 @@ func NewQLibrary__() *QLibrary {
 /*
 Constructs a library with the given parent.
 */
-func (*QLibrary) NewForInherit_1(fileName string, parent QObject_ITF /*777 QObject **/) *QLibrary {
-	return NewQLibrary_1(fileName, parent)
+func (*QLibrary) NewForInherit1(fileName string, parent QObject_ITF /*777 QObject **/) *QLibrary {
+	return NewQLibrary1(fileName, parent)
 }
-func NewQLibrary_1(fileName string, parent QObject_ITF /*777 QObject **/) *QLibrary {
-	var tmpArg0 = NewQString_5(fileName)
+func NewQLibrary1(fileName string, parent QObject_ITF /*777 QObject **/) *QLibrary {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -153,11 +153,11 @@ func NewQLibrary_1(fileName string, parent QObject_ITF /*777 QObject **/) *QLibr
 /*
 Constructs a library with the given parent.
 */
-func (*QLibrary) NewForInherit_1_(fileName string) *QLibrary {
-	return NewQLibrary_1_(fileName)
+func (*QLibrary) NewForInherit1p(fileName string) *QLibrary {
+	return NewQLibrary1p(fileName)
 }
-func NewQLibrary_1_(fileName string) *QLibrary {
-	var tmpArg0 = NewQString_5(fileName)
+func NewQLibrary1p(fileName string) *QLibrary {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -176,11 +176,11 @@ func NewQLibrary_1_(fileName string) *QLibrary {
 /*
 Constructs a library with the given parent.
 */
-func (*QLibrary) NewForInherit_2(fileName string, verNum int, parent QObject_ITF /*777 QObject **/) *QLibrary {
-	return NewQLibrary_2(fileName, verNum, parent)
+func (*QLibrary) NewForInherit2(fileName string, verNum int, parent QObject_ITF /*777 QObject **/) *QLibrary {
+	return NewQLibrary2(fileName, verNum, parent)
 }
-func NewQLibrary_2(fileName string, verNum int, parent QObject_ITF /*777 QObject **/) *QLibrary {
-	var tmpArg0 = NewQString_5(fileName)
+func NewQLibrary2(fileName string, verNum int, parent QObject_ITF /*777 QObject **/) *QLibrary {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -201,11 +201,11 @@ func NewQLibrary_2(fileName string, verNum int, parent QObject_ITF /*777 QObject
 /*
 Constructs a library with the given parent.
 */
-func (*QLibrary) NewForInherit_2_(fileName string, verNum int) *QLibrary {
-	return NewQLibrary_2_(fileName, verNum)
+func (*QLibrary) NewForInherit2p(fileName string, verNum int) *QLibrary {
+	return NewQLibrary2p(fileName, verNum)
 }
-func NewQLibrary_2_(fileName string, verNum int) *QLibrary {
-	var tmpArg0 = NewQString_5(fileName)
+func NewQLibrary2p(fileName string, verNum int) *QLibrary {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -224,13 +224,13 @@ func NewQLibrary_2_(fileName string, verNum int) *QLibrary {
 /*
 Constructs a library with the given parent.
 */
-func (*QLibrary) NewForInherit_3(fileName string, version string, parent QObject_ITF /*777 QObject **/) *QLibrary {
-	return NewQLibrary_3(fileName, version, parent)
+func (*QLibrary) NewForInherit3(fileName string, version string, parent QObject_ITF /*777 QObject **/) *QLibrary {
+	return NewQLibrary3(fileName, version, parent)
 }
-func NewQLibrary_3(fileName string, version string, parent QObject_ITF /*777 QObject **/) *QLibrary {
-	var tmpArg0 = NewQString_5(fileName)
+func NewQLibrary3(fileName string, version string, parent QObject_ITF /*777 QObject **/) *QLibrary {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(version)
+	var tmpArg1 = NewQString5(version)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -251,13 +251,13 @@ func NewQLibrary_3(fileName string, version string, parent QObject_ITF /*777 QOb
 /*
 Constructs a library with the given parent.
 */
-func (*QLibrary) NewForInherit_3_(fileName string, version string) *QLibrary {
-	return NewQLibrary_3_(fileName, version)
+func (*QLibrary) NewForInherit3p(fileName string, version string) *QLibrary {
+	return NewQLibrary3p(fileName, version)
 }
-func NewQLibrary_3_(fileName string, version string) *QLibrary {
-	var tmpArg0 = NewQString_5(fileName)
+func NewQLibrary3p(fileName string, version string) *QLibrary {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(version)
+	var tmpArg1 = NewQString5(version)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -371,8 +371,8 @@ with MY_EXPORT defined as
   #define MY_EXPORT
   #endif
 */
-func (this *QLibrary) Resolve_1(fileName string, symbol string) unsafe.Pointer /*666*/ {
-	var tmpArg0 = NewQString_5(fileName)
+func (this *QLibrary) Resolve1(fileName string, symbol string) unsafe.Pointer /*666*/ {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(symbol)
 	defer qtrt.FreeMem(convArg1)
@@ -380,9 +380,9 @@ func (this *QLibrary) Resolve_1(fileName string, symbol string) unsafe.Pointer /
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
-func QLibrary_Resolve_1(fileName string, symbol string) unsafe.Pointer /*666*/ {
+func QLibrary_Resolve1(fileName string, symbol string) unsafe.Pointer /*666*/ {
 	var nilthis *QLibrary
-	rv := nilthis.Resolve_1(fileName, symbol)
+	rv := nilthis.Resolve1(fileName, symbol)
 	return rv
 }
 
@@ -426,8 +426,8 @@ with MY_EXPORT defined as
   #define MY_EXPORT
   #endif
 */
-func (this *QLibrary) Resolve_2(fileName string, verNum int, symbol string) unsafe.Pointer /*666*/ {
-	var tmpArg0 = NewQString_5(fileName)
+func (this *QLibrary) Resolve2(fileName string, verNum int, symbol string) unsafe.Pointer /*666*/ {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg2 = qtrt.CString(symbol)
 	defer qtrt.FreeMem(convArg2)
@@ -435,9 +435,9 @@ func (this *QLibrary) Resolve_2(fileName string, verNum int, symbol string) unsa
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
-func QLibrary_Resolve_2(fileName string, verNum int, symbol string) unsafe.Pointer /*666*/ {
+func QLibrary_Resolve2(fileName string, verNum int, symbol string) unsafe.Pointer /*666*/ {
 	var nilthis *QLibrary
-	rv := nilthis.Resolve_2(fileName, verNum, symbol)
+	rv := nilthis.Resolve2(fileName, verNum, symbol)
 	return rv
 }
 
@@ -481,10 +481,10 @@ with MY_EXPORT defined as
   #define MY_EXPORT
   #endif
 */
-func (this *QLibrary) Resolve_3(fileName string, version string, symbol string) unsafe.Pointer /*666*/ {
-	var tmpArg0 = NewQString_5(fileName)
+func (this *QLibrary) Resolve3(fileName string, version string, symbol string) unsafe.Pointer /*666*/ {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(version)
+	var tmpArg1 = NewQString5(version)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = qtrt.CString(symbol)
 	defer qtrt.FreeMem(convArg2)
@@ -492,9 +492,9 @@ func (this *QLibrary) Resolve_3(fileName string, version string, symbol string) 
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
 }
-func QLibrary_Resolve_3(fileName string, version string, symbol string) unsafe.Pointer /*666*/ {
+func QLibrary_Resolve3(fileName string, version string, symbol string) unsafe.Pointer /*666*/ {
 	var nilthis *QLibrary
-	rv := nilthis.Resolve_3(fileName, version, symbol)
+	rv := nilthis.Resolve3(fileName, version, symbol)
 	return rv
 }
 
@@ -572,7 +572,7 @@ macOS and iOS.dylib, .bundle, .so
 Trailing versioning numbers on Unix are ignored.
 */
 func (this *QLibrary) IsLibrary(fileName string) bool {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary9isLibraryERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -593,7 +593,7 @@ func QLibrary_IsLibrary(fileName string) bool {
 
  */
 func (this *QLibrary) SetFileName(fileName string) {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -627,7 +627,7 @@ Sets the fileName property and major version number to fileName and versionNumbe
 See also setFileName().
 */
 func (this *QLibrary) SetFileNameAndVersion(fileName string, verNum int) {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary21setFileNameAndVersionERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, verNum)
 	qtrt.ErrPrint(err, rv)
@@ -643,10 +643,10 @@ Sets the fileName property and major version number to fileName and versionNumbe
 
 See also setFileName().
 */
-func (this *QLibrary) SetFileNameAndVersion_1(fileName string, version string) {
-	var tmpArg0 = NewQString_5(fileName)
+func (this *QLibrary) SetFileNameAndVersion1(fileName string, version string) {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(version)
+	var tmpArg1 = NewQString5(version)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QLibrary21setFileNameAndVersionERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

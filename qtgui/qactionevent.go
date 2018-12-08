@@ -90,10 +90,10 @@ func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Poi
 /*
 
  */
-func (*QActionEvent) NewForInherit__(type_ int, action unsafe.Pointer /*666*/) *QActionEvent {
-	return NewQActionEvent__(type_, action)
+func (*QActionEvent) NewForInheritp(type_ int, action unsafe.Pointer /*666*/) *QActionEvent {
+	return NewQActionEventp(type_, action)
 }
-func NewQActionEvent__(type_ int, action unsafe.Pointer /*666*/) *QActionEvent {
+func NewQActionEventp(type_ int, action unsafe.Pointer /*666*/) *QActionEvent {
 	// arg: 2, QAction *=Pointer, QAction=Record, , Invalid
 	var before unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", qtrt.FFI_TYPE_POINTER, type_, action, before)

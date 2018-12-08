@@ -183,7 +183,7 @@ Returns true if the mutex is recursive.
 
 This function was introduced in  Qt 5.7.
 */
-func (this *QBasicMutex) IsRecursive_1() bool {
+func (this *QBasicMutex) IsRecursive1() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicMutex11isRecursiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

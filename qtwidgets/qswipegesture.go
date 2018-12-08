@@ -109,10 +109,10 @@ func NewQSwipeGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QSwipeGestur
 /*
 
  */
-func (*QSwipeGesture) NewForInherit__() *QSwipeGesture {
-	return NewQSwipeGesture__()
+func (*QSwipeGesture) NewForInheritp() *QSwipeGesture {
+	return NewQSwipeGesturep()
 }
-func NewQSwipeGesture__() *QSwipeGesture {
+func NewQSwipeGesturep() *QSwipeGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSwipeGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

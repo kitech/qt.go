@@ -109,10 +109,10 @@ func NewQPinchGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPinchGestur
 /*
 
  */
-func (*QPinchGesture) NewForInherit__() *QPinchGesture {
-	return NewQPinchGesture__()
+func (*QPinchGesture) NewForInheritp() *QPinchGesture {
+	return NewQPinchGesturep()
 }
-func NewQPinchGesture__() *QPinchGesture {
+func NewQPinchGesturep() *QPinchGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QPinchGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

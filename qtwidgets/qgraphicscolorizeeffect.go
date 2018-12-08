@@ -114,10 +114,10 @@ func NewQGraphicsColorizeEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QG
 /*
 
  */
-func (*QGraphicsColorizeEffect) NewForInherit__() *QGraphicsColorizeEffect {
-	return NewQGraphicsColorizeEffect__()
+func (*QGraphicsColorizeEffect) NewForInheritp() *QGraphicsColorizeEffect {
+	return NewQGraphicsColorizeEffectp()
 }
-func NewQGraphicsColorizeEffect__() *QGraphicsColorizeEffect {
+func NewQGraphicsColorizeEffectp() *QGraphicsColorizeEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

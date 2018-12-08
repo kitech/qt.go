@@ -110,7 +110,7 @@ func DeleteQWinMime(this *QWinMime) {
 Registers the MIME type mime, and returns an ID number identifying the format on Windows.
 */
 func (this *QWinMime) RegisterMimeType(mime string) int {
-	var tmpArg0 = qtcore.NewQString_5(mime)
+	var tmpArg0 = qtcore.NewQString5(mime)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QWinMime16registerMimeTypeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -91,10 +91,10 @@ func NewQJsonDocument() *QJsonDocument {
 /*
 Constructs an empty and invalid document.
 */
-func (*QJsonDocument) NewForInherit_1(object QJsonObject_ITF) *QJsonDocument {
-	return NewQJsonDocument_1(object)
+func (*QJsonDocument) NewForInherit1(object QJsonObject_ITF) *QJsonDocument {
+	return NewQJsonDocument1(object)
 }
-func NewQJsonDocument_1(object QJsonObject_ITF) *QJsonDocument {
+func NewQJsonDocument1(object QJsonObject_ITF) *QJsonDocument {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QJsonObject_PTR() != nil {
 		convArg0 = object.QJsonObject_PTR().GetCthis()
@@ -114,10 +114,10 @@ func NewQJsonDocument_1(object QJsonObject_ITF) *QJsonDocument {
 /*
 Constructs an empty and invalid document.
 */
-func (*QJsonDocument) NewForInherit_2(array QJsonArray_ITF) *QJsonDocument {
-	return NewQJsonDocument_2(array)
+func (*QJsonDocument) NewForInherit2(array QJsonArray_ITF) *QJsonDocument {
+	return NewQJsonDocument2(array)
 }
-func NewQJsonDocument_2(array QJsonArray_ITF) *QJsonDocument {
+func NewQJsonDocument2(array QJsonArray_ITF) *QJsonDocument {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QJsonArray_PTR() != nil {
 		convArg0 = array.QJsonArray_PTR().GetCthis()
@@ -172,7 +172,7 @@ func (this *QJsonDocument) Operator_equal(other QJsonDocument_ITF) *QJsonDocumen
 /*
 
  */
-func (this *QJsonDocument) Operator_equal_1(other unsafe.Pointer /*333*/) *QJsonDocument {
+func (this *QJsonDocument) Operator_equal1(other unsafe.Pointer /*333*/) *QJsonDocument {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonDocumentaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -246,7 +246,7 @@ Returns a QJsonDocument representing the data.
 
 See also rawData(), fromBinaryData(), isNull(), and DataValidation.
 */
-func (this *QJsonDocument) FromRawData__(data string, size int) *QJsonDocument /*123*/ {
+func (this *QJsonDocument) FromRawDatap(data string, size int) *QJsonDocument /*123*/ {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	// arg: 2, QJsonDocument::DataValidation=Enum, QJsonDocument::DataValidation=Enum, , Invalid
@@ -315,7 +315,7 @@ validation decides whether the data is checked for validity before being used. B
 
 See also toBinaryData(), fromRawData(), isNull(), and DataValidation.
 */
-func (this *QJsonDocument) FromBinaryData__(data QByteArray_ITF) *QJsonDocument /*123*/ {
+func (this *QJsonDocument) FromBinaryDatap(data QByteArray_ITF) *QJsonDocument /*123*/ {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -428,7 +428,7 @@ Converts the QJsonDocument to a UTF-8 encoded JSON document in the provided form
 
 See also fromJson() and JsonFormat.
 */
-func (this *QJsonDocument) ToJson_1(format int) *QByteArray /*123*/ {
+func (this *QJsonDocument) ToJson1(format int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument6toJsonENS_10JsonFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -569,7 +569,7 @@ func (this *QJsonDocument) SetArray(array QJsonArray_ITF) {
 
  */
 func (this *QJsonDocument) Operator_get_index(key string) *QJsonValue /*123*/ {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocumentixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -586,7 +586,7 @@ func (this *QJsonDocument) Operator_get_index(key string) *QJsonValue /*123*/ {
 /*
 
  */
-func (this *QJsonDocument) Operator_get_index_1(key QLatin1String_ITF /*123*/) *QJsonValue /*123*/ {
+func (this *QJsonDocument) Operator_get_index1(key QLatin1String_ITF /*123*/) *QJsonValue /*123*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
 		convArg0 = key.QLatin1String_PTR().GetCthis()
@@ -606,7 +606,7 @@ func (this *QJsonDocument) Operator_get_index_1(key QLatin1String_ITF /*123*/) *
 /*
 
  */
-func (this *QJsonDocument) Operator_get_index_2(i int) *QJsonValue /*123*/ {
+func (this *QJsonDocument) Operator_get_index2(i int) *QJsonValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocumentixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333

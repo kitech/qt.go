@@ -108,10 +108,10 @@ parent is passed to QGraphicsLayoutItem's constructor and the QGraphicsLayoutIte
 
 If parent is a QGraphicsWidget the layout will be installed on that widget. (Note that installing a layout will delete the old one installed.)
 */
-func (*QGraphicsLayout) NewForInherit__() *QGraphicsLayout {
-	return NewQGraphicsLayout__()
+func (*QGraphicsLayout) NewForInheritp() *QGraphicsLayout {
+	return NewQGraphicsLayoutp()
 }
-func NewQGraphicsLayout__() *QGraphicsLayout {
+func NewQGraphicsLayoutp() *QGraphicsLayout {
 	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)

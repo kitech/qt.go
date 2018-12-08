@@ -134,7 +134,7 @@ func (this *QCryptographicHash) AddData(data string, length int) {
 /*
 Adds the first length chars of data to the cryptographic hash.
 */
-func (this *QCryptographicHash) AddData_1(data QByteArray_ITF) {
+func (this *QCryptographicHash) AddData1(data QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -151,7 +151,7 @@ func (this *QCryptographicHash) AddData_1(data QByteArray_ITF) {
 /*
 Adds the first length chars of data to the cryptographic hash.
 */
-func (this *QCryptographicHash) AddData_2(device QIODevice_ITF /*777 QIODevice **/) bool {
+func (this *QCryptographicHash) AddData2(device QIODevice_ITF /*777 QIODevice **/) bool {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()

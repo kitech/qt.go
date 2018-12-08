@@ -91,10 +91,10 @@ func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
 /*
 
  */
-func (*QStyleOptionComplex) NewForInherit__() *QStyleOptionComplex {
-	return NewQStyleOptionComplex__()
+func (*QStyleOptionComplex) NewForInheritp() *QStyleOptionComplex {
+	return NewQStyleOptionComplexp()
 }
-func NewQStyleOptionComplex__() *QStyleOptionComplex {
+func NewQStyleOptionComplexp() *QStyleOptionComplex {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	version := 0 /*QStyleOptionComplex::Version*/
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -114,10 +114,10 @@ func NewQStyleOptionComplex__() *QStyleOptionComplex {
 /*
 
  */
-func (*QStyleOptionComplex) NewForInherit__1(version int) *QStyleOptionComplex {
-	return NewQStyleOptionComplex__1(version)
+func (*QStyleOptionComplex) NewForInheritp1(version int) *QStyleOptionComplex {
+	return NewQStyleOptionComplexp1(version)
 }
-func NewQStyleOptionComplex__1(version int) *QStyleOptionComplex {
+func NewQStyleOptionComplexp1(version int) *QStyleOptionComplex {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := QStyleOption__SO_Complex
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)

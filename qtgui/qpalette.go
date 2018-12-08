@@ -96,10 +96,10 @@ Constructs a palette object that uses the application's default palette.
 
 See also QApplication::setPalette() and QApplication::palette().
 */
-func (*QPalette) NewForInherit_1(button QColor_ITF) *QPalette {
-	return NewQPalette_1(button)
+func (*QPalette) NewForInherit1(button QColor_ITF) *QPalette {
+	return NewQPalette1(button)
 }
-func NewQPalette_1(button QColor_ITF) *QPalette {
+func NewQPalette1(button QColor_ITF) *QPalette {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QColor_PTR() != nil {
 		convArg0 = button.QColor_PTR().GetCthis()
@@ -121,10 +121,10 @@ Constructs a palette object that uses the application's default palette.
 
 See also QApplication::setPalette() and QApplication::palette().
 */
-func (*QPalette) NewForInherit_2(button int) *QPalette {
-	return NewQPalette_2(button)
+func (*QPalette) NewForInherit2(button int) *QPalette {
+	return NewQPalette2(button)
 }
-func NewQPalette_2(button int) *QPalette {
+func NewQPalette2(button int) *QPalette {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2EN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, button)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -142,10 +142,10 @@ Constructs a palette object that uses the application's default palette.
 
 See also QApplication::setPalette() and QApplication::palette().
 */
-func (*QPalette) NewForInherit_3(button QColor_ITF, window QColor_ITF) *QPalette {
-	return NewQPalette_3(button, window)
+func (*QPalette) NewForInherit3(button QColor_ITF, window QColor_ITF) *QPalette {
+	return NewQPalette3(button, window)
 }
-func NewQPalette_3(button QColor_ITF, window QColor_ITF) *QPalette {
+func NewQPalette3(button QColor_ITF, window QColor_ITF) *QPalette {
 	var convArg0 unsafe.Pointer
 	if button != nil && button.QColor_PTR() != nil {
 		convArg0 = button.QColor_PTR().GetCthis()
@@ -171,10 +171,10 @@ Constructs a palette object that uses the application's default palette.
 
 See also QApplication::setPalette() and QApplication::palette().
 */
-func (*QPalette) NewForInherit_4(windowText QBrush_ITF, button QBrush_ITF, light QBrush_ITF, dark QBrush_ITF, mid QBrush_ITF, text QBrush_ITF, bright_text QBrush_ITF, base QBrush_ITF, window QBrush_ITF) *QPalette {
-	return NewQPalette_4(windowText, button, light, dark, mid, text, bright_text, base, window)
+func (*QPalette) NewForInherit4(windowText QBrush_ITF, button QBrush_ITF, light QBrush_ITF, dark QBrush_ITF, mid QBrush_ITF, text QBrush_ITF, bright_text QBrush_ITF, base QBrush_ITF, window QBrush_ITF) *QPalette {
+	return NewQPalette4(windowText, button, light, dark, mid, text, bright_text, base, window)
 }
-func NewQPalette_4(windowText QBrush_ITF, button QBrush_ITF, light QBrush_ITF, dark QBrush_ITF, mid QBrush_ITF, text QBrush_ITF, bright_text QBrush_ITF, base QBrush_ITF, window QBrush_ITF) *QPalette {
+func NewQPalette4(windowText QBrush_ITF, button QBrush_ITF, light QBrush_ITF, dark QBrush_ITF, mid QBrush_ITF, text QBrush_ITF, bright_text QBrush_ITF, base QBrush_ITF, window QBrush_ITF) *QPalette {
 	var convArg0 unsafe.Pointer
 	if windowText != nil && windowText.QBrush_PTR() != nil {
 		convArg0 = windowText.QBrush_PTR().GetCthis()
@@ -228,10 +228,10 @@ Constructs a palette object that uses the application's default palette.
 
 See also QApplication::setPalette() and QApplication::palette().
 */
-func (*QPalette) NewForInherit_5(windowText QColor_ITF, window QColor_ITF, light QColor_ITF, dark QColor_ITF, mid QColor_ITF, text QColor_ITF, base QColor_ITF) *QPalette {
-	return NewQPalette_5(windowText, window, light, dark, mid, text, base)
+func (*QPalette) NewForInherit5(windowText QColor_ITF, window QColor_ITF, light QColor_ITF, dark QColor_ITF, mid QColor_ITF, text QColor_ITF, base QColor_ITF) *QPalette {
+	return NewQPalette5(windowText, window, light, dark, mid, text, base)
 }
-func NewQPalette_5(windowText QColor_ITF, window QColor_ITF, light QColor_ITF, dark QColor_ITF, mid QColor_ITF, text QColor_ITF, base QColor_ITF) *QPalette {
+func NewQPalette5(windowText QColor_ITF, window QColor_ITF, light QColor_ITF, dark QColor_ITF, mid QColor_ITF, text QColor_ITF, base QColor_ITF) *QPalette {
 	var convArg0 unsafe.Pointer
 	if windowText != nil && windowText.QColor_PTR() != nil {
 		convArg0 = windowText.QColor_PTR().GetCthis()
@@ -310,7 +310,7 @@ func (this *QPalette) Operator_equal(palette QPalette_ITF) *QPalette {
 /*
 
  */
-func (this *QPalette) Operator_equal_1(other unsafe.Pointer /*333*/) *QPalette {
+func (this *QPalette) Operator_equal1(other unsafe.Pointer /*333*/) *QPalette {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -396,7 +396,7 @@ Returns the color in the specified color group, used for the given color role.
 
 See also brush(), setColor(), and ColorRole.
 */
-func (this *QPalette) Color_1(cr int) *QColor {
+func (this *QPalette) Color1(cr int) *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette5colorENS_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cr)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -432,7 +432,7 @@ Returns the brush in the specified color group, used for the given color role.
 
 See also color(), setBrush(), and ColorRole.
 */
-func (this *QPalette) Brush_1(cr int) *QBrush {
+func (this *QPalette) Brush1(cr int) *QBrush {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette5brushENS_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cr)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -469,7 +469,7 @@ Sets the color in the specified color group, used for the given color role, to t
 
 See also setBrush(), color(), and ColorRole.
 */
-func (this *QPalette) SetColor_1(cr int, color QColor_ITF) {
+func (this *QPalette) SetColor1(cr int, color QColor_ITF) {
 	var convArg1 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
 		convArg1 = color.QColor_PTR().GetCthis()
@@ -507,7 +507,7 @@ Sets the brush for the given color role to the specified brush for all groups in
 
 See also brush(), setColor(), and ColorRole.
 */
-func (this *QPalette) SetBrush_1(cg int, cr int, brush QBrush_ITF) {
+func (this *QPalette) SetBrush1(cg int, cr int, brush QBrush_ITF) {
 	var convArg2 unsafe.Pointer
 	if brush != nil && brush.QBrush_PTR() != nil {
 		convArg2 = brush.QBrush_PTR().GetCthis()
@@ -1081,7 +1081,7 @@ func (this *QPalette) Resolve(arg0 QPalette_ITF) *QPalette /*123*/ {
 /*
 Returns a new QPalette that has attributes copied from other.
 */
-func (this *QPalette) Resolve_1() uint {
+func (this *QPalette) Resolve1() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette7resolveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -1095,7 +1095,7 @@ func (this *QPalette) Resolve_1() uint {
 /*
 Returns a new QPalette that has attributes copied from other.
 */
-func (this *QPalette) Resolve_2(mask uint) {
+func (this *QPalette) Resolve2(mask uint) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette7resolveEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mask)
 	qtrt.ErrPrint(err, rv)
 }

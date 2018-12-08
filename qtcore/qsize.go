@@ -95,10 +95,10 @@ Constructs a size with an invalid width and height (i.e., isValid() returns fals
 
 See also isValid().
 */
-func (*QSize) NewForInherit_1(w int, h int) *QSize {
-	return NewQSize_1(w, h)
+func (*QSize) NewForInherit1(w int, h int) *QSize {
+	return NewQSize1(w, h)
 }
-func NewQSize_1(w int, h int) *QSize {
+func NewQSize1(w int, h int) *QSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QSizeC2Eii", qtrt.FFI_TYPE_POINTER, w, h)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSizeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -322,7 +322,7 @@ Example:
 
 See also setWidth(), setHeight(), and scaled().
 */
-func (this *QSize) Scale_1(s QSize_ITF, mode int) {
+func (this *QSize) Scale1(s QSize_ITF, mode int) {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
@@ -363,7 +363,7 @@ This function was introduced in  Qt 5.0.
 
 See also scale().
 */
-func (this *QSize) Scaled_1(s QSize_ITF, mode int) *QSize /*123*/ {
+func (this *QSize) Scaled1(s QSize_ITF, mode int) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()

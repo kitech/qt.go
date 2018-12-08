@@ -100,10 +100,10 @@ All elements are set to zero except m11 and m22 (specifying the scale), which ar
 
 See also reset().
 */
-func (*QMatrix) NewForInherit_1() *QMatrix {
-	return NewQMatrix_1()
+func (*QMatrix) NewForInherit1() *QMatrix {
+	return NewQMatrix1()
 }
-func NewQMatrix_1() *QMatrix {
+func NewQMatrix1() *QMatrix {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QMatrixC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -123,10 +123,10 @@ All elements are set to zero except m11 and m22 (specifying the scale), which ar
 
 See also reset().
 */
-func (*QMatrix) NewForInherit_2(m11 float64, m12 float64, m21 float64, m22 float64, dx float64, dy float64) *QMatrix {
-	return NewQMatrix_2(m11, m12, m21, m22, dx, dy)
+func (*QMatrix) NewForInherit2(m11 float64, m12 float64, m21 float64, m22 float64, dx float64, dy float64) *QMatrix {
+	return NewQMatrix2(m11, m12, m21, m22, dx, dy)
 }
-func NewQMatrix_2(m11 float64, m12 float64, m21 float64, m22 float64, dx float64, dy float64) *QMatrix {
+func NewQMatrix2(m11 float64, m12 float64, m21 float64, m22 float64, dx float64, dy float64) *QMatrix {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QMatrixC2Edddddd", qtrt.FFI_TYPE_POINTER, m11, m12, m21, m22, dx, dy)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -158,7 +158,7 @@ func (this *QMatrix) Operator_equal(other unsafe.Pointer /*333*/) *QMatrix {
 /*
 
  */
-func (this *QMatrix) Operator_equal_1(arg0 QMatrix_ITF) *QMatrix {
+func (this *QMatrix) Operator_equal1(arg0 QMatrix_ITF) *QMatrix {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMatrix_PTR() != nil {
 		convArg0 = arg0.QMatrix_PTR().GetCthis()
@@ -328,7 +328,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QMatrix) Map_1(x float64, y float64, tx unsafe.Pointer /*666*/, ty unsafe.Pointer /*666*/) {
+func (this *QMatrix) Map1(x float64, y float64, tx unsafe.Pointer /*666*/, ty unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix3mapEddPdS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, tx, ty)
 	qtrt.ErrPrint(err, rv)
 }
@@ -353,7 +353,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QMatrix) Map_2(p qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
+func (this *QMatrix) Map2(p qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -385,7 +385,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QMatrix) Map_3(p qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
+func (this *QMatrix) Map3(p qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -417,7 +417,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QMatrix) Map_4(l qtcore.QLine_ITF) *qtcore.QLine /*123*/ {
+func (this *QMatrix) Map4(l qtcore.QLine_ITF) *qtcore.QLine /*123*/ {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QLine_PTR() != nil {
 		convArg0 = l.QLine_PTR().GetCthis()
@@ -449,7 +449,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QMatrix) Map_5(l qtcore.QLineF_ITF) *qtcore.QLineF /*123*/ {
+func (this *QMatrix) Map5(l qtcore.QLineF_ITF) *qtcore.QLineF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QLineF_PTR() != nil {
 		convArg0 = l.QLineF_PTR().GetCthis()
@@ -481,7 +481,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QMatrix) Map_6(a QPolygonF_ITF) *QPolygonF /*123*/ {
+func (this *QMatrix) Map6(a QPolygonF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QPolygonF_PTR() != nil {
 		convArg0 = a.QPolygonF_PTR().GetCthis()
@@ -513,7 +513,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QMatrix) Map_7(a QPolygon_ITF) *QPolygon /*123*/ {
+func (this *QMatrix) Map7(a QPolygon_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QPolygon_PTR() != nil {
 		convArg0 = a.QPolygon_PTR().GetCthis()
@@ -545,7 +545,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QMatrix) Map_8(r QRegion_ITF) *QRegion /*123*/ {
+func (this *QMatrix) Map8(r QRegion_ITF) *QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRegion_PTR() != nil {
 		convArg0 = r.QRegion_PTR().GetCthis()
@@ -577,7 +577,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QMatrix) Map_9(p QPainterPath_ITF) *QPainterPath /*123*/ {
+func (this *QMatrix) Map9(p QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainterPath_PTR() != nil {
 		convArg0 = p.QPainterPath_PTR().GetCthis()
@@ -641,7 +641,7 @@ If rotation or shearing has been specified, this function returns the bounding r
 
 See also mapToPolygon() and Basic Matrix Operations.
 */
-func (this *QMatrix) MapRect_1(arg0 qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
+func (this *QMatrix) MapRect1(arg0 qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRectF_PTR() != nil {
 		convArg0 = arg0.QRectF_PTR().GetCthis()
@@ -856,7 +856,7 @@ If the matrix is singular (not invertible), the returned matrix is the identity 
 
 See also isInvertible().
 */
-func (this *QMatrix) Inverted__() *QMatrix /*123*/ {
+func (this *QMatrix) Invertedp() *QMatrix /*123*/ {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var invertible unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QMatrix8invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)

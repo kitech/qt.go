@@ -149,10 +149,10 @@ func NewQTextBrowser(parent QWidget_ITF /*777 QWidget **/) *QTextBrowser {
 /*
 Constructs an empty QTextBrowser with parent parent.
 */
-func (*QTextBrowser) NewForInherit__() *QTextBrowser {
-	return NewQTextBrowser__()
+func (*QTextBrowser) NewForInheritp() *QTextBrowser {
+	return NewQTextBrowserp()
 }
-func NewQTextBrowser__() *QTextBrowser {
+func NewQTextBrowserp() *QTextBrowser {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowserC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -626,8 +626,8 @@ Note: Signal highlighted is overloaded in this class. To connect to this signal 
   connect(textBrowser, QOverload<const QUrl &>::of(&QTextBrowser::highlighted),
       [=](const QUrl &link){ /-* ... *-/ });
 */
-func (this *QTextBrowser) Highlighted_1(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func (this *QTextBrowser) Highlighted1(arg0 string) {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser11highlightedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

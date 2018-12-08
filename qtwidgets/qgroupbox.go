@@ -159,10 +159,10 @@ func NewQGroupBox(parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
 /*
 Constructs a group box widget with the given parent but with no title.
 */
-func (*QGroupBox) NewForInherit__() *QGroupBox {
-	return NewQGroupBox__()
+func (*QGroupBox) NewForInheritp() *QGroupBox {
+	return NewQGroupBoxp()
 }
-func NewQGroupBox__() *QGroupBox {
+func NewQGroupBoxp() *QGroupBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -180,11 +180,11 @@ func NewQGroupBox__() *QGroupBox {
 /*
 Constructs a group box widget with the given parent but with no title.
 */
-func (*QGroupBox) NewForInherit_1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
-	return NewQGroupBox_1(title, parent)
+func (*QGroupBox) NewForInherit1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
+	return NewQGroupBox1(title, parent)
 }
-func NewQGroupBox_1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func NewQGroupBox1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -205,11 +205,11 @@ func NewQGroupBox_1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupB
 /*
 Constructs a group box widget with the given parent but with no title.
 */
-func (*QGroupBox) NewForInherit_1_(title string) *QGroupBox {
-	return NewQGroupBox_1_(title)
+func (*QGroupBox) NewForInherit1p(title string) *QGroupBox {
+	return NewQGroupBox1p(title)
 }
-func NewQGroupBox_1_(title string) *QGroupBox {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func NewQGroupBox1p(title string) *QGroupBox {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -261,7 +261,7 @@ func (this *QGroupBox) Title() string {
 
  */
 func (this *QGroupBox) SetTitle(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -424,7 +424,7 @@ This function was introduced in  Qt 4.2.
 
 See also checkable, toggled(), and checked.
 */
-func (this *QGroupBox) Clicked__() {
+func (this *QGroupBox) Clickedp() {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	checked := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox7clickedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), checked)

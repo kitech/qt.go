@@ -96,10 +96,10 @@ Constructs a polygon with no points.
 
 See also QVector::isEmpty().
 */
-func (*QPolygon) NewForInherit_1(size int) *QPolygon {
-	return NewQPolygon_1(size)
+func (*QPolygon) NewForInherit1(size int) *QPolygon {
+	return NewQPolygon1(size)
 }
-func NewQPolygon_1(size int) *QPolygon {
+func NewQPolygon1(size int) *QPolygon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygonC2Ei", qtrt.FFI_TYPE_POINTER, size)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,10 +117,10 @@ Constructs a polygon with no points.
 
 See also QVector::isEmpty().
 */
-func (*QPolygon) NewForInherit_2(r qtcore.QRect_ITF, closed bool) *QPolygon {
-	return NewQPolygon_2(r, closed)
+func (*QPolygon) NewForInherit2(r qtcore.QRect_ITF, closed bool) *QPolygon {
+	return NewQPolygon2(r, closed)
 }
-func NewQPolygon_2(r qtcore.QRect_ITF, closed bool) *QPolygon {
+func NewQPolygon2(r qtcore.QRect_ITF, closed bool) *QPolygon {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -142,10 +142,10 @@ Constructs a polygon with no points.
 
 See also QVector::isEmpty().
 */
-func (*QPolygon) NewForInherit_2_(r qtcore.QRect_ITF) *QPolygon {
-	return NewQPolygon_2_(r)
+func (*QPolygon) NewForInherit2p(r qtcore.QRect_ITF) *QPolygon {
+	return NewQPolygon2p(r)
 }
-func NewQPolygon_2_(r qtcore.QRect_ITF) *QPolygon {
+func NewQPolygon2p(r qtcore.QRect_ITF) *QPolygon {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -169,10 +169,10 @@ Constructs a polygon with no points.
 
 See also QVector::isEmpty().
 */
-func (*QPolygon) NewForInherit_3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
-	return NewQPolygon_3(nPoints, points)
+func (*QPolygon) NewForInherit3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
+	return NewQPolygon3(nPoints, points)
 }
-func NewQPolygon_3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
+func NewQPolygon3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPolygonC2EiPKi", qtrt.FFI_TYPE_POINTER, nPoints, points)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -219,7 +219,7 @@ func (this *QPolygon) Operator_equal(other unsafe.Pointer /*333*/) *QPolygon {
 /*
 
  */
-func (this *QPolygon) Operator_equal_1(other QPolygon_ITF) *QPolygon {
+func (this *QPolygon) Operator_equal1(other QPolygon_ITF) *QPolygon {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPolygon_PTR() != nil {
 		convArg0 = other.QPolygon_PTR().GetCthis()
@@ -275,7 +275,7 @@ Translates all points in the polygon by (dx, dy).
 
 See also translated().
 */
-func (this *QPolygon) Translate_1(offset qtcore.QPoint_ITF) {
+func (this *QPolygon) Translate1(offset qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
 		convArg0 = offset.QPoint_PTR().GetCthis()
@@ -316,7 +316,7 @@ This function was introduced in  Qt 4.6.
 
 See also translate().
 */
-func (this *QPolygon) Translated_1(offset qtcore.QPoint_ITF) *QPolygon /*123*/ {
+func (this *QPolygon) Translated1(offset qtcore.QPoint_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
 		convArg0 = offset.QPoint_PTR().GetCthis()
@@ -371,7 +371,7 @@ Extracts the coordinates of the point at the given index to *x and *y (if they a
 
 See also setPoint().
 */
-func (this *QPolygon) Point_1(i int) *qtcore.QPoint /*123*/ {
+func (this *QPolygon) Point1(i int) *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPolygon5pointEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -404,7 +404,7 @@ Sets the point at the given index to the point specified by (x, y).
 
 See also point(), putPoints(), and setPoints().
 */
-func (this *QPolygon) SetPoint_1(index int, p qtcore.QPoint_ITF) {
+func (this *QPolygon) SetPoint1(index int, p qtcore.QPoint_ITF) {
 	var convArg1 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg1 = p.QPoint_PTR().GetCthis()
@@ -502,7 +502,7 @@ The following code has the same result, but here the putPoints() function overwr
 
 See also setPoints().
 */
-func (this *QPolygon) PutPoints_1(index int, nPoints int, from QPolygon_ITF, fromIndex int) {
+func (this *QPolygon) PutPoints1(index int, nPoints int, from QPolygon_ITF, fromIndex int) {
 	var convArg2 unsafe.Pointer
 	if from != nil && from.QPolygon_PTR() != nil {
 		convArg2 = from.QPolygon_PTR().GetCthis()
@@ -541,7 +541,7 @@ The following code has the same result, but here the putPoints() function overwr
 
 See also setPoints().
 */
-func (this *QPolygon) PutPoints_1_(index int, nPoints int, from QPolygon_ITF) {
+func (this *QPolygon) PutPoints1p(index int, nPoints int, from QPolygon_ITF) {
 	var convArg2 unsafe.Pointer
 	if from != nil && from.QPolygon_PTR() != nil {
 		convArg2 = from.QPolygon_PTR().GetCthis()

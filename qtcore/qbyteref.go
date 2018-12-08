@@ -88,7 +88,7 @@ func (this *QByteRef) Operator_equal(c byte) *QByteRef {
 /*
 
  */
-func (this *QByteRef) Operator_equal_1(c QByteRef_ITF) *QByteRef {
+func (this *QByteRef) Operator_equal1(c QByteRef_ITF) *QByteRef {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QByteRef_PTR() != nil {
 		convArg0 = c.QByteRef_PTR().GetCthis()

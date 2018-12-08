@@ -109,10 +109,10 @@ func NewQDoubleSpinBox(parent QWidget_ITF /*777 QWidget **/) *QDoubleSpinBox {
 /*
 
  */
-func (*QDoubleSpinBox) NewForInherit__() *QDoubleSpinBox {
-	return NewQDoubleSpinBox__()
+func (*QDoubleSpinBox) NewForInheritp() *QDoubleSpinBox {
+	return NewQDoubleSpinBoxp()
 }
-func NewQDoubleSpinBox__() *QDoubleSpinBox {
+func NewQDoubleSpinBoxp() *QDoubleSpinBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDoubleSpinBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -177,7 +177,7 @@ func (this *QDoubleSpinBox) Prefix() string {
 
  */
 func (this *QDoubleSpinBox) SetPrefix(prefix string) {
-	var tmpArg0 = qtcore.NewQString_5(prefix)
+	var tmpArg0 = qtcore.NewQString5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDoubleSpinBox9setPrefixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -209,7 +209,7 @@ func (this *QDoubleSpinBox) Suffix() string {
 
  */
 func (this *QDoubleSpinBox) SetSuffix(suffix string) {
-	var tmpArg0 = qtcore.NewQString_5(suffix)
+	var tmpArg0 = qtcore.NewQString5(suffix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDoubleSpinBox9setSuffixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -377,7 +377,7 @@ func (this *QDoubleSpinBox) SetDecimals(prec int) {
 Reimplemented from QAbstractSpinBox::validate().
 */
 func (this *QDoubleSpinBox) Validate(input string, pos int) int {
-	var tmpArg0 = qtcore.NewQString_5(input)
+	var tmpArg0 = qtcore.NewQString5(input)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	qtrt.ErrPrint(err, rv)
@@ -399,7 +399,7 @@ Note: QSpinBox handles specialValueText() separately; this function is only conc
 See also textFromValue() and validate().
 */
 func (this *QDoubleSpinBox) ValueFromText(text string) float64 {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox13valueFromTextERK7QString", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -438,7 +438,7 @@ func (this *QDoubleSpinBox) TextFromValue(val float64) string {
 Reimplemented from QAbstractSpinBox::fixup().
 */
 func (this *QDoubleSpinBox) Fixup(str string) {
-	var tmpArg0 = qtcore.NewQString_5(str)
+	var tmpArg0 = qtcore.NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox5fixupER7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -498,8 +498,8 @@ Note: Signal valueChanged is overloaded in this class. To connect to this signal
 
 Note: Notifier signal for property value.
 */
-func (this *QDoubleSpinBox) ValueChanged_1(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func (this *QDoubleSpinBox) ValueChanged1(arg0 string) {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDoubleSpinBox12valueChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

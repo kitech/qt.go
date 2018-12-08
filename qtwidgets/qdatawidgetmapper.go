@@ -113,10 +113,10 @@ Constructs a new QDataWidgetMapper with parent object parent. By default, the or
 
 See also setOrientation() and setSubmitPolicy().
 */
-func (*QDataWidgetMapper) NewForInherit__() *QDataWidgetMapper {
-	return NewQDataWidgetMapper__()
+func (*QDataWidgetMapper) NewForInheritp() *QDataWidgetMapper {
+	return NewQDataWidgetMapperp()
 }
-func NewQDataWidgetMapper__() *QDataWidgetMapper {
+func NewQDataWidgetMapperp() *QDataWidgetMapper {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QDataWidgetMapperC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -369,7 +369,7 @@ Only one-to-one mappings between sections and widgets are allowed. It is not pos
 
 See also removeMapping(), mappedSection(), and clearMapping().
 */
-func (this *QDataWidgetMapper) AddMapping_1(widget QWidget_ITF /*777 QWidget **/, section int, propertyName qtcore.QByteArray_ITF) {
+func (this *QDataWidgetMapper) AddMapping1(widget QWidget_ITF /*777 QWidget **/, section int, propertyName qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()

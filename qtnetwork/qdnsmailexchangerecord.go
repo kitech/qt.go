@@ -108,7 +108,7 @@ func (this *QDnsMailExchangeRecord) Operator_equal(other unsafe.Pointer /*333*/)
 /*
 
  */
-func (this *QDnsMailExchangeRecord) Operator_equal_1(other QDnsMailExchangeRecord_ITF) *QDnsMailExchangeRecord {
+func (this *QDnsMailExchangeRecord) Operator_equal1(other QDnsMailExchangeRecord_ITF) *QDnsMailExchangeRecord {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDnsMailExchangeRecord_PTR() != nil {
 		convArg0 = other.QDnsMailExchangeRecord_PTR().GetCthis()

@@ -181,7 +181,7 @@ Sets the name (a unique identifier) for the device. In most systems it is enough
 See also name().
 */
 func (this *QTouchDevice) SetName(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTouchDevice7setNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -131,7 +131,7 @@ Note: The style must be configured before loading QML that imports Qt Quick Cont
 See also setFallbackStyle() and Using Styles in Qt Quick Controls 2.
 */
 func (this *QQuickStyle) SetStyle(style string) {
-	var tmpArg0 = qtcore.NewQString_5(style)
+	var tmpArg0 = qtcore.NewQString5(style)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle8setStyleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +160,7 @@ This function was introduced in  Qt 5.8.
 See also setStyle() and Using Styles in Qt Quick Controls 2.
 */
 func (this *QQuickStyle) SetFallbackStyle(style string) {
-	var tmpArg0 = qtcore.NewQString_5(style)
+	var tmpArg0 = qtcore.NewQString5(style)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle16setFallbackStyleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

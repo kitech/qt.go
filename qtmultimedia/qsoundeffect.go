@@ -110,10 +110,10 @@ func NewQSoundEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QSoundEffect 
 /*
 Creates a QSoundEffect with the given parent.
 */
-func (*QSoundEffect) NewForInherit__() *QSoundEffect {
-	return NewQSoundEffect__()
+func (*QSoundEffect) NewForInheritp() *QSoundEffect {
+	return NewQSoundEffectp()
 }
-func NewQSoundEffect__() *QSoundEffect {
+func NewQSoundEffectp() *QSoundEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSoundEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -419,7 +419,7 @@ Note: Setter function for property category.
 See also category().
 */
 func (this *QSoundEffect) SetCategory(category string) {
-	var tmpArg0 = qtcore.NewQString_5(category)
+	var tmpArg0 = qtcore.NewQString5(category)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSoundEffect11setCategoryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

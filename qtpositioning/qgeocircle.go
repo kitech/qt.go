@@ -90,10 +90,10 @@ func NewQGeoCircle() *QGeoCircle {
 /*
 Constructs a new, invalid geo circle.
 */
-func (*QGeoCircle) NewForInherit_1(center QGeoCoordinate_ITF, radius float64) *QGeoCircle {
-	return NewQGeoCircle_1(center, radius)
+func (*QGeoCircle) NewForInherit1(center QGeoCoordinate_ITF, radius float64) *QGeoCircle {
+	return NewQGeoCircle1(center, radius)
 }
-func NewQGeoCircle_1(center QGeoCoordinate_ITF, radius float64) *QGeoCircle {
+func NewQGeoCircle1(center QGeoCoordinate_ITF, radius float64) *QGeoCircle {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QGeoCoordinate_PTR() != nil {
 		convArg0 = center.QGeoCoordinate_PTR().GetCthis()
@@ -113,10 +113,10 @@ func NewQGeoCircle_1(center QGeoCoordinate_ITF, radius float64) *QGeoCircle {
 /*
 Constructs a new, invalid geo circle.
 */
-func (*QGeoCircle) NewForInherit_1_(center QGeoCoordinate_ITF) *QGeoCircle {
-	return NewQGeoCircle_1_(center)
+func (*QGeoCircle) NewForInherit1p(center QGeoCoordinate_ITF) *QGeoCircle {
+	return NewQGeoCircle1p(center)
 }
-func NewQGeoCircle_1_(center QGeoCoordinate_ITF) *QGeoCircle {
+func NewQGeoCircle1p(center QGeoCoordinate_ITF) *QGeoCircle {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QGeoCoordinate_PTR() != nil {
 		convArg0 = center.QGeoCoordinate_PTR().GetCthis()
@@ -138,10 +138,10 @@ func NewQGeoCircle_1_(center QGeoCoordinate_ITF) *QGeoCircle {
 /*
 Constructs a new, invalid geo circle.
 */
-func (*QGeoCircle) NewForInherit_2(other QGeoShape_ITF) *QGeoCircle {
-	return NewQGeoCircle_2(other)
+func (*QGeoCircle) NewForInherit2(other QGeoShape_ITF) *QGeoCircle {
+	return NewQGeoCircle2(other)
 }
-func NewQGeoCircle_2(other QGeoShape_ITF) *QGeoCircle {
+func NewQGeoCircle2(other QGeoShape_ITF) *QGeoCircle {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGeoShape_PTR() != nil {
 		convArg0 = other.QGeoShape_PTR().GetCthis()

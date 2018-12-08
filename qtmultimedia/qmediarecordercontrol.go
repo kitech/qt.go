@@ -316,7 +316,7 @@ func (this *QMediaRecorderControl) ActualLocationChanged(location qtcore.QUrl_IT
 Signals that an error has occurred. The errorString describes the error.
 */
 func (this *QMediaRecorderControl) Error(error int, errorString string) {
-	var tmpArg1 = qtcore.NewQString_5(errorString)
+	var tmpArg1 = qtcore.NewQString5(errorString)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMediaRecorderControl5errorEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -400,10 +400,10 @@ func NewQMediaRecorderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMed
 /*
 Constructs a media recorder control with the given parent.
 */
-func (*QMediaRecorderControl) NewForInherit__() *QMediaRecorderControl {
-	return NewQMediaRecorderControl__()
+func (*QMediaRecorderControl) NewForInheritp() *QMediaRecorderControl {
+	return NewQMediaRecorderControlp()
 }
-func NewQMediaRecorderControl__() *QMediaRecorderControl {
+func NewQMediaRecorderControlp() *QMediaRecorderControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMediaRecorderControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

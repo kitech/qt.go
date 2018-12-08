@@ -160,10 +160,10 @@ func NewQMediaNetworkAccessControl(parent qtcore.QObject_ITF /*777 QObject **/) 
 /*
 
  */
-func (*QMediaNetworkAccessControl) NewForInherit__() *QMediaNetworkAccessControl {
-	return NewQMediaNetworkAccessControl__()
+func (*QMediaNetworkAccessControl) NewForInheritp() *QMediaNetworkAccessControl {
+	return NewQMediaNetworkAccessControlp()
 }
-func NewQMediaNetworkAccessControl__() *QMediaNetworkAccessControl {
+func NewQMediaNetworkAccessControlp() *QMediaNetworkAccessControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMediaNetworkAccessControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

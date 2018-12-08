@@ -126,11 +126,11 @@ Constructs a QRegularExpression object with an empty pattern and no pattern opti
 
 See also setPattern() and setPatternOptions().
 */
-func (*QRegularExpression) NewForInherit_1(pattern string, options int) *QRegularExpression {
-	return NewQRegularExpression_1(pattern, options)
+func (*QRegularExpression) NewForInherit1(pattern string, options int) *QRegularExpression {
+	return NewQRegularExpression1(pattern, options)
 }
-func NewQRegularExpression_1(pattern string, options int) *QRegularExpression {
-	var tmpArg0 = NewQString_5(pattern)
+func NewQRegularExpression1(pattern string, options int) *QRegularExpression {
+	var tmpArg0 = NewQString5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpressionC2ERK7QString6QFlagsINS_13PatternOptionEE", qtrt.FFI_TYPE_POINTER, convArg0, options)
 	qtrt.ErrPrint(err, rv)
@@ -149,11 +149,11 @@ Constructs a QRegularExpression object with an empty pattern and no pattern opti
 
 See also setPattern() and setPatternOptions().
 */
-func (*QRegularExpression) NewForInherit_1_(pattern string) *QRegularExpression {
-	return NewQRegularExpression_1_(pattern)
+func (*QRegularExpression) NewForInherit1p(pattern string) *QRegularExpression {
+	return NewQRegularExpression1p(pattern)
 }
-func NewQRegularExpression_1_(pattern string) *QRegularExpression {
-	var tmpArg0 = NewQString_5(pattern)
+func NewQRegularExpression1p(pattern string) *QRegularExpression {
+	var tmpArg0 = NewQString5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QRegularExpression::PatternOptions=Typedef, QRegularExpression::PatternOptions=Typedef, QFlags<QRegularExpression::PatternOption>, Unexposed
 	options := 0
@@ -207,7 +207,7 @@ func (this *QRegularExpression) Operator_equal(re QRegularExpression_ITF) *QRegu
 /*
 
  */
-func (this *QRegularExpression) Operator_equal_1(re unsafe.Pointer /*333*/) *QRegularExpression {
+func (this *QRegularExpression) Operator_equal1(re unsafe.Pointer /*333*/) *QRegularExpression {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpressionaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), re)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -262,7 +262,7 @@ Sets the pattern string of the regular expression to pattern. The pattern option
 See also pattern() and setPatternOptions().
 */
 func (this *QRegularExpression) SetPattern(pattern string) {
-	var tmpArg0 = NewQString_5(pattern)
+	var tmpArg0 = NewQString5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpression10setPatternERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -388,7 +388,7 @@ The returned QRegularExpressionMatch object contains the results of the match.
 See also QRegularExpressionMatch and normal matching.
 */
 func (this *QRegularExpression) Match(subject string, offset int, matchType int, matchOptions int) *QRegularExpressionMatch /*123*/ {
-	var tmpArg0 = NewQString_5(subject)
+	var tmpArg0 = NewQString5(subject)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression5matchERK7QStringiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -409,8 +409,8 @@ The returned QRegularExpressionMatch object contains the results of the match.
 
 See also QRegularExpressionMatch and normal matching.
 */
-func (this *QRegularExpression) Match__(subject string) *QRegularExpressionMatch /*123*/ {
-	var tmpArg0 = NewQString_5(subject)
+func (this *QRegularExpression) Matchp(subject string) *QRegularExpressionMatch /*123*/ {
+	var tmpArg0 = NewQString5(subject)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	offset := int(0)
@@ -437,8 +437,8 @@ The returned QRegularExpressionMatch object contains the results of the match.
 
 See also QRegularExpressionMatch and normal matching.
 */
-func (this *QRegularExpression) Match__1(subject string, offset int) *QRegularExpressionMatch /*123*/ {
-	var tmpArg0 = NewQString_5(subject)
+func (this *QRegularExpression) Matchp1(subject string, offset int) *QRegularExpressionMatch /*123*/ {
+	var tmpArg0 = NewQString5(subject)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum, , Invalid
 	matchType := 0
@@ -463,8 +463,8 @@ The returned QRegularExpressionMatch object contains the results of the match.
 
 See also QRegularExpressionMatch and normal matching.
 */
-func (this *QRegularExpression) Match__2(subject string, offset int, matchType int) *QRegularExpressionMatch /*123*/ {
-	var tmpArg0 = NewQString_5(subject)
+func (this *QRegularExpression) Matchp2(subject string, offset int, matchType int) *QRegularExpressionMatch /*123*/ {
+	var tmpArg0 = NewQString5(subject)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
@@ -487,7 +487,7 @@ The returned QRegularExpressionMatch object contains the results of the match.
 
 See also QRegularExpressionMatch and normal matching.
 */
-func (this *QRegularExpression) Match_1(subjectRef QStringRef_ITF, offset int, matchType int, matchOptions int) *QRegularExpressionMatch /*123*/ {
+func (this *QRegularExpression) Match1(subjectRef QStringRef_ITF, offset int, matchType int, matchOptions int) *QRegularExpressionMatch /*123*/ {
 	var convArg0 unsafe.Pointer
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
@@ -511,7 +511,7 @@ The returned QRegularExpressionMatch object contains the results of the match.
 
 See also QRegularExpressionMatch and normal matching.
 */
-func (this *QRegularExpression) Match_1_(subjectRef QStringRef_ITF) *QRegularExpressionMatch /*123*/ {
+func (this *QRegularExpression) Match1p(subjectRef QStringRef_ITF) *QRegularExpressionMatch /*123*/ {
 	var convArg0 unsafe.Pointer
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
@@ -541,7 +541,7 @@ The returned QRegularExpressionMatch object contains the results of the match.
 
 See also QRegularExpressionMatch and normal matching.
 */
-func (this *QRegularExpression) Match_1_1(subjectRef QStringRef_ITF, offset int) *QRegularExpressionMatch /*123*/ {
+func (this *QRegularExpression) Match1p1(subjectRef QStringRef_ITF, offset int) *QRegularExpressionMatch /*123*/ {
 	var convArg0 unsafe.Pointer
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
@@ -569,7 +569,7 @@ The returned QRegularExpressionMatch object contains the results of the match.
 
 See also QRegularExpressionMatch and normal matching.
 */
-func (this *QRegularExpression) Match_1_2(subjectRef QStringRef_ITF, offset int, matchType int) *QRegularExpressionMatch /*123*/ {
+func (this *QRegularExpression) Match1p2(subjectRef QStringRef_ITF, offset int, matchType int) *QRegularExpressionMatch /*123*/ {
 	var convArg0 unsafe.Pointer
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
@@ -596,7 +596,7 @@ The returned QRegularExpressionMatchIterator is positioned before the first matc
 See also QRegularExpressionMatchIterator and global matching.
 */
 func (this *QRegularExpression) GlobalMatch(subject string, offset int, matchType int, matchOptions int) *QRegularExpressionMatchIterator /*123*/ {
-	var tmpArg0 = NewQString_5(subject)
+	var tmpArg0 = NewQString5(subject)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression11globalMatchERK7QStringiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, matchType, matchOptions)
 	qtrt.ErrPrint(err, rv)
@@ -617,8 +617,8 @@ The returned QRegularExpressionMatchIterator is positioned before the first matc
 
 See also QRegularExpressionMatchIterator and global matching.
 */
-func (this *QRegularExpression) GlobalMatch__(subject string) *QRegularExpressionMatchIterator /*123*/ {
-	var tmpArg0 = NewQString_5(subject)
+func (this *QRegularExpression) GlobalMatchp(subject string) *QRegularExpressionMatchIterator /*123*/ {
+	var tmpArg0 = NewQString5(subject)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	offset := int(0)
@@ -645,8 +645,8 @@ The returned QRegularExpressionMatchIterator is positioned before the first matc
 
 See also QRegularExpressionMatchIterator and global matching.
 */
-func (this *QRegularExpression) GlobalMatch__1(subject string, offset int) *QRegularExpressionMatchIterator /*123*/ {
-	var tmpArg0 = NewQString_5(subject)
+func (this *QRegularExpression) GlobalMatchp1(subject string, offset int) *QRegularExpressionMatchIterator /*123*/ {
+	var tmpArg0 = NewQString5(subject)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QRegularExpression::MatchType=Enum, QRegularExpression::MatchType=Enum, , Invalid
 	matchType := 0
@@ -671,8 +671,8 @@ The returned QRegularExpressionMatchIterator is positioned before the first matc
 
 See also QRegularExpressionMatchIterator and global matching.
 */
-func (this *QRegularExpression) GlobalMatch__2(subject string, offset int, matchType int) *QRegularExpressionMatchIterator /*123*/ {
-	var tmpArg0 = NewQString_5(subject)
+func (this *QRegularExpression) GlobalMatchp2(subject string, offset int, matchType int) *QRegularExpressionMatchIterator /*123*/ {
+	var tmpArg0 = NewQString5(subject)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 3, QRegularExpression::MatchOptions=Typedef, QRegularExpression::MatchOptions=Typedef, QFlags<QRegularExpression::MatchOption>, Unexposed
 	matchOptions := 0
@@ -695,7 +695,7 @@ The returned QRegularExpressionMatchIterator is positioned before the first matc
 
 See also QRegularExpressionMatchIterator and global matching.
 */
-func (this *QRegularExpression) GlobalMatch_1(subjectRef QStringRef_ITF, offset int, matchType int, matchOptions int) *QRegularExpressionMatchIterator /*123*/ {
+func (this *QRegularExpression) GlobalMatch1(subjectRef QStringRef_ITF, offset int, matchType int, matchOptions int) *QRegularExpressionMatchIterator /*123*/ {
 	var convArg0 unsafe.Pointer
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
@@ -719,7 +719,7 @@ The returned QRegularExpressionMatchIterator is positioned before the first matc
 
 See also QRegularExpressionMatchIterator and global matching.
 */
-func (this *QRegularExpression) GlobalMatch_1_(subjectRef QStringRef_ITF) *QRegularExpressionMatchIterator /*123*/ {
+func (this *QRegularExpression) GlobalMatch1p(subjectRef QStringRef_ITF) *QRegularExpressionMatchIterator /*123*/ {
 	var convArg0 unsafe.Pointer
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
@@ -749,7 +749,7 @@ The returned QRegularExpressionMatchIterator is positioned before the first matc
 
 See also QRegularExpressionMatchIterator and global matching.
 */
-func (this *QRegularExpression) GlobalMatch_1_1(subjectRef QStringRef_ITF, offset int) *QRegularExpressionMatchIterator /*123*/ {
+func (this *QRegularExpression) GlobalMatch1p1(subjectRef QStringRef_ITF, offset int) *QRegularExpressionMatchIterator /*123*/ {
 	var convArg0 unsafe.Pointer
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
@@ -777,7 +777,7 @@ The returned QRegularExpressionMatchIterator is positioned before the first matc
 
 See also QRegularExpressionMatchIterator and global matching.
 */
-func (this *QRegularExpression) GlobalMatch_1_2(subjectRef QStringRef_ITF, offset int, matchType int) *QRegularExpressionMatchIterator /*123*/ {
+func (this *QRegularExpression) GlobalMatch1p2(subjectRef QStringRef_ITF, offset int, matchType int) *QRegularExpressionMatchIterator /*123*/ {
 	var convArg0 unsafe.Pointer
 	if subjectRef != nil && subjectRef.QStringRef_PTR() != nil {
 		convArg0 = subjectRef.QStringRef_PTR().GetCthis()
@@ -836,7 +836,7 @@ This is very convenient in order to build patterns from arbitrary strings:
 Note: This function implements Perl's quotemeta algorithm and escapes with a backslash all characters in str, except for the characters in the [A-Z], [a-z] and [0-9] ranges, as well as the underscore (_) character. The only difference with Perl is that a literal NUL inside str is escaped with the sequence "\\0" (backslash + '0'), instead of "\\\0" (backslash + NUL).
 */
 func (this *QRegularExpression) Escape(str string) string {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpression6escapeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

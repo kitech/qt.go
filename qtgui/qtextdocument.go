@@ -118,10 +118,10 @@ func NewQTextDocument(parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocumen
 /*
 Constructs an empty QTextDocument with the given parent.
 */
-func (*QTextDocument) NewForInherit__() *QTextDocument {
-	return NewQTextDocument__()
+func (*QTextDocument) NewForInheritp() *QTextDocument {
+	return NewQTextDocumentp()
 }
-func NewQTextDocument__() *QTextDocument {
+func NewQTextDocumentp() *QTextDocument {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocumentC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -139,11 +139,11 @@ func NewQTextDocument__() *QTextDocument {
 /*
 Constructs an empty QTextDocument with the given parent.
 */
-func (*QTextDocument) NewForInherit_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocument {
-	return NewQTextDocument_1(text, parent)
+func (*QTextDocument) NewForInherit1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocument {
+	return NewQTextDocument1(text, parent)
 }
-func NewQTextDocument_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocument {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQTextDocument1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QTextDocument {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -164,11 +164,11 @@ func NewQTextDocument_1(text string, parent qtcore.QObject_ITF /*777 QObject **/
 /*
 Constructs an empty QTextDocument with the given parent.
 */
-func (*QTextDocument) NewForInherit_1_(text string) *QTextDocument {
-	return NewQTextDocument_1_(text)
+func (*QTextDocument) NewForInherit1p(text string) *QTextDocument {
+	return NewQTextDocument1p(text)
 }
-func NewQTextDocument_1_(text string) *QTextDocument {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQTextDocument1p(text string) *QTextDocument {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -220,7 +220,7 @@ func (this *QTextDocument) Clone(parent qtcore.QObject_ITF /*777 QObject **/) *Q
 /*
 Creates a new QTextDocument that is a copy of this text document. parent is the parent of the returned text document.
 */
-func (this *QTextDocument) Clone__() *QTextDocument /*777 QTextDocument **/ {
+func (this *QTextDocument) Clonep() *QTextDocument /*777 QTextDocument **/ {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument5cloneEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -416,7 +416,7 @@ Sets the document's meta information of the type specified by info to the given 
 See also metaInformation().
 */
 func (this *QTextDocument) SetMetaInformation(info int, arg1 string) {
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument18setMetaInformationENS_15MetaInformationERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), info, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -496,7 +496,7 @@ If you later on convert the returned html string into a byte array for transmiss
 
 See also Supported HTML Subset.
 */
-func (this *QTextDocument) ToHtml__() string {
+func (this *QTextDocument) ToHtmlp() string {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument6toHtmlERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -522,7 +522,7 @@ Note: It is the responsibility of the caller to make sure that the text is corre
 See also setPlainText() and Supported HTML Subset.
 */
 func (this *QTextDocument) SetHtml(html string) {
-	var tmpArg0 = qtcore.NewQString_5(html)
+	var tmpArg0 = qtcore.NewQString5(html)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument7setHtmlERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -583,7 +583,7 @@ Replaces the entire contents of the document with the given plain text. The undo
 See also setHtml().
 */
 func (this *QTextDocument) SetPlainText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument12setPlainTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -624,7 +624,7 @@ If the given cursor has a selection, the search begins after the selection; othe
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find(subString string, from int, options int) *QTextCursor /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(subString)
+	var tmpArg0 = qtcore.NewQString5(subString)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextDocument4findERK7QStringi6QFlagsINS_8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, options)
 	qtrt.ErrPrint(err, rv)
@@ -647,8 +647,8 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find__(subString string) *QTextCursor /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(subString)
+func (this *QTextDocument) Findp(subString string) *QTextCursor /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(subString)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
@@ -675,8 +675,8 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find__1(subString string, from int) *QTextCursor /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(subString)
+func (this *QTextDocument) Findp1(subString string, from int) *QTextCursor /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(subString)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QTextDocument::FindFlags=Typedef, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
@@ -701,8 +701,8 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_1(subString string, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(subString)
+func (this *QTextDocument) Find1(subString string, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(subString)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if cursor != nil && cursor.QTextCursor_PTR() != nil {
@@ -729,8 +729,8 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_1_(subString string, cursor QTextCursor_ITF) *QTextCursor /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(subString)
+func (this *QTextDocument) Find1p(subString string, cursor QTextCursor_ITF) *QTextCursor /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(subString)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if cursor != nil && cursor.QTextCursor_PTR() != nil {
@@ -759,7 +759,7 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_2(expr qtcore.QRegExp_ITF, from int, options int) *QTextCursor /*123*/ {
+func (this *QTextDocument) Find2(expr qtcore.QRegExp_ITF, from int, options int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if expr != nil && expr.QRegExp_PTR() != nil {
 		convArg0 = expr.QRegExp_PTR().GetCthis()
@@ -785,7 +785,7 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_2_(expr qtcore.QRegExp_ITF) *QTextCursor /*123*/ {
+func (this *QTextDocument) Find2p(expr qtcore.QRegExp_ITF) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if expr != nil && expr.QRegExp_PTR() != nil {
 		convArg0 = expr.QRegExp_PTR().GetCthis()
@@ -815,7 +815,7 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_2_1(expr qtcore.QRegExp_ITF, from int) *QTextCursor /*123*/ {
+func (this *QTextDocument) Find2p1(expr qtcore.QRegExp_ITF, from int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if expr != nil && expr.QRegExp_PTR() != nil {
 		convArg0 = expr.QRegExp_PTR().GetCthis()
@@ -843,7 +843,7 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_3(expr qtcore.QRegExp_ITF, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
+func (this *QTextDocument) Find3(expr qtcore.QRegExp_ITF, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if expr != nil && expr.QRegExp_PTR() != nil {
 		convArg0 = expr.QRegExp_PTR().GetCthis()
@@ -873,7 +873,7 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_3_(expr qtcore.QRegExp_ITF, cursor QTextCursor_ITF) *QTextCursor /*123*/ {
+func (this *QTextDocument) Find3p(expr qtcore.QRegExp_ITF, cursor QTextCursor_ITF) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if expr != nil && expr.QRegExp_PTR() != nil {
 		convArg0 = expr.QRegExp_PTR().GetCthis()
@@ -905,7 +905,7 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_4(expr qtcore.QRegularExpression_ITF, from int, options int) *QTextCursor /*123*/ {
+func (this *QTextDocument) Find4(expr qtcore.QRegularExpression_ITF, from int, options int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if expr != nil && expr.QRegularExpression_PTR() != nil {
 		convArg0 = expr.QRegularExpression_PTR().GetCthis()
@@ -931,7 +931,7 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_4_(expr qtcore.QRegularExpression_ITF) *QTextCursor /*123*/ {
+func (this *QTextDocument) Find4p(expr qtcore.QRegularExpression_ITF) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if expr != nil && expr.QRegularExpression_PTR() != nil {
 		convArg0 = expr.QRegularExpression_PTR().GetCthis()
@@ -961,7 +961,7 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_4_1(expr qtcore.QRegularExpression_ITF, from int) *QTextCursor /*123*/ {
+func (this *QTextDocument) Find4p1(expr qtcore.QRegularExpression_ITF, from int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if expr != nil && expr.QRegularExpression_PTR() != nil {
 		convArg0 = expr.QRegularExpression_PTR().GetCthis()
@@ -989,7 +989,7 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_5(expr qtcore.QRegularExpression_ITF, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
+func (this *QTextDocument) Find5(expr qtcore.QRegularExpression_ITF, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if expr != nil && expr.QRegularExpression_PTR() != nil {
 		convArg0 = expr.QRegularExpression_PTR().GetCthis()
@@ -1019,7 +1019,7 @@ If the given cursor has a selection, the search begins after the selection; othe
 
 By default the search is case-sensitive, and can match text anywhere in the document.
 */
-func (this *QTextDocument) Find_5_(expr qtcore.QRegularExpression_ITF, cursor QTextCursor_ITF) *QTextCursor /*123*/ {
+func (this *QTextDocument) Find5p(expr qtcore.QRegularExpression_ITF, cursor QTextCursor_ITF) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if expr != nil && expr.QRegularExpression_PTR() != nil {
 		convArg0 = expr.QRegularExpression_PTR().GetCthis()
@@ -1502,7 +1502,7 @@ Draws the content of the document with painter p, clipped to rect. If rect is a 
 
 This function was introduced in  Qt 4.2.
 */
-func (this *QTextDocument) DrawContents__(painter QPainter_ITF /*777 QPainter **/) {
+func (this *QTextDocument) DrawContentsp(painter QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -1712,7 +1712,7 @@ func (this *QTextDocument) CharacterCount() int {
 
  */
 func (this *QTextDocument) SetDefaultStyleSheet(sheet string) {
-	var tmpArg0 = qtcore.NewQString_5(sheet)
+	var tmpArg0 = qtcore.NewQString5(sheet)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument20setDefaultStyleSheetERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1772,7 +1772,7 @@ This function was introduced in  Qt 4.2.
 
 See also undoAvailable() and isUndoRedoEnabled().
 */
-func (this *QTextDocument) Undo_1() {
+func (this *QTextDocument) Undo1() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument4undoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
@@ -1810,7 +1810,7 @@ The provided cursor is positioned at the end of the location where the edition o
 
 This function was introduced in  Qt 4.2.
 */
-func (this *QTextDocument) Redo_1() {
+func (this *QTextDocument) Redo1() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument4redoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
@@ -1848,7 +1848,7 @@ This function was introduced in  Qt 4.7.
 
 See also QTextDocument::undoAvailable() and QTextDocument::redoAvailable().
 */
-func (this *QTextDocument) ClearUndoRedoStacks__() {
+func (this *QTextDocument) ClearUndoRedoStacksp() {
 	// arg: 0, QTextDocument::Stacks=Enum, QTextDocument::Stacks=Enum, , Invalid
 	historyToClear := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument19clearUndoRedoStacksENS_6StacksE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), historyToClear)
@@ -2193,7 +2193,7 @@ func (this *QTextDocument) SetModified(m bool) {
 /*
 
  */
-func (this *QTextDocument) SetModified__() {
+func (this *QTextDocument) SetModifiedp() {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	m := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextDocument11setModifiedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), m)

@@ -90,7 +90,7 @@ Plays the sound stored in the file specified by the given filename.
 See also stop(), loopsRemaining(), and isFinished().
 */
 func (this *QSound) Play(filename string) {
-	var tmpArg0 = qtcore.NewQString_5(filename)
+	var tmpArg0 = qtcore.NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QSound4playERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -110,7 +110,7 @@ Plays the sound stored in the file specified by the given filename.
 
 See also stop(), loopsRemaining(), and isFinished().
 */
-func (this *QSound) Play_1() {
+func (this *QSound) Play1() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QSound4playEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
@@ -129,7 +129,7 @@ func (*QSound) NewForInherit(filename string, parent qtcore.QObject_ITF /*777 QO
 	return NewQSound(filename, parent)
 }
 func NewQSound(filename string, parent qtcore.QObject_ITF /*777 QObject **/) *QSound {
-	var tmpArg0 = qtcore.NewQString_5(filename)
+	var tmpArg0 = qtcore.NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -152,11 +152,11 @@ Constructs a QSound object from the file specified by the given filename and wit
 
 See also play().
 */
-func (*QSound) NewForInherit__(filename string) *QSound {
-	return NewQSound__(filename)
+func (*QSound) NewForInheritp(filename string) *QSound {
+	return NewQSoundp(filename)
 }
-func NewQSound__(filename string) *QSound {
-	var tmpArg0 = qtcore.NewQString_5(filename)
+func NewQSoundp(filename string) *QSound {
+	var tmpArg0 = qtcore.NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer

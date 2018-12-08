@@ -111,10 +111,10 @@ Constructs a shared memory object with the given parent and with its key set to 
 
 See also setKey(), create(), and attach().
 */
-func (*QSharedMemory) NewForInherit__() *QSharedMemory {
-	return NewQSharedMemory__()
+func (*QSharedMemory) NewForInheritp() *QSharedMemory {
+	return NewQSharedMemoryp()
 }
-func NewQSharedMemory__() *QSharedMemory {
+func NewQSharedMemoryp() *QSharedMemory {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemoryC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -134,11 +134,11 @@ Constructs a shared memory object with the given parent and with its key set to 
 
 See also setKey(), create(), and attach().
 */
-func (*QSharedMemory) NewForInherit_1(key string, parent QObject_ITF /*777 QObject **/) *QSharedMemory {
-	return NewQSharedMemory_1(key, parent)
+func (*QSharedMemory) NewForInherit1(key string, parent QObject_ITF /*777 QObject **/) *QSharedMemory {
+	return NewQSharedMemory1(key, parent)
 }
-func NewQSharedMemory_1(key string, parent QObject_ITF /*777 QObject **/) *QSharedMemory {
-	var tmpArg0 = NewQString_5(key)
+func NewQSharedMemory1(key string, parent QObject_ITF /*777 QObject **/) *QSharedMemory {
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -161,11 +161,11 @@ Constructs a shared memory object with the given parent and with its key set to 
 
 See also setKey(), create(), and attach().
 */
-func (*QSharedMemory) NewForInherit_1_(key string) *QSharedMemory {
-	return NewQSharedMemory_1_(key)
+func (*QSharedMemory) NewForInherit1p(key string) *QSharedMemory {
+	return NewQSharedMemory1p(key)
 }
-func NewQSharedMemory_1_(key string) *QSharedMemory {
-	var tmpArg0 = NewQString_5(key)
+func NewQSharedMemory1p(key string) *QSharedMemory {
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -206,7 +206,7 @@ If the shared memory object is attached to an underlying shared memory segment, 
 See also key(), nativeKey(), and isAttached().
 */
 func (this *QSharedMemory) SetKey(key string) {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory6setKeyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -252,7 +252,7 @@ This function was introduced in  Qt 4.8.
 See also nativeKey(), key(), and isAttached().
 */
 func (this *QSharedMemory) SetNativeKey(key string) {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory12setNativeKeyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -307,7 +307,7 @@ Creates a shared memory segment of size bytes with the key passed to the constru
 
 See also error().
 */
-func (this *QSharedMemory) Create__(size int) bool {
+func (this *QSharedMemory) Createp(size int) bool {
 	// arg: 1, QSharedMemory::AccessMode=Enum, QSharedMemory::AccessMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory6createEiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size, mode)
@@ -359,7 +359,7 @@ Attempts to attach the process to the shared memory segment identified by the ke
 
 See also isAttached(), detach(), and create().
 */
-func (this *QSharedMemory) Attach__() bool {
+func (this *QSharedMemory) Attachp() bool {
 	// arg: 0, QSharedMemory::AccessMode=Enum, QSharedMemory::AccessMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSharedMemory6attachENS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
@@ -425,7 +425,7 @@ Returns a pointer to the contents of the shared memory segment, if one is attach
 
 See also attach().
 */
-func (this *QSharedMemory) Data_1() unsafe.Pointer /*666*/ {
+func (this *QSharedMemory) Data1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSharedMemory4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))

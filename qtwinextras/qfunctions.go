@@ -125,7 +125,7 @@ func ToHRGN(region qtgui.QRegion_ITF) unsafe.Pointer /*666*/ {
 
  */
 func SetCurrentProcessExplicitAppUserModelID(id string) {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin39setCurrentProcessExplicitAppUserModelIDERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -156,7 +156,7 @@ func SetWindowExcludedFromPeek(window qtgui.QWindow_ITF /*777 QWindow **/, exclu
 /*
 
  */
-func SetWindowExcludedFromPeek_1(window qtwidgets.QWidget_ITF /*777 QWidget **/, exclude bool) {
+func SetWindowExcludedFromPeek1(window qtwidgets.QWidget_ITF /*777 QWidget **/, exclude bool) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -190,7 +190,7 @@ func ExtendFrameIntoClientArea(window qtgui.QWindow_ITF /*777 QWindow **/, left 
 /*
 
  */
-func ExtendFrameIntoClientArea_1(window qtgui.QWindow_ITF /*777 QWindow **/, margins qtcore.QMargins_ITF) {
+func ExtendFrameIntoClientArea1(window qtgui.QWindow_ITF /*777 QWindow **/, margins qtcore.QMargins_ITF) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg0 = window.QWindow_PTR().GetCthis()
@@ -211,7 +211,7 @@ func ExtendFrameIntoClientArea_1(window qtgui.QWindow_ITF /*777 QWindow **/, mar
 /*
 
  */
-func ExtendFrameIntoClientArea_2(window qtwidgets.QWidget_ITF /*777 QWidget **/, left int, top int, right int, bottom int) {
+func ExtendFrameIntoClientArea2(window qtwidgets.QWidget_ITF /*777 QWidget **/, left int, top int, right int, bottom int) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -228,7 +228,7 @@ func ExtendFrameIntoClientArea_2(window qtwidgets.QWidget_ITF /*777 QWidget **/,
 /*
 
  */
-func ExtendFrameIntoClientArea_3(window qtwidgets.QWidget_ITF /*777 QWidget **/, margins qtcore.QMargins_ITF) {
+func ExtendFrameIntoClientArea3(window qtwidgets.QWidget_ITF /*777 QWidget **/, margins qtcore.QMargins_ITF) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -267,7 +267,7 @@ func IsWindowExcludedFromPeek(window qtgui.QWindow_ITF /*777 QWindow **/) bool {
 /*
 
  */
-func IsWindowExcludedFromPeek_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) bool {
+func IsWindowExcludedFromPeek1(window qtwidgets.QWidget_ITF /*777 QWidget **/) bool {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -302,7 +302,7 @@ func DisableBlurBehindWindow(window qtgui.QWindow_ITF /*777 QWindow **/) {
 /*
 
  */
-func DisableBlurBehindWindow_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+func DisableBlurBehindWindow1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -337,7 +337,7 @@ func IsWindowPeekDisallowed(window qtgui.QWindow_ITF /*777 QWindow **/) bool {
 /*
 
  */
-func IsWindowPeekDisallowed_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) bool {
+func IsWindowPeekDisallowed1(window qtwidgets.QWidget_ITF /*777 QWidget **/) bool {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -393,7 +393,7 @@ func EnableBlurBehindWindow(window qtgui.QWindow_ITF /*777 QWindow **/, region q
 /*
 
  */
-func EnableBlurBehindWindow_1(window qtgui.QWindow_ITF /*777 QWindow **/) {
+func EnableBlurBehindWindow1(window qtgui.QWindow_ITF /*777 QWindow **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg0 = window.QWindow_PTR().GetCthis()
@@ -410,7 +410,7 @@ func EnableBlurBehindWindow_1(window qtgui.QWindow_ITF /*777 QWindow **/) {
 /*
 
  */
-func EnableBlurBehindWindow_2(window qtwidgets.QWidget_ITF /*777 QWidget **/, region qtgui.QRegion_ITF) {
+func EnableBlurBehindWindow2(window qtwidgets.QWidget_ITF /*777 QWidget **/, region qtgui.QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -431,7 +431,7 @@ func EnableBlurBehindWindow_2(window qtwidgets.QWidget_ITF /*777 QWidget **/, re
 /*
 
  */
-func EnableBlurBehindWindow_3(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+func EnableBlurBehindWindow3(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -465,7 +465,7 @@ func TaskbarActivateTabAlt(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 /*
 
  */
-func TaskbarActivateTabAlt_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+func TaskbarActivateTabAlt1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -499,7 +499,7 @@ func SetWindowFlip3DPolicy(window qtgui.QWindow_ITF /*777 QWindow **/, policy in
 /*
 
  */
-func SetWindowFlip3DPolicy_1(window qtwidgets.QWidget_ITF /*777 QWidget **/, policy int) {
+func SetWindowFlip3DPolicy1(window qtwidgets.QWidget_ITF /*777 QWidget **/, policy int) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -533,7 +533,7 @@ func SetWindowDisallowPeek(window qtgui.QWindow_ITF /*777 QWindow **/, disallow 
 /*
 
  */
-func SetWindowDisallowPeek_1(window qtwidgets.QWidget_ITF /*777 QWidget **/, disallow bool) {
+func SetWindowDisallowPeek1(window qtwidgets.QWidget_ITF /*777 QWidget **/, disallow bool) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -596,7 +596,7 @@ func MarkFullscreenWindow(arg0 qtgui.QWindow_ITF /*777 QWindow **/, fullscreen b
 /*
 
  */
-func MarkFullscreenWindow_1(window qtwidgets.QWidget_ITF /*777 QWidget **/, fullscreen bool) {
+func MarkFullscreenWindow1(window qtwidgets.QWidget_ITF /*777 QWidget **/, fullscreen bool) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -659,7 +659,7 @@ func WindowFlip3DPolicy(arg0 qtgui.QWindow_ITF /*777 QWindow **/) int {
 /*
 
  */
-func WindowFlip3DPolicy_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) int {
+func WindowFlip3DPolicy1(window qtwidgets.QWidget_ITF /*777 QWidget **/) int {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -694,7 +694,7 @@ func TaskbarActivateTab(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 /*
 
  */
-func TaskbarActivateTab_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+func TaskbarActivateTab1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -728,7 +728,7 @@ func ResetExtendedFrame(window qtgui.QWindow_ITF /*777 QWindow **/) {
 /*
 
  */
-func ResetExtendedFrame_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+func ResetExtendedFrame1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -795,7 +795,7 @@ func TaskbarDeleteTab(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 /*
 
  */
-func TaskbarDeleteTab_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+func TaskbarDeleteTab1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()
@@ -845,7 +845,7 @@ func TaskbarAddTab(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 /*
 
  */
-func TaskbarAddTab_1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
+func TaskbarAddTab1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWidget_PTR() != nil {
 		convArg0 = window.QWidget_PTR().GetCthis()

@@ -128,7 +128,7 @@ func (this *QJsonObject) Operator_equal(other QJsonObject_ITF) *QJsonObject {
 /*
 
  */
-func (this *QJsonObject) Operator_equal_1(other unsafe.Pointer /*333*/) *QJsonObject {
+func (this *QJsonObject) Operator_equal1(other unsafe.Pointer /*333*/) *QJsonObject {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObjectaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -248,7 +248,7 @@ The returned QJsonValue is QJsonValue::Undefined if the key does not exist.
 See also QJsonValue and QJsonValue::isUndefined().
 */
 func (this *QJsonObject) Value(key string) *QJsonValue /*123*/ {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject5valueERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -269,7 +269,7 @@ The returned QJsonValue is QJsonValue::Undefined if the key does not exist.
 
 See also QJsonValue and QJsonValue::isUndefined().
 */
-func (this *QJsonObject) Value_1(key QLatin1String_ITF /*123*/) *QJsonValue /*123*/ {
+func (this *QJsonObject) Value1(key QLatin1String_ITF /*123*/) *QJsonValue /*123*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
 		convArg0 = key.QLatin1String_PTR().GetCthis()
@@ -290,7 +290,7 @@ func (this *QJsonObject) Value_1(key QLatin1String_ITF /*123*/) *QJsonValue /*12
 
  */
 func (this *QJsonObject) Operator_get_index(key string) *QJsonValue /*123*/ {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObjectixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -307,7 +307,7 @@ func (this *QJsonObject) Operator_get_index(key string) *QJsonValue /*123*/ {
 /*
 
  */
-func (this *QJsonObject) Operator_get_index_1(key QLatin1String_ITF /*123*/) *QJsonValue /*123*/ {
+func (this *QJsonObject) Operator_get_index1(key QLatin1String_ITF /*123*/) *QJsonValue /*123*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
 		convArg0 = key.QLatin1String_PTR().GetCthis()
@@ -327,8 +327,8 @@ func (this *QJsonObject) Operator_get_index_1(key QLatin1String_ITF /*123*/) *QJ
 /*
 
  */
-func (this *QJsonObject) Operator_get_index_2(key string) *QJsonValueRef /*123*/ {
-	var tmpArg0 = NewQString_5(key)
+func (this *QJsonObject) Operator_get_index2(key string) *QJsonValueRef /*123*/ {
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObjectixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -345,7 +345,7 @@ func (this *QJsonObject) Operator_get_index_2(key string) *QJsonValueRef /*123*/
 /*
 
  */
-func (this *QJsonObject) Operator_get_index_3(key QLatin1String_ITF /*123*/) *QJsonValueRef /*123*/ {
+func (this *QJsonObject) Operator_get_index3(key QLatin1String_ITF /*123*/) *QJsonValueRef /*123*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
 		convArg0 = key.QLatin1String_PTR().GetCthis()
@@ -368,7 +368,7 @@ Removes key from the object.
 See also insert() and take().
 */
 func (this *QJsonObject) Remove(key string) {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObject6removeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -387,7 +387,7 @@ Returns a QJsonValue containing the value referenced by key. If key was not cont
 See also insert(), remove(), and QJsonValue.
 */
 func (this *QJsonObject) Take(key string) *QJsonValue /*123*/ {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObject4takeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -407,7 +407,7 @@ Returns true if the object contains key key.
 See also insert(), remove(), and take().
 */
 func (this *QJsonObject) Contains(key string) bool {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject8containsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -424,7 +424,7 @@ Returns true if the object contains key key.
 
 See also insert(), remove(), and take().
 */
-func (this *QJsonObject) Contains_1(key QLatin1String_ITF /*123*/) bool {
+func (this *QJsonObject) Contains1(key QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
 		convArg0 = key.QLatin1String_PTR().GetCthis()
@@ -496,7 +496,7 @@ Returns an STL-style iterator pointing to the first item in the object.
 
 See also constBegin() and end().
 */
-func (this *QJsonObject) Begin_1() unsafe.Pointer /*444*/ {
+func (this *QJsonObject) Begin1() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -544,7 +544,7 @@ Returns an STL-style iterator pointing to the imaginary item after the last item
 
 See also begin() and constEnd().
 */
-func (this *QJsonObject) End_1() unsafe.Pointer /*444*/ {
+func (this *QJsonObject) End1() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -577,7 +577,7 @@ Returns an iterator pointing to the item with key key in the map.
 If the map contains no item with key key, the function returns end().
 */
 func (this *QJsonObject) Find(key string) unsafe.Pointer /*444*/ {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObject4findERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -594,7 +594,7 @@ Returns an iterator pointing to the item with key key in the map.
 
 If the map contains no item with key key, the function returns end().
 */
-func (this *QJsonObject) Find_1(key QLatin1String_ITF /*123*/) unsafe.Pointer /*444*/ {
+func (this *QJsonObject) Find1(key QLatin1String_ITF /*123*/) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
 		convArg0 = key.QLatin1String_PTR().GetCthis()
@@ -614,8 +614,8 @@ Returns an iterator pointing to the item with key key in the map.
 
 If the map contains no item with key key, the function returns end().
 */
-func (this *QJsonObject) Find_2(key string) unsafe.Pointer /*444*/ {
-	var tmpArg0 = NewQString_5(key)
+func (this *QJsonObject) Find2(key string) unsafe.Pointer /*444*/ {
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject4findERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -632,7 +632,7 @@ Returns an iterator pointing to the item with key key in the map.
 
 If the map contains no item with key key, the function returns end().
 */
-func (this *QJsonObject) Find_3(key QLatin1String_ITF /*123*/) unsafe.Pointer /*444*/ {
+func (this *QJsonObject) Find3(key QLatin1String_ITF /*123*/) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
 		convArg0 = key.QLatin1String_PTR().GetCthis()
@@ -653,7 +653,7 @@ Returns a const iterator pointing to the item with key key in the map.
 If the map contains no item with key key, the function returns constEnd().
 */
 func (this *QJsonObject) ConstFind(key string) unsafe.Pointer /*444*/ {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QJsonObject9constFindERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -670,7 +670,7 @@ Returns a const iterator pointing to the item with key key in the map.
 
 If the map contains no item with key key, the function returns constEnd().
 */
-func (this *QJsonObject) ConstFind_1(key QLatin1String_ITF /*123*/) unsafe.Pointer /*444*/ {
+func (this *QJsonObject) ConstFind1(key QLatin1String_ITF /*123*/) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
 		convArg0 = key.QLatin1String_PTR().GetCthis()

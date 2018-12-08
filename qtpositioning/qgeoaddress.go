@@ -193,7 +193,7 @@ If text is empty, indicates that text() should be automatically generated from t
 See also text().
 */
 func (this *QGeoAddress) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGeoAddress7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -229,7 +229,7 @@ Sets the country name.
 See also country().
 */
 func (this *QGeoAddress) SetCountry(country string) {
-	var tmpArg0 = qtcore.NewQString_5(country)
+	var tmpArg0 = qtcore.NewQString5(country)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGeoAddress10setCountryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -265,7 +265,7 @@ Sets the countryCode according to ISO 3166-1 alpha-3
 See also countryCode().
 */
 func (this *QGeoAddress) SetCountryCode(countryCode string) {
-	var tmpArg0 = qtcore.NewQString_5(countryCode)
+	var tmpArg0 = qtcore.NewQString5(countryCode)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGeoAddress14setCountryCodeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -301,7 +301,7 @@ Sets the state.
 See also state().
 */
 func (this *QGeoAddress) SetState(state string) {
-	var tmpArg0 = qtcore.NewQString_5(state)
+	var tmpArg0 = qtcore.NewQString5(state)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGeoAddress8setStateERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -337,7 +337,7 @@ Sets the county.
 See also county().
 */
 func (this *QGeoAddress) SetCounty(county string) {
-	var tmpArg0 = qtcore.NewQString_5(county)
+	var tmpArg0 = qtcore.NewQString5(county)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGeoAddress9setCountyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -373,7 +373,7 @@ Sets the city.
 See also city().
 */
 func (this *QGeoAddress) SetCity(city string) {
-	var tmpArg0 = qtcore.NewQString_5(city)
+	var tmpArg0 = qtcore.NewQString5(city)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGeoAddress7setCityERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -409,7 +409,7 @@ Sets the district.
 See also district().
 */
 func (this *QGeoAddress) SetDistrict(district string) {
-	var tmpArg0 = qtcore.NewQString_5(district)
+	var tmpArg0 = qtcore.NewQString5(district)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGeoAddress11setDistrictERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -445,7 +445,7 @@ Sets the postalCode.
 See also postalCode().
 */
 func (this *QGeoAddress) SetPostalCode(postalCode string) {
-	var tmpArg0 = qtcore.NewQString_5(postalCode)
+	var tmpArg0 = qtcore.NewQString5(postalCode)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGeoAddress13setPostalCodeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -485,7 +485,7 @@ This typically includes a street number and street name but may also contain thi
 See also street().
 */
 func (this *QGeoAddress) SetStreet(street string) {
-	var tmpArg0 = qtcore.NewQString_5(street)
+	var tmpArg0 = qtcore.NewQString5(street)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGeoAddress9setStreetERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

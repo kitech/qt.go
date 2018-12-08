@@ -91,10 +91,10 @@ func NewQGraphicsSceneHelpEvent(type_ int) *QGraphicsSceneHelpEvent {
 /*
 
  */
-func (*QGraphicsSceneHelpEvent) NewForInherit__() *QGraphicsSceneHelpEvent {
-	return NewQGraphicsSceneHelpEvent__()
+func (*QGraphicsSceneHelpEvent) NewForInheritp() *QGraphicsSceneHelpEvent {
+	return NewQGraphicsSceneHelpEventp()
 }
-func NewQGraphicsSceneHelpEvent__() *QGraphicsSceneHelpEvent {
+func NewQGraphicsSceneHelpEventp() *QGraphicsSceneHelpEvent {
 	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSceneHelpEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)

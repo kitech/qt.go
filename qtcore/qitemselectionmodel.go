@@ -112,10 +112,10 @@ func NewQItemSelectionModel(model QAbstractItemModel_ITF /*777 QAbstractItemMode
 /*
 Constructs a selection model that operates on the specified item model.
 */
-func (*QItemSelectionModel) NewForInherit__() *QItemSelectionModel {
-	return NewQItemSelectionModel__()
+func (*QItemSelectionModel) NewForInheritp() *QItemSelectionModel {
+	return NewQItemSelectionModelp()
 }
-func NewQItemSelectionModel__() *QItemSelectionModel {
+func NewQItemSelectionModelp() *QItemSelectionModel {
 	// arg: 0, QAbstractItemModel *=Pointer, QAbstractItemModel=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModelC2EP18QAbstractItemModel", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -133,10 +133,10 @@ func NewQItemSelectionModel__() *QItemSelectionModel {
 /*
 Constructs a selection model that operates on the specified item model.
 */
-func (*QItemSelectionModel) NewForInherit_1(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent QObject_ITF /*777 QObject **/) *QItemSelectionModel {
-	return NewQItemSelectionModel_1(model, parent)
+func (*QItemSelectionModel) NewForInherit1(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent QObject_ITF /*777 QObject **/) *QItemSelectionModel {
+	return NewQItemSelectionModel1(model, parent)
 }
-func NewQItemSelectionModel_1(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent QObject_ITF /*777 QObject **/) *QItemSelectionModel {
+func NewQItemSelectionModel1(model QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent QObject_ITF /*777 QObject **/) *QItemSelectionModel {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
 		convArg0 = model.QAbstractItemModel_PTR().GetCthis()
@@ -343,7 +343,7 @@ This function was introduced in  Qt 4.2.
 
 See also selectedIndexes() and selectedColumns().
 */
-func (this *QItemSelectionModel) SelectedRows__() *QModelIndexList /*667*/ {
+func (this *QItemSelectionModel) SelectedRowsp() *QModelIndexList /*667*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12selectedRowsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
@@ -383,7 +383,7 @@ This function was introduced in  Qt 4.2.
 
 See also selectedIndexes() and selectedRows().
 */
-func (this *QItemSelectionModel) SelectedColumns__() *QModelIndexList /*667*/ {
+func (this *QItemSelectionModel) SelectedColumnsp() *QModelIndexList /*667*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	row := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedColumnsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
@@ -434,7 +434,7 @@ Returns the item model operated on by the selection model.
 
 See also setModel().
 */
-func (this *QItemSelectionModel) Model_1() *QAbstractItemModel /*777 QAbstractItemModel **/ {
+func (this *QItemSelectionModel) Model1() *QAbstractItemModel /*777 QAbstractItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QItemSelectionModel5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -511,7 +511,7 @@ Selects the model item index using the specified command, and emits selectionCha
 
 See also QItemSelectionModel::SelectionFlags.
 */
-func (this *QItemSelectionModel) Select_1(selection QItemSelection_ITF, command int) {
+func (this *QItemSelectionModel) Select1(selection QItemSelection_ITF, command int) {
 	var convArg0 unsafe.Pointer
 	if selection != nil && selection.QItemSelection_PTR() != nil {
 		convArg0 = selection.QItemSelection_PTR().GetCthis()

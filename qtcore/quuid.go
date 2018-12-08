@@ -91,10 +91,10 @@ func NewQUuid() *QUuid {
 /*
 Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
 */
-func (*QUuid) NewForInherit_1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte, b5 byte, b6 byte, b7 byte, b8 byte) *QUuid {
-	return NewQUuid_1(l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
+func (*QUuid) NewForInherit1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte, b5 byte, b6 byte, b7 byte, b8 byte) *QUuid {
+	return NewQUuid1(l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 }
-func NewQUuid_1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte, b5 byte, b6 byte, b7 byte, b8 byte) *QUuid {
+func NewQUuid1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte, b5 byte, b6 byte, b7 byte, b8 byte) *QUuid {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuidC2Ejtthhhhhhhh", qtrt.FFI_TYPE_POINTER, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,11 +110,11 @@ func NewQUuid_1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte
 /*
 Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
 */
-func (*QUuid) NewForInherit_2(arg0 string) *QUuid {
-	return NewQUuid_2(arg0)
+func (*QUuid) NewForInherit2(arg0 string) *QUuid {
+	return NewQUuid2(arg0)
 }
-func NewQUuid_2(arg0 string) *QUuid {
-	var tmpArg0 = NewQString_5(arg0)
+func NewQUuid2(arg0 string) *QUuid {
+	var tmpArg0 = NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuidC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -131,10 +131,10 @@ func NewQUuid_2(arg0 string) *QUuid {
 /*
 Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
 */
-func (*QUuid) NewForInherit_3(arg0 string) *QUuid {
-	return NewQUuid_3(arg0)
+func (*QUuid) NewForInherit3(arg0 string) *QUuid {
+	return NewQUuid3(arg0)
 }
-func NewQUuid_3(arg0 string) *QUuid {
+func NewQUuid3(arg0 string) *QUuid {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuidC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -152,10 +152,10 @@ func NewQUuid_3(arg0 string) *QUuid {
 /*
 Creates the null UUID. toString() will output the null UUID as "{00000000-0000-0000-0000-000000000000}".
 */
-func (*QUuid) NewForInherit_4(arg0 QByteArray_ITF) *QUuid {
-	return NewQUuid_4(arg0)
+func (*QUuid) NewForInherit4(arg0 QByteArray_ITF) *QUuid {
+	return NewQUuid4(arg0)
 }
-func NewQUuid_4(arg0 QByteArray_ITF) *QUuid {
+func NewQUuid4(arg0 QByteArray_ITF) *QUuid {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QByteArray_PTR() != nil {
 		convArg0 = arg0.QByteArray_PTR().GetCthis()
@@ -208,7 +208,7 @@ This function was introduced in  Qt 5.10.
 
 See also toString() and QUuid().
 */
-func (this *QUuid) FromString_1(string QLatin1String_ITF /*123*/) *QUuid /*123*/ {
+func (this *QUuid) FromString1(string QLatin1String_ITF /*123*/) *QUuid /*123*/ {
 	var convArg0 unsafe.Pointer
 	if string != nil && string.QLatin1String_PTR() != nil {
 		convArg0 = string.QLatin1String_PTR().GetCthis()
@@ -219,9 +219,9 @@ func (this *QUuid) FromString_1(string QLatin1String_ITF /*123*/) *QUuid /*123*/
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
-func QUuid_FromString_1(string QLatin1String_ITF /*123*/) *QUuid /*123*/ {
+func QUuid_FromString1(string QLatin1String_ITF /*123*/) *QUuid /*123*/ {
 	var nilthis *QUuid
-	rv := nilthis.FromString_1(string)
+	rv := nilthis.FromString1(string)
 	return rv
 }
 
@@ -492,12 +492,12 @@ This function was introduced in  Qt 5.0.
 
 See also variant(), version(), and createUuidV5().
 */
-func (this *QUuid) CreateUuidV3_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
+func (this *QUuid) CreateUuidV31(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 	var convArg0 unsafe.Pointer
 	if ns != nil && ns.QUuid_PTR() != nil {
 		convArg0 = ns.QUuid_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(baseData)
+	var tmpArg1 = NewQString5(baseData)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid12createUuidV3ERKS_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -505,9 +505,9 @@ func (this *QUuid) CreateUuidV3_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ 
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
-func QUuid_CreateUuidV3_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
+func QUuid_CreateUuidV31(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 	var nilthis *QUuid
-	rv := nilthis.CreateUuidV3_1(ns, baseData)
+	rv := nilthis.CreateUuidV31(ns, baseData)
 	return rv
 }
 
@@ -556,12 +556,12 @@ This function was introduced in  Qt 5.0.
 
 See also variant(), version(), and createUuidV3().
 */
-func (this *QUuid) CreateUuidV5_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
+func (this *QUuid) CreateUuidV51(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 	var convArg0 unsafe.Pointer
 	if ns != nil && ns.QUuid_PTR() != nil {
 		convArg0 = ns.QUuid_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(baseData)
+	var tmpArg1 = NewQString5(baseData)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QUuid12createUuidV5ERKS_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -569,9 +569,9 @@ func (this *QUuid) CreateUuidV5_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ 
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
-func QUuid_CreateUuidV5_1(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
+func QUuid_CreateUuidV51(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 	var nilthis *QUuid
-	rv := nilthis.CreateUuidV5_1(ns, baseData)
+	rv := nilthis.CreateUuidV51(ns, baseData)
 	return rv
 }
 

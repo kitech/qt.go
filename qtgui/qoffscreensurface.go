@@ -128,10 +128,10 @@ This function was introduced in  Qt 5.10.
 
 See also setScreen() and create().
 */
-func (*QOffscreenSurface) NewForInherit_1(screen QScreen_ITF /*777 QScreen **/) *QOffscreenSurface {
-	return NewQOffscreenSurface_1(screen)
+func (*QOffscreenSurface) NewForInherit1(screen QScreen_ITF /*777 QScreen **/) *QOffscreenSurface {
+	return NewQOffscreenSurface1(screen)
 }
-func NewQOffscreenSurface_1(screen QScreen_ITF /*777 QScreen **/) *QOffscreenSurface {
+func NewQOffscreenSurface1(screen QScreen_ITF /*777 QScreen **/) *QOffscreenSurface {
 	var convArg0 unsafe.Pointer
 	if screen != nil && screen.QScreen_PTR() != nil {
 		convArg0 = screen.QScreen_PTR().GetCthis()
@@ -157,10 +157,10 @@ This function was introduced in  Qt 5.10.
 
 See also setScreen() and create().
 */
-func (*QOffscreenSurface) NewForInherit_1_() *QOffscreenSurface {
-	return NewQOffscreenSurface_1_()
+func (*QOffscreenSurface) NewForInherit1p() *QOffscreenSurface {
+	return NewQOffscreenSurface1p()
 }
-func NewQOffscreenSurface_1_() *QOffscreenSurface {
+func NewQOffscreenSurface1p() *QOffscreenSurface {
 	// arg: 0, QScreen *=Pointer, QScreen=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QOffscreenSurfaceC2EP7QScreen", qtrt.FFI_TYPE_POINTER, convArg0)

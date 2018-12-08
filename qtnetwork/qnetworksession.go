@@ -126,10 +126,10 @@ Constructs a session based on connectionConfig with the given parent.
 
 See also QNetworkConfiguration.
 */
-func (*QNetworkSession) NewForInherit__(connConfig QNetworkConfiguration_ITF) *QNetworkSession {
-	return NewQNetworkSession__(connConfig)
+func (*QNetworkSession) NewForInheritp(connConfig QNetworkConfiguration_ITF) *QNetworkSession {
+	return NewQNetworkSessionp(connConfig)
 }
-func NewQNetworkSession__(connConfig QNetworkConfiguration_ITF) *QNetworkSession {
+func NewQNetworkSessionp(connConfig QNetworkConfiguration_ITF) *QNetworkSession {
 	var convArg0 unsafe.Pointer
 	if connConfig != nil && connConfig.QNetworkConfiguration_PTR() != nil {
 		convArg0 = connConfig.QNetworkConfiguration_PTR().GetCthis()
@@ -262,7 +262,7 @@ Returns the type of error that last occurred.
 
 See also state() and errorString().
 */
-func (this *QNetworkSession) Error_1(arg0 int) {
+func (this *QNetworkSession) Error1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSession5errorENS_12SessionErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -327,7 +327,7 @@ AutoCloseSessionTimeoutIf the session requires polling to keep its state up to d
 See also setSessionProperty().
 */
 func (this *QNetworkSession) SessionProperty(key string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession15sessionPropertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -349,7 +349,7 @@ Note that the UserChoiceConfiguration and ActiveConfiguration properties are rea
 See also sessionProperty().
 */
 func (this *QNetworkSession) SetSessionProperty(key string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -479,7 +479,7 @@ If msecs is -1, this function will not time out.
 
 See also open() and error().
 */
-func (this *QNetworkSession) WaitForOpened__() bool {
+func (this *QNetworkSession) WaitForOpenedp() bool {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	msecs := int(30000)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSession13waitForOpenedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)

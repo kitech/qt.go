@@ -108,10 +108,10 @@ func NewQAccessibleBridgePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QA
 /*
 
  */
-func (*QAccessibleBridgePlugin) NewForInherit__() *QAccessibleBridgePlugin {
-	return NewQAccessibleBridgePlugin__()
+func (*QAccessibleBridgePlugin) NewForInheritp() *QAccessibleBridgePlugin {
+	return NewQAccessibleBridgePluginp()
 }
-func NewQAccessibleBridgePlugin__() *QAccessibleBridgePlugin {
+func NewQAccessibleBridgePluginp() *QAccessibleBridgePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -145,7 +145,7 @@ func DeleteQAccessibleBridgePlugin(this *QAccessibleBridgePlugin) {
 
  */
 func (this *QAccessibleBridgePlugin) Create(key string) *QAccessibleBridge /*777 QAccessibleBridge **/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QAccessibleBridgePlugin6createERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

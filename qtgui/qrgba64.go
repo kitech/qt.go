@@ -117,16 +117,16 @@ Returns c as a QRgba64 struct.
 
 See also fromArgb32().
 */
-func (this *QRgba64) FromRgba64_1(red uint16, green uint16, blue uint16, alpha uint16) *QRgba64 /*123*/ {
+func (this *QRgba64) FromRgba641(red uint16, green uint16, blue uint16, alpha uint16) *QRgba64 /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QRgba6410fromRgba64Etttt", qtrt.FFI_TYPE_POINTER, red, green, blue, alpha)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRgba64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRgba64)
 	return rv2
 }
-func QRgba64_FromRgba64_1(red uint16, green uint16, blue uint16, alpha uint16) *QRgba64 /*123*/ {
+func QRgba64_FromRgba641(red uint16, green uint16, blue uint16, alpha uint16) *QRgba64 /*123*/ {
 	var nilthis *QRgba64
-	rv := nilthis.FromRgba64_1(red, green, blue, alpha)
+	rv := nilthis.FromRgba641(red, green, blue, alpha)
 	return rv
 }
 

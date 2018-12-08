@@ -90,10 +90,10 @@ func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateCha
 /*
 
  */
-func (*QWindowStateChangeEvent) NewForInherit__(aOldState int) *QWindowStateChangeEvent {
-	return NewQWindowStateChangeEvent__(aOldState)
+func (*QWindowStateChangeEvent) NewForInheritp(aOldState int) *QWindowStateChangeEvent {
+	return NewQWindowStateChangeEventp(aOldState)
 }
-func NewQWindowStateChangeEvent__(aOldState int) *QWindowStateChangeEvent {
+func NewQWindowStateChangeEventp(aOldState int) *QWindowStateChangeEvent {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	isOverride := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWindowStateChangeEventC2E6QFlagsIN2Qt11WindowStateEEb", qtrt.FFI_TYPE_POINTER, aOldState, isOverride)

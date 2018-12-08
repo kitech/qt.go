@@ -60,7 +60,7 @@ func Operator_add(margins QMarginsF_ITF) *QMarginsF /*123*/ {
 /*
 
  */
-func Operator_add_1(margins QMargins_ITF) *QMargins /*123*/ {
+func Operator_add1(margins QMargins_ITF) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -80,7 +80,7 @@ func Operator_add_1(margins QMargins_ITF) *QMargins /*123*/ {
 /*
 
  */
-func Operator_add_2(p QPointF_ITF) *QPointF /*123*/ {
+func Operator_add2(p QPointF_ITF) *QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -100,7 +100,7 @@ func Operator_add_2(p QPointF_ITF) *QPointF /*123*/ {
 /*
 
  */
-func Operator_add_3(p QPoint_ITF) *QPoint /*123*/ {
+func Operator_add3(p QPoint_ITF) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -120,7 +120,7 @@ func Operator_add_3(p QPoint_ITF) *QPoint /*123*/ {
 /*
 
  */
-func Operator_add_4(lhs int, rhs QMargins_ITF) *QMargins /*123*/ {
+func Operator_add4(lhs int, rhs QMargins_ITF) *QMargins /*123*/ {
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QMargins_PTR() != nil {
 		convArg1 = rhs.QMargins_PTR().GetCthis()
@@ -140,7 +140,7 @@ func Operator_add_4(lhs int, rhs QMargins_ITF) *QMargins /*123*/ {
 /*
 
  */
-func Operator_add_5(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
+func Operator_add5(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QMarginsF_PTR() != nil {
 		convArg1 = rhs.QMarginsF_PTR().GetCthis()
@@ -160,8 +160,8 @@ func Operator_add_5(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 /*
 
  */
-func Operator_add_6(c byte, s string) string {
-	var tmpArg1 = NewQString_5(s)
+func Operator_add6(c byte, s string) string {
+	var tmpArg1 = NewQString5(s)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZplcRK7QString", qtrt.FFI_TYPE_POINTER, c, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -179,7 +179,7 @@ func Operator_add_6(c byte, s string) string {
 /*
 
  */
-func Operator_add_7(a1 byte, a2 QByteArray_ITF) *QByteArray /*123*/ {
+func Operator_add7(a1 byte, a2 QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg1 unsafe.Pointer
 	if a2 != nil && a2.QByteArray_PTR() != nil {
 		convArg1 = a2.QByteArray_PTR().GetCthis()
@@ -199,7 +199,7 @@ func Operator_add_7(a1 byte, a2 QByteArray_ITF) *QByteArray /*123*/ {
 /*
 
  */
-func Operator_add_8(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
+func Operator_add8(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -219,7 +219,7 @@ func Operator_add_8(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
 /*
 
  */
-func Operator_add_9(lhs QMarginsF_ITF, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
+func Operator_add9(lhs QMarginsF_ITF, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -243,7 +243,7 @@ func Operator_add_9(lhs QMarginsF_ITF, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 /*
 
  */
-func Operator_add_10(lhs QMarginsF_ITF, rhs QRectF_ITF) *QRectF /*123*/ {
+func Operator_add10(lhs QMarginsF_ITF, rhs QRectF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -267,7 +267,7 @@ func Operator_add_10(lhs QMarginsF_ITF, rhs QRectF_ITF) *QRectF /*123*/ {
 /*
 
  */
-func Operator_add_11(lhs QMargins_ITF, rhs int) *QMargins /*123*/ {
+func Operator_add11(lhs QMargins_ITF, rhs int) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMargins_PTR() != nil {
 		convArg0 = lhs.QMargins_PTR().GetCthis()
@@ -287,7 +287,7 @@ func Operator_add_11(lhs QMargins_ITF, rhs int) *QMargins /*123*/ {
 /*
 
  */
-func Operator_add_12(m1 QMargins_ITF, m2 QMargins_ITF) *QMargins /*123*/ {
+func Operator_add12(m1 QMargins_ITF, m2 QMargins_ITF) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMargins_PTR() != nil {
 		convArg0 = m1.QMargins_PTR().GetCthis()
@@ -311,7 +311,7 @@ func Operator_add_12(m1 QMargins_ITF, m2 QMargins_ITF) *QMargins /*123*/ {
 /*
 
  */
-func Operator_add_13(margins QMargins_ITF, rectangle QRect_ITF) *QRect /*123*/ {
+func Operator_add13(margins QMargins_ITF, rectangle QRect_ITF) *QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -335,8 +335,8 @@ func Operator_add_13(margins QMargins_ITF, rectangle QRect_ITF) *QRect /*123*/ {
 /*
 
  */
-func Operator_add_14(s string, c byte) string {
-	var tmpArg0 = NewQString_5(s)
+func Operator_add14(s string, c byte) string {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZplRK7QStringc", qtrt.FFI_TYPE_POINTER, convArg0, c)
 	qtrt.ErrPrint(err, rv)
@@ -354,10 +354,10 @@ func Operator_add_14(s string, c byte) string {
 /*
 
  */
-func Operator_add_15(s1 string, s2 string) string {
-	var tmpArg0 = NewQString_5(s1)
+func Operator_add15(s1 string, s2 string) string {
+	var tmpArg0 = NewQString5(s1)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(s2)
+	var tmpArg1 = NewQString5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZplRK7QStringS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -375,8 +375,8 @@ func Operator_add_15(s1 string, s2 string) string {
 /*
 
  */
-func Operator_add_16(s1 string, s2 QStringRef_ITF) string {
-	var tmpArg0 = NewQString_5(s1)
+func Operator_add16(s1 string, s2 QStringRef_ITF) string {
+	var tmpArg0 = NewQString5(s1)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if s2 != nil && s2.QStringRef_PTR() != nil {
@@ -398,8 +398,8 @@ func Operator_add_16(s1 string, s2 QStringRef_ITF) string {
 /*
 
  */
-func Operator_add_17(s string, ba QByteArray_ITF) string {
-	var tmpArg0 = NewQString_5(s)
+func Operator_add17(s string, ba QByteArray_ITF) string {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if ba != nil && ba.QByteArray_PTR() != nil {
@@ -421,8 +421,8 @@ func Operator_add_17(s string, ba QByteArray_ITF) string {
 /*
 
  */
-func Operator_add_18(s1 string, s2 string) string {
-	var tmpArg0 = NewQString_5(s1)
+func Operator_add18(s1 string, s2 string) string {
+	var tmpArg0 = NewQString5(s1)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(s2)
 	defer qtrt.FreeMem(convArg1)
@@ -442,8 +442,8 @@ func Operator_add_18(s1 string, s2 string) string {
 /*
 
  */
-func Operator_add_19(s1 string, s2 QChar_ITF /*123*/) string {
-	var tmpArg0 = NewQString_5(s1)
+func Operator_add19(s1 string, s2 QChar_ITF /*123*/) string {
+	var tmpArg0 = NewQString5(s1)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if s2 != nil && s2.QChar_PTR() != nil {
@@ -465,7 +465,7 @@ func Operator_add_19(s1 string, s2 QChar_ITF /*123*/) string {
 /*
 
  */
-func Operator_add_20(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
+func Operator_add20(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPointF_PTR() != nil {
 		convArg0 = p1.QPointF_PTR().GetCthis()
@@ -489,7 +489,7 @@ func Operator_add_20(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
 /*
 
  */
-func Operator_add_21(s1 QSizeF_ITF, s2 QSizeF_ITF) *QSizeF /*123*/ {
+func Operator_add21(s1 QSizeF_ITF, s2 QSizeF_ITF) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSizeF_PTR() != nil {
 		convArg0 = s1.QSizeF_PTR().GetCthis()
@@ -513,7 +513,7 @@ func Operator_add_21(s1 QSizeF_ITF, s2 QSizeF_ITF) *QSizeF /*123*/ {
 /*
 
  */
-func Operator_add_22(lhs QRectF_ITF, rhs QMarginsF_ITF) *QRectF /*123*/ {
+func Operator_add22(lhs QRectF_ITF, rhs QMarginsF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QRectF_PTR() != nil {
 		convArg0 = lhs.QRectF_PTR().GetCthis()
@@ -537,7 +537,7 @@ func Operator_add_22(lhs QRectF_ITF, rhs QMarginsF_ITF) *QRectF /*123*/ {
 /*
 
  */
-func Operator_add_23(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
+func Operator_add23(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPoint_PTR() != nil {
 		convArg0 = p1.QPoint_PTR().GetCthis()
@@ -561,7 +561,7 @@ func Operator_add_23(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
 /*
 
  */
-func Operator_add_24(s1 QSize_ITF, s2 QSize_ITF) *QSize /*123*/ {
+func Operator_add24(s1 QSize_ITF, s2 QSize_ITF) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSize_PTR() != nil {
 		convArg0 = s1.QSize_PTR().GetCthis()
@@ -585,7 +585,7 @@ func Operator_add_24(s1 QSize_ITF, s2 QSize_ITF) *QSize /*123*/ {
 /*
 
  */
-func Operator_add_25(rectangle QRect_ITF, margins QMargins_ITF) *QRect /*123*/ {
+func Operator_add25(rectangle QRect_ITF, margins QMargins_ITF) *QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rectangle != nil && rectangle.QRect_PTR() != nil {
 		convArg0 = rectangle.QRect_PTR().GetCthis()
@@ -609,7 +609,7 @@ func Operator_add_25(rectangle QRect_ITF, margins QMargins_ITF) *QRect /*123*/ {
 /*
 
  */
-func Operator_add_26(s1 QStringRef_ITF, s2 QStringRef_ITF) string {
+func Operator_add26(s1 QStringRef_ITF, s2 QStringRef_ITF) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -634,12 +634,12 @@ func Operator_add_26(s1 QStringRef_ITF, s2 QStringRef_ITF) string {
 /*
 
  */
-func Operator_add_27(s1 QStringRef_ITF, s2 string) string {
+func Operator_add27(s1 QStringRef_ITF, s2 string) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(s2)
+	var tmpArg1 = NewQString5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZplRK10QStringRefRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -657,7 +657,7 @@ func Operator_add_27(s1 QStringRef_ITF, s2 string) string {
 /*
 
  */
-func Operator_add_28(s1 QStringRef_ITF, s2 QChar_ITF /*123*/) string {
+func Operator_add28(s1 QStringRef_ITF, s2 QChar_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -682,7 +682,7 @@ func Operator_add_28(s1 QStringRef_ITF, s2 QChar_ITF /*123*/) string {
 /*
 
  */
-func Operator_add_29(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/) string {
+func Operator_add29(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -707,7 +707,7 @@ func Operator_add_29(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/) string {
 /*
 
  */
-func Operator_add_30(a1 QByteArray_ITF, a2 byte) *QByteArray /*123*/ {
+func Operator_add30(a1 QByteArray_ITF, a2 byte) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -727,7 +727,7 @@ func Operator_add_30(a1 QByteArray_ITF, a2 byte) *QByteArray /*123*/ {
 /*
 
  */
-func Operator_add_31(a1 QByteArray_ITF, a2 QByteArray_ITF) *QByteArray /*123*/ {
+func Operator_add31(a1 QByteArray_ITF, a2 QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -751,12 +751,12 @@ func Operator_add_31(a1 QByteArray_ITF, a2 QByteArray_ITF) *QByteArray /*123*/ {
 /*
 
  */
-func Operator_add_32(ba QByteArray_ITF, s string) string {
+func Operator_add32(ba QByteArray_ITF, s string) string {
 	var convArg0 unsafe.Pointer
 	if ba != nil && ba.QByteArray_PTR() != nil {
 		convArg0 = ba.QByteArray_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(s)
+	var tmpArg1 = NewQString5(s)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZplRK10QByteArrayRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -774,7 +774,7 @@ func Operator_add_32(ba QByteArray_ITF, s string) string {
 /*
 
  */
-func Operator_add_33(a1 QByteArray_ITF, a2 string) *QByteArray /*123*/ {
+func Operator_add33(a1 QByteArray_ITF, a2 string) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -796,10 +796,10 @@ func Operator_add_33(a1 QByteArray_ITF, a2 string) *QByteArray /*123*/ {
 /*
 
  */
-func Operator_add_34(s1 string, s2 string) string {
+func Operator_add34(s1 string, s2 string) string {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
-	var tmpArg1 = NewQString_5(s2)
+	var tmpArg1 = NewQString5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZplPKcRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -817,7 +817,7 @@ func Operator_add_34(s1 string, s2 string) string {
 /*
 
  */
-func Operator_add_35(a1 string, a2 QByteArray_ITF) *QByteArray /*123*/ {
+func Operator_add35(a1 string, a2 QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg0 = qtrt.CString(a1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -839,12 +839,12 @@ func Operator_add_35(a1 string, a2 QByteArray_ITF) *QByteArray /*123*/ {
 /*
 
  */
-func Operator_add_36(s1 QChar_ITF /*123*/, s2 string) string {
+func Operator_add36(s1 QChar_ITF /*123*/, s2 string) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QChar_PTR() != nil {
 		convArg0 = s1.QChar_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(s2)
+	var tmpArg1 = NewQString5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Zpl5QCharRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -862,7 +862,7 @@ func Operator_add_36(s1 QChar_ITF /*123*/, s2 string) string {
 /*
 
  */
-func Operator_add_37(s1 QChar_ITF /*123*/, s2 QStringRef_ITF) string {
+func Operator_add37(s1 QChar_ITF /*123*/, s2 QStringRef_ITF) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QChar_PTR() != nil {
 		convArg0 = s1.QChar_PTR().GetCthis()
@@ -887,7 +887,7 @@ func Operator_add_37(s1 QChar_ITF /*123*/, s2 QStringRef_ITF) string {
 /*
 
  */
-func Operator_add_38(s1 QLatin1String_ITF /*123*/, s2 QStringRef_ITF) string {
+func Operator_add38(s1 QLatin1String_ITF /*123*/, s2 QStringRef_ITF) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QLatin1String_PTR() != nil {
 		convArg0 = s1.QLatin1String_PTR().GetCthis()
@@ -936,7 +936,7 @@ func Operator_or(arg0 QBitArray_ITF, arg1 QBitArray_ITF) *QBitArray /*123*/ {
 /*
 
  */
-func Operator_or_1(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or1(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN9QMetaType8TypeFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -952,7 +952,7 @@ func Operator_or_1(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_2(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or2(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN9QIODevice12OpenModeFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -968,7 +968,7 @@ func Operator_or_2(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_3(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or3(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN8QLibrary8LoadHintEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -984,7 +984,7 @@ func Operator_or_3(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_4(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or4(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN7QString11SectionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1000,7 +1000,7 @@ func Operator_or_4(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_5(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or5(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN7QLocale12NumberOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1016,7 +1016,7 @@ func Operator_or_5(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_6(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or6(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN4QUrl25ComponentFormattingOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1032,7 +1032,7 @@ func Operator_or_6(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_7(f int, i int) int {
+func Operator_or7(f int, i int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN4QUrl25ComponentFormattingOptionENS_19UrlFormattingOptionE", qtrt.FFI_TYPE_POINTER, f, i)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -1046,7 +1046,7 @@ func Operator_or_7(f int, i int) int {
 /*
 
  */
-func Operator_or_8(f int, i int) int {
+func Operator_or8(f int, i int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN4QUrl25ComponentFormattingOptionE12QUrlTwoFlagsINS_19UrlFormattingOptionES0_E", qtrt.FFI_TYPE_POINTER, f, i)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -1060,7 +1060,7 @@ func Operator_or_8(f int, i int) int {
 /*
 
  */
-func Operator_or_9(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or9(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN4QUrl19UrlFormattingOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1076,7 +1076,7 @@ func Operator_or_9(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_10(f1 int, f2 int) int {
+func Operator_or10(f1 int, f2 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN4QUrl19UrlFormattingOptionES0_", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -1090,7 +1090,7 @@ func Operator_or_10(f1 int, f2 int) int {
 /*
 
  */
-func Operator_or_11(i int, f int) int {
+func Operator_or11(i int, f int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN4QUrl19UrlFormattingOptionENS_25ComponentFormattingOptionE", qtrt.FFI_TYPE_POINTER, i, f)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -1104,7 +1104,7 @@ func Operator_or_11(i int, f int) int {
 /*
 
  */
-func Operator_or_12(i int, f int) int {
+func Operator_or12(i int, f int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN4QUrl19UrlFormattingOptionE6QFlagsINS_25ComponentFormattingOptionEE", qtrt.FFI_TYPE_POINTER, i, f)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -1118,7 +1118,7 @@ func Operator_or_12(i int, f int) int {
 /*
 
  */
-func Operator_or_13(f1 int, f2 int) int {
+func Operator_or13(f1 int, f2 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN4QUrl19UrlFormattingOptionE12QUrlTwoFlagsIS0_NS_25ComponentFormattingOptionEE", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -1132,7 +1132,7 @@ func Operator_or_13(f1 int, f2 int) int {
 /*
 
  */
-func Operator_or_14(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or14(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN4QDir8SortFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1148,7 +1148,7 @@ func Operator_or_14(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_15(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or15(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN4QDir6FilterEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1164,7 +1164,7 @@ func Operator_or_15(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_16(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or16(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt9MatchFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1180,7 +1180,7 @@ func Operator_or_16(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_17(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or17(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt8ItemFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1196,7 +1196,7 @@ func Operator_or_17(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_18(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or18(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt4EdgeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1212,7 +1212,7 @@ func Operator_or_18(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_19(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or19(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt19TextInteractionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1228,7 +1228,7 @@ func Operator_or_19(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_20(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or20(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt19ImageConversionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1244,7 +1244,7 @@ func Operator_or_20(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_21(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or21(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt17ScreenOrientationEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1260,7 +1260,7 @@ func Operator_or_21(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_22(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or22(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt16KeyboardModifierEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1276,7 +1276,7 @@ func Operator_or_22(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_23(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or23(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt16InputMethodQueryEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1292,7 +1292,7 @@ func Operator_or_23(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_24(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or24(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt15TouchPointStateEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1308,7 +1308,7 @@ func Operator_or_24(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_25(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or25(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt15InputMethodHintEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1324,7 +1324,7 @@ func Operator_or_25(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_26(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or26(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt14MouseEventFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1340,7 +1340,7 @@ func Operator_or_26(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_27(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or27(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt14DockWidgetAreaEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1356,7 +1356,7 @@ func Operator_or_27(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_28(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or28(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt13AlignmentFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1372,7 +1372,7 @@ func Operator_or_28(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_29(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or29(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt11WindowStateEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1388,7 +1388,7 @@ func Operator_or_29(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_30(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or30(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt11ToolBarAreaEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1404,7 +1404,7 @@ func Operator_or_30(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_31(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or31(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1420,7 +1420,7 @@ func Operator_or_31(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_32(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or32(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt11MouseButtonEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1436,7 +1436,7 @@ func Operator_or_32(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_33(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or33(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt11GestureFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1452,7 +1452,7 @@ func Operator_or_33(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_34(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or34(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt10WindowTypeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1468,7 +1468,7 @@ func Operator_or_34(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_35(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or35(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt10DropActionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1484,7 +1484,7 @@ func Operator_or_35(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_36(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or36(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN19QTextBoundaryFinder14BoundaryReasonEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1500,7 +1500,7 @@ func Operator_or_36(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_37(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or37(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN19QItemSelectionModel13SelectionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1516,7 +1516,7 @@ func Operator_or_37(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_38(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or38(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN18QRegularExpression13PatternOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1532,7 +1532,7 @@ func Operator_or_38(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_39(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or39(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN18QRegularExpression11MatchOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1548,7 +1548,7 @@ func Operator_or_39(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_40(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or40(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN18QCommandLineOption4FlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1564,7 +1564,7 @@ func Operator_or_40(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_41(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or41(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN14QStandardPaths12LocateOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1580,7 +1580,7 @@ func Operator_or_41(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_42(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or42(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN12QDirIterator12IteratorFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1596,7 +1596,7 @@ func Operator_or_42(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_43(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or43(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QTextStream10NumberFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1612,7 +1612,7 @@ func Operator_or_43(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_44(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or44(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QFileDevice10PermissionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1628,7 +1628,7 @@ func Operator_or_44(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_45(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or45(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN10QTextCodec14ConversionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1644,7 +1644,7 @@ func Operator_or_45(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_46(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or46(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN10QEventLoop17ProcessEventsFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1660,7 +1660,7 @@ func Operator_or_46(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_47(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or47(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN10QByteArray12Base64OptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1676,7 +1676,7 @@ func Operator_or_47(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_48(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or48(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN10QArrayData16AllocationOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1692,7 +1692,7 @@ func Operator_or_48(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_49(f int, i int) int {
+func Operator_or49(f int, i int) int {
 	rv, err := qtrt.InvokeQtFunc6("_Zor6QFlagsIN4QUrl25ComponentFormattingOptionEENS0_19UrlFormattingOptionE", qtrt.FFI_TYPE_POINTER, f, i)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -1706,7 +1706,7 @@ func Operator_or_49(f int, i int) int {
 /*
 
  */
-func Operator_or_50(f int, i int) int {
+func Operator_or50(f int, i int) int {
 	rv, err := qtrt.InvokeQtFunc6("_Zor6QFlagsIN4QUrl25ComponentFormattingOptionEE12QUrlTwoFlagsINS0_19UrlFormattingOptionES1_E", qtrt.FFI_TYPE_POINTER, f, i)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -1720,7 +1720,7 @@ func Operator_or_50(f int, i int) int {
 /*
 
  */
-func Operator_or_51(i int, f int) int {
+func Operator_or51(i int, f int) int {
 	rv, err := qtrt.InvokeQtFunc6("_Zor12QUrlTwoFlagsIN4QUrl19UrlFormattingOptionENS0_25ComponentFormattingOptionEE6QFlagsIS2_E", qtrt.FFI_TYPE_POINTER, i, f)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -1776,7 +1776,7 @@ This function was introduced in  Qt 5.1.
 
 See also QMargins::operator+=() and QMargins::operator-=().
 */
-func Operator_minus_1(margins QMargins_ITF) *QMargins /*123*/ {
+func Operator_minus1(margins QMargins_ITF) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -1798,7 +1798,7 @@ Returns a QPoint object that is formed by subtracting p2 from p1; each component
 
 See also QPoint::operator-=().
 */
-func Operator_minus_2(p QPointF_ITF) *QPointF /*123*/ {
+func Operator_minus2(p QPointF_ITF) *QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -1820,7 +1820,7 @@ Returns a QPoint object that is formed by subtracting p2 from p1; each component
 
 See also QPoint::operator-=().
 */
-func Operator_minus_3(p QPoint_ITF) *QPoint /*123*/ {
+func Operator_minus3(p QPoint_ITF) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -1840,7 +1840,7 @@ func Operator_minus_3(p QPoint_ITF) *QPoint /*123*/ {
 /*
 
  */
-func Operator_not_equal_1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
+func Operator_not_equal1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -1862,7 +1862,7 @@ func Operator_not_equal_1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
 /*
 
  */
-func Operator_not_equal_2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
+func Operator_not_equal2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if v1 != nil && v1.QVariant_PTR() != nil {
 		convArg0 = v1.QVariant_PTR().GetCthis()
@@ -1884,7 +1884,7 @@ func Operator_not_equal_2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool
 /*
 
  */
-func Operator_not_equal_3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
+func Operator_not_equal3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMargins_PTR() != nil {
 		convArg0 = m1.QMargins_PTR().GetCthis()
@@ -1906,8 +1906,8 @@ func Operator_not_equal_3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
 /*
 
  */
-func Operator_not_equal_4(lhs string, rhs QStringRef_ITF) bool {
-	var tmpArg0 = NewQString_5(lhs)
+func Operator_not_equal4(lhs string, rhs QStringRef_ITF) bool {
+	var tmpArg0 = NewQString5(lhs)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QStringRef_PTR() != nil {
@@ -1926,8 +1926,8 @@ func Operator_not_equal_4(lhs string, rhs QStringRef_ITF) bool {
 /*
 
  */
-func Operator_not_equal_5(s string, arg1 int) bool {
-	var tmpArg0 = NewQString_5(s)
+func Operator_not_equal5(s string, arg1 int) bool {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZneRK7QStringNS_4NullE", qtrt.FFI_TYPE_POINTER, convArg0, arg1)
 	qtrt.ErrPrint(err, rv)
@@ -1942,8 +1942,8 @@ func Operator_not_equal_5(s string, arg1 int) bool {
 /*
 
  */
-func Operator_not_equal_6(lhs string, rhs QChar_ITF /*123*/) bool {
-	var tmpArg0 = NewQString_5(lhs)
+func Operator_not_equal6(lhs string, rhs QChar_ITF /*123*/) bool {
+	var tmpArg0 = NewQString5(lhs)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QChar_PTR() != nil {
@@ -1962,7 +1962,7 @@ func Operator_not_equal_6(lhs string, rhs QChar_ITF /*123*/) bool {
 /*
 
  */
-func Operator_not_equal_7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
+func Operator_not_equal7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPointF_PTR() != nil {
 		convArg0 = p1.QPointF_PTR().GetCthis()
@@ -1984,7 +1984,7 @@ func Operator_not_equal_7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
 /*
 
  */
-func Operator_not_equal_8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
+func Operator_not_equal8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSizeF_PTR() != nil {
 		convArg0 = s1.QSizeF_PTR().GetCthis()
@@ -2006,7 +2006,7 @@ func Operator_not_equal_8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
 /*
 
  */
-func Operator_not_equal_9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
+func Operator_not_equal9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r1 != nil && r1.QRectF_PTR() != nil {
 		convArg0 = r1.QRectF_PTR().GetCthis()
@@ -2028,7 +2028,7 @@ func Operator_not_equal_9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
 /*
 
  */
-func Operator_not_equal_10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
+func Operator_not_equal10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPoint_PTR() != nil {
 		convArg0 = p1.QPoint_PTR().GetCthis()
@@ -2050,7 +2050,7 @@ func Operator_not_equal_10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
 /*
 
  */
-func Operator_not_equal_11(s1 QSize_ITF, s2 QSize_ITF) bool {
+func Operator_not_equal11(s1 QSize_ITF, s2 QSize_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSize_PTR() != nil {
 		convArg0 = s1.QSize_PTR().GetCthis()
@@ -2072,7 +2072,7 @@ func Operator_not_equal_11(s1 QSize_ITF, s2 QSize_ITF) bool {
 /*
 
  */
-func Operator_not_equal_12(r1 QRect_ITF, r2 QRect_ITF) bool {
+func Operator_not_equal12(r1 QRect_ITF, r2 QRect_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r1 != nil && r1.QRect_PTR() != nil {
 		convArg0 = r1.QRect_PTR().GetCthis()
@@ -2094,7 +2094,7 @@ func Operator_not_equal_12(r1 QRect_ITF, r2 QRect_ITF) bool {
 /*
 
  */
-func Operator_not_equal_13(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
+func Operator_not_equal13(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QVersionNumber_PTR() != nil {
 		convArg0 = lhs.QVersionNumber_PTR().GetCthis()
@@ -2116,7 +2116,7 @@ func Operator_not_equal_13(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool 
 /*
 
  */
-func Operator_not_equal_14(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
+func Operator_not_equal14(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if first != nil && first.QStorageInfo_PTR() != nil {
 		convArg0 = first.QStorageInfo_PTR().GetCthis()
@@ -2138,7 +2138,7 @@ func Operator_not_equal_14(first QStorageInfo_ITF, second QStorageInfo_ITF) bool
 /*
 
  */
-func Operator_not_equal_15(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
+func Operator_not_equal15(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMetaMethod_PTR() != nil {
 		convArg0 = m1.QMetaMethod_PTR().GetCthis()
@@ -2160,7 +2160,7 @@ func Operator_not_equal_15(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
 /*
 
  */
-func Operator_not_equal_16(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
+func Operator_not_equal16(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -2182,12 +2182,12 @@ func Operator_not_equal_16(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
 /*
 
  */
-func Operator_not_equal_17(lhs QStringRef_ITF, rhs string) bool {
+func Operator_not_equal17(lhs QStringRef_ITF, rhs string) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(rhs)
+	var tmpArg1 = NewQString5(rhs)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZneRK10QStringRefRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2202,7 +2202,7 @@ func Operator_not_equal_17(lhs QStringRef_ITF, rhs string) bool {
 /*
 
  */
-func Operator_not_equal_18(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
+func Operator_not_equal18(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -2224,7 +2224,7 @@ func Operator_not_equal_18(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
 /*
 
  */
-func Operator_not_equal_19(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
+func Operator_not_equal19(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -2246,7 +2246,7 @@ func Operator_not_equal_19(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
 /*
 
  */
-func Operator_not_equal_20(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_not_equal20(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -2268,7 +2268,7 @@ func Operator_not_equal_20(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) bo
 /*
 
  */
-func Operator_not_equal_21(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
+func Operator_not_equal21(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -2290,7 +2290,7 @@ func Operator_not_equal_21(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
 /*
 
  */
-func Operator_not_equal_22(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
+func Operator_not_equal22(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QByteArray_PTR() != nil {
 		convArg0 = lhs.QByteArray_PTR().GetCthis()
@@ -2312,7 +2312,7 @@ func Operator_not_equal_22(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
 /*
 
  */
-func Operator_not_equal_23(a1 QByteArray_ITF, a2 string) bool {
+func Operator_not_equal23(a1 QByteArray_ITF, a2 string) bool {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -2332,10 +2332,10 @@ func Operator_not_equal_23(a1 QByteArray_ITF, a2 string) bool {
 /*
 
  */
-func Operator_not_equal_24(s1 string, s2 string) bool {
+func Operator_not_equal24(s1 string, s2 string) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
-	var tmpArg1 = NewQString_5(s2)
+	var tmpArg1 = NewQString5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZnePKcRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2350,7 +2350,7 @@ func Operator_not_equal_24(s1 string, s2 string) bool {
 /*
 
  */
-func Operator_not_equal_25(s1 string, s2 QStringRef_ITF) bool {
+func Operator_not_equal25(s1 string, s2 QStringRef_ITF) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -2370,7 +2370,7 @@ func Operator_not_equal_25(s1 string, s2 QStringRef_ITF) bool {
 /*
 
  */
-func Operator_not_equal_26(a1 string, a2 QByteArray_ITF) bool {
+func Operator_not_equal26(a1 string, a2 QByteArray_ITF) bool {
 	var convArg0 = qtrt.CString(a1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -2390,7 +2390,7 @@ func Operator_not_equal_26(a1 string, a2 QByteArray_ITF) bool {
 /*
 
  */
-func Operator_not_equal_27(s1 string, s2 QLatin1String_ITF /*123*/) bool {
+func Operator_not_equal27(s1 string, s2 QLatin1String_ITF /*123*/) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -2410,7 +2410,7 @@ func Operator_not_equal_27(s1 string, s2 QLatin1String_ITF /*123*/) bool {
 /*
 
  */
-func Operator_not_equal_28(arg0 int, arg1 int) bool {
+func Operator_not_equal28(arg0 int, arg1 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZneN7QString4NullES0_", qtrt.FFI_TYPE_POINTER, arg0, arg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -2424,8 +2424,8 @@ func Operator_not_equal_28(arg0 int, arg1 int) bool {
 /*
 
  */
-func Operator_not_equal_29(arg0 int, s string) bool {
-	var tmpArg1 = NewQString_5(s)
+func Operator_not_equal29(arg0 int, s string) bool {
+	var tmpArg1 = NewQString5(s)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZneN7QString4NullERKS_", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2440,7 +2440,7 @@ func Operator_not_equal_29(arg0 int, s string) bool {
 /*
 
  */
-func Operator_not_equal_30(arg0 int, rhs QChar_ITF /*123*/) bool {
+func Operator_not_equal30(arg0 int, rhs QChar_ITF /*123*/) bool {
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QChar_PTR() != nil {
 		convArg1 = rhs.QChar_PTR().GetCthis()
@@ -2458,7 +2458,7 @@ func Operator_not_equal_30(arg0 int, rhs QChar_ITF /*123*/) bool {
 /*
 
  */
-func Operator_not_equal_31(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
+func Operator_not_equal31(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c1 != nil && c1.QChar_PTR() != nil {
 		convArg0 = c1.QChar_PTR().GetCthis()
@@ -2480,12 +2480,12 @@ func Operator_not_equal_31(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
 /*
 
  */
-func Operator_not_equal_32(lhs QChar_ITF /*123*/, rhs string) bool {
+func Operator_not_equal32(lhs QChar_ITF /*123*/, rhs string) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(rhs)
+	var tmpArg1 = NewQString5(rhs)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Zne5QCharRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2500,7 +2500,7 @@ func Operator_not_equal_32(lhs QChar_ITF /*123*/, rhs string) bool {
 /*
 
  */
-func Operator_not_equal_33(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
+func Operator_not_equal33(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2522,7 +2522,7 @@ func Operator_not_equal_33(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
 /*
 
  */
-func Operator_not_equal_34(lhs QChar_ITF /*123*/, arg1 int) bool {
+func Operator_not_equal34(lhs QChar_ITF /*123*/, arg1 int) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2540,7 +2540,7 @@ func Operator_not_equal_34(lhs QChar_ITF /*123*/, arg1 int) bool {
 /*
 
  */
-func Operator_not_equal_35(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_not_equal35(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2562,7 +2562,7 @@ func Operator_not_equal_35(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*/)
 /*
 
  */
-func Operator_not_equal_36(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_not_equal36(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2584,7 +2584,7 @@ func Operator_not_equal_36(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/) b
 /*
 
  */
-func Operator_not_equal_37(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF /*123*/) bool {
+func Operator_not_equal37(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QLatin1String_PTR() != nil {
 		convArg0 = s1.QLatin1String_PTR().GetCthis()
@@ -2606,7 +2606,7 @@ func Operator_not_equal_37(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF /*
 /*
 
  */
-func Operator_not_equal_38(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) bool {
+func Operator_not_equal38(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -2628,7 +2628,7 @@ func Operator_not_equal_38(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) bo
 /*
 
  */
-func Operator_not_equal_39(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
+func Operator_not_equal39(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -2650,7 +2650,7 @@ func Operator_not_equal_39(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*/)
 /*
 
  */
-func Operator_not_equal_40(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_not_equal40(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -2672,7 +2672,7 @@ func Operator_not_equal_40(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*
 /*
 
  */
-func Operator_not_equal_41(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_not_equal41(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -2694,7 +2694,7 @@ func Operator_not_equal_41(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*12
 /*
 
  */
-func Operator_not_equal_42(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
+func Operator_not_equal42(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -2716,7 +2716,7 @@ func Operator_not_equal_42(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/) b
 /*
 
  */
-func Operator_not_equal_43(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_not_equal43(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -2758,7 +2758,7 @@ func Operator_mul(factor int, margins QMargins_ITF) *QMargins /*123*/ {
 /*
 
  */
-func Operator_mul_1(factor int, p QPoint_ITF) *QPoint /*123*/ {
+func Operator_mul1(factor int, p QPoint_ITF) *QPoint /*123*/ {
 	var convArg1 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg1 = p.QPoint_PTR().GetCthis()
@@ -2778,7 +2778,7 @@ func Operator_mul_1(factor int, p QPoint_ITF) *QPoint /*123*/ {
 /*
 
  */
-func Operator_mul_2(factor float32, p QPoint_ITF) *QPoint /*123*/ {
+func Operator_mul2(factor float32, p QPoint_ITF) *QPoint /*123*/ {
 	var convArg1 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg1 = p.QPoint_PTR().GetCthis()
@@ -2798,7 +2798,7 @@ func Operator_mul_2(factor float32, p QPoint_ITF) *QPoint /*123*/ {
 /*
 
  */
-func Operator_mul_3(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
+func Operator_mul3(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QMarginsF_PTR() != nil {
 		convArg1 = rhs.QMarginsF_PTR().GetCthis()
@@ -2818,7 +2818,7 @@ func Operator_mul_3(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 /*
 
  */
-func Operator_mul_4(factor float64, margins QMargins_ITF) *QMargins /*123*/ {
+func Operator_mul4(factor float64, margins QMargins_ITF) *QMargins /*123*/ {
 	var convArg1 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg1 = margins.QMargins_PTR().GetCthis()
@@ -2838,7 +2838,7 @@ func Operator_mul_4(factor float64, margins QMargins_ITF) *QMargins /*123*/ {
 /*
 
  */
-func Operator_mul_5(c float64, p QPointF_ITF) *QPointF /*123*/ {
+func Operator_mul5(c float64, p QPointF_ITF) *QPointF /*123*/ {
 	var convArg1 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg1 = p.QPointF_PTR().GetCthis()
@@ -2858,7 +2858,7 @@ func Operator_mul_5(c float64, p QPointF_ITF) *QPointF /*123*/ {
 /*
 
  */
-func Operator_mul_6(c float64, s QSizeF_ITF) *QSizeF /*123*/ {
+func Operator_mul6(c float64, s QSizeF_ITF) *QSizeF /*123*/ {
 	var convArg1 unsafe.Pointer
 	if s != nil && s.QSizeF_PTR() != nil {
 		convArg1 = s.QSizeF_PTR().GetCthis()
@@ -2878,7 +2878,7 @@ func Operator_mul_6(c float64, s QSizeF_ITF) *QSizeF /*123*/ {
 /*
 
  */
-func Operator_mul_7(factor float64, p QPoint_ITF) *QPoint /*123*/ {
+func Operator_mul7(factor float64, p QPoint_ITF) *QPoint /*123*/ {
 	var convArg1 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg1 = p.QPoint_PTR().GetCthis()
@@ -2898,7 +2898,7 @@ func Operator_mul_7(factor float64, p QPoint_ITF) *QPoint /*123*/ {
 /*
 
  */
-func Operator_mul_8(c float64, s QSize_ITF) *QSize /*123*/ {
+func Operator_mul8(c float64, s QSize_ITF) *QSize /*123*/ {
 	var convArg1 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg1 = s.QSize_PTR().GetCthis()
@@ -2918,7 +2918,7 @@ func Operator_mul_8(c float64, s QSize_ITF) *QSize /*123*/ {
 /*
 
  */
-func Operator_mul_9(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
+func Operator_mul9(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -2938,7 +2938,7 @@ func Operator_mul_9(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
 /*
 
  */
-func Operator_mul_10(margins QMargins_ITF, factor int) *QMargins /*123*/ {
+func Operator_mul10(margins QMargins_ITF, factor int) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -2958,7 +2958,7 @@ func Operator_mul_10(margins QMargins_ITF, factor int) *QMargins /*123*/ {
 /*
 
  */
-func Operator_mul_11(margins QMargins_ITF, factor float64) *QMargins /*123*/ {
+func Operator_mul11(margins QMargins_ITF, factor float64) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -2978,7 +2978,7 @@ func Operator_mul_11(margins QMargins_ITF, factor float64) *QMargins /*123*/ {
 /*
 
  */
-func Operator_mul_12(p QPointF_ITF, c float64) *QPointF /*123*/ {
+func Operator_mul12(p QPointF_ITF, c float64) *QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -2998,7 +2998,7 @@ func Operator_mul_12(p QPointF_ITF, c float64) *QPointF /*123*/ {
 /*
 
  */
-func Operator_mul_13(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
+func Operator_mul13(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSizeF_PTR() != nil {
 		convArg0 = s.QSizeF_PTR().GetCthis()
@@ -3018,7 +3018,7 @@ func Operator_mul_13(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
 /*
 
  */
-func Operator_mul_14(p QPoint_ITF, factor int) *QPoint /*123*/ {
+func Operator_mul14(p QPoint_ITF, factor int) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -3038,7 +3038,7 @@ func Operator_mul_14(p QPoint_ITF, factor int) *QPoint /*123*/ {
 /*
 
  */
-func Operator_mul_15(p QPoint_ITF, factor float32) *QPoint /*123*/ {
+func Operator_mul15(p QPoint_ITF, factor float32) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -3058,7 +3058,7 @@ func Operator_mul_15(p QPoint_ITF, factor float32) *QPoint /*123*/ {
 /*
 
  */
-func Operator_mul_16(p QPoint_ITF, factor float64) *QPoint /*123*/ {
+func Operator_mul16(p QPoint_ITF, factor float64) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -3078,7 +3078,7 @@ func Operator_mul_16(p QPoint_ITF, factor float64) *QPoint /*123*/ {
 /*
 
  */
-func Operator_mul_17(s QSize_ITF, c float64) *QSize /*123*/ {
+func Operator_mul17(s QSize_ITF, c float64) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
@@ -3102,7 +3102,7 @@ This function was introduced in  Qt 5.1.
 
 See also QMargins::operator+=() and QMargins::operator-=().
 */
-func Operator_minus_4(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
+func Operator_minus4(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -3126,7 +3126,7 @@ This function was introduced in  Qt 5.1.
 
 See also QMargins::operator+=() and QMargins::operator-=().
 */
-func Operator_minus_5(lhs QMarginsF_ITF, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
+func Operator_minus5(lhs QMarginsF_ITF, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -3154,7 +3154,7 @@ This function was introduced in  Qt 5.1.
 
 See also QMargins::operator+=() and QMargins::operator-=().
 */
-func Operator_minus_6(lhs QMargins_ITF, rhs int) *QMargins /*123*/ {
+func Operator_minus6(lhs QMargins_ITF, rhs int) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMargins_PTR() != nil {
 		convArg0 = lhs.QMargins_PTR().GetCthis()
@@ -3178,7 +3178,7 @@ This function was introduced in  Qt 5.1.
 
 See also QMargins::operator+=() and QMargins::operator-=().
 */
-func Operator_minus_7(m1 QMargins_ITF, m2 QMargins_ITF) *QMargins /*123*/ {
+func Operator_minus7(m1 QMargins_ITF, m2 QMargins_ITF) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMargins_PTR() != nil {
 		convArg0 = m1.QMargins_PTR().GetCthis()
@@ -3204,7 +3204,7 @@ Returns a QPoint object that is formed by subtracting p2 from p1; each component
 
 See also QPoint::operator-=().
 */
-func Operator_minus_8(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
+func Operator_minus8(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPointF_PTR() != nil {
 		convArg0 = p1.QPointF_PTR().GetCthis()
@@ -3228,7 +3228,7 @@ func Operator_minus_8(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
 /*
 Returns s2 subtracted from s1; each component is subtracted separately.
 */
-func Operator_minus_9(s1 QSizeF_ITF, s2 QSizeF_ITF) *QSizeF /*123*/ {
+func Operator_minus9(s1 QSizeF_ITF, s2 QSizeF_ITF) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSizeF_PTR() != nil {
 		convArg0 = s1.QSizeF_PTR().GetCthis()
@@ -3254,7 +3254,7 @@ Returns the lhs rectangle shrunken by the rhs margins.
 
 This function was introduced in  Qt 5.3.
 */
-func Operator_minus_10(lhs QRectF_ITF, rhs QMarginsF_ITF) *QRectF /*123*/ {
+func Operator_minus10(lhs QRectF_ITF, rhs QMarginsF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QRectF_PTR() != nil {
 		convArg0 = lhs.QRectF_PTR().GetCthis()
@@ -3280,7 +3280,7 @@ Returns a QPoint object that is formed by subtracting p2 from p1; each component
 
 See also QPoint::operator-=().
 */
-func Operator_minus_11(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
+func Operator_minus11(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPoint_PTR() != nil {
 		convArg0 = p1.QPoint_PTR().GetCthis()
@@ -3304,7 +3304,7 @@ func Operator_minus_11(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
 /*
 Returns s2 subtracted from s1; each component is subtracted separately.
 */
-func Operator_minus_12(s1 QSize_ITF, s2 QSize_ITF) *QSize /*123*/ {
+func Operator_minus12(s1 QSize_ITF, s2 QSize_ITF) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSize_PTR() != nil {
 		convArg0 = s1.QSize_PTR().GetCthis()
@@ -3330,7 +3330,7 @@ Returns the lhs rectangle shrunken by the rhs margins.
 
 This function was introduced in  Qt 5.3.
 */
-func Operator_minus_13(lhs QRect_ITF, rhs QMargins_ITF) *QRect /*123*/ {
+func Operator_minus13(lhs QRect_ITF, rhs QMargins_ITF) *QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QRect_PTR() != nil {
 		convArg0 = lhs.QRect_PTR().GetCthis()
@@ -3354,7 +3354,7 @@ func Operator_minus_13(lhs QRect_ITF, rhs QMargins_ITF) *QRect /*123*/ {
 /*
 
  */
-func Operator_equal_equal_1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
+func Operator_equal_equal1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -3376,7 +3376,7 @@ func Operator_equal_equal_1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
+func Operator_equal_equal2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if v1 != nil && v1.QVariant_PTR() != nil {
 		convArg0 = v1.QVariant_PTR().GetCthis()
@@ -3398,7 +3398,7 @@ func Operator_equal_equal_2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bo
 /*
 
  */
-func Operator_equal_equal_3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
+func Operator_equal_equal3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMargins_PTR() != nil {
 		convArg0 = m1.QMargins_PTR().GetCthis()
@@ -3420,8 +3420,8 @@ func Operator_equal_equal_3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_4(lhs string, rhs QStringRef_ITF) bool {
-	var tmpArg0 = NewQString_5(lhs)
+func Operator_equal_equal4(lhs string, rhs QStringRef_ITF) bool {
+	var tmpArg0 = NewQString5(lhs)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QStringRef_PTR() != nil {
@@ -3440,8 +3440,8 @@ func Operator_equal_equal_4(lhs string, rhs QStringRef_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_5(s string, arg1 int) bool {
-	var tmpArg0 = NewQString_5(s)
+func Operator_equal_equal5(s string, arg1 int) bool {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZeqRK7QStringNS_4NullE", qtrt.FFI_TYPE_POINTER, convArg0, arg1)
 	qtrt.ErrPrint(err, rv)
@@ -3456,8 +3456,8 @@ func Operator_equal_equal_5(s string, arg1 int) bool {
 /*
 
  */
-func Operator_equal_equal_6(lhs string, rhs QChar_ITF /*123*/) bool {
-	var tmpArg0 = NewQString_5(lhs)
+func Operator_equal_equal6(lhs string, rhs QChar_ITF /*123*/) bool {
+	var tmpArg0 = NewQString5(lhs)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QChar_PTR() != nil {
@@ -3476,7 +3476,7 @@ func Operator_equal_equal_6(lhs string, rhs QChar_ITF /*123*/) bool {
 /*
 
  */
-func Operator_equal_equal_7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
+func Operator_equal_equal7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPointF_PTR() != nil {
 		convArg0 = p1.QPointF_PTR().GetCthis()
@@ -3498,7 +3498,7 @@ func Operator_equal_equal_7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
+func Operator_equal_equal8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSizeF_PTR() != nil {
 		convArg0 = s1.QSizeF_PTR().GetCthis()
@@ -3520,7 +3520,7 @@ func Operator_equal_equal_8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
+func Operator_equal_equal9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r1 != nil && r1.QRectF_PTR() != nil {
 		convArg0 = r1.QRectF_PTR().GetCthis()
@@ -3542,7 +3542,7 @@ func Operator_equal_equal_9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
+func Operator_equal_equal10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPoint_PTR() != nil {
 		convArg0 = p1.QPoint_PTR().GetCthis()
@@ -3564,7 +3564,7 @@ func Operator_equal_equal_10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_11(s1 QSize_ITF, s2 QSize_ITF) bool {
+func Operator_equal_equal11(s1 QSize_ITF, s2 QSize_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSize_PTR() != nil {
 		convArg0 = s1.QSize_PTR().GetCthis()
@@ -3586,7 +3586,7 @@ func Operator_equal_equal_11(s1 QSize_ITF, s2 QSize_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_12(r1 QRect_ITF, r2 QRect_ITF) bool {
+func Operator_equal_equal12(r1 QRect_ITF, r2 QRect_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r1 != nil && r1.QRect_PTR() != nil {
 		convArg0 = r1.QRect_PTR().GetCthis()
@@ -3608,7 +3608,7 @@ func Operator_equal_equal_12(r1 QRect_ITF, r2 QRect_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_13(arg0 QHashDummyValue_ITF, arg1 QHashDummyValue_ITF) bool {
+func Operator_equal_equal13(arg0 QHashDummyValue_ITF, arg1 QHashDummyValue_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QHashDummyValue_PTR() != nil {
 		convArg0 = arg0.QHashDummyValue_PTR().GetCthis()
@@ -3630,7 +3630,7 @@ func Operator_equal_equal_13(arg0 QHashDummyValue_ITF, arg1 QHashDummyValue_ITF)
 /*
 
  */
-func Operator_equal_equal_14(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
+func Operator_equal_equal14(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QVersionNumber_PTR() != nil {
 		convArg0 = lhs.QVersionNumber_PTR().GetCthis()
@@ -3652,7 +3652,7 @@ func Operator_equal_equal_14(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) boo
 /*
 
  */
-func Operator_equal_equal_15(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
+func Operator_equal_equal15(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if first != nil && first.QStorageInfo_PTR() != nil {
 		convArg0 = first.QStorageInfo_PTR().GetCthis()
@@ -3674,7 +3674,7 @@ func Operator_equal_equal_15(first QStorageInfo_ITF, second QStorageInfo_ITF) bo
 /*
 
  */
-func Operator_equal_equal_16(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
+func Operator_equal_equal16(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMetaMethod_PTR() != nil {
 		convArg0 = m1.QMetaMethod_PTR().GetCthis()
@@ -3696,7 +3696,7 @@ func Operator_equal_equal_16(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_17(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
+func Operator_equal_equal17(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -3718,12 +3718,12 @@ func Operator_equal_equal_17(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_18(lhs QStringRef_ITF, rhs string) bool {
+func Operator_equal_equal18(lhs QStringRef_ITF, rhs string) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(rhs)
+	var tmpArg1 = NewQString5(rhs)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZeqRK10QStringRefRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3738,7 +3738,7 @@ func Operator_equal_equal_18(lhs QStringRef_ITF, rhs string) bool {
 /*
 
  */
-func Operator_equal_equal_19(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
+func Operator_equal_equal19(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -3760,7 +3760,7 @@ func Operator_equal_equal_19(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_20(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
+func Operator_equal_equal20(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -3782,7 +3782,7 @@ func Operator_equal_equal_20(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
 /*
 
  */
-func Operator_equal_equal_21(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_equal_equal21(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -3804,7 +3804,7 @@ func Operator_equal_equal_21(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) 
 /*
 
  */
-func Operator_equal_equal_22(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
+func Operator_equal_equal22(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -3826,7 +3826,7 @@ func Operator_equal_equal_22(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_23(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
+func Operator_equal_equal23(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QByteArray_PTR() != nil {
 		convArg0 = lhs.QByteArray_PTR().GetCthis()
@@ -3848,7 +3848,7 @@ func Operator_equal_equal_23(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_24(a1 QByteArray_ITF, a2 string) bool {
+func Operator_equal_equal24(a1 QByteArray_ITF, a2 string) bool {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -3868,10 +3868,10 @@ func Operator_equal_equal_24(a1 QByteArray_ITF, a2 string) bool {
 /*
 
  */
-func Operator_equal_equal_25(s1 string, s2 string) bool {
+func Operator_equal_equal25(s1 string, s2 string) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
-	var tmpArg1 = NewQString_5(s2)
+	var tmpArg1 = NewQString5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZeqPKcRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3886,7 +3886,7 @@ func Operator_equal_equal_25(s1 string, s2 string) bool {
 /*
 
  */
-func Operator_equal_equal_26(s1 string, s2 QStringRef_ITF) bool {
+func Operator_equal_equal26(s1 string, s2 QStringRef_ITF) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -3906,7 +3906,7 @@ func Operator_equal_equal_26(s1 string, s2 QStringRef_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_27(a1 string, a2 QByteArray_ITF) bool {
+func Operator_equal_equal27(a1 string, a2 QByteArray_ITF) bool {
 	var convArg0 = qtrt.CString(a1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -3926,7 +3926,7 @@ func Operator_equal_equal_27(a1 string, a2 QByteArray_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_28(s1 string, s2 QLatin1String_ITF /*123*/) bool {
+func Operator_equal_equal28(s1 string, s2 QLatin1String_ITF /*123*/) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -3946,7 +3946,7 @@ func Operator_equal_equal_28(s1 string, s2 QLatin1String_ITF /*123*/) bool {
 /*
 
  */
-func Operator_equal_equal_29(arg0 int, arg1 int) bool {
+func Operator_equal_equal29(arg0 int, arg1 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZeqN7QString4NullES0_", qtrt.FFI_TYPE_POINTER, arg0, arg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -3960,8 +3960,8 @@ func Operator_equal_equal_29(arg0 int, arg1 int) bool {
 /*
 
  */
-func Operator_equal_equal_30(arg0 int, s string) bool {
-	var tmpArg1 = NewQString_5(s)
+func Operator_equal_equal30(arg0 int, s string) bool {
+	var tmpArg1 = NewQString5(s)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZeqN7QString4NullERKS_", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3976,7 +3976,7 @@ func Operator_equal_equal_30(arg0 int, s string) bool {
 /*
 
  */
-func Operator_equal_equal_31(arg0 int, rhs QChar_ITF /*123*/) bool {
+func Operator_equal_equal31(arg0 int, rhs QChar_ITF /*123*/) bool {
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QChar_PTR() != nil {
 		convArg1 = rhs.QChar_PTR().GetCthis()
@@ -3994,7 +3994,7 @@ func Operator_equal_equal_31(arg0 int, rhs QChar_ITF /*123*/) bool {
 /*
 
  */
-func Operator_equal_equal_32(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
+func Operator_equal_equal32(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c1 != nil && c1.QChar_PTR() != nil {
 		convArg0 = c1.QChar_PTR().GetCthis()
@@ -4016,12 +4016,12 @@ func Operator_equal_equal_32(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
 /*
 
  */
-func Operator_equal_equal_33(lhs QChar_ITF /*123*/, rhs string) bool {
+func Operator_equal_equal33(lhs QChar_ITF /*123*/, rhs string) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(rhs)
+	var tmpArg1 = NewQString5(rhs)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Zeq5QCharRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -4036,7 +4036,7 @@ func Operator_equal_equal_33(lhs QChar_ITF /*123*/, rhs string) bool {
 /*
 
  */
-func Operator_equal_equal_34(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
+func Operator_equal_equal34(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4058,7 +4058,7 @@ func Operator_equal_equal_34(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_35(lhs QChar_ITF /*123*/, arg1 int) bool {
+func Operator_equal_equal35(lhs QChar_ITF /*123*/, arg1 int) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4076,7 +4076,7 @@ func Operator_equal_equal_35(lhs QChar_ITF /*123*/, arg1 int) bool {
 /*
 
  */
-func Operator_equal_equal_36(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_equal_equal36(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4098,7 +4098,7 @@ func Operator_equal_equal_36(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*
 /*
 
  */
-func Operator_equal_equal_37(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_equal_equal37(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4120,7 +4120,7 @@ func Operator_equal_equal_37(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/)
 /*
 
  */
-func Operator_equal_equal_38(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF /*123*/) bool {
+func Operator_equal_equal38(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QLatin1String_PTR() != nil {
 		convArg0 = s1.QLatin1String_PTR().GetCthis()
@@ -4142,7 +4142,7 @@ func Operator_equal_equal_38(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF 
 /*
 
  */
-func Operator_equal_equal_39(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) bool {
+func Operator_equal_equal39(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -4164,7 +4164,7 @@ func Operator_equal_equal_39(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) 
 /*
 
  */
-func Operator_equal_equal_40(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
+func Operator_equal_equal40(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -4186,7 +4186,7 @@ func Operator_equal_equal_40(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*
 /*
 
  */
-func Operator_equal_equal_41(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_equal_equal41(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -4208,7 +4208,7 @@ func Operator_equal_equal_41(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF 
 /*
 
  */
-func Operator_equal_equal_42(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_equal_equal42(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -4230,7 +4230,7 @@ func Operator_equal_equal_42(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*
 /*
 
  */
-func Operator_equal_equal_43(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
+func Operator_equal_equal43(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -4252,7 +4252,7 @@ func Operator_equal_equal_43(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/)
 /*
 
  */
-func Operator_equal_equal_44(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_equal_equal44(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -4318,7 +4318,7 @@ func Operator_div(lhs QMarginsF_ITF, divisor float64) *QMarginsF /*123*/ {
 /*
 
  */
-func Operator_div_1(margins QMargins_ITF, divisor int) *QMargins /*123*/ {
+func Operator_div1(margins QMargins_ITF, divisor int) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -4338,7 +4338,7 @@ func Operator_div_1(margins QMargins_ITF, divisor int) *QMargins /*123*/ {
 /*
 
  */
-func Operator_div_2(margins QMargins_ITF, divisor float64) *QMargins /*123*/ {
+func Operator_div2(margins QMargins_ITF, divisor float64) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -4358,7 +4358,7 @@ func Operator_div_2(margins QMargins_ITF, divisor float64) *QMargins /*123*/ {
 /*
 
  */
-func Operator_div_3(p QPointF_ITF, divisor float64) *QPointF /*123*/ {
+func Operator_div3(p QPointF_ITF, divisor float64) *QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -4378,7 +4378,7 @@ func Operator_div_3(p QPointF_ITF, divisor float64) *QPointF /*123*/ {
 /*
 
  */
-func Operator_div_4(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
+func Operator_div4(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSizeF_PTR() != nil {
 		convArg0 = s.QSizeF_PTR().GetCthis()
@@ -4398,7 +4398,7 @@ func Operator_div_4(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
 /*
 
  */
-func Operator_div_5(p QPoint_ITF, c float64) *QPoint /*123*/ {
+func Operator_div5(p QPoint_ITF, c float64) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -4418,7 +4418,7 @@ func Operator_div_5(p QPoint_ITF, c float64) *QPoint /*123*/ {
 /*
 
  */
-func Operator_div_6(s QSize_ITF, c float64) *QSize /*123*/ {
+func Operator_div6(s QSize_ITF, c float64) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
@@ -4484,7 +4484,7 @@ func EndsWith(haystack QLatin1String_ITF /*123*/, needle QLatin1String_ITF /*123
 /*
 
  */
-func EndsWith_1(haystack QLatin1String_ITF /*123*/, needle QStringView_ITF /*123*/, cs int) bool {
+func EndsWith1(haystack QLatin1String_ITF /*123*/, needle QStringView_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if haystack != nil && haystack.QLatin1String_PTR() != nil {
 		convArg0 = haystack.QLatin1String_PTR().GetCthis()
@@ -4506,7 +4506,7 @@ func EndsWith_1(haystack QLatin1String_ITF /*123*/, needle QStringView_ITF /*123
 /*
 
  */
-func EndsWith_2(haystack QStringView_ITF /*123*/, needle QStringView_ITF /*123*/, cs int) bool {
+func EndsWith2(haystack QStringView_ITF /*123*/, needle QStringView_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if haystack != nil && haystack.QStringView_PTR() != nil {
 		convArg0 = haystack.QStringView_PTR().GetCthis()
@@ -4528,7 +4528,7 @@ func EndsWith_2(haystack QStringView_ITF /*123*/, needle QStringView_ITF /*123*/
 /*
 
  */
-func EndsWith_3(haystack QStringView_ITF /*123*/, needle QLatin1String_ITF /*123*/, cs int) bool {
+func EndsWith3(haystack QStringView_ITF /*123*/, needle QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if haystack != nil && haystack.QStringView_PTR() != nil {
 		convArg0 = haystack.QStringView_PTR().GetCthis()
@@ -4570,7 +4570,7 @@ func Trimmed(s QLatin1String_ITF /*123*/) *QLatin1String /*123*/ {
 /*
 
  */
-func Trimmed_1(s QStringView_ITF /*123*/) *QStringView /*123*/ {
+func Trimmed1(s QStringView_ITF /*123*/) *QStringView /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -4595,9 +4595,9 @@ func QStringList_replaceInStrings(that QStringList_ITF /*777 QStringList **/, be
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(before)
+	var tmpArg1 = NewQString5(before)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(after)
+	var tmpArg2 = NewQString5(after)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate28QStringList_replaceInStringsEP11QStringListRK7QStringS4_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4611,7 +4611,7 @@ func QStringList_replaceInStrings(that QStringList_ITF /*777 QStringList **/, be
 /*
 
  */
-func QStringList_replaceInStrings_1(that QStringList_ITF /*777 QStringList **/, rx QRegExp_ITF, after string) {
+func QStringList_replaceInStrings1(that QStringList_ITF /*777 QStringList **/, rx QRegExp_ITF, after string) {
 	var convArg0 unsafe.Pointer
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
@@ -4620,7 +4620,7 @@ func QStringList_replaceInStrings_1(that QStringList_ITF /*777 QStringList **/, 
 	if rx != nil && rx.QRegExp_PTR() != nil {
 		convArg1 = rx.QRegExp_PTR().GetCthis()
 	}
-	var tmpArg2 = NewQString_5(after)
+	var tmpArg2 = NewQString5(after)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate28QStringList_replaceInStringsEP11QStringListRK7QRegExpRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -4634,7 +4634,7 @@ func QStringList_replaceInStrings_1(that QStringList_ITF /*777 QStringList **/, 
 /*
 
  */
-func QStringList_replaceInStrings_2(that QStringList_ITF /*777 QStringList **/, rx QRegularExpression_ITF, after string) {
+func QStringList_replaceInStrings2(that QStringList_ITF /*777 QStringList **/, rx QRegularExpression_ITF, after string) {
 	var convArg0 unsafe.Pointer
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
@@ -4643,7 +4643,7 @@ func QStringList_replaceInStrings_2(that QStringList_ITF /*777 QStringList **/, 
 	if rx != nil && rx.QRegularExpression_PTR() != nil {
 		convArg1 = rx.QRegularExpression_PTR().GetCthis()
 	}
-	var tmpArg2 = NewQString_5(after)
+	var tmpArg2 = NewQString5(after)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate28QStringList_replaceInStringsEP11QStringListRK18QRegularExpressionRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -4697,7 +4697,7 @@ func QStringList_lastIndexOf(that QStringList_ITF /*777 const QStringList **/, r
 /*
 
  */
-func QStringList_lastIndexOf_1(that QStringList_ITF /*777 const QStringList **/, re QRegularExpression_ITF, from int) int {
+func QStringList_lastIndexOf1(that QStringList_ITF /*777 const QStringList **/, re QRegularExpression_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
@@ -4719,7 +4719,7 @@ func QStringList_lastIndexOf_1(that QStringList_ITF /*777 const QStringList **/,
 /*
 
  */
-func QStringList_lastIndexOf_2(that QStringList_ITF /*777 const QStringList **/, rx QRegExp_ITF, from int) int {
+func QStringList_lastIndexOf2(that QStringList_ITF /*777 const QStringList **/, rx QRegExp_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
@@ -4761,7 +4761,7 @@ func Deref_for_methodcall(o QObject_ITF) *QObject {
 /*
 
  */
-func Deref_for_methodcall_1(o QObject_ITF /*777 QObject **/) *QObject {
+func Deref_for_methodcall1(o QObject_ITF /*777 QObject **/) *QObject {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QObject_PTR() != nil {
 		convArg0 = o.QObject_PTR().GetCthis()
@@ -4786,7 +4786,7 @@ func QStringList_contains(that QStringList_ITF /*777 const QStringList **/, str 
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(str)
+	var tmpArg1 = NewQString5(str)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate20QStringList_containsEPK11QStringListRK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4801,7 +4801,7 @@ func QStringList_contains(that QStringList_ITF /*777 const QStringList **/, str 
 /*
 
  */
-func QStringList_contains_1(that QStringList_ITF /*777 const QStringList **/, str QLatin1String_ITF /*123*/, cs int) bool {
+func QStringList_contains1(that QStringList_ITF /*777 const QStringList **/, str QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
@@ -4845,7 +4845,7 @@ func QStringList_indexOf(that QStringList_ITF /*777 const QStringList **/, rx QR
 /*
 
  */
-func QStringList_indexOf_1(that QStringList_ITF /*777 const QStringList **/, re QRegularExpression_ITF, from int) int {
+func QStringList_indexOf1(that QStringList_ITF /*777 const QStringList **/, re QRegularExpression_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
@@ -4867,7 +4867,7 @@ func QStringList_indexOf_1(that QStringList_ITF /*777 const QStringList **/, re 
 /*
 
  */
-func QStringList_indexOf_2(that QStringList_ITF /*777 const QStringList **/, rx QRegExp_ITF, from int) int {
+func QStringList_indexOf2(that QStringList_ITF /*777 const QStringList **/, rx QRegExp_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
@@ -4936,7 +4936,7 @@ func QStringList_filter(that QStringList_ITF /*777 const QStringList **/, str st
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(str)
+	var tmpArg1 = NewQString5(str)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate18QStringList_filterEPK11QStringListRK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, cs)
 	qtrt.ErrPrint(err, rv)
@@ -4953,7 +4953,7 @@ func QStringList_filter(that QStringList_ITF /*777 const QStringList **/, str st
 /*
 
  */
-func QStringList_filter_1(that QStringList_ITF /*777 const QStringList **/, re QRegExp_ITF) *QStringList /*123*/ {
+func QStringList_filter1(that QStringList_ITF /*777 const QStringList **/, re QRegExp_ITF) *QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
@@ -4977,7 +4977,7 @@ func QStringList_filter_1(that QStringList_ITF /*777 const QStringList **/, re Q
 /*
 
  */
-func QStringList_filter_2(that QStringList_ITF /*777 const QStringList **/, re QRegularExpression_ITF) *QStringList /*123*/ {
+func QStringList_filter2(that QStringList_ITF /*777 const QStringList **/, re QRegularExpression_ITF) *QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
@@ -5043,7 +5043,7 @@ func QStringList_join(list QStringList_ITF, sep QLatin1String_ITF /*123*/) strin
 /*
 
  */
-func QStringList_join_1(that QStringList_ITF /*777 const QStringList **/, sep QChar_ITF /*777 const QChar **/, seplen int) string {
+func QStringList_join1(that QStringList_ITF /*777 const QStringList **/, sep QChar_ITF /*777 const QChar **/, seplen int) string {
 	var convArg0 unsafe.Pointer
 	if that != nil && that.QStringList_PTR() != nil {
 		convArg0 = that.QStringList_PTR().GetCthis()
@@ -5110,7 +5110,7 @@ func CompareStrings(lhs QLatin1String_ITF /*123*/, rhs QLatin1String_ITF /*123*/
 /*
 
  */
-func CompareStrings_1(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/, cs int) int {
+func CompareStrings1(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/, cs int) int {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -5132,7 +5132,7 @@ func CompareStrings_1(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/
 /*
 
  */
-func CompareStrings_2(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/, cs int) int {
+func CompareStrings2(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/, cs int) int {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -5154,7 +5154,7 @@ func CompareStrings_2(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/, 
 /*
 
  */
-func CompareStrings_3(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /*123*/, cs int) int {
+func CompareStrings3(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /*123*/, cs int) int {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -5236,7 +5236,7 @@ func StartsWith(haystack QLatin1String_ITF /*123*/, needle QLatin1String_ITF /*1
 /*
 
  */
-func StartsWith_1(haystack QLatin1String_ITF /*123*/, needle QStringView_ITF /*123*/, cs int) bool {
+func StartsWith1(haystack QLatin1String_ITF /*123*/, needle QStringView_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if haystack != nil && haystack.QLatin1String_PTR() != nil {
 		convArg0 = haystack.QLatin1String_PTR().GetCthis()
@@ -5258,7 +5258,7 @@ func StartsWith_1(haystack QLatin1String_ITF /*123*/, needle QStringView_ITF /*1
 /*
 
  */
-func StartsWith_2(haystack QStringView_ITF /*123*/, needle QStringView_ITF /*123*/, cs int) bool {
+func StartsWith2(haystack QStringView_ITF /*123*/, needle QStringView_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if haystack != nil && haystack.QStringView_PTR() != nil {
 		convArg0 = haystack.QStringView_PTR().GetCthis()
@@ -5280,7 +5280,7 @@ func StartsWith_2(haystack QStringView_ITF /*123*/, needle QStringView_ITF /*123
 /*
 
  */
-func StartsWith_3(haystack QStringView_ITF /*123*/, needle QLatin1String_ITF /*123*/, cs int) bool {
+func StartsWith3(haystack QStringView_ITF /*123*/, needle QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if haystack != nil && haystack.QStringView_PTR() != nil {
 		convArg0 = haystack.QStringView_PTR().GetCthis()
@@ -5316,7 +5316,7 @@ func Qt_getEnumMetaObject(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 /*
 
  */
-func Qt_getEnumMetaObject_1(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject1(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_9SortOrderE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5330,7 +5330,7 @@ func Qt_getEnumMetaObject_1(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 /*
 
  */
-func Qt_getEnumMetaObject_2(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject2(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_9DayOfWeekE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5344,7 +5344,7 @@ func Qt_getEnumMetaObject_2(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 /*
 
  */
-func Qt_getEnumMetaObject_3(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject3(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_9ArrowTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5358,7 +5358,7 @@ func Qt_getEnumMetaObject_3(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 /*
 
  */
-func Qt_getEnumMetaObject_4(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject4(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_8TimeSpecE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5372,7 +5372,7 @@ func Qt_getEnumMetaObject_4(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 /*
 
  */
-func Qt_getEnumMetaObject_5(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject5(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_8TextFlagE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5386,7 +5386,7 @@ func Qt_getEnumMetaObject_5(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 /*
 
  */
-func Qt_getEnumMetaObject_6(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject6(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_8SizeModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5400,7 +5400,7 @@ func Qt_getEnumMetaObject_6(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 /*
 
  */
-func Qt_getEnumMetaObject_7(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject7(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_8SizeHintE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5414,7 +5414,7 @@ func Qt_getEnumMetaObject_7(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 /*
 
  */
-func Qt_getEnumMetaObject_8(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject8(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_8PenStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5428,7 +5428,7 @@ func Qt_getEnumMetaObject_8(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 /*
 
  */
-func Qt_getEnumMetaObject_9(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject9(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_8MaskModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5442,7 +5442,7 @@ func Qt_getEnumMetaObject_9(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 /*
 
  */
-func Qt_getEnumMetaObject_10(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject10(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_8FillRuleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5456,7 +5456,7 @@ func Qt_getEnumMetaObject_10(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_11(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject11(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_6CornerE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5470,7 +5470,7 @@ func Qt_getEnumMetaObject_11(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_12(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject12(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_6BGModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5484,7 +5484,7 @@ func Qt_getEnumMetaObject_12(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_13(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject13(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_4EdgeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5498,7 +5498,7 @@ func Qt_getEnumMetaObject_13(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_14(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject14(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_4AxisE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5512,7 +5512,7 @@ func Qt_getEnumMetaObject_14(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_15(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject15(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_3KeyE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5526,7 +5526,7 @@ func Qt_getEnumMetaObject_15(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_16(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject16(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_22ItemSelectionOperationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5540,7 +5540,7 @@ func Qt_getEnumMetaObject_16(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_17(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject17(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_20ApplicationAttributeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5554,7 +5554,7 @@ func Qt_getEnumMetaObject_17(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_18(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject18(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_19TextInteractionFlagE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5568,7 +5568,7 @@ func Qt_getEnumMetaObject_18(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_19(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject19(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_18TransformationModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5582,7 +5582,7 @@ func Qt_getEnumMetaObject_19(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_20(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject20(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_17ScreenOrientationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5596,7 +5596,7 @@ func Qt_getEnumMetaObject_20(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_21(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject21(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_17NativeGestureTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5610,7 +5610,7 @@ func Qt_getEnumMetaObject_21(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_22(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject22(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5624,7 +5624,7 @@ func Qt_getEnumMetaObject_22(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_23(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject23(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_17ContextMenuPolicyE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5638,7 +5638,7 @@ func Qt_getEnumMetaObject_23(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_24(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject24(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_16TabFocusBehaviorE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5652,7 +5652,7 @@ func Qt_getEnumMetaObject_24(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_25(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject25(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_16MouseEventSourceE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5666,7 +5666,7 @@ func Qt_getEnumMetaObject_25(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_26(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject26(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5680,7 +5680,7 @@ func Qt_getEnumMetaObject_26(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_27(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject27(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_16ApplicationStateE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5694,7 +5694,7 @@ func Qt_getEnumMetaObject_27(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_28(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject28(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_15WidgetAttributeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5708,7 +5708,7 @@ func Qt_getEnumMetaObject_28(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_29(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject29(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_15ToolButtonStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5722,7 +5722,7 @@ func Qt_getEnumMetaObject_29(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_30(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject30(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_15ShortcutContextE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5736,7 +5736,7 @@ func Qt_getEnumMetaObject_30(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_31(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject31(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_15ScrollBarPolicyE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5750,7 +5750,7 @@ func Qt_getEnumMetaObject_31(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_32(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject32(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_15LayoutDirectionE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5764,7 +5764,7 @@ func Qt_getEnumMetaObject_32(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_33(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject33(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_15InputMethodHintE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5778,7 +5778,7 @@ func Qt_getEnumMetaObject_33(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_34(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject34(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_15CursorMoveStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5792,7 +5792,7 @@ func Qt_getEnumMetaObject_34(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_35(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject35(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5806,7 +5806,7 @@ func Qt_getEnumMetaObject_35(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_36(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject36(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5820,7 +5820,7 @@ func Qt_getEnumMetaObject_36(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_37(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject37(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_14WindowModalityE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5834,7 +5834,7 @@ func Qt_getEnumMetaObject_37(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_38(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject38(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_14MouseEventFlagE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5848,7 +5848,7 @@ func Qt_getEnumMetaObject_38(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_39(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject39(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_14DockWidgetAreaE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5862,7 +5862,7 @@ func Qt_getEnumMetaObject_39(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_40(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject40(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_14ConnectionTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5876,7 +5876,7 @@ func Qt_getEnumMetaObject_40(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_41(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject41(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_13TextElideModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5890,7 +5890,7 @@ func Qt_getEnumMetaObject_41(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_42(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject42(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_13ClipOperationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5904,7 +5904,7 @@ func Qt_getEnumMetaObject_42(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_43(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject43(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_12PenJoinStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5918,7 +5918,7 @@ func Qt_getEnumMetaObject_43(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_44(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject44(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_12ItemDataRoleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5932,7 +5932,7 @@ func Qt_getEnumMetaObject_44(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_45(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject45(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_12GestureStateE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5946,7 +5946,7 @@ func Qt_getEnumMetaObject_45(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_46(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject46(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_12EnterKeyTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5960,7 +5960,7 @@ func Qt_getEnumMetaObject_46(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_47(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject47(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_12ChecksumTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5974,7 +5974,7 @@ func Qt_getEnumMetaObject_47(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_48(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject48(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_11WindowStateE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -5988,7 +5988,7 @@ func Qt_getEnumMetaObject_48(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_49(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject49(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_11ToolBarAreaE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6002,7 +6002,7 @@ func Qt_getEnumMetaObject_49(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_50(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject50(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_11ScrollPhaseE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6016,7 +6016,7 @@ func Qt_getEnumMetaObject_50(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_51(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject51(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_11PenCapStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6030,7 +6030,7 @@ func Qt_getEnumMetaObject_51(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_52(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject52(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_11OrientationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6044,7 +6044,7 @@ func Qt_getEnumMetaObject_52(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_53(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject53(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_11GlobalColorE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6058,7 +6058,7 @@ func Qt_getEnumMetaObject_53(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_54(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject54(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_11GestureTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6072,7 +6072,7 @@ func Qt_getEnumMetaObject_54(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_55(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject55(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_11FocusReasonE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6086,7 +6086,7 @@ func Qt_getEnumMetaObject_55(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_56(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject56(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_11FocusPolicyE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6100,7 +6100,7 @@ func Qt_getEnumMetaObject_56(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_57(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject57(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_11CursorShapeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6114,7 +6114,7 @@ func Qt_getEnumMetaObject_57(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_58(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject58(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_10WindowTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6128,7 +6128,7 @@ func Qt_getEnumMetaObject_58(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_59(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject59(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_10TextFormatE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6142,7 +6142,7 @@ func Qt_getEnumMetaObject_59(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_60(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject60(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_10DropActionE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6156,7 +6156,7 @@ func Qt_getEnumMetaObject_60(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_61(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject61(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_10DateFormatE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6170,7 +6170,7 @@ func Qt_getEnumMetaObject_61(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_62(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject62(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_10CheckStateE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6184,7 +6184,7 @@ func Qt_getEnumMetaObject_62(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_63(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject63(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectENS_10BrushStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6198,7 +6198,7 @@ func Qt_getEnumMetaObject_63(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_64(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject64(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_9MatchFlagEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6212,7 +6212,7 @@ func Qt_getEnumMetaObject_64(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_65(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject65(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_8ItemFlagEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6226,7 +6226,7 @@ func Qt_getEnumMetaObject_65(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_66(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject66(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_4EdgeEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6240,7 +6240,7 @@ func Qt_getEnumMetaObject_66(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_67(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject67(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_19TextInteractionFlagEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6254,7 +6254,7 @@ func Qt_getEnumMetaObject_67(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_68(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject68(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6268,7 +6268,7 @@ func Qt_getEnumMetaObject_68(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_69(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject69(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_17ScreenOrientationEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6282,7 +6282,7 @@ func Qt_getEnumMetaObject_69(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_70(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject70(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6296,7 +6296,7 @@ func Qt_getEnumMetaObject_70(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_71(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject71(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_16InputMethodQueryEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6310,7 +6310,7 @@ func Qt_getEnumMetaObject_71(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_72(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject72(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_15TouchPointStateEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6324,7 +6324,7 @@ func Qt_getEnumMetaObject_72(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_73(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject73(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6338,7 +6338,7 @@ func Qt_getEnumMetaObject_73(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_74(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject74(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_14DockWidgetAreaEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6352,7 +6352,7 @@ func Qt_getEnumMetaObject_74(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_75(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject75(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6366,7 +6366,7 @@ func Qt_getEnumMetaObject_75(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_76(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject76(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_11WindowStateEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6380,7 +6380,7 @@ func Qt_getEnumMetaObject_76(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_77(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject77(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_11ToolBarAreaEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6394,7 +6394,7 @@ func Qt_getEnumMetaObject_77(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_78(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject78(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_11OrientationEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6408,7 +6408,7 @@ func Qt_getEnumMetaObject_78(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_79(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject79(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_11MouseButtonEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6422,7 +6422,7 @@ func Qt_getEnumMetaObject_79(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_80(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject80(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_10WindowTypeEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6436,7 +6436,7 @@ func Qt_getEnumMetaObject_80(arg0 int) *QMetaObject /*777 const QMetaObject **/ 
 /*
 
  */
-func Qt_getEnumMetaObject_81(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getEnumMetaObject81(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20qt_getEnumMetaObjectE6QFlagsINS_10DropActionEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -6464,7 +6464,7 @@ func Qt_getEnumName(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_1(arg0 int) string {
+func Qt_getEnumName1(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_9SortOrderE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6478,7 +6478,7 @@ func Qt_getEnumName_1(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_2(arg0 int) string {
+func Qt_getEnumName2(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_9DayOfWeekE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6492,7 +6492,7 @@ func Qt_getEnumName_2(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_3(arg0 int) string {
+func Qt_getEnumName3(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_9ArrowTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6506,7 +6506,7 @@ func Qt_getEnumName_3(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_4(arg0 int) string {
+func Qt_getEnumName4(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_8TimeSpecE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6520,7 +6520,7 @@ func Qt_getEnumName_4(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_5(arg0 int) string {
+func Qt_getEnumName5(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_8TextFlagE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6534,7 +6534,7 @@ func Qt_getEnumName_5(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_6(arg0 int) string {
+func Qt_getEnumName6(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_8SizeModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6548,7 +6548,7 @@ func Qt_getEnumName_6(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_7(arg0 int) string {
+func Qt_getEnumName7(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_8SizeHintE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6562,7 +6562,7 @@ func Qt_getEnumName_7(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_8(arg0 int) string {
+func Qt_getEnumName8(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_8PenStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6576,7 +6576,7 @@ func Qt_getEnumName_8(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_9(arg0 int) string {
+func Qt_getEnumName9(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_8MaskModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6590,7 +6590,7 @@ func Qt_getEnumName_9(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_10(arg0 int) string {
+func Qt_getEnumName10(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_8FillRuleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6604,7 +6604,7 @@ func Qt_getEnumName_10(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_11(arg0 int) string {
+func Qt_getEnumName11(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_6CornerE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6618,7 +6618,7 @@ func Qt_getEnumName_11(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_12(arg0 int) string {
+func Qt_getEnumName12(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_6BGModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6632,7 +6632,7 @@ func Qt_getEnumName_12(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_13(arg0 int) string {
+func Qt_getEnumName13(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_4EdgeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6646,7 +6646,7 @@ func Qt_getEnumName_13(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_14(arg0 int) string {
+func Qt_getEnumName14(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_4AxisE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6660,7 +6660,7 @@ func Qt_getEnumName_14(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_15(arg0 int) string {
+func Qt_getEnumName15(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_3KeyE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6674,7 +6674,7 @@ func Qt_getEnumName_15(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_16(arg0 int) string {
+func Qt_getEnumName16(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_22ItemSelectionOperationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6688,7 +6688,7 @@ func Qt_getEnumName_16(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_17(arg0 int) string {
+func Qt_getEnumName17(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_20ApplicationAttributeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6702,7 +6702,7 @@ func Qt_getEnumName_17(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_18(arg0 int) string {
+func Qt_getEnumName18(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_19TextInteractionFlagE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6716,7 +6716,7 @@ func Qt_getEnumName_18(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_19(arg0 int) string {
+func Qt_getEnumName19(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_18TransformationModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6730,7 +6730,7 @@ func Qt_getEnumName_19(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_20(arg0 int) string {
+func Qt_getEnumName20(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_17ScreenOrientationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6744,7 +6744,7 @@ func Qt_getEnumName_20(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_21(arg0 int) string {
+func Qt_getEnumName21(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_17NativeGestureTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6758,7 +6758,7 @@ func Qt_getEnumName_21(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_22(arg0 int) string {
+func Qt_getEnumName22(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6772,7 +6772,7 @@ func Qt_getEnumName_22(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_23(arg0 int) string {
+func Qt_getEnumName23(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_17ContextMenuPolicyE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6786,7 +6786,7 @@ func Qt_getEnumName_23(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_24(arg0 int) string {
+func Qt_getEnumName24(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_16TabFocusBehaviorE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6800,7 +6800,7 @@ func Qt_getEnumName_24(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_25(arg0 int) string {
+func Qt_getEnumName25(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_16MouseEventSourceE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6814,7 +6814,7 @@ func Qt_getEnumName_25(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_26(arg0 int) string {
+func Qt_getEnumName26(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6828,7 +6828,7 @@ func Qt_getEnumName_26(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_27(arg0 int) string {
+func Qt_getEnumName27(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_16ApplicationStateE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6842,7 +6842,7 @@ func Qt_getEnumName_27(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_28(arg0 int) string {
+func Qt_getEnumName28(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_15WidgetAttributeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6856,7 +6856,7 @@ func Qt_getEnumName_28(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_29(arg0 int) string {
+func Qt_getEnumName29(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_15ToolButtonStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6870,7 +6870,7 @@ func Qt_getEnumName_29(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_30(arg0 int) string {
+func Qt_getEnumName30(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_15ShortcutContextE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6884,7 +6884,7 @@ func Qt_getEnumName_30(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_31(arg0 int) string {
+func Qt_getEnumName31(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_15ScrollBarPolicyE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6898,7 +6898,7 @@ func Qt_getEnumName_31(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_32(arg0 int) string {
+func Qt_getEnumName32(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_15LayoutDirectionE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6912,7 +6912,7 @@ func Qt_getEnumName_32(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_33(arg0 int) string {
+func Qt_getEnumName33(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_15InputMethodHintE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6926,7 +6926,7 @@ func Qt_getEnumName_33(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_34(arg0 int) string {
+func Qt_getEnumName34(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_15CursorMoveStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6940,7 +6940,7 @@ func Qt_getEnumName_34(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_35(arg0 int) string {
+func Qt_getEnumName35(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6954,7 +6954,7 @@ func Qt_getEnumName_35(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_36(arg0 int) string {
+func Qt_getEnumName36(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6968,7 +6968,7 @@ func Qt_getEnumName_36(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_37(arg0 int) string {
+func Qt_getEnumName37(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_14WindowModalityE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6982,7 +6982,7 @@ func Qt_getEnumName_37(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_38(arg0 int) string {
+func Qt_getEnumName38(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_14MouseEventFlagE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -6996,7 +6996,7 @@ func Qt_getEnumName_38(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_39(arg0 int) string {
+func Qt_getEnumName39(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_14DockWidgetAreaE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7010,7 +7010,7 @@ func Qt_getEnumName_39(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_40(arg0 int) string {
+func Qt_getEnumName40(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_14ConnectionTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7024,7 +7024,7 @@ func Qt_getEnumName_40(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_41(arg0 int) string {
+func Qt_getEnumName41(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_13TextElideModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7038,7 +7038,7 @@ func Qt_getEnumName_41(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_42(arg0 int) string {
+func Qt_getEnumName42(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_13ClipOperationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7052,7 +7052,7 @@ func Qt_getEnumName_42(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_43(arg0 int) string {
+func Qt_getEnumName43(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_12PenJoinStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7066,7 +7066,7 @@ func Qt_getEnumName_43(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_44(arg0 int) string {
+func Qt_getEnumName44(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_12ItemDataRoleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7080,7 +7080,7 @@ func Qt_getEnumName_44(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_45(arg0 int) string {
+func Qt_getEnumName45(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_12GestureStateE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7094,7 +7094,7 @@ func Qt_getEnumName_45(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_46(arg0 int) string {
+func Qt_getEnumName46(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_12EnterKeyTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7108,7 +7108,7 @@ func Qt_getEnumName_46(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_47(arg0 int) string {
+func Qt_getEnumName47(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_12ChecksumTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7122,7 +7122,7 @@ func Qt_getEnumName_47(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_48(arg0 int) string {
+func Qt_getEnumName48(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_11WindowStateE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7136,7 +7136,7 @@ func Qt_getEnumName_48(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_49(arg0 int) string {
+func Qt_getEnumName49(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_11ToolBarAreaE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7150,7 +7150,7 @@ func Qt_getEnumName_49(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_50(arg0 int) string {
+func Qt_getEnumName50(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_11ScrollPhaseE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7164,7 +7164,7 @@ func Qt_getEnumName_50(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_51(arg0 int) string {
+func Qt_getEnumName51(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_11PenCapStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7178,7 +7178,7 @@ func Qt_getEnumName_51(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_52(arg0 int) string {
+func Qt_getEnumName52(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_11OrientationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7192,7 +7192,7 @@ func Qt_getEnumName_52(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_53(arg0 int) string {
+func Qt_getEnumName53(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_11GlobalColorE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7206,7 +7206,7 @@ func Qt_getEnumName_53(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_54(arg0 int) string {
+func Qt_getEnumName54(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_11GestureTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7220,7 +7220,7 @@ func Qt_getEnumName_54(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_55(arg0 int) string {
+func Qt_getEnumName55(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_11FocusReasonE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7234,7 +7234,7 @@ func Qt_getEnumName_55(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_56(arg0 int) string {
+func Qt_getEnumName56(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_11FocusPolicyE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7248,7 +7248,7 @@ func Qt_getEnumName_56(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_57(arg0 int) string {
+func Qt_getEnumName57(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_11CursorShapeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7262,7 +7262,7 @@ func Qt_getEnumName_57(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_58(arg0 int) string {
+func Qt_getEnumName58(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_10WindowTypeE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7276,7 +7276,7 @@ func Qt_getEnumName_58(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_59(arg0 int) string {
+func Qt_getEnumName59(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_10TextFormatE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7290,7 +7290,7 @@ func Qt_getEnumName_59(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_60(arg0 int) string {
+func Qt_getEnumName60(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_10DropActionE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7304,7 +7304,7 @@ func Qt_getEnumName_60(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_61(arg0 int) string {
+func Qt_getEnumName61(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_10DateFormatE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7318,7 +7318,7 @@ func Qt_getEnumName_61(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_62(arg0 int) string {
+func Qt_getEnumName62(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_10CheckStateE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7332,7 +7332,7 @@ func Qt_getEnumName_62(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_63(arg0 int) string {
+func Qt_getEnumName63(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameENS_10BrushStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7346,7 +7346,7 @@ func Qt_getEnumName_63(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_64(arg0 int) string {
+func Qt_getEnumName64(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_9MatchFlagEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7360,7 +7360,7 @@ func Qt_getEnumName_64(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_65(arg0 int) string {
+func Qt_getEnumName65(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_8ItemFlagEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7374,7 +7374,7 @@ func Qt_getEnumName_65(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_66(arg0 int) string {
+func Qt_getEnumName66(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_4EdgeEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7388,7 +7388,7 @@ func Qt_getEnumName_66(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_67(arg0 int) string {
+func Qt_getEnumName67(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_19TextInteractionFlagEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7402,7 +7402,7 @@ func Qt_getEnumName_67(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_68(arg0 int) string {
+func Qt_getEnumName68(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7416,7 +7416,7 @@ func Qt_getEnumName_68(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_69(arg0 int) string {
+func Qt_getEnumName69(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_17ScreenOrientationEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7430,7 +7430,7 @@ func Qt_getEnumName_69(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_70(arg0 int) string {
+func Qt_getEnumName70(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7444,7 +7444,7 @@ func Qt_getEnumName_70(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_71(arg0 int) string {
+func Qt_getEnumName71(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_16InputMethodQueryEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7458,7 +7458,7 @@ func Qt_getEnumName_71(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_72(arg0 int) string {
+func Qt_getEnumName72(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_15TouchPointStateEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7472,7 +7472,7 @@ func Qt_getEnumName_72(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_73(arg0 int) string {
+func Qt_getEnumName73(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_15InputMethodHintEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7486,7 +7486,7 @@ func Qt_getEnumName_73(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_74(arg0 int) string {
+func Qt_getEnumName74(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_14DockWidgetAreaEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7500,7 +7500,7 @@ func Qt_getEnumName_74(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_75(arg0 int) string {
+func Qt_getEnumName75(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7514,7 +7514,7 @@ func Qt_getEnumName_75(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_76(arg0 int) string {
+func Qt_getEnumName76(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_11WindowStateEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7528,7 +7528,7 @@ func Qt_getEnumName_76(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_77(arg0 int) string {
+func Qt_getEnumName77(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_11ToolBarAreaEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7542,7 +7542,7 @@ func Qt_getEnumName_77(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_78(arg0 int) string {
+func Qt_getEnumName78(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_11OrientationEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7556,7 +7556,7 @@ func Qt_getEnumName_78(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_79(arg0 int) string {
+func Qt_getEnumName79(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_11MouseButtonEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7570,7 +7570,7 @@ func Qt_getEnumName_79(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_80(arg0 int) string {
+func Qt_getEnumName80(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_10WindowTypeEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7584,7 +7584,7 @@ func Qt_getEnumName_80(arg0 int) string {
 /*
 
  */
-func Qt_getEnumName_81(arg0 int) string {
+func Qt_getEnumName81(arg0 int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt14qt_getEnumNameE6QFlagsINS_10DropActionEE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -7666,7 +7666,7 @@ func QIsNull(f float32) bool {
 /*
 
  */
-func QIsNull_1(d float64) bool {
+func QIsNull1(d float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZL7qIsNulld", qtrt.FFI_TYPE_POINTER, d)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -7694,7 +7694,7 @@ func QFuzzyCompare(p1 float32, p2 float32) bool {
 /*
 
  */
-func QFuzzyCompare_1(p1 float64, p2 float64) bool {
+func QFuzzyCompare1(p1 float64, p2 float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZL13qFuzzyComparedd", qtrt.FFI_TYPE_POINTER, p1, p2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -7722,7 +7722,7 @@ func QFuzzyIsNull(f float32) bool {
 /*
 
  */
-func QFuzzyIsNull_1(d float64) bool {
+func QFuzzyIsNull1(d float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZL12qFuzzyIsNulld", qtrt.FFI_TYPE_POINTER, d)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -7811,7 +7811,7 @@ func QIsFinite(f float32) bool {
 /*
 
  */
-func QIsFinite_1(d float64) bool {
+func QIsFinite1(d float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z9qIsFinited", qtrt.FFI_TYPE_POINTER, d)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -7863,7 +7863,7 @@ This is an overloaded function.
 
 Compresses the first nbytes of data at compression level compressionLevel and returns the compressed data in a new byte array.
 */
-func QCompress_1(data unsafe.Pointer /*666*/, nbytes int, compressionLevel int) *QByteArray /*123*/ {
+func QCompress1(data unsafe.Pointer /*666*/, nbytes int, compressionLevel int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_Z9qCompressPKhii", qtrt.FFI_TYPE_POINTER, data, nbytes, compressionLevel)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -7903,7 +7903,7 @@ The checksum is independent of the byte order (endianness) and will be calculate
 
 Note: This function is a 16-bit cache conserving (16 entry table) implementation of the CRC-16-CCITT algorithm.
 */
-func QChecksum_1(s string, len_ uint) uint16 {
+func QChecksum1(s string, len_ uint) uint16 {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z9qChecksumPKcj", qtrt.FFI_TYPE_POINTER, convArg0, len_)
@@ -8094,7 +8094,7 @@ func QRound64(d float32) int64 {
 /*
 
  */
-func QRound64_1(d float64) int64 {
+func QRound641(d float64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z8qRound64d", qtrt.FFI_TYPE_POINTER, d)
 	qtrt.ErrPrint(err, rv)
 	return int64(rv) // 222
@@ -8122,7 +8122,7 @@ func QIntCast(f float32) int {
 /*
 
  */
-func QIntCast_1(f float64) int {
+func QIntCast1(f float64) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z8qIntCastd", qtrt.FFI_TYPE_POINTER, f)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -8282,7 +8282,7 @@ Special case 2: Returns an arbitrary non-zero value if str1 is 0 or str2 is 0 (b
 
 See also qstrncmp(), qstricmp(), qstrnicmp(), and 8-bit Character Comparisons.
 */
-func Qstrcmp_1(str1 QByteArray_ITF, str2 QByteArray_ITF) int {
+func Qstrcmp1(str1 QByteArray_ITF, str2 QByteArray_ITF) int {
 	var convArg0 unsafe.Pointer
 	if str1 != nil && str1.QByteArray_PTR() != nil {
 		convArg0 = str1.QByteArray_PTR().GetCthis()
@@ -8312,7 +8312,7 @@ Special case 2: Returns an arbitrary non-zero value if str1 is 0 or str2 is 0 (b
 
 See also qstrncmp(), qstricmp(), qstrnicmp(), and 8-bit Character Comparisons.
 */
-func Qstrcmp_2(str1 QByteArray_ITF, str2 string) int {
+func Qstrcmp2(str1 QByteArray_ITF, str2 string) int {
 	var convArg0 unsafe.Pointer
 	if str1 != nil && str1.QByteArray_PTR() != nil {
 		convArg0 = str1.QByteArray_PTR().GetCthis()
@@ -8340,7 +8340,7 @@ Special case 2: Returns an arbitrary non-zero value if str1 is 0 or str2 is 0 (b
 
 See also qstrncmp(), qstricmp(), qstrnicmp(), and 8-bit Character Comparisons.
 */
-func Qstrcmp_3(str1 string, str2 string) int {
+func Qstrcmp3(str1 string, str2 string) int {
 	var convArg0 = qtrt.CString(str1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(str2)
@@ -8442,7 +8442,7 @@ func QRound(d float32) int {
 /*
 
  */
-func QRound_1(d float64) int {
+func QRound1(d float64) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qRoundd", qtrt.FFI_TYPE_POINTER, d)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -8470,7 +8470,7 @@ func QIsNaN(f float32) bool {
 /*
 
  */
-func QIsNaN_1(d float64) bool {
+func QIsNaN1(d float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qIsNaNd", qtrt.FFI_TYPE_POINTER, d)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -8498,7 +8498,7 @@ func QIsInf(f float32) bool {
 /*
 
  */
-func QIsInf_1(d float64) bool {
+func QIsInf1(d float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qIsInfd", qtrt.FFI_TYPE_POINTER, d)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -8674,7 +8674,7 @@ func QHash(key uint64, seed uint) uint {
 /*
 
  */
-func QHash_1(key int64, seed uint) uint {
+func QHash1(key int64, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashxj", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8688,7 +8688,7 @@ func QHash_1(key int64, seed uint) uint {
 /*
 
  */
-func QHash_2(key uint16, seed uint) uint {
+func QHash2(key uint16, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashtj", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8702,7 +8702,7 @@ func QHash_2(key uint16, seed uint) uint {
 /*
 
  */
-func QHash_3(key int16, seed uint) uint {
+func QHash3(key int16, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashsj", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8716,7 +8716,7 @@ func QHash_3(key int16, seed uint) uint {
 /*
 
  */
-func QHash_4(key uint, seed uint) uint {
+func QHash4(key uint, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashmj", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8730,7 +8730,7 @@ func QHash_4(key uint, seed uint) uint {
 /*
 
  */
-func QHash_5(key int, seed uint) uint {
+func QHash5(key int, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashlj", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8744,7 +8744,7 @@ func QHash_5(key int, seed uint) uint {
 /*
 
  */
-func QHash_6(key uint, seed uint) uint {
+func QHash6(key uint, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashjj", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8758,7 +8758,7 @@ func QHash_6(key uint, seed uint) uint {
 /*
 
  */
-func QHash_7(key int, seed uint) uint {
+func QHash7(key int, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashij", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8772,7 +8772,7 @@ func QHash_7(key int, seed uint) uint {
 /*
 
  */
-func QHash_8(key byte, seed uint) uint {
+func QHash8(key byte, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashhj", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8786,7 +8786,7 @@ func QHash_8(key byte, seed uint) uint {
 /*
 
  */
-func QHash_9(key float32, seed uint) uint {
+func QHash9(key float32, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashfj", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8800,7 +8800,7 @@ func QHash_9(key float32, seed uint) uint {
 /*
 
  */
-func QHash_10(key float64, seed uint) uint {
+func QHash10(key float64, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashej", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8814,7 +8814,7 @@ func QHash_10(key float64, seed uint) uint {
 /*
 
  */
-func QHash_11(key float64, seed uint) uint {
+func QHash11(key float64, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashdj", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8828,7 +8828,7 @@ func QHash_11(key float64, seed uint) uint {
 /*
 
  */
-func QHash_12(key byte, seed uint) uint {
+func QHash12(key byte, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashcj", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8842,7 +8842,7 @@ func QHash_12(key byte, seed uint) uint {
 /*
 
  */
-func QHash_13(key byte, seed uint) uint {
+func QHash13(key byte, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashaj", qtrt.FFI_TYPE_POINTER, key, seed)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -8858,7 +8858,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash_14(key QUrlQuery_ITF, seed uint) uint {
+func QHash14(key QUrlQuery_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QUrlQuery_PTR() != nil {
 		convArg0 = key.QUrlQuery_PTR().GetCthis()
@@ -8878,7 +8878,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash_15(key QMimeType_ITF, seed uint) uint {
+func QHash15(key QMimeType_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QMimeType_PTR() != nil {
 		convArg0 = key.QMimeType_PTR().GetCthis()
@@ -8896,7 +8896,7 @@ func QHash_15(key QMimeType_ITF, seed uint) uint {
 /*
 
  */
-func QHash_16(key QDateTime_ITF, seed uint) uint {
+func QHash16(key QDateTime_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QDateTime_PTR() != nil {
 		convArg0 = key.QDateTime_PTR().GetCthis()
@@ -8914,7 +8914,7 @@ func QHash_16(key QDateTime_ITF, seed uint) uint {
 /*
 
  */
-func QHash_17(key QBitArray_ITF, seed uint) uint {
+func QHash17(key QBitArray_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QBitArray_PTR() != nil {
 		convArg0 = key.QBitArray_PTR().GetCthis()
@@ -8932,8 +8932,8 @@ func QHash_17(key QBitArray_ITF, seed uint) uint {
 /*
 
  */
-func QHash_18(key string, seed uint) uint {
-	var tmpArg0 = NewQString_5(key)
+func QHash18(key string, seed uint) uint {
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK7QStringj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	qtrt.ErrPrint(err, rv)
@@ -8950,7 +8950,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash_19(key QRegExp_ITF, seed uint) uint {
+func QHash19(key QRegExp_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QRegExp_PTR() != nil {
 		convArg0 = key.QRegExp_PTR().GetCthis()
@@ -8970,7 +8970,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash_20(key QLocale_ITF, seed uint) uint {
+func QHash20(key QLocale_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLocale_PTR() != nil {
 		convArg0 = key.QLocale_PTR().GetCthis()
@@ -8990,7 +8990,7 @@ Returns a hash of the UUID uuid, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.0.
 */
-func QHash_21(uuid QUuid_ITF, seed uint) uint {
+func QHash21(uuid QUuid_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if uuid != nil && uuid.QUuid_PTR() != nil {
 		convArg0 = uuid.QUuid_PTR().GetCthis()
@@ -9008,7 +9008,7 @@ func QHash_21(uuid QUuid_ITF, seed uint) uint {
 /*
 
  */
-func QHash_22(key QTime_ITF, seed uint) uint {
+func QHash22(key QTime_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QTime_PTR() != nil {
 		convArg0 = key.QTime_PTR().GetCthis()
@@ -9026,7 +9026,7 @@ func QHash_22(key QTime_ITF, seed uint) uint {
 /*
 
  */
-func QHash_23(key QDate_ITF, seed uint) uint {
+func QHash23(key QDate_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QDate_PTR() != nil {
 		convArg0 = key.QDate_PTR().GetCthis()
@@ -9044,7 +9044,7 @@ func QHash_23(key QDate_ITF, seed uint) uint {
 /*
 
  */
-func QHash_24(url QUrl_ITF, seed uint) uint {
+func QHash24(url QUrl_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
@@ -9062,7 +9062,7 @@ func QHash_24(url QUrl_ITF, seed uint) uint {
 /*
 
  */
-func QHash_25(index QPersistentModelIndex_ITF, seed uint) uint {
+func QHash25(index QPersistentModelIndex_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QPersistentModelIndex_PTR() != nil {
 		convArg0 = index.QPersistentModelIndex_PTR().GetCthis()
@@ -9080,7 +9080,7 @@ func QHash_25(index QPersistentModelIndex_ITF, seed uint) uint {
 /*
 
  */
-func QHash_26(index QPersistentModelIndex_ITF, seed uint) uint {
+func QHash26(index QPersistentModelIndex_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QPersistentModelIndex_PTR() != nil {
 		convArg0 = index.QPersistentModelIndex_PTR().GetCthis()
@@ -9098,7 +9098,7 @@ func QHash_26(index QPersistentModelIndex_ITF, seed uint) uint {
 /*
 
  */
-func QHash_27(arg0 QItemSelectionRange_ITF) uint {
+func QHash27(arg0 QItemSelectionRange_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QItemSelectionRange_PTR() != nil {
 		convArg0 = arg0.QItemSelectionRange_PTR().GetCthis()
@@ -9118,7 +9118,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash_28(key QRegularExpression_ITF, seed uint) uint {
+func QHash28(key QRegularExpression_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QRegularExpression_PTR() != nil {
 		convArg0 = key.QRegularExpression_PTR().GetCthis()
@@ -9136,7 +9136,7 @@ func QHash_28(key QRegularExpression_ITF, seed uint) uint {
 /*
 
  */
-func QHash_29(key QVersionNumber_ITF, seed uint) uint {
+func QHash29(key QVersionNumber_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QVersionNumber_PTR() != nil {
 		convArg0 = key.QVersionNumber_PTR().GetCthis()
@@ -9154,7 +9154,7 @@ func QHash_29(key QVersionNumber_ITF, seed uint) uint {
 /*
 
  */
-func QHash_30(index QModelIndex_ITF) uint {
+func QHash30(index QModelIndex_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -9172,7 +9172,7 @@ func QHash_30(index QModelIndex_ITF) uint {
 /*
 
  */
-func QHash_31(key QStringRef_ITF, seed uint) uint {
+func QHash31(key QStringRef_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QStringRef_PTR() != nil {
 		convArg0 = key.QStringRef_PTR().GetCthis()
@@ -9190,7 +9190,7 @@ func QHash_31(key QStringRef_ITF, seed uint) uint {
 /*
 
  */
-func QHash_32(key QByteArray_ITF, seed uint) uint {
+func QHash32(key QByteArray_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QByteArray_PTR() != nil {
 		convArg0 = key.QByteArray_PTR().GetCthis()
@@ -9208,7 +9208,7 @@ func QHash_32(key QByteArray_ITF, seed uint) uint {
 /*
 
  */
-func QHash_33(key QChar_ITF /*123*/, seed uint) uint {
+func QHash33(key QChar_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QChar_PTR() != nil {
 		convArg0 = key.QChar_PTR().GetCthis()
@@ -9226,7 +9226,7 @@ func QHash_33(key QChar_ITF /*123*/, seed uint) uint {
 /*
 
  */
-func QHash_34(key QLatin1String_ITF /*123*/, seed uint) uint {
+func QHash34(key QLatin1String_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
 		convArg0 = key.QLatin1String_PTR().GetCthis()
@@ -9244,7 +9244,7 @@ func QHash_34(key QLatin1String_ITF /*123*/, seed uint) uint {
 /*
 
  */
-func QHash_35(key QStringView_ITF /*123*/, seed uint) uint {
+func QHash35(key QStringView_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QStringView_PTR() != nil {
 		convArg0 = key.QStringView_PTR().GetCthis()
@@ -9397,7 +9397,7 @@ func Swap(value1 QUrlQuery_ITF, value2 QUrlQuery_ITF) {
 /*
 Swaps this time zone instance with other. This function is very fast and never fails.
 */
-func Swap_1(value1 QTimeZone_ITF, value2 QTimeZone_ITF) {
+func Swap1(value1 QTimeZone_ITF, value2 QTimeZone_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QTimeZone_PTR() != nil {
 		convArg0 = value1.QTimeZone_PTR().GetCthis()
@@ -9422,7 +9422,7 @@ This operation is very fast and never fails.
 
 The swap() method helps with the implementation of assignment operators in an exception-safe way. For more information consult More C++ Idioms - Copy-and-swap.
 */
-func Swap_2(value1 QMimeType_ITF, value2 QMimeType_ITF) {
+func Swap2(value1 QMimeType_ITF, value2 QMimeType_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QMimeType_PTR() != nil {
 		convArg0 = value1.QMimeType_PTR().GetCthis()
@@ -9445,7 +9445,7 @@ Swaps this file info with other. This function is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_3(value1 QFileInfo_ITF, value2 QFileInfo_ITF) {
+func Swap3(value1 QFileInfo_ITF, value2 QFileInfo_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QFileInfo_PTR() != nil {
 		convArg0 = value1.QFileInfo_PTR().GetCthis()
@@ -9468,7 +9468,7 @@ Swaps this datetime with other. This operation is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_4(value1 QDateTime_ITF, value2 QDateTime_ITF) {
+func Swap4(value1 QDateTime_ITF, value2 QDateTime_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QDateTime_PTR() != nil {
 		convArg0 = value1.QDateTime_PTR().GetCthis()
@@ -9489,7 +9489,7 @@ func Swap_4(value1 QDateTime_ITF, value2 QDateTime_ITF) {
 /*
 Swaps this collator with other. This function is very fast and never fails.
 */
-func Swap_5(value1 QCollator_ITF, value2 QCollator_ITF) {
+func Swap5(value1 QCollator_ITF, value2 QCollator_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QCollator_PTR() != nil {
 		convArg0 = value1.QCollator_PTR().GetCthis()
@@ -9512,7 +9512,7 @@ Swaps bit array other with this bit array. This operation is very fast and never
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_6(value1 QBitArray_ITF, value2 QBitArray_ITF) {
+func Swap6(value1 QBitArray_ITF, value2 QBitArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QBitArray_PTR() != nil {
 		convArg0 = value1.QBitArray_PTR().GetCthis()
@@ -9535,7 +9535,7 @@ Swaps variant other with this variant. This operation is very fast and never fai
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_7(value1 QVariant_ITF, value2 QVariant_ITF) {
+func Swap7(value1 QVariant_ITF, value2 QVariant_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QVariant_PTR() != nil {
 		convArg0 = value1.QVariant_PTR().GetCthis()
@@ -9558,10 +9558,10 @@ Swaps string other with this string. This operation is very fast and never fails
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_8(value1 string, value2 string) {
-	var tmpArg0 = NewQString_5(value1)
+func Swap8(value1 string, value2 string) {
+	var tmpArg0 = NewQString5(value1)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(value2)
+	var tmpArg1 = NewQString5(value2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z4swapR7QStringS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -9577,7 +9577,7 @@ Swaps locale other with this locale. This operation is very fast and never fails
 
 This function was introduced in  Qt 5.6.
 */
-func Swap_9(value1 QLocale_ITF, value2 QLocale_ITF) {
+func Swap9(value1 QLocale_ITF, value2 QLocale_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QLocale_PTR() != nil {
 		convArg0 = value1.QLocale_PTR().GetCthis()
@@ -9600,7 +9600,7 @@ Swaps URL other with this URL. This operation is very fast and never fails.
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_10(value1 QUrl_ITF, value2 QUrl_ITF) {
+func Swap10(value1 QUrl_ITF, value2 QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QUrl_PTR() != nil {
 		convArg0 = value1.QUrl_PTR().GetCthis()
@@ -9623,7 +9623,7 @@ Swaps this QDir instance with other. This function is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_11(value1 QDir_ITF, value2 QDir_ITF) {
+func Swap11(value1 QDir_ITF, value2 QDir_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QDir_PTR() != nil {
 		convArg0 = value1.QDir_PTR().GetCthis()
@@ -9644,7 +9644,7 @@ func Swap_11(value1 QDir_ITF, value2 QDir_ITF) {
 /*
 Swaps the regular expression other with this regular expression. This operation is very fast and never fails.
 */
-func Swap_12(value1 QRegularExpressionMatchIterator_ITF, value2 QRegularExpressionMatchIterator_ITF) {
+func Swap12(value1 QRegularExpressionMatchIterator_ITF, value2 QRegularExpressionMatchIterator_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QRegularExpressionMatchIterator_PTR() != nil {
 		convArg0 = value1.QRegularExpressionMatchIterator_PTR().GetCthis()
@@ -9665,7 +9665,7 @@ func Swap_12(value1 QRegularExpressionMatchIterator_ITF, value2 QRegularExpressi
 /*
 Swaps the regular expression other with this regular expression. This operation is very fast and never fails.
 */
-func Swap_13(value1 QRegularExpressionMatch_ITF, value2 QRegularExpressionMatch_ITF) {
+func Swap13(value1 QRegularExpressionMatch_ITF, value2 QRegularExpressionMatch_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QRegularExpressionMatch_PTR() != nil {
 		convArg0 = value1.QRegularExpressionMatch_PTR().GetCthis()
@@ -9686,7 +9686,7 @@ func Swap_13(value1 QRegularExpressionMatch_ITF, value2 QRegularExpressionMatch_
 /*
 
  */
-func Swap_14(value1 QPersistentModelIndex_ITF, value2 QPersistentModelIndex_ITF) {
+func Swap14(value1 QPersistentModelIndex_ITF, value2 QPersistentModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QPersistentModelIndex_PTR() != nil {
 		convArg0 = value1.QPersistentModelIndex_PTR().GetCthis()
@@ -9707,7 +9707,7 @@ func Swap_14(value1 QPersistentModelIndex_ITF, value2 QPersistentModelIndex_ITF)
 /*
 
  */
-func Swap_15(value1 QXmlStreamStringRef_ITF, value2 QXmlStreamStringRef_ITF) {
+func Swap15(value1 QXmlStreamStringRef_ITF, value2 QXmlStreamStringRef_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QXmlStreamStringRef_PTR() != nil {
 		convArg0 = value1.QXmlStreamStringRef_PTR().GetCthis()
@@ -9728,7 +9728,7 @@ func Swap_15(value1 QXmlStreamStringRef_ITF, value2 QXmlStreamStringRef_ITF) {
 /*
 
  */
-func Swap_16(value1 QProcessEnvironment_ITF, value2 QProcessEnvironment_ITF) {
+func Swap16(value1 QProcessEnvironment_ITF, value2 QProcessEnvironment_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QProcessEnvironment_PTR() != nil {
 		convArg0 = value1.QProcessEnvironment_PTR().GetCthis()
@@ -9749,7 +9749,7 @@ func Swap_16(value1 QProcessEnvironment_ITF, value2 QProcessEnvironment_ITF) {
 /*
 Swaps the regular expression other with this regular expression. This operation is very fast and never fails.
 */
-func Swap_17(value1 QRegularExpression_ITF, value2 QRegularExpression_ITF) {
+func Swap17(value1 QRegularExpression_ITF, value2 QRegularExpression_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QRegularExpression_PTR() != nil {
 		convArg0 = value1.QRegularExpression_PTR().GetCthis()
@@ -9770,7 +9770,7 @@ func Swap_17(value1 QRegularExpression_ITF, value2 QRegularExpression_ITF) {
 /*
 Swaps option other with this option. This operation is very fast and never fails.
 */
-func Swap_18(value1 QCommandLineOption_ITF, value2 QCommandLineOption_ITF) {
+func Swap18(value1 QCommandLineOption_ITF, value2 QCommandLineOption_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QCommandLineOption_PTR() != nil {
 		convArg0 = value1.QCommandLineOption_PTR().GetCthis()
@@ -9791,7 +9791,7 @@ func Swap_18(value1 QCommandLineOption_ITF, value2 QCommandLineOption_ITF) {
 /*
 Swaps this collator with other. This function is very fast and never fails.
 */
-func Swap_19(value1 QCollatorSortKey_ITF, value2 QCollatorSortKey_ITF) {
+func Swap19(value1 QCollatorSortKey_ITF, value2 QCollatorSortKey_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QCollatorSortKey_PTR() != nil {
 		convArg0 = value1.QCollatorSortKey_PTR().GetCthis()
@@ -9812,7 +9812,7 @@ func Swap_19(value1 QCollatorSortKey_ITF, value2 QCollatorSortKey_ITF) {
 /*
 
  */
-func Swap_20(value1 QItemSelection_ITF, value2 QItemSelection_ITF) {
+func Swap20(value1 QItemSelection_ITF, value2 QItemSelection_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QItemSelection_PTR() != nil {
 		convArg0 = value1.QItemSelection_PTR().GetCthis()
@@ -9833,7 +9833,7 @@ func Swap_20(value1 QItemSelection_ITF, value2 QItemSelection_ITF) {
 /*
 Swaps this deadline timer with the other deadline timer.
 */
-func Swap_21(value1 QDeadlineTimer_ITF, value2 QDeadlineTimer_ITF) {
+func Swap21(value1 QDeadlineTimer_ITF, value2 QDeadlineTimer_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QDeadlineTimer_PTR() != nil {
 		convArg0 = value1.QDeadlineTimer_PTR().GetCthis()
@@ -9856,7 +9856,7 @@ Swaps the document other with this. This operation is very fast and never fails.
 
 This function was introduced in  Qt 5.10.
 */
-func Swap_22(value1 QJsonDocument_ITF, value2 QJsonDocument_ITF) {
+func Swap22(value1 QJsonDocument_ITF, value2 QJsonDocument_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QJsonDocument_PTR() != nil {
 		convArg0 = value1.QJsonDocument_PTR().GetCthis()
@@ -9877,7 +9877,7 @@ func Swap_22(value1 QJsonDocument_ITF, value2 QJsonDocument_ITF) {
 /*
 Swaps this volume info with other. This function is very fast and never fails.
 */
-func Swap_23(value1 QStorageInfo_ITF, value2 QStorageInfo_ITF) {
+func Swap23(value1 QStorageInfo_ITF, value2 QStorageInfo_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QStorageInfo_PTR() != nil {
 		convArg0 = value1.QStorageInfo_PTR().GetCthis()
@@ -9900,7 +9900,7 @@ Swaps curve other with this curve. This operation is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_24(value1 QEasingCurve_ITF, value2 QEasingCurve_ITF) {
+func Swap24(value1 QEasingCurve_ITF, value2 QEasingCurve_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QEasingCurve_PTR() != nil {
 		convArg0 = value1.QEasingCurve_PTR().GetCthis()
@@ -9923,7 +9923,7 @@ Swaps the object other with this. This operation is very fast and never fails.
 
 This function was introduced in  Qt 5.10.
 */
-func Swap_25(value1 QJsonObject_ITF, value2 QJsonObject_ITF) {
+func Swap25(value1 QJsonObject_ITF, value2 QJsonObject_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QJsonObject_PTR() != nil {
 		convArg0 = value1.QJsonObject_PTR().GetCthis()
@@ -9946,7 +9946,7 @@ Swaps the value other with this. This operation is very fast and never fails.
 
 This function was introduced in  Qt 5.10.
 */
-func Swap_26(value1 QJsonValue_ITF, value2 QJsonValue_ITF) {
+func Swap26(value1 QJsonValue_ITF, value2 QJsonValue_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QJsonValue_PTR() != nil {
 		convArg0 = value1.QJsonValue_PTR().GetCthis()
@@ -9969,7 +9969,7 @@ Swaps the array other with this. This operation is very fast and never fails.
 
 This function was introduced in  Qt 5.10.
 */
-func Swap_27(value1 QJsonArray_ITF, value2 QJsonArray_ITF) {
+func Swap27(value1 QJsonArray_ITF, value2 QJsonArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QJsonArray_PTR() != nil {
 		convArg0 = value1.QJsonArray_PTR().GetCthis()
@@ -9992,7 +9992,7 @@ Swaps byte array other with this byte array. This operation is very fast and nev
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_28(value1 QByteArray_ITF, value2 QByteArray_ITF) {
+func Swap28(value1 QByteArray_ITF, value2 QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QByteArray_PTR() != nil {
 		convArg0 = value1.QByteArray_PTR().GetCthis()
@@ -10421,7 +10421,7 @@ func QCountTrailingZeroBits(v uint64) uint {
 /*
 
  */
-func QCountTrailingZeroBits_1(v uint16) uint {
+func QCountTrailingZeroBits1(v uint16) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z22qCountTrailingZeroBitst", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10435,7 +10435,7 @@ func QCountTrailingZeroBits_1(v uint16) uint {
 /*
 
  */
-func QCountTrailingZeroBits_2(v uint) uint {
+func QCountTrailingZeroBits2(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z22qCountTrailingZeroBitsm", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10449,7 +10449,7 @@ func QCountTrailingZeroBits_2(v uint) uint {
 /*
 
  */
-func QCountTrailingZeroBits_3(v uint) uint {
+func QCountTrailingZeroBits3(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z22qCountTrailingZeroBitsj", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10463,7 +10463,7 @@ func QCountTrailingZeroBits_3(v uint) uint {
 /*
 
  */
-func QCountTrailingZeroBits_4(v byte) uint {
+func QCountTrailingZeroBits4(v byte) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z22qCountTrailingZeroBitsh", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10505,7 +10505,7 @@ func QCountLeadingZeroBits(v uint64) uint {
 /*
 
  */
-func QCountLeadingZeroBits_1(v uint16) uint {
+func QCountLeadingZeroBits1(v uint16) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z21qCountLeadingZeroBitst", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10519,7 +10519,7 @@ func QCountLeadingZeroBits_1(v uint16) uint {
 /*
 
  */
-func QCountLeadingZeroBits_2(v uint) uint {
+func QCountLeadingZeroBits2(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z21qCountLeadingZeroBitsm", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10533,7 +10533,7 @@ func QCountLeadingZeroBits_2(v uint) uint {
 /*
 
  */
-func QCountLeadingZeroBits_3(v uint) uint {
+func QCountLeadingZeroBits3(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z21qCountLeadingZeroBitsj", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10547,7 +10547,7 @@ func QCountLeadingZeroBits_3(v uint) uint {
 /*
 
  */
-func QCountLeadingZeroBits_4(v byte) uint {
+func QCountLeadingZeroBits4(v byte) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z21qCountLeadingZeroBitsh", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10566,7 +10566,7 @@ func Qt_qFindChild_helper(parent QObject_ITF /*777 const QObject **/, name strin
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(name)
+	var tmpArg1 = NewQString5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if mo != nil && mo.QMetaObject_PTR() != nil {
@@ -10588,7 +10588,7 @@ func Qt_qFindChild_helper(parent QObject_ITF /*777 const QObject **/, name strin
 func QEnvironmentVariable(varName string, defaultValue string) string {
 	var convArg0 = qtrt.CString(varName)
 	defer qtrt.FreeMem(convArg0)
-	var tmpArg1 = NewQString_5(defaultValue)
+	var tmpArg1 = NewQString5(defaultValue)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z20qEnvironmentVariablePKcRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -10606,7 +10606,7 @@ func QEnvironmentVariable(varName string, defaultValue string) string {
 /*
 
  */
-func QEnvironmentVariable_1(varName string) string {
+func QEnvironmentVariable1(varName string) string {
 	var convArg0 = qtrt.CString(varName)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z20qEnvironmentVariablePKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -10652,7 +10652,7 @@ func Qt_getQtMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 /*
 
  */
-func Qt_getQtMetaObject_1() *QMetaObject /*777 const QMetaObject **/ {
+func Qt_getQtMetaObject1() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_Z18qt_getQtMetaObjectv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -10667,7 +10667,7 @@ func Qt_getQtMetaObject_1() *QMetaObject /*777 const QMetaObject **/ {
 
  */
 func QSetMessagePattern(messagePattern string) {
-	var tmpArg0 = NewQString_5(messagePattern)
+	var tmpArg0 = NewQString5(messagePattern)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z18qSetMessagePatternRK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -10707,7 +10707,7 @@ func Qt_message_output(arg0 int, context QMessageLogContext_ITF, message string)
 	if context != nil && context.QMessageLogContext_PTR() != nil {
 		convArg1 = context.QMessageLogContext_PTR().GetCthis()
 	}
-	var tmpArg2 = NewQString_5(message)
+	var tmpArg2 = NewQString5(message)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z17qt_message_output9QtMsgTypeRK18QMessageLogContextRK7QString", qtrt.FFI_TYPE_POINTER, arg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -10735,7 +10735,7 @@ func QRadiansToDegrees(radians float32) float32 {
 /*
 
  */
-func QRadiansToDegrees_1(radians float64) float64 {
+func QRadiansToDegrees1(radians float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z17qRadiansToDegreesd", qtrt.FFI_TYPE_POINTER, radians)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -10754,7 +10754,7 @@ func QFormatLogMessage(type_ int, context QMessageLogContext_ITF, buf string) st
 	if context != nil && context.QMessageLogContext_PTR() != nil {
 		convArg1 = context.QMessageLogContext_PTR().GetCthis()
 	}
-	var tmpArg2 = NewQString_5(buf)
+	var tmpArg2 = NewQString5(buf)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z17qFormatLogMessage9QtMsgTypeRK18QMessageLogContextRK7QString", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -10786,7 +10786,7 @@ func QDegreesToRadians(degrees float32) float32 {
 /*
 
  */
-func QDegreesToRadians_1(degrees float64) float64 {
+func QDegreesToRadians1(degrees float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z17qDegreesToRadiansd", qtrt.FFI_TYPE_POINTER, degrees)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -10829,7 +10829,7 @@ func QPopulationCount(v uint64) uint {
 /*
 
  */
-func QPopulationCount_1(v uint16) uint {
+func QPopulationCount1(v uint16) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z16qPopulationCountt", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10843,7 +10843,7 @@ func QPopulationCount_1(v uint16) uint {
 /*
 
  */
-func QPopulationCount_2(v uint) uint {
+func QPopulationCount2(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z16qPopulationCountm", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10857,7 +10857,7 @@ func QPopulationCount_2(v uint) uint {
 /*
 
  */
-func QPopulationCount_3(v uint) uint {
+func QPopulationCount3(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z16qPopulationCountj", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10871,7 +10871,7 @@ func QPopulationCount_3(v uint) uint {
 /*
 
  */
-func QPopulationCount_4(v byte) uint {
+func QPopulationCount4(v byte) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z16qPopulationCounth", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10966,7 +10966,7 @@ func QNextPowerOfTwo(v uint64) uint64 {
 /*
 
  */
-func QNextPowerOfTwo_1(v int64) uint64 {
+func QNextPowerOfTwo1(v int64) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z15qNextPowerOfTwox", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
@@ -10980,7 +10980,7 @@ func QNextPowerOfTwo_1(v int64) uint64 {
 /*
 
  */
-func QNextPowerOfTwo_2(v uint) uint {
+func QNextPowerOfTwo2(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z15qNextPowerOfTwoj", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -10994,7 +10994,7 @@ func QNextPowerOfTwo_2(v uint) uint {
 /*
 
  */
-func QNextPowerOfTwo_3(v int) uint {
+func QNextPowerOfTwo3(v int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z15qNextPowerOfTwoi", qtrt.FFI_TYPE_POINTER, v)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -11148,7 +11148,7 @@ func QFloatDistance(a float32, b float32) uint {
 /*
 
  */
-func QFloatDistance_1(a float64, b float64) uint64 {
+func QFloatDistance1(a float64, b float64) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z14qFloatDistancedd", qtrt.FFI_TYPE_POINTER, a, b)
 	qtrt.ErrPrint(err, rv)
 	return uint64(rv) // 222
@@ -11327,7 +11327,7 @@ This is an overloaded function.
 
 Uncompresses the first nbytes of data and returns a new byte array with the uncompressed data.
 */
-func QUncompress_1(data unsafe.Pointer /*666*/, nbytes int) *QByteArray /*123*/ {
+func QUncompress1(data unsafe.Pointer /*666*/, nbytes int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_Z11qUncompressPKhi", qtrt.FFI_TYPE_POINTER, data, nbytes)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333

@@ -114,10 +114,10 @@ Constructs a radio tuner based on a media service allocated by the default media
 
 The parent is passed to QMediaObject.
 */
-func (*QRadioTuner) NewForInherit__() *QRadioTuner {
-	return NewQRadioTuner__()
+func (*QRadioTuner) NewForInheritp() *QRadioTuner {
+	return NewQRadioTunerp()
 }
-func NewQRadioTuner__() *QRadioTuner {
+func NewQRadioTunerp() *QRadioTuner {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRadioTunerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -367,7 +367,7 @@ Returns the error state of a radio tuner.
 
 See also errorString().
 */
-func (this *QRadioTuner) Error_1(error int) {
+func (this *QRadioTuner) Error1(error int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRadioTuner5errorENS_5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	qtrt.ErrPrint(err, rv)
 }
@@ -464,7 +464,7 @@ Emits QRadioTuner::stationFound(int, QString) for every found station. After sea
 
 See also searchForward(), searchBackward(), and searching.
 */
-func (this *QRadioTuner) SearchAllStations__() {
+func (this *QRadioTuner) SearchAllStationsp() {
 	// arg: 0, QRadioTuner::SearchMode=Elaborated, QRadioTuner::SearchMode=Enum, , Invalid
 	searchMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRadioTuner17searchAllStationsENS_10SearchModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), searchMode)
@@ -705,7 +705,7 @@ func (this *QRadioTuner) MutedChanged(muted bool) {
 Signals that a station was found in frequency with stationId Program Identification code.
 */
 func (this *QRadioTuner) StationFound(frequency int, stationId string) {
-	var tmpArg1 = qtcore.NewQString_5(stationId)
+	var tmpArg1 = qtcore.NewQString5(stationId)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRadioTuner12stationFoundEi7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), frequency, convArg1)
 	qtrt.ErrPrint(err, rv)

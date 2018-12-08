@@ -61,7 +61,7 @@ type QCameraViewfinderSettingsList struct {
 }
 
 // QList<T> & operator=(const QList<T> &)
-func (this *QCameraViewfinderSettingsList) Operator_equal_0() *QCameraViewfinderSettingsList {
+func (this *QCameraViewfinderSettingsList) Operator_equal0() *QCameraViewfinderSettingsList {
 	// QCameraViewfinderSettingsList_operator_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_operator_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -69,7 +69,7 @@ func (this *QCameraViewfinderSettingsList) Operator_equal_0() *QCameraViewfinder
 }
 
 // QList<T> & operator=(QList<T> &&)
-func (this *QCameraViewfinderSettingsList) Operator_equal_1() *QCameraViewfinderSettingsList {
+func (this *QCameraViewfinderSettingsList) Operator_equal1() *QCameraViewfinderSettingsList {
 	// QCameraViewfinderSettingsList_operator_equal_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_operator_equal_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -77,14 +77,14 @@ func (this *QCameraViewfinderSettingsList) Operator_equal_1() *QCameraViewfinder
 }
 
 // void swap(QList<T> &)
-func (this *QCameraViewfinderSettingsList) Swap_0() {
+func (this *QCameraViewfinderSettingsList) Swap0() {
 	// QCameraViewfinderSettingsList_swap_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_swap_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool operator==(const QList<T> &)
-func (this *QCameraViewfinderSettingsList) Operator_equal_equal_0() bool {
+func (this *QCameraViewfinderSettingsList) Operator_equal_equal0() bool {
 	// QCameraViewfinderSettingsList_operator_equal_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_operator_equal_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -92,7 +92,7 @@ func (this *QCameraViewfinderSettingsList) Operator_equal_equal_0() bool {
 }
 
 // bool operator!=(const QList<T> &)
-func (this *QCameraViewfinderSettingsList) Operator_not_equal_0() bool {
+func (this *QCameraViewfinderSettingsList) Operator_not_equal0() bool {
 	// QCameraViewfinderSettingsList_operator_not_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_operator_not_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -100,7 +100,7 @@ func (this *QCameraViewfinderSettingsList) Operator_not_equal_0() bool {
 }
 
 // int size()
-func (this *QCameraViewfinderSettingsList) Size_0() int {
+func (this *QCameraViewfinderSettingsList) Size0() int {
 	// QCameraViewfinderSettingsList_size_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_size_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -108,21 +108,21 @@ func (this *QCameraViewfinderSettingsList) Size_0() int {
 }
 
 // void detach()
-func (this *QCameraViewfinderSettingsList) Detach_0() {
+func (this *QCameraViewfinderSettingsList) Detach0() {
 	// QCameraViewfinderSettingsList_detach_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_detach_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void detachShared()
-func (this *QCameraViewfinderSettingsList) DetachShared_0() {
+func (this *QCameraViewfinderSettingsList) DetachShared0() {
 	// QCameraViewfinderSettingsList_detachShared_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_detachShared_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool isDetached()
-func (this *QCameraViewfinderSettingsList) IsDetached_0() bool {
+func (this *QCameraViewfinderSettingsList) IsDetached0() bool {
 	// QCameraViewfinderSettingsList_isDetached_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_isDetached_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -130,14 +130,14 @@ func (this *QCameraViewfinderSettingsList) IsDetached_0() bool {
 }
 
 // void setSharable(bool)
-func (this *QCameraViewfinderSettingsList) SetSharable_0() {
+func (this *QCameraViewfinderSettingsList) SetSharable0() {
 	// QCameraViewfinderSettingsList_setSharable_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_setSharable_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool isSharedWith(const QList<T> &)
-func (this *QCameraViewfinderSettingsList) IsSharedWith_0() bool {
+func (this *QCameraViewfinderSettingsList) IsSharedWith0() bool {
 	// QCameraViewfinderSettingsList_isSharedWith_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_isSharedWith_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -145,7 +145,7 @@ func (this *QCameraViewfinderSettingsList) IsSharedWith_0() bool {
 }
 
 // bool isEmpty()
-func (this *QCameraViewfinderSettingsList) IsEmpty_0() bool {
+func (this *QCameraViewfinderSettingsList) IsEmpty0() bool {
 	// QCameraViewfinderSettingsList_isEmpty_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_isEmpty_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -153,14 +153,14 @@ func (this *QCameraViewfinderSettingsList) IsEmpty_0() bool {
 }
 
 // void clear()
-func (this *QCameraViewfinderSettingsList) Clear_0() {
+func (this *QCameraViewfinderSettingsList) Clear0() {
 	// QCameraViewfinderSettingsList_clear_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_clear_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // const T & at(int)
-func (this *QCameraViewfinderSettingsList) At_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) At0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_at_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_at_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -168,7 +168,7 @@ func (this *QCameraViewfinderSettingsList) At_0() *QCameraViewfinderSettings {
 }
 
 // const T & operator[](int)
-func (this *QCameraViewfinderSettingsList) Operator_get_index_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) Operator_get_index0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_operator_get_index_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_operator_get_index_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -176,7 +176,7 @@ func (this *QCameraViewfinderSettingsList) Operator_get_index_0() *QCameraViewfi
 }
 
 // T & operator[](int)
-func (this *QCameraViewfinderSettingsList) Operator_get_index_1() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) Operator_get_index1() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_operator_get_index_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_operator_get_index_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -184,56 +184,56 @@ func (this *QCameraViewfinderSettingsList) Operator_get_index_1() *QCameraViewfi
 }
 
 // void reserve(int)
-func (this *QCameraViewfinderSettingsList) Reserve_0() {
+func (this *QCameraViewfinderSettingsList) Reserve0() {
 	// QCameraViewfinderSettingsList_reserve_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_reserve_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void append(const T &)
-func (this *QCameraViewfinderSettingsList) Append_0() {
+func (this *QCameraViewfinderSettingsList) Append0() {
 	// QCameraViewfinderSettingsList_append_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_append_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void append(const QList<T> &)
-func (this *QCameraViewfinderSettingsList) Append_1() {
+func (this *QCameraViewfinderSettingsList) Append1() {
 	// QCameraViewfinderSettingsList_append_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_append_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void prepend(const T &)
-func (this *QCameraViewfinderSettingsList) Prepend_0() {
+func (this *QCameraViewfinderSettingsList) Prepend0() {
 	// QCameraViewfinderSettingsList_prepend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_prepend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void insert(int, const T &)
-func (this *QCameraViewfinderSettingsList) Insert_0() {
+func (this *QCameraViewfinderSettingsList) Insert0() {
 	// QCameraViewfinderSettingsList_insert_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_insert_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void replace(int, const T &)
-func (this *QCameraViewfinderSettingsList) Replace_0() {
+func (this *QCameraViewfinderSettingsList) Replace0() {
 	// QCameraViewfinderSettingsList_replace_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_replace_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void removeAt(int)
-func (this *QCameraViewfinderSettingsList) RemoveAt_0() {
+func (this *QCameraViewfinderSettingsList) RemoveAt0() {
 	// QCameraViewfinderSettingsList_removeAt_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_removeAt_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // int removeAll(const T &)
-func (this *QCameraViewfinderSettingsList) RemoveAll_0() int {
+func (this *QCameraViewfinderSettingsList) RemoveAll0() int {
 	// QCameraViewfinderSettingsList_removeAll_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_removeAll_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -241,7 +241,7 @@ func (this *QCameraViewfinderSettingsList) RemoveAll_0() int {
 }
 
 // bool removeOne(const T &)
-func (this *QCameraViewfinderSettingsList) RemoveOne_0() bool {
+func (this *QCameraViewfinderSettingsList) RemoveOne0() bool {
 	// QCameraViewfinderSettingsList_removeOne_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_removeOne_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -249,7 +249,7 @@ func (this *QCameraViewfinderSettingsList) RemoveOne_0() bool {
 }
 
 // T takeAt(int)
-func (this *QCameraViewfinderSettingsList) TakeAt_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) TakeAt0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_takeAt_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_takeAt_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -257,7 +257,7 @@ func (this *QCameraViewfinderSettingsList) TakeAt_0() *QCameraViewfinderSettings
 }
 
 // T takeFirst()
-func (this *QCameraViewfinderSettingsList) TakeFirst_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) TakeFirst0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_takeFirst_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_takeFirst_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -265,7 +265,7 @@ func (this *QCameraViewfinderSettingsList) TakeFirst_0() *QCameraViewfinderSetti
 }
 
 // T takeLast()
-func (this *QCameraViewfinderSettingsList) TakeLast_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) TakeLast0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_takeLast_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_takeLast_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -273,21 +273,21 @@ func (this *QCameraViewfinderSettingsList) TakeLast_0() *QCameraViewfinderSettin
 }
 
 // void move(int, int)
-func (this *QCameraViewfinderSettingsList) Move_0() {
+func (this *QCameraViewfinderSettingsList) Move0() {
 	// QCameraViewfinderSettingsList_move_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_move_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void swap(int, int)
-func (this *QCameraViewfinderSettingsList) Swap_1() {
+func (this *QCameraViewfinderSettingsList) Swap1() {
 	// QCameraViewfinderSettingsList_swap_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_swap_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // int indexOf(const T &, int)
-func (this *QCameraViewfinderSettingsList) IndexOf_0() int {
+func (this *QCameraViewfinderSettingsList) IndexOf0() int {
 	// QCameraViewfinderSettingsList_indexOf_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_indexOf_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -295,7 +295,7 @@ func (this *QCameraViewfinderSettingsList) IndexOf_0() int {
 }
 
 // int lastIndexOf(const T &, int)
-func (this *QCameraViewfinderSettingsList) LastIndexOf_0() int {
+func (this *QCameraViewfinderSettingsList) LastIndexOf0() int {
 	// QCameraViewfinderSettingsList_lastIndexOf_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_lastIndexOf_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -303,7 +303,7 @@ func (this *QCameraViewfinderSettingsList) LastIndexOf_0() int {
 }
 
 // bool contains(const T &)
-func (this *QCameraViewfinderSettingsList) Contains_0() bool {
+func (this *QCameraViewfinderSettingsList) Contains0() bool {
 	// QCameraViewfinderSettingsList_contains_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_contains_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -311,7 +311,7 @@ func (this *QCameraViewfinderSettingsList) Contains_0() bool {
 }
 
 // int count(const T &)
-func (this *QCameraViewfinderSettingsList) Count_0() int {
+func (this *QCameraViewfinderSettingsList) Count0() int {
 	// QCameraViewfinderSettingsList_count_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_count_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -319,126 +319,126 @@ func (this *QCameraViewfinderSettingsList) Count_0() int {
 }
 
 // QList::iterator begin()
-func (this *QCameraViewfinderSettingsList) Begin_0() {
+func (this *QCameraViewfinderSettingsList) Begin0() {
 	// QCameraViewfinderSettingsList_begin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_begin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator begin()
-func (this *QCameraViewfinderSettingsList) Begin_1() {
+func (this *QCameraViewfinderSettingsList) Begin1() {
 	// QCameraViewfinderSettingsList_begin_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_begin_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator cbegin()
-func (this *QCameraViewfinderSettingsList) Cbegin_0() {
+func (this *QCameraViewfinderSettingsList) Cbegin0() {
 	// QCameraViewfinderSettingsList_cbegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_cbegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator constBegin()
-func (this *QCameraViewfinderSettingsList) ConstBegin_0() {
+func (this *QCameraViewfinderSettingsList) ConstBegin0() {
 	// QCameraViewfinderSettingsList_constBegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_constBegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator end()
-func (this *QCameraViewfinderSettingsList) End_0() {
+func (this *QCameraViewfinderSettingsList) End0() {
 	// QCameraViewfinderSettingsList_end_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_end_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator end()
-func (this *QCameraViewfinderSettingsList) End_1() {
+func (this *QCameraViewfinderSettingsList) End1() {
 	// QCameraViewfinderSettingsList_end_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_end_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator cend()
-func (this *QCameraViewfinderSettingsList) Cend_0() {
+func (this *QCameraViewfinderSettingsList) Cend0() {
 	// QCameraViewfinderSettingsList_cend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_cend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator constEnd()
-func (this *QCameraViewfinderSettingsList) ConstEnd_0() {
+func (this *QCameraViewfinderSettingsList) ConstEnd0() {
 	// QCameraViewfinderSettingsList_constEnd_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_constEnd_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::reverse_iterator rbegin()
-func (this *QCameraViewfinderSettingsList) Rbegin_0() {
+func (this *QCameraViewfinderSettingsList) Rbegin0() {
 	// QCameraViewfinderSettingsList_rbegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_rbegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::reverse_iterator rend()
-func (this *QCameraViewfinderSettingsList) Rend_0() {
+func (this *QCameraViewfinderSettingsList) Rend0() {
 	// QCameraViewfinderSettingsList_rend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_rend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator rbegin()
-func (this *QCameraViewfinderSettingsList) Rbegin_1() {
+func (this *QCameraViewfinderSettingsList) Rbegin1() {
 	// QCameraViewfinderSettingsList_rbegin_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_rbegin_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator rend()
-func (this *QCameraViewfinderSettingsList) Rend_1() {
+func (this *QCameraViewfinderSettingsList) Rend1() {
 	// QCameraViewfinderSettingsList_rend_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_rend_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator crbegin()
-func (this *QCameraViewfinderSettingsList) Crbegin_0() {
+func (this *QCameraViewfinderSettingsList) Crbegin0() {
 	// QCameraViewfinderSettingsList_crbegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_crbegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator crend()
-func (this *QCameraViewfinderSettingsList) Crend_0() {
+func (this *QCameraViewfinderSettingsList) Crend0() {
 	// QCameraViewfinderSettingsList_crend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_crend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator insert(QList::iterator, const T &)
-func (this *QCameraViewfinderSettingsList) Insert_1() {
+func (this *QCameraViewfinderSettingsList) Insert1() {
 	// QCameraViewfinderSettingsList_insert_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_insert_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator erase(QList::iterator)
-func (this *QCameraViewfinderSettingsList) Erase_0() {
+func (this *QCameraViewfinderSettingsList) Erase0() {
 	// QCameraViewfinderSettingsList_erase_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_erase_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator erase(QList::iterator, QList::iterator)
-func (this *QCameraViewfinderSettingsList) Erase_1() {
+func (this *QCameraViewfinderSettingsList) Erase1() {
 	// QCameraViewfinderSettingsList_erase_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_erase_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // int count()
-func (this *QCameraViewfinderSettingsList) Count_1() int {
+func (this *QCameraViewfinderSettingsList) Count1() int {
 	// QCameraViewfinderSettingsList_count_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_count_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -446,7 +446,7 @@ func (this *QCameraViewfinderSettingsList) Count_1() int {
 }
 
 // int length()
-func (this *QCameraViewfinderSettingsList) Length_0() int {
+func (this *QCameraViewfinderSettingsList) Length0() int {
 	// QCameraViewfinderSettingsList_length_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_length_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -454,7 +454,7 @@ func (this *QCameraViewfinderSettingsList) Length_0() int {
 }
 
 // T & first()
-func (this *QCameraViewfinderSettingsList) First_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) First0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_first_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_first_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -462,7 +462,7 @@ func (this *QCameraViewfinderSettingsList) First_0() *QCameraViewfinderSettings 
 }
 
 // const T & constFirst()
-func (this *QCameraViewfinderSettingsList) ConstFirst_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) ConstFirst0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_constFirst_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_constFirst_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -470,7 +470,7 @@ func (this *QCameraViewfinderSettingsList) ConstFirst_0() *QCameraViewfinderSett
 }
 
 // const T & first()
-func (this *QCameraViewfinderSettingsList) First_1() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) First1() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_first_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_first_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -478,7 +478,7 @@ func (this *QCameraViewfinderSettingsList) First_1() *QCameraViewfinderSettings 
 }
 
 // T & last()
-func (this *QCameraViewfinderSettingsList) Last_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) Last0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_last_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_last_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -486,7 +486,7 @@ func (this *QCameraViewfinderSettingsList) Last_0() *QCameraViewfinderSettings {
 }
 
 // const T & last()
-func (this *QCameraViewfinderSettingsList) Last_1() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) Last1() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_last_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_last_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -494,7 +494,7 @@ func (this *QCameraViewfinderSettingsList) Last_1() *QCameraViewfinderSettings {
 }
 
 // const T & constLast()
-func (this *QCameraViewfinderSettingsList) ConstLast_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) ConstLast0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_constLast_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_constLast_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -502,21 +502,21 @@ func (this *QCameraViewfinderSettingsList) ConstLast_0() *QCameraViewfinderSetti
 }
 
 // void removeFirst()
-func (this *QCameraViewfinderSettingsList) RemoveFirst_0() {
+func (this *QCameraViewfinderSettingsList) RemoveFirst0() {
 	// QCameraViewfinderSettingsList_removeFirst_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_removeFirst_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void removeLast()
-func (this *QCameraViewfinderSettingsList) RemoveLast_0() {
+func (this *QCameraViewfinderSettingsList) RemoveLast0() {
 	// QCameraViewfinderSettingsList_removeLast_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_removeLast_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool startsWith(const T &)
-func (this *QCameraViewfinderSettingsList) StartsWith_0() bool {
+func (this *QCameraViewfinderSettingsList) StartsWith0() bool {
 	// QCameraViewfinderSettingsList_startsWith_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_startsWith_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -524,7 +524,7 @@ func (this *QCameraViewfinderSettingsList) StartsWith_0() bool {
 }
 
 // bool endsWith(const T &)
-func (this *QCameraViewfinderSettingsList) EndsWith_0() bool {
+func (this *QCameraViewfinderSettingsList) EndsWith0() bool {
 	// QCameraViewfinderSettingsList_endsWith_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_endsWith_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -532,7 +532,7 @@ func (this *QCameraViewfinderSettingsList) EndsWith_0() bool {
 }
 
 // QList<T> mid(int, int)
-func (this *QCameraViewfinderSettingsList) Mid_0() *QCameraViewfinderSettingsList {
+func (this *QCameraViewfinderSettingsList) Mid0() *QCameraViewfinderSettingsList {
 	// QCameraViewfinderSettingsList_mid_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_mid_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -540,7 +540,7 @@ func (this *QCameraViewfinderSettingsList) Mid_0() *QCameraViewfinderSettingsLis
 }
 
 // T value(int)
-func (this *QCameraViewfinderSettingsList) Value_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) Value0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_value_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_value_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -548,7 +548,7 @@ func (this *QCameraViewfinderSettingsList) Value_0() *QCameraViewfinderSettings 
 }
 
 // T value(int, const T &)
-func (this *QCameraViewfinderSettingsList) Value_1() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) Value1() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_value_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_value_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -556,21 +556,21 @@ func (this *QCameraViewfinderSettingsList) Value_1() *QCameraViewfinderSettings 
 }
 
 // void push_back(const T &)
-func (this *QCameraViewfinderSettingsList) Push_back_0() {
+func (this *QCameraViewfinderSettingsList) Push_back0() {
 	// QCameraViewfinderSettingsList_push_back_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_push_back_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void push_front(const T &)
-func (this *QCameraViewfinderSettingsList) Push_front_0() {
+func (this *QCameraViewfinderSettingsList) Push_front0() {
 	// QCameraViewfinderSettingsList_push_front_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_push_front_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // T & front()
-func (this *QCameraViewfinderSettingsList) Front_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) Front0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_front_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_front_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -578,7 +578,7 @@ func (this *QCameraViewfinderSettingsList) Front_0() *QCameraViewfinderSettings 
 }
 
 // const T & front()
-func (this *QCameraViewfinderSettingsList) Front_1() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) Front1() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_front_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_front_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -586,7 +586,7 @@ func (this *QCameraViewfinderSettingsList) Front_1() *QCameraViewfinderSettings 
 }
 
 // T & back()
-func (this *QCameraViewfinderSettingsList) Back_0() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) Back0() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_back_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_back_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -594,7 +594,7 @@ func (this *QCameraViewfinderSettingsList) Back_0() *QCameraViewfinderSettings {
 }
 
 // const T & back()
-func (this *QCameraViewfinderSettingsList) Back_1() *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettingsList) Back1() *QCameraViewfinderSettings {
 	// QCameraViewfinderSettingsList_back_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_back_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -602,21 +602,21 @@ func (this *QCameraViewfinderSettingsList) Back_1() *QCameraViewfinderSettings {
 }
 
 // void pop_front()
-func (this *QCameraViewfinderSettingsList) Pop_front_0() {
+func (this *QCameraViewfinderSettingsList) Pop_front0() {
 	// QCameraViewfinderSettingsList_pop_front_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_pop_front_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void pop_back()
-func (this *QCameraViewfinderSettingsList) Pop_back_0() {
+func (this *QCameraViewfinderSettingsList) Pop_back0() {
 	// QCameraViewfinderSettingsList_pop_back_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_pop_back_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool empty()
-func (this *QCameraViewfinderSettingsList) Empty_0() bool {
+func (this *QCameraViewfinderSettingsList) Empty0() bool {
 	// QCameraViewfinderSettingsList_empty_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_empty_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -624,7 +624,7 @@ func (this *QCameraViewfinderSettingsList) Empty_0() bool {
 }
 
 // QList<T> & operator+=(const QList<T> &)
-func (this *QCameraViewfinderSettingsList) Operator_add_equal_0() *QCameraViewfinderSettingsList {
+func (this *QCameraViewfinderSettingsList) Operator_add_equal0() *QCameraViewfinderSettingsList {
 	// QCameraViewfinderSettingsList_operator_add_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_operator_add_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -632,7 +632,7 @@ func (this *QCameraViewfinderSettingsList) Operator_add_equal_0() *QCameraViewfi
 }
 
 // QList<T> operator+(const QList<T> &)
-func (this *QCameraViewfinderSettingsList) Operator_add_0() *QCameraViewfinderSettingsList {
+func (this *QCameraViewfinderSettingsList) Operator_add0() *QCameraViewfinderSettingsList {
 	// QCameraViewfinderSettingsList_operator_add_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_operator_add_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -640,7 +640,7 @@ func (this *QCameraViewfinderSettingsList) Operator_add_0() *QCameraViewfinderSe
 }
 
 // QList<T> & operator+=(const T &)
-func (this *QCameraViewfinderSettingsList) Operator_add_equal_1() *QCameraViewfinderSettingsList {
+func (this *QCameraViewfinderSettingsList) Operator_add_equal1() *QCameraViewfinderSettingsList {
 	// QCameraViewfinderSettingsList_operator_add_equal_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_operator_add_equal_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -648,7 +648,7 @@ func (this *QCameraViewfinderSettingsList) Operator_add_equal_1() *QCameraViewfi
 }
 
 // QList<T> & operator<<(const T &)
-func (this *QCameraViewfinderSettingsList) Operator_left_shift_0() *QCameraViewfinderSettingsList {
+func (this *QCameraViewfinderSettingsList) Operator_left_shift0() *QCameraViewfinderSettingsList {
 	// QCameraViewfinderSettingsList_operator_left_shift_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_operator_left_shift_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -656,7 +656,7 @@ func (this *QCameraViewfinderSettingsList) Operator_left_shift_0() *QCameraViewf
 }
 
 // QList<T> & operator<<(const QList<T> &)
-func (this *QCameraViewfinderSettingsList) Operator_left_shift_1() *QCameraViewfinderSettingsList {
+func (this *QCameraViewfinderSettingsList) Operator_left_shift1() *QCameraViewfinderSettingsList {
 	// QCameraViewfinderSettingsList_operator_left_shift_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_operator_left_shift_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -664,21 +664,21 @@ func (this *QCameraViewfinderSettingsList) Operator_left_shift_1() *QCameraViewf
 }
 
 // QVector<T> toVector()
-func (this *QCameraViewfinderSettingsList) ToVector_0() {
+func (this *QCameraViewfinderSettingsList) ToVector0() {
 	// QCameraViewfinderSettingsList_toVector_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_toVector_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QSet<T> toSet()
-func (this *QCameraViewfinderSettingsList) ToSet_0() {
+func (this *QCameraViewfinderSettingsList) ToSet0() {
 	// QCameraViewfinderSettingsList_toSet_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_toSet_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList<T> fromVector(const QVector<T> &)
-func (this *QCameraViewfinderSettingsList) FromVector_0() *QCameraViewfinderSettingsList {
+func (this *QCameraViewfinderSettingsList) FromVector0() *QCameraViewfinderSettingsList {
 	// QCameraViewfinderSettingsList_fromVector_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_fromVector_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -686,7 +686,7 @@ func (this *QCameraViewfinderSettingsList) FromVector_0() *QCameraViewfinderSett
 }
 
 // QList<T> fromSet(const QSet<T> &)
-func (this *QCameraViewfinderSettingsList) FromSet_0() *QCameraViewfinderSettingsList {
+func (this *QCameraViewfinderSettingsList) FromSet0() *QCameraViewfinderSettingsList {
 	// QCameraViewfinderSettingsList_fromSet_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_fromSet_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -694,7 +694,7 @@ func (this *QCameraViewfinderSettingsList) FromSet_0() *QCameraViewfinderSetting
 }
 
 // QList<T> fromStdList(const std::list<T> &)
-func (this *QCameraViewfinderSettingsList) FromStdList_0() *QCameraViewfinderSettingsList {
+func (this *QCameraViewfinderSettingsList) FromStdList0() *QCameraViewfinderSettingsList {
 	// QCameraViewfinderSettingsList_fromStdList_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_fromStdList_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -702,70 +702,70 @@ func (this *QCameraViewfinderSettingsList) FromStdList_0() *QCameraViewfinderSet
 }
 
 // std::list<T> toStdList()
-func (this *QCameraViewfinderSettingsList) ToStdList_0() {
+func (this *QCameraViewfinderSettingsList) ToStdList0() {
 	// QCameraViewfinderSettingsList_toStdList_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_toStdList_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::Node * detach_helper_grow(int, int)
-func (this *QCameraViewfinderSettingsList) Detach_helper_grow_0() {
+func (this *QCameraViewfinderSettingsList) Detach_helper_grow0() {
 	// QCameraViewfinderSettingsList_detach_helper_grow_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_detach_helper_grow_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void detach_helper(int)
-func (this *QCameraViewfinderSettingsList) Detach_helper_0() {
+func (this *QCameraViewfinderSettingsList) Detach_helper0() {
 	// QCameraViewfinderSettingsList_detach_helper_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_detach_helper_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void detach_helper()
-func (this *QCameraViewfinderSettingsList) Detach_helper_1() {
+func (this *QCameraViewfinderSettingsList) Detach_helper1() {
 	// QCameraViewfinderSettingsList_detach_helper_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_detach_helper_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void dealloc(QListData::Data *)
-func (this *QCameraViewfinderSettingsList) Dealloc_0() {
+func (this *QCameraViewfinderSettingsList) Dealloc0() {
 	// QCameraViewfinderSettingsList_dealloc_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_dealloc_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_construct(QList::Node *, const T &)
-func (this *QCameraViewfinderSettingsList) Node_construct_0() {
+func (this *QCameraViewfinderSettingsList) Node_construct0() {
 	// QCameraViewfinderSettingsList_node_construct_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_node_construct_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_destruct(QList::Node *)
-func (this *QCameraViewfinderSettingsList) Node_destruct_0() {
+func (this *QCameraViewfinderSettingsList) Node_destruct0() {
 	// QCameraViewfinderSettingsList_node_destruct_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_node_destruct_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_copy(QList::Node *, QList::Node *, QList::Node *)
-func (this *QCameraViewfinderSettingsList) Node_copy_0() {
+func (this *QCameraViewfinderSettingsList) Node_copy0() {
 	// QCameraViewfinderSettingsList_node_copy_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_node_copy_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_destruct(QList::Node *, QList::Node *)
-func (this *QCameraViewfinderSettingsList) Node_destruct_1() {
+func (this *QCameraViewfinderSettingsList) Node_destruct1() {
 	// QCameraViewfinderSettingsList_node_destruct_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_node_destruct_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool isValidIterator(const QList::iterator &)
-func (this *QCameraViewfinderSettingsList) IsValidIterator_0() bool {
+func (this *QCameraViewfinderSettingsList) IsValidIterator0() bool {
 	// QCameraViewfinderSettingsList_isValidIterator_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_isValidIterator_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -773,7 +773,7 @@ func (this *QCameraViewfinderSettingsList) IsValidIterator_0() bool {
 }
 
 // bool op_eq_impl(const QList<T> &, QListData::NotArrayCompatibleLayout)
-func (this *QCameraViewfinderSettingsList) Op_eq_impl_0() bool {
+func (this *QCameraViewfinderSettingsList) Op_eq_impl0() bool {
 	// QCameraViewfinderSettingsList_op_eq_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_op_eq_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -781,7 +781,7 @@ func (this *QCameraViewfinderSettingsList) Op_eq_impl_0() bool {
 }
 
 // bool op_eq_impl(const QList<T> &, QListData::ArrayCompatibleLayout)
-func (this *QCameraViewfinderSettingsList) Op_eq_impl_1() bool {
+func (this *QCameraViewfinderSettingsList) Op_eq_impl1() bool {
 	// QCameraViewfinderSettingsList_op_eq_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_op_eq_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -789,7 +789,7 @@ func (this *QCameraViewfinderSettingsList) Op_eq_impl_1() bool {
 }
 
 // bool contains_impl(const T &, QListData::NotArrayCompatibleLayout)
-func (this *QCameraViewfinderSettingsList) Contains_impl_0() bool {
+func (this *QCameraViewfinderSettingsList) Contains_impl0() bool {
 	// QCameraViewfinderSettingsList_contains_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_contains_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -797,7 +797,7 @@ func (this *QCameraViewfinderSettingsList) Contains_impl_0() bool {
 }
 
 // bool contains_impl(const T &, QListData::ArrayCompatibleLayout)
-func (this *QCameraViewfinderSettingsList) Contains_impl_1() bool {
+func (this *QCameraViewfinderSettingsList) Contains_impl1() bool {
 	// QCameraViewfinderSettingsList_contains_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_contains_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -805,7 +805,7 @@ func (this *QCameraViewfinderSettingsList) Contains_impl_1() bool {
 }
 
 // int count_impl(const T &, QListData::NotArrayCompatibleLayout)
-func (this *QCameraViewfinderSettingsList) Count_impl_0() int {
+func (this *QCameraViewfinderSettingsList) Count_impl0() int {
 	// QCameraViewfinderSettingsList_count_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_count_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -813,7 +813,7 @@ func (this *QCameraViewfinderSettingsList) Count_impl_0() int {
 }
 
 // int count_impl(const T &, QListData::ArrayCompatibleLayout)
-func (this *QCameraViewfinderSettingsList) Count_impl_1() int {
+func (this *QCameraViewfinderSettingsList) Count_impl1() int {
 	// QCameraViewfinderSettingsList_count_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QCameraViewfinderSettingsList_count_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)

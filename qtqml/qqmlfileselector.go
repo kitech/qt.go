@@ -113,10 +113,10 @@ func NewQQmlFileSelector(engine QQmlEngine_ITF /*777 QQmlEngine **/, parent qtco
 /*
 Creates a new QQmlFileSelector with parent object parent, which includes its own QFileSelector. engine is the QQmlEngine you wish to apply file selectors to. It will also take ownership of the QQmlFileSelector.
 */
-func (*QQmlFileSelector) NewForInherit__(engine QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlFileSelector {
-	return NewQQmlFileSelector__(engine)
+func (*QQmlFileSelector) NewForInheritp(engine QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlFileSelector {
+	return NewQQmlFileSelectorp(engine)
 }
-func NewQQmlFileSelector__(engine QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlFileSelector {
+func NewQQmlFileSelectorp(engine QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlFileSelector {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QQmlEngine_PTR() != nil {
 		convArg0 = engine.QQmlEngine_PTR().GetCthis()
@@ -207,7 +207,7 @@ func (this *QQmlFileSelector) SetExtraSelectors(strings qtcore.QStringList_ITF) 
 /*
 Adds extra selectors contained in strings to the current QFileSelector being used. Use this when extra selectors are all you need to avoid having to create your own QFileSelector instance.
 */
-func (this *QQmlFileSelector) SetExtraSelectors_1(strings qtcore.QStringList_ITF) {
+func (this *QQmlFileSelector) SetExtraSelectors1(strings qtcore.QStringList_ITF) {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {
 		convArg0 = strings.QStringList_PTR().GetCthis()

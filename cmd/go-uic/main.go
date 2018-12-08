@@ -209,7 +209,7 @@ func onSetupUi(line string) {
 			case "QVBoxLayout", "QHBoxLayout":
 				if refmtval != "" {
 					refmtval = fmt.Sprintf("this.%s", refmtval)
-					refmtsuf = "_1"
+					refmtsuf = "1"
 				}
 			case "QGridLayout":
 				if refmtval == "" {
@@ -245,9 +245,9 @@ func onSetupUi(line string) {
 			refmtsuf := ""
 			switch mats[0][2] {
 			case "setMaximumSize", "setMinimumSize":
-				refmtsuf = "_1"
+				refmtsuf = "1"
 			case "setIconSize":
-				refmtval = fmt.Sprintf("qtcore.NewQSize_1(%s)", refmtval)
+				refmtval = fmt.Sprintf("qtcore.NewQSize1(%s)", refmtval)
 			}
 			cp.APf("setupUi", "this.%s.%s%s(%s)  // 113",
 				strings.Title(mats[0][1]), refmtname, refmtsuf, refmtval)
@@ -308,16 +308,16 @@ func onSetupUi(line string) {
 			case "ResizeMode":
 				refmtval = "qtquickwidgets." + strings.Replace(refmtval, ":", "_", -1)
 			case "MaximumSize", "MinimumSize":
-				refmtsuf = "_1"
+				refmtsuf = "1"
 			case "Widget":
 				// refmtname = "this." + refmtname
 				refmtval = "this." + strings.Title(refmtval)
 			case "Pixmap":
 				refmtval = mats[0][3]
-				refmtval = fmt.Sprintf("qtgui.NewQPixmap_3(\"%s\", \"dummy123\", 0)", strings.Split(refmtval, "\"")[1])
+				refmtval = fmt.Sprintf("qtgui.NewQPixmap3(\"%s\", \"dummy123\", 0)", strings.Split(refmtval, "\"")[1])
 			case "Source": // QQuickWidget
 				refmtval = mats[0][3]
-				refmtval = fmt.Sprintf("qtcore.NewQUrl_1(\"%s\", 0)", strings.Split(refmtval, "\"")[1])
+				refmtval = fmt.Sprintf("qtcore.NewQUrl1(\"%s\", 0)", strings.Split(refmtval, "\"")[1])
 			case "StyleSheet": // QQuickWidget
 				refmtval = mats[0][3]
 				refmtval = fmt.Sprintf("\"%s\"", strings.Split(refmtval, "\"")[1])
@@ -332,9 +332,9 @@ func onSetupUi(line string) {
 				refmtval = mats[0][3]
 				numreg := regexp.MustCompile(`QVariant\([e\+\d]+\)`)
 				if strings.Contains(refmtval, "(false)") || strings.Contains(refmtval, "(true)") {
-					refmtval = strings.Replace(refmtval, "QVariant", "qtcore.NewQVariant_9", -1)
+					refmtval = strings.Replace(refmtval, "QVariant", "qtcore.NewQVariant9", -1)
 				} else if numreg.MatchString(refmtval) {
-					refmtval = strings.Replace(refmtval, "QVariant", "qtcore.NewQVariant_5", -1)
+					refmtval = strings.Replace(refmtval, "QVariant", "qtcore.NewQVariant5", -1)
 				}
 			default:
 				log.Println(line, refmtname)
@@ -355,7 +355,7 @@ func onSetupUi(line string) {
 			case "addWidget":
 				log.Println(line, memty, mats[0][1], refmtname)
 				if memty == "QGridLayout" {
-					refmtname += "_2"
+					refmtname += "2"
 					refmtval = fmt.Sprintf("this.%s, 0", refmtval)
 				} else {
 					if strings.Contains(mats[0][1], "Layout") {
@@ -369,7 +369,7 @@ func onSetupUi(line string) {
 				// toolbox
 				tbreg := regexp.MustCompile(`(.+)\, QStringLiteral\((.+)\)`)
 				if strings.HasPrefix(refmtval, "QString") { // QComboBox
-					refmtval = fmt.Sprintf("\"\", qtcore.NewQVariant_12(\"wtf\")")
+					refmtval = fmt.Sprintf("\"\", qtcore.NewQVariant12(\"wtf\")")
 				} else if tbreg.MatchString(refmtval) {
 					tbmats := tbreg.FindAllStringSubmatch(refmtval, -1)
 					refmtval = fmt.Sprintf("this.%s, %s", tbmats[0][1], tbmats[0][2])
@@ -411,7 +411,7 @@ func onSetupUi(line string) {
 				refmtvals = append(refmtvals, "qtwidgets."+strings.Replace(v, ":", "_", -1))
 			}
 			refmtval := strings.Join(refmtvals, ", ")
-			cp.APf("setupUi", "  this.%s = qtwidgets.New%s_1(%s, 1)", strings.Title(mats[0][1]), "QSizePolicy", refmtval)
+			cp.APf("setupUi", "  this.%s = qtwidgets.New%s1(%s, 1)", strings.Title(mats[0][1]), "QSizePolicy", refmtval)
 		} else if reg8.MatchString(line) {
 			mats := reg8.FindAllStringSubmatch(line, -1)
 			log.Println(mats, line)

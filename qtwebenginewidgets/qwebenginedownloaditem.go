@@ -217,7 +217,7 @@ func (this *QWebEngineDownloadItem) Path() string {
 
  */
 func (this *QWebEngineDownloadItem) SetPath(path string) {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QWebEngineDownloadItem7setPathE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

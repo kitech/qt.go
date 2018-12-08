@@ -117,10 +117,10 @@ func NewQPauseAnimation(parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
 /*
 Constructs a QPauseAnimation. parent is passed to QObject's constructor. The default duration is 0.
 */
-func (*QPauseAnimation) NewForInherit__() *QPauseAnimation {
-	return NewQPauseAnimation__()
+func (*QPauseAnimation) NewForInheritp() *QPauseAnimation {
+	return NewQPauseAnimationp()
 }
-func NewQPauseAnimation__() *QPauseAnimation {
+func NewQPauseAnimationp() *QPauseAnimation {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -138,10 +138,10 @@ func NewQPauseAnimation__() *QPauseAnimation {
 /*
 Constructs a QPauseAnimation. parent is passed to QObject's constructor. The default duration is 0.
 */
-func (*QPauseAnimation) NewForInherit_1(msecs int, parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
-	return NewQPauseAnimation_1(msecs, parent)
+func (*QPauseAnimation) NewForInherit1(msecs int, parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
+	return NewQPauseAnimation1(msecs, parent)
 }
-func NewQPauseAnimation_1(msecs int, parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
+func NewQPauseAnimation1(msecs int, parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg1 = parent.QObject_PTR().GetCthis()
@@ -161,10 +161,10 @@ func NewQPauseAnimation_1(msecs int, parent QObject_ITF /*777 QObject **/) *QPau
 /*
 Constructs a QPauseAnimation. parent is passed to QObject's constructor. The default duration is 0.
 */
-func (*QPauseAnimation) NewForInherit_1_(msecs int) *QPauseAnimation {
-	return NewQPauseAnimation_1_(msecs)
+func (*QPauseAnimation) NewForInherit1p(msecs int) *QPauseAnimation {
+	return NewQPauseAnimation1p(msecs)
 }
-func NewQPauseAnimation_1_(msecs int) *QPauseAnimation {
+func NewQPauseAnimation1p(msecs int) *QPauseAnimation {
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", qtrt.FFI_TYPE_POINTER, msecs, convArg1)

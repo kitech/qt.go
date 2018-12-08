@@ -105,7 +105,7 @@ func DeleteQAudioOutputSelectorControl(this *QAudioOutputSelectorControl) {
 Returns the description of the output name.
 */
 func (this *QAudioOutputSelectorControl) OutputDescription(name string) string {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAudioOutputSelectorControl17outputDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ Set the active audio output to name.
 See also activeOutput().
 */
 func (this *QAudioOutputSelectorControl) SetActiveOutput(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAudioOutputSelectorControl15setActiveOutputERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -177,7 +177,7 @@ func (this *QAudioOutputSelectorControl) SetActiveOutput(name string) {
 Signals that the audio output has changed to name.
 */
 func (this *QAudioOutputSelectorControl) ActiveOutputChanged(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAudioOutputSelectorControl19activeOutputChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -227,10 +227,10 @@ func NewQAudioOutputSelectorControl(parent qtcore.QObject_ITF /*777 QObject **/)
 /*
 Constructs a new audio output selector control with the given parent.
 */
-func (*QAudioOutputSelectorControl) NewForInherit__() *QAudioOutputSelectorControl {
-	return NewQAudioOutputSelectorControl__()
+func (*QAudioOutputSelectorControl) NewForInheritp() *QAudioOutputSelectorControl {
+	return NewQAudioOutputSelectorControlp()
 }
-func NewQAudioOutputSelectorControl__() *QAudioOutputSelectorControl {
+func NewQAudioOutputSelectorControlp() *QAudioOutputSelectorControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAudioOutputSelectorControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

@@ -110,10 +110,10 @@ func NewQRegularExpressionValidator(parent qtcore.QObject_ITF /*777 QObject **/)
 /*
 
  */
-func (*QRegularExpressionValidator) NewForInherit__() *QRegularExpressionValidator {
-	return NewQRegularExpressionValidator__()
+func (*QRegularExpressionValidator) NewForInheritp() *QRegularExpressionValidator {
+	return NewQRegularExpressionValidatorp()
 }
-func NewQRegularExpressionValidator__() *QRegularExpressionValidator {
+func NewQRegularExpressionValidatorp() *QRegularExpressionValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -131,10 +131,10 @@ func NewQRegularExpressionValidator__() *QRegularExpressionValidator {
 /*
 
  */
-func (*QRegularExpressionValidator) NewForInherit_1(re qtcore.QRegularExpression_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
-	return NewQRegularExpressionValidator_1(re, parent)
+func (*QRegularExpressionValidator) NewForInherit1(re qtcore.QRegularExpression_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
+	return NewQRegularExpressionValidator1(re, parent)
 }
-func NewQRegularExpressionValidator_1(re qtcore.QRegularExpression_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
+func NewQRegularExpressionValidator1(re qtcore.QRegularExpression_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegularExpressionValidator {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()
@@ -158,10 +158,10 @@ func NewQRegularExpressionValidator_1(re qtcore.QRegularExpression_ITF, parent q
 /*
 
  */
-func (*QRegularExpressionValidator) NewForInherit_1_(re qtcore.QRegularExpression_ITF) *QRegularExpressionValidator {
-	return NewQRegularExpressionValidator_1_(re)
+func (*QRegularExpressionValidator) NewForInherit1p(re qtcore.QRegularExpression_ITF) *QRegularExpressionValidator {
+	return NewQRegularExpressionValidator1p(re)
 }
-func NewQRegularExpressionValidator_1_(re qtcore.QRegularExpression_ITF) *QRegularExpressionValidator {
+func NewQRegularExpressionValidator1p(re qtcore.QRegularExpression_ITF) *QRegularExpressionValidator {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()
@@ -201,7 +201,7 @@ This virtual function returns Invalid if input is invalid according to this vali
 The function can change both input and pos (the cursor position) if required.
 */
 func (this *QRegularExpressionValidator) Validate(input string, pos int) int {
-	var tmpArg0 = qtcore.NewQString_5(input)
+	var tmpArg0 = qtcore.NewQString5(input)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	qtrt.ErrPrint(err, rv)

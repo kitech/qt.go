@@ -165,7 +165,7 @@ Sets the format of the QImageIOHandler to format. The format is most useful for 
 
 See also format().
 */
-func (this *QImageIOHandler) SetFormat_1(format qtcore.QByteArray_ITF) {
+func (this *QImageIOHandler) SetFormat1(format qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QByteArray_PTR() != nil {
 		convArg0 = format.QByteArray_PTR().GetCthis()

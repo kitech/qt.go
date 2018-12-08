@@ -120,10 +120,10 @@ func NewQQuickWebEngineScript(parent qtcore.QObject_ITF /*777 QObject **/) *QQui
 /*
 Constructs a new QQuickWebEngineScript with the parent parent.
 */
-func (*QQuickWebEngineScript) NewForInherit__() *QQuickWebEngineScript {
-	return NewQQuickWebEngineScript__()
+func (*QQuickWebEngineScript) NewForInheritp() *QQuickWebEngineScript {
+	return NewQQuickWebEngineScriptp()
 }
-func NewQQuickWebEngineScript__() *QQuickWebEngineScript {
+func NewQQuickWebEngineScriptp() *QQuickWebEngineScript {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQuickWebEngineScriptC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -266,7 +266,7 @@ func (this *QQuickWebEngineScript) RunOnSubframes() bool {
 
  */
 func (this *QQuickWebEngineScript) SetName(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQuickWebEngineScript7setNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -298,7 +298,7 @@ func (this *QQuickWebEngineScript) SetSourceUrl(url qtcore.QUrl_ITF) {
 
  */
 func (this *QQuickWebEngineScript) SetSourceCode(code string) {
-	var tmpArg0 = qtcore.NewQString_5(code)
+	var tmpArg0 = qtcore.NewQString5(code)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQuickWebEngineScript13setSourceCodeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -352,7 +352,7 @@ func (this *QQuickWebEngineScript) SetRunOnSubframes(on bool) {
 
  */
 func (this *QQuickWebEngineScript) NameChanged(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQuickWebEngineScript11nameChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -384,7 +384,7 @@ func (this *QQuickWebEngineScript) SourceUrlChanged(url qtcore.QUrl_ITF) {
 
  */
 func (this *QQuickWebEngineScript) SourceCodeChanged(code string) {
-	var tmpArg0 = qtcore.NewQString_5(code)
+	var tmpArg0 = qtcore.NewQString5(code)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQuickWebEngineScript17sourceCodeChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

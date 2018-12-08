@@ -134,10 +134,10 @@ func NewQCommandLinkButton(parent QWidget_ITF /*777 QWidget **/) *QCommandLinkBu
 /*
 Constructs a command link with no text and a parent.
 */
-func (*QCommandLinkButton) NewForInherit__() *QCommandLinkButton {
-	return NewQCommandLinkButton__()
+func (*QCommandLinkButton) NewForInheritp() *QCommandLinkButton {
+	return NewQCommandLinkButtonp()
 }
-func NewQCommandLinkButton__() *QCommandLinkButton {
+func NewQCommandLinkButtonp() *QCommandLinkButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -155,11 +155,11 @@ func NewQCommandLinkButton__() *QCommandLinkButton {
 /*
 Constructs a command link with no text and a parent.
 */
-func (*QCommandLinkButton) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
-	return NewQCommandLinkButton_1(text, parent)
+func (*QCommandLinkButton) NewForInherit1(text string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
+	return NewQCommandLinkButton1(text, parent)
 }
-func NewQCommandLinkButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQCommandLinkButton1(text string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -180,11 +180,11 @@ func NewQCommandLinkButton_1(text string, parent QWidget_ITF /*777 QWidget **/) 
 /*
 Constructs a command link with no text and a parent.
 */
-func (*QCommandLinkButton) NewForInherit_1_(text string) *QCommandLinkButton {
-	return NewQCommandLinkButton_1_(text)
+func (*QCommandLinkButton) NewForInherit1p(text string) *QCommandLinkButton {
+	return NewQCommandLinkButton1p(text)
 }
-func NewQCommandLinkButton_1_(text string) *QCommandLinkButton {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQCommandLinkButton1p(text string) *QCommandLinkButton {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -203,13 +203,13 @@ func NewQCommandLinkButton_1_(text string) *QCommandLinkButton {
 /*
 Constructs a command link with no text and a parent.
 */
-func (*QCommandLinkButton) NewForInherit_2(text string, description string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
-	return NewQCommandLinkButton_2(text, description, parent)
+func (*QCommandLinkButton) NewForInherit2(text string, description string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
+	return NewQCommandLinkButton2(text, description, parent)
 }
-func NewQCommandLinkButton_2(text string, description string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQCommandLinkButton2(text string, description string, parent QWidget_ITF /*777 QWidget **/) *QCommandLinkButton {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(description)
+	var tmpArg1 = qtcore.NewQString5(description)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -230,13 +230,13 @@ func NewQCommandLinkButton_2(text string, description string, parent QWidget_ITF
 /*
 Constructs a command link with no text and a parent.
 */
-func (*QCommandLinkButton) NewForInherit_2_(text string, description string) *QCommandLinkButton {
-	return NewQCommandLinkButton_2_(text, description)
+func (*QCommandLinkButton) NewForInherit2p(text string, description string) *QCommandLinkButton {
+	return NewQCommandLinkButton2p(text, description)
 }
-func NewQCommandLinkButton_2_(text string, description string) *QCommandLinkButton {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQCommandLinkButton2p(text string, description string) *QCommandLinkButton {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(description)
+	var tmpArg1 = qtcore.NewQString5(description)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -288,7 +288,7 @@ func (this *QCommandLinkButton) Description() string {
 
  */
 func (this *QCommandLinkButton) SetDescription(description string) {
-	var tmpArg0 = qtcore.NewQString_5(description)
+	var tmpArg0 = qtcore.NewQString5(description)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButton14setDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

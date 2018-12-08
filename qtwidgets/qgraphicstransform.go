@@ -114,10 +114,10 @@ func NewQGraphicsTransform(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphi
 /*
 Constructs a new QGraphicsTransform with the given parent.
 */
-func (*QGraphicsTransform) NewForInherit__() *QGraphicsTransform {
-	return NewQGraphicsTransform__()
+func (*QGraphicsTransform) NewForInheritp() *QGraphicsTransform {
+	return NewQGraphicsTransformp()
 }
-func NewQGraphicsTransform__() *QGraphicsTransform {
+func NewQGraphicsTransformp() *QGraphicsTransform {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsTransformC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

@@ -91,10 +91,10 @@ func NewQLatin1String() *QLatin1String {
 /*
 
  */
-func (*QLatin1String) NewForInherit_1(s string) *QLatin1String {
-	return NewQLatin1String_1(s)
+func (*QLatin1String) NewForInherit1(s string) *QLatin1String {
+	return NewQLatin1String1(s)
 }
-func NewQLatin1String_1(s string) *QLatin1String {
+func NewQLatin1String1(s string) *QLatin1String {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -112,10 +112,10 @@ func NewQLatin1String_1(s string) *QLatin1String {
 /*
 
  */
-func (*QLatin1String) NewForInherit_2(f string, l string) *QLatin1String {
-	return NewQLatin1String_2(f, l)
+func (*QLatin1String) NewForInherit2(f string, l string) *QLatin1String {
+	return NewQLatin1String2(f, l)
 }
-func NewQLatin1String_2(f string, l string) *QLatin1String {
+func NewQLatin1String2(f string, l string) *QLatin1String {
 	var convArg0 = qtrt.CString(f)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(l)
@@ -135,10 +135,10 @@ func NewQLatin1String_2(f string, l string) *QLatin1String {
 /*
 
  */
-func (*QLatin1String) NewForInherit_3(s string, sz int) *QLatin1String {
-	return NewQLatin1String_3(s, sz)
+func (*QLatin1String) NewForInherit3(s string, sz int) *QLatin1String {
+	return NewQLatin1String3(s, sz)
 }
-func NewQLatin1String_3(s string, sz int) *QLatin1String {
+func NewQLatin1String3(s string, sz int) *QLatin1String {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKci", qtrt.FFI_TYPE_POINTER, convArg0, sz)
@@ -156,10 +156,10 @@ func NewQLatin1String_3(s string, sz int) *QLatin1String {
 /*
 
  */
-func (*QLatin1String) NewForInherit_4(s QByteArray_ITF) *QLatin1String {
-	return NewQLatin1String_4(s)
+func (*QLatin1String) NewForInherit4(s QByteArray_ITF) *QLatin1String {
+	return NewQLatin1String4(s)
 }
-func NewQLatin1String_4(s QByteArray_ITF) *QLatin1String {
+func NewQLatin1String4(s QByteArray_ITF) *QLatin1String {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
 		convArg0 = s.QByteArray_PTR().GetCthis()
@@ -430,7 +430,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QLatin1String) StartsWith__(s QStringView_ITF /*123*/) bool {
+func (this *QLatin1String) StartsWithp(s QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -461,7 +461,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QLatin1String) StartsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
+func (this *QLatin1String) StartsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -490,7 +490,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QLatin1String) StartsWith_1_(s QLatin1String_ITF /*123*/) bool {
+func (this *QLatin1String) StartsWith1p(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -521,7 +521,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QLatin1String) StartsWith_2(c QChar_ITF /*123*/) bool {
+func (this *QLatin1String) StartsWith2(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -550,7 +550,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QLatin1String) StartsWith_3(c QChar_ITF /*123*/, cs int) bool {
+func (this *QLatin1String) StartsWith3(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -608,7 +608,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QLatin1String) EndsWith__(s QStringView_ITF /*123*/) bool {
+func (this *QLatin1String) EndsWithp(s QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -639,7 +639,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QLatin1String) EndsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
+func (this *QLatin1String) EndsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -668,7 +668,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QLatin1String) EndsWith_1_(s QLatin1String_ITF /*123*/) bool {
+func (this *QLatin1String) EndsWith1p(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -699,7 +699,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QLatin1String) EndsWith_2(c QChar_ITF /*123*/) bool {
+func (this *QLatin1String) EndsWith2(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -728,7 +728,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QLatin1String) EndsWith_3(c QChar_ITF /*123*/, cs int) bool {
+func (this *QLatin1String) EndsWith3(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -856,7 +856,7 @@ Example:
 
 See also left(), right(), chopped(), chop(), and truncate().
 */
-func (this *QLatin1String) Mid_1(pos int, n int) *QLatin1String /*123*/ {
+func (this *QLatin1String) Mid1(pos int, n int) *QLatin1String /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1String3midEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, n)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1034,7 +1034,7 @@ func (this *QLatin1String) Trimmed() *QLatin1String /*123*/ {
 
  */
 func (this *QLatin1String) Operator_equal_equal(s string) bool {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringeqERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1049,7 +1049,7 @@ func (this *QLatin1String) Operator_equal_equal(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_equal_equal_1(s string) bool {
+func (this *QLatin1String) Operator_equal_equal1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringeqEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1065,7 +1065,7 @@ func (this *QLatin1String) Operator_equal_equal_1(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_equal_equal_2(s QByteArray_ITF) bool {
+func (this *QLatin1String) Operator_equal_equal2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
 		convArg0 = s.QByteArray_PTR().GetCthis()
@@ -1084,7 +1084,7 @@ func (this *QLatin1String) Operator_equal_equal_2(s QByteArray_ITF) bool {
 
  */
 func (this *QLatin1String) Operator_not_equal(s string) bool {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringneERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1099,7 +1099,7 @@ func (this *QLatin1String) Operator_not_equal(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_not_equal_1(s string) bool {
+func (this *QLatin1String) Operator_not_equal1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringneEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1115,7 +1115,7 @@ func (this *QLatin1String) Operator_not_equal_1(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_not_equal_2(s QByteArray_ITF) bool {
+func (this *QLatin1String) Operator_not_equal2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
 		convArg0 = s.QByteArray_PTR().GetCthis()
@@ -1134,7 +1134,7 @@ func (this *QLatin1String) Operator_not_equal_2(s QByteArray_ITF) bool {
 
  */
 func (this *QLatin1String) Operator_greater_than(s string) bool {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringgtERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1149,7 +1149,7 @@ func (this *QLatin1String) Operator_greater_than(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_greater_than_1(s string) bool {
+func (this *QLatin1String) Operator_greater_than1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringgtEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1165,7 +1165,7 @@ func (this *QLatin1String) Operator_greater_than_1(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_greater_than_2(s QByteArray_ITF) bool {
+func (this *QLatin1String) Operator_greater_than2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
 		convArg0 = s.QByteArray_PTR().GetCthis()
@@ -1184,7 +1184,7 @@ func (this *QLatin1String) Operator_greater_than_2(s QByteArray_ITF) bool {
 
  */
 func (this *QLatin1String) Operator_less_than(s string) bool {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringltERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1199,7 +1199,7 @@ func (this *QLatin1String) Operator_less_than(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_less_than_1(s string) bool {
+func (this *QLatin1String) Operator_less_than1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringltEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1215,7 +1215,7 @@ func (this *QLatin1String) Operator_less_than_1(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_less_than_2(s QByteArray_ITF) bool {
+func (this *QLatin1String) Operator_less_than2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
 		convArg0 = s.QByteArray_PTR().GetCthis()
@@ -1234,7 +1234,7 @@ func (this *QLatin1String) Operator_less_than_2(s QByteArray_ITF) bool {
 
  */
 func (this *QLatin1String) Operator_greater_than_equal(s string) bool {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringgeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1249,7 +1249,7 @@ func (this *QLatin1String) Operator_greater_than_equal(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_greater_than_equal_1(s string) bool {
+func (this *QLatin1String) Operator_greater_than_equal1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringgeEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1265,7 +1265,7 @@ func (this *QLatin1String) Operator_greater_than_equal_1(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_greater_than_equal_2(s QByteArray_ITF) bool {
+func (this *QLatin1String) Operator_greater_than_equal2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
 		convArg0 = s.QByteArray_PTR().GetCthis()
@@ -1284,7 +1284,7 @@ func (this *QLatin1String) Operator_greater_than_equal_2(s QByteArray_ITF) bool 
 
  */
 func (this *QLatin1String) Operator_less_than_equal(s string) bool {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1299,7 +1299,7 @@ func (this *QLatin1String) Operator_less_than_equal(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_less_than_equal_1(s string) bool {
+func (this *QLatin1String) Operator_less_than_equal1(s string) bool {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QLatin1StringleEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1315,7 +1315,7 @@ func (this *QLatin1String) Operator_less_than_equal_1(s string) bool {
 /*
 
  */
-func (this *QLatin1String) Operator_less_than_equal_2(s QByteArray_ITF) bool {
+func (this *QLatin1String) Operator_less_than_equal2(s QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
 		convArg0 = s.QByteArray_PTR().GetCthis()

@@ -114,10 +114,10 @@ func NewQGraphicsOpacityEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGr
 /*
 
  */
-func (*QGraphicsOpacityEffect) NewForInherit__() *QGraphicsOpacityEffect {
-	return NewQGraphicsOpacityEffect__()
+func (*QGraphicsOpacityEffect) NewForInheritp() *QGraphicsOpacityEffect {
+	return NewQGraphicsOpacityEffectp()
 }
-func NewQGraphicsOpacityEffect__() *QGraphicsOpacityEffect {
+func NewQGraphicsOpacityEffectp() *QGraphicsOpacityEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

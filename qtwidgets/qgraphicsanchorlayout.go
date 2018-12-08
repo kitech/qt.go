@@ -100,10 +100,10 @@ func NewQGraphicsAnchorLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayo
 /*
 Constructs a QGraphicsAnchorLayout instance. parent is passed to QGraphicsLayout's constructor.
 */
-func (*QGraphicsAnchorLayout) NewForInherit__() *QGraphicsAnchorLayout {
-	return NewQGraphicsAnchorLayout__()
+func (*QGraphicsAnchorLayout) NewForInheritp() *QGraphicsAnchorLayout {
+	return NewQGraphicsAnchorLayoutp()
 }
-func NewQGraphicsAnchorLayout__() *QGraphicsAnchorLayout {
+func NewQGraphicsAnchorLayoutp() *QGraphicsAnchorLayout {
 	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -287,7 +287,7 @@ This can also be achieved using the following line of code:
 
 See also addAnchor() and addCornerAnchors().
 */
-func (this *QGraphicsAnchorLayout) AddAnchors__(firstItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, secondItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) {
+func (this *QGraphicsAnchorLayout) AddAnchorsp(firstItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, secondItem QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) {
 	var convArg0 unsafe.Pointer
 	if firstItem != nil && firstItem.QGraphicsLayoutItem_PTR() != nil {
 		convArg0 = firstItem.QGraphicsLayoutItem_PTR().GetCthis()
@@ -488,7 +488,7 @@ func (this *QGraphicsAnchorLayout) SizeHint(which int, constraint qtcore.QSizeF_
 /*
 Reimplemented from QGraphicsLayoutItem::sizeHint().
 */
-func (this *QGraphicsAnchorLayout) SizeHint__(which int) *qtcore.QSizeF /*123*/ {
+func (this *QGraphicsAnchorLayout) SizeHintp(which int) *qtcore.QSizeF /*123*/ {
 	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)

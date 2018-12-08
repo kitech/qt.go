@@ -199,10 +199,10 @@ func NewQTabBar(parent QWidget_ITF /*777 QWidget **/) *QTabBar {
 /*
 Creates a new tab bar with the given parent.
 */
-func (*QTabBar) NewForInherit__() *QTabBar {
-	return NewQTabBar__()
+func (*QTabBar) NewForInheritp() *QTabBar {
+	return NewQTabBarp()
 }
-func NewQTabBar__() *QTabBar {
+func NewQTabBarp() *QTabBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QTabBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -263,7 +263,7 @@ func (this *QTabBar) SetShape(shape int) {
 Adds a new tab with text text. Returns the new tab's index.
 */
 func (this *QTabBar) AddTab(text string) int {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QTabBar6addTabERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -278,12 +278,12 @@ func (this *QTabBar) AddTab(text string) int {
 /*
 Adds a new tab with text text. Returns the new tab's index.
 */
-func (this *QTabBar) AddTab_1(icon qtgui.QIcon_ITF, text string) int {
+func (this *QTabBar) AddTab1(icon qtgui.QIcon_ITF, text string) int {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QTabBar6addTabERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -299,7 +299,7 @@ func (this *QTabBar) AddTab_1(icon qtgui.QIcon_ITF, text string) int {
 Inserts a new tab with text text at position index. If index is out of range, the new tab is appened. Returns the new tab's index.
 */
 func (this *QTabBar) InsertTab(index int, text string) int {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QTabBar9insertTabEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -314,12 +314,12 @@ func (this *QTabBar) InsertTab(index int, text string) int {
 /*
 Inserts a new tab with text text at position index. If index is out of range, the new tab is appened. Returns the new tab's index.
 */
-func (this *QTabBar) InsertTab_1(index int, icon qtgui.QIcon_ITF, text string) int {
+func (this *QTabBar) InsertTab1(index int, icon qtgui.QIcon_ITF, text string) int {
 	var convArg1 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg1 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QTabBar9insertTabEiRK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -417,7 +417,7 @@ Sets the text of the tab at position index to text.
 See also tabText().
 */
 func (this *QTabBar) SetTabText(index int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QTabBar10setTabTextEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -537,7 +537,7 @@ Sets the tool tip of the tab at position index to tip.
 See also tabToolTip().
 */
 func (this *QTabBar) SetTabToolTip(index int, tip string) {
-	var tmpArg1 = qtcore.NewQString_5(tip)
+	var tmpArg1 = qtcore.NewQString5(tip)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QTabBar13setTabToolTipEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -575,7 +575,7 @@ This function was introduced in  Qt 4.1.
 See also tabWhatsThis().
 */
 func (this *QTabBar) SetTabWhatsThis(index int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QTabBar15setTabWhatsThisEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1082,7 +1082,7 @@ Sets the accessibleName of the tab at position index to name.
 See also accessibleTabName().
 */
 func (this *QTabBar) SetAccessibleTabName(index int, name string) {
-	var tmpArg1 = qtcore.NewQString_5(name)
+	var tmpArg1 = qtcore.NewQString5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QTabBar20setAccessibleTabNameEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)

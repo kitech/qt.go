@@ -101,10 +101,10 @@ func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
 /*
 
  */
-func (*QFutureInterfaceBase) NewForInherit__() *QFutureInterfaceBase {
-	return NewQFutureInterfaceBase__()
+func (*QFutureInterfaceBase) NewForInheritp() *QFutureInterfaceBase {
+	return NewQFutureInterfaceBasep()
 }
-func NewQFutureInterfaceBase__() *QFutureInterfaceBase {
+func NewQFutureInterfaceBasep() *QFutureInterfaceBase {
 	// arg: 0, QFutureInterfaceBase::State=Enum, QFutureInterfaceBase::State=Enum, , Invalid
 	initialState := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseC2ENS_5StateE", qtrt.FFI_TYPE_POINTER, initialState)
@@ -319,7 +319,7 @@ func (this *QFutureInterfaceBase) ProgressValue() int {
 
  */
 func (this *QFutureInterfaceBase) SetProgressValueAndText(progressValue int, progressText string) {
-	var tmpArg1 = NewQString_5(progressText)
+	var tmpArg1 = NewQString5(progressText)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), progressValue, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -650,7 +650,7 @@ func (this *QFutureInterfaceBase) ResultStoreBase() int {
 /*
 
  */
-func (this *QFutureInterfaceBase) ResultStoreBase_1() int {
+func (this *QFutureInterfaceBase) ResultStoreBase1() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase15resultStoreBaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cpretval2go("int", rv).(int) // 3331

@@ -116,10 +116,10 @@ func NewQQuickFramebufferObject(parent QQuickItem_ITF /*777 QQuickItem **/) *QQu
 /*
 Constructs a new QQuickFramebufferObject with parent parent.
 */
-func (*QQuickFramebufferObject) NewForInherit__() *QQuickFramebufferObject {
-	return NewQQuickFramebufferObject__()
+func (*QQuickFramebufferObject) NewForInheritp() *QQuickFramebufferObject {
+	return NewQQuickFramebufferObjectp()
 }
-func NewQQuickFramebufferObject__() *QQuickFramebufferObject {
+func NewQQuickFramebufferObjectp() *QQuickFramebufferObject {
 	// arg: 0, QQuickItem *=Pointer, QQuickItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QQuickFramebufferObjectC2EP10QQuickItem", qtrt.FFI_TYPE_POINTER, convArg0)

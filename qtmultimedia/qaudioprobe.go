@@ -110,10 +110,10 @@ func NewQAudioProbe(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioProbe {
 /*
 Creates a new QAudioProbe class with a parent. After setting the source to monitor with setSource(), the audioBufferProbed() signal will be emitted when audio buffers are flowing in the source media object.
 */
-func (*QAudioProbe) NewForInherit__() *QAudioProbe {
-	return NewQAudioProbe__()
+func (*QAudioProbe) NewForInheritp() *QAudioProbe {
+	return NewQAudioProbep()
 }
-func NewQAudioProbe__() *QAudioProbe {
+func NewQAudioProbep() *QAudioProbe {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAudioProbeC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -176,7 +176,7 @@ If the media object does not support monitoring audio, this function will return
 
 The previous object will no longer be monitored. Passing in the same object will be ignored, but monitoring will continue.
 */
-func (this *QAudioProbe) SetSource_1(source QMediaRecorder_ITF /*777 QMediaRecorder **/) bool {
+func (this *QAudioProbe) SetSource1(source QMediaRecorder_ITF /*777 QMediaRecorder **/) bool {
 	var convArg0 unsafe.Pointer
 	if source != nil && source.QMediaRecorder_PTR() != nil {
 		convArg0 = source.QMediaRecorder_PTR().GetCthis()

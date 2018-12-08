@@ -157,10 +157,10 @@ Constructs a QSyntaxHighlighter with the given parent.
 
 If the parent is a QTextEdit, it installs the syntax highlighter on the parents document. The specified QTextEdit also becomes the owner of the QSyntaxHighlighter.
 */
-func (*QSyntaxHighlighter) NewForInherit_1(parent QTextDocument_ITF /*777 QTextDocument **/) *QSyntaxHighlighter {
-	return NewQSyntaxHighlighter_1(parent)
+func (*QSyntaxHighlighter) NewForInherit1(parent QTextDocument_ITF /*777 QTextDocument **/) *QSyntaxHighlighter {
+	return NewQSyntaxHighlighter1(parent)
 }
-func NewQSyntaxHighlighter_1(parent QTextDocument_ITF /*777 QTextDocument **/) *QSyntaxHighlighter {
+func NewQSyntaxHighlighter1(parent QTextDocument_ITF /*777 QTextDocument **/) *QSyntaxHighlighter {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QTextDocument_PTR() != nil {
 		convArg0 = parent.QTextDocument_PTR().GetCthis()
@@ -293,7 +293,7 @@ See the Detailed Description for examples of using setCurrentBlockState(), curre
 See also previousBlockState(), setFormat(), and setCurrentBlockState().
 */
 func (this *QSyntaxHighlighter) HighlightBlock(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighter14highlightBlockERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -332,7 +332,7 @@ The specified format is applied to the text from the start position for a length
 
 See also format() and highlightBlock().
 */
-func (this *QSyntaxHighlighter) SetFormat_1(start int, count int, color QColor_ITF) {
+func (this *QSyntaxHighlighter) SetFormat1(start int, count int, color QColor_ITF) {
 	var convArg2 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
 		convArg2 = color.QColor_PTR().GetCthis()
@@ -353,7 +353,7 @@ The specified format is applied to the text from the start position for a length
 
 See also format() and highlightBlock().
 */
-func (this *QSyntaxHighlighter) SetFormat_2(start int, count int, font QFont_ITF) {
+func (this *QSyntaxHighlighter) SetFormat2(start int, count int, font QFont_ITF) {
 	var convArg2 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
 		convArg2 = font.QFont_PTR().GetCthis()

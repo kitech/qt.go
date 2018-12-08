@@ -91,10 +91,10 @@ func NewQSizeF() *QSizeF {
 /*
 
  */
-func (*QSizeF) NewForInherit_1(sz QSize_ITF) *QSizeF {
-	return NewQSizeF_1(sz)
+func (*QSizeF) NewForInherit1(sz QSize_ITF) *QSizeF {
+	return NewQSizeF1(sz)
 }
-func NewQSizeF_1(sz QSize_ITF) *QSizeF {
+func NewQSizeF1(sz QSize_ITF) *QSizeF {
 	var convArg0 unsafe.Pointer
 	if sz != nil && sz.QSize_PTR() != nil {
 		convArg0 = sz.QSize_PTR().GetCthis()
@@ -114,10 +114,10 @@ func NewQSizeF_1(sz QSize_ITF) *QSizeF {
 /*
 
  */
-func (*QSizeF) NewForInherit_2(w float64, h float64) *QSizeF {
-	return NewQSizeF_2(w, h)
+func (*QSizeF) NewForInherit2(w float64, h float64) *QSizeF {
+	return NewQSizeF2(w, h)
 }
-func NewQSizeF_2(w float64, h float64) *QSizeF {
+func NewQSizeF2(w float64, h float64) *QSizeF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QSizeFC2Edd", qtrt.FFI_TYPE_POINTER, w, h)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -341,7 +341,7 @@ Example:
 
 See also setWidth(), setHeight(), and scaled().
 */
-func (this *QSizeF) Scale_1(s QSizeF_ITF, mode int) {
+func (this *QSizeF) Scale1(s QSizeF_ITF, mode int) {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSizeF_PTR() != nil {
 		convArg0 = s.QSizeF_PTR().GetCthis()
@@ -382,7 +382,7 @@ This function was introduced in  Qt 5.0.
 
 See also scale().
 */
-func (this *QSizeF) Scaled_1(s QSizeF_ITF, mode int) *QSizeF /*123*/ {
+func (this *QSizeF) Scaled1(s QSizeF_ITF, mode int) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSizeF_PTR() != nil {
 		convArg0 = s.QSizeF_PTR().GetCthis()

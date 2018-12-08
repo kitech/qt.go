@@ -99,16 +99,16 @@ Searches all installed QTextCodec objects and returns the one which best matches
 
 Note: This function is thread-safe.
 */
-func (this *QTextCodec) CodecForName_1(name string) *QTextCodec /*777 QTextCodec **/ {
+func (this *QTextCodec) CodecForName1(name string) *QTextCodec /*777 QTextCodec **/ {
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextCodec12codecForNameEPKc", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QTextCodec_CodecForName_1(name string) *QTextCodec /*777 QTextCodec **/ {
+func QTextCodec_CodecForName1(name string) *QTextCodec /*777 QTextCodec **/ {
 	var nilthis *QTextCodec
-	rv := nilthis.CodecForName_1(name)
+	rv := nilthis.CodecForName1(name)
 	return rv
 }
 
@@ -226,7 +226,7 @@ This function was introduced in  Qt 4.4.
 
 See also codecForUtfText().
 */
-func (this *QTextCodec) CodecForHtml_1(ba QByteArray_ITF, defaultCodec QTextCodec_ITF /*777 QTextCodec **/) *QTextCodec /*777 QTextCodec **/ {
+func (this *QTextCodec) CodecForHtml1(ba QByteArray_ITF, defaultCodec QTextCodec_ITF /*777 QTextCodec **/) *QTextCodec /*777 QTextCodec **/ {
 	var convArg0 unsafe.Pointer
 	if ba != nil && ba.QByteArray_PTR() != nil {
 		convArg0 = ba.QByteArray_PTR().GetCthis()
@@ -239,9 +239,9 @@ func (this *QTextCodec) CodecForHtml_1(ba QByteArray_ITF, defaultCodec QTextCode
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QTextCodec_CodecForHtml_1(ba QByteArray_ITF, defaultCodec QTextCodec_ITF /*777 QTextCodec **/) *QTextCodec /*777 QTextCodec **/ {
+func QTextCodec_CodecForHtml1(ba QByteArray_ITF, defaultCodec QTextCodec_ITF /*777 QTextCodec **/) *QTextCodec /*777 QTextCodec **/ {
 	var nilthis *QTextCodec
-	rv := nilthis.CodecForHtml_1(ba, defaultCodec)
+	rv := nilthis.CodecForHtml1(ba, defaultCodec)
 	return rv
 }
 
@@ -284,7 +284,7 @@ This function was introduced in  Qt 4.6.
 
 See also codecForHtml().
 */
-func (this *QTextCodec) CodecForUtfText_1(ba QByteArray_ITF, defaultCodec QTextCodec_ITF /*777 QTextCodec **/) *QTextCodec /*777 QTextCodec **/ {
+func (this *QTextCodec) CodecForUtfText1(ba QByteArray_ITF, defaultCodec QTextCodec_ITF /*777 QTextCodec **/) *QTextCodec /*777 QTextCodec **/ {
 	var convArg0 unsafe.Pointer
 	if ba != nil && ba.QByteArray_PTR() != nil {
 		convArg0 = ba.QByteArray_PTR().GetCthis()
@@ -297,9 +297,9 @@ func (this *QTextCodec) CodecForUtfText_1(ba QByteArray_ITF, defaultCodec QTextC
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QTextCodec_CodecForUtfText_1(ba QByteArray_ITF, defaultCodec QTextCodec_ITF /*777 QTextCodec **/) *QTextCodec /*777 QTextCodec **/ {
+func QTextCodec_CodecForUtfText1(ba QByteArray_ITF, defaultCodec QTextCodec_ITF /*777 QTextCodec **/) *QTextCodec /*777 QTextCodec **/ {
 	var nilthis *QTextCodec
-	rv := nilthis.CodecForUtfText_1(ba, defaultCodec)
+	rv := nilthis.CodecForUtfText1(ba, defaultCodec)
 	return rv
 }
 
@@ -329,8 +329,8 @@ func (this *QTextCodec) CanEncode(arg0 QChar_ITF /*123*/) bool {
 /*
 Returns true if the Unicode character ch can be fully encoded with this codec; otherwise returns false.
 */
-func (this *QTextCodec) CanEncode_1(arg0 string) bool {
-	var tmpArg0 = NewQString_5(arg0)
+func (this *QTextCodec) CanEncode1(arg0 string) bool {
+	var tmpArg0 = NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextCodec9canEncodeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -345,7 +345,7 @@ func (this *QTextCodec) CanEncode_1(arg0 string) bool {
 /*
 Returns true if the Unicode character ch can be fully encoded with this codec; otherwise returns false.
 */
-func (this *QTextCodec) CanEncode_2(arg0 QStringView_ITF /*123*/) bool {
+func (this *QTextCodec) CanEncode2(arg0 QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QStringView_PTR() != nil {
 		convArg0 = arg0.QStringView_PTR().GetCthis()
@@ -384,7 +384,7 @@ func (this *QTextCodec) ToUnicode(arg0 QByteArray_ITF) string {
 /*
 Converts a from the encoding of this codec to Unicode, and returns the result in a QString.
 */
-func (this *QTextCodec) ToUnicode_1(chars string) string {
+func (this *QTextCodec) ToUnicode1(chars string) string {
 	var convArg0 = qtrt.CString(chars)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextCodec9toUnicodeEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -404,7 +404,7 @@ func (this *QTextCodec) ToUnicode_1(chars string) string {
 Converts str from Unicode to the encoding of this codec, and returns the result in a QByteArray.
 */
 func (this *QTextCodec) FromUnicode(uc string) *QByteArray /*123*/ {
-	var tmpArg0 = NewQString_5(uc)
+	var tmpArg0 = NewQString5(uc)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextCodec11fromUnicodeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -421,7 +421,7 @@ func (this *QTextCodec) FromUnicode(uc string) *QByteArray /*123*/ {
 /*
 Converts str from Unicode to the encoding of this codec, and returns the result in a QByteArray.
 */
-func (this *QTextCodec) FromUnicode_1(uc QStringView_ITF /*123*/) *QByteArray /*123*/ {
+func (this *QTextCodec) FromUnicode1(uc QStringView_ITF /*123*/) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if uc != nil && uc.QStringView_PTR() != nil {
 		convArg0 = uc.QStringView_PTR().GetCthis()
@@ -463,7 +463,7 @@ The caller is responsible for deleting the returned object.
 
 This function was introduced in  Qt 4.7.
 */
-func (this *QTextCodec) MakeDecoder__() *QTextDecoder /*777 QTextDecoder **/ {
+func (this *QTextCodec) MakeDecoderp() *QTextDecoder /*777 QTextDecoder **/ {
 	// arg: 0, QTextCodec::ConversionFlags=Typedef, QTextCodec::ConversionFlags=Typedef, QFlags<QTextCodec::ConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextCodec11makeDecoderE6QFlagsINS_14ConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
@@ -501,7 +501,7 @@ The caller is responsible for deleting the returned object.
 
 This function was introduced in  Qt 4.7.
 */
-func (this *QTextCodec) MakeEncoder__() *QTextEncoder /*777 QTextEncoder **/ {
+func (this *QTextCodec) MakeEncoderp() *QTextEncoder /*777 QTextEncoder **/ {
 	// arg: 0, QTextCodec::ConversionFlags=Typedef, QTextCodec::ConversionFlags=Typedef, QFlags<QTextCodec::ConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextCodec11makeEncoderE6QFlagsINS_14ConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)

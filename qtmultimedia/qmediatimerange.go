@@ -94,10 +94,10 @@ func NewQMediaTimeRange() *QMediaTimeRange {
 /*
 Constructs an empty time range.
 */
-func (*QMediaTimeRange) NewForInherit_1(start int64, end_ int64) *QMediaTimeRange {
-	return NewQMediaTimeRange_1(start, end_)
+func (*QMediaTimeRange) NewForInherit1(start int64, end_ int64) *QMediaTimeRange {
+	return NewQMediaTimeRange1(start, end_)
 }
-func NewQMediaTimeRange_1(start int64, end_ int64) *QMediaTimeRange {
+func NewQMediaTimeRange1(start int64, end_ int64) *QMediaTimeRange {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QMediaTimeRangeC2Exx", qtrt.FFI_TYPE_POINTER, start, end_)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMediaTimeRangeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -113,10 +113,10 @@ func NewQMediaTimeRange_1(start int64, end_ int64) *QMediaTimeRange {
 /*
 Constructs an empty time range.
 */
-func (*QMediaTimeRange) NewForInherit_2(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
-	return NewQMediaTimeRange_2(arg0)
+func (*QMediaTimeRange) NewForInherit2(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
+	return NewQMediaTimeRange2(arg0)
 }
-func NewQMediaTimeRange_2(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
+func NewQMediaTimeRange2(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeInterval_PTR() != nil {
 		convArg0 = arg0.QMediaTimeInterval_PTR().GetCthis()
@@ -171,7 +171,7 @@ func (this *QMediaTimeRange) Operator_equal(arg0 QMediaTimeRange_ITF) *QMediaTim
 /*
 
  */
-func (this *QMediaTimeRange) Operator_equal_1(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
+func (this *QMediaTimeRange) Operator_equal1(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeInterval_PTR() != nil {
 		convArg0 = arg0.QMediaTimeInterval_PTR().GetCthis()
@@ -300,7 +300,7 @@ This operation takes linear time.
 
 See also removeInterval().
 */
-func (this *QMediaTimeRange) AddInterval_1(interval QMediaTimeInterval_ITF) {
+func (this *QMediaTimeRange) AddInterval1(interval QMediaTimeInterval_ITF) {
 	var convArg0 unsafe.Pointer
 	if interval != nil && interval.QMediaTimeInterval_PTR() != nil {
 		convArg0 = interval.QMediaTimeInterval_PTR().GetCthis()
@@ -365,7 +365,7 @@ This operation takes linear time.
 
 See also addInterval().
 */
-func (this *QMediaTimeRange) RemoveInterval_1(interval QMediaTimeInterval_ITF) {
+func (this *QMediaTimeRange) RemoveInterval1(interval QMediaTimeInterval_ITF) {
 	var convArg0 unsafe.Pointer
 	if interval != nil && interval.QMediaTimeInterval_PTR() != nil {
 		convArg0 = interval.QMediaTimeInterval_PTR().GetCthis()
@@ -421,7 +421,7 @@ func (this *QMediaTimeRange) Operator_add_equal(arg0 QMediaTimeRange_ITF) *QMedi
 /*
 
  */
-func (this *QMediaTimeRange) Operator_add_equal_1(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
+func (this *QMediaTimeRange) Operator_add_equal1(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeInterval_PTR() != nil {
 		convArg0 = arg0.QMediaTimeInterval_PTR().GetCthis()
@@ -461,7 +461,7 @@ func (this *QMediaTimeRange) Operator_minus_equal(arg0 QMediaTimeRange_ITF) *QMe
 /*
 
  */
-func (this *QMediaTimeRange) Operator_minus_equal_1(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
+func (this *QMediaTimeRange) Operator_minus_equal1(arg0 QMediaTimeInterval_ITF) *QMediaTimeRange {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeInterval_PTR() != nil {
 		convArg0 = arg0.QMediaTimeInterval_PTR().GetCthis()

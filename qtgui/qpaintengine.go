@@ -92,10 +92,10 @@ func NewQPaintEngine(features int) *QPaintEngine {
 /*
 Creates a paint engine with the featureset specified by caps.
 */
-func (*QPaintEngine) NewForInherit__() *QPaintEngine {
-	return NewQPaintEngine__()
+func (*QPaintEngine) NewForInheritp() *QPaintEngine {
+	return NewQPaintEnginep()
 }
-func NewQPaintEngine__() *QPaintEngine {
+func NewQPaintEnginep() *QPaintEngine {
 	// arg: 0, QPaintEngine::PaintEngineFeatures=Typedef, QPaintEngine::PaintEngineFeatures=Typedef, QFlags<QPaintEngine::PaintEngineFeature>, Unexposed
 	features := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngineC2E6QFlagsINS_18PaintEngineFeatureEE", qtrt.FFI_TYPE_POINTER, features)
@@ -233,7 +233,7 @@ func (this *QPaintEngine) DrawRects(rects qtcore.QRect_ITF /*777 const QRect **/
 /*
 Draws the first rectCount rectangles in the buffer rects. The default implementation of this function calls drawPath() or drawPolygon() depending on the feature set of the paint engine.
 */
-func (this *QPaintEngine) DrawRects_1(rects qtcore.QRectF_ITF /*777 const QRectF **/, rectCount int) {
+func (this *QPaintEngine) DrawRects1(rects qtcore.QRectF_ITF /*777 const QRectF **/, rectCount int) {
 	var convArg0 unsafe.Pointer
 	if rects != nil && rects.QRectF_PTR() != nil {
 		convArg0 = rects.QRectF_PTR().GetCthis()
@@ -267,7 +267,7 @@ func (this *QPaintEngine) DrawLines(lines qtcore.QLine_ITF /*777 const QLine **/
 /*
 The default implementation splits the list of lines in lines into lineCount separate calls to drawPath() or drawPolygon() depending on the feature set of the paint engine.
 */
-func (this *QPaintEngine) DrawLines_1(lines qtcore.QLineF_ITF /*777 const QLineF **/, lineCount int) {
+func (this *QPaintEngine) DrawLines1(lines qtcore.QLineF_ITF /*777 const QLineF **/, lineCount int) {
 	var convArg0 unsafe.Pointer
 	if lines != nil && lines.QLineF_PTR() != nil {
 		convArg0 = lines.QLineF_PTR().GetCthis()
@@ -305,7 +305,7 @@ Reimplement this function to draw the largest ellipse that can be contained with
 
 The default implementation calls drawPolygon().
 */
-func (this *QPaintEngine) DrawEllipse_1(r qtcore.QRect_ITF) {
+func (this *QPaintEngine) DrawEllipse1(r qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -356,7 +356,7 @@ func (this *QPaintEngine) DrawPoints(points qtcore.QPointF_ITF /*777 const QPoin
 /*
 Draws the first pointCount points in the buffer points
 */
-func (this *QPaintEngine) DrawPoints_1(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
+func (this *QPaintEngine) DrawPoints1(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPoint_PTR() != nil {
 		convArg0 = points.QPoint_PTR().GetCthis()
@@ -394,7 +394,7 @@ Reimplement this virtual function to draw the polygon defined by the pointCount 
 
 Note: At least one of the drawPolygon() functions must be reimplemented.
 */
-func (this *QPaintEngine) DrawPolygon_1(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int, mode int) {
+func (this *QPaintEngine) DrawPolygon1(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int, mode int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPoint_PTR() != nil {
 		convArg0 = points.QPoint_PTR().GetCthis()
@@ -507,7 +507,7 @@ func (this *QPaintEngine) DrawImage(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtcor
 /*
 Reimplement this function to draw the part of the image specified by the sr rectangle in the given rectangle using the given conversion flags flags, to convert it to a pixmap.
 */
-func (this *QPaintEngine) DrawImage__(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtcore.QRectF_ITF) {
+func (this *QPaintEngine) DrawImagep(r qtcore.QRectF_ITF, pm QImage_ITF, sr qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()

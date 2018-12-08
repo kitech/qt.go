@@ -22,8 +22,7 @@ func NewMainWindow(parent qtwidgets.QWidget_ITF, fo qtcore.Qt__WindowType) *Main
 }
 
 func (m *MainWindow) init() {
-	m.SetWindowTitle("housekeeper")
-	m.SetFixedSize(qtcore.NewQSize_1(300, 200))
+	m.SetFixedSize(qtcore.NewQSize1(300, 200))
 
 	frame := NewMainFrame(m, 0)
 	m.SetCentralWidget(frame)
@@ -45,14 +44,14 @@ func NewMainFrame(parent qtwidgets.QWidget_ITF, fo qtcore.Qt__WindowType) *MainF
 }
 
 func (m *MainFrame) init() {
-	hboxLayout := qtwidgets.NewQHBoxLayout_1(m)
+	hboxLayout := qtwidgets.NewQHBoxLayout1(m)
 
-	button1 := qtwidgets.NewQPushButton_1("a", m)
+	button1 := qtwidgets.NewQPushButton1("a", m)
 
 	hboxLayout.AddStretch(1)
 	hboxLayout.AddWidget(button1, 0, qtcore.Qt__AlignCenter)
-	hboxLayout.AddWidget(qtwidgets.NewQPushButton_1("b", m), 0, qtcore.Qt__AlignCenter)
-	hboxLayout.AddWidget(qtwidgets.NewQPushButton_1("c", m), 0, qtcore.Qt__AlignCenter)
+	hboxLayout.AddWidget(qtwidgets.NewQPushButton1("b", m), 0, qtcore.Qt__AlignCenter)
+	hboxLayout.AddWidget(qtwidgets.NewQPushButton1("c", m), 0, qtcore.Qt__AlignCenter)
 	hboxLayout.AddStretch(1)
 
 	m.SetLayout(hboxLayout)

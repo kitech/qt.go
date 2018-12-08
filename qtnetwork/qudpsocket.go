@@ -116,10 +116,10 @@ parent is passed to the QObject constructor.
 
 See also socketType().
 */
-func (*QUdpSocket) NewForInherit__() *QUdpSocket {
-	return NewQUdpSocket__()
+func (*QUdpSocket) NewForInheritp() *QUdpSocket {
+	return NewQUdpSocketp()
 }
-func NewQUdpSocket__() *QUdpSocket {
+func NewQUdpSocketp() *QUdpSocket {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocketC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -190,7 +190,7 @@ This function was introduced in  Qt 4.8.
 
 See also leaveMulticastGroup().
 */
-func (this *QUdpSocket) JoinMulticastGroup_1(groupAddress QHostAddress_ITF, iface QNetworkInterface_ITF) bool {
+func (this *QUdpSocket) JoinMulticastGroup1(groupAddress QHostAddress_ITF, iface QNetworkInterface_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if groupAddress != nil && groupAddress.QHostAddress_PTR() != nil {
 		convArg0 = groupAddress.QHostAddress_PTR().GetCthis()
@@ -246,7 +246,7 @@ This function was introduced in  Qt 4.8.
 
 See also joinMulticastGroup().
 */
-func (this *QUdpSocket) LeaveMulticastGroup_1(groupAddress QHostAddress_ITF, iface QNetworkInterface_ITF) bool {
+func (this *QUdpSocket) LeaveMulticastGroup1(groupAddress QHostAddress_ITF, iface QNetworkInterface_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if groupAddress != nil && groupAddress.QHostAddress_PTR() != nil {
 		convArg0 = groupAddress.QHostAddress_PTR().GetCthis()
@@ -369,7 +369,7 @@ If maxSize is too small, the rest of the datagram will be lost. If maxSize is 0,
 
 See also writeDatagram(), hasPendingDatagrams(), and pendingDatagramSize().
 */
-func (this *QUdpSocket) ReceiveDatagram__() *QNetworkDatagram /*123*/ {
+func (this *QUdpSocket) ReceiveDatagramp() *QNetworkDatagram /*123*/ {
 	// arg: 0, qint64=Typedef, qint64=Typedef, long long, LongLong
 	maxSize := int64(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUdpSocket15receiveDatagramEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxSize)
@@ -419,7 +419,7 @@ If maxSize is too small, the rest of the datagram will be lost. To avoid loss of
 
 See also writeDatagram(), hasPendingDatagrams(), and pendingDatagramSize().
 */
-func (this *QUdpSocket) ReadDatagram__(data string, maxlen int64) int64 {
+func (this *QUdpSocket) ReadDatagramp(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	// arg: 2, QHostAddress *=Pointer, QHostAddress=Record, , Invalid
@@ -445,7 +445,7 @@ If maxSize is too small, the rest of the datagram will be lost. To avoid loss of
 
 See also writeDatagram(), hasPendingDatagrams(), and pendingDatagramSize().
 */
-func (this *QUdpSocket) ReadDatagram__1(data string, maxlen int64, host QHostAddress_ITF /*777 QHostAddress **/) int64 {
+func (this *QUdpSocket) ReadDatagramp1(data string, maxlen int64, host QHostAddress_ITF /*777 QHostAddress **/) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 unsafe.Pointer
@@ -501,7 +501,7 @@ Warning: Calling this function on a connected UDP socket may result in an error 
 
 See also readDatagram() and write().
 */
-func (this *QUdpSocket) WriteDatagram_1(data string, len_ int64, host QHostAddress_ITF, port uint16) int64 {
+func (this *QUdpSocket) WriteDatagram1(data string, len_ int64, host QHostAddress_ITF, port uint16) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 unsafe.Pointer
@@ -529,7 +529,7 @@ Warning: Calling this function on a connected UDP socket may result in an error 
 
 See also readDatagram() and write().
 */
-func (this *QUdpSocket) WriteDatagram_2(datagram qtcore.QByteArray_ITF, host QHostAddress_ITF, port uint16) int64 {
+func (this *QUdpSocket) WriteDatagram2(datagram qtcore.QByteArray_ITF, host QHostAddress_ITF, port uint16) int64 {
 	var convArg0 unsafe.Pointer
 	if datagram != nil && datagram.QByteArray_PTR() != nil {
 		convArg0 = datagram.QByteArray_PTR().GetCthis()

@@ -110,10 +110,10 @@ func NewQGraphicsPathItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 /*
 
  */
-func (*QGraphicsPathItem) NewForInherit__() *QGraphicsPathItem {
-	return NewQGraphicsPathItem__()
+func (*QGraphicsPathItem) NewForInheritp() *QGraphicsPathItem {
+	return NewQGraphicsPathItemp()
 }
-func NewQGraphicsPathItem__() *QGraphicsPathItem {
+func NewQGraphicsPathItemp() *QGraphicsPathItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsPathItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -131,10 +131,10 @@ func NewQGraphicsPathItem__() *QGraphicsPathItem {
 /*
 
  */
-func (*QGraphicsPathItem) NewForInherit_1(path qtgui.QPainterPath_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPathItem {
-	return NewQGraphicsPathItem_1(path, parent)
+func (*QGraphicsPathItem) NewForInherit1(path qtgui.QPainterPath_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPathItem {
+	return NewQGraphicsPathItem1(path, parent)
 }
-func NewQGraphicsPathItem_1(path qtgui.QPainterPath_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPathItem {
+func NewQGraphicsPathItem1(path qtgui.QPainterPath_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPathItem {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -158,10 +158,10 @@ func NewQGraphicsPathItem_1(path qtgui.QPainterPath_ITF, parent QGraphicsItem_IT
 /*
 
  */
-func (*QGraphicsPathItem) NewForInherit_1_(path qtgui.QPainterPath_ITF) *QGraphicsPathItem {
-	return NewQGraphicsPathItem_1_(path)
+func (*QGraphicsPathItem) NewForInherit1p(path qtgui.QPainterPath_ITF) *QGraphicsPathItem {
+	return NewQGraphicsPathItem1p(path)
 }
-func NewQGraphicsPathItem_1_(path qtgui.QPainterPath_ITF) *QGraphicsPathItem {
+func NewQGraphicsPathItem1p(path qtgui.QPainterPath_ITF) *QGraphicsPathItem {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -398,7 +398,7 @@ Note: Enabling caching for an item does not guarantee that paint() will be invok
 
 See also setCacheMode(), QPen::width(), Item Coordinates, and ItemUsesExtendedStyleOption.
 */
-func (this *QGraphicsPathItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+func (this *QGraphicsPathItem) Paintp(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()

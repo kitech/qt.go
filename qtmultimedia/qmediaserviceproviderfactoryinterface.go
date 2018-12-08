@@ -80,7 +80,7 @@ Constructs a new instance of the QMediaService identified by key.
 The QMediaService returned must be destroyed with release().
 */
 func (this *QMediaServiceProviderFactoryInterface) Create(key string) *QMediaService /*777 QMediaService **/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN37QMediaServiceProviderFactoryInterface6createERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

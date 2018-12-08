@@ -119,7 +119,7 @@ func (this *QImageEncoderControl) SupportedImageCodecs() *qtcore.QStringList /*1
 Returns a description of an image codec.
 */
 func (this *QImageEncoderControl) ImageCodecDescription(codecName string) string {
-	var tmpArg0 = qtcore.NewQString_5(codecName)
+	var tmpArg0 = qtcore.NewQString5(codecName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QImageEncoderControl21imageCodecDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +164,7 @@ If non null image settings parameter is passed, the returned list is reduced to 
 
 If the encoder supports arbitrary resolutions within the supported resolutions range, *continuous is set to true, otherwise *continuous is set to false.
 */
-func (this *QImageEncoderControl) SupportedResolutions__(settings QImageEncoderSettings_ITF) *qtcore.QSizeList /*lll*/ {
+func (this *QImageEncoderControl) SupportedResolutionsp(settings QImageEncoderSettings_ITF) *qtcore.QSizeList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if settings != nil && settings.QImageEncoderSettings_PTR() != nil {
 		convArg0 = settings.QImageEncoderSettings_PTR().GetCthis()
@@ -247,10 +247,10 @@ func NewQImageEncoderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QImag
 /*
 Constructs a new image encoder control object with the given parent
 */
-func (*QImageEncoderControl) NewForInherit__() *QImageEncoderControl {
-	return NewQImageEncoderControl__()
+func (*QImageEncoderControl) NewForInheritp() *QImageEncoderControl {
+	return NewQImageEncoderControlp()
 }
-func NewQImageEncoderControl__() *QImageEncoderControl {
+func NewQImageEncoderControlp() *QImageEncoderControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QImageEncoderControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

@@ -239,10 +239,10 @@ func NewQGraphicsView(parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
 /*
 Constructs a QGraphicsView. parent is passed to QWidget's constructor.
 */
-func (*QGraphicsView) NewForInherit__() *QGraphicsView {
-	return NewQGraphicsView__()
+func (*QGraphicsView) NewForInheritp() *QGraphicsView {
+	return NewQGraphicsViewp()
 }
-func NewQGraphicsView__() *QGraphicsView {
+func NewQGraphicsViewp() *QGraphicsView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -260,10 +260,10 @@ func NewQGraphicsView__() *QGraphicsView {
 /*
 Constructs a QGraphicsView. parent is passed to QWidget's constructor.
 */
-func (*QGraphicsView) NewForInherit_1(scene QGraphicsScene_ITF /*777 QGraphicsScene **/, parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
-	return NewQGraphicsView_1(scene, parent)
+func (*QGraphicsView) NewForInherit1(scene QGraphicsScene_ITF /*777 QGraphicsScene **/, parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
+	return NewQGraphicsView1(scene, parent)
 }
-func NewQGraphicsView_1(scene QGraphicsScene_ITF /*777 QGraphicsScene **/, parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
+func NewQGraphicsView1(scene QGraphicsScene_ITF /*777 QGraphicsScene **/, parent QWidget_ITF /*777 QWidget **/) *QGraphicsView {
 	var convArg0 unsafe.Pointer
 	if scene != nil && scene.QGraphicsScene_PTR() != nil {
 		convArg0 = scene.QGraphicsScene_PTR().GetCthis()
@@ -287,10 +287,10 @@ func NewQGraphicsView_1(scene QGraphicsScene_ITF /*777 QGraphicsScene **/, paren
 /*
 Constructs a QGraphicsView. parent is passed to QWidget's constructor.
 */
-func (*QGraphicsView) NewForInherit_1_(scene QGraphicsScene_ITF /*777 QGraphicsScene **/) *QGraphicsView {
-	return NewQGraphicsView_1_(scene)
+func (*QGraphicsView) NewForInherit1p(scene QGraphicsScene_ITF /*777 QGraphicsScene **/) *QGraphicsView {
+	return NewQGraphicsView1p(scene)
 }
-func NewQGraphicsView_1_(scene QGraphicsScene_ITF /*777 QGraphicsScene **/) *QGraphicsView {
+func NewQGraphicsView1p(scene QGraphicsScene_ITF /*777 QGraphicsScene **/) *QGraphicsView {
 	var convArg0 unsafe.Pointer
 	if scene != nil && scene.QGraphicsScene_PTR() != nil {
 		convArg0 = scene.QGraphicsScene_PTR().GetCthis()
@@ -374,7 +374,7 @@ If enabled is true, the render hint hint is enabled; otherwise it is disabled.
 
 See also renderHints.
 */
-func (this *QGraphicsView) SetRenderHint__(hint int) {
+func (this *QGraphicsView) SetRenderHintp(hint int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13setRenderHintEN8QPainter10RenderHintEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, enabled)
@@ -541,7 +541,7 @@ Enables flag if enabled is true; otherwise disables flag.
 
 See also optimizationFlags.
 */
-func (this *QGraphicsView) SetOptimizationFlag__(flag int) {
+func (this *QGraphicsView) SetOptimizationFlagp(flag int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView19setOptimizationFlagENS_16OptimizationFlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
@@ -788,7 +788,7 @@ func (this *QGraphicsView) SetSceneRect(rect qtcore.QRectF_ITF) {
 /*
 
  */
-func (this *QGraphicsView) SetSceneRect_1(x float64, y float64, w float64, h float64) {
+func (this *QGraphicsView) SetSceneRect1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView12setSceneRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -876,7 +876,7 @@ To simplify interation with items using a transformed view, QGraphicsView provid
 
 See also matrix(), setTransform(), rotate(), scale(), shear(), and translate().
 */
-func (this *QGraphicsView) SetMatrix__(matrix qtgui.QMatrix_ITF) {
+func (this *QGraphicsView) SetMatrixp(matrix qtgui.QMatrix_ITF) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
 		convArg0 = matrix.QMatrix_PTR().GetCthis()
@@ -1021,7 +1021,7 @@ To simplify interation with items using a transformed view, QGraphicsView provid
 
 See also transform(), rotate(), scale(), shear(), and translate().
 */
-func (this *QGraphicsView) SetTransform__(matrix qtgui.QTransform_ITF) {
+func (this *QGraphicsView) SetTransformp(matrix qtgui.QTransform_ITF) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()
@@ -1144,7 +1144,7 @@ Note: If the item is close to or outside the border, it will be visible in the v
 
 See also ensureVisible().
 */
-func (this *QGraphicsView) CenterOn_1(x float64, y float64) {
+func (this *QGraphicsView) CenterOn1(x float64, y float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView8centerOnEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1163,7 +1163,7 @@ Note: If the item is close to or outside the border, it will be visible in the v
 
 See also ensureVisible().
 */
-func (this *QGraphicsView) CenterOn_2(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) {
+func (this *QGraphicsView) CenterOn2(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -1201,7 +1201,7 @@ Scrolls the contents of the viewport so that the scene rectangle rect is visible
 
 See also centerOn().
 */
-func (this *QGraphicsView) EnsureVisible__(rect qtcore.QRectF_ITF) {
+func (this *QGraphicsView) EnsureVisiblep(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -1224,7 +1224,7 @@ Scrolls the contents of the viewport so that the scene rectangle rect is visible
 
 See also centerOn().
 */
-func (this *QGraphicsView) EnsureVisible__1(rect qtcore.QRectF_ITF, xmargin int) {
+func (this *QGraphicsView) EnsureVisiblep1(rect qtcore.QRectF_ITF, xmargin int) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -1245,7 +1245,7 @@ Scrolls the contents of the viewport so that the scene rectangle rect is visible
 
 See also centerOn().
 */
-func (this *QGraphicsView) EnsureVisible_1(x float64, y float64, w float64, h float64, xmargin int, ymargin int) {
+func (this *QGraphicsView) EnsureVisible1(x float64, y float64, w float64, h float64, xmargin int, ymargin int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1260,7 +1260,7 @@ Scrolls the contents of the viewport so that the scene rectangle rect is visible
 
 See also centerOn().
 */
-func (this *QGraphicsView) EnsureVisible_1_(x float64, y float64, w float64, h float64) {
+func (this *QGraphicsView) EnsureVisible1p(x float64, y float64, w float64, h float64) {
 	// arg: 4, int=Int, =Invalid, , Invalid
 	xmargin := int(50)
 	// arg: 5, int=Int, =Invalid, , Invalid
@@ -1279,7 +1279,7 @@ Scrolls the contents of the viewport so that the scene rectangle rect is visible
 
 See also centerOn().
 */
-func (this *QGraphicsView) EnsureVisible_1_1(x float64, y float64, w float64, h float64, xmargin int) {
+func (this *QGraphicsView) EnsureVisible1p1(x float64, y float64, w float64, h float64, xmargin int) {
 	// arg: 5, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
@@ -1296,7 +1296,7 @@ Scrolls the contents of the viewport so that the scene rectangle rect is visible
 
 See also centerOn().
 */
-func (this *QGraphicsView) EnsureVisible_2(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, xmargin int, ymargin int) {
+func (this *QGraphicsView) EnsureVisible2(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, xmargin int, ymargin int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -1315,7 +1315,7 @@ Scrolls the contents of the viewport so that the scene rectangle rect is visible
 
 See also centerOn().
 */
-func (this *QGraphicsView) EnsureVisible_2_(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) {
+func (this *QGraphicsView) EnsureVisible2p(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -1338,7 +1338,7 @@ Scrolls the contents of the viewport so that the scene rectangle rect is visible
 
 See also centerOn().
 */
-func (this *QGraphicsView) EnsureVisible_2_1(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, xmargin int) {
+func (this *QGraphicsView) EnsureVisible2p1(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, xmargin int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -1390,7 +1390,7 @@ If rect is empty, or if the viewport is too small, this function will do nothing
 
 See also setTransform(), ensureVisible(), and centerOn().
 */
-func (this *QGraphicsView) FitInView__(rect qtcore.QRectF_ITF) {
+func (this *QGraphicsView) FitInViewp(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -1417,7 +1417,7 @@ If rect is empty, or if the viewport is too small, this function will do nothing
 
 See also setTransform(), ensureVisible(), and centerOn().
 */
-func (this *QGraphicsView) FitInView_1(x float64, y float64, w float64, h float64, aspectRadioMode int) {
+func (this *QGraphicsView) FitInView1(x float64, y float64, w float64, h float64, aspectRadioMode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewEddddN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, aspectRadioMode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1438,7 +1438,7 @@ If rect is empty, or if the viewport is too small, this function will do nothing
 
 See also setTransform(), ensureVisible(), and centerOn().
 */
-func (this *QGraphicsView) FitInView_1_(x float64, y float64, w float64, h float64) {
+func (this *QGraphicsView) FitInView1p(x float64, y float64, w float64, h float64) {
 	// arg: 4, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectRadioMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView9fitInViewEddddN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, aspectRadioMode)
@@ -1461,7 +1461,7 @@ If rect is empty, or if the viewport is too small, this function will do nothing
 
 See also setTransform(), ensureVisible(), and centerOn().
 */
-func (this *QGraphicsView) FitInView_2(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, aspectRadioMode int) {
+func (this *QGraphicsView) FitInView2(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, aspectRadioMode int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -1486,7 +1486,7 @@ If rect is empty, or if the viewport is too small, this function will do nothing
 
 See also setTransform(), ensureVisible(), and centerOn().
 */
-func (this *QGraphicsView) FitInView_2_(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) {
+func (this *QGraphicsView) FitInView2p(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -1594,7 +1594,7 @@ The source rect contents will be transformed according to aspectRatioMode to fit
 
 See also QGraphicsScene::render().
 */
-func (this *QGraphicsView) Render__(painter qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QGraphicsView) Renderp(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -1649,7 +1649,7 @@ The source rect contents will be transformed according to aspectRatioMode to fit
 
 See also QGraphicsScene::render().
 */
-func (this *QGraphicsView) Render__1(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRectF_ITF) {
+func (this *QGraphicsView) Renderp1(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -1706,7 +1706,7 @@ The source rect contents will be transformed according to aspectRatioMode to fit
 
 See also QGraphicsScene::render().
 */
-func (this *QGraphicsView) Render__2(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRectF_ITF, source qtcore.QRect_ITF) {
+func (this *QGraphicsView) Renderp2(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRectF_ITF, source qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -1752,7 +1752,7 @@ Returns a list of all the items in the associated scene, in descending stacking 
 
 See also QGraphicsScene::items() and Sorting.
 */
-func (this *QGraphicsView) Items_1(pos qtcore.QPoint_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsView) Items1(pos qtcore.QPoint_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
@@ -1773,7 +1773,7 @@ Returns a list of all the items in the associated scene, in descending stacking 
 
 See also QGraphicsScene::items() and Sorting.
 */
-func (this *QGraphicsView) Items_2(x int, y int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsView) Items2(x int, y int) *QGraphicsItemList /*lll*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
@@ -1790,7 +1790,7 @@ Returns a list of all the items in the associated scene, in descending stacking 
 
 See also QGraphicsScene::items() and Sorting.
 */
-func (this *QGraphicsView) Items_3(rect qtcore.QRect_ITF, mode int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsView) Items3(rect qtcore.QRect_ITF, mode int) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg0 = rect.QRect_PTR().GetCthis()
@@ -1811,7 +1811,7 @@ Returns a list of all the items in the associated scene, in descending stacking 
 
 See also QGraphicsScene::items() and Sorting.
 */
-func (this *QGraphicsView) Items_3_(rect qtcore.QRect_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsView) Items3p(rect qtcore.QRect_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg0 = rect.QRect_PTR().GetCthis()
@@ -1834,7 +1834,7 @@ Returns a list of all the items in the associated scene, in descending stacking 
 
 See also QGraphicsScene::items() and Sorting.
 */
-func (this *QGraphicsView) Items_4(x int, y int, w int, h int, mode int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsView) Items4(x int, y int, w int, h int, mode int) *QGraphicsItemList /*lll*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsEiiiiN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, mode)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQGraphicsItemListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
@@ -1851,7 +1851,7 @@ Returns a list of all the items in the associated scene, in descending stacking 
 
 See also QGraphicsScene::items() and Sorting.
 */
-func (this *QGraphicsView) Items_4_(x int, y int, w int, h int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsView) Items4p(x int, y int, w int, h int) *QGraphicsItemList /*lll*/ {
 	// arg: 4, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5itemsEiiiiN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, mode)
@@ -1870,7 +1870,7 @@ Returns a list of all the items in the associated scene, in descending stacking 
 
 See also QGraphicsScene::items() and Sorting.
 */
-func (this *QGraphicsView) Items_5(polygon qtgui.QPolygon_ITF, mode int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsView) Items5(polygon qtgui.QPolygon_ITF, mode int) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygon_PTR() != nil {
 		convArg0 = polygon.QPolygon_PTR().GetCthis()
@@ -1891,7 +1891,7 @@ Returns a list of all the items in the associated scene, in descending stacking 
 
 See also QGraphicsScene::items() and Sorting.
 */
-func (this *QGraphicsView) Items_5_(polygon qtgui.QPolygon_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsView) Items5p(polygon qtgui.QPolygon_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygon_PTR() != nil {
 		convArg0 = polygon.QPolygon_PTR().GetCthis()
@@ -1914,7 +1914,7 @@ Returns a list of all the items in the associated scene, in descending stacking 
 
 See also QGraphicsScene::items() and Sorting.
 */
-func (this *QGraphicsView) Items_6(path qtgui.QPainterPath_ITF, mode int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsView) Items6(path qtgui.QPainterPath_ITF, mode int) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1935,7 +1935,7 @@ Returns a list of all the items in the associated scene, in descending stacking 
 
 See also QGraphicsScene::items() and Sorting.
 */
-func (this *QGraphicsView) Items_6_(path qtgui.QPainterPath_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsView) Items6p(path qtgui.QPainterPath_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -2006,7 +2006,7 @@ Example:
 
 See also items() and Sorting.
 */
-func (this *QGraphicsView) ItemAt_1(x int, y int) *QGraphicsItem /*777 QGraphicsItem **/ {
+func (this *QGraphicsView) ItemAt1(x int, y int) *QGraphicsItem /*777 QGraphicsItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView6itemAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -2048,7 +2048,7 @@ Note: It can be useful to map the whole rectangle covered by the pixel at point 
 
 See also mapFromScene().
 */
-func (this *QGraphicsView) MapToScene_1(rect qtcore.QRect_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsView) MapToScene1(rect qtcore.QRect_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg0 = rect.QRect_PTR().GetCthis()
@@ -2072,7 +2072,7 @@ Note: It can be useful to map the whole rectangle covered by the pixel at point 
 
 See also mapFromScene().
 */
-func (this *QGraphicsView) MapToScene_2(polygon qtgui.QPolygon_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsView) MapToScene2(polygon qtgui.QPolygon_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygon_PTR() != nil {
 		convArg0 = polygon.QPolygon_PTR().GetCthis()
@@ -2096,7 +2096,7 @@ Note: It can be useful to map the whole rectangle covered by the pixel at point 
 
 See also mapFromScene().
 */
-func (this *QGraphicsView) MapToScene_3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
+func (this *QGraphicsView) MapToScene3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -2120,7 +2120,7 @@ Note: It can be useful to map the whole rectangle covered by the pixel at point 
 
 See also mapFromScene().
 */
-func (this *QGraphicsView) MapToScene_4(x int, y int) *qtcore.QPointF /*123*/ {
+func (this *QGraphicsView) MapToScene4(x int, y int) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -2140,7 +2140,7 @@ Note: It can be useful to map the whole rectangle covered by the pixel at point 
 
 See also mapFromScene().
 */
-func (this *QGraphicsView) MapToScene_5(x int, y int, w int, h int) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsView) MapToScene5(x int, y int, w int, h int) *qtgui.QPolygonF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -2180,7 +2180,7 @@ Returns the scene coordinate point to viewport coordinates.
 
 See also mapToScene().
 */
-func (this *QGraphicsView) MapFromScene_1(rect qtcore.QRectF_ITF) *qtgui.QPolygon /*123*/ {
+func (this *QGraphicsView) MapFromScene1(rect qtcore.QRectF_ITF) *qtgui.QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -2202,7 +2202,7 @@ Returns the scene coordinate point to viewport coordinates.
 
 See also mapToScene().
 */
-func (this *QGraphicsView) MapFromScene_2(polygon qtgui.QPolygonF_ITF) *qtgui.QPolygon /*123*/ {
+func (this *QGraphicsView) MapFromScene2(polygon qtgui.QPolygonF_ITF) *qtgui.QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -2224,7 +2224,7 @@ Returns the scene coordinate point to viewport coordinates.
 
 See also mapToScene().
 */
-func (this *QGraphicsView) MapFromScene_3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
+func (this *QGraphicsView) MapFromScene3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -2246,7 +2246,7 @@ Returns the scene coordinate point to viewport coordinates.
 
 See also mapToScene().
 */
-func (this *QGraphicsView) MapFromScene_4(x float64, y float64) *qtcore.QPoint /*123*/ {
+func (this *QGraphicsView) MapFromScene4(x float64, y float64) *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -2264,7 +2264,7 @@ Returns the scene coordinate point to viewport coordinates.
 
 See also mapToScene().
 */
-func (this *QGraphicsView) MapFromScene_5(x float64, y float64, w float64, h float64) *qtgui.QPolygon /*123*/ {
+func (this *QGraphicsView) MapFromScene5(x float64, y float64, w float64, h float64) *qtgui.QPolygon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -2391,7 +2391,7 @@ Note that QGraphicsView currently supports background caching only (see QGraphic
 
 See also QGraphicsScene::invalidate() and update().
 */
-func (this *QGraphicsView) InvalidateScene__() {
+func (this *QGraphicsView) InvalidateScenep() {
 	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, QGraphicsScene::SceneLayers=Elaborated, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>, Unexposed
@@ -2414,7 +2414,7 @@ Note that QGraphicsView currently supports background caching only (see QGraphic
 
 See also QGraphicsScene::invalidate() and update().
 */
-func (this *QGraphicsView) InvalidateScene__1(rect qtcore.QRectF_ITF) {
+func (this *QGraphicsView) InvalidateScenep1(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()

@@ -163,10 +163,10 @@ func NewQWebEngineView(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QWebEngi
 /*
 
  */
-func (*QWebEngineView) NewForInherit__() *QWebEngineView {
-	return NewQWebEngineView__()
+func (*QWebEngineView) NewForInheritp() *QWebEngineView {
+	return NewQWebEngineViewp()
 }
-func NewQWebEngineView__() *QWebEngineView {
+func NewQWebEngineViewp() *QWebEngineView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEngineViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -247,7 +247,7 @@ func (this *QWebEngineView) Load(url qtcore.QUrl_ITF) {
 /*
 
  */
-func (this *QWebEngineView) Load_1(request qtwebenginecore.QWebEngineHttpRequest_ITF) {
+func (this *QWebEngineView) Load1(request qtwebenginecore.QWebEngineHttpRequest_ITF) {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QWebEngineHttpRequest_PTR() != nil {
 		convArg0 = request.QWebEngineHttpRequest_PTR().GetCthis()
@@ -265,7 +265,7 @@ func (this *QWebEngineView) Load_1(request qtwebenginecore.QWebEngineHttpRequest
 
  */
 func (this *QWebEngineView) SetHtml(html string, baseUrl qtcore.QUrl_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(html)
+	var tmpArg0 = qtcore.NewQString5(html)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if baseUrl != nil && baseUrl.QUrl_PTR() != nil {
@@ -283,8 +283,8 @@ func (this *QWebEngineView) SetHtml(html string, baseUrl qtcore.QUrl_ITF) {
 /*
 
  */
-func (this *QWebEngineView) SetHtml__(html string) {
-	var tmpArg0 = qtcore.NewQString_5(html)
+func (this *QWebEngineView) SetHtmlp(html string) {
+	var tmpArg0 = qtcore.NewQString5(html)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg1 = qtcore.NewQUrl()
@@ -305,7 +305,7 @@ func (this *QWebEngineView) SetContent(data qtcore.QByteArray_ITF, mimeType stri
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(mimeType)
+	var tmpArg1 = qtcore.NewQString5(mimeType)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if baseUrl != nil && baseUrl.QUrl_PTR() != nil {
@@ -323,7 +323,7 @@ func (this *QWebEngineView) SetContent(data qtcore.QByteArray_ITF, mimeType stri
 /*
 
  */
-func (this *QWebEngineView) SetContent__(data qtcore.QByteArray_ITF) {
+func (this *QWebEngineView) SetContentp(data qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -344,12 +344,12 @@ func (this *QWebEngineView) SetContent__(data qtcore.QByteArray_ITF) {
 /*
 
  */
-func (this *QWebEngineView) SetContent__1(data qtcore.QByteArray_ITF, mimeType string) {
+func (this *QWebEngineView) SetContentp1(data qtcore.QByteArray_ITF, mimeType string) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(mimeType)
+	var tmpArg1 = qtcore.NewQString5(mimeType)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
@@ -519,7 +519,7 @@ func (this *QWebEngineView) TriggerPageAction(action int, checked bool) {
 /*
 
  */
-func (this *QWebEngineView) TriggerPageAction__(action int) {
+func (this *QWebEngineView) TriggerPageActionp(action int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	checked := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEngineView17triggerPageActionEN14QWebEnginePage9WebActionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action, checked)
@@ -683,7 +683,7 @@ func (this *QWebEngineView) LoadFinished(arg0 bool) {
 
  */
 func (this *QWebEngineView) TitleChanged(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEngineView12titleChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

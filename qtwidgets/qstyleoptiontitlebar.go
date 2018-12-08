@@ -91,10 +91,10 @@ func NewQStyleOptionTitleBar() *QStyleOptionTitleBar {
 /*
 
  */
-func (*QStyleOptionTitleBar) NewForInherit_1(version int) *QStyleOptionTitleBar {
-	return NewQStyleOptionTitleBar_1(version)
+func (*QStyleOptionTitleBar) NewForInherit1(version int) *QStyleOptionTitleBar {
+	return NewQStyleOptionTitleBar1(version)
 }
-func NewQStyleOptionTitleBar_1(version int) *QStyleOptionTitleBar {
+func NewQStyleOptionTitleBar1(version int) *QStyleOptionTitleBar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTitleBarFromPointer(unsafe.Pointer(uintptr(rv)))

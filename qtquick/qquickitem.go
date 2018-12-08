@@ -280,10 +280,10 @@ func NewQQuickItem(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickItem {
 /*
 Constructs a QQuickItem with the given parent.
 */
-func (*QQuickItem) NewForInherit__() *QQuickItem {
-	return NewQQuickItem__()
+func (*QQuickItem) NewForInheritp() *QQuickItem {
+	return NewQQuickItemp()
 }
-func NewQQuickItem__() *QQuickItem {
+func NewQQuickItemp() *QQuickItem {
 	// arg: 0, QQuickItem *=Pointer, QQuickItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItemC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -489,7 +489,7 @@ func (this *QQuickItem) State() string {
 
  */
 func (this *QQuickItem) SetState(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem8setStateERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1145,7 +1145,7 @@ Enables the specified flag for this item if enabled is true; if enabled is false
 
 These provide various hints for the item; for example, the ItemClipsChildrenToShape flag indicates that all children of this item should be clipped to fit within the item area.
 */
-func (this *QQuickItem) SetFlag__(flag int) {
+func (this *QQuickItem) SetFlagp(flag int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem7setFlagENS_4FlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
@@ -1248,7 +1248,7 @@ func (this *QQuickItem) SetFocus(arg0 bool) {
 /*
 
  */
-func (this *QQuickItem) SetFocus_1(focus bool, reason int) {
+func (this *QQuickItem) SetFocus1(focus bool, reason int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem8setFocusEbN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), focus, reason)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1686,7 +1686,7 @@ Note: This function will render the item to an offscreen surface and copy that s
 
 See also QQuickWindow::grabWindow().
 */
-func (this *QQuickItem) GrabToImage__(callback qtqml.QJSValue_ITF) bool {
+func (this *QQuickItem) GrabToImagep(callback qtqml.QJSValue_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if callback != nil && callback.QJSValue_PTR() != nil {
 		convArg0 = callback.QJSValue_PTR().GetCthis()
@@ -2044,7 +2044,7 @@ The reason for the focus change will be Qt::OtherFocusReason. Use the overloaded
 
 See also activeFocus.
 */
-func (this *QQuickItem) ForceActiveFocus_1(reason int) {
+func (this *QQuickItem) ForceActiveFocus1(reason int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem16forceActiveFocusEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), reason)
 	qtrt.ErrPrint(err, rv)
 }
@@ -2071,7 +2071,7 @@ func (this *QQuickItem) NextItemInFocusChain(forward bool) *QQuickItem /*777 QQu
 /*
 Returns the item in the focus chain which is next to this item. If forward is true, or not supplied, it is the next item in the forwards direction. If forward is false, it is the next item in the backwards direction.
 */
-func (this *QQuickItem) NextItemInFocusChain__() *QQuickItem /*777 QQuickItem **/ {
+func (this *QQuickItem) NextItemInFocusChainp() *QQuickItem /*777 QQuickItem **/ {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	forward := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem20nextItemInFocusChainEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), forward)
@@ -2203,7 +2203,7 @@ func (this *QQuickItem) BaselineOffsetChanged(arg0 float64) {
 
  */
 func (this *QQuickItem) StateChanged(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem12stateChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2573,7 +2573,7 @@ func (this *QQuickItem) UpdateInputMethod(queries int) {
 /*
 Notify input method on updated query values if needed. queries indicates the changed attributes.
 */
-func (this *QQuickItem) UpdateInputMethod__() {
+func (this *QQuickItem) UpdateInputMethodp() {
 	// arg: 0, Qt::InputMethodQueries=Elaborated, Qt::InputMethodQueries=Typedef, QFlags<Qt::InputMethodQuery>, Unexposed
 	queries := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem17updateInputMethodE6QFlagsIN2Qt16InputMethodQueryEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), queries)

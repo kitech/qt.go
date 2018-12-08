@@ -91,10 +91,10 @@ func NewQXmlStreamReader() *QXmlStreamReader {
 /*
 
  */
-func (*QXmlStreamReader) NewForInherit_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStreamReader {
-	return NewQXmlStreamReader_1(device)
+func (*QXmlStreamReader) NewForInherit1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStreamReader {
+	return NewQXmlStreamReader1(device)
 }
-func NewQXmlStreamReader_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStreamReader {
+func NewQXmlStreamReader1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStreamReader {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -114,10 +114,10 @@ func NewQXmlStreamReader_1(device QIODevice_ITF /*777 QIODevice **/) *QXmlStream
 /*
 
  */
-func (*QXmlStreamReader) NewForInherit_2(data QByteArray_ITF) *QXmlStreamReader {
-	return NewQXmlStreamReader_2(data)
+func (*QXmlStreamReader) NewForInherit2(data QByteArray_ITF) *QXmlStreamReader {
+	return NewQXmlStreamReader2(data)
 }
-func NewQXmlStreamReader_2(data QByteArray_ITF) *QXmlStreamReader {
+func NewQXmlStreamReader2(data QByteArray_ITF) *QXmlStreamReader {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -137,11 +137,11 @@ func NewQXmlStreamReader_2(data QByteArray_ITF) *QXmlStreamReader {
 /*
 
  */
-func (*QXmlStreamReader) NewForInherit_3(data string) *QXmlStreamReader {
-	return NewQXmlStreamReader_3(data)
+func (*QXmlStreamReader) NewForInherit3(data string) *QXmlStreamReader {
+	return NewQXmlStreamReader3(data)
 }
-func NewQXmlStreamReader_3(data string) *QXmlStreamReader {
-	var tmpArg0 = NewQString_5(data)
+func NewQXmlStreamReader3(data string) *QXmlStreamReader {
+	var tmpArg0 = NewQString5(data)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -158,10 +158,10 @@ func NewQXmlStreamReader_3(data string) *QXmlStreamReader {
 /*
 
  */
-func (*QXmlStreamReader) NewForInherit_4(data string) *QXmlStreamReader {
-	return NewQXmlStreamReader_4(data)
+func (*QXmlStreamReader) NewForInherit4(data string) *QXmlStreamReader {
+	return NewQXmlStreamReader4(data)
 }
-func NewQXmlStreamReader_4(data string) *QXmlStreamReader {
+func NewQXmlStreamReader4(data string) *QXmlStreamReader {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -242,8 +242,8 @@ func (this *QXmlStreamReader) AddData(data QByteArray_ITF) {
 /*
 
  */
-func (this *QXmlStreamReader) AddData_1(data string) {
-	var tmpArg0 = NewQString_5(data)
+func (this *QXmlStreamReader) AddData1(data string) {
+	var tmpArg0 = NewQString5(data)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -257,7 +257,7 @@ func (this *QXmlStreamReader) AddData_1(data string) {
 /*
 
  */
-func (this *QXmlStreamReader) AddData_2(data string) {
+func (this *QXmlStreamReader) AddData2(data string) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -673,7 +673,7 @@ func (this *QXmlStreamReader) ReadElementText(behaviour int) string {
 /*
 
  */
-func (this *QXmlStreamReader) ReadElementText__() string {
+func (this *QXmlStreamReader) ReadElementTextp() string {
 	// arg: 0, QXmlStreamReader::ReadElementTextBehaviour=Enum, QXmlStreamReader::ReadElementTextBehaviour=Enum, , Invalid
 	behaviour := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader15readElementTextENS_24ReadElementTextBehaviourE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), behaviour)
@@ -870,7 +870,7 @@ func (this *QXmlStreamReader) DtdSystemId() *QStringRef /*123*/ {
 
  */
 func (this *QXmlStreamReader) RaiseError(message string) {
-	var tmpArg0 = NewQString_5(message)
+	var tmpArg0 = NewQString5(message)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader10raiseErrorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -884,7 +884,7 @@ func (this *QXmlStreamReader) RaiseError(message string) {
 /*
 
  */
-func (this *QXmlStreamReader) RaiseError__() {
+func (this *QXmlStreamReader) RaiseErrorp() {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QXmlStreamReader10raiseErrorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

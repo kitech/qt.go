@@ -140,7 +140,7 @@ Sets the current container format.
 See also containerFormat().
 */
 func (this *QMediaContainerControl) SetContainerFormat(format string) {
-	var tmpArg0 = qtcore.NewQString_5(format)
+	var tmpArg0 = qtcore.NewQString5(format)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QMediaContainerControl18setContainerFormatERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func (this *QMediaContainerControl) SetContainerFormat(format string) {
 Returns a description of the container format.
 */
 func (this *QMediaContainerControl) ContainerDescription(formatMimeType string) string {
-	var tmpArg0 = qtcore.NewQString_5(formatMimeType)
+	var tmpArg0 = qtcore.NewQString5(formatMimeType)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QMediaContainerControl20containerDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -196,10 +196,10 @@ func NewQMediaContainerControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMe
 /*
 Constructs a new media container control with the given parent.
 */
-func (*QMediaContainerControl) NewForInherit__() *QMediaContainerControl {
-	return NewQMediaContainerControl__()
+func (*QMediaContainerControl) NewForInheritp() *QMediaContainerControl {
+	return NewQMediaContainerControlp()
 }
-func NewQMediaContainerControl__() *QMediaContainerControl {
+func NewQMediaContainerControlp() *QMediaContainerControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QMediaContainerControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

@@ -81,9 +81,9 @@ func NewQAccessibleTextUpdateEvent(obj qtcore.QObject_ITF /*777 QObject **/, pos
 	if obj != nil && obj.QObject_PTR() != nil {
 		convArg0 = obj.QObject_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(oldText)
+	var tmpArg2 = qtcore.NewQString5(oldText)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(text)
+	var tmpArg3 = qtcore.NewQString5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -100,17 +100,17 @@ func NewQAccessibleTextUpdateEvent(obj qtcore.QObject_ITF /*777 QObject **/, pos
 /*
 
  */
-func (*QAccessibleTextUpdateEvent) NewForInherit_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
-	return NewQAccessibleTextUpdateEvent_1(iface, position, oldText, text)
+func (*QAccessibleTextUpdateEvent) NewForInherit1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
+	return NewQAccessibleTextUpdateEvent1(iface, position, oldText, text)
 }
-func NewQAccessibleTextUpdateEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
+func NewQAccessibleTextUpdateEvent1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
 		convArg0 = iface.QAccessibleInterface_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(oldText)
+	var tmpArg2 = qtcore.NewQString5(oldText)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(text)
+	var tmpArg3 = qtcore.NewQString5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)

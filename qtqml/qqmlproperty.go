@@ -93,10 +93,10 @@ func NewQQmlProperty() *QQmlProperty {
 /*
 Create an invalid QQmlProperty.
 */
-func (*QQmlProperty) NewForInherit_1(arg0 qtcore.QObject_ITF /*777 QObject **/) *QQmlProperty {
-	return NewQQmlProperty_1(arg0)
+func (*QQmlProperty) NewForInherit1(arg0 qtcore.QObject_ITF /*777 QObject **/) *QQmlProperty {
+	return NewQQmlProperty1(arg0)
 }
-func NewQQmlProperty_1(arg0 qtcore.QObject_ITF /*777 QObject **/) *QQmlProperty {
+func NewQQmlProperty1(arg0 qtcore.QObject_ITF /*777 QObject **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
@@ -116,10 +116,10 @@ func NewQQmlProperty_1(arg0 qtcore.QObject_ITF /*777 QObject **/) *QQmlProperty 
 /*
 Create an invalid QQmlProperty.
 */
-func (*QQmlProperty) NewForInherit_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
-	return NewQQmlProperty_2(arg0, arg1)
+func (*QQmlProperty) NewForInherit2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
+	return NewQQmlProperty2(arg0, arg1)
 }
-func NewQQmlProperty_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
+func NewQQmlProperty2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
@@ -143,10 +143,10 @@ func NewQQmlProperty_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlConte
 /*
 Create an invalid QQmlProperty.
 */
-func (*QQmlProperty) NewForInherit_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
-	return NewQQmlProperty_3(arg0, arg1)
+func (*QQmlProperty) NewForInherit3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
+	return NewQQmlProperty3(arg0, arg1)
 }
-func NewQQmlProperty_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
+func NewQQmlProperty3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
@@ -170,15 +170,15 @@ func NewQQmlProperty_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 QQmlEngin
 /*
 Create an invalid QQmlProperty.
 */
-func (*QQmlProperty) NewForInherit_4(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) *QQmlProperty {
-	return NewQQmlProperty_4(arg0, arg1)
+func (*QQmlProperty) NewForInherit4(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) *QQmlProperty {
+	return NewQQmlProperty4(arg0, arg1)
 }
-func NewQQmlProperty_4(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) *QQmlProperty {
+func NewQQmlProperty4(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlPropertyC2EP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -195,15 +195,15 @@ func NewQQmlProperty_4(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) *
 /*
 Create an invalid QQmlProperty.
 */
-func (*QQmlProperty) NewForInherit_5(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
-	return NewQQmlProperty_5(arg0, arg1, arg2)
+func (*QQmlProperty) NewForInherit5(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
+	return NewQQmlProperty5(arg0, arg1, arg2)
 }
-func NewQQmlProperty_5(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
+func NewQQmlProperty5(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if arg2 != nil && arg2.QQmlContext_PTR() != nil {
@@ -224,15 +224,15 @@ func NewQQmlProperty_5(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, a
 /*
 Create an invalid QQmlProperty.
 */
-func (*QQmlProperty) NewForInherit_6(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
-	return NewQQmlProperty_6(arg0, arg1, arg2)
+func (*QQmlProperty) NewForInherit6(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
+	return NewQQmlProperty6(arg0, arg1, arg2)
 }
-func NewQQmlProperty_6(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
+func NewQQmlProperty6(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlProperty {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if arg2 != nil && arg2.QQmlEngine_PTR() != nil {
@@ -437,12 +437,12 @@ func (this *QQmlProperty) Read() *qtcore.QVariant /*123*/ {
 /*
 Returns the property value.
 */
-func (this *QQmlProperty) Read_1(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string) *qtcore.QVariant /*123*/ {
+func (this *QQmlProperty) Read1(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -450,9 +450,9 @@ func (this *QQmlProperty) Read_1(arg0 qtcore.QObject_ITF /*777 const QObject **/
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
-func QQmlProperty_Read_1(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string) *qtcore.QVariant /*123*/ {
+func QQmlProperty_Read1(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string) *qtcore.QVariant /*123*/ {
 	var nilthis *QQmlProperty
-	rv := nilthis.Read_1(arg0, arg1)
+	rv := nilthis.Read1(arg0, arg1)
 	return rv
 }
 
@@ -464,12 +464,12 @@ func QQmlProperty_Read_1(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 s
 /*
 Returns the property value.
 */
-func (this *QQmlProperty) Read_2(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *qtcore.QVariant /*123*/ {
+func (this *QQmlProperty) Read2(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if arg2 != nil && arg2.QQmlContext_PTR() != nil {
@@ -481,9 +481,9 @@ func (this *QQmlProperty) Read_2(arg0 qtcore.QObject_ITF /*777 const QObject **/
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
-func QQmlProperty_Read_2(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *qtcore.QVariant /*123*/ {
+func QQmlProperty_Read2(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string, arg2 QQmlContext_ITF /*777 QQmlContext **/) *qtcore.QVariant /*123*/ {
 	var nilthis *QQmlProperty
-	rv := nilthis.Read_2(arg0, arg1, arg2)
+	rv := nilthis.Read2(arg0, arg1, arg2)
 	return rv
 }
 
@@ -495,12 +495,12 @@ func QQmlProperty_Read_2(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 s
 /*
 Returns the property value.
 */
-func (this *QQmlProperty) Read_3(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *qtcore.QVariant /*123*/ {
+func (this *QQmlProperty) Read3(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if arg2 != nil && arg2.QQmlEngine_PTR() != nil {
@@ -512,9 +512,9 @@ func (this *QQmlProperty) Read_3(arg0 qtcore.QObject_ITF /*777 const QObject **/
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
-func QQmlProperty_Read_3(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *qtcore.QVariant /*123*/ {
+func QQmlProperty_Read3(arg0 qtcore.QObject_ITF /*777 const QObject **/, arg1 string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *qtcore.QVariant /*123*/ {
 	var nilthis *QQmlProperty
-	rv := nilthis.Read_3(arg0, arg1, arg2)
+	rv := nilthis.Read3(arg0, arg1, arg2)
 	return rv
 }
 
@@ -544,12 +544,12 @@ func (this *QQmlProperty) Write(arg0 qtcore.QVariant_ITF) bool {
 /*
 Sets the property value to value. Returns true on success, or false if the property can't be set because the value is the wrong type, for example.
 */
-func (this *QQmlProperty) Write_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF) bool {
+func (this *QQmlProperty) Write1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if arg2 != nil && arg2.QVariant_PTR() != nil {
@@ -559,9 +559,9 @@ func (this *QQmlProperty) Write_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QQmlProperty_Write_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF) bool {
+func QQmlProperty_Write1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF) bool {
 	var nilthis *QQmlProperty
-	rv := nilthis.Write_1(arg0, arg1, arg2)
+	rv := nilthis.Write1(arg0, arg1, arg2)
 	return rv
 }
 
@@ -573,12 +573,12 @@ func QQmlProperty_Write_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string
 /*
 Sets the property value to value. Returns true on success, or false if the property can't be set because the value is the wrong type, for example.
 */
-func (this *QQmlProperty) Write_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF, arg3 QQmlContext_ITF /*777 QQmlContext **/) bool {
+func (this *QQmlProperty) Write2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF, arg3 QQmlContext_ITF /*777 QQmlContext **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if arg2 != nil && arg2.QVariant_PTR() != nil {
@@ -592,9 +592,9 @@ func (this *QQmlProperty) Write_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QQmlProperty_Write_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF, arg3 QQmlContext_ITF /*777 QQmlContext **/) bool {
+func QQmlProperty_Write2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF, arg3 QQmlContext_ITF /*777 QQmlContext **/) bool {
 	var nilthis *QQmlProperty
-	rv := nilthis.Write_2(arg0, arg1, arg2, arg3)
+	rv := nilthis.Write2(arg0, arg1, arg2, arg3)
 	return rv
 }
 
@@ -606,12 +606,12 @@ func QQmlProperty_Write_2(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string
 /*
 Sets the property value to value. Returns true on success, or false if the property can't be set because the value is the wrong type, for example.
 */
-func (this *QQmlProperty) Write_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF, arg3 QQmlEngine_ITF /*777 QQmlEngine **/) bool {
+func (this *QQmlProperty) Write3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF, arg3 QQmlEngine_ITF /*777 QQmlEngine **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if arg2 != nil && arg2.QVariant_PTR() != nil {
@@ -625,9 +625,9 @@ func (this *QQmlProperty) Write_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QQmlProperty_Write_3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF, arg3 QQmlEngine_ITF /*777 QQmlEngine **/) bool {
+func QQmlProperty_Write3(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string, arg2 qtcore.QVariant_ITF, arg3 QQmlEngine_ITF /*777 QQmlEngine **/) bool {
 	var nilthis *QQmlProperty
-	rv := nilthis.Write_3(arg0, arg1, arg2, arg3)
+	rv := nilthis.Write3(arg0, arg1, arg2, arg3)
 	return rv
 }
 
@@ -707,7 +707,7 @@ Connects the property's change notifier signal to the specified slot of the dest
 
 Note: slot should be passed using the SLOT() macro so it is correctly identified.
 */
-func (this *QQmlProperty) ConnectNotifySignal_1(dest qtcore.QObject_ITF /*777 QObject **/, method int) bool {
+func (this *QQmlProperty) ConnectNotifySignal1(dest qtcore.QObject_ITF /*777 QObject **/, method int) bool {
 	var convArg0 unsafe.Pointer
 	if dest != nil && dest.QObject_PTR() != nil {
 		convArg0 = dest.QObject_PTR().GetCthis()

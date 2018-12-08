@@ -124,7 +124,7 @@ func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 /*
 Returns an icon set for the given type.
 */
-func (this *QFileIconProvider) Icon_1(info qtcore.QFileInfo_ITF) *qtgui.QIcon /*123*/ {
+func (this *QFileIconProvider) Icon1(info qtcore.QFileInfo_ITF) *qtgui.QIcon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if info != nil && info.QFileInfo_PTR() != nil {
 		convArg0 = info.QFileInfo_PTR().GetCthis()

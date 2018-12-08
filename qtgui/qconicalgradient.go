@@ -90,10 +90,10 @@ func NewQConicalGradient() *QConicalGradient {
 /*
 
  */
-func (*QConicalGradient) NewForInherit_1(center qtcore.QPointF_ITF, startAngle float64) *QConicalGradient {
-	return NewQConicalGradient_1(center, startAngle)
+func (*QConicalGradient) NewForInherit1(center qtcore.QPointF_ITF, startAngle float64) *QConicalGradient {
+	return NewQConicalGradient1(center, startAngle)
 }
-func NewQConicalGradient_1(center qtcore.QPointF_ITF, startAngle float64) *QConicalGradient {
+func NewQConicalGradient1(center qtcore.QPointF_ITF, startAngle float64) *QConicalGradient {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QPointF_PTR() != nil {
 		convArg0 = center.QPointF_PTR().GetCthis()
@@ -113,10 +113,10 @@ func NewQConicalGradient_1(center qtcore.QPointF_ITF, startAngle float64) *QConi
 /*
 
  */
-func (*QConicalGradient) NewForInherit_2(cx float64, cy float64, startAngle float64) *QConicalGradient {
-	return NewQConicalGradient_2(cx, cy, startAngle)
+func (*QConicalGradient) NewForInherit2(cx float64, cy float64, startAngle float64) *QConicalGradient {
+	return NewQConicalGradient2(cx, cy, startAngle)
 }
-func NewQConicalGradient_2(cx float64, cy float64, startAngle float64) *QConicalGradient {
+func NewQConicalGradient2(cx float64, cy float64, startAngle float64) *QConicalGradient {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QConicalGradientC2Eddd", qtrt.FFI_TYPE_POINTER, cx, cy, startAngle)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQConicalGradientFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -165,7 +165,7 @@ func (this *QConicalGradient) SetCenter(center qtcore.QPointF_ITF) {
 /*
 
  */
-func (this *QConicalGradient) SetCenter_1(x float64, y float64) {
+func (this *QConicalGradient) SetCenter1(x float64, y float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QConicalGradient9setCenterEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 }

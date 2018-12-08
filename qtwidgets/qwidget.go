@@ -323,10 +323,10 @@ Note that the X11 version of Qt may not be able to deliver all combinations of s
 
 See also windowFlags.
 */
-func (*QWidget) NewForInherit__() *QWidget {
-	return NewQWidget__()
+func (*QWidget) NewForInheritp() *QWidget {
+	return NewQWidgetp()
 }
-func NewQWidget__() *QWidget {
+func NewQWidgetp() *QWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -356,10 +356,10 @@ Note that the X11 version of Qt may not be able to deliver all combinations of s
 
 See also windowFlags.
 */
-func (*QWidget) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QWidget {
-	return NewQWidget__1(parent)
+func (*QWidget) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QWidget {
+	return NewQWidgetp1(parent)
 }
-func NewQWidget__1(parent QWidget_ITF /*777 QWidget **/) *QWidget {
+func NewQWidgetp1(parent QWidget_ITF /*777 QWidget **/) *QWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -1003,7 +1003,7 @@ func (this *QWidget) SetMinimumSize(arg0 qtcore.QSize_ITF) {
 /*
 
  */
-func (this *QWidget) SetMinimumSize_1(minw int, minh int) {
+func (this *QWidget) SetMinimumSize1(minw int, minh int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget14setMinimumSizeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), minw, minh)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1033,7 +1033,7 @@ func (this *QWidget) SetMaximumSize(arg0 qtcore.QSize_ITF) {
 /*
 
  */
-func (this *QWidget) SetMaximumSize_1(maxw int, maxh int) {
+func (this *QWidget) SetMaximumSize1(maxw int, maxh int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget14setMaximumSizeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxw, maxh)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1131,7 +1131,7 @@ func (this *QWidget) SetSizeIncrement(arg0 qtcore.QSize_ITF) {
 /*
 
  */
-func (this *QWidget) SetSizeIncrement_1(w int, h int) {
+func (this *QWidget) SetSizeIncrement1(w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget16setSizeIncrementEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1177,7 +1177,7 @@ func (this *QWidget) SetBaseSize(arg0 qtcore.QSize_ITF) {
 /*
 
  */
-func (this *QWidget) SetBaseSize_1(basew int, baseh int) {
+func (this *QWidget) SetBaseSize1(basew int, baseh int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget11setBaseSizeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), basew, baseh)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1223,7 +1223,7 @@ Alternatively, if you want the widget to have a fixed size based on its contents
 
 See also maximumSize and minimumSize.
 */
-func (this *QWidget) SetFixedSize_1(w int, h int) {
+func (this *QWidget) SetFixedSize1(w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget12setFixedSizeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1822,7 +1822,7 @@ Masked widgets receive mouse events only on their visible portions.
 
 See also mask(), clearMask(), windowOpacity(), and Shaped Clock Example.
 */
-func (this *QWidget) SetMask_1(arg0 qtgui.QRegion_ITF) {
+func (this *QWidget) SetMask1(arg0 qtgui.QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRegion_PTR() != nil {
 		convArg0 = arg0.QRegion_PTR().GetCthis()
@@ -1945,7 +1945,7 @@ Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFra
 
 This function was introduced in  Qt 4.3.
 */
-func (this *QWidget) Render__(target qtgui.QPaintDevice_ITF /*777 QPaintDevice **/) {
+func (this *QWidget) Renderp(target qtgui.QPaintDevice_ITF /*777 QPaintDevice **/) {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QPaintDevice_PTR() != nil {
 		convArg0 = target.QPaintDevice_PTR().GetCthis()
@@ -1992,7 +1992,7 @@ Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFra
 
 This function was introduced in  Qt 4.3.
 */
-func (this *QWidget) Render__1(target qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, targetOffset qtcore.QPoint_ITF) {
+func (this *QWidget) Renderp1(target qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, targetOffset qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QPaintDevice_PTR() != nil {
 		convArg0 = target.QPaintDevice_PTR().GetCthis()
@@ -2041,7 +2041,7 @@ Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFra
 
 This function was introduced in  Qt 4.3.
 */
-func (this *QWidget) Render__2(target qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, targetOffset qtcore.QPoint_ITF, sourceRegion qtgui.QRegion_ITF) {
+func (this *QWidget) Renderp2(target qtgui.QPaintDevice_ITF /*777 QPaintDevice **/, targetOffset qtcore.QPoint_ITF, sourceRegion qtgui.QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QPaintDevice_PTR() != nil {
 		convArg0 = target.QPaintDevice_PTR().GetCthis()
@@ -2092,7 +2092,7 @@ Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFra
 
 This function was introduced in  Qt 4.3.
 */
-func (this *QWidget) Render_1(painter qtgui.QPainter_ITF /*777 QPainter **/, targetOffset qtcore.QPoint_ITF, sourceRegion qtgui.QRegion_ITF, renderFlags int) {
+func (this *QWidget) Render1(painter qtgui.QPainter_ITF /*777 QPainter **/, targetOffset qtcore.QPoint_ITF, sourceRegion qtgui.QRegion_ITF, renderFlags int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -2141,7 +2141,7 @@ Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFra
 
 This function was introduced in  Qt 4.3.
 */
-func (this *QWidget) Render_1_(painter qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QWidget) Render1p(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -2188,7 +2188,7 @@ Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFra
 
 This function was introduced in  Qt 4.3.
 */
-func (this *QWidget) Render_1_1(painter qtgui.QPainter_ITF /*777 QPainter **/, targetOffset qtcore.QPoint_ITF) {
+func (this *QWidget) Render1p1(painter qtgui.QPainter_ITF /*777 QPainter **/, targetOffset qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -2237,7 +2237,7 @@ Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFra
 
 This function was introduced in  Qt 4.3.
 */
-func (this *QWidget) Render_1_2(painter qtgui.QPainter_ITF /*777 QPainter **/, targetOffset qtcore.QPoint_ITF, sourceRegion qtgui.QRegion_ITF) {
+func (this *QWidget) Render1p2(painter qtgui.QPainter_ITF /*777 QPainter **/, targetOffset qtcore.QPoint_ITF, sourceRegion qtgui.QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -2296,7 +2296,7 @@ This function was introduced in  Qt 5.0.
 
 See also render() and QPixmap.
 */
-func (this *QWidget) Grab__() *qtgui.QPixmap /*123*/ {
+func (this *QWidget) Grabp() *qtgui.QPixmap /*123*/ {
 	// arg: 0, const QRect &=LValueReference, QRect=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget4grabERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -2386,7 +2386,7 @@ This function was introduced in  Qt 4.6.
 
 See also ungrabGesture() and QGestureEvent.
 */
-func (this *QWidget) GrabGesture__(type_ int) {
+func (this *QWidget) GrabGesturep(type_ int) {
 	// arg: 1, Qt::GestureFlags=Elaborated, Qt::GestureFlags=Typedef, QFlags<Qt::GestureFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget11grabGestureEN2Qt11GestureTypeE6QFlagsINS0_11GestureFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, flags)
@@ -2419,7 +2419,7 @@ func (this *QWidget) UngrabGesture(type_ int) {
 
  */
 func (this *QWidget) SetWindowTitle(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget14setWindowTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2434,7 +2434,7 @@ func (this *QWidget) SetWindowTitle(arg0 string) {
 
  */
 func (this *QWidget) SetStyleSheet(styleSheet string) {
-	var tmpArg0 = qtcore.NewQString_5(styleSheet)
+	var tmpArg0 = qtcore.NewQString5(styleSheet)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget13setStyleSheetERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2516,7 +2516,7 @@ func (this *QWidget) WindowIcon() *qtgui.QIcon /*123*/ {
 
  */
 func (this *QWidget) SetWindowIconText(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget17setWindowIconTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2550,7 +2550,7 @@ Sets the window's role to role. This only makes sense for windows on X11.
 See also windowRole().
 */
 func (this *QWidget) SetWindowRole(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget13setWindowRoleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2584,7 +2584,7 @@ func (this *QWidget) WindowRole() string {
 
  */
 func (this *QWidget) SetWindowFilePath(filePath string) {
-	var tmpArg0 = qtcore.NewQString_5(filePath)
+	var tmpArg0 = qtcore.NewQString5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget17setWindowFilePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2657,7 +2657,7 @@ func (this *QWidget) IsWindowModified() bool {
 
  */
 func (this *QWidget) SetToolTip(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2716,7 +2716,7 @@ func (this *QWidget) ToolTipDuration() int {
 
  */
 func (this *QWidget) SetStatusTip(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget12setStatusTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2748,7 +2748,7 @@ func (this *QWidget) StatusTip() string {
 
  */
 func (this *QWidget) SetWhatsThis(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget12setWhatsThisERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2797,7 +2797,7 @@ func (this *QWidget) AccessibleName() string {
 
  */
 func (this *QWidget) SetAccessibleName(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget17setAccessibleNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2829,7 +2829,7 @@ func (this *QWidget) AccessibleDescription() string {
 
  */
 func (this *QWidget) SetAccessibleDescription(description string) {
-	var tmpArg0 = qtcore.NewQString_5(description)
+	var tmpArg0 = qtcore.NewQString5(description)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget24setAccessibleDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2994,7 +2994,7 @@ Warning: If you call setFocus() in a function which may itself be called from fo
 
 See also hasFocus(), clearFocus(), focusInEvent(), focusOutEvent(), setFocusPolicy(), focusWidget(), QApplication::focusWidget(), grabKeyboard(), grabMouse(), Keyboard Focus in Widgets, and QEvent::RequestSoftwareInputPanel.
 */
-func (this *QWidget) SetFocus_1(reason int) {
+func (this *QWidget) SetFocus1(reason int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget8setFocusEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), reason)
 	qtrt.ErrPrint(err, rv)
 }
@@ -3257,7 +3257,7 @@ Note: On Windows, grabMouse() only works when the mouse is inside a window owned
 
 See also releaseMouse(), grabKeyboard(), and releaseKeyboard().
 */
-func (this *QWidget) GrabMouse_1(arg0 qtgui.QCursor_ITF) {
+func (this *QWidget) GrabMouse1(arg0 qtgui.QCursor_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QCursor_PTR() != nil {
 		convArg0 = arg0.QCursor_PTR().GetCthis()
@@ -3355,7 +3355,7 @@ Warning: You should not normally need to use this function; instead create QActi
 
 See also releaseShortcut() and setShortcutEnabled().
 */
-func (this *QWidget) GrabShortcut__(key qtgui.QKeySequence_ITF) int {
+func (this *QWidget) GrabShortcutp(key qtgui.QKeySequence_ITF) int {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
 		convArg0 = key.QKeySequence_PTR().GetCthis()
@@ -3413,7 +3413,7 @@ Warning: You should not normally need to use this function since Qt's shortcut s
 
 See also grabShortcut() and releaseShortcut().
 */
-func (this *QWidget) SetShortcutEnabled__(id int) {
+func (this *QWidget) SetShortcutEnabledp(id int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enable := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget18setShortcutEnabledEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, enable)
@@ -3449,7 +3449,7 @@ This function was introduced in  Qt 4.2.
 
 See also grabShortcut() and releaseShortcut().
 */
-func (this *QWidget) SetShortcutAutoRepeat__(id int) {
+func (this *QWidget) SetShortcutAutoRepeatp(id int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enable := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget21setShortcutAutoRepeatEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, enable)
@@ -3584,7 +3584,7 @@ Qt normally erases the widget's area before the paintEvent() call. If the Qt::WA
 
 See also repaint(), paintEvent(), setUpdatesEnabled(), and Analog Clock Example.
 */
-func (this *QWidget) Update_1(x int, y int, w int, h int) {
+func (this *QWidget) Update1(x int, y int, w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6updateEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -3605,7 +3605,7 @@ Qt normally erases the widget's area before the paintEvent() call. If the Qt::WA
 
 See also repaint(), paintEvent(), setUpdatesEnabled(), and Analog Clock Example.
 */
-func (this *QWidget) Update_2(arg0 qtcore.QRect_ITF) {
+func (this *QWidget) Update2(arg0 qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -3630,7 +3630,7 @@ Qt normally erases the widget's area before the paintEvent() call. If the Qt::WA
 
 See also repaint(), paintEvent(), setUpdatesEnabled(), and Analog Clock Example.
 */
-func (this *QWidget) Update_3(arg0 qtgui.QRegion_ITF) {
+func (this *QWidget) Update3(arg0 qtgui.QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRegion_PTR() != nil {
 		convArg0 = arg0.QRegion_PTR().GetCthis()
@@ -3672,7 +3672,7 @@ Warning: If you call repaint() in a function which may itself be called from pai
 
 See also update(), paintEvent(), and setUpdatesEnabled().
 */
-func (this *QWidget) Repaint_1(x int, y int, w int, h int) {
+func (this *QWidget) Repaint1(x int, y int, w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget7repaintEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -3691,7 +3691,7 @@ Warning: If you call repaint() in a function which may itself be called from pai
 
 See also update(), paintEvent(), and setUpdatesEnabled().
 */
-func (this *QWidget) Repaint_2(arg0 qtcore.QRect_ITF) {
+func (this *QWidget) Repaint2(arg0 qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -3714,7 +3714,7 @@ Warning: If you call repaint() in a function which may itself be called from pai
 
 See also update(), paintEvent(), and setUpdatesEnabled().
 */
-func (this *QWidget) Repaint_3(arg0 qtgui.QRegion_ITF) {
+func (this *QWidget) Repaint3(arg0 qtgui.QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRegion_PTR() != nil {
 		convArg0 = arg0.QRegion_PTR().GetCthis()
@@ -3961,7 +3961,7 @@ func (this *QWidget) Move(x int, y int) {
 /*
 
  */
-func (this *QWidget) Move_1(arg0 qtcore.QPoint_ITF) {
+func (this *QWidget) Move1(arg0 qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
 		convArg0 = arg0.QPoint_PTR().GetCthis()
@@ -3991,7 +3991,7 @@ func (this *QWidget) Resize(w int, h int) {
 /*
 
  */
-func (this *QWidget) Resize_1(arg0 qtcore.QSize_ITF) {
+func (this *QWidget) Resize1(arg0 qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSize_PTR() != nil {
 		convArg0 = arg0.QSize_PTR().GetCthis()
@@ -4021,7 +4021,7 @@ func (this *QWidget) SetGeometry(x int, y int, w int, h int) {
 /*
 
  */
-func (this *QWidget) SetGeometry_1(arg0 qtcore.QRect_ITF) {
+func (this *QWidget) SetGeometry1(arg0 qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -4367,7 +4367,7 @@ func (this *QWidget) SetSizePolicy(arg0 QSizePolicy_ITF /*123*/) {
 /*
 
  */
-func (this *QWidget) SetSizePolicy_1(horizontal int, vertical int) {
+func (this *QWidget) SetSizePolicy1(horizontal int, vertical int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget13setSizePolicyEN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), horizontal, vertical)
 	qtrt.ErrPrint(err, rv)
 }
@@ -4453,7 +4453,7 @@ Changing the margins will trigger a resizeEvent().
 
 See also contentsMargins(), contentsRect(), and getContentsMargins().
 */
-func (this *QWidget) SetContentsMargins_1(margins qtcore.QMargins_ITF) {
+func (this *QWidget) SetContentsMargins1(margins qtcore.QMargins_ITF) {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -4635,7 +4635,7 @@ Warning: It is very unlikely that you will ever need this function. If you have 
 
 See also setWindowFlags().
 */
-func (this *QWidget) SetParent_1(parent QWidget_ITF /*777 QWidget **/, f int) {
+func (this *QWidget) SetParent1(parent QWidget_ITF /*777 QWidget **/, f int) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -4681,7 +4681,7 @@ For widgets that use contents propagation, a scroll will cause an update of the 
 
 See also Transparency and Double Buffering.
 */
-func (this *QWidget) Scroll_1(dx int, dy int, arg2 qtcore.QRect_ITF) {
+func (this *QWidget) Scroll1(dx int, dy int, arg2 qtcore.QRect_ITF) {
 	var convArg2 unsafe.Pointer
 	if arg2 != nil && arg2.QRect_PTR() != nil {
 		convArg2 = arg2.QRect_PTR().GetCthis()
@@ -4906,7 +4906,7 @@ This function was introduced in  Qt 5.9.
 
 See also setWindowFlags(), windowFlags(), and windowType().
 */
-func (this *QWidget) SetWindowFlag__(arg0 int) {
+func (this *QWidget) SetWindowFlagp(arg0 int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget13setWindowFlagEN2Qt10WindowTypeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, on)
@@ -4989,7 +4989,7 @@ func (this *QWidget) ChildAt(x int, y int) *QWidget /*777 QWidget **/ {
 /*
 Returns the visible child widget at the position (x, y) in the widget's coordinate system. If there is no visible child widget at the specified position, the function returns 0.
 */
-func (this *QWidget) ChildAt_1(p qtcore.QPoint_ITF) *QWidget /*777 QWidget **/ {
+func (this *QWidget) ChildAt1(p qtcore.QPoint_ITF) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -5024,7 +5024,7 @@ Sets the attribute attribute on this widget if on is true; otherwise clears the 
 
 See also testAttribute().
 */
-func (this *QWidget) SetAttribute__(arg0 int) {
+func (this *QWidget) SetAttributep(arg0 int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget12setAttributeEN2Qt15WidgetAttributeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, on)
@@ -5236,7 +5236,7 @@ Rendering Integration; The window container does not interoperate with QGraphics
 Focus Handling; It is possible to let the window container instance have any focus policy and it will delegate focus to the window via a call to QWindow::requestActivate(). However, returning to the normal focus chain from the QWindow instance will be up to the QWindow instance implementation itself. For instance, when entering a Qt Quick based window with tab focus, it is quite likely that further tab presses will only cycle inside the QML application. Also, whether QWindow::requestActivate() actually gives the window focus, is platform dependent.
 Using many window container instances in a QWidget-based application can greatly hurt the overall performance of the application.
 */
-func (this *QWidget) CreateWindowContainer__(window qtgui.QWindow_ITF /*777 QWindow **/) *QWidget /*777 QWidget **/ {
+func (this *QWidget) CreateWindowContainerp(window qtgui.QWindow_ITF /*777 QWindow **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg0 = window.QWindow_PTR().GetCthis()
@@ -5274,7 +5274,7 @@ Rendering Integration; The window container does not interoperate with QGraphics
 Focus Handling; It is possible to let the window container instance have any focus policy and it will delegate focus to the window via a call to QWindow::requestActivate(). However, returning to the normal focus chain from the QWindow instance will be up to the QWindow instance implementation itself. For instance, when entering a Qt Quick based window with tab focus, it is quite likely that further tab presses will only cycle inside the QML application. Also, whether QWindow::requestActivate() actually gives the window focus, is platform dependent.
 Using many window container instances in a QWidget-based application can greatly hurt the overall performance of the application.
 */
-func (this *QWidget) CreateWindowContainer__1(window qtgui.QWindow_ITF /*777 QWindow **/, parent QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
+func (this *QWidget) CreateWindowContainerp1(window qtgui.QWindow_ITF /*777 QWindow **/, parent QWidget_ITF /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg0 = window.QWindow_PTR().GetCthis()
@@ -5303,7 +5303,7 @@ This function was introduced in  Qt 5.2.
 Note: Notifier signal for property windowTitle.
 */
 func (this *QWidget) WindowTitleChanged(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget18windowTitleChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -5339,7 +5339,7 @@ func (this *QWidget) WindowIconChanged(icon qtgui.QIcon_ITF) {
 
  */
 func (this *QWidget) WindowIconTextChanged(iconText string) {
-	var tmpArg0 = qtcore.NewQString_5(iconText)
+	var tmpArg0 = qtcore.NewQString5(iconText)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget21windowIconTextChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -6206,7 +6206,7 @@ The QWidget constructor calls create(0,true,true) to create a window for this wi
 
 See also createWindowContainer() and QWindow::fromWinId().
 */
-func (this *QWidget) Create__() {
+func (this *QWidget) Createp() {
 	// arg: 0, WId=Typedef, WId=Typedef, ::quintptr, Elaborated
 	var arg0 unsafe.Pointer
 	// arg: 1, bool=Bool, =Invalid, , Invalid
@@ -6235,7 +6235,7 @@ The QWidget constructor calls create(0,true,true) to create a window for this wi
 
 See also createWindowContainer() and QWindow::fromWinId().
 */
-func (this *QWidget) Create__1(arg0 uint64) {
+func (this *QWidget) Createp1(arg0 uint64) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	initializeWindow := true
 	// arg: 2, bool=Bool, =Invalid, , Invalid
@@ -6262,7 +6262,7 @@ The QWidget constructor calls create(0,true,true) to create a window for this wi
 
 See also createWindowContainer() and QWindow::fromWinId().
 */
-func (this *QWidget) Create__2(arg0 uint64, initializeWindow bool) {
+func (this *QWidget) Createp2(arg0 uint64, initializeWindow bool) {
 	// arg: 2, bool=Bool, =Invalid, , Invalid
 	destroyOldWindow := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget6createEybb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, initializeWindow, destroyOldWindow)
@@ -6298,7 +6298,7 @@ destroy() calls itself recursively for all the child widgets, passing destroySub
 
 This function is usually called from the QWidget destructor.
 */
-func (this *QWidget) Destroy__() {
+func (this *QWidget) Destroyp() {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	destroyWindow := true
 	// arg: 1, bool=Bool, =Invalid, , Invalid
@@ -6319,7 +6319,7 @@ destroy() calls itself recursively for all the child widgets, passing destroySub
 
 This function is usually called from the QWidget destructor.
 */
-func (this *QWidget) Destroy__1(destroyWindow bool) {
+func (this *QWidget) Destroyp1(destroyWindow bool) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	destroySubWindows := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWidget7destroyEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), destroyWindow, destroySubWindows)

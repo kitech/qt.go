@@ -160,10 +160,10 @@ The parent argument is dialog's parent widget. The widget flags, f, are passed t
 
 See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
 */
-func (*QProgressDialog) NewForInherit__() *QProgressDialog {
-	return NewQProgressDialog__()
+func (*QProgressDialog) NewForInheritp() *QProgressDialog {
+	return NewQProgressDialogp()
 }
-func NewQProgressDialog__() *QProgressDialog {
+func NewQProgressDialogp() *QProgressDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -196,10 +196,10 @@ The parent argument is dialog's parent widget. The widget flags, f, are passed t
 
 See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
 */
-func (*QProgressDialog) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
-	return NewQProgressDialog__1(parent)
+func (*QProgressDialog) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
+	return NewQProgressDialogp1(parent)
 }
-func NewQProgressDialog__1(parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
+func NewQProgressDialogp1(parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -234,13 +234,13 @@ The parent argument is dialog's parent widget. The widget flags, f, are passed t
 
 See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
 */
-func (*QProgressDialog) NewForInherit_1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/, flags int) *QProgressDialog {
-	return NewQProgressDialog_1(labelText, cancelButtonText, minimum, maximum, parent, flags)
+func (*QProgressDialog) NewForInherit1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/, flags int) *QProgressDialog {
+	return NewQProgressDialog1(labelText, cancelButtonText, minimum, maximum, parent, flags)
 }
-func NewQProgressDialog_1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/, flags int) *QProgressDialog {
-	var tmpArg0 = qtcore.NewQString_5(labelText)
+func NewQProgressDialog1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/, flags int) *QProgressDialog {
+	var tmpArg0 = qtcore.NewQString5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(cancelButtonText)
+	var tmpArg1 = qtcore.NewQString5(cancelButtonText)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -274,13 +274,13 @@ The parent argument is dialog's parent widget. The widget flags, f, are passed t
 
 See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
 */
-func (*QProgressDialog) NewForInherit_1_(labelText string, cancelButtonText string, minimum int, maximum int) *QProgressDialog {
-	return NewQProgressDialog_1_(labelText, cancelButtonText, minimum, maximum)
+func (*QProgressDialog) NewForInherit1p(labelText string, cancelButtonText string, minimum int, maximum int) *QProgressDialog {
+	return NewQProgressDialog1p(labelText, cancelButtonText, minimum, maximum)
 }
-func NewQProgressDialog_1_(labelText string, cancelButtonText string, minimum int, maximum int) *QProgressDialog {
-	var tmpArg0 = qtcore.NewQString_5(labelText)
+func NewQProgressDialog1p(labelText string, cancelButtonText string, minimum int, maximum int) *QProgressDialog {
+	var tmpArg0 = qtcore.NewQString5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(cancelButtonText)
+	var tmpArg1 = qtcore.NewQString5(cancelButtonText)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 4, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg4 unsafe.Pointer
@@ -314,13 +314,13 @@ The parent argument is dialog's parent widget. The widget flags, f, are passed t
 
 See also setLabelText(), setCancelButtonText(), setCancelButton(), setMinimum(), and setMaximum().
 */
-func (*QProgressDialog) NewForInherit_1_1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
-	return NewQProgressDialog_1_1(labelText, cancelButtonText, minimum, maximum, parent)
+func (*QProgressDialog) NewForInherit1p1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
+	return NewQProgressDialog1p1(labelText, cancelButtonText, minimum, maximum, parent)
 }
-func NewQProgressDialog_1_1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
-	var tmpArg0 = qtcore.NewQString_5(labelText)
+func NewQProgressDialog1p1(labelText string, cancelButtonText string, minimum int, maximum int, parent QWidget_ITF /*777 QWidget **/) *QProgressDialog {
+	var tmpArg0 = qtcore.NewQString5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(cancelButtonText)
+	var tmpArg1 = qtcore.NewQString5(cancelButtonText)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -684,7 +684,7 @@ func (this *QProgressDialog) SetValue(progress int) {
 
  */
 func (this *QProgressDialog) SetLabelText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog12setLabelTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -701,7 +701,7 @@ Sets the cancel button's text to cancelButtonText. If the text is set to QString
 See also setCancelButton().
 */
 func (this *QProgressDialog) SetCancelButtonText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog19setCancelButtonTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -93,13 +93,13 @@ func NewQXmlStreamNamespaceDeclaration() *QXmlStreamNamespaceDeclaration {
 /*
 
  */
-func (*QXmlStreamNamespaceDeclaration) NewForInherit_1(prefix string, namespaceUri string) *QXmlStreamNamespaceDeclaration {
-	return NewQXmlStreamNamespaceDeclaration_1(prefix, namespaceUri)
+func (*QXmlStreamNamespaceDeclaration) NewForInherit1(prefix string, namespaceUri string) *QXmlStreamNamespaceDeclaration {
+	return NewQXmlStreamNamespaceDeclaration1(prefix, namespaceUri)
 }
-func NewQXmlStreamNamespaceDeclaration_1(prefix string, namespaceUri string) *QXmlStreamNamespaceDeclaration {
-	var tmpArg0 = NewQString_5(prefix)
+func NewQXmlStreamNamespaceDeclaration1(prefix string, namespaceUri string) *QXmlStreamNamespaceDeclaration {
+	var tmpArg0 = NewQString5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(namespaceUri)
+	var tmpArg1 = NewQString5(namespaceUri)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationC2ERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -132,7 +132,7 @@ func (this *QXmlStreamNamespaceDeclaration) Operator_equal(other unsafe.Pointer 
 /*
 
  */
-func (this *QXmlStreamNamespaceDeclaration) Operator_equal_1(arg0 QXmlStreamNamespaceDeclaration_ITF) *QXmlStreamNamespaceDeclaration {
+func (this *QXmlStreamNamespaceDeclaration) Operator_equal1(arg0 QXmlStreamNamespaceDeclaration_ITF) *QXmlStreamNamespaceDeclaration {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QXmlStreamNamespaceDeclaration_PTR() != nil {
 		convArg0 = arg0.QXmlStreamNamespaceDeclaration_PTR().GetCthis()

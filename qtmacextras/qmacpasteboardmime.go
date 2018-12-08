@@ -130,9 +130,9 @@ Returns true if the converter can convert (both ways) between mime and flav; oth
 All subclasses must reimplement this pure virtual function.
 */
 func (this *QMacPasteboardMime) CanConvert(mime string, flav string) bool {
-	var tmpArg0 = qtcore.NewQString_5(mime)
+	var tmpArg0 = qtcore.NewQString5(mime)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(flav)
+	var tmpArg1 = qtcore.NewQString5(flav)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime10canConvertERK7QStringS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -150,7 +150,7 @@ Returns the MIME UTI used for Mac flavor flav, or 0 if this converter does not s
 All subclasses must reimplement this pure virtual function.
 */
 func (this *QMacPasteboardMime) MimeFor(flav string) string {
-	var tmpArg0 = qtcore.NewQString_5(flav)
+	var tmpArg0 = qtcore.NewQString5(flav)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime7mimeForE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ Returns the Mac UTI used for MIME type mime, or 0 if this converter does not sup
 All subclasses must reimplement this pure virtual function.
 */
 func (this *QMacPasteboardMime) FlavorFor(mime string) string {
-	var tmpArg0 = qtcore.NewQString_5(mime)
+	var tmpArg0 = qtcore.NewQString5(mime)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime9flavorForERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

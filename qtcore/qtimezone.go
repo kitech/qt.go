@@ -91,10 +91,10 @@ func NewQTimeZone() *QTimeZone {
 /*
 Create a null/invalid time zone instance.
 */
-func (*QTimeZone) NewForInherit_1(ianaId QByteArray_ITF) *QTimeZone {
-	return NewQTimeZone_1(ianaId)
+func (*QTimeZone) NewForInherit1(ianaId QByteArray_ITF) *QTimeZone {
+	return NewQTimeZone1(ianaId)
 }
-func NewQTimeZone_1(ianaId QByteArray_ITF) *QTimeZone {
+func NewQTimeZone1(ianaId QByteArray_ITF) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if ianaId != nil && ianaId.QByteArray_PTR() != nil {
 		convArg0 = ianaId.QByteArray_PTR().GetCthis()
@@ -114,10 +114,10 @@ func NewQTimeZone_1(ianaId QByteArray_ITF) *QTimeZone {
 /*
 Create a null/invalid time zone instance.
 */
-func (*QTimeZone) NewForInherit_2(offsetSeconds int) *QTimeZone {
-	return NewQTimeZone_2(offsetSeconds)
+func (*QTimeZone) NewForInherit2(offsetSeconds int) *QTimeZone {
+	return NewQTimeZone2(offsetSeconds)
 }
-func NewQTimeZone_2(offsetSeconds int) *QTimeZone {
+func NewQTimeZone2(offsetSeconds int) *QTimeZone {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZoneC2Ei", qtrt.FFI_TYPE_POINTER, offsetSeconds)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimeZoneFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -133,19 +133,19 @@ func NewQTimeZone_2(offsetSeconds int) *QTimeZone {
 /*
 Create a null/invalid time zone instance.
 */
-func (*QTimeZone) NewForInherit_3(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int, comment string) *QTimeZone {
-	return NewQTimeZone_3(zoneId, offsetSeconds, name, abbreviation, country, comment)
+func (*QTimeZone) NewForInherit3(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int, comment string) *QTimeZone {
+	return NewQTimeZone3(zoneId, offsetSeconds, name, abbreviation, country, comment)
 }
-func NewQTimeZone_3(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int, comment string) *QTimeZone {
+func NewQTimeZone3(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int, comment string) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if zoneId != nil && zoneId.QByteArray_PTR() != nil {
 		convArg0 = zoneId.QByteArray_PTR().GetCthis()
 	}
-	var tmpArg2 = NewQString_5(name)
+	var tmpArg2 = NewQString5(name)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = NewQString_5(abbreviation)
+	var tmpArg3 = NewQString5(abbreviation)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg5 = NewQString_5(comment)
+	var tmpArg5 = NewQString5(comment)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZoneC2ERK10QByteArrayiRK7QStringS5_N7QLocale7CountryES5_", qtrt.FFI_TYPE_POINTER, convArg0, offsetSeconds, convArg2, convArg3, country, convArg5)
 	qtrt.ErrPrint(err, rv)
@@ -162,17 +162,17 @@ func NewQTimeZone_3(zoneId QByteArray_ITF, offsetSeconds int, name string, abbre
 /*
 Create a null/invalid time zone instance.
 */
-func (*QTimeZone) NewForInherit_3_(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string) *QTimeZone {
-	return NewQTimeZone_3_(zoneId, offsetSeconds, name, abbreviation)
+func (*QTimeZone) NewForInherit3p(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string) *QTimeZone {
+	return NewQTimeZone3p(zoneId, offsetSeconds, name, abbreviation)
 }
-func NewQTimeZone_3_(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string) *QTimeZone {
+func NewQTimeZone3p(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if zoneId != nil && zoneId.QByteArray_PTR() != nil {
 		convArg0 = zoneId.QByteArray_PTR().GetCthis()
 	}
-	var tmpArg2 = NewQString_5(name)
+	var tmpArg2 = NewQString5(name)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = NewQString_5(abbreviation)
+	var tmpArg3 = NewQString5(abbreviation)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, QLocale::Country=Elaborated, QLocale::Country=Enum, , Invalid
 	country := 0
@@ -193,17 +193,17 @@ func NewQTimeZone_3_(zoneId QByteArray_ITF, offsetSeconds int, name string, abbr
 /*
 Create a null/invalid time zone instance.
 */
-func (*QTimeZone) NewForInherit_3_1(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int) *QTimeZone {
-	return NewQTimeZone_3_1(zoneId, offsetSeconds, name, abbreviation, country)
+func (*QTimeZone) NewForInherit3p1(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int) *QTimeZone {
+	return NewQTimeZone3p1(zoneId, offsetSeconds, name, abbreviation, country)
 }
-func NewQTimeZone_3_1(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int) *QTimeZone {
+func NewQTimeZone3p1(zoneId QByteArray_ITF, offsetSeconds int, name string, abbreviation string, country int) *QTimeZone {
 	var convArg0 unsafe.Pointer
 	if zoneId != nil && zoneId.QByteArray_PTR() != nil {
 		convArg0 = zoneId.QByteArray_PTR().GetCthis()
 	}
-	var tmpArg2 = NewQString_5(name)
+	var tmpArg2 = NewQString5(name)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = NewQString_5(abbreviation)
+	var tmpArg3 = NewQString5(abbreviation)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = NewQString()
@@ -257,7 +257,7 @@ func (this *QTimeZone) Operator_equal(other QTimeZone_ITF) *QTimeZone {
 /*
 
  */
-func (this *QTimeZone) Operator_equal_1(other unsafe.Pointer /*333*/) *QTimeZone {
+func (this *QTimeZone) Operator_equal1(other unsafe.Pointer /*333*/) *QTimeZone {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeZoneaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTimeZoneFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -428,7 +428,7 @@ The display name may change depending on DST or historical events.
 
 See also abbreviation().
 */
-func (this *QTimeZone) DisplayName__(atDateTime QDateTime_ITF) string {
+func (this *QTimeZone) DisplayNamep(atDateTime QDateTime_ITF) string {
 	var convArg0 unsafe.Pointer
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
 		convArg0 = atDateTime.QDateTime_PTR().GetCthis()
@@ -459,7 +459,7 @@ The display name may change depending on DST or historical events.
 
 See also abbreviation().
 */
-func (this *QTimeZone) DisplayName__1(atDateTime QDateTime_ITF, nameType int) string {
+func (this *QTimeZone) DisplayNamep1(atDateTime QDateTime_ITF, nameType int) string {
 	var convArg0 unsafe.Pointer
 	if atDateTime != nil && atDateTime.QDateTime_PTR() != nil {
 		convArg0 = atDateTime.QDateTime_PTR().GetCthis()
@@ -488,7 +488,7 @@ The display name may change depending on DST or historical events.
 
 See also abbreviation().
 */
-func (this *QTimeZone) DisplayName_1(timeType int, nameType int, locale QLocale_ITF) string {
+func (this *QTimeZone) DisplayName1(timeType int, nameType int, locale QLocale_ITF) string {
 	var convArg2 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
 		convArg2 = locale.QLocale_PTR().GetCthis()
@@ -515,7 +515,7 @@ The display name may change depending on DST or historical events.
 
 See also abbreviation().
 */
-func (this *QTimeZone) DisplayName_1_(timeType int) string {
+func (this *QTimeZone) DisplayName1p(timeType int) string {
 	// arg: 1, QTimeZone::NameType=Elaborated, QTimeZone::NameType=Enum, , Invalid
 	nameType := 0
 	// arg: 2, const QLocale &=LValueReference, QLocale=Record, , Invalid
@@ -542,7 +542,7 @@ The display name may change depending on DST or historical events.
 
 See also abbreviation().
 */
-func (this *QTimeZone) DisplayName_1_1(timeType int, nameType int) string {
+func (this *QTimeZone) DisplayName1p1(timeType int, nameType int) string {
 	// arg: 2, const QLocale &=LValueReference, QLocale=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeZone11displayNameENS_8TimeTypeENS_8NameTypeERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeType, nameType, convArg2)
@@ -932,7 +932,7 @@ Because a Windows ID can cover several IANA IDs in several different countries, 
 
 See also ianaIdToWindowsId() and windowsIdToIanaIds().
 */
-func (this *QTimeZone) WindowsIdToDefaultIanaId_1(windowsId QByteArray_ITF, country int) *QByteArray /*123*/ {
+func (this *QTimeZone) WindowsIdToDefaultIanaId1(windowsId QByteArray_ITF, country int) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if windowsId != nil && windowsId.QByteArray_PTR() != nil {
 		convArg0 = windowsId.QByteArray_PTR().GetCthis()
@@ -943,9 +943,9 @@ func (this *QTimeZone) WindowsIdToDefaultIanaId_1(windowsId QByteArray_ITF, coun
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QTimeZone_WindowsIdToDefaultIanaId_1(windowsId QByteArray_ITF, country int) *QByteArray /*123*/ {
+func QTimeZone_WindowsIdToDefaultIanaId1(windowsId QByteArray_ITF, country int) *QByteArray /*123*/ {
 	var nilthis *QTimeZone
-	rv := nilthis.WindowsIdToDefaultIanaId_1(windowsId, country)
+	rv := nilthis.WindowsIdToDefaultIanaId1(windowsId, country)
 	return rv
 }
 

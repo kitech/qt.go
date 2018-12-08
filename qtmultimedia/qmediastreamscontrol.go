@@ -133,7 +133,7 @@ Returns the meta-data value of key for a given stream.
 Useful metadata keys are QMediaMetaData::Title, QMediaMetaData::Description and QMediaMetaData::Language.
 */
 func (this *QMediaStreamsControl) MetaData(streamNumber int, key string) *qtcore.QVariant /*123*/ {
-	var tmpArg1 = qtcore.NewQString_5(key)
+	var tmpArg1 = qtcore.NewQString5(key)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QMediaStreamsControl8metaDataEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), streamNumber, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -230,10 +230,10 @@ func NewQMediaStreamsControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMedi
 /*
 Constructs a new media streams control with the given parent.
 */
-func (*QMediaStreamsControl) NewForInherit__() *QMediaStreamsControl {
-	return NewQMediaStreamsControl__()
+func (*QMediaStreamsControl) NewForInheritp() *QMediaStreamsControl {
+	return NewQMediaStreamsControlp()
 }
-func NewQMediaStreamsControl__() *QMediaStreamsControl {
+func NewQMediaStreamsControlp() *QMediaStreamsControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QMediaStreamsControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

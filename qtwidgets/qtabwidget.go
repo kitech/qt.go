@@ -159,10 +159,10 @@ func NewQTabWidget(parent QWidget_ITF /*777 QWidget **/) *QTabWidget {
 /*
 Constructs a tabbed widget with parent parent.
 */
-func (*QTabWidget) NewForInherit__() *QTabWidget {
-	return NewQTabWidget__()
+func (*QTabWidget) NewForInheritp() *QTabWidget {
+	return NewQTabWidgetp()
 }
-func NewQTabWidget__() *QTabWidget {
+func NewQTabWidgetp() *QTabWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -206,7 +206,7 @@ func (this *QTabWidget) AddTab(widget QWidget_ITF /*777 QWidget **/, arg1 string
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget6addTabEP7QWidgetRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -227,7 +227,7 @@ Note: If you call addTab() after show(), the layout system will try to adjust to
 
 See also insertTab().
 */
-func (this *QTabWidget) AddTab_1(widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, label string) int {
+func (this *QTabWidget) AddTab1(widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, label string) int {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -236,7 +236,7 @@ func (this *QTabWidget) AddTab_1(widget QWidget_ITF /*777 QWidget **/, icon qtgu
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg1 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(label)
+	var tmpArg2 = qtcore.NewQString5(label)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget6addTabEP7QWidgetRK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -268,7 +268,7 @@ func (this *QTabWidget) InsertTab(index int, widget QWidget_ITF /*777 QWidget **
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(arg2)
+	var tmpArg2 = qtcore.NewQString5(arg2)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget9insertTabEiP7QWidgetRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -295,7 +295,7 @@ Note: If you call insertTab() after show(), the layout system will try to adjust
 
 See also addTab().
 */
-func (this *QTabWidget) InsertTab_1(index int, widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, label string) int {
+func (this *QTabWidget) InsertTab1(index int, widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, label string) int {
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
@@ -304,7 +304,7 @@ func (this *QTabWidget) InsertTab_1(index int, widget QWidget_ITF /*777 QWidget 
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg2 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(label)
+	var tmpArg3 = qtcore.NewQString5(label)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -393,7 +393,7 @@ If the provided text contains an ampersand character ('&'), a shortcut is automa
 See also tabText().
 */
 func (this *QTabWidget) SetTabText(index int, arg1 string) {
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget10setTabTextEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -449,7 +449,7 @@ Sets the tab tool tip for the page at position index to tip.
 See also tabToolTip().
 */
 func (this *QTabWidget) SetTabToolTip(index int, tip string) {
-	var tmpArg1 = qtcore.NewQString_5(tip)
+	var tmpArg1 = qtcore.NewQString5(tip)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget13setTabToolTipEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -487,7 +487,7 @@ This function was introduced in  Qt 4.1.
 See also tabWhatsThis().
 */
 func (this *QTabWidget) SetTabWhatsThis(index int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTabWidget15setTabWhatsThisEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -809,7 +809,7 @@ Note: Corner widgets are designed for North and South tab positions; other orien
 
 See also cornerWidget() and setTabPosition().
 */
-func (this *QTabWidget) SetCornerWidget__(w QWidget_ITF /*777 QWidget **/) {
+func (this *QTabWidget) SetCornerWidgetp(w QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
 		convArg0 = w.QWidget_PTR().GetCthis()
@@ -846,7 +846,7 @@ Returns the widget shown in the corner of the tab widget or 0.
 
 See also setCornerWidget().
 */
-func (this *QTabWidget) CornerWidget__() *QWidget /*777 QWidget **/ {
+func (this *QTabWidget) CornerWidgetp() *QWidget /*777 QWidget **/ {
 	// arg: 0, Qt::Corner=Elaborated, Qt::Corner=Enum, , Invalid
 	corner := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTabWidget12cornerWidgetEN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), corner)

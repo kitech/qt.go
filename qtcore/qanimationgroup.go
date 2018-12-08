@@ -112,10 +112,10 @@ func NewQAnimationGroup(parent QObject_ITF /*777 QObject **/) *QAnimationGroup {
 /*
 Constructs a QAnimationGroup. parent is passed to QObject's constructor.
 */
-func (*QAnimationGroup) NewForInherit__() *QAnimationGroup {
-	return NewQAnimationGroup__()
+func (*QAnimationGroup) NewForInheritp() *QAnimationGroup {
+	return NewQAnimationGroupp()
 }
-func NewQAnimationGroup__() *QAnimationGroup {
+func NewQAnimationGroupp() *QAnimationGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

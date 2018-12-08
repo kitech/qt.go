@@ -109,7 +109,7 @@ func DeleteQMimeDatabase(this *QMimeDatabase) {
 Returns a MIME type for nameOrAlias or an invalid one if none found.
 */
 func (this *QMimeDatabase) MimeTypeForName(nameOrAlias string) *QMimeType /*123*/ {
-	var tmpArg0 = NewQString_5(nameOrAlias)
+	var tmpArg0 = NewQString5(nameOrAlias)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMimeDatabase15mimeTypeForNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -139,7 +139,7 @@ fileInfo may refer to an absolute or relative path.
 See also QMimeType::isDefault() and mimeTypeForData().
 */
 func (this *QMimeDatabase) MimeTypeForFile(fileName string, mode int) *QMimeType /*123*/ {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMimeDatabase15mimeTypeForFileERK7QStringNS_9MatchModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -168,8 +168,8 @@ fileInfo may refer to an absolute or relative path.
 
 See also QMimeType::isDefault() and mimeTypeForData().
 */
-func (this *QMimeDatabase) MimeTypeForFile__(fileName string) *QMimeType /*123*/ {
-	var tmpArg0 = NewQString_5(fileName)
+func (this *QMimeDatabase) MimeTypeForFilep(fileName string) *QMimeType /*123*/ {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QMimeDatabase::MatchMode=Enum, QMimeDatabase::MatchMode=Enum, , Invalid
 	mode := 0
@@ -200,7 +200,7 @@ fileInfo may refer to an absolute or relative path.
 
 See also QMimeType::isDefault() and mimeTypeForData().
 */
-func (this *QMimeDatabase) MimeTypeForFile_1(fileInfo QFileInfo_ITF, mode int) *QMimeType /*123*/ {
+func (this *QMimeDatabase) MimeTypeForFile1(fileInfo QFileInfo_ITF, mode int) *QMimeType /*123*/ {
 	var convArg0 unsafe.Pointer
 	if fileInfo != nil && fileInfo.QFileInfo_PTR() != nil {
 		convArg0 = fileInfo.QFileInfo_PTR().GetCthis()
@@ -232,7 +232,7 @@ fileInfo may refer to an absolute or relative path.
 
 See also QMimeType::isDefault() and mimeTypeForData().
 */
-func (this *QMimeDatabase) MimeTypeForFile_1_(fileInfo QFileInfo_ITF) *QMimeType /*123*/ {
+func (this *QMimeDatabase) MimeTypeForFile1p(fileInfo QFileInfo_ITF) *QMimeType /*123*/ {
 	var convArg0 unsafe.Pointer
 	if fileInfo != nil && fileInfo.QFileInfo_PTR() != nil {
 		convArg0 = fileInfo.QFileInfo_PTR().GetCthis()
@@ -278,7 +278,7 @@ Returns a MIME type for data.
 
 A valid MIME type is always returned. If data doesn't match any known MIME type data, the default MIME type (application/octet-stream) is returned.
 */
-func (this *QMimeDatabase) MimeTypeForData_1(device QIODevice_ITF /*777 QIODevice **/) *QMimeType /*123*/ {
+func (this *QMimeDatabase) MimeTypeForData1(device QIODevice_ITF /*777 QIODevice **/) *QMimeType /*123*/ {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -333,7 +333,7 @@ A valid MIME type is always returned. If device data doesn't match any known MIM
 This method looks at both the file name and the file contents, if necessary. The file extension has priority over the contents, but the contents will be used if the file extension is unknown, or matches multiple MIME types.
 */
 func (this *QMimeDatabase) MimeTypeForFileNameAndData(fileName string, device QIODevice_ITF /*777 QIODevice **/) *QMimeType /*123*/ {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
@@ -362,8 +362,8 @@ A valid MIME type is always returned. If device data doesn't match any known MIM
 
 This method looks at both the file name and the file contents, if necessary. The file extension has priority over the contents, but the contents will be used if the file extension is unknown, or matches multiple MIME types.
 */
-func (this *QMimeDatabase) MimeTypeForFileNameAndData_1(fileName string, data QByteArray_ITF) *QMimeType /*123*/ {
-	var tmpArg0 = NewQString_5(fileName)
+func (this *QMimeDatabase) MimeTypeForFileNameAndData1(fileName string, data QByteArray_ITF) *QMimeType /*123*/ {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -387,7 +387,7 @@ Returns the suffix for the file fileName, as known by the MIME database.
 This allows to pre-select "tar.bz2" for foo.tar.bz2, but still only "txt" for my.file.with.dots.txt.
 */
 func (this *QMimeDatabase) SuffixForFileName(fileName string) string {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QMimeDatabase17suffixForFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

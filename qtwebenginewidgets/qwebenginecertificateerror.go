@@ -93,7 +93,7 @@ func NewQWebEngineCertificateError(error int, url qtcore.QUrl_ITF /*123*/, overr
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg1 = url.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(errorDescription)
+	var tmpArg3 = qtcore.NewQString5(errorDescription)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QWebEngineCertificateErrorC2Ei4QUrlb7QString", qtrt.FFI_TYPE_POINTER, error, convArg1, overridable, convArg3)
 	qtrt.ErrPrint(err, rv)

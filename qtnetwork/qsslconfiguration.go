@@ -125,7 +125,7 @@ func (this *QSslConfiguration) Operator_equal(other unsafe.Pointer /*333*/) *QSs
 /*
 
  */
-func (this *QSslConfiguration) Operator_equal_1(other QSslConfiguration_ITF) *QSslConfiguration {
+func (this *QSslConfiguration) Operator_equal1(other QSslConfiguration_ITF) *QSslConfiguration {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslConfiguration_PTR() != nil {
 		convArg0 = other.QSslConfiguration_PTR().GetCthis()

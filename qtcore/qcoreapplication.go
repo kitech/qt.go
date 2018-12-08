@@ -117,10 +117,10 @@ The argc and argv arguments are processed by the application, and made available
 
 Warning: The data referred to by argc and argv must stay valid for the entire lifetime of the QCoreApplication object. In addition, argc must be greater than zero and argv must contain at least one valid character string.
 */
-func (*QCoreApplication) NewForInherit__(argc int, argv []string) *QCoreApplication {
-	return NewQCoreApplication__(argc, argv)
+func (*QCoreApplication) NewForInheritp(argc int, argv []string) *QCoreApplication {
+	return NewQCoreApplicationp(argc, argv)
 }
-func NewQCoreApplication__(argc int, argv []string) *QCoreApplication {
+func NewQCoreApplicationp(argc int, argv []string) *QCoreApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	// arg: 2, int=Int, =Invalid, , Invalid
 	arg2 := 0
@@ -210,7 +210,7 @@ Sets the attribute attribute if on is true; otherwise clears the attribute.
 
 See also testAttribute().
 */
-func (this *QCoreApplication) SetAttribute__(attribute int) {
+func (this *QCoreApplication) SetAttributep(attribute int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication12setAttributeEN2Qt20ApplicationAttributeEb", qtrt.FFI_TYPE_POINTER, attribute, on)
@@ -247,7 +247,7 @@ func QCoreApplication_TestAttribute(attribute int) bool {
 
  */
 func (this *QCoreApplication) SetOrganizationDomain(orgDomain string) {
-	var tmpArg0 = NewQString_5(orgDomain)
+	var tmpArg0 = NewQString5(orgDomain)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication21setOrganizationDomainERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -288,7 +288,7 @@ func QCoreApplication_OrganizationDomain() string {
 
  */
 func (this *QCoreApplication) SetOrganizationName(orgName string) {
-	var tmpArg0 = NewQString_5(orgName)
+	var tmpArg0 = NewQString5(orgName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication19setOrganizationNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -329,7 +329,7 @@ func QCoreApplication_OrganizationName() string {
 
  */
 func (this *QCoreApplication) SetApplicationName(application string) {
-	var tmpArg0 = NewQString_5(application)
+	var tmpArg0 = NewQString5(application)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18setApplicationNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -370,7 +370,7 @@ func QCoreApplication_ApplicationName() string {
 
  */
 func (this *QCoreApplication) SetApplicationVersion(version string) {
-	var tmpArg0 = NewQString_5(version)
+	var tmpArg0 = NewQString5(version)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication21setApplicationVersionERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -545,7 +545,7 @@ Note: This function is thread-safe.
 
 See also exec(), QTimer, QEventLoop::processEvents(), flush(), and sendPostedEvents().
 */
-func (this *QCoreApplication) ProcessEvents__() {
+func (this *QCoreApplication) ProcessEventsp() {
 	// arg: 0, QEventLoop::ProcessEventsFlags=Elaborated, QEventLoop::ProcessEventsFlags=Typedef, QFlags<QEventLoop::ProcessEventsFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE", qtrt.FFI_TYPE_POINTER, flags)
@@ -570,13 +570,13 @@ Note: This function is thread-safe.
 
 See also exec(), QTimer, QEventLoop::processEvents(), flush(), and sendPostedEvents().
 */
-func (this *QCoreApplication) ProcessEvents_1(flags int, maxtime int) {
+func (this *QCoreApplication) ProcessEvents1(flags int, maxtime int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEEi", qtrt.FFI_TYPE_POINTER, flags, maxtime)
 	qtrt.ErrPrint(err, rv)
 }
-func QCoreApplication_ProcessEvents_1(flags int, maxtime int) {
+func QCoreApplication_ProcessEvents1(flags int, maxtime int) {
 	var nilthis *QCoreApplication
-	nilthis.ProcessEvents_1(flags, maxtime)
+	nilthis.ProcessEvents1(flags, maxtime)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:122
@@ -620,7 +620,7 @@ Note that unlike the C library function of the same name, this function does ret
 
 See also quit() and exec().
 */
-func (this *QCoreApplication) Exit__() {
+func (this *QCoreApplication) Exitp() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	retcode := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication4exitEi", qtrt.FFI_TYPE_POINTER, retcode)
@@ -721,7 +721,7 @@ This function was introduced in  Qt 4.3.
 
 See also sendEvent(), notify(), sendPostedEvents(), and Qt::EventPriority.
 */
-func (this *QCoreApplication) PostEvent__(receiver QObject_ITF /*777 QObject **/, event QEvent_ITF /*777 QEvent **/) {
+func (this *QCoreApplication) PostEventp(receiver QObject_ITF /*777 QObject **/, event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
 		convArg0 = receiver.QObject_PTR().GetCthis()
@@ -781,7 +781,7 @@ Note: This method must be called from the thread in which its QObject parameter,
 
 See also flush() and postEvent().
 */
-func (this *QCoreApplication) SendPostedEvents__() {
+func (this *QCoreApplication) SendPostedEventsp() {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -806,7 +806,7 @@ Note: This method must be called from the thread in which its QObject parameter,
 
 See also flush() and postEvent().
 */
-func (this *QCoreApplication) SendPostedEvents__1(receiver QObject_ITF /*777 QObject **/) {
+func (this *QCoreApplication) SendPostedEventsp1(receiver QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
 		convArg0 = receiver.QObject_PTR().GetCthis()
@@ -862,7 +862,7 @@ Note: This function is thread-safe.
 
 This function was introduced in  Qt 4.3.
 */
-func (this *QCoreApplication) RemovePostedEvents__(receiver QObject_ITF /*777 QObject **/) {
+func (this *QCoreApplication) RemovePostedEventsp(receiver QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
 		convArg0 = receiver.QObject_PTR().GetCthis()
@@ -1160,7 +1160,7 @@ The library paths are reset to the default when an instance of QCoreApplication 
 See also removeLibraryPath(), libraryPaths(), and setLibraryPaths().
 */
 func (this *QCoreApplication) AddLibraryPath(arg0 string) {
-	var tmpArg0 = NewQString_5(arg0)
+	var tmpArg0 = NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication14addLibraryPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1183,7 +1183,7 @@ The library paths are reset to the default when an instance of QCoreApplication 
 See also addLibraryPath(), libraryPaths(), and setLibraryPaths().
 */
 func (this *QCoreApplication) RemoveLibraryPath(arg0 string) {
-	var tmpArg0 = NewQString_5(arg0)
+	var tmpArg0 = NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication17removeLibraryPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1323,7 +1323,7 @@ Note: This function is thread-safe.
 
 See also QObject::tr(), installTranslator(), removeTranslator(), and translate().
 */
-func (this *QCoreApplication) Translate__(context string, key string) string {
+func (this *QCoreApplication) Translatep(context string, key string) string {
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(key)
@@ -1366,7 +1366,7 @@ Note: This function is thread-safe.
 
 See also QObject::tr(), installTranslator(), removeTranslator(), and translate().
 */
-func (this *QCoreApplication) Translate__1(context string, key string, disambiguation string) string {
+func (this *QCoreApplication) Translatep1(context string, key string, disambiguation string) string {
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(key)

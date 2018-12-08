@@ -109,10 +109,10 @@ func NewQMacToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 /*
 Constructs a QMacToolBar with the given parent
 */
-func (*QMacToolBar) NewForInherit__() *QMacToolBar {
-	return NewQMacToolBar__()
+func (*QMacToolBar) NewForInheritp() *QMacToolBar {
+	return NewQMacToolBarp()
 }
-func NewQMacToolBar__() *QMacToolBar {
+func NewQMacToolBarp() *QMacToolBar {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -130,11 +130,11 @@ func NewQMacToolBar__() *QMacToolBar {
 /*
 Constructs a QMacToolBar with the given parent
 */
-func (*QMacToolBar) NewForInherit_1(identifier string, parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
-	return NewQMacToolBar_1(identifier, parent)
+func (*QMacToolBar) NewForInherit1(identifier string, parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
+	return NewQMacToolBar1(identifier, parent)
 }
-func NewQMacToolBar_1(identifier string, parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
-	var tmpArg0 = qtcore.NewQString_5(identifier)
+func NewQMacToolBar1(identifier string, parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
+	var tmpArg0 = qtcore.NewQString5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -155,11 +155,11 @@ func NewQMacToolBar_1(identifier string, parent qtcore.QObject_ITF /*777 QObject
 /*
 Constructs a QMacToolBar with the given parent
 */
-func (*QMacToolBar) NewForInherit_1_(identifier string) *QMacToolBar {
-	return NewQMacToolBar_1_(identifier)
+func (*QMacToolBar) NewForInherit1p(identifier string) *QMacToolBar {
+	return NewQMacToolBar1p(identifier)
 }
-func NewQMacToolBar_1_(identifier string) *QMacToolBar {
-	var tmpArg0 = qtcore.NewQString_5(identifier)
+func NewQMacToolBar1p(identifier string) *QMacToolBar {
+	var tmpArg0 = qtcore.NewQString5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -198,7 +198,7 @@ func (this *QMacToolBar) AddItem(icon qtgui.QIcon_ITF, text string) *QMacToolBar
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar7addItemERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -218,7 +218,7 @@ func (this *QMacToolBar) AddAllowedItem(icon qtgui.QIcon_ITF, text string) *QMac
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar14addAllowedItemERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

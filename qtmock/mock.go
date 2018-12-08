@@ -11,12 +11,12 @@ func KeepMe() {}
 
 func QApplication_Translate(a string, b string, c string, d int) *qtcore.QString {
 	// return qtcore.NewQString_5("mockhe")
-	return qtcore.NewQString_5(b)
+	return qtcore.NewQString5(b)
 }
 
 func QCoreApplication_Translate(a string, b string, c string, d int) *qtcore.QString {
 	// return qtcore.NewQString_5("mockhe")
-	return qtcore.NewQString_5(b)
+	return qtcore.NewQString5(b)
 }
 
 // bool qRegisterResourceData(int, unsigned char const*, unsigned char const*, unsigned char const*)

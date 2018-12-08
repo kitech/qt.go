@@ -91,10 +91,10 @@ func NewQStyleOptionFocusRect() *QStyleOptionFocusRect {
 /*
 
  */
-func (*QStyleOptionFocusRect) NewForInherit_1(version int) *QStyleOptionFocusRect {
-	return NewQStyleOptionFocusRect_1(version)
+func (*QStyleOptionFocusRect) NewForInherit1(version int) *QStyleOptionFocusRect {
+	return NewQStyleOptionFocusRect1(version)
 }
-func NewQStyleOptionFocusRect_1(version int) *QStyleOptionFocusRect {
+func NewQStyleOptionFocusRect1(version int) *QStyleOptionFocusRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFocusRectFromPointer(unsafe.Pointer(uintptr(rv)))

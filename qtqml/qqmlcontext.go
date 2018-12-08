@@ -113,10 +113,10 @@ func NewQQmlContext(parent QQmlEngine_ITF /*777 QQmlEngine **/, objParent qtcore
 /*
 Create a new QQmlContext as a child of engine's root context, and the QObject parent.
 */
-func (*QQmlContext) NewForInherit__(parent QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlContext {
-	return NewQQmlContext__(parent)
+func (*QQmlContext) NewForInheritp(parent QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlContext {
+	return NewQQmlContextp(parent)
 }
-func NewQQmlContext__(parent QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlContext {
+func NewQQmlContextp(parent QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlContext {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQmlEngine_PTR() != nil {
 		convArg0 = parent.QQmlEngine_PTR().GetCthis()
@@ -138,10 +138,10 @@ func NewQQmlContext__(parent QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlContext {
 /*
 Create a new QQmlContext as a child of engine's root context, and the QObject parent.
 */
-func (*QQmlContext) NewForInherit_1(parent QQmlContext_ITF /*777 QQmlContext **/, objParent qtcore.QObject_ITF /*777 QObject **/) *QQmlContext {
-	return NewQQmlContext_1(parent, objParent)
+func (*QQmlContext) NewForInherit1(parent QQmlContext_ITF /*777 QQmlContext **/, objParent qtcore.QObject_ITF /*777 QObject **/) *QQmlContext {
+	return NewQQmlContext1(parent, objParent)
 }
-func NewQQmlContext_1(parent QQmlContext_ITF /*777 QQmlContext **/, objParent qtcore.QObject_ITF /*777 QObject **/) *QQmlContext {
+func NewQQmlContext1(parent QQmlContext_ITF /*777 QQmlContext **/, objParent qtcore.QObject_ITF /*777 QObject **/) *QQmlContext {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQmlContext_PTR() != nil {
 		convArg0 = parent.QQmlContext_PTR().GetCthis()
@@ -165,10 +165,10 @@ func NewQQmlContext_1(parent QQmlContext_ITF /*777 QQmlContext **/, objParent qt
 /*
 Create a new QQmlContext as a child of engine's root context, and the QObject parent.
 */
-func (*QQmlContext) NewForInherit_1_(parent QQmlContext_ITF /*777 QQmlContext **/) *QQmlContext {
-	return NewQQmlContext_1_(parent)
+func (*QQmlContext) NewForInherit1p(parent QQmlContext_ITF /*777 QQmlContext **/) *QQmlContext {
+	return NewQQmlContext1p(parent)
 }
-func NewQQmlContext_1_(parent QQmlContext_ITF /*777 QQmlContext **/) *QQmlContext {
+func NewQQmlContext1p(parent QQmlContext_ITF /*777 QQmlContext **/) *QQmlContext {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QQmlContext_PTR() != nil {
 		convArg0 = parent.QQmlContext_PTR().GetCthis()
@@ -287,7 +287,7 @@ Returns the value of the name property for this context as a QVariant.
 See also setContextProperty().
 */
 func (this *QQmlContext) ContextProperty(arg0 string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQmlContext15contextPropertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -309,7 +309,7 @@ QQmlContext does not take ownership of value.
 See also contextProperty().
 */
 func (this *QQmlContext) SetContextProperty(arg0 string, arg1 qtcore.QObject_ITF /*777 QObject **/) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if arg1 != nil && arg1.QObject_PTR() != nil {
@@ -331,8 +331,8 @@ QQmlContext does not take ownership of value.
 
 See also contextProperty().
 */
-func (this *QQmlContext) SetContextProperty_1(arg0 string, arg1 qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func (this *QQmlContext) SetContextProperty1(arg0 string, arg1 qtcore.QVariant_ITF) {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if arg1 != nil && arg1.QVariant_PTR() != nil {

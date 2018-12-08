@@ -36,7 +36,7 @@ func Test1(t *testing.T) {
 	}
 	log.Println(szo.Rheight(), szo.Height())
 
-	w.SetObjectName(qtcore.NewQString_5("hehhehhe"))
+	w.SetObjectName(qtcore.NewQString5("hehhehhe"))
 	objname := w.ObjectName()
 	if objname.Length() != 8 {
 		t.Error(objname)
@@ -48,7 +48,7 @@ func Test1(t *testing.T) {
 	}
 
 	{
-		szo := qtcore.NewQSize_1(0, 0)
+		szo := qtcore.NewQSize1(0, 0)
 		log.Println(szo.Height(), szo.Rheight())
 	}
 
@@ -58,7 +58,7 @@ func Test1(t *testing.T) {
 	}
 
 	{
-		szo := qtcore.NewQSizeF_2(5.5, 6.5)
+		szo := qtcore.NewQSizeF2(5.5, 6.5)
 		log.Println(szo.Height(), szo.Rheight(), szo.IsEmpty())
 	}
 

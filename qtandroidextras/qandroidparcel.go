@@ -92,10 +92,10 @@ func NewQAndroidParcel() *QAndroidParcel {
 /*
 Creates a new object.
 */
-func (*QAndroidParcel) NewForInherit_1(parcel QAndroidJniObject_ITF) *QAndroidParcel {
-	return NewQAndroidParcel_1(parcel)
+func (*QAndroidParcel) NewForInherit1(parcel QAndroidJniObject_ITF) *QAndroidParcel {
+	return NewQAndroidParcel1(parcel)
 }
-func NewQAndroidParcel_1(parcel QAndroidJniObject_ITF) *QAndroidParcel {
+func NewQAndroidParcel1(parcel QAndroidJniObject_ITF) *QAndroidParcel {
 	var convArg0 unsafe.Pointer
 	if parcel != nil && parcel.QAndroidJniObject_PTR() != nil {
 		convArg0 = parcel.QAndroidJniObject_PTR().GetCthis()

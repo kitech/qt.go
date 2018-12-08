@@ -91,11 +91,11 @@ func NewQStringRef() *QStringRef {
 /*
 
  */
-func (*QStringRef) NewForInherit_1(string string, position int, size int) *QStringRef {
-	return NewQStringRef_1(string, position, size)
+func (*QStringRef) NewForInherit1(string string, position int, size int) *QStringRef {
+	return NewQStringRef1(string, position, size)
 }
-func NewQStringRef_1(string string, position int, size int) *QStringRef {
-	var tmpArg0 = NewQString_5(string)
+func NewQStringRef1(string string, position int, size int) *QStringRef {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStringRefC2EPK7QStringii", qtrt.FFI_TYPE_POINTER, convArg0, position, size)
 	qtrt.ErrPrint(err, rv)
@@ -112,11 +112,11 @@ func NewQStringRef_1(string string, position int, size int) *QStringRef {
 /*
 
  */
-func (*QStringRef) NewForInherit_2(string string) *QStringRef {
-	return NewQStringRef_2(string)
+func (*QStringRef) NewForInherit2(string string) *QStringRef {
+	return NewQStringRef2(string)
 }
-func NewQStringRef_2(string string) *QStringRef {
-	var tmpArg0 = NewQString_5(string)
+func NewQStringRef2(string string) *QStringRef {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStringRefC2EPK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -149,7 +149,7 @@ func (this *QStringRef) Operator_equal(other unsafe.Pointer /*333*/) *QStringRef
 /*
 
  */
-func (this *QStringRef) Operator_equal_1(other QStringRef_ITF) *QStringRef {
+func (this *QStringRef) Operator_equal1(other QStringRef_ITF) *QStringRef {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QStringRef_PTR() != nil {
 		convArg0 = other.QStringRef_PTR().GetCthis()
@@ -169,8 +169,8 @@ func (this *QStringRef) Operator_equal_1(other QStringRef_ITF) *QStringRef {
 /*
 
  */
-func (this *QStringRef) Operator_equal_2(string string) *QStringRef {
-	var tmpArg0 = NewQString_5(string)
+func (this *QStringRef) Operator_equal2(string string) *QStringRef {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStringRefaSEPK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -283,8 +283,8 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also contains() and indexOf().
 */
-func (this *QStringRef) Count_1(s string, cs int) int {
-	var tmpArg0 = NewQString_5(s)
+func (this *QStringRef) Count1(s string, cs int) int {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef5countERK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -303,8 +303,8 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also contains() and indexOf().
 */
-func (this *QStringRef) Count_1_(s string) int {
-	var tmpArg0 = NewQString_5(s)
+func (this *QStringRef) Count1p(s string) int {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
@@ -325,7 +325,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also contains() and indexOf().
 */
-func (this *QStringRef) Count_2(c QChar_ITF /*123*/, cs int) int {
+func (this *QStringRef) Count2(c QChar_ITF /*123*/, cs int) int {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -347,7 +347,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also contains() and indexOf().
 */
-func (this *QStringRef) Count_2_(c QChar_ITF /*123*/) int {
+func (this *QStringRef) Count2p(c QChar_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -371,7 +371,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also contains() and indexOf().
 */
-func (this *QStringRef) Count_3(s QStringRef_ITF, cs int) int {
+func (this *QStringRef) Count3(s QStringRef_ITF, cs int) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -393,7 +393,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also contains() and indexOf().
 */
-func (this *QStringRef) Count_3_(s QStringRef_ITF) int {
+func (this *QStringRef) Count3p(s QStringRef_ITF) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -448,7 +448,7 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 See also lastIndexOf(), contains(), and count().
 */
 func (this *QStringRef) IndexOf(str string, from int, cs int) int {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7indexOfERK7QStringiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -481,8 +481,8 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QStringRef) IndexOf__(str string) int {
-	var tmpArg0 = NewQString_5(str)
+func (this *QStringRef) IndexOfp(str string) int {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
@@ -519,8 +519,8 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QStringRef) IndexOf__1(str string, from int) int {
-	var tmpArg0 = NewQString_5(str)
+func (this *QStringRef) IndexOfp1(str string, from int) int {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
@@ -555,7 +555,7 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QStringRef) IndexOf_1(ch QChar_ITF /*123*/, from int, cs int) int {
+func (this *QStringRef) IndexOf1(ch QChar_ITF /*123*/, from int, cs int) int {
 	var convArg0 unsafe.Pointer
 	if ch != nil && ch.QChar_PTR() != nil {
 		convArg0 = ch.QChar_PTR().GetCthis()
@@ -591,7 +591,7 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QStringRef) IndexOf_1_(ch QChar_ITF /*123*/) int {
+func (this *QStringRef) IndexOf1p(ch QChar_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if ch != nil && ch.QChar_PTR() != nil {
 		convArg0 = ch.QChar_PTR().GetCthis()
@@ -631,7 +631,7 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QStringRef) IndexOf_1_1(ch QChar_ITF /*123*/, from int) int {
+func (this *QStringRef) IndexOf1p1(ch QChar_ITF /*123*/, from int) int {
 	var convArg0 unsafe.Pointer
 	if ch != nil && ch.QChar_PTR() != nil {
 		convArg0 = ch.QChar_PTR().GetCthis()
@@ -669,7 +669,7 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QStringRef) IndexOf_2(str QLatin1String_ITF /*123*/, from int, cs int) int {
+func (this *QStringRef) IndexOf2(str QLatin1String_ITF /*123*/, from int, cs int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
 		convArg0 = str.QLatin1String_PTR().GetCthis()
@@ -705,7 +705,7 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QStringRef) IndexOf_2_(str QLatin1String_ITF /*123*/) int {
+func (this *QStringRef) IndexOf2p(str QLatin1String_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
 		convArg0 = str.QLatin1String_PTR().GetCthis()
@@ -745,7 +745,7 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QStringRef) IndexOf_2_1(str QLatin1String_ITF /*123*/, from int) int {
+func (this *QStringRef) IndexOf2p1(str QLatin1String_ITF /*123*/, from int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
 		convArg0 = str.QLatin1String_PTR().GetCthis()
@@ -783,7 +783,7 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QStringRef) IndexOf_3(str QStringRef_ITF, from int, cs int) int {
+func (this *QStringRef) IndexOf3(str QStringRef_ITF, from int, cs int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringRef_PTR() != nil {
 		convArg0 = str.QStringRef_PTR().GetCthis()
@@ -819,7 +819,7 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QStringRef) IndexOf_3_(str QStringRef_ITF) int {
+func (this *QStringRef) IndexOf3p(str QStringRef_ITF) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringRef_PTR() != nil {
 		convArg0 = str.QStringRef_PTR().GetCthis()
@@ -859,7 +859,7 @@ If from is -1, the search starts at the last character; if it is -2, at the next
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QStringRef) IndexOf_3_1(str QStringRef_ITF, from int) int {
+func (this *QStringRef) IndexOf3p1(str QStringRef_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringRef_PTR() != nil {
 		convArg0 = str.QStringRef_PTR().GetCthis()
@@ -896,7 +896,7 @@ Example:
 See also indexOf(), contains(), and count().
 */
 func (this *QStringRef) LastIndexOf(str string, from int, cs int) int {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef11lastIndexOfERK7QStringiN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	qtrt.ErrPrint(err, rv)
@@ -927,8 +927,8 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QStringRef) LastIndexOf__(str string) int {
-	var tmpArg0 = NewQString_5(str)
+func (this *QStringRef) LastIndexOfp(str string) int {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(-1)
@@ -963,8 +963,8 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QStringRef) LastIndexOf__1(str string, from int) int {
-	var tmpArg0 = NewQString_5(str)
+func (this *QStringRef) LastIndexOfp1(str string, from int) int {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
@@ -997,7 +997,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QStringRef) LastIndexOf_1(ch QChar_ITF /*123*/, from int, cs int) int {
+func (this *QStringRef) LastIndexOf1(ch QChar_ITF /*123*/, from int, cs int) int {
 	var convArg0 unsafe.Pointer
 	if ch != nil && ch.QChar_PTR() != nil {
 		convArg0 = ch.QChar_PTR().GetCthis()
@@ -1031,7 +1031,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QStringRef) LastIndexOf_1_(ch QChar_ITF /*123*/) int {
+func (this *QStringRef) LastIndexOf1p(ch QChar_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if ch != nil && ch.QChar_PTR() != nil {
 		convArg0 = ch.QChar_PTR().GetCthis()
@@ -1069,7 +1069,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QStringRef) LastIndexOf_1_1(ch QChar_ITF /*123*/, from int) int {
+func (this *QStringRef) LastIndexOf1p1(ch QChar_ITF /*123*/, from int) int {
 	var convArg0 unsafe.Pointer
 	if ch != nil && ch.QChar_PTR() != nil {
 		convArg0 = ch.QChar_PTR().GetCthis()
@@ -1105,7 +1105,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QStringRef) LastIndexOf_2(str QLatin1String_ITF /*123*/, from int, cs int) int {
+func (this *QStringRef) LastIndexOf2(str QLatin1String_ITF /*123*/, from int, cs int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
 		convArg0 = str.QLatin1String_PTR().GetCthis()
@@ -1139,7 +1139,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QStringRef) LastIndexOf_2_(str QLatin1String_ITF /*123*/) int {
+func (this *QStringRef) LastIndexOf2p(str QLatin1String_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
 		convArg0 = str.QLatin1String_PTR().GetCthis()
@@ -1177,7 +1177,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QStringRef) LastIndexOf_2_1(str QLatin1String_ITF /*123*/, from int) int {
+func (this *QStringRef) LastIndexOf2p1(str QLatin1String_ITF /*123*/, from int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
 		convArg0 = str.QLatin1String_PTR().GetCthis()
@@ -1213,7 +1213,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QStringRef) LastIndexOf_3(str QStringRef_ITF, from int, cs int) int {
+func (this *QStringRef) LastIndexOf3(str QStringRef_ITF, from int, cs int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringRef_PTR() != nil {
 		convArg0 = str.QStringRef_PTR().GetCthis()
@@ -1247,7 +1247,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QStringRef) LastIndexOf_3_(str QStringRef_ITF) int {
+func (this *QStringRef) LastIndexOf3p(str QStringRef_ITF) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringRef_PTR() != nil {
 		convArg0 = str.QStringRef_PTR().GetCthis()
@@ -1285,7 +1285,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QStringRef) LastIndexOf_3_1(str QStringRef_ITF, from int) int {
+func (this *QStringRef) LastIndexOf3p1(str QStringRef_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringRef_PTR() != nil {
 		convArg0 = str.QStringRef_PTR().GetCthis()
@@ -1318,7 +1318,7 @@ Example:
 See also indexOf() and count().
 */
 func (this *QStringRef) Contains(str string, cs int) bool {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8containsERK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -1345,8 +1345,8 @@ Example:
 
 See also indexOf() and count().
 */
-func (this *QStringRef) Contains__(str string) bool {
-	var tmpArg0 = NewQString_5(str)
+func (this *QStringRef) Containsp(str string) bool {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
@@ -1375,7 +1375,7 @@ Example:
 
 See also indexOf() and count().
 */
-func (this *QStringRef) Contains_1(ch QChar_ITF /*123*/, cs int) bool {
+func (this *QStringRef) Contains1(ch QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if ch != nil && ch.QChar_PTR() != nil {
 		convArg0 = ch.QChar_PTR().GetCthis()
@@ -1405,7 +1405,7 @@ Example:
 
 See also indexOf() and count().
 */
-func (this *QStringRef) Contains_1_(ch QChar_ITF /*123*/) bool {
+func (this *QStringRef) Contains1p(ch QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if ch != nil && ch.QChar_PTR() != nil {
 		convArg0 = ch.QChar_PTR().GetCthis()
@@ -1437,7 +1437,7 @@ Example:
 
 See also indexOf() and count().
 */
-func (this *QStringRef) Contains_2(str QLatin1String_ITF /*123*/, cs int) bool {
+func (this *QStringRef) Contains2(str QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
 		convArg0 = str.QLatin1String_PTR().GetCthis()
@@ -1467,7 +1467,7 @@ Example:
 
 See also indexOf() and count().
 */
-func (this *QStringRef) Contains_2_(str QLatin1String_ITF /*123*/) bool {
+func (this *QStringRef) Contains2p(str QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
 		convArg0 = str.QLatin1String_PTR().GetCthis()
@@ -1499,7 +1499,7 @@ Example:
 
 See also indexOf() and count().
 */
-func (this *QStringRef) Contains_3(str QStringRef_ITF, cs int) bool {
+func (this *QStringRef) Contains3(str QStringRef_ITF, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringRef_PTR() != nil {
 		convArg0 = str.QStringRef_PTR().GetCthis()
@@ -1529,7 +1529,7 @@ Example:
 
 See also indexOf() and count().
 */
-func (this *QStringRef) Contains_3_(str QStringRef_ITF) bool {
+func (this *QStringRef) Contains3p(str QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringRef_PTR() != nil {
 		convArg0 = str.QStringRef_PTR().GetCthis()
@@ -1643,7 +1643,7 @@ Example:
 
 See also left(), right(), chopped(), chop(), and truncate().
 */
-func (this *QStringRef) Mid__(pos int) *QStringRef /*123*/ {
+func (this *QStringRef) Midp(pos int) *QStringRef /*123*/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	n := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef3midEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, n)
@@ -1795,7 +1795,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QStringRef) StartsWith__(s QStringView_ITF /*123*/) bool {
+func (this *QStringRef) StartsWithp(s QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -1826,7 +1826,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QStringRef) StartsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
+func (this *QStringRef) StartsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -1855,7 +1855,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QStringRef) StartsWith_1_(s QLatin1String_ITF /*123*/) bool {
+func (this *QStringRef) StartsWith1p(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -1886,7 +1886,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QStringRef) StartsWith_2(c QChar_ITF /*123*/, cs int) bool {
+func (this *QStringRef) StartsWith2(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -1915,7 +1915,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QStringRef) StartsWith_2_(c QChar_ITF /*123*/) bool {
+func (this *QStringRef) StartsWith2p(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -1946,8 +1946,8 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QStringRef) StartsWith_3(s string, cs int) bool {
-	var tmpArg0 = NewQString_5(s)
+func (this *QStringRef) StartsWith3(s string, cs int) bool {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef10startsWithERK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -1973,8 +1973,8 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QStringRef) StartsWith_3_(s string) bool {
-	var tmpArg0 = NewQString_5(s)
+func (this *QStringRef) StartsWith3p(s string) bool {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
@@ -2002,7 +2002,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QStringRef) StartsWith_4(c QStringRef_ITF, cs int) bool {
+func (this *QStringRef) StartsWith4(c QStringRef_ITF, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QStringRef_PTR() != nil {
 		convArg0 = c.QStringRef_PTR().GetCthis()
@@ -2031,7 +2031,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QStringRef) StartsWith_4_(c QStringRef_ITF) bool {
+func (this *QStringRef) StartsWith4p(c QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QStringRef_PTR() != nil {
 		convArg0 = c.QStringRef_PTR().GetCthis()
@@ -2091,7 +2091,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QStringRef) EndsWith__(s QStringView_ITF /*123*/) bool {
+func (this *QStringRef) EndsWithp(s QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -2122,7 +2122,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QStringRef) EndsWith_1(s QLatin1String_ITF /*123*/, cs int) bool {
+func (this *QStringRef) EndsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -2151,7 +2151,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QStringRef) EndsWith_1_(s QLatin1String_ITF /*123*/) bool {
+func (this *QStringRef) EndsWith1p(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -2182,7 +2182,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QStringRef) EndsWith_2(c QChar_ITF /*123*/, cs int) bool {
+func (this *QStringRef) EndsWith2(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -2211,7 +2211,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QStringRef) EndsWith_2_(c QChar_ITF /*123*/) bool {
+func (this *QStringRef) EndsWith2p(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -2242,8 +2242,8 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QStringRef) EndsWith_3(s string, cs int) bool {
-	var tmpArg0 = NewQString_5(s)
+func (this *QStringRef) EndsWith3(s string, cs int) bool {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8endsWithERK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -2269,8 +2269,8 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QStringRef) EndsWith_3_(s string) bool {
-	var tmpArg0 = NewQString_5(s)
+func (this *QStringRef) EndsWith3p(s string) bool {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
@@ -2298,7 +2298,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QStringRef) EndsWith_4(c QStringRef_ITF, cs int) bool {
+func (this *QStringRef) EndsWith4(c QStringRef_ITF, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QStringRef_PTR() != nil {
 		convArg0 = c.QStringRef_PTR().GetCthis()
@@ -2327,7 +2327,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QStringRef) EndsWith_4_(c QStringRef_ITF) bool {
+func (this *QStringRef) EndsWith4p(c QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QStringRef_PTR() != nil {
 		convArg0 = c.QStringRef_PTR().GetCthis()
@@ -2671,7 +2671,7 @@ func (this *QStringRef) IsNull() bool {
 
  */
 func (this *QStringRef) AppendTo(string string) *QStringRef /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8appendToEP7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2884,7 +2884,7 @@ This function was introduced in  Qt 4.2.
 See also operator==(), operator<(), and operator>().
 */
 func (this *QStringRef) Compare(s string, cs int) int {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7compareERK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -2914,8 +2914,8 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare__(s string) int {
-	var tmpArg0 = NewQString_5(s)
+func (this *QStringRef) Comparep(s string) int {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
@@ -2947,7 +2947,7 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_1(s QStringRef_ITF, cs int) int {
+func (this *QStringRef) Compare1(s QStringRef_ITF, cs int) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -2980,7 +2980,7 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_1_(s QStringRef_ITF) int {
+func (this *QStringRef) Compare1p(s QStringRef_ITF) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -3015,7 +3015,7 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_2(s QLatin1String_ITF /*123*/, cs int) int {
+func (this *QStringRef) Compare2(s QLatin1String_ITF /*123*/, cs int) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -3048,7 +3048,7 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_2_(s QLatin1String_ITF /*123*/) int {
+func (this *QStringRef) Compare2p(s QLatin1String_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -3083,7 +3083,7 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_3(s QByteArray_ITF, cs int) int {
+func (this *QStringRef) Compare3(s QByteArray_ITF, cs int) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
 		convArg0 = s.QByteArray_PTR().GetCthis()
@@ -3116,7 +3116,7 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_3_(s QByteArray_ITF) int {
+func (this *QStringRef) Compare3p(s QByteArray_ITF) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
 		convArg0 = s.QByteArray_PTR().GetCthis()
@@ -3151,20 +3151,20 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_4(s1 QStringRef_ITF, s2 string, arg2 int) int {
+func (this *QStringRef) Compare4(s1 QStringRef_ITF, s2 string, arg2 int) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(s2)
+	var tmpArg1 = NewQString5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStringRef7compareERKS_RK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, arg2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QStringRef_Compare_4(s1 QStringRef_ITF, s2 string, arg2 int) int {
+func QStringRef_Compare4(s1 QStringRef_ITF, s2 string, arg2 int) int {
 	var nilthis *QStringRef
-	rv := nilthis.Compare_4(s1, s2, arg2)
+	rv := nilthis.Compare4(s1, s2, arg2)
 	return rv
 }
 
@@ -3191,12 +3191,12 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_4_(s1 QStringRef_ITF, s2 string) int {
+func (this *QStringRef) Compare4p(s1 QStringRef_ITF, s2 string) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(s2)
+	var tmpArg1 = NewQString5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	arg2 := 0
@@ -3228,7 +3228,7 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_5(s1 QStringRef_ITF, s2 QStringRef_ITF, arg2 int) int {
+func (this *QStringRef) Compare5(s1 QStringRef_ITF, s2 QStringRef_ITF, arg2 int) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -3241,9 +3241,9 @@ func (this *QStringRef) Compare_5(s1 QStringRef_ITF, s2 QStringRef_ITF, arg2 int
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QStringRef_Compare_5(s1 QStringRef_ITF, s2 QStringRef_ITF, arg2 int) int {
+func QStringRef_Compare5(s1 QStringRef_ITF, s2 QStringRef_ITF, arg2 int) int {
 	var nilthis *QStringRef
-	rv := nilthis.Compare_5(s1, s2, arg2)
+	rv := nilthis.Compare5(s1, s2, arg2)
 	return rv
 }
 
@@ -3270,7 +3270,7 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_5_(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
+func (this *QStringRef) Compare5p(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -3309,7 +3309,7 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_6(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/, cs int) int {
+func (this *QStringRef) Compare6(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/, cs int) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -3322,9 +3322,9 @@ func (this *QStringRef) Compare_6(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QStringRef_Compare_6(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/, cs int) int {
+func QStringRef_Compare6(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/, cs int) int {
 	var nilthis *QStringRef
-	rv := nilthis.Compare_6(s1, s2, cs)
+	rv := nilthis.Compare6(s1, s2, cs)
 	return rv
 }
 
@@ -3351,7 +3351,7 @@ This function was introduced in  Qt 4.2.
 
 See also operator==(), operator<(), and operator>().
 */
-func (this *QStringRef) Compare_6_(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/) int {
+func (this *QStringRef) Compare6p(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -3382,7 +3382,7 @@ On macOS and iOS this function compares according the "Order for sorted lists" s
 See also compare() and QLocale.
 */
 func (this *QStringRef) LocaleAwareCompare(s string) int {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef18localeAwareCompareERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -3403,7 +3403,7 @@ On macOS and iOS this function compares according the "Order for sorted lists" s
 
 See also compare() and QLocale.
 */
-func (this *QStringRef) LocaleAwareCompare_1(s QStringRef_ITF) int {
+func (this *QStringRef) LocaleAwareCompare1(s QStringRef_ITF) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -3427,20 +3427,20 @@ On macOS and iOS this function compares according the "Order for sorted lists" s
 
 See also compare() and QLocale.
 */
-func (this *QStringRef) LocaleAwareCompare_2(s1 QStringRef_ITF, s2 string) int {
+func (this *QStringRef) LocaleAwareCompare2(s1 QStringRef_ITF, s2 string) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(s2)
+	var tmpArg1 = NewQString5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStringRef18localeAwareCompareERKS_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QStringRef_LocaleAwareCompare_2(s1 QStringRef_ITF, s2 string) int {
+func QStringRef_LocaleAwareCompare2(s1 QStringRef_ITF, s2 string) int {
 	var nilthis *QStringRef
-	rv := nilthis.LocaleAwareCompare_2(s1, s2)
+	rv := nilthis.LocaleAwareCompare2(s1, s2)
 	return rv
 }
 
@@ -3458,7 +3458,7 @@ On macOS and iOS this function compares according the "Order for sorted lists" s
 
 See also compare() and QLocale.
 */
-func (this *QStringRef) LocaleAwareCompare_3(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
+func (this *QStringRef) LocaleAwareCompare3(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -3471,9 +3471,9 @@ func (this *QStringRef) LocaleAwareCompare_3(s1 QStringRef_ITF, s2 QStringRef_IT
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QStringRef_LocaleAwareCompare_3(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
+func QStringRef_LocaleAwareCompare3(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
 	var nilthis *QStringRef
-	rv := nilthis.LocaleAwareCompare_3(s1, s2)
+	rv := nilthis.LocaleAwareCompare3(s1, s2)
 	return rv
 }
 
@@ -3568,7 +3568,7 @@ Example:
 
 See also number(), toUShort(), toInt(), and QLocale::toShort().
 */
-func (this *QStringRef) ToShort__() int16 {
+func (this *QStringRef) ToShortp() int16 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -3605,7 +3605,7 @@ Example:
 
 See also number(), toUShort(), toInt(), and QLocale::toShort().
 */
-func (this *QStringRef) ToShort__1(ok *bool) int16 {
+func (this *QStringRef) ToShortp1(ok *bool) int16 {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7toShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -3673,7 +3673,7 @@ Example:
 
 See also number(), toShort(), and QLocale::toUShort().
 */
-func (this *QStringRef) ToUShort__() uint16 {
+func (this *QStringRef) ToUShortp() uint16 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -3710,7 +3710,7 @@ Example:
 
 See also number(), toShort(), and QLocale::toUShort().
 */
-func (this *QStringRef) ToUShort__1(ok *bool) uint16 {
+func (this *QStringRef) ToUShortp1(ok *bool) uint16 {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -3776,7 +3776,7 @@ Example:
 
 See also number(), toUInt(), toDouble(), and QLocale::toInt().
 */
-func (this *QStringRef) ToInt__() int {
+func (this *QStringRef) ToIntp() int {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -3812,7 +3812,7 @@ Example:
 
 See also number(), toUInt(), toDouble(), and QLocale::toInt().
 */
-func (this *QStringRef) ToInt__1(ok *bool) int {
+func (this *QStringRef) ToIntp1(ok *bool) int {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef5toIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -3880,7 +3880,7 @@ Example:
 
 See also number(), toInt(), and QLocale::toUInt().
 */
-func (this *QStringRef) ToUInt__() uint {
+func (this *QStringRef) ToUIntp() uint {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -3917,7 +3917,7 @@ Example:
 
 See also number(), toInt(), and QLocale::toUInt().
 */
-func (this *QStringRef) ToUInt__1(ok *bool) uint {
+func (this *QStringRef) ToUIntp1(ok *bool) uint {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -3985,7 +3985,7 @@ Example:
 
 See also number(), toULong(), toInt(), and QLocale::toInt().
 */
-func (this *QStringRef) ToLong__() int {
+func (this *QStringRef) ToLongp() int {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -4022,7 +4022,7 @@ Example:
 
 See also number(), toULong(), toInt(), and QLocale::toInt().
 */
-func (this *QStringRef) ToLong__1(ok *bool) int {
+func (this *QStringRef) ToLongp1(ok *bool) int {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef6toLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -4090,7 +4090,7 @@ Example:
 
 See also number() and QLocale::toUInt().
 */
-func (this *QStringRef) ToULong__() uint {
+func (this *QStringRef) ToULongp() uint {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -4127,7 +4127,7 @@ Example:
 
 See also number() and QLocale::toUInt().
 */
-func (this *QStringRef) ToULong__1(ok *bool) uint {
+func (this *QStringRef) ToULongp1(ok *bool) uint {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -4195,7 +4195,7 @@ Example:
 
 See also number(), toULongLong(), toInt(), and QLocale::toLongLong().
 */
-func (this *QStringRef) ToLongLong__() int64 {
+func (this *QStringRef) ToLongLongp() int64 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -4232,7 +4232,7 @@ Example:
 
 See also number(), toULongLong(), toInt(), and QLocale::toLongLong().
 */
-func (this *QStringRef) ToLongLong__1(ok *bool) int64 {
+func (this *QStringRef) ToLongLongp1(ok *bool) int64 {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -4300,7 +4300,7 @@ Example:
 
 See also number(), toLongLong(), and QLocale::toULongLong().
 */
-func (this *QStringRef) ToULongLong__() uint64 {
+func (this *QStringRef) ToULongLongp() uint64 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -4337,7 +4337,7 @@ Example:
 
 See also number(), toLongLong(), and QLocale::toULongLong().
 */
-func (this *QStringRef) ToULongLong__1(ok *bool) uint64 {
+func (this *QStringRef) ToULongLongp1(ok *bool) uint64 {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -4403,7 +4403,7 @@ Example:
 
 See also number(), toDouble(), toInt(), and QLocale::toFloat().
 */
-func (this *QStringRef) ToFloat__() float32 {
+func (this *QStringRef) ToFloatp() float32 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
@@ -4509,7 +4509,7 @@ For historical reasons, this function does not handle thousands group separators
 
 See also number(), QLocale::setDefault(), QLocale::toDouble(), and trimmed().
 */
-func (this *QStringRef) ToDouble__() float64 {
+func (this *QStringRef) ToDoublep() float64 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)

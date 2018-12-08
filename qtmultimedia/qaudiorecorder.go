@@ -110,10 +110,10 @@ func NewQAudioRecorder(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioRecor
 /*
 Constructs an audio recorder. The parent is passed to QMediaObject.
 */
-func (*QAudioRecorder) NewForInherit__() *QAudioRecorder {
-	return NewQAudioRecorder__()
+func (*QAudioRecorder) NewForInheritp() *QAudioRecorder {
+	return NewQAudioRecorderp()
 }
-func NewQAudioRecorder__() *QAudioRecorder {
+func NewQAudioRecorderp() *QAudioRecorder {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAudioRecorderC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -180,7 +180,7 @@ func (this *QAudioRecorder) DefaultAudioInput() string {
 Returns the readable translated description of the audio input device with name.
 */
 func (this *QAudioRecorder) AudioInputDescription(name string) string {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAudioRecorder21audioInputDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -224,7 +224,7 @@ Note: Setter function for property audioInput.
 See also audioInput().
 */
 func (this *QAudioRecorder) SetAudioInput(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAudioRecorder13setAudioInputERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -241,7 +241,7 @@ Signal emitted when active audio input changes to name.
 Note: Notifier signal for property audioInput.
 */
 func (this *QAudioRecorder) AudioInputChanged(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAudioRecorder17audioInputChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

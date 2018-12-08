@@ -103,7 +103,7 @@ func DeleteQCameraInfoControl(this *QCameraInfoControl) {
 Returns the physical position of the camera named deviceName on the hardware system.
 */
 func (this *QCameraInfoControl) CameraPosition(deviceName string) int {
-	var tmpArg0 = qtcore.NewQString_5(deviceName)
+	var tmpArg0 = qtcore.NewQString5(deviceName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCameraInfoControl14cameraPositionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -121,7 +121,7 @@ Returns the physical orientation of the sensor for the camera named deviceName.
 The value is the orientation angle (clockwise, in steps of 90 degrees) of the camera sensor in relation to the display in its natural orientation.
 */
 func (this *QCameraInfoControl) CameraOrientation(deviceName string) int {
-	var tmpArg0 = qtcore.NewQString_5(deviceName)
+	var tmpArg0 = qtcore.NewQString5(deviceName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCameraInfoControl17cameraOrientationERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -159,10 +159,10 @@ func NewQCameraInfoControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCamera
 /*
 Constructs a camera info control with the given parent.
 */
-func (*QCameraInfoControl) NewForInherit__() *QCameraInfoControl {
-	return NewQCameraInfoControl__()
+func (*QCameraInfoControl) NewForInheritp() *QCameraInfoControl {
+	return NewQCameraInfoControlp()
 }
-func NewQCameraInfoControl__() *QCameraInfoControl {
+func NewQCameraInfoControlp() *QCameraInfoControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCameraInfoControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

@@ -108,10 +108,10 @@ func NewQImageIOPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QImageIOPlu
 /*
 
  */
-func (*QImageIOPlugin) NewForInherit__() *QImageIOPlugin {
-	return NewQImageIOPlugin__()
+func (*QImageIOPlugin) NewForInheritp() *QImageIOPlugin {
+	return NewQImageIOPluginp()
 }
-func NewQImageIOPlugin__() *QImageIOPlugin {
+func NewQImageIOPluginp() *QImageIOPlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QImageIOPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -188,7 +188,7 @@ func (this *QImageIOPlugin) Create(device qtcore.QIODevice_ITF /*777 QIODevice *
 /*
 
  */
-func (this *QImageIOPlugin) Create__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QImageIOHandler /*777 QImageIOHandler **/ {
+func (this *QImageIOPlugin) Createp(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QImageIOHandler /*777 QImageIOHandler **/ {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()

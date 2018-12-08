@@ -142,7 +142,7 @@ The lockedMutex will be returned to the same locked state. This function is prov
 
 See also wakeOne() and wakeAll().
 */
-func (this *QWaitCondition) Wait__(lockedMutex QMutex_ITF /*777 QMutex **/) bool {
+func (this *QWaitCondition) Waitp(lockedMutex QMutex_ITF /*777 QMutex **/) bool {
 	var convArg0 unsafe.Pointer
 	if lockedMutex != nil && lockedMutex.QMutex_PTR() != nil {
 		convArg0 = lockedMutex.QMutex_PTR().GetCthis()
@@ -171,7 +171,7 @@ The lockedMutex will be returned to the same locked state. This function is prov
 
 See also wakeOne() and wakeAll().
 */
-func (this *QWaitCondition) Wait_1(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/, time uint) bool {
+func (this *QWaitCondition) Wait1(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/, time uint) bool {
 	var convArg0 unsafe.Pointer
 	if lockedReadWriteLock != nil && lockedReadWriteLock.QReadWriteLock_PTR() != nil {
 		convArg0 = lockedReadWriteLock.QReadWriteLock_PTR().GetCthis()
@@ -198,7 +198,7 @@ The lockedMutex will be returned to the same locked state. This function is prov
 
 See also wakeOne() and wakeAll().
 */
-func (this *QWaitCondition) Wait_1_(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) bool {
+func (this *QWaitCondition) Wait1p(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) bool {
 	var convArg0 unsafe.Pointer
 	if lockedReadWriteLock != nil && lockedReadWriteLock.QReadWriteLock_PTR() != nil {
 		convArg0 = lockedReadWriteLock.QReadWriteLock_PTR().GetCthis()

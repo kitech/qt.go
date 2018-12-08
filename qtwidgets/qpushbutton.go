@@ -139,10 +139,10 @@ func NewQPushButton(parent QWidget_ITF /*777 QWidget **/) *QPushButton {
 /*
 Constructs a push button with no text and a parent.
 */
-func (*QPushButton) NewForInherit__() *QPushButton {
-	return NewQPushButton__()
+func (*QPushButton) NewForInheritp() *QPushButton {
+	return NewQPushButtonp()
 }
-func NewQPushButton__() *QPushButton {
+func NewQPushButtonp() *QPushButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -160,11 +160,11 @@ func NewQPushButton__() *QPushButton {
 /*
 Constructs a push button with no text and a parent.
 */
-func (*QPushButton) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
-	return NewQPushButton_1(text, parent)
+func (*QPushButton) NewForInherit1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
+	return NewQPushButton1(text, parent)
 }
-func NewQPushButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQPushButton1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -185,11 +185,11 @@ func NewQPushButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushB
 /*
 Constructs a push button with no text and a parent.
 */
-func (*QPushButton) NewForInherit_1_(text string) *QPushButton {
-	return NewQPushButton_1_(text)
+func (*QPushButton) NewForInherit1p(text string) *QPushButton {
+	return NewQPushButton1p(text)
 }
-func NewQPushButton_1_(text string) *QPushButton {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQPushButton1p(text string) *QPushButton {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -208,15 +208,15 @@ func NewQPushButton_1_(text string) *QPushButton {
 /*
 Constructs a push button with no text and a parent.
 */
-func (*QPushButton) NewForInherit_2(icon qtgui.QIcon_ITF, text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
-	return NewQPushButton_2(icon, text, parent)
+func (*QPushButton) NewForInherit2(icon qtgui.QIcon_ITF, text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
+	return NewQPushButton2(icon, text, parent)
 }
-func NewQPushButton_2(icon qtgui.QIcon_ITF, text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
+func NewQPushButton2(icon qtgui.QIcon_ITF, text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -237,15 +237,15 @@ func NewQPushButton_2(icon qtgui.QIcon_ITF, text string, parent QWidget_ITF /*77
 /*
 Constructs a push button with no text and a parent.
 */
-func (*QPushButton) NewForInherit_2_(icon qtgui.QIcon_ITF, text string) *QPushButton {
-	return NewQPushButton_2_(icon, text)
+func (*QPushButton) NewForInherit2p(icon qtgui.QIcon_ITF, text string) *QPushButton {
+	return NewQPushButton2p(icon, text)
 }
-func NewQPushButton_2_(icon qtgui.QIcon_ITF, text string) *QPushButton {
+func NewQPushButton2p(icon qtgui.QIcon_ITF, text string) *QPushButton {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer

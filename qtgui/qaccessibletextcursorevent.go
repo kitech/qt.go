@@ -96,10 +96,10 @@ func NewQAccessibleTextCursorEvent(obj qtcore.QObject_ITF /*777 QObject **/, cur
 /*
 
  */
-func (*QAccessibleTextCursorEvent) NewForInherit_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, cursorPos int) *QAccessibleTextCursorEvent {
-	return NewQAccessibleTextCursorEvent_1(iface, cursorPos)
+func (*QAccessibleTextCursorEvent) NewForInherit1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, cursorPos int) *QAccessibleTextCursorEvent {
+	return NewQAccessibleTextCursorEvent1(iface, cursorPos)
 }
-func NewQAccessibleTextCursorEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, cursorPos int) *QAccessibleTextCursorEvent {
+func NewQAccessibleTextCursorEvent1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, cursorPos int) *QAccessibleTextCursorEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
 		convArg0 = iface.QAccessibleInterface_PTR().GetCthis()

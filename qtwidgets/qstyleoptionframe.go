@@ -91,10 +91,10 @@ func NewQStyleOptionFrame() *QStyleOptionFrame {
 /*
 
  */
-func (*QStyleOptionFrame) NewForInherit_1(version int) *QStyleOptionFrame {
-	return NewQStyleOptionFrame_1(version)
+func (*QStyleOptionFrame) NewForInherit1(version int) *QStyleOptionFrame {
+	return NewQStyleOptionFrame1(version)
 }
-func NewQStyleOptionFrame_1(version int) *QStyleOptionFrame {
+func NewQStyleOptionFrame1(version int) *QStyleOptionFrame {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFrameFromPointer(unsafe.Pointer(uintptr(rv)))

@@ -134,10 +134,10 @@ func NewQSlider(parent QWidget_ITF /*777 QWidget **/) *QSlider {
 /*
 Constructs a vertical slider with the given parent.
 */
-func (*QSlider) NewForInherit__() *QSlider {
-	return NewQSlider__()
+func (*QSlider) NewForInheritp() *QSlider {
+	return NewQSliderp()
 }
-func NewQSlider__() *QSlider {
+func NewQSliderp() *QSlider {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSliderC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -155,10 +155,10 @@ func NewQSlider__() *QSlider {
 /*
 Constructs a vertical slider with the given parent.
 */
-func (*QSlider) NewForInherit_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlider {
-	return NewQSlider_1(orientation, parent)
+func (*QSlider) NewForInherit1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlider {
+	return NewQSlider1(orientation, parent)
 }
-func NewQSlider_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlider {
+func NewQSlider1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlider {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
@@ -178,10 +178,10 @@ func NewQSlider_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlide
 /*
 Constructs a vertical slider with the given parent.
 */
-func (*QSlider) NewForInherit_1_(orientation int) *QSlider {
-	return NewQSlider_1_(orientation)
+func (*QSlider) NewForInherit1p(orientation int) *QSlider {
+	return NewQSlider1p(orientation)
 }
-func NewQSlider_1_(orientation int) *QSlider {
+func NewQSlider1p(orientation int) *QSlider {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSliderC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, orientation, convArg1)

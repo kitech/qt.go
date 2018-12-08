@@ -129,10 +129,10 @@ func NewQKeySequenceEdit(parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit
 /*
 Constructs a QKeySequenceEdit widget with the given parent.
 */
-func (*QKeySequenceEdit) NewForInherit__() *QKeySequenceEdit {
-	return NewQKeySequenceEdit__()
+func (*QKeySequenceEdit) NewForInheritp() *QKeySequenceEdit {
+	return NewQKeySequenceEditp()
 }
-func NewQKeySequenceEdit__() *QKeySequenceEdit {
+func NewQKeySequenceEditp() *QKeySequenceEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QKeySequenceEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -150,10 +150,10 @@ func NewQKeySequenceEdit__() *QKeySequenceEdit {
 /*
 Constructs a QKeySequenceEdit widget with the given parent.
 */
-func (*QKeySequenceEdit) NewForInherit_1(keySequence qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
-	return NewQKeySequenceEdit_1(keySequence, parent)
+func (*QKeySequenceEdit) NewForInherit1(keySequence qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
+	return NewQKeySequenceEdit1(keySequence, parent)
 }
-func NewQKeySequenceEdit_1(keySequence qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
+func NewQKeySequenceEdit1(keySequence qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QKeySequenceEdit {
 	var convArg0 unsafe.Pointer
 	if keySequence != nil && keySequence.QKeySequence_PTR() != nil {
 		convArg0 = keySequence.QKeySequence_PTR().GetCthis()
@@ -177,10 +177,10 @@ func NewQKeySequenceEdit_1(keySequence qtgui.QKeySequence_ITF, parent QWidget_IT
 /*
 Constructs a QKeySequenceEdit widget with the given parent.
 */
-func (*QKeySequenceEdit) NewForInherit_1_(keySequence qtgui.QKeySequence_ITF) *QKeySequenceEdit {
-	return NewQKeySequenceEdit_1_(keySequence)
+func (*QKeySequenceEdit) NewForInherit1p(keySequence qtgui.QKeySequence_ITF) *QKeySequenceEdit {
+	return NewQKeySequenceEdit1p(keySequence)
 }
-func NewQKeySequenceEdit_1_(keySequence qtgui.QKeySequence_ITF) *QKeySequenceEdit {
+func NewQKeySequenceEdit1p(keySequence qtgui.QKeySequence_ITF) *QKeySequenceEdit {
 	var convArg0 unsafe.Pointer
 	if keySequence != nil && keySequence.QKeySequence_PTR() != nil {
 		convArg0 = keySequence.QKeySequence_PTR().GetCthis()

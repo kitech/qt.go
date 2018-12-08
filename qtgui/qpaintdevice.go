@@ -386,10 +386,10 @@ func NewQPaintDevice() *QPaintDevice {
 /*
 Constructs a paint device. This constructor can be invoked only from subclasses of QPaintDevice.
 */
-func (*QPaintDevice) NewForInherit_1(arg0 QPaintDevice_ITF) *QPaintDevice {
-	return NewQPaintDevice_1(arg0)
+func (*QPaintDevice) NewForInherit1(arg0 QPaintDevice_ITF) *QPaintDevice {
+	return NewQPaintDevice1(arg0)
 }
-func NewQPaintDevice_1(arg0 QPaintDevice_ITF) *QPaintDevice {
+func NewQPaintDevice1(arg0 QPaintDevice_ITF) *QPaintDevice {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintDevice_PTR() != nil {
 		convArg0 = arg0.QPaintDevice_PTR().GetCthis()

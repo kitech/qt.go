@@ -95,11 +95,11 @@ Constructs a QLocale object initialized with the default locale. If no default l
 
 See also setDefault().
 */
-func (*QLocale) NewForInherit_1(name string) *QLocale {
-	return NewQLocale_1(name)
+func (*QLocale) NewForInherit1(name string) *QLocale {
+	return NewQLocale1(name)
 }
-func NewQLocale_1(name string) *QLocale {
-	var tmpArg0 = NewQString_5(name)
+func NewQLocale1(name string) *QLocale {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -118,10 +118,10 @@ Constructs a QLocale object initialized with the default locale. If no default l
 
 See also setDefault().
 */
-func (*QLocale) NewForInherit_2(language int, country int) *QLocale {
-	return NewQLocale_2(language, country)
+func (*QLocale) NewForInherit2(language int, country int) *QLocale {
+	return NewQLocale2(language, country)
 }
-func NewQLocale_2(language int, country int) *QLocale {
+func NewQLocale2(language int, country int) *QLocale {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_7CountryE", qtrt.FFI_TYPE_POINTER, language, country)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -139,10 +139,10 @@ Constructs a QLocale object initialized with the default locale. If no default l
 
 See also setDefault().
 */
-func (*QLocale) NewForInherit_2_(language int) *QLocale {
-	return NewQLocale_2_(language)
+func (*QLocale) NewForInherit2p(language int) *QLocale {
+	return NewQLocale2p(language)
 }
-func NewQLocale_2_(language int) *QLocale {
+func NewQLocale2p(language int) *QLocale {
 	// arg: 1, QLocale::Country=Enum, QLocale::Country=Enum, , Invalid
 	country := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_7CountryE", qtrt.FFI_TYPE_POINTER, language, country)
@@ -162,10 +162,10 @@ Constructs a QLocale object initialized with the default locale. If no default l
 
 See also setDefault().
 */
-func (*QLocale) NewForInherit_3(language int, script int, country int) *QLocale {
-	return NewQLocale_3(language, script, country)
+func (*QLocale) NewForInherit3(language int, script int, country int) *QLocale {
+	return NewQLocale3(language, script, country)
 }
-func NewQLocale_3(language int, script int, country int) *QLocale {
+func NewQLocale3(language int, script int, country int) *QLocale {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_6ScriptENS_7CountryE", qtrt.FFI_TYPE_POINTER, language, script, country)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -197,7 +197,7 @@ func (this *QLocale) Operator_equal(other unsafe.Pointer /*333*/) *QLocale {
 /*
 
  */
-func (this *QLocale) Operator_equal_1(other QLocale_ITF) *QLocale {
+func (this *QLocale) Operator_equal1(other QLocale_ITF) *QLocale {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QLocale_PTR() != nil {
 		convArg0 = other.QLocale_PTR().GetCthis()
@@ -398,7 +398,7 @@ This function ignores leading and trailing whitespace.
 See also toUShort() and toString().
 */
 func (this *QLocale) ToShort(s string, ok *bool) int16 {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toShortERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -421,8 +421,8 @@ This function ignores leading and trailing whitespace.
 
 See also toUShort() and toString().
 */
-func (this *QLocale) ToShort__(s string) int16 {
-	var tmpArg0 = NewQString_5(s)
+func (this *QLocale) ToShortp(s string) int16 {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -447,7 +447,7 @@ This function ignores leading and trailing whitespace.
 
 See also toUShort() and toString().
 */
-func (this *QLocale) ToShort_1(s QStringRef_ITF, ok *bool) int16 {
+func (this *QLocale) ToShort1(s QStringRef_ITF, ok *bool) int16 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -473,7 +473,7 @@ This function ignores leading and trailing whitespace.
 
 See also toUShort() and toString().
 */
-func (this *QLocale) ToShort_1_(s QStringRef_ITF) int16 {
+func (this *QLocale) ToShort1p(s QStringRef_ITF) int16 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -501,7 +501,7 @@ This function ignores leading and trailing whitespace.
 
 See also toUShort() and toString().
 */
-func (this *QLocale) ToShort_2(s QStringView_ITF /*123*/, ok *bool) int16 {
+func (this *QLocale) ToShort2(s QStringView_ITF /*123*/, ok *bool) int16 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -527,7 +527,7 @@ This function ignores leading and trailing whitespace.
 
 See also toUShort() and toString().
 */
-func (this *QLocale) ToShort_2_(s QStringView_ITF /*123*/) int16 {
+func (this *QLocale) ToShort2p(s QStringView_ITF /*123*/) int16 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -556,7 +556,7 @@ This function ignores leading and trailing whitespace.
 See also toShort() and toString().
 */
 func (this *QLocale) ToUShort(s string, ok *bool) uint16 {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -579,8 +579,8 @@ This function ignores leading and trailing whitespace.
 
 See also toShort() and toString().
 */
-func (this *QLocale) ToUShort__(s string) uint16 {
-	var tmpArg0 = NewQString_5(s)
+func (this *QLocale) ToUShortp(s string) uint16 {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -605,7 +605,7 @@ This function ignores leading and trailing whitespace.
 
 See also toShort() and toString().
 */
-func (this *QLocale) ToUShort_1(s QStringRef_ITF, ok *bool) uint16 {
+func (this *QLocale) ToUShort1(s QStringRef_ITF, ok *bool) uint16 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -631,7 +631,7 @@ This function ignores leading and trailing whitespace.
 
 See also toShort() and toString().
 */
-func (this *QLocale) ToUShort_1_(s QStringRef_ITF) uint16 {
+func (this *QLocale) ToUShort1p(s QStringRef_ITF) uint16 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -659,7 +659,7 @@ This function ignores leading and trailing whitespace.
 
 See also toShort() and toString().
 */
-func (this *QLocale) ToUShort_2(s QStringView_ITF /*123*/, ok *bool) uint16 {
+func (this *QLocale) ToUShort2(s QStringView_ITF /*123*/, ok *bool) uint16 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -685,7 +685,7 @@ This function ignores leading and trailing whitespace.
 
 See also toShort() and toString().
 */
-func (this *QLocale) ToUShort_2_(s QStringView_ITF /*123*/) uint16 {
+func (this *QLocale) ToUShort2p(s QStringView_ITF /*123*/) uint16 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -714,7 +714,7 @@ This function ignores leading and trailing whitespace.
 See also toUInt() and toString().
 */
 func (this *QLocale) ToInt(s string, ok *bool) int {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale5toIntERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -737,8 +737,8 @@ This function ignores leading and trailing whitespace.
 
 See also toUInt() and toString().
 */
-func (this *QLocale) ToInt__(s string) int {
-	var tmpArg0 = NewQString_5(s)
+func (this *QLocale) ToIntp(s string) int {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -763,7 +763,7 @@ This function ignores leading and trailing whitespace.
 
 See also toUInt() and toString().
 */
-func (this *QLocale) ToInt_1(s QStringRef_ITF, ok *bool) int {
+func (this *QLocale) ToInt1(s QStringRef_ITF, ok *bool) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -789,7 +789,7 @@ This function ignores leading and trailing whitespace.
 
 See also toUInt() and toString().
 */
-func (this *QLocale) ToInt_1_(s QStringRef_ITF) int {
+func (this *QLocale) ToInt1p(s QStringRef_ITF) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -817,7 +817,7 @@ This function ignores leading and trailing whitespace.
 
 See also toUInt() and toString().
 */
-func (this *QLocale) ToInt_2(s QStringView_ITF /*123*/, ok *bool) int {
+func (this *QLocale) ToInt2(s QStringView_ITF /*123*/, ok *bool) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -843,7 +843,7 @@ This function ignores leading and trailing whitespace.
 
 See also toUInt() and toString().
 */
-func (this *QLocale) ToInt_2_(s QStringView_ITF /*123*/) int {
+func (this *QLocale) ToInt2p(s QStringView_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -872,7 +872,7 @@ This function ignores leading and trailing whitespace.
 See also toInt() and toString().
 */
 func (this *QLocale) ToUInt(s string, ok *bool) uint {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -895,8 +895,8 @@ This function ignores leading and trailing whitespace.
 
 See also toInt() and toString().
 */
-func (this *QLocale) ToUInt__(s string) uint {
-	var tmpArg0 = NewQString_5(s)
+func (this *QLocale) ToUIntp(s string) uint {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -921,7 +921,7 @@ This function ignores leading and trailing whitespace.
 
 See also toInt() and toString().
 */
-func (this *QLocale) ToUInt_1(s QStringRef_ITF, ok *bool) uint {
+func (this *QLocale) ToUInt1(s QStringRef_ITF, ok *bool) uint {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -947,7 +947,7 @@ This function ignores leading and trailing whitespace.
 
 See also toInt() and toString().
 */
-func (this *QLocale) ToUInt_1_(s QStringRef_ITF) uint {
+func (this *QLocale) ToUInt1p(s QStringRef_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -975,7 +975,7 @@ This function ignores leading and trailing whitespace.
 
 See also toInt() and toString().
 */
-func (this *QLocale) ToUInt_2(s QStringView_ITF /*123*/, ok *bool) uint {
+func (this *QLocale) ToUInt2(s QStringView_ITF /*123*/, ok *bool) uint {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -1001,7 +1001,7 @@ This function ignores leading and trailing whitespace.
 
 See also toInt() and toString().
 */
-func (this *QLocale) ToUInt_2_(s QStringView_ITF /*123*/) uint {
+func (this *QLocale) ToUInt2p(s QStringView_ITF /*123*/) uint {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -1030,7 +1030,7 @@ This function ignores leading and trailing whitespace.
 See also toInt(), toULongLong(), toDouble(), and toString().
 */
 func (this *QLocale) ToLongLong(s string, ok *bool) int64 {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1053,8 +1053,8 @@ This function ignores leading and trailing whitespace.
 
 See also toInt(), toULongLong(), toDouble(), and toString().
 */
-func (this *QLocale) ToLongLong__(s string) int64 {
-	var tmpArg0 = NewQString_5(s)
+func (this *QLocale) ToLongLongp(s string) int64 {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -1079,7 +1079,7 @@ This function ignores leading and trailing whitespace.
 
 See also toInt(), toULongLong(), toDouble(), and toString().
 */
-func (this *QLocale) ToLongLong_1(s QStringRef_ITF, ok *bool) int64 {
+func (this *QLocale) ToLongLong1(s QStringRef_ITF, ok *bool) int64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -1105,7 +1105,7 @@ This function ignores leading and trailing whitespace.
 
 See also toInt(), toULongLong(), toDouble(), and toString().
 */
-func (this *QLocale) ToLongLong_1_(s QStringRef_ITF) int64 {
+func (this *QLocale) ToLongLong1p(s QStringRef_ITF) int64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -1133,7 +1133,7 @@ This function ignores leading and trailing whitespace.
 
 See also toInt(), toULongLong(), toDouble(), and toString().
 */
-func (this *QLocale) ToLongLong_2(s QStringView_ITF /*123*/, ok *bool) int64 {
+func (this *QLocale) ToLongLong2(s QStringView_ITF /*123*/, ok *bool) int64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -1159,7 +1159,7 @@ This function ignores leading and trailing whitespace.
 
 See also toInt(), toULongLong(), toDouble(), and toString().
 */
-func (this *QLocale) ToLongLong_2_(s QStringView_ITF /*123*/) int64 {
+func (this *QLocale) ToLongLong2p(s QStringView_ITF /*123*/) int64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -1188,7 +1188,7 @@ This function ignores leading and trailing whitespace.
 See also toLongLong(), toInt(), toDouble(), and toString().
 */
 func (this *QLocale) ToULongLong(s string, ok *bool) uint64 {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK7QStringPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1211,8 +1211,8 @@ This function ignores leading and trailing whitespace.
 
 See also toLongLong(), toInt(), toDouble(), and toString().
 */
-func (this *QLocale) ToULongLong__(s string) uint64 {
-	var tmpArg0 = NewQString_5(s)
+func (this *QLocale) ToULongLongp(s string) uint64 {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -1237,7 +1237,7 @@ This function ignores leading and trailing whitespace.
 
 See also toLongLong(), toInt(), toDouble(), and toString().
 */
-func (this *QLocale) ToULongLong_1(s QStringRef_ITF, ok *bool) uint64 {
+func (this *QLocale) ToULongLong1(s QStringRef_ITF, ok *bool) uint64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -1263,7 +1263,7 @@ This function ignores leading and trailing whitespace.
 
 See also toLongLong(), toInt(), toDouble(), and toString().
 */
-func (this *QLocale) ToULongLong_1_(s QStringRef_ITF) uint64 {
+func (this *QLocale) ToULongLong1p(s QStringRef_ITF) uint64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -1291,7 +1291,7 @@ This function ignores leading and trailing whitespace.
 
 See also toLongLong(), toInt(), toDouble(), and toString().
 */
-func (this *QLocale) ToULongLong_2(s QStringView_ITF /*123*/, ok *bool) uint64 {
+func (this *QLocale) ToULongLong2(s QStringView_ITF /*123*/, ok *bool) uint64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -1317,7 +1317,7 @@ This function ignores leading and trailing whitespace.
 
 See also toLongLong(), toInt(), toDouble(), and toString().
 */
-func (this *QLocale) ToULongLong_2_(s QStringView_ITF /*123*/) uint64 {
+func (this *QLocale) ToULongLong2p(s QStringView_ITF /*123*/) uint64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -1344,7 +1344,7 @@ This function ignores leading and trailing whitespace.
 See also toDouble(), toInt(), and toString().
 */
 func (this *QLocale) ToFloat(s string, ok *bool) float32 {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toFloatERK7QStringPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1365,8 +1365,8 @@ This function ignores leading and trailing whitespace.
 
 See also toDouble(), toInt(), and toString().
 */
-func (this *QLocale) ToFloat__(s string) float32 {
-	var tmpArg0 = NewQString_5(s)
+func (this *QLocale) ToFloatp(s string) float32 {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -1389,7 +1389,7 @@ This function ignores leading and trailing whitespace.
 
 See also toDouble(), toInt(), and toString().
 */
-func (this *QLocale) ToFloat_1(s QStringRef_ITF, ok *bool) float32 {
+func (this *QLocale) ToFloat1(s QStringRef_ITF, ok *bool) float32 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -1413,7 +1413,7 @@ This function ignores leading and trailing whitespace.
 
 See also toDouble(), toInt(), and toString().
 */
-func (this *QLocale) ToFloat_1_(s QStringRef_ITF) float32 {
+func (this *QLocale) ToFloat1p(s QStringRef_ITF) float32 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -1439,7 +1439,7 @@ This function ignores leading and trailing whitespace.
 
 See also toDouble(), toInt(), and toString().
 */
-func (this *QLocale) ToFloat_2(s QStringView_ITF /*123*/, ok *bool) float32 {
+func (this *QLocale) ToFloat2(s QStringView_ITF /*123*/, ok *bool) float32 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -1463,7 +1463,7 @@ This function ignores leading and trailing whitespace.
 
 See also toDouble(), toInt(), and toString().
 */
-func (this *QLocale) ToFloat_2_(s QStringView_ITF /*123*/) float32 {
+func (this *QLocale) ToFloat2p(s QStringView_ITF /*123*/) float32 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -1512,7 +1512,7 @@ This function ignores leading and trailing whitespace.
 See also toFloat(), toInt(), and toString().
 */
 func (this *QLocale) ToDouble(s string, ok *bool) float64 {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toDoubleERK7QStringPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
 	qtrt.ErrPrint(err, rv)
@@ -1555,8 +1555,8 @@ This function ignores leading and trailing whitespace.
 
 See also toFloat(), toInt(), and toString().
 */
-func (this *QLocale) ToDouble__(s string) float64 {
-	var tmpArg0 = NewQString_5(s)
+func (this *QLocale) ToDoublep(s string) float64 {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
@@ -1601,7 +1601,7 @@ This function ignores leading and trailing whitespace.
 
 See also toFloat(), toInt(), and toString().
 */
-func (this *QLocale) ToDouble_1(s QStringRef_ITF, ok *bool) float64 {
+func (this *QLocale) ToDouble1(s QStringRef_ITF, ok *bool) float64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -1647,7 +1647,7 @@ This function ignores leading and trailing whitespace.
 
 See also toFloat(), toInt(), and toString().
 */
-func (this *QLocale) ToDouble_1_(s QStringRef_ITF) float64 {
+func (this *QLocale) ToDouble1p(s QStringRef_ITF) float64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -1695,7 +1695,7 @@ This function ignores leading and trailing whitespace.
 
 See also toFloat(), toInt(), and toString().
 */
-func (this *QLocale) ToDouble_2(s QStringView_ITF /*123*/, ok *bool) float64 {
+func (this *QLocale) ToDouble2(s QStringView_ITF /*123*/, ok *bool) float64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -1741,7 +1741,7 @@ This function ignores leading and trailing whitespace.
 
 See also toFloat(), toInt(), and toString().
 */
-func (this *QLocale) ToDouble_2_(s QStringView_ITF /*123*/) float64 {
+func (this *QLocale) ToDouble2p(s QStringView_ITF /*123*/) float64 {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
 		convArg0 = s.QStringView_PTR().GetCthis()
@@ -1782,7 +1782,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_1(i uint64) string {
+func (this *QLocale) ToString1(i uint64) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1801,7 +1801,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_2(i int16) string {
+func (this *QLocale) ToString2(i int16) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEs", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1820,7 +1820,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_3(i uint16) string {
+func (this *QLocale) ToString3(i uint16) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1839,7 +1839,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_4(i int) string {
+func (this *QLocale) ToString4(i int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1858,7 +1858,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_5(i uint) string {
+func (this *QLocale) ToString5(i uint) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1877,7 +1877,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_6(i float64, f byte, prec int) string {
+func (this *QLocale) ToString6(i float64, f byte, prec int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1896,7 +1896,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_6_(i float64) string {
+func (this *QLocale) ToString6p(i float64) string {
 	// arg: 1, char=Char_S, =Invalid, , Invalid
 	f := 'g'
 	// arg: 2, int=Int, =Invalid, , Invalid
@@ -1919,7 +1919,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_6_1(i float64, f byte) string {
+func (this *QLocale) ToString6p1(i float64, f byte) string {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
@@ -1940,7 +1940,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_7(i float32, f byte, prec int) string {
+func (this *QLocale) ToString7(i float32, f byte, prec int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -1959,7 +1959,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_7_(i float32) string {
+func (this *QLocale) ToString7p(i float32) string {
 	// arg: 1, char=Char_S, =Invalid, , Invalid
 	f := 'g'
 	// arg: 2, int=Int, =Invalid, , Invalid
@@ -1982,7 +1982,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_7_1(i float32, f byte) string {
+func (this *QLocale) ToString7p1(i float32, f byte) string {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
@@ -2003,12 +2003,12 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_8(date QDate_ITF, formatStr string) string {
+func (this *QLocale) ToString8(date QDate_ITF, formatStr string) string {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
 		convArg0 = date.QDate_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(formatStr)
+	var tmpArg1 = NewQString5(formatStr)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2028,12 +2028,12 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_9(time QTime_ITF, formatStr string) string {
+func (this *QLocale) ToString9(time QTime_ITF, formatStr string) string {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {
 		convArg0 = time.QTime_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(formatStr)
+	var tmpArg1 = NewQString5(formatStr)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2053,12 +2053,12 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_10(dateTime QDateTime_ITF, format string) string {
+func (this *QLocale) ToString10(dateTime QDateTime_ITF, format string) string {
 	var convArg0 unsafe.Pointer
 	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
 		convArg0 = dateTime.QDateTime_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(format)
+	var tmpArg1 = NewQString5(format)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2078,7 +2078,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_11(date QDate_ITF, formatStr QStringView_ITF /*123*/) string {
+func (this *QLocale) ToString11(date QDate_ITF, formatStr QStringView_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
 		convArg0 = date.QDate_PTR().GetCthis()
@@ -2105,7 +2105,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_12(time QTime_ITF, formatStr QStringView_ITF /*123*/) string {
+func (this *QLocale) ToString12(time QTime_ITF, formatStr QStringView_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {
 		convArg0 = time.QTime_PTR().GetCthis()
@@ -2132,7 +2132,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_13(dateTime QDateTime_ITF, format QStringView_ITF /*123*/) string {
+func (this *QLocale) ToString13(dateTime QDateTime_ITF, format QStringView_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
 		convArg0 = dateTime.QDateTime_PTR().GetCthis()
@@ -2159,7 +2159,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_14(date QDate_ITF, format int) string {
+func (this *QLocale) ToString14(date QDate_ITF, format int) string {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
 		convArg0 = date.QDate_PTR().GetCthis()
@@ -2182,7 +2182,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_14_(date QDate_ITF) string {
+func (this *QLocale) ToString14p(date QDate_ITF) string {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
 		convArg0 = date.QDate_PTR().GetCthis()
@@ -2207,7 +2207,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_15(time QTime_ITF, format int) string {
+func (this *QLocale) ToString15(time QTime_ITF, format int) string {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {
 		convArg0 = time.QTime_PTR().GetCthis()
@@ -2230,7 +2230,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_15_(time QTime_ITF) string {
+func (this *QLocale) ToString15p(time QTime_ITF) string {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {
 		convArg0 = time.QTime_PTR().GetCthis()
@@ -2255,7 +2255,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_16(dateTime QDateTime_ITF, format int) string {
+func (this *QLocale) ToString16(dateTime QDateTime_ITF, format int) string {
 	var convArg0 unsafe.Pointer
 	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
 		convArg0 = dateTime.QDateTime_PTR().GetCthis()
@@ -2278,7 +2278,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString_16_(dateTime QDateTime_ITF) string {
+func (this *QLocale) ToString16p(dateTime QDateTime_ITF) string {
 	var convArg0 unsafe.Pointer
 	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
 		convArg0 = dateTime.QDateTime_PTR().GetCthis()
@@ -2330,7 +2330,7 @@ This function was introduced in  Qt 4.1.
 
 See also QDate::toString() and QDate::fromString().
 */
-func (this *QLocale) DateFormat__() string {
+func (this *QLocale) DateFormatp() string {
 	// arg: 0, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10dateFormatENS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
@@ -2378,7 +2378,7 @@ This function was introduced in  Qt 4.1.
 
 See also QTime::toString() and QTime::fromString().
 */
-func (this *QLocale) TimeFormat__() string {
+func (this *QLocale) TimeFormatp() string {
 	// arg: 0, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10timeFormatENS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
@@ -2426,7 +2426,7 @@ This function was introduced in  Qt 4.4.
 
 See also QDateTime::toString() and QDateTime::fromString().
 */
-func (this *QLocale) DateTimeFormat__() string {
+func (this *QLocale) DateTimeFormatp() string {
 	// arg: 0, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale14dateTimeFormatENS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
@@ -2452,7 +2452,7 @@ This function was introduced in  Qt 4.4.
 See also dateFormat(), toTime(), toDateTime(), and QDate::fromString().
 */
 func (this *QLocale) ToDate(string string, arg1 int) *QDate /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	qtrt.ErrPrint(err, rv)
@@ -2475,8 +2475,8 @@ This function was introduced in  Qt 4.4.
 
 See also dateFormat(), toTime(), toDateTime(), and QDate::fromString().
 */
-func (this *QLocale) ToDate__(string string) *QDate /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+func (this *QLocale) ToDatep(string string) *QDate /*123*/ {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	arg1 := 0
@@ -2501,10 +2501,10 @@ This function was introduced in  Qt 4.4.
 
 See also dateFormat(), toTime(), toDateTime(), and QDate::fromString().
 */
-func (this *QLocale) ToDate_1(string string, format string) *QDate /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+func (this *QLocale) ToDate1(string string, format string) *QDate /*123*/ {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(format)
+	var tmpArg1 = NewQString5(format)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2528,7 +2528,7 @@ This function was introduced in  Qt 4.4.
 See also timeFormat(), toDate(), toDateTime(), and QTime::fromString().
 */
 func (this *QLocale) ToTime(string string, arg1 int) *QTime /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	qtrt.ErrPrint(err, rv)
@@ -2551,8 +2551,8 @@ This function was introduced in  Qt 4.4.
 
 See also timeFormat(), toDate(), toDateTime(), and QTime::fromString().
 */
-func (this *QLocale) ToTime__(string string) *QTime /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+func (this *QLocale) ToTimep(string string) *QTime /*123*/ {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	arg1 := 0
@@ -2577,10 +2577,10 @@ This function was introduced in  Qt 4.4.
 
 See also timeFormat(), toDate(), toDateTime(), and QTime::fromString().
 */
-func (this *QLocale) ToTime_1(string string, format string) *QTime /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+func (this *QLocale) ToTime1(string string, format string) *QTime /*123*/ {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(format)
+	var tmpArg1 = NewQString5(format)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2604,7 +2604,7 @@ This function was introduced in  Qt 4.4.
 See also dateTimeFormat(), toTime(), toDate(), and QDateTime::fromString().
 */
 func (this *QLocale) ToDateTime(string string, format int) *QDateTime /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -2627,8 +2627,8 @@ This function was introduced in  Qt 4.4.
 
 See also dateTimeFormat(), toTime(), toDate(), and QDateTime::fromString().
 */
-func (this *QLocale) ToDateTime__(string string) *QDateTime /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+func (this *QLocale) ToDateTimep(string string) *QDateTime /*123*/ {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
@@ -2653,10 +2653,10 @@ This function was introduced in  Qt 4.4.
 
 See also dateTimeFormat(), toTime(), toDate(), and QDateTime::fromString().
 */
-func (this *QLocale) ToDateTime_1(string string, format string) *QDateTime /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+func (this *QLocale) ToDateTime1(string string, format string) *QDateTime /*123*/ {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(format)
+	var tmpArg1 = NewQString5(format)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2824,7 +2824,7 @@ This function was introduced in  Qt 4.2.
 
 See also dayName() and standaloneMonthName().
 */
-func (this *QLocale) MonthName__(arg0 int) string {
+func (this *QLocale) MonthNamep(arg0 int) string {
 	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale9monthNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
@@ -2872,7 +2872,7 @@ This function was introduced in  Qt 4.5.
 
 See also monthName() and standaloneDayName().
 */
-func (this *QLocale) StandaloneMonthName__(arg0 int) string {
+func (this *QLocale) StandaloneMonthNamep(arg0 int) string {
 	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale19standaloneMonthNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
@@ -2916,7 +2916,7 @@ This function was introduced in  Qt 4.2.
 
 See also monthName() and standaloneDayName().
 */
-func (this *QLocale) DayName__(arg0 int) string {
+func (this *QLocale) DayNamep(arg0 int) string {
 	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7dayNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
@@ -2964,7 +2964,7 @@ This function was introduced in  Qt 4.5.
 
 See also dayName() and standaloneMonthName().
 */
-func (this *QLocale) StandaloneDayName__(arg0 int) string {
+func (this *QLocale) StandaloneDayNamep(arg0 int) string {
 	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale17standaloneDayNameEiNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
@@ -3080,7 +3080,7 @@ This function was introduced in  Qt 4.8.
 See also QString::toUpper().
 */
 func (this *QLocale) ToUpper(str string) string {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toUpperERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -3105,7 +3105,7 @@ This function was introduced in  Qt 4.8.
 See also QString::toLower().
 */
 func (this *QLocale) ToLower(str string) string {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toLowerERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -3144,7 +3144,7 @@ Returns a currency symbol according to the format.
 
 This function was introduced in  Qt 4.8.
 */
-func (this *QLocale) CurrencySymbol__() string {
+func (this *QLocale) CurrencySymbolp() string {
 	// arg: 0, QLocale::CurrencySymbolFormat=Enum, QLocale::CurrencySymbolFormat=Enum, , Invalid
 	arg0 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale14currencySymbolENS_20CurrencySymbolFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
@@ -3168,7 +3168,7 @@ This function was introduced in  Qt 4.8.
 See also currencySymbol().
 */
 func (this *QLocale) ToCurrencyString(arg0 int64, symbol string) string {
-	var tmpArg1 = NewQString_5(symbol)
+	var tmpArg1 = NewQString5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringExRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3190,7 +3190,7 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString__(arg0 int64) string {
+func (this *QLocale) ToCurrencyStringp(arg0 int64) string {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringExRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
@@ -3213,8 +3213,8 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_1(arg0 uint64, symbol string) string {
-	var tmpArg1 = NewQString_5(symbol)
+func (this *QLocale) ToCurrencyString1(arg0 uint64, symbol string) string {
+	var tmpArg1 = NewQString5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEyRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3236,7 +3236,7 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_1_(arg0 uint64) string {
+func (this *QLocale) ToCurrencyString1p(arg0 uint64) string {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEyRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
@@ -3259,8 +3259,8 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_2(arg0 int16, symbol string) string {
-	var tmpArg1 = NewQString_5(symbol)
+func (this *QLocale) ToCurrencyString2(arg0 int16, symbol string) string {
+	var tmpArg1 = NewQString5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEsRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3282,7 +3282,7 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_2_(arg0 int16) string {
+func (this *QLocale) ToCurrencyString2p(arg0 int16) string {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEsRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
@@ -3305,8 +3305,8 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_3(arg0 uint16, symbol string) string {
-	var tmpArg1 = NewQString_5(symbol)
+func (this *QLocale) ToCurrencyString3(arg0 uint16, symbol string) string {
+	var tmpArg1 = NewQString5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEtRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3328,7 +3328,7 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_3_(arg0 uint16) string {
+func (this *QLocale) ToCurrencyString3p(arg0 uint16) string {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEtRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
@@ -3351,8 +3351,8 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_4(arg0 int, symbol string) string {
-	var tmpArg1 = NewQString_5(symbol)
+func (this *QLocale) ToCurrencyString4(arg0 int, symbol string) string {
+	var tmpArg1 = NewQString5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3374,7 +3374,7 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_4_(arg0 int) string {
+func (this *QLocale) ToCurrencyString4p(arg0 int) string {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
@@ -3397,8 +3397,8 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_5(arg0 uint, symbol string) string {
-	var tmpArg1 = NewQString_5(symbol)
+func (this *QLocale) ToCurrencyString5(arg0 uint, symbol string) string {
+	var tmpArg1 = NewQString5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEjRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3420,7 +3420,7 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_5_(arg0 uint) string {
+func (this *QLocale) ToCurrencyString5p(arg0 uint) string {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEjRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
@@ -3443,8 +3443,8 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_6(arg0 float64, symbol string) string {
-	var tmpArg1 = NewQString_5(symbol)
+func (this *QLocale) ToCurrencyString6(arg0 float64, symbol string) string {
+	var tmpArg1 = NewQString5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3466,7 +3466,7 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_6_(arg0 float64) string {
+func (this *QLocale) ToCurrencyString6p(arg0 float64) string {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
@@ -3489,8 +3489,8 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_7(arg0 float64, symbol string, precision int) string {
-	var tmpArg1 = NewQString_5(symbol)
+func (this *QLocale) ToCurrencyString7(arg0 float64, symbol string, precision int) string {
+	var tmpArg1 = NewQString5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1, precision)
 	qtrt.ErrPrint(err, rv)
@@ -3512,8 +3512,8 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_8(i float32, symbol string) string {
-	var tmpArg1 = NewQString_5(symbol)
+func (this *QLocale) ToCurrencyString8(i float32, symbol string) string {
+	var tmpArg1 = NewQString5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -3535,7 +3535,7 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_8_(i float32) string {
+func (this *QLocale) ToCurrencyString8p(i float32) string {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, convArg1)
@@ -3558,8 +3558,8 @@ This function was introduced in  Qt 4.8.
 
 See also currencySymbol().
 */
-func (this *QLocale) ToCurrencyString_9(i float32, symbol string, precision int) string {
-	var tmpArg1 = NewQString_5(symbol)
+func (this *QLocale) ToCurrencyString9(i float32, symbol string, precision int) string {
+	var tmpArg1 = NewQString5(symbol)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, convArg1, precision)
 	qtrt.ErrPrint(err, rv)
@@ -3598,7 +3598,7 @@ Converts a size in bytes to a human-readable localized string, comprising a numb
 
 This function was introduced in  Qt 5.10.
 */
-func (this *QLocale) FormattedDataSize__(bytes int64) string {
+func (this *QLocale) FormattedDataSizep(bytes int64) string {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	precision := int(2)
 	// arg: 2, QLocale::DataSizeFormats=Typedef, QLocale::DataSizeFormats=Typedef, QFlags<QLocale::DataSizeFormat>, Unexposed
@@ -3621,7 +3621,7 @@ Converts a size in bytes to a human-readable localized string, comprising a numb
 
 This function was introduced in  Qt 5.10.
 */
-func (this *QLocale) FormattedDataSize__1(bytes int64, precision int) string {
+func (this *QLocale) FormattedDataSizep1(bytes int64, precision int) string {
 	// arg: 2, QLocale::DataSizeFormats=Typedef, QLocale::DataSizeFormats=Typedef, QFlags<QLocale::DataSizeFormat>, Unexposed
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale17formattedDataSizeExi6QFlagsINS_14DataSizeFormatEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bytes, precision, format)
@@ -3891,7 +3891,7 @@ Returns str quoted according to the current locale using the given quotation sty
 This function was introduced in  Qt 4.8.
 */
 func (this *QLocale) QuoteString(str string, style int) string {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11quoteStringERK7QStringNS_14QuotationStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, style)
 	qtrt.ErrPrint(err, rv)
@@ -3911,8 +3911,8 @@ Returns str quoted according to the current locale using the given quotation sty
 
 This function was introduced in  Qt 4.8.
 */
-func (this *QLocale) QuoteString__(str string) string {
-	var tmpArg0 = NewQString_5(str)
+func (this *QLocale) QuoteStringp(str string) string {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QLocale::QuotationStyle=Enum, QLocale::QuotationStyle=Enum, , Invalid
 	style := 0
@@ -3934,7 +3934,7 @@ Returns str quoted according to the current locale using the given quotation sty
 
 This function was introduced in  Qt 4.8.
 */
-func (this *QLocale) QuoteString_1(str QStringRef_ITF, style int) string {
+func (this *QLocale) QuoteString1(str QStringRef_ITF, style int) string {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringRef_PTR() != nil {
 		convArg0 = str.QStringRef_PTR().GetCthis()
@@ -3957,7 +3957,7 @@ Returns str quoted according to the current locale using the given quotation sty
 
 This function was introduced in  Qt 4.8.
 */
-func (this *QLocale) QuoteString_1_(str QStringRef_ITF) string {
+func (this *QLocale) QuoteString1p(str QStringRef_ITF) string {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringRef_PTR() != nil {
 		convArg0 = str.QStringRef_PTR().GetCthis()

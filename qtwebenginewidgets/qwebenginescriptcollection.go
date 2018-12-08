@@ -161,7 +161,7 @@ func (this *QWebEngineScriptCollection) Contains(value QWebEngineScript_ITF) boo
 
  */
 func (this *QWebEngineScriptCollection) FindScript(name string) *QWebEngineScript /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QWebEngineScriptCollection10findScriptERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

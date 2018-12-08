@@ -95,10 +95,10 @@ Constructs an empty QUrlQuery object. A query can be set afterwards by calling s
 
 See also setQuery() and addQueryItem().
 */
-func (*QUrlQuery) NewForInherit_1(url QUrl_ITF) *QUrlQuery {
-	return NewQUrlQuery_1(url)
+func (*QUrlQuery) NewForInherit1(url QUrl_ITF) *QUrlQuery {
+	return NewQUrlQuery1(url)
 }
-func NewQUrlQuery_1(url QUrl_ITF) *QUrlQuery {
+func NewQUrlQuery1(url QUrl_ITF) *QUrlQuery {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
@@ -120,11 +120,11 @@ Constructs an empty QUrlQuery object. A query can be set afterwards by calling s
 
 See also setQuery() and addQueryItem().
 */
-func (*QUrlQuery) NewForInherit_2(queryString string) *QUrlQuery {
-	return NewQUrlQuery_2(queryString)
+func (*QUrlQuery) NewForInherit2(queryString string) *QUrlQuery {
+	return NewQUrlQuery2(queryString)
 }
-func NewQUrlQuery_2(queryString string) *QUrlQuery {
-	var tmpArg0 = NewQString_5(queryString)
+func NewQUrlQuery2(queryString string) *QUrlQuery {
+	var tmpArg0 = NewQString5(queryString)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -161,7 +161,7 @@ func (this *QUrlQuery) Operator_equal(other QUrlQuery_ITF) *QUrlQuery {
 /*
 
  */
-func (this *QUrlQuery) Operator_equal_1(other unsafe.Pointer /*333*/) *QUrlQuery {
+func (this *QUrlQuery) Operator_equal1(other unsafe.Pointer /*333*/) *QUrlQuery {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQueryaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUrlQueryFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -293,7 +293,7 @@ Parses the query string in queryString and sets the internal items to the values
 See also query().
 */
 func (this *QUrlQuery) SetQuery(queryString string) {
-	var tmpArg0 = NewQString_5(queryString)
+	var tmpArg0 = NewQString5(queryString)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery8setQueryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -390,7 +390,7 @@ Returns true if there is a query string pair whose key is equal to key from the 
 See also addQueryItem() and queryItemValue().
 */
 func (this *QUrlQuery) HasQueryItem(key string) bool {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUrlQuery12hasQueryItemERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -410,9 +410,9 @@ Note: This method does not treat spaces (ASCII 0x20) and plus ("+") signs as the
 See also hasQueryItem() and queryItemValue().
 */
 func (this *QUrlQuery) AddQueryItem(key string, value string) {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(value)
+	var tmpArg1 = NewQString5(value)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery12addQueryItemERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -429,7 +429,7 @@ Removes the query string pair whose key is equal to key from the URL. If there a
 See also removeAllQueryItems().
 */
 func (this *QUrlQuery) RemoveQueryItem(key string) {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery15removeQueryItemERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -446,7 +446,7 @@ Removes all the query string pairs whose key is equal to key from the URL.
 See also removeQueryItem().
 */
 func (this *QUrlQuery) RemoveAllQueryItems(key string) {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUrlQuery19removeAllQueryItemsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

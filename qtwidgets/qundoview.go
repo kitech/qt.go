@@ -109,10 +109,10 @@ func NewQUndoView(parent QWidget_ITF /*777 QWidget **/) *QUndoView {
 /*
 Constructs a new view with parent parent.
 */
-func (*QUndoView) NewForInherit__() *QUndoView {
-	return NewQUndoView__()
+func (*QUndoView) NewForInheritp() *QUndoView {
+	return NewQUndoViewp()
 }
-func NewQUndoView__() *QUndoView {
+func NewQUndoViewp() *QUndoView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -130,10 +130,10 @@ func NewQUndoView__() *QUndoView {
 /*
 Constructs a new view with parent parent.
 */
-func (*QUndoView) NewForInherit_1(stack QUndoStack_ITF /*777 QUndoStack **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
-	return NewQUndoView_1(stack, parent)
+func (*QUndoView) NewForInherit1(stack QUndoStack_ITF /*777 QUndoStack **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
+	return NewQUndoView1(stack, parent)
 }
-func NewQUndoView_1(stack QUndoStack_ITF /*777 QUndoStack **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
+func NewQUndoView1(stack QUndoStack_ITF /*777 QUndoStack **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
 	var convArg0 unsafe.Pointer
 	if stack != nil && stack.QUndoStack_PTR() != nil {
 		convArg0 = stack.QUndoStack_PTR().GetCthis()
@@ -157,10 +157,10 @@ func NewQUndoView_1(stack QUndoStack_ITF /*777 QUndoStack **/, parent QWidget_IT
 /*
 Constructs a new view with parent parent.
 */
-func (*QUndoView) NewForInherit_1_(stack QUndoStack_ITF /*777 QUndoStack **/) *QUndoView {
-	return NewQUndoView_1_(stack)
+func (*QUndoView) NewForInherit1p(stack QUndoStack_ITF /*777 QUndoStack **/) *QUndoView {
+	return NewQUndoView1p(stack)
 }
-func NewQUndoView_1_(stack QUndoStack_ITF /*777 QUndoStack **/) *QUndoView {
+func NewQUndoView1p(stack QUndoStack_ITF /*777 QUndoStack **/) *QUndoView {
 	var convArg0 unsafe.Pointer
 	if stack != nil && stack.QUndoStack_PTR() != nil {
 		convArg0 = stack.QUndoStack_PTR().GetCthis()
@@ -182,10 +182,10 @@ func NewQUndoView_1_(stack QUndoStack_ITF /*777 QUndoStack **/) *QUndoView {
 /*
 Constructs a new view with parent parent.
 */
-func (*QUndoView) NewForInherit_2(group QUndoGroup_ITF /*777 QUndoGroup **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
-	return NewQUndoView_2(group, parent)
+func (*QUndoView) NewForInherit2(group QUndoGroup_ITF /*777 QUndoGroup **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
+	return NewQUndoView2(group, parent)
 }
-func NewQUndoView_2(group QUndoGroup_ITF /*777 QUndoGroup **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
+func NewQUndoView2(group QUndoGroup_ITF /*777 QUndoGroup **/, parent QWidget_ITF /*777 QWidget **/) *QUndoView {
 	var convArg0 unsafe.Pointer
 	if group != nil && group.QUndoGroup_PTR() != nil {
 		convArg0 = group.QUndoGroup_PTR().GetCthis()
@@ -209,10 +209,10 @@ func NewQUndoView_2(group QUndoGroup_ITF /*777 QUndoGroup **/, parent QWidget_IT
 /*
 Constructs a new view with parent parent.
 */
-func (*QUndoView) NewForInherit_2_(group QUndoGroup_ITF /*777 QUndoGroup **/) *QUndoView {
-	return NewQUndoView_2_(group)
+func (*QUndoView) NewForInherit2p(group QUndoGroup_ITF /*777 QUndoGroup **/) *QUndoView {
+	return NewQUndoView2p(group)
 }
-func NewQUndoView_2_(group QUndoGroup_ITF /*777 QUndoGroup **/) *QUndoView {
+func NewQUndoView2p(group QUndoGroup_ITF /*777 QUndoGroup **/) *QUndoView {
 	var convArg0 unsafe.Pointer
 	if group != nil && group.QUndoGroup_PTR() != nil {
 		convArg0 = group.QUndoGroup_PTR().GetCthis()
@@ -284,7 +284,7 @@ func (this *QUndoView) Group() *QUndoGroup /*777 QUndoGroup **/ {
 
  */
 func (this *QUndoView) SetEmptyLabel(label string) {
-	var tmpArg0 = qtcore.NewQString_5(label)
+	var tmpArg0 = qtcore.NewQString5(label)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoView13setEmptyLabelERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

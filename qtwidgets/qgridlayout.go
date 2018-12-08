@@ -114,10 +114,10 @@ func NewQGridLayout(parent QWidget_ITF /*777 QWidget **/) *QGridLayout {
 /*
 Constructs a new QGridLayout with parent widget, parent. The layout has one row and one column initially, and will expand when new items are inserted.
 */
-func (*QGridLayout) NewForInherit_1() *QGridLayout {
-	return NewQGridLayout_1()
+func (*QGridLayout) NewForInherit1() *QGridLayout {
+	return NewQGridLayout1()
 }
-func NewQGridLayout_1() *QGridLayout {
+func NewQGridLayout1() *QGridLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGridLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -551,7 +551,7 @@ Adds the given widget to the cell grid at row, column. The top-left position is 
 
 The alignment is specified by alignment. The default alignment is 0, which means that the widget fills the entire cell.
 */
-func (this *QGridLayout) AddWidget_1(arg0 QWidget_ITF /*777 QWidget **/, row int, column int, arg3 int) {
+func (this *QGridLayout) AddWidget1(arg0 QWidget_ITF /*777 QWidget **/, row int, column int, arg3 int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
@@ -570,7 +570,7 @@ Adds the given widget to the cell grid at row, column. The top-left position is 
 
 The alignment is specified by alignment. The default alignment is 0, which means that the widget fills the entire cell.
 */
-func (this *QGridLayout) AddWidget_1_(arg0 QWidget_ITF /*777 QWidget **/, row int, column int) {
+func (this *QGridLayout) AddWidget1p(arg0 QWidget_ITF /*777 QWidget **/, row int, column int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
@@ -591,7 +591,7 @@ Adds the given widget to the cell grid at row, column. The top-left position is 
 
 The alignment is specified by alignment. The default alignment is 0, which means that the widget fills the entire cell.
 */
-func (this *QGridLayout) AddWidget_2(arg0 QWidget_ITF /*777 QWidget **/, row int, column int, rowSpan int, columnSpan int, arg5 int) {
+func (this *QGridLayout) AddWidget2(arg0 QWidget_ITF /*777 QWidget **/, row int, column int, rowSpan int, columnSpan int, arg5 int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
@@ -610,7 +610,7 @@ Adds the given widget to the cell grid at row, column. The top-left position is 
 
 The alignment is specified by alignment. The default alignment is 0, which means that the widget fills the entire cell.
 */
-func (this *QGridLayout) AddWidget_2_(arg0 QWidget_ITF /*777 QWidget **/, row int, column int, rowSpan int, columnSpan int) {
+func (this *QGridLayout) AddWidget2p(arg0 QWidget_ITF /*777 QWidget **/, row int, column int, rowSpan int, columnSpan int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
@@ -658,7 +658,7 @@ A non-zero alignment indicates that the layout should not grow to fill the avail
 
 layout becomes a child of the grid layout.
 */
-func (this *QGridLayout) AddLayout__(arg0 QLayout_ITF /*777 QLayout **/, row int, column int) {
+func (this *QGridLayout) AddLayoutp(arg0 QLayout_ITF /*777 QLayout **/, row int, column int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QLayout_PTR() != nil {
 		convArg0 = arg0.QLayout_PTR().GetCthis()
@@ -683,7 +683,7 @@ A non-zero alignment indicates that the layout should not grow to fill the avail
 
 layout becomes a child of the grid layout.
 */
-func (this *QGridLayout) AddLayout_1(arg0 QLayout_ITF /*777 QLayout **/, row int, column int, rowSpan int, columnSpan int, arg5 int) {
+func (this *QGridLayout) AddLayout1(arg0 QLayout_ITF /*777 QLayout **/, row int, column int, rowSpan int, columnSpan int, arg5 int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QLayout_PTR() != nil {
 		convArg0 = arg0.QLayout_PTR().GetCthis()
@@ -706,7 +706,7 @@ A non-zero alignment indicates that the layout should not grow to fill the avail
 
 layout becomes a child of the grid layout.
 */
-func (this *QGridLayout) AddLayout_1_(arg0 QLayout_ITF /*777 QLayout **/, row int, column int, rowSpan int, columnSpan int) {
+func (this *QGridLayout) AddLayout1p(arg0 QLayout_ITF /*777 QLayout **/, row int, column int, rowSpan int, columnSpan int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QLayout_PTR() != nil {
 		convArg0 = arg0.QLayout_PTR().GetCthis()
@@ -854,7 +854,7 @@ Adds item at position row, column, spanning rowSpan rows and columnSpan columns,
 
 Warning: Do not use this function to add child layouts or child widget items. Use addLayout() or addWidget() instead.
 */
-func (this *QGridLayout) AddItem__(item QLayoutItem_ITF /*777 QLayoutItem **/, row int, column int) {
+func (this *QGridLayout) AddItemp(item QLayoutItem_ITF /*777 QLayoutItem **/, row int, column int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QLayoutItem_PTR() != nil {
 		convArg0 = item.QLayoutItem_PTR().GetCthis()
@@ -879,7 +879,7 @@ Adds item at position row, column, spanning rowSpan rows and columnSpan columns,
 
 Warning: Do not use this function to add child layouts or child widget items. Use addLayout() or addWidget() instead.
 */
-func (this *QGridLayout) AddItem__1(item QLayoutItem_ITF /*777 QLayoutItem **/, row int, column int, rowSpan int) {
+func (this *QGridLayout) AddItemp1(item QLayoutItem_ITF /*777 QLayoutItem **/, row int, column int, rowSpan int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QLayoutItem_PTR() != nil {
 		convArg0 = item.QLayoutItem_PTR().GetCthis()
@@ -902,7 +902,7 @@ Adds item at position row, column, spanning rowSpan rows and columnSpan columns,
 
 Warning: Do not use this function to add child layouts or child widget items. Use addLayout() or addWidget() instead.
 */
-func (this *QGridLayout) AddItem__2(item QLayoutItem_ITF /*777 QLayoutItem **/, row int, column int, rowSpan int, columnSpan int) {
+func (this *QGridLayout) AddItemp2(item QLayoutItem_ITF /*777 QLayoutItem **/, row int, column int, rowSpan int, columnSpan int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QLayoutItem_PTR() != nil {
 		convArg0 = item.QLayoutItem_PTR().GetCthis()
@@ -923,7 +923,7 @@ Adds item at position row, column, spanning rowSpan rows and columnSpan columns,
 
 Warning: Do not use this function to add child layouts or child widget items. Use addLayout() or addWidget() instead.
 */
-func (this *QGridLayout) AddItem_1(arg0 QLayoutItem_ITF /*777 QLayoutItem **/) {
+func (this *QGridLayout) AddItem1(arg0 QLayoutItem_ITF /*777 QLayoutItem **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QLayoutItem_PTR() != nil {
 		convArg0 = arg0.QLayoutItem_PTR().GetCthis()

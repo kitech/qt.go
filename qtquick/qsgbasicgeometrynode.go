@@ -120,7 +120,7 @@ func (this *QSGBasicGeometryNode) Geometry() *QSGGeometry /*777 const QSGGeometr
 /*
 
  */
-func (this *QSGBasicGeometryNode) Geometry_1() *QSGGeometry /*777 QSGGeometry **/ {
+func (this *QSGBasicGeometryNode) Geometry1() *QSGGeometry /*777 QSGGeometry **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQSGGeometryFromPointer(unsafe.Pointer(uintptr(rv))) // 444

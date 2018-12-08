@@ -148,10 +148,10 @@ Constructs a checkbox with the given parent, but with no text.
 
 parent is passed on to the QAbstractButton constructor.
 */
-func (*QCheckBox) NewForInherit__() *QCheckBox {
-	return NewQCheckBox__()
+func (*QCheckBox) NewForInheritp() *QCheckBox {
+	return NewQCheckBoxp()
 }
-func NewQCheckBox__() *QCheckBox {
+func NewQCheckBoxp() *QCheckBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -171,11 +171,11 @@ Constructs a checkbox with the given parent, but with no text.
 
 parent is passed on to the QAbstractButton constructor.
 */
-func (*QCheckBox) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
-	return NewQCheckBox_1(text, parent)
+func (*QCheckBox) NewForInherit1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
+	return NewQCheckBox1(text, parent)
 }
-func NewQCheckBox_1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQCheckBox1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -198,11 +198,11 @@ Constructs a checkbox with the given parent, but with no text.
 
 parent is passed on to the QAbstractButton constructor.
 */
-func (*QCheckBox) NewForInherit_1_(text string) *QCheckBox {
-	return NewQCheckBox_1_(text)
+func (*QCheckBox) NewForInherit1p(text string) *QCheckBox {
+	return NewQCheckBox1p(text)
 }
-func NewQCheckBox_1_(text string) *QCheckBox {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQCheckBox1p(text string) *QCheckBox {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -281,7 +281,7 @@ func (this *QCheckBox) SetTristate(y bool) {
 /*
 
  */
-func (this *QCheckBox) SetTristate__() {
+func (this *QCheckBox) SetTristatep() {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	y := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCheckBox11setTristateEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), y)

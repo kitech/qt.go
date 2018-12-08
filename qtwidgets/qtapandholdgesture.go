@@ -109,10 +109,10 @@ func NewQTapAndHoldGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QTapAnd
 /*
 
  */
-func (*QTapAndHoldGesture) NewForInherit__() *QTapAndHoldGesture {
-	return NewQTapAndHoldGesture__()
+func (*QTapAndHoldGesture) NewForInheritp() *QTapAndHoldGesture {
+	return NewQTapAndHoldGesturep()
 }
-func NewQTapAndHoldGesture__() *QTapAndHoldGesture {
+func NewQTapAndHoldGesturep() *QTapAndHoldGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QTapAndHoldGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

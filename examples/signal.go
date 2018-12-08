@@ -14,7 +14,7 @@ import (
 func main() {
 	qtrt.SetDebugDynSlot(true)
 	// rs := qtrt.CString("hehehg呵呵")
-	txt := qtcore.NewQString_5("hehehg呵呵")
+	txt := qtcore.NewQString5("hehehg呵呵")
 	log.Println(txt.Length(), txt.IsEmpty())
 	log.Println(txt.GetCthis())
 	log.Println(txt.ToLatin1())
@@ -27,7 +27,7 @@ func main() {
 	tmer := qtcore.NewQTimer(nil)
 	log.Println(tmer)
 	tmer.SetInterval(3000)
-	tmer.Start_1()
+	tmer.Start1()
 
 	cnter := 3
 	// dyslot := qtrt.NewQDynSlotObject("abc", 123)

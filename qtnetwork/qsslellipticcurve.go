@@ -101,7 +101,7 @@ Note: The OpenSSL implementation of this function treats the name case-sensitive
 See also shortName().
 */
 func (this *QSslEllipticCurve) FromShortName(name string) *QSslEllipticCurve /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurve13fromShortNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -130,7 +130,7 @@ Note: The OpenSSL implementation of this function treats the name case-sensitive
 See also longName().
 */
 func (this *QSslEllipticCurve) FromLongName(name string) *QSslEllipticCurve /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurve12fromLongNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

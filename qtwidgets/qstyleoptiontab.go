@@ -91,10 +91,10 @@ func NewQStyleOptionTab() *QStyleOptionTab {
 /*
 
  */
-func (*QStyleOptionTab) NewForInherit_1(version int) *QStyleOptionTab {
-	return NewQStyleOptionTab_1(version)
+func (*QStyleOptionTab) NewForInherit1(version int) *QStyleOptionTab {
+	return NewQStyleOptionTab1(version)
 }
-func NewQStyleOptionTab_1(version int) *QStyleOptionTab {
+func NewQStyleOptionTab1(version int) *QStyleOptionTab {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabFromPointer(unsafe.Pointer(uintptr(rv)))

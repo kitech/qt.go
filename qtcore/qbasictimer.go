@@ -165,7 +165,7 @@ The given object will receive timer events.
 
 See also stop(), isActive(), QObject::timerEvent(), and Qt::CoarseTimer.
 */
-func (this *QBasicTimer) Start_1(msec int, timerType int, obj QObject_ITF /*777 QObject **/) {
+func (this *QBasicTimer) Start1(msec int, timerType int, obj QObject_ITF /*777 QObject **/) {
 	var convArg2 unsafe.Pointer
 	if obj != nil && obj.QObject_PTR() != nil {
 		convArg2 = obj.QObject_PTR().GetCthis()

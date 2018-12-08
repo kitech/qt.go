@@ -91,11 +91,11 @@ func NewQUrl() *QUrl {
 /*
 Constructs an empty QUrl object.
 */
-func (*QUrl) NewForInherit_1(url string, mode int) *QUrl {
-	return NewQUrl_1(url, mode)
+func (*QUrl) NewForInherit1(url string, mode int) *QUrl {
+	return NewQUrl1(url, mode)
 }
-func NewQUrl_1(url string, mode int) *QUrl {
-	var tmpArg0 = NewQString_5(url)
+func NewQUrl1(url string, mode int) *QUrl {
+	var tmpArg0 = NewQString5(url)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrlC2ERK7QStringNS_11ParsingModeE", qtrt.FFI_TYPE_POINTER, convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -112,11 +112,11 @@ func NewQUrl_1(url string, mode int) *QUrl {
 /*
 Constructs an empty QUrl object.
 */
-func (*QUrl) NewForInherit_1_(url string) *QUrl {
-	return NewQUrl_1_(url)
+func (*QUrl) NewForInherit1p(url string) *QUrl {
+	return NewQUrl1p(url)
 }
-func NewQUrl_1_(url string) *QUrl {
-	var tmpArg0 = NewQString_5(url)
+func NewQUrl1p(url string) *QUrl {
+	var tmpArg0 = NewQString5(url)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
@@ -155,8 +155,8 @@ func (this *QUrl) Operator_equal(copy QUrl_ITF) *QUrl {
 /*
 
  */
-func (this *QUrl) Operator_equal_1(url string) *QUrl {
-	var tmpArg0 = NewQString_5(url)
+func (this *QUrl) Operator_equal1(url string) *QUrl {
+	var tmpArg0 = NewQString5(url)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrlaSERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -173,7 +173,7 @@ func (this *QUrl) Operator_equal_1(url string) *QUrl {
 /*
 
  */
-func (this *QUrl) Operator_equal_2(other unsafe.Pointer /*333*/) *QUrl {
+func (this *QUrl) Operator_equal2(other unsafe.Pointer /*333*/) *QUrl {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrlaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -228,7 +228,7 @@ Parses the url using the parser mode parsingMode. In TolerantMode (the default),
 See also url() and toString().
 */
 func (this *QUrl) SetUrl(url string, mode int) {
-	var tmpArg0 = NewQString_5(url)
+	var tmpArg0 = NewQString5(url)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl6setUrlERK7QStringNS_11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -246,8 +246,8 @@ Parses the url using the parser mode parsingMode. In TolerantMode (the default),
 
 See also url() and toString().
 */
-func (this *QUrl) SetUrl__(url string) {
-	var tmpArg0 = NewQString_5(url)
+func (this *QUrl) SetUrlp(url string) {
+	var tmpArg0 = NewQString5(url)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
@@ -296,7 +296,7 @@ Parses the URL using parsingMode. See setUrl() for more information on this para
 
 See also toEncoded() and setUrl().
 */
-func (this *QUrl) FromEncoded__(url QByteArray_ITF) *QUrl /*123*/ {
+func (this *QUrl) FromEncodedp(url QByteArray_ITF) *QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QByteArray_PTR() != nil {
 		convArg0 = url.QByteArray_PTR().GetCthis()
@@ -327,7 +327,7 @@ In the case the string corresponds to a valid file path on the system, a file://
 If that is not the case, an attempt is made to turn the string into a http:// or ftp:// URL. The latter in the case the string starts with 'ftp'. The result is then passed through QUrl's tolerant parser, and in the case or success, a valid QUrl is returned, or else a QUrl().
 */
 func (this *QUrl) FromUserInput(userInput string) *QUrl /*123*/ {
-	var tmpArg0 = NewQString_5(userInput)
+	var tmpArg0 = NewQString5(userInput)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl13fromUserInputERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -357,10 +357,10 @@ In the case the string corresponds to a valid file path on the system, a file://
 
 If that is not the case, an attempt is made to turn the string into a http:// or ftp:// URL. The latter in the case the string starts with 'ftp'. The result is then passed through QUrl's tolerant parser, and in the case or success, a valid QUrl is returned, or else a QUrl().
 */
-func (this *QUrl) FromUserInput_1(userInput string, workingDirectory string, options int) *QUrl /*123*/ {
-	var tmpArg0 = NewQString_5(userInput)
+func (this *QUrl) FromUserInput1(userInput string, workingDirectory string, options int) *QUrl /*123*/ {
+	var tmpArg0 = NewQString5(userInput)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(workingDirectory)
+	var tmpArg1 = NewQString5(workingDirectory)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl13fromUserInputERK7QStringS2_6QFlagsINS_25UserInputResolutionOptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, options)
 	qtrt.ErrPrint(err, rv)
@@ -368,9 +368,9 @@ func (this *QUrl) FromUserInput_1(userInput string, workingDirectory string, opt
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUrl)
 	return rv2
 }
-func QUrl_FromUserInput_1(userInput string, workingDirectory string, options int) *QUrl /*123*/ {
+func QUrl_FromUserInput1(userInput string, workingDirectory string, options int) *QUrl /*123*/ {
 	var nilthis *QUrl
-	rv := nilthis.FromUserInput_1(userInput, workingDirectory, options)
+	rv := nilthis.FromUserInput1(userInput, workingDirectory, options)
 	return rv
 }
 
@@ -390,10 +390,10 @@ In the case the string corresponds to a valid file path on the system, a file://
 
 If that is not the case, an attempt is made to turn the string into a http:// or ftp:// URL. The latter in the case the string starts with 'ftp'. The result is then passed through QUrl's tolerant parser, and in the case or success, a valid QUrl is returned, or else a QUrl().
 */
-func (this *QUrl) FromUserInput_1_(userInput string, workingDirectory string) *QUrl /*123*/ {
-	var tmpArg0 = NewQString_5(userInput)
+func (this *QUrl) FromUserInput1p(userInput string, workingDirectory string) *QUrl /*123*/ {
+	var tmpArg0 = NewQString5(userInput)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(workingDirectory)
+	var tmpArg1 = NewQString5(workingDirectory)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QUrl::UserInputResolutionOptions=Typedef, QUrl::UserInputResolutionOptions=Typedef, QFlags<QUrl::UserInputResolutionOption>, Unexposed
 	options := 0
@@ -513,7 +513,7 @@ The scheme can also be empty, in which case the URL is interpreted as relative.
 See also scheme() and isRelative().
 */
 func (this *QUrl) SetScheme(scheme string) {
-	var tmpArg0 = NewQString_5(scheme)
+	var tmpArg0 = NewQString5(scheme)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl9setSchemeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -563,7 +563,7 @@ This function does not allow mode to be QUrl::DecodedMode. To set fully decoded 
 See also authority(), setUserInfo(), setHost(), and setPort().
 */
 func (this *QUrl) SetAuthority(authority string, mode int) {
-	var tmpArg0 = NewQString_5(authority)
+	var tmpArg0 = NewQString5(authority)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl12setAuthorityERK7QStringNS_11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -591,8 +591,8 @@ This function does not allow mode to be QUrl::DecodedMode. To set fully decoded 
 
 See also authority(), setUserInfo(), setHost(), and setPort().
 */
-func (this *QUrl) SetAuthority__(authority string) {
-	var tmpArg0 = NewQString_5(authority)
+func (this *QUrl) SetAuthorityp(authority string) {
+	var tmpArg0 = NewQString5(authority)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
@@ -619,7 +619,7 @@ This function does not allow mode to be QUrl::DecodedMode. To set fully decoded 
 See also userInfo(), setUserName(), setPassword(), and setAuthority().
 */
 func (this *QUrl) SetUserInfo(userInfo string, mode int) {
-	var tmpArg0 = NewQString_5(userInfo)
+	var tmpArg0 = NewQString5(userInfo)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl11setUserInfoERK7QStringNS_11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -643,8 +643,8 @@ This function does not allow mode to be QUrl::DecodedMode. To set fully decoded 
 
 See also userInfo(), setUserName(), setPassword(), and setAuthority().
 */
-func (this *QUrl) SetUserInfo__(userInfo string) {
-	var tmpArg0 = NewQString_5(userInfo)
+func (this *QUrl) SetUserInfop(userInfo string) {
+	var tmpArg0 = NewQString5(userInfo)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
@@ -667,7 +667,7 @@ QUrl::DecodedMode should be used when setting the user name from a data source w
 See also userName() and setUserInfo().
 */
 func (this *QUrl) SetUserName(userName string, mode int) {
-	var tmpArg0 = NewQString_5(userName)
+	var tmpArg0 = NewQString5(userName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl11setUserNameERK7QStringNS_11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -687,8 +687,8 @@ QUrl::DecodedMode should be used when setting the user name from a data source w
 
 See also userName() and setUserInfo().
 */
-func (this *QUrl) SetUserName__(userName string) {
-	var tmpArg0 = NewQString_5(userName)
+func (this *QUrl) SetUserNamep(userName string) {
+	var tmpArg0 = NewQString5(userName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
@@ -711,7 +711,7 @@ QUrl::DecodedMode should be used when setting the password from a data source wh
 See also password() and setUserInfo().
 */
 func (this *QUrl) SetPassword(password string, mode int) {
-	var tmpArg0 = NewQString_5(password)
+	var tmpArg0 = NewQString5(password)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl11setPasswordERK7QStringNS_11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -731,8 +731,8 @@ QUrl::DecodedMode should be used when setting the password from a data source wh
 
 See also password() and setUserInfo().
 */
-func (this *QUrl) SetPassword__(password string) {
-	var tmpArg0 = NewQString_5(password)
+func (this *QUrl) SetPasswordp(password string) {
+	var tmpArg0 = NewQString5(password)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
@@ -755,7 +755,7 @@ Note that, in all cases, the result of the parsing must be a valid hostname acco
 See also host() and setAuthority().
 */
 func (this *QUrl) SetHost(host string, mode int) {
-	var tmpArg0 = NewQString_5(host)
+	var tmpArg0 = NewQString5(host)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl7setHostERK7QStringNS_11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -775,8 +775,8 @@ Note that, in all cases, the result of the parsing must be a valid hostname acco
 
 See also host() and setAuthority().
 */
-func (this *QUrl) SetHost__(host string) {
-	var tmpArg0 = NewQString_5(host)
+func (this *QUrl) SetHostp(host string) {
+	var tmpArg0 = NewQString5(host)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
@@ -847,7 +847,7 @@ This function was introduced in  Qt 4.1.
 
 See also setPort().
 */
-func (this *QUrl) Port__() int {
+func (this *QUrl) Portp() int {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	defaultPort := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QUrl4portEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultPort)
@@ -876,7 +876,7 @@ QUrl::DecodedMode should be used when setting the path from a data source which 
 See also path().
 */
 func (this *QUrl) SetPath(path string, mode int) {
-	var tmpArg0 = NewQString_5(path)
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl7setPathERK7QStringNS_11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -902,8 +902,8 @@ QUrl::DecodedMode should be used when setting the path from a data source which 
 
 See also path().
 */
-func (this *QUrl) SetPath__(path string) {
-	var tmpArg0 = NewQString_5(path)
+func (this *QUrl) SetPathp(path string) {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
@@ -948,7 +948,7 @@ Query strings often contain percent-encoded sequences, so use of DecodedMode is 
 See also query() and hasQuery().
 */
 func (this *QUrl) SetQuery(query string, mode int) {
-	var tmpArg0 = NewQString_5(query)
+	var tmpArg0 = NewQString5(query)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl8setQueryERK7QStringNS_11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -972,8 +972,8 @@ Query strings often contain percent-encoded sequences, so use of DecodedMode is 
 
 See also query() and hasQuery().
 */
-func (this *QUrl) SetQuery__(query string) {
-	var tmpArg0 = NewQString_5(query)
+func (this *QUrl) SetQueryp(query string) {
+	var tmpArg0 = NewQString5(query)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
@@ -999,7 +999,7 @@ Query strings often contain percent-encoded sequences, so use of DecodedMode is 
 
 See also query() and hasQuery().
 */
-func (this *QUrl) SetQuery_1(query QUrlQuery_ITF) {
+func (this *QUrl) SetQuery1(query QUrlQuery_ITF) {
 	var convArg0 unsafe.Pointer
 	if query != nil && query.QUrlQuery_PTR() != nil {
 		convArg0 = query.QUrlQuery_PTR().GetCthis()
@@ -1047,7 +1047,7 @@ QUrl::DecodedMode should be used when setting the fragment from a data source wh
 See also fragment() and hasFragment().
 */
 func (this *QUrl) SetFragment(fragment string, mode int) {
-	var tmpArg0 = NewQString_5(fragment)
+	var tmpArg0 = NewQString5(fragment)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl11setFragmentERK7QStringNS_11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -1073,8 +1073,8 @@ QUrl::DecodedMode should be used when setting the fragment from a data source wh
 
 See also fragment() and hasFragment().
 */
-func (this *QUrl) SetFragment__(fragment string) {
-	var tmpArg0 = NewQString_5(fragment)
+func (this *QUrl) SetFragmentp(fragment string) {
+	var tmpArg0 = NewQString5(fragment)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
@@ -1223,7 +1223,7 @@ For this reason, it is better to use a relative URL (that is, no scheme) for rel
 See also toLocalFile(), isLocalFile(), and QDir::toNativeSeparators().
 */
 func (this *QUrl) FromLocalFile(localfile string) *QUrl /*123*/ {
-	var tmpArg0 = NewQString_5(localfile)
+	var tmpArg0 = NewQString5(localfile)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl13fromLocalFileERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1392,7 +1392,7 @@ Unreserved is defined as: ALPHA / DIGIT / "-" / "." / "_" / "~"
   // prints "{a fi%73hy %73tring%3F}"
 */
 func (this *QUrl) ToPercentEncoding(arg0 string, exclude QByteArray_ITF, include_ QByteArray_ITF) *QByteArray /*123*/ {
-	var tmpArg0 = NewQString_5(arg0)
+	var tmpArg0 = NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if exclude != nil && exclude.QByteArray_PTR() != nil {
@@ -1429,8 +1429,8 @@ Unreserved is defined as: ALPHA / DIGIT / "-" / "." / "_" / "~"
   qDebug(ba.constData());
   // prints "{a fi%73hy %73tring%3F}"
 */
-func (this *QUrl) ToPercentEncoding__(arg0 string) *QByteArray /*123*/ {
-	var tmpArg0 = NewQString_5(arg0)
+func (this *QUrl) ToPercentEncodingp(arg0 string) *QByteArray /*123*/ {
+	var tmpArg0 = NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = NewQByteArray()
@@ -1458,8 +1458,8 @@ Unreserved is defined as: ALPHA / DIGIT / "-" / "." / "_" / "~"
   qDebug(ba.constData());
   // prints "{a fi%73hy %73tring%3F}"
 */
-func (this *QUrl) ToPercentEncoding__1(arg0 string, exclude QByteArray_ITF) *QByteArray /*123*/ {
-	var tmpArg0 = NewQString_5(arg0)
+func (this *QUrl) ToPercentEncodingp1(arg0 string, exclude QByteArray_ITF) *QByteArray /*123*/ {
+	var tmpArg0 = NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if exclude != nil && exclude.QByteArray_PTR() != nil {
@@ -1521,7 +1521,7 @@ This function returns an empty QByteArray if domain is not a valid hostname. Not
 This function was introduced in  Qt 4.2.
 */
 func (this *QUrl) ToAce(arg0 string) *QByteArray /*123*/ {
-	var tmpArg0 = NewQString_5(arg0)
+	var tmpArg0 = NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl5toAceERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1598,7 +1598,7 @@ Converts a list of strings representing urls into a list of urls, using QUrl(str
 
 This function was introduced in  Qt 5.1.
 */
-func (this *QUrl) FromStringList__(uris QStringList_ITF) *QUrlList /*lll*/ {
+func (this *QUrl) FromStringListp(uris QStringList_ITF) *QUrlList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if uris != nil && uris.QStringList_PTR() != nil {
 		convArg0 = uris.QStringList_PTR().GetCthis()

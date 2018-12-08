@@ -110,10 +110,10 @@ func NewQNetworkConfigurationManager(parent qtcore.QObject_ITF /*777 QObject **/
 /*
 
  */
-func (*QNetworkConfigurationManager) NewForInherit__() *QNetworkConfigurationManager {
-	return NewQNetworkConfigurationManager__()
+func (*QNetworkConfigurationManager) NewForInheritp() *QNetworkConfigurationManager {
+	return NewQNetworkConfigurationManagerp()
 }
-func NewQNetworkConfigurationManager__() *QNetworkConfigurationManager {
+func NewQNetworkConfigurationManagerp() *QNetworkConfigurationManager {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QNetworkConfigurationManagerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -177,7 +177,7 @@ func (this *QNetworkConfigurationManager) DefaultConfiguration() *QNetworkConfig
 
  */
 func (this *QNetworkConfigurationManager) ConfigurationFromIdentifier(identifier string) *QNetworkConfiguration /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(identifier)
+	var tmpArg0 = qtcore.NewQString5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QNetworkConfigurationManager27configurationFromIdentifierERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

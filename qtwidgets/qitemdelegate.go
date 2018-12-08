@@ -179,10 +179,10 @@ func NewQItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QItemDelegat
 /*
 Constructs an item delegate with the given parent.
 */
-func (*QItemDelegate) NewForInherit__() *QItemDelegate {
-	return NewQItemDelegate__()
+func (*QItemDelegate) NewForInheritp() *QItemDelegate {
+	return NewQItemDelegatep()
 }
-func NewQItemDelegate__() *QItemDelegate {
+func NewQItemDelegatep() *QItemDelegate {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QItemDelegateC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -488,7 +488,7 @@ func (this *QItemDelegate) DrawDisplay(painter qtgui.QPainter_ITF /*777 QPainter
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg2 = rect.QRect_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(text)
+	var tmpArg3 = qtcore.NewQString5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QItemDelegate11drawDisplayEP8QPainterRK20QStyleOptionViewItemRK5QRectRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -840,7 +840,7 @@ func (this *QItemDelegate) TextRectangle(painter qtgui.QPainter_ITF /*777 QPaint
 	if font != nil && font.QFont_PTR() != nil {
 		convArg2 = font.QFont_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(text)
+	var tmpArg3 = qtcore.NewQString5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QItemDelegate13textRectangleEP8QPainterRK5QRectRK5QFontRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)

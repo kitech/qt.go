@@ -142,10 +142,10 @@ func NewQStateMachine(parent QObject_ITF /*777 QObject **/) *QStateMachine {
 /*
 Constructs a new state machine with the given parent.
 */
-func (*QStateMachine) NewForInherit__() *QStateMachine {
-	return NewQStateMachine__()
+func (*QStateMachine) NewForInheritp() *QStateMachine {
+	return NewQStateMachinep()
 }
-func NewQStateMachine__() *QStateMachine {
+func NewQStateMachinep() *QStateMachine {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -163,10 +163,10 @@ func NewQStateMachine__() *QStateMachine {
 /*
 Constructs a new state machine with the given parent.
 */
-func (*QStateMachine) NewForInherit_1(childMode int, parent QObject_ITF /*777 QObject **/) *QStateMachine {
-	return NewQStateMachine_1(childMode, parent)
+func (*QStateMachine) NewForInherit1(childMode int, parent QObject_ITF /*777 QObject **/) *QStateMachine {
+	return NewQStateMachine1(childMode, parent)
 }
-func NewQStateMachine_1(childMode int, parent QObject_ITF /*777 QObject **/) *QStateMachine {
+func NewQStateMachine1(childMode int, parent QObject_ITF /*777 QObject **/) *QStateMachine {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg1 = parent.QObject_PTR().GetCthis()
@@ -186,10 +186,10 @@ func NewQStateMachine_1(childMode int, parent QObject_ITF /*777 QObject **/) *QS
 /*
 Constructs a new state machine with the given parent.
 */
-func (*QStateMachine) NewForInherit_1_(childMode int) *QStateMachine {
-	return NewQStateMachine_1_(childMode)
+func (*QStateMachine) NewForInherit1p(childMode int) *QStateMachine {
+	return NewQStateMachine1p(childMode)
 }
-func NewQStateMachine_1_(childMode int) *QStateMachine {
+func NewQStateMachine1p(childMode int) *QStateMachine {
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStateMachineC2EN6QState9ChildModeEP7QObject", qtrt.FFI_TYPE_POINTER, childMode, convArg1)
@@ -457,7 +457,7 @@ Note: This function is thread-safe.
 
 See also postDelayedEvent().
 */
-func (this *QStateMachine) PostEvent__(event QEvent_ITF /*777 QEvent **/) {
+func (this *QStateMachine) PostEventp(event QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
 	if event != nil && event.QEvent_PTR() != nil {
 		convArg0 = event.QEvent_PTR().GetCthis()

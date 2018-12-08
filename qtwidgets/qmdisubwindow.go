@@ -235,10 +235,10 @@ Note that only QMdiSubWindows can be set as children of QMdiArea; you cannot, fo
 
 See also QMdiArea::addSubWindow().
 */
-func (*QMdiSubWindow) NewForInherit__() *QMdiSubWindow {
-	return NewQMdiSubWindow__()
+func (*QMdiSubWindow) NewForInheritp() *QMdiSubWindow {
+	return NewQMdiSubWindowp()
 }
-func NewQMdiSubWindow__() *QMdiSubWindow {
+func NewQMdiSubWindowp() *QMdiSubWindow {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -271,10 +271,10 @@ Note that only QMdiSubWindows can be set as children of QMdiArea; you cannot, fo
 
 See also QMdiArea::addSubWindow().
 */
-func (*QMdiSubWindow) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QMdiSubWindow {
-	return NewQMdiSubWindow__1(parent)
+func (*QMdiSubWindow) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QMdiSubWindow {
+	return NewQMdiSubWindowp1(parent)
 }
-func NewQMdiSubWindow__1(parent QWidget_ITF /*777 QWidget **/) *QMdiSubWindow {
+func NewQMdiSubWindowp1(parent QWidget_ITF /*777 QWidget **/) *QMdiSubWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -441,7 +441,7 @@ If on is true, option is enabled on the subwindow; otherwise it is disabled. See
 
 See also SubWindowOption and testOption().
 */
-func (this *QMdiSubWindow) SetOption__(option int) {
+func (this *QMdiSubWindow) SetOptionp(option int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMdiSubWindow9setOptionENS_15SubWindowOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)

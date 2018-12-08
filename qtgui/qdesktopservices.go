@@ -141,7 +141,7 @@ Note that the handler will always be called from within the same thread that cal
 See also openUrl() and unsetUrlHandler().
 */
 func (this *QDesktopServices) SetUrlHandler(scheme string, receiver qtcore.QObject_ITF /*777 QObject **/, method string) {
-	var tmpArg0 = qtcore.NewQString_5(scheme)
+	var tmpArg0 = qtcore.NewQString5(scheme)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -168,7 +168,7 @@ Removes a previously set URL handler for the specified scheme.
 See also setUrlHandler().
 */
 func (this *QDesktopServices) UnsetUrlHandler(scheme string) {
-	var tmpArg0 = qtcore.NewQString_5(scheme)
+	var tmpArg0 = qtcore.NewQString5(scheme)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServices15unsetUrlHandlerERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

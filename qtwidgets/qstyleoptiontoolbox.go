@@ -91,10 +91,10 @@ func NewQStyleOptionToolBox() *QStyleOptionToolBox {
 /*
 
  */
-func (*QStyleOptionToolBox) NewForInherit_1(version int) *QStyleOptionToolBox {
-	return NewQStyleOptionToolBox_1(version)
+func (*QStyleOptionToolBox) NewForInherit1(version int) *QStyleOptionToolBox {
+	return NewQStyleOptionToolBox1(version)
 }
-func NewQStyleOptionToolBox_1(version int) *QStyleOptionToolBox {
+func NewQStyleOptionToolBox1(version int) *QStyleOptionToolBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionToolBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionToolBoxFromPointer(unsafe.Pointer(uintptr(rv)))

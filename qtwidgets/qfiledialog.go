@@ -124,19 +124,19 @@ func NewQFileDialog(parent QWidget_ITF /*777 QWidget **/, f int) *QFileDialog {
 /*
 Constructs a file dialog with the given parent and widget flags.
 */
-func (*QFileDialog) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/, caption string, directory string, filter string) *QFileDialog {
-	return NewQFileDialog_1(parent, caption, directory, filter)
+func (*QFileDialog) NewForInherit1(parent QWidget_ITF /*777 QWidget **/, caption string, directory string, filter string) *QFileDialog {
+	return NewQFileDialog1(parent, caption, directory, filter)
 }
-func NewQFileDialog_1(parent QWidget_ITF /*777 QWidget **/, caption string, directory string, filter string) *QFileDialog {
+func NewQFileDialog1(parent QWidget_ITF /*777 QWidget **/, caption string, directory string, filter string) *QFileDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(directory)
+	var tmpArg2 = qtcore.NewQString5(directory)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialogC2EP7QWidgetRK7QStringS4_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -153,10 +153,10 @@ func NewQFileDialog_1(parent QWidget_ITF /*777 QWidget **/, caption string, dire
 /*
 Constructs a file dialog with the given parent and widget flags.
 */
-func (*QFileDialog) NewForInherit_1_() *QFileDialog {
-	return NewQFileDialog_1_()
+func (*QFileDialog) NewForInherit1p() *QFileDialog {
+	return NewQFileDialog1p()
 }
-func NewQFileDialog_1_() *QFileDialog {
+func NewQFileDialog1p() *QFileDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
@@ -180,10 +180,10 @@ func NewQFileDialog_1_() *QFileDialog {
 /*
 Constructs a file dialog with the given parent and widget flags.
 */
-func (*QFileDialog) NewForInherit_1_1(parent QWidget_ITF /*777 QWidget **/) *QFileDialog {
-	return NewQFileDialog_1_1(parent)
+func (*QFileDialog) NewForInherit1p1(parent QWidget_ITF /*777 QWidget **/) *QFileDialog {
+	return NewQFileDialog1p1(parent)
 }
-func NewQFileDialog_1_1(parent QWidget_ITF /*777 QWidget **/) *QFileDialog {
+func NewQFileDialog1p1(parent QWidget_ITF /*777 QWidget **/) *QFileDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -209,15 +209,15 @@ func NewQFileDialog_1_1(parent QWidget_ITF /*777 QWidget **/) *QFileDialog {
 /*
 Constructs a file dialog with the given parent and widget flags.
 */
-func (*QFileDialog) NewForInherit_1_2(parent QWidget_ITF /*777 QWidget **/, caption string) *QFileDialog {
-	return NewQFileDialog_1_2(parent, caption)
+func (*QFileDialog) NewForInherit1p2(parent QWidget_ITF /*777 QWidget **/, caption string) *QFileDialog {
+	return NewQFileDialog1p2(parent, caption)
 }
-func NewQFileDialog_1_2(parent QWidget_ITF /*777 QWidget **/, caption string) *QFileDialog {
+func NewQFileDialog1p2(parent QWidget_ITF /*777 QWidget **/, caption string) *QFileDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
@@ -238,17 +238,17 @@ func NewQFileDialog_1_2(parent QWidget_ITF /*777 QWidget **/, caption string) *Q
 /*
 Constructs a file dialog with the given parent and widget flags.
 */
-func (*QFileDialog) NewForInherit_1_3(parent QWidget_ITF /*777 QWidget **/, caption string, directory string) *QFileDialog {
-	return NewQFileDialog_1_3(parent, caption, directory)
+func (*QFileDialog) NewForInherit1p3(parent QWidget_ITF /*777 QWidget **/, caption string, directory string) *QFileDialog {
+	return NewQFileDialog1p3(parent, caption, directory)
 }
-func NewQFileDialog_1_3(parent QWidget_ITF /*777 QWidget **/, caption string, directory string) *QFileDialog {
+func NewQFileDialog1p3(parent QWidget_ITF /*777 QWidget **/, caption string, directory string) *QFileDialog {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(directory)
+	var tmpArg2 = qtcore.NewQString5(directory)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
@@ -287,7 +287,7 @@ Note: On iOS, if you set directory to QStandardPaths::standardLocations(QStandar
 See also directory().
 */
 func (this *QFileDialog) SetDirectory(directory string) {
-	var tmpArg0 = qtcore.NewQString_5(directory)
+	var tmpArg0 = qtcore.NewQString5(directory)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog12setDirectoryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -305,7 +305,7 @@ Note: On iOS, if you set directory to QStandardPaths::standardLocations(QStandar
 
 See also directory().
 */
-func (this *QFileDialog) SetDirectory_1(directory qtcore.QDir_ITF) {
+func (this *QFileDialog) SetDirectory1(directory qtcore.QDir_ITF) {
 	var convArg0 unsafe.Pointer
 	if directory != nil && directory.QDir_PTR() != nil {
 		convArg0 = directory.QDir_PTR().GetCthis()
@@ -388,7 +388,7 @@ Selects the given filename in the file dialog.
 See also selectedFiles().
 */
 func (this *QFileDialog) SelectFile(filename string) {
-	var tmpArg0 = qtcore.NewQString_5(filename)
+	var tmpArg0 = qtcore.NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog10selectFileERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -502,7 +502,7 @@ This function was introduced in  Qt 4.4.
 See also setMimeTypeFilters() and setNameFilters().
 */
 func (this *QFileDialog) SetNameFilter(filter string) {
-	var tmpArg0 = qtcore.NewQString_5(filter)
+	var tmpArg0 = qtcore.NewQString5(filter)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog13setNameFilterERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -578,7 +578,7 @@ This function was introduced in  Qt 4.4.
 See also setNameFilter(), setNameFilters(), and selectedNameFilter().
 */
 func (this *QFileDialog) SelectNameFilter(filter string) {
-	var tmpArg0 = qtcore.NewQString_5(filter)
+	var tmpArg0 = qtcore.NewQString5(filter)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog16selectNameFilterERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -694,7 +694,7 @@ Sets the current MIME type filter.
 This function was introduced in  Qt 5.2.
 */
 func (this *QFileDialog) SelectMimeTypeFilter(filter string) {
-	var tmpArg0 = qtcore.NewQString_5(filter)
+	var tmpArg0 = qtcore.NewQString5(filter)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog20selectMimeTypeFilterERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -969,7 +969,7 @@ func (this *QFileDialog) ConfirmOverwrite() bool {
 
  */
 func (this *QFileDialog) SetDefaultSuffix(suffix string) {
-	var tmpArg0 = qtcore.NewQString_5(suffix)
+	var tmpArg0 = qtcore.NewQString5(suffix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog16setDefaultSuffixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1114,7 +1114,7 @@ Sets the text shown in the filedialog in the specified label.
 See also labelText().
 */
 func (this *QFileDialog) SetLabelText(label int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog12setLabelTextENS_11DialogLabelERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), label, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1240,7 +1240,7 @@ This function was introduced in  Qt 4.5.
 
 See also options and testOption().
 */
-func (this *QFileDialog) SetOption__(option int) {
+func (this *QFileDialog) SetOptionp(option int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog9setOptionENS_6OptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
@@ -1341,7 +1341,7 @@ When the selection changes for local operations and the dialog is accepted, this
 See also currentChanged() and QDialog::Accepted.
 */
 func (this *QFileDialog) FileSelected(file string) {
-	var tmpArg0 = qtcore.NewQString_5(file)
+	var tmpArg0 = qtcore.NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog12fileSelectedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1377,7 +1377,7 @@ When the current file changes for local operations, this signal is emitted with 
 See also filesSelected().
 */
 func (this *QFileDialog) CurrentChanged(path string) {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14currentChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1394,7 +1394,7 @@ This signal is emitted for local operations when the user enters a directory.
 This function was introduced in  Qt 4.3.
 */
 func (this *QFileDialog) DirectoryEntered(directory string) {
-	var tmpArg0 = qtcore.NewQString_5(directory)
+	var tmpArg0 = qtcore.NewQString5(directory)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog16directoryEnteredERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1472,7 +1472,7 @@ This signal is emitted when the user selects a filter.
 This function was introduced in  Qt 4.3.
 */
 func (this *QFileDialog) FilterSelected(filter string) {
-	var tmpArg0 = qtcore.NewQString_5(filter)
+	var tmpArg0 = qtcore.NewQString5(filter)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog14filterSelectedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1521,13 +1521,13 @@ func (this *QFileDialog) GetOpenFileName(parent QWidget_ITF /*777 QWidget **/, c
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getOpenFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -1580,7 +1580,7 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileNames(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileName__() string {
+func (this *QFileDialog) GetOpenFileNamep() string {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
@@ -1639,7 +1639,7 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileNames(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileName__1(parent QWidget_ITF /*777 QWidget **/) string {
+func (this *QFileDialog) GetOpenFileNamep1(parent QWidget_ITF /*777 QWidget **/) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -1700,12 +1700,12 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileNames(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileName__2(parent QWidget_ITF /*777 QWidget **/, caption string) string {
+func (this *QFileDialog) GetOpenFileNamep2(parent QWidget_ITF /*777 QWidget **/, caption string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
@@ -1761,14 +1761,14 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileNames(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileName__3(parent QWidget_ITF /*777 QWidget **/, caption string, dir string) string {
+func (this *QFileDialog) GetOpenFileNamep3(parent QWidget_ITF /*777 QWidget **/, caption string, dir string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
@@ -1822,16 +1822,16 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileNames(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileName__4(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string) string {
+func (this *QFileDialog) GetOpenFileNamep4(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
@@ -1883,18 +1883,18 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileNames(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileName__5(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string, selectedFilter string) string {
+func (this *QFileDialog) GetOpenFileNamep5(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string, selectedFilter string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
@@ -1931,15 +1931,15 @@ func (this *QFileDialog) GetOpenFileUrl(parent QWidget_ITF /*777 QWidget **/, ca
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	var convArg6 unsafe.Pointer
 	if supportedSchemes != nil && supportedSchemes.QStringList_PTR() != nil {
@@ -1977,7 +1977,7 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileName(), getOpenFileUrls(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrl__() *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetOpenFileUrlp() *qtcore.QUrl /*123*/ {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
@@ -2019,7 +2019,7 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileName(), getOpenFileUrls(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrl__1(parent QWidget_ITF /*777 QWidget **/) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetOpenFileUrlp1(parent QWidget_ITF /*777 QWidget **/) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -2063,12 +2063,12 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileName(), getOpenFileUrls(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrl__2(parent QWidget_ITF /*777 QWidget **/, caption string) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetOpenFileUrlp2(parent QWidget_ITF /*777 QWidget **/, caption string) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
@@ -2107,12 +2107,12 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileName(), getOpenFileUrls(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrl__3(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetOpenFileUrlp3(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
@@ -2153,18 +2153,18 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileName(), getOpenFileUrls(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrl__4(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetOpenFileUrlp4(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
@@ -2199,20 +2199,20 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileName(), getOpenFileUrls(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrl__5(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetOpenFileUrlp5(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
@@ -2245,20 +2245,20 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileName(), getOpenFileUrls(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrl__6(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string, options int) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetOpenFileUrlp6(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string, options int) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
@@ -2314,13 +2314,13 @@ func (this *QFileDialog) GetSaveFileName(parent QWidget_ITF /*777 QWidget **/, c
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog15getSaveFileNameEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -2375,7 +2375,7 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getOpenFileNames(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetSaveFileName__() string {
+func (this *QFileDialog) GetSaveFileNamep() string {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
@@ -2436,7 +2436,7 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getOpenFileNames(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetSaveFileName__1(parent QWidget_ITF /*777 QWidget **/) string {
+func (this *QFileDialog) GetSaveFileNamep1(parent QWidget_ITF /*777 QWidget **/) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -2499,12 +2499,12 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getOpenFileNames(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetSaveFileName__2(parent QWidget_ITF /*777 QWidget **/, caption string) string {
+func (this *QFileDialog) GetSaveFileNamep2(parent QWidget_ITF /*777 QWidget **/, caption string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
@@ -2562,14 +2562,14 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getOpenFileNames(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetSaveFileName__3(parent QWidget_ITF /*777 QWidget **/, caption string, dir string) string {
+func (this *QFileDialog) GetSaveFileNamep3(parent QWidget_ITF /*777 QWidget **/, caption string, dir string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
@@ -2625,16 +2625,16 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getOpenFileNames(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetSaveFileName__4(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string) string {
+func (this *QFileDialog) GetSaveFileNamep4(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
@@ -2688,18 +2688,18 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getOpenFileNames(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetSaveFileName__5(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string, selectedFilter string) string {
+func (this *QFileDialog) GetSaveFileNamep5(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string, selectedFilter string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
@@ -2736,15 +2736,15 @@ func (this *QFileDialog) GetSaveFileUrl(parent QWidget_ITF /*777 QWidget **/, ca
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	var convArg6 unsafe.Pointer
 	if supportedSchemes != nil && supportedSchemes.QStringList_PTR() != nil {
@@ -2782,7 +2782,7 @@ This function was introduced in  Qt 5.2.
 
 See also getSaveFileName(), getOpenFileUrl(), getOpenFileUrls(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetSaveFileUrl__() *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetSaveFileUrlp() *qtcore.QUrl /*123*/ {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
@@ -2824,7 +2824,7 @@ This function was introduced in  Qt 5.2.
 
 See also getSaveFileName(), getOpenFileUrl(), getOpenFileUrls(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetSaveFileUrl__1(parent QWidget_ITF /*777 QWidget **/) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetSaveFileUrlp1(parent QWidget_ITF /*777 QWidget **/) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -2868,12 +2868,12 @@ This function was introduced in  Qt 5.2.
 
 See also getSaveFileName(), getOpenFileUrl(), getOpenFileUrls(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetSaveFileUrl__2(parent QWidget_ITF /*777 QWidget **/, caption string) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetSaveFileUrlp2(parent QWidget_ITF /*777 QWidget **/, caption string) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
@@ -2912,12 +2912,12 @@ This function was introduced in  Qt 5.2.
 
 See also getSaveFileName(), getOpenFileUrl(), getOpenFileUrls(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetSaveFileUrl__3(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetSaveFileUrlp3(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
@@ -2958,18 +2958,18 @@ This function was introduced in  Qt 5.2.
 
 See also getSaveFileName(), getOpenFileUrl(), getOpenFileUrls(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetSaveFileUrl__4(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetSaveFileUrlp4(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
@@ -3004,20 +3004,20 @@ This function was introduced in  Qt 5.2.
 
 See also getSaveFileName(), getOpenFileUrl(), getOpenFileUrls(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetSaveFileUrl__5(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetSaveFileUrlp5(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
@@ -3050,20 +3050,20 @@ This function was introduced in  Qt 5.2.
 
 See also getSaveFileName(), getOpenFileUrl(), getOpenFileUrls(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetSaveFileUrl__6(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string, options int) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetSaveFileUrlp6(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string, options int) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer
@@ -3111,9 +3111,9 @@ func (this *QFileDialog) GetExistingDirectory(parent QWidget_ITF /*777 QWidget *
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog20getExistingDirectoryEP7QWidgetRK7QStringS4_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	qtrt.ErrPrint(err, rv)
@@ -3160,7 +3160,7 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getOpenFileNames(), and getSaveFileName().
 */
-func (this *QFileDialog) GetExistingDirectory__() string {
+func (this *QFileDialog) GetExistingDirectoryp() string {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
@@ -3209,7 +3209,7 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getOpenFileNames(), and getSaveFileName().
 */
-func (this *QFileDialog) GetExistingDirectory__1(parent QWidget_ITF /*777 QWidget **/) string {
+func (this *QFileDialog) GetExistingDirectoryp1(parent QWidget_ITF /*777 QWidget **/) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -3260,12 +3260,12 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getOpenFileNames(), and getSaveFileName().
 */
-func (this *QFileDialog) GetExistingDirectory__2(parent QWidget_ITF /*777 QWidget **/, caption string) string {
+func (this *QFileDialog) GetExistingDirectoryp2(parent QWidget_ITF /*777 QWidget **/, caption string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
@@ -3311,14 +3311,14 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getOpenFileNames(), and getSaveFileName().
 */
-func (this *QFileDialog) GetExistingDirectory__3(parent QWidget_ITF /*777 QWidget **/, caption string, dir string) string {
+func (this *QFileDialog) GetExistingDirectoryp3(parent QWidget_ITF /*777 QWidget **/, caption string, dir string) string {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
@@ -3355,7 +3355,7 @@ func (this *QFileDialog) GetExistingDirectoryUrl(parent QWidget_ITF /*777 QWidge
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
@@ -3397,7 +3397,7 @@ This function was introduced in  Qt 5.2.
 
 See also getExistingDirectory(), getOpenFileUrl(), getOpenFileUrls(), and getSaveFileUrl().
 */
-func (this *QFileDialog) GetExistingDirectoryUrl__() *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetExistingDirectoryUrlp() *qtcore.QUrl /*123*/ {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
@@ -3435,7 +3435,7 @@ This function was introduced in  Qt 5.2.
 
 See also getExistingDirectory(), getOpenFileUrl(), getOpenFileUrls(), and getSaveFileUrl().
 */
-func (this *QFileDialog) GetExistingDirectoryUrl__1(parent QWidget_ITF /*777 QWidget **/) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetExistingDirectoryUrlp1(parent QWidget_ITF /*777 QWidget **/) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -3475,12 +3475,12 @@ This function was introduced in  Qt 5.2.
 
 See also getExistingDirectory(), getOpenFileUrl(), getOpenFileUrls(), and getSaveFileUrl().
 */
-func (this *QFileDialog) GetExistingDirectoryUrl__2(parent QWidget_ITF /*777 QWidget **/, caption string) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetExistingDirectoryUrlp2(parent QWidget_ITF /*777 QWidget **/, caption string) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
@@ -3515,12 +3515,12 @@ This function was introduced in  Qt 5.2.
 
 See also getExistingDirectory(), getOpenFileUrl(), getOpenFileUrls(), and getSaveFileUrl().
 */
-func (this *QFileDialog) GetExistingDirectoryUrl__3(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetExistingDirectoryUrlp3(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
@@ -3557,12 +3557,12 @@ This function was introduced in  Qt 5.2.
 
 See also getExistingDirectory(), getOpenFileUrl(), getOpenFileUrls(), and getSaveFileUrl().
 */
-func (this *QFileDialog) GetExistingDirectoryUrl__4(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, options int) *qtcore.QUrl /*123*/ {
+func (this *QFileDialog) GetExistingDirectoryUrlp4(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, options int) *qtcore.QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
@@ -3620,13 +3620,13 @@ func (this *QFileDialog) GetOpenFileNames(parent QWidget_ITF /*777 QWidget **/, 
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog16getOpenFileNamesEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
 	qtrt.ErrPrint(err, rv)
@@ -3678,7 +3678,7 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileNames__() *qtcore.QStringList /*123*/ {
+func (this *QFileDialog) GetOpenFileNamesp() *qtcore.QStringList /*123*/ {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
@@ -3736,7 +3736,7 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileNames__1(parent QWidget_ITF /*777 QWidget **/) *qtcore.QStringList /*123*/ {
+func (this *QFileDialog) GetOpenFileNamesp1(parent QWidget_ITF /*777 QWidget **/) *qtcore.QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -3796,12 +3796,12 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileNames__2(parent QWidget_ITF /*777 QWidget **/, caption string) *qtcore.QStringList /*123*/ {
+func (this *QFileDialog) GetOpenFileNamesp2(parent QWidget_ITF /*777 QWidget **/, caption string) *qtcore.QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = qtcore.NewQString()
@@ -3856,14 +3856,14 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileNames__3(parent QWidget_ITF /*777 QWidget **/, caption string, dir string) *qtcore.QStringList /*123*/ {
+func (this *QFileDialog) GetOpenFileNamesp3(parent QWidget_ITF /*777 QWidget **/, caption string, dir string) *qtcore.QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = qtcore.NewQString()
@@ -3916,16 +3916,16 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileNames__4(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string) *qtcore.QStringList /*123*/ {
+func (this *QFileDialog) GetOpenFileNamesp4(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string) *qtcore.QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
@@ -3976,18 +3976,18 @@ Warning: Do not delete parent during the execution of the dialog. If you want to
 
 See also getOpenFileName(), getSaveFileName(), and getExistingDirectory().
 */
-func (this *QFileDialog) GetOpenFileNames__5(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string, selectedFilter string) *qtcore.QStringList /*123*/ {
+func (this *QFileDialog) GetOpenFileNamesp5(parent QWidget_ITF /*777 QWidget **/, caption string, dir string, filter string, selectedFilter string) *qtcore.QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(dir)
+	var tmpArg2 = qtcore.NewQString5(dir)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
@@ -4023,15 +4023,15 @@ func (this *QFileDialog) GetOpenFileUrls(parent QWidget_ITF /*777 QWidget **/, c
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	var convArg6 unsafe.Pointer
 	if supportedSchemes != nil && supportedSchemes.QStringList_PTR() != nil {
@@ -4068,7 +4068,7 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrls__() *qtcore.QUrlList /*lll*/ {
+func (this *QFileDialog) GetOpenFileUrlsp() *qtcore.QUrlList /*lll*/ {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
@@ -4109,7 +4109,7 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrls__1(parent QWidget_ITF /*777 QWidget **/) *qtcore.QUrlList /*lll*/ {
+func (this *QFileDialog) GetOpenFileUrlsp1(parent QWidget_ITF /*777 QWidget **/) *qtcore.QUrlList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -4152,12 +4152,12 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrls__2(parent QWidget_ITF /*777 QWidget **/, caption string) *qtcore.QUrlList /*lll*/ {
+func (this *QFileDialog) GetOpenFileUrlsp2(parent QWidget_ITF /*777 QWidget **/, caption string) *qtcore.QUrlList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg2 = qtcore.NewQUrl()
@@ -4195,12 +4195,12 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrls__3(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF) *qtcore.QUrlList /*lll*/ {
+func (this *QFileDialog) GetOpenFileUrlsp3(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF) *qtcore.QUrlList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
@@ -4240,18 +4240,18 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrls__4(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string) *qtcore.QUrlList /*lll*/ {
+func (this *QFileDialog) GetOpenFileUrlsp4(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string) *qtcore.QUrlList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, QString *=Pointer, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
@@ -4285,20 +4285,20 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrls__5(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string) *qtcore.QUrlList /*lll*/ {
+func (this *QFileDialog) GetOpenFileUrlsp5(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string) *qtcore.QUrlList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, QFileDialog::Options=Typedef, QFileDialog::Options=Typedef, QFlags<QFileDialog::Option>, Unexposed
 	options := 0
@@ -4330,20 +4330,20 @@ This function was introduced in  Qt 5.2.
 
 See also getOpenFileNames(), getOpenFileUrl(), getSaveFileUrl(), and getExistingDirectoryUrl().
 */
-func (this *QFileDialog) GetOpenFileUrls__6(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string, options int) *qtcore.QUrlList /*lll*/ {
+func (this *QFileDialog) GetOpenFileUrlsp6(parent QWidget_ITF /*777 QWidget **/, caption string, dir qtcore.QUrl_ITF, filter string, selectedFilter string, options int) *qtcore.QUrlList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(caption)
+	var tmpArg1 = qtcore.NewQString5(caption)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if dir != nil && dir.QUrl_PTR() != nil {
 		convArg2 = dir.QUrl_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(filter)
+	var tmpArg3 = qtcore.NewQString5(filter)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var tmpArg4 = qtcore.NewQString5(selectedFilter)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 6, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg6 unsafe.Pointer

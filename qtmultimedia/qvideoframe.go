@@ -94,10 +94,10 @@ func NewQVideoFrame() *QVideoFrame {
 /*
 Constructs a null video frame.
 */
-func (*QVideoFrame) NewForInherit_1(buffer QAbstractVideoBuffer_ITF /*777 QAbstractVideoBuffer **/, size qtcore.QSize_ITF, format int) *QVideoFrame {
-	return NewQVideoFrame_1(buffer, size, format)
+func (*QVideoFrame) NewForInherit1(buffer QAbstractVideoBuffer_ITF /*777 QAbstractVideoBuffer **/, size qtcore.QSize_ITF, format int) *QVideoFrame {
+	return NewQVideoFrame1(buffer, size, format)
 }
-func NewQVideoFrame_1(buffer QAbstractVideoBuffer_ITF /*777 QAbstractVideoBuffer **/, size qtcore.QSize_ITF, format int) *QVideoFrame {
+func NewQVideoFrame1(buffer QAbstractVideoBuffer_ITF /*777 QAbstractVideoBuffer **/, size qtcore.QSize_ITF, format int) *QVideoFrame {
 	var convArg0 unsafe.Pointer
 	if buffer != nil && buffer.QAbstractVideoBuffer_PTR() != nil {
 		convArg0 = buffer.QAbstractVideoBuffer_PTR().GetCthis()
@@ -121,10 +121,10 @@ func NewQVideoFrame_1(buffer QAbstractVideoBuffer_ITF /*777 QAbstractVideoBuffer
 /*
 Constructs a null video frame.
 */
-func (*QVideoFrame) NewForInherit_2(bytes int, size qtcore.QSize_ITF, bytesPerLine int, format int) *QVideoFrame {
-	return NewQVideoFrame_2(bytes, size, bytesPerLine, format)
+func (*QVideoFrame) NewForInherit2(bytes int, size qtcore.QSize_ITF, bytesPerLine int, format int) *QVideoFrame {
+	return NewQVideoFrame2(bytes, size, bytesPerLine, format)
 }
-func NewQVideoFrame_2(bytes int, size qtcore.QSize_ITF, bytesPerLine int, format int) *QVideoFrame {
+func NewQVideoFrame2(bytes int, size qtcore.QSize_ITF, bytesPerLine int, format int) *QVideoFrame {
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()
@@ -144,10 +144,10 @@ func NewQVideoFrame_2(bytes int, size qtcore.QSize_ITF, bytesPerLine int, format
 /*
 Constructs a null video frame.
 */
-func (*QVideoFrame) NewForInherit_3(image qtgui.QImage_ITF) *QVideoFrame {
-	return NewQVideoFrame_3(image)
+func (*QVideoFrame) NewForInherit3(image qtgui.QImage_ITF) *QVideoFrame {
+	return NewQVideoFrame3(image)
 }
-func NewQVideoFrame_3(image qtgui.QImage_ITF) *QVideoFrame {
+func NewQVideoFrame3(image qtgui.QImage_ITF) *QVideoFrame {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()
@@ -514,7 +514,7 @@ This value is only valid while the frame data is mapped.
 
 See also bits(), map(), and mappedBytes().
 */
-func (this *QVideoFrame) BytesPerLine_1(plane int) int {
+func (this *QVideoFrame) BytesPerLine1(plane int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QVideoFrame12bytesPerLineEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), plane)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -554,7 +554,7 @@ Changes made to data accessed via this pointer (when mapped with write access) a
 
 See also map(), mappedBytes(), and bytesPerLine().
 */
-func (this *QVideoFrame) Bits_1(plane int) unsafe.Pointer /*666*/ {
+func (this *QVideoFrame) Bits1(plane int) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QVideoFrame4bitsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), plane)
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -574,7 +574,7 @@ Changes made to data accessed via this pointer (when mapped with write access) a
 
 See also map(), mappedBytes(), and bytesPerLine().
 */
-func (this *QVideoFrame) Bits_2() unsafe.Pointer /*666*/ {
+func (this *QVideoFrame) Bits2() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QVideoFrame4bitsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -594,7 +594,7 @@ Changes made to data accessed via this pointer (when mapped with write access) a
 
 See also map(), mappedBytes(), and bytesPerLine().
 */
-func (this *QVideoFrame) Bits_3(plane int) unsafe.Pointer /*666*/ {
+func (this *QVideoFrame) Bits3(plane int) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QVideoFrame4bitsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), plane)
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -743,7 +743,7 @@ See the documentation for the relevant video frame producer for further informat
 See also setMetaData().
 */
 func (this *QVideoFrame) MetaData(key string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QVideoFrame8metaDataERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -767,7 +767,7 @@ The producer of the video frame might use this to associate certain data with th
 See also metaData().
 */
 func (this *QVideoFrame) SetMetaData(key string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {

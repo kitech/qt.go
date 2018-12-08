@@ -151,7 +151,7 @@ Creates and returns a monitor with the given parent, by loading the plugin named
 Returns 0 if the plugin cannot be found.
 */
 func (this *QGeoAreaMonitorSource) CreateSource(sourceName string, parent qtcore.QObject_ITF /*777 QObject **/) *QGeoAreaMonitorSource /*777 QGeoAreaMonitorSource **/ {
-	var tmpArg0 = qtcore.NewQString_5(sourceName)
+	var tmpArg0 = qtcore.NewQString5(sourceName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -272,7 +272,7 @@ func (this *QGeoAreaMonitorSource) Error() int {
 /*
 Returns the type of error that last occurred.
 */
-func (this *QGeoAreaMonitorSource) Error_1(error int) {
+func (this *QGeoAreaMonitorSource) Error1(error int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGeoAreaMonitorSource5errorENS_5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	qtrt.ErrPrint(err, rv)
 }

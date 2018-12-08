@@ -91,10 +91,10 @@ func NewQRandomGenerator(seedValue uint) *QRandomGenerator {
 /*
 
  */
-func (*QRandomGenerator) NewForInherit__() *QRandomGenerator {
-	return NewQRandomGenerator__()
+func (*QRandomGenerator) NewForInheritp() *QRandomGenerator {
+	return NewQRandomGeneratorp()
 }
-func NewQRandomGenerator__() *QRandomGenerator {
+func NewQRandomGeneratorp() *QRandomGenerator {
 	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int, UInt
 	seedValue := uint(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2Ej", qtrt.FFI_TYPE_POINTER, seedValue)
@@ -112,10 +112,10 @@ func NewQRandomGenerator__() *QRandomGenerator {
 /*
 
  */
-func (*QRandomGenerator) NewForInherit_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRandomGenerator {
-	return NewQRandomGenerator_1(seedBuffer, len_)
+func (*QRandomGenerator) NewForInherit1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRandomGenerator {
+	return NewQRandomGenerator1(seedBuffer, len_)
 }
-func NewQRandomGenerator_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRandomGenerator {
+func NewQRandomGenerator1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRandomGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjx", qtrt.FFI_TYPE_POINTER, seedBuffer, len_)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGeneratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -131,10 +131,10 @@ func NewQRandomGenerator_1(seedBuffer unsafe.Pointer /*666*/, len_ int64) *QRand
 /*
 
  */
-func (*QRandomGenerator) NewForInherit_2(begin_ unsafe.Pointer /*666*/, end_ unsafe.Pointer /*666*/) *QRandomGenerator {
-	return NewQRandomGenerator_2(begin_, end_)
+func (*QRandomGenerator) NewForInherit2(begin_ unsafe.Pointer /*666*/, end_ unsafe.Pointer /*666*/) *QRandomGenerator {
+	return NewQRandomGenerator2(begin_, end_)
 }
-func NewQRandomGenerator_2(begin_ unsafe.Pointer /*666*/, end_ unsafe.Pointer /*666*/) *QRandomGenerator {
+func NewQRandomGenerator2(begin_ unsafe.Pointer /*666*/, end_ unsafe.Pointer /*666*/) *QRandomGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2EPKjS1_", qtrt.FFI_TYPE_POINTER, begin_, end_)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGeneratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -150,10 +150,10 @@ func NewQRandomGenerator_2(begin_ unsafe.Pointer /*666*/, end_ unsafe.Pointer /*
 /*
 
  */
-func (*QRandomGenerator) NewForInherit_3(arg0 int) *QRandomGenerator {
-	return NewQRandomGenerator_3(arg0)
+func (*QRandomGenerator) NewForInherit3(arg0 int) *QRandomGenerator {
+	return NewQRandomGenerator3(arg0)
 }
-func NewQRandomGenerator_3(arg0 int) *QRandomGenerator {
+func NewQRandomGenerator3(arg0 int) *QRandomGenerator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGeneratorC2ENS_6SystemE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRandomGeneratorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -203,7 +203,7 @@ func (this *QRandomGenerator) Generate() uint {
 /*
 
  */
-func (this *QRandomGenerator) Generate_1(begin_ unsafe.Pointer /*666*/, end_ unsafe.Pointer /*666*/) {
+func (this *QRandomGenerator) Generate1(begin_ unsafe.Pointer /*666*/, end_ unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator8generateEPjS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), begin_, end_)
 	qtrt.ErrPrint(err, rv)
 }
@@ -258,7 +258,7 @@ func (this *QRandomGenerator) Bounded(highest float64) float64 {
 /*
 
  */
-func (this *QRandomGenerator) Bounded_1(highest uint) uint {
+func (this *QRandomGenerator) Bounded1(highest uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), highest)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -272,7 +272,7 @@ func (this *QRandomGenerator) Bounded_1(highest uint) uint {
 /*
 
  */
-func (this *QRandomGenerator) Bounded_2(highest int) int {
+func (this *QRandomGenerator) Bounded2(highest int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), highest)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -286,7 +286,7 @@ func (this *QRandomGenerator) Bounded_2(highest int) int {
 /*
 
  */
-func (this *QRandomGenerator) Bounded_3(lowest uint, highest uint) uint {
+func (this *QRandomGenerator) Bounded3(lowest uint, highest uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEjj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), lowest, highest)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -300,7 +300,7 @@ func (this *QRandomGenerator) Bounded_3(lowest uint, highest uint) uint {
 /*
 
  */
-func (this *QRandomGenerator) Bounded_4(lowest int, highest int) int {
+func (this *QRandomGenerator) Bounded4(lowest int, highest int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), lowest, highest)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -341,7 +341,7 @@ func (this *QRandomGenerator) Seed(s uint) {
 /*
 
  */
-func (this *QRandomGenerator) Seed__() {
+func (this *QRandomGenerator) Seedp() {
 	// arg: 0, quint32=Typedef, quint32=Typedef, unsigned int, UInt
 	s := uint(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRandomGenerator4seedEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), s)

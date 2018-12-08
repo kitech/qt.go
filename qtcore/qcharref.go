@@ -92,7 +92,7 @@ func (this *QCharRef) Operator_equal(c QChar_ITF /*123*/) *QCharRef {
 /*
 
  */
-func (this *QCharRef) Operator_equal_1(c byte) *QCharRef {
+func (this *QCharRef) Operator_equal1(c byte) *QCharRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QCharRefaSEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -108,7 +108,7 @@ func (this *QCharRef) Operator_equal_1(c byte) *QCharRef {
 /*
 
  */
-func (this *QCharRef) Operator_equal_2(c byte) *QCharRef {
+func (this *QCharRef) Operator_equal2(c byte) *QCharRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QCharRefaSEh", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -124,7 +124,7 @@ func (this *QCharRef) Operator_equal_2(c byte) *QCharRef {
 /*
 
  */
-func (this *QCharRef) Operator_equal_3(c QCharRef_ITF) *QCharRef {
+func (this *QCharRef) Operator_equal3(c QCharRef_ITF) *QCharRef {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QCharRef_PTR() != nil {
 		convArg0 = c.QCharRef_PTR().GetCthis()
@@ -144,7 +144,7 @@ func (this *QCharRef) Operator_equal_3(c QCharRef_ITF) *QCharRef {
 /*
 
  */
-func (this *QCharRef) Operator_equal_4(rc uint16) *QCharRef {
+func (this *QCharRef) Operator_equal4(rc uint16) *QCharRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QCharRefaSEt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -160,7 +160,7 @@ func (this *QCharRef) Operator_equal_4(rc uint16) *QCharRef {
 /*
 
  */
-func (this *QCharRef) Operator_equal_5(rc int16) *QCharRef {
+func (this *QCharRef) Operator_equal5(rc int16) *QCharRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QCharRefaSEs", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -176,7 +176,7 @@ func (this *QCharRef) Operator_equal_5(rc int16) *QCharRef {
 /*
 
  */
-func (this *QCharRef) Operator_equal_6(rc uint) *QCharRef {
+func (this *QCharRef) Operator_equal6(rc uint) *QCharRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QCharRefaSEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -192,7 +192,7 @@ func (this *QCharRef) Operator_equal_6(rc uint) *QCharRef {
 /*
 
  */
-func (this *QCharRef) Operator_equal_7(rc int) *QCharRef {
+func (this *QCharRef) Operator_equal7(rc int) *QCharRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QCharRefaSEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -724,7 +724,7 @@ Note: The returned string may not be '\0'-terminated. Use size() to determine th
 
 See also setUnicode(), utf16(), and fromRawData().
 */
-func (this *QCharRef) Unicode_1() uint16 {
+func (this *QCharRef) Unicode1() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QCharRef7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint16(rv)

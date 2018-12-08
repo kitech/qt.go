@@ -106,7 +106,7 @@ func (this *QBitRef) Operator_equal(val QBitRef_ITF) *QBitRef {
 /*
 
  */
-func (this *QBitRef) Operator_equal_1(val bool) *QBitRef {
+func (this *QBitRef) Operator_equal1(val bool) *QBitRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitRefaSEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQBitRefFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

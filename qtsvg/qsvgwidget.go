@@ -115,10 +115,10 @@ func NewQSvgWidget(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QSvgWidget {
 /*
 Constructs a new SVG display widget with the given parent.
 */
-func (*QSvgWidget) NewForInherit__() *QSvgWidget {
-	return NewQSvgWidget__()
+func (*QSvgWidget) NewForInheritp() *QSvgWidget {
+	return NewQSvgWidgetp()
 }
-func NewQSvgWidget__() *QSvgWidget {
+func NewQSvgWidgetp() *QSvgWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSvgWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -136,11 +136,11 @@ func NewQSvgWidget__() *QSvgWidget {
 /*
 Constructs a new SVG display widget with the given parent.
 */
-func (*QSvgWidget) NewForInherit_1(file string, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QSvgWidget {
-	return NewQSvgWidget_1(file, parent)
+func (*QSvgWidget) NewForInherit1(file string, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QSvgWidget {
+	return NewQSvgWidget1(file, parent)
 }
-func NewQSvgWidget_1(file string, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QSvgWidget {
-	var tmpArg0 = qtcore.NewQString_5(file)
+func NewQSvgWidget1(file string, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QSvgWidget {
+	var tmpArg0 = qtcore.NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -161,11 +161,11 @@ func NewQSvgWidget_1(file string, parent qtwidgets.QWidget_ITF /*777 QWidget **/
 /*
 Constructs a new SVG display widget with the given parent.
 */
-func (*QSvgWidget) NewForInherit_1_(file string) *QSvgWidget {
-	return NewQSvgWidget_1_(file)
+func (*QSvgWidget) NewForInherit1p(file string) *QSvgWidget {
+	return NewQSvgWidget1p(file)
 }
-func NewQSvgWidget_1_(file string) *QSvgWidget {
-	var tmpArg0 = qtcore.NewQString_5(file)
+func NewQSvgWidget1p(file string) *QSvgWidget {
+	var tmpArg0 = qtcore.NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -230,7 +230,7 @@ func (this *QSvgWidget) SizeHint() *qtcore.QSize /*123*/ {
 Loads the contents of the specified SVG file and updates the widget.
 */
 func (this *QSvgWidget) Load(file string) {
-	var tmpArg0 = qtcore.NewQString_5(file)
+	var tmpArg0 = qtcore.NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSvgWidget4loadERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -244,7 +244,7 @@ func (this *QSvgWidget) Load(file string) {
 /*
 Loads the contents of the specified SVG file and updates the widget.
 */
-func (this *QSvgWidget) Load_1(contents qtcore.QByteArray_ITF) {
+func (this *QSvgWidget) Load1(contents qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if contents != nil && contents.QByteArray_PTR() != nil {
 		convArg0 = contents.QByteArray_PTR().GetCthis()

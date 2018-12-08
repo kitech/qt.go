@@ -86,7 +86,7 @@ func (this *QMapNodeBase) NextNode() *QMapNodeBase /*777 const QMapNodeBase **/ 
 /*
 
  */
-func (this *QMapNodeBase) NextNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
+func (this *QMapNodeBase) NextNode1() *QMapNodeBase /*777 QMapNodeBase **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapNodeBase8nextNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMapNodeBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -114,7 +114,7 @@ func (this *QMapNodeBase) PreviousNode() *QMapNodeBase /*777 const QMapNodeBase 
 /*
 
  */
-func (this *QMapNodeBase) PreviousNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
+func (this *QMapNodeBase) PreviousNode1() *QMapNodeBase /*777 QMapNodeBase **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapNodeBase12previousNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQMapNodeBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444

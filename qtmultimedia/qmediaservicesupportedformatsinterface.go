@@ -93,7 +93,7 @@ func DeleteQMediaServiceSupportedFormatsInterface(this *QMediaServiceSupportedFo
 
  */
 func (this *QMediaServiceSupportedFormatsInterface) HasSupport(mimeType string, codecs qtcore.QStringList_ITF) int {
-	var tmpArg0 = qtcore.NewQString_5(mimeType)
+	var tmpArg0 = qtcore.NewQString5(mimeType)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if codecs != nil && codecs.QStringList_PTR() != nil {

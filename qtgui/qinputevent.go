@@ -90,10 +90,10 @@ func NewQInputEvent(type_ int, modifiers int) *QInputEvent {
 /*
 
  */
-func (*QInputEvent) NewForInherit__(type_ int) *QInputEvent {
-	return NewQInputEvent__(type_)
+func (*QInputEvent) NewForInheritp(type_ int) *QInputEvent {
+	return NewQInputEventp(type_)
 }
-func NewQInputEvent__(type_ int) *QInputEvent {
+func NewQInputEventp(type_ int) *QInputEvent {
 	// arg: 1, Qt::KeyboardModifiers=Elaborated, Qt::KeyboardModifiers=Typedef, QFlags<Qt::KeyboardModifier>, Unexposed
 	modifiers := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QInputEventC2EN6QEvent4TypeE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, type_, modifiers)

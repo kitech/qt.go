@@ -108,10 +108,10 @@ func NewQIntValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidato
 /*
 
  */
-func (*QIntValidator) NewForInherit__() *QIntValidator {
-	return NewQIntValidator__()
+func (*QIntValidator) NewForInheritp() *QIntValidator {
+	return NewQIntValidatorp()
 }
-func NewQIntValidator__() *QIntValidator {
+func NewQIntValidatorp() *QIntValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -129,10 +129,10 @@ func NewQIntValidator__() *QIntValidator {
 /*
 
  */
-func (*QIntValidator) NewForInherit_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
-	return NewQIntValidator_1(bottom, top, parent)
+func (*QIntValidator) NewForInherit1(bottom int, top int, parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
+	return NewQIntValidator1(bottom, top, parent)
 }
-func NewQIntValidator_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
+func NewQIntValidator1(bottom int, top int, parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidator {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg2 = parent.QObject_PTR().GetCthis()
@@ -152,10 +152,10 @@ func NewQIntValidator_1(bottom int, top int, parent qtcore.QObject_ITF /*777 QOb
 /*
 
  */
-func (*QIntValidator) NewForInherit_1_(bottom int, top int) *QIntValidator {
-	return NewQIntValidator_1_(bottom, top)
+func (*QIntValidator) NewForInherit1p(bottom int, top int) *QIntValidator {
+	return NewQIntValidator1p(bottom, top)
 }
-func NewQIntValidator_1_(bottom int, top int) *QIntValidator {
+func NewQIntValidator1p(bottom int, top int) *QIntValidator {
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QIntValidatorC2EiiP7QObject", qtrt.FFI_TYPE_POINTER, bottom, top, convArg2)
@@ -191,7 +191,7 @@ This virtual function returns Invalid if input is invalid according to this vali
 The function can change both input and pos (the cursor position) if required.
 */
 func (this *QIntValidator) Validate(arg0 string, arg1 int) int {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
 	qtrt.ErrPrint(err, rv)
@@ -209,7 +209,7 @@ This function attempts to change input to be valid according to this validator's
 Reimplementations of this function can change input even if they do not produce a valid string. For example, an ISBN validator might want to delete every character except digits and "-", even if the result is still not a valid ISBN; a surname validator might want to remove whitespace from the start and end of the string, even if the resulting string is not in the list of accepted surnames.
 */
 func (this *QIntValidator) Fixup(input string) {
-	var tmpArg0 = qtcore.NewQString_5(input)
+	var tmpArg0 = qtcore.NewQString5(input)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator5fixupER7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

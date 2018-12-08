@@ -94,10 +94,10 @@ func NewQAndroidJniExceptionCleaner(outputMode int) *QAndroidJniExceptionCleaner
 /*
 
  */
-func (*QAndroidJniExceptionCleaner) NewForInherit__() *QAndroidJniExceptionCleaner {
-	return NewQAndroidJniExceptionCleaner__()
+func (*QAndroidJniExceptionCleaner) NewForInheritp() *QAndroidJniExceptionCleaner {
+	return NewQAndroidJniExceptionCleanerp()
 }
-func NewQAndroidJniExceptionCleaner__() *QAndroidJniExceptionCleaner {
+func NewQAndroidJniExceptionCleanerp() *QAndroidJniExceptionCleaner {
 	// arg: 0, QAndroidJniExceptionCleaner::OutputMode=Enum, QAndroidJniExceptionCleaner::OutputMode=Enum, , Invalid
 	outputMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QAndroidJniExceptionCleanerC2ENS_10OutputModeE", qtrt.FFI_TYPE_POINTER, outputMode)

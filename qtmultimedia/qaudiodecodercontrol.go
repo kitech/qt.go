@@ -140,7 +140,7 @@ Sources are exclusive, so only one can be set.
 See also sourceFilename().
 */
 func (this *QAudioDecoderControl) SetSourceFilename(fileName string) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAudioDecoderControl17setSourceFilenameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -376,7 +376,7 @@ func (this *QAudioDecoderControl) SourceChanged() {
 Signals that an error has occurred. The errorString provides a more detailed explanation.
 */
 func (this *QAudioDecoderControl) Error(error int, errorString string) {
-	var tmpArg1 = qtcore.NewQString_5(errorString)
+	var tmpArg1 = qtcore.NewQString5(errorString)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAudioDecoderControl5errorEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -484,10 +484,10 @@ func NewQAudioDecoderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QAudi
 /*
 Constructs a new audio decoder control with the given parent.
 */
-func (*QAudioDecoderControl) NewForInherit__() *QAudioDecoderControl {
-	return NewQAudioDecoderControl__()
+func (*QAudioDecoderControl) NewForInheritp() *QAudioDecoderControl {
+	return NewQAudioDecoderControlp()
 }
-func NewQAudioDecoderControl__() *QAudioDecoderControl {
+func NewQAudioDecoderControlp() *QAudioDecoderControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAudioDecoderControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

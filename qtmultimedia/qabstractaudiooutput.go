@@ -104,7 +104,7 @@ func (this *QAbstractAudioOutput) Start(device qtcore.QIODevice_ITF /*777 QIODev
 /*
 
  */
-func (this *QAbstractAudioOutput) Start_1() *qtcore.QIODevice /*777 QIODevice **/ {
+func (this *QAbstractAudioOutput) Start1() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAbstractAudioOutput5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -386,7 +386,7 @@ func (this *QAbstractAudioOutput) Category() string {
 
  */
 func (this *QAbstractAudioOutput) SetCategory(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAbstractAudioOutput11setCategoryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

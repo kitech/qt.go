@@ -94,15 +94,15 @@ func NewQMediaResource() *QMediaResource {
 /*
 Constructs a null media resource.
 */
-func (*QMediaResource) NewForInherit_1(url qtcore.QUrl_ITF, mimeType string) *QMediaResource {
-	return NewQMediaResource_1(url, mimeType)
+func (*QMediaResource) NewForInherit1(url qtcore.QUrl_ITF, mimeType string) *QMediaResource {
+	return NewQMediaResource1(url, mimeType)
 }
-func NewQMediaResource_1(url qtcore.QUrl_ITF, mimeType string) *QMediaResource {
+func NewQMediaResource1(url qtcore.QUrl_ITF, mimeType string) *QMediaResource {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(mimeType)
+	var tmpArg1 = qtcore.NewQString5(mimeType)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaResourceC2ERK4QUrlRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -119,10 +119,10 @@ func NewQMediaResource_1(url qtcore.QUrl_ITF, mimeType string) *QMediaResource {
 /*
 Constructs a null media resource.
 */
-func (*QMediaResource) NewForInherit_1_(url qtcore.QUrl_ITF) *QMediaResource {
-	return NewQMediaResource_1_(url)
+func (*QMediaResource) NewForInherit1p(url qtcore.QUrl_ITF) *QMediaResource {
+	return NewQMediaResource1p(url)
 }
-func NewQMediaResource_1_(url qtcore.QUrl_ITF) *QMediaResource {
+func NewQMediaResource1p(url qtcore.QUrl_ITF) *QMediaResource {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
@@ -144,15 +144,15 @@ func NewQMediaResource_1_(url qtcore.QUrl_ITF) *QMediaResource {
 /*
 Constructs a null media resource.
 */
-func (*QMediaResource) NewForInherit_2(request qtnetwork.QNetworkRequest_ITF, mimeType string) *QMediaResource {
-	return NewQMediaResource_2(request, mimeType)
+func (*QMediaResource) NewForInherit2(request qtnetwork.QNetworkRequest_ITF, mimeType string) *QMediaResource {
+	return NewQMediaResource2(request, mimeType)
 }
-func NewQMediaResource_2(request qtnetwork.QNetworkRequest_ITF, mimeType string) *QMediaResource {
+func NewQMediaResource2(request qtnetwork.QNetworkRequest_ITF, mimeType string) *QMediaResource {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg0 = request.QNetworkRequest_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(mimeType)
+	var tmpArg1 = qtcore.NewQString5(mimeType)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaResourceC2ERK15QNetworkRequestRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -169,10 +169,10 @@ func NewQMediaResource_2(request qtnetwork.QNetworkRequest_ITF, mimeType string)
 /*
 Constructs a null media resource.
 */
-func (*QMediaResource) NewForInherit_2_(request qtnetwork.QNetworkRequest_ITF) *QMediaResource {
-	return NewQMediaResource_2_(request)
+func (*QMediaResource) NewForInherit2p(request qtnetwork.QNetworkRequest_ITF) *QMediaResource {
+	return NewQMediaResource2p(request)
 }
-func NewQMediaResource_2_(request qtnetwork.QNetworkRequest_ITF) *QMediaResource {
+func NewQMediaResource2p(request qtnetwork.QNetworkRequest_ITF) *QMediaResource {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg0 = request.QNetworkRequest_PTR().GetCthis()
@@ -356,7 +356,7 @@ Sets the language of a media resource.
 See also language().
 */
 func (this *QMediaResource) SetLanguage(language string) {
-	var tmpArg0 = qtcore.NewQString_5(language)
+	var tmpArg0 = qtcore.NewQString5(language)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaResource11setLanguageERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -394,7 +394,7 @@ Sets the audio codec of a media resource.
 See also audioCodec().
 */
 func (this *QMediaResource) SetAudioCodec(codec string) {
-	var tmpArg0 = qtcore.NewQString_5(codec)
+	var tmpArg0 = qtcore.NewQString5(codec)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaResource13setAudioCodecERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -432,7 +432,7 @@ Sets the video codec of media resource.
 See also videoCodec().
 */
 func (this *QMediaResource) SetVideoCodec(codec string) {
-	var tmpArg0 = qtcore.NewQString_5(codec)
+	var tmpArg0 = qtcore.NewQString5(codec)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaResource13setVideoCodecERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -652,7 +652,7 @@ Sets the resolution in pixels of a media resource.
 
 See also resolution().
 */
-func (this *QMediaResource) SetResolution_1(width int, height int) {
+func (this *QMediaResource) SetResolution1(width int, height int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaResource13setResolutionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, height)
 	qtrt.ErrPrint(err, rv)
 }

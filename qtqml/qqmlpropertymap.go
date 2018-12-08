@@ -114,10 +114,10 @@ func NewQQmlPropertyMap(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlProper
 /*
 Constructs a bindable map with parent object parent.
 */
-func (*QQmlPropertyMap) NewForInherit__() *QQmlPropertyMap {
-	return NewQQmlPropertyMap__()
+func (*QQmlPropertyMap) NewForInheritp() *QQmlPropertyMap {
+	return NewQQmlPropertyMapp()
 }
-func NewQQmlPropertyMap__() *QQmlPropertyMap {
+func NewQQmlPropertyMapp() *QQmlPropertyMap {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QQmlPropertyMapC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -153,7 +153,7 @@ Returns the value associated with key.
 If no value has been set for this key (or if the value has been cleared), an invalid QVariant is returned.
 */
 func (this *QQmlPropertyMap) Value(key string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap5valueERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ func (this *QQmlPropertyMap) Value(key string) *qtcore.QVariant /*123*/ {
 Clears the value (if any) associated with key.
 */
 func (this *QQmlPropertyMap) Clear(key string) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QQmlPropertyMap5clearERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -254,7 +254,7 @@ Returns true if the map contains key.
 See also size().
 */
 func (this *QQmlPropertyMap) Contains(key string) bool {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap8containsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -270,7 +270,7 @@ func (this *QQmlPropertyMap) Contains(key string) bool {
 
  */
 func (this *QQmlPropertyMap) Operator_get_index(key string) *qtcore.QVariant {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QQmlPropertyMapixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -287,8 +287,8 @@ func (this *QQmlPropertyMap) Operator_get_index(key string) *qtcore.QVariant {
 /*
 
  */
-func (this *QQmlPropertyMap) Operator_get_index_1(key string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+func (this *QQmlPropertyMap) Operator_get_index1(key string) *qtcore.QVariant /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMapixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -308,7 +308,7 @@ This signal is emitted whenever one of the values in the map is changed. key is 
 Note: valueChanged() is NOT emitted when changes are made by calling insert() or clear() - it is only emitted when a value is updated from QML.
 */
 func (this *QQmlPropertyMap) ValueChanged(key string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -329,7 +329,7 @@ Returns the new value to be stored for the key key. This function is provided to
 Override this function to manipulate the property value as it is updated. Note that this function is only invoked when the value is updated from QML.
 */
 func (this *QQmlPropertyMap) UpdateValue(key string, input qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if input != nil && input.QVariant_PTR() != nil {

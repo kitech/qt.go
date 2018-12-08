@@ -119,10 +119,10 @@ func NewQKeyEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *QKe
 /*
 Constructs a new key event transition with the given sourceState.
 */
-func (*QKeyEventTransition) NewForInherit__() *QKeyEventTransition {
-	return NewQKeyEventTransition__()
+func (*QKeyEventTransition) NewForInheritp() *QKeyEventTransition {
+	return NewQKeyEventTransitionp()
 }
-func NewQKeyEventTransition__() *QKeyEventTransition {
+func NewQKeyEventTransitionp() *QKeyEventTransition {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -140,10 +140,10 @@ func NewQKeyEventTransition__() *QKeyEventTransition {
 /*
 Constructs a new key event transition with the given sourceState.
 */
-func (*QKeyEventTransition) NewForInherit_1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, key int, sourceState qtcore.QState_ITF /*777 QState **/) *QKeyEventTransition {
-	return NewQKeyEventTransition_1(object, type_, key, sourceState)
+func (*QKeyEventTransition) NewForInherit1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, key int, sourceState qtcore.QState_ITF /*777 QState **/) *QKeyEventTransition {
+	return NewQKeyEventTransition1(object, type_, key, sourceState)
 }
-func NewQKeyEventTransition_1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, key int, sourceState qtcore.QState_ITF /*777 QState **/) *QKeyEventTransition {
+func NewQKeyEventTransition1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, key int, sourceState qtcore.QState_ITF /*777 QState **/) *QKeyEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
 		convArg0 = object.QObject_PTR().GetCthis()
@@ -167,10 +167,10 @@ func NewQKeyEventTransition_1(object qtcore.QObject_ITF /*777 QObject **/, type_
 /*
 Constructs a new key event transition with the given sourceState.
 */
-func (*QKeyEventTransition) NewForInherit_1_(object qtcore.QObject_ITF /*777 QObject **/, type_ int, key int) *QKeyEventTransition {
-	return NewQKeyEventTransition_1_(object, type_, key)
+func (*QKeyEventTransition) NewForInherit1p(object qtcore.QObject_ITF /*777 QObject **/, type_ int, key int) *QKeyEventTransition {
+	return NewQKeyEventTransition1p(object, type_, key)
 }
-func NewQKeyEventTransition_1_(object qtcore.QObject_ITF /*777 QObject **/, type_ int, key int) *QKeyEventTransition {
+func NewQKeyEventTransition1p(object qtcore.QObject_ITF /*777 QObject **/, type_ int, key int) *QKeyEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
 		convArg0 = object.QObject_PTR().GetCthis()

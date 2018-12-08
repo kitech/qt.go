@@ -95,10 +95,10 @@ func NewQTableWidgetSelectionRange() *QTableWidgetSelectionRange {
 /*
 
  */
-func (*QTableWidgetSelectionRange) NewForInherit_1(top int, left int, bottom int, right int) *QTableWidgetSelectionRange {
-	return NewQTableWidgetSelectionRange_1(top, left, bottom, right)
+func (*QTableWidgetSelectionRange) NewForInherit1(top int, left int, bottom int, right int) *QTableWidgetSelectionRange {
+	return NewQTableWidgetSelectionRange1(top, left, bottom, right)
 }
-func NewQTableWidgetSelectionRange_1(top int, left int, bottom int, right int) *QTableWidgetSelectionRange {
+func NewQTableWidgetSelectionRange1(top int, left int, bottom int, right int) *QTableWidgetSelectionRange {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Eiiii", qtrt.FFI_TYPE_POINTER, top, left, bottom, right)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTableWidgetSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv)))

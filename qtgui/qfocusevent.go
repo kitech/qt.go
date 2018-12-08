@@ -90,10 +90,10 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 /*
 
  */
-func (*QFocusEvent) NewForInherit__(type_ int) *QFocusEvent {
-	return NewQFocusEvent__(type_)
+func (*QFocusEvent) NewForInheritp(type_ int) *QFocusEvent {
+	return NewQFocusEventp(type_)
 }
-func NewQFocusEvent__(type_ int) *QFocusEvent {
+func NewQFocusEventp(type_ int) *QFocusEvent {
 	// arg: 1, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum, , Invalid
 	reason := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, type_, reason)

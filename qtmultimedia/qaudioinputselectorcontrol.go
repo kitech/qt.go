@@ -105,7 +105,7 @@ func DeleteQAudioInputSelectorControl(this *QAudioInputSelectorControl) {
 Returns the description of the input name.
 */
 func (this *QAudioInputSelectorControl) InputDescription(name string) string {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAudioInputSelectorControl16inputDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ Set the active audio input to name.
 See also activeInput().
 */
 func (this *QAudioInputSelectorControl) SetActiveInput(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAudioInputSelectorControl14setActiveInputERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -177,7 +177,7 @@ func (this *QAudioInputSelectorControl) SetActiveInput(name string) {
 Signals that the audio input has changed to name.
 */
 func (this *QAudioInputSelectorControl) ActiveInputChanged(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAudioInputSelectorControl18activeInputChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -227,10 +227,10 @@ func NewQAudioInputSelectorControl(parent qtcore.QObject_ITF /*777 QObject **/) 
 /*
 Constructs a new audio input selector control with the given parent.
 */
-func (*QAudioInputSelectorControl) NewForInherit__() *QAudioInputSelectorControl {
-	return NewQAudioInputSelectorControl__()
+func (*QAudioInputSelectorControl) NewForInheritp() *QAudioInputSelectorControl {
+	return NewQAudioInputSelectorControlp()
 }
-func NewQAudioInputSelectorControl__() *QAudioInputSelectorControl {
+func NewQAudioInputSelectorControlp() *QAudioInputSelectorControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAudioInputSelectorControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

@@ -337,10 +337,10 @@ func NewQCameraFocusControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCamer
 /*
 Constructs a camera control object with parent.
 */
-func (*QCameraFocusControl) NewForInherit__() *QCameraFocusControl {
-	return NewQCameraFocusControl__()
+func (*QCameraFocusControl) NewForInheritp() *QCameraFocusControl {
+	return NewQCameraFocusControlp()
 }
-func NewQCameraFocusControl__() *QCameraFocusControl {
+func NewQCameraFocusControlp() *QCameraFocusControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraFocusControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

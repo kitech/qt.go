@@ -91,10 +91,10 @@ func NewQLine() *QLine {
 /*
 Constructs a null line.
 */
-func (*QLine) NewForInherit_1(pt1 QPoint_ITF, pt2 QPoint_ITF) *QLine {
-	return NewQLine_1(pt1, pt2)
+func (*QLine) NewForInherit1(pt1 QPoint_ITF, pt2 QPoint_ITF) *QLine {
+	return NewQLine1(pt1, pt2)
 }
-func NewQLine_1(pt1 QPoint_ITF, pt2 QPoint_ITF) *QLine {
+func NewQLine1(pt1 QPoint_ITF, pt2 QPoint_ITF) *QLine {
 	var convArg0 unsafe.Pointer
 	if pt1 != nil && pt1.QPoint_PTR() != nil {
 		convArg0 = pt1.QPoint_PTR().GetCthis()
@@ -118,10 +118,10 @@ func NewQLine_1(pt1 QPoint_ITF, pt2 QPoint_ITF) *QLine {
 /*
 Constructs a null line.
 */
-func (*QLine) NewForInherit_2(x1 int, y1 int, x2 int, y2 int) *QLine {
-	return NewQLine_2(x1, y1, x2, y2)
+func (*QLine) NewForInherit2(x1 int, y1 int, x2 int, y2 int) *QLine {
+	return NewQLine2(x1, y1, x2, y2)
 }
-func NewQLine_2(x1 int, y1 int, x2 int, y2 int) *QLine {
+func NewQLine2(x1 int, y1 int, x2 int, y2 int) *QLine {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLineC2Eiiii", qtrt.FFI_TYPE_POINTER, x1, y1, x2, y2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLineFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -300,7 +300,7 @@ func (this *QLine) Translate(p QPoint_ITF) {
 /*
 Translates this line by the given offset.
 */
-func (this *QLine) Translate_1(dx int, dy int) {
+func (this *QLine) Translate1(dx int, dy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QLine9translateEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
 }
@@ -337,7 +337,7 @@ Returns this line translated by the given offset.
 
 This function was introduced in  Qt 4.4.
 */
-func (this *QLine) Translated_1(dx int, dy int) *QLine /*123*/ {
+func (this *QLine) Translated1(dx int, dy int) *QLine /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QLine10translatedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333

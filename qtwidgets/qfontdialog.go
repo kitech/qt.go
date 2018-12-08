@@ -140,10 +140,10 @@ This function was introduced in  Qt 4.5.
 
 See also getFont().
 */
-func (*QFontDialog) NewForInherit__() *QFontDialog {
-	return NewQFontDialog__()
+func (*QFontDialog) NewForInheritp() *QFontDialog {
+	return NewQFontDialogp()
 }
-func NewQFontDialog__() *QFontDialog {
+func NewQFontDialogp() *QFontDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialogC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -169,10 +169,10 @@ This function was introduced in  Qt 4.5.
 
 See also getFont().
 */
-func (*QFontDialog) NewForInherit_1(initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
-	return NewQFontDialog_1(initial, parent)
+func (*QFontDialog) NewForInherit1(initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
+	return NewQFontDialog1(initial, parent)
 }
-func NewQFontDialog_1(initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
+func NewQFontDialog1(initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
 		convArg0 = initial.QFont_PTR().GetCthis()
@@ -204,10 +204,10 @@ This function was introduced in  Qt 4.5.
 
 See also getFont().
 */
-func (*QFontDialog) NewForInherit_1_(initial qtgui.QFont_ITF) *QFontDialog {
-	return NewQFontDialog_1_(initial)
+func (*QFontDialog) NewForInherit1p(initial qtgui.QFont_ITF) *QFontDialog {
+	return NewQFontDialog1p(initial)
 }
-func NewQFontDialog_1_(initial qtgui.QFont_ITF) *QFontDialog {
+func NewQFontDialog1p(initial qtgui.QFont_ITF) *QFontDialog {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
 		convArg0 = initial.QFont_PTR().GetCthis()
@@ -324,7 +324,7 @@ Sets the given option to be enabled if on is true; otherwise, clears the given o
 
 See also options and testOption().
 */
-func (this *QFontDialog) SetOption__(option int) {
+func (this *QFontDialog) SetOptionp(option int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog9setOptionENS_16FontDialogOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
@@ -503,7 +503,7 @@ In this example, if the user clicks OK the font they chose will be used, and if 
 
 Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
 */
-func (this *QFontDialog) GetFont__(ok *bool) *qtgui.QFont /*123*/ {
+func (this *QFontDialog) GetFontp(ok *bool) *qtgui.QFont /*123*/ {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbP7QWidget", qtrt.FFI_TYPE_POINTER, ok, convArg1)
@@ -550,7 +550,7 @@ In this example, if the user clicks OK the font they chose will be used, and if 
 
 Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
 */
-func (this *QFontDialog) GetFont_1(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/, title string, options int) *qtgui.QFont /*123*/ {
+func (this *QFontDialog) GetFont1(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/, title string, options int) *qtgui.QFont /*123*/ {
 	var convArg1 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
 		convArg1 = initial.QFont_PTR().GetCthis()
@@ -559,7 +559,7 @@ func (this *QFontDialog) GetFont_1(ok *bool, initial qtgui.QFont_ITF, parent QWi
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg2 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(title)
+	var tmpArg3 = qtcore.NewQString5(title)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbRK5QFontP7QWidgetRK7QString6QFlagsINS_16FontDialogOptionEE", qtrt.FFI_TYPE_POINTER, ok, convArg1, convArg2, convArg3, options)
 	qtrt.ErrPrint(err, rv)
@@ -567,9 +567,9 @@ func (this *QFontDialog) GetFont_1(ok *bool, initial qtgui.QFont_ITF, parent QWi
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
-func QFontDialog_GetFont_1(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/, title string, options int) *qtgui.QFont /*123*/ {
+func QFontDialog_GetFont1(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/, title string, options int) *qtgui.QFont /*123*/ {
 	var nilthis *QFontDialog
-	rv := nilthis.GetFont_1(ok, initial, parent, title, options)
+	rv := nilthis.GetFont1(ok, initial, parent, title, options)
 	return rv
 }
 
@@ -610,7 +610,7 @@ In this example, if the user clicks OK the font they chose will be used, and if 
 
 Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
 */
-func (this *QFontDialog) GetFont_1_(ok *bool, initial qtgui.QFont_ITF) *qtgui.QFont /*123*/ {
+func (this *QFontDialog) GetFont1p(ok *bool, initial qtgui.QFont_ITF) *qtgui.QFont /*123*/ {
 	var convArg1 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
 		convArg1 = initial.QFont_PTR().GetCthis()
@@ -665,7 +665,7 @@ In this example, if the user clicks OK the font they chose will be used, and if 
 
 Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
 */
-func (this *QFontDialog) GetFont_1_1(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/) *qtgui.QFont /*123*/ {
+func (this *QFontDialog) GetFont1p1(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/) *qtgui.QFont /*123*/ {
 	var convArg1 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
 		convArg1 = initial.QFont_PTR().GetCthis()
@@ -722,7 +722,7 @@ In this example, if the user clicks OK the font they chose will be used, and if 
 
 Warning: Do not delete parent during the execution of the dialog. If you want to do this, you should create the dialog yourself using one of the QFontDialog constructors.
 */
-func (this *QFontDialog) GetFont_1_2(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/, title string) *qtgui.QFont /*123*/ {
+func (this *QFontDialog) GetFont1p2(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget **/, title string) *qtgui.QFont /*123*/ {
 	var convArg1 unsafe.Pointer
 	if initial != nil && initial.QFont_PTR() != nil {
 		convArg1 = initial.QFont_PTR().GetCthis()
@@ -731,7 +731,7 @@ func (this *QFontDialog) GetFont_1_2(ok *bool, initial qtgui.QFont_ITF, parent Q
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg2 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(title)
+	var tmpArg3 = qtcore.NewQString5(title)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, QFontDialog::FontDialogOptions=Typedef, QFontDialog::FontDialogOptions=Typedef, QFlags<QFontDialog::FontDialogOption>, Unexposed
 	options := 0

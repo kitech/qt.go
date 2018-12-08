@@ -109,10 +109,10 @@ func NewQDateEdit(parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
 /*
 
  */
-func (*QDateEdit) NewForInherit__() *QDateEdit {
-	return NewQDateEdit__()
+func (*QDateEdit) NewForInheritp() *QDateEdit {
+	return NewQDateEditp()
 }
-func NewQDateEdit__() *QDateEdit {
+func NewQDateEditp() *QDateEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -130,10 +130,10 @@ func NewQDateEdit__() *QDateEdit {
 /*
 
  */
-func (*QDateEdit) NewForInherit_1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
-	return NewQDateEdit_1(date, parent)
+func (*QDateEdit) NewForInherit1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
+	return NewQDateEdit1(date, parent)
 }
-func NewQDateEdit_1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
+func NewQDateEdit1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
 		convArg0 = date.QDate_PTR().GetCthis()
@@ -157,10 +157,10 @@ func NewQDateEdit_1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/)
 /*
 
  */
-func (*QDateEdit) NewForInherit_1_(date qtcore.QDate_ITF) *QDateEdit {
-	return NewQDateEdit_1_(date)
+func (*QDateEdit) NewForInherit1p(date qtcore.QDate_ITF) *QDateEdit {
+	return NewQDateEdit1p(date)
 }
-func NewQDateEdit_1_(date qtcore.QDate_ITF) *QDateEdit {
+func NewQDateEdit1p(date qtcore.QDate_ITF) *QDateEdit {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
 		convArg0 = date.QDate_PTR().GetCthis()

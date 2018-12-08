@@ -207,7 +207,7 @@ Returns an update containing the last known position, or a null update if none i
 
 If fromSatellitePositioningMethodsOnly is true, this returns the last known position received from a satellite positioning method; if none is available, a null update is returned.
 */
-func (this *QGeoPositionInfoSource) LastKnownPosition__() *QGeoPositionInfo /*123*/ {
+func (this *QGeoPositionInfoSource) LastKnownPositionp() *QGeoPositionInfo /*123*/ {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	fromSatellitePositioningMethodsOnly := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGeoPositionInfoSource17lastKnownPositionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fromSatellitePositioningMethodsOnly)
@@ -300,7 +300,7 @@ Creates and returns a position source with the given parent, by loading the plug
 Returns 0 if the plugin cannot be found.
 */
 func (this *QGeoPositionInfoSource) CreateSource(sourceName string, parent qtcore.QObject_ITF /*777 QObject **/) *QGeoPositionInfoSource /*777 QGeoPositionInfoSource **/ {
-	var tmpArg0 = qtcore.NewQString_5(sourceName)
+	var tmpArg0 = qtcore.NewQString5(sourceName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -359,7 +359,7 @@ func (this *QGeoPositionInfoSource) Error() int {
 /*
 Returns the type of error that last occurred.
 */
-func (this *QGeoPositionInfoSource) Error_1(arg0 int) {
+func (this *QGeoPositionInfoSource) Error1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGeoPositionInfoSource5errorENS_5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -429,7 +429,7 @@ This does nothing if another update request is in progress. However it can be ca
 
 If the source uses multiple positioning methods, it tries to get the current position from the most accurate positioning method within the given timeout.
 */
-func (this *QGeoPositionInfoSource) RequestUpdate__() {
+func (this *QGeoPositionInfoSource) RequestUpdatep() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	timeout := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGeoPositionInfoSource13requestUpdateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)

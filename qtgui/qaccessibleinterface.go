@@ -236,7 +236,7 @@ func (this *QAccessibleInterface) Text(t int) string {
 
  */
 func (this *QAccessibleInterface) SetText(t int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAccessibleInterface7setTextEN11QAccessible4TextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t, convArg1)
 	qtrt.ErrPrint(err, rv)

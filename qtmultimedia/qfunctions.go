@@ -38,7 +38,7 @@ func init() {
 /*
 
  */
-func Operator_add_40(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) *QMediaTimeRange /*123*/ {
+func Operator_add40(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) *QMediaTimeRange /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeRange_PTR() != nil {
 		convArg0 = arg0.QMediaTimeRange_PTR().GetCthis()
@@ -62,7 +62,7 @@ func Operator_add_40(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) *QMedia
 /*
 
  */
-func Operator_or_71(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or71(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN7QCamera8LockTypeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -78,7 +78,7 @@ func Operator_or_71(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_72(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or72(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN25QMediaServiceProviderHint7FeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -94,7 +94,7 @@ func Operator_or_72(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_73(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or73(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN20QVideoFilterRunnable7RunFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -110,7 +110,7 @@ func Operator_or_73(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_74(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or74(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN19QCameraImageCapture18CaptureDestinationEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -126,7 +126,7 @@ func Operator_or_74(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_75(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or75(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN15QCameraExposure9FlashModeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -142,7 +142,7 @@ func Operator_or_75(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_76(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or76(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN12QCameraFocus9FocusModeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -158,7 +158,7 @@ func Operator_or_76(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_not_equal_49(r1 int, r2 int) bool {
+func Operator_not_equal49(r1 int, r2 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZneRKN7QCamera14FrameRateRangeES2_", qtrt.FFI_TYPE_POINTER, &r1, &r2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -172,7 +172,7 @@ func Operator_not_equal_49(r1 int, r2 int) bool {
 /*
 
  */
-func Operator_not_equal_50(lhs QCameraViewfinderSettings_ITF, rhs QCameraViewfinderSettings_ITF) bool {
+func Operator_not_equal50(lhs QCameraViewfinderSettings_ITF, rhs QCameraViewfinderSettings_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QCameraViewfinderSettings_PTR() != nil {
 		convArg0 = lhs.QCameraViewfinderSettings_PTR().GetCthis()
@@ -194,7 +194,7 @@ func Operator_not_equal_50(lhs QCameraViewfinderSettings_ITF, rhs QCameraViewfin
 /*
 
  */
-func Operator_not_equal_51(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterval_ITF) bool {
+func Operator_not_equal51(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterval_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeInterval_PTR() != nil {
 		convArg0 = arg0.QMediaTimeInterval_PTR().GetCthis()
@@ -216,7 +216,7 @@ func Operator_not_equal_51(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterval_
 /*
 
  */
-func Operator_not_equal_52(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) bool {
+func Operator_not_equal52(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeRange_PTR() != nil {
 		convArg0 = arg0.QMediaTimeRange_PTR().GetCthis()
@@ -238,7 +238,7 @@ func Operator_not_equal_52(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) b
 /*
 Returns a time range containing r2 subtracted from r1.
 */
-func Operator_minus_16(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) *QMediaTimeRange /*123*/ {
+func Operator_minus16(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) *QMediaTimeRange /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeRange_PTR() != nil {
 		convArg0 = arg0.QMediaTimeRange_PTR().GetCthis()
@@ -262,7 +262,7 @@ func Operator_minus_16(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) *QMed
 /*
 
  */
-func Operator_equal_equal_51(r1 int, r2 int) bool {
+func Operator_equal_equal51(r1 int, r2 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZeqRKN7QCamera14FrameRateRangeES2_", qtrt.FFI_TYPE_POINTER, &r1, &r2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -276,7 +276,7 @@ func Operator_equal_equal_51(r1 int, r2 int) bool {
 /*
 
  */
-func Operator_equal_equal_52(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterval_ITF) bool {
+func Operator_equal_equal52(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterval_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeInterval_PTR() != nil {
 		convArg0 = arg0.QMediaTimeInterval_PTR().GetCthis()
@@ -298,7 +298,7 @@ func Operator_equal_equal_52(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterva
 /*
 
  */
-func Operator_equal_equal_53(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) bool {
+func Operator_equal_equal53(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeRange_PTR() != nil {
 		convArg0 = arg0.QMediaTimeRange_PTR().GetCthis()
@@ -356,7 +356,7 @@ func ConvertVolume(volume float64, from int, to int) float64 {
 /*
 Swaps this viewfinder settings object with other. This function is very fast and never fails.
 */
-func Swap_58(value1 QCameraViewfinderSettings_ITF, value2 QCameraViewfinderSettings_ITF) {
+func Swap58(value1 QCameraViewfinderSettings_ITF, value2 QCameraViewfinderSettings_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QCameraViewfinderSettings_PTR() != nil {
 		convArg0 = value1.QCameraViewfinderSettings_PTR().GetCthis()

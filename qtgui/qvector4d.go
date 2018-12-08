@@ -92,10 +92,10 @@ func NewQVector4D() *QVector4D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0, 0).
 */
-func (*QVector4D) NewForInherit_1(arg0 int) *QVector4D {
-	return NewQVector4D_1(arg0)
+func (*QVector4D) NewForInherit1(arg0 int) *QVector4D {
+	return NewQVector4D1(arg0)
 }
-func NewQVector4D_1(arg0 int) *QVector4D {
+func NewQVector4D1(arg0 int) *QVector4D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector4DC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQVector4D_1(arg0 int) *QVector4D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0, 0).
 */
-func (*QVector4D) NewForInherit_2(xpos float32, ypos float32, zpos float32, wpos float32) *QVector4D {
-	return NewQVector4D_2(xpos, ypos, zpos, wpos)
+func (*QVector4D) NewForInherit2(xpos float32, ypos float32, zpos float32, wpos float32) *QVector4D {
+	return NewQVector4D2(xpos, ypos, zpos, wpos)
 }
-func NewQVector4D_2(xpos float32, ypos float32, zpos float32, wpos float32) *QVector4D {
+func NewQVector4D2(xpos float32, ypos float32, zpos float32, wpos float32) *QVector4D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector4DC2Effff", qtrt.FFI_TYPE_POINTER, xpos, ypos, zpos, wpos)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -130,10 +130,10 @@ func NewQVector4D_2(xpos float32, ypos float32, zpos float32, wpos float32) *QVe
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0, 0).
 */
-func (*QVector4D) NewForInherit_3(point qtcore.QPoint_ITF) *QVector4D {
-	return NewQVector4D_3(point)
+func (*QVector4D) NewForInherit3(point qtcore.QPoint_ITF) *QVector4D {
+	return NewQVector4D3(point)
 }
-func NewQVector4D_3(point qtcore.QPoint_ITF) *QVector4D {
+func NewQVector4D3(point qtcore.QPoint_ITF) *QVector4D {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
 		convArg0 = point.QPoint_PTR().GetCthis()
@@ -153,10 +153,10 @@ func NewQVector4D_3(point qtcore.QPoint_ITF) *QVector4D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0, 0).
 */
-func (*QVector4D) NewForInherit_4(point qtcore.QPointF_ITF) *QVector4D {
-	return NewQVector4D_4(point)
+func (*QVector4D) NewForInherit4(point qtcore.QPointF_ITF) *QVector4D {
+	return NewQVector4D4(point)
 }
-func NewQVector4D_4(point qtcore.QPointF_ITF) *QVector4D {
+func NewQVector4D4(point qtcore.QPointF_ITF) *QVector4D {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
 		convArg0 = point.QPointF_PTR().GetCthis()
@@ -176,10 +176,10 @@ func NewQVector4D_4(point qtcore.QPointF_ITF) *QVector4D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0, 0).
 */
-func (*QVector4D) NewForInherit_5(vector QVector2D_ITF) *QVector4D {
-	return NewQVector4D_5(vector)
+func (*QVector4D) NewForInherit5(vector QVector2D_ITF) *QVector4D {
+	return NewQVector4D5(vector)
 }
-func NewQVector4D_5(vector QVector2D_ITF) *QVector4D {
+func NewQVector4D5(vector QVector2D_ITF) *QVector4D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector2D_PTR() != nil {
 		convArg0 = vector.QVector2D_PTR().GetCthis()
@@ -199,10 +199,10 @@ func NewQVector4D_5(vector QVector2D_ITF) *QVector4D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0, 0).
 */
-func (*QVector4D) NewForInherit_6(vector QVector2D_ITF, zpos float32, wpos float32) *QVector4D {
-	return NewQVector4D_6(vector, zpos, wpos)
+func (*QVector4D) NewForInherit6(vector QVector2D_ITF, zpos float32, wpos float32) *QVector4D {
+	return NewQVector4D6(vector, zpos, wpos)
 }
-func NewQVector4D_6(vector QVector2D_ITF, zpos float32, wpos float32) *QVector4D {
+func NewQVector4D6(vector QVector2D_ITF, zpos float32, wpos float32) *QVector4D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector2D_PTR() != nil {
 		convArg0 = vector.QVector2D_PTR().GetCthis()
@@ -222,10 +222,10 @@ func NewQVector4D_6(vector QVector2D_ITF, zpos float32, wpos float32) *QVector4D
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0, 0).
 */
-func (*QVector4D) NewForInherit_7(vector QVector3D_ITF) *QVector4D {
-	return NewQVector4D_7(vector)
+func (*QVector4D) NewForInherit7(vector QVector3D_ITF) *QVector4D {
+	return NewQVector4D7(vector)
 }
-func NewQVector4D_7(vector QVector3D_ITF) *QVector4D {
+func NewQVector4D7(vector QVector3D_ITF) *QVector4D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
 		convArg0 = vector.QVector3D_PTR().GetCthis()
@@ -245,10 +245,10 @@ func NewQVector4D_7(vector QVector3D_ITF) *QVector4D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0, 0).
 */
-func (*QVector4D) NewForInherit_8(vector QVector3D_ITF, wpos float32) *QVector4D {
-	return NewQVector4D_8(vector, wpos)
+func (*QVector4D) NewForInherit8(vector QVector3D_ITF, wpos float32) *QVector4D {
+	return NewQVector4D8(vector, wpos)
 }
-func NewQVector4D_8(vector QVector3D_ITF, wpos float32) *QVector4D {
+func NewQVector4D8(vector QVector3D_ITF, wpos float32) *QVector4D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
 		convArg0 = vector.QVector3D_PTR().GetCthis()
@@ -420,7 +420,7 @@ func (this *QVector4D) Operator_get_index(i int) float32 {
 /*
 
  */
-func (this *QVector4D) Operator_get_index_1(i int) float32 {
+func (this *QVector4D) Operator_get_index1(i int) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4DixEi", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -557,7 +557,7 @@ func (this *QVector4D) Operator_mul_equal(factor float32) *QVector4D {
 /*
 
  */
-func (this *QVector4D) Operator_mul_equal_1(vector QVector4D_ITF) *QVector4D {
+func (this *QVector4D) Operator_mul_equal1(vector QVector4D_ITF) *QVector4D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector4D_PTR() != nil {
 		convArg0 = vector.QVector4D_PTR().GetCthis()
@@ -593,7 +593,7 @@ func (this *QVector4D) Operator_div_equal(divisor float32) *QVector4D {
 /*
 
  */
-func (this *QVector4D) Operator_div_equal_1(vector QVector4D_ITF) *QVector4D {
+func (this *QVector4D) Operator_div_equal1(vector QVector4D_ITF) *QVector4D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector4D_PTR() != nil {
 		convArg0 = vector.QVector4D_PTR().GetCthis()

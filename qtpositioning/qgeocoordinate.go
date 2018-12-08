@@ -92,10 +92,10 @@ func NewQGeoCoordinate() *QGeoCoordinate {
 /*
 Constructs a coordinate. The coordinate will be invalid until setLatitude() and setLongitude() have been called.
 */
-func (*QGeoCoordinate) NewForInherit_1(latitude float64, longitude float64) *QGeoCoordinate {
-	return NewQGeoCoordinate_1(latitude, longitude)
+func (*QGeoCoordinate) NewForInherit1(latitude float64, longitude float64) *QGeoCoordinate {
+	return NewQGeoCoordinate1(latitude, longitude)
 }
-func NewQGeoCoordinate_1(latitude float64, longitude float64) *QGeoCoordinate {
+func NewQGeoCoordinate1(latitude float64, longitude float64) *QGeoCoordinate {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGeoCoordinateC2Edd", qtrt.FFI_TYPE_POINTER, latitude, longitude)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGeoCoordinateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQGeoCoordinate_1(latitude float64, longitude float64) *QGeoCoordinate {
 /*
 Constructs a coordinate. The coordinate will be invalid until setLatitude() and setLongitude() have been called.
 */
-func (*QGeoCoordinate) NewForInherit_2(latitude float64, longitude float64, altitude float64) *QGeoCoordinate {
-	return NewQGeoCoordinate_2(latitude, longitude, altitude)
+func (*QGeoCoordinate) NewForInherit2(latitude float64, longitude float64, altitude float64) *QGeoCoordinate {
+	return NewQGeoCoordinate2(latitude, longitude, altitude)
 }
-func NewQGeoCoordinate_2(latitude float64, longitude float64, altitude float64) *QGeoCoordinate {
+func NewQGeoCoordinate2(latitude float64, longitude float64, altitude float64) *QGeoCoordinate {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGeoCoordinateC2Eddd", qtrt.FFI_TYPE_POINTER, latitude, longitude, altitude)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQGeoCoordinateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -414,7 +414,7 @@ The altitude will have distanceUp added to it.
 
 Returns an invalid coordinate if this coordinate is invalid.
 */
-func (this *QGeoCoordinate) AtDistanceAndAzimuth__(distance float64, azimuth float64) *QGeoCoordinate /*123*/ {
+func (this *QGeoCoordinate) AtDistanceAndAzimuthp(distance float64, azimuth float64) *QGeoCoordinate /*123*/ {
 	// arg: 2, qreal=Typedef, qreal=Typedef, double, Double
 	distanceUp := float64(0.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGeoCoordinate20atDistanceAndAzimuthEddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), distance, azimuth, distanceUp)
@@ -481,7 +481,7 @@ The altitude field is omitted if no altitude is set.
 
 If the coordinate is invalid, an empty string is returned.
 */
-func (this *QGeoCoordinate) ToString__() string {
+func (this *QGeoCoordinate) ToStringp() string {
 	// arg: 0, QGeoCoordinate::CoordinateFormat=Enum, QGeoCoordinate::CoordinateFormat=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGeoCoordinate8toStringENS_16CoordinateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)

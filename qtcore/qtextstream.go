@@ -95,10 +95,10 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
-func (*QTextStream) NewForInherit_1(device QIODevice_ITF /*777 QIODevice **/) *QTextStream {
-	return NewQTextStream_1(device)
+func (*QTextStream) NewForInherit1(device QIODevice_ITF /*777 QIODevice **/) *QTextStream {
+	return NewQTextStream1(device)
 }
-func NewQTextStream_1(device QIODevice_ITF /*777 QIODevice **/) *QTextStream {
+func NewQTextStream1(device QIODevice_ITF /*777 QIODevice **/) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -120,11 +120,11 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
-func (*QTextStream) NewForInherit_2(string string, openMode int) *QTextStream {
-	return NewQTextStream_2(string, openMode)
+func (*QTextStream) NewForInherit2(string string, openMode int) *QTextStream {
+	return NewQTextStream2(string, openMode)
 }
-func NewQTextStream_2(string string, openMode int) *QTextStream {
-	var tmpArg0 = NewQString_5(string)
+func NewQTextStream2(string string, openMode int) *QTextStream {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamC2EP7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, openMode)
 	qtrt.ErrPrint(err, rv)
@@ -143,11 +143,11 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
-func (*QTextStream) NewForInherit_2_(string string) *QTextStream {
-	return NewQTextStream_2_(string)
+func (*QTextStream) NewForInherit2p(string string) *QTextStream {
+	return NewQTextStream2p(string)
 }
-func NewQTextStream_2_(string string) *QTextStream {
-	var tmpArg0 = NewQString_5(string)
+func NewQTextStream2p(string string) *QTextStream {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QIODevice::OpenMode=Elaborated, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
@@ -168,10 +168,10 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
-func (*QTextStream) NewForInherit_3(array QByteArray_ITF /*777 QByteArray **/, openMode int) *QTextStream {
-	return NewQTextStream_3(array, openMode)
+func (*QTextStream) NewForInherit3(array QByteArray_ITF /*777 QByteArray **/, openMode int) *QTextStream {
+	return NewQTextStream3(array, openMode)
 }
-func NewQTextStream_3(array QByteArray_ITF /*777 QByteArray **/, openMode int) *QTextStream {
+func NewQTextStream3(array QByteArray_ITF /*777 QByteArray **/, openMode int) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
 		convArg0 = array.QByteArray_PTR().GetCthis()
@@ -193,10 +193,10 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
-func (*QTextStream) NewForInherit_3_(array QByteArray_ITF /*777 QByteArray **/) *QTextStream {
-	return NewQTextStream_3_(array)
+func (*QTextStream) NewForInherit3p(array QByteArray_ITF /*777 QByteArray **/) *QTextStream {
+	return NewQTextStream3p(array)
 }
-func NewQTextStream_3_(array QByteArray_ITF /*777 QByteArray **/) *QTextStream {
+func NewQTextStream3p(array QByteArray_ITF /*777 QByteArray **/) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
 		convArg0 = array.QByteArray_PTR().GetCthis()
@@ -220,10 +220,10 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
-func (*QTextStream) NewForInherit_4(array QByteArray_ITF, openMode int) *QTextStream {
-	return NewQTextStream_4(array, openMode)
+func (*QTextStream) NewForInherit4(array QByteArray_ITF, openMode int) *QTextStream {
+	return NewQTextStream4(array, openMode)
 }
-func NewQTextStream_4(array QByteArray_ITF, openMode int) *QTextStream {
+func NewQTextStream4(array QByteArray_ITF, openMode int) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
 		convArg0 = array.QByteArray_PTR().GetCthis()
@@ -245,10 +245,10 @@ Constructs a QTextStream. Before you can use it for reading or writing, you must
 
 See also setDevice() and setString().
 */
-func (*QTextStream) NewForInherit_4_(array QByteArray_ITF) *QTextStream {
-	return NewQTextStream_4_(array)
+func (*QTextStream) NewForInherit4p(array QByteArray_ITF) *QTextStream {
+	return NewQTextStream4p(array)
 }
-func NewQTextStream_4_(array QByteArray_ITF) *QTextStream {
+func NewQTextStream4p(array QByteArray_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
 		convArg0 = array.QByteArray_PTR().GetCthis()
@@ -314,7 +314,7 @@ Warning: If you call this function while the text stream is reading from an open
 
 See also codec(), setAutoDetectUnicode(), and setLocale().
 */
-func (this *QTextStream) SetCodec_1(codecName string) {
+func (this *QTextStream) SetCodec1(codecName string) {
 	var convArg0 = qtrt.CString(codecName)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream8setCodecEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -492,7 +492,7 @@ Sets the current string to string, using the given openMode. If a device has alr
 See also string() and setDevice().
 */
 func (this *QTextStream) SetString(string string, openMode int) {
-	var tmpArg0 = NewQString_5(string)
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream9setStringEP7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, openMode)
 	qtrt.ErrPrint(err, rv)
@@ -508,8 +508,8 @@ Sets the current string to string, using the given openMode. If a device has alr
 
 See also string() and setDevice().
 */
-func (this *QTextStream) SetString__(string string) {
-	var tmpArg0 = NewQString_5(string)
+func (this *QTextStream) SetStringp(string string) {
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QIODevice::OpenMode=Elaborated, QIODevice::OpenMode=Typedef, QFlags<QIODevice::OpenModeFlag>, Unexposed
 	openMode := 0
@@ -722,7 +722,7 @@ If the stream has read to the end of the file, readLine() will return a null QSt
 
 See also readAll() and QIODevice::readLine().
 */
-func (this *QTextStream) ReadLine__() string {
+func (this *QTextStream) ReadLinep() string {
 	// arg: 0, qint64=Typedef, qint64=Typedef, long long, LongLong
 	maxlen := int64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream8readLineEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
@@ -756,7 +756,7 @@ This function was introduced in  Qt 5.5.
 See also readAll() and QIODevice::readLine().
 */
 func (this *QTextStream) ReadLineInto(line string, maxlen int64) bool {
-	var tmpArg0 = NewQString_5(line)
+	var tmpArg0 = NewQString5(line)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream12readLineIntoEP7QStringx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	qtrt.ErrPrint(err, rv)
@@ -785,8 +785,8 @@ This function was introduced in  Qt 5.5.
 
 See also readAll() and QIODevice::readLine().
 */
-func (this *QTextStream) ReadLineInto__(line string) bool {
-	var tmpArg0 = NewQString_5(line)
+func (this *QTextStream) ReadLineIntop(line string) bool {
+	var tmpArg0 = NewQString5(line)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, qint64=Typedef, qint64=Typedef, long long, LongLong
 	maxlen := int64(0)
@@ -1111,7 +1111,7 @@ func (this *QTextStream) Operator_right_shift(ch QChar_ITF) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_1(ch byte) *QTextStream {
+func (this *QTextStream) Operator_right_shift1(ch byte) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ch)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1127,7 +1127,7 @@ func (this *QTextStream) Operator_right_shift_1(ch byte) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_2(i int16) *QTextStream {
+func (this *QTextStream) Operator_right_shift2(i int16) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERs", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1143,7 +1143,7 @@ func (this *QTextStream) Operator_right_shift_2(i int16) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_3(i uint16) *QTextStream {
+func (this *QTextStream) Operator_right_shift3(i uint16) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1159,7 +1159,7 @@ func (this *QTextStream) Operator_right_shift_3(i uint16) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_4(i int) *QTextStream {
+func (this *QTextStream) Operator_right_shift4(i int) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1175,7 +1175,7 @@ func (this *QTextStream) Operator_right_shift_4(i int) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_5(i uint) *QTextStream {
+func (this *QTextStream) Operator_right_shift5(i uint) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1191,7 +1191,7 @@ func (this *QTextStream) Operator_right_shift_5(i uint) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_6(i int) *QTextStream {
+func (this *QTextStream) Operator_right_shift6(i int) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1207,7 +1207,7 @@ func (this *QTextStream) Operator_right_shift_6(i int) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_7(i uint) *QTextStream {
+func (this *QTextStream) Operator_right_shift7(i uint) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1223,7 +1223,7 @@ func (this *QTextStream) Operator_right_shift_7(i uint) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_8(i int64) *QTextStream {
+func (this *QTextStream) Operator_right_shift8(i int64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1239,7 +1239,7 @@ func (this *QTextStream) Operator_right_shift_8(i int64) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_9(i uint64) *QTextStream {
+func (this *QTextStream) Operator_right_shift9(i uint64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1255,7 +1255,7 @@ func (this *QTextStream) Operator_right_shift_9(i uint64) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_10(f float32) *QTextStream {
+func (this *QTextStream) Operator_right_shift10(f float32) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1271,7 +1271,7 @@ func (this *QTextStream) Operator_right_shift_10(f float32) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_11(f float64) *QTextStream {
+func (this *QTextStream) Operator_right_shift11(f float64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsERd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1287,8 +1287,8 @@ func (this *QTextStream) Operator_right_shift_11(f float64) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_12(s string) *QTextStream {
-	var tmpArg0 = NewQString_5(s)
+func (this *QTextStream) Operator_right_shift12(s string) *QTextStream {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsER7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1305,7 +1305,7 @@ func (this *QTextStream) Operator_right_shift_12(s string) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_13(array QByteArray_ITF) *QTextStream {
+func (this *QTextStream) Operator_right_shift13(array QByteArray_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
 		convArg0 = array.QByteArray_PTR().GetCthis()
@@ -1325,7 +1325,7 @@ func (this *QTextStream) Operator_right_shift_13(array QByteArray_ITF) *QTextStr
 /*
 
  */
-func (this *QTextStream) Operator_right_shift_14(c string) *QTextStream {
+func (this *QTextStream) Operator_right_shift14(c string) *QTextStream {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamrsEPc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1363,7 +1363,7 @@ func (this *QTextStream) Operator_left_shift(ch QChar_ITF /*123*/) *QTextStream 
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_1(ch byte) *QTextStream {
+func (this *QTextStream) Operator_left_shift1(ch byte) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ch)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1379,7 +1379,7 @@ func (this *QTextStream) Operator_left_shift_1(ch byte) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_2(i int16) *QTextStream {
+func (this *QTextStream) Operator_left_shift2(i int16) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEs", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1395,7 +1395,7 @@ func (this *QTextStream) Operator_left_shift_2(i int16) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_3(i uint16) *QTextStream {
+func (this *QTextStream) Operator_left_shift3(i uint16) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1411,7 +1411,7 @@ func (this *QTextStream) Operator_left_shift_3(i uint16) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_4(i int) *QTextStream {
+func (this *QTextStream) Operator_left_shift4(i int) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1427,7 +1427,7 @@ func (this *QTextStream) Operator_left_shift_4(i int) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_5(i uint) *QTextStream {
+func (this *QTextStream) Operator_left_shift5(i uint) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1443,7 +1443,7 @@ func (this *QTextStream) Operator_left_shift_5(i uint) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_6(i int) *QTextStream {
+func (this *QTextStream) Operator_left_shift6(i int) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1459,7 +1459,7 @@ func (this *QTextStream) Operator_left_shift_6(i int) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_7(i uint) *QTextStream {
+func (this *QTextStream) Operator_left_shift7(i uint) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1475,7 +1475,7 @@ func (this *QTextStream) Operator_left_shift_7(i uint) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_8(i int64) *QTextStream {
+func (this *QTextStream) Operator_left_shift8(i int64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1491,7 +1491,7 @@ func (this *QTextStream) Operator_left_shift_8(i int64) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_9(i uint64) *QTextStream {
+func (this *QTextStream) Operator_left_shift9(i uint64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1507,7 +1507,7 @@ func (this *QTextStream) Operator_left_shift_9(i uint64) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_10(f float32) *QTextStream {
+func (this *QTextStream) Operator_left_shift10(f float32) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1523,7 +1523,7 @@ func (this *QTextStream) Operator_left_shift_10(f float32) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_11(f float64) *QTextStream {
+func (this *QTextStream) Operator_left_shift11(f float64) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1539,8 +1539,8 @@ func (this *QTextStream) Operator_left_shift_11(f float64) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_12(s string) *QTextStream {
-	var tmpArg0 = NewQString_5(s)
+func (this *QTextStream) Operator_left_shift12(s string) *QTextStream {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1557,7 +1557,7 @@ func (this *QTextStream) Operator_left_shift_12(s string) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_13(s QLatin1String_ITF /*123*/) *QTextStream {
+func (this *QTextStream) Operator_left_shift13(s QLatin1String_ITF /*123*/) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -1577,7 +1577,7 @@ func (this *QTextStream) Operator_left_shift_13(s QLatin1String_ITF /*123*/) *QT
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_14(s QStringRef_ITF) *QTextStream {
+func (this *QTextStream) Operator_left_shift14(s QStringRef_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -1597,7 +1597,7 @@ func (this *QTextStream) Operator_left_shift_14(s QStringRef_ITF) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_15(array QByteArray_ITF) *QTextStream {
+func (this *QTextStream) Operator_left_shift15(array QByteArray_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
 		convArg0 = array.QByteArray_PTR().GetCthis()
@@ -1617,7 +1617,7 @@ func (this *QTextStream) Operator_left_shift_15(array QByteArray_ITF) *QTextStre
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_16(c string) *QTextStream {
+func (this *QTextStream) Operator_left_shift16(c string) *QTextStream {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1635,7 +1635,7 @@ func (this *QTextStream) Operator_left_shift_16(c string) *QTextStream {
 /*
 
  */
-func (this *QTextStream) Operator_left_shift_17(ptr unsafe.Pointer /*666*/) *QTextStream {
+func (this *QTextStream) Operator_left_shift17(ptr unsafe.Pointer /*666*/) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEPKv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ptr)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

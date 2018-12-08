@@ -96,10 +96,10 @@ Creates an invalid QGeoPositionInfo object.
 
 See also isValid().
 */
-func (*QGeoPositionInfo) NewForInherit_1(coordinate QGeoCoordinate_ITF, updateTime qtcore.QDateTime_ITF) *QGeoPositionInfo {
-	return NewQGeoPositionInfo_1(coordinate, updateTime)
+func (*QGeoPositionInfo) NewForInherit1(coordinate QGeoCoordinate_ITF, updateTime qtcore.QDateTime_ITF) *QGeoPositionInfo {
+	return NewQGeoPositionInfo1(coordinate, updateTime)
 }
-func NewQGeoPositionInfo_1(coordinate QGeoCoordinate_ITF, updateTime qtcore.QDateTime_ITF) *QGeoPositionInfo {
+func NewQGeoPositionInfo1(coordinate QGeoCoordinate_ITF, updateTime qtcore.QDateTime_ITF) *QGeoPositionInfo {
 	var convArg0 unsafe.Pointer
 	if coordinate != nil && coordinate.QGeoCoordinate_PTR() != nil {
 		convArg0 = coordinate.QGeoCoordinate_PTR().GetCthis()

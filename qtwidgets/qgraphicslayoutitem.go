@@ -112,10 +112,10 @@ func NewQGraphicsLayoutItem(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayout
 /*
 Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
 */
-func (*QGraphicsLayoutItem) NewForInherit__() *QGraphicsLayoutItem {
-	return NewQGraphicsLayoutItem__()
+func (*QGraphicsLayoutItem) NewForInheritp() *QGraphicsLayoutItem {
+	return NewQGraphicsLayoutItemp()
 }
-func NewQGraphicsLayoutItem__() *QGraphicsLayoutItem {
+func NewQGraphicsLayoutItemp() *QGraphicsLayoutItem {
 	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, bool=Bool, =Invalid, , Invalid
@@ -135,10 +135,10 @@ func NewQGraphicsLayoutItem__() *QGraphicsLayoutItem {
 /*
 Constructs the QGraphicsLayoutItem object. parent becomes the object's parent. If isLayout is true the item is a layout, otherwise isLayout is false.
 */
-func (*QGraphicsLayoutItem) NewForInherit__1(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLayoutItem {
-	return NewQGraphicsLayoutItem__1(parent)
+func (*QGraphicsLayoutItem) NewForInheritp1(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLayoutItem {
+	return NewQGraphicsLayoutItemp1(parent)
 }
-func NewQGraphicsLayoutItem__1(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLayoutItem {
+func NewQGraphicsLayoutItemp1(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLayoutItem {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
 		convArg0 = parent.QGraphicsLayoutItem_PTR().GetCthis()
@@ -200,7 +200,7 @@ QGraphicsLayoutItem's default size policy is (QSizePolicy::Fixed, QSizePolicy::F
 
 See also sizePolicy() and QWidget::sizePolicy().
 */
-func (this *QGraphicsLayoutItem) SetSizePolicy_1(hPolicy int, vPolicy int, controlType int) {
+func (this *QGraphicsLayoutItem) SetSizePolicy1(hPolicy int, vPolicy int, controlType int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem13setSizePolicyEN11QSizePolicy6PolicyES1_NS0_11ControlTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hPolicy, vPolicy, controlType)
 	qtrt.ErrPrint(err, rv)
 }
@@ -217,7 +217,7 @@ QGraphicsLayoutItem's default size policy is (QSizePolicy::Fixed, QSizePolicy::F
 
 See also sizePolicy() and QWidget::sizePolicy().
 */
-func (this *QGraphicsLayoutItem) SetSizePolicy_1_(hPolicy int, vPolicy int) {
+func (this *QGraphicsLayoutItem) SetSizePolicy1p(hPolicy int, vPolicy int) {
 	// arg: 2, QSizePolicy::ControlType=Elaborated, QSizePolicy::ControlType=Enum, , Invalid
 	controlType := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem13setSizePolicyEN11QSizePolicy6PolicyES1_NS0_11ControlTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hPolicy, vPolicy, controlType)
@@ -271,7 +271,7 @@ Sets the minimum size to size. This property overrides sizeHint() for Qt::Minimu
 
 See also minimumSize(), maximumSize(), preferredSize(), Qt::MinimumSize, sizeHint(), setMinimumWidth(), and setMinimumHeight().
 */
-func (this *QGraphicsLayoutItem) SetMinimumSize_1(w float64, h float64) {
+func (this *QGraphicsLayoutItem) SetMinimumSize1(w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem14setMinimumSizeEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -385,7 +385,7 @@ Sets the preferred size to size. This property overrides sizeHint() for Qt::Pref
 
 See also preferredSize(), minimumSize(), maximumSize(), Qt::PreferredSize, and sizeHint().
 */
-func (this *QGraphicsLayoutItem) SetPreferredSize_1(w float64, h float64) {
+func (this *QGraphicsLayoutItem) SetPreferredSize1(w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem16setPreferredSizeEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -499,7 +499,7 @@ Sets the maximum size to size. This property overrides sizeHint() for Qt::Maximu
 
 See also maximumSize(), minimumSize(), preferredSize(), Qt::MaximumSize, and sizeHint().
 */
-func (this *QGraphicsLayoutItem) SetMaximumSize_1(w float64, h float64) {
+func (this *QGraphicsLayoutItem) SetMaximumSize1(w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem14setMaximumSizeEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -712,7 +712,7 @@ This function caches each of the size hints and guarantees that sizeHint() will 
 
 See also sizeHint().
 */
-func (this *QGraphicsLayoutItem) EffectiveSizeHint__(which int) *qtcore.QSizeF /*123*/ {
+func (this *QGraphicsLayoutItem) EffectiveSizeHintp(which int) *qtcore.QSizeF /*123*/ {
 	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem17effectiveSizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
@@ -898,7 +898,7 @@ Reimplement this function in a subclass of QGraphicsLayoutItem to provide the ne
 
 See also effectiveSizeHint().
 */
-func (this *QGraphicsLayoutItem) SizeHint__(which int) *qtcore.QSizeF /*123*/ {
+func (this *QGraphicsLayoutItem) SizeHintp(which int) *qtcore.QSizeF /*123*/ {
 	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)

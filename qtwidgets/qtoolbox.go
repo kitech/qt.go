@@ -134,10 +134,10 @@ func NewQToolBox(parent QWidget_ITF /*777 QWidget **/, f int) *QToolBox {
 /*
 Constructs a new toolbox with the given parent and the flags, f.
 */
-func (*QToolBox) NewForInherit__() *QToolBox {
-	return NewQToolBox__()
+func (*QToolBox) NewForInheritp() *QToolBox {
+	return NewQToolBoxp()
 }
-func NewQToolBox__() *QToolBox {
+func NewQToolBoxp() *QToolBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -157,10 +157,10 @@ func NewQToolBox__() *QToolBox {
 /*
 Constructs a new toolbox with the given parent and the flags, f.
 */
-func (*QToolBox) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QToolBox {
-	return NewQToolBox__1(parent)
+func (*QToolBox) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QToolBox {
+	return NewQToolBoxp1(parent)
 }
-func NewQToolBox__1(parent QWidget_ITF /*777 QWidget **/) *QToolBox {
+func NewQToolBoxp1(parent QWidget_ITF /*777 QWidget **/) *QToolBox {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -202,7 +202,7 @@ func (this *QToolBox) AddItem(widget QWidget_ITF /*777 QWidget **/, text string)
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox7addItemEP7QWidgetRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QToolBox) AddItem(widget QWidget_ITF /*777 QWidget **/, text string)
 /*
 Adds the widget in a new tab at bottom of the toolbox. The new tab's text is set to text, and the iconSet is displayed to the left of the text. Returns the new tab's index.
 */
-func (this *QToolBox) AddItem_1(widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, text string) int {
+func (this *QToolBox) AddItem1(widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, text string) int {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -226,7 +226,7 @@ func (this *QToolBox) AddItem_1(widget QWidget_ITF /*777 QWidget **/, icon qtgui
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg1 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -246,7 +246,7 @@ func (this *QToolBox) InsertItem(index int, widget QWidget_ITF /*777 QWidget **/
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox10insertItemEiP7QWidgetRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -261,7 +261,7 @@ func (this *QToolBox) InsertItem(index int, widget QWidget_ITF /*777 QWidget **/
 /*
 Inserts the widget at position index, or at the bottom of the toolbox if index is out of range. The new item's text is set to text, and the icon is displayed to the left of the text. Returns the new item's index.
 */
-func (this *QToolBox) InsertItem_1(index int, widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, text string) int {
+func (this *QToolBox) InsertItem1(index int, widget QWidget_ITF /*777 QWidget **/, icon qtgui.QIcon_ITF, text string) int {
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
@@ -270,7 +270,7 @@ func (this *QToolBox) InsertItem_1(index int, widget QWidget_ITF /*777 QWidget *
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg2 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(text)
+	var tmpArg3 = qtcore.NewQString5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -332,7 +332,7 @@ If the provided text contains an ampersand character ('&'), a mnemonic is automa
 See also itemText().
 */
 func (this *QToolBox) SetItemText(index int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox11setItemTextEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -405,7 +405,7 @@ Sets the tooltip of the item at position index to toolTip.
 See also itemToolTip().
 */
 func (this *QToolBox) SetItemToolTip(index int, toolTip string) {
-	var tmpArg1 = qtcore.NewQString_5(toolTip)
+	var tmpArg1 = qtcore.NewQString5(toolTip)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBox14setItemToolTipEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)

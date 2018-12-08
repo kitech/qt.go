@@ -143,10 +143,10 @@ Constructs a status bar with a size grip and the given parent.
 
 See also setSizeGripEnabled().
 */
-func (*QStatusBar) NewForInherit__() *QStatusBar {
-	return NewQStatusBar__()
+func (*QStatusBar) NewForInheritp() *QStatusBar {
+	return NewQStatusBarp()
 }
-func NewQStatusBar__() *QStatusBar {
+func NewQStatusBarp() *QStatusBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -204,7 +204,7 @@ The widget is located to the far left of the first permanent widget (see addPerm
 
 See also insertWidget(), removeWidget(), and addPermanentWidget().
 */
-func (this *QStatusBar) AddWidget__(widget QWidget_ITF /*777 QWidget **/) {
+func (this *QStatusBar) AddWidgetp(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -257,7 +257,7 @@ This function was introduced in  Qt 4.2.
 
 See also addWidget(), removeWidget(), and addPermanentWidget().
 */
-func (this *QStatusBar) InsertWidget__(index int, widget QWidget_ITF /*777 QWidget **/) int {
+func (this *QStatusBar) InsertWidgetp(index int, widget QWidget_ITF /*777 QWidget **/) int {
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
@@ -302,7 +302,7 @@ Permanently means that the widget may not be obscured by temporary messages. It 
 
 See also insertPermanentWidget(), removeWidget(), and addWidget().
 */
-func (this *QStatusBar) AddPermanentWidget__(widget QWidget_ITF /*777 QWidget **/) {
+func (this *QStatusBar) AddPermanentWidgetp(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -355,7 +355,7 @@ This function was introduced in  Qt 4.2.
 
 See also addPermanentWidget(), removeWidget(), and addWidget().
 */
-func (this *QStatusBar) InsertPermanentWidget__(index int, widget QWidget_ITF /*777 QWidget **/) int {
+func (this *QStatusBar) InsertPermanentWidgetp(index int, widget QWidget_ITF /*777 QWidget **/) int {
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
@@ -447,7 +447,7 @@ Note that showMessage() is called to show temporary explanations of tool tip tex
 See also messageChanged(), currentMessage(), and clearMessage().
 */
 func (this *QStatusBar) ShowMessage(text string, timeout int) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar11showMessageERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, timeout)
 	qtrt.ErrPrint(err, rv)
@@ -465,8 +465,8 @@ Note that showMessage() is called to show temporary explanations of tool tip tex
 
 See also messageChanged(), currentMessage(), and clearMessage().
 */
-func (this *QStatusBar) ShowMessage__(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QStatusBar) ShowMessagep(text string) {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	timeout := int(0)
@@ -500,7 +500,7 @@ This signal is emitted whenever the temporary status message changes. The new te
 See also showMessage() and clearMessage().
 */
 func (this *QStatusBar) MessageChanged(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar14messageChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

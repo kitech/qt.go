@@ -95,10 +95,10 @@ func NewQSignalBlocker(o QObject_ITF /*777 QObject **/) *QSignalBlocker {
 /*
 
  */
-func (*QSignalBlocker) NewForInherit_1(o QObject_ITF) *QSignalBlocker {
-	return NewQSignalBlocker_1(o)
+func (*QSignalBlocker) NewForInherit1(o QObject_ITF) *QSignalBlocker {
+	return NewQSignalBlocker1(o)
 }
-func NewQSignalBlocker_1(o QObject_ITF) *QSignalBlocker {
+func NewQSignalBlocker1(o QObject_ITF) *QSignalBlocker {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QObject_PTR() != nil {
 		convArg0 = o.QObject_PTR().GetCthis()

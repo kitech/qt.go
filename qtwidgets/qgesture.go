@@ -113,10 +113,10 @@ Constructs a new gesture object with the given parent.
 
 QGesture objects are created by gesture recognizers in the QGestureRecognizer::create() function.
 */
-func (*QGesture) NewForInherit__() *QGesture {
-	return NewQGesture__()
+func (*QGesture) NewForInheritp() *QGesture {
+	return NewQGesturep()
 }
-func NewQGesture__() *QGesture {
+func NewQGesturep() *QGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

@@ -146,10 +146,10 @@ func NewQQuickView(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
 /*
 Constructs a QQuickView with the given parent. The default value of parent is 0.
 */
-func (*QQuickView) NewForInherit__() *QQuickView {
-	return NewQQuickView__()
+func (*QQuickView) NewForInheritp() *QQuickView {
+	return NewQQuickViewp()
 }
-func NewQQuickView__() *QQuickView {
+func NewQQuickViewp() *QQuickView {
 	// arg: 0, QWindow *=Pointer, QWindow=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -167,10 +167,10 @@ func NewQQuickView__() *QQuickView {
 /*
 Constructs a QQuickView with the given parent. The default value of parent is 0.
 */
-func (*QQuickView) NewForInherit_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
-	return NewQQuickView_1(engine, parent)
+func (*QQuickView) NewForInherit1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
+	return NewQQuickView1(engine, parent)
 }
-func NewQQuickView_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
+func NewQQuickView1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QQmlEngine_PTR() != nil {
 		convArg0 = engine.QQmlEngine_PTR().GetCthis()
@@ -194,10 +194,10 @@ func NewQQuickView_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qt
 /*
 Constructs a QQuickView with the given parent. The default value of parent is 0.
 */
-func (*QQuickView) NewForInherit_2(source qtcore.QUrl_ITF, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
-	return NewQQuickView_2(source, parent)
+func (*QQuickView) NewForInherit2(source qtcore.QUrl_ITF, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
+	return NewQQuickView2(source, parent)
 }
-func NewQQuickView_2(source qtcore.QUrl_ITF, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
+func NewQQuickView2(source qtcore.QUrl_ITF, parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
 	var convArg0 unsafe.Pointer
 	if source != nil && source.QUrl_PTR() != nil {
 		convArg0 = source.QUrl_PTR().GetCthis()
@@ -221,10 +221,10 @@ func NewQQuickView_2(source qtcore.QUrl_ITF, parent qtgui.QWindow_ITF /*777 QWin
 /*
 Constructs a QQuickView with the given parent. The default value of parent is 0.
 */
-func (*QQuickView) NewForInherit_2_(source qtcore.QUrl_ITF) *QQuickView {
-	return NewQQuickView_2_(source)
+func (*QQuickView) NewForInherit2p(source qtcore.QUrl_ITF) *QQuickView {
+	return NewQQuickView2p(source)
 }
-func NewQQuickView_2_(source qtcore.QUrl_ITF) *QQuickView {
+func NewQQuickView2p(source qtcore.QUrl_ITF) *QQuickView {
 	var convArg0 unsafe.Pointer
 	if source != nil && source.QUrl_PTR() != nil {
 		convArg0 = source.QUrl_PTR().GetCthis()

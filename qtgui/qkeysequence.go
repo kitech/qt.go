@@ -92,11 +92,11 @@ func NewQKeySequence() *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
-func (*QKeySequence) NewForInherit_1(key string, format int) *QKeySequence {
-	return NewQKeySequence_1(key, format)
+func (*QKeySequence) NewForInherit1(key string, format int) *QKeySequence {
+	return NewQKeySequence1(key, format)
 }
-func NewQKeySequence_1(key string, format int) *QKeySequence {
-	var tmpArg0 = qtcore.NewQString_5(key)
+func NewQKeySequence1(key string, format int) *QKeySequence {
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2ERK7QStringNS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -113,11 +113,11 @@ func NewQKeySequence_1(key string, format int) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
-func (*QKeySequence) NewForInherit_1_(key string) *QKeySequence {
-	return NewQKeySequence_1_(key)
+func (*QKeySequence) NewForInherit1p(key string) *QKeySequence {
+	return NewQKeySequence1p(key)
 }
-func NewQKeySequence_1_(key string) *QKeySequence {
-	var tmpArg0 = qtcore.NewQString_5(key)
+func NewQKeySequence1p(key string) *QKeySequence {
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum, , Invalid
 	format := 0
@@ -136,10 +136,10 @@ func NewQKeySequence_1_(key string) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
-func (*QKeySequence) NewForInherit_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
-	return NewQKeySequence_2(k1, k2, k3, k4)
+func (*QKeySequence) NewForInherit2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
+	return NewQKeySequence2(k1, k2, k3, k4)
 }
-func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
+func NewQKeySequence2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -155,10 +155,10 @@ func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
-func (*QKeySequence) NewForInherit_2_(k1 int) *QKeySequence {
-	return NewQKeySequence_2_(k1)
+func (*QKeySequence) NewForInherit2p(k1 int) *QKeySequence {
+	return NewQKeySequence2p(k1)
 }
-func NewQKeySequence_2_(k1 int) *QKeySequence {
+func NewQKeySequence2p(k1 int) *QKeySequence {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	k2 := int(0)
 	// arg: 2, int=Int, =Invalid, , Invalid
@@ -180,10 +180,10 @@ func NewQKeySequence_2_(k1 int) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
-func (*QKeySequence) NewForInherit_2_1(k1 int, k2 int) *QKeySequence {
-	return NewQKeySequence_2_1(k1, k2)
+func (*QKeySequence) NewForInherit2p1(k1 int, k2 int) *QKeySequence {
+	return NewQKeySequence2p1(k1, k2)
 }
-func NewQKeySequence_2_1(k1 int, k2 int) *QKeySequence {
+func NewQKeySequence2p1(k1 int, k2 int) *QKeySequence {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	k3 := int(0)
 	// arg: 3, int=Int, =Invalid, , Invalid
@@ -203,10 +203,10 @@ func NewQKeySequence_2_1(k1 int, k2 int) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
-func (*QKeySequence) NewForInherit_2_2(k1 int, k2 int, k3 int) *QKeySequence {
-	return NewQKeySequence_2_2(k1, k2, k3)
+func (*QKeySequence) NewForInherit2p2(k1 int, k2 int, k3 int) *QKeySequence {
+	return NewQKeySequence2p2(k1, k2, k3)
 }
-func NewQKeySequence_2_2(k1 int, k2 int, k3 int) *QKeySequence {
+func NewQKeySequence2p2(k1 int, k2 int, k3 int) *QKeySequence {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	k4 := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2Eiiii", qtrt.FFI_TYPE_POINTER, k1, k2, k3, k4)
@@ -224,10 +224,10 @@ func NewQKeySequence_2_2(k1 int, k2 int, k3 int) *QKeySequence {
 /*
 Constructs an empty key sequence.
 */
-func (*QKeySequence) NewForInherit_3(key int) *QKeySequence {
-	return NewQKeySequence_3(key)
+func (*QKeySequence) NewForInherit3(key int) *QKeySequence {
+	return NewQKeySequence3(key)
 }
-func NewQKeySequence_3(key int) *QKeySequence {
+func NewQKeySequence3(key int) *QKeySequence {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceC2ENS_11StandardKeyE", qtrt.FFI_TYPE_POINTER, key)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -323,7 +323,7 @@ This function was introduced in  Qt 4.1.
 
 See also fromString().
 */
-func (this *QKeySequence) ToString__() string {
+func (this *QKeySequence) ToStringp() string {
 	// arg: 0, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum, , Invalid
 	format := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QKeySequence8toStringENS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
@@ -347,7 +347,7 @@ This function was introduced in  Qt 4.1.
 See also toString().
 */
 func (this *QKeySequence) FromString(str string, format int) *QKeySequence /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(str)
+	var tmpArg0 = qtcore.NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequence10fromStringERK7QStringNS_14SequenceFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	qtrt.ErrPrint(err, rv)
@@ -373,8 +373,8 @@ This function was introduced in  Qt 4.1.
 
 See also toString().
 */
-func (this *QKeySequence) FromString__(str string) *QKeySequence /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(str)
+func (this *QKeySequence) FromStringp(str string) *QKeySequence /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QKeySequence::SequenceFormat=Enum, QKeySequence::SequenceFormat=Enum, , Invalid
 	format := 0
@@ -416,7 +416,7 @@ For example, mnemonic("E&xit") returns Qt::ALT+Qt::Key_X, mnemonic("&Quit") retu
 We provide a list of common mnemonics in English. At the time of writing, Microsoft and Open Group do not appear to have issued equivalent recommendations for other languages.
 */
 func (this *QKeySequence) Mnemonic(text string) *QKeySequence /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequence8mnemonicERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -472,7 +472,7 @@ func (this *QKeySequence) Operator_equal(other QKeySequence_ITF) *QKeySequence {
 /*
 
  */
-func (this *QKeySequence) Operator_equal_1(other unsafe.Pointer /*333*/) *QKeySequence {
+func (this *QKeySequence) Operator_equal1(other unsafe.Pointer /*333*/) *QKeySequence {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QKeySequenceaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

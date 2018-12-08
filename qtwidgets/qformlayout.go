@@ -113,10 +113,10 @@ Constructs a new form layout with the given parent widget.
 
 See also QWidget::setLayout().
 */
-func (*QFormLayout) NewForInherit__() *QFormLayout {
-	return NewQFormLayout__()
+func (*QFormLayout) NewForInheritp() *QFormLayout {
+	return NewQFormLayoutp()
 }
-func NewQFormLayout__() *QFormLayout {
+func NewQFormLayoutp() *QFormLayout {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayoutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -367,7 +367,7 @@ Adds a new row to the bottom of this form layout, with the given label and field
 
 See also insertRow().
 */
-func (this *QFormLayout) AddRow_1(label QWidget_ITF /*777 QWidget **/, field QLayout_ITF /*777 QLayout **/) {
+func (this *QFormLayout) AddRow1(label QWidget_ITF /*777 QWidget **/, field QLayout_ITF /*777 QLayout **/) {
 	var convArg0 unsafe.Pointer
 	if label != nil && label.QWidget_PTR() != nil {
 		convArg0 = label.QWidget_PTR().GetCthis()
@@ -390,8 +390,8 @@ Adds a new row to the bottom of this form layout, with the given label and field
 
 See also insertRow().
 */
-func (this *QFormLayout) AddRow_2(labelText string, field QWidget_ITF /*777 QWidget **/) {
-	var tmpArg0 = qtcore.NewQString_5(labelText)
+func (this *QFormLayout) AddRow2(labelText string, field QWidget_ITF /*777 QWidget **/) {
+	var tmpArg0 = qtcore.NewQString5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if field != nil && field.QWidget_PTR() != nil {
@@ -411,8 +411,8 @@ Adds a new row to the bottom of this form layout, with the given label and field
 
 See also insertRow().
 */
-func (this *QFormLayout) AddRow_3(labelText string, field QLayout_ITF /*777 QLayout **/) {
-	var tmpArg0 = qtcore.NewQString_5(labelText)
+func (this *QFormLayout) AddRow3(labelText string, field QLayout_ITF /*777 QLayout **/) {
+	var tmpArg0 = qtcore.NewQString5(labelText)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if field != nil && field.QLayout_PTR() != nil {
@@ -432,7 +432,7 @@ Adds a new row to the bottom of this form layout, with the given label and field
 
 See also insertRow().
 */
-func (this *QFormLayout) AddRow_4(widget QWidget_ITF /*777 QWidget **/) {
+func (this *QFormLayout) AddRow4(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -451,7 +451,7 @@ Adds a new row to the bottom of this form layout, with the given label and field
 
 See also insertRow().
 */
-func (this *QFormLayout) AddRow_5(layout QLayout_ITF /*777 QLayout **/) {
+func (this *QFormLayout) AddRow5(layout QLayout_ITF /*777 QLayout **/) {
 	var convArg0 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
 		convArg0 = layout.QLayout_PTR().GetCthis()
@@ -493,7 +493,7 @@ Inserts a new row at position row in this form layout, with the given label and 
 
 See also addRow().
 */
-func (this *QFormLayout) InsertRow_1(row int, label QWidget_ITF /*777 QWidget **/, field QLayout_ITF /*777 QLayout **/) {
+func (this *QFormLayout) InsertRow1(row int, label QWidget_ITF /*777 QWidget **/, field QLayout_ITF /*777 QLayout **/) {
 	var convArg1 unsafe.Pointer
 	if label != nil && label.QWidget_PTR() != nil {
 		convArg1 = label.QWidget_PTR().GetCthis()
@@ -516,8 +516,8 @@ Inserts a new row at position row in this form layout, with the given label and 
 
 See also addRow().
 */
-func (this *QFormLayout) InsertRow_2(row int, labelText string, field QWidget_ITF /*777 QWidget **/) {
-	var tmpArg1 = qtcore.NewQString_5(labelText)
+func (this *QFormLayout) InsertRow2(row int, labelText string, field QWidget_ITF /*777 QWidget **/) {
+	var tmpArg1 = qtcore.NewQString5(labelText)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if field != nil && field.QWidget_PTR() != nil {
@@ -537,8 +537,8 @@ Inserts a new row at position row in this form layout, with the given label and 
 
 See also addRow().
 */
-func (this *QFormLayout) InsertRow_3(row int, labelText string, field QLayout_ITF /*777 QLayout **/) {
-	var tmpArg1 = qtcore.NewQString_5(labelText)
+func (this *QFormLayout) InsertRow3(row int, labelText string, field QLayout_ITF /*777 QLayout **/) {
+	var tmpArg1 = qtcore.NewQString5(labelText)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if field != nil && field.QLayout_PTR() != nil {
@@ -558,7 +558,7 @@ Inserts a new row at position row in this form layout, with the given label and 
 
 See also addRow().
 */
-func (this *QFormLayout) InsertRow_4(row int, widget QWidget_ITF /*777 QWidget **/) {
+func (this *QFormLayout) InsertRow4(row int, widget QWidget_ITF /*777 QWidget **/) {
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
@@ -577,7 +577,7 @@ Inserts a new row at position row in this form layout, with the given label and 
 
 See also addRow().
 */
-func (this *QFormLayout) InsertRow_5(row int, layout QLayout_ITF /*777 QLayout **/) {
+func (this *QFormLayout) InsertRow5(row int, layout QLayout_ITF /*777 QLayout **/) {
 	var convArg1 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
 		convArg1 = layout.QLayout_PTR().GetCthis()
@@ -649,7 +649,7 @@ This function was introduced in  Qt 5.8.
 
 See also takeRow().
 */
-func (this *QFormLayout) RemoveRow_1(widget QWidget_ITF /*777 QWidget **/) {
+func (this *QFormLayout) RemoveRow1(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -687,7 +687,7 @@ This function was introduced in  Qt 5.8.
 
 See also takeRow().
 */
-func (this *QFormLayout) RemoveRow_2(layout QLayout_ITF /*777 QLayout **/) {
+func (this *QFormLayout) RemoveRow2(layout QLayout_ITF /*777 QLayout **/) {
 	var convArg0 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
 		convArg0 = layout.QLayout_PTR().GetCthis()
@@ -768,7 +768,7 @@ This function was introduced in  Qt 5.8.
 
 See also removeRow().
 */
-func (this *QFormLayout) TakeRow_1(widget QWidget_ITF /*777 QWidget **/) unsafe.Pointer /*444*/ {
+func (this *QFormLayout) TakeRow1(widget QWidget_ITF /*777 QWidget **/) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -811,7 +811,7 @@ This function was introduced in  Qt 5.8.
 
 See also removeRow().
 */
-func (this *QFormLayout) TakeRow_2(layout QLayout_ITF /*777 QLayout **/) unsafe.Pointer /*444*/ {
+func (this *QFormLayout) TakeRow2(layout QLayout_ITF /*777 QLayout **/) unsafe.Pointer /*444*/ {
 	var convArg0 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
 		convArg0 = layout.QLayout_PTR().GetCthis()
@@ -916,7 +916,7 @@ Returns the layout item in the given row with the specified role (column). Retur
 
 See also QLayout::itemAt() and setItem().
 */
-func (this *QFormLayout) ItemAt_1(index int) *QLayoutItem /*777 QLayoutItem **/ {
+func (this *QFormLayout) ItemAt1(index int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout6itemAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -1003,7 +1003,7 @@ Returns the label associated with the given field.
 
 See also itemAt().
 */
-func (this *QFormLayout) LabelForField_1(field QLayout_ITF /*777 QLayout **/) *QWidget /*777 QWidget **/ {
+func (this *QFormLayout) LabelForField1(field QLayout_ITF /*777 QLayout **/) *QWidget /*777 QWidget **/ {
 	var convArg0 unsafe.Pointer
 	if field != nil && field.QLayout_PTR() != nil {
 		convArg0 = field.QLayout_PTR().GetCthis()

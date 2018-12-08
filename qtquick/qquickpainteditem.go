@@ -116,10 +116,10 @@ func NewQQuickPaintedItem(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickPai
 /*
 Constructs a QQuickPaintedItem with the given parent item.
 */
-func (*QQuickPaintedItem) NewForInherit__() *QQuickPaintedItem {
-	return NewQQuickPaintedItem__()
+func (*QQuickPaintedItem) NewForInheritp() *QQuickPaintedItem {
+	return NewQQuickPaintedItemp()
 }
-func NewQQuickPaintedItem__() *QQuickPaintedItem {
+func NewQQuickPaintedItemp() *QQuickPaintedItem {
 	// arg: 0, QQuickItem *=Pointer, QQuickItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQuickPaintedItemC2EP10QQuickItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -177,7 +177,7 @@ This function does not cause an immediate paint; instead it schedules a paint re
 
 See also paint().
 */
-func (this *QQuickPaintedItem) Update__() {
+func (this *QQuickPaintedItem) Updatep() {
 	// arg: 0, const QRect &=LValueReference, QRect=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQuickPaintedItem6updateERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -340,7 +340,7 @@ By default, no performance hint is enabled/
 
 See also setPerformanceHints() and performanceHints().
 */
-func (this *QQuickPaintedItem) SetPerformanceHint__(hint int) {
+func (this *QQuickPaintedItem) SetPerformanceHintp(hint int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QQuickPaintedItem18setPerformanceHintENS_15PerformanceHintEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, enabled)

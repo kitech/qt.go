@@ -57,7 +57,7 @@ type QGraphicsWidgetList struct {
 }
 
 // QList<T> & operator=(const QList<T> &)
-func (this *QGraphicsWidgetList) Operator_equal_0() *QGraphicsWidgetList {
+func (this *QGraphicsWidgetList) Operator_equal0() *QGraphicsWidgetList {
 	// QGraphicsWidgetList_operator_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_operator_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -65,7 +65,7 @@ func (this *QGraphicsWidgetList) Operator_equal_0() *QGraphicsWidgetList {
 }
 
 // QList<T> & operator=(QList<T> &&)
-func (this *QGraphicsWidgetList) Operator_equal_1() *QGraphicsWidgetList {
+func (this *QGraphicsWidgetList) Operator_equal1() *QGraphicsWidgetList {
 	// QGraphicsWidgetList_operator_equal_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_operator_equal_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -73,14 +73,14 @@ func (this *QGraphicsWidgetList) Operator_equal_1() *QGraphicsWidgetList {
 }
 
 // void swap(QList<T> &)
-func (this *QGraphicsWidgetList) Swap_0() {
+func (this *QGraphicsWidgetList) Swap0() {
 	// QGraphicsWidgetList_swap_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_swap_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool operator==(const QList<T> &)
-func (this *QGraphicsWidgetList) Operator_equal_equal_0() bool {
+func (this *QGraphicsWidgetList) Operator_equal_equal0() bool {
 	// QGraphicsWidgetList_operator_equal_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_operator_equal_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -88,7 +88,7 @@ func (this *QGraphicsWidgetList) Operator_equal_equal_0() bool {
 }
 
 // bool operator!=(const QList<T> &)
-func (this *QGraphicsWidgetList) Operator_not_equal_0() bool {
+func (this *QGraphicsWidgetList) Operator_not_equal0() bool {
 	// QGraphicsWidgetList_operator_not_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_operator_not_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -96,7 +96,7 @@ func (this *QGraphicsWidgetList) Operator_not_equal_0() bool {
 }
 
 // int size()
-func (this *QGraphicsWidgetList) Size_0() int {
+func (this *QGraphicsWidgetList) Size0() int {
 	// QGraphicsWidgetList_size_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_size_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -104,21 +104,21 @@ func (this *QGraphicsWidgetList) Size_0() int {
 }
 
 // void detach()
-func (this *QGraphicsWidgetList) Detach_0() {
+func (this *QGraphicsWidgetList) Detach0() {
 	// QGraphicsWidgetList_detach_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_detach_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void detachShared()
-func (this *QGraphicsWidgetList) DetachShared_0() {
+func (this *QGraphicsWidgetList) DetachShared0() {
 	// QGraphicsWidgetList_detachShared_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_detachShared_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool isDetached()
-func (this *QGraphicsWidgetList) IsDetached_0() bool {
+func (this *QGraphicsWidgetList) IsDetached0() bool {
 	// QGraphicsWidgetList_isDetached_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_isDetached_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -126,14 +126,14 @@ func (this *QGraphicsWidgetList) IsDetached_0() bool {
 }
 
 // void setSharable(bool)
-func (this *QGraphicsWidgetList) SetSharable_0() {
+func (this *QGraphicsWidgetList) SetSharable0() {
 	// QGraphicsWidgetList_setSharable_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_setSharable_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool isSharedWith(const QList<T> &)
-func (this *QGraphicsWidgetList) IsSharedWith_0() bool {
+func (this *QGraphicsWidgetList) IsSharedWith0() bool {
 	// QGraphicsWidgetList_isSharedWith_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_isSharedWith_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -141,7 +141,7 @@ func (this *QGraphicsWidgetList) IsSharedWith_0() bool {
 }
 
 // bool isEmpty()
-func (this *QGraphicsWidgetList) IsEmpty_0() bool {
+func (this *QGraphicsWidgetList) IsEmpty0() bool {
 	// QGraphicsWidgetList_isEmpty_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_isEmpty_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -149,14 +149,14 @@ func (this *QGraphicsWidgetList) IsEmpty_0() bool {
 }
 
 // void clear()
-func (this *QGraphicsWidgetList) Clear_0() {
+func (this *QGraphicsWidgetList) Clear0() {
 	// QGraphicsWidgetList_clear_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_clear_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // const T & at(int)
-func (this *QGraphicsWidgetList) At_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) At0() *QGraphicsWidget {
 	// QGraphicsWidgetList_at_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_at_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -164,7 +164,7 @@ func (this *QGraphicsWidgetList) At_0() *QGraphicsWidget {
 }
 
 // const T & operator[](int)
-func (this *QGraphicsWidgetList) Operator_get_index_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) Operator_get_index0() *QGraphicsWidget {
 	// QGraphicsWidgetList_operator_get_index_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_operator_get_index_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -172,7 +172,7 @@ func (this *QGraphicsWidgetList) Operator_get_index_0() *QGraphicsWidget {
 }
 
 // T & operator[](int)
-func (this *QGraphicsWidgetList) Operator_get_index_1() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) Operator_get_index1() *QGraphicsWidget {
 	// QGraphicsWidgetList_operator_get_index_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_operator_get_index_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -180,56 +180,56 @@ func (this *QGraphicsWidgetList) Operator_get_index_1() *QGraphicsWidget {
 }
 
 // void reserve(int)
-func (this *QGraphicsWidgetList) Reserve_0() {
+func (this *QGraphicsWidgetList) Reserve0() {
 	// QGraphicsWidgetList_reserve_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_reserve_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void append(const T &)
-func (this *QGraphicsWidgetList) Append_0() {
+func (this *QGraphicsWidgetList) Append0() {
 	// QGraphicsWidgetList_append_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_append_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void append(const QList<T> &)
-func (this *QGraphicsWidgetList) Append_1() {
+func (this *QGraphicsWidgetList) Append1() {
 	// QGraphicsWidgetList_append_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_append_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void prepend(const T &)
-func (this *QGraphicsWidgetList) Prepend_0() {
+func (this *QGraphicsWidgetList) Prepend0() {
 	// QGraphicsWidgetList_prepend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_prepend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void insert(int, const T &)
-func (this *QGraphicsWidgetList) Insert_0() {
+func (this *QGraphicsWidgetList) Insert0() {
 	// QGraphicsWidgetList_insert_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_insert_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void replace(int, const T &)
-func (this *QGraphicsWidgetList) Replace_0() {
+func (this *QGraphicsWidgetList) Replace0() {
 	// QGraphicsWidgetList_replace_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_replace_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void removeAt(int)
-func (this *QGraphicsWidgetList) RemoveAt_0() {
+func (this *QGraphicsWidgetList) RemoveAt0() {
 	// QGraphicsWidgetList_removeAt_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_removeAt_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // int removeAll(const T &)
-func (this *QGraphicsWidgetList) RemoveAll_0() int {
+func (this *QGraphicsWidgetList) RemoveAll0() int {
 	// QGraphicsWidgetList_removeAll_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_removeAll_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -237,7 +237,7 @@ func (this *QGraphicsWidgetList) RemoveAll_0() int {
 }
 
 // bool removeOne(const T &)
-func (this *QGraphicsWidgetList) RemoveOne_0() bool {
+func (this *QGraphicsWidgetList) RemoveOne0() bool {
 	// QGraphicsWidgetList_removeOne_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_removeOne_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -245,7 +245,7 @@ func (this *QGraphicsWidgetList) RemoveOne_0() bool {
 }
 
 // T takeAt(int)
-func (this *QGraphicsWidgetList) TakeAt_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) TakeAt0() *QGraphicsWidget {
 	// QGraphicsWidgetList_takeAt_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_takeAt_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func (this *QGraphicsWidgetList) TakeAt_0() *QGraphicsWidget {
 }
 
 // T takeFirst()
-func (this *QGraphicsWidgetList) TakeFirst_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) TakeFirst0() *QGraphicsWidget {
 	// QGraphicsWidgetList_takeFirst_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_takeFirst_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -261,7 +261,7 @@ func (this *QGraphicsWidgetList) TakeFirst_0() *QGraphicsWidget {
 }
 
 // T takeLast()
-func (this *QGraphicsWidgetList) TakeLast_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) TakeLast0() *QGraphicsWidget {
 	// QGraphicsWidgetList_takeLast_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_takeLast_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -269,21 +269,21 @@ func (this *QGraphicsWidgetList) TakeLast_0() *QGraphicsWidget {
 }
 
 // void move(int, int)
-func (this *QGraphicsWidgetList) Move_0() {
+func (this *QGraphicsWidgetList) Move0() {
 	// QGraphicsWidgetList_move_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_move_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void swap(int, int)
-func (this *QGraphicsWidgetList) Swap_1() {
+func (this *QGraphicsWidgetList) Swap1() {
 	// QGraphicsWidgetList_swap_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_swap_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // int indexOf(const T &, int)
-func (this *QGraphicsWidgetList) IndexOf_0() int {
+func (this *QGraphicsWidgetList) IndexOf0() int {
 	// QGraphicsWidgetList_indexOf_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_indexOf_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -291,7 +291,7 @@ func (this *QGraphicsWidgetList) IndexOf_0() int {
 }
 
 // int lastIndexOf(const T &, int)
-func (this *QGraphicsWidgetList) LastIndexOf_0() int {
+func (this *QGraphicsWidgetList) LastIndexOf0() int {
 	// QGraphicsWidgetList_lastIndexOf_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_lastIndexOf_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -299,7 +299,7 @@ func (this *QGraphicsWidgetList) LastIndexOf_0() int {
 }
 
 // bool contains(const T &)
-func (this *QGraphicsWidgetList) Contains_0() bool {
+func (this *QGraphicsWidgetList) Contains0() bool {
 	// QGraphicsWidgetList_contains_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_contains_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -307,7 +307,7 @@ func (this *QGraphicsWidgetList) Contains_0() bool {
 }
 
 // int count(const T &)
-func (this *QGraphicsWidgetList) Count_0() int {
+func (this *QGraphicsWidgetList) Count0() int {
 	// QGraphicsWidgetList_count_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_count_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -315,126 +315,126 @@ func (this *QGraphicsWidgetList) Count_0() int {
 }
 
 // QList::iterator begin()
-func (this *QGraphicsWidgetList) Begin_0() {
+func (this *QGraphicsWidgetList) Begin0() {
 	// QGraphicsWidgetList_begin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_begin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator begin()
-func (this *QGraphicsWidgetList) Begin_1() {
+func (this *QGraphicsWidgetList) Begin1() {
 	// QGraphicsWidgetList_begin_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_begin_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator cbegin()
-func (this *QGraphicsWidgetList) Cbegin_0() {
+func (this *QGraphicsWidgetList) Cbegin0() {
 	// QGraphicsWidgetList_cbegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_cbegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator constBegin()
-func (this *QGraphicsWidgetList) ConstBegin_0() {
+func (this *QGraphicsWidgetList) ConstBegin0() {
 	// QGraphicsWidgetList_constBegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_constBegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator end()
-func (this *QGraphicsWidgetList) End_0() {
+func (this *QGraphicsWidgetList) End0() {
 	// QGraphicsWidgetList_end_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_end_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator end()
-func (this *QGraphicsWidgetList) End_1() {
+func (this *QGraphicsWidgetList) End1() {
 	// QGraphicsWidgetList_end_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_end_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator cend()
-func (this *QGraphicsWidgetList) Cend_0() {
+func (this *QGraphicsWidgetList) Cend0() {
 	// QGraphicsWidgetList_cend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_cend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator constEnd()
-func (this *QGraphicsWidgetList) ConstEnd_0() {
+func (this *QGraphicsWidgetList) ConstEnd0() {
 	// QGraphicsWidgetList_constEnd_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_constEnd_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::reverse_iterator rbegin()
-func (this *QGraphicsWidgetList) Rbegin_0() {
+func (this *QGraphicsWidgetList) Rbegin0() {
 	// QGraphicsWidgetList_rbegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_rbegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::reverse_iterator rend()
-func (this *QGraphicsWidgetList) Rend_0() {
+func (this *QGraphicsWidgetList) Rend0() {
 	// QGraphicsWidgetList_rend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_rend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator rbegin()
-func (this *QGraphicsWidgetList) Rbegin_1() {
+func (this *QGraphicsWidgetList) Rbegin1() {
 	// QGraphicsWidgetList_rbegin_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_rbegin_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator rend()
-func (this *QGraphicsWidgetList) Rend_1() {
+func (this *QGraphicsWidgetList) Rend1() {
 	// QGraphicsWidgetList_rend_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_rend_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator crbegin()
-func (this *QGraphicsWidgetList) Crbegin_0() {
+func (this *QGraphicsWidgetList) Crbegin0() {
 	// QGraphicsWidgetList_crbegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_crbegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator crend()
-func (this *QGraphicsWidgetList) Crend_0() {
+func (this *QGraphicsWidgetList) Crend0() {
 	// QGraphicsWidgetList_crend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_crend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator insert(QList::iterator, const T &)
-func (this *QGraphicsWidgetList) Insert_1() {
+func (this *QGraphicsWidgetList) Insert1() {
 	// QGraphicsWidgetList_insert_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_insert_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator erase(QList::iterator)
-func (this *QGraphicsWidgetList) Erase_0() {
+func (this *QGraphicsWidgetList) Erase0() {
 	// QGraphicsWidgetList_erase_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_erase_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator erase(QList::iterator, QList::iterator)
-func (this *QGraphicsWidgetList) Erase_1() {
+func (this *QGraphicsWidgetList) Erase1() {
 	// QGraphicsWidgetList_erase_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_erase_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // int count()
-func (this *QGraphicsWidgetList) Count_1() int {
+func (this *QGraphicsWidgetList) Count1() int {
 	// QGraphicsWidgetList_count_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_count_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -442,7 +442,7 @@ func (this *QGraphicsWidgetList) Count_1() int {
 }
 
 // int length()
-func (this *QGraphicsWidgetList) Length_0() int {
+func (this *QGraphicsWidgetList) Length0() int {
 	// QGraphicsWidgetList_length_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_length_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -450,7 +450,7 @@ func (this *QGraphicsWidgetList) Length_0() int {
 }
 
 // T & first()
-func (this *QGraphicsWidgetList) First_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) First0() *QGraphicsWidget {
 	// QGraphicsWidgetList_first_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_first_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -458,7 +458,7 @@ func (this *QGraphicsWidgetList) First_0() *QGraphicsWidget {
 }
 
 // const T & constFirst()
-func (this *QGraphicsWidgetList) ConstFirst_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) ConstFirst0() *QGraphicsWidget {
 	// QGraphicsWidgetList_constFirst_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_constFirst_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -466,7 +466,7 @@ func (this *QGraphicsWidgetList) ConstFirst_0() *QGraphicsWidget {
 }
 
 // const T & first()
-func (this *QGraphicsWidgetList) First_1() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) First1() *QGraphicsWidget {
 	// QGraphicsWidgetList_first_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_first_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -474,7 +474,7 @@ func (this *QGraphicsWidgetList) First_1() *QGraphicsWidget {
 }
 
 // T & last()
-func (this *QGraphicsWidgetList) Last_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) Last0() *QGraphicsWidget {
 	// QGraphicsWidgetList_last_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_last_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -482,7 +482,7 @@ func (this *QGraphicsWidgetList) Last_0() *QGraphicsWidget {
 }
 
 // const T & last()
-func (this *QGraphicsWidgetList) Last_1() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) Last1() *QGraphicsWidget {
 	// QGraphicsWidgetList_last_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_last_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -490,7 +490,7 @@ func (this *QGraphicsWidgetList) Last_1() *QGraphicsWidget {
 }
 
 // const T & constLast()
-func (this *QGraphicsWidgetList) ConstLast_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) ConstLast0() *QGraphicsWidget {
 	// QGraphicsWidgetList_constLast_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_constLast_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -498,21 +498,21 @@ func (this *QGraphicsWidgetList) ConstLast_0() *QGraphicsWidget {
 }
 
 // void removeFirst()
-func (this *QGraphicsWidgetList) RemoveFirst_0() {
+func (this *QGraphicsWidgetList) RemoveFirst0() {
 	// QGraphicsWidgetList_removeFirst_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_removeFirst_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void removeLast()
-func (this *QGraphicsWidgetList) RemoveLast_0() {
+func (this *QGraphicsWidgetList) RemoveLast0() {
 	// QGraphicsWidgetList_removeLast_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_removeLast_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool startsWith(const T &)
-func (this *QGraphicsWidgetList) StartsWith_0() bool {
+func (this *QGraphicsWidgetList) StartsWith0() bool {
 	// QGraphicsWidgetList_startsWith_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_startsWith_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -520,7 +520,7 @@ func (this *QGraphicsWidgetList) StartsWith_0() bool {
 }
 
 // bool endsWith(const T &)
-func (this *QGraphicsWidgetList) EndsWith_0() bool {
+func (this *QGraphicsWidgetList) EndsWith0() bool {
 	// QGraphicsWidgetList_endsWith_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_endsWith_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -528,7 +528,7 @@ func (this *QGraphicsWidgetList) EndsWith_0() bool {
 }
 
 // QList<T> mid(int, int)
-func (this *QGraphicsWidgetList) Mid_0() *QGraphicsWidgetList {
+func (this *QGraphicsWidgetList) Mid0() *QGraphicsWidgetList {
 	// QGraphicsWidgetList_mid_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_mid_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -536,7 +536,7 @@ func (this *QGraphicsWidgetList) Mid_0() *QGraphicsWidgetList {
 }
 
 // T value(int)
-func (this *QGraphicsWidgetList) Value_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) Value0() *QGraphicsWidget {
 	// QGraphicsWidgetList_value_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_value_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -544,7 +544,7 @@ func (this *QGraphicsWidgetList) Value_0() *QGraphicsWidget {
 }
 
 // T value(int, const T &)
-func (this *QGraphicsWidgetList) Value_1() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) Value1() *QGraphicsWidget {
 	// QGraphicsWidgetList_value_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_value_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -552,21 +552,21 @@ func (this *QGraphicsWidgetList) Value_1() *QGraphicsWidget {
 }
 
 // void push_back(const T &)
-func (this *QGraphicsWidgetList) Push_back_0() {
+func (this *QGraphicsWidgetList) Push_back0() {
 	// QGraphicsWidgetList_push_back_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_push_back_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void push_front(const T &)
-func (this *QGraphicsWidgetList) Push_front_0() {
+func (this *QGraphicsWidgetList) Push_front0() {
 	// QGraphicsWidgetList_push_front_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_push_front_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // T & front()
-func (this *QGraphicsWidgetList) Front_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) Front0() *QGraphicsWidget {
 	// QGraphicsWidgetList_front_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_front_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -574,7 +574,7 @@ func (this *QGraphicsWidgetList) Front_0() *QGraphicsWidget {
 }
 
 // const T & front()
-func (this *QGraphicsWidgetList) Front_1() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) Front1() *QGraphicsWidget {
 	// QGraphicsWidgetList_front_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_front_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -582,7 +582,7 @@ func (this *QGraphicsWidgetList) Front_1() *QGraphicsWidget {
 }
 
 // T & back()
-func (this *QGraphicsWidgetList) Back_0() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) Back0() *QGraphicsWidget {
 	// QGraphicsWidgetList_back_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_back_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -590,7 +590,7 @@ func (this *QGraphicsWidgetList) Back_0() *QGraphicsWidget {
 }
 
 // const T & back()
-func (this *QGraphicsWidgetList) Back_1() *QGraphicsWidget {
+func (this *QGraphicsWidgetList) Back1() *QGraphicsWidget {
 	// QGraphicsWidgetList_back_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_back_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -598,21 +598,21 @@ func (this *QGraphicsWidgetList) Back_1() *QGraphicsWidget {
 }
 
 // void pop_front()
-func (this *QGraphicsWidgetList) Pop_front_0() {
+func (this *QGraphicsWidgetList) Pop_front0() {
 	// QGraphicsWidgetList_pop_front_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_pop_front_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void pop_back()
-func (this *QGraphicsWidgetList) Pop_back_0() {
+func (this *QGraphicsWidgetList) Pop_back0() {
 	// QGraphicsWidgetList_pop_back_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_pop_back_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool empty()
-func (this *QGraphicsWidgetList) Empty_0() bool {
+func (this *QGraphicsWidgetList) Empty0() bool {
 	// QGraphicsWidgetList_empty_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_empty_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -620,7 +620,7 @@ func (this *QGraphicsWidgetList) Empty_0() bool {
 }
 
 // QList<T> & operator+=(const QList<T> &)
-func (this *QGraphicsWidgetList) Operator_add_equal_0() *QGraphicsWidgetList {
+func (this *QGraphicsWidgetList) Operator_add_equal0() *QGraphicsWidgetList {
 	// QGraphicsWidgetList_operator_add_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_operator_add_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -628,7 +628,7 @@ func (this *QGraphicsWidgetList) Operator_add_equal_0() *QGraphicsWidgetList {
 }
 
 // QList<T> operator+(const QList<T> &)
-func (this *QGraphicsWidgetList) Operator_add_0() *QGraphicsWidgetList {
+func (this *QGraphicsWidgetList) Operator_add0() *QGraphicsWidgetList {
 	// QGraphicsWidgetList_operator_add_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_operator_add_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -636,7 +636,7 @@ func (this *QGraphicsWidgetList) Operator_add_0() *QGraphicsWidgetList {
 }
 
 // QList<T> & operator+=(const T &)
-func (this *QGraphicsWidgetList) Operator_add_equal_1() *QGraphicsWidgetList {
+func (this *QGraphicsWidgetList) Operator_add_equal1() *QGraphicsWidgetList {
 	// QGraphicsWidgetList_operator_add_equal_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_operator_add_equal_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -644,7 +644,7 @@ func (this *QGraphicsWidgetList) Operator_add_equal_1() *QGraphicsWidgetList {
 }
 
 // QList<T> & operator<<(const T &)
-func (this *QGraphicsWidgetList) Operator_left_shift_0() *QGraphicsWidgetList {
+func (this *QGraphicsWidgetList) Operator_left_shift0() *QGraphicsWidgetList {
 	// QGraphicsWidgetList_operator_left_shift_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_operator_left_shift_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -652,7 +652,7 @@ func (this *QGraphicsWidgetList) Operator_left_shift_0() *QGraphicsWidgetList {
 }
 
 // QList<T> & operator<<(const QList<T> &)
-func (this *QGraphicsWidgetList) Operator_left_shift_1() *QGraphicsWidgetList {
+func (this *QGraphicsWidgetList) Operator_left_shift1() *QGraphicsWidgetList {
 	// QGraphicsWidgetList_operator_left_shift_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_operator_left_shift_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -660,21 +660,21 @@ func (this *QGraphicsWidgetList) Operator_left_shift_1() *QGraphicsWidgetList {
 }
 
 // QVector<T> toVector()
-func (this *QGraphicsWidgetList) ToVector_0() {
+func (this *QGraphicsWidgetList) ToVector0() {
 	// QGraphicsWidgetList_toVector_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_toVector_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QSet<T> toSet()
-func (this *QGraphicsWidgetList) ToSet_0() {
+func (this *QGraphicsWidgetList) ToSet0() {
 	// QGraphicsWidgetList_toSet_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_toSet_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList<T> fromVector(const QVector<T> &)
-func (this *QGraphicsWidgetList) FromVector_0() *QGraphicsWidgetList {
+func (this *QGraphicsWidgetList) FromVector0() *QGraphicsWidgetList {
 	// QGraphicsWidgetList_fromVector_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_fromVector_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -682,7 +682,7 @@ func (this *QGraphicsWidgetList) FromVector_0() *QGraphicsWidgetList {
 }
 
 // QList<T> fromSet(const QSet<T> &)
-func (this *QGraphicsWidgetList) FromSet_0() *QGraphicsWidgetList {
+func (this *QGraphicsWidgetList) FromSet0() *QGraphicsWidgetList {
 	// QGraphicsWidgetList_fromSet_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_fromSet_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -690,7 +690,7 @@ func (this *QGraphicsWidgetList) FromSet_0() *QGraphicsWidgetList {
 }
 
 // QList<T> fromStdList(const std::list<T> &)
-func (this *QGraphicsWidgetList) FromStdList_0() *QGraphicsWidgetList {
+func (this *QGraphicsWidgetList) FromStdList0() *QGraphicsWidgetList {
 	// QGraphicsWidgetList_fromStdList_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_fromStdList_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -698,70 +698,70 @@ func (this *QGraphicsWidgetList) FromStdList_0() *QGraphicsWidgetList {
 }
 
 // std::list<T> toStdList()
-func (this *QGraphicsWidgetList) ToStdList_0() {
+func (this *QGraphicsWidgetList) ToStdList0() {
 	// QGraphicsWidgetList_toStdList_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_toStdList_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::Node * detach_helper_grow(int, int)
-func (this *QGraphicsWidgetList) Detach_helper_grow_0() {
+func (this *QGraphicsWidgetList) Detach_helper_grow0() {
 	// QGraphicsWidgetList_detach_helper_grow_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_detach_helper_grow_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void detach_helper(int)
-func (this *QGraphicsWidgetList) Detach_helper_0() {
+func (this *QGraphicsWidgetList) Detach_helper0() {
 	// QGraphicsWidgetList_detach_helper_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_detach_helper_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void detach_helper()
-func (this *QGraphicsWidgetList) Detach_helper_1() {
+func (this *QGraphicsWidgetList) Detach_helper1() {
 	// QGraphicsWidgetList_detach_helper_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_detach_helper_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void dealloc(QListData::Data *)
-func (this *QGraphicsWidgetList) Dealloc_0() {
+func (this *QGraphicsWidgetList) Dealloc0() {
 	// QGraphicsWidgetList_dealloc_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_dealloc_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_construct(QList::Node *, const T &)
-func (this *QGraphicsWidgetList) Node_construct_0() {
+func (this *QGraphicsWidgetList) Node_construct0() {
 	// QGraphicsWidgetList_node_construct_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_node_construct_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_destruct(QList::Node *)
-func (this *QGraphicsWidgetList) Node_destruct_0() {
+func (this *QGraphicsWidgetList) Node_destruct0() {
 	// QGraphicsWidgetList_node_destruct_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_node_destruct_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_copy(QList::Node *, QList::Node *, QList::Node *)
-func (this *QGraphicsWidgetList) Node_copy_0() {
+func (this *QGraphicsWidgetList) Node_copy0() {
 	// QGraphicsWidgetList_node_copy_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_node_copy_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_destruct(QList::Node *, QList::Node *)
-func (this *QGraphicsWidgetList) Node_destruct_1() {
+func (this *QGraphicsWidgetList) Node_destruct1() {
 	// QGraphicsWidgetList_node_destruct_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_node_destruct_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool isValidIterator(const QList::iterator &)
-func (this *QGraphicsWidgetList) IsValidIterator_0() bool {
+func (this *QGraphicsWidgetList) IsValidIterator0() bool {
 	// QGraphicsWidgetList_isValidIterator_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_isValidIterator_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -769,7 +769,7 @@ func (this *QGraphicsWidgetList) IsValidIterator_0() bool {
 }
 
 // bool op_eq_impl(const QList<T> &, QListData::NotArrayCompatibleLayout)
-func (this *QGraphicsWidgetList) Op_eq_impl_0() bool {
+func (this *QGraphicsWidgetList) Op_eq_impl0() bool {
 	// QGraphicsWidgetList_op_eq_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_op_eq_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -777,7 +777,7 @@ func (this *QGraphicsWidgetList) Op_eq_impl_0() bool {
 }
 
 // bool op_eq_impl(const QList<T> &, QListData::ArrayCompatibleLayout)
-func (this *QGraphicsWidgetList) Op_eq_impl_1() bool {
+func (this *QGraphicsWidgetList) Op_eq_impl1() bool {
 	// QGraphicsWidgetList_op_eq_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_op_eq_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -785,7 +785,7 @@ func (this *QGraphicsWidgetList) Op_eq_impl_1() bool {
 }
 
 // bool contains_impl(const T &, QListData::NotArrayCompatibleLayout)
-func (this *QGraphicsWidgetList) Contains_impl_0() bool {
+func (this *QGraphicsWidgetList) Contains_impl0() bool {
 	// QGraphicsWidgetList_contains_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_contains_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -793,7 +793,7 @@ func (this *QGraphicsWidgetList) Contains_impl_0() bool {
 }
 
 // bool contains_impl(const T &, QListData::ArrayCompatibleLayout)
-func (this *QGraphicsWidgetList) Contains_impl_1() bool {
+func (this *QGraphicsWidgetList) Contains_impl1() bool {
 	// QGraphicsWidgetList_contains_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_contains_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -801,7 +801,7 @@ func (this *QGraphicsWidgetList) Contains_impl_1() bool {
 }
 
 // int count_impl(const T &, QListData::NotArrayCompatibleLayout)
-func (this *QGraphicsWidgetList) Count_impl_0() int {
+func (this *QGraphicsWidgetList) Count_impl0() int {
 	// QGraphicsWidgetList_count_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_count_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -809,7 +809,7 @@ func (this *QGraphicsWidgetList) Count_impl_0() int {
 }
 
 // int count_impl(const T &, QListData::ArrayCompatibleLayout)
-func (this *QGraphicsWidgetList) Count_impl_1() int {
+func (this *QGraphicsWidgetList) Count_impl1() int {
 	// QGraphicsWidgetList_count_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsWidgetList_count_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)

@@ -144,10 +144,10 @@ func NewQTreeWidget(parent QWidget_ITF /*777 QWidget **/) *QTreeWidget {
 /*
 Constructs a tree widget with the given parent.
 */
-func (*QTreeWidget) NewForInherit__() *QTreeWidget {
-	return NewQTreeWidget__()
+func (*QTreeWidget) NewForInheritp() *QTreeWidget {
+	return NewQTreeWidgetp()
 }
-func NewQTreeWidget__() *QTreeWidget {
+func NewQTreeWidgetp() *QTreeWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -394,7 +394,7 @@ Same as setHeaderLabels(QStringList(label)).
 This function was introduced in  Qt 4.2.
 */
 func (this *QTreeWidget) SetHeaderLabel(label string) {
-	var tmpArg0 = qtcore.NewQString_5(label)
+	var tmpArg0 = qtcore.NewQString5(label)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget14setHeaderLabelERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -467,7 +467,7 @@ Unless the selection mode is NoSelection, the item is also selected.
 
 See also currentItem() and currentItemChanged().
 */
-func (this *QTreeWidget) SetCurrentItem_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
+func (this *QTreeWidget) SetCurrentItem1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
@@ -488,7 +488,7 @@ Unless the selection mode is NoSelection, the item is also selected.
 
 See also currentItem() and currentItemChanged().
 */
-func (this *QTreeWidget) SetCurrentItem_2(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int, command int) {
+func (this *QTreeWidget) SetCurrentItem2(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int, command int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
@@ -527,7 +527,7 @@ Returns a pointer to the item at the coordinates p. The coordinates are relative
 
 See also visualItemRect().
 */
-func (this *QTreeWidget) ItemAt_1(x int, y int) *QTreeWidgetItem /*777 QTreeWidgetItem **/ {
+func (this *QTreeWidget) ItemAt1(x int, y int) *QTreeWidgetItem /*777 QTreeWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget6itemAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -613,7 +613,7 @@ func (this *QTreeWidget) EditItem(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem
 /*
 Starts editing the item in the given column if it is editable.
 */
-func (this *QTreeWidget) EditItem__(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
+func (this *QTreeWidget) EditItemp(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
@@ -653,7 +653,7 @@ Opens a persistent editor for the item in the given column.
 
 See also closePersistentEditor() and isPersistentEditorOpen().
 */
-func (this *QTreeWidget) OpenPersistentEditor__(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
+func (this *QTreeWidget) OpenPersistentEditorp(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
@@ -697,7 +697,7 @@ This function has no effect if no persistent editor is open for this combination
 
 See also openPersistentEditor() and isPersistentEditorOpen().
 */
-func (this *QTreeWidget) ClosePersistentEditor__(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
+func (this *QTreeWidget) ClosePersistentEditorp(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
@@ -742,7 +742,7 @@ This function was introduced in  Qt 5.10.
 
 See also openPersistentEditor() and closePersistentEditor().
 */
-func (this *QTreeWidget) IsPersistentEditorOpen__(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) bool {
+func (this *QTreeWidget) IsPersistentEditorOpenp(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) bool {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
@@ -1062,7 +1062,7 @@ Ensures that the item is visible, scrolling the view if necessary using the spec
 
 See also currentItem(), itemAt(), and topLevelItem().
 */
-func (this *QTreeWidget) ScrollToItem__(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) {
+func (this *QTreeWidget) ScrollToItemp(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
@@ -1430,7 +1430,7 @@ Note: In Qt versions prior to 5.7, this function took a non-const item.
 
 See also itemFromIndex() and topLevelItem().
 */
-func (this *QTreeWidget) IndexFromItem__(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) *qtcore.QModelIndex /*123*/ {
+func (this *QTreeWidget) IndexFromItemp(item QTreeWidgetItem_ITF /*777 const QTreeWidgetItem **/) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
@@ -1456,7 +1456,7 @@ Note: In Qt versions prior to 5.7, this function took a non-const item.
 
 See also itemFromIndex() and topLevelItem().
 */
-func (this *QTreeWidget) IndexFromItem_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) *qtcore.QModelIndex /*123*/ {
+func (this *QTreeWidget) IndexFromItem1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
@@ -1480,7 +1480,7 @@ Note: In Qt versions prior to 5.7, this function took a non-const item.
 
 See also itemFromIndex() and topLevelItem().
 */
-func (this *QTreeWidget) IndexFromItem_1_(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *qtcore.QModelIndex /*123*/ {
+func (this *QTreeWidget) IndexFromItem1p(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()

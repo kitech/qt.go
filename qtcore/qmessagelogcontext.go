@@ -91,10 +91,10 @@ func NewQMessageLogContext() *QMessageLogContext {
 /*
 
  */
-func (*QMessageLogContext) NewForInherit_1(fileName string, lineNumber int, functionName string, categoryName string) *QMessageLogContext {
-	return NewQMessageLogContext_1(fileName, lineNumber, functionName, categoryName)
+func (*QMessageLogContext) NewForInherit1(fileName string, lineNumber int, functionName string, categoryName string) *QMessageLogContext {
+	return NewQMessageLogContext1(fileName, lineNumber, functionName, categoryName)
 }
-func NewQMessageLogContext_1(fileName string, lineNumber int, functionName string, categoryName string) *QMessageLogContext {
+func NewQMessageLogContext1(fileName string, lineNumber int, functionName string, categoryName string) *QMessageLogContext {
 	var convArg0 = qtrt.CString(fileName)
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = qtrt.CString(functionName)

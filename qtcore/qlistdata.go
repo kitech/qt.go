@@ -168,7 +168,7 @@ func (this *QListData) Remove(i int) {
 /*
 
  */
-func (this *QListData) Remove_1(i int, n int) {
+func (this *QListData) Remove1(i int, n int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListData6removeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, n)
 	qtrt.ErrPrint(err, rv)
 }

@@ -91,10 +91,10 @@ func NewQRectF() *QRectF {
 /*
 
  */
-func (*QRectF) NewForInherit_1(topleft QPointF_ITF, size QSizeF_ITF) *QRectF {
-	return NewQRectF_1(topleft, size)
+func (*QRectF) NewForInherit1(topleft QPointF_ITF, size QSizeF_ITF) *QRectF {
+	return NewQRectF1(topleft, size)
 }
-func NewQRectF_1(topleft QPointF_ITF, size QSizeF_ITF) *QRectF {
+func NewQRectF1(topleft QPointF_ITF, size QSizeF_ITF) *QRectF {
 	var convArg0 unsafe.Pointer
 	if topleft != nil && topleft.QPointF_PTR() != nil {
 		convArg0 = topleft.QPointF_PTR().GetCthis()
@@ -118,10 +118,10 @@ func NewQRectF_1(topleft QPointF_ITF, size QSizeF_ITF) *QRectF {
 /*
 
  */
-func (*QRectF) NewForInherit_2(topleft QPointF_ITF, bottomRight QPointF_ITF) *QRectF {
-	return NewQRectF_2(topleft, bottomRight)
+func (*QRectF) NewForInherit2(topleft QPointF_ITF, bottomRight QPointF_ITF) *QRectF {
+	return NewQRectF2(topleft, bottomRight)
 }
-func NewQRectF_2(topleft QPointF_ITF, bottomRight QPointF_ITF) *QRectF {
+func NewQRectF2(topleft QPointF_ITF, bottomRight QPointF_ITF) *QRectF {
 	var convArg0 unsafe.Pointer
 	if topleft != nil && topleft.QPointF_PTR() != nil {
 		convArg0 = topleft.QPointF_PTR().GetCthis()
@@ -145,10 +145,10 @@ func NewQRectF_2(topleft QPointF_ITF, bottomRight QPointF_ITF) *QRectF {
 /*
 
  */
-func (*QRectF) NewForInherit_3(left float64, top float64, width float64, height float64) *QRectF {
-	return NewQRectF_3(left, top, width, height)
+func (*QRectF) NewForInherit3(left float64, top float64, width float64, height float64) *QRectF {
+	return NewQRectF3(left, top, width, height)
 }
-func NewQRectF_3(left float64, top float64, width float64, height float64) *QRectF {
+func NewQRectF3(left float64, top float64, width float64, height float64) *QRectF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QRectFC2Edddd", qtrt.FFI_TYPE_POINTER, left, top, width, height)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRectFFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -164,10 +164,10 @@ func NewQRectF_3(left float64, top float64, width float64, height float64) *QRec
 /*
 
  */
-func (*QRectF) NewForInherit_4(rect QRect_ITF) *QRectF {
-	return NewQRectF_4(rect)
+func (*QRectF) NewForInherit4(rect QRect_ITF) *QRectF {
+	return NewQRectF4(rect)
 }
-func NewQRectF_4(rect QRect_ITF) *QRectF {
+func NewQRectF4(rect QRect_ITF) *QRectF {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg0 = rect.QRect_PTR().GetCthis()
@@ -803,7 +803,7 @@ Moves the rectangle dx along the x axis and dy along the y axis, relative to the
 
 See also moveTopLeft(), moveTo(), and translated().
 */
-func (this *QRectF) Translate_1(p QPointF_ITF) {
+func (this *QRectF) Translate1(p QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -840,7 +840,7 @@ Returns a copy of the rectangle that is translated dx along the x axis and dy al
 
 See also translate().
 */
-func (this *QRectF) Translated_1(p QPointF_ITF) *QRectF /*123*/ {
+func (this *QRectF) Translated1(p QPointF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -903,7 +903,7 @@ Moves the rectangle, leaving the top-left corner at the given position (x, y). T
 
 See also translate() and moveTopLeft().
 */
-func (this *QRectF) MoveTo_1(p QPointF_ITF) {
+func (this *QRectF) MoveTo1(p QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -1214,7 +1214,7 @@ Returns true if the given point is inside or on the edge of the rectangle, other
 
 See also intersects().
 */
-func (this *QRectF) Contains_1(p QPointF_ITF) bool {
+func (this *QRectF) Contains1(p QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -1234,7 +1234,7 @@ Returns true if the given point is inside or on the edge of the rectangle, other
 
 See also intersects().
 */
-func (this *QRectF) Contains_2(x float64, y float64) bool {
+func (this *QRectF) Contains2(x float64, y float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QRectF8containsEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

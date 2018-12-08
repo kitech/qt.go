@@ -181,7 +181,7 @@ func (this *QSGMaterialShader) AttributeNames() []string {
 
  */
 func (this *QSGMaterialShader) SetShaderSourceFile(type_ int, sourceFile string) {
-	var tmpArg1 = qtcore.NewQString_5(sourceFile)
+	var tmpArg1 = qtcore.NewQString5(sourceFile)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader19setShaderSourceFileE6QFlagsIN13QOpenGLShader13ShaderTypeBitEERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, convArg1)
 	qtrt.ErrPrint(err, rv)

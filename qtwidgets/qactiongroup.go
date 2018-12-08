@@ -152,8 +152,8 @@ Normally an action is added to a group by creating it with the group as its pare
 
 See also QAction::setActionGroup().
 */
-func (this *QActionGroup) AddAction_1(text string) *QAction /*777 QAction **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QActionGroup) AddAction1(text string) *QAction /*777 QAction **/ {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -172,12 +172,12 @@ Normally an action is added to a group by creating it with the group as its pare
 
 See also QAction::setActionGroup().
 */
-func (this *QActionGroup) AddAction_2(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
+func (this *QActionGroup) AddAction2(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

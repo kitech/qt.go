@@ -96,10 +96,10 @@ Constructs a painter.
 
 See also begin() and end().
 */
-func (*QPainter) NewForInherit_1(arg0 QPaintDevice_ITF /*777 QPaintDevice **/) *QPainter {
-	return NewQPainter_1(arg0)
+func (*QPainter) NewForInherit1(arg0 QPaintDevice_ITF /*777 QPaintDevice **/) *QPainter {
+	return NewQPainter1(arg0)
 }
-func NewQPainter_1(arg0 QPaintDevice_ITF /*777 QPaintDevice **/) *QPainter {
+func NewQPainter1(arg0 QPaintDevice_ITF /*777 QPaintDevice **/) *QPainter {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPaintDevice_PTR() != nil {
 		convArg0 = arg0.QPaintDevice_PTR().GetCthis()
@@ -377,7 +377,7 @@ The pen defines how to draw lines and outlines, and it also defines the text col
 
 See also pen() and Settings.
 */
-func (this *QPainter) SetPen_1(pen QPen_ITF) {
+func (this *QPainter) SetPen1(pen QPen_ITF) {
 	var convArg0 unsafe.Pointer
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg0 = pen.QPen_PTR().GetCthis()
@@ -398,7 +398,7 @@ The pen defines how to draw lines and outlines, and it also defines the text col
 
 See also pen() and Settings.
 */
-func (this *QPainter) SetPen_2(style int) {
+func (this *QPainter) SetPen2(style int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter6setPenEN2Qt8PenStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	qtrt.ErrPrint(err, rv)
 }
@@ -454,7 +454,7 @@ The painter's brush defines how shapes are filled.
 
 See also brush() and Settings.
 */
-func (this *QPainter) SetBrush_1(style int) {
+func (this *QPainter) SetBrush1(style int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8setBrushEN2Qt10BrushStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	qtrt.ErrPrint(err, rv)
 }
@@ -563,7 +563,7 @@ Note that while the brushOrigin() was necessary to adopt the parent's background
 
 See also brushOrigin() and Settings.
 */
-func (this *QPainter) SetBrushOrigin_1(arg0 qtcore.QPoint_ITF) {
+func (this *QPainter) SetBrushOrigin1(arg0 qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
 		convArg0 = arg0.QPoint_PTR().GetCthis()
@@ -586,7 +586,7 @@ Note that while the brushOrigin() was necessary to adopt the parent's background
 
 See also brushOrigin() and Settings.
 */
-func (this *QPainter) SetBrushOrigin_2(arg0 qtcore.QPointF_ITF) {
+func (this *QPainter) SetBrushOrigin2(arg0 qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPointF_PTR() != nil {
 		convArg0 = arg0.QPointF_PTR().GetCthis()
@@ -744,7 +744,7 @@ Note that the clip rectangle is specified in logical (painter) coordinates.
 
 See also clipRegion(), setClipping(), and Clipping.
 */
-func (this *QPainter) SetClipRect__(arg0 qtcore.QRectF_ITF) {
+func (this *QPainter) SetClipRectp(arg0 qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRectF_PTR() != nil {
 		convArg0 = arg0.QRectF_PTR().GetCthis()
@@ -767,7 +767,7 @@ Note that the clip rectangle is specified in logical (painter) coordinates.
 
 See also clipRegion(), setClipping(), and Clipping.
 */
-func (this *QPainter) SetClipRect_1(arg0 qtcore.QRect_ITF, op int) {
+func (this *QPainter) SetClipRect1(arg0 qtcore.QRect_ITF, op int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -788,7 +788,7 @@ Note that the clip rectangle is specified in logical (painter) coordinates.
 
 See also clipRegion(), setClipping(), and Clipping.
 */
-func (this *QPainter) SetClipRect_1_(arg0 qtcore.QRect_ITF) {
+func (this *QPainter) SetClipRect1p(arg0 qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -811,7 +811,7 @@ Note that the clip rectangle is specified in logical (painter) coordinates.
 
 See also clipRegion(), setClipping(), and Clipping.
 */
-func (this *QPainter) SetClipRect_2(x int, y int, w int, h int, op int) {
+func (this *QPainter) SetClipRect2(x int, y int, w int, h int, op int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11setClipRectEiiiiN2Qt13ClipOperationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, op)
 	qtrt.ErrPrint(err, rv)
 }
@@ -828,7 +828,7 @@ Note that the clip rectangle is specified in logical (painter) coordinates.
 
 See also clipRegion(), setClipping(), and Clipping.
 */
-func (this *QPainter) SetClipRect_2_(x int, y int, w int, h int) {
+func (this *QPainter) SetClipRect2p(x int, y int, w int, h int) {
 	// arg: 4, Qt::ClipOperation=Elaborated, Qt::ClipOperation=Enum, , Invalid
 	op := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11setClipRectEiiiiN2Qt13ClipOperationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, op)
@@ -868,7 +868,7 @@ Note that the clip region is given in logical coordinates.
 
 See also clipRegion(), setClipRect(), and Clipping.
 */
-func (this *QPainter) SetClipRegion__(arg0 QRegion_ITF) {
+func (this *QPainter) SetClipRegionp(arg0 QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRegion_PTR() != nil {
 		convArg0 = arg0.QRegion_PTR().GetCthis()
@@ -912,7 +912,7 @@ Note that the clip path is specified in logical (painter) coordinates.
 
 See also clipPath(), clipRegion(), and Clipping.
 */
-func (this *QPainter) SetClipPath__(path QPainterPath_ITF) {
+func (this *QPainter) SetClipPathp(path QPainterPath_ITF) {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1031,7 +1031,7 @@ func (this *QPainter) SetMatrix(matrix QMatrix_ITF, combine bool) {
 /*
 
  */
-func (this *QPainter) SetMatrix__(matrix QMatrix_ITF) {
+func (this *QPainter) SetMatrixp(matrix QMatrix_ITF) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
 		convArg0 = matrix.QMatrix_PTR().GetCthis()
@@ -1120,7 +1120,7 @@ This function was introduced in  Qt 4.3.
 
 See also transform() and setWorldTransform().
 */
-func (this *QPainter) SetTransform__(transform QTransform_ITF) {
+func (this *QPainter) SetTransformp(transform QTransform_ITF) {
 	var convArg0 unsafe.Pointer
 	if transform != nil && transform.QTransform_PTR() != nil {
 		convArg0 = transform.QTransform_PTR().GetCthis()
@@ -1211,7 +1211,7 @@ func (this *QPainter) SetWorldMatrix(matrix QMatrix_ITF, combine bool) {
 /*
 
  */
-func (this *QPainter) SetWorldMatrix__(matrix QMatrix_ITF) {
+func (this *QPainter) SetWorldMatrixp(matrix QMatrix_ITF) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
 		convArg0 = matrix.QMatrix_PTR().GetCthis()
@@ -1267,7 +1267,7 @@ Sets the world transformation matrix. If combine is true, the specified matrix i
 
 See also worldTransform(), transform(), and setTransform().
 */
-func (this *QPainter) SetWorldTransform__(matrix QTransform_ITF) {
+func (this *QPainter) SetWorldTransformp(matrix QTransform_ITF) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()
@@ -1466,7 +1466,7 @@ Translates the coordinate system by the given offset; i.e. the given offset is a
 
 See also setWorldTransform() and Coordinate Transformations.
 */
-func (this *QPainter) Translate_1(offset qtcore.QPoint_ITF) {
+func (this *QPainter) Translate1(offset qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
 		convArg0 = offset.QPoint_PTR().GetCthis()
@@ -1485,7 +1485,7 @@ Translates the coordinate system by the given offset; i.e. the given offset is a
 
 See also setWorldTransform() and Coordinate Transformations.
 */
-func (this *QPainter) Translate_2(dx float64, dy float64) {
+func (this *QPainter) Translate2(dx float64, dy float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9translateEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1545,7 +1545,7 @@ The default window rectangle is the same as the device's rectangle.
 
 See also window(), viewTransformEnabled(), and Window-Viewport Conversion.
 */
-func (this *QPainter) SetWindow_1(x int, y int, w int, h int) {
+func (this *QPainter) SetWindow1(x int, y int, w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9setWindowEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1605,7 +1605,7 @@ The default viewport rectangle is the same as the device's rectangle.
 
 See also viewport(), viewTransformEnabled(), and Window-Viewport Conversion.
 */
-func (this *QPainter) SetViewport_1(x int, y int, w int, h int) {
+func (this *QPainter) SetViewport1(x int, y int, w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11setViewportEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1751,7 +1751,7 @@ Draws a single point at the given position using the current pen's color.
 
 See also Coordinate System.
 */
-func (this *QPainter) DrawPoint_1(p qtcore.QPoint_ITF) {
+func (this *QPainter) DrawPoint1(p qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -1770,7 +1770,7 @@ Draws a single point at the given position using the current pen's color.
 
 See also Coordinate System.
 */
-func (this *QPainter) DrawPoint_2(x int, y int) {
+func (this *QPainter) DrawPoint2(x int, y int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawPointEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1804,7 +1804,7 @@ Draws the first pointCount points in the array points using the current pen's co
 
 See also Coordinate System.
 */
-func (this *QPainter) DrawPoints_1(points QPolygonF_ITF) {
+func (this *QPainter) DrawPoints1(points QPolygonF_ITF) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPolygonF_PTR() != nil {
 		convArg0 = points.QPolygonF_PTR().GetCthis()
@@ -1823,7 +1823,7 @@ Draws the first pointCount points in the array points using the current pen's co
 
 See also Coordinate System.
 */
-func (this *QPainter) DrawPoints_2(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
+func (this *QPainter) DrawPoints2(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPoint_PTR() != nil {
 		convArg0 = points.QPoint_PTR().GetCthis()
@@ -1842,7 +1842,7 @@ Draws the first pointCount points in the array points using the current pen's co
 
 See also Coordinate System.
 */
-func (this *QPainter) DrawPoints_3(points QPolygon_ITF) {
+func (this *QPainter) DrawPoints3(points QPolygon_ITF) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPolygon_PTR() != nil {
 		convArg0 = points.QPolygon_PTR().GetCthis()
@@ -1902,7 +1902,7 @@ Draws a line defined by line.
 
 See also drawLines(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawLine_1(line qtcore.QLine_ITF) {
+func (this *QPainter) DrawLine1(line qtcore.QLine_ITF) {
 	var convArg0 unsafe.Pointer
 	if line != nil && line.QLine_PTR() != nil {
 		convArg0 = line.QLine_PTR().GetCthis()
@@ -1932,7 +1932,7 @@ Draws a line defined by line.
 
 See also drawLines(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawLine_2(x1 int, y1 int, x2 int, y2 int) {
+func (this *QPainter) DrawLine2(x1 int, y1 int, x2 int, y2 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8drawLineEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1958,7 +1958,7 @@ Draws a line defined by line.
 
 See also drawLines(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawLine_3(p1 qtcore.QPoint_ITF, p2 qtcore.QPoint_ITF) {
+func (this *QPainter) DrawLine3(p1 qtcore.QPoint_ITF, p2 qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPoint_PTR() != nil {
 		convArg0 = p1.QPoint_PTR().GetCthis()
@@ -1992,7 +1992,7 @@ Draws a line defined by line.
 
 See also drawLines(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawLine_4(p1 qtcore.QPointF_ITF, p2 qtcore.QPointF_ITF) {
+func (this *QPainter) DrawLine4(p1 qtcore.QPointF_ITF, p2 qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPointF_PTR() != nil {
 		convArg0 = p1.QPointF_PTR().GetCthis()
@@ -2034,7 +2034,7 @@ Draws the first lineCount lines in the array lines using the current pen.
 
 See also drawLine() and drawPolyline().
 */
-func (this *QPainter) DrawLines_1(pointPairs qtcore.QPointF_ITF /*777 const QPointF **/, lineCount int) {
+func (this *QPainter) DrawLines1(pointPairs qtcore.QPointF_ITF /*777 const QPointF **/, lineCount int) {
 	var convArg0 unsafe.Pointer
 	if pointPairs != nil && pointPairs.QPointF_PTR() != nil {
 		convArg0 = pointPairs.QPointF_PTR().GetCthis()
@@ -2053,7 +2053,7 @@ Draws the first lineCount lines in the array lines using the current pen.
 
 See also drawLine() and drawPolyline().
 */
-func (this *QPainter) DrawLines_2(lines qtcore.QLine_ITF /*777 const QLine **/, lineCount int) {
+func (this *QPainter) DrawLines2(lines qtcore.QLine_ITF /*777 const QLine **/, lineCount int) {
 	var convArg0 unsafe.Pointer
 	if lines != nil && lines.QLine_PTR() != nil {
 		convArg0 = lines.QLine_PTR().GetCthis()
@@ -2072,7 +2072,7 @@ Draws the first lineCount lines in the array lines using the current pen.
 
 See also drawLine() and drawPolyline().
 */
-func (this *QPainter) DrawLines_3(pointPairs qtcore.QPoint_ITF /*777 const QPoint **/, lineCount int) {
+func (this *QPainter) DrawLines3(pointPairs qtcore.QPoint_ITF /*777 const QPoint **/, lineCount int) {
 	var convArg0 unsafe.Pointer
 	if pointPairs != nil && pointPairs.QPoint_PTR() != nil {
 		convArg0 = pointPairs.QPoint_PTR().GetCthis()
@@ -2136,7 +2136,7 @@ A filled rectangle has a size of rectangle.size(). A stroked rectangle has a siz
 
 See also drawRects(), drawPolygon(), and Coordinate System.
 */
-func (this *QPainter) DrawRect_1(x1 int, y1 int, w int, h int) {
+func (this *QPainter) DrawRect1(x1 int, y1 int, w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8drawRectEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -2164,7 +2164,7 @@ A filled rectangle has a size of rectangle.size(). A stroked rectangle has a siz
 
 See also drawRects(), drawPolygon(), and Coordinate System.
 */
-func (this *QPainter) DrawRect_2(rect qtcore.QRect_ITF) {
+func (this *QPainter) DrawRect2(rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg0 = rect.QRect_PTR().GetCthis()
@@ -2202,7 +2202,7 @@ Draws the first rectCount of the given rectangles using the current pen and brus
 
 See also drawRect().
 */
-func (this *QPainter) DrawRects_1(rects qtcore.QRect_ITF /*777 const QRect **/, rectCount int) {
+func (this *QPainter) DrawRects1(rects qtcore.QRect_ITF /*777 const QRect **/, rectCount int) {
 	var convArg0 unsafe.Pointer
 	if rects != nil && rects.QRect_PTR() != nil {
 		convArg0 = rects.QRect_PTR().GetCthis()
@@ -2266,7 +2266,7 @@ A filled ellipse has a size of rectangle.size(). A stroked ellipse has a size of
 
 See also drawPie() and Coordinate System.
 */
-func (this *QPainter) DrawEllipse_1(r qtcore.QRect_ITF) {
+func (this *QPainter) DrawEllipse1(r qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -2298,7 +2298,7 @@ A filled ellipse has a size of rectangle.size(). A stroked ellipse has a size of
 
 See also drawPie() and Coordinate System.
 */
-func (this *QPainter) DrawEllipse_2(x int, y int, w int, h int) {
+func (this *QPainter) DrawEllipse2(x int, y int, w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter11drawEllipseEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -2326,7 +2326,7 @@ A filled ellipse has a size of rectangle.size(). A stroked ellipse has a size of
 
 See also drawPie() and Coordinate System.
 */
-func (this *QPainter) DrawEllipse_3(center qtcore.QPointF_ITF, rx float64, ry float64) {
+func (this *QPainter) DrawEllipse3(center qtcore.QPointF_ITF, rx float64, ry float64) {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QPointF_PTR() != nil {
 		convArg0 = center.QPointF_PTR().GetCthis()
@@ -2358,7 +2358,7 @@ A filled ellipse has a size of rectangle.size(). A stroked ellipse has a size of
 
 See also drawPie() and Coordinate System.
 */
-func (this *QPainter) DrawEllipse_4(center qtcore.QPoint_ITF, rx int, ry int) {
+func (this *QPainter) DrawEllipse4(center qtcore.QPoint_ITF, rx int, ry int) {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QPoint_PTR() != nil {
 		convArg0 = center.QPoint_PTR().GetCthis()
@@ -2430,7 +2430,7 @@ Note that unlike the drawPolygon() function the last point is not connected to t
 
 See also drawLines(), drawPolygon(), and Coordinate System.
 */
-func (this *QPainter) DrawPolyline_1(polyline QPolygonF_ITF) {
+func (this *QPainter) DrawPolyline1(polyline QPolygonF_ITF) {
 	var convArg0 unsafe.Pointer
 	if polyline != nil && polyline.QPolygonF_PTR() != nil {
 		convArg0 = polyline.QPolygonF_PTR().GetCthis()
@@ -2466,7 +2466,7 @@ Note that unlike the drawPolygon() function the last point is not connected to t
 
 See also drawLines(), drawPolygon(), and Coordinate System.
 */
-func (this *QPainter) DrawPolyline_2(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
+func (this *QPainter) DrawPolyline2(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPoint_PTR() != nil {
 		convArg0 = points.QPoint_PTR().GetCthis()
@@ -2502,7 +2502,7 @@ Note that unlike the drawPolygon() function the last point is not connected to t
 
 See also drawLines(), drawPolygon(), and Coordinate System.
 */
-func (this *QPainter) DrawPolyline_3(polygon QPolygon_ITF) {
+func (this *QPainter) DrawPolyline3(polygon QPolygon_ITF) {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygon_PTR() != nil {
 		convArg0 = polygon.QPolygon_PTR().GetCthis()
@@ -2580,7 +2580,7 @@ If fillRule is Qt::WindingFill, the polygon is filled using the winding fill alg
 
 See also drawConvexPolygon(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawPolygon__(points qtcore.QPointF_ITF /*777 const QPointF **/, pointCount int) {
+func (this *QPainter) DrawPolygonp(points qtcore.QPointF_ITF /*777 const QPointF **/, pointCount int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPointF_PTR() != nil {
 		convArg0 = points.QPointF_PTR().GetCthis()
@@ -2621,7 +2621,7 @@ If fillRule is Qt::WindingFill, the polygon is filled using the winding fill alg
 
 See also drawConvexPolygon(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawPolygon_1(polygon QPolygonF_ITF, fillRule int) {
+func (this *QPainter) DrawPolygon1(polygon QPolygonF_ITF, fillRule int) {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -2660,7 +2660,7 @@ If fillRule is Qt::WindingFill, the polygon is filled using the winding fill alg
 
 See also drawConvexPolygon(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawPolygon_1_(polygon QPolygonF_ITF) {
+func (this *QPainter) DrawPolygon1p(polygon QPolygonF_ITF) {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -2701,7 +2701,7 @@ If fillRule is Qt::WindingFill, the polygon is filled using the winding fill alg
 
 See also drawConvexPolygon(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawPolygon_2(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int, fillRule int) {
+func (this *QPainter) DrawPolygon2(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int, fillRule int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPoint_PTR() != nil {
 		convArg0 = points.QPoint_PTR().GetCthis()
@@ -2740,7 +2740,7 @@ If fillRule is Qt::WindingFill, the polygon is filled using the winding fill alg
 
 See also drawConvexPolygon(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawPolygon_2_(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
+func (this *QPainter) DrawPolygon2p(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPoint_PTR() != nil {
 		convArg0 = points.QPoint_PTR().GetCthis()
@@ -2781,7 +2781,7 @@ If fillRule is Qt::WindingFill, the polygon is filled using the winding fill alg
 
 See also drawConvexPolygon(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawPolygon_3(polygon QPolygon_ITF, fillRule int) {
+func (this *QPainter) DrawPolygon3(polygon QPolygon_ITF, fillRule int) {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygon_PTR() != nil {
 		convArg0 = polygon.QPolygon_PTR().GetCthis()
@@ -2820,7 +2820,7 @@ If fillRule is Qt::WindingFill, the polygon is filled using the winding fill alg
 
 See also drawConvexPolygon(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawPolygon_3_(polygon QPolygon_ITF) {
+func (this *QPainter) DrawPolygon3p(polygon QPolygon_ITF) {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygon_PTR() != nil {
 		convArg0 = polygon.QPolygon_PTR().GetCthis()
@@ -2900,7 +2900,7 @@ On some platforms (e.g. X11), the drawConvexPolygon() function can be faster tha
 
 See also drawPolygon(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawConvexPolygon_1(polygon QPolygonF_ITF) {
+func (this *QPainter) DrawConvexPolygon1(polygon QPolygonF_ITF) {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -2939,7 +2939,7 @@ On some platforms (e.g. X11), the drawConvexPolygon() function can be faster tha
 
 See also drawPolygon(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawConvexPolygon_2(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
+func (this *QPainter) DrawConvexPolygon2(points qtcore.QPoint_ITF /*777 const QPoint **/, pointCount int) {
 	var convArg0 unsafe.Pointer
 	if points != nil && points.QPoint_PTR() != nil {
 		convArg0 = points.QPoint_PTR().GetCthis()
@@ -2978,7 +2978,7 @@ On some platforms (e.g. X11), the drawConvexPolygon() function can be faster tha
 
 See also drawPolygon(), drawPolyline(), and Coordinate System.
 */
-func (this *QPainter) DrawConvexPolygon_3(polygon QPolygon_ITF) {
+func (this *QPainter) DrawConvexPolygon3(polygon QPolygon_ITF) {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygon_PTR() != nil {
 		convArg0 = polygon.QPolygon_PTR().GetCthis()
@@ -3046,7 +3046,7 @@ The startAngle and spanAngle must be specified in 1/16th of a degree, i.e. a ful
 
 See also drawPie(), drawChord(), and Coordinate System.
 */
-func (this *QPainter) DrawArc_1(arg0 qtcore.QRect_ITF, a int, alen int) {
+func (this *QPainter) DrawArc1(arg0 qtcore.QRect_ITF, a int, alen int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -3080,7 +3080,7 @@ The startAngle and spanAngle must be specified in 1/16th of a degree, i.e. a ful
 
 See also drawPie(), drawChord(), and Coordinate System.
 */
-func (this *QPainter) DrawArc_2(x int, y int, w int, h int, a int, alen int) {
+func (this *QPainter) DrawArc2(x int, y int, w int, h int, a int, alen int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter7drawArcEiiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, a, alen)
 	qtrt.ErrPrint(err, rv)
 }
@@ -3148,7 +3148,7 @@ The startAngle and spanAngle must be specified in 1/16th of a degree, i.e. a ful
 
 See also drawEllipse(), drawChord(), and Coordinate System.
 */
-func (this *QPainter) DrawPie_1(x int, y int, w int, h int, a int, alen int) {
+func (this *QPainter) DrawPie1(x int, y int, w int, h int, a int, alen int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter7drawPieEiiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, a, alen)
 	qtrt.ErrPrint(err, rv)
 }
@@ -3180,7 +3180,7 @@ The startAngle and spanAngle must be specified in 1/16th of a degree, i.e. a ful
 
 See also drawEllipse(), drawChord(), and Coordinate System.
 */
-func (this *QPainter) DrawPie_2(arg0 qtcore.QRect_ITF, a int, alen int) {
+func (this *QPainter) DrawPie2(arg0 qtcore.QRect_ITF, a int, alen int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -3248,7 +3248,7 @@ The startAngle and spanAngle must be specified in 1/16th of a degree, i.e. a ful
 
 See also drawArc(), drawPie(), and Coordinate System.
 */
-func (this *QPainter) DrawChord_1(x int, y int, w int, h int, a int, alen int) {
+func (this *QPainter) DrawChord1(x int, y int, w int, h int, a int, alen int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9drawChordEiiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, a, alen)
 	qtrt.ErrPrint(err, rv)
 }
@@ -3278,7 +3278,7 @@ The startAngle and spanAngle must be specified in 1/16th of a degree, i.e. a ful
 
 See also drawArc(), drawPie(), and Coordinate System.
 */
-func (this *QPainter) DrawChord_2(arg0 qtcore.QRect_ITF, a int, alen int) {
+func (this *QPainter) DrawChord2(arg0 qtcore.QRect_ITF, a int, alen int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -3350,7 +3350,7 @@ This function was introduced in  Qt 4.4.
 
 See also drawRect() and QPen.
 */
-func (this *QPainter) DrawRoundedRect__(rect qtcore.QRectF_ITF, xRadius float64, yRadius float64) {
+func (this *QPainter) DrawRoundedRectp(rect qtcore.QRectF_ITF, xRadius float64, yRadius float64) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -3388,7 +3388,7 @@ This function was introduced in  Qt 4.4.
 
 See also drawRect() and QPen.
 */
-func (this *QPainter) DrawRoundedRect_1(x int, y int, w int, h int, xRadius float64, yRadius float64, mode int) {
+func (this *QPainter) DrawRoundedRect1(x int, y int, w int, h int, xRadius float64, yRadius float64, mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter15drawRoundedRectEiiiiddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xRadius, yRadius, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -3420,7 +3420,7 @@ This function was introduced in  Qt 4.4.
 
 See also drawRect() and QPen.
 */
-func (this *QPainter) DrawRoundedRect_1_(x int, y int, w int, h int, xRadius float64, yRadius float64) {
+func (this *QPainter) DrawRoundedRect1p(x int, y int, w int, h int, xRadius float64, yRadius float64) {
 	// arg: 6, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter15drawRoundedRectEiiiiddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xRadius, yRadius, mode)
@@ -3454,7 +3454,7 @@ This function was introduced in  Qt 4.4.
 
 See also drawRect() and QPen.
 */
-func (this *QPainter) DrawRoundedRect_2(rect qtcore.QRect_ITF, xRadius float64, yRadius float64, mode int) {
+func (this *QPainter) DrawRoundedRect2(rect qtcore.QRect_ITF, xRadius float64, yRadius float64, mode int) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg0 = rect.QRect_PTR().GetCthis()
@@ -3490,7 +3490,7 @@ This function was introduced in  Qt 4.4.
 
 See also drawRect() and QPen.
 */
-func (this *QPainter) DrawRoundedRect_2_(rect qtcore.QRect_ITF, xRadius float64, yRadius float64) {
+func (this *QPainter) DrawRoundedRect2p(rect qtcore.QRect_ITF, xRadius float64, yRadius float64) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg0 = rect.QRect_PTR().GetCthis()
@@ -3526,7 +3526,7 @@ func (this *QPainter) DrawRoundRect(r qtcore.QRectF_ITF, xround int, yround int)
 /*
 
  */
-func (this *QPainter) DrawRoundRect__(r qtcore.QRectF_ITF) {
+func (this *QPainter) DrawRoundRectp(r qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
@@ -3547,7 +3547,7 @@ func (this *QPainter) DrawRoundRect__(r qtcore.QRectF_ITF) {
 /*
 
  */
-func (this *QPainter) DrawRoundRect__1(r qtcore.QRectF_ITF, xround int) {
+func (this *QPainter) DrawRoundRectp1(r qtcore.QRectF_ITF, xround int) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
@@ -3566,7 +3566,7 @@ func (this *QPainter) DrawRoundRect__1(r qtcore.QRectF_ITF, xround int) {
 /*
 
  */
-func (this *QPainter) DrawRoundRect_1(x int, y int, w int, h int, arg4 int, arg5 int) {
+func (this *QPainter) DrawRoundRect1(x int, y int, w int, h int, arg4 int, arg5 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectEiiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, arg4, arg5)
 	qtrt.ErrPrint(err, rv)
 }
@@ -3579,7 +3579,7 @@ func (this *QPainter) DrawRoundRect_1(x int, y int, w int, h int, arg4 int, arg5
 /*
 
  */
-func (this *QPainter) DrawRoundRect_1_(x int, y int, w int, h int) {
+func (this *QPainter) DrawRoundRect1p(x int, y int, w int, h int) {
 	// arg: 4, int=Int, =Invalid, , Invalid
 	arg4 := int(25)
 	// arg: 5, int=Int, =Invalid, , Invalid
@@ -3596,7 +3596,7 @@ func (this *QPainter) DrawRoundRect_1_(x int, y int, w int, h int) {
 /*
 
  */
-func (this *QPainter) DrawRoundRect_1_1(x int, y int, w int, h int, arg4 int) {
+func (this *QPainter) DrawRoundRect1p1(x int, y int, w int, h int, arg4 int) {
 	// arg: 5, int=Int, =Invalid, , Invalid
 	arg5 := int(25)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13drawRoundRectEiiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, arg4, arg5)
@@ -3611,7 +3611,7 @@ func (this *QPainter) DrawRoundRect_1_1(x int, y int, w int, h int, arg4 int) {
 /*
 
  */
-func (this *QPainter) DrawRoundRect_2(r qtcore.QRect_ITF, xround int, yround int) {
+func (this *QPainter) DrawRoundRect2(r qtcore.QRect_ITF, xround int, yround int) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -3628,7 +3628,7 @@ func (this *QPainter) DrawRoundRect_2(r qtcore.QRect_ITF, xround int, yround int
 /*
 
  */
-func (this *QPainter) DrawRoundRect_2_(r qtcore.QRect_ITF) {
+func (this *QPainter) DrawRoundRect2p(r qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -3649,7 +3649,7 @@ func (this *QPainter) DrawRoundRect_2_(r qtcore.QRect_ITF) {
 /*
 
  */
-func (this *QPainter) DrawRoundRect_2_1(r qtcore.QRect_ITF, xround int) {
+func (this *QPainter) DrawRoundRect2p1(r qtcore.QRect_ITF, xround int) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -3701,7 +3701,7 @@ Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fi
 
 See also drawPixmap().
 */
-func (this *QPainter) DrawTiledPixmap__(rect qtcore.QRectF_ITF, pm QPixmap_ITF) {
+func (this *QPainter) DrawTiledPixmapp(rect qtcore.QRectF_ITF, pm QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -3728,7 +3728,7 @@ Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fi
 
 See also drawPixmap().
 */
-func (this *QPainter) DrawTiledPixmap_1(x int, y int, w int, h int, arg4 QPixmap_ITF, sx int, sy int) {
+func (this *QPainter) DrawTiledPixmap1(x int, y int, w int, h int, arg4 QPixmap_ITF, sx int, sy int) {
 	var convArg4 unsafe.Pointer
 	if arg4 != nil && arg4.QPixmap_PTR() != nil {
 		convArg4 = arg4.QPixmap_PTR().GetCthis()
@@ -3749,7 +3749,7 @@ Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fi
 
 See also drawPixmap().
 */
-func (this *QPainter) DrawTiledPixmap_1_(x int, y int, w int, h int, arg4 QPixmap_ITF) {
+func (this *QPainter) DrawTiledPixmap1p(x int, y int, w int, h int, arg4 QPixmap_ITF) {
 	var convArg4 unsafe.Pointer
 	if arg4 != nil && arg4.QPixmap_PTR() != nil {
 		convArg4 = arg4.QPixmap_PTR().GetCthis()
@@ -3774,7 +3774,7 @@ Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fi
 
 See also drawPixmap().
 */
-func (this *QPainter) DrawTiledPixmap_1_1(x int, y int, w int, h int, arg4 QPixmap_ITF, sx int) {
+func (this *QPainter) DrawTiledPixmap1p1(x int, y int, w int, h int, arg4 QPixmap_ITF, sx int) {
 	var convArg4 unsafe.Pointer
 	if arg4 != nil && arg4.QPixmap_PTR() != nil {
 		convArg4 = arg4.QPixmap_PTR().GetCthis()
@@ -3797,7 +3797,7 @@ Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fi
 
 See also drawPixmap().
 */
-func (this *QPainter) DrawTiledPixmap_2(arg0 qtcore.QRect_ITF, arg1 QPixmap_ITF, arg2 qtcore.QPoint_ITF) {
+func (this *QPainter) DrawTiledPixmap2(arg0 qtcore.QRect_ITF, arg1 QPixmap_ITF, arg2 qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -3826,7 +3826,7 @@ Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fi
 
 See also drawPixmap().
 */
-func (this *QPainter) DrawTiledPixmap_2_(arg0 qtcore.QRect_ITF, arg1 QPixmap_ITF) {
+func (this *QPainter) DrawTiledPixmap2p(arg0 qtcore.QRect_ITF, arg1 QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -3908,7 +3908,7 @@ This function does exactly the same as QPicture::play() when called with point =
 
 See also QPicture::play().
 */
-func (this *QPainter) DrawPicture_1(x int, y int, picture QPicture_ITF) {
+func (this *QPainter) DrawPicture1(x int, y int, picture QPicture_ITF) {
 	var convArg2 unsafe.Pointer
 	if picture != nil && picture.QPicture_PTR() != nil {
 		convArg2 = picture.QPicture_PTR().GetCthis()
@@ -3944,7 +3944,7 @@ This function does exactly the same as QPicture::play() when called with point =
 
 See also QPicture::play().
 */
-func (this *QPainter) DrawPicture_2(p qtcore.QPoint_ITF, picture QPicture_ITF) {
+func (this *QPainter) DrawPicture2(p qtcore.QPoint_ITF, picture QPicture_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -4032,7 +4032,7 @@ If pixmap is a QBitmap it is drawn with the bits that are "set" using the pens c
 
 See also drawImage() and QPixmap::devicePixelRatio().
 */
-func (this *QPainter) DrawPixmap_1(targetRect qtcore.QRect_ITF, pixmap QPixmap_ITF, sourceRect qtcore.QRect_ITF) {
+func (this *QPainter) DrawPixmap1(targetRect qtcore.QRect_ITF, pixmap QPixmap_ITF, sourceRect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if targetRect != nil && targetRect.QRect_PTR() != nil {
 		convArg0 = targetRect.QRect_PTR().GetCthis()
@@ -4078,7 +4078,7 @@ If pixmap is a QBitmap it is drawn with the bits that are "set" using the pens c
 
 See also drawImage() and QPixmap::devicePixelRatio().
 */
-func (this *QPainter) DrawPixmap_2(x int, y int, w int, h int, pm QPixmap_ITF, sx int, sy int, sw int, sh int) {
+func (this *QPainter) DrawPixmap2(x int, y int, w int, h int, pm QPixmap_ITF, sx int, sy int, sw int, sh int) {
 	var convArg4 unsafe.Pointer
 	if pm != nil && pm.QPixmap_PTR() != nil {
 		convArg4 = pm.QPixmap_PTR().GetCthis()
@@ -4116,7 +4116,7 @@ If pixmap is a QBitmap it is drawn with the bits that are "set" using the pens c
 
 See also drawImage() and QPixmap::devicePixelRatio().
 */
-func (this *QPainter) DrawPixmap_3(x int, y int, pm QPixmap_ITF, sx int, sy int, sw int, sh int) {
+func (this *QPainter) DrawPixmap3(x int, y int, pm QPixmap_ITF, sx int, sy int, sw int, sh int) {
 	var convArg2 unsafe.Pointer
 	if pm != nil && pm.QPixmap_PTR() != nil {
 		convArg2 = pm.QPixmap_PTR().GetCthis()
@@ -4154,7 +4154,7 @@ If pixmap is a QBitmap it is drawn with the bits that are "set" using the pens c
 
 See also drawImage() and QPixmap::devicePixelRatio().
 */
-func (this *QPainter) DrawPixmap_4(p qtcore.QPointF_ITF, pm QPixmap_ITF, sr qtcore.QRectF_ITF) {
+func (this *QPainter) DrawPixmap4(p qtcore.QPointF_ITF, pm QPixmap_ITF, sr qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -4200,7 +4200,7 @@ If pixmap is a QBitmap it is drawn with the bits that are "set" using the pens c
 
 See also drawImage() and QPixmap::devicePixelRatio().
 */
-func (this *QPainter) DrawPixmap_5(p qtcore.QPoint_ITF, pm QPixmap_ITF, sr qtcore.QRect_ITF) {
+func (this *QPainter) DrawPixmap5(p qtcore.QPoint_ITF, pm QPixmap_ITF, sr qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -4246,7 +4246,7 @@ If pixmap is a QBitmap it is drawn with the bits that are "set" using the pens c
 
 See also drawImage() and QPixmap::devicePixelRatio().
 */
-func (this *QPainter) DrawPixmap_6(p qtcore.QPointF_ITF, pm QPixmap_ITF) {
+func (this *QPainter) DrawPixmap6(p qtcore.QPointF_ITF, pm QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -4288,7 +4288,7 @@ If pixmap is a QBitmap it is drawn with the bits that are "set" using the pens c
 
 See also drawImage() and QPixmap::devicePixelRatio().
 */
-func (this *QPainter) DrawPixmap_7(p qtcore.QPoint_ITF, pm QPixmap_ITF) {
+func (this *QPainter) DrawPixmap7(p qtcore.QPoint_ITF, pm QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -4330,7 +4330,7 @@ If pixmap is a QBitmap it is drawn with the bits that are "set" using the pens c
 
 See also drawImage() and QPixmap::devicePixelRatio().
 */
-func (this *QPainter) DrawPixmap_8(x int, y int, pm QPixmap_ITF) {
+func (this *QPainter) DrawPixmap8(x int, y int, pm QPixmap_ITF) {
 	var convArg2 unsafe.Pointer
 	if pm != nil && pm.QPixmap_PTR() != nil {
 		convArg2 = pm.QPixmap_PTR().GetCthis()
@@ -4368,7 +4368,7 @@ If pixmap is a QBitmap it is drawn with the bits that are "set" using the pens c
 
 See also drawImage() and QPixmap::devicePixelRatio().
 */
-func (this *QPainter) DrawPixmap_9(r qtcore.QRect_ITF, pm QPixmap_ITF) {
+func (this *QPainter) DrawPixmap9(r qtcore.QRect_ITF, pm QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -4410,7 +4410,7 @@ If pixmap is a QBitmap it is drawn with the bits that are "set" using the pens c
 
 See also drawImage() and QPixmap::devicePixelRatio().
 */
-func (this *QPainter) DrawPixmap_10(x int, y int, w int, h int, pm QPixmap_ITF) {
+func (this *QPainter) DrawPixmap10(x int, y int, w int, h int, pm QPixmap_ITF) {
 	var convArg4 unsafe.Pointer
 	if pm != nil && pm.QPixmap_PTR() != nil {
 		convArg4 = pm.QPixmap_PTR().GetCthis()
@@ -4494,7 +4494,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage__(targetRect qtcore.QRectF_ITF, image QImage_ITF, sourceRect qtcore.QRectF_ITF) {
+func (this *QPainter) DrawImagep(targetRect qtcore.QRectF_ITF, image QImage_ITF, sourceRect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if targetRect != nil && targetRect.QRectF_PTR() != nil {
 		convArg0 = targetRect.QRectF_PTR().GetCthis()
@@ -4542,7 +4542,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_1(targetRect qtcore.QRect_ITF, image QImage_ITF, sourceRect qtcore.QRect_ITF, flags int) {
+func (this *QPainter) DrawImage1(targetRect qtcore.QRect_ITF, image QImage_ITF, sourceRect qtcore.QRect_ITF, flags int) {
 	var convArg0 unsafe.Pointer
 	if targetRect != nil && targetRect.QRect_PTR() != nil {
 		convArg0 = targetRect.QRect_PTR().GetCthis()
@@ -4588,7 +4588,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_1_(targetRect qtcore.QRect_ITF, image QImage_ITF, sourceRect qtcore.QRect_ITF) {
+func (this *QPainter) DrawImage1p(targetRect qtcore.QRect_ITF, image QImage_ITF, sourceRect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if targetRect != nil && targetRect.QRect_PTR() != nil {
 		convArg0 = targetRect.QRect_PTR().GetCthis()
@@ -4636,7 +4636,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_2(p qtcore.QPointF_ITF, image QImage_ITF, sr qtcore.QRectF_ITF, flags int) {
+func (this *QPainter) DrawImage2(p qtcore.QPointF_ITF, image QImage_ITF, sr qtcore.QRectF_ITF, flags int) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -4682,7 +4682,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_2_(p qtcore.QPointF_ITF, image QImage_ITF, sr qtcore.QRectF_ITF) {
+func (this *QPainter) DrawImage2p(p qtcore.QPointF_ITF, image QImage_ITF, sr qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -4730,7 +4730,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_3(p qtcore.QPoint_ITF, image QImage_ITF, sr qtcore.QRect_ITF, flags int) {
+func (this *QPainter) DrawImage3(p qtcore.QPoint_ITF, image QImage_ITF, sr qtcore.QRect_ITF, flags int) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -4776,7 +4776,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_3_(p qtcore.QPoint_ITF, image QImage_ITF, sr qtcore.QRect_ITF) {
+func (this *QPainter) DrawImage3p(p qtcore.QPoint_ITF, image QImage_ITF, sr qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -4824,7 +4824,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_4(r qtcore.QRectF_ITF, image QImage_ITF) {
+func (this *QPainter) DrawImage4(r qtcore.QRectF_ITF, image QImage_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
@@ -4866,7 +4866,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_5(r qtcore.QRect_ITF, image QImage_ITF) {
+func (this *QPainter) DrawImage5(r qtcore.QRect_ITF, image QImage_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -4908,7 +4908,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_6(p qtcore.QPointF_ITF, image QImage_ITF) {
+func (this *QPainter) DrawImage6(p qtcore.QPointF_ITF, image QImage_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -4950,7 +4950,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_7(p qtcore.QPoint_ITF, image QImage_ITF) {
+func (this *QPainter) DrawImage7(p qtcore.QPoint_ITF, image QImage_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -4992,7 +4992,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_8(x int, y int, image QImage_ITF, sx int, sy int, sw int, sh int, flags int) {
+func (this *QPainter) DrawImage8(x int, y int, image QImage_ITF, sx int, sy int, sw int, sh int, flags int) {
 	var convArg2 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg2 = image.QImage_PTR().GetCthis()
@@ -5030,7 +5030,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_8_(x int, y int, image QImage_ITF) {
+func (this *QPainter) DrawImage8p(x int, y int, image QImage_ITF) {
 	var convArg2 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg2 = image.QImage_PTR().GetCthis()
@@ -5078,7 +5078,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_8_1(x int, y int, image QImage_ITF, sx int) {
+func (this *QPainter) DrawImage8p1(x int, y int, image QImage_ITF, sx int) {
 	var convArg2 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg2 = image.QImage_PTR().GetCthis()
@@ -5124,7 +5124,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_8_2(x int, y int, image QImage_ITF, sx int, sy int) {
+func (this *QPainter) DrawImage8p2(x int, y int, image QImage_ITF, sx int, sy int) {
 	var convArg2 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg2 = image.QImage_PTR().GetCthis()
@@ -5168,7 +5168,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_8_3(x int, y int, image QImage_ITF, sx int, sy int, sw int) {
+func (this *QPainter) DrawImage8p3(x int, y int, image QImage_ITF, sx int, sy int, sw int) {
 	var convArg2 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg2 = image.QImage_PTR().GetCthis()
@@ -5210,7 +5210,7 @@ If the image needs to be modified to fit in a lower-resolution result (e.g. conv
 
 See also drawPixmap() and QImage::devicePixelRatio().
 */
-func (this *QPainter) DrawImage_8_4(x int, y int, image QImage_ITF, sx int, sy int, sw int, sh int) {
+func (this *QPainter) DrawImage8p4(x int, y int, image QImage_ITF, sx int, sy int, sw int, sh int) {
 	var convArg2 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg2 = image.QImage_PTR().GetCthis()
@@ -5332,7 +5332,7 @@ This function was introduced in  Qt 4.7.
 
 See also QStaticText.
 */
-func (this *QPainter) DrawStaticText_1(topLeftPosition qtcore.QPoint_ITF, staticText QStaticText_ITF) {
+func (this *QPainter) DrawStaticText1(topLeftPosition qtcore.QPoint_ITF, staticText QStaticText_ITF) {
 	var convArg0 unsafe.Pointer
 	if topLeftPosition != nil && topLeftPosition.QPoint_PTR() != nil {
 		convArg0 = topLeftPosition.QPoint_PTR().GetCthis()
@@ -5365,7 +5365,7 @@ This function was introduced in  Qt 4.7.
 
 See also QStaticText.
 */
-func (this *QPainter) DrawStaticText_2(left int, top int, staticText QStaticText_ITF) {
+func (this *QPainter) DrawStaticText2(left int, top int, staticText QStaticText_ITF) {
 	var convArg2 unsafe.Pointer
 	if staticText != nil && staticText.QStaticText_PTR() != nil {
 		convArg2 = staticText.QStaticText_PTR().GetCthis()
@@ -5395,7 +5395,7 @@ func (this *QPainter) DrawText(p qtcore.QPointF_ITF, s string) {
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(s)
+	var tmpArg1 = qtcore.NewQString5(s)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8drawTextERK7QPointFRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -5417,12 +5417,12 @@ Note: The y-position is used as the baseline of the font.
 
 See also setFont() and setPen().
 */
-func (this *QPainter) DrawText_1(p qtcore.QPoint_ITF, s string) {
+func (this *QPainter) DrawText1(p qtcore.QPoint_ITF, s string) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(s)
+	var tmpArg1 = qtcore.NewQString5(s)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8drawTextERK6QPointRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -5444,8 +5444,8 @@ Note: The y-position is used as the baseline of the font.
 
 See also setFont() and setPen().
 */
-func (this *QPainter) DrawText_2(x int, y int, s string) {
-	var tmpArg2 = qtcore.NewQString_5(s)
+func (this *QPainter) DrawText2(x int, y int, s string) {
+	var tmpArg2 = qtcore.NewQString5(s)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8drawTextEiiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -5467,12 +5467,12 @@ Note: The y-position is used as the baseline of the font.
 
 See also setFont() and setPen().
 */
-func (this *QPainter) DrawText_3(p qtcore.QPointF_ITF, str string, tf int, justificationPadding int) {
+func (this *QPainter) DrawText3(p qtcore.QPointF_ITF, str string, tf int, justificationPadding int) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(str)
+	var tmpArg1 = qtcore.NewQString5(str)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8drawTextERK7QPointFRK7QStringii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, tf, justificationPadding)
 	qtrt.ErrPrint(err, rv)
@@ -5494,12 +5494,12 @@ Note: The y-position is used as the baseline of the font.
 
 See also setFont() and setPen().
 */
-func (this *QPainter) DrawText_4(r qtcore.QRectF_ITF, flags int, text string, br qtcore.QRectF_ITF /*777 QRectF **/) {
+func (this *QPainter) DrawText4(r qtcore.QRectF_ITF, flags int, text string, br qtcore.QRectF_ITF /*777 QRectF **/) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if br != nil && br.QRectF_PTR() != nil {
@@ -5525,12 +5525,12 @@ Note: The y-position is used as the baseline of the font.
 
 See also setFont() and setPen().
 */
-func (this *QPainter) DrawText_4_(r qtcore.QRectF_ITF, flags int, text string) {
+func (this *QPainter) DrawText4p(r qtcore.QRectF_ITF, flags int, text string) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QRectF *=Pointer, QRectF=Record, , Invalid
 	var convArg3 unsafe.Pointer
@@ -5554,12 +5554,12 @@ Note: The y-position is used as the baseline of the font.
 
 See also setFont() and setPen().
 */
-func (this *QPainter) DrawText_5(r qtcore.QRect_ITF, flags int, text string, br qtcore.QRect_ITF /*777 QRect **/) {
+func (this *QPainter) DrawText5(r qtcore.QRect_ITF, flags int, text string, br qtcore.QRect_ITF /*777 QRect **/) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if br != nil && br.QRect_PTR() != nil {
@@ -5585,12 +5585,12 @@ Note: The y-position is used as the baseline of the font.
 
 See also setFont() and setPen().
 */
-func (this *QPainter) DrawText_5_(r qtcore.QRect_ITF, flags int, text string) {
+func (this *QPainter) DrawText5p(r qtcore.QRect_ITF, flags int, text string) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QRect *=Pointer, QRect=Record, , Invalid
 	var convArg3 unsafe.Pointer
@@ -5614,8 +5614,8 @@ Note: The y-position is used as the baseline of the font.
 
 See also setFont() and setPen().
 */
-func (this *QPainter) DrawText_6(x int, y int, w int, h int, flags int, text string, br qtcore.QRect_ITF /*777 QRect **/) {
-	var tmpArg5 = qtcore.NewQString_5(text)
+func (this *QPainter) DrawText6(x int, y int, w int, h int, flags int, text string, br qtcore.QRect_ITF /*777 QRect **/) {
+	var tmpArg5 = qtcore.NewQString5(text)
 	var convArg5 = tmpArg5.GetCthis()
 	var convArg6 unsafe.Pointer
 	if br != nil && br.QRect_PTR() != nil {
@@ -5641,8 +5641,8 @@ Note: The y-position is used as the baseline of the font.
 
 See also setFont() and setPen().
 */
-func (this *QPainter) DrawText_6_(x int, y int, w int, h int, flags int, text string) {
-	var tmpArg5 = qtcore.NewQString_5(text)
+func (this *QPainter) DrawText6p(x int, y int, w int, h int, flags int, text string) {
+	var tmpArg5 = qtcore.NewQString5(text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 6, QRect *=Pointer, QRect=Record, , Invalid
 	var convArg6 unsafe.Pointer
@@ -5666,12 +5666,12 @@ Note: The y-position is used as the baseline of the font.
 
 See also setFont() and setPen().
 */
-func (this *QPainter) DrawText_7(r qtcore.QRectF_ITF, text string, o QTextOption_ITF) {
+func (this *QPainter) DrawText7(r qtcore.QRectF_ITF, text string, o QTextOption_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if o != nil && o.QTextOption_PTR() != nil {
@@ -5697,12 +5697,12 @@ Note: The y-position is used as the baseline of the font.
 
 See also setFont() and setPen().
 */
-func (this *QPainter) DrawText_7_(r qtcore.QRectF_ITF, text string) {
+func (this *QPainter) DrawText7p(r qtcore.QRectF_ITF, text string) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QTextOption &=LValueReference, QTextOption=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -5746,7 +5746,7 @@ func (this *QPainter) BoundingRect(rect qtcore.QRectF_ITF, flags int, text strin
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter12boundingRectERK6QRectFiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -5786,12 +5786,12 @@ If several of the horizontal or several of the vertical alignment flags are set,
 
 See also drawText(), Qt::Alignment, and Qt::TextFlag.
 */
-func (this *QPainter) BoundingRect_1(rect qtcore.QRect_ITF, flags int, text string) *qtcore.QRect /*123*/ {
+func (this *QPainter) BoundingRect1(rect qtcore.QRect_ITF, flags int, text string) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg0 = rect.QRect_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter12boundingRectERK5QRectiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -5831,8 +5831,8 @@ If several of the horizontal or several of the vertical alignment flags are set,
 
 See also drawText(), Qt::Alignment, and Qt::TextFlag.
 */
-func (this *QPainter) BoundingRect_2(x int, y int, w int, h int, flags int, text string) *qtcore.QRect /*123*/ {
-	var tmpArg5 = qtcore.NewQString_5(text)
+func (this *QPainter) BoundingRect2(x int, y int, w int, h int, flags int, text string) *qtcore.QRect /*123*/ {
+	var tmpArg5 = qtcore.NewQString5(text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter12boundingRectEiiiiiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, flags, convArg5)
 	qtrt.ErrPrint(err, rv)
@@ -5872,12 +5872,12 @@ If several of the horizontal or several of the vertical alignment flags are set,
 
 See also drawText(), Qt::Alignment, and Qt::TextFlag.
 */
-func (this *QPainter) BoundingRect_3(rect qtcore.QRectF_ITF, text string, o QTextOption_ITF) *qtcore.QRectF /*123*/ {
+func (this *QPainter) BoundingRect3(rect qtcore.QRectF_ITF, text string, o QTextOption_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if o != nil && o.QTextOption_PTR() != nil {
@@ -5921,12 +5921,12 @@ If several of the horizontal or several of the vertical alignment flags are set,
 
 See also drawText(), Qt::Alignment, and Qt::TextFlag.
 */
-func (this *QPainter) BoundingRect_3_(rect qtcore.QRectF_ITF, text string) *qtcore.QRectF /*123*/ {
+func (this *QPainter) BoundingRect3p(rect qtcore.QRectF_ITF, text string) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QTextOption &=LValueReference, QTextOption=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -5966,7 +5966,7 @@ func (this *QPainter) DrawTextItem(p qtcore.QPointF_ITF, ti QTextItem_ITF) {
 /*
 
  */
-func (this *QPainter) DrawTextItem_1(x int, y int, ti QTextItem_ITF) {
+func (this *QPainter) DrawTextItem1(x int, y int, ti QTextItem_ITF) {
 	var convArg2 unsafe.Pointer
 	if ti != nil && ti.QTextItem_PTR() != nil {
 		convArg2 = ti.QTextItem_PTR().GetCthis()
@@ -5983,7 +5983,7 @@ func (this *QPainter) DrawTextItem_1(x int, y int, ti QTextItem_ITF) {
 /*
 
  */
-func (this *QPainter) DrawTextItem_2(p qtcore.QPoint_ITF, ti QTextItem_ITF) {
+func (this *QPainter) DrawTextItem2(p qtcore.QPoint_ITF, ti QTextItem_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -6033,7 +6033,7 @@ Alternatively, you can specify a QColor instead of a QBrush; the QBrush construc
 
 See also drawRect().
 */
-func (this *QPainter) FillRect_1(x int, y int, w int, h int, arg4 QBrush_ITF) {
+func (this *QPainter) FillRect1(x int, y int, w int, h int, arg4 QBrush_ITF) {
 	var convArg4 unsafe.Pointer
 	if arg4 != nil && arg4.QBrush_PTR() != nil {
 		convArg4 = arg4.QBrush_PTR().GetCthis()
@@ -6054,7 +6054,7 @@ Alternatively, you can specify a QColor instead of a QBrush; the QBrush construc
 
 See also drawRect().
 */
-func (this *QPainter) FillRect_2(arg0 qtcore.QRect_ITF, arg1 QBrush_ITF) {
+func (this *QPainter) FillRect2(arg0 qtcore.QRect_ITF, arg1 QBrush_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -6079,7 +6079,7 @@ Alternatively, you can specify a QColor instead of a QBrush; the QBrush construc
 
 See also drawRect().
 */
-func (this *QPainter) FillRect_3(arg0 qtcore.QRectF_ITF, color QColor_ITF) {
+func (this *QPainter) FillRect3(arg0 qtcore.QRectF_ITF, color QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRectF_PTR() != nil {
 		convArg0 = arg0.QRectF_PTR().GetCthis()
@@ -6104,7 +6104,7 @@ Alternatively, you can specify a QColor instead of a QBrush; the QBrush construc
 
 See also drawRect().
 */
-func (this *QPainter) FillRect_4(x int, y int, w int, h int, color QColor_ITF) {
+func (this *QPainter) FillRect4(x int, y int, w int, h int, color QColor_ITF) {
 	var convArg4 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
 		convArg4 = color.QColor_PTR().GetCthis()
@@ -6125,7 +6125,7 @@ Alternatively, you can specify a QColor instead of a QBrush; the QBrush construc
 
 See also drawRect().
 */
-func (this *QPainter) FillRect_5(arg0 qtcore.QRect_ITF, color QColor_ITF) {
+func (this *QPainter) FillRect5(arg0 qtcore.QRect_ITF, color QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -6150,7 +6150,7 @@ Alternatively, you can specify a QColor instead of a QBrush; the QBrush construc
 
 See also drawRect().
 */
-func (this *QPainter) FillRect_6(x int, y int, w int, h int, c int) {
+func (this *QPainter) FillRect6(x int, y int, w int, h int, c int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8fillRectEiiiiN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, c)
 	qtrt.ErrPrint(err, rv)
 }
@@ -6167,7 +6167,7 @@ Alternatively, you can specify a QColor instead of a QBrush; the QBrush construc
 
 See also drawRect().
 */
-func (this *QPainter) FillRect_7(r qtcore.QRect_ITF, c int) {
+func (this *QPainter) FillRect7(r qtcore.QRect_ITF, c int) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -6188,7 +6188,7 @@ Alternatively, you can specify a QColor instead of a QBrush; the QBrush construc
 
 See also drawRect().
 */
-func (this *QPainter) FillRect_8(r qtcore.QRectF_ITF, c int) {
+func (this *QPainter) FillRect8(r qtcore.QRectF_ITF, c int) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
@@ -6209,7 +6209,7 @@ Alternatively, you can specify a QColor instead of a QBrush; the QBrush construc
 
 See also drawRect().
 */
-func (this *QPainter) FillRect_9(x int, y int, w int, h int, style int) {
+func (this *QPainter) FillRect9(x int, y int, w int, h int, style int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8fillRectEiiiiN2Qt10BrushStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, style)
 	qtrt.ErrPrint(err, rv)
 }
@@ -6226,7 +6226,7 @@ Alternatively, you can specify a QColor instead of a QBrush; the QBrush construc
 
 See also drawRect().
 */
-func (this *QPainter) FillRect_10(r qtcore.QRect_ITF, style int) {
+func (this *QPainter) FillRect10(r qtcore.QRect_ITF, style int) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -6247,7 +6247,7 @@ Alternatively, you can specify a QColor instead of a QBrush; the QBrush construc
 
 See also drawRect().
 */
-func (this *QPainter) FillRect_11(r qtcore.QRectF_ITF, style int) {
+func (this *QPainter) FillRect11(r qtcore.QRectF_ITF, style int) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRectF_PTR() != nil {
 		convArg0 = r.QRectF_PTR().GetCthis()
@@ -6295,7 +6295,7 @@ Erases the area inside the given rectangle. Equivalent to calling
 
 See also fillRect().
 */
-func (this *QPainter) EraseRect_1(x int, y int, w int, h int) {
+func (this *QPainter) EraseRect1(x int, y int, w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter9eraseRectEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -6315,7 +6315,7 @@ Erases the area inside the given rectangle. Equivalent to calling
 
 See also fillRect().
 */
-func (this *QPainter) EraseRect_2(arg0 qtcore.QRect_ITF) {
+func (this *QPainter) EraseRect2(arg0 qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRect_PTR() != nil {
 		convArg0 = arg0.QRect_PTR().GetCthis()
@@ -6349,7 +6349,7 @@ Sets the given render hint on the painter if on is true; otherwise clears the re
 
 See also setRenderHints(), renderHints(), and Rendering Quality.
 */
-func (this *QPainter) SetRenderHint__(hint int) {
+func (this *QPainter) SetRenderHintp(hint int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter13setRenderHintENS_10RenderHintEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hint, on)
@@ -6385,7 +6385,7 @@ This function was introduced in  Qt 4.2.
 
 See also setRenderHint(), renderHints(), and Rendering Quality.
 */
-func (this *QPainter) SetRenderHints__(hints int) {
+func (this *QPainter) SetRenderHintsp(hints int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter14setRenderHintsE6QFlagsINS_10RenderHintEEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hints, on)
@@ -6479,7 +6479,7 @@ func QPainter_SetRedirected(device QPaintDevice_ITF /*777 const QPaintDevice **/
 /*
 
  */
-func (this *QPainter) SetRedirected__(device QPaintDevice_ITF /*777 const QPaintDevice **/, replacement QPaintDevice_ITF /*777 QPaintDevice **/) {
+func (this *QPainter) SetRedirectedp(device QPaintDevice_ITF /*777 const QPaintDevice **/, replacement QPaintDevice_ITF /*777 QPaintDevice **/) {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QPaintDevice_PTR() != nil {
 		convArg0 = device.QPaintDevice_PTR().GetCthis()
@@ -6529,7 +6529,7 @@ func QPainter_Redirected(device QPaintDevice_ITF /*777 const QPaintDevice **/, o
 /*
 
  */
-func (this *QPainter) Redirected__(device QPaintDevice_ITF /*777 const QPaintDevice **/) *QPaintDevice /*777 QPaintDevice **/ {
+func (this *QPainter) Redirectedp(device QPaintDevice_ITF /*777 const QPaintDevice **/) *QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QPaintDevice_PTR() != nil {
 		convArg0 = device.QPaintDevice_PTR().GetCthis()

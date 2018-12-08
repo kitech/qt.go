@@ -109,10 +109,10 @@ func NewQPanGesture(parent qtcore.QObject_ITF /*777 QObject **/) *QPanGesture {
 /*
 
  */
-func (*QPanGesture) NewForInherit__() *QPanGesture {
-	return NewQPanGesture__()
+func (*QPanGesture) NewForInheritp() *QPanGesture {
+	return NewQPanGesturep()
 }
-func NewQPanGesture__() *QPanGesture {
+func NewQPanGesturep() *QPanGesture {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPanGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

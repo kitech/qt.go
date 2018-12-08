@@ -184,10 +184,10 @@ func NewQMenuBar(parent QWidget_ITF /*777 QWidget **/) *QMenuBar {
 /*
 Constructs a menu bar with parent parent.
 */
-func (*QMenuBar) NewForInherit__() *QMenuBar {
-	return NewQMenuBar__()
+func (*QMenuBar) NewForInheritp() *QMenuBar {
+	return NewQMenuBarp()
 }
-func NewQMenuBar__() *QMenuBar {
+func NewQMenuBarp() *QMenuBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMenuBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -225,7 +225,7 @@ This convenience function creates a new action with text. The function adds the 
 See also QWidget::addAction() and QWidget::actions().
 */
 func (this *QMenuBar) AddAction(text string) *QAction /*777 QAction **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMenuBar9addActionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -244,8 +244,8 @@ This convenience function creates a new action with text. The function adds the 
 
 See also QWidget::addAction() and QWidget::actions().
 */
-func (this *QMenuBar) AddAction_1(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QMenuBar) AddAction1(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -292,8 +292,8 @@ Note: The returned QAction object can be used to hide the corresponding menu.
 
 See also QWidget::addAction() and QMenu::menuAction().
 */
-func (this *QMenuBar) AddMenu_1(title string) *QMenu /*777 QMenu **/ {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func (this *QMenuBar) AddMenu1(title string) *QMenu /*777 QMenu **/ {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMenuBar7addMenuERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -312,12 +312,12 @@ Note: The returned QAction object can be used to hide the corresponding menu.
 
 See also QWidget::addAction() and QMenu::menuAction().
 */
-func (this *QMenuBar) AddMenu_2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 QMenu **/ {
+func (this *QMenuBar) AddMenu2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 QMenu **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMenuBar7addMenuERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -588,7 +588,7 @@ Note: Using a corner other than Qt::TopRightCorner or Qt::TopLeftCorner will res
 
 See also cornerWidget().
 */
-func (this *QMenuBar) SetCornerWidget__(w QWidget_ITF /*777 QWidget **/) {
+func (this *QMenuBar) SetCornerWidgetp(w QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
 		convArg0 = w.QWidget_PTR().GetCthis()
@@ -629,7 +629,7 @@ Note: Using a corner other than Qt::TopRightCorner or Qt::TopLeftCorner will res
 
 See also setCornerWidget().
 */
-func (this *QMenuBar) CornerWidget__() *QWidget /*777 QWidget **/ {
+func (this *QMenuBar) CornerWidgetp() *QWidget /*777 QWidget **/ {
 	// arg: 0, Qt::Corner=Elaborated, Qt::Corner=Enum, , Invalid
 	corner := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMenuBar12cornerWidgetEN2Qt6CornerE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), corner)

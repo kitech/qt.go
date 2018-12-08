@@ -94,10 +94,10 @@ func NewQAndroidServiceConnection() *QAndroidServiceConnection {
 /*
 Creates a new object
 */
-func (*QAndroidServiceConnection) NewForInherit_1(serviceConnection QAndroidJniObject_ITF) *QAndroidServiceConnection {
-	return NewQAndroidServiceConnection_1(serviceConnection)
+func (*QAndroidServiceConnection) NewForInherit1(serviceConnection QAndroidJniObject_ITF) *QAndroidServiceConnection {
+	return NewQAndroidServiceConnection1(serviceConnection)
 }
-func NewQAndroidServiceConnection_1(serviceConnection QAndroidJniObject_ITF) *QAndroidServiceConnection {
+func NewQAndroidServiceConnection1(serviceConnection QAndroidJniObject_ITF) *QAndroidServiceConnection {
 	var convArg0 unsafe.Pointer
 	if serviceConnection != nil && serviceConnection.QAndroidJniObject_PTR() != nil {
 		convArg0 = serviceConnection.QAndroidJniObject_PTR().GetCthis()
@@ -137,7 +137,7 @@ Warning: This method is called from Binder's thread which is different from the 
 returns the underline QAndroidJniObject
 */
 func (this *QAndroidServiceConnection) OnServiceConnected(name string, serviceBinder QAndroidBinder_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if serviceBinder != nil && serviceBinder.QAndroidBinder_PTR() != nil {
@@ -160,7 +160,7 @@ Warning: This method is called from Binder's thread which is different from the 
 returns the underline QAndroidJniObject
 */
 func (this *QAndroidServiceConnection) OnServiceDisconnected(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QAndroidServiceConnection21onServiceDisconnectedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

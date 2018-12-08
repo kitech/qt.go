@@ -91,11 +91,11 @@ func NewQStringMatcher() *QStringMatcher {
 /*
 Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
-func (*QStringMatcher) NewForInherit_1(pattern string, cs int) *QStringMatcher {
-	return NewQStringMatcher_1(pattern, cs)
+func (*QStringMatcher) NewForInherit1(pattern string, cs int) *QStringMatcher {
+	return NewQStringMatcher1(pattern, cs)
 }
-func NewQStringMatcher_1(pattern string, cs int) *QStringMatcher {
-	var tmpArg0 = NewQString_5(pattern)
+func NewQStringMatcher1(pattern string, cs int) *QStringMatcher {
+	var tmpArg0 = NewQString5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherC2ERK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -112,11 +112,11 @@ func NewQStringMatcher_1(pattern string, cs int) *QStringMatcher {
 /*
 Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
-func (*QStringMatcher) NewForInherit_1_(pattern string) *QStringMatcher {
-	return NewQStringMatcher_1_(pattern)
+func (*QStringMatcher) NewForInherit1p(pattern string) *QStringMatcher {
+	return NewQStringMatcher1p(pattern)
 }
-func NewQStringMatcher_1_(pattern string) *QStringMatcher {
-	var tmpArg0 = NewQString_5(pattern)
+func NewQStringMatcher1p(pattern string) *QStringMatcher {
+	var tmpArg0 = NewQString5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
@@ -135,10 +135,10 @@ func NewQStringMatcher_1_(pattern string) *QStringMatcher {
 /*
 Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
-func (*QStringMatcher) NewForInherit_2(uc QChar_ITF /*777 const QChar **/, len_ int, cs int) *QStringMatcher {
-	return NewQStringMatcher_2(uc, len_, cs)
+func (*QStringMatcher) NewForInherit2(uc QChar_ITF /*777 const QChar **/, len_ int, cs int) *QStringMatcher {
+	return NewQStringMatcher2(uc, len_, cs)
 }
-func NewQStringMatcher_2(uc QChar_ITF /*777 const QChar **/, len_ int, cs int) *QStringMatcher {
+func NewQStringMatcher2(uc QChar_ITF /*777 const QChar **/, len_ int, cs int) *QStringMatcher {
 	var convArg0 unsafe.Pointer
 	if uc != nil && uc.QChar_PTR() != nil {
 		convArg0 = uc.QChar_PTR().GetCthis()
@@ -158,10 +158,10 @@ func NewQStringMatcher_2(uc QChar_ITF /*777 const QChar **/, len_ int, cs int) *
 /*
 Constructs an empty string matcher that won't match anything. Call setPattern() to give it a pattern to match.
 */
-func (*QStringMatcher) NewForInherit_2_(uc QChar_ITF /*777 const QChar **/, len_ int) *QStringMatcher {
-	return NewQStringMatcher_2_(uc, len_)
+func (*QStringMatcher) NewForInherit2p(uc QChar_ITF /*777 const QChar **/, len_ int) *QStringMatcher {
+	return NewQStringMatcher2p(uc, len_)
 }
-func NewQStringMatcher_2_(uc QChar_ITF /*777 const QChar **/, len_ int) *QStringMatcher {
+func NewQStringMatcher2p(uc QChar_ITF /*777 const QChar **/, len_ int) *QStringMatcher {
 	var convArg0 unsafe.Pointer
 	if uc != nil && uc.QChar_PTR() != nil {
 		convArg0 = uc.QChar_PTR().GetCthis()
@@ -221,7 +221,7 @@ Sets the string that this string matcher will search for to pattern.
 See also pattern(), setCaseSensitivity(), and indexIn().
 */
 func (this *QStringMatcher) SetPattern(pattern string) {
-	var tmpArg0 = NewQString_5(pattern)
+	var tmpArg0 = NewQString5(pattern)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcher10setPatternERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ Searches the string str from character position from (default 0, i.e. from the f
 See also setPattern() and setCaseSensitivity().
 */
 func (this *QStringMatcher) IndexIn(str string, from int) int {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
@@ -270,8 +270,8 @@ Searches the string str from character position from (default 0, i.e. from the f
 
 See also setPattern() and setCaseSensitivity().
 */
-func (this *QStringMatcher) IndexIn__(str string) int {
-	var tmpArg0 = NewQString_5(str)
+func (this *QStringMatcher) IndexInp(str string) int {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
@@ -290,7 +290,7 @@ Searches the string str from character position from (default 0, i.e. from the f
 
 See also setPattern() and setCaseSensitivity().
 */
-func (this *QStringMatcher) IndexIn_1(str QChar_ITF /*777 const QChar **/, length int, from int) int {
+func (this *QStringMatcher) IndexIn1(str QChar_ITF /*777 const QChar **/, length int, from int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QChar_PTR() != nil {
 		convArg0 = str.QChar_PTR().GetCthis()
@@ -310,7 +310,7 @@ Searches the string str from character position from (default 0, i.e. from the f
 
 See also setPattern() and setCaseSensitivity().
 */
-func (this *QStringMatcher) IndexIn_1_(str QChar_ITF /*777 const QChar **/, length int) int {
+func (this *QStringMatcher) IndexIn1p(str QChar_ITF /*777 const QChar **/, length int) int {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QChar_PTR() != nil {
 		convArg0 = str.QChar_PTR().GetCthis()

@@ -96,11 +96,11 @@ Constructs a font object that uses the application's default font.
 
 See also QGuiApplication::setFont() and QGuiApplication::font().
 */
-func (*QFont) NewForInherit_1(family string, pointSize int, weight int, italic bool) *QFont {
-	return NewQFont_1(family, pointSize, weight, italic)
+func (*QFont) NewForInherit1(family string, pointSize int, weight int, italic bool) *QFont {
+	return NewQFont1(family, pointSize, weight, italic)
 }
-func NewQFont_1(family string, pointSize int, weight int, italic bool) *QFont {
-	var tmpArg0 = qtcore.NewQString_5(family)
+func NewQFont1(family string, pointSize int, weight int, italic bool) *QFont {
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontC2ERK7QStringiib", qtrt.FFI_TYPE_POINTER, convArg0, pointSize, weight, italic)
 	qtrt.ErrPrint(err, rv)
@@ -119,11 +119,11 @@ Constructs a font object that uses the application's default font.
 
 See also QGuiApplication::setFont() and QGuiApplication::font().
 */
-func (*QFont) NewForInherit_1_(family string) *QFont {
-	return NewQFont_1_(family)
+func (*QFont) NewForInherit1p(family string) *QFont {
+	return NewQFont1p(family)
 }
-func NewQFont_1_(family string) *QFont {
-	var tmpArg0 = qtcore.NewQString_5(family)
+func NewQFont1p(family string) *QFont {
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	pointSize := int(-1)
@@ -148,11 +148,11 @@ Constructs a font object that uses the application's default font.
 
 See also QGuiApplication::setFont() and QGuiApplication::font().
 */
-func (*QFont) NewForInherit_1_1(family string, pointSize int) *QFont {
-	return NewQFont_1_1(family, pointSize)
+func (*QFont) NewForInherit1p1(family string, pointSize int) *QFont {
+	return NewQFont1p1(family, pointSize)
 }
-func NewQFont_1_1(family string, pointSize int) *QFont {
-	var tmpArg0 = qtcore.NewQString_5(family)
+func NewQFont1p1(family string, pointSize int) *QFont {
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, int=Int, =Invalid, , Invalid
 	weight := int(-1)
@@ -175,11 +175,11 @@ Constructs a font object that uses the application's default font.
 
 See also QGuiApplication::setFont() and QGuiApplication::font().
 */
-func (*QFont) NewForInherit_1_2(family string, pointSize int, weight int) *QFont {
-	return NewQFont_1_2(family, pointSize, weight)
+func (*QFont) NewForInherit1p2(family string, pointSize int, weight int) *QFont {
+	return NewQFont1p2(family, pointSize, weight)
 }
-func NewQFont_1_2(family string, pointSize int, weight int) *QFont {
-	var tmpArg0 = qtcore.NewQString_5(family)
+func NewQFont1p2(family string, pointSize int, weight int) *QFont {
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 3, bool=Bool, =Invalid, , Invalid
 	italic := false
@@ -200,10 +200,10 @@ Constructs a font object that uses the application's default font.
 
 See also QGuiApplication::setFont() and QGuiApplication::font().
 */
-func (*QFont) NewForInherit_2(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFont {
-	return NewQFont_2(arg0, pd)
+func (*QFont) NewForInherit2(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFont {
+	return NewQFont2(arg0, pd)
 }
-func NewQFont_2(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFont {
+func NewQFont2(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFont {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {
 		convArg0 = arg0.QFont_PTR().GetCthis()
@@ -285,7 +285,7 @@ The family name may optionally also include a foundry name, e.g. "Helvetica [Cro
 See also family(), setStyleHint(), and QFontInfo.
 */
 func (this *QFont) SetFamily(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont9setFamilyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -327,7 +327,7 @@ This function was introduced in  Qt 4.8.
 See also styleName().
 */
 func (this *QFont) SetStyleName(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont12setStyleNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -786,7 +786,7 @@ Qt does not support style hints on X11 since this information is not provided by
 
 See also StyleHint, styleHint(), StyleStrategy, styleStrategy(), and QFontInfo.
 */
-func (this *QFont) SetStyleHint__(arg0 int) {
+func (this *QFont) SetStyleHintp(arg0 int) {
 	// arg: 1, QFont::StyleStrategy=Enum, QFont::StyleStrategy=Enum, , Invalid
 	arg1 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont12setStyleHintENS_9StyleHintENS_13StyleStrategyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
@@ -1084,7 +1084,7 @@ func (this *QFont) Operator_equal(arg0 QFont_ITF) *QFont {
 /*
 
  */
-func (this *QFont) Operator_equal_1(other unsafe.Pointer /*333*/) *QFont {
+func (this *QFont) Operator_equal1(other unsafe.Pointer /*333*/) *QFont {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFontaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1175,7 +1175,7 @@ func (this *QFont) IsCopyOf(arg0 QFont_ITF) bool {
 
  */
 func (this *QFont) SetRawName(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont10setRawNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1247,7 +1247,7 @@ Sets this font to match the description descrip. The description is a comma-sepa
 See also toString().
 */
 func (this *QFont) FromString(arg0 string) bool {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont10fromStringERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1269,7 +1269,7 @@ To obtain a list of substitutions use substitutes().
 See also setFamily(), insertSubstitutions(), insertSubstitution(), and removeSubstitutions().
 */
 func (this *QFont) Substitute(arg0 string) string {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont10substituteERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1297,7 +1297,7 @@ If there is no substitution for familyName, an empty list is returned.
 See also substitute(), insertSubstitutions(), insertSubstitution(), and removeSubstitutions().
 */
 func (this *QFont) Substitutes(arg0 string) *qtcore.QStringList /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont11substitutesERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1345,9 +1345,9 @@ Inserts substituteName into the substitution table for the family familyName.
 See also insertSubstitutions(), removeSubstitutions(), substitutions(), substitute(), and substitutes().
 */
 func (this *QFont) InsertSubstitution(arg0 string, arg1 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont18insertSubstitutionERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1368,7 +1368,7 @@ Inserts the list of families substituteNames into the substitution list for fami
 See also insertSubstitution(), removeSubstitutions(), substitutions(), and substitute().
 */
 func (this *QFont) InsertSubstitutions(arg0 string, arg1 qtcore.QStringList_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if arg1 != nil && arg1.QStringList_PTR() != nil {
@@ -1395,7 +1395,7 @@ This function was introduced in  Qt 5.0.
 See also insertSubstitutions(), insertSubstitution(), substitutions(), and substitute().
 */
 func (this *QFont) RemoveSubstitutions(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont19removeSubstitutionsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1547,7 +1547,7 @@ func (this *QFont) Resolve(arg0 QFont_ITF) *QFont /*123*/ {
 /*
 Returns a new QFont that has attributes copied from other that have not been previously set on this font.
 */
-func (this *QFont) Resolve_1() uint {
+func (this *QFont) Resolve1() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFont7resolveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -1561,7 +1561,7 @@ func (this *QFont) Resolve_1() uint {
 /*
 Returns a new QFont that has attributes copied from other that have not been previously set on this font.
 */
-func (this *QFont) Resolve_2(mask uint) {
+func (this *QFont) Resolve2(mask uint) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont7resolveEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mask)
 	qtrt.ErrPrint(err, rv)
 }

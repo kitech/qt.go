@@ -95,10 +95,10 @@ func NewQTextEncoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextEnco
 /*
 
  */
-func (*QTextEncoder) NewForInherit_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextEncoder {
-	return NewQTextEncoder_1(codec, flags)
+func (*QTextEncoder) NewForInherit1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextEncoder {
+	return NewQTextEncoder1(codec, flags)
 }
-func NewQTextEncoder_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextEncoder {
+func NewQTextEncoder1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextEncoder {
 	var convArg0 unsafe.Pointer
 	if codec != nil && codec.QTextCodec_PTR() != nil {
 		convArg0 = codec.QTextCodec_PTR().GetCthis()
@@ -134,7 +134,7 @@ func DeleteQTextEncoder(this *QTextEncoder) {
 Converts str from Unicode to the encoding of this codec, and returns the result in a QByteArray.
 */
 func (this *QTextEncoder) FromUnicode(str string) *QByteArray /*123*/ {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -151,7 +151,7 @@ func (this *QTextEncoder) FromUnicode(str string) *QByteArray /*123*/ {
 /*
 Converts str from Unicode to the encoding of this codec, and returns the result in a QByteArray.
 */
-func (this *QTextEncoder) FromUnicode_1(str QStringView_ITF /*123*/) *QByteArray /*123*/ {
+func (this *QTextEncoder) FromUnicode1(str QStringView_ITF /*123*/) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QStringView_PTR() != nil {
 		convArg0 = str.QStringView_PTR().GetCthis()
@@ -171,7 +171,7 @@ func (this *QTextEncoder) FromUnicode_1(str QStringView_ITF /*123*/) *QByteArray
 /*
 Converts str from Unicode to the encoding of this codec, and returns the result in a QByteArray.
 */
-func (this *QTextEncoder) FromUnicode_2(uc QChar_ITF /*777 const QChar **/, len_ int) *QByteArray /*123*/ {
+func (this *QTextEncoder) FromUnicode2(uc QChar_ITF /*777 const QChar **/, len_ int) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if uc != nil && uc.QChar_PTR() != nil {
 		convArg0 = uc.QChar_PTR().GetCthis()

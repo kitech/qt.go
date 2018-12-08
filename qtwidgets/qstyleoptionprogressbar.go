@@ -91,10 +91,10 @@ func NewQStyleOptionProgressBar() *QStyleOptionProgressBar {
 /*
 
  */
-func (*QStyleOptionProgressBar) NewForInherit_1(version int) *QStyleOptionProgressBar {
-	return NewQStyleOptionProgressBar_1(version)
+func (*QStyleOptionProgressBar) NewForInherit1(version int) *QStyleOptionProgressBar {
+	return NewQStyleOptionProgressBar1(version)
 }
-func NewQStyleOptionProgressBar_1(version int) *QStyleOptionProgressBar {
+func NewQStyleOptionProgressBar1(version int) *QStyleOptionProgressBar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionProgressBarFromPointer(unsafe.Pointer(uintptr(rv)))

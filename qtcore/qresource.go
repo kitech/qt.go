@@ -93,7 +93,7 @@ func (*QResource) NewForInherit(file string, locale QLocale_ITF) *QResource {
 	return NewQResource(file, locale)
 }
 func NewQResource(file string, locale QLocale_ITF) *QResource {
-	var tmpArg0 = NewQString_5(file)
+	var tmpArg0 = NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
@@ -116,10 +116,10 @@ Constructs a QResource pointing to file. locale is used to load a specific local
 
 See also QFileInfo, QDir::searchPaths(), setFileName(), and setLocale().
 */
-func (*QResource) NewForInherit__() *QResource {
-	return NewQResource__()
+func (*QResource) NewForInheritp() *QResource {
+	return NewQResourcep()
 }
-func NewQResource__() *QResource {
+func NewQResourcep() *QResource {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = NewQString()
 	// arg: 1, const QLocale &=LValueReference, QLocale=Record, , Invalid
@@ -141,11 +141,11 @@ Constructs a QResource pointing to file. locale is used to load a specific local
 
 See also QFileInfo, QDir::searchPaths(), setFileName(), and setLocale().
 */
-func (*QResource) NewForInherit__1(file string) *QResource {
-	return NewQResource__1(file)
+func (*QResource) NewForInheritp1(file string) *QResource {
+	return NewQResourcep1(file)
 }
-func NewQResource__1(file string) *QResource {
-	var tmpArg0 = NewQString_5(file)
+func NewQResourcep1(file string) *QResource {
+	var tmpArg0 = NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QLocale &=LValueReference, QLocale=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -182,7 +182,7 @@ Sets a QResource to point to file. file can either be absolute, in which case it
 See also fileName() and absoluteFilePath().
 */
 func (this *QResource) SetFileName(file string) {
-	var tmpArg0 = NewQString_5(file)
+	var tmpArg0 = NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -350,7 +350,7 @@ func (this *QResource) LastModified() *QDateTime /*123*/ {
 
  */
 func (this *QResource) AddSearchPath(path string) {
-	var tmpArg0 = NewQString_5(path)
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource13addSearchPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -392,9 +392,9 @@ Registers the resource with the given rccFileName at the location in the resourc
 See also unregisterResource().
 */
 func (this *QResource) RegisterResource(rccFilename string, resourceRoot string) bool {
-	var tmpArg0 = NewQString_5(rccFilename)
+	var tmpArg0 = NewQString5(rccFilename)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(resourceRoot)
+	var tmpArg1 = NewQString5(resourceRoot)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource16registerResourceERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -416,8 +416,8 @@ Registers the resource with the given rccFileName at the location in the resourc
 
 See also unregisterResource().
 */
-func (this *QResource) RegisterResource__(rccFilename string) bool {
-	var tmpArg0 = NewQString_5(rccFilename)
+func (this *QResource) RegisterResourcep(rccFilename string) bool {
+	var tmpArg0 = NewQString5(rccFilename)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
@@ -436,16 +436,16 @@ Registers the resource with the given rccFileName at the location in the resourc
 
 See also unregisterResource().
 */
-func (this *QResource) RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
-	var tmpArg1 = NewQString_5(resourceRoot)
+func (this *QResource) RegisterResource1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
+	var tmpArg1 = NewQString5(resourceRoot)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource16registerResourceEPKhRK7QString", qtrt.FFI_TYPE_POINTER, rccData, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QResource_RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
+func QResource_RegisterResource1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
 	var nilthis *QResource
-	rv := nilthis.RegisterResource_1(rccData, resourceRoot)
+	rv := nilthis.RegisterResource1(rccData, resourceRoot)
 	return rv
 }
 
@@ -459,7 +459,7 @@ Registers the resource with the given rccFileName at the location in the resourc
 
 See also unregisterResource().
 */
-func (this *QResource) RegisterResource_1_(rccData unsafe.Pointer /*666*/) bool {
+func (this *QResource) RegisterResource1p(rccData unsafe.Pointer /*666*/) bool {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource16registerResourceEPKhRK7QString", qtrt.FFI_TYPE_POINTER, rccData, convArg1)
@@ -478,9 +478,9 @@ Unregisters the resource with the given rccFileName at the location in the resou
 See also registerResource().
 */
 func (this *QResource) UnregisterResource(rccFilename string, resourceRoot string) bool {
-	var tmpArg0 = NewQString_5(rccFilename)
+	var tmpArg0 = NewQString5(rccFilename)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(resourceRoot)
+	var tmpArg1 = NewQString5(resourceRoot)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource18unregisterResourceERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -502,8 +502,8 @@ Unregisters the resource with the given rccFileName at the location in the resou
 
 See also registerResource().
 */
-func (this *QResource) UnregisterResource__(rccFilename string) bool {
-	var tmpArg0 = NewQString_5(rccFilename)
+func (this *QResource) UnregisterResourcep(rccFilename string) bool {
+	var tmpArg0 = NewQString5(rccFilename)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
@@ -522,16 +522,16 @@ Unregisters the resource with the given rccFileName at the location in the resou
 
 See also registerResource().
 */
-func (this *QResource) UnregisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
-	var tmpArg1 = NewQString_5(resourceRoot)
+func (this *QResource) UnregisterResource1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
+	var tmpArg1 = NewQString5(resourceRoot)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource18unregisterResourceEPKhRK7QString", qtrt.FFI_TYPE_POINTER, rccData, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QResource_UnregisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
+func QResource_UnregisterResource1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
 	var nilthis *QResource
-	rv := nilthis.UnregisterResource_1(rccData, resourceRoot)
+	rv := nilthis.UnregisterResource1(rccData, resourceRoot)
 	return rv
 }
 
@@ -545,7 +545,7 @@ Unregisters the resource with the given rccFileName at the location in the resou
 
 See also registerResource().
 */
-func (this *QResource) UnregisterResource_1_(rccData unsafe.Pointer /*666*/) bool {
+func (this *QResource) UnregisterResource1p(rccData unsafe.Pointer /*666*/) bool {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource18unregisterResourceEPKhRK7QString", qtrt.FFI_TYPE_POINTER, rccData, convArg1)

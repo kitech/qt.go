@@ -93,10 +93,10 @@ func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 /*
 
  */
-func (*QStyleHintReturn) NewForInherit__() *QStyleHintReturn {
-	return NewQStyleHintReturn__()
+func (*QStyleHintReturn) NewForInheritp() *QStyleHintReturn {
+	return NewQStyleHintReturnp()
 }
-func NewQStyleHintReturn__() *QStyleHintReturn {
+func NewQStyleHintReturnp() *QStyleHintReturn {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	version := 0 /*QStyleOption::Version*/
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -116,10 +116,10 @@ func NewQStyleHintReturn__() *QStyleHintReturn {
 /*
 
  */
-func (*QStyleHintReturn) NewForInherit__1(version int) *QStyleHintReturn {
-	return NewQStyleHintReturn__1(version)
+func (*QStyleHintReturn) NewForInheritp1(version int) *QStyleHintReturn {
+	return NewQStyleHintReturnp1(version)
 }
-func NewQStyleHintReturn__1(version int) *QStyleHintReturn {
+func NewQStyleHintReturnp1(version int) *QStyleHintReturn {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := QStyleHintReturn__SH_Default
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)

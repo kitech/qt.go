@@ -128,10 +128,10 @@ func NewQIODevice() *QIODevice {
 /*
 Constructs a QIODevice object.
 */
-func (*QIODevice) NewForInherit_1(parent QObject_ITF /*777 QObject **/) *QIODevice {
-	return NewQIODevice_1(parent)
+func (*QIODevice) NewForInherit1(parent QObject_ITF /*777 QObject **/) *QIODevice {
+	return NewQIODevice1(parent)
 }
-func NewQIODevice_1(parent QObject_ITF /*777 QObject **/) *QIODevice {
+func NewQIODevice1(parent QObject_ITF /*777 QObject **/) *QIODevice {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
@@ -582,7 +582,7 @@ Reads at most maxSize bytes from the device into data, and returns the number of
 
 See also readData(), readLine(), and write().
 */
-func (this *QIODevice) Read_1(maxlen int64) *QByteArray /*123*/ {
+func (this *QIODevice) Read1(maxlen int64) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice4readEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -692,7 +692,7 @@ This function calls readLineData(), which is implemented using repeated calls to
 
 See also getChar(), read(), and write().
 */
-func (this *QIODevice) ReadLine_1(maxlen int64) *QByteArray /*123*/ {
+func (this *QIODevice) ReadLine1(maxlen int64) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice8readLineEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -738,7 +738,7 @@ This function calls readLineData(), which is implemented using repeated calls to
 
 See also getChar(), read(), and write().
 */
-func (this *QIODevice) ReadLine_1_() *QByteArray /*123*/ {
+func (this *QIODevice) ReadLine1p() *QByteArray /*123*/ {
 	// arg: 0, qint64=Typedef, qint64=Typedef, long long, LongLong
 	maxlen := int64(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice8readLineEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
@@ -883,7 +883,7 @@ Writes at most maxSize bytes of data from data to the device. Returns the number
 
 See also read() and writeData().
 */
-func (this *QIODevice) Write_1(data string) int64 {
+func (this *QIODevice) Write1(data string) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice5writeEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -901,7 +901,7 @@ Writes at most maxSize bytes of data from data to the device. Returns the number
 
 See also read() and writeData().
 */
-func (this *QIODevice) Write_2(data QByteArray_ITF) int64 {
+func (this *QIODevice) Write2(data QByteArray_ITF) int64 {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -973,7 +973,7 @@ This function was introduced in  Qt 4.1.
 
 See also read().
 */
-func (this *QIODevice) Peek_1(maxlen int64) *QByteArray /*123*/ {
+func (this *QIODevice) Peek1(maxlen int64) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice4peekEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1329,7 +1329,7 @@ Sets the human readable description of the last device error that occurred to st
 See also errorString().
 */
 func (this *QIODevice) SetErrorString(errorString string) {
-	var tmpArg0 = NewQString_5(errorString)
+	var tmpArg0 = NewQString5(errorString)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice14setErrorStringERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

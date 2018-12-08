@@ -95,11 +95,11 @@ Constructs a QTemporaryDir using as template the application name returned by QC
 
 See also QDir::tempPath().
 */
-func (*QTemporaryDir) NewForInherit_1(templateName string) *QTemporaryDir {
-	return NewQTemporaryDir_1(templateName)
+func (*QTemporaryDir) NewForInherit1(templateName string) *QTemporaryDir {
+	return NewQTemporaryDir1(templateName)
 }
-func NewQTemporaryDir_1(templateName string) *QTemporaryDir {
-	var tmpArg0 = NewQString_5(templateName)
+func NewQTemporaryDir1(templateName string) *QTemporaryDir {
+	var tmpArg0 = NewQString5(templateName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDirC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -235,7 +235,7 @@ Returns the path name of a file in the temporary directory. Does not check if th
 This function was introduced in  Qt 5.9.
 */
 func (this *QTemporaryDir) FilePath(fileName string) string {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir8filePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -226,7 +226,7 @@ func QEvent_RegisterEventType(hint int) int {
 /*
 
  */
-func (this *QEvent) RegisterEventType__() int {
+func (this *QEvent) RegisterEventTypep() int {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	hint := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", qtrt.FFI_TYPE_POINTER, hint)

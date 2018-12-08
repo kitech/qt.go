@@ -91,10 +91,10 @@ func NewQLineF() *QLineF {
 /*
 
  */
-func (*QLineF) NewForInherit_1(pt1 QPointF_ITF, pt2 QPointF_ITF) *QLineF {
-	return NewQLineF_1(pt1, pt2)
+func (*QLineF) NewForInherit1(pt1 QPointF_ITF, pt2 QPointF_ITF) *QLineF {
+	return NewQLineF1(pt1, pt2)
 }
-func NewQLineF_1(pt1 QPointF_ITF, pt2 QPointF_ITF) *QLineF {
+func NewQLineF1(pt1 QPointF_ITF, pt2 QPointF_ITF) *QLineF {
 	var convArg0 unsafe.Pointer
 	if pt1 != nil && pt1.QPointF_PTR() != nil {
 		convArg0 = pt1.QPointF_PTR().GetCthis()
@@ -118,10 +118,10 @@ func NewQLineF_1(pt1 QPointF_ITF, pt2 QPointF_ITF) *QLineF {
 /*
 
  */
-func (*QLineF) NewForInherit_2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
-	return NewQLineF_2(x1, y1, x2, y2)
+func (*QLineF) NewForInherit2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
+	return NewQLineF2(x1, y1, x2, y2)
 }
-func NewQLineF_2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
+func NewQLineF2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineFC2Edddd", qtrt.FFI_TYPE_POINTER, x1, y1, x2, y2)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLineFFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -137,10 +137,10 @@ func NewQLineF_2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
 /*
 
  */
-func (*QLineF) NewForInherit_3(line QLine_ITF) *QLineF {
-	return NewQLineF_3(line)
+func (*QLineF) NewForInherit3(line QLine_ITF) *QLineF {
+	return NewQLineF3(line)
 }
-func NewQLineF_3(line QLine_ITF) *QLineF {
+func NewQLineF3(line QLine_ITF) *QLineF {
 	var convArg0 unsafe.Pointer
 	if line != nil && line.QLine_PTR() != nil {
 		convArg0 = line.QLine_PTR().GetCthis()
@@ -368,7 +368,7 @@ func (this *QLineF) Angle() float64 {
 /*
 
  */
-func (this *QLineF) Angle_1(l QLineF_ITF) float64 {
+func (this *QLineF) Angle1(l QLineF_ITF) float64 {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QLineF_PTR() != nil {
 		convArg0 = l.QLineF_PTR().GetCthis()
@@ -504,7 +504,7 @@ func (this *QLineF) Translate(p QPointF_ITF) {
 /*
 Translates this line by the given offset.
 */
-func (this *QLineF) Translate_1(dx float64, dy float64) {
+func (this *QLineF) Translate1(dx float64, dy float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF9translateEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
 }
@@ -541,7 +541,7 @@ Returns this line translated by the given offset.
 
 This function was introduced in  Qt 4.4.
 */
-func (this *QLineF) Translated_1(dx float64, dy float64) *QLineF /*123*/ {
+func (this *QLineF) Translated1(dx float64, dy float64) *QLineF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF10translatedEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333

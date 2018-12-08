@@ -92,9 +92,9 @@ func NewQXmlStreamAttributes() *QXmlStreamAttributes {
 
  */
 func (this *QXmlStreamAttributes) Value(namespaceUri string, name string) *QStringRef /*123*/ {
-	var tmpArg0 = NewQString_5(namespaceUri)
+	var tmpArg0 = NewQString5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(name)
+	var tmpArg1 = NewQString5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -111,8 +111,8 @@ func (this *QXmlStreamAttributes) Value(namespaceUri string, name string) *QStri
 /*
 
  */
-func (this *QXmlStreamAttributes) Value_1(namespaceUri string, name QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
-	var tmpArg0 = NewQString_5(namespaceUri)
+func (this *QXmlStreamAttributes) Value1(namespaceUri string, name QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
+	var tmpArg0 = NewQString5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if name != nil && name.QLatin1String_PTR() != nil {
@@ -133,7 +133,7 @@ func (this *QXmlStreamAttributes) Value_1(namespaceUri string, name QLatin1Strin
 /*
 
  */
-func (this *QXmlStreamAttributes) Value_2(namespaceUri QLatin1String_ITF /*123*/, name QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
+func (this *QXmlStreamAttributes) Value2(namespaceUri QLatin1String_ITF /*123*/, name QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
 	var convArg0 unsafe.Pointer
 	if namespaceUri != nil && namespaceUri.QLatin1String_PTR() != nil {
 		convArg0 = namespaceUri.QLatin1String_PTR().GetCthis()
@@ -157,8 +157,8 @@ func (this *QXmlStreamAttributes) Value_2(namespaceUri QLatin1String_ITF /*123*/
 /*
 
  */
-func (this *QXmlStreamAttributes) Value_3(qualifiedName string) *QStringRef /*123*/ {
-	var tmpArg0 = NewQString_5(qualifiedName)
+func (this *QXmlStreamAttributes) Value3(qualifiedName string) *QStringRef /*123*/ {
+	var tmpArg0 = NewQString5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -175,7 +175,7 @@ func (this *QXmlStreamAttributes) Value_3(qualifiedName string) *QStringRef /*12
 /*
 
  */
-func (this *QXmlStreamAttributes) Value_4(qualifiedName QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
+func (this *QXmlStreamAttributes) Value4(qualifiedName QLatin1String_ITF /*123*/) *QStringRef /*123*/ {
 	var convArg0 unsafe.Pointer
 	if qualifiedName != nil && qualifiedName.QLatin1String_PTR() != nil {
 		convArg0 = qualifiedName.QLatin1String_PTR().GetCthis()
@@ -196,7 +196,7 @@ func (this *QXmlStreamAttributes) Value_4(qualifiedName QLatin1String_ITF /*123*
 
  */
 func (this *QXmlStreamAttributes) HasAttribute(qualifiedName string) bool {
-	var tmpArg0 = NewQString_5(qualifiedName)
+	var tmpArg0 = NewQString5(qualifiedName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes12hasAttributeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -211,7 +211,7 @@ func (this *QXmlStreamAttributes) HasAttribute(qualifiedName string) bool {
 /*
 
  */
-func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName QLatin1String_ITF /*123*/) bool {
+func (this *QXmlStreamAttributes) HasAttribute1(qualifiedName QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if qualifiedName != nil && qualifiedName.QLatin1String_PTR() != nil {
 		convArg0 = qualifiedName.QLatin1String_PTR().GetCthis()
@@ -229,10 +229,10 @@ func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName QLatin1String_ITF
 /*
 
  */
-func (this *QXmlStreamAttributes) HasAttribute_2(namespaceUri string, name string) bool {
-	var tmpArg0 = NewQString_5(namespaceUri)
+func (this *QXmlStreamAttributes) HasAttribute2(namespaceUri string, name string) bool {
+	var tmpArg0 = NewQString5(namespaceUri)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(name)
+	var tmpArg1 = NewQString5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

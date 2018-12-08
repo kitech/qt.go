@@ -109,10 +109,10 @@ func NewQMacToolBarItem(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBa
 /*
 Constructs a QMacToolBarItem with parent.
 */
-func (*QMacToolBarItem) NewForInherit__() *QMacToolBarItem {
-	return NewQMacToolBarItem__()
+func (*QMacToolBarItem) NewForInheritp() *QMacToolBarItem {
+	return NewQMacToolBarItemp()
 }
-func NewQMacToolBarItem__() *QMacToolBarItem {
+func NewQMacToolBarItemp() *QMacToolBarItem {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QMacToolBarItemC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -217,7 +217,7 @@ func (this *QMacToolBarItem) Text() string {
 
  */
 func (this *QMacToolBarItem) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QMacToolBarItem7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -185,10 +185,10 @@ func NewQCameraCaptureDestinationControl(parent qtcore.QObject_ITF /*777 QObject
 /*
 Constructs a new image capture destination control object with the given parent
 */
-func (*QCameraCaptureDestinationControl) NewForInherit__() *QCameraCaptureDestinationControl {
-	return NewQCameraCaptureDestinationControl__()
+func (*QCameraCaptureDestinationControl) NewForInheritp() *QCameraCaptureDestinationControl {
+	return NewQCameraCaptureDestinationControlp()
 }
-func NewQCameraCaptureDestinationControl__() *QCameraCaptureDestinationControl {
+func NewQCameraCaptureDestinationControlp() *QCameraCaptureDestinationControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QCameraCaptureDestinationControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

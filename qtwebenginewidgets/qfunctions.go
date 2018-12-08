@@ -70,7 +70,7 @@ func init() {
 /*
 
  */
-func Swap_86(value1 QWebEngineHistoryItem_ITF, value2 QWebEngineHistoryItem_ITF) {
+func Swap86(value1 QWebEngineHistoryItem_ITF, value2 QWebEngineHistoryItem_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QWebEngineHistoryItem_PTR() != nil {
 		convArg0 = value1.QWebEngineHistoryItem_PTR().GetCthis()
@@ -91,7 +91,7 @@ func Swap_86(value1 QWebEngineHistoryItem_ITF, value2 QWebEngineHistoryItem_ITF)
 /*
 
  */
-func Swap_87(value1 QWebEngineScript_ITF, value2 QWebEngineScript_ITF) {
+func Swap87(value1 QWebEngineScript_ITF, value2 QWebEngineScript_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QWebEngineScript_PTR() != nil {
 		convArg0 = value1.QWebEngineScript_PTR().GetCthis()

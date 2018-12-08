@@ -95,10 +95,10 @@ Creates a new semaphore and initializes the number of resources it guards to n (
 
 See also release() and available().
 */
-func (*QSemaphore) NewForInherit__() *QSemaphore {
-	return NewQSemaphore__()
+func (*QSemaphore) NewForInheritp() *QSemaphore {
+	return NewQSemaphorep()
 }
-func NewQSemaphore__() *QSemaphore {
+func NewQSemaphorep() *QSemaphore {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	n := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphoreC2Ei", qtrt.FFI_TYPE_POINTER, n)
@@ -148,7 +148,7 @@ Tries to acquire n resources guarded by the semaphore. If n > available(), this 
 
 See also release(), available(), and tryAcquire().
 */
-func (this *QSemaphore) Acquire__() {
+func (this *QSemaphore) Acquirep() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore7acquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
@@ -199,7 +199,7 @@ Example:
 
 See also acquire().
 */
-func (this *QSemaphore) TryAcquire__() bool {
+func (this *QSemaphore) TryAcquirep() bool {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
@@ -226,7 +226,7 @@ Example:
 
 See also acquire().
 */
-func (this *QSemaphore) TryAcquire_1(n int, timeout int) bool {
+func (this *QSemaphore) TryAcquire1(n int, timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n, timeout)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -281,7 +281,7 @@ QSemaphoreReleaser is a RAII wrapper around this function.
 
 See also acquire(), available(), and QSemaphoreReleaser.
 */
-func (this *QSemaphore) Release__() {
+func (this *QSemaphore) Releasep() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore7releaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)

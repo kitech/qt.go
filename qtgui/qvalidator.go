@@ -108,10 +108,10 @@ func NewQValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QValidator {
 /*
 Sets up the validator. The parent parameter is passed on to the QObject constructor.
 */
-func (*QValidator) NewForInherit__() *QValidator {
-	return NewQValidator__()
+func (*QValidator) NewForInheritp() *QValidator {
+	return NewQValidatorp()
 }
-func NewQValidator__() *QValidator {
+func NewQValidatorp() *QValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -184,7 +184,7 @@ This virtual function returns Invalid if input is invalid according to this vali
 The function can change both input and pos (the cursor position) if required.
 */
 func (this *QValidator) Validate(arg0 string, arg1 int) int {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
 	qtrt.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ This function attempts to change input to be valid according to this validator's
 Reimplementations of this function can change input even if they do not produce a valid string. For example, an ISBN validator might want to delete every character except digits and "-", even if the result is still not a valid ISBN; a surname validator might want to remove whitespace from the start and end of the string, even if the resulting string is not in the list of accepted surnames.
 */
 func (this *QValidator) Fixup(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator5fixupER7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

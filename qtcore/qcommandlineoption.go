@@ -80,7 +80,7 @@ func (*QCommandLineOption) NewForInherit(name string) *QCommandLineOption {
 	return NewQCommandLineOption(name)
 }
 func NewQCommandLineOption(name string) *QCommandLineOption {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -101,10 +101,10 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
-func (*QCommandLineOption) NewForInherit_1(names QStringList_ITF) *QCommandLineOption {
-	return NewQCommandLineOption_1(names)
+func (*QCommandLineOption) NewForInherit1(names QStringList_ITF) *QCommandLineOption {
+	return NewQCommandLineOption1(names)
 }
-func NewQCommandLineOption_1(names QStringList_ITF) *QCommandLineOption {
+func NewQCommandLineOption1(names QStringList_ITF) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {
 		convArg0 = names.QStringList_PTR().GetCthis()
@@ -128,17 +128,17 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
-func (*QCommandLineOption) NewForInherit_2(name string, description string, valueName string, defaultValue string) *QCommandLineOption {
-	return NewQCommandLineOption_2(name, description, valueName, defaultValue)
+func (*QCommandLineOption) NewForInherit2(name string, description string, valueName string, defaultValue string) *QCommandLineOption {
+	return NewQCommandLineOption2(name, description, valueName, defaultValue)
 }
-func NewQCommandLineOption_2(name string, description string, valueName string, defaultValue string) *QCommandLineOption {
-	var tmpArg0 = NewQString_5(name)
+func NewQCommandLineOption2(name string, description string, valueName string, defaultValue string) *QCommandLineOption {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(description)
+	var tmpArg1 = NewQString5(description)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(valueName)
+	var tmpArg2 = NewQString5(valueName)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = NewQString_5(defaultValue)
+	var tmpArg3 = NewQString5(defaultValue)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK7QStringS2_S2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -159,13 +159,13 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
-func (*QCommandLineOption) NewForInherit_2_(name string, description string) *QCommandLineOption {
-	return NewQCommandLineOption_2_(name, description)
+func (*QCommandLineOption) NewForInherit2p(name string, description string) *QCommandLineOption {
+	return NewQCommandLineOption2p(name, description)
 }
-func NewQCommandLineOption_2_(name string, description string) *QCommandLineOption {
-	var tmpArg0 = NewQString_5(name)
+func NewQCommandLineOption2p(name string, description string) *QCommandLineOption {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(description)
+	var tmpArg1 = NewQString5(description)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
@@ -190,15 +190,15 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
-func (*QCommandLineOption) NewForInherit_2_1(name string, description string, valueName string) *QCommandLineOption {
-	return NewQCommandLineOption_2_1(name, description, valueName)
+func (*QCommandLineOption) NewForInherit2p1(name string, description string, valueName string) *QCommandLineOption {
+	return NewQCommandLineOption2p1(name, description, valueName)
 }
-func NewQCommandLineOption_2_1(name string, description string, valueName string) *QCommandLineOption {
-	var tmpArg0 = NewQString_5(name)
+func NewQCommandLineOption2p1(name string, description string, valueName string) *QCommandLineOption {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(description)
+	var tmpArg1 = NewQString5(description)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(valueName)
+	var tmpArg2 = NewQString5(valueName)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
@@ -221,19 +221,19 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
-func (*QCommandLineOption) NewForInherit_3(names QStringList_ITF, description string, valueName string, defaultValue string) *QCommandLineOption {
-	return NewQCommandLineOption_3(names, description, valueName, defaultValue)
+func (*QCommandLineOption) NewForInherit3(names QStringList_ITF, description string, valueName string, defaultValue string) *QCommandLineOption {
+	return NewQCommandLineOption3(names, description, valueName, defaultValue)
 }
-func NewQCommandLineOption_3(names QStringList_ITF, description string, valueName string, defaultValue string) *QCommandLineOption {
+func NewQCommandLineOption3(names QStringList_ITF, description string, valueName string, defaultValue string) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {
 		convArg0 = names.QStringList_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(description)
+	var tmpArg1 = NewQString5(description)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(valueName)
+	var tmpArg2 = NewQString5(valueName)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = NewQString_5(defaultValue)
+	var tmpArg3 = NewQString5(defaultValue)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -254,15 +254,15 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
-func (*QCommandLineOption) NewForInherit_3_(names QStringList_ITF, description string) *QCommandLineOption {
-	return NewQCommandLineOption_3_(names, description)
+func (*QCommandLineOption) NewForInherit3p(names QStringList_ITF, description string) *QCommandLineOption {
+	return NewQCommandLineOption3p(names, description)
 }
-func NewQCommandLineOption_3_(names QStringList_ITF, description string) *QCommandLineOption {
+func NewQCommandLineOption3p(names QStringList_ITF, description string) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {
 		convArg0 = names.QStringList_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(description)
+	var tmpArg1 = NewQString5(description)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
@@ -287,17 +287,17 @@ The name can be either short or long. If the name is one character in length, it
 
 See also setDescription(), setValueName(), and setDefaultValues().
 */
-func (*QCommandLineOption) NewForInherit_3_1(names QStringList_ITF, description string, valueName string) *QCommandLineOption {
-	return NewQCommandLineOption_3_1(names, description, valueName)
+func (*QCommandLineOption) NewForInherit3p1(names QStringList_ITF, description string, valueName string) *QCommandLineOption {
+	return NewQCommandLineOption3p1(names, description, valueName)
 }
-func NewQCommandLineOption_3_1(names QStringList_ITF, description string, valueName string) *QCommandLineOption {
+func NewQCommandLineOption3p1(names QStringList_ITF, description string, valueName string) *QCommandLineOption {
 	var convArg0 unsafe.Pointer
 	if names != nil && names.QStringList_PTR() != nil {
 		convArg0 = names.QStringList_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(description)
+	var tmpArg1 = NewQString5(description)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(valueName)
+	var tmpArg2 = NewQString5(valueName)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
@@ -351,7 +351,7 @@ func (this *QCommandLineOption) Operator_equal(other QCommandLineOption_ITF) *QC
 /*
 
  */
-func (this *QCommandLineOption) Operator_equal_1(other unsafe.Pointer /*333*/) *QCommandLineOption {
+func (this *QCommandLineOption) Operator_equal1(other unsafe.Pointer /*333*/) *QCommandLineOption {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOptionaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -409,7 +409,7 @@ Call QCommandLineParser::value() if you expect the option to be present only onc
 See also valueName().
 */
 func (this *QCommandLineOption) SetValueName(name string) {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOption12setValueNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -451,7 +451,7 @@ The description is used by QCommandLineParser::showHelp().
 See also description().
 */
 func (this *QCommandLineOption) SetDescription(description string) {
-	var tmpArg0 = NewQString_5(description)
+	var tmpArg0 = NewQString5(description)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOption14setDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -491,7 +491,7 @@ If defaultValue is empty, the option has no default values.
 See also defaultValues() and setDefaultValues().
 */
 func (this *QCommandLineOption) SetDefaultValue(defaultValue string) {
-	var tmpArg0 = NewQString_5(defaultValue)
+	var tmpArg0 = NewQString5(defaultValue)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOption15setDefaultValueERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

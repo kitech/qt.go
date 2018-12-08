@@ -144,10 +144,10 @@ func NewQGraphicsEffect(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsE
 /*
 Constructs a new QGraphicsEffect instance having the specified parent.
 */
-func (*QGraphicsEffect) NewForInherit__() *QGraphicsEffect {
-	return NewQGraphicsEffect__()
+func (*QGraphicsEffect) NewForInheritp() *QGraphicsEffect {
+	return NewQGraphicsEffectp()
 }
-func NewQGraphicsEffect__() *QGraphicsEffect {
+func NewQGraphicsEffectp() *QGraphicsEffect {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -396,7 +396,7 @@ Calling this function with Qt::DeviceCoordinates outside of QGraphicsEffect::dra
 
 See also draw().
 */
-func (this *QGraphicsEffect) SourceBoundingRect__() *qtcore.QRectF /*123*/ {
+func (this *QGraphicsEffect) SourceBoundingRectp() *qtcore.QRectF /*123*/ {
 	// arg: 0, Qt::CoordinateSystem=Elaborated, Qt::CoordinateSystem=Enum, , Invalid
 	system := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsEffect18sourceBoundingRectEN2Qt16CoordinateSystemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), system)
@@ -486,7 +486,7 @@ Calling this function with Qt::DeviceCoordinates outside of QGraphicsEffect::dra
 
 See also draw() and boundingRect().
 */
-func (this *QGraphicsEffect) SourcePixmap__() *qtgui.QPixmap /*123*/ {
+func (this *QGraphicsEffect) SourcePixmapp() *qtgui.QPixmap /*123*/ {
 	// arg: 0, Qt::CoordinateSystem=Elaborated, Qt::CoordinateSystem=Enum, , Invalid
 	system := 0
 	// arg: 1, QPoint *=Pointer, QPoint=Record, , Invalid
@@ -516,7 +516,7 @@ Calling this function with Qt::DeviceCoordinates outside of QGraphicsEffect::dra
 
 See also draw() and boundingRect().
 */
-func (this *QGraphicsEffect) SourcePixmap__1(system int) *qtgui.QPixmap /*123*/ {
+func (this *QGraphicsEffect) SourcePixmapp1(system int) *qtgui.QPixmap /*123*/ {
 	// arg: 1, QPoint *=Pointer, QPoint=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, QGraphicsEffect::PixmapPadMode=Enum, QGraphicsEffect::PixmapPadMode=Enum, , Invalid
@@ -544,7 +544,7 @@ Calling this function with Qt::DeviceCoordinates outside of QGraphicsEffect::dra
 
 See also draw() and boundingRect().
 */
-func (this *QGraphicsEffect) SourcePixmap__2(system int, offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QPixmap /*123*/ {
+func (this *QGraphicsEffect) SourcePixmapp2(system int, offset qtcore.QPoint_ITF /*777 QPoint **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if offset != nil && offset.QPoint_PTR() != nil {
 		convArg1 = offset.QPoint_PTR().GetCthis()

@@ -96,10 +96,10 @@ func NewQAccessibleEvent(obj qtcore.QObject_ITF /*777 QObject **/, typ int) *QAc
 /*
 
  */
-func (*QAccessibleEvent) NewForInherit_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
-	return NewQAccessibleEvent_1(iface, typ)
+func (*QAccessibleEvent) NewForInherit1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
+	return NewQAccessibleEvent1(iface, typ)
 }
-func NewQAccessibleEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
+func NewQAccessibleEvent1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
 		convArg0 = iface.QAccessibleInterface_PTR().GetCthis()

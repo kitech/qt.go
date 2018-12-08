@@ -103,11 +103,11 @@ func NewQFile() *QFile {
 /*
 Constructs a QFile object.
 */
-func (*QFile) NewForInherit_1(name string) *QFile {
-	return NewQFile_1(name)
+func (*QFile) NewForInherit1(name string) *QFile {
+	return NewQFile1(name)
 }
-func NewQFile_1(name string) *QFile {
-	var tmpArg0 = NewQString_5(name)
+func NewQFile1(name string) *QFile {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -124,10 +124,10 @@ func NewQFile_1(name string) *QFile {
 /*
 Constructs a QFile object.
 */
-func (*QFile) NewForInherit_2(parent QObject_ITF /*777 QObject **/) *QFile {
-	return NewQFile_2(parent)
+func (*QFile) NewForInherit2(parent QObject_ITF /*777 QObject **/) *QFile {
+	return NewQFile2(parent)
 }
-func NewQFile_2(parent QObject_ITF /*777 QObject **/) *QFile {
+func NewQFile2(parent QObject_ITF /*777 QObject **/) *QFile {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
@@ -147,11 +147,11 @@ func NewQFile_2(parent QObject_ITF /*777 QObject **/) *QFile {
 /*
 Constructs a QFile object.
 */
-func (*QFile) NewForInherit_3(name string, parent QObject_ITF /*777 QObject **/) *QFile {
-	return NewQFile_3(name, parent)
+func (*QFile) NewForInherit3(name string, parent QObject_ITF /*777 QObject **/) *QFile {
+	return NewQFile3(name, parent)
 }
-func NewQFile_3(name string, parent QObject_ITF /*777 QObject **/) *QFile {
-	var tmpArg0 = NewQString_5(name)
+func NewQFile3(name string, parent QObject_ITF /*777 QObject **/) *QFile {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -228,7 +228,7 @@ Note that the directory separator "/" works for all operating systems supported 
 See also fileName(), QFileInfo, and QDir.
 */
 func (this *QFile) SetFileName(name string) {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -245,7 +245,7 @@ Converts fileName to the local 8-bit encoding determined by the user's locale. T
 See also decodeName().
 */
 func (this *QFile) EncodeName(fileName string) *QByteArray /*123*/ {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile10encodeNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -297,7 +297,7 @@ This does the reverse of QFile::encodeName() using localFileName.
 
 See also encodeName().
 */
-func (this *QFile) DecodeName_1(localFileName string) string {
+func (this *QFile) DecodeName1(localFileName string) string {
 	var convArg0 = qtrt.CString(localFileName)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile10decodeNameEPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -307,9 +307,9 @@ func (this *QFile) DecodeName_1(localFileName string) string {
 	/*==*/ DeleteQString(rv2)
 	return rv3
 }
-func QFile_DecodeName_1(localFileName string) string {
+func QFile_DecodeName1(localFileName string) string {
 	var nilthis *QFile
-	rv := nilthis.DecodeName_1(localFileName)
+	rv := nilthis.DecodeName1(localFileName)
 	return rv
 }
 
@@ -339,16 +339,16 @@ Returns true if the file specified by fileName exists; otherwise returns false.
 
 Note: If fileName is a symlink that points to a non-existing file, false is returned.
 */
-func (this *QFile) Exists_1(fileName string) bool {
-	var tmpArg0 = NewQString_5(fileName)
+func (this *QFile) Exists1(fileName string) bool {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6existsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QFile_Exists_1(fileName string) bool {
+func QFile_Exists1(fileName string) bool {
 	var nilthis *QFile
-	rv := nilthis.Exists_1(fileName)
+	rv := nilthis.Exists1(fileName)
 	return rv
 }
 
@@ -377,8 +377,8 @@ func (this *QFile) ReadLink() string {
 /*
 
  */
-func (this *QFile) ReadLink_1(fileName string) string {
-	var tmpArg0 = NewQString_5(fileName)
+func (this *QFile) ReadLink1(fileName string) string {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile8readLinkERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -387,9 +387,9 @@ func (this *QFile) ReadLink_1(fileName string) string {
 	/*==*/ DeleteQString(rv2)
 	return rv3
 }
-func QFile_ReadLink_1(fileName string) string {
+func QFile_ReadLink1(fileName string) string {
 	var nilthis *QFile
-	rv := nilthis.ReadLink_1(fileName)
+	rv := nilthis.ReadLink1(fileName)
 	return rv
 }
 
@@ -426,8 +426,8 @@ This name may not represent an existing file; it is only a string. QFile::exists
 
 This function was introduced in  Qt 4.2.
 */
-func (this *QFile) SymLinkTarget_1(fileName string) string {
-	var tmpArg0 = NewQString_5(fileName)
+func (this *QFile) SymLinkTarget1(fileName string) string {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile13symLinkTargetERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -436,9 +436,9 @@ func (this *QFile) SymLinkTarget_1(fileName string) string {
 	/*==*/ DeleteQString(rv2)
 	return rv3
 }
-func QFile_SymLinkTarget_1(fileName string) string {
+func QFile_SymLinkTarget1(fileName string) string {
 	var nilthis *QFile
-	rv := nilthis.SymLinkTarget_1(fileName)
+	rv := nilthis.SymLinkTarget1(fileName)
 	return rv
 }
 
@@ -472,16 +472,16 @@ The file is closed before it is removed.
 
 See also setFileName().
 */
-func (this *QFile) Remove_1(fileName string) bool {
-	var tmpArg0 = NewQString_5(fileName)
+func (this *QFile) Remove1(fileName string) bool {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6removeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QFile_Remove_1(fileName string) bool {
+func QFile_Remove1(fileName string) bool {
 	var nilthis *QFile
-	rv := nilthis.Remove_1(fileName)
+	rv := nilthis.Remove1(fileName)
 	return rv
 }
 
@@ -502,7 +502,7 @@ If the rename operation fails, Qt will attempt to copy this file's contents to n
 See also setFileName().
 */
 func (this *QFile) Rename(newName string) bool {
-	var tmpArg0 = NewQString_5(newName)
+	var tmpArg0 = NewQString5(newName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6renameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -525,18 +525,18 @@ If the rename operation fails, Qt will attempt to copy this file's contents to n
 
 See also setFileName().
 */
-func (this *QFile) Rename_1(oldName string, newName string) bool {
-	var tmpArg0 = NewQString_5(oldName)
+func (this *QFile) Rename1(oldName string, newName string) bool {
+	var tmpArg0 = NewQString5(oldName)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(newName)
+	var tmpArg1 = NewQString5(newName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6renameERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QFile_Rename_1(oldName string, newName string) bool {
+func QFile_Rename1(oldName string, newName string) bool {
 	var nilthis *QFile
-	rv := nilthis.Rename_1(oldName, newName)
+	rv := nilthis.Rename1(oldName, newName)
 	return rv
 }
 
@@ -555,7 +555,7 @@ Note: To create a valid link on Windows, linkName must have a .lnk file extensio
 See also setFileName().
 */
 func (this *QFile) Link(newName string) bool {
-	var tmpArg0 = NewQString_5(newName)
+	var tmpArg0 = NewQString5(newName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4linkERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -576,18 +576,18 @@ Note: To create a valid link on Windows, linkName must have a .lnk file extensio
 
 See also setFileName().
 */
-func (this *QFile) Link_1(oldname string, newName string) bool {
-	var tmpArg0 = NewQString_5(oldname)
+func (this *QFile) Link1(oldname string, newName string) bool {
+	var tmpArg0 = NewQString5(oldname)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(newName)
+	var tmpArg1 = NewQString5(newName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4linkERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QFile_Link_1(oldname string, newName string) bool {
+func QFile_Link1(oldname string, newName string) bool {
 	var nilthis *QFile
-	rv := nilthis.Link_1(oldname, newName)
+	rv := nilthis.Link1(oldname, newName)
 	return rv
 }
 
@@ -606,7 +606,7 @@ The source file is closed before it is copied.
 See also setFileName().
 */
 func (this *QFile) Copy(newName string) bool {
-	var tmpArg0 = NewQString_5(newName)
+	var tmpArg0 = NewQString5(newName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4copyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -627,18 +627,18 @@ The source file is closed before it is copied.
 
 See also setFileName().
 */
-func (this *QFile) Copy_1(fileName string, newName string) bool {
-	var tmpArg0 = NewQString_5(fileName)
+func (this *QFile) Copy1(fileName string, newName string) bool {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(newName)
+	var tmpArg1 = NewQString5(newName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4copyERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QFile_Copy_1(fileName string, newName string) bool {
+func QFile_Copy1(fileName string, newName string) bool {
 	var nilthis *QFile
-	rv := nilthis.Copy_1(fileName, newName)
+	rv := nilthis.Copy1(fileName, newName)
 	return rv
 }
 
@@ -680,7 +680,7 @@ Note: In WriteOnly or ReadWrite mode, if the relevant file does not already exis
 
 See also QIODevice::OpenMode and setFileName().
 */
-func (this *QFile) Open_1(fd int, ioFlags int, handleFlags int) bool {
+func (this *QFile) Open1(fd int, ioFlags int, handleFlags int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4openEi6QFlagsIN9QIODevice12OpenModeFlagEES0_IN11QFileDevice14FileHandleFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fd, ioFlags, handleFlags)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -702,7 +702,7 @@ Note: In WriteOnly or ReadWrite mode, if the relevant file does not already exis
 
 See also QIODevice::OpenMode and setFileName().
 */
-func (this *QFile) Open_1_(fd int, ioFlags int) bool {
+func (this *QFile) Open1p(fd int, ioFlags int) bool {
 	// arg: 2, QFileDevice::FileHandleFlags=Typedef, QFileDevice::FileHandleFlags=Typedef, QFlags<QFileDevice::FileHandleFlag>, Unexposed
 	handleFlags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4openEi6QFlagsIN9QIODevice12OpenModeFlagEES0_IN11QFileDevice14FileHandleFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fd, ioFlags, handleFlags)
@@ -746,16 +746,16 @@ func (this *QFile) Resize(sz int64) bool {
 /*
 Reimplemented from QFileDevice::resize().
 */
-func (this *QFile) Resize_1(filename string, sz int64) bool {
-	var tmpArg0 = NewQString_5(filename)
+func (this *QFile) Resize1(filename string, sz int64) bool {
+	var tmpArg0 = NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6resizeERK7QStringx", qtrt.FFI_TYPE_POINTER, convArg0, sz)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QFile_Resize_1(filename string, sz int64) bool {
+func QFile_Resize1(filename string, sz int64) bool {
 	var nilthis *QFile
-	rv := nilthis.Resize_1(filename, sz)
+	rv := nilthis.Resize1(filename, sz)
 	return rv
 }
 
@@ -785,16 +785,16 @@ Reimplemented from QFileDevice::permissions().
 
 See also setPermissions().
 */
-func (this *QFile) Permissions_1(filename string) int {
-	var tmpArg0 = NewQString_5(filename)
+func (this *QFile) Permissions1(filename string) int {
+	var tmpArg0 = NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile11permissionsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QFile_Permissions_1(filename string) int {
+func QFile_Permissions1(filename string) int {
 	var nilthis *QFile
-	rv := nilthis.Permissions_1(filename)
+	rv := nilthis.Permissions1(filename)
 	return rv
 }
 
@@ -832,16 +832,16 @@ Warning: This function does not manipulate ACLs, which may limit its effectivene
 
 See also permissions() and setFileName().
 */
-func (this *QFile) SetPermissions_1(filename string, permissionSpec int) bool {
-	var tmpArg0 = NewQString_5(filename)
+func (this *QFile) SetPermissions1(filename string, permissionSpec int) bool {
+	var tmpArg0 = NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile14setPermissionsERK7QString6QFlagsIN11QFileDevice10PermissionEE", qtrt.FFI_TYPE_POINTER, convArg0, permissionSpec)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QFile_SetPermissions_1(filename string, permissionSpec int) bool {
+func QFile_SetPermissions1(filename string, permissionSpec int) bool {
 	var nilthis *QFile
-	rv := nilthis.SetPermissions_1(filename, permissionSpec)
+	rv := nilthis.SetPermissions1(filename, permissionSpec)
 	return rv
 }
 

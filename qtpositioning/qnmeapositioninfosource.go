@@ -113,10 +113,10 @@ func NewQNmeaPositionInfoSource(updateMode int, parent qtcore.QObject_ITF /*777 
 /*
 Constructs a QNmeaPositionInfoSource instance with the given parent and updateMode.
 */
-func (*QNmeaPositionInfoSource) NewForInherit__(updateMode int) *QNmeaPositionInfoSource {
-	return NewQNmeaPositionInfoSource__(updateMode)
+func (*QNmeaPositionInfoSource) NewForInheritp(updateMode int) *QNmeaPositionInfoSource {
+	return NewQNmeaPositionInfoSourcep(updateMode)
 }
-func NewQNmeaPositionInfoSource__(updateMode int) *QNmeaPositionInfoSource {
+func NewQNmeaPositionInfoSourcep(updateMode int) *QNmeaPositionInfoSource {
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QNmeaPositionInfoSourceC2ENS_10UpdateModeEP7QObject", qtrt.FFI_TYPE_POINTER, updateMode, convArg1)
@@ -270,7 +270,7 @@ func (this *QNmeaPositionInfoSource) LastKnownPosition(fromSatellitePositioningM
 /*
 Reimplemented from QGeoPositionInfoSource::lastKnownPosition().
 */
-func (this *QNmeaPositionInfoSource) LastKnownPosition__() *QGeoPositionInfo /*123*/ {
+func (this *QNmeaPositionInfoSource) LastKnownPositionp() *QGeoPositionInfo /*123*/ {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	fromSatellitePositioningMethodsOnly := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QNmeaPositionInfoSource17lastKnownPositionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fromSatellitePositioningMethodsOnly)
@@ -369,7 +369,7 @@ func (this *QNmeaPositionInfoSource) RequestUpdate(timeout int) {
 /*
 Reimplemented from QGeoPositionInfoSource::requestUpdate().
 */
-func (this *QNmeaPositionInfoSource) RequestUpdate__() {
+func (this *QNmeaPositionInfoSource) RequestUpdatep() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	timeout := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QNmeaPositionInfoSource13requestUpdateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)

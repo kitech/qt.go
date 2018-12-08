@@ -160,10 +160,10 @@ func NewQCameraViewfinderSettingsControl2(parent qtcore.QObject_ITF /*777 QObjec
 /*
 
  */
-func (*QCameraViewfinderSettingsControl2) NewForInherit__() *QCameraViewfinderSettingsControl2 {
-	return NewQCameraViewfinderSettingsControl2__()
+func (*QCameraViewfinderSettingsControl2) NewForInheritp() *QCameraViewfinderSettingsControl2 {
+	return NewQCameraViewfinderSettingsControl2p()
 }
-func NewQCameraViewfinderSettingsControl2__() *QCameraViewfinderSettingsControl2 {
+func NewQCameraViewfinderSettingsControl2p() *QCameraViewfinderSettingsControl2 {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN33QCameraViewfinderSettingsControl2C2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

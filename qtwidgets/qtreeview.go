@@ -288,10 +288,10 @@ Constructs a tree view with a parent to represent a model's data. Use setModel()
 
 See also QAbstractItemModel.
 */
-func (*QTreeView) NewForInherit__() *QTreeView {
-	return NewQTreeView__()
+func (*QTreeView) NewForInheritp() *QTreeView {
+	return NewQTreeViewp()
 }
-func NewQTreeView__() *QTreeView {
+func NewQTreeViewp() *QTreeView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -971,7 +971,7 @@ func (this *QTreeView) TreePosition() int {
 Reimplemented from QAbstractItemView::keyboardSearch().
 */
 func (this *QTreeView) KeyboardSearch(search string) {
-	var tmpArg0 = qtcore.NewQString_5(search)
+	var tmpArg0 = qtcore.NewQString5(search)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView14keyboardSearchERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1028,7 +1028,7 @@ Reimplemented from QAbstractItemView::scrollTo().
 
 Scroll the contents of the tree view until the given model item index is visible. The hint parameter specifies more precisely where the item should be located after the operation. If any of the parents of the model item are collapsed, they will be expanded to ensure that the model item is visible.
 */
-func (this *QTreeView) ScrollTo__(index qtcore.QModelIndex_ITF) {
+func (this *QTreeView) ScrollTop(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -1158,7 +1158,7 @@ This function was introduced in  Qt 4.2.
 
 See also sortingEnabled.
 */
-func (this *QTreeView) SortByColumn_1(column int) {
+func (this *QTreeView) SortByColumn1(column int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView12sortByColumnEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
 }

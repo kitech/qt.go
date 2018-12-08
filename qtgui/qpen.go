@@ -92,10 +92,10 @@ func NewQPen() *QPen {
 /*
 Constructs a default black solid line pen with 1 width.
 */
-func (*QPen) NewForInherit_1(arg0 int) *QPen {
-	return NewQPen_1(arg0)
+func (*QPen) NewForInherit1(arg0 int) *QPen {
+	return NewQPen1(arg0)
 }
-func NewQPen_1(arg0 int) *QPen {
+func NewQPen1(arg0 int) *QPen {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2EN2Qt8PenStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQPen_1(arg0 int) *QPen {
 /*
 Constructs a default black solid line pen with 1 width.
 */
-func (*QPen) NewForInherit_2(color QColor_ITF) *QPen {
-	return NewQPen_2(color)
+func (*QPen) NewForInherit2(color QColor_ITF) *QPen {
+	return NewQPen2(color)
 }
-func NewQPen_2(color QColor_ITF) *QPen {
+func NewQPen2(color QColor_ITF) *QPen {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
 		convArg0 = color.QColor_PTR().GetCthis()
@@ -134,10 +134,10 @@ func NewQPen_2(color QColor_ITF) *QPen {
 /*
 Constructs a default black solid line pen with 1 width.
 */
-func (*QPen) NewForInherit_3(brush QBrush_ITF, width float64, s int, c int, j int) *QPen {
-	return NewQPen_3(brush, width, s, c, j)
+func (*QPen) NewForInherit3(brush QBrush_ITF, width float64, s int, c int, j int) *QPen {
+	return NewQPen3(brush, width, s, c, j)
 }
-func NewQPen_3(brush QBrush_ITF, width float64, s int, c int, j int) *QPen {
+func NewQPen3(brush QBrush_ITF, width float64, s int, c int, j int) *QPen {
 	var convArg0 unsafe.Pointer
 	if brush != nil && brush.QBrush_PTR() != nil {
 		convArg0 = brush.QBrush_PTR().GetCthis()
@@ -157,10 +157,10 @@ func NewQPen_3(brush QBrush_ITF, width float64, s int, c int, j int) *QPen {
 /*
 Constructs a default black solid line pen with 1 width.
 */
-func (*QPen) NewForInherit_3_(brush QBrush_ITF, width float64) *QPen {
-	return NewQPen_3_(brush, width)
+func (*QPen) NewForInherit3p(brush QBrush_ITF, width float64) *QPen {
+	return NewQPen3p(brush, width)
 }
-func NewQPen_3_(brush QBrush_ITF, width float64) *QPen {
+func NewQPen3p(brush QBrush_ITF, width float64) *QPen {
 	var convArg0 unsafe.Pointer
 	if brush != nil && brush.QBrush_PTR() != nil {
 		convArg0 = brush.QBrush_PTR().GetCthis()
@@ -186,10 +186,10 @@ func NewQPen_3_(brush QBrush_ITF, width float64) *QPen {
 /*
 Constructs a default black solid line pen with 1 width.
 */
-func (*QPen) NewForInherit_3_1(brush QBrush_ITF, width float64, s int) *QPen {
-	return NewQPen_3_1(brush, width, s)
+func (*QPen) NewForInherit3p1(brush QBrush_ITF, width float64, s int) *QPen {
+	return NewQPen3p1(brush, width, s)
 }
-func NewQPen_3_1(brush QBrush_ITF, width float64, s int) *QPen {
+func NewQPen3p1(brush QBrush_ITF, width float64, s int) *QPen {
 	var convArg0 unsafe.Pointer
 	if brush != nil && brush.QBrush_PTR() != nil {
 		convArg0 = brush.QBrush_PTR().GetCthis()
@@ -213,10 +213,10 @@ func NewQPen_3_1(brush QBrush_ITF, width float64, s int) *QPen {
 /*
 Constructs a default black solid line pen with 1 width.
 */
-func (*QPen) NewForInherit_3_2(brush QBrush_ITF, width float64, s int, c int) *QPen {
-	return NewQPen_3_2(brush, width, s, c)
+func (*QPen) NewForInherit3p2(brush QBrush_ITF, width float64, s int, c int) *QPen {
+	return NewQPen3p2(brush, width, s, c)
 }
-func NewQPen_3_2(brush QBrush_ITF, width float64, s int, c int) *QPen {
+func NewQPen3p2(brush QBrush_ITF, width float64, s int, c int) *QPen {
 	var convArg0 unsafe.Pointer
 	if brush != nil && brush.QBrush_PTR() != nil {
 		convArg0 = brush.QBrush_PTR().GetCthis()
@@ -273,7 +273,7 @@ func (this *QPen) Operator_equal(pen QPen_ITF) *QPen {
 /*
 
  */
-func (this *QPen) Operator_equal_1(other unsafe.Pointer /*333*/) *QPen {
+func (this *QPen) Operator_equal1(other unsafe.Pointer /*333*/) *QPen {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPenFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

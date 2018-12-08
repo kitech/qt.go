@@ -129,10 +129,10 @@ func NewQSequentialAnimationGroup(parent QObject_ITF /*777 QObject **/) *QSequen
 /*
 Constructs a QSequentialAnimationGroup. parent is passed to QObject's constructor.
 */
-func (*QSequentialAnimationGroup) NewForInherit__() *QSequentialAnimationGroup {
-	return NewQSequentialAnimationGroup__()
+func (*QSequentialAnimationGroup) NewForInheritp() *QSequentialAnimationGroup {
+	return NewQSequentialAnimationGroupp()
 }
-func NewQSequentialAnimationGroup__() *QSequentialAnimationGroup {
+func NewQSequentialAnimationGroupp() *QSequentialAnimationGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QSequentialAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

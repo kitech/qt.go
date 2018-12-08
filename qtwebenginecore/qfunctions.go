@@ -54,7 +54,7 @@ func init() {
 /*
 
  */
-func Swap_85(value1 QWebEngineHttpRequest_ITF, value2 QWebEngineHttpRequest_ITF) {
+func Swap85(value1 QWebEngineHttpRequest_ITF, value2 QWebEngineHttpRequest_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QWebEngineHttpRequest_PTR() != nil {
 		convArg0 = value1.QWebEngineHttpRequest_PTR().GetCthis()

@@ -129,7 +129,7 @@ func QColormap_Instance(screen int) *QColormap /*123*/ {
 /*
 Returns the colormap for the specified screen. If screen is -1, this function returns the colormap for the default screen.
 */
-func (this *QColormap) Instance__() *QColormap /*123*/ {
+func (this *QColormap) Instancep() *QColormap /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	screen := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QColormap8instanceEi", qtrt.FFI_TYPE_POINTER, screen)

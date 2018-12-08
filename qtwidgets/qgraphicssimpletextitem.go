@@ -110,10 +110,10 @@ func NewQGraphicsSimpleTextItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/
 /*
 
  */
-func (*QGraphicsSimpleTextItem) NewForInherit__() *QGraphicsSimpleTextItem {
-	return NewQGraphicsSimpleTextItem__()
+func (*QGraphicsSimpleTextItem) NewForInheritp() *QGraphicsSimpleTextItem {
+	return NewQGraphicsSimpleTextItemp()
 }
-func NewQGraphicsSimpleTextItem__() *QGraphicsSimpleTextItem {
+func NewQGraphicsSimpleTextItemp() *QGraphicsSimpleTextItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -131,11 +131,11 @@ func NewQGraphicsSimpleTextItem__() *QGraphicsSimpleTextItem {
 /*
 
  */
-func (*QGraphicsSimpleTextItem) NewForInherit_1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSimpleTextItem {
-	return NewQGraphicsSimpleTextItem_1(text, parent)
+func (*QGraphicsSimpleTextItem) NewForInherit1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSimpleTextItem {
+	return NewQGraphicsSimpleTextItem1(text, parent)
 }
-func NewQGraphicsSimpleTextItem_1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSimpleTextItem {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQGraphicsSimpleTextItem1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSimpleTextItem {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -156,11 +156,11 @@ func NewQGraphicsSimpleTextItem_1(text string, parent QGraphicsItem_ITF /*777 QG
 /*
 
  */
-func (*QGraphicsSimpleTextItem) NewForInherit_1_(text string) *QGraphicsSimpleTextItem {
-	return NewQGraphicsSimpleTextItem_1_(text)
+func (*QGraphicsSimpleTextItem) NewForInherit1p(text string) *QGraphicsSimpleTextItem {
+	return NewQGraphicsSimpleTextItem1p(text)
 }
-func NewQGraphicsSimpleTextItem_1_(text string) *QGraphicsSimpleTextItem {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQGraphicsSimpleTextItem1p(text string) *QGraphicsSimpleTextItem {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -195,7 +195,7 @@ func DeleteQGraphicsSimpleTextItem(this *QGraphicsSimpleTextItem) {
 
  */
 func (this *QGraphicsSimpleTextItem) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItem7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

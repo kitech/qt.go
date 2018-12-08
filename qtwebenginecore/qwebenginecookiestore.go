@@ -127,7 +127,7 @@ func (this *QWebEngineCookieStore) SetCookie(cookie qtnetwork.QNetworkCookie_ITF
 /*
 
  */
-func (this *QWebEngineCookieStore) SetCookie__(cookie qtnetwork.QNetworkCookie_ITF) {
+func (this *QWebEngineCookieStore) SetCookiep(cookie qtnetwork.QNetworkCookie_ITF) {
 	var convArg0 unsafe.Pointer
 	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {
 		convArg0 = cookie.QNetworkCookie_PTR().GetCthis()
@@ -167,7 +167,7 @@ func (this *QWebEngineCookieStore) DeleteCookie(cookie qtnetwork.QNetworkCookie_
 /*
 
  */
-func (this *QWebEngineCookieStore) DeleteCookie__(cookie qtnetwork.QNetworkCookie_ITF) {
+func (this *QWebEngineCookieStore) DeleteCookiep(cookie qtnetwork.QNetworkCookie_ITF) {
 	var convArg0 unsafe.Pointer
 	if cookie != nil && cookie.QNetworkCookie_PTR() != nil {
 		convArg0 = cookie.QNetworkCookie_PTR().GetCthis()

@@ -193,13 +193,13 @@ func ExternalRefCountData_Operator_delete(ptr unsafe.Pointer /*666*/) {
 /*
 
  */
-func (this *ExternalRefCountData) Operator_delete_1(arg0 unsafe.Pointer /*666*/, arg1 unsafe.Pointer /*666*/) {
+func (this *ExternalRefCountData) Operator_delete1(arg0 unsafe.Pointer /*666*/, arg1 unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDatadlEPvS1_", qtrt.FFI_TYPE_POINTER, arg0, arg1)
 	qtrt.ErrPrint(err, rv)
 }
-func ExternalRefCountData_Operator_delete_1(arg0 unsafe.Pointer /*666*/, arg1 unsafe.Pointer /*666*/) {
+func ExternalRefCountData_Operator_delete1(arg0 unsafe.Pointer /*666*/, arg1 unsafe.Pointer /*666*/) {
 	var nilthis *ExternalRefCountData
-	nilthis.Operator_delete_1(arg0, arg1)
+	nilthis.Operator_delete1(arg0, arg1)
 }
 
 //  body block end

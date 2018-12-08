@@ -204,10 +204,10 @@ Constructs a new QThread to manage a new thread. The parent takes ownership of t
 
 See also start().
 */
-func (*QThread) NewForInherit__() *QThread {
-	return NewQThread__()
+func (*QThread) NewForInheritp() *QThread {
+	return NewQThreadp()
 }
-func NewQThread__() *QThread {
+func NewQThreadp() *QThread {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThreadC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -425,7 +425,7 @@ No QEventLoops will be started anymore in this thread until QThread::exec() has 
 
 See also quit() and QEventLoop.
 */
-func (this *QThread) Exit__() {
+func (this *QThread) Exitp() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	retcode := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread4exitEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), retcode)
@@ -536,7 +536,7 @@ The effect of the priority parameter is dependent on the operating system's sche
 
 See also run() and terminate().
 */
-func (this *QThread) Start__() {
+func (this *QThread) Startp() {
 	// arg: 0, QThread::Priority=Enum, QThread::Priority=Enum, , Invalid
 	arg0 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread5startENS_8PriorityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
@@ -621,7 +621,7 @@ This provides similar functionality to the POSIX pthread_join() function.
 
 See also sleep() and terminate().
 */
-func (this *QThread) Wait__() bool {
+func (this *QThread) Waitp() bool {
 	// arg: 0, unsigned long=ULong, =Invalid, , Invalid
 	time := -1
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread4waitEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), time)
@@ -758,7 +758,7 @@ When enabled is true, termination is enabled. Future calls to QThread::terminate
 
 See also terminate().
 */
-func (this *QThread) SetTerminationEnabled__() {
+func (this *QThread) SetTerminationEnabledp() {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread21setTerminationEnabledEb", qtrt.FFI_TYPE_POINTER, enabled)

@@ -110,7 +110,7 @@ Sets the target rect of this image node to rect.
 
 See also rect().
 */
-func (this *QSGImageNode) SetRect_1(x float64, y float64, w float64, h float64) {
+func (this *QSGImageNode) SetRect1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -162,7 +162,7 @@ Sets the source rect of this image node to rect.
 
 See also sourceRect().
 */
-func (this *QSGImageNode) SetSourceRect_1(x float64, y float64, w float64, h float64) {
+func (this *QSGImageNode) SetSourceRect1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSGImageNode13setSourceRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }

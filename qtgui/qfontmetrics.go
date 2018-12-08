@@ -108,10 +108,10 @@ The font metrics object holds the information for the font that is passed in the
 
 Use QFontMetrics(const QFont &, QPaintDevice *) to get the font metrics that are compatible with a certain paint device.
 */
-func (*QFontMetrics) NewForInherit_1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFontMetrics {
-	return NewQFontMetrics_1(arg0, pd)
+func (*QFontMetrics) NewForInherit1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFontMetrics {
+	return NewQFontMetrics1(arg0, pd)
 }
-func NewQFontMetrics_1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFontMetrics {
+func NewQFontMetrics1(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFontMetrics {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {
 		convArg0 = arg0.QFont_PTR().GetCthis()
@@ -170,7 +170,7 @@ func (this *QFontMetrics) Operator_equal(arg0 QFontMetrics_ITF) *QFontMetrics {
 /*
 
  */
-func (this *QFontMetrics) Operator_equal_1(other unsafe.Pointer /*333*/) *QFontMetrics {
+func (this *QFontMetrics) Operator_equal1(other unsafe.Pointer /*333*/) *QFontMetrics {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QFontMetricsaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQFontMetricsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -484,7 +484,7 @@ Note that this value is not equal to boundingRect().width(); boundingRect() retu
 See also boundingRect().
 */
 func (this *QFontMetrics) Width(arg0 string, len_ int) int {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics5widthERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
 	qtrt.ErrPrint(err, rv)
@@ -503,8 +503,8 @@ Note that this value is not equal to boundingRect().width(); boundingRect() retu
 
 See also boundingRect().
 */
-func (this *QFontMetrics) Width__(arg0 string) int {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func (this *QFontMetrics) Widthp(arg0 string) int {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	len_ := int(-1)
@@ -525,8 +525,8 @@ Note that this value is not equal to boundingRect().width(); boundingRect() retu
 
 See also boundingRect().
 */
-func (this *QFontMetrics) Width_1(arg0 string, len_ int, flags int) int {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func (this *QFontMetrics) Width1(arg0 string, len_ int, flags int) int {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics5widthERK7QStringii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_, flags)
 	qtrt.ErrPrint(err, rv)
@@ -545,7 +545,7 @@ Note that this value is not equal to boundingRect().width(); boundingRect() retu
 
 See also boundingRect().
 */
-func (this *QFontMetrics) Width_2(arg0 qtcore.QChar_ITF /*123*/) int {
+func (this *QFontMetrics) Width2(arg0 qtcore.QChar_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QChar_PTR() != nil {
 		convArg0 = arg0.QChar_PTR().GetCthis()
@@ -564,7 +564,7 @@ func (this *QFontMetrics) Width_2(arg0 qtcore.QChar_ITF /*123*/) int {
 
  */
 func (this *QFontMetrics) CharWidth(str string, pos int) int {
-	var tmpArg0 = qtcore.NewQString_5(str)
+	var tmpArg0 = qtcore.NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics9charWidthERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pos)
 	qtrt.ErrPrint(err, rv)
@@ -615,8 +615,8 @@ Warning: The width of the returned rectangle is not the advance width of the cha
 
 See also width().
 */
-func (this *QFontMetrics) BoundingRect_1(text string) *qtcore.QRect /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QFontMetrics) BoundingRect1(text string) *qtcore.QRect /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -641,12 +641,12 @@ Warning: The width of the returned rectangle is not the advance width of the cha
 
 See also width().
 */
-func (this *QFontMetrics) BoundingRect_2(r qtcore.QRect_ITF, flags int, text string, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QRect /*123*/ {
+func (this *QFontMetrics) BoundingRect2(r qtcore.QRect_ITF, flags int, text string, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags, convArg2, tabstops, tabarray)
 	qtrt.ErrPrint(err, rv)
@@ -671,12 +671,12 @@ Warning: The width of the returned rectangle is not the advance width of the cha
 
 See also width().
 */
-func (this *QFontMetrics) BoundingRect_2_(r qtcore.QRect_ITF, flags int, text string) *qtcore.QRect /*123*/ {
+func (this *QFontMetrics) BoundingRect2p(r qtcore.QRect_ITF, flags int, text string) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, int=Int, =Invalid, , Invalid
 	tabstops := int(0)
@@ -705,12 +705,12 @@ Warning: The width of the returned rectangle is not the advance width of the cha
 
 See also width().
 */
-func (this *QFontMetrics) BoundingRect_2_1(r qtcore.QRect_ITF, flags int, text string, tabstops int) *qtcore.QRect /*123*/ {
+func (this *QFontMetrics) BoundingRect2p1(r qtcore.QRect_ITF, flags int, text string, tabstops int) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, int *=Pointer, =Invalid, , Invalid
 	var tabarray unsafe.Pointer
@@ -737,8 +737,8 @@ Warning: The width of the returned rectangle is not the advance width of the cha
 
 See also width().
 */
-func (this *QFontMetrics) BoundingRect_3(x int, y int, w int, h int, flags int, text string, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QRect /*123*/ {
-	var tmpArg5 = qtcore.NewQString_5(text)
+func (this *QFontMetrics) BoundingRect3(x int, y int, w int, h int, flags int, text string, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QRect /*123*/ {
+	var tmpArg5 = qtcore.NewQString5(text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, flags, convArg5, tabstops, tabarray)
 	qtrt.ErrPrint(err, rv)
@@ -763,8 +763,8 @@ Warning: The width of the returned rectangle is not the advance width of the cha
 
 See also width().
 */
-func (this *QFontMetrics) BoundingRect_3_(x int, y int, w int, h int, flags int, text string) *qtcore.QRect /*123*/ {
-	var tmpArg5 = qtcore.NewQString_5(text)
+func (this *QFontMetrics) BoundingRect3p(x int, y int, w int, h int, flags int, text string) *qtcore.QRect /*123*/ {
+	var tmpArg5 = qtcore.NewQString5(text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 6, int=Int, =Invalid, , Invalid
 	tabstops := int(0)
@@ -793,8 +793,8 @@ Warning: The width of the returned rectangle is not the advance width of the cha
 
 See also width().
 */
-func (this *QFontMetrics) BoundingRect_3_1(x int, y int, w int, h int, flags int, text string, tabstops int) *qtcore.QRect /*123*/ {
-	var tmpArg5 = qtcore.NewQString_5(text)
+func (this *QFontMetrics) BoundingRect3p1(x int, y int, w int, h int, flags int, text string, tabstops int) *qtcore.QRect /*123*/ {
+	var tmpArg5 = qtcore.NewQString5(text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 7, int *=Pointer, =Invalid, , Invalid
 	var tabarray unsafe.Pointer
@@ -831,7 +831,7 @@ Despite the different actual character heights, the heights of the bounding rect
 See also boundingRect().
 */
 func (this *QFontMetrics) Size(flags int, str string, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QSize /*123*/ {
-	var tmpArg1 = qtcore.NewQString_5(str)
+	var tmpArg1 = qtcore.NewQString5(str)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics4sizeEiRK7QStringiPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags, convArg1, tabstops, tabarray)
 	qtrt.ErrPrint(err, rv)
@@ -865,8 +865,8 @@ Despite the different actual character heights, the heights of the bounding rect
 
 See also boundingRect().
 */
-func (this *QFontMetrics) Size__(flags int, str string) *qtcore.QSize /*123*/ {
-	var tmpArg1 = qtcore.NewQString_5(str)
+func (this *QFontMetrics) Sizep(flags int, str string) *qtcore.QSize /*123*/ {
+	var tmpArg1 = qtcore.NewQString5(str)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, int=Int, =Invalid, , Invalid
 	tabstops := int(0)
@@ -904,8 +904,8 @@ Despite the different actual character heights, the heights of the bounding rect
 
 See also boundingRect().
 */
-func (this *QFontMetrics) Size__1(flags int, str string, tabstops int) *qtcore.QSize /*123*/ {
-	var tmpArg1 = qtcore.NewQString_5(str)
+func (this *QFontMetrics) Sizep1(flags int, str string, tabstops int) *qtcore.QSize /*123*/ {
+	var tmpArg1 = qtcore.NewQString5(str)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 3, int *=Pointer, =Invalid, , Invalid
 	var tabarray unsafe.Pointer
@@ -937,7 +937,7 @@ This function was introduced in  Qt 4.3.
 See also width(), height(), and boundingRect().
 */
 func (this *QFontMetrics) TightBoundingRect(text string) *qtcore.QRect /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics17tightBoundingRectERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -965,7 +965,7 @@ The elide mark follows the layoutdirection. For example, it will be on the right
 This function was introduced in  Qt 4.2.
 */
 func (this *QFontMetrics) ElidedText(text string, mode int, width int, flags int) string {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics10elidedTextERK7QStringN2Qt13TextElideModeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, width, flags)
 	qtrt.ErrPrint(err, rv)
@@ -993,8 +993,8 @@ The elide mark follows the layoutdirection. For example, it will be on the right
 
 This function was introduced in  Qt 4.2.
 */
-func (this *QFontMetrics) ElidedText__(text string, mode int, width int) string {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QFontMetrics) ElidedTextp(text string, mode int, width int) string {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 3, int=Int, =Invalid, , Invalid
 	flags := int(0)

@@ -182,7 +182,7 @@ You should call this function after ending painting with endPaint().
 
 See also QWindow::transientParent().
 */
-func (this *QBackingStore) Flush__(region QRegion_ITF) {
+func (this *QBackingStore) Flushp(region QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if region != nil && region.QRegion_PTR() != nil {
 		convArg0 = region.QRegion_PTR().GetCthis()
@@ -211,7 +211,7 @@ You should call this function after ending painting with endPaint().
 
 See also QWindow::transientParent().
 */
-func (this *QBackingStore) Flush__1(region QRegion_ITF, window QWindow_ITF /*777 QWindow **/) {
+func (this *QBackingStore) Flushp1(region QRegion_ITF, window QWindow_ITF /*777 QWindow **/) {
 	var convArg0 unsafe.Pointer
 	if region != nil && region.QRegion_PTR() != nil {
 		convArg0 = region.QRegion_PTR().GetCthis()

@@ -99,10 +99,10 @@ Constructs a QCollator from locale. If locale is not specified the system's defa
 
 See also setLocale().
 */
-func (*QCollator) NewForInherit__() *QCollator {
-	return NewQCollator__()
+func (*QCollator) NewForInheritp() *QCollator {
+	return NewQCollatorp()
 }
-func NewQCollator__() *QCollator {
+func NewQCollatorp() *QCollator {
 	// arg: 0, const QLocale &=LValueReference, QLocale=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollatorC2ERK7QLocale", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -155,7 +155,7 @@ func (this *QCollator) Operator_equal(arg0 QCollator_ITF) *QCollator {
 /*
 
  */
-func (this *QCollator) Operator_equal_1(other unsafe.Pointer /*333*/) *QCollator {
+func (this *QCollator) Operator_equal1(other unsafe.Pointer /*333*/) *QCollator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QCollatoraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCollatorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -329,9 +329,9 @@ func (this *QCollator) IgnorePunctuation() bool {
 Compares s1 with s2. Returns an integer less than, equal to, or greater than zero depending on whether s1 is smaller, equal or larger than s2.
 */
 func (this *QCollator) Compare(s1 string, s2 string) int {
-	var tmpArg0 = NewQString_5(s1)
+	var tmpArg0 = NewQString5(s1)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(s2)
+	var tmpArg1 = NewQString5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator7compareERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -346,7 +346,7 @@ func (this *QCollator) Compare(s1 string, s2 string) int {
 /*
 Compares s1 with s2. Returns an integer less than, equal to, or greater than zero depending on whether s1 is smaller, equal or larger than s2.
 */
-func (this *QCollator) Compare_1(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
+func (this *QCollator) Compare1(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -368,7 +368,7 @@ func (this *QCollator) Compare_1(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
 /*
 Compares s1 with s2. Returns an integer less than, equal to, or greater than zero depending on whether s1 is smaller, equal or larger than s2.
 */
-func (this *QCollator) Compare_2(s1 QChar_ITF /*777 const QChar **/, len1 int, s2 QChar_ITF /*777 const QChar **/, len2 int) int {
+func (this *QCollator) Compare2(s1 QChar_ITF /*777 const QChar **/, len1 int, s2 QChar_ITF /*777 const QChar **/, len2 int) int {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QChar_PTR() != nil {
 		convArg0 = s1.QChar_PTR().GetCthis()
@@ -391,9 +391,9 @@ func (this *QCollator) Compare_2(s1 QChar_ITF /*777 const QChar **/, len1 int, s
 
  */
 func (this *QCollator) Operator_fncall(s1 string, s2 string) bool {
-	var tmpArg0 = NewQString_5(s1)
+	var tmpArg0 = NewQString5(s1)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(s2)
+	var tmpArg1 = NewQString5(s2)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollatorclERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -411,7 +411,7 @@ Returns a sortKey for string.
 Creating the sort key is usually somewhat slower, than using the compare() methods directly. But if the string is compared repeatedly (e.g. when sorting a whole list of strings), it's usually faster to create the sort keys for each string and then sort using the keys.
 */
 func (this *QCollator) SortKey(string string) *QCollatorSortKey /*123*/ {
-	var tmpArg0 = NewQString_5(string)
+	var tmpArg0 = NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QCollator7sortKeyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

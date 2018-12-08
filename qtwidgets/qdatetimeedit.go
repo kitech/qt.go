@@ -169,10 +169,10 @@ func NewQDateTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 /*
 Constructs an empty date time editor with a parent.
 */
-func (*QDateTimeEdit) NewForInherit__() *QDateTimeEdit {
-	return NewQDateTimeEdit__()
+func (*QDateTimeEdit) NewForInheritp() *QDateTimeEdit {
+	return NewQDateTimeEditp()
 }
-func NewQDateTimeEdit__() *QDateTimeEdit {
+func NewQDateTimeEditp() *QDateTimeEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -190,10 +190,10 @@ func NewQDateTimeEdit__() *QDateTimeEdit {
 /*
 Constructs an empty date time editor with a parent.
 */
-func (*QDateTimeEdit) NewForInherit_1(dt qtcore.QDateTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
-	return NewQDateTimeEdit_1(dt, parent)
+func (*QDateTimeEdit) NewForInherit1(dt qtcore.QDateTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+	return NewQDateTimeEdit1(dt, parent)
 }
-func NewQDateTimeEdit_1(dt qtcore.QDateTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+func NewQDateTimeEdit1(dt qtcore.QDateTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if dt != nil && dt.QDateTime_PTR() != nil {
 		convArg0 = dt.QDateTime_PTR().GetCthis()
@@ -217,10 +217,10 @@ func NewQDateTimeEdit_1(dt qtcore.QDateTime_ITF, parent QWidget_ITF /*777 QWidge
 /*
 Constructs an empty date time editor with a parent.
 */
-func (*QDateTimeEdit) NewForInherit_1_(dt qtcore.QDateTime_ITF) *QDateTimeEdit {
-	return NewQDateTimeEdit_1_(dt)
+func (*QDateTimeEdit) NewForInherit1p(dt qtcore.QDateTime_ITF) *QDateTimeEdit {
+	return NewQDateTimeEdit1p(dt)
 }
-func NewQDateTimeEdit_1_(dt qtcore.QDateTime_ITF) *QDateTimeEdit {
+func NewQDateTimeEdit1p(dt qtcore.QDateTime_ITF) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if dt != nil && dt.QDateTime_PTR() != nil {
 		convArg0 = dt.QDateTime_PTR().GetCthis()
@@ -242,10 +242,10 @@ func NewQDateTimeEdit_1_(dt qtcore.QDateTime_ITF) *QDateTimeEdit {
 /*
 Constructs an empty date time editor with a parent.
 */
-func (*QDateTimeEdit) NewForInherit_2(d qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
-	return NewQDateTimeEdit_2(d, parent)
+func (*QDateTimeEdit) NewForInherit2(d qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+	return NewQDateTimeEdit2(d, parent)
 }
-func NewQDateTimeEdit_2(d qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+func NewQDateTimeEdit2(d qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if d != nil && d.QDate_PTR() != nil {
 		convArg0 = d.QDate_PTR().GetCthis()
@@ -269,10 +269,10 @@ func NewQDateTimeEdit_2(d qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/
 /*
 Constructs an empty date time editor with a parent.
 */
-func (*QDateTimeEdit) NewForInherit_2_(d qtcore.QDate_ITF) *QDateTimeEdit {
-	return NewQDateTimeEdit_2_(d)
+func (*QDateTimeEdit) NewForInherit2p(d qtcore.QDate_ITF) *QDateTimeEdit {
+	return NewQDateTimeEdit2p(d)
 }
-func NewQDateTimeEdit_2_(d qtcore.QDate_ITF) *QDateTimeEdit {
+func NewQDateTimeEdit2p(d qtcore.QDate_ITF) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if d != nil && d.QDate_PTR() != nil {
 		convArg0 = d.QDate_PTR().GetCthis()
@@ -294,10 +294,10 @@ func NewQDateTimeEdit_2_(d qtcore.QDate_ITF) *QDateTimeEdit {
 /*
 Constructs an empty date time editor with a parent.
 */
-func (*QDateTimeEdit) NewForInherit_3(t qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
-	return NewQDateTimeEdit_3(t, parent)
+func (*QDateTimeEdit) NewForInherit3(t qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+	return NewQDateTimeEdit3(t, parent)
 }
-func NewQDateTimeEdit_3(t qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+func NewQDateTimeEdit3(t qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QTime_PTR() != nil {
 		convArg0 = t.QTime_PTR().GetCthis()
@@ -321,10 +321,10 @@ func NewQDateTimeEdit_3(t qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/
 /*
 Constructs an empty date time editor with a parent.
 */
-func (*QDateTimeEdit) NewForInherit_3_(t qtcore.QTime_ITF) *QDateTimeEdit {
-	return NewQDateTimeEdit_3_(t)
+func (*QDateTimeEdit) NewForInherit3p(t qtcore.QTime_ITF) *QDateTimeEdit {
+	return NewQDateTimeEdit3p(t)
 }
-func NewQDateTimeEdit_3_(t qtcore.QTime_ITF) *QDateTimeEdit {
+func NewQDateTimeEdit3p(t qtcore.QTime_ITF) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QTime_PTR() != nil {
 		convArg0 = t.QTime_PTR().GetCthis()
@@ -346,10 +346,10 @@ func NewQDateTimeEdit_3_(t qtcore.QTime_ITF) *QDateTimeEdit {
 /*
 Constructs an empty date time editor with a parent.
 */
-func (*QDateTimeEdit) NewForInherit_4(val qtcore.QVariant_ITF, parserType int, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
-	return NewQDateTimeEdit_4(val, parserType, parent)
+func (*QDateTimeEdit) NewForInherit4(val qtcore.QVariant_ITF, parserType int, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+	return NewQDateTimeEdit4(val, parserType, parent)
 }
-func NewQDateTimeEdit_4(val qtcore.QVariant_ITF, parserType int, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
+func NewQDateTimeEdit4(val qtcore.QVariant_ITF, parserType int, parent QWidget_ITF /*777 QWidget **/) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if val != nil && val.QVariant_PTR() != nil {
 		convArg0 = val.QVariant_PTR().GetCthis()
@@ -373,10 +373,10 @@ func NewQDateTimeEdit_4(val qtcore.QVariant_ITF, parserType int, parent QWidget_
 /*
 Constructs an empty date time editor with a parent.
 */
-func (*QDateTimeEdit) NewForInherit_4_(val qtcore.QVariant_ITF, parserType int) *QDateTimeEdit {
-	return NewQDateTimeEdit_4_(val, parserType)
+func (*QDateTimeEdit) NewForInherit4p(val qtcore.QVariant_ITF, parserType int) *QDateTimeEdit {
+	return NewQDateTimeEdit4p(val, parserType)
 }
-func NewQDateTimeEdit_4_(val qtcore.QVariant_ITF, parserType int) *QDateTimeEdit {
+func NewQDateTimeEdit4p(val qtcore.QVariant_ITF, parserType int) *QDateTimeEdit {
 	var convArg0 unsafe.Pointer
 	if val != nil && val.QVariant_PTR() != nil {
 		convArg0 = val.QVariant_PTR().GetCthis()
@@ -1058,7 +1058,7 @@ func (this *QDateTimeEdit) DisplayFormat() string {
 
  */
 func (this *QDateTimeEdit) SetDisplayFormat(format string) {
-	var tmpArg0 = qtcore.NewQString_5(format)
+	var tmpArg0 = qtcore.NewQString5(format)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit16setDisplayFormatERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1360,7 +1360,7 @@ func (this *QDateTimeEdit) FocusNextPrevChild(next bool) bool {
 Reimplemented from QAbstractSpinBox::validate().
 */
 func (this *QDateTimeEdit) Validate(input string, pos int) int {
-	var tmpArg0 = qtcore.NewQString_5(input)
+	var tmpArg0 = qtcore.NewQString5(input)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QDateTimeEdit8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	qtrt.ErrPrint(err, rv)
@@ -1376,7 +1376,7 @@ func (this *QDateTimeEdit) Validate(input string, pos int) int {
 Reimplemented from QAbstractSpinBox::fixup().
 */
 func (this *QDateTimeEdit) Fixup(input string) {
-	var tmpArg0 = qtcore.NewQString_5(input)
+	var tmpArg0 = qtcore.NewQString5(input)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QDateTimeEdit5fixupER7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1395,7 +1395,7 @@ This virtual function is used by the datetime edit whenever it needs to interpre
 See also textFromDateTime() and validate().
 */
 func (this *QDateTimeEdit) DateTimeFromText(text string) *qtcore.QDateTime /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QDateTimeEdit16dateTimeFromTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

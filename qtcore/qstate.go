@@ -122,10 +122,10 @@ func NewQState(parent QState_ITF /*777 QState **/) *QState {
 /*
 Constructs a new state with the given parent state.
 */
-func (*QState) NewForInherit__() *QState {
-	return NewQState__()
+func (*QState) NewForInheritp() *QState {
+	return NewQStatep()
 }
-func NewQState__() *QState {
+func NewQStatep() *QState {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QStateC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -143,10 +143,10 @@ func NewQState__() *QState {
 /*
 Constructs a new state with the given parent state.
 */
-func (*QState) NewForInherit_1(childMode int, parent QState_ITF /*777 QState **/) *QState {
-	return NewQState_1(childMode, parent)
+func (*QState) NewForInherit1(childMode int, parent QState_ITF /*777 QState **/) *QState {
+	return NewQState1(childMode, parent)
 }
-func NewQState_1(childMode int, parent QState_ITF /*777 QState **/) *QState {
+func NewQState1(childMode int, parent QState_ITF /*777 QState **/) *QState {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QState_PTR() != nil {
 		convArg1 = parent.QState_PTR().GetCthis()
@@ -166,10 +166,10 @@ func NewQState_1(childMode int, parent QState_ITF /*777 QState **/) *QState {
 /*
 Constructs a new state with the given parent state.
 */
-func (*QState) NewForInherit_1_(childMode int) *QState {
-	return NewQState_1_(childMode)
+func (*QState) NewForInherit1p(childMode int) *QState {
+	return NewQState1p(childMode)
 }
-func NewQState_1_(childMode int) *QState {
+func NewQState1p(childMode int) *QState {
 	// arg: 1, QState *=Pointer, QState=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QStateC2ENS_9ChildModeEPS_", qtrt.FFI_TYPE_POINTER, childMode, convArg1)
@@ -258,7 +258,7 @@ func (this *QState) AddTransition(transition QAbstractTransition_ITF /*777 QAbst
 /*
 Adds the given transition. The transition has this state as the source. This state takes ownership of the transition.
 */
-func (this *QState) AddTransition_1(sender QObject_ITF /*777 const QObject **/, signal string, target QAbstractState_ITF /*777 QAbstractState **/) *QSignalTransition /*777 QSignalTransition **/ {
+func (this *QState) AddTransition1(sender QObject_ITF /*777 const QObject **/, signal string, target QAbstractState_ITF /*777 QAbstractState **/) *QSignalTransition /*777 QSignalTransition **/ {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
 		convArg0 = sender.QObject_PTR().GetCthis()
@@ -282,7 +282,7 @@ func (this *QState) AddTransition_1(sender QObject_ITF /*777 const QObject **/, 
 /*
 Adds the given transition. The transition has this state as the source. This state takes ownership of the transition.
 */
-func (this *QState) AddTransition_2(target QAbstractState_ITF /*777 QAbstractState **/) *QAbstractTransition /*777 QAbstractTransition **/ {
+func (this *QState) AddTransition2(target QAbstractState_ITF /*777 QAbstractState **/) *QAbstractTransition /*777 QAbstractTransition **/ {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QAbstractState_PTR() != nil {
 		convArg0 = target.QAbstractState_PTR().GetCthis()

@@ -91,10 +91,10 @@ func NewQMessageLogger() *QMessageLogger {
 /*
 
  */
-func (*QMessageLogger) NewForInherit_1(file string, line int, function string) *QMessageLogger {
-	return NewQMessageLogger_1(file, line, function)
+func (*QMessageLogger) NewForInherit1(file string, line int, function string) *QMessageLogger {
+	return NewQMessageLogger1(file, line, function)
 }
-func NewQMessageLogger_1(file string, line int, function string) *QMessageLogger {
+func NewQMessageLogger1(file string, line int, function string) *QMessageLogger {
 	var convArg0 = qtrt.CString(file)
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = qtrt.CString(function)
@@ -114,10 +114,10 @@ func NewQMessageLogger_1(file string, line int, function string) *QMessageLogger
 /*
 
  */
-func (*QMessageLogger) NewForInherit_2(file string, line int, function string, category string) *QMessageLogger {
-	return NewQMessageLogger_2(file, line, function, category)
+func (*QMessageLogger) NewForInherit2(file string, line int, function string, category string) *QMessageLogger {
+	return NewQMessageLogger2(file, line, function, category)
 }
-func NewQMessageLogger_2(file string, line int, function string, category string) *QMessageLogger {
+func NewQMessageLogger2(file string, line int, function string, category string) *QMessageLogger {
 	var convArg0 = qtrt.CString(file)
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = qtrt.CString(function)

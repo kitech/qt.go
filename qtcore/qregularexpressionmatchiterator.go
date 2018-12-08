@@ -128,7 +128,7 @@ func (this *QRegularExpressionMatchIterator) Operator_equal(iterator QRegularExp
 /*
 
  */
-func (this *QRegularExpressionMatchIterator) Operator_equal_1(iterator unsafe.Pointer /*333*/) *QRegularExpressionMatchIterator {
+func (this *QRegularExpressionMatchIterator) Operator_equal1(iterator unsafe.Pointer /*333*/) *QRegularExpressionMatchIterator {
 	rv, err := qtrt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIteratoraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), iterator)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegularExpressionMatchIteratorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

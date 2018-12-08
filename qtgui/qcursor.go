@@ -92,10 +92,10 @@ func NewQCursor() *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
-func (*QCursor) NewForInherit_1(shape int) *QCursor {
-	return NewQCursor_1(shape)
+func (*QCursor) NewForInherit1(shape int) *QCursor {
+	return NewQCursor1(shape)
 }
-func NewQCursor_1(shape int) *QCursor {
+func NewQCursor1(shape int) *QCursor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursorC2EN2Qt11CursorShapeE", qtrt.FFI_TYPE_POINTER, shape)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCursorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQCursor_1(shape int) *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
-func (*QCursor) NewForInherit_2(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int, hotY int) *QCursor {
-	return NewQCursor_2(bitmap, mask, hotX, hotY)
+func (*QCursor) NewForInherit2(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int, hotY int) *QCursor {
+	return NewQCursor2(bitmap, mask, hotX, hotY)
 }
-func NewQCursor_2(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int, hotY int) *QCursor {
+func NewQCursor2(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int, hotY int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
 		convArg0 = bitmap.QBitmap_PTR().GetCthis()
@@ -138,10 +138,10 @@ func NewQCursor_2(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int, hotY int) *QCu
 /*
 Constructs a cursor with the default arrow shape.
 */
-func (*QCursor) NewForInherit_2_(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
-	return NewQCursor_2_(bitmap, mask)
+func (*QCursor) NewForInherit2p(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
+	return NewQCursor2p(bitmap, mask)
 }
-func NewQCursor_2_(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
+func NewQCursor2p(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
 	var convArg0 unsafe.Pointer
 	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
 		convArg0 = bitmap.QBitmap_PTR().GetCthis()
@@ -169,10 +169,10 @@ func NewQCursor_2_(bitmap QBitmap_ITF, mask QBitmap_ITF) *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
-func (*QCursor) NewForInherit_2_1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
-	return NewQCursor_2_1(bitmap, mask, hotX)
+func (*QCursor) NewForInherit2p1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
+	return NewQCursor2p1(bitmap, mask, hotX)
 }
-func NewQCursor_2_1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
+func NewQCursor2p1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if bitmap != nil && bitmap.QBitmap_PTR() != nil {
 		convArg0 = bitmap.QBitmap_PTR().GetCthis()
@@ -198,10 +198,10 @@ func NewQCursor_2_1(bitmap QBitmap_ITF, mask QBitmap_ITF, hotX int) *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
-func (*QCursor) NewForInherit_3(pixmap QPixmap_ITF, hotX int, hotY int) *QCursor {
-	return NewQCursor_3(pixmap, hotX, hotY)
+func (*QCursor) NewForInherit3(pixmap QPixmap_ITF, hotX int, hotY int) *QCursor {
+	return NewQCursor3(pixmap, hotX, hotY)
 }
-func NewQCursor_3(pixmap QPixmap_ITF, hotX int, hotY int) *QCursor {
+func NewQCursor3(pixmap QPixmap_ITF, hotX int, hotY int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
@@ -221,10 +221,10 @@ func NewQCursor_3(pixmap QPixmap_ITF, hotX int, hotY int) *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
-func (*QCursor) NewForInherit_3_(pixmap QPixmap_ITF) *QCursor {
-	return NewQCursor_3_(pixmap)
+func (*QCursor) NewForInherit3p(pixmap QPixmap_ITF) *QCursor {
+	return NewQCursor3p(pixmap)
 }
-func NewQCursor_3_(pixmap QPixmap_ITF) *QCursor {
+func NewQCursor3p(pixmap QPixmap_ITF) *QCursor {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
@@ -248,10 +248,10 @@ func NewQCursor_3_(pixmap QPixmap_ITF) *QCursor {
 /*
 Constructs a cursor with the default arrow shape.
 */
-func (*QCursor) NewForInherit_3_1(pixmap QPixmap_ITF, hotX int) *QCursor {
-	return NewQCursor_3_1(pixmap, hotX)
+func (*QCursor) NewForInherit3p1(pixmap QPixmap_ITF, hotX int) *QCursor {
+	return NewQCursor3p1(pixmap, hotX)
 }
-func NewQCursor_3_1(pixmap QPixmap_ITF, hotX int) *QCursor {
+func NewQCursor3p1(pixmap QPixmap_ITF, hotX int) *QCursor {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
@@ -308,7 +308,7 @@ func (this *QCursor) Operator_equal(cursor QCursor_ITF) *QCursor {
 /*
 
  */
-func (this *QCursor) Operator_equal_1(other unsafe.Pointer /*333*/) *QCursor {
+func (this *QCursor) Operator_equal1(other unsafe.Pointer /*333*/) *QCursor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursoraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -471,7 +471,7 @@ Note: On platforms where there is no windowing system or cursors are not availab
 
 See also setPos(), QWidget::mapFromGlobal(), QWidget::mapToGlobal(), and QGuiApplication::primaryScreen().
 */
-func (this *QCursor) Pos_1(screen QScreen_ITF /*777 const QScreen **/) *qtcore.QPoint /*123*/ {
+func (this *QCursor) Pos1(screen QScreen_ITF /*777 const QScreen **/) *qtcore.QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if screen != nil && screen.QScreen_PTR() != nil {
 		convArg0 = screen.QScreen_PTR().GetCthis()
@@ -482,9 +482,9 @@ func (this *QCursor) Pos_1(screen QScreen_ITF /*777 const QScreen **/) *qtcore.Q
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
-func QCursor_Pos_1(screen QScreen_ITF /*777 const QScreen **/) *qtcore.QPoint /*123*/ {
+func QCursor_Pos1(screen QScreen_ITF /*777 const QScreen **/) *qtcore.QPoint /*123*/ {
 	var nilthis *QCursor
-	rv := nilthis.Pos_1(screen)
+	rv := nilthis.Pos1(screen)
 	return rv
 }
 
@@ -521,7 +521,7 @@ You can call QWidget::mapToGlobal() to translate widget coordinates to global sc
 
 See also pos(), QWidget::mapFromGlobal(), QWidget::mapToGlobal(), and QGuiApplication::primaryScreen().
 */
-func (this *QCursor) SetPos_1(screen QScreen_ITF /*777 QScreen **/, x int, y int) {
+func (this *QCursor) SetPos1(screen QScreen_ITF /*777 QScreen **/, x int, y int) {
 	var convArg0 unsafe.Pointer
 	if screen != nil && screen.QScreen_PTR() != nil {
 		convArg0 = screen.QScreen_PTR().GetCthis()
@@ -529,9 +529,9 @@ func (this *QCursor) SetPos_1(screen QScreen_ITF /*777 QScreen **/, x int, y int
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursor6setPosEP7QScreenii", qtrt.FFI_TYPE_POINTER, convArg0, x, y)
 	qtrt.ErrPrint(err, rv)
 }
-func QCursor_SetPos_1(screen QScreen_ITF /*777 QScreen **/, x int, y int) {
+func QCursor_SetPos1(screen QScreen_ITF /*777 QScreen **/, x int, y int) {
 	var nilthis *QCursor
-	nilthis.SetPos_1(screen, x, y)
+	nilthis.SetPos1(screen, x, y)
 }
 
 // /usr/include/qt/QtGui/qcursor.h:111
@@ -546,7 +546,7 @@ You can call QWidget::mapToGlobal() to translate widget coordinates to global sc
 
 See also pos(), QWidget::mapFromGlobal(), QWidget::mapToGlobal(), and QGuiApplication::primaryScreen().
 */
-func (this *QCursor) SetPos_2(p qtcore.QPoint_ITF) {
+func (this *QCursor) SetPos2(p qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -554,9 +554,9 @@ func (this *QCursor) SetPos_2(p qtcore.QPoint_ITF) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursor6setPosERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QCursor_SetPos_2(p qtcore.QPoint_ITF) {
+func QCursor_SetPos2(p qtcore.QPoint_ITF) {
 	var nilthis *QCursor
-	nilthis.SetPos_2(p)
+	nilthis.SetPos2(p)
 }
 
 // /usr/include/qt/QtGui/qcursor.h:112
@@ -571,7 +571,7 @@ You can call QWidget::mapToGlobal() to translate widget coordinates to global sc
 
 See also pos(), QWidget::mapFromGlobal(), QWidget::mapToGlobal(), and QGuiApplication::primaryScreen().
 */
-func (this *QCursor) SetPos_3(screen QScreen_ITF /*777 QScreen **/, p qtcore.QPoint_ITF) {
+func (this *QCursor) SetPos3(screen QScreen_ITF /*777 QScreen **/, p qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if screen != nil && screen.QScreen_PTR() != nil {
 		convArg0 = screen.QScreen_PTR().GetCthis()
@@ -583,9 +583,9 @@ func (this *QCursor) SetPos_3(screen QScreen_ITF /*777 QScreen **/, p qtcore.QPo
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCursor6setPosEP7QScreenRK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
-func QCursor_SetPos_3(screen QScreen_ITF /*777 QScreen **/, p qtcore.QPoint_ITF) {
+func QCursor_SetPos3(screen QScreen_ITF /*777 QScreen **/, p qtcore.QPoint_ITF) {
 	var nilthis *QCursor
-	nilthis.SetPos_3(screen, p)
+	nilthis.SetPos3(screen, p)
 }
 
 //  body block end

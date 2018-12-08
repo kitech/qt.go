@@ -102,10 +102,10 @@ Constructs a camera info object from a camera device name.
 
 If no such device exists, the QCameraInfo object will be invalid and isNull() will return true.
 */
-func (*QCameraInfo) NewForInherit__() *QCameraInfo {
-	return NewQCameraInfo__()
+func (*QCameraInfo) NewForInheritp() *QCameraInfo {
+	return NewQCameraInfop()
 }
-func NewQCameraInfo__() *QCameraInfo {
+func NewQCameraInfop() *QCameraInfo {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QCameraInfoC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -125,10 +125,10 @@ Constructs a camera info object from a camera device name.
 
 If no such device exists, the QCameraInfo object will be invalid and isNull() will return true.
 */
-func (*QCameraInfo) NewForInherit_1(camera QCamera_ITF) *QCameraInfo {
-	return NewQCameraInfo_1(camera)
+func (*QCameraInfo) NewForInherit1(camera QCamera_ITF) *QCameraInfo {
+	return NewQCameraInfo1(camera)
 }
-func NewQCameraInfo_1(camera QCamera_ITF) *QCameraInfo {
+func NewQCameraInfo1(camera QCamera_ITF) *QCameraInfo {
 	var convArg0 unsafe.Pointer
 	if camera != nil && camera.QCamera_PTR() != nil {
 		convArg0 = camera.QCamera_PTR().GetCthis()
@@ -352,7 +352,7 @@ Returns a list of available cameras on the system which are located at position.
 
 If position is not specified or if the value is QCamera::UnspecifiedPosition, a list of all available cameras will be returned.
 */
-func (this *QCameraInfo) AvailableCameras__() *QCameraInfoList /*lll*/ {
+func (this *QCameraInfo) AvailableCamerasp() *QCameraInfoList /*lll*/ {
 	// arg: 0, QCamera::Position=Elaborated, QCamera::Position=Enum, , Invalid
 	position := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QCameraInfo16availableCamerasEN7QCamera8PositionE", qtrt.FFI_TYPE_POINTER, position)

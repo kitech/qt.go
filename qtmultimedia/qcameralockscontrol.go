@@ -192,10 +192,10 @@ func NewQCameraLocksControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCamer
 /*
 Constructs a camera locks control object with parent.
 */
-func (*QCameraLocksControl) NewForInherit__() *QCameraLocksControl {
-	return NewQCameraLocksControl__()
+func (*QCameraLocksControl) NewForInheritp() *QCameraLocksControl {
+	return NewQCameraLocksControlp()
 }
-func NewQCameraLocksControl__() *QCameraLocksControl {
+func NewQCameraLocksControlp() *QCameraLocksControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraLocksControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

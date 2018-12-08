@@ -308,10 +308,10 @@ func NewQCameraZoomControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCamera
 /*
 Constructs a camera zoom control object with parent.
 */
-func (*QCameraZoomControl) NewForInherit__() *QCameraZoomControl {
-	return NewQCameraZoomControl__()
+func (*QCameraZoomControl) NewForInheritp() *QCameraZoomControl {
+	return NewQCameraZoomControlp()
 }
-func NewQCameraZoomControl__() *QCameraZoomControl {
+func NewQCameraZoomControlp() *QCameraZoomControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCameraZoomControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

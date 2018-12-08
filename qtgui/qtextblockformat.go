@@ -90,10 +90,10 @@ func NewQTextBlockFormat() *QTextBlockFormat {
 /*
 
  */
-func (*QTextBlockFormat) NewForInherit_1(fmt_ QTextFormat_ITF) *QTextBlockFormat {
-	return NewQTextBlockFormat_1(fmt_)
+func (*QTextBlockFormat) NewForInherit1(fmt_ QTextFormat_ITF) *QTextBlockFormat {
+	return NewQTextBlockFormat1(fmt_)
 }
-func NewQTextBlockFormat_1(fmt_ QTextFormat_ITF) *QTextBlockFormat {
+func NewQTextBlockFormat1(fmt_ QTextFormat_ITF) *QTextBlockFormat {
 	var convArg0 unsafe.Pointer
 	if fmt_ != nil && fmt_.QTextFormat_PTR() != nil {
 		convArg0 = fmt_.QTextFormat_PTR().GetCthis()
@@ -343,7 +343,7 @@ func (this *QTextBlockFormat) LineHeight(scriptLineHeight float64, scaling float
 /*
 
  */
-func (this *QTextBlockFormat) LineHeight_1() float64 {
+func (this *QTextBlockFormat) LineHeight1() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat10lineHeightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111

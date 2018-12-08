@@ -108,10 +108,10 @@ func NewQAccessiblePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QAccessi
 /*
 Constructs an accessibility plugin with the given parent. This is invoked automatically by the plugin loader.
 */
-func (*QAccessiblePlugin) NewForInherit__() *QAccessiblePlugin {
-	return NewQAccessiblePlugin__()
+func (*QAccessiblePlugin) NewForInheritp() *QAccessiblePlugin {
+	return NewQAccessiblePluginp()
 }
-func NewQAccessiblePlugin__() *QAccessiblePlugin {
+func NewQAccessiblePluginp() *QAccessiblePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessiblePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -145,7 +145,7 @@ func DeleteQAccessiblePlugin(this *QAccessiblePlugin) {
 Creates and returns a QAccessibleInterface implementation for the class key and the object object. Keys are case sensitive.
 */
 func (this *QAccessiblePlugin) Create(key string, object qtcore.QObject_ITF /*777 QObject **/) *QAccessibleInterface /*777 QAccessibleInterface **/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {

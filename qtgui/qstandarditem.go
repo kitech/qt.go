@@ -102,11 +102,11 @@ func NewQStandardItem() *QStandardItem {
 /*
 
  */
-func (*QStandardItem) NewForInherit_1(text string) *QStandardItem {
-	return NewQStandardItem_1(text)
+func (*QStandardItem) NewForInherit1(text string) *QStandardItem {
+	return NewQStandardItem1(text)
 }
-func NewQStandardItem_1(text string) *QStandardItem {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQStandardItem1(text string) *QStandardItem {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -123,15 +123,15 @@ func NewQStandardItem_1(text string) *QStandardItem {
 /*
 
  */
-func (*QStandardItem) NewForInherit_2(icon QIcon_ITF, text string) *QStandardItem {
-	return NewQStandardItem_2(icon, text)
+func (*QStandardItem) NewForInherit2(icon QIcon_ITF, text string) *QStandardItem {
+	return NewQStandardItem2(icon, text)
 }
-func NewQStandardItem_2(icon QIcon_ITF, text string) *QStandardItem {
+func NewQStandardItem2(icon QIcon_ITF, text string) *QStandardItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemC2ERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -148,10 +148,10 @@ func NewQStandardItem_2(icon QIcon_ITF, text string) *QStandardItem {
 /*
 
  */
-func (*QStandardItem) NewForInherit_3(rows int, columns int) *QStandardItem {
-	return NewQStandardItem_3(rows, columns)
+func (*QStandardItem) NewForInherit3(rows int, columns int) *QStandardItem {
+	return NewQStandardItem3(rows, columns)
 }
-func NewQStandardItem_3(rows int, columns int) *QStandardItem {
+func NewQStandardItem3(rows int, columns int) *QStandardItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemC2Eii", qtrt.FFI_TYPE_POINTER, rows, columns)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStandardItemFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -167,10 +167,10 @@ func NewQStandardItem_3(rows int, columns int) *QStandardItem {
 /*
 
  */
-func (*QStandardItem) NewForInherit_3_(rows int) *QStandardItem {
-	return NewQStandardItem_3_(rows)
+func (*QStandardItem) NewForInherit3p(rows int) *QStandardItem {
+	return NewQStandardItem3p(rows)
 }
-func NewQStandardItem_3_(rows int) *QStandardItem {
+func NewQStandardItem3p(rows int) *QStandardItem {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	columns := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItemC2Eii", qtrt.FFI_TYPE_POINTER, rows, columns)
@@ -223,7 +223,7 @@ Reimplemented from QAbstractItemModel::data().
 
 See also setData().
 */
-func (this *QStandardItem) Data__() *qtcore.QVariant /*123*/ {
+func (this *QStandardItem) Datap() *qtcore.QVariant /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::UserRole + 1*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem4dataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
@@ -262,7 +262,7 @@ Reimplemented from QAbstractItemModel::setData().
 
 See also data().
 */
-func (this *QStandardItem) SetData__(value qtcore.QVariant_ITF) {
+func (this *QStandardItem) SetDatap(value qtcore.QVariant_ITF) {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg0 = value.QVariant_PTR().GetCthis()
@@ -299,7 +299,7 @@ func (this *QStandardItem) Text() string {
 
  */
 func (this *QStandardItem) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -364,7 +364,7 @@ func (this *QStandardItem) ToolTip() string {
 
  */
 func (this *QStandardItem) SetToolTip(toolTip string) {
-	var tmpArg0 = qtcore.NewQString_5(toolTip)
+	var tmpArg0 = qtcore.NewQString5(toolTip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -396,7 +396,7 @@ func (this *QStandardItem) StatusTip() string {
 
  */
 func (this *QStandardItem) SetStatusTip(statusTip string) {
-	var tmpArg0 = qtcore.NewQString_5(statusTip)
+	var tmpArg0 = qtcore.NewQString5(statusTip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem12setStatusTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -428,7 +428,7 @@ func (this *QStandardItem) WhatsThis() string {
 
  */
 func (this *QStandardItem) SetWhatsThis(whatsThis string) {
-	var tmpArg0 = qtcore.NewQString_5(whatsThis)
+	var tmpArg0 = qtcore.NewQString5(whatsThis)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem12setWhatsThisERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -646,7 +646,7 @@ func (this *QStandardItem) AccessibleText() string {
 
  */
 func (this *QStandardItem) SetAccessibleText(accessibleText string) {
-	var tmpArg0 = qtcore.NewQString_5(accessibleText)
+	var tmpArg0 = qtcore.NewQString5(accessibleText)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem17setAccessibleTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -678,7 +678,7 @@ func (this *QStandardItem) AccessibleDescription() string {
 
  */
 func (this *QStandardItem) SetAccessibleDescription(accessibleDescription string) {
-	var tmpArg0 = qtcore.NewQString_5(accessibleDescription)
+	var tmpArg0 = qtcore.NewQString5(accessibleDescription)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem24setAccessibleDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1128,7 +1128,7 @@ func (this *QStandardItem) Child(row int, column int) *QStandardItem /*777 QStan
 /*
 
  */
-func (this *QStandardItem) Child__(row int) *QStandardItem /*777 QStandardItem **/ {
+func (this *QStandardItem) Childp(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStandardItem5childEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
@@ -1161,7 +1161,7 @@ func (this *QStandardItem) SetChild(row int, column int, item QStandardItem_ITF 
 /*
 
  */
-func (this *QStandardItem) SetChild_1(row int, item QStandardItem_ITF /*777 QStandardItem **/) {
+func (this *QStandardItem) SetChild1(row int, item QStandardItem_ITF /*777 QStandardItem **/) {
 	var convArg1 unsafe.Pointer
 	if item != nil && item.QStandardItem_PTR() != nil {
 		convArg1 = item.QStandardItem_PTR().GetCthis()
@@ -1312,7 +1312,7 @@ func (this *QStandardItem) TakeChild(row int, column int) *QStandardItem /*777 Q
 /*
 
  */
-func (this *QStandardItem) TakeChild__(row int) *QStandardItem /*777 QStandardItem **/ {
+func (this *QStandardItem) TakeChildp(row int) *QStandardItem /*777 QStandardItem **/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	column := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem9takeChildEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
@@ -1341,7 +1341,7 @@ func (this *QStandardItem) SortChildren(column int, order int) {
 /*
 
  */
-func (this *QStandardItem) SortChildren__(column int) {
+func (this *QStandardItem) SortChildrenp(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem12sortChildrenEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)

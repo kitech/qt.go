@@ -93,10 +93,10 @@ func NewQJSValue(value int) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
-func (*QJSValue) NewForInherit__() *QJSValue {
-	return NewQJSValue__()
+func (*QJSValue) NewForInheritp() *QJSValue {
+	return NewQJSValuep()
 }
-func NewQJSValue__() *QJSValue {
+func NewQJSValuep() *QJSValue {
 	// arg: 0, QJSValue::SpecialValue=Enum, QJSValue::SpecialValue=Enum, , Invalid
 	value := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2ENS_12SpecialValueE", qtrt.FFI_TYPE_POINTER, value)
@@ -114,10 +114,10 @@ func NewQJSValue__() *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
-func (*QJSValue) NewForInherit_1(value bool) *QJSValue {
-	return NewQJSValue_1(value)
+func (*QJSValue) NewForInherit1(value bool) *QJSValue {
+	return NewQJSValue1(value)
 }
-func NewQJSValue_1(value bool) *QJSValue {
+func NewQJSValue1(value bool) *QJSValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Eb", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -133,10 +133,10 @@ func NewQJSValue_1(value bool) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
-func (*QJSValue) NewForInherit_2(value int) *QJSValue {
-	return NewQJSValue_2(value)
+func (*QJSValue) NewForInherit2(value int) *QJSValue {
+	return NewQJSValue2(value)
 }
-func NewQJSValue_2(value int) *QJSValue {
+func NewQJSValue2(value int) *QJSValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Ei", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -152,10 +152,10 @@ func NewQJSValue_2(value int) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
-func (*QJSValue) NewForInherit_3(value uint) *QJSValue {
-	return NewQJSValue_3(value)
+func (*QJSValue) NewForInherit3(value uint) *QJSValue {
+	return NewQJSValue3(value)
 }
-func NewQJSValue_3(value uint) *QJSValue {
+func NewQJSValue3(value uint) *QJSValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Ej", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -171,10 +171,10 @@ func NewQJSValue_3(value uint) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
-func (*QJSValue) NewForInherit_4(value float64) *QJSValue {
-	return NewQJSValue_4(value)
+func (*QJSValue) NewForInherit4(value float64) *QJSValue {
+	return NewQJSValue4(value)
 }
-func NewQJSValue_4(value float64) *QJSValue {
+func NewQJSValue4(value float64) *QJSValue {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Ed", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -190,11 +190,11 @@ func NewQJSValue_4(value float64) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
-func (*QJSValue) NewForInherit_5(value string) *QJSValue {
-	return NewQJSValue_5(value)
+func (*QJSValue) NewForInherit5(value string) *QJSValue {
+	return NewQJSValue5(value)
 }
-func NewQJSValue_5(value string) *QJSValue {
-	var tmpArg0 = qtcore.NewQString_5(value)
+func NewQJSValue5(value string) *QJSValue {
+	var tmpArg0 = qtcore.NewQString5(value)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -211,10 +211,10 @@ func NewQJSValue_5(value string) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
-func (*QJSValue) NewForInherit_6(value qtcore.QLatin1String_ITF) *QJSValue {
-	return NewQJSValue_6(value)
+func (*QJSValue) NewForInherit6(value qtcore.QLatin1String_ITF) *QJSValue {
+	return NewQJSValue6(value)
 }
-func NewQJSValue_6(value qtcore.QLatin1String_ITF) *QJSValue {
+func NewQJSValue6(value qtcore.QLatin1String_ITF) *QJSValue {
 	var convArg0 unsafe.Pointer
 	if value != nil && value.QLatin1String_PTR() != nil {
 		convArg0 = value.QLatin1String_PTR().GetCthis()
@@ -234,10 +234,10 @@ func NewQJSValue_6(value qtcore.QLatin1String_ITF) *QJSValue {
 /*
 Constructs a new QJSValue with a special value.
 */
-func (*QJSValue) NewForInherit_7(str string) *QJSValue {
-	return NewQJSValue_7(str)
+func (*QJSValue) NewForInherit7(str string) *QJSValue {
+	return NewQJSValue7(str)
 }
-func NewQJSValue_7(str string) *QJSValue {
+func NewQJSValue7(str string) *QJSValue {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -286,7 +286,7 @@ func (this *QJSValue) Operator_equal(other unsafe.Pointer /*333*/) *QJSValue {
 /*
 
  */
-func (this *QJSValue) Operator_equal_1(other QJSValue_ITF) *QJSValue {
+func (this *QJSValue) Operator_equal1(other QJSValue_ITF) *QJSValue {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QJSValue_PTR() != nil {
 		convArg0 = other.QJSValue_PTR().GetCthis()
@@ -792,7 +792,7 @@ If the property is implemented using a getter function (i.e. has the PropertyGet
 See also setProperty(), hasProperty(), and QJSValueIterator.
 */
 func (this *QJSValue) Property(name string) *QJSValue /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue8propertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -813,7 +813,7 @@ If the property is implemented using a getter function (i.e. has the PropertyGet
 
 See also setProperty(), hasProperty(), and QJSValueIterator.
 */
-func (this *QJSValue) Property_1(arrayIndex uint) *QJSValue /*123*/ {
+func (this *QJSValue) Property1(arrayIndex uint) *QJSValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue8propertyEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arrayIndex)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -836,7 +836,7 @@ If this QJSValue does not already have a property with name name, a new property
 See also property() and deleteProperty().
 */
 func (this *QJSValue) SetProperty(name string, value QJSValue_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QJSValue_PTR() != nil {
@@ -860,7 +860,7 @@ If this QJSValue does not already have a property with name name, a new property
 
 See also property() and deleteProperty().
 */
-func (this *QJSValue) SetProperty_1(arrayIndex uint, value QJSValue_ITF) {
+func (this *QJSValue) SetProperty1(arrayIndex uint, value QJSValue_ITF) {
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QJSValue_PTR() != nil {
 		convArg1 = value.QJSValue_PTR().GetCthis()
@@ -880,7 +880,7 @@ Returns true if this object has a property of the given name, otherwise returns 
 See also property() and hasOwnProperty().
 */
 func (this *QJSValue) HasProperty(name string) bool {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue11hasPropertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -898,7 +898,7 @@ Returns true if this object has an own (not prototype-inherited) property of the
 See also property() and hasProperty().
 */
 func (this *QJSValue) HasOwnProperty(name string) bool {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue14hasOwnPropertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -924,7 +924,7 @@ If this object doesn't have an own property of the given name, but an object in 
 See also setProperty() and hasOwnProperty().
 */
 func (this *QJSValue) DeleteProperty(name string) bool {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValue14deletePropertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -123,7 +123,7 @@ func (this *QNetworkCacheMetaData) Operator_equal(other unsafe.Pointer /*333*/) 
 /*
 
  */
-func (this *QNetworkCacheMetaData) Operator_equal_1(other QNetworkCacheMetaData_ITF) *QNetworkCacheMetaData {
+func (this *QNetworkCacheMetaData) Operator_equal1(other QNetworkCacheMetaData_ITF) *QNetworkCacheMetaData {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkCacheMetaData_PTR() != nil {
 		convArg0 = other.QNetworkCacheMetaData_PTR().GetCthis()

@@ -119,10 +119,10 @@ func NewQCompleter(parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
 /*
 Constructs a completer object with the given parent.
 */
-func (*QCompleter) NewForInherit__() *QCompleter {
-	return NewQCompleter__()
+func (*QCompleter) NewForInheritp() *QCompleter {
+	return NewQCompleterp()
 }
-func NewQCompleter__() *QCompleter {
+func NewQCompleterp() *QCompleter {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleterC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -140,10 +140,10 @@ func NewQCompleter__() *QCompleter {
 /*
 Constructs a completer object with the given parent.
 */
-func (*QCompleter) NewForInherit_1(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
-	return NewQCompleter_1(model, parent)
+func (*QCompleter) NewForInherit1(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
+	return NewQCompleter1(model, parent)
 }
-func NewQCompleter_1(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
+func NewQCompleter1(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
 		convArg0 = model.QAbstractItemModel_PTR().GetCthis()
@@ -167,10 +167,10 @@ func NewQCompleter_1(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemMode
 /*
 Constructs a completer object with the given parent.
 */
-func (*QCompleter) NewForInherit_1_(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) *QCompleter {
-	return NewQCompleter_1_(model)
+func (*QCompleter) NewForInherit1p(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) *QCompleter {
+	return NewQCompleter1p(model)
 }
-func NewQCompleter_1_(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) *QCompleter {
+func NewQCompleter1p(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) *QCompleter {
 	var convArg0 unsafe.Pointer
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
 		convArg0 = model.QAbstractItemModel_PTR().GetCthis()
@@ -192,10 +192,10 @@ func NewQCompleter_1_(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemMod
 /*
 Constructs a completer object with the given parent.
 */
-func (*QCompleter) NewForInherit_2(completions qtcore.QStringList_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
-	return NewQCompleter_2(completions, parent)
+func (*QCompleter) NewForInherit2(completions qtcore.QStringList_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
+	return NewQCompleter2(completions, parent)
 }
-func NewQCompleter_2(completions qtcore.QStringList_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
+func NewQCompleter2(completions qtcore.QStringList_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
 	var convArg0 unsafe.Pointer
 	if completions != nil && completions.QStringList_PTR() != nil {
 		convArg0 = completions.QStringList_PTR().GetCthis()
@@ -219,10 +219,10 @@ func NewQCompleter_2(completions qtcore.QStringList_ITF, parent qtcore.QObject_I
 /*
 Constructs a completer object with the given parent.
 */
-func (*QCompleter) NewForInherit_2_(completions qtcore.QStringList_ITF) *QCompleter {
-	return NewQCompleter_2_(completions)
+func (*QCompleter) NewForInherit2p(completions qtcore.QStringList_ITF) *QCompleter {
+	return NewQCompleter2p(completions)
 }
-func NewQCompleter_2_(completions qtcore.QStringList_ITF) *QCompleter {
+func NewQCompleter2p(completions qtcore.QStringList_ITF) *QCompleter {
 	var convArg0 unsafe.Pointer
 	if completions != nil && completions.QStringList_PTR() != nil {
 		convArg0 = completions.QStringList_PTR().GetCthis()
@@ -694,7 +694,7 @@ func (this *QCompleter) CompletionPrefix() string {
 
  */
 func (this *QCompleter) SetCompletionPrefix(prefix string) {
-	var tmpArg0 = qtcore.NewQString_5(prefix)
+	var tmpArg0 = qtcore.NewQString5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter19setCompletionPrefixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -729,7 +729,7 @@ For QCompleter::PopupCompletion and QCompletion::UnfilteredPopupCompletion modes
 
 For QCompleter::InlineCompletion mode, the highlighted() signal is fired with the current completion.
 */
-func (this *QCompleter) Complete__() {
+func (this *QCompleter) Completep() {
 	// arg: 0, const QRect &=LValueReference, QRect=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter8completeERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -789,7 +789,7 @@ When used with list models, the first item in the returned list is used for matc
 See also pathFromIndex() and Handling Tree Models.
 */
 func (this *QCompleter) SplitPath(path string) *qtcore.QStringList /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QCompleter9splitPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -853,7 +853,7 @@ Note: Signal activated is overloaded in this class. To connect to this signal by
       [=](const QString &text){ /-* ... *-/ });
 */
 func (this *QCompleter) Activated(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter9activatedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -873,7 +873,7 @@ Note: Signal activated is overloaded in this class. To connect to this signal by
   connect(completer, QOverload<const QString &>::of(&QCompleter::activated),
       [=](const QString &text){ /-* ... *-/ });
 */
-func (this *QCompleter) Activated_1(index qtcore.QModelIndex_ITF) {
+func (this *QCompleter) Activated1(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -897,7 +897,7 @@ Note: Signal highlighted is overloaded in this class. To connect to this signal 
       [=](const QString &text){ /-* ... *-/ });
 */
 func (this *QCompleter) Highlighted(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleter11highlightedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -917,7 +917,7 @@ Note: Signal highlighted is overloaded in this class. To connect to this signal 
   connect(completer, QOverload<const QString &>::of(&QCompleter::highlighted),
       [=](const QString &text){ /-* ... *-/ });
 */
-func (this *QCompleter) Highlighted_1(index qtcore.QModelIndex_ITF) {
+func (this *QCompleter) Highlighted1(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()

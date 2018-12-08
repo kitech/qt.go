@@ -200,7 +200,7 @@ Resizes the vertex and index data of this geometry object to fit vertexCount ver
 
 Vertex and index data will be invalidated after this call and the caller must mark the associated geometry node as dirty, by calling node->markDirty(QSGNode::DirtyGeometry) to ensure that the renderer has a chance to update internal buffers.
 */
-func (this *QSGGeometry) Allocate__(vertexCount int) {
+func (this *QSGGeometry) Allocatep(vertexCount int) {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	indexCount := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry8allocateEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), vertexCount, indexCount)
@@ -247,7 +247,7 @@ Returns a pointer to the raw vertex data of this geometry object.
 
 See also vertexDataAsPoint2D() and vertexDataAsTexturedPoint2D().
 */
-func (this *QSGGeometry) VertexData_1() unsafe.Pointer /*666*/ {
+func (this *QSGGeometry) VertexData1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry10vertexDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -275,7 +275,7 @@ func (this *QSGGeometry) VertexDataAsPoint2D() unsafe.Pointer /*666*/ {
 /*
 Convenience function to access the vertex data as a mutable array of QSGGeometry::Point2D.
 */
-func (this *QSGGeometry) VertexDataAsPoint2D_1() unsafe.Pointer /*666*/ {
+func (this *QSGGeometry) VertexDataAsPoint2D1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry19vertexDataAsPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -303,7 +303,7 @@ func (this *QSGGeometry) VertexDataAsTexturedPoint2D() unsafe.Pointer /*666*/ {
 /*
 Convenience function to access the vertex data as a mutable array of QSGGeometry::TexturedPoint2D.
 */
-func (this *QSGGeometry) VertexDataAsTexturedPoint2D_1() unsafe.Pointer /*666*/ {
+func (this *QSGGeometry) VertexDataAsTexturedPoint2D1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry27vertexDataAsTexturedPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -331,7 +331,7 @@ func (this *QSGGeometry) VertexDataAsColoredPoint2D() unsafe.Pointer /*666*/ {
 /*
 Convenience function to access the vertex data as a mutable array of QSGGeometry::ColoredPoint2D.
 */
-func (this *QSGGeometry) VertexDataAsColoredPoint2D_1() unsafe.Pointer /*666*/ {
+func (this *QSGGeometry) VertexDataAsColoredPoint2D1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry26vertexDataAsColoredPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -391,7 +391,7 @@ Returns a pointer to the raw index data of this geometry object.
 
 See also indexDataAsUShort() and indexDataAsUInt().
 */
-func (this *QSGGeometry) IndexData_1() unsafe.Pointer /*666*/ {
+func (this *QSGGeometry) IndexData1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry9indexDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -419,7 +419,7 @@ func (this *QSGGeometry) IndexDataAsUInt() unsafe.Pointer /*666*/ {
 /*
 Convenience function to access the index data as a mutable array of 32-bit unsigned integers.
 */
-func (this *QSGGeometry) IndexDataAsUInt_1() unsafe.Pointer /*666*/ {
+func (this *QSGGeometry) IndexDataAsUInt1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry15indexDataAsUIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -447,7 +447,7 @@ func (this *QSGGeometry) IndexDataAsUShort() unsafe.Pointer /*666*/ {
 /*
 Convenience function to access the index data as a mutable array of 16-bit unsigned integers.
 */
-func (this *QSGGeometry) IndexDataAsUShort_1() unsafe.Pointer /*666*/ {
+func (this *QSGGeometry) IndexDataAsUShort1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry17indexDataAsUShortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))

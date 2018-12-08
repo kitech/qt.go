@@ -96,10 +96,10 @@ Constructs an empty QTextDocumentFragment.
 
 See also isEmpty().
 */
-func (*QTextDocumentFragment) NewForInherit_1(document QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment {
-	return NewQTextDocumentFragment_1(document)
+func (*QTextDocumentFragment) NewForInherit1(document QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment {
+	return NewQTextDocumentFragment1(document)
 }
-func NewQTextDocumentFragment_1(document QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment {
+func NewQTextDocumentFragment1(document QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment {
 	var convArg0 unsafe.Pointer
 	if document != nil && document.QTextDocument_PTR() != nil {
 		convArg0 = document.QTextDocument_PTR().GetCthis()
@@ -121,10 +121,10 @@ Constructs an empty QTextDocumentFragment.
 
 See also isEmpty().
 */
-func (*QTextDocumentFragment) NewForInherit_2(range_ QTextCursor_ITF) *QTextDocumentFragment {
-	return NewQTextDocumentFragment_2(range_)
+func (*QTextDocumentFragment) NewForInherit2(range_ QTextCursor_ITF) *QTextDocumentFragment {
+	return NewQTextDocumentFragment2(range_)
 }
-func NewQTextDocumentFragment_2(range_ QTextCursor_ITF) *QTextDocumentFragment {
+func NewQTextDocumentFragment2(range_ QTextCursor_ITF) *QTextDocumentFragment {
 	var convArg0 unsafe.Pointer
 	if range_ != nil && range_.QTextCursor_PTR() != nil {
 		convArg0 = range_.QTextCursor_PTR().GetCthis()
@@ -241,7 +241,7 @@ This function was introduced in  Qt 4.2.
 
 See also toPlainText(), QTextDocument::toHtml(), and QTextCodec.
 */
-func (this *QTextDocumentFragment) ToHtml__() string {
+func (this *QTextDocumentFragment) ToHtmlp() string {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -263,7 +263,7 @@ Returns a document fragment that contains the given plainText.
 When inserting such a fragment into a QTextDocument the current char format of the QTextCursor used for insertion is used as format for the text.
 */
 func (this *QTextDocumentFragment) FromPlainText(plainText string) *QTextDocumentFragment /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(plainText)
+	var tmpArg0 = qtcore.NewQString5(plainText)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QTextDocumentFragment13fromPlainTextERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -286,7 +286,7 @@ func QTextDocumentFragment_FromPlainText(plainText string) *QTextDocumentFragmen
 Returns a QTextDocumentFragment based on the arbitrary piece of HTML in the given text. The formatting is preserved as much as possible; for example, "<b>bold</b>" will become a document fragment with the text "bold" with a bold character format.
 */
 func (this *QTextDocumentFragment) FromHtml(html string) *QTextDocumentFragment /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(html)
+	var tmpArg0 = qtcore.NewQString5(html)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QTextDocumentFragment8fromHtmlERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -308,8 +308,8 @@ func QTextDocumentFragment_FromHtml(html string) *QTextDocumentFragment /*123*/ 
 /*
 Returns a QTextDocumentFragment based on the arbitrary piece of HTML in the given text. The formatting is preserved as much as possible; for example, "<b>bold</b>" will become a document fragment with the text "bold" with a bold character format.
 */
-func (this *QTextDocumentFragment) FromHtml_1(html string, resourceProvider QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(html)
+func (this *QTextDocumentFragment) FromHtml1(html string, resourceProvider QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(html)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if resourceProvider != nil && resourceProvider.QTextDocument_PTR() != nil {
@@ -321,9 +321,9 @@ func (this *QTextDocumentFragment) FromHtml_1(html string, resourceProvider QTex
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextDocumentFragment)
 	return rv2
 }
-func QTextDocumentFragment_FromHtml_1(html string, resourceProvider QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment /*123*/ {
+func QTextDocumentFragment_FromHtml1(html string, resourceProvider QTextDocument_ITF /*777 const QTextDocument **/) *QTextDocumentFragment /*123*/ {
 	var nilthis *QTextDocumentFragment
-	rv := nilthis.FromHtml_1(html, resourceProvider)
+	rv := nilthis.FromHtml1(html, resourceProvider)
 	return rv
 }
 

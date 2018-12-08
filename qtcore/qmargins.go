@@ -95,10 +95,10 @@ Constructs a margins object with all margins set to 0.
 
 See also isNull().
 */
-func (*QMargins) NewForInherit_1(left int, top int, right int, bottom int) *QMargins {
-	return NewQMargins_1(left, top, right, bottom)
+func (*QMargins) NewForInherit1(left int, top int, right int, bottom int) *QMargins {
+	return NewQMargins1(left, top, right, bottom)
 }
-func NewQMargins_1(left int, top int, right int, bottom int) *QMargins {
+func NewQMargins1(left int, top int, right int, bottom int) *QMargins {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsC2Eiiii", qtrt.FFI_TYPE_POINTER, left, top, right, bottom)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -272,7 +272,7 @@ func (this *QMargins) Operator_add_equal(margins QMargins_ITF) *QMargins {
 /*
 
  */
-func (this *QMargins) Operator_add_equal_1(arg0 int) *QMargins {
+func (this *QMargins) Operator_add_equal1(arg0 int) *QMargins {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginspLEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -308,7 +308,7 @@ func (this *QMargins) Operator_minus_equal(margins QMargins_ITF) *QMargins {
 /*
 
  */
-func (this *QMargins) Operator_minus_equal_1(arg0 int) *QMargins {
+func (this *QMargins) Operator_minus_equal1(arg0 int) *QMargins {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsmIEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -340,7 +340,7 @@ func (this *QMargins) Operator_mul_equal(arg0 int) *QMargins {
 /*
 
  */
-func (this *QMargins) Operator_mul_equal_1(arg0 float64) *QMargins {
+func (this *QMargins) Operator_mul_equal1(arg0 float64) *QMargins {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsmLEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -372,7 +372,7 @@ func (this *QMargins) Operator_div_equal(arg0 int) *QMargins {
 /*
 
  */
-func (this *QMargins) Operator_div_equal_1(arg0 float64) *QMargins {
+func (this *QMargins) Operator_div_equal1(arg0 float64) *QMargins {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsdVEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

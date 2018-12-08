@@ -169,10 +169,10 @@ func NewQAudioRoleControl(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioRo
 /*
 Construct a QAudioRoleControl with the given parent.
 */
-func (*QAudioRoleControl) NewForInherit__() *QAudioRoleControl {
-	return NewQAudioRoleControl__()
+func (*QAudioRoleControl) NewForInheritp() *QAudioRoleControl {
+	return NewQAudioRoleControlp()
 }
-func NewQAudioRoleControl__() *QAudioRoleControl {
+func NewQAudioRoleControlp() *QAudioRoleControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAudioRoleControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

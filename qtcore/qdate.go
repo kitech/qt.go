@@ -91,10 +91,10 @@ func NewQDate() *QDate {
 /*
 
  */
-func (*QDate) NewForInherit_1(y int, m int, d int) *QDate {
-	return NewQDate_1(y, m, d)
+func (*QDate) NewForInherit1(y int, m int, d int) *QDate {
+	return NewQDate1(y, m, d)
 }
-func NewQDate_1(y int, m int, d int) *QDate {
+func NewQDate1(y int, m int, d int) *QDate {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDateC2Eiii", qtrt.FFI_TYPE_POINTER, y, m, d)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQDateFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -148,14 +148,14 @@ If the timeSpec() is Qt::LocalTime or Qt::TimeZone then the date and time are ch
 
 See also QDate::isValid() and QTime::isValid().
 */
-func (this *QDate) IsValid_1(y int, m int, d int) bool {
+func (this *QDate) IsValid1(y int, m int, d int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate7isValidEiii", qtrt.FFI_TYPE_POINTER, y, m, d)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QDate_IsValid_1(y int, m int, d int) bool {
+func QDate_IsValid1(y int, m int, d int) bool {
 	var nilthis *QDate
-	rv := nilthis.IsValid_1(y, m, d)
+	rv := nilthis.IsValid1(y, m, d)
 	return rv
 }
 
@@ -279,7 +279,7 @@ func (this *QDate) WeekNumber(yearNum unsafe.Pointer /*666*/) int {
 /*
 
  */
-func (this *QDate) WeekNumber__() int {
+func (this *QDate) WeekNumberp() int {
 	// arg: 0, int *=Pointer, =Invalid, , Invalid
 	var yearNum unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate10weekNumberEPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), yearNum)
@@ -317,7 +317,7 @@ func QDate_ShortMonthName(month int, type_ int) string {
 /*
 
  */
-func (this *QDate) ShortMonthName__(month int) string {
+func (this *QDate) ShortMonthNamep(month int) string {
 	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate14shortMonthNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, month, type_)
@@ -358,7 +358,7 @@ func QDate_ShortDayName(weekday int, type_ int) string {
 /*
 
  */
-func (this *QDate) ShortDayName__(weekday int) string {
+func (this *QDate) ShortDayNamep(weekday int) string {
 	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate12shortDayNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, weekday, type_)
@@ -399,7 +399,7 @@ func QDate_LongMonthName(month int, type_ int) string {
 /*
 
  */
-func (this *QDate) LongMonthName__(month int) string {
+func (this *QDate) LongMonthNamep(month int) string {
 	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate13longMonthNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, month, type_)
@@ -440,7 +440,7 @@ func QDate_LongDayName(weekday int, type_ int) string {
 /*
 
  */
-func (this *QDate) LongDayName__(weekday int) string {
+func (this *QDate) LongDayNamep(weekday int) string {
 	// arg: 1, QDate::MonthNameType=Enum, QDate::MonthNameType=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate11longDayNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, weekday, type_)
@@ -580,7 +580,7 @@ If the datetime is invalid, an empty string will be returned.
 
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
-func (this *QDate) ToString__() string {
+func (this *QDate) ToStringp() string {
 	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
@@ -651,8 +651,8 @@ If the datetime is invalid, an empty string will be returned.
 
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
-func (this *QDate) ToString_1(format string) string {
-	var tmpArg0 = NewQString_5(format)
+func (this *QDate) ToString1(format string) string {
+	var tmpArg0 = NewQString5(format)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -722,7 +722,7 @@ If the datetime is invalid, an empty string will be returned.
 
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
-func (this *QDate) ToString_2(format QStringView_ITF /*123*/) string {
+func (this *QDate) ToString2(format QStringView_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QStringView_PTR() != nil {
 		convArg0 = format.QStringView_PTR().GetCthis()
@@ -772,7 +772,7 @@ func (this *QDate) GetDate(year unsafe.Pointer /*666*/, month unsafe.Pointer /*6
 /*
 
  */
-func (this *QDate) GetDate_1(year unsafe.Pointer /*666*/, month unsafe.Pointer /*666*/, day unsafe.Pointer /*666*/) {
+func (this *QDate) GetDate1(year unsafe.Pointer /*666*/, month unsafe.Pointer /*666*/, day unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate7getDateEPiS0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), year, month, day)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1017,7 +1017,7 @@ Note for Qt::TextDate: It is recommended that you use the English short month na
 See also toString() and QLocale::toDateTime().
 */
 func (this *QDate) FromString(s string, f int) *QDate /*123*/ {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate10fromStringERK7QStringN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
@@ -1043,8 +1043,8 @@ Note for Qt::TextDate: It is recommended that you use the English short month na
 
 See also toString() and QLocale::toDateTime().
 */
-func (this *QDate) FromString__(s string) *QDate /*123*/ {
-	var tmpArg0 = NewQString_5(s)
+func (this *QDate) FromStringp(s string) *QDate /*123*/ {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
@@ -1067,10 +1067,10 @@ Note for Qt::TextDate: It is recommended that you use the English short month na
 
 See also toString() and QLocale::toDateTime().
 */
-func (this *QDate) FromString_1(s string, format string) *QDate /*123*/ {
-	var tmpArg0 = NewQString_5(s)
+func (this *QDate) FromString1(s string, format string) *QDate /*123*/ {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(format)
+	var tmpArg1 = NewQString5(format)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate10fromStringERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1078,9 +1078,9 @@ func (this *QDate) FromString_1(s string, format string) *QDate /*123*/ {
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
 }
-func QDate_FromString_1(s string, format string) *QDate /*123*/ {
+func QDate_FromString1(s string, format string) *QDate /*123*/ {
 	var nilthis *QDate
-	rv := nilthis.FromString_1(s, format)
+	rv := nilthis.FromString1(s, format)
 	return rv
 }
 

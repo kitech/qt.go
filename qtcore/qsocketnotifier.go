@@ -124,10 +124,10 @@ Note for Windows users: The socket passed to QSocketNotifier will become non-blo
 
 See also setEnabled() and isEnabled().
 */
-func (*QSocketNotifier) NewForInherit__(socket int64, arg1 int) *QSocketNotifier {
-	return NewQSocketNotifier__(socket, arg1)
+func (*QSocketNotifier) NewForInheritp(socket int64, arg1 int) *QSocketNotifier {
+	return NewQSocketNotifierp(socket, arg1)
 }
-func NewQSocketNotifier__(socket int64, arg1 int) *QSocketNotifier {
+func NewQSocketNotifierp(socket int64, arg1 int) *QSocketNotifier {
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifierC2ExNS_4TypeEP7QObject", qtrt.FFI_TYPE_POINTER, socket, arg1, convArg2)

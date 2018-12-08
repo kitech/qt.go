@@ -113,10 +113,10 @@ Constructs an empty undo stack with the parent parent. The stack will initially 
 
 See also push().
 */
-func (*QUndoStack) NewForInherit__() *QUndoStack {
-	return NewQUndoStack__()
+func (*QUndoStack) NewForInheritp() *QUndoStack {
+	return NewQUndoStackp()
 }
-func NewQUndoStack__() *QUndoStack {
+func NewQUndoStackp() *QUndoStack {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStackC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -337,7 +337,7 @@ func (this *QUndoStack) CreateUndoAction(parent qtcore.QObject_ITF /*777 QObject
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(prefix)
+	var tmpArg1 = qtcore.NewQString5(prefix)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -358,7 +358,7 @@ If prefix is empty, the default template "Undo %1" is used instead of prefix. Be
 
 See also createRedoAction(), canUndo(), and QUndoCommand::text().
 */
-func (this *QUndoStack) CreateUndoAction__(parent qtcore.QObject_ITF /*777 QObject **/) *QAction /*777 QAction **/ {
+func (this *QUndoStack) CreateUndoActionp(parent qtcore.QObject_ITF /*777 QObject **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
@@ -389,7 +389,7 @@ func (this *QUndoStack) CreateRedoAction(parent qtcore.QObject_ITF /*777 QObject
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(prefix)
+	var tmpArg1 = qtcore.NewQString5(prefix)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -410,7 +410,7 @@ If prefix is empty, the default template "Redo %1" is used instead of prefix. Be
 
 See also createUndoAction(), canRedo(), and QUndoCommand::text().
 */
-func (this *QUndoStack) CreateRedoAction__(parent qtcore.QObject_ITF /*777 QObject **/) *QAction /*777 QAction **/ {
+func (this *QUndoStack) CreateRedoActionp(parent qtcore.QObject_ITF /*777 QObject **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
@@ -517,7 +517,7 @@ This code is equivalent to:
 See also endMacro().
 */
 func (this *QUndoStack) BeginMacro(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStack10beginMacroERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -705,7 +705,7 @@ func (this *QUndoStack) SetActive(active bool) {
 /*
 
  */
-func (this *QUndoStack) SetActive__() {
+func (this *QUndoStack) SetActivep() {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	active := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStack9setActiveEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), active)
@@ -779,7 +779,7 @@ func (this *QUndoStack) CanRedoChanged(canRedo bool) {
 This signal is emitted whenever the value of undoText() changes. It is used to update the text property of the undo action returned by createUndoAction(). undoText specifies the new text.
 */
 func (this *QUndoStack) UndoTextChanged(undoText string) {
-	var tmpArg0 = qtcore.NewQString_5(undoText)
+	var tmpArg0 = qtcore.NewQString5(undoText)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStack15undoTextChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -794,7 +794,7 @@ func (this *QUndoStack) UndoTextChanged(undoText string) {
 This signal is emitted whenever the value of redoText() changes. It is used to update the text property of the redo action returned by createRedoAction(). redoText specifies the new text.
 */
 func (this *QUndoStack) RedoTextChanged(redoText string) {
-	var tmpArg0 = qtcore.NewQString_5(redoText)
+	var tmpArg0 = qtcore.NewQString5(redoText)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStack15redoTextChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

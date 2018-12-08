@@ -188,7 +188,7 @@ This function was introduced in  Qt 5.3.
 
 See also pageSize() and pageLayout().
 */
-func (this *QPagedPaintDevice) SetPageSize_1(size int) {
+func (this *QPagedPaintDevice) SetPageSize1(size int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice11setPageSizeENS_8PageSizeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	qtrt.ErrPrint(err, rv)
 }
@@ -265,7 +265,7 @@ This function was introduced in  Qt 5.3.
 
 See also pageLayout().
 */
-func (this *QPagedPaintDevice) SetPageMargins_1(margins qtcore.QMarginsF_ITF, units int) bool {
+func (this *QPagedPaintDevice) SetPageMargins1(margins qtcore.QMarginsF_ITF, units int) bool {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMarginsF_PTR() != nil {
 		convArg0 = margins.QMarginsF_PTR().GetCthis()
@@ -394,7 +394,7 @@ func (this *QPagedPaintDevice) DevicePageLayout() *QPageLayout /*123*/ {
 /*
 
  */
-func (this *QPagedPaintDevice) DevicePageLayout_1() *QPageLayout {
+func (this *QPagedPaintDevice) DevicePageLayout1() *QPageLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDevice16devicePageLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPageLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

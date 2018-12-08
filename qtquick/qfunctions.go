@@ -42,7 +42,7 @@ func init() {
 /*
 
  */
-func Operator_or_90(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or90(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN7QSGNode4FlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -58,7 +58,7 @@ func Operator_or_90(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_91(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or91(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN7QSGNode13DirtyStateBitEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -74,7 +74,7 @@ func Operator_or_91(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_92(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or92(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN20QSGSimpleTextureNode31TextureCoordinatesTransformFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -90,7 +90,7 @@ func Operator_or_92(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_93(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or93(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN20QSGRendererInterface21ShaderCompilationTypeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -106,7 +106,7 @@ func Operator_or_93(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_94(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or94(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN20QSGRendererInterface16ShaderSourceTypeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -122,7 +122,7 @@ func Operator_or_94(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_95(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or95(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN19QSGAbstractRenderer12ClearModeBitEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -138,7 +138,7 @@ func Operator_or_95(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_96(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or96(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN17QSGMaterialShader11RenderState10DirtyStateEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -154,7 +154,7 @@ func Operator_or_96(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_97(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or97(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN17QQuickPaintedItem15PerformanceHintEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -170,7 +170,7 @@ func Operator_or_97(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_98(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or98(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN13QSGRenderNode9StateFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -186,7 +186,7 @@ func Operator_or_98(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_99(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or99(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN13QSGRenderNode13RenderingFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -202,7 +202,7 @@ func Operator_or_99(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_100(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or100(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN12QSGImageNode31TextureCoordinatesTransformFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -218,7 +218,7 @@ func Operator_or_100(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_101(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or101(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QSGMaterial4FlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -234,7 +234,7 @@ func Operator_or_101(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_102(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or102(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN10QQuickItem4FlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -255,7 +255,7 @@ func Qsgnode_set_description(node QSGNode_ITF /*777 QSGNode **/, description str
 	if node != nil && node.QSGNode_PTR() != nil {
 		convArg0 = node.QSGNode_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(description)
+	var tmpArg1 = qtcore.NewQString5(description)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z23qsgnode_set_descriptionP7QSGNodeRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

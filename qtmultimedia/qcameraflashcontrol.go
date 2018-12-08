@@ -199,10 +199,10 @@ func NewQCameraFlashControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCamer
 /*
 Constructs a camera flash control object with parent.
 */
-func (*QCameraFlashControl) NewForInherit__() *QCameraFlashControl {
-	return NewQCameraFlashControl__()
+func (*QCameraFlashControl) NewForInheritp() *QCameraFlashControl {
+	return NewQCameraFlashControlp()
 }
-func NewQCameraFlashControl__() *QCameraFlashControl {
+func NewQCameraFlashControlp() *QCameraFlashControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraFlashControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

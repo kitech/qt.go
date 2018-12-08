@@ -112,11 +112,11 @@ Constructs a QTemporaryFile using as file template the application name returned
 
 See also setFileTemplate() and QDir::tempPath().
 */
-func (*QTemporaryFile) NewForInherit_1(templateName string) *QTemporaryFile {
-	return NewQTemporaryFile_1(templateName)
+func (*QTemporaryFile) NewForInherit1(templateName string) *QTemporaryFile {
+	return NewQTemporaryFile1(templateName)
 }
-func NewQTemporaryFile_1(templateName string) *QTemporaryFile {
-	var tmpArg0 = NewQString_5(templateName)
+func NewQTemporaryFile1(templateName string) *QTemporaryFile {
+	var tmpArg0 = NewQString5(templateName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFileC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -135,10 +135,10 @@ Constructs a QTemporaryFile using as file template the application name returned
 
 See also setFileTemplate() and QDir::tempPath().
 */
-func (*QTemporaryFile) NewForInherit_2(parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
-	return NewQTemporaryFile_2(parent)
+func (*QTemporaryFile) NewForInherit2(parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
+	return NewQTemporaryFile2(parent)
 }
-func NewQTemporaryFile_2(parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
+func NewQTemporaryFile2(parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
@@ -160,11 +160,11 @@ Constructs a QTemporaryFile using as file template the application name returned
 
 See also setFileTemplate() and QDir::tempPath().
 */
-func (*QTemporaryFile) NewForInherit_3(templateName string, parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
-	return NewQTemporaryFile_3(templateName, parent)
+func (*QTemporaryFile) NewForInherit3(templateName string, parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
+	return NewQTemporaryFile3(templateName, parent)
 }
-func NewQTemporaryFile_3(templateName string, parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
-	var tmpArg0 = NewQString_5(templateName)
+func NewQTemporaryFile3(templateName string, parent QObject_ITF /*777 QObject **/) *QTemporaryFile {
+	var tmpArg0 = NewQString5(templateName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -257,7 +257,7 @@ A QTemporaryFile will always be opened in QIODevice::ReadWrite mode, this allows
 
 See also fileName().
 */
-func (this *QTemporaryFile) Open_1(flags int) bool {
+func (this *QTemporaryFile) Open1(flags int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -316,7 +316,7 @@ If name contains a relative file path, the path will be relative to the current 
 See also fileTemplate().
 */
 func (this *QTemporaryFile) SetFileTemplate(name string) {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile15setFileTemplateERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -331,7 +331,7 @@ func (this *QTemporaryFile) SetFileTemplate(name string) {
 
  */
 func (this *QTemporaryFile) Rename(newName string) bool {
-	var tmpArg0 = NewQString_5(newName)
+	var tmpArg0 = NewQString5(newName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile6renameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -347,7 +347,7 @@ func (this *QTemporaryFile) Rename(newName string) bool {
 
  */
 func (this *QTemporaryFile) CreateLocalFile(fileName string) *QTemporaryFile /*777 QTemporaryFile **/ {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile15createLocalFileERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -367,7 +367,7 @@ func QTemporaryFile_CreateLocalFile(fileName string) *QTemporaryFile /*777 QTemp
 /*
 
  */
-func (this *QTemporaryFile) CreateLocalFile_1(file QFile_ITF) *QTemporaryFile /*777 QTemporaryFile **/ {
+func (this *QTemporaryFile) CreateLocalFile1(file QFile_ITF) *QTemporaryFile /*777 QTemporaryFile **/ {
 	var convArg0 unsafe.Pointer
 	if file != nil && file.QFile_PTR() != nil {
 		convArg0 = file.QFile_PTR().GetCthis()
@@ -376,9 +376,9 @@ func (this *QTemporaryFile) CreateLocalFile_1(file QFile_ITF) *QTemporaryFile /*
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTemporaryFileFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QTemporaryFile_CreateLocalFile_1(file QFile_ITF) *QTemporaryFile /*777 QTemporaryFile **/ {
+func QTemporaryFile_CreateLocalFile1(file QFile_ITF) *QTemporaryFile /*777 QTemporaryFile **/ {
 	var nilthis *QTemporaryFile
-	rv := nilthis.CreateLocalFile_1(file)
+	rv := nilthis.CreateLocalFile1(file)
 	return rv
 }
 
@@ -404,7 +404,7 @@ For example:
 See also QFileInfo::isNativePath().
 */
 func (this *QTemporaryFile) CreateNativeFile(fileName string) *QTemporaryFile /*777 QTemporaryFile **/ {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile16createNativeFileERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -437,7 +437,7 @@ For example:
 
 See also QFileInfo::isNativePath().
 */
-func (this *QTemporaryFile) CreateNativeFile_1(file QFile_ITF) *QTemporaryFile /*777 QTemporaryFile **/ {
+func (this *QTemporaryFile) CreateNativeFile1(file QFile_ITF) *QTemporaryFile /*777 QTemporaryFile **/ {
 	var convArg0 unsafe.Pointer
 	if file != nil && file.QFile_PTR() != nil {
 		convArg0 = file.QFile_PTR().GetCthis()
@@ -446,9 +446,9 @@ func (this *QTemporaryFile) CreateNativeFile_1(file QFile_ITF) *QTemporaryFile /
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTemporaryFileFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QTemporaryFile_CreateNativeFile_1(file QFile_ITF) *QTemporaryFile /*777 QTemporaryFile **/ {
+func QTemporaryFile_CreateNativeFile1(file QFile_ITF) *QTemporaryFile /*777 QTemporaryFile **/ {
 	var nilthis *QTemporaryFile
-	rv := nilthis.CreateNativeFile_1(file)
+	rv := nilthis.CreateNativeFile1(file)
 	return rv
 }
 

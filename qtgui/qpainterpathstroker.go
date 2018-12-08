@@ -92,10 +92,10 @@ func NewQPainterPathStroker() *QPainterPathStroker {
 /*
 
  */
-func (*QPainterPathStroker) NewForInherit_1(pen QPen_ITF) *QPainterPathStroker {
-	return NewQPainterPathStroker_1(pen)
+func (*QPainterPathStroker) NewForInherit1(pen QPen_ITF) *QPainterPathStroker {
+	return NewQPainterPathStroker1(pen)
 }
-func NewQPainterPathStroker_1(pen QPen_ITF) *QPainterPathStroker {
+func NewQPainterPathStroker1(pen QPen_ITF) *QPainterPathStroker {
 	var convArg0 unsafe.Pointer
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg0 = pen.QPen_PTR().GetCthis()

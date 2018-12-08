@@ -127,10 +127,10 @@ Constructs a media recorder which records the media produced by mediaObject.
 
 The parent is passed to QMediaObject.
 */
-func (*QCameraImageCapture) NewForInherit__(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QCameraImageCapture {
-	return NewQCameraImageCapture__(mediaObject)
+func (*QCameraImageCapture) NewForInheritp(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QCameraImageCapture {
+	return NewQCameraImageCapturep(mediaObject)
 }
-func NewQCameraImageCapture__(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QCameraImageCapture {
+func NewQCameraImageCapturep(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QCameraImageCapture {
 	var convArg0 unsafe.Pointer
 	if mediaObject != nil && mediaObject.QMediaObject_PTR() != nil {
 		convArg0 = mediaObject.QMediaObject_PTR().GetCthis()
@@ -229,8 +229,8 @@ Returns the current error state.
 
 See also errorString().
 */
-func (this *QCameraImageCapture) Error_1(id int, error int, errorString string) {
-	var tmpArg2 = qtcore.NewQString_5(errorString)
+func (this *QCameraImageCapture) Error1(id int, error int, errorString string) {
+	var tmpArg2 = qtcore.NewQString5(errorString)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraImageCapture5errorEiNS_5ErrorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, error, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -294,7 +294,7 @@ func (this *QCameraImageCapture) SupportedImageCodecs() *qtcore.QStringList /*12
 Returns a description of an image codec.
 */
 func (this *QCameraImageCapture) ImageCodecDescription(codecName string) string {
-	var tmpArg0 = qtcore.NewQString_5(codecName)
+	var tmpArg0 = qtcore.NewQString5(codecName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QCameraImageCapture21imageCodecDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -343,7 +343,7 @@ If the encoder supports arbitrary resolutions within the supported range, *conti
 
 See also QImageEncoderSettings::resolution().
 */
-func (this *QCameraImageCapture) SupportedResolutions__() *qtcore.QSizeList /*lll*/ {
+func (this *QCameraImageCapture) SupportedResolutionsp() *qtcore.QSizeList /*lll*/ {
 	// arg: 0, const QImageEncoderSettings &=LValueReference, QImageEncoderSettings=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
@@ -368,7 +368,7 @@ If the encoder supports arbitrary resolutions within the supported range, *conti
 
 See also QImageEncoderSettings::resolution().
 */
-func (this *QCameraImageCapture) SupportedResolutions__1(settings QImageEncoderSettings_ITF) *qtcore.QSizeList /*lll*/ {
+func (this *QCameraImageCapture) SupportedResolutionsp1(settings QImageEncoderSettings_ITF) *qtcore.QSizeList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if settings != nil && settings.QImageEncoderSettings_PTR() != nil {
 		convArg0 = settings.QImageEncoderSettings_PTR().GetCthis()
@@ -515,7 +515,7 @@ QCameraImageCapture::capture returns the capture Id parameter, used with imageEx
 See also isReadyForCapture().
 */
 func (this *QCameraImageCapture) Capture(location string) int {
-	var tmpArg0 = qtcore.NewQString_5(location)
+	var tmpArg0 = qtcore.NewQString5(location)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraImageCapture7captureERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -538,7 +538,7 @@ QCameraImageCapture::capture returns the capture Id parameter, used with imageEx
 
 See also isReadyForCapture().
 */
-func (this *QCameraImageCapture) Capture__() int {
+func (this *QCameraImageCapture) Capturep() int {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraImageCapture7captureERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -641,7 +641,7 @@ Signals that a metadata for an image with request id is available. Also includes
 This signal is emitted between imageExposed and imageSaved signals.
 */
 func (this *QCameraImageCapture) ImageMetadataAvailable(id int, key string, value qtcore.QVariant_ITF) {
-	var tmpArg1 = qtcore.NewQString_5(key)
+	var tmpArg1 = qtcore.NewQString5(key)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -677,7 +677,7 @@ func (this *QCameraImageCapture) ImageAvailable(id int, image QVideoFrame_ITF) {
 Signal emitted when the frame with request id was saved to fileName.
 */
 func (this *QCameraImageCapture) ImageSaved(id int, fileName string) {
-	var tmpArg1 = qtcore.NewQString_5(fileName)
+	var tmpArg1 = qtcore.NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraImageCapture10imageSavedEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
 	qtrt.ErrPrint(err, rv)

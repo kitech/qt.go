@@ -143,10 +143,10 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
-func (*QMessageBox) NewForInherit__() *QMessageBox {
-	return NewQMessageBox__()
+func (*QMessageBox) NewForInheritp() *QMessageBox {
+	return NewQMessageBoxp()
 }
-func NewQMessageBox__() *QMessageBox {
+func NewQMessageBoxp() *QMessageBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -166,13 +166,13 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
-func (*QMessageBox) NewForInherit_1(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/, flags int) *QMessageBox {
-	return NewQMessageBox_1(icon, title, text, buttons, parent, flags)
+func (*QMessageBox) NewForInherit1(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/, flags int) *QMessageBox {
+	return NewQMessageBox1(icon, title, text, buttons, parent, flags)
 }
-func NewQMessageBox_1(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/, flags int) *QMessageBox {
-	var tmpArg1 = qtcore.NewQString_5(title)
+func NewQMessageBox1(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/, flags int) *QMessageBox {
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -195,13 +195,13 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
-func (*QMessageBox) NewForInherit_1_(icon int, title string, text string) *QMessageBox {
-	return NewQMessageBox_1_(icon, title, text)
+func (*QMessageBox) NewForInherit1p(icon int, title string, text string) *QMessageBox {
+	return NewQMessageBox1p(icon, title, text)
 }
-func NewQMessageBox_1_(icon int, title string, text string) *QMessageBox {
-	var tmpArg1 = qtcore.NewQString_5(title)
+func NewQMessageBox1p(icon int, title string, text string) *QMessageBox {
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>, Unexposed
 	buttons := 0
@@ -226,13 +226,13 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
-func (*QMessageBox) NewForInherit_1_1(icon int, title string, text string, buttons int) *QMessageBox {
-	return NewQMessageBox_1_1(icon, title, text, buttons)
+func (*QMessageBox) NewForInherit1p1(icon int, title string, text string, buttons int) *QMessageBox {
+	return NewQMessageBox1p1(icon, title, text, buttons)
 }
-func NewQMessageBox_1_1(icon int, title string, text string, buttons int) *QMessageBox {
-	var tmpArg1 = qtcore.NewQString_5(title)
+func NewQMessageBox1p1(icon int, title string, text string, buttons int) *QMessageBox {
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg4 unsafe.Pointer
@@ -255,13 +255,13 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
-func (*QMessageBox) NewForInherit_1_2(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
-	return NewQMessageBox_1_2(icon, title, text, buttons, parent)
+func (*QMessageBox) NewForInherit1p2(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
+	return NewQMessageBox1p2(icon, title, text, buttons, parent)
 }
-func NewQMessageBox_1_2(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
-	var tmpArg1 = qtcore.NewQString_5(title)
+func NewQMessageBox1p2(icon int, title string, text string, buttons int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -286,13 +286,13 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
-func (*QMessageBox) NewForInherit_2(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/, f int) *QMessageBox {
-	return NewQMessageBox_2(title, text, icon, button0, button1, button2, parent, f)
+func (*QMessageBox) NewForInherit2(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/, f int) *QMessageBox {
+	return NewQMessageBox2(title, text, icon, button0, button1, button2, parent, f)
 }
-func NewQMessageBox_2(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/, f int) *QMessageBox {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func NewQMessageBox2(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/, f int) *QMessageBox {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg6 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -315,13 +315,13 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
-func (*QMessageBox) NewForInherit_2_(title string, text string, icon int, button0 int, button1 int, button2 int) *QMessageBox {
-	return NewQMessageBox_2_(title, text, icon, button0, button1, button2)
+func (*QMessageBox) NewForInherit2p(title string, text string, icon int, button0 int, button1 int, button2 int) *QMessageBox {
+	return NewQMessageBox2p(title, text, icon, button0, button1, button2)
 }
-func NewQMessageBox_2_(title string, text string, icon int, button0 int, button1 int, button2 int) *QMessageBox {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func NewQMessageBox2p(title string, text string, icon int, button0 int, button1 int, button2 int) *QMessageBox {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 6, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg6 unsafe.Pointer
@@ -344,13 +344,13 @@ Constructs a message box with no text and no buttons. parent is passed to the QD
 
 On macOS, if you want your message box to appear as a Qt::Sheet of its parent, set the message box's window modality to Qt::WindowModal or use open(). Otherwise, the message box will be a standard dialog.
 */
-func (*QMessageBox) NewForInherit_2_1(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
-	return NewQMessageBox_2_1(title, text, icon, button0, button1, button2, parent)
+func (*QMessageBox) NewForInherit2p1(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
+	return NewQMessageBox2p1(title, text, icon, button0, button1, button2, parent)
 }
-func NewQMessageBox_2_1(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func NewQMessageBox2p1(title string, text string, icon int, button0 int, button1 int, button2 int, parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg6 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -413,8 +413,8 @@ This function was introduced in  Qt 4.2.
 
 See also removeButton(), button(), and setStandardButtons().
 */
-func (this *QMessageBox) AddButton_1(text string, role int) *QPushButton /*777 QPushButton **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QMessageBox) AddButton1(text string, role int) *QPushButton /*777 QPushButton **/ {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox9addButtonERK7QStringNS_10ButtonRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	qtrt.ErrPrint(err, rv)
@@ -433,7 +433,7 @@ This function was introduced in  Qt 4.2.
 
 See also removeButton(), button(), and setStandardButtons().
 */
-func (this *QMessageBox) AddButton_2(button int) *QPushButton /*777 QPushButton **/ {
+func (this *QMessageBox) AddButton2(button int) *QPushButton /*777 QPushButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox9addButtonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -623,7 +623,7 @@ This function was introduced in  Qt 4.2.
 
 See also defaultButton(), addButton(), and QPushButton::setDefault().
 */
-func (this *QMessageBox) SetDefaultButton_1(button int) {
+func (this *QMessageBox) SetDefaultButton1(button int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox16setDefaultButtonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	qtrt.ErrPrint(err, rv)
 }
@@ -677,7 +677,7 @@ This function was introduced in  Qt 4.2.
 
 See also escapeButton(), addButton(), and clickedButton().
 */
-func (this *QMessageBox) SetEscapeButton_1(button int) {
+func (this *QMessageBox) SetEscapeButton1(button int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox15setEscapeButtonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	qtrt.ErrPrint(err, rv)
 }
@@ -742,7 +742,7 @@ func (this *QMessageBox) Text() string {
 
  */
 func (this *QMessageBox) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -926,9 +926,9 @@ func (this *QMessageBox) Information(parent QWidget_ITF /*777 QWidget **/, title
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -960,14 +960,14 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information__(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
+func (this *QMessageBox) Informationp(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>, Unexposed
 	buttons := 0
@@ -998,14 +998,14 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information__1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
+func (this *QMessageBox) Informationp1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
@@ -1034,22 +1034,22 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
+func (this *QMessageBox) Information1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QMessageBox_Information_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
+func QMessageBox_Information1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Information_1(parent, title, text, button0, button1, button2)
+	rv := nilthis.Information1(parent, title, text, button0, button1, button2)
 	return rv
 }
 
@@ -1073,14 +1073,14 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information_1_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int) int {
+func (this *QMessageBox) Information1p(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, int=Int, =Invalid, , Invalid
 	button1 := int(0)
@@ -1111,14 +1111,14 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information_1_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func (this *QMessageBox) Information1p1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 5, int=Int, =Invalid, , Invalid
 	button2 := int(0)
@@ -1147,28 +1147,28 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
+func (this *QMessageBox) Information2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QMessageBox_Information_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
+func QMessageBox_Information2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Information_2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	rv := nilthis.Information2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
 	return rv
 }
 
@@ -1192,16 +1192,16 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information_2_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
+func (this *QMessageBox) Information2p(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
@@ -1236,18 +1236,18 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information_2_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
+func (this *QMessageBox) Information2p1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
@@ -1280,20 +1280,20 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information_2_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
+func (this *QMessageBox) Information2p2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
@@ -1324,20 +1324,20 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information_2_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
+func (this *QMessageBox) Information2p3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
@@ -1366,22 +1366,22 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func (this *QMessageBox) Information3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QMessageBox_Information_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func QMessageBox_Information3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Information_3(parent, title, text, button0, button1)
+	rv := nilthis.Information3(parent, title, text, button0, button1)
 	return rv
 }
 
@@ -1405,14 +1405,14 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and critical().
 */
-func (this *QMessageBox) Information_3_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int) int {
+func (this *QMessageBox) Information3p(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	button1 := 0
@@ -1446,9 +1446,9 @@ func (this *QMessageBox) Question(parent QWidget_ITF /*777 QWidget **/, title st
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -1480,14 +1480,14 @@ This function was introduced in  Qt 4.2.
 
 See also information(), warning(), and critical().
 */
-func (this *QMessageBox) Question__(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
+func (this *QMessageBox) Questionp(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>, Unexposed
 	buttons := 0
@@ -1518,14 +1518,14 @@ This function was introduced in  Qt 4.2.
 
 See also information(), warning(), and critical().
 */
-func (this *QMessageBox) Question__1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
+func (this *QMessageBox) Questionp1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
@@ -1554,22 +1554,22 @@ This function was introduced in  Qt 4.2.
 
 See also information(), warning(), and critical().
 */
-func (this *QMessageBox) Question_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
+func (this *QMessageBox) Question1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QMessageBox_Question_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
+func QMessageBox_Question1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Question_1(parent, title, text, button0, button1, button2)
+	rv := nilthis.Question1(parent, title, text, button0, button1, button2)
 	return rv
 }
 
@@ -1593,14 +1593,14 @@ This function was introduced in  Qt 4.2.
 
 See also information(), warning(), and critical().
 */
-func (this *QMessageBox) Question_1_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int) int {
+func (this *QMessageBox) Question1p(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, int=Int, =Invalid, , Invalid
 	button1 := int(0)
@@ -1631,14 +1631,14 @@ This function was introduced in  Qt 4.2.
 
 See also information(), warning(), and critical().
 */
-func (this *QMessageBox) Question_1_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func (this *QMessageBox) Question1p1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 5, int=Int, =Invalid, , Invalid
 	button2 := int(0)
@@ -1667,28 +1667,28 @@ This function was introduced in  Qt 4.2.
 
 See also information(), warning(), and critical().
 */
-func (this *QMessageBox) Question_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
+func (this *QMessageBox) Question2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QMessageBox_Question_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
+func QMessageBox_Question2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Question_2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	rv := nilthis.Question2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
 	return rv
 }
 
@@ -1712,16 +1712,16 @@ This function was introduced in  Qt 4.2.
 
 See also information(), warning(), and critical().
 */
-func (this *QMessageBox) Question_2_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
+func (this *QMessageBox) Question2p(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
@@ -1756,18 +1756,18 @@ This function was introduced in  Qt 4.2.
 
 See also information(), warning(), and critical().
 */
-func (this *QMessageBox) Question_2_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
+func (this *QMessageBox) Question2p1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
@@ -1800,20 +1800,20 @@ This function was introduced in  Qt 4.2.
 
 See also information(), warning(), and critical().
 */
-func (this *QMessageBox) Question_2_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
+func (this *QMessageBox) Question2p2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
@@ -1844,20 +1844,20 @@ This function was introduced in  Qt 4.2.
 
 See also information(), warning(), and critical().
 */
-func (this *QMessageBox) Question_2_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
+func (this *QMessageBox) Question2p3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
@@ -1886,22 +1886,22 @@ This function was introduced in  Qt 4.2.
 
 See also information(), warning(), and critical().
 */
-func (this *QMessageBox) Question_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func (this *QMessageBox) Question3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QMessageBox_Question_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func QMessageBox_Question3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Question_3(parent, title, text, button0, button1)
+	rv := nilthis.Question3(parent, title, text, button0, button1)
 	return rv
 }
 
@@ -1930,9 +1930,9 @@ func (this *QMessageBox) Warning(parent QWidget_ITF /*777 QWidget **/, title str
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -1964,14 +1964,14 @@ This function was introduced in  Qt 4.2.
 
 See also question(), information(), and critical().
 */
-func (this *QMessageBox) Warning__(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
+func (this *QMessageBox) Warningp(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>, Unexposed
 	buttons := 0
@@ -2002,14 +2002,14 @@ This function was introduced in  Qt 4.2.
 
 See also question(), information(), and critical().
 */
-func (this *QMessageBox) Warning__1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
+func (this *QMessageBox) Warningp1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
@@ -2038,22 +2038,22 @@ This function was introduced in  Qt 4.2.
 
 See also question(), information(), and critical().
 */
-func (this *QMessageBox) Warning_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
+func (this *QMessageBox) Warning1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QMessageBox_Warning_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
+func QMessageBox_Warning1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Warning_1(parent, title, text, button0, button1, button2)
+	rv := nilthis.Warning1(parent, title, text, button0, button1, button2)
 	return rv
 }
 
@@ -2077,14 +2077,14 @@ This function was introduced in  Qt 4.2.
 
 See also question(), information(), and critical().
 */
-func (this *QMessageBox) Warning_1_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func (this *QMessageBox) Warning1p(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 5, int=Int, =Invalid, , Invalid
 	button2 := int(0)
@@ -2113,28 +2113,28 @@ This function was introduced in  Qt 4.2.
 
 See also question(), information(), and critical().
 */
-func (this *QMessageBox) Warning_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
+func (this *QMessageBox) Warning2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QMessageBox_Warning_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
+func QMessageBox_Warning2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Warning_2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	rv := nilthis.Warning2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
 	return rv
 }
 
@@ -2158,16 +2158,16 @@ This function was introduced in  Qt 4.2.
 
 See also question(), information(), and critical().
 */
-func (this *QMessageBox) Warning_2_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
+func (this *QMessageBox) Warning2p(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
@@ -2202,18 +2202,18 @@ This function was introduced in  Qt 4.2.
 
 See also question(), information(), and critical().
 */
-func (this *QMessageBox) Warning_2_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
+func (this *QMessageBox) Warning2p1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
@@ -2246,20 +2246,20 @@ This function was introduced in  Qt 4.2.
 
 See also question(), information(), and critical().
 */
-func (this *QMessageBox) Warning_2_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
+func (this *QMessageBox) Warning2p2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
@@ -2290,20 +2290,20 @@ This function was introduced in  Qt 4.2.
 
 See also question(), information(), and critical().
 */
-func (this *QMessageBox) Warning_2_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
+func (this *QMessageBox) Warning2p3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
@@ -2332,22 +2332,22 @@ This function was introduced in  Qt 4.2.
 
 See also question(), information(), and critical().
 */
-func (this *QMessageBox) Warning_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func (this *QMessageBox) Warning3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QMessageBox_Warning_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func QMessageBox_Warning3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Warning_3(parent, title, text, button0, button1)
+	rv := nilthis.Warning3(parent, title, text, button0, button1)
 	return rv
 }
 
@@ -2376,9 +2376,9 @@ func (this *QMessageBox) Critical(parent QWidget_ITF /*777 QWidget **/, title st
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
 	qtrt.ErrPrint(err, rv)
@@ -2410,14 +2410,14 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and information().
 */
-func (this *QMessageBox) Critical__(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
+func (this *QMessageBox) Criticalp(parent QWidget_ITF /*777 QWidget **/, title string, text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QMessageBox::StandardButtons=Typedef, QMessageBox::StandardButtons=Typedef, QFlags<QMessageBox::StandardButton>, Unexposed
 	buttons := 0
@@ -2448,14 +2448,14 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and information().
 */
-func (this *QMessageBox) Critical__1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
+func (this *QMessageBox) Criticalp1(parent QWidget_ITF /*777 QWidget **/, title string, text string, buttons int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 4, QMessageBox::StandardButton=Enum, QMessageBox::StandardButton=Enum, , Invalid
 	defaultButton := 0
@@ -2484,22 +2484,22 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and information().
 */
-func (this *QMessageBox) Critical_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
+func (this *QMessageBox) Critical1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QMessageBox_Critical_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
+func QMessageBox_Critical1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int, button2 int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Critical_1(parent, title, text, button0, button1, button2)
+	rv := nilthis.Critical1(parent, title, text, button0, button1, button2)
 	return rv
 }
 
@@ -2523,14 +2523,14 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and information().
 */
-func (this *QMessageBox) Critical_1_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func (this *QMessageBox) Critical1p(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 5, int=Int, =Invalid, , Invalid
 	button2 := int(0)
@@ -2559,28 +2559,28 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and information().
 */
-func (this *QMessageBox) Critical_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
+func (this *QMessageBox) Critical2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QMessageBox_Critical_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
+func QMessageBox_Critical2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int, escapeButtonNumber int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Critical_2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	rv := nilthis.Critical2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
 	return rv
 }
 
@@ -2604,16 +2604,16 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and information().
 */
-func (this *QMessageBox) Critical_2_(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
+func (this *QMessageBox) Critical2p(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = qtcore.NewQString()
@@ -2648,18 +2648,18 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and information().
 */
-func (this *QMessageBox) Critical_2_1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
+func (this *QMessageBox) Critical2p1(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
 	// arg: 5, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg5 = qtcore.NewQString()
@@ -2692,20 +2692,20 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and information().
 */
-func (this *QMessageBox) Critical_2_2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
+func (this *QMessageBox) Critical2p2(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 6, int=Int, =Invalid, , Invalid
 	defaultButtonNumber := int(0)
@@ -2736,20 +2736,20 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and information().
 */
-func (this *QMessageBox) Critical_2_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
+func (this *QMessageBox) Critical2p3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0Text string, button1Text string, button2Text string, defaultButtonNumber int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = qtcore.NewQString_5(button0Text)
+	var tmpArg3 = qtcore.NewQString5(button0Text)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = qtcore.NewQString_5(button1Text)
+	var tmpArg4 = qtcore.NewQString5(button1Text)
 	var convArg4 = tmpArg4.GetCthis()
-	var tmpArg5 = qtcore.NewQString_5(button2Text)
+	var tmpArg5 = qtcore.NewQString5(button2Text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 7, int=Int, =Invalid, , Invalid
 	escapeButtonNumber := int(-1)
@@ -2778,22 +2778,22 @@ This function was introduced in  Qt 4.2.
 
 See also question(), warning(), and information().
 */
-func (this *QMessageBox) Critical_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func (this *QMessageBox) Critical3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QMessageBox_Critical_3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
+func QMessageBox_Critical3(parent QWidget_ITF /*777 QWidget **/, title string, text string, button0 int, button1 int) int {
 	var nilthis *QMessageBox
-	rv := nilthis.Critical_3(parent, title, text, button0, button1)
+	rv := nilthis.Critical3(parent, title, text, button0, button1)
 	return rv
 }
 
@@ -2812,9 +2812,9 @@ func (this *QMessageBox) About(parent QWidget_ITF /*777 QWidget **/, title strin
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -2845,7 +2845,7 @@ func (this *QMessageBox) AboutQt(parent QWidget_ITF /*777 QWidget **/, title str
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2871,7 +2871,7 @@ On macOS, the about box is popped up as a modeless window; on other platforms, i
 
 See also QApplication::aboutQt().
 */
-func (this *QMessageBox) AboutQt__(parent QWidget_ITF /*777 QWidget **/) {
+func (this *QMessageBox) AboutQtp(parent QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -2908,7 +2908,7 @@ func (this *QMessageBox) ButtonText(button int) string {
 
  */
 func (this *QMessageBox) SetButtonText(button int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox13setButtonTextEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2940,7 +2940,7 @@ func (this *QMessageBox) InformativeText() string {
 
  */
 func (this *QMessageBox) SetInformativeText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox18setInformativeTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2972,7 +2972,7 @@ func (this *QMessageBox) DetailedText() string {
 
  */
 func (this *QMessageBox) SetDetailedText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox15setDetailedTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2991,7 +2991,7 @@ Sets the title of the message box to title. On macOS, the window title is ignore
 This function was introduced in  Qt 4.2.
 */
 func (this *QMessageBox) SetWindowTitle(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox14setWindowTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

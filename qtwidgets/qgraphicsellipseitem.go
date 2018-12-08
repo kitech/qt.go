@@ -110,10 +110,10 @@ func NewQGraphicsEllipseItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *
 /*
 
  */
-func (*QGraphicsEllipseItem) NewForInherit__() *QGraphicsEllipseItem {
-	return NewQGraphicsEllipseItem__()
+func (*QGraphicsEllipseItem) NewForInheritp() *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItemp()
 }
-func NewQGraphicsEllipseItem__() *QGraphicsEllipseItem {
+func NewQGraphicsEllipseItemp() *QGraphicsEllipseItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -131,10 +131,10 @@ func NewQGraphicsEllipseItem__() *QGraphicsEllipseItem {
 /*
 
  */
-func (*QGraphicsEllipseItem) NewForInherit_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
-	return NewQGraphicsEllipseItem_1(rect, parent)
+func (*QGraphicsEllipseItem) NewForInherit1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItem1(rect, parent)
 }
-func NewQGraphicsEllipseItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
+func NewQGraphicsEllipseItem1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -158,10 +158,10 @@ func NewQGraphicsEllipseItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF 
 /*
 
  */
-func (*QGraphicsEllipseItem) NewForInherit_1_(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem {
-	return NewQGraphicsEllipseItem_1_(rect)
+func (*QGraphicsEllipseItem) NewForInherit1p(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItem1p(rect)
 }
-func NewQGraphicsEllipseItem_1_(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem {
+func NewQGraphicsEllipseItem1p(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -183,10 +183,10 @@ func NewQGraphicsEllipseItem_1_(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem {
 /*
 
  */
-func (*QGraphicsEllipseItem) NewForInherit_2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
-	return NewQGraphicsEllipseItem_2(x, y, w, h, parent)
+func (*QGraphicsEllipseItem) NewForInherit2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItem2(x, y, w, h, parent)
 }
-func NewQGraphicsEllipseItem_2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
+func NewQGraphicsEllipseItem2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
 		convArg4 = parent.QGraphicsItem_PTR().GetCthis()
@@ -206,10 +206,10 @@ func NewQGraphicsEllipseItem_2(x float64, y float64, w float64, h float64, paren
 /*
 
  */
-func (*QGraphicsEllipseItem) NewForInherit_2_(x float64, y float64, w float64, h float64) *QGraphicsEllipseItem {
-	return NewQGraphicsEllipseItem_2_(x, y, w, h)
+func (*QGraphicsEllipseItem) NewForInherit2p(x float64, y float64, w float64, h float64) *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItem2p(x, y, w, h)
 }
-func NewQGraphicsEllipseItem_2_(x float64, y float64, w float64, h float64) *QGraphicsEllipseItem {
+func NewQGraphicsEllipseItem2p(x float64, y float64, w float64, h float64) *QGraphicsEllipseItem {
 	// arg: 4, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, x, y, w, h, convArg4)
@@ -275,7 +275,7 @@ func (this *QGraphicsEllipseItem) SetRect(rect qtcore.QRectF_ITF) {
 /*
 
  */
-func (this *QGraphicsEllipseItem) SetRect_1(x float64, y float64, w float64, h float64) {
+func (this *QGraphicsEllipseItem) SetRect1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -509,7 +509,7 @@ Note: Enabling caching for an item does not guarantee that paint() will be invok
 
 See also setCacheMode(), QPen::width(), Item Coordinates, and ItemUsesExtendedStyleOption.
 */
-func (this *QGraphicsEllipseItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+func (this *QGraphicsEllipseItem) Paintp(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()

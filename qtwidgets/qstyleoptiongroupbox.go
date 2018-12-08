@@ -91,10 +91,10 @@ func NewQStyleOptionGroupBox() *QStyleOptionGroupBox {
 /*
 
  */
-func (*QStyleOptionGroupBox) NewForInherit_1(version int) *QStyleOptionGroupBox {
-	return NewQStyleOptionGroupBox_1(version)
+func (*QStyleOptionGroupBox) NewForInherit1(version int) *QStyleOptionGroupBox {
+	return NewQStyleOptionGroupBox1(version)
 }
-func NewQStyleOptionGroupBox_1(version int) *QStyleOptionGroupBox {
+func NewQStyleOptionGroupBox1(version int) *QStyleOptionGroupBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionGroupBoxFromPointer(unsafe.Pointer(uintptr(rv)))

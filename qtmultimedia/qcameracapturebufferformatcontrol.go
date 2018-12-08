@@ -171,10 +171,10 @@ func NewQCameraCaptureBufferFormatControl(parent qtcore.QObject_ITF /*777 QObjec
 /*
 Constructs a new image buffer capture format control object with the given parent
 */
-func (*QCameraCaptureBufferFormatControl) NewForInherit__() *QCameraCaptureBufferFormatControl {
-	return NewQCameraCaptureBufferFormatControl__()
+func (*QCameraCaptureBufferFormatControl) NewForInheritp() *QCameraCaptureBufferFormatControl {
+	return NewQCameraCaptureBufferFormatControlp()
 }
-func NewQCameraCaptureBufferFormatControl__() *QCameraCaptureBufferFormatControl {
+func NewQCameraCaptureBufferFormatControlp() *QCameraCaptureBufferFormatControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN33QCameraCaptureBufferFormatControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

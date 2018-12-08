@@ -245,7 +245,7 @@ func (this *QCameraControl) StatusChanged(arg0 int) {
 Signal emitted when an error occurs with error code error and a description of the error errorString.
 */
 func (this *QCameraControl) Error(error int, errorString string) {
-	var tmpArg1 = qtcore.NewQString_5(errorString)
+	var tmpArg1 = qtcore.NewQString5(errorString)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QCameraControl5errorEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -295,10 +295,10 @@ func NewQCameraControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCameraCont
 /*
 Constructs a camera control object with parent.
 */
-func (*QCameraControl) NewForInherit__() *QCameraControl {
-	return NewQCameraControl__()
+func (*QCameraControl) NewForInheritp() *QCameraControl {
+	return NewQCameraControlp()
 }
-func NewQCameraControl__() *QCameraControl {
+func NewQCameraControlp() *QCameraControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QCameraControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

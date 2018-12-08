@@ -131,10 +131,10 @@ Constructs an empty buffer with the given parent. You can call setData() to fill
 
 See also open().
 */
-func (*QBuffer) NewForInherit__() *QBuffer {
-	return NewQBuffer__()
+func (*QBuffer) NewForInheritp() *QBuffer {
+	return NewQBufferp()
 }
-func NewQBuffer__() *QBuffer {
+func NewQBufferp() *QBuffer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBufferC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -154,10 +154,10 @@ Constructs an empty buffer with the given parent. You can call setData() to fill
 
 See also open().
 */
-func (*QBuffer) NewForInherit_1(buf QByteArray_ITF /*777 QByteArray **/, parent QObject_ITF /*777 QObject **/) *QBuffer {
-	return NewQBuffer_1(buf, parent)
+func (*QBuffer) NewForInherit1(buf QByteArray_ITF /*777 QByteArray **/, parent QObject_ITF /*777 QObject **/) *QBuffer {
+	return NewQBuffer1(buf, parent)
 }
-func NewQBuffer_1(buf QByteArray_ITF /*777 QByteArray **/, parent QObject_ITF /*777 QObject **/) *QBuffer {
+func NewQBuffer1(buf QByteArray_ITF /*777 QByteArray **/, parent QObject_ITF /*777 QObject **/) *QBuffer {
 	var convArg0 unsafe.Pointer
 	if buf != nil && buf.QByteArray_PTR() != nil {
 		convArg0 = buf.QByteArray_PTR().GetCthis()
@@ -183,10 +183,10 @@ Constructs an empty buffer with the given parent. You can call setData() to fill
 
 See also open().
 */
-func (*QBuffer) NewForInherit_1_(buf QByteArray_ITF /*777 QByteArray **/) *QBuffer {
-	return NewQBuffer_1_(buf)
+func (*QBuffer) NewForInherit1p(buf QByteArray_ITF /*777 QByteArray **/) *QBuffer {
+	return NewQBuffer1p(buf)
 }
-func NewQBuffer_1_(buf QByteArray_ITF /*777 QByteArray **/) *QBuffer {
+func NewQBuffer1p(buf QByteArray_ITF /*777 QByteArray **/) *QBuffer {
 	var convArg0 unsafe.Pointer
 	if buf != nil && buf.QByteArray_PTR() != nil {
 		convArg0 = buf.QByteArray_PTR().GetCthis()
@@ -243,7 +243,7 @@ Returns a reference to the QBuffer's internal buffer. You can use it to modify t
 
 See also setBuffer() and data().
 */
-func (this *QBuffer) Buffer_1() *QByteArray {
+func (this *QBuffer) Buffer1() *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer6bufferEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -323,7 +323,7 @@ Does nothing if isOpen() is true.
 
 See also data() and setBuffer().
 */
-func (this *QBuffer) SetData_1(data string, len_ int) {
+func (this *QBuffer) SetData1(data string, len_ int) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer7setDataEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)

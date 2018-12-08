@@ -203,7 +203,7 @@ Returns the index of the screen that contains the largest part of widget, or -1 
 
 See also primaryScreen.
 */
-func (this *QDesktopWidget) ScreenNumber__() int {
+func (this *QDesktopWidget) ScreenNumberp() int {
 	// arg: 0, const QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget12screenNumberEPK7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -221,7 +221,7 @@ Returns the index of the screen that contains the largest part of widget, or -1 
 
 See also primaryScreen.
 */
-func (this *QDesktopWidget) ScreenNumber_1(arg0 qtcore.QPoint_ITF) int {
+func (this *QDesktopWidget) ScreenNumber1(arg0 qtcore.QPoint_ITF) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPoint_PTR() != nil {
 		convArg0 = arg0.QPoint_PTR().GetCthis()
@@ -261,7 +261,7 @@ If the system uses a virtual desktop, the returned widget will have the geometry
 
 See also primaryScreen, screenCount, and virtualDesktop.
 */
-func (this *QDesktopWidget) Screen__() *QWidget /*777 QWidget **/ {
+func (this *QDesktopWidget) Screenp() *QWidget /*777 QWidget **/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	screen := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QDesktopWidget6screenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
@@ -297,7 +297,7 @@ Returns the geometry of the screen with index screen. The default screen is used
 
 See also screenNumber().
 */
-func (this *QDesktopWidget) ScreenGeometry__() *qtcore.QRect /*123*/ {
+func (this *QDesktopWidget) ScreenGeometryp() *qtcore.QRect /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	screen := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget14screenGeometryEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
@@ -317,7 +317,7 @@ Returns the geometry of the screen with index screen. The default screen is used
 
 See also screenNumber().
 */
-func (this *QDesktopWidget) ScreenGeometry_1(widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
+func (this *QDesktopWidget) ScreenGeometry1(widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -339,7 +339,7 @@ Returns the geometry of the screen with index screen. The default screen is used
 
 See also screenNumber().
 */
-func (this *QDesktopWidget) ScreenGeometry_2(point qtcore.QPoint_ITF) *qtcore.QRect /*123*/ {
+func (this *QDesktopWidget) ScreenGeometry2(point qtcore.QPoint_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
 		convArg0 = point.QPoint_PTR().GetCthis()
@@ -379,7 +379,7 @@ Returns the available geometry of the screen with index screen. What is availabl
 
 See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
 */
-func (this *QDesktopWidget) AvailableGeometry__() *qtcore.QRect /*123*/ {
+func (this *QDesktopWidget) AvailableGeometryp() *qtcore.QRect /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	screen := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget17availableGeometryEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
@@ -399,7 +399,7 @@ Returns the available geometry of the screen with index screen. What is availabl
 
 See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
 */
-func (this *QDesktopWidget) AvailableGeometry_1(widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
+func (this *QDesktopWidget) AvailableGeometry1(widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -421,7 +421,7 @@ Returns the available geometry of the screen with index screen. What is availabl
 
 See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
 */
-func (this *QDesktopWidget) AvailableGeometry_2(point qtcore.QPoint_ITF) *qtcore.QRect /*123*/ {
+func (this *QDesktopWidget) AvailableGeometry2(point qtcore.QPoint_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
 		convArg0 = point.QPoint_PTR().GetCthis()

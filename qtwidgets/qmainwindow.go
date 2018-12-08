@@ -123,10 +123,10 @@ Constructs a QMainWindow with the given parent and the specified widget flags.
 
 QMainWindow sets the Qt::Window flag itself, and will hence always be created as a top-level widget.
 */
-func (*QMainWindow) NewForInherit__() *QMainWindow {
-	return NewQMainWindow__()
+func (*QMainWindow) NewForInheritp() *QMainWindow {
+	return NewQMainWindowp()
 }
-func NewQMainWindow__() *QMainWindow {
+func NewQMainWindowp() *QMainWindow {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -148,10 +148,10 @@ Constructs a QMainWindow with the given parent and the specified widget flags.
 
 QMainWindow sets the Qt::Window flag itself, and will hence always be created as a top-level widget.
 */
-func (*QMainWindow) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
-	return NewQMainWindow__1(parent)
+func (*QMainWindow) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
+	return NewQMainWindowp1(parent)
 }
-func NewQMainWindow__1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
+func NewQMainWindowp1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -635,7 +635,7 @@ func (this *QMainWindow) AddToolBarBreak(area int) {
 /*
 Adds a toolbar break to the given area after all the other objects that are present.
 */
-func (this *QMainWindow) AddToolBarBreak__() {
+func (this *QMainWindow) AddToolBarBreakp() {
 	// arg: 0, Qt::ToolBarArea=Elaborated, Qt::ToolBarArea=Enum, , Invalid
 	area := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow15addToolBarBreakEN2Qt11ToolBarAreaE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), area)
@@ -688,7 +688,7 @@ Adds the toolbar into the specified area in this main window. The toolbar is pla
 
 See also insertToolBar(), addToolBarBreak(), and insertToolBarBreak().
 */
-func (this *QMainWindow) AddToolBar_1(toolbar QToolBar_ITF /*777 QToolBar **/) {
+func (this *QMainWindow) AddToolBar1(toolbar QToolBar_ITF /*777 QToolBar **/) {
 	var convArg0 unsafe.Pointer
 	if toolbar != nil && toolbar.QToolBar_PTR() != nil {
 		convArg0 = toolbar.QToolBar_PTR().GetCthis()
@@ -707,8 +707,8 @@ Adds the toolbar into the specified area in this main window. The toolbar is pla
 
 See also insertToolBar(), addToolBarBreak(), and insertToolBarBreak().
 */
-func (this *QMainWindow) AddToolBar_2(title string) *QToolBar /*777 QToolBar **/ {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func (this *QMainWindow) AddToolBar2(title string) *QToolBar /*777 QToolBar **/ {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMainWindow10addToolBarERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -851,7 +851,7 @@ func (this *QMainWindow) AddDockWidget(area int, dockwidget QDockWidget_ITF /*77
 /*
 Adds the given dockwidget to the specified area.
 */
-func (this *QMainWindow) AddDockWidget_1(area int, dockwidget QDockWidget_ITF /*777 QDockWidget **/, orientation int) {
+func (this *QMainWindow) AddDockWidget1(area int, dockwidget QDockWidget_ITF /*777 QDockWidget **/, orientation int) {
 	var convArg1 unsafe.Pointer
 	if dockwidget != nil && dockwidget.QDockWidget_PTR() != nil {
 		convArg1 = dockwidget.QDockWidget_PTR().GetCthis()
@@ -1031,7 +1031,7 @@ To save the geometry when the window closes, you can implement a close event lik
 
 See also restoreState(), QWidget::saveGeometry(), and QWidget::restoreGeometry().
 */
-func (this *QMainWindow) SaveState__() *qtcore.QByteArray /*123*/ {
+func (this *QMainWindow) SaveStatep() *qtcore.QByteArray /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	version := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMainWindow9saveStateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), version)
@@ -1095,7 +1095,7 @@ To restore geometry saved using QSettings, you can use code like this:
 
 See also saveState(), QWidget::saveGeometry(), QWidget::restoreGeometry(), and restoreDockWidget().
 */
-func (this *QMainWindow) RestoreState__(state qtcore.QByteArray_ITF) bool {
+func (this *QMainWindow) RestoreStatep(state qtcore.QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if state != nil && state.QByteArray_PTR() != nil {
 		convArg0 = state.QByteArray_PTR().GetCthis()

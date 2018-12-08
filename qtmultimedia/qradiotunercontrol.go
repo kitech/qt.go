@@ -404,7 +404,7 @@ func (this *QRadioTunerControl) SearchAllStations(searchMode int) {
 /*
 Starts a scan through the whole frequency band searching all stations with a specific searchMode.
 */
-func (this *QRadioTunerControl) SearchAllStations__() {
+func (this *QRadioTunerControl) SearchAllStationsp() {
 	// arg: 0, QRadioTuner::SearchMode=Elaborated, QRadioTuner::SearchMode=Enum, , Invalid
 	searchMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRadioTunerControl17searchAllStationsEN11QRadioTuner10SearchModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), searchMode)
@@ -472,7 +472,7 @@ func (this *QRadioTunerControl) Error() int {
 /*
 Returns the error state of a radio tuner.
 */
-func (this *QRadioTunerControl) Error_1(err_ int) {
+func (this *QRadioTunerControl) Error1(err_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRadioTunerControl5errorEN11QRadioTuner5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), err_)
 	qtrt.ErrPrint(err, rv)
 }
@@ -607,7 +607,7 @@ func (this *QRadioTunerControl) MutedChanged(muted bool) {
 Signals that new station with frequency and stationId was found when scanning
 */
 func (this *QRadioTunerControl) StationFound(frequency int, stationId string) {
-	var tmpArg1 = qtcore.NewQString_5(stationId)
+	var tmpArg1 = qtcore.NewQString5(stationId)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRadioTunerControl12stationFoundEi7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), frequency, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -657,10 +657,10 @@ func NewQRadioTunerControl(parent qtcore.QObject_ITF /*777 QObject **/) *QRadioT
 /*
 Constructs a radio tuner control with the given parent.
 */
-func (*QRadioTunerControl) NewForInherit__() *QRadioTunerControl {
-	return NewQRadioTunerControl__()
+func (*QRadioTunerControl) NewForInheritp() *QRadioTunerControl {
+	return NewQRadioTunerControlp()
 }
-func NewQRadioTunerControl__() *QRadioTunerControl {
+func NewQRadioTunerControlp() *QRadioTunerControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRadioTunerControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

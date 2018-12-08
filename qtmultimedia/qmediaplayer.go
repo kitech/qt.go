@@ -110,10 +110,10 @@ func NewQMediaPlayer(parent qtcore.QObject_ITF /*777 QObject **/, flags int) *QM
 /*
 Construct a QMediaPlayer instance parented to parent and with flags.
 */
-func (*QMediaPlayer) NewForInherit__() *QMediaPlayer {
-	return NewQMediaPlayer__()
+func (*QMediaPlayer) NewForInheritp() *QMediaPlayer {
+	return NewQMediaPlayerp()
 }
-func NewQMediaPlayer__() *QMediaPlayer {
+func NewQMediaPlayerp() *QMediaPlayer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, QMediaPlayer::Flags=Typedef, QMediaPlayer::Flags=Typedef, QFlags<QMediaPlayer::Flag>, Unexposed
@@ -133,10 +133,10 @@ func NewQMediaPlayer__() *QMediaPlayer {
 /*
 Construct a QMediaPlayer instance parented to parent and with flags.
 */
-func (*QMediaPlayer) NewForInherit__1(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlayer {
-	return NewQMediaPlayer__1(parent)
+func (*QMediaPlayer) NewForInheritp1(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlayer {
+	return NewQMediaPlayerp1(parent)
 }
-func NewQMediaPlayer__1(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlayer {
+func NewQMediaPlayerp1(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlayer {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
@@ -176,7 +176,7 @@ Returns the level of support a media player has for a mimeType and a set of code
 The flags argument allows additional requirements such as performance indicators to be specified.
 */
 func (this *QMediaPlayer) HasSupport(mimeType string, codecs qtcore.QStringList_ITF, flags int) int {
-	var tmpArg0 = qtcore.NewQString_5(mimeType)
+	var tmpArg0 = qtcore.NewQString5(mimeType)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if codecs != nil && codecs.QStringList_PTR() != nil {
@@ -202,8 +202,8 @@ Returns the level of support a media player has for a mimeType and a set of code
 
 The flags argument allows additional requirements such as performance indicators to be specified.
 */
-func (this *QMediaPlayer) HasSupport__(mimeType string) int {
-	var tmpArg0 = qtcore.NewQString_5(mimeType)
+func (this *QMediaPlayer) HasSupportp(mimeType string) int {
+	var tmpArg0 = qtcore.NewQString5(mimeType)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -224,8 +224,8 @@ Returns the level of support a media player has for a mimeType and a set of code
 
 The flags argument allows additional requirements such as performance indicators to be specified.
 */
-func (this *QMediaPlayer) HasSupport__1(mimeType string, codecs qtcore.QStringList_ITF) int {
-	var tmpArg0 = qtcore.NewQString_5(mimeType)
+func (this *QMediaPlayer) HasSupportp1(mimeType string, codecs qtcore.QStringList_ITF) int {
+	var tmpArg0 = qtcore.NewQString5(mimeType)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if codecs != nil && codecs.QStringList_PTR() != nil {
@@ -267,7 +267,7 @@ func QMediaPlayer_SupportedMimeTypes(flags int) *qtcore.QStringList /*123*/ {
 /*
 
  */
-func (this *QMediaPlayer) SupportedMimeTypes__() *qtcore.QStringList /*123*/ {
+func (this *QMediaPlayer) SupportedMimeTypesp() *qtcore.QStringList /*123*/ {
 	// arg: 0, QMediaPlayer::Flags=Typedef, QMediaPlayer::Flags=Typedef, QFlags<QMediaPlayer::Flag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMediaPlayer18supportedMimeTypesE6QFlagsINS_4FlagEE", qtrt.FFI_TYPE_POINTER, flags)
@@ -536,7 +536,7 @@ func (this *QMediaPlayer) Error() int {
 /*
 Returns the current error state.
 */
-func (this *QMediaPlayer) Error_1(error int) {
+func (this *QMediaPlayer) Error1(error int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMediaPlayer5errorENS_5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	qtrt.ErrPrint(err, rv)
 }
@@ -755,7 +755,7 @@ Note: Setter function for property media.
 
 See also media().
 */
-func (this *QMediaPlayer) SetMedia__(media QMediaContent_ITF) {
+func (this *QMediaPlayer) SetMediap(media QMediaContent_ITF) {
 	var convArg0 unsafe.Pointer
 	if media != nil && media.QMediaContent_PTR() != nil {
 		convArg0 = media.QMediaContent_PTR().GetCthis()

@@ -143,10 +143,10 @@ Constructs a wizard with the given parent and window flags.
 
 See also parent() and windowFlags().
 */
-func (*QWizard) NewForInherit__() *QWizard {
-	return NewQWizard__()
+func (*QWizard) NewForInheritp() *QWizard {
+	return NewQWizardp()
 }
-func NewQWizard__() *QWizard {
+func NewQWizardp() *QWizard {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -168,10 +168,10 @@ Constructs a wizard with the given parent and window flags.
 
 See also parent() and windowFlags().
 */
-func (*QWizard) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QWizard {
-	return NewQWizard__1(parent)
+func (*QWizard) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QWizard {
+	return NewQWizardp1(parent)
 }
-func NewQWizard__1(parent QWidget_ITF /*777 QWidget **/) *QWizard {
+func NewQWizardp1(parent QWidget_ITF /*777 QWidget **/) *QWizard {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -410,7 +410,7 @@ This function can be used to set fields on any page of the wizard.
 See also QWizardPage::registerField(), QWizardPage::setField(), and field().
 */
 func (this *QWizard) SetField(name string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -433,7 +433,7 @@ This function can be used to access fields on any page of the wizard.
 See also QWizardPage::registerField(), QWizardPage::field(), and setField().
 */
 func (this *QWizard) Field(name string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWizard5fieldERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -494,7 +494,7 @@ Sets the given option to be enabled if on is true; otherwise, clears the given o
 
 See also options, testOption(), and setWizardStyle().
 */
-func (this *QWizard) SetOption__(option int) {
+func (this *QWizard) SetOptionp(option int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard9setOptionENS_12WizardOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
@@ -561,7 +561,7 @@ Button texts may also be set on a per-page basis using QWizardPage::setButtonTex
 See also buttonText(), setButton(), button(), setButtonLayout(), setOptions(), and QWizardPage::setButtonText().
 */
 func (this *QWizard) SetButtonText(which int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard13setButtonTextENS_12WizardButtonERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)

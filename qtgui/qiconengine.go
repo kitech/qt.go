@@ -188,7 +188,7 @@ func (this *QIconEngine) AddPixmap(pixmap QPixmap_ITF, mode int, state int) {
 Called by QIcon::addFile(). Adds a specialized pixmap from the file with the given fileName, size, mode and state. The default pixmap-based engine stores any supplied file names, and it loads the pixmaps on demand instead of using scaled pixmaps if the size of a pixmap matches the size of icon requested. Custom icon engines that implement scalable vector formats are free to ignores any extra files.
 */
 func (this *QIconEngine) AddFile(fileName string, size qtcore.QSize_ITF, mode int, state int) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -300,7 +300,7 @@ Note: This is a helper method and the actual work is done by the virtual_hook() 
 
 This function was introduced in  Qt 4.5.
 */
-func (this *QIconEngine) AvailableSizes__() *qtcore.QSizeList /*lll*/ {
+func (this *QIconEngine) AvailableSizesp() *qtcore.QSizeList /*lll*/ {
 	// arg: 0, QIcon::Mode=Elaborated, QIcon::Mode=Enum, , Invalid
 	mode := 0
 	// arg: 1, QIcon::State=Elaborated, QIcon::State=Enum, , Invalid
@@ -323,7 +323,7 @@ Note: This is a helper method and the actual work is done by the virtual_hook() 
 
 This function was introduced in  Qt 4.5.
 */
-func (this *QIconEngine) AvailableSizes__1(mode int) *qtcore.QSizeList /*lll*/ {
+func (this *QIconEngine) AvailableSizesp1(mode int) *qtcore.QSizeList /*lll*/ {
 	// arg: 1, QIcon::State=Elaborated, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QIconEngine14availableSizesEN5QIcon4ModeENS0_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, state)

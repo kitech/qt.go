@@ -96,10 +96,10 @@ Constructs an invalid QAndroidJniObject.
 
 See also isValid().
 */
-func (*QAndroidJniObject) NewForInherit_1(className string) *QAndroidJniObject {
-	return NewQAndroidJniObject_1(className)
+func (*QAndroidJniObject) NewForInherit1(className string) *QAndroidJniObject {
+	return NewQAndroidJniObject1(className)
 }
-func NewQAndroidJniObject_1(className string) *QAndroidJniObject {
+func NewQAndroidJniObject1(className string) *QAndroidJniObject {
 	var convArg0 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObjectC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -238,7 +238,7 @@ Creates a Java string from the QString string and returns a QAndroidJniObject ho
 See also toString().
 */
 func (this *QAndroidJniObject) FromString(string string) *QAndroidJniObject /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(string)
+	var tmpArg0 = qtcore.NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAndroidJniObject10fromStringERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -155,10 +155,10 @@ func NewQMediaVideoProbeControl(parent qtcore.QObject_ITF /*777 QObject **/) *QM
 /*
 Create a new media video probe control object with the given parent.
 */
-func (*QMediaVideoProbeControl) NewForInherit__() *QMediaVideoProbeControl {
-	return NewQMediaVideoProbeControl__()
+func (*QMediaVideoProbeControl) NewForInheritp() *QMediaVideoProbeControl {
+	return NewQMediaVideoProbeControlp()
 }
-func NewQMediaVideoProbeControl__() *QMediaVideoProbeControl {
+func NewQMediaVideoProbeControlp() *QMediaVideoProbeControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QMediaVideoProbeControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

@@ -98,10 +98,10 @@ func NewQDragMoveEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData
 /*
 
  */
-func (*QDragMoveEvent) NewForInherit__(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragMoveEvent {
-	return NewQDragMoveEvent__(pos, actions, data, buttons, modifiers)
+func (*QDragMoveEvent) NewForInheritp(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragMoveEvent {
+	return NewQDragMoveEventp(pos, actions, data, buttons, modifiers)
 }
-func NewQDragMoveEvent__(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragMoveEvent {
+func NewQDragMoveEventp(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData_ITF /*777 const QMimeData **/, buttons int, modifiers int) *QDragMoveEvent {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
@@ -171,7 +171,7 @@ func (this *QDragMoveEvent) Accept() {
 /*
 
  */
-func (this *QDragMoveEvent) Accept_1(r qtcore.QRect_ITF) {
+func (this *QDragMoveEvent) Accept1(r qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -201,7 +201,7 @@ func (this *QDragMoveEvent) Ignore() {
 /*
 
  */
-func (this *QDragMoveEvent) Ignore_1(r qtcore.QRect_ITF) {
+func (this *QDragMoveEvent) Ignore1(r qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()

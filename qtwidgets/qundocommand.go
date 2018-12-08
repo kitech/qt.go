@@ -97,10 +97,10 @@ func NewQUndoCommand(parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoComma
 /*
 
  */
-func (*QUndoCommand) NewForInherit__() *QUndoCommand {
-	return NewQUndoCommand__()
+func (*QUndoCommand) NewForInheritp() *QUndoCommand {
+	return NewQUndoCommandp()
 }
-func NewQUndoCommand__() *QUndoCommand {
+func NewQUndoCommandp() *QUndoCommand {
 	// arg: 0, QUndoCommand *=Pointer, QUndoCommand=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -118,11 +118,11 @@ func NewQUndoCommand__() *QUndoCommand {
 /*
 
  */
-func (*QUndoCommand) NewForInherit_1(text string, parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
-	return NewQUndoCommand_1(text, parent)
+func (*QUndoCommand) NewForInherit1(text string, parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
+	return NewQUndoCommand1(text, parent)
 }
-func NewQUndoCommand_1(text string, parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQUndoCommand1(text string, parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoCommand {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QUndoCommand_PTR() != nil {
@@ -143,11 +143,11 @@ func NewQUndoCommand_1(text string, parent QUndoCommand_ITF /*777 QUndoCommand *
 /*
 
  */
-func (*QUndoCommand) NewForInherit_1_(text string) *QUndoCommand {
-	return NewQUndoCommand_1_(text)
+func (*QUndoCommand) NewForInherit1p(text string) *QUndoCommand {
+	return NewQUndoCommand1p(text)
 }
-func NewQUndoCommand_1_(text string) *QUndoCommand {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQUndoCommand1p(text string) *QUndoCommand {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUndoCommand *=Pointer, QUndoCommand=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -256,7 +256,7 @@ func (this *QUndoCommand) ActionText() string {
 
  */
 func (this *QUndoCommand) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

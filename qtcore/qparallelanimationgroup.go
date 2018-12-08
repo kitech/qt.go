@@ -127,10 +127,10 @@ func NewQParallelAnimationGroup(parent QObject_ITF /*777 QObject **/) *QParallel
 /*
 Constructs a QParallelAnimationGroup. parent is passed to QObject's constructor.
 */
-func (*QParallelAnimationGroup) NewForInherit__() *QParallelAnimationGroup {
-	return NewQParallelAnimationGroup__()
+func (*QParallelAnimationGroup) NewForInheritp() *QParallelAnimationGroup {
+	return NewQParallelAnimationGroupp()
 }
-func NewQParallelAnimationGroup__() *QParallelAnimationGroup {
+func NewQParallelAnimationGroupp() *QParallelAnimationGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

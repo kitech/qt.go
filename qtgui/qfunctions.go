@@ -30,7 +30,7 @@ func init() {
 /*
 
  */
-func Operator_add_39(q1 QQuaternion_ITF, q2 QQuaternion_ITF) *QQuaternion /*123*/ {
+func Operator_add39(q1 QQuaternion_ITF, q2 QQuaternion_ITF) *QQuaternion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if q1 != nil && q1.QQuaternion_PTR() != nil {
 		convArg0 = q1.QQuaternion_PTR().GetCthis()
@@ -54,7 +54,7 @@ func Operator_add_39(q1 QQuaternion_ITF, q2 QQuaternion_ITF) *QQuaternion /*123*
 /*
 
  */
-func Operator_or_52(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or52(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN9QTextItem10RenderFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -70,7 +70,7 @@ func Operator_or_52(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_53(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or53(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN8QPainter10RenderHintEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -86,7 +86,7 @@ func Operator_or_53(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_54(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or54(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN19QOpenGLDebugMessage8SeverityEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -102,7 +102,7 @@ func Operator_or_54(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_55(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or55(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN19QOpenGLDebugMessage6SourceEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -118,7 +118,7 @@ func Operator_or_55(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_56(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or56(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN19QOpenGLDebugMessage4TypeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -134,7 +134,7 @@ func Operator_or_56(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_57(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or57(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN16QOpenGLFunctions13OpenGLFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -150,7 +150,7 @@ func Operator_or_57(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_58(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or58(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN14QSurfaceFormat12FormatOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -166,7 +166,7 @@ func Operator_or_58(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_59(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or59(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN14QOpenGLTexture7FeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -182,7 +182,7 @@ func Operator_or_59(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_60(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or60(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN14QImageIOPlugin10CapabilityEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -198,7 +198,7 @@ func Operator_or_60(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_61(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or61(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN13QTextDocument8FindFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -214,7 +214,7 @@ func Operator_or_61(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_62(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or62(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN13QOpenGLShader13ShaderTypeBitEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -230,7 +230,7 @@ func Operator_or_62(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_63(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or63(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN13QOpenGLBuffer15RangeAccessFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -246,7 +246,7 @@ func Operator_or_63(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_64(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or64(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN12QTouchDevice14CapabilityFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -262,7 +262,7 @@ func Operator_or_64(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_65(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or65(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN12QPaintEngine9DirtyFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -278,7 +278,7 @@ func Operator_or_65(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_66(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or66(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN12QPaintEngine18PaintEngineFeatureEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -294,7 +294,7 @@ func Operator_or_66(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_67(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or67(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QTouchEvent10TouchPoint8InfoFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -310,7 +310,7 @@ func Operator_or_67(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_68(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or68(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QTextOption4FlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -326,7 +326,7 @@ func Operator_or_68(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_69(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or69(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QTextFormat13PageBreakFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -342,7 +342,7 @@ func Operator_or_69(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_70(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or70(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QAccessible12RelationFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -360,7 +360,7 @@ Returns a QQuaternion object that is formed by subtracting q2 from q1; each comp
 
 See also QQuaternion::operator-=().
 */
-func Operator_minus_14(quaternion QQuaternion_ITF) *QQuaternion /*123*/ {
+func Operator_minus14(quaternion QQuaternion_ITF) *QQuaternion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if quaternion != nil && quaternion.QQuaternion_PTR() != nil {
 		convArg0 = quaternion.QQuaternion_PTR().GetCthis()
@@ -380,7 +380,7 @@ func Operator_minus_14(quaternion QQuaternion_ITF) *QQuaternion /*123*/ {
 /*
 
  */
-func Operator_not_equal_44(lhs QPageSize_ITF, rhs QPageSize_ITF) bool {
+func Operator_not_equal44(lhs QPageSize_ITF, rhs QPageSize_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QPageSize_PTR() != nil {
 		convArg0 = lhs.QPageSize_PTR().GetCthis()
@@ -402,7 +402,7 @@ func Operator_not_equal_44(lhs QPageSize_ITF, rhs QPageSize_ITF) bool {
 /*
 
  */
-func Operator_not_equal_45(lhs QCursor_ITF, rhs QCursor_ITF) bool {
+func Operator_not_equal45(lhs QCursor_ITF, rhs QCursor_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QCursor_PTR() != nil {
 		convArg0 = lhs.QCursor_PTR().GetCthis()
@@ -424,7 +424,7 @@ func Operator_not_equal_45(lhs QCursor_ITF, rhs QCursor_ITF) bool {
 /*
 
  */
-func Operator_not_equal_46(arg0 QSurfaceFormat_ITF, arg1 QSurfaceFormat_ITF) bool {
+func Operator_not_equal46(arg0 QSurfaceFormat_ITF, arg1 QSurfaceFormat_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSurfaceFormat_PTR() != nil {
 		convArg0 = arg0.QSurfaceFormat_PTR().GetCthis()
@@ -446,7 +446,7 @@ func Operator_not_equal_46(arg0 QSurfaceFormat_ITF, arg1 QSurfaceFormat_ITF) boo
 /*
 
  */
-func Operator_not_equal_47(q1 QQuaternion_ITF, q2 QQuaternion_ITF) bool {
+func Operator_not_equal47(q1 QQuaternion_ITF, q2 QQuaternion_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if q1 != nil && q1.QQuaternion_PTR() != nil {
 		convArg0 = q1.QQuaternion_PTR().GetCthis()
@@ -468,7 +468,7 @@ func Operator_not_equal_47(q1 QQuaternion_ITF, q2 QQuaternion_ITF) bool {
 /*
 
  */
-func Operator_not_equal_48(lhs QPageLayout_ITF, rhs QPageLayout_ITF) bool {
+func Operator_not_equal48(lhs QPageLayout_ITF, rhs QPageLayout_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QPageLayout_PTR() != nil {
 		convArg0 = lhs.QPageLayout_PTR().GetCthis()
@@ -490,7 +490,7 @@ func Operator_not_equal_48(lhs QPageLayout_ITF, rhs QPageLayout_ITF) bool {
 /*
 
  */
-func Operator_mul_18(factor float32, quaternion QQuaternion_ITF) *QQuaternion /*123*/ {
+func Operator_mul18(factor float32, quaternion QQuaternion_ITF) *QQuaternion /*123*/ {
 	var convArg1 unsafe.Pointer
 	if quaternion != nil && quaternion.QQuaternion_PTR() != nil {
 		convArg1 = quaternion.QQuaternion_PTR().GetCthis()
@@ -510,7 +510,7 @@ func Operator_mul_18(factor float32, quaternion QQuaternion_ITF) *QQuaternion /*
 /*
 
  */
-func Operator_mul_19(quaternion QQuaternion_ITF, factor float32) *QQuaternion /*123*/ {
+func Operator_mul19(quaternion QQuaternion_ITF, factor float32) *QQuaternion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if quaternion != nil && quaternion.QQuaternion_PTR() != nil {
 		convArg0 = quaternion.QQuaternion_PTR().GetCthis()
@@ -530,7 +530,7 @@ func Operator_mul_19(quaternion QQuaternion_ITF, factor float32) *QQuaternion /*
 /*
 
  */
-func Operator_mul_20(q1 QQuaternion_ITF, q2 QQuaternion_ITF) *QQuaternion /*123*/ {
+func Operator_mul20(q1 QQuaternion_ITF, q2 QQuaternion_ITF) *QQuaternion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if q1 != nil && q1.QQuaternion_PTR() != nil {
 		convArg0 = q1.QQuaternion_PTR().GetCthis()
@@ -556,7 +556,7 @@ Returns a QQuaternion object that is formed by subtracting q2 from q1; each comp
 
 See also QQuaternion::operator-=().
 */
-func Operator_minus_15(q1 QQuaternion_ITF, q2 QQuaternion_ITF) *QQuaternion /*123*/ {
+func Operator_minus15(q1 QQuaternion_ITF, q2 QQuaternion_ITF) *QQuaternion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if q1 != nil && q1.QQuaternion_PTR() != nil {
 		convArg0 = q1.QQuaternion_PTR().GetCthis()
@@ -580,7 +580,7 @@ func Operator_minus_15(q1 QQuaternion_ITF, q2 QQuaternion_ITF) *QQuaternion /*12
 /*
 
  */
-func Operator_equal_equal_45(first int, second int) bool {
+func Operator_equal_equal45(first int, second int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZeqRKN11QAccessible5StateES2_", qtrt.FFI_TYPE_POINTER, &first, &second)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -594,7 +594,7 @@ func Operator_equal_equal_45(first int, second int) bool {
 /*
 
  */
-func Operator_equal_equal_46(lhs QPageSize_ITF, rhs QPageSize_ITF) bool {
+func Operator_equal_equal46(lhs QPageSize_ITF, rhs QPageSize_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QPageSize_PTR() != nil {
 		convArg0 = lhs.QPageSize_PTR().GetCthis()
@@ -616,7 +616,7 @@ func Operator_equal_equal_46(lhs QPageSize_ITF, rhs QPageSize_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_47(lhs QCursor_ITF, rhs QCursor_ITF) bool {
+func Operator_equal_equal47(lhs QCursor_ITF, rhs QCursor_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QCursor_PTR() != nil {
 		convArg0 = lhs.QCursor_PTR().GetCthis()
@@ -638,7 +638,7 @@ func Operator_equal_equal_47(lhs QCursor_ITF, rhs QCursor_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_48(arg0 QSurfaceFormat_ITF, arg1 QSurfaceFormat_ITF) bool {
+func Operator_equal_equal48(arg0 QSurfaceFormat_ITF, arg1 QSurfaceFormat_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSurfaceFormat_PTR() != nil {
 		convArg0 = arg0.QSurfaceFormat_PTR().GetCthis()
@@ -660,7 +660,7 @@ func Operator_equal_equal_48(arg0 QSurfaceFormat_ITF, arg1 QSurfaceFormat_ITF) b
 /*
 
  */
-func Operator_equal_equal_49(q1 QQuaternion_ITF, q2 QQuaternion_ITF) bool {
+func Operator_equal_equal49(q1 QQuaternion_ITF, q2 QQuaternion_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if q1 != nil && q1.QQuaternion_PTR() != nil {
 		convArg0 = q1.QQuaternion_PTR().GetCthis()
@@ -682,7 +682,7 @@ func Operator_equal_equal_49(q1 QQuaternion_ITF, q2 QQuaternion_ITF) bool {
 /*
 
  */
-func Operator_equal_equal_50(lhs QPageLayout_ITF, rhs QPageLayout_ITF) bool {
+func Operator_equal_equal50(lhs QPageLayout_ITF, rhs QPageLayout_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QPageLayout_PTR() != nil {
 		convArg0 = lhs.QPageLayout_PTR().GetCthis()
@@ -704,7 +704,7 @@ func Operator_equal_equal_50(lhs QPageLayout_ITF, rhs QPageLayout_ITF) bool {
 /*
 
  */
-func Operator_div_7(quaternion QQuaternion_ITF, divisor float32) *QQuaternion /*123*/ {
+func Operator_div7(quaternion QQuaternion_ITF, divisor float32) *QQuaternion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if quaternion != nil && quaternion.QQuaternion_PTR() != nil {
 		convArg0 = quaternion.QQuaternion_PTR().GetCthis()
@@ -725,7 +725,7 @@ func Operator_div_7(quaternion QQuaternion_ITF, divisor float32) *QQuaternion /*
 
  */
 func ConvertFromPlainText(plain string, mode int) string {
-	var tmpArg0 = qtcore.NewQString_5(plain)
+	var tmpArg0 = qtcore.NewQString5(plain)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt20convertFromPlainTextERK7QStringNS_14WhiteSpaceModeE", qtrt.FFI_TYPE_POINTER, convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -744,7 +744,7 @@ func ConvertFromPlainText(plain string, mode int) string {
 
  */
 func MightBeRichText(arg0 string) bool {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt15mightBeRichTextERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -847,7 +847,7 @@ func QGray(rgb uint) int {
 /*
 
  */
-func QGray_1(r int, g int, b int) int {
+func QGray1(r int, g int, b int) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qGrayiii", qtrt.FFI_TYPE_POINTER, r, g, b)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -875,7 +875,7 @@ func QBlue(rgb uint) int {
 /*
 
  */
-func Swap_29(value1 int, value2 int) {
+func Swap29(value1 int, value2 int) {
 	rv, err := qtrt.InvokeQtFunc6("_Z4swapRN12QPixmapCache3KeyES1_", qtrt.FFI_TYPE_POINTER, &value1, &value2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -890,7 +890,7 @@ Swaps polygon other with this polygon. This operation is very fast and never fai
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_30(value1 QPolygonF_ITF, value2 QPolygonF_ITF) {
+func Swap30(value1 QPolygonF_ITF, value2 QPolygonF_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QPolygonF_PTR() != nil {
 		convArg0 = value1.QPolygonF_PTR().GetCthis()
@@ -911,7 +911,7 @@ func Swap_30(value1 QPolygonF_ITF, value2 QPolygonF_ITF) {
 /*
 Swaps this QPageSize with other. This function is very fast and never fails.
 */
-func Swap_31(value1 QPageSize_ITF, value2 QPageSize_ITF) {
+func Swap31(value1 QPageSize_ITF, value2 QPageSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QPageSize_PTR() != nil {
 		convArg0 = value1.QPageSize_PTR().GetCthis()
@@ -934,7 +934,7 @@ Swaps this glyph run instance with other. This function is very fast and never f
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_32(value1 QGlyphRun_ITF, value2 QGlyphRun_ITF) {
+func Swap32(value1 QGlyphRun_ITF, value2 QGlyphRun_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QGlyphRun_PTR() != nil {
 		convArg0 = value1.QGlyphRun_PTR().GetCthis()
@@ -957,7 +957,7 @@ Swaps polygon other with this polygon. This operation is very fast and never fai
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_33(value1 QPolygon_ITF, value2 QPolygon_ITF) {
+func Swap33(value1 QPolygon_ITF, value2 QPolygon_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QPolygon_PTR() != nil {
 		convArg0 = value1.QPolygon_PTR().GetCthis()
@@ -980,7 +980,7 @@ Swaps picture other with this picture. This operation is very fast and never fai
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_34(value1 QPicture_ITF, value2 QPicture_ITF) {
+func Swap34(value1 QPicture_ITF, value2 QPicture_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QPicture_PTR() != nil {
 		convArg0 = value1.QPicture_PTR().GetCthis()
@@ -1003,7 +1003,7 @@ Swaps this palette instance with other. This function is very fast and never fai
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_35(value1 QPalette_ITF, value2 QPalette_ITF) {
+func Swap35(value1 QPalette_ITF, value2 QPalette_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QPalette_PTR() != nil {
 		convArg0 = value1.QPalette_PTR().GetCthis()
@@ -1026,7 +1026,7 @@ Swaps region other with this region. This operation is very fast and never fails
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_36(value1 QRegion_ITF, value2 QRegion_ITF) {
+func Swap36(value1 QRegion_ITF, value2 QRegion_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QRegion_PTR() != nil {
 		convArg0 = value1.QRegion_PTR().GetCthis()
@@ -1049,7 +1049,7 @@ Swaps pixmap other with this pixmap. This operation is very fast and never fails
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_37(value1 QPixmap_ITF, value2 QPixmap_ITF) {
+func Swap37(value1 QPixmap_ITF, value2 QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QPixmap_PTR() != nil {
 		convArg0 = value1.QPixmap_PTR().GetCthis()
@@ -1070,7 +1070,7 @@ func Swap_37(value1 QPixmap_ITF, value2 QPixmap_ITF) {
 /*
 
  */
-func Swap_38(value1 QCursor_ITF, value2 QCursor_ITF) {
+func Swap38(value1 QCursor_ITF, value2 QCursor_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QCursor_PTR() != nil {
 		convArg0 = value1.QCursor_PTR().GetCthis()
@@ -1093,7 +1093,7 @@ Swaps bitmap other with this bitmap. This operation is very fast and never fails
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_39(value1 QBitmap_ITF, value2 QBitmap_ITF) {
+func Swap39(value1 QBitmap_ITF, value2 QBitmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QBitmap_PTR() != nil {
 		convArg0 = value1.QBitmap_PTR().GetCthis()
@@ -1116,7 +1116,7 @@ Swaps image other with this image. This operation is very fast and never fails.
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_40(value1 QImage_ITF, value2 QImage_ITF) {
+func Swap40(value1 QImage_ITF, value2 QImage_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QImage_PTR() != nil {
 		convArg0 = value1.QImage_PTR().GetCthis()
@@ -1139,7 +1139,7 @@ Swaps brush other with this brush. This operation is very fast and never fails.
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_41(value1 QBrush_ITF, value2 QBrush_ITF) {
+func Swap41(value1 QBrush_ITF, value2 QBrush_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QBrush_PTR() != nil {
 		convArg0 = value1.QBrush_PTR().GetCthis()
@@ -1162,7 +1162,7 @@ Swaps icon other with this icon. This operation is very fast and never fails.
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_42(value1 QIcon_ITF, value2 QIcon_ITF) {
+func Swap42(value1 QIcon_ITF, value2 QIcon_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QIcon_PTR() != nil {
 		convArg0 = value1.QIcon_PTR().GetCthis()
@@ -1185,7 +1185,7 @@ Swaps pen other with this pen. This operation is very fast and never fails.
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_43(value1 QPen_ITF, value2 QPen_ITF) {
+func Swap43(value1 QPen_ITF, value2 QPen_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QPen_PTR() != nil {
 		convArg0 = value1.QPen_PTR().GetCthis()
@@ -1206,7 +1206,7 @@ func Swap_43(value1 QPen_ITF, value2 QPen_ITF) {
 /*
 
  */
-func Swap_44(value1 QOpenGLPixelTransferOptions_ITF, value2 QOpenGLPixelTransferOptions_ITF) {
+func Swap44(value1 QOpenGLPixelTransferOptions_ITF, value2 QOpenGLPixelTransferOptions_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QOpenGLPixelTransferOptions_PTR() != nil {
 		convArg0 = value1.QOpenGLPixelTransferOptions_PTR().GetCthis()
@@ -1229,7 +1229,7 @@ Swaps this text format with other. This function is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_45(value1 QTextTableCellFormat_ITF, value2 QTextTableCellFormat_ITF) {
+func Swap45(value1 QTextTableCellFormat_ITF, value2 QTextTableCellFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QTextTableCellFormat_PTR() != nil {
 		convArg0 = value1.QTextTableCellFormat_PTR().GetCthis()
@@ -1250,7 +1250,7 @@ func Swap_45(value1 QTextTableCellFormat_ITF, value2 QTextTableCellFormat_ITF) {
 /*
 
  */
-func Swap_46(value1 QOpenGLDebugMessage_ITF, value2 QOpenGLDebugMessage_ITF) {
+func Swap46(value1 QOpenGLDebugMessage_ITF, value2 QOpenGLDebugMessage_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QOpenGLDebugMessage_PTR() != nil {
 		convArg0 = value1.QOpenGLDebugMessage_PTR().GetCthis()
@@ -1273,7 +1273,7 @@ Swaps this text format with other. This function is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_47(value1 QTextTableFormat_ITF, value2 QTextTableFormat_ITF) {
+func Swap47(value1 QTextTableFormat_ITF, value2 QTextTableFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QTextTableFormat_PTR() != nil {
 		convArg0 = value1.QTextTableFormat_PTR().GetCthis()
@@ -1296,7 +1296,7 @@ Swaps this text format with other. This function is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_48(value1 QTextImageFormat_ITF, value2 QTextImageFormat_ITF) {
+func Swap48(value1 QTextImageFormat_ITF, value2 QTextImageFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QTextImageFormat_PTR() != nil {
 		convArg0 = value1.QTextImageFormat_PTR().GetCthis()
@@ -1319,7 +1319,7 @@ Swaps this text format with other. This function is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_49(value1 QTextFrameFormat_ITF, value2 QTextFrameFormat_ITF) {
+func Swap49(value1 QTextFrameFormat_ITF, value2 QTextFrameFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QTextFrameFormat_PTR() != nil {
 		convArg0 = value1.QTextFrameFormat_PTR().GetCthis()
@@ -1342,7 +1342,7 @@ Swaps this text format with other. This function is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_50(value1 QTextBlockFormat_ITF, value2 QTextBlockFormat_ITF) {
+func Swap50(value1 QTextBlockFormat_ITF, value2 QTextBlockFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QTextBlockFormat_PTR() != nil {
 		convArg0 = value1.QTextBlockFormat_PTR().GetCthis()
@@ -1365,7 +1365,7 @@ Swaps this text format with other. This function is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_51(value1 QTextListFormat_ITF, value2 QTextListFormat_ITF) {
+func Swap51(value1 QTextListFormat_ITF, value2 QTextListFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QTextListFormat_PTR() != nil {
 		convArg0 = value1.QTextListFormat_PTR().GetCthis()
@@ -1388,7 +1388,7 @@ Swaps this text format with other. This function is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_52(value1 QTextCharFormat_ITF, value2 QTextCharFormat_ITF) {
+func Swap52(value1 QTextCharFormat_ITF, value2 QTextCharFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QTextCharFormat_PTR() != nil {
 		convArg0 = value1.QTextCharFormat_PTR().GetCthis()
@@ -1411,7 +1411,7 @@ Swaps painter path other with this painter path. This operation is very fast and
 
 This function was introduced in  Qt 4.8.
 */
-func Swap_53(value1 QPainterPath_ITF, value2 QPainterPath_ITF) {
+func Swap53(value1 QPainterPath_ITF, value2 QPainterPath_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QPainterPath_PTR() != nil {
 		convArg0 = value1.QPainterPath_PTR().GetCthis()
@@ -1434,7 +1434,7 @@ Swaps this text format with other. This function is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_54(value1 QTextFormat_ITF, value2 QTextFormat_ITF) {
+func Swap54(value1 QTextFormat_ITF, value2 QTextFormat_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QTextFormat_PTR() != nil {
 		convArg0 = value1.QTextFormat_PTR().GetCthis()
@@ -1457,7 +1457,7 @@ Swaps this text cursor instance with other. This function is very fast and never
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_55(value1 QTextCursor_ITF, value2 QTextCursor_ITF) {
+func Swap55(value1 QTextCursor_ITF, value2 QTextCursor_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QTextCursor_PTR() != nil {
 		convArg0 = value1.QTextCursor_PTR().GetCthis()
@@ -1480,7 +1480,7 @@ Swaps this static text instance with other. This function is very fast and never
 
 This function was introduced in  Qt 5.0.
 */
-func Swap_56(value1 QStaticText_ITF, value2 QStaticText_ITF) {
+func Swap56(value1 QStaticText_ITF, value2 QStaticText_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QStaticText_PTR() != nil {
 		convArg0 = value1.QStaticText_PTR().GetCthis()
@@ -1501,7 +1501,7 @@ func Swap_56(value1 QStaticText_ITF, value2 QStaticText_ITF) {
 /*
 Swaps this page layout with other. This function is very fast and never fails.
 */
-func Swap_57(value1 QPageLayout_ITF, value2 QPageLayout_ITF) {
+func Swap57(value1 QPageLayout_ITF, value2 QPageLayout_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QPageLayout_PTR() != nil {
 		convArg0 = value1.QPageLayout_PTR().GetCthis()
@@ -1551,7 +1551,7 @@ func QRed(rgb uint) int {
 
  */
 func QAccessibleLocalizedActionDescription(actionName string) string {
-	var tmpArg0 = qtcore.NewQString_5(actionName)
+	var tmpArg0 = qtcore.NewQString5(actionName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z37qAccessibleLocalizedActionDescriptionRK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1598,7 +1598,7 @@ func QAccessibleRoleString(role int) string {
 
  */
 func Qt_findAtNxFile(baseFileName string, targetDevicePixelRatio float64, sourceDevicePixelRatio unsafe.Pointer /*666*/) string {
-	var tmpArg0 = qtcore.NewQString_5(baseFileName)
+	var tmpArg0 = qtcore.NewQString5(baseFileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z15qt_findAtNxFileRK7QStringdPd", qtrt.FFI_TYPE_POINTER, convArg0, targetDevicePixelRatio, sourceDevicePixelRatio)
 	qtrt.ErrPrint(err, rv)
@@ -1630,7 +1630,7 @@ func QUnpremultiply(p uint) uint {
 /*
 Returns true if q1 and q2 are equal, allowing for a small fuzziness factor for floating-point comparisons; false otherwise.
 */
-func QFuzzyCompare_2(q1 QQuaternion_ITF, q2 QQuaternion_ITF) bool {
+func QFuzzyCompare2(q1 QQuaternion_ITF, q2 QQuaternion_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if q1 != nil && q1.QQuaternion_PTR() != nil {
 		convArg0 = q1.QQuaternion_PTR().GetCthis()

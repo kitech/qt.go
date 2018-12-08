@@ -104,7 +104,7 @@ func (this *QAbstractAudioInput) Start(device qtcore.QIODevice_ITF /*777 QIODevi
 /*
 
  */
-func (this *QAbstractAudioInput) Start_1() *qtcore.QIODevice /*777 QIODevice **/ {
+func (this *QAbstractAudioInput) Start1() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractAudioInput5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444

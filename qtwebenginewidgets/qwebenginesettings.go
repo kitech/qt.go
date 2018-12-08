@@ -122,7 +122,7 @@ func QWebEngineSettings_DefaultSettings() *QWebEngineSettings /*777 QWebEngineSe
 
  */
 func (this *QWebEngineSettings) SetFontFamily(which int, family string) {
-	var tmpArg1 = qtcore.NewQString_5(family)
+	var tmpArg1 = qtcore.NewQString5(family)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QWebEngineSettings13setFontFamilyENS_10FontFamilyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -247,7 +247,7 @@ func (this *QWebEngineSettings) ResetAttribute(attr int) {
 
  */
 func (this *QWebEngineSettings) SetDefaultTextEncoding(encoding string) {
-	var tmpArg0 = qtcore.NewQString_5(encoding)
+	var tmpArg0 = qtcore.NewQString5(encoding)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QWebEngineSettings22setDefaultTextEncodingERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

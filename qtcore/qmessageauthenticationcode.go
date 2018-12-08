@@ -97,10 +97,10 @@ func NewQMessageAuthenticationCode(method int, key QByteArray_ITF) *QMessageAuth
 /*
 Constructs an object that can be used to create a cryptographic hash from data using method method and key key.
 */
-func (*QMessageAuthenticationCode) NewForInherit__(method int) *QMessageAuthenticationCode {
-	return NewQMessageAuthenticationCode__(method)
+func (*QMessageAuthenticationCode) NewForInheritp(method int) *QMessageAuthenticationCode {
+	return NewQMessageAuthenticationCodep(method)
 }
-func NewQMessageAuthenticationCode__(method int) *QMessageAuthenticationCode {
+func NewQMessageAuthenticationCodep(method int) *QMessageAuthenticationCode {
 	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = NewQByteArray()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeC2EN18QCryptographicHash9AlgorithmERK10QByteArray", qtrt.FFI_TYPE_POINTER, method, convArg1)
@@ -178,7 +178,7 @@ func (this *QMessageAuthenticationCode) AddData(data string, length int) {
 /*
 Adds the first length chars of data to the message.
 */
-func (this *QMessageAuthenticationCode) AddData_1(data QByteArray_ITF) {
+func (this *QMessageAuthenticationCode) AddData1(data QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -195,7 +195,7 @@ func (this *QMessageAuthenticationCode) AddData_1(data QByteArray_ITF) {
 /*
 Adds the first length chars of data to the message.
 */
-func (this *QMessageAuthenticationCode) AddData_2(device QIODevice_ITF /*777 QIODevice **/) bool {
+func (this *QMessageAuthenticationCode) AddData2(device QIODevice_ITF /*777 QIODevice **/) bool {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()

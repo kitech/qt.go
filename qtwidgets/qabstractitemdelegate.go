@@ -109,10 +109,10 @@ func NewQAbstractItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QAbs
 /*
 Creates a new abstract item delegate with the given parent.
 */
-func (*QAbstractItemDelegate) NewForInherit__() *QAbstractItemDelegate {
-	return NewQAbstractItemDelegate__()
+func (*QAbstractItemDelegate) NewForInheritp() *QAbstractItemDelegate {
+	return NewQAbstractItemDelegatep()
 }
-func NewQAbstractItemDelegate__() *QAbstractItemDelegate {
+func NewQAbstractItemDelegatep() *QAbstractItemDelegate {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegateC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -375,7 +375,7 @@ func (this *QAbstractItemDelegate) ElidedText(fontMetrics qtgui.QFontMetrics_ITF
 	if fontMetrics != nil && fontMetrics.QFontMetrics_PTR() != nil {
 		convArg0 = fontMetrics.QFontMetrics_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(text)
+	var tmpArg3 = qtcore.NewQString5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegate10elidedTextERK12QFontMetricsiN2Qt13TextElideModeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0, width, mode, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -478,7 +478,7 @@ The hint provides a way for the delegate to influence how the model and view beh
 
 See also EndEditHint.
 */
-func (this *QAbstractItemDelegate) CloseEditor__(editor QWidget_ITF /*777 QWidget **/) {
+func (this *QAbstractItemDelegate) CloseEditorp(editor QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if editor != nil && editor.QWidget_PTR() != nil {
 		convArg0 = editor.QWidget_PTR().GetCthis()

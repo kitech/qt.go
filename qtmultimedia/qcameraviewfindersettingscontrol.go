@@ -184,10 +184,10 @@ func NewQCameraViewfinderSettingsControl(parent qtcore.QObject_ITF /*777 QObject
 /*
 Constructs a camera viewfinder control object with parent.
 */
-func (*QCameraViewfinderSettingsControl) NewForInherit__() *QCameraViewfinderSettingsControl {
-	return NewQCameraViewfinderSettingsControl__()
+func (*QCameraViewfinderSettingsControl) NewForInheritp() *QCameraViewfinderSettingsControl {
+	return NewQCameraViewfinderSettingsControlp()
 }
-func NewQCameraViewfinderSettingsControl__() *QCameraViewfinderSettingsControl {
+func NewQCameraViewfinderSettingsControlp() *QCameraViewfinderSettingsControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QCameraViewfinderSettingsControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

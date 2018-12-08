@@ -96,10 +96,10 @@ Creates a new object which can be used to perform IPC.
 
 See also onTransact and transact.
 */
-func (*QAndroidBinder) NewForInherit_1(binder QAndroidJniObject_ITF) *QAndroidBinder {
-	return NewQAndroidBinder_1(binder)
+func (*QAndroidBinder) NewForInherit1(binder QAndroidJniObject_ITF) *QAndroidBinder {
+	return NewQAndroidBinder1(binder)
 }
-func NewQAndroidBinder_1(binder QAndroidJniObject_ITF) *QAndroidBinder {
+func NewQAndroidBinder1(binder QAndroidJniObject_ITF) *QAndroidBinder {
 	var convArg0 unsafe.Pointer
 	if binder != nil && binder.QAndroidJniObject_PTR() != nil {
 		convArg0 = binder.QAndroidJniObject_PTR().GetCthis()
@@ -203,7 +203,7 @@ The code is the action to perform. Should be between FIRST_CALL_TRANSACTION and 
 
 Returns true on success
 */
-func (this *QAndroidBinder) Transact__(code int, data QAndroidParcel_ITF) bool {
+func (this *QAndroidBinder) Transactp(code int, data QAndroidParcel_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if data != nil && data.QAndroidParcel_PTR() != nil {
 		convArg1 = data.QAndroidParcel_PTR().GetCthis()
@@ -233,7 +233,7 @@ The code is the action to perform. Should be between FIRST_CALL_TRANSACTION and 
 
 Returns true on success
 */
-func (this *QAndroidBinder) Transact__1(code int, data QAndroidParcel_ITF, reply QAndroidParcel_ITF /*777 QAndroidParcel **/) bool {
+func (this *QAndroidBinder) Transactp1(code int, data QAndroidParcel_ITF, reply QAndroidParcel_ITF /*777 QAndroidParcel **/) bool {
 	var convArg1 unsafe.Pointer
 	if data != nil && data.QAndroidParcel_PTR() != nil {
 		convArg1 = data.QAndroidParcel_PTR().GetCthis()

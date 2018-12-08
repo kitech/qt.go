@@ -160,10 +160,10 @@ func NewQVideoRendererControl(parent qtcore.QObject_ITF /*777 QObject **/) *QVid
 /*
 Constructs a new video renderer media end point with the given parent.
 */
-func (*QVideoRendererControl) NewForInherit__() *QVideoRendererControl {
-	return NewQVideoRendererControl__()
+func (*QVideoRendererControl) NewForInheritp() *QVideoRendererControl {
+	return NewQVideoRendererControlp()
 }
-func NewQVideoRendererControl__() *QVideoRendererControl {
+func NewQVideoRendererControlp() *QVideoRendererControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QVideoRendererControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

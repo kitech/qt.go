@@ -104,9 +104,9 @@ func (*QSettings) NewForInherit(organization string, application string, parent 
 	return NewQSettings(organization, application, parent)
 }
 func NewQSettings(organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
-	var tmpArg0 = NewQString_5(organization)
+	var tmpArg0 = NewQString5(organization)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(application)
+	var tmpArg1 = NewQString5(application)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -138,11 +138,11 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit__(organization string) *QSettings {
-	return NewQSettings__(organization)
+func (*QSettings) NewForInheritp(organization string) *QSettings {
+	return NewQSettingsp(organization)
 }
-func NewQSettings__(organization string) *QSettings {
-	var tmpArg0 = NewQString_5(organization)
+func NewQSettingsp(organization string) *QSettings {
+	var tmpArg0 = NewQString5(organization)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
@@ -174,13 +174,13 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit__1(organization string, application string) *QSettings {
-	return NewQSettings__1(organization, application)
+func (*QSettings) NewForInheritp1(organization string, application string) *QSettings {
+	return NewQSettingsp1(organization, application)
 }
-func NewQSettings__1(organization string, application string) *QSettings {
-	var tmpArg0 = NewQString_5(organization)
+func NewQSettingsp1(organization string, application string) *QSettings {
+	var tmpArg0 = NewQString5(organization)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(application)
+	var tmpArg1 = NewQString5(application)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -210,13 +210,13 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit_1(scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
-	return NewQSettings_1(scope, organization, application, parent)
+func (*QSettings) NewForInherit1(scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
+	return NewQSettings1(scope, organization, application, parent)
 }
-func NewQSettings_1(scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
-	var tmpArg1 = NewQString_5(organization)
+func NewQSettings1(scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
+	var tmpArg1 = NewQString5(organization)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(application)
+	var tmpArg2 = NewQString5(application)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -248,11 +248,11 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit_1_(scope int, organization string) *QSettings {
-	return NewQSettings_1_(scope, organization)
+func (*QSettings) NewForInherit1p(scope int, organization string) *QSettings {
+	return NewQSettings1p(scope, organization)
 }
-func NewQSettings_1_(scope int, organization string) *QSettings {
-	var tmpArg1 = NewQString_5(organization)
+func NewQSettings1p(scope int, organization string) *QSettings {
+	var tmpArg1 = NewQString5(organization)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
@@ -284,13 +284,13 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit_1_1(scope int, organization string, application string) *QSettings {
-	return NewQSettings_1_1(scope, organization, application)
+func (*QSettings) NewForInherit1p1(scope int, organization string, application string) *QSettings {
+	return NewQSettings1p1(scope, organization, application)
 }
-func NewQSettings_1_1(scope int, organization string, application string) *QSettings {
-	var tmpArg1 = NewQString_5(organization)
+func NewQSettings1p1(scope int, organization string, application string) *QSettings {
+	var tmpArg1 = NewQString5(organization)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(application)
+	var tmpArg2 = NewQString5(application)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
@@ -320,13 +320,13 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit_2(format int, scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
-	return NewQSettings_2(format, scope, organization, application, parent)
+func (*QSettings) NewForInherit2(format int, scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
+	return NewQSettings2(format, scope, organization, application, parent)
 }
-func NewQSettings_2(format int, scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
-	var tmpArg2 = NewQString_5(organization)
+func NewQSettings2(format int, scope int, organization string, application string, parent QObject_ITF /*777 QObject **/) *QSettings {
+	var tmpArg2 = NewQString5(organization)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = NewQString_5(application)
+	var tmpArg3 = NewQString5(application)
 	var convArg3 = tmpArg3.GetCthis()
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -358,11 +358,11 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit_2_(format int, scope int, organization string) *QSettings {
-	return NewQSettings_2_(format, scope, organization)
+func (*QSettings) NewForInherit2p(format int, scope int, organization string) *QSettings {
+	return NewQSettings2p(format, scope, organization)
 }
-func NewQSettings_2_(format int, scope int, organization string) *QSettings {
-	var tmpArg2 = NewQString_5(organization)
+func NewQSettings2p(format int, scope int, organization string) *QSettings {
+	var tmpArg2 = NewQString5(organization)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
@@ -394,13 +394,13 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit_2_1(format int, scope int, organization string, application string) *QSettings {
-	return NewQSettings_2_1(format, scope, organization, application)
+func (*QSettings) NewForInherit2p1(format int, scope int, organization string, application string) *QSettings {
+	return NewQSettings2p1(format, scope, organization, application)
 }
-func NewQSettings_2_1(format int, scope int, organization string, application string) *QSettings {
-	var tmpArg2 = NewQString_5(organization)
+func NewQSettings2p1(format int, scope int, organization string, application string) *QSettings {
+	var tmpArg2 = NewQString5(organization)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = NewQString_5(application)
+	var tmpArg3 = NewQString5(application)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg4 unsafe.Pointer
@@ -430,11 +430,11 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit_3(fileName string, format int, parent QObject_ITF /*777 QObject **/) *QSettings {
-	return NewQSettings_3(fileName, format, parent)
+func (*QSettings) NewForInherit3(fileName string, format int, parent QObject_ITF /*777 QObject **/) *QSettings {
+	return NewQSettings3(fileName, format, parent)
 }
-func NewQSettings_3(fileName string, format int, parent QObject_ITF /*777 QObject **/) *QSettings {
-	var tmpArg0 = NewQString_5(fileName)
+func NewQSettings3(fileName string, format int, parent QObject_ITF /*777 QObject **/) *QSettings {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -466,11 +466,11 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit_3_(fileName string, format int) *QSettings {
-	return NewQSettings_3_(fileName, format)
+func (*QSettings) NewForInherit3p(fileName string, format int) *QSettings {
+	return NewQSettings3p(fileName, format)
 }
-func NewQSettings_3_(fileName string, format int) *QSettings {
-	var tmpArg0 = NewQString_5(fileName)
+func NewQSettings3p(fileName string, format int) *QSettings {
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -500,10 +500,10 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit_4(parent QObject_ITF /*777 QObject **/) *QSettings {
-	return NewQSettings_4(parent)
+func (*QSettings) NewForInherit4(parent QObject_ITF /*777 QObject **/) *QSettings {
+	return NewQSettings4(parent)
 }
-func NewQSettings_4(parent QObject_ITF /*777 QObject **/) *QSettings {
+func NewQSettings4(parent QObject_ITF /*777 QObject **/) *QSettings {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
@@ -534,10 +534,10 @@ The scope is set to QSettings::UserScope, and the format is set to QSettings::Na
 
 See also setDefaultFormat() and Fallback Mechanism.
 */
-func (*QSettings) NewForInherit_4_() *QSettings {
-	return NewQSettings_4_()
+func (*QSettings) NewForInherit4p() *QSettings {
+	return NewQSettings4p()
 }
-func NewQSettings_4_() *QSettings {
+func NewQSettings4p() *QSettings {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettingsC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -694,7 +694,7 @@ Call endGroup() to reset the current group to what it was before the correspondi
 See also endGroup() and group().
 */
 func (this *QSettings) BeginGroup(prefix string) {
-	var tmpArg0 = NewQString_5(prefix)
+	var tmpArg0 = NewQString5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings10beginGroupERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -787,7 +787,7 @@ Use beginWriteArray() to write the array in the first place.
 See also beginWriteArray(), endArray(), and setArrayIndex().
 */
 func (this *QSettings) BeginReadArray(prefix string) int {
-	var tmpArg0 = NewQString_5(prefix)
+	var tmpArg0 = NewQString5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings14beginReadArrayERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -841,7 +841,7 @@ To read back an array, use beginReadArray().
 See also beginReadArray(), endArray(), and setArrayIndex().
 */
 func (this *QSettings) BeginWriteArray(prefix string, size int) {
-	var tmpArg0 = NewQString_5(prefix)
+	var tmpArg0 = NewQString5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings15beginWriteArrayERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, size)
 	qtrt.ErrPrint(err, rv)
@@ -893,8 +893,8 @@ To read back an array, use beginReadArray().
 
 See also beginReadArray(), endArray(), and setArrayIndex().
 */
-func (this *QSettings) BeginWriteArray__(prefix string) {
-	var tmpArg0 = NewQString_5(prefix)
+func (this *QSettings) BeginWriteArrayp(prefix string) {
+	var tmpArg0 = NewQString5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
@@ -1104,7 +1104,7 @@ Example:
 See also value(), remove(), and contains().
 */
 func (this *QSettings) SetValue(key string, value QVariant_ITF) {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -1140,7 +1140,7 @@ Example:
 See also setValue(), contains(), and remove().
 */
 func (this *QSettings) Value(key string, defaultValue QVariant_ITF) *QVariant /*123*/ {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if defaultValue != nil && defaultValue.QVariant_PTR() != nil {
@@ -1178,8 +1178,8 @@ Example:
 
 See also setValue(), contains(), and remove().
 */
-func (this *QSettings) Value__(key string) *QVariant /*123*/ {
-	var tmpArg0 = NewQString_5(key)
+func (this *QSettings) Valuep(key string) *QVariant /*123*/ {
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg1 = NewQVariant()
@@ -1238,7 +1238,7 @@ Note that the Windows registry and INI files use case-insensitive keys, whereas 
 See also setValue(), value(), and contains().
 */
 func (this *QSettings) Remove(key string) {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings6removeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1259,7 +1259,7 @@ Note that the Windows registry and INI files use case-insensitive keys, whereas 
 See also value() and setValue().
 */
 func (this *QSettings) Contains(key string) bool {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSettings8containsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1437,7 +1437,7 @@ This function was introduced in  Qt 4.5.
 
 See also iniCodec().
 */
-func (this *QSettings) SetIniCodec_1(codecName string) {
+func (this *QSettings) SetIniCodec1(codecName string) {
 	var convArg0 = qtrt.CString(codecName)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings11setIniCodecEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1517,7 +1517,7 @@ func QSettings_DefaultFormat() int {
 
  */
 func (this *QSettings) SetSystemIniPath(dir string) {
-	var tmpArg0 = NewQString_5(dir)
+	var tmpArg0 = NewQString5(dir)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings16setSystemIniPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1536,7 +1536,7 @@ func QSettings_SetSystemIniPath(dir string) {
 
  */
 func (this *QSettings) SetUserIniPath(dir string) {
-	var tmpArg0 = NewQString_5(dir)
+	var tmpArg0 = NewQString5(dir)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings14setUserIniPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1579,7 +1579,7 @@ This function was introduced in  Qt 4.1.
 See also registerFormat().
 */
 func (this *QSettings) SetPath(format int, scope int, path string) {
-	var tmpArg2 = NewQString_5(path)
+	var tmpArg2 = NewQString5(path)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSettings7setPathENS_6FormatENS_5ScopeERK7QString", qtrt.FFI_TYPE_POINTER, format, scope, convArg2)
 	qtrt.ErrPrint(err, rv)

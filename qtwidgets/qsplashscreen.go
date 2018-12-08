@@ -128,10 +128,10 @@ Construct a splash screen that will display the pixmap.
 
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
-func (*QSplashScreen) NewForInherit__() *QSplashScreen {
-	return NewQSplashScreen__()
+func (*QSplashScreen) NewForInheritp() *QSplashScreen {
+	return NewQSplashScreenp()
 }
-func NewQSplashScreen__() *QSplashScreen {
+func NewQSplashScreenp() *QSplashScreen {
 	// arg: 0, const QPixmap &=LValueReference, QPixmap=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -153,10 +153,10 @@ Construct a splash screen that will display the pixmap.
 
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
-func (*QSplashScreen) NewForInherit__1(pixmap qtgui.QPixmap_ITF) *QSplashScreen {
-	return NewQSplashScreen__1(pixmap)
+func (*QSplashScreen) NewForInheritp1(pixmap qtgui.QPixmap_ITF) *QSplashScreen {
+	return NewQSplashScreenp1(pixmap)
 }
-func NewQSplashScreen__1(pixmap qtgui.QPixmap_ITF) *QSplashScreen {
+func NewQSplashScreenp1(pixmap qtgui.QPixmap_ITF) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
@@ -180,10 +180,10 @@ Construct a splash screen that will display the pixmap.
 
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
-func (*QSplashScreen) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
-	return NewQSplashScreen_1(parent, pixmap, f)
+func (*QSplashScreen) NewForInherit1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
+	return NewQSplashScreen1(parent, pixmap, f)
 }
-func NewQSplashScreen_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
+func NewQSplashScreen1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF, f int) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -209,10 +209,10 @@ Construct a splash screen that will display the pixmap.
 
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
-func (*QSplashScreen) NewForInherit_1_(parent QWidget_ITF /*777 QWidget **/) *QSplashScreen {
-	return NewQSplashScreen_1_(parent)
+func (*QSplashScreen) NewForInherit1p(parent QWidget_ITF /*777 QWidget **/) *QSplashScreen {
+	return NewQSplashScreen1p(parent)
 }
-func NewQSplashScreen_1_(parent QWidget_ITF /*777 QWidget **/) *QSplashScreen {
+func NewQSplashScreen1p(parent QWidget_ITF /*777 QWidget **/) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -238,10 +238,10 @@ Construct a splash screen that will display the pixmap.
 
 There should be no need to set the widget flags, f, except perhaps Qt::WindowStaysOnTopHint.
 */
-func (*QSplashScreen) NewForInherit_1_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF) *QSplashScreen {
-	return NewQSplashScreen_1_1(parent, pixmap)
+func (*QSplashScreen) NewForInherit1p1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF) *QSplashScreen {
+	return NewQSplashScreen1p1(parent, pixmap)
 }
-func NewQSplashScreen_1_1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF) *QSplashScreen {
+func NewQSplashScreen1p1(parent QWidget_ITF /*777 QWidget **/, pixmap qtgui.QPixmap_ITF) *QSplashScreen {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -373,7 +373,7 @@ Draws the message text onto the splash screen with color color and aligns the te
 See also Qt::Alignment, clearMessage(), and message().
 */
 func (this *QSplashScreen) ShowMessage(message string, alignment int, color qtgui.QColor_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(message)
+	var tmpArg0 = qtcore.NewQString5(message)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg2 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
@@ -393,8 +393,8 @@ Draws the message text onto the splash screen with color color and aligns the te
 
 See also Qt::Alignment, clearMessage(), and message().
 */
-func (this *QSplashScreen) ShowMessage__(message string) {
-	var tmpArg0 = qtcore.NewQString_5(message)
+func (this *QSplashScreen) ShowMessagep(message string) {
+	var tmpArg0 = qtcore.NewQString5(message)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	alignment := 0 /*Qt::AlignLeft*/
@@ -414,8 +414,8 @@ Draws the message text onto the splash screen with color color and aligns the te
 
 See also Qt::Alignment, clearMessage(), and message().
 */
-func (this *QSplashScreen) ShowMessage__1(message string, alignment int) {
-	var tmpArg0 = qtcore.NewQString_5(message)
+func (this *QSplashScreen) ShowMessagep1(message string, alignment int) {
+	var tmpArg0 = qtcore.NewQString5(message)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, const QColor &=LValueReference, QColor=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -449,7 +449,7 @@ This signal is emitted when the message on the splash screen changes. message is
 See also showMessage() and clearMessage().
 */
 func (this *QSplashScreen) MessageChanged(message string) {
-	var tmpArg0 = qtcore.NewQString_5(message)
+	var tmpArg0 = qtcore.NewQString5(message)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSplashScreen14messageChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -138,10 +138,10 @@ Constructs a spin box with 0 as minimum value and 99 as maximum value, a step va
 
 See also setMinimum(), setMaximum(), and setSingleStep().
 */
-func (*QSpinBox) NewForInherit__() *QSpinBox {
-	return NewQSpinBox__()
+func (*QSpinBox) NewForInheritp() *QSpinBox {
+	return NewQSpinBoxp()
 }
-func NewQSpinBox__() *QSpinBox {
+func NewQSpinBoxp() *QSpinBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -206,7 +206,7 @@ func (this *QSpinBox) Prefix() string {
 
  */
 func (this *QSpinBox) SetPrefix(prefix string) {
-	var tmpArg0 = qtcore.NewQString_5(prefix)
+	var tmpArg0 = qtcore.NewQString5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox9setPrefixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -238,7 +238,7 @@ func (this *QSpinBox) Suffix() string {
 
  */
 func (this *QSpinBox) SetSuffix(suffix string) {
-	var tmpArg0 = qtcore.NewQString_5(suffix)
+	var tmpArg0 = qtcore.NewQString5(suffix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox9setSuffixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -424,7 +424,7 @@ func (this *QSpinBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 Reimplemented from QAbstractSpinBox::validate().
 */
 func (this *QSpinBox) Validate(input string, pos int) int {
-	var tmpArg0 = qtcore.NewQString_5(input)
+	var tmpArg0 = qtcore.NewQString5(input)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	qtrt.ErrPrint(err, rv)
@@ -446,7 +446,7 @@ Note: QSpinBox handles specialValueText() separately; this function is only conc
 See also textFromValue() and validate().
 */
 func (this *QSpinBox) ValueFromText(text string) int {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox13valueFromTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -485,7 +485,7 @@ func (this *QSpinBox) TextFromValue(val int) string {
 Reimplemented from QAbstractSpinBox::fixup().
 */
 func (this *QSpinBox) Fixup(str string) {
-	var tmpArg0 = qtcore.NewQString_5(str)
+	var tmpArg0 = qtcore.NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox5fixupER7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -545,8 +545,8 @@ Note: Signal valueChanged is overloaded in this class. To connect to this signal
 
 Note: Notifier signal for property value.
 */
-func (this *QSpinBox) ValueChanged_1(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func (this *QSpinBox) ValueChanged1(arg0 string) {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -94,10 +94,10 @@ func NewQAudioBuffer() *QAudioBuffer {
 /*
 Create a new, empty, invalid buffer.
 */
-func (*QAudioBuffer) NewForInherit_1(data qtcore.QByteArray_ITF, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
-	return NewQAudioBuffer_1(data, format, startTime)
+func (*QAudioBuffer) NewForInherit1(data qtcore.QByteArray_ITF, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
+	return NewQAudioBuffer1(data, format, startTime)
 }
-func NewQAudioBuffer_1(data qtcore.QByteArray_ITF, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
+func NewQAudioBuffer1(data qtcore.QByteArray_ITF, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -121,10 +121,10 @@ func NewQAudioBuffer_1(data qtcore.QByteArray_ITF, format QAudioFormat_ITF, star
 /*
 Create a new, empty, invalid buffer.
 */
-func (*QAudioBuffer) NewForInherit_1_(data qtcore.QByteArray_ITF, format QAudioFormat_ITF) *QAudioBuffer {
-	return NewQAudioBuffer_1_(data, format)
+func (*QAudioBuffer) NewForInherit1p(data qtcore.QByteArray_ITF, format QAudioFormat_ITF) *QAudioBuffer {
+	return NewQAudioBuffer1p(data, format)
 }
-func NewQAudioBuffer_1_(data qtcore.QByteArray_ITF, format QAudioFormat_ITF) *QAudioBuffer {
+func NewQAudioBuffer1p(data qtcore.QByteArray_ITF, format QAudioFormat_ITF) *QAudioBuffer {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -150,10 +150,10 @@ func NewQAudioBuffer_1_(data qtcore.QByteArray_ITF, format QAudioFormat_ITF) *QA
 /*
 Create a new, empty, invalid buffer.
 */
-func (*QAudioBuffer) NewForInherit_2(numFrames int, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
-	return NewQAudioBuffer_2(numFrames, format, startTime)
+func (*QAudioBuffer) NewForInherit2(numFrames int, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
+	return NewQAudioBuffer2(numFrames, format, startTime)
 }
-func NewQAudioBuffer_2(numFrames int, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
+func NewQAudioBuffer2(numFrames int, format QAudioFormat_ITF, startTime int64) *QAudioBuffer {
 	var convArg1 unsafe.Pointer
 	if format != nil && format.QAudioFormat_PTR() != nil {
 		convArg1 = format.QAudioFormat_PTR().GetCthis()
@@ -173,10 +173,10 @@ func NewQAudioBuffer_2(numFrames int, format QAudioFormat_ITF, startTime int64) 
 /*
 Create a new, empty, invalid buffer.
 */
-func (*QAudioBuffer) NewForInherit_2_(numFrames int, format QAudioFormat_ITF) *QAudioBuffer {
-	return NewQAudioBuffer_2_(numFrames, format)
+func (*QAudioBuffer) NewForInherit2p(numFrames int, format QAudioFormat_ITF) *QAudioBuffer {
+	return NewQAudioBuffer2p(numFrames, format)
 }
-func NewQAudioBuffer_2_(numFrames int, format QAudioFormat_ITF) *QAudioBuffer {
+func NewQAudioBuffer2p(numFrames int, format QAudioFormat_ITF) *QAudioBuffer {
 	var convArg1 unsafe.Pointer
 	if format != nil && format.QAudioFormat_PTR() != nil {
 		convArg1 = format.QAudioFormat_PTR().GetCthis()
@@ -397,7 +397,7 @@ There is also a templatized version of this data() function that allows you to r
   // With a 16bit sample const buffer:
   const quint16 *data = buffer->data<quint16>();
 */
-func (this *QAudioBuffer) Data_1() unsafe.Pointer /*666*/ {
+func (this *QAudioBuffer) Data1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QAudioBuffer4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))

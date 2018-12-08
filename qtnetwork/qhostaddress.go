@@ -96,10 +96,10 @@ Constructs a null host address object, i.e. an address which is not valid for an
 
 See also clear().
 */
-func (*QHostAddress) NewForInherit_1(ip4Addr uint) *QHostAddress {
-	return NewQHostAddress_1(ip4Addr)
+func (*QHostAddress) NewForInherit1(ip4Addr uint) *QHostAddress {
+	return NewQHostAddress1(ip4Addr)
 }
-func NewQHostAddress_1(ip4Addr uint) *QHostAddress {
+func NewQHostAddress1(ip4Addr uint) *QHostAddress {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2Ej", qtrt.FFI_TYPE_POINTER, ip4Addr)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,10 +117,10 @@ Constructs a null host address object, i.e. an address which is not valid for an
 
 See also clear().
 */
-func (*QHostAddress) NewForInherit_2(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
-	return NewQHostAddress_2(ip6Addr)
+func (*QHostAddress) NewForInherit2(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
+	return NewQHostAddress2(ip6Addr)
 }
-func NewQHostAddress_2(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
+func NewQHostAddress2(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2EPh", qtrt.FFI_TYPE_POINTER, ip6Addr)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -138,10 +138,10 @@ Constructs a null host address object, i.e. an address which is not valid for an
 
 See also clear().
 */
-func (*QHostAddress) NewForInherit_3(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
-	return NewQHostAddress_3(ip6Addr)
+func (*QHostAddress) NewForInherit3(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
+	return NewQHostAddress3(ip6Addr)
 }
-func NewQHostAddress_3(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
+func NewQHostAddress3(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2EPKh", qtrt.FFI_TYPE_POINTER, ip6Addr)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -159,11 +159,11 @@ Constructs a null host address object, i.e. an address which is not valid for an
 
 See also clear().
 */
-func (*QHostAddress) NewForInherit_4(address string) *QHostAddress {
-	return NewQHostAddress_4(address)
+func (*QHostAddress) NewForInherit4(address string) *QHostAddress {
+	return NewQHostAddress4(address)
 }
-func NewQHostAddress_4(address string) *QHostAddress {
-	var tmpArg0 = qtcore.NewQString_5(address)
+func NewQHostAddress4(address string) *QHostAddress {
+	var tmpArg0 = qtcore.NewQString5(address)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -182,10 +182,10 @@ Constructs a null host address object, i.e. an address which is not valid for an
 
 See also clear().
 */
-func (*QHostAddress) NewForInherit_5(address int) *QHostAddress {
-	return NewQHostAddress_5(address)
+func (*QHostAddress) NewForInherit5(address int) *QHostAddress {
+	return NewQHostAddress5(address)
 }
-func NewQHostAddress_5(address int) *QHostAddress {
+func NewQHostAddress5(address int) *QHostAddress {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2ENS_14SpecialAddressE", qtrt.FFI_TYPE_POINTER, address)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -232,7 +232,7 @@ func (this *QHostAddress) Operator_equal(other unsafe.Pointer /*333*/) *QHostAdd
 /*
 
  */
-func (this *QHostAddress) Operator_equal_1(other QHostAddress_ITF) *QHostAddress {
+func (this *QHostAddress) Operator_equal1(other QHostAddress_ITF) *QHostAddress {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QHostAddress_PTR() != nil {
 		convArg0 = other.QHostAddress_PTR().GetCthis()
@@ -252,8 +252,8 @@ func (this *QHostAddress) Operator_equal_1(other QHostAddress_ITF) *QHostAddress
 /*
 
  */
-func (this *QHostAddress) Operator_equal_2(address string) *QHostAddress {
-	var tmpArg0 = qtcore.NewQString_5(address)
+func (this *QHostAddress) Operator_equal2(address string) *QHostAddress {
+	var tmpArg0 = qtcore.NewQString5(address)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressaSERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -270,7 +270,7 @@ func (this *QHostAddress) Operator_equal_2(address string) *QHostAddress {
 /*
 
  */
-func (this *QHostAddress) Operator_equal_3(address int) *QHostAddress {
+func (this *QHostAddress) Operator_equal3(address int) *QHostAddress {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressaSENS_14SpecialAddressE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), address)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -318,7 +318,7 @@ func (this *QHostAddress) SetAddress(ip4Addr uint) {
 /*
 Set the IPv4 address specified by ip4Addr.
 */
-func (this *QHostAddress) SetAddress_1(ip6Addr unsafe.Pointer /*666*/) {
+func (this *QHostAddress) SetAddress1(ip6Addr unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress10setAddressEPh", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ip6Addr)
 	qtrt.ErrPrint(err, rv)
 }
@@ -331,7 +331,7 @@ func (this *QHostAddress) SetAddress_1(ip6Addr unsafe.Pointer /*666*/) {
 /*
 Set the IPv4 address specified by ip4Addr.
 */
-func (this *QHostAddress) SetAddress_2(ip6Addr unsafe.Pointer /*666*/) {
+func (this *QHostAddress) SetAddress2(ip6Addr unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress10setAddressEPKh", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ip6Addr)
 	qtrt.ErrPrint(err, rv)
 }
@@ -344,8 +344,8 @@ func (this *QHostAddress) SetAddress_2(ip6Addr unsafe.Pointer /*666*/) {
 /*
 Set the IPv4 address specified by ip4Addr.
 */
-func (this *QHostAddress) SetAddress_3(address string) bool {
-	var tmpArg0 = qtcore.NewQString_5(address)
+func (this *QHostAddress) SetAddress3(address string) bool {
+	var tmpArg0 = qtcore.NewQString5(address)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress10setAddressERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -360,7 +360,7 @@ func (this *QHostAddress) SetAddress_3(address string) bool {
 /*
 Set the IPv4 address specified by ip4Addr.
 */
-func (this *QHostAddress) SetAddress_4(address int) {
+func (this *QHostAddress) SetAddress4(address int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress10setAddressENS_14SpecialAddressE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), address)
 	qtrt.ErrPrint(err, rv)
 }
@@ -413,7 +413,7 @@ This value is valid if the protocol() is IPv4Protocol, or if the protocol is IPv
 
 See also toString().
 */
-func (this *QHostAddress) ToIPv4Address_1(ok *bool) uint {
+func (this *QHostAddress) ToIPv4Address1(ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress13toIPv4AddressEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
@@ -515,7 +515,7 @@ This function was introduced in  Qt 4.1.
 See also scopeId(), QNetworkInterface, and QNetworkInterface::interfaceFromName.
 */
 func (this *QHostAddress) SetScopeId(id string) {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress10setScopeIdERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -559,7 +559,7 @@ This function was introduced in  Qt 5.8.
 
 See also ConversionMode and operator==().
 */
-func (this *QHostAddress) IsEqual__(address QHostAddress_ITF) bool {
+func (this *QHostAddress) IsEqualp(address QHostAddress_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if address != nil && address.QHostAddress_PTR() != nil {
 		convArg0 = address.QHostAddress_PTR().GetCthis()
@@ -597,7 +597,7 @@ func (this *QHostAddress) Operator_equal_equal(address QHostAddress_ITF) bool {
 /*
 
  */
-func (this *QHostAddress) Operator_equal_equal_1(address int) bool {
+func (this *QHostAddress) Operator_equal_equal1(address int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddresseqENS_14SpecialAddressE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), address)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -629,7 +629,7 @@ func (this *QHostAddress) Operator_not_equal(address QHostAddress_ITF) bool {
 /*
 
  */
-func (this *QHostAddress) Operator_not_equal_1(address int) bool {
+func (this *QHostAddress) Operator_not_equal1(address int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddressneENS_14SpecialAddressE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), address)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

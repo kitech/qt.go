@@ -147,10 +147,10 @@ Constructs a new top-level QLayout, with parent parent. parent may not be 0.
 
 There can be only one top-level layout for a widget. It is returned by QWidget::layout().
 */
-func (*QLayout) NewForInherit_1() *QLayout {
-	return NewQLayout_1()
+func (*QLayout) NewForInherit1() *QLayout {
+	return NewQLayout1()
 }
-func NewQLayout_1() *QLayout {
+func NewQLayout1() *QLayout {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -260,7 +260,7 @@ This function was introduced in  Qt 4.3.
 
 See also contentsMargins(), getContentsMargins(), QStyle::pixelMetric(), PM_LayoutLeftMargin, PM_LayoutTopMargin, PM_LayoutRightMargin, and PM_LayoutBottomMargin.
 */
-func (this *QLayout) SetContentsMargins_1(margins qtcore.QMargins_ITF) {
+func (this *QLayout) SetContentsMargins1(margins qtcore.QMargins_ITF) {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -356,7 +356,7 @@ func (this *QLayout) SetAlignment(w QWidget_ITF /*777 QWidget **/, alignment int
 /*
 Sets the alignment for widget w to alignment and returns true if w is found in this layout (not including child layouts); otherwise returns false.
 */
-func (this *QLayout) SetAlignment_1(l QLayout_ITF /*777 QLayout **/, alignment int) bool {
+func (this *QLayout) SetAlignment1(l QLayout_ITF /*777 QLayout **/, alignment int) bool {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QLayout_PTR() != nil {
 		convArg0 = l.QLayout_PTR().GetCthis()
@@ -858,7 +858,7 @@ This function was introduced in  Qt 5.2.
 
 See also indexOf().
 */
-func (this *QLayout) ReplaceWidget__(from QWidget_ITF /*777 QWidget **/, to QWidget_ITF /*777 QWidget **/) *QLayoutItem /*777 QLayoutItem **/ {
+func (this *QLayout) ReplaceWidgetp(from QWidget_ITF /*777 QWidget **/, to QWidget_ITF /*777 QWidget **/) *QLayoutItem /*777 QLayoutItem **/ {
 	var convArg0 unsafe.Pointer
 	if from != nil && from.QWidget_PTR() != nil {
 		convArg0 = from.QWidget_PTR().GetCthis()

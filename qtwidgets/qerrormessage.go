@@ -119,10 +119,10 @@ func NewQErrorMessage(parent QWidget_ITF /*777 QWidget **/) *QErrorMessage {
 /*
 Constructs and installs an error handler window with the given parent.
 */
-func (*QErrorMessage) NewForInherit__() *QErrorMessage {
-	return NewQErrorMessage__()
+func (*QErrorMessage) NewForInheritp() *QErrorMessage {
+	return NewQErrorMessagep()
 }
-func NewQErrorMessage__() *QErrorMessage {
+func NewQErrorMessagep() *QErrorMessage {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessageC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -177,7 +177,7 @@ Shows the given message, message, and returns immediately. If the user has reque
 Normally, the message is displayed immediately. However, if there are pending messages, it will be queued to be displayed later.
 */
 func (this *QErrorMessage) ShowMessage(message string) {
-	var tmpArg0 = qtcore.NewQString_5(message)
+	var tmpArg0 = qtcore.NewQString5(message)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -193,10 +193,10 @@ Shows the given message, message, and returns immediately. If the user has reque
 
 Normally, the message is displayed immediately. However, if there are pending messages, it will be queued to be displayed later.
 */
-func (this *QErrorMessage) ShowMessage_1(message string, type_ string) {
-	var tmpArg0 = qtcore.NewQString_5(message)
+func (this *QErrorMessage) ShowMessage1(message string, type_ string) {
+	var tmpArg0 = qtcore.NewQString5(message)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(type_)
+	var tmpArg1 = qtcore.NewQString5(type_)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

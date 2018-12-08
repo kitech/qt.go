@@ -110,10 +110,10 @@ func NewQWinThumbnailToolButton(parent qtcore.QObject_ITF /*777 QObject **/) *QW
 /*
 Constructs a QWinThumbnailToolButton with the specified parent.
 */
-func (*QWinThumbnailToolButton) NewForInherit__() *QWinThumbnailToolButton {
-	return NewQWinThumbnailToolButton__()
+func (*QWinThumbnailToolButton) NewForInheritp() *QWinThumbnailToolButton {
+	return NewQWinThumbnailToolButtonp()
 }
-func NewQWinThumbnailToolButton__() *QWinThumbnailToolButton {
+func NewQWinThumbnailToolButtonp() *QWinThumbnailToolButton {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWinThumbnailToolButtonC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -147,7 +147,7 @@ func DeleteQWinThumbnailToolButton(this *QWinThumbnailToolButton) {
 
  */
 func (this *QWinThumbnailToolButton) SetToolTip(toolTip string) {
-	var tmpArg0 = qtcore.NewQString_5(toolTip)
+	var tmpArg0 = qtcore.NewQString5(toolTip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWinThumbnailToolButton10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

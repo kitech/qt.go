@@ -92,10 +92,10 @@ func NewQVector3D() *QVector3D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0).
 */
-func (*QVector3D) NewForInherit_1(arg0 int) *QVector3D {
-	return NewQVector3D_1(arg0)
+func (*QVector3D) NewForInherit1(arg0 int) *QVector3D {
+	return NewQVector3D1(arg0)
 }
-func NewQVector3D_1(arg0 int) *QVector3D {
+func NewQVector3D1(arg0 int) *QVector3D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQVector3D_1(arg0 int) *QVector3D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0).
 */
-func (*QVector3D) NewForInherit_2(xpos float32, ypos float32, zpos float32) *QVector3D {
-	return NewQVector3D_2(xpos, ypos, zpos)
+func (*QVector3D) NewForInherit2(xpos float32, ypos float32, zpos float32) *QVector3D {
+	return NewQVector3D2(xpos, ypos, zpos)
 }
-func NewQVector3D_2(xpos float32, ypos float32, zpos float32) *QVector3D {
+func NewQVector3D2(xpos float32, ypos float32, zpos float32) *QVector3D {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector3DC2Efff", qtrt.FFI_TYPE_POINTER, xpos, ypos, zpos)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -130,10 +130,10 @@ func NewQVector3D_2(xpos float32, ypos float32, zpos float32) *QVector3D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0).
 */
-func (*QVector3D) NewForInherit_3(point qtcore.QPoint_ITF) *QVector3D {
-	return NewQVector3D_3(point)
+func (*QVector3D) NewForInherit3(point qtcore.QPoint_ITF) *QVector3D {
+	return NewQVector3D3(point)
 }
-func NewQVector3D_3(point qtcore.QPoint_ITF) *QVector3D {
+func NewQVector3D3(point qtcore.QPoint_ITF) *QVector3D {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPoint_PTR() != nil {
 		convArg0 = point.QPoint_PTR().GetCthis()
@@ -153,10 +153,10 @@ func NewQVector3D_3(point qtcore.QPoint_ITF) *QVector3D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0).
 */
-func (*QVector3D) NewForInherit_4(point qtcore.QPointF_ITF) *QVector3D {
-	return NewQVector3D_4(point)
+func (*QVector3D) NewForInherit4(point qtcore.QPointF_ITF) *QVector3D {
+	return NewQVector3D4(point)
 }
-func NewQVector3D_4(point qtcore.QPointF_ITF) *QVector3D {
+func NewQVector3D4(point qtcore.QPointF_ITF) *QVector3D {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
 		convArg0 = point.QPointF_PTR().GetCthis()
@@ -176,10 +176,10 @@ func NewQVector3D_4(point qtcore.QPointF_ITF) *QVector3D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0).
 */
-func (*QVector3D) NewForInherit_5(vector QVector2D_ITF) *QVector3D {
-	return NewQVector3D_5(vector)
+func (*QVector3D) NewForInherit5(vector QVector2D_ITF) *QVector3D {
+	return NewQVector3D5(vector)
 }
-func NewQVector3D_5(vector QVector2D_ITF) *QVector3D {
+func NewQVector3D5(vector QVector2D_ITF) *QVector3D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector2D_PTR() != nil {
 		convArg0 = vector.QVector2D_PTR().GetCthis()
@@ -199,10 +199,10 @@ func NewQVector3D_5(vector QVector2D_ITF) *QVector3D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0).
 */
-func (*QVector3D) NewForInherit_6(vector QVector2D_ITF, zpos float32) *QVector3D {
-	return NewQVector3D_6(vector, zpos)
+func (*QVector3D) NewForInherit6(vector QVector2D_ITF, zpos float32) *QVector3D {
+	return NewQVector3D6(vector, zpos)
 }
-func NewQVector3D_6(vector QVector2D_ITF, zpos float32) *QVector3D {
+func NewQVector3D6(vector QVector2D_ITF, zpos float32) *QVector3D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector2D_PTR() != nil {
 		convArg0 = vector.QVector2D_PTR().GetCthis()
@@ -222,10 +222,10 @@ func NewQVector3D_6(vector QVector2D_ITF, zpos float32) *QVector3D {
 /*
 Constructs a null vector, i.e. with coordinates (0, 0, 0).
 */
-func (*QVector3D) NewForInherit_7(vector QVector4D_ITF) *QVector3D {
-	return NewQVector3D_7(vector)
+func (*QVector3D) NewForInherit7(vector QVector4D_ITF) *QVector3D {
+	return NewQVector3D7(vector)
 }
-func NewQVector3D_7(vector QVector4D_ITF) *QVector3D {
+func NewQVector3D7(vector QVector4D_ITF) *QVector3D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector4D_PTR() != nil {
 		convArg0 = vector.QVector4D_PTR().GetCthis()
@@ -366,7 +366,7 @@ func (this *QVector3D) Operator_get_index(i int) float32 {
 /*
 
  */
-func (this *QVector3D) Operator_get_index_1(i int) float32 {
+func (this *QVector3D) Operator_get_index1(i int) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector3DixEi", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -503,7 +503,7 @@ func (this *QVector3D) Operator_mul_equal(factor float32) *QVector3D {
 /*
 
  */
-func (this *QVector3D) Operator_mul_equal_1(vector QVector3D_ITF) *QVector3D {
+func (this *QVector3D) Operator_mul_equal1(vector QVector3D_ITF) *QVector3D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
 		convArg0 = vector.QVector3D_PTR().GetCthis()
@@ -539,7 +539,7 @@ func (this *QVector3D) Operator_div_equal(divisor float32) *QVector3D {
 /*
 
  */
-func (this *QVector3D) Operator_div_equal_1(vector QVector3D_ITF) *QVector3D {
+func (this *QVector3D) Operator_div_equal1(vector QVector3D_ITF) *QVector3D {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
 		convArg0 = vector.QVector3D_PTR().GetCthis()
@@ -654,7 +654,7 @@ Use crossProduct() to compute the cross-product of v1 and v2 if you do not need 
 
 See also crossProduct() and distanceToPlane().
 */
-func (this *QVector3D) Normal_1(v1 QVector3D_ITF, v2 QVector3D_ITF, v3 QVector3D_ITF) *QVector3D /*123*/ {
+func (this *QVector3D) Normal1(v1 QVector3D_ITF, v2 QVector3D_ITF, v3 QVector3D_ITF) *QVector3D /*123*/ {
 	var convArg0 unsafe.Pointer
 	if v1 != nil && v1.QVector3D_PTR() != nil {
 		convArg0 = v1.QVector3D_PTR().GetCthis()
@@ -673,9 +673,9 @@ func (this *QVector3D) Normal_1(v1 QVector3D_ITF, v2 QVector3D_ITF, v3 QVector3D
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
 	return rv2
 }
-func QVector3D_Normal_1(v1 QVector3D_ITF, v2 QVector3D_ITF, v3 QVector3D_ITF) *QVector3D /*123*/ {
+func QVector3D_Normal1(v1 QVector3D_ITF, v2 QVector3D_ITF, v3 QVector3D_ITF) *QVector3D /*123*/ {
 	var nilthis *QVector3D
-	rv := nilthis.Normal_1(v1, v2, v3)
+	rv := nilthis.Normal1(v1, v2, v3)
 	return rv
 }
 
@@ -811,7 +811,7 @@ The return value will be negative if the vertex is below the plane, or zero if i
 
 See also normal() and distanceToLine().
 */
-func (this *QVector3D) DistanceToPlane_1(plane1 QVector3D_ITF, plane2 QVector3D_ITF, plane3 QVector3D_ITF) float32 {
+func (this *QVector3D) DistanceToPlane1(plane1 QVector3D_ITF, plane2 QVector3D_ITF, plane3 QVector3D_ITF) float32 {
 	var convArg0 unsafe.Pointer
 	if plane1 != nil && plane1.QVector3D_PTR() != nil {
 		convArg0 = plane1.QVector3D_PTR().GetCthis()

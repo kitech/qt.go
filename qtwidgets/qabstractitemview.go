@@ -399,10 +399,10 @@ func NewQAbstractItemView(parent QWidget_ITF /*777 QWidget **/) *QAbstractItemVi
 /*
 Constructs an abstract item view with the given parent.
 */
-func (*QAbstractItemView) NewForInherit__() *QAbstractItemView {
-	return NewQAbstractItemView__()
+func (*QAbstractItemView) NewForInheritp() *QAbstractItemView {
+	return NewQAbstractItemViewp()
 }
-func NewQAbstractItemView__() *QAbstractItemView {
+func NewQAbstractItemViewp() *QAbstractItemView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -563,7 +563,7 @@ Returns the item delegate used by this view and model. This is either one set wi
 
 See also setItemDelegate().
 */
-func (this *QAbstractItemView) ItemDelegate_1(index qtcore.QModelIndex_ITF) *QAbstractItemDelegate /*777 QAbstractItemDelegate **/ {
+func (this *QAbstractItemView) ItemDelegate1(index qtcore.QModelIndex_ITF) *QAbstractItemDelegate /*777 QAbstractItemDelegate **/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -1084,7 +1084,7 @@ Moves to and selects the item best matching the string search. If no item is fou
 In the default implementation, the search is reset if search is empty, or the time interval since the last search has exceeded QApplication::keyboardInputInterval().
 */
 func (this *QAbstractItemView) KeyboardSearch(search string) {
-	var tmpArg0 = qtcore.NewQString_5(search)
+	var tmpArg0 = qtcore.NewQString5(search)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView14keyboardSearchERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1145,7 +1145,7 @@ Scrolls the view if necessary to ensure that the item at index is visible. The v
 
 In the base class this is a pure virtual function.
 */
-func (this *QAbstractItemView) ScrollTo__(index qtcore.QModelIndex_ITF) {
+func (this *QAbstractItemView) ScrollTop(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -1563,7 +1563,7 @@ Note that this function does not change the current index. Since the current ind
 
 See also QModelIndex::flags().
 */
-func (this *QAbstractItemView) Edit_1(index qtcore.QModelIndex_ITF, trigger int, event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+func (this *QAbstractItemView) Edit1(index qtcore.QModelIndex_ITF, trigger int, event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -2263,7 +2263,7 @@ Reimplement this function to define your own selection behavior.
 
 See also setSelection().
 */
-func (this *QAbstractItemView) SelectionCommand__(index qtcore.QModelIndex_ITF) int {
+func (this *QAbstractItemView) SelectionCommandp(index qtcore.QModelIndex_ITF) int {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()

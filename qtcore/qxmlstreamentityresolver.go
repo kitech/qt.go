@@ -90,9 +90,9 @@ func DeleteQXmlStreamEntityResolver(this *QXmlStreamEntityResolver) {
 
  */
 func (this *QXmlStreamEntityResolver) ResolveEntity(publicId string, systemId string) string {
-	var tmpArg0 = NewQString_5(publicId)
+	var tmpArg0 = NewQString5(publicId)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(systemId)
+	var tmpArg1 = NewQString5(systemId)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -111,7 +111,7 @@ func (this *QXmlStreamEntityResolver) ResolveEntity(publicId string, systemId st
 
  */
 func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(name string) string {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

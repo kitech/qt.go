@@ -660,7 +660,7 @@ func (this *QMediaPlayerControl) PlaybackRateChanged(rate float64) {
 Signals that an error has occurred. The errorString provides a more detailed explanation.
 */
 func (this *QMediaPlayerControl) Error(error int, errorString string) {
-	var tmpArg1 = qtcore.NewQString_5(errorString)
+	var tmpArg1 = qtcore.NewQString5(errorString)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QMediaPlayerControl5errorEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -697,10 +697,10 @@ func NewQMediaPlayerControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMedia
 /*
 Constructs a new media player control with the given parent.
 */
-func (*QMediaPlayerControl) NewForInherit__() *QMediaPlayerControl {
-	return NewQMediaPlayerControl__()
+func (*QMediaPlayerControl) NewForInheritp() *QMediaPlayerControl {
+	return NewQMediaPlayerControlp()
 }
-func NewQMediaPlayerControl__() *QMediaPlayerControl {
+func NewQMediaPlayerControlp() *QMediaPlayerControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QMediaPlayerControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

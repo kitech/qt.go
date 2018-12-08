@@ -95,10 +95,10 @@ func NewQSGNode() *QSGNode {
 /*
 Constructs a new node
 */
-func (*QSGNode) NewForInherit_1(type_ int) *QSGNode {
-	return NewQSGNode_1(type_)
+func (*QSGNode) NewForInherit1(type_ int) *QSGNode {
+	return NewQSGNode1(type_)
 }
-func NewQSGNode_1(type_ int) *QSGNode {
+func NewQSGNode1(type_ int) *QSGNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNodeC2ENS_8NodeTypeE", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -473,7 +473,7 @@ Sets the flag f on this node if enabled is true; otherwise clears the flag.
 
 See also flags().
 */
-func (this *QSGNode) SetFlag__(arg0 int) {
+func (this *QSGNode) SetFlagp(arg0 int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	arg1 := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode7setFlagENS_4FlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
@@ -505,7 +505,7 @@ Sets the flags f on this node if enabled is true; otherwise clears the flags.
 
 See also flags().
 */
-func (this *QSGNode) SetFlags__(arg0 int) {
+func (this *QSGNode) SetFlagsp(arg0 int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	arg1 := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QSGNode8setFlagsE6QFlagsINS_4FlagEEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)

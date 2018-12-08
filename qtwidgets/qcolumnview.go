@@ -192,10 +192,10 @@ Constructs a column view with a parent to represent a model's data. Use setModel
 
 See also QAbstractItemModel.
 */
-func (*QColumnView) NewForInherit__() *QColumnView {
-	return NewQColumnView__()
+func (*QColumnView) NewForInheritp() *QColumnView {
+	return NewQColumnViewp()
 }
-func NewQColumnView__() *QColumnView {
+func NewQColumnViewp() *QColumnView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QColumnViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -265,7 +265,7 @@ func (this *QColumnView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 /*
 Reimplemented from QAbstractItemView::scrollTo().
 */
-func (this *QColumnView) ScrollTo__(index qtcore.QModelIndex_ITF) {
+func (this *QColumnView) ScrollTop(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()

@@ -221,10 +221,10 @@ func NewQGraphicsTextItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 /*
 
  */
-func (*QGraphicsTextItem) NewForInherit__() *QGraphicsTextItem {
-	return NewQGraphicsTextItem__()
+func (*QGraphicsTextItem) NewForInheritp() *QGraphicsTextItem {
+	return NewQGraphicsTextItemp()
 }
-func NewQGraphicsTextItem__() *QGraphicsTextItem {
+func NewQGraphicsTextItemp() *QGraphicsTextItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsTextItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -242,11 +242,11 @@ func NewQGraphicsTextItem__() *QGraphicsTextItem {
 /*
 
  */
-func (*QGraphicsTextItem) NewForInherit_1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsTextItem {
-	return NewQGraphicsTextItem_1(text, parent)
+func (*QGraphicsTextItem) NewForInherit1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsTextItem {
+	return NewQGraphicsTextItem1(text, parent)
 }
-func NewQGraphicsTextItem_1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsTextItem {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQGraphicsTextItem1(text string, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsTextItem {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
@@ -267,11 +267,11 @@ func NewQGraphicsTextItem_1(text string, parent QGraphicsItem_ITF /*777 QGraphic
 /*
 
  */
-func (*QGraphicsTextItem) NewForInherit_1_(text string) *QGraphicsTextItem {
-	return NewQGraphicsTextItem_1_(text)
+func (*QGraphicsTextItem) NewForInherit1p(text string) *QGraphicsTextItem {
+	return NewQGraphicsTextItem1p(text)
 }
-func NewQGraphicsTextItem_1_(text string) *QGraphicsTextItem {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQGraphicsTextItem1p(text string) *QGraphicsTextItem {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -323,7 +323,7 @@ func (this *QGraphicsTextItem) ToHtml() string {
 
  */
 func (this *QGraphicsTextItem) SetHtml(html string) {
-	var tmpArg0 = qtcore.NewQString_5(html)
+	var tmpArg0 = qtcore.NewQString5(html)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsTextItem7setHtmlERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -355,7 +355,7 @@ func (this *QGraphicsTextItem) ToPlainText() string {
 
  */
 func (this *QGraphicsTextItem) SetPlainText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsTextItem12setPlainTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -848,7 +848,7 @@ func (this *QGraphicsTextItem) TextCursor() *qtgui.QTextCursor /*123*/ {
 
  */
 func (this *QGraphicsTextItem) LinkActivated(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsTextItem13linkActivatedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -863,7 +863,7 @@ func (this *QGraphicsTextItem) LinkActivated(arg0 string) {
 
  */
 func (this *QGraphicsTextItem) LinkHovered(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsTextItem11linkHoveredERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

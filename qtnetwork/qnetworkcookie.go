@@ -104,10 +104,10 @@ Create a new QNetworkCookie object, initializing the cookie name to name and its
 
 A cookie is only valid if it has a name. However, the value is opaque to the application and being empty may have significance to the remote server.
 */
-func (*QNetworkCookie) NewForInherit__() *QNetworkCookie {
-	return NewQNetworkCookie__()
+func (*QNetworkCookie) NewForInheritp() *QNetworkCookie {
+	return NewQNetworkCookiep()
 }
-func NewQNetworkCookie__() *QNetworkCookie {
+func NewQNetworkCookiep() *QNetworkCookie {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
 	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
@@ -129,10 +129,10 @@ Create a new QNetworkCookie object, initializing the cookie name to name and its
 
 A cookie is only valid if it has a name. However, the value is opaque to the application and being empty may have significance to the remote server.
 */
-func (*QNetworkCookie) NewForInherit__1(name qtcore.QByteArray_ITF) *QNetworkCookie {
-	return NewQNetworkCookie__1(name)
+func (*QNetworkCookie) NewForInheritp1(name qtcore.QByteArray_ITF) *QNetworkCookie {
+	return NewQNetworkCookiep1(name)
 }
-func NewQNetworkCookie__1(name qtcore.QByteArray_ITF) *QNetworkCookie {
+func NewQNetworkCookiep1(name qtcore.QByteArray_ITF) *QNetworkCookie {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QByteArray_PTR() != nil {
 		convArg0 = name.QByteArray_PTR().GetCthis()
@@ -185,7 +185,7 @@ func (this *QNetworkCookie) Operator_equal(other unsafe.Pointer /*333*/) *QNetwo
 /*
 
  */
-func (this *QNetworkCookie) Operator_equal_1(other QNetworkCookie_ITF) *QNetworkCookie {
+func (this *QNetworkCookie) Operator_equal1(other QNetworkCookie_ITF) *QNetworkCookie {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkCookie_PTR() != nil {
 		convArg0 = other.QNetworkCookie_PTR().GetCthis()
@@ -411,7 +411,7 @@ Sets the domain associated with this cookie to be domain.
 See also domain().
 */
 func (this *QNetworkCookie) SetDomain(domain string) {
-	var tmpArg0 = qtcore.NewQString_5(domain)
+	var tmpArg0 = qtcore.NewQString5(domain)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QNetworkCookie9setDomainERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -447,7 +447,7 @@ Sets the path associated with this cookie to be path.
 See also path().
 */
 func (this *QNetworkCookie) SetPath(path string) {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QNetworkCookie7setPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -557,7 +557,7 @@ Returns the raw form of this QNetworkCookie. The QByteArray returned by this fun
 
 See also parseCookies().
 */
-func (this *QNetworkCookie) ToRawForm__() *qtcore.QByteArray /*123*/ {
+func (this *QNetworkCookie) ToRawFormp() *qtcore.QByteArray /*123*/ {
 	// arg: 0, QNetworkCookie::RawForm=Enum, QNetworkCookie::RawForm=Enum, , Invalid
 	form := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QNetworkCookie9toRawFormENS_7RawFormE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), form)

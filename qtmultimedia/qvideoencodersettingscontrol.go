@@ -135,7 +135,7 @@ If the encoder supports arbitrary resolutions within the supported resolutions r
 
 See also QVideoEncoderSettings::resolution().
 */
-func (this *QVideoEncoderSettingsControl) SupportedResolutions__(settings QVideoEncoderSettings_ITF) *qtcore.QSizeList /*lll*/ {
+func (this *QVideoEncoderSettingsControl) SupportedResolutionsp(settings QVideoEncoderSettings_ITF) *qtcore.QSizeList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if settings != nil && settings.QVideoEncoderSettings_PTR() != nil {
 		convArg0 = settings.QVideoEncoderSettings_PTR().GetCthis()
@@ -173,7 +173,7 @@ func (this *QVideoEncoderSettingsControl) SupportedVideoCodecs() *qtcore.QString
 Returns a description of a video codec.
 */
 func (this *QVideoEncoderSettingsControl) VideoCodecDescription(codecName string) string {
-	var tmpArg0 = qtcore.NewQString_5(codecName)
+	var tmpArg0 = qtcore.NewQString5(codecName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QVideoEncoderSettingsControl21videoCodecDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -253,10 +253,10 @@ func NewQVideoEncoderSettingsControl(parent qtcore.QObject_ITF /*777 QObject **/
 /*
 Create a new video encoder settings control object with the given parent.
 */
-func (*QVideoEncoderSettingsControl) NewForInherit__() *QVideoEncoderSettingsControl {
-	return NewQVideoEncoderSettingsControl__()
+func (*QVideoEncoderSettingsControl) NewForInheritp() *QVideoEncoderSettingsControl {
+	return NewQVideoEncoderSettingsControlp()
 }
-func NewQVideoEncoderSettingsControl__() *QVideoEncoderSettingsControl {
+func NewQVideoEncoderSettingsControlp() *QVideoEncoderSettingsControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QVideoEncoderSettingsControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

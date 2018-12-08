@@ -210,10 +210,10 @@ The window is not shown until setVisible(true), show(), or similar is called.
 
 See also setScreen().
 */
-func (*QWindow) NewForInherit__() *QWindow {
-	return NewQWindow__()
+func (*QWindow) NewForInheritp() *QWindow {
+	return NewQWindowp()
 }
-func NewQWindow__() *QWindow {
+func NewQWindowp() *QWindow {
 	// arg: 0, QScreen *=Pointer, QScreen=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindowC2EP7QScreen", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -235,10 +235,10 @@ The window is not shown until setVisible(true), show(), or similar is called.
 
 See also setScreen().
 */
-func (*QWindow) NewForInherit_1(parent QWindow_ITF /*777 QWindow **/) *QWindow {
-	return NewQWindow_1(parent)
+func (*QWindow) NewForInherit1(parent QWindow_ITF /*777 QWindow **/) *QWindow {
+	return NewQWindow1(parent)
 }
-func NewQWindow_1(parent QWindow_ITF /*777 QWindow **/) *QWindow {
+func NewQWindow1(parent QWindow_ITF /*777 QWindow **/) *QWindow {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWindow_PTR() != nil {
 		convArg0 = parent.QWindow_PTR().GetCthis()
@@ -420,7 +420,7 @@ This function was introduced in  Qt 5.9.
 
 See also setParent().
 */
-func (this *QWindow) Parent_1() *QWindow /*777 QWindow **/ {
+func (this *QWindow) Parent1() *QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -642,7 +642,7 @@ This function was introduced in  Qt 5.9.
 
 See also setFlags(), flags(), and type().
 */
-func (this *QWindow) SetFlag__(arg0 int) {
+func (this *QWindow) SetFlagp(arg0 int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow7setFlagEN2Qt10WindowTypeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, on)
@@ -964,7 +964,7 @@ func (this *QWindow) IsAncestorOf(child QWindow_ITF /*777 const QWindow **/, mod
 /*
 Returns true if the window is an ancestor of the given child. If mode is IncludeTransients, then transient parents are also considered ancestors.
 */
-func (this *QWindow) IsAncestorOf__(child QWindow_ITF /*777 const QWindow **/) bool {
+func (this *QWindow) IsAncestorOfp(child QWindow_ITF /*777 const QWindow **/) bool {
 	var convArg0 unsafe.Pointer
 	if child != nil && child.QWindow_PTR() != nil {
 		convArg0 = child.QWindow_PTR().GetCthis()
@@ -1438,7 +1438,7 @@ The position is in relation to the virtualGeometry() of its screen.
 
 See also position().
 */
-func (this *QWindow) SetPosition_1(posx int, posy int) {
+func (this *QWindow) SetPosition1(posx int, posy int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setPositionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), posx, posy)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1472,7 +1472,7 @@ set the size of the window, excluding any window frame, to newSize
 
 See also size() and geometry().
 */
-func (this *QWindow) Resize_1(w int, h int) {
+func (this *QWindow) Resize1(w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow6resizeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1490,7 +1490,7 @@ The windowing system might use filePath to display the path of the document this
 See also filePath().
 */
 func (this *QWindow) SetFilePath(filePath string) {
-	var tmpArg0 = qtcore.NewQString_5(filePath)
+	var tmpArg0 = qtcore.NewQString5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setFilePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1996,7 +1996,7 @@ func (this *QWindow) Lower() {
 
  */
 func (this *QWindow) SetTitle(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2083,7 +2083,7 @@ The geometry is in relation to the virtualGeometry() of its screen.
 
 See also geometry().
 */
-func (this *QWindow) SetGeometry_1(rect qtcore.QRect_ITF) {
+func (this *QWindow) SetGeometry1(rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRect_PTR() != nil {
 		convArg0 = rect.QRect_PTR().GetCthis()
@@ -2238,7 +2238,7 @@ func (this *QWindow) WindowStateChanged(windowState int) {
 
  */
 func (this *QWindow) WindowTitleChanged(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow18windowTitleChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

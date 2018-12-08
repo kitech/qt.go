@@ -75,7 +75,7 @@ func Operator_equal_equal(obj1 QAndroidJniObject_ITF, obj2 QAndroidJniObject_ITF
 
  */
 func ShouldShowRequestPermissionRationale(permission string) bool {
-	var tmpArg0 = qtcore.NewQString_5(permission)
+	var tmpArg0 = qtcore.NewQString5(permission)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid36shouldShowRequestPermissionRationaleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -181,7 +181,7 @@ func HideSplashScreen() {
 /*
 
  */
-func HideSplashScreen_1(duration int) {
+func HideSplashScreen1(duration int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid16hideSplashScreenEi", qtrt.FFI_TYPE_POINTER, duration)
 	qtrt.ErrPrint(err, rv)
 }
@@ -195,7 +195,7 @@ func HideSplashScreen_1(duration int) {
 
  */
 func CheckPermission(permission string) int {
-	var tmpArg0 = qtcore.NewQString_5(permission)
+	var tmpArg0 = qtcore.NewQString5(permission)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid15checkPermissionERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

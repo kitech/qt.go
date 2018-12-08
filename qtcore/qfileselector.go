@@ -111,10 +111,10 @@ Create a QFileSelector instance. This instance will have the same static selecto
 
 If supplied, it will have the given QObject parent.
 */
-func (*QFileSelector) NewForInherit__() *QFileSelector {
-	return NewQFileSelector__()
+func (*QFileSelector) NewForInheritp() *QFileSelector {
+	return NewQFileSelectorp()
 }
-func NewQFileSelector__() *QFileSelector {
+func NewQFileSelectorp() *QFileSelector {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFileSelectorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -152,7 +152,7 @@ If the original file does not exist, the original filePath is returned. This mea
 See the class overview for the selection algorithm.
 */
 func (this *QFileSelector) Select(filePath string) string {
-	var tmpArg0 = NewQString_5(filePath)
+	var tmpArg0 = NewQString5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFileSelector6selectERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +174,7 @@ If the original file does not exist, the original filePath is returned. This mea
 
 See the class overview for the selection algorithm.
 */
-func (this *QFileSelector) Select_1(filePath QUrl_ITF) *QUrl /*123*/ {
+func (this *QFileSelector) Select1(filePath QUrl_ITF) *QUrl /*123*/ {
 	var convArg0 unsafe.Pointer
 	if filePath != nil && filePath.QUrl_PTR() != nil {
 		convArg0 = filePath.QUrl_PTR().GetCthis()

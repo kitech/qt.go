@@ -92,10 +92,10 @@ func NewQMatrix4x4() *QMatrix4x4 {
 /*
 Constructs an identity matrix.
 */
-func (*QMatrix4x4) NewForInherit_1(arg0 int) *QMatrix4x4 {
-	return NewQMatrix4x4_1(arg0)
+func (*QMatrix4x4) NewForInherit1(arg0 int) *QMatrix4x4 {
+	return NewQMatrix4x41(arg0)
 }
-func NewQMatrix4x4_1(arg0 int) *QMatrix4x4 {
+func NewQMatrix4x41(arg0 int) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQMatrix4x4_1(arg0 int) *QMatrix4x4 {
 /*
 Constructs an identity matrix.
 */
-func (*QMatrix4x4) NewForInherit_2(values unsafe.Pointer /*666*/) *QMatrix4x4 {
-	return NewQMatrix4x4_2(values)
+func (*QMatrix4x4) NewForInherit2(values unsafe.Pointer /*666*/) *QMatrix4x4 {
+	return NewQMatrix4x42(values)
 }
-func NewQMatrix4x4_2(values unsafe.Pointer /*666*/) *QMatrix4x4 {
+func NewQMatrix4x42(values unsafe.Pointer /*666*/) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2EPKf", qtrt.FFI_TYPE_POINTER, values)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv)))
@@ -130,10 +130,10 @@ func NewQMatrix4x4_2(values unsafe.Pointer /*666*/) *QMatrix4x4 {
 /*
 Constructs an identity matrix.
 */
-func (*QMatrix4x4) NewForInherit_3(m11 float32, m12 float32, m13 float32, m14 float32, m21 float32, m22 float32, m23 float32, m24 float32, m31 float32, m32 float32, m33 float32, m34 float32, m41 float32, m42 float32, m43 float32, m44 float32) *QMatrix4x4 {
-	return NewQMatrix4x4_3(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44)
+func (*QMatrix4x4) NewForInherit3(m11 float32, m12 float32, m13 float32, m14 float32, m21 float32, m22 float32, m23 float32, m24 float32, m31 float32, m32 float32, m33 float32, m34 float32, m41 float32, m42 float32, m43 float32, m44 float32) *QMatrix4x4 {
+	return NewQMatrix4x43(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44)
 }
-func NewQMatrix4x4_3(m11 float32, m12 float32, m13 float32, m14 float32, m21 float32, m22 float32, m23 float32, m24 float32, m31 float32, m32 float32, m33 float32, m34 float32, m41 float32, m42 float32, m43 float32, m44 float32) *QMatrix4x4 {
+func NewQMatrix4x43(m11 float32, m12 float32, m13 float32, m14 float32, m21 float32, m22 float32, m23 float32, m24 float32, m31 float32, m32 float32, m33 float32, m34 float32, m41 float32, m42 float32, m43 float32, m44 float32) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2Effffffffffffffff", qtrt.FFI_TYPE_POINTER, m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv)))
@@ -149,10 +149,10 @@ func NewQMatrix4x4_3(m11 float32, m12 float32, m13 float32, m14 float32, m21 flo
 /*
 Constructs an identity matrix.
 */
-func (*QMatrix4x4) NewForInherit_4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix4x4 {
-	return NewQMatrix4x4_4(values, cols, rows)
+func (*QMatrix4x4) NewForInherit4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix4x4 {
+	return NewQMatrix4x44(values, cols, rows)
 }
-func NewQMatrix4x4_4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix4x4 {
+func NewQMatrix4x44(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4C2EPKfii", qtrt.FFI_TYPE_POINTER, values, cols, rows)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv)))
@@ -168,10 +168,10 @@ func NewQMatrix4x4_4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix
 /*
 Constructs an identity matrix.
 */
-func (*QMatrix4x4) NewForInherit_5(transform QTransform_ITF) *QMatrix4x4 {
-	return NewQMatrix4x4_5(transform)
+func (*QMatrix4x4) NewForInherit5(transform QTransform_ITF) *QMatrix4x4 {
+	return NewQMatrix4x45(transform)
 }
-func NewQMatrix4x4_5(transform QTransform_ITF) *QMatrix4x4 {
+func NewQMatrix4x45(transform QTransform_ITF) *QMatrix4x4 {
 	var convArg0 unsafe.Pointer
 	if transform != nil && transform.QTransform_PTR() != nil {
 		convArg0 = transform.QTransform_PTR().GetCthis()
@@ -191,10 +191,10 @@ func NewQMatrix4x4_5(transform QTransform_ITF) *QMatrix4x4 {
 /*
 Constructs an identity matrix.
 */
-func (*QMatrix4x4) NewForInherit_6(matrix QMatrix_ITF) *QMatrix4x4 {
-	return NewQMatrix4x4_6(matrix)
+func (*QMatrix4x4) NewForInherit6(matrix QMatrix_ITF) *QMatrix4x4 {
+	return NewQMatrix4x46(matrix)
 }
-func NewQMatrix4x4_6(matrix QMatrix_ITF) *QMatrix4x4 {
+func NewQMatrix4x46(matrix QMatrix_ITF) *QMatrix4x4 {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
 		convArg0 = matrix.QMatrix_PTR().GetCthis()
@@ -228,7 +228,7 @@ func (this *QMatrix4x4) Operator_fncall(row int, column int) float32 {
 /*
 
  */
-func (this *QMatrix4x4) Operator_fncall_1(row int, column int) float32 {
+func (this *QMatrix4x4) Operator_fncall1(row int, column int) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4clEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cpretval2go("float32", rv).(float32) // 3331
@@ -418,7 +418,7 @@ If the matrix is recognized as the identity or an orthonormal matrix, then this 
 
 See also determinant() and normalMatrix().
 */
-func (this *QMatrix4x4) Inverted__() *QMatrix4x4 /*123*/ {
+func (this *QMatrix4x4) Invertedp() *QMatrix4x4 /*123*/ {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var invertible unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x48invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
@@ -512,7 +512,7 @@ func (this *QMatrix4x4) Operator_mul_equal(other QMatrix4x4_ITF) *QMatrix4x4 {
 /*
 
  */
-func (this *QMatrix4x4) Operator_mul_equal_1(factor float32) *QMatrix4x4 {
+func (this *QMatrix4x4) Operator_mul_equal1(factor float32) *QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x4mLEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -601,7 +601,7 @@ Multiplies this matrix by another that scales coordinates by the components of v
 
 See also translate() and rotate().
 */
-func (this *QMatrix4x4) Scale_1(x float32, y float32) {
+func (this *QMatrix4x4) Scale1(x float32, y float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x45scaleEff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 }
@@ -616,7 +616,7 @@ Multiplies this matrix by another that scales coordinates by the components of v
 
 See also translate() and rotate().
 */
-func (this *QMatrix4x4) Scale_2(x float32, y float32, z float32) {
+func (this *QMatrix4x4) Scale2(x float32, y float32, z float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x45scaleEfff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, z)
 	qtrt.ErrPrint(err, rv)
 }
@@ -631,7 +631,7 @@ Multiplies this matrix by another that scales coordinates by the components of v
 
 See also translate() and rotate().
 */
-func (this *QMatrix4x4) Scale_3(factor float32) {
+func (this *QMatrix4x4) Scale3(factor float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x45scaleEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
 	qtrt.ErrPrint(err, rv)
 }
@@ -665,7 +665,7 @@ Multiplies this matrix by another that translates coordinates by the components 
 
 See also scale() and rotate().
 */
-func (this *QMatrix4x4) Translate_1(x float32, y float32) {
+func (this *QMatrix4x4) Translate1(x float32, y float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x49translateEff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 }
@@ -680,7 +680,7 @@ Multiplies this matrix by another that translates coordinates by the components 
 
 See also scale() and rotate().
 */
-func (this *QMatrix4x4) Translate_2(x float32, y float32, z float32) {
+func (this *QMatrix4x4) Translate2(x float32, y float32, z float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x49translateEfff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, z)
 	qtrt.ErrPrint(err, rv)
 }
@@ -714,7 +714,7 @@ Multiples this matrix by another that rotates coordinates through angle degrees 
 
 See also scale() and translate().
 */
-func (this *QMatrix4x4) Rotate_1(angle float32, x float32, y float32, z float32) {
+func (this *QMatrix4x4) Rotate1(angle float32, x float32, y float32, z float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x46rotateEffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), angle, x, y, z)
 	qtrt.ErrPrint(err, rv)
 }
@@ -729,7 +729,7 @@ Multiples this matrix by another that rotates coordinates through angle degrees 
 
 See also scale() and translate().
 */
-func (this *QMatrix4x4) Rotate_1_(angle float32, x float32, y float32) {
+func (this *QMatrix4x4) Rotate1p(angle float32, x float32, y float32) {
 	// arg: 3, float=Float, =Invalid, , Invalid
 	z := float32(0.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x46rotateEffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), angle, x, y, z)
@@ -746,7 +746,7 @@ Multiples this matrix by another that rotates coordinates through angle degrees 
 
 See also scale() and translate().
 */
-func (this *QMatrix4x4) Rotate_2(quaternion QQuaternion_ITF) {
+func (this *QMatrix4x4) Rotate2(quaternion QQuaternion_ITF) {
 	var convArg0 unsafe.Pointer
 	if quaternion != nil && quaternion.QQuaternion_PTR() != nil {
 		convArg0 = quaternion.QQuaternion_PTR().GetCthis()
@@ -784,7 +784,7 @@ Multiplies this matrix by another that applies an orthographic projection for a 
 
 See also frustum() and perspective().
 */
-func (this *QMatrix4x4) Ortho_1(rect qtcore.QRectF_ITF) {
+func (this *QMatrix4x4) Ortho1(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -803,7 +803,7 @@ Multiplies this matrix by another that applies an orthographic projection for a 
 
 See also frustum() and perspective().
 */
-func (this *QMatrix4x4) Ortho_2(left float32, right float32, bottom float32, top float32, nearPlane float32, farPlane float32) {
+func (this *QMatrix4x4) Ortho2(left float32, right float32, bottom float32, top float32, nearPlane float32, farPlane float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x45orthoEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, right, bottom, top, nearPlane, farPlane)
 	qtrt.ErrPrint(err, rv)
 }
@@ -894,7 +894,7 @@ Multiplies this matrix by another that performs the scale and bias transformatio
 
 This matches the transform used by the fixed function OpenGL viewport transform controlled by the functions glViewport() and glDepthRange().
 */
-func (this *QMatrix4x4) Viewport_1(left float32, bottom float32, width float32, height float32, nearPlane float32, farPlane float32) {
+func (this *QMatrix4x4) Viewport1(left float32, bottom float32, width float32, height float32, nearPlane float32, farPlane float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x48viewportEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, bottom, width, height, nearPlane, farPlane)
 	qtrt.ErrPrint(err, rv)
 }
@@ -909,7 +909,7 @@ Multiplies this matrix by another that performs the scale and bias transformatio
 
 This matches the transform used by the fixed function OpenGL viewport transform controlled by the functions glViewport() and glDepthRange().
 */
-func (this *QMatrix4x4) Viewport_1_(left float32, bottom float32, width float32, height float32) {
+func (this *QMatrix4x4) Viewport1p(left float32, bottom float32, width float32, height float32) {
 	// arg: 4, float=Float, =Invalid, , Invalid
 	nearPlane := float32(0.0)
 	// arg: 5, float=Float, =Invalid, , Invalid
@@ -928,7 +928,7 @@ Multiplies this matrix by another that performs the scale and bias transformatio
 
 This matches the transform used by the fixed function OpenGL viewport transform controlled by the functions glViewport() and glDepthRange().
 */
-func (this *QMatrix4x4) Viewport_1_1(left float32, bottom float32, width float32, height float32, nearPlane float32) {
+func (this *QMatrix4x4) Viewport1p1(left float32, bottom float32, width float32, height float32, nearPlane float32) {
 	// arg: 5, float=Float, =Invalid, , Invalid
 	farPlane := float32(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QMatrix4x48viewportEffffff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left, bottom, width, height, nearPlane, farPlane)
@@ -1011,7 +1011,7 @@ The returned QTransform is formed by simply dropping the third row and third col
 
 See also toAffine().
 */
-func (this *QMatrix4x4) ToTransform_1(distanceToPlane float32) *QTransform /*123*/ {
+func (this *QMatrix4x4) ToTransform1(distanceToPlane float32) *QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x411toTransformEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), distanceToPlane)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1051,7 +1051,7 @@ Maps point by multiplying this matrix by point.
 
 See also mapRect().
 */
-func (this *QMatrix4x4) Map_1(point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
+func (this *QMatrix4x4) Map1(point qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QPointF_PTR() != nil {
 		convArg0 = point.QPointF_PTR().GetCthis()
@@ -1073,7 +1073,7 @@ Maps point by multiplying this matrix by point.
 
 See also mapRect().
 */
-func (this *QMatrix4x4) Map_2(point QVector3D_ITF) *QVector3D /*123*/ {
+func (this *QMatrix4x4) Map2(point QVector3D_ITF) *QVector3D /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector3D_PTR() != nil {
 		convArg0 = point.QVector3D_PTR().GetCthis()
@@ -1095,7 +1095,7 @@ Maps point by multiplying this matrix by point.
 
 See also mapRect().
 */
-func (this *QMatrix4x4) Map_3(point QVector4D_ITF) *QVector4D /*123*/ {
+func (this *QMatrix4x4) Map3(point QVector4D_ITF) *QVector4D /*123*/ {
 	var convArg0 unsafe.Pointer
 	if point != nil && point.QVector4D_PTR() != nil {
 		convArg0 = point.QVector4D_PTR().GetCthis()
@@ -1161,7 +1161,7 @@ Maps rect by multiplying this matrix by the corners of rect and then forming a n
 
 See also map().
 */
-func (this *QMatrix4x4) MapRect_1(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
+func (this *QMatrix4x4) MapRect1(rect qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -1199,7 +1199,7 @@ Returns a pointer to the raw data of this matrix.
 
 See also constData() and optimize().
 */
-func (this *QMatrix4x4) Data_1() unsafe.Pointer /*666*/ {
+func (this *QMatrix4x4) Data1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMatrix4x44dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))

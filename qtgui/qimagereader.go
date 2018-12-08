@@ -92,10 +92,10 @@ func NewQImageReader() *QImageReader {
 /*
 Constructs an empty QImageReader object. Before reading an image, call setDevice() or setFileName().
 */
-func (*QImageReader) NewForInherit_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageReader {
-	return NewQImageReader_1(device, format)
+func (*QImageReader) NewForInherit1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageReader {
+	return NewQImageReader1(device, format)
 }
-func NewQImageReader_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageReader {
+func NewQImageReader1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageReader {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -119,10 +119,10 @@ func NewQImageReader_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format q
 /*
 Constructs an empty QImageReader object. Before reading an image, call setDevice() or setFileName().
 */
-func (*QImageReader) NewForInherit_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QImageReader {
-	return NewQImageReader_1_(device)
+func (*QImageReader) NewForInherit1p(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QImageReader {
+	return NewQImageReader1p(device)
 }
-func NewQImageReader_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QImageReader {
+func NewQImageReader1p(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QImageReader {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -144,11 +144,11 @@ func NewQImageReader_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QImage
 /*
 Constructs an empty QImageReader object. Before reading an image, call setDevice() or setFileName().
 */
-func (*QImageReader) NewForInherit_2(fileName string, format qtcore.QByteArray_ITF) *QImageReader {
-	return NewQImageReader_2(fileName, format)
+func (*QImageReader) NewForInherit2(fileName string, format qtcore.QByteArray_ITF) *QImageReader {
+	return NewQImageReader2(fileName, format)
 }
-func NewQImageReader_2(fileName string, format qtcore.QByteArray_ITF) *QImageReader {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQImageReader2(fileName string, format qtcore.QByteArray_ITF) *QImageReader {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if format != nil && format.QByteArray_PTR() != nil {
@@ -169,11 +169,11 @@ func NewQImageReader_2(fileName string, format qtcore.QByteArray_ITF) *QImageRea
 /*
 Constructs an empty QImageReader object. Before reading an image, call setDevice() or setFileName().
 */
-func (*QImageReader) NewForInherit_2_(fileName string) *QImageReader {
-	return NewQImageReader_2_(fileName)
+func (*QImageReader) NewForInherit2p(fileName string) *QImageReader {
+	return NewQImageReader2p(fileName)
 }
-func NewQImageReader_2_(fileName string) *QImageReader {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQImageReader2p(fileName string) *QImageReader {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = qtcore.NewQByteArray()
@@ -382,7 +382,7 @@ If fileName does not include a file extension (e.g., .png or .bmp), QImageReader
 See also fileName(), setDevice(), and supportedImageFormats().
 */
 func (this *QImageReader) SetFileName(fileName string) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReader11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -461,8 +461,8 @@ This function was introduced in  Qt 4.5.
 
 See also QImageIOHandler::ImageOption, QImageIOHandler::option(), and QImageIOHandler::supportsOption().
 */
-func (this *QImageReader) ImageFormat_1(fileName string) *qtcore.QByteArray /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func (this *QImageReader) ImageFormat1(fileName string) *qtcore.QByteArray /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageReader11imageFormatERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -470,9 +470,9 @@ func (this *QImageReader) ImageFormat_1(fileName string) *qtcore.QByteArray /*12
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
-func QImageReader_ImageFormat_1(fileName string) *qtcore.QByteArray /*123*/ {
+func QImageReader_ImageFormat1(fileName string) *qtcore.QByteArray /*123*/ {
 	var nilthis *QImageReader
-	rv := nilthis.ImageFormat_1(fileName)
+	rv := nilthis.ImageFormat1(fileName)
 	return rv
 }
 
@@ -490,7 +490,7 @@ This function was introduced in  Qt 4.5.
 
 See also QImageIOHandler::ImageOption, QImageIOHandler::option(), and QImageIOHandler::supportsOption().
 */
-func (this *QImageReader) ImageFormat_2(device qtcore.QIODevice_ITF /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
+func (this *QImageReader) ImageFormat2(device qtcore.QIODevice_ITF /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -501,9 +501,9 @@ func (this *QImageReader) ImageFormat_2(device qtcore.QIODevice_ITF /*777 QIODev
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
-func QImageReader_ImageFormat_2(device qtcore.QIODevice_ITF /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
+func QImageReader_ImageFormat2(device qtcore.QIODevice_ITF /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
 	var nilthis *QImageReader
-	rv := nilthis.ImageFormat_2(device)
+	rv := nilthis.ImageFormat2(device)
 	return rv
 }
 
@@ -544,7 +544,7 @@ This function was introduced in  Qt 4.1.
 See also textKeys() and QImageWriter::setText().
 */
 func (this *QImageReader) Text(key string) string {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QImageReader4textERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -927,7 +927,7 @@ For image formats that support animation, calling read() repeatedly will return 
 
 See also canRead(), supportedImageFormats(), supportsAnimation(), and QMovie.
 */
-func (this *QImageReader) Read_1(image QImage_ITF /*777 QImage **/) bool {
+func (this *QImageReader) Read1(image QImage_ITF /*777 QImage **/) bool {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()

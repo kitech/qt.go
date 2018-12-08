@@ -112,10 +112,10 @@ Constructs a plugin with the given parent.
 
 Note that this constructor is invoked automatically by the moc generated code that exports the plugin, so there is no need for calling it explicitly.
 */
-func (*QGenericPlugin) NewForInherit__() *QGenericPlugin {
-	return NewQGenericPlugin__()
+func (*QGenericPlugin) NewForInheritp() *QGenericPlugin {
+	return NewQGenericPluginp()
 }
-func NewQGenericPlugin__() *QGenericPlugin {
+func NewQGenericPluginp() *QGenericPlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGenericPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -149,9 +149,9 @@ func DeleteQGenericPlugin(this *QGenericPlugin) {
 Implement this function to create a driver matching the type specified by the given key and specification parameters. Note that keys are case-insensitive.
 */
 func (this *QGenericPlugin) Create(name string, spec string) *qtcore.QObject /*777 QObject **/ {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(spec)
+	var tmpArg1 = qtcore.NewQString5(spec)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGenericPlugin6createERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

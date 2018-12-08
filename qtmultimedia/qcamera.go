@@ -110,10 +110,10 @@ func NewQCamera(parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
 /*
 Construct a QCamera with a parent.
 */
-func (*QCamera) NewForInherit__() *QCamera {
-	return NewQCamera__()
+func (*QCamera) NewForInheritp() *QCamera {
+	return NewQCamerap()
 }
-func NewQCamera__() *QCamera {
+func NewQCamerap() *QCamera {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCameraC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -131,10 +131,10 @@ func NewQCamera__() *QCamera {
 /*
 Construct a QCamera with a parent.
 */
-func (*QCamera) NewForInherit_1(deviceName qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
-	return NewQCamera_1(deviceName, parent)
+func (*QCamera) NewForInherit1(deviceName qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
+	return NewQCamera1(deviceName, parent)
 }
-func NewQCamera_1(deviceName qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
+func NewQCamera1(deviceName qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
 	var convArg0 unsafe.Pointer
 	if deviceName != nil && deviceName.QByteArray_PTR() != nil {
 		convArg0 = deviceName.QByteArray_PTR().GetCthis()
@@ -158,10 +158,10 @@ func NewQCamera_1(deviceName qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*
 /*
 Construct a QCamera with a parent.
 */
-func (*QCamera) NewForInherit_1_(deviceName qtcore.QByteArray_ITF) *QCamera {
-	return NewQCamera_1_(deviceName)
+func (*QCamera) NewForInherit1p(deviceName qtcore.QByteArray_ITF) *QCamera {
+	return NewQCamera1p(deviceName)
 }
-func NewQCamera_1_(deviceName qtcore.QByteArray_ITF) *QCamera {
+func NewQCamera1p(deviceName qtcore.QByteArray_ITF) *QCamera {
 	var convArg0 unsafe.Pointer
 	if deviceName != nil && deviceName.QByteArray_PTR() != nil {
 		convArg0 = deviceName.QByteArray_PTR().GetCthis()
@@ -183,10 +183,10 @@ func NewQCamera_1_(deviceName qtcore.QByteArray_ITF) *QCamera {
 /*
 Construct a QCamera with a parent.
 */
-func (*QCamera) NewForInherit_2(cameraInfo QCameraInfo_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
-	return NewQCamera_2(cameraInfo, parent)
+func (*QCamera) NewForInherit2(cameraInfo QCameraInfo_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
+	return NewQCamera2(cameraInfo, parent)
 }
-func NewQCamera_2(cameraInfo QCameraInfo_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
+func NewQCamera2(cameraInfo QCameraInfo_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
 	var convArg0 unsafe.Pointer
 	if cameraInfo != nil && cameraInfo.QCameraInfo_PTR() != nil {
 		convArg0 = cameraInfo.QCameraInfo_PTR().GetCthis()
@@ -210,10 +210,10 @@ func NewQCamera_2(cameraInfo QCameraInfo_ITF, parent qtcore.QObject_ITF /*777 QO
 /*
 Construct a QCamera with a parent.
 */
-func (*QCamera) NewForInherit_2_(cameraInfo QCameraInfo_ITF) *QCamera {
-	return NewQCamera_2_(cameraInfo)
+func (*QCamera) NewForInherit2p(cameraInfo QCameraInfo_ITF) *QCamera {
+	return NewQCamera2p(cameraInfo)
 }
-func NewQCamera_2_(cameraInfo QCameraInfo_ITF) *QCamera {
+func NewQCamera2p(cameraInfo QCameraInfo_ITF) *QCamera {
 	var convArg0 unsafe.Pointer
 	if cameraInfo != nil && cameraInfo.QCameraInfo_PTR() != nil {
 		convArg0 = cameraInfo.QCameraInfo_PTR().GetCthis()
@@ -235,10 +235,10 @@ func NewQCamera_2_(cameraInfo QCameraInfo_ITF) *QCamera {
 /*
 Construct a QCamera with a parent.
 */
-func (*QCamera) NewForInherit_3(position int, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
-	return NewQCamera_3(position, parent)
+func (*QCamera) NewForInherit3(position int, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
+	return NewQCamera3(position, parent)
 }
-func NewQCamera_3(position int, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
+func NewQCamera3(position int, parent qtcore.QObject_ITF /*777 QObject **/) *QCamera {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg1 = parent.QObject_PTR().GetCthis()
@@ -258,10 +258,10 @@ func NewQCamera_3(position int, parent qtcore.QObject_ITF /*777 QObject **/) *QC
 /*
 Construct a QCamera with a parent.
 */
-func (*QCamera) NewForInherit_3_(position int) *QCamera {
-	return NewQCamera_3_(position)
+func (*QCamera) NewForInherit3p(position int) *QCamera {
+	return NewQCamera3p(position)
 }
-func NewQCamera_3_(position int) *QCamera {
+func NewQCamera3p(position int) *QCamera {
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCameraC2ENS_8PositionEP7QObject", qtrt.FFI_TYPE_POINTER, position, convArg1)
@@ -541,7 +541,7 @@ This function was introduced in  Qt 5.5.
 
 See also QCameraViewfinderSettings::resolution() and setViewfinderSettings().
 */
-func (this *QCamera) SupportedViewfinderResolutions__() *qtcore.QSizeList /*lll*/ {
+func (this *QCamera) SupportedViewfinderResolutionsp() *qtcore.QSizeList /*lll*/ {
 	// arg: 0, const QCameraViewfinderSettings &=LValueReference, QCameraViewfinderSettings=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCamera30supportedViewfinderResolutionsERK25QCameraViewfinderSettings", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -572,7 +572,7 @@ func (this *QCamera) Error() int {
 /*
 Returns the error state of the object.
 */
-func (this *QCamera) Error_1(arg0 int) {
+func (this *QCamera) Error1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera5errorENS_5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -648,7 +648,7 @@ Returns the status of requested camera settings locks.
 
 Note: Getter function for property lockStatus.
 */
-func (this *QCamera) LockStatus_1(lock int) int {
+func (this *QCamera) LockStatus1(lock int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QCamera10lockStatusENS_8LockTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), lock)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -748,7 +748,7 @@ func (this *QCamera) SearchAndLock() {
 /*
 Lock all the supported camera settings.
 */
-func (this *QCamera) SearchAndLock_1(locks int) {
+func (this *QCamera) SearchAndLock1(locks int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera13searchAndLockE6QFlagsINS_8LockTypeEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), locks)
 	qtrt.ErrPrint(err, rv)
 }
@@ -774,7 +774,7 @@ func (this *QCamera) Unlock() {
 /*
 Unlock all the requested camera locks.
 */
-func (this *QCamera) Unlock_1(locks int) {
+func (this *QCamera) Unlock1(locks int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera6unlockE6QFlagsINS_8LockTypeEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), locks)
 	qtrt.ErrPrint(err, rv)
 }
@@ -893,7 +893,7 @@ Note: Signal lockStatusChanged is overloaded in this class. To connect to this s
 
 Note: Notifier signal for property lockStatus.
 */
-func (this *QCamera) LockStatusChanged_1(arg0 int, arg1 int, arg2 int) {
+func (this *QCamera) LockStatusChanged1(arg0 int, arg1 int, arg2 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera17lockStatusChangedENS_8LockTypeENS_10LockStatusENS_16LockChangeReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1, arg2)
 	qtrt.ErrPrint(err, rv)
 }

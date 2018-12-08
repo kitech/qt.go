@@ -91,10 +91,10 @@ func NewQStyleOptionMenuItem() *QStyleOptionMenuItem {
 /*
 
  */
-func (*QStyleOptionMenuItem) NewForInherit_1(version int) *QStyleOptionMenuItem {
-	return NewQStyleOptionMenuItem_1(version)
+func (*QStyleOptionMenuItem) NewForInherit1(version int) *QStyleOptionMenuItem {
+	return NewQStyleOptionMenuItem1(version)
 }
-func NewQStyleOptionMenuItem_1(version int) *QStyleOptionMenuItem {
+func NewQStyleOptionMenuItem1(version int) *QStyleOptionMenuItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionMenuItemFromPointer(unsafe.Pointer(uintptr(rv)))

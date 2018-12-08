@@ -94,10 +94,10 @@ func NewQShortcutEvent(key QKeySequence_ITF, id int, ambiguous bool) *QShortcutE
 /*
 
  */
-func (*QShortcutEvent) NewForInherit__(key QKeySequence_ITF, id int) *QShortcutEvent {
-	return NewQShortcutEvent__(key, id)
+func (*QShortcutEvent) NewForInheritp(key QKeySequence_ITF, id int) *QShortcutEvent {
+	return NewQShortcutEventp(key, id)
 }
-func NewQShortcutEvent__(key QKeySequence_ITF, id int) *QShortcutEvent {
+func NewQShortcutEventp(key QKeySequence_ITF, id int) *QShortcutEvent {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
 		convArg0 = key.QKeySequence_PTR().GetCthis()

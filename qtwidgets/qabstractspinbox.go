@@ -209,10 +209,10 @@ func NewQAbstractSpinBox(parent QWidget_ITF /*777 QWidget **/) *QAbstractSpinBox
 /*
 Constructs an abstract spinbox with the given parent with default wrapping, and alignment properties.
 */
-func (*QAbstractSpinBox) NewForInherit__() *QAbstractSpinBox {
-	return NewQAbstractSpinBox__()
+func (*QAbstractSpinBox) NewForInheritp() *QAbstractSpinBox {
+	return NewQAbstractSpinBoxp()
 }
-func NewQAbstractSpinBox__() *QAbstractSpinBox {
+func NewQAbstractSpinBoxp() *QAbstractSpinBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -348,7 +348,7 @@ func (this *QAbstractSpinBox) SpecialValueText() string {
 
  */
 func (this *QAbstractSpinBox) SetSpecialValueText(txt string) {
-	var tmpArg0 = qtcore.NewQString_5(txt)
+	var tmpArg0 = qtcore.NewQString5(txt)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox19setSpecialValueTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -631,7 +631,7 @@ func (this *QAbstractSpinBox) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*
 This virtual function is called by the QAbstractSpinBox to determine whether input is valid. The pos parameter indicates the position in the string. Reimplemented in the various subclasses.
 */
 func (this *QAbstractSpinBox) Validate(input string, pos int) int {
-	var tmpArg0 = qtcore.NewQString_5(input)
+	var tmpArg0 = qtcore.NewQString5(input)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	qtrt.ErrPrint(err, rv)
@@ -647,7 +647,7 @@ func (this *QAbstractSpinBox) Validate(input string, pos int) int {
 This virtual function is called by the QAbstractSpinBox if the input is not validated to QValidator::Acceptable when Return is pressed or interpretText() is called. It will try to change the text so it is valid. Reimplemented in the various subclasses.
 */
 func (this *QAbstractSpinBox) Fixup(input string) {
-	var tmpArg0 = qtcore.NewQString_5(input)
+	var tmpArg0 = qtcore.NewQString5(input)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAbstractSpinBox5fixupER7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

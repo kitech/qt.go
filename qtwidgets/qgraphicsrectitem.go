@@ -110,10 +110,10 @@ func NewQGraphicsRectItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 /*
 
  */
-func (*QGraphicsRectItem) NewForInherit__() *QGraphicsRectItem {
-	return NewQGraphicsRectItem__()
+func (*QGraphicsRectItem) NewForInheritp() *QGraphicsRectItem {
+	return NewQGraphicsRectItemp()
 }
-func NewQGraphicsRectItem__() *QGraphicsRectItem {
+func NewQGraphicsRectItemp() *QGraphicsRectItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -131,10 +131,10 @@ func NewQGraphicsRectItem__() *QGraphicsRectItem {
 /*
 
  */
-func (*QGraphicsRectItem) NewForInherit_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
-	return NewQGraphicsRectItem_1(rect, parent)
+func (*QGraphicsRectItem) NewForInherit1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
+	return NewQGraphicsRectItem1(rect, parent)
 }
-func NewQGraphicsRectItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
+func NewQGraphicsRectItem1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -158,10 +158,10 @@ func NewQGraphicsRectItem_1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /*7
 /*
 
  */
-func (*QGraphicsRectItem) NewForInherit_1_(rect qtcore.QRectF_ITF) *QGraphicsRectItem {
-	return NewQGraphicsRectItem_1_(rect)
+func (*QGraphicsRectItem) NewForInherit1p(rect qtcore.QRectF_ITF) *QGraphicsRectItem {
+	return NewQGraphicsRectItem1p(rect)
 }
-func NewQGraphicsRectItem_1_(rect qtcore.QRectF_ITF) *QGraphicsRectItem {
+func NewQGraphicsRectItem1p(rect qtcore.QRectF_ITF) *QGraphicsRectItem {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -183,10 +183,10 @@ func NewQGraphicsRectItem_1_(rect qtcore.QRectF_ITF) *QGraphicsRectItem {
 /*
 
  */
-func (*QGraphicsRectItem) NewForInherit_2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
-	return NewQGraphicsRectItem_2(x, y, w, h, parent)
+func (*QGraphicsRectItem) NewForInherit2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
+	return NewQGraphicsRectItem2(x, y, w, h, parent)
 }
-func NewQGraphicsRectItem_2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
+func NewQGraphicsRectItem2(x float64, y float64, w float64, h float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsRectItem {
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
 		convArg4 = parent.QGraphicsItem_PTR().GetCthis()
@@ -206,10 +206,10 @@ func NewQGraphicsRectItem_2(x float64, y float64, w float64, h float64, parent Q
 /*
 
  */
-func (*QGraphicsRectItem) NewForInherit_2_(x float64, y float64, w float64, h float64) *QGraphicsRectItem {
-	return NewQGraphicsRectItem_2_(x, y, w, h)
+func (*QGraphicsRectItem) NewForInherit2p(x float64, y float64, w float64, h float64) *QGraphicsRectItem {
+	return NewQGraphicsRectItem2p(x, y, w, h)
 }
-func NewQGraphicsRectItem_2_(x float64, y float64, w float64, h float64) *QGraphicsRectItem {
+func NewQGraphicsRectItem2p(x float64, y float64, w float64, h float64) *QGraphicsRectItem {
 	// arg: 4, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2EddddP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, x, y, w, h, convArg4)
@@ -275,7 +275,7 @@ func (this *QGraphicsRectItem) SetRect(rect qtcore.QRectF_ITF) {
 /*
 
  */
-func (this *QGraphicsRectItem) SetRect_1(x float64, y float64, w float64, h float64) {
+func (this *QGraphicsRectItem) SetRect1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRectItem7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -455,7 +455,7 @@ Note: Enabling caching for an item does not guarantee that paint() will be invok
 
 See also setCacheMode(), QPen::width(), Item Coordinates, and ItemUsesExtendedStyleOption.
 */
-func (this *QGraphicsRectItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+func (this *QGraphicsRectItem) Paintp(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()

@@ -96,10 +96,10 @@ Creates a new text format with an InvalidFormat.
 
 See also FormatType.
 */
-func (*QTextFormat) NewForInherit_1(type_ int) *QTextFormat {
-	return NewQTextFormat_1(type_)
+func (*QTextFormat) NewForInherit1(type_ int) *QTextFormat {
+	return NewQTextFormat1(type_)
 }
-func NewQTextFormat_1(type_ int) *QTextFormat {
+func NewQTextFormat1(type_ int) *QTextFormat {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextFormatC2Ei", qtrt.FFI_TYPE_POINTER, type_)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv)))

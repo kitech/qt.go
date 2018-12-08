@@ -96,11 +96,11 @@ func NewQMediaServiceProviderHint() *QMediaServiceProviderHint {
 /*
 
  */
-func (*QMediaServiceProviderHint) NewForInherit_1(mimeType string, codecs qtcore.QStringList_ITF) *QMediaServiceProviderHint {
-	return NewQMediaServiceProviderHint_1(mimeType, codecs)
+func (*QMediaServiceProviderHint) NewForInherit1(mimeType string, codecs qtcore.QStringList_ITF) *QMediaServiceProviderHint {
+	return NewQMediaServiceProviderHint1(mimeType, codecs)
 }
-func NewQMediaServiceProviderHint_1(mimeType string, codecs qtcore.QStringList_ITF) *QMediaServiceProviderHint {
-	var tmpArg0 = qtcore.NewQString_5(mimeType)
+func NewQMediaServiceProviderHint1(mimeType string, codecs qtcore.QStringList_ITF) *QMediaServiceProviderHint {
+	var tmpArg0 = qtcore.NewQString5(mimeType)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if codecs != nil && codecs.QStringList_PTR() != nil {
@@ -121,10 +121,10 @@ func NewQMediaServiceProviderHint_1(mimeType string, codecs qtcore.QStringList_I
 /*
 
  */
-func (*QMediaServiceProviderHint) NewForInherit_2(device qtcore.QByteArray_ITF) *QMediaServiceProviderHint {
-	return NewQMediaServiceProviderHint_2(device)
+func (*QMediaServiceProviderHint) NewForInherit2(device qtcore.QByteArray_ITF) *QMediaServiceProviderHint {
+	return NewQMediaServiceProviderHint2(device)
 }
-func NewQMediaServiceProviderHint_2(device qtcore.QByteArray_ITF) *QMediaServiceProviderHint {
+func NewQMediaServiceProviderHint2(device qtcore.QByteArray_ITF) *QMediaServiceProviderHint {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QByteArray_PTR() != nil {
 		convArg0 = device.QByteArray_PTR().GetCthis()
@@ -144,10 +144,10 @@ func NewQMediaServiceProviderHint_2(device qtcore.QByteArray_ITF) *QMediaService
 /*
 
  */
-func (*QMediaServiceProviderHint) NewForInherit_3(position int) *QMediaServiceProviderHint {
-	return NewQMediaServiceProviderHint_3(position)
+func (*QMediaServiceProviderHint) NewForInherit3(position int) *QMediaServiceProviderHint {
+	return NewQMediaServiceProviderHint3(position)
 }
-func NewQMediaServiceProviderHint_3(position int) *QMediaServiceProviderHint {
+func NewQMediaServiceProviderHint3(position int) *QMediaServiceProviderHint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QMediaServiceProviderHintC2EN7QCamera8PositionE", qtrt.FFI_TYPE_POINTER, position)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMediaServiceProviderHintFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -163,10 +163,10 @@ func NewQMediaServiceProviderHint_3(position int) *QMediaServiceProviderHint {
 /*
 
  */
-func (*QMediaServiceProviderHint) NewForInherit_4(features int) *QMediaServiceProviderHint {
-	return NewQMediaServiceProviderHint_4(features)
+func (*QMediaServiceProviderHint) NewForInherit4(features int) *QMediaServiceProviderHint {
+	return NewQMediaServiceProviderHint4(features)
 }
-func NewQMediaServiceProviderHint_4(features int) *QMediaServiceProviderHint {
+func NewQMediaServiceProviderHint4(features int) *QMediaServiceProviderHint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QMediaServiceProviderHintC2E6QFlagsINS_7FeatureEE", qtrt.FFI_TYPE_POINTER, features)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMediaServiceProviderHintFromPointer(unsafe.Pointer(uintptr(rv)))

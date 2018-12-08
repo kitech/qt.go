@@ -93,7 +93,7 @@ func (*QSaveFile) NewForInherit(name string) *QSaveFile {
 	return NewQSaveFile(name)
 }
 func NewQSaveFile(name string) *QSaveFile {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFileC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -110,10 +110,10 @@ func NewQSaveFile(name string) *QSaveFile {
 /*
 Constructs a new file object to represent the file with the given name.
 */
-func (*QSaveFile) NewForInherit_1(parent QObject_ITF /*777 QObject **/) *QSaveFile {
-	return NewQSaveFile_1(parent)
+func (*QSaveFile) NewForInherit1(parent QObject_ITF /*777 QObject **/) *QSaveFile {
+	return NewQSaveFile1(parent)
 }
-func NewQSaveFile_1(parent QObject_ITF /*777 QObject **/) *QSaveFile {
+func NewQSaveFile1(parent QObject_ITF /*777 QObject **/) *QSaveFile {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
@@ -133,10 +133,10 @@ func NewQSaveFile_1(parent QObject_ITF /*777 QObject **/) *QSaveFile {
 /*
 Constructs a new file object to represent the file with the given name.
 */
-func (*QSaveFile) NewForInherit_1_() *QSaveFile {
-	return NewQSaveFile_1_()
+func (*QSaveFile) NewForInherit1p() *QSaveFile {
+	return NewQSaveFile1p()
 }
-func NewQSaveFile_1_() *QSaveFile {
+func NewQSaveFile1p() *QSaveFile {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -154,11 +154,11 @@ func NewQSaveFile_1_() *QSaveFile {
 /*
 Constructs a new file object to represent the file with the given name.
 */
-func (*QSaveFile) NewForInherit_2(name string, parent QObject_ITF /*777 QObject **/) *QSaveFile {
-	return NewQSaveFile_2(name, parent)
+func (*QSaveFile) NewForInherit2(name string, parent QObject_ITF /*777 QObject **/) *QSaveFile {
+	return NewQSaveFile2(name, parent)
 }
-func NewQSaveFile_2(name string, parent QObject_ITF /*777 QObject **/) *QSaveFile {
-	var tmpArg0 = NewQString_5(name)
+func NewQSaveFile2(name string, parent QObject_ITF /*777 QObject **/) *QSaveFile {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -218,7 +218,7 @@ Sets the name of the file. The name can have no path, a relative path, or an abs
 See also QFile::setFileName() and fileName().
 */
 func (this *QSaveFile) SetFileName(name string) {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFile11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

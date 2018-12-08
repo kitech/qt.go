@@ -110,10 +110,10 @@ func NewQSvgRenderer(parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer 
 /*
 Constructs a new renderer with the given parent.
 */
-func (*QSvgRenderer) NewForInherit__() *QSvgRenderer {
-	return NewQSvgRenderer__()
+func (*QSvgRenderer) NewForInheritp() *QSvgRenderer {
+	return NewQSvgRendererp()
 }
-func NewQSvgRenderer__() *QSvgRenderer {
+func NewQSvgRendererp() *QSvgRenderer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSvgRendererC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -131,11 +131,11 @@ func NewQSvgRenderer__() *QSvgRenderer {
 /*
 Constructs a new renderer with the given parent.
 */
-func (*QSvgRenderer) NewForInherit_1(filename string, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
-	return NewQSvgRenderer_1(filename, parent)
+func (*QSvgRenderer) NewForInherit1(filename string, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
+	return NewQSvgRenderer1(filename, parent)
 }
-func NewQSvgRenderer_1(filename string, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
-	var tmpArg0 = qtcore.NewQString_5(filename)
+func NewQSvgRenderer1(filename string, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
+	var tmpArg0 = qtcore.NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -156,11 +156,11 @@ func NewQSvgRenderer_1(filename string, parent qtcore.QObject_ITF /*777 QObject 
 /*
 Constructs a new renderer with the given parent.
 */
-func (*QSvgRenderer) NewForInherit_1_(filename string) *QSvgRenderer {
-	return NewQSvgRenderer_1_(filename)
+func (*QSvgRenderer) NewForInherit1p(filename string) *QSvgRenderer {
+	return NewQSvgRenderer1p(filename)
 }
-func NewQSvgRenderer_1_(filename string) *QSvgRenderer {
-	var tmpArg0 = qtcore.NewQString_5(filename)
+func NewQSvgRenderer1p(filename string) *QSvgRenderer {
+	var tmpArg0 = qtcore.NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -179,10 +179,10 @@ func NewQSvgRenderer_1_(filename string) *QSvgRenderer {
 /*
 Constructs a new renderer with the given parent.
 */
-func (*QSvgRenderer) NewForInherit_2(contents qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
-	return NewQSvgRenderer_2(contents, parent)
+func (*QSvgRenderer) NewForInherit2(contents qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
+	return NewQSvgRenderer2(contents, parent)
 }
-func NewQSvgRenderer_2(contents qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
+func NewQSvgRenderer2(contents qtcore.QByteArray_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
 	var convArg0 unsafe.Pointer
 	if contents != nil && contents.QByteArray_PTR() != nil {
 		convArg0 = contents.QByteArray_PTR().GetCthis()
@@ -206,10 +206,10 @@ func NewQSvgRenderer_2(contents qtcore.QByteArray_ITF, parent qtcore.QObject_ITF
 /*
 Constructs a new renderer with the given parent.
 */
-func (*QSvgRenderer) NewForInherit_2_(contents qtcore.QByteArray_ITF) *QSvgRenderer {
-	return NewQSvgRenderer_2_(contents)
+func (*QSvgRenderer) NewForInherit2p(contents qtcore.QByteArray_ITF) *QSvgRenderer {
+	return NewQSvgRenderer2p(contents)
 }
-func NewQSvgRenderer_2_(contents qtcore.QByteArray_ITF) *QSvgRenderer {
+func NewQSvgRenderer2p(contents qtcore.QByteArray_ITF) *QSvgRenderer {
 	var convArg0 unsafe.Pointer
 	if contents != nil && contents.QByteArray_PTR() != nil {
 		convArg0 = contents.QByteArray_PTR().GetCthis()
@@ -231,10 +231,10 @@ func NewQSvgRenderer_2_(contents qtcore.QByteArray_ITF) *QSvgRenderer {
 /*
 Constructs a new renderer with the given parent.
 */
-func (*QSvgRenderer) NewForInherit_3(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
-	return NewQSvgRenderer_3(contents, parent)
+func (*QSvgRenderer) NewForInherit3(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
+	return NewQSvgRenderer3(contents, parent)
 }
-func NewQSvgRenderer_3(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
+func NewQSvgRenderer3(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/, parent qtcore.QObject_ITF /*777 QObject **/) *QSvgRenderer {
 	var convArg0 unsafe.Pointer
 	if contents != nil && contents.QXmlStreamReader_PTR() != nil {
 		convArg0 = contents.QXmlStreamReader_PTR().GetCthis()
@@ -258,10 +258,10 @@ func NewQSvgRenderer_3(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamRead
 /*
 Constructs a new renderer with the given parent.
 */
-func (*QSvgRenderer) NewForInherit_3_(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/) *QSvgRenderer {
-	return NewQSvgRenderer_3_(contents)
+func (*QSvgRenderer) NewForInherit3p(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/) *QSvgRenderer {
+	return NewQSvgRenderer3p(contents)
 }
-func NewQSvgRenderer_3_(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/) *QSvgRenderer {
+func NewQSvgRenderer3p(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/) *QSvgRenderer {
 	var convArg0 unsafe.Pointer
 	if contents != nil && contents.QXmlStreamReader_PTR() != nil {
 		convArg0 = contents.QXmlStreamReader_PTR().GetCthis()
@@ -379,7 +379,7 @@ func (this *QSvgRenderer) SetViewBox(viewbox qtcore.QRect_ITF) {
 /*
 
  */
-func (this *QSvgRenderer) SetViewBox_1(viewbox qtcore.QRectF_ITF) {
+func (this *QSvgRenderer) SetViewBox1(viewbox qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if viewbox != nil && viewbox.QRectF_PTR() != nil {
 		convArg0 = viewbox.QRectF_PTR().GetCthis()
@@ -485,7 +485,7 @@ This function was introduced in  Qt 4.2.
 See also matrixForElement().
 */
 func (this *QSvgRenderer) BoundsOnElement(id string) *qtcore.QRectF /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSvgRenderer15boundsOnElementERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -507,7 +507,7 @@ Note: this method returns true only for elements that can be rendered. Which imp
 This function was introduced in  Qt 4.2.
 */
 func (this *QSvgRenderer) ElementExists(id string) bool {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSvgRenderer13elementExistsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -529,7 +529,7 @@ This function was introduced in  Qt 4.2.
 See also boundsOnElement().
 */
 func (this *QSvgRenderer) MatrixForElement(id string) *qtgui.QMatrix /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QSvgRenderer16matrixForElementERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -547,7 +547,7 @@ func (this *QSvgRenderer) MatrixForElement(id string) *qtgui.QMatrix /*123*/ {
 Loads the SVG file specified by filename, returning true if the content was successfully parsed; otherwise returns false.
 */
 func (this *QSvgRenderer) Load(filename string) bool {
-	var tmpArg0 = qtcore.NewQString_5(filename)
+	var tmpArg0 = qtcore.NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QSvgRenderer4loadERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -562,7 +562,7 @@ func (this *QSvgRenderer) Load(filename string) bool {
 /*
 Loads the SVG file specified by filename, returning true if the content was successfully parsed; otherwise returns false.
 */
-func (this *QSvgRenderer) Load_1(contents qtcore.QByteArray_ITF) bool {
+func (this *QSvgRenderer) Load1(contents qtcore.QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if contents != nil && contents.QByteArray_PTR() != nil {
 		convArg0 = contents.QByteArray_PTR().GetCthis()
@@ -580,7 +580,7 @@ func (this *QSvgRenderer) Load_1(contents qtcore.QByteArray_ITF) bool {
 /*
 Loads the SVG file specified by filename, returning true if the content was successfully parsed; otherwise returns false.
 */
-func (this *QSvgRenderer) Load_2(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/) bool {
+func (this *QSvgRenderer) Load2(contents qtcore.QXmlStreamReader_ITF /*777 QXmlStreamReader **/) bool {
 	var convArg0 unsafe.Pointer
 	if contents != nil && contents.QXmlStreamReader_PTR() != nil {
 		convArg0 = contents.QXmlStreamReader_PTR().GetCthis()
@@ -615,7 +615,7 @@ func (this *QSvgRenderer) Render(p qtgui.QPainter_ITF /*777 QPainter **/) {
 /*
 Renders the current document, or the current frame of an animated document, using the given painter.
 */
-func (this *QSvgRenderer) Render_1(p qtgui.QPainter_ITF /*777 QPainter **/, bounds qtcore.QRectF_ITF) {
+func (this *QSvgRenderer) Render1(p qtgui.QPainter_ITF /*777 QPainter **/, bounds qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
 		convArg0 = p.QPainter_PTR().GetCthis()
@@ -636,12 +636,12 @@ func (this *QSvgRenderer) Render_1(p qtgui.QPainter_ITF /*777 QPainter **/, boun
 /*
 Renders the current document, or the current frame of an animated document, using the given painter.
 */
-func (this *QSvgRenderer) Render_2(p qtgui.QPainter_ITF /*777 QPainter **/, elementId string, bounds qtcore.QRectF_ITF) {
+func (this *QSvgRenderer) Render2(p qtgui.QPainter_ITF /*777 QPainter **/, elementId string, bounds qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
 		convArg0 = p.QPainter_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(elementId)
+	var tmpArg1 = qtcore.NewQString5(elementId)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if bounds != nil && bounds.QRectF_PTR() != nil {
@@ -659,12 +659,12 @@ func (this *QSvgRenderer) Render_2(p qtgui.QPainter_ITF /*777 QPainter **/, elem
 /*
 Renders the current document, or the current frame of an animated document, using the given painter.
 */
-func (this *QSvgRenderer) Render_2_(p qtgui.QPainter_ITF /*777 QPainter **/, elementId string) {
+func (this *QSvgRenderer) Render2p(p qtgui.QPainter_ITF /*777 QPainter **/, elementId string) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
 		convArg0 = p.QPainter_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(elementId)
+	var tmpArg1 = qtcore.NewQString5(elementId)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg2 unsafe.Pointer

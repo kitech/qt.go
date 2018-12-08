@@ -75,7 +75,7 @@ func (*QWhatsThisClickedEvent) NewForInherit(href string) *QWhatsThisClickedEven
 	return NewQWhatsThisClickedEvent(href)
 }
 func NewQWhatsThisClickedEvent(href string) *QWhatsThisClickedEvent {
-	var tmpArg0 = qtcore.NewQString_5(href)
+	var tmpArg0 = qtcore.NewQString5(href)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

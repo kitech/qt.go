@@ -114,10 +114,10 @@ func NewQAudioOutput(format QAudioFormat_ITF, parent qtcore.QObject_ITF /*777 QO
 /*
 Construct a new audio output and attach it to parent. The default audio output device is used with the output format parameters.
 */
-func (*QAudioOutput) NewForInherit__() *QAudioOutput {
-	return NewQAudioOutput__()
+func (*QAudioOutput) NewForInheritp() *QAudioOutput {
+	return NewQAudioOutputp()
 }
-func NewQAudioOutput__() *QAudioOutput {
+func NewQAudioOutputp() *QAudioOutput {
 	// arg: 0, const QAudioFormat &=LValueReference, QAudioFormat=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
@@ -137,10 +137,10 @@ func NewQAudioOutput__() *QAudioOutput {
 /*
 Construct a new audio output and attach it to parent. The default audio output device is used with the output format parameters.
 */
-func (*QAudioOutput) NewForInherit__1(format QAudioFormat_ITF) *QAudioOutput {
-	return NewQAudioOutput__1(format)
+func (*QAudioOutput) NewForInheritp1(format QAudioFormat_ITF) *QAudioOutput {
+	return NewQAudioOutputp1(format)
 }
-func NewQAudioOutput__1(format QAudioFormat_ITF) *QAudioOutput {
+func NewQAudioOutputp1(format QAudioFormat_ITF) *QAudioOutput {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QAudioFormat_PTR() != nil {
 		convArg0 = format.QAudioFormat_PTR().GetCthis()
@@ -162,10 +162,10 @@ func NewQAudioOutput__1(format QAudioFormat_ITF) *QAudioOutput {
 /*
 Construct a new audio output and attach it to parent. The default audio output device is used with the output format parameters.
 */
-func (*QAudioOutput) NewForInherit_1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QAudioOutput {
-	return NewQAudioOutput_1(audioDeviceInfo, format, parent)
+func (*QAudioOutput) NewForInherit1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QAudioOutput {
+	return NewQAudioOutput1(audioDeviceInfo, format, parent)
 }
-func NewQAudioOutput_1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QAudioOutput {
+func NewQAudioOutput1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QAudioOutput {
 	var convArg0 unsafe.Pointer
 	if audioDeviceInfo != nil && audioDeviceInfo.QAudioDeviceInfo_PTR() != nil {
 		convArg0 = audioDeviceInfo.QAudioDeviceInfo_PTR().GetCthis()
@@ -193,10 +193,10 @@ func NewQAudioOutput_1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat
 /*
 Construct a new audio output and attach it to parent. The default audio output device is used with the output format parameters.
 */
-func (*QAudioOutput) NewForInherit_1_(audioDeviceInfo QAudioDeviceInfo_ITF) *QAudioOutput {
-	return NewQAudioOutput_1_(audioDeviceInfo)
+func (*QAudioOutput) NewForInherit1p(audioDeviceInfo QAudioDeviceInfo_ITF) *QAudioOutput {
+	return NewQAudioOutput1p(audioDeviceInfo)
 }
-func NewQAudioOutput_1_(audioDeviceInfo QAudioDeviceInfo_ITF) *QAudioOutput {
+func NewQAudioOutput1p(audioDeviceInfo QAudioDeviceInfo_ITF) *QAudioOutput {
 	var convArg0 unsafe.Pointer
 	if audioDeviceInfo != nil && audioDeviceInfo.QAudioDeviceInfo_PTR() != nil {
 		convArg0 = audioDeviceInfo.QAudioDeviceInfo_PTR().GetCthis()
@@ -220,10 +220,10 @@ func NewQAudioOutput_1_(audioDeviceInfo QAudioDeviceInfo_ITF) *QAudioOutput {
 /*
 Construct a new audio output and attach it to parent. The default audio output device is used with the output format parameters.
 */
-func (*QAudioOutput) NewForInherit_1_1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF) *QAudioOutput {
-	return NewQAudioOutput_1_1(audioDeviceInfo, format)
+func (*QAudioOutput) NewForInherit1p1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF) *QAudioOutput {
+	return NewQAudioOutput1p1(audioDeviceInfo, format)
 }
-func NewQAudioOutput_1_1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF) *QAudioOutput {
+func NewQAudioOutput1p1(audioDeviceInfo QAudioDeviceInfo_ITF, format QAudioFormat_ITF) *QAudioOutput {
 	var convArg0 unsafe.Pointer
 	if audioDeviceInfo != nil && audioDeviceInfo.QAudioDeviceInfo_PTR() != nil {
 		convArg0 = audioDeviceInfo.QAudioDeviceInfo_PTR().GetCthis()
@@ -309,7 +309,7 @@ If a problem occurs during this process, error() returns QAudio::OpenError, stat
 
 See also QIODevice.
 */
-func (this *QAudioOutput) Start_1() *qtcore.QIODevice /*777 QIODevice **/ {
+func (this *QAudioOutput) Start1() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QAudioOutput5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -604,7 +604,7 @@ Changing an audio output stream's category while it is opened will not take effe
 See also category().
 */
 func (this *QAudioOutput) SetCategory(category string) {
-	var tmpArg0 = qtcore.NewQString_5(category)
+	var tmpArg0 = qtcore.NewQString5(category)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QAudioOutput11setCategoryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

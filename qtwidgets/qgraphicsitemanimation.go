@@ -119,10 +119,10 @@ func NewQGraphicsItemAnimation(parent qtcore.QObject_ITF /*777 QObject **/) *QGr
 /*
 Constructs an animation object with the given parent.
 */
-func (*QGraphicsItemAnimation) NewForInherit__() *QGraphicsItemAnimation {
-	return NewQGraphicsItemAnimation__()
+func (*QGraphicsItemAnimation) NewForInheritp() *QGraphicsItemAnimation {
+	return NewQGraphicsItemAnimationp()
 }
-func NewQGraphicsItemAnimation__() *QGraphicsItemAnimation {
+func NewQGraphicsItemAnimationp() *QGraphicsItemAnimation {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QGraphicsItemAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

@@ -127,10 +127,10 @@ The parent argument is passed to the QFrame constructor.
 
 See also setDigitCount() and setSmallDecimalPoint().
 */
-func (*QLCDNumber) NewForInherit__() *QLCDNumber {
-	return NewQLCDNumber__()
+func (*QLCDNumber) NewForInheritp() *QLCDNumber {
+	return NewQLCDNumberp()
 }
-func NewQLCDNumber__() *QLCDNumber {
+func NewQLCDNumberp() *QLCDNumber {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumberC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -152,10 +152,10 @@ The parent argument is passed to the QFrame constructor.
 
 See also setDigitCount() and setSmallDecimalPoint().
 */
-func (*QLCDNumber) NewForInherit_1(numDigits uint, parent QWidget_ITF /*777 QWidget **/) *QLCDNumber {
-	return NewQLCDNumber_1(numDigits, parent)
+func (*QLCDNumber) NewForInherit1(numDigits uint, parent QWidget_ITF /*777 QWidget **/) *QLCDNumber {
+	return NewQLCDNumber1(numDigits, parent)
 }
-func NewQLCDNumber_1(numDigits uint, parent QWidget_ITF /*777 QWidget **/) *QLCDNumber {
+func NewQLCDNumber1(numDigits uint, parent QWidget_ITF /*777 QWidget **/) *QLCDNumber {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
@@ -179,10 +179,10 @@ The parent argument is passed to the QFrame constructor.
 
 See also setDigitCount() and setSmallDecimalPoint().
 */
-func (*QLCDNumber) NewForInherit_1_(numDigits uint) *QLCDNumber {
-	return NewQLCDNumber_1_(numDigits)
+func (*QLCDNumber) NewForInherit1p(numDigits uint) *QLCDNumber {
+	return NewQLCDNumber1p(numDigits)
 }
-func NewQLCDNumber_1_(numDigits uint) *QLCDNumber {
+func NewQLCDNumber1p(numDigits uint) *QLCDNumber {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumberC2EjP7QWidget", qtrt.FFI_TYPE_POINTER, numDigits, convArg1)
@@ -282,7 +282,7 @@ Returns true if num is too big to be displayed in its entirety; otherwise return
 
 See also display(), digitCount(), and smallDecimalPoint().
 */
-func (this *QLCDNumber) CheckOverflow_1(num int) bool {
+func (this *QLCDNumber) CheckOverflow1(num int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber13checkOverflowEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), num)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -401,7 +401,7 @@ These digits and other symbols can be shown: 0/O, 1, 2, 3, 4, 5/S, 6, 7, 8, 9/g,
 Note: Setter function for property intValue. Setter function for property value.
 */
 func (this *QLCDNumber) Display(str string) {
-	var tmpArg0 = qtcore.NewQString_5(str)
+	var tmpArg0 = qtcore.NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumber7displayERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -421,7 +421,7 @@ These digits and other symbols can be shown: 0/O, 1, 2, 3, 4, 5/S, 6, 7, 8, 9/g,
 
 Note: Setter function for property intValue. Setter function for property value.
 */
-func (this *QLCDNumber) Display_1(num int) {
+func (this *QLCDNumber) Display1(num int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumber7displayEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), num)
 	qtrt.ErrPrint(err, rv)
 }
@@ -440,7 +440,7 @@ These digits and other symbols can be shown: 0/O, 1, 2, 3, 4, 5/S, 6, 7, 8, 9/g,
 
 Note: Setter function for property intValue. Setter function for property value.
 */
-func (this *QLCDNumber) Display_2(num float64) {
+func (this *QLCDNumber) Display2(num float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumber7displayEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), num)
 	qtrt.ErrPrint(err, rv)
 }

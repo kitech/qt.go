@@ -250,10 +250,10 @@ If parent is 0, you can add the item to a scene by calling QGraphicsScene::addIt
 
 See also QGraphicsScene::addItem() and setParentItem().
 */
-func (*QGraphicsItem) NewForInherit__() *QGraphicsItem {
-	return NewQGraphicsItem__()
+func (*QGraphicsItem) NewForInheritp() *QGraphicsItem {
+	return NewQGraphicsItemp()
 }
-func NewQGraphicsItem__() *QGraphicsItem {
+func NewQGraphicsItemp() *QGraphicsItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItemC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -570,7 +570,7 @@ If enabled is true, the item flag flag is enabled; otherwise, it is disabled.
 
 See also flags() and setFlags().
 */
-func (this *QGraphicsItem) SetFlag__(flag int) {
+func (this *QGraphicsItem) SetFlagp(flag int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem7setFlagENS_16GraphicsItemFlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
@@ -671,7 +671,7 @@ This function was introduced in  Qt 4.4.
 
 See also cacheMode(), CacheMode, and QPixmapCache::setCacheLimit().
 */
-func (this *QGraphicsItem) SetCacheMode__(mode int) {
+func (this *QGraphicsItem) SetCacheModep(mode int) {
 	// arg: 1, const QSize &=LValueReference, QSize=Record, , Invalid
 	var convArg1 = qtcore.NewQSize()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem12setCacheModeENS_9CacheModeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, convArg1)
@@ -753,7 +753,7 @@ This function was introduced in  Qt 4.6.
 
 See also panelModality(), setPanelModality(), and PanelModality.
 */
-func (this *QGraphicsItem) IsBlockedByModalPanel__() bool {
+func (this *QGraphicsItem) IsBlockedByModalPanelp() bool {
 	// arg: 0, QGraphicsItem **=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -791,7 +791,7 @@ Sets the item's tool tip to toolTip. If toolTip is empty, the item's tool tip is
 See also toolTip() and QToolTip.
 */
 func (this *QGraphicsItem) SetToolTip(toolTip string) {
-	var tmpArg0 = qtcore.NewQString_5(toolTip)
+	var tmpArg0 = qtcore.NewQString5(toolTip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1486,7 +1486,7 @@ As a result of calling this function, this item will receive a focus in event wi
 
 See also clearFocus(), hasFocus(), focusItem(), and focusProxy().
 */
-func (this *QGraphicsItem) SetFocus__() {
+func (this *QGraphicsItem) SetFocusp() {
 	// arg: 0, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum, , Invalid
 	focusReason := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem8setFocusEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), focusReason)
@@ -1832,7 +1832,7 @@ The position of the item describes its origin (local coordinate (0, 0)) in paren
 
 See also pos(), scenePos(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) SetPos_1(x float64, y float64) {
+func (this *QGraphicsItem) SetPos1(x float64, y float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem6setPosEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1887,7 +1887,7 @@ If this item is not viewed by a QGraphicsView, this function does nothing.
 
 See also QGraphicsView::ensureVisible().
 */
-func (this *QGraphicsItem) EnsureVisible__() {
+func (this *QGraphicsItem) EnsureVisiblep() {
 	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -1912,7 +1912,7 @@ If this item is not viewed by a QGraphicsView, this function does nothing.
 
 See also QGraphicsView::ensureVisible().
 */
-func (this *QGraphicsItem) EnsureVisible__1(rect qtcore.QRectF_ITF) {
+func (this *QGraphicsItem) EnsureVisiblep1(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -1939,7 +1939,7 @@ If this item is not viewed by a QGraphicsView, this function does nothing.
 
 See also QGraphicsView::ensureVisible().
 */
-func (this *QGraphicsItem) EnsureVisible__2(rect qtcore.QRectF_ITF, xmargin int) {
+func (this *QGraphicsItem) EnsureVisiblep2(rect qtcore.QRectF_ITF, xmargin int) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -1964,7 +1964,7 @@ If this item is not viewed by a QGraphicsView, this function does nothing.
 
 See also QGraphicsView::ensureVisible().
 */
-func (this *QGraphicsItem) EnsureVisible_1(x float64, y float64, w float64, h float64, xmargin int, ymargin int) {
+func (this *QGraphicsItem) EnsureVisible1(x float64, y float64, w float64, h float64, xmargin int, ymargin int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1983,7 +1983,7 @@ If this item is not viewed by a QGraphicsView, this function does nothing.
 
 See also QGraphicsView::ensureVisible().
 */
-func (this *QGraphicsItem) EnsureVisible_1_(x float64, y float64, w float64, h float64) {
+func (this *QGraphicsItem) EnsureVisible1p(x float64, y float64, w float64, h float64) {
 	// arg: 4, int=Int, =Invalid, , Invalid
 	xmargin := int(50)
 	// arg: 5, int=Int, =Invalid, , Invalid
@@ -2006,7 +2006,7 @@ If this item is not viewed by a QGraphicsView, this function does nothing.
 
 See also QGraphicsView::ensureVisible().
 */
-func (this *QGraphicsItem) EnsureVisible_1_1(x float64, y float64, w float64, h float64, xmargin int) {
+func (this *QGraphicsItem) EnsureVisible1p1(x float64, y float64, w float64, h float64, xmargin int) {
 	// arg: 5, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem13ensureVisibleEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xmargin, ymargin)
@@ -2070,7 +2070,7 @@ func (this *QGraphicsItem) SetMatrix(matrix qtgui.QMatrix_ITF, combine bool) {
 /*
 
  */
-func (this *QGraphicsItem) SetMatrix__(matrix qtgui.QMatrix_ITF) {
+func (this *QGraphicsItem) SetMatrixp(matrix qtgui.QMatrix_ITF) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
 		convArg0 = matrix.QMatrix_PTR().GetCthis()
@@ -2238,7 +2238,7 @@ This function was introduced in  Qt 4.5.
 
 See also mapToItem(), mapFromItem(), and deviceTransform().
 */
-func (this *QGraphicsItem) ItemTransform__(other QGraphicsItem_ITF /*777 const QGraphicsItem **/) *qtgui.QTransform /*123*/ {
+func (this *QGraphicsItem) ItemTransformp(other QGraphicsItem_ITF /*777 const QGraphicsItem **/) *qtgui.QTransform /*123*/ {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGraphicsItem_PTR() != nil {
 		convArg0 = other.QGraphicsItem_PTR().GetCthis()
@@ -2297,7 +2297,7 @@ This function was introduced in  Qt 4.3.
 
 See also transform(), setRotation(), setScale(), setTransformOriginPoint(), The Graphics View Coordinate System, and Transformations.
 */
-func (this *QGraphicsItem) SetTransform__(matrix qtgui.QTransform_ITF) {
+func (this *QGraphicsItem) SetTransformp(matrix qtgui.QTransform_ITF) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()
@@ -2462,7 +2462,7 @@ This function was introduced in  Qt 4.6.
 
 See also transformOriginPoint() and Transformations.
 */
-func (this *QGraphicsItem) SetTransformOriginPoint_1(ax float64, ay float64) {
+func (this *QGraphicsItem) SetTransformOriginPoint1(ax float64, ay float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem23setTransformOriginPointEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ax, ay)
 	qtrt.ErrPrint(err, rv)
 }
@@ -2766,7 +2766,7 @@ Keep in mind that when reimplementing this function and calling shape() or bound
 
 See also contains() and shape().
 */
-func (this *QGraphicsItem) CollidesWithItem__(other QGraphicsItem_ITF /*777 const QGraphicsItem **/) bool {
+func (this *QGraphicsItem) CollidesWithItemp(other QGraphicsItem_ITF /*777 const QGraphicsItem **/) bool {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGraphicsItem_PTR() != nil {
 		convArg0 = other.QGraphicsItem_PTR().GetCthis()
@@ -2816,7 +2816,7 @@ Note that this function checks whether the item's shape or bounding rectangle (d
 
 See also collidesWithItem(), contains(), and shape().
 */
-func (this *QGraphicsItem) CollidesWithPath__(path qtgui.QPainterPath_ITF) bool {
+func (this *QGraphicsItem) CollidesWithPathp(path qtgui.QPainterPath_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -2859,7 +2859,7 @@ The way collisions are detected is determined by applying mode to items that are
 
 See also collidesWithItem().
 */
-func (this *QGraphicsItem) CollidingItems__() *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsItem) CollidingItemsp() *QGraphicsItemList /*lll*/ {
 	// arg: 0, Qt::ItemSelectionMode=Elaborated, Qt::ItemSelectionMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem14collidingItemsEN2Qt17ItemSelectionModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
@@ -2906,7 +2906,7 @@ This function was introduced in  Qt 4.3.
 
 See also opaqueArea().
 */
-func (this *QGraphicsItem) IsObscured__() bool {
+func (this *QGraphicsItem) IsObscuredp() bool {
 	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem10isObscuredERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -2928,7 +2928,7 @@ This function was introduced in  Qt 4.3.
 
 See also opaqueArea().
 */
-func (this *QGraphicsItem) IsObscured_1(x float64, y float64, w float64, h float64) bool {
+func (this *QGraphicsItem) IsObscured1(x float64, y float64, w float64, h float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem10isObscuredEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -3126,7 +3126,7 @@ Note: Enabling caching for an item does not guarantee that paint() will be invok
 
 See also setCacheMode(), QPen::width(), Item Coordinates, and ItemUsesExtendedStyleOption.
 */
-func (this *QGraphicsItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+func (this *QGraphicsItem) Paintp(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -3182,7 +3182,7 @@ If the item is invisible (i.e., isVisible() returns false), this function does n
 
 See also paint() and boundingRect().
 */
-func (this *QGraphicsItem) Update__() {
+func (this *QGraphicsItem) Updatep() {
 	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem6updateERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -3205,7 +3205,7 @@ If the item is invisible (i.e., isVisible() returns false), this function does n
 
 See also paint() and boundingRect().
 */
-func (this *QGraphicsItem) Update_1(x float64, y float64, width float64, height float64) {
+func (this *QGraphicsItem) Update1(x float64, y float64, width float64, height float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem6updateEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, width, height)
 	qtrt.ErrPrint(err, rv)
 }
@@ -3269,7 +3269,7 @@ This function was introduced in  Qt 4.4.
 
 See also boundingRect().
 */
-func (this *QGraphicsItem) Scroll__(dx float64, dy float64) {
+func (this *QGraphicsItem) Scrollp(dx float64, dy float64) {
 	// arg: 2, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItem6scrollEddRK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy, convArg2)
@@ -3316,7 +3316,7 @@ If item is 0, this function returns the same as mapToScene().
 
 See also itemTransform(), mapToParent(), mapToScene(), transform(), mapFromItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToItem_1(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapToItem1(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -3344,7 +3344,7 @@ If item is 0, this function returns the same as mapToScene().
 
 See also itemTransform(), mapToParent(), mapToScene(), transform(), mapFromItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToItem_2(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapToItem2(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -3372,7 +3372,7 @@ If item is 0, this function returns the same as mapToScene().
 
 See also itemTransform(), mapToParent(), mapToScene(), transform(), mapFromItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToItem_3(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
+func (this *QGraphicsItem) MapToItem3(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -3400,7 +3400,7 @@ If item is 0, this function returns the same as mapToScene().
 
 See also itemTransform(), mapToParent(), mapToScene(), transform(), mapFromItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToItem_4(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64) *qtcore.QPointF /*123*/ {
+func (this *QGraphicsItem) MapToItem4(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -3424,7 +3424,7 @@ If item is 0, this function returns the same as mapToScene().
 
 See also itemTransform(), mapToParent(), mapToScene(), transform(), mapFromItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToItem_5(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapToItem5(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -3468,7 +3468,7 @@ Maps the point point, which is in this item's coordinate system, to its parent's
 
 See also mapToItem(), mapToScene(), transform(), mapFromParent(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToParent_1(rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapToParent1(rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -3490,7 +3490,7 @@ Maps the point point, which is in this item's coordinate system, to its parent's
 
 See also mapToItem(), mapToScene(), transform(), mapFromParent(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToParent_2(polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapToParent2(polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -3512,7 +3512,7 @@ Maps the point point, which is in this item's coordinate system, to its parent's
 
 See also mapToItem(), mapToScene(), transform(), mapFromParent(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToParent_3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
+func (this *QGraphicsItem) MapToParent3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -3534,7 +3534,7 @@ Maps the point point, which is in this item's coordinate system, to its parent's
 
 See also mapToItem(), mapToScene(), transform(), mapFromParent(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToParent_4(x float64, y float64) *qtcore.QPointF /*123*/ {
+func (this *QGraphicsItem) MapToParent4(x float64, y float64) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem11mapToParentEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -3552,7 +3552,7 @@ Maps the point point, which is in this item's coordinate system, to its parent's
 
 See also mapToItem(), mapToScene(), transform(), mapFromParent(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToParent_5(x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapToParent5(x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem11mapToParentEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -3592,7 +3592,7 @@ Maps the point point, which is in this item's coordinate system, to the scene's 
 
 See also mapToItem(), mapToParent(), transform(), mapFromScene(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToScene_1(rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapToScene1(rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -3614,7 +3614,7 @@ Maps the point point, which is in this item's coordinate system, to the scene's 
 
 See also mapToItem(), mapToParent(), transform(), mapFromScene(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToScene_2(polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapToScene2(polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -3636,7 +3636,7 @@ Maps the point point, which is in this item's coordinate system, to the scene's 
 
 See also mapToItem(), mapToParent(), transform(), mapFromScene(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToScene_3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
+func (this *QGraphicsItem) MapToScene3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -3658,7 +3658,7 @@ Maps the point point, which is in this item's coordinate system, to the scene's 
 
 See also mapToItem(), mapToParent(), transform(), mapFromScene(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToScene_4(x float64, y float64) *qtcore.QPointF /*123*/ {
+func (this *QGraphicsItem) MapToScene4(x float64, y float64) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem10mapToSceneEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -3676,7 +3676,7 @@ Maps the point point, which is in this item's coordinate system, to the scene's 
 
 See also mapToItem(), mapToParent(), transform(), mapFromScene(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapToScene_5(x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapToScene5(x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem10mapToSceneEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -3728,7 +3728,7 @@ This function was introduced in  Qt 4.5.
 
 See also itemTransform(), mapToParent(), mapToScene(), mapFromItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapRectToItem_1(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
+func (this *QGraphicsItem) MapRectToItem1(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -3776,7 +3776,7 @@ This function was introduced in  Qt 4.5.
 
 See also itemTransform(), mapToParent(), mapToScene(), mapFromItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapRectToParent_1(x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
+func (this *QGraphicsItem) MapRectToParent1(x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem15mapRectToParentEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -3820,7 +3820,7 @@ This function was introduced in  Qt 4.5.
 
 See also itemTransform(), mapToParent(), mapToScene(), mapFromItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapRectToScene_1(x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
+func (this *QGraphicsItem) MapRectToScene1(x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem14mapRectToSceneEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -3868,7 +3868,7 @@ If item is 0, this function returns the same as mapFromScene().
 
 See also itemTransform(), mapFromParent(), mapFromScene(), transform(), mapToItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromItem_1(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapFromItem1(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -3896,7 +3896,7 @@ If item is 0, this function returns the same as mapFromScene().
 
 See also itemTransform(), mapFromParent(), mapFromScene(), transform(), mapToItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromItem_2(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapFromItem2(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -3924,7 +3924,7 @@ If item is 0, this function returns the same as mapFromScene().
 
 See also itemTransform(), mapFromParent(), mapFromScene(), transform(), mapToItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromItem_3(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
+func (this *QGraphicsItem) MapFromItem3(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -3952,7 +3952,7 @@ If item is 0, this function returns the same as mapFromScene().
 
 See also itemTransform(), mapFromParent(), mapFromScene(), transform(), mapToItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromItem_4(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64) *qtcore.QPointF /*123*/ {
+func (this *QGraphicsItem) MapFromItem4(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -3976,7 +3976,7 @@ If item is 0, this function returns the same as mapFromScene().
 
 See also itemTransform(), mapFromParent(), mapFromScene(), transform(), mapToItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromItem_5(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapFromItem5(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -4020,7 +4020,7 @@ Maps the point point, which is in this item's parent's coordinate system, to thi
 
 See also mapFromItem(), mapFromScene(), transform(), mapToParent(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromParent_1(rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapFromParent1(rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -4042,7 +4042,7 @@ Maps the point point, which is in this item's parent's coordinate system, to thi
 
 See also mapFromItem(), mapFromScene(), transform(), mapToParent(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromParent_2(polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapFromParent2(polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -4064,7 +4064,7 @@ Maps the point point, which is in this item's parent's coordinate system, to thi
 
 See also mapFromItem(), mapFromScene(), transform(), mapToParent(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromParent_3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
+func (this *QGraphicsItem) MapFromParent3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -4086,7 +4086,7 @@ Maps the point point, which is in this item's parent's coordinate system, to thi
 
 See also mapFromItem(), mapFromScene(), transform(), mapToParent(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromParent_4(x float64, y float64) *qtcore.QPointF /*123*/ {
+func (this *QGraphicsItem) MapFromParent4(x float64, y float64) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem13mapFromParentEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -4104,7 +4104,7 @@ Maps the point point, which is in this item's parent's coordinate system, to thi
 
 See also mapFromItem(), mapFromScene(), transform(), mapToParent(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromParent_5(x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapFromParent5(x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem13mapFromParentEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -4144,7 +4144,7 @@ Maps the point point, which is in this item's scene's coordinate system, to this
 
 See also mapFromItem(), mapFromParent(), transform(), mapToScene(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromScene_1(rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapFromScene1(rect qtcore.QRectF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -4166,7 +4166,7 @@ Maps the point point, which is in this item's scene's coordinate system, to this
 
 See also mapFromItem(), mapFromParent(), transform(), mapToScene(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromScene_2(polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapFromScene2(polygon qtgui.QPolygonF_ITF) *qtgui.QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -4188,7 +4188,7 @@ Maps the point point, which is in this item's scene's coordinate system, to this
 
 See also mapFromItem(), mapFromParent(), transform(), mapToScene(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromScene_3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
+func (this *QGraphicsItem) MapFromScene3(path qtgui.QPainterPath_ITF) *qtgui.QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -4210,7 +4210,7 @@ Maps the point point, which is in this item's scene's coordinate system, to this
 
 See also mapFromItem(), mapFromParent(), transform(), mapToScene(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromScene_4(x float64, y float64) *qtcore.QPointF /*123*/ {
+func (this *QGraphicsItem) MapFromScene4(x float64, y float64) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem12mapFromSceneEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -4228,7 +4228,7 @@ Maps the point point, which is in this item's scene's coordinate system, to this
 
 See also mapFromItem(), mapFromParent(), transform(), mapToScene(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapFromScene_5(x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
+func (this *QGraphicsItem) MapFromScene5(x float64, y float64, w float64, h float64) *qtgui.QPolygonF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem12mapFromSceneEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -4280,7 +4280,7 @@ This function was introduced in  Qt 4.5.
 
 See also itemTransform(), mapToParent(), mapToScene(), mapFromItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapRectFromItem_1(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
+func (this *QGraphicsItem) MapRectFromItem1(item QGraphicsItem_ITF /*777 const QGraphicsItem **/, x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -4328,7 +4328,7 @@ This function was introduced in  Qt 4.5.
 
 See also itemTransform(), mapToParent(), mapToScene(), mapFromItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapRectFromParent_1(x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
+func (this *QGraphicsItem) MapRectFromParent1(x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem17mapRectFromParentEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -4372,7 +4372,7 @@ This function was introduced in  Qt 4.5.
 
 See also itemTransform(), mapToParent(), mapToScene(), mapFromItem(), and The Graphics View Coordinate System.
 */
-func (this *QGraphicsItem) MapRectFromScene_1(x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
+func (this *QGraphicsItem) MapRectFromScene1(x float64, y float64, w float64, h float64) *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsItem16mapRectFromSceneEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333

@@ -16,7 +16,7 @@ func Test0(t *testing.T) {
 
 	app := qtwidgets.NewQApplication(len(os.Args), os.Args, 0)
 
-	lab := qtwidgets.NewQLabel__1(nil)
+	lab := qtwidgets.NewQLabelp1(nil)
 	lab.SetText(qtcore.QCoreApplication_Translate("MainWindow", "TextLabel\345\223\210\345\226\275", "dummy123", 0))
 	lab.Show()
 

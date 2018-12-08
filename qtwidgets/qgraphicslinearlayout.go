@@ -95,10 +95,10 @@ func NewQGraphicsLinearLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayo
 /*
 Constructs a QGraphicsLinearLayout instance using Qt::Horizontal orientation. parent is passed to QGraphicsLayout's constructor.
 */
-func (*QGraphicsLinearLayout) NewForInherit__() *QGraphicsLinearLayout {
-	return NewQGraphicsLinearLayout__()
+func (*QGraphicsLinearLayout) NewForInheritp() *QGraphicsLinearLayout {
+	return NewQGraphicsLinearLayoutp()
 }
-func NewQGraphicsLinearLayout__() *QGraphicsLinearLayout {
+func NewQGraphicsLinearLayoutp() *QGraphicsLinearLayout {
 	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -116,10 +116,10 @@ func NewQGraphicsLinearLayout__() *QGraphicsLinearLayout {
 /*
 Constructs a QGraphicsLinearLayout instance using Qt::Horizontal orientation. parent is passed to QGraphicsLayout's constructor.
 */
-func (*QGraphicsLinearLayout) NewForInherit_1(orientation int, parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
-	return NewQGraphicsLinearLayout_1(orientation, parent)
+func (*QGraphicsLinearLayout) NewForInherit1(orientation int, parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
+	return NewQGraphicsLinearLayout1(orientation, parent)
 }
-func NewQGraphicsLinearLayout_1(orientation int, parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
+func NewQGraphicsLinearLayout1(orientation int, parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QGraphicsLayoutItem_PTR() != nil {
 		convArg1 = parent.QGraphicsLayoutItem_PTR().GetCthis()
@@ -139,10 +139,10 @@ func NewQGraphicsLinearLayout_1(orientation int, parent QGraphicsLayoutItem_ITF 
 /*
 Constructs a QGraphicsLinearLayout instance using Qt::Horizontal orientation. parent is passed to QGraphicsLayout's constructor.
 */
-func (*QGraphicsLinearLayout) NewForInherit_1_(orientation int) *QGraphicsLinearLayout {
-	return NewQGraphicsLinearLayout_1_(orientation)
+func (*QGraphicsLinearLayout) NewForInherit1p(orientation int) *QGraphicsLinearLayout {
+	return NewQGraphicsLinearLayout1p(orientation)
 }
-func NewQGraphicsLinearLayout_1_(orientation int) *QGraphicsLinearLayout {
+func NewQGraphicsLinearLayout1p(orientation int) *QGraphicsLinearLayout {
 	// arg: 1, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayoutC2EN2Qt11OrientationEP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
@@ -236,7 +236,7 @@ func (this *QGraphicsLinearLayout) AddStretch(stretch int) {
 /*
 This convenience function is equivalent to calling insertStretch(-1, stretch).
 */
-func (this *QGraphicsLinearLayout) AddStretch__() {
+func (this *QGraphicsLinearLayout) AddStretchp() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	stretch := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout10addStretchEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), stretch)
@@ -287,7 +287,7 @@ Inserts a stretch of stretch at index, or before any item that is currently at i
 
 See also addStretch(), setStretchFactor(), setItemSpacing(), and insertItem().
 */
-func (this *QGraphicsLinearLayout) InsertStretch__(index int) {
+func (this *QGraphicsLinearLayout) InsertStretchp(index int) {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	stretch := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout13insertStretchEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, stretch)
@@ -562,7 +562,7 @@ func (this *QGraphicsLinearLayout) SizeHint(which int, constraint qtcore.QSizeF_
 /*
 Reimplemented from QGraphicsLayoutItem::sizeHint().
 */
-func (this *QGraphicsLinearLayout) SizeHint__(which int) *qtcore.QSizeF /*123*/ {
+func (this *QGraphicsLinearLayout) SizeHintp(which int) *qtcore.QSizeF /*123*/ {
 	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
@@ -593,7 +593,7 @@ func (this *QGraphicsLinearLayout) Dump(indent int) {
 /*
 
  */
-func (this *QGraphicsLinearLayout) Dump__() {
+func (this *QGraphicsLinearLayout) Dumpp() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	indent := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout4dumpEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), indent)

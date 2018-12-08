@@ -122,10 +122,10 @@ func NewQAbstractTransition(sourceState QState_ITF /*777 QState **/) *QAbstractT
 /*
 Constructs a new QAbstractTransition object with the given sourceState.
 */
-func (*QAbstractTransition) NewForInherit__() *QAbstractTransition {
-	return NewQAbstractTransition__()
+func (*QAbstractTransition) NewForInheritp() *QAbstractTransition {
+	return NewQAbstractTransitionp()
 }
-func NewQAbstractTransition__() *QAbstractTransition {
+func NewQAbstractTransitionp() *QAbstractTransition {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)

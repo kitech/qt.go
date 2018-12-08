@@ -90,10 +90,10 @@ func NewQTextImageFormat() *QTextImageFormat {
 /*
 
  */
-func (*QTextImageFormat) NewForInherit_1(format QTextFormat_ITF) *QTextImageFormat {
-	return NewQTextImageFormat_1(format)
+func (*QTextImageFormat) NewForInherit1(format QTextFormat_ITF) *QTextImageFormat {
+	return NewQTextImageFormat1(format)
 }
-func NewQTextImageFormat_1(format QTextFormat_ITF) *QTextImageFormat {
+func NewQTextImageFormat1(format QTextFormat_ITF) *QTextImageFormat {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QTextFormat_PTR() != nil {
 		convArg0 = format.QTextFormat_PTR().GetCthis()
@@ -128,7 +128,7 @@ func (this *QTextImageFormat) IsValid() bool {
 
  */
 func (this *QTextImageFormat) SetName(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormat7setNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

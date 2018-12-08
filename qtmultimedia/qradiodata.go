@@ -131,10 +131,10 @@ The mediaObject should be an instance of QRadioTuner. It is preferable to use th
 
 During construction, this class is bound to the mediaObject using the bind() method.
 */
-func (*QRadioData) NewForInherit__(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QRadioData {
-	return NewQRadioData__(mediaObject)
+func (*QRadioData) NewForInheritp(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QRadioData {
+	return NewQRadioDatap(mediaObject)
 }
-func NewQRadioData__(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QRadioData {
+func NewQRadioDatap(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QRadioData {
 	var convArg0 unsafe.Pointer
 	if mediaObject != nil && mediaObject.QMediaObject_PTR() != nil {
 		convArg0 = mediaObject.QMediaObject_PTR().GetCthis()
@@ -317,7 +317,7 @@ Returns the error state of a radio data.
 
 See also errorString().
 */
-func (this *QRadioData) Error_1(error int) {
+func (this *QRadioData) Error1(error int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QRadioData5errorENS_5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	qtrt.ErrPrint(err, rv)
 }
@@ -365,7 +365,7 @@ Signals that the Program Identification code has changed to stationId
 Note: Notifier signal for property stationId.
 */
 func (this *QRadioData) StationIdChanged(stationId string) {
-	var tmpArg0 = qtcore.NewQString_5(stationId)
+	var tmpArg0 = qtcore.NewQString5(stationId)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QRadioData16stationIdChangedE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -397,7 +397,7 @@ Signals that the Program Type Name has changed to programTypeName
 Note: Notifier signal for property programTypeName.
 */
 func (this *QRadioData) ProgramTypeNameChanged(programTypeName string) {
-	var tmpArg0 = qtcore.NewQString_5(programTypeName)
+	var tmpArg0 = qtcore.NewQString5(programTypeName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QRadioData22programTypeNameChangedE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -414,7 +414,7 @@ Signals that the Program Service has changed to stationName
 Note: Notifier signal for property stationName.
 */
 func (this *QRadioData) StationNameChanged(stationName string) {
-	var tmpArg0 = qtcore.NewQString_5(stationName)
+	var tmpArg0 = qtcore.NewQString5(stationName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QRadioData18stationNameChangedE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -431,7 +431,7 @@ Signals that the Radio Text property has changed to radioText
 Note: Notifier signal for property radioText.
 */
 func (this *QRadioData) RadioTextChanged(radioText string) {
-	var tmpArg0 = qtcore.NewQString_5(radioText)
+	var tmpArg0 = qtcore.NewQString5(radioText)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QRadioData16radioTextChangedE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

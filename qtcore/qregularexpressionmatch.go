@@ -126,7 +126,7 @@ func (this *QRegularExpressionMatch) Operator_equal(match_ QRegularExpressionMat
 /*
 
  */
-func (this *QRegularExpressionMatch) Operator_equal_1(match_ unsafe.Pointer /*333*/) *QRegularExpressionMatch {
+func (this *QRegularExpressionMatch) Operator_equal1(match_ unsafe.Pointer /*333*/) *QRegularExpressionMatch {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QRegularExpressionMatchaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), match_)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -278,7 +278,7 @@ func (this *QRegularExpressionMatch) Captured(nth int) string {
 /*
 
  */
-func (this *QRegularExpressionMatch) Captured__() string {
+func (this *QRegularExpressionMatch) Capturedp() string {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch8capturedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
@@ -297,8 +297,8 @@ func (this *QRegularExpressionMatch) Captured__() string {
 /*
 
  */
-func (this *QRegularExpressionMatch) Captured_1(name string) string {
-	var tmpArg0 = NewQString_5(name)
+func (this *QRegularExpressionMatch) Captured1(name string) string {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch8capturedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -316,7 +316,7 @@ func (this *QRegularExpressionMatch) Captured_1(name string) string {
 /*
 
  */
-func (this *QRegularExpressionMatch) Captured_2(name QStringView_ITF /*123*/) string {
+func (this *QRegularExpressionMatch) Captured2(name QStringView_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QStringView_PTR() != nil {
 		convArg0 = name.QStringView_PTR().GetCthis()
@@ -353,7 +353,7 @@ func (this *QRegularExpressionMatch) CapturedRef(nth int) *QStringRef /*123*/ {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedRef__() *QStringRef /*123*/ {
+func (this *QRegularExpressionMatch) CapturedRefp() *QStringRef /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedRefEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
@@ -371,8 +371,8 @@ func (this *QRegularExpressionMatch) CapturedRef__() *QStringRef /*123*/ {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedRef_1(name string) *QStringRef /*123*/ {
-	var tmpArg0 = NewQString_5(name)
+func (this *QRegularExpressionMatch) CapturedRef1(name string) *QStringRef /*123*/ {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedRefERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -389,7 +389,7 @@ func (this *QRegularExpressionMatch) CapturedRef_1(name string) *QStringRef /*12
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedRef_2(name QStringView_ITF /*123*/) *QStringRef /*123*/ {
+func (this *QRegularExpressionMatch) CapturedRef2(name QStringView_ITF /*123*/) *QStringRef /*123*/ {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QStringView_PTR() != nil {
 		convArg0 = name.QStringView_PTR().GetCthis()
@@ -425,7 +425,7 @@ func (this *QRegularExpressionMatch) CapturedView(nth int) *QStringView /*123*/ 
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedView__() *QStringView /*123*/ {
+func (this *QRegularExpressionMatch) CapturedViewp() *QStringView /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch12capturedViewEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
@@ -443,7 +443,7 @@ func (this *QRegularExpressionMatch) CapturedView__() *QStringView /*123*/ {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedView_1(name QStringView_ITF /*123*/) *QStringView /*123*/ {
+func (this *QRegularExpressionMatch) CapturedView1(name QStringView_ITF /*123*/) *QStringView /*123*/ {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QStringView_PTR() != nil {
 		convArg0 = name.QStringView_PTR().GetCthis()
@@ -493,7 +493,7 @@ func (this *QRegularExpressionMatch) CapturedStart(nth int) int {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedStart__() int {
+func (this *QRegularExpressionMatch) CapturedStartp() int {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
@@ -509,8 +509,8 @@ func (this *QRegularExpressionMatch) CapturedStart__() int {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedStart_1(name string) int {
-	var tmpArg0 = NewQString_5(name)
+func (this *QRegularExpressionMatch) CapturedStart1(name string) int {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -525,7 +525,7 @@ func (this *QRegularExpressionMatch) CapturedStart_1(name string) int {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedStart_2(name QStringView_ITF /*123*/) int {
+func (this *QRegularExpressionMatch) CapturedStart2(name QStringView_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QStringView_PTR() != nil {
 		convArg0 = name.QStringView_PTR().GetCthis()
@@ -557,7 +557,7 @@ func (this *QRegularExpressionMatch) CapturedLength(nth int) int {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedLength__() int {
+func (this *QRegularExpressionMatch) CapturedLengthp() int {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
@@ -573,8 +573,8 @@ func (this *QRegularExpressionMatch) CapturedLength__() int {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedLength_1(name string) int {
-	var tmpArg0 = NewQString_5(name)
+func (this *QRegularExpressionMatch) CapturedLength1(name string) int {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -589,7 +589,7 @@ func (this *QRegularExpressionMatch) CapturedLength_1(name string) int {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedLength_2(name QStringView_ITF /*123*/) int {
+func (this *QRegularExpressionMatch) CapturedLength2(name QStringView_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QStringView_PTR() != nil {
 		convArg0 = name.QStringView_PTR().GetCthis()
@@ -621,7 +621,7 @@ func (this *QRegularExpressionMatch) CapturedEnd(nth int) int {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedEnd__() int {
+func (this *QRegularExpressionMatch) CapturedEndp() int {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	nth := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nth)
@@ -637,8 +637,8 @@ func (this *QRegularExpressionMatch) CapturedEnd__() int {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedEnd_1(name string) int {
-	var tmpArg0 = NewQString_5(name)
+func (this *QRegularExpressionMatch) CapturedEnd1(name string) int {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -653,7 +653,7 @@ func (this *QRegularExpressionMatch) CapturedEnd_1(name string) int {
 /*
 
  */
-func (this *QRegularExpressionMatch) CapturedEnd_2(name QStringView_ITF /*123*/) int {
+func (this *QRegularExpressionMatch) CapturedEnd2(name QStringView_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QStringView_PTR() != nil {
 		convArg0 = name.QStringView_PTR().GetCthis()

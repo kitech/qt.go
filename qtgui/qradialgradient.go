@@ -90,10 +90,10 @@ func NewQRadialGradient() *QRadialGradient {
 /*
 
  */
-func (*QRadialGradient) NewForInherit_1(center qtcore.QPointF_ITF, radius float64, focalPoint qtcore.QPointF_ITF) *QRadialGradient {
-	return NewQRadialGradient_1(center, radius, focalPoint)
+func (*QRadialGradient) NewForInherit1(center qtcore.QPointF_ITF, radius float64, focalPoint qtcore.QPointF_ITF) *QRadialGradient {
+	return NewQRadialGradient1(center, radius, focalPoint)
 }
-func NewQRadialGradient_1(center qtcore.QPointF_ITF, radius float64, focalPoint qtcore.QPointF_ITF) *QRadialGradient {
+func NewQRadialGradient1(center qtcore.QPointF_ITF, radius float64, focalPoint qtcore.QPointF_ITF) *QRadialGradient {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QPointF_PTR() != nil {
 		convArg0 = center.QPointF_PTR().GetCthis()
@@ -117,10 +117,10 @@ func NewQRadialGradient_1(center qtcore.QPointF_ITF, radius float64, focalPoint 
 /*
 
  */
-func (*QRadialGradient) NewForInherit_2(cx float64, cy float64, radius float64, fx float64, fy float64) *QRadialGradient {
-	return NewQRadialGradient_2(cx, cy, radius, fx, fy)
+func (*QRadialGradient) NewForInherit2(cx float64, cy float64, radius float64, fx float64, fy float64) *QRadialGradient {
+	return NewQRadialGradient2(cx, cy, radius, fx, fy)
 }
-func NewQRadialGradient_2(cx float64, cy float64, radius float64, fx float64, fy float64) *QRadialGradient {
+func NewQRadialGradient2(cx float64, cy float64, radius float64, fx float64, fy float64) *QRadialGradient {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QRadialGradientC2Eddddd", qtrt.FFI_TYPE_POINTER, cx, cy, radius, fx, fy)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -136,10 +136,10 @@ func NewQRadialGradient_2(cx float64, cy float64, radius float64, fx float64, fy
 /*
 
  */
-func (*QRadialGradient) NewForInherit_3(center qtcore.QPointF_ITF, radius float64) *QRadialGradient {
-	return NewQRadialGradient_3(center, radius)
+func (*QRadialGradient) NewForInherit3(center qtcore.QPointF_ITF, radius float64) *QRadialGradient {
+	return NewQRadialGradient3(center, radius)
 }
-func NewQRadialGradient_3(center qtcore.QPointF_ITF, radius float64) *QRadialGradient {
+func NewQRadialGradient3(center qtcore.QPointF_ITF, radius float64) *QRadialGradient {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QPointF_PTR() != nil {
 		convArg0 = center.QPointF_PTR().GetCthis()
@@ -159,10 +159,10 @@ func NewQRadialGradient_3(center qtcore.QPointF_ITF, radius float64) *QRadialGra
 /*
 
  */
-func (*QRadialGradient) NewForInherit_4(cx float64, cy float64, radius float64) *QRadialGradient {
-	return NewQRadialGradient_4(cx, cy, radius)
+func (*QRadialGradient) NewForInherit4(cx float64, cy float64, radius float64) *QRadialGradient {
+	return NewQRadialGradient4(cx, cy, radius)
 }
-func NewQRadialGradient_4(cx float64, cy float64, radius float64) *QRadialGradient {
+func NewQRadialGradient4(cx float64, cy float64, radius float64) *QRadialGradient {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QRadialGradientC2Eddd", qtrt.FFI_TYPE_POINTER, cx, cy, radius)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -178,10 +178,10 @@ func NewQRadialGradient_4(cx float64, cy float64, radius float64) *QRadialGradie
 /*
 
  */
-func (*QRadialGradient) NewForInherit_5(center qtcore.QPointF_ITF, centerRadius float64, focalPoint qtcore.QPointF_ITF, focalRadius float64) *QRadialGradient {
-	return NewQRadialGradient_5(center, centerRadius, focalPoint, focalRadius)
+func (*QRadialGradient) NewForInherit5(center qtcore.QPointF_ITF, centerRadius float64, focalPoint qtcore.QPointF_ITF, focalRadius float64) *QRadialGradient {
+	return NewQRadialGradient5(center, centerRadius, focalPoint, focalRadius)
 }
-func NewQRadialGradient_5(center qtcore.QPointF_ITF, centerRadius float64, focalPoint qtcore.QPointF_ITF, focalRadius float64) *QRadialGradient {
+func NewQRadialGradient5(center qtcore.QPointF_ITF, centerRadius float64, focalPoint qtcore.QPointF_ITF, focalRadius float64) *QRadialGradient {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QPointF_PTR() != nil {
 		convArg0 = center.QPointF_PTR().GetCthis()
@@ -205,10 +205,10 @@ func NewQRadialGradient_5(center qtcore.QPointF_ITF, centerRadius float64, focal
 /*
 
  */
-func (*QRadialGradient) NewForInherit_6(cx float64, cy float64, centerRadius float64, fx float64, fy float64, focalRadius float64) *QRadialGradient {
-	return NewQRadialGradient_6(cx, cy, centerRadius, fx, fy, focalRadius)
+func (*QRadialGradient) NewForInherit6(cx float64, cy float64, centerRadius float64, fx float64, fy float64, focalRadius float64) *QRadialGradient {
+	return NewQRadialGradient6(cx, cy, centerRadius, fx, fy, focalRadius)
 }
-func NewQRadialGradient_6(cx float64, cy float64, centerRadius float64, fx float64, fy float64, focalRadius float64) *QRadialGradient {
+func NewQRadialGradient6(cx float64, cy float64, centerRadius float64, fx float64, fy float64, focalRadius float64) *QRadialGradient {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QRadialGradientC2Edddddd", qtrt.FFI_TYPE_POINTER, cx, cy, centerRadius, fx, fy, focalRadius)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -257,7 +257,7 @@ func (this *QRadialGradient) SetCenter(center qtcore.QPointF_ITF) {
 /*
 
  */
-func (this *QRadialGradient) SetCenter_1(x float64, y float64) {
+func (this *QRadialGradient) SetCenter1(x float64, y float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QRadialGradient9setCenterEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 }
@@ -303,7 +303,7 @@ func (this *QRadialGradient) SetFocalPoint(focalPoint qtcore.QPointF_ITF) {
 /*
 
  */
-func (this *QRadialGradient) SetFocalPoint_1(x float64, y float64) {
+func (this *QRadialGradient) SetFocalPoint1(x float64, y float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QRadialGradient13setFocalPointEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 }

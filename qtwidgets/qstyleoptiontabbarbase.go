@@ -91,10 +91,10 @@ func NewQStyleOptionTabBarBase() *QStyleOptionTabBarBase {
 /*
 
  */
-func (*QStyleOptionTabBarBase) NewForInherit_1(version int) *QStyleOptionTabBarBase {
-	return NewQStyleOptionTabBarBase_1(version)
+func (*QStyleOptionTabBarBase) NewForInherit1(version int) *QStyleOptionTabBarBase {
+	return NewQStyleOptionTabBarBase1(version)
 }
-func NewQStyleOptionTabBarBase_1(version int) *QStyleOptionTabBarBase {
+func NewQStyleOptionTabBarBase1(version int) *QStyleOptionTabBarBase {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabBarBaseFromPointer(unsafe.Pointer(uintptr(rv)))

@@ -91,10 +91,10 @@ func NewQMarginsF() *QMarginsF {
 /*
 
  */
-func (*QMarginsF) NewForInherit_1(left float64, top float64, right float64, bottom float64) *QMarginsF {
-	return NewQMarginsF_1(left, top, right, bottom)
+func (*QMarginsF) NewForInherit1(left float64, top float64, right float64, bottom float64) *QMarginsF {
+	return NewQMarginsF1(left, top, right, bottom)
 }
-func NewQMarginsF_1(left float64, top float64, right float64, bottom float64) *QMarginsF {
+func NewQMarginsF1(left float64, top float64, right float64, bottom float64) *QMarginsF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFC2Edddd", qtrt.FFI_TYPE_POINTER, left, top, right, bottom)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,10 +110,10 @@ func NewQMarginsF_1(left float64, top float64, right float64, bottom float64) *Q
 /*
 
  */
-func (*QMarginsF) NewForInherit_2(margins QMargins_ITF) *QMarginsF {
-	return NewQMarginsF_2(margins)
+func (*QMarginsF) NewForInherit2(margins QMargins_ITF) *QMarginsF {
+	return NewQMarginsF2(margins)
 }
-func NewQMarginsF_2(margins QMargins_ITF) *QMarginsF {
+func NewQMarginsF2(margins QMargins_ITF) *QMarginsF {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -291,7 +291,7 @@ func (this *QMarginsF) Operator_add_equal(margins QMarginsF_ITF) *QMarginsF {
 /*
 
  */
-func (this *QMarginsF) Operator_add_equal_1(addend float64) *QMarginsF {
+func (this *QMarginsF) Operator_add_equal1(addend float64) *QMarginsF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFpLEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), addend)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -327,7 +327,7 @@ func (this *QMarginsF) Operator_minus_equal(margins QMarginsF_ITF) *QMarginsF {
 /*
 
  */
-func (this *QMarginsF) Operator_minus_equal_1(subtrahend float64) *QMarginsF {
+func (this *QMarginsF) Operator_minus_equal1(subtrahend float64) *QMarginsF {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMarginsFmIEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), subtrahend)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

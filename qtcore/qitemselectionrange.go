@@ -91,10 +91,10 @@ func NewQItemSelectionRange() *QItemSelectionRange {
 /*
 
  */
-func (*QItemSelectionRange) NewForInherit_1(topL QModelIndex_ITF, bottomR QModelIndex_ITF) *QItemSelectionRange {
-	return NewQItemSelectionRange_1(topL, bottomR)
+func (*QItemSelectionRange) NewForInherit1(topL QModelIndex_ITF, bottomR QModelIndex_ITF) *QItemSelectionRange {
+	return NewQItemSelectionRange1(topL, bottomR)
 }
-func NewQItemSelectionRange_1(topL QModelIndex_ITF, bottomR QModelIndex_ITF) *QItemSelectionRange {
+func NewQItemSelectionRange1(topL QModelIndex_ITF, bottomR QModelIndex_ITF) *QItemSelectionRange {
 	var convArg0 unsafe.Pointer
 	if topL != nil && topL.QModelIndex_PTR() != nil {
 		convArg0 = topL.QModelIndex_PTR().GetCthis()
@@ -118,10 +118,10 @@ func NewQItemSelectionRange_1(topL QModelIndex_ITF, bottomR QModelIndex_ITF) *QI
 /*
 
  */
-func (*QItemSelectionRange) NewForInherit_2(index QModelIndex_ITF) *QItemSelectionRange {
-	return NewQItemSelectionRange_2(index)
+func (*QItemSelectionRange) NewForInherit2(index QModelIndex_ITF) *QItemSelectionRange {
+	return NewQItemSelectionRange2(index)
 }
-func NewQItemSelectionRange_2(index QModelIndex_ITF) *QItemSelectionRange {
+func NewQItemSelectionRange2(index QModelIndex_ITF) *QItemSelectionRange {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -157,7 +157,7 @@ func (this *QItemSelectionRange) Operator_equal(other unsafe.Pointer /*333*/) *Q
 /*
 
  */
-func (this *QItemSelectionRange) Operator_equal_1(other QItemSelectionRange_ITF) *QItemSelectionRange {
+func (this *QItemSelectionRange) Operator_equal1(other QItemSelectionRange_ITF) *QItemSelectionRange {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QItemSelectionRange_PTR() != nil {
 		convArg0 = other.QItemSelectionRange_PTR().GetCthis()
@@ -360,7 +360,7 @@ func (this *QItemSelectionRange) Contains(index QModelIndex_ITF) bool {
 /*
 
  */
-func (this *QItemSelectionRange) Contains_1(row int, column int, parentIndex QModelIndex_ITF) bool {
+func (this *QItemSelectionRange) Contains1(row int, column int, parentIndex QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if parentIndex != nil && parentIndex.QModelIndex_PTR() != nil {
 		convArg2 = parentIndex.QModelIndex_PTR().GetCthis()

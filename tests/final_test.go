@@ -14,7 +14,7 @@ func Test0(t *testing.T) {
 	qtrt.DebugFinal = false
 	if true {
 		for i := 0; i < 100; i++ {
-			sz := qtcore.NewQString_5(gopp.RandomStringAlphaMixed(50000))
+			sz := qtcore.NewQString5(gopp.RandomStringAlphaMixed(50000))
 			_ = sz
 			sz = nil
 		}

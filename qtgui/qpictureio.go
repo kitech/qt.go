@@ -92,10 +92,10 @@ func NewQPictureIO() *QPictureIO {
 /*
 
  */
-func (*QPictureIO) NewForInherit_1(ioDevice qtcore.QIODevice_ITF /*777 QIODevice **/, format string) *QPictureIO {
-	return NewQPictureIO_1(ioDevice, format)
+func (*QPictureIO) NewForInherit1(ioDevice qtcore.QIODevice_ITF /*777 QIODevice **/, format string) *QPictureIO {
+	return NewQPictureIO1(ioDevice, format)
 }
-func NewQPictureIO_1(ioDevice qtcore.QIODevice_ITF /*777 QIODevice **/, format string) *QPictureIO {
+func NewQPictureIO1(ioDevice qtcore.QIODevice_ITF /*777 QIODevice **/, format string) *QPictureIO {
 	var convArg0 unsafe.Pointer
 	if ioDevice != nil && ioDevice.QIODevice_PTR() != nil {
 		convArg0 = ioDevice.QIODevice_PTR().GetCthis()
@@ -117,11 +117,11 @@ func NewQPictureIO_1(ioDevice qtcore.QIODevice_ITF /*777 QIODevice **/, format s
 /*
 
  */
-func (*QPictureIO) NewForInherit_2(fileName string, format string) *QPictureIO {
-	return NewQPictureIO_2(fileName, format)
+func (*QPictureIO) NewForInherit2(fileName string, format string) *QPictureIO {
+	return NewQPictureIO2(fileName, format)
 }
-func NewQPictureIO_2(fileName string, format string) *QPictureIO {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQPictureIO2(fileName string, format string) *QPictureIO {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
@@ -352,7 +352,7 @@ func (this *QPictureIO) SetIODevice(arg0 qtcore.QIODevice_ITF /*777 QIODevice **
 
  */
 func (this *QPictureIO) SetFileName(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -380,7 +380,7 @@ func (this *QPictureIO) SetQuality(arg0 int) {
 
  */
 func (this *QPictureIO) SetDescription(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO14setDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -451,7 +451,7 @@ func (this *QPictureIO) Write() bool {
 
  */
 func (this *QPictureIO) PictureFormat(fileName string) *qtcore.QByteArray /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPictureIO13pictureFormatERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -473,7 +473,7 @@ func QPictureIO_PictureFormat(fileName string) *qtcore.QByteArray /*123*/ {
 /*
 
  */
-func (this *QPictureIO) PictureFormat_1(arg0 qtcore.QIODevice_ITF /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
+func (this *QPictureIO) PictureFormat1(arg0 qtcore.QIODevice_ITF /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QIODevice_PTR() != nil {
 		convArg0 = arg0.QIODevice_PTR().GetCthis()
@@ -484,9 +484,9 @@ func (this *QPictureIO) PictureFormat_1(arg0 qtcore.QIODevice_ITF /*777 QIODevic
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
-func QPictureIO_PictureFormat_1(arg0 qtcore.QIODevice_ITF /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
+func QPictureIO_PictureFormat1(arg0 qtcore.QIODevice_ITF /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
 	var nilthis *QPictureIO
-	rv := nilthis.PictureFormat_1(arg0)
+	rv := nilthis.PictureFormat1(arg0)
 	return rv
 }
 

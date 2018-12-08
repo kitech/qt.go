@@ -108,7 +108,7 @@ func (this *QDnsHostAddressRecord) Operator_equal(other unsafe.Pointer /*333*/) 
 /*
 
  */
-func (this *QDnsHostAddressRecord) Operator_equal_1(other QDnsHostAddressRecord_ITF) *QDnsHostAddressRecord {
+func (this *QDnsHostAddressRecord) Operator_equal1(other QDnsHostAddressRecord_ITF) *QDnsHostAddressRecord {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDnsHostAddressRecord_PTR() != nil {
 		convArg0 = other.QDnsHostAddressRecord_PTR().GetCthis()

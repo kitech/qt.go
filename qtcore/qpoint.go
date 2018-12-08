@@ -95,10 +95,10 @@ Constructs a null point, i.e. with coordinates (0, 0)
 
 See also isNull().
 */
-func (*QPoint) NewForInherit_1(xpos int, ypos int) *QPoint {
-	return NewQPoint_1(xpos, ypos)
+func (*QPoint) NewForInherit1(xpos int, ypos int) *QPoint {
+	return NewQPoint1(xpos, ypos)
 }
-func NewQPoint_1(xpos int, ypos int) *QPoint {
+func NewQPoint1(xpos int, ypos int) *QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointC2Eii", qtrt.FFI_TYPE_POINTER, xpos, ypos)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPointFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -329,7 +329,7 @@ func (this *QPoint) Operator_mul_equal(factor float32) *QPoint {
 /*
 
  */
-func (this *QPoint) Operator_mul_equal_1(factor float64) *QPoint {
+func (this *QPoint) Operator_mul_equal1(factor float64) *QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointmLEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -345,7 +345,7 @@ func (this *QPoint) Operator_mul_equal_1(factor float64) *QPoint {
 /*
 
  */
-func (this *QPoint) Operator_mul_equal_2(factor int) *QPoint {
+func (this *QPoint) Operator_mul_equal2(factor int) *QPoint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPointmLEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), factor)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

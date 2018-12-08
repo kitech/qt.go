@@ -110,10 +110,10 @@ func NewQAudioDecoder(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioDecode
 /*
 Construct an QAudioDecoder instance parented to parent.
 */
-func (*QAudioDecoder) NewForInherit__() *QAudioDecoder {
-	return NewQAudioDecoder__()
+func (*QAudioDecoder) NewForInheritp() *QAudioDecoder {
+	return NewQAudioDecoderp()
 }
-func NewQAudioDecoder__() *QAudioDecoder {
+func NewQAudioDecoderp() *QAudioDecoder {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QAudioDecoderC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -147,7 +147,7 @@ func DeleteQAudioDecoder(this *QAudioDecoder) {
 Returns the level of support an audio decoder has for a mimeType and a set of codecs.
 */
 func (this *QAudioDecoder) HasSupport(mimeType string, codecs qtcore.QStringList_ITF) int {
-	var tmpArg0 = qtcore.NewQString_5(mimeType)
+	var tmpArg0 = qtcore.NewQString5(mimeType)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if codecs != nil && codecs.QStringList_PTR() != nil {
@@ -171,8 +171,8 @@ func QAudioDecoder_HasSupport(mimeType string, codecs qtcore.QStringList_ITF) in
 /*
 Returns the level of support an audio decoder has for a mimeType and a set of codecs.
 */
-func (this *QAudioDecoder) HasSupport__(mimeType string) int {
-	var tmpArg0 = qtcore.NewQString_5(mimeType)
+func (this *QAudioDecoder) HasSupportp(mimeType string) int {
+	var tmpArg0 = qtcore.NewQString5(mimeType)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -233,7 +233,7 @@ Note: Setter function for property sourceFilename.
 See also sourceFilename().
 */
 func (this *QAudioDecoder) SetSourceFilename(fileName string) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QAudioDecoder17setSourceFilenameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -347,7 +347,7 @@ func (this *QAudioDecoder) Error() int {
 /*
 Returns the current error state.
 */
-func (this *QAudioDecoder) Error_1(error int) {
+func (this *QAudioDecoder) Error1(error int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QAudioDecoder5errorENS_5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	qtrt.ErrPrint(err, rv)
 }

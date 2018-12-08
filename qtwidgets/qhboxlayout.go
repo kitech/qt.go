@@ -105,10 +105,10 @@ func NewQHBoxLayout() *QHBoxLayout {
 /*
 
  */
-func (*QHBoxLayout) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/) *QHBoxLayout {
-	return NewQHBoxLayout_1(parent)
+func (*QHBoxLayout) NewForInherit1(parent QWidget_ITF /*777 QWidget **/) *QHBoxLayout {
+	return NewQHBoxLayout1(parent)
 }
-func NewQHBoxLayout_1(parent QWidget_ITF /*777 QWidget **/) *QHBoxLayout {
+func NewQHBoxLayout1(parent QWidget_ITF /*777 QWidget **/) *QHBoxLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()

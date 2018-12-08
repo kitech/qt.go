@@ -90,10 +90,10 @@ func NewQTextListFormat() *QTextListFormat {
 /*
 
  */
-func (*QTextListFormat) NewForInherit_1(fmt_ QTextFormat_ITF) *QTextListFormat {
-	return NewQTextListFormat_1(fmt_)
+func (*QTextListFormat) NewForInherit1(fmt_ QTextFormat_ITF) *QTextListFormat {
+	return NewQTextListFormat1(fmt_)
 }
-func NewQTextListFormat_1(fmt_ QTextFormat_ITF) *QTextListFormat {
+func NewQTextListFormat1(fmt_ QTextFormat_ITF) *QTextListFormat {
 	var convArg0 unsafe.Pointer
 	if fmt_ != nil && fmt_.QTextFormat_PTR() != nil {
 		convArg0 = fmt_.QTextFormat_PTR().GetCthis()
@@ -182,7 +182,7 @@ func (this *QTextListFormat) Indent() int {
 
  */
 func (this *QTextListFormat) SetNumberPrefix(numberPrefix string) {
-	var tmpArg0 = qtcore.NewQString_5(numberPrefix)
+	var tmpArg0 = qtcore.NewQString5(numberPrefix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormat15setNumberPrefixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -214,7 +214,7 @@ func (this *QTextListFormat) NumberPrefix() string {
 
  */
 func (this *QTextListFormat) SetNumberSuffix(numberSuffix string) {
-	var tmpArg0 = qtcore.NewQString_5(numberSuffix)
+	var tmpArg0 = qtcore.NewQString5(numberSuffix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextListFormat15setNumberSuffixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

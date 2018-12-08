@@ -172,10 +172,10 @@ The parent and widget flag f, arguments are passed to the QFrame constructor.
 
 See also setAlignment(), setFrameStyle(), and setIndent().
 */
-func (*QLabel) NewForInherit__() *QLabel {
-	return NewQLabel__()
+func (*QLabel) NewForInheritp() *QLabel {
+	return NewQLabelp()
 }
-func NewQLabel__() *QLabel {
+func NewQLabelp() *QLabel {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -199,10 +199,10 @@ The parent and widget flag f, arguments are passed to the QFrame constructor.
 
 See also setAlignment(), setFrameStyle(), and setIndent().
 */
-func (*QLabel) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QLabel {
-	return NewQLabel__1(parent)
+func (*QLabel) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QLabel {
+	return NewQLabelp1(parent)
 }
-func NewQLabel__1(parent QWidget_ITF /*777 QWidget **/) *QLabel {
+func NewQLabelp1(parent QWidget_ITF /*777 QWidget **/) *QLabel {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -228,11 +228,11 @@ The parent and widget flag f, arguments are passed to the QFrame constructor.
 
 See also setAlignment(), setFrameStyle(), and setIndent().
 */
-func (*QLabel) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
-	return NewQLabel_1(text, parent, f)
+func (*QLabel) NewForInherit1(text string, parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
+	return NewQLabel1(text, parent, f)
 }
-func NewQLabel_1(text string, parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQLabel1(text string, parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -257,11 +257,11 @@ The parent and widget flag f, arguments are passed to the QFrame constructor.
 
 See also setAlignment(), setFrameStyle(), and setIndent().
 */
-func (*QLabel) NewForInherit_1_(text string) *QLabel {
-	return NewQLabel_1_(text)
+func (*QLabel) NewForInherit1p(text string) *QLabel {
+	return NewQLabel1p(text)
 }
-func NewQLabel_1_(text string) *QLabel {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQLabel1p(text string) *QLabel {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -286,11 +286,11 @@ The parent and widget flag f, arguments are passed to the QFrame constructor.
 
 See also setAlignment(), setFrameStyle(), and setIndent().
 */
-func (*QLabel) NewForInherit_1_1(text string, parent QWidget_ITF /*777 QWidget **/) *QLabel {
-	return NewQLabel_1_1(text, parent)
+func (*QLabel) NewForInherit1p1(text string, parent QWidget_ITF /*777 QWidget **/) *QLabel {
+	return NewQLabel1p1(text, parent)
 }
-func NewQLabel_1_1(text string, parent QWidget_ITF /*777 QWidget **/) *QLabel {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQLabel1p1(text string, parent QWidget_ITF /*777 QWidget **/) *QLabel {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -780,7 +780,7 @@ func (this *QLabel) SelectionStart() int {
 
  */
 func (this *QLabel) SetText(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -874,7 +874,7 @@ The buddy shortcut, if any, is disabled.
 
 See also setText(), QString::setNum(), and setBuddy().
 */
-func (this *QLabel) SetNum_1(arg0 float64) {
+func (this *QLabel) SetNum1(arg0 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel6setNumEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -905,7 +905,7 @@ This function was introduced in  Qt 4.2.
 See also linkHovered().
 */
 func (this *QLabel) LinkActivated(link string) {
-	var tmpArg0 = qtcore.NewQString_5(link)
+	var tmpArg0 = qtcore.NewQString5(link)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel13linkActivatedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -924,7 +924,7 @@ This function was introduced in  Qt 4.2.
 See also linkActivated().
 */
 func (this *QLabel) LinkHovered(link string) {
-	var tmpArg0 = qtcore.NewQString_5(link)
+	var tmpArg0 = qtcore.NewQString5(link)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QLabel11linkHoveredERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -104,7 +104,7 @@ Note: The keys used are case insensitive.
 See also keys().
 */
 func (this *QStyleFactory) Create(arg0 string) *QStyle /*777 QStyle **/ {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStyleFactory6createERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

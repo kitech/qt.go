@@ -224,7 +224,7 @@ func (this *QAudioEncoderSettings) Codec() string {
 
  */
 func (this *QAudioEncoderSettings) SetCodec(codec string) {
-	var tmpArg0 = qtcore.NewQString_5(codec)
+	var tmpArg0 = qtcore.NewQString5(codec)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAudioEncoderSettings8setCodecERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -347,7 +347,7 @@ func (this *QAudioEncoderSettings) SetQuality(quality int) {
 
  */
 func (this *QAudioEncoderSettings) EncodingOption(option string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(option)
+	var tmpArg0 = qtcore.NewQString5(option)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QAudioEncoderSettings14encodingOptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -365,7 +365,7 @@ func (this *QAudioEncoderSettings) EncodingOption(option string) *qtcore.QVarian
 
  */
 func (this *QAudioEncoderSettings) SetEncodingOption(option string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(option)
+	var tmpArg0 = qtcore.NewQString5(option)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {

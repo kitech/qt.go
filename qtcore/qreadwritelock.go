@@ -103,10 +103,10 @@ This function was introduced in  Qt 4.4.
 
 See also lockForRead(), lockForWrite(), and RecursionMode.
 */
-func (*QReadWriteLock) NewForInherit__() *QReadWriteLock {
-	return NewQReadWriteLock__()
+func (*QReadWriteLock) NewForInheritp() *QReadWriteLock {
+	return NewQReadWriteLockp()
 }
-func NewQReadWriteLock__() *QReadWriteLock {
+func NewQReadWriteLockp() *QReadWriteLock {
 	// arg: 0, QReadWriteLock::RecursionMode=Enum, QReadWriteLock::RecursionMode=Enum, , Invalid
 	recursionMode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLockC2ENS_13RecursionModeE", qtrt.FFI_TYPE_POINTER, recursionMode)
@@ -186,7 +186,7 @@ It is not possible to lock for read if the thread already has locked for write.
 
 See also unlock() and lockForRead().
 */
-func (this *QReadWriteLock) TryLockForRead_1(timeout int) bool {
+func (this *QReadWriteLock) TryLockForRead1(timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -247,7 +247,7 @@ It is not possible to lock for write if the thread already has locked for read.
 
 See also unlock() and lockForWrite().
 */
-func (this *QReadWriteLock) TryLockForWrite_1(timeout int) bool {
+func (this *QReadWriteLock) TryLockForWrite1(timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

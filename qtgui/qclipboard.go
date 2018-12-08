@@ -106,7 +106,7 @@ The mode argument is used to control which part of the system clipboard is used.
 
 See also QClipboard::Mode and supportsSelection().
 */
-func (this *QClipboard) Clear__() {
+func (this *QClipboard) Clearp() {
 	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard5clearENS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
@@ -218,7 +218,7 @@ The mode argument is used to control which part of the system clipboard is used.
 
 See also setText() and mimeData().
 */
-func (this *QClipboard) Text__() string {
+func (this *QClipboard) Textp() string {
 	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QClipboard4textENS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
@@ -241,8 +241,8 @@ The mode argument is used to control which part of the system clipboard is used.
 
 See also setText() and mimeData().
 */
-func (this *QClipboard) Text_1(subtype string, mode int) string {
-	var tmpArg0 = qtcore.NewQString_5(subtype)
+func (this *QClipboard) Text1(subtype string, mode int) string {
+	var tmpArg0 = qtcore.NewQString5(subtype)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QClipboard4textER7QStringNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -264,8 +264,8 @@ The mode argument is used to control which part of the system clipboard is used.
 
 See also setText() and mimeData().
 */
-func (this *QClipboard) Text_1_(subtype string) string {
-	var tmpArg0 = qtcore.NewQString_5(subtype)
+func (this *QClipboard) Text1p(subtype string) string {
+	var tmpArg0 = qtcore.NewQString5(subtype)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
@@ -290,7 +290,7 @@ The mode argument is used to control which part of the system clipboard is used.
 See also text() and setMimeData().
 */
 func (this *QClipboard) SetText(arg0 string, mode int) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QClipboard7setTextERK7QStringNS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -308,8 +308,8 @@ The mode argument is used to control which part of the system clipboard is used.
 
 See also text() and setMimeData().
 */
-func (this *QClipboard) SetText__(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func (this *QClipboard) SetTextp(arg0 string) {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
@@ -355,7 +355,7 @@ Note: The pointer returned might become invalidated when the contents of the cli
 
 See also setMimeData().
 */
-func (this *QClipboard) MimeData__() *qtcore.QMimeData /*777 const QMimeData **/ {
+func (this *QClipboard) MimeDatap() *qtcore.QMimeData /*777 const QMimeData **/ {
 	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QClipboard8mimeDataENS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
@@ -400,7 +400,7 @@ The setText(), setImage() and setPixmap() functions are simpler wrappers for set
 
 See also mimeData().
 */
-func (this *QClipboard) SetMimeData__(data qtcore.QMimeData_ITF /*777 QMimeData **/) {
+func (this *QClipboard) SetMimeDatap(data qtcore.QMimeData_ITF /*777 QMimeData **/) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QMimeData_PTR() != nil {
 		convArg0 = data.QMimeData_PTR().GetCthis()
@@ -443,7 +443,7 @@ The mode argument is used to control which part of the system clipboard is used.
 
 See also setImage(), pixmap(), mimeData(), and QImage::isNull().
 */
-func (this *QClipboard) Image__() *QImage /*123*/ {
+func (this *QClipboard) Imagep() *QImage /*123*/ {
 	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QClipboard5imageENS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
@@ -485,7 +485,7 @@ The mode argument is used to control which part of the system clipboard is used.
 
 See also setPixmap(), image(), mimeData(), and QPixmap::convertFromImage().
 */
-func (this *QClipboard) Pixmap__() *QPixmap /*123*/ {
+func (this *QClipboard) Pixmapp() *QPixmap /*123*/ {
 	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QClipboard6pixmapENS_4ModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
@@ -546,7 +546,7 @@ This is shorthand for:
 
 See also image(), setPixmap(), and setMimeData().
 */
-func (this *QClipboard) SetImage__(arg0 QImage_ITF) {
+func (this *QClipboard) SetImagep(arg0 QImage_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QImage_PTR() != nil {
 		convArg0 = arg0.QImage_PTR().GetCthis()
@@ -590,7 +590,7 @@ The mode argument is used to control which part of the system clipboard is used.
 
 See also pixmap(), setImage(), and setMimeData().
 */
-func (this *QClipboard) SetPixmap__(arg0 QPixmap_ITF) {
+func (this *QClipboard) SetPixmapp(arg0 QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPixmap_PTR() != nil {
 		convArg0 = arg0.QPixmap_PTR().GetCthis()

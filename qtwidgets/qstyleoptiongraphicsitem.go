@@ -93,10 +93,10 @@ func NewQStyleOptionGraphicsItem() *QStyleOptionGraphicsItem {
 /*
 
  */
-func (*QStyleOptionGraphicsItem) NewForInherit_1(version int) *QStyleOptionGraphicsItem {
-	return NewQStyleOptionGraphicsItem_1(version)
+func (*QStyleOptionGraphicsItem) NewForInherit1(version int) *QStyleOptionGraphicsItem {
+	return NewQStyleOptionGraphicsItem1(version)
 }
-func NewQStyleOptionGraphicsItem_1(version int) *QStyleOptionGraphicsItem {
+func NewQStyleOptionGraphicsItem1(version int) *QStyleOptionGraphicsItem {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv)))

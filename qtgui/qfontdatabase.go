@@ -116,7 +116,7 @@ If a family exists in several foundries, the returned name for that font is in t
 
 See also writingSystems().
 */
-func (this *QFontDatabase) Families__() *qtcore.QStringList /*123*/ {
+func (this *QFontDatabase) Familiesp() *qtcore.QStringList /*123*/ {
 	// arg: 0, QFontDatabase::WritingSystem=Enum, QFontDatabase::WritingSystem=Enum, , Invalid
 	writingSystem := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase8familiesENS_13WritingSystemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), writingSystem)
@@ -137,7 +137,7 @@ Returns a list of the styles available for the font family family. Some example 
 See also families().
 */
 func (this *QFontDatabase) Styles(family string) *qtcore.QStringList /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase6stylesERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -175,7 +175,7 @@ func (this *QFontDatabase) StyleString(font QFont_ITF) string {
 /*
 Returns a string that describes the style of the font. For example, "Bold Italic", "Bold", "Italic" or "Normal". An empty string may be returned.
 */
-func (this *QFontDatabase) StyleString_1(fontInfo QFontInfo_ITF) string {
+func (this *QFontDatabase) StyleString1(fontInfo QFontInfo_ITF) string {
 	var convArg0 unsafe.Pointer
 	if fontInfo != nil && fontInfo.QFontInfo_PTR() != nil {
 		convArg0 = fontInfo.QFontInfo_PTR().GetCthis()
@@ -197,9 +197,9 @@ func (this *QFontDatabase) StyleString_1(fontInfo QFontInfo_ITF) string {
 Returns a QFont object that has family family, style style and point size pointSize. If no matching font could be created, a QFont object that uses the application's default font is returned.
 */
 func (this *QFontDatabase) Font(family string, style string, pointSize int) *QFont /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(style)
+	var tmpArg1 = qtcore.NewQString5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase4fontERK7QStringS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, pointSize)
 	qtrt.ErrPrint(err, rv)
@@ -219,9 +219,9 @@ Returns true if the font that has family family and style style is a scalable bi
 See also isScalable() and isSmoothlyScalable().
 */
 func (this *QFontDatabase) IsBitmapScalable(family string, style string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(style)
+	var tmpArg1 = qtcore.NewQString5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -238,8 +238,8 @@ Returns true if the font that has family family and style style is a scalable bi
 
 See also isScalable() and isSmoothlyScalable().
 */
-func (this *QFontDatabase) IsBitmapScalable__(family string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+func (this *QFontDatabase) IsBitmapScalablep(family string) bool {
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
@@ -259,9 +259,9 @@ Returns true if the font that has family family and style style is smoothly scal
 See also isScalable() and isBitmapScalable().
 */
 func (this *QFontDatabase) IsSmoothlyScalable(family string, style string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(style)
+	var tmpArg1 = qtcore.NewQString5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -278,8 +278,8 @@ Returns true if the font that has family family and style style is smoothly scal
 
 See also isScalable() and isBitmapScalable().
 */
-func (this *QFontDatabase) IsSmoothlyScalable__(family string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+func (this *QFontDatabase) IsSmoothlyScalablep(family string) bool {
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
@@ -299,9 +299,9 @@ Returns true if the font that has family family and style style is scalable; oth
 See also isBitmapScalable() and isSmoothlyScalable().
 */
 func (this *QFontDatabase) IsScalable(family string, style string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(style)
+	var tmpArg1 = qtcore.NewQString5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase10isScalableERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -318,8 +318,8 @@ Returns true if the font that has family family and style style is scalable; oth
 
 See also isBitmapScalable() and isSmoothlyScalable().
 */
-func (this *QFontDatabase) IsScalable__(family string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+func (this *QFontDatabase) IsScalablep(family string) bool {
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
@@ -337,9 +337,9 @@ func (this *QFontDatabase) IsScalable__(family string) bool {
 Returns true if the font that has family family and style style is fixed pitch; otherwise returns false.
 */
 func (this *QFontDatabase) IsFixedPitch(family string, style string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(style)
+	var tmpArg1 = qtcore.NewQString5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -354,8 +354,8 @@ func (this *QFontDatabase) IsFixedPitch(family string, style string) bool {
 /*
 Returns true if the font that has family family and style style is fixed pitch; otherwise returns false.
 */
-func (this *QFontDatabase) IsFixedPitch__(family string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+func (this *QFontDatabase) IsFixedPitchp(family string) bool {
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
@@ -375,9 +375,9 @@ Returns true if the font that has family family and style style is italic; other
 See also weight() and bold().
 */
 func (this *QFontDatabase) Italic(family string, style string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(style)
+	var tmpArg1 = qtcore.NewQString5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase6italicERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -395,9 +395,9 @@ Returns true if the font that has family family and style style is bold; otherwi
 See also italic() and weight().
 */
 func (this *QFontDatabase) Bold(family string, style string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(style)
+	var tmpArg1 = qtcore.NewQString5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase4boldERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -415,9 +415,9 @@ Returns the weight of the font that has family family and style style. If there 
 See also italic() and bold().
 */
 func (this *QFontDatabase) Weight(family string, style string) int {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(style)
+	var tmpArg1 = qtcore.NewQString5(style)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase6weightERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -433,7 +433,7 @@ func (this *QFontDatabase) Weight(family string, style string) int {
 
  */
 func (this *QFontDatabase) HasFamily(family string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase9hasFamilyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -455,7 +455,7 @@ This function was introduced in  Qt 5.5.
 See also families().
 */
 func (this *QFontDatabase) IsPrivateFamily(family string) bool {
-	var tmpArg0 = qtcore.NewQString_5(family)
+	var tmpArg0 = qtcore.NewQString5(family)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase15isPrivateFamilyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -525,7 +525,7 @@ This function was introduced in  Qt 4.2.
 See also addApplicationFontFromData(), applicationFontFamilies(), and removeApplicationFont().
 */
 func (this *QFontDatabase) AddApplicationFont(fileName string) int {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase18addApplicationFontERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

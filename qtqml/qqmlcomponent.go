@@ -109,10 +109,10 @@ func NewQQmlComponent(parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponen
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
-func (*QQmlComponent) NewForInherit__() *QQmlComponent {
-	return NewQQmlComponent__()
+func (*QQmlComponent) NewForInheritp() *QQmlComponent {
+	return NewQQmlComponentp()
 }
-func NewQQmlComponent__() *QQmlComponent {
+func NewQQmlComponentp() *QQmlComponent {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponentC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -130,10 +130,10 @@ func NewQQmlComponent__() *QQmlComponent {
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
-func (*QQmlComponent) NewForInherit_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
-	return NewQQmlComponent_1(arg0, parent)
+func (*QQmlComponent) NewForInherit1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+	return NewQQmlComponent1(arg0, parent)
 }
-func NewQQmlComponent_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+func NewQQmlComponent1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
@@ -157,10 +157,10 @@ func NewQQmlComponent_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, parent qtcore.
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
-func (*QQmlComponent) NewForInherit_1_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlComponent {
-	return NewQQmlComponent_1_(arg0)
+func (*QQmlComponent) NewForInherit1p(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlComponent {
+	return NewQQmlComponent1p(arg0)
 }
-func NewQQmlComponent_1_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlComponent {
+func NewQQmlComponent1p(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
@@ -182,15 +182,15 @@ func NewQQmlComponent_1_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlComponen
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
-func (*QQmlComponent) NewForInherit_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
-	return NewQQmlComponent_2(arg0, fileName, parent)
+func (*QQmlComponent) NewForInherit2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+	return NewQQmlComponent2(arg0, fileName, parent)
 }
-func NewQQmlComponent_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+func NewQQmlComponent2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(fileName)
+	var tmpArg1 = qtcore.NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -211,15 +211,15 @@ func NewQQmlComponent_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName strin
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
-func (*QQmlComponent) NewForInherit_2_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string) *QQmlComponent {
-	return NewQQmlComponent_2_(arg0, fileName)
+func (*QQmlComponent) NewForInherit2p(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string) *QQmlComponent {
+	return NewQQmlComponent2p(arg0, fileName)
 }
-func NewQQmlComponent_2_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string) *QQmlComponent {
+func NewQQmlComponent2p(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(fileName)
+	var tmpArg1 = qtcore.NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -238,15 +238,15 @@ func NewQQmlComponent_2_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName stri
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
-func (*QQmlComponent) NewForInherit_3(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
-	return NewQQmlComponent_3(arg0, fileName, mode, parent)
+func (*QQmlComponent) NewForInherit3(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+	return NewQQmlComponent3(arg0, fileName, mode, parent)
 }
-func NewQQmlComponent_3(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+func NewQQmlComponent3(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(fileName)
+	var tmpArg1 = qtcore.NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg3 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -267,15 +267,15 @@ func NewQQmlComponent_3(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName strin
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
-func (*QQmlComponent) NewForInherit_3_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int) *QQmlComponent {
-	return NewQQmlComponent_3_(arg0, fileName, mode)
+func (*QQmlComponent) NewForInherit3p(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int) *QQmlComponent {
+	return NewQQmlComponent3p(arg0, fileName, mode)
 }
-func NewQQmlComponent_3_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int) *QQmlComponent {
+func NewQQmlComponent3p(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName string, mode int) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(fileName)
+	var tmpArg1 = qtcore.NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
@@ -294,10 +294,10 @@ func NewQQmlComponent_3_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, fileName stri
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
-func (*QQmlComponent) NewForInherit_4(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
-	return NewQQmlComponent_4(arg0, url, parent)
+func (*QQmlComponent) NewForInherit4(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+	return NewQQmlComponent4(arg0, url, parent)
 }
-func NewQQmlComponent_4(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+func NewQQmlComponent4(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
@@ -325,10 +325,10 @@ func NewQQmlComponent_4(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUr
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
-func (*QQmlComponent) NewForInherit_4_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF) *QQmlComponent {
-	return NewQQmlComponent_4_(arg0, url)
+func (*QQmlComponent) NewForInherit4p(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF) *QQmlComponent {
+	return NewQQmlComponent4p(arg0, url)
 }
-func NewQQmlComponent_4_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF) *QQmlComponent {
+func NewQQmlComponent4p(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
@@ -354,10 +354,10 @@ func NewQQmlComponent_4_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QU
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
-func (*QQmlComponent) NewForInherit_5(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
-	return NewQQmlComponent_5(arg0, url, mode, parent)
+func (*QQmlComponent) NewForInherit5(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+	return NewQQmlComponent5(arg0, url, mode, parent)
 }
-func NewQQmlComponent_5(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
+func NewQQmlComponent5(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
@@ -385,10 +385,10 @@ func NewQQmlComponent_5(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUr
 /*
 Create a QQmlComponent with no data and give it the specified engine and parent. Set the data with setData().
 */
-func (*QQmlComponent) NewForInherit_5_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int) *QQmlComponent {
-	return NewQQmlComponent_5_(arg0, url, mode)
+func (*QQmlComponent) NewForInherit5p(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int) *QQmlComponent {
+	return NewQQmlComponent5p(arg0, url, mode)
 }
-func NewQQmlComponent_5_(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int) *QQmlComponent {
+func NewQQmlComponent5p(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, url qtcore.QUrl_ITF, mode int) *QQmlComponent {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
@@ -580,7 +580,7 @@ If the object being created from this component is a visual item, it must have a
 
 See also QQmlEngine::ObjectOwnership.
 */
-func (this *QQmlComponent) Create__() *qtcore.QObject /*777 QObject **/ {
+func (this *QQmlComponent) Createp() *qtcore.QObject /*777 QObject **/ {
 	// arg: 0, QQmlContext *=Pointer, QQmlContext=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlComponent6createEP11QQmlContext", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -604,7 +604,7 @@ If the object being created from this component is a visual item, it must have a
 
 See also QQmlEngine::ObjectOwnership.
 */
-func (this *QQmlComponent) Create_1(arg0 QQmlIncubator_ITF, context QQmlContext_ITF /*777 QQmlContext **/, forContext QQmlContext_ITF /*777 QQmlContext **/) {
+func (this *QQmlComponent) Create1(arg0 QQmlIncubator_ITF, context QQmlContext_ITF /*777 QQmlContext **/, forContext QQmlContext_ITF /*777 QQmlContext **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlIncubator_PTR() != nil {
 		convArg0 = arg0.QQmlIncubator_PTR().GetCthis()
@@ -637,7 +637,7 @@ If the object being created from this component is a visual item, it must have a
 
 See also QQmlEngine::ObjectOwnership.
 */
-func (this *QQmlComponent) Create_1_(arg0 QQmlIncubator_ITF) {
+func (this *QQmlComponent) Create1p(arg0 QQmlIncubator_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlIncubator_PTR() != nil {
 		convArg0 = arg0.QQmlIncubator_PTR().GetCthis()
@@ -666,7 +666,7 @@ If the object being created from this component is a visual item, it must have a
 
 See also QQmlEngine::ObjectOwnership.
 */
-func (this *QQmlComponent) Create_1_1(arg0 QQmlIncubator_ITF, context QQmlContext_ITF /*777 QQmlContext **/) {
+func (this *QQmlComponent) Create1p1(arg0 QQmlIncubator_ITF, context QQmlContext_ITF /*777 QQmlContext **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlIncubator_PTR() != nil {
 		convArg0 = arg0.QQmlIncubator_PTR().GetCthis()
@@ -790,7 +790,7 @@ Ensure that the URL provided is full and correct, in particular, use QUrl::fromL
 
 Relative paths will be resolved against the engine's baseUrl(), which is the current working directory unless specified.
 */
-func (this *QQmlComponent) LoadUrl_1(url qtcore.QUrl_ITF, mode int) {
+func (this *QQmlComponent) LoadUrl1(url qtcore.QUrl_ITF, mode int) {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()

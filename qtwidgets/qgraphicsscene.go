@@ -219,10 +219,10 @@ func NewQGraphicsScene(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsSc
 /*
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
-func (*QGraphicsScene) NewForInherit__() *QGraphicsScene {
-	return NewQGraphicsScene__()
+func (*QGraphicsScene) NewForInheritp() *QGraphicsScene {
+	return NewQGraphicsScenep()
 }
-func NewQGraphicsScene__() *QGraphicsScene {
+func NewQGraphicsScenep() *QGraphicsScene {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsSceneC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -240,10 +240,10 @@ func NewQGraphicsScene__() *QGraphicsScene {
 /*
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
-func (*QGraphicsScene) NewForInherit_1(sceneRect qtcore.QRectF_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
-	return NewQGraphicsScene_1(sceneRect, parent)
+func (*QGraphicsScene) NewForInherit1(sceneRect qtcore.QRectF_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
+	return NewQGraphicsScene1(sceneRect, parent)
 }
-func NewQGraphicsScene_1(sceneRect qtcore.QRectF_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
+func NewQGraphicsScene1(sceneRect qtcore.QRectF_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
 	var convArg0 unsafe.Pointer
 	if sceneRect != nil && sceneRect.QRectF_PTR() != nil {
 		convArg0 = sceneRect.QRectF_PTR().GetCthis()
@@ -267,10 +267,10 @@ func NewQGraphicsScene_1(sceneRect qtcore.QRectF_ITF, parent qtcore.QObject_ITF 
 /*
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
-func (*QGraphicsScene) NewForInherit_1_(sceneRect qtcore.QRectF_ITF) *QGraphicsScene {
-	return NewQGraphicsScene_1_(sceneRect)
+func (*QGraphicsScene) NewForInherit1p(sceneRect qtcore.QRectF_ITF) *QGraphicsScene {
+	return NewQGraphicsScene1p(sceneRect)
 }
-func NewQGraphicsScene_1_(sceneRect qtcore.QRectF_ITF) *QGraphicsScene {
+func NewQGraphicsScene1p(sceneRect qtcore.QRectF_ITF) *QGraphicsScene {
 	var convArg0 unsafe.Pointer
 	if sceneRect != nil && sceneRect.QRectF_PTR() != nil {
 		convArg0 = sceneRect.QRectF_PTR().GetCthis()
@@ -292,10 +292,10 @@ func NewQGraphicsScene_1_(sceneRect qtcore.QRectF_ITF) *QGraphicsScene {
 /*
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
-func (*QGraphicsScene) NewForInherit_2(x float64, y float64, width float64, height float64, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
-	return NewQGraphicsScene_2(x, y, width, height, parent)
+func (*QGraphicsScene) NewForInherit2(x float64, y float64, width float64, height float64, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
+	return NewQGraphicsScene2(x, y, width, height, parent)
 }
-func NewQGraphicsScene_2(x float64, y float64, width float64, height float64, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
+func NewQGraphicsScene2(x float64, y float64, width float64, height float64, parent qtcore.QObject_ITF /*777 QObject **/) *QGraphicsScene {
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg4 = parent.QObject_PTR().GetCthis()
@@ -315,10 +315,10 @@ func NewQGraphicsScene_2(x float64, y float64, width float64, height float64, pa
 /*
 Constructs a QGraphicsScene object. The parent parameter is passed to QObject's constructor.
 */
-func (*QGraphicsScene) NewForInherit_2_(x float64, y float64, width float64, height float64) *QGraphicsScene {
-	return NewQGraphicsScene_2_(x, y, width, height)
+func (*QGraphicsScene) NewForInherit2p(x float64, y float64, width float64, height float64) *QGraphicsScene {
+	return NewQGraphicsScene2p(x, y, width, height)
 }
-func NewQGraphicsScene_2_(x float64, y float64, width float64, height float64) *QGraphicsScene {
+func NewQGraphicsScene2p(x float64, y float64, width float64, height float64) *QGraphicsScene {
 	// arg: 4, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsSceneC2EddddP7QObject", qtrt.FFI_TYPE_POINTER, x, y, width, height, convArg4)
@@ -416,7 +416,7 @@ func (this *QGraphicsScene) SetSceneRect(rect qtcore.QRectF_ITF) {
 /*
 
  */
-func (this *QGraphicsScene) SetSceneRect_1(x float64, y float64, w float64, h float64) {
+func (this *QGraphicsScene) SetSceneRect1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene12setSceneRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -490,7 +490,7 @@ The source rect contents will be transformed according to aspectRatioMode to fit
 
 See also QGraphicsView::render().
 */
-func (this *QGraphicsScene) Render__(painter qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QGraphicsScene) Renderp(painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -531,7 +531,7 @@ The source rect contents will be transformed according to aspectRatioMode to fit
 
 See also QGraphicsView::render().
 */
-func (this *QGraphicsScene) Render__1(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRectF_ITF) {
+func (this *QGraphicsScene) Renderp1(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -574,7 +574,7 @@ The source rect contents will be transformed according to aspectRatioMode to fit
 
 See also QGraphicsView::render().
 */
-func (this *QGraphicsScene) Render__2(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRectF_ITF, source qtcore.QRectF_ITF) {
+func (this *QGraphicsScene) Renderp2(painter qtgui.QPainter_ITF /*777 QPainter **/, target qtcore.QRectF_ITF, source qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -719,7 +719,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items__() *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Itemsp() *QGraphicsItemList /*lll*/ {
 	// arg: 0, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsEN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), order)
@@ -738,7 +738,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_1(pos qtcore.QPointF_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items1(pos qtcore.QPointF_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
 		convArg0 = pos.QPointF_PTR().GetCthis()
@@ -763,7 +763,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_1_(pos qtcore.QPointF_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items1p(pos qtcore.QPointF_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
 		convArg0 = pos.QPointF_PTR().GetCthis()
@@ -790,7 +790,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_1_1(pos qtcore.QPointF_ITF, mode int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items1p1(pos qtcore.QPointF_ITF, mode int) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
 		convArg0 = pos.QPointF_PTR().GetCthis()
@@ -815,7 +815,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_1_2(pos qtcore.QPointF_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items1p2(pos qtcore.QPointF_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
 		convArg0 = pos.QPointF_PTR().GetCthis()
@@ -838,7 +838,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_2(rect qtcore.QRectF_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items2(rect qtcore.QRectF_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -863,7 +863,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_2_(rect qtcore.QRectF_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items2p(rect qtcore.QRectF_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -890,7 +890,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_2_1(rect qtcore.QRectF_ITF, mode int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items2p1(rect qtcore.QRectF_ITF, mode int) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -915,7 +915,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_2_2(rect qtcore.QRectF_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items2p2(rect qtcore.QRectF_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -938,7 +938,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_3(polygon qtgui.QPolygonF_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items3(polygon qtgui.QPolygonF_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -963,7 +963,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_3_(polygon qtgui.QPolygonF_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items3p(polygon qtgui.QPolygonF_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -990,7 +990,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_3_1(polygon qtgui.QPolygonF_ITF, mode int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items3p1(polygon qtgui.QPolygonF_ITF, mode int) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -1015,7 +1015,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_3_2(polygon qtgui.QPolygonF_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items3p2(polygon qtgui.QPolygonF_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -1038,7 +1038,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_4(path qtgui.QPainterPath_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items4(path qtgui.QPainterPath_ITF, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1063,7 +1063,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_4_(path qtgui.QPainterPath_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items4p(path qtgui.QPainterPath_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1090,7 +1090,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_4_1(path qtgui.QPainterPath_ITF, mode int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items4p1(path qtgui.QPainterPath_ITF, mode int) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1115,7 +1115,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_4_2(path qtgui.QPainterPath_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items4p2(path qtgui.QPainterPath_ITF, mode int, order int) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1138,7 +1138,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_5(x float64, y float64, w float64, h float64, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items5(x float64, y float64, w float64, h float64, mode int, order int, deviceTransform qtgui.QTransform_ITF) *QGraphicsItemList /*lll*/ {
 	var convArg6 unsafe.Pointer
 	if deviceTransform != nil && deviceTransform.QTransform_PTR() != nil {
 		convArg6 = deviceTransform.QTransform_PTR().GetCthis()
@@ -1159,7 +1159,7 @@ Returns an ordered list of all items on the scene. order decides the stacking or
 
 See also addItem(), removeItem(), and Sorting.
 */
-func (this *QGraphicsScene) Items_5_(x float64, y float64, w float64, h float64, mode int, order int) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) Items5p(x float64, y float64, w float64, h float64, mode int, order int) *QGraphicsItemList /*lll*/ {
 	// arg: 6, const QTransform &=LValueReference, QTransform=Record, , Invalid
 	var convArg6 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScene5itemsEddddN2Qt17ItemSelectionModeENS0_9SortOrderERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, mode, order, convArg6)
@@ -1203,7 +1203,7 @@ The items are returned in descending stacking order (i.e., the first item in the
 
 See also items(), itemAt(), QGraphicsItem::collidesWithItem(), and Sorting.
 */
-func (this *QGraphicsScene) CollidingItems__(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) *QGraphicsItemList /*lll*/ {
+func (this *QGraphicsScene) CollidingItemsp(item QGraphicsItem_ITF /*777 const QGraphicsItem **/) *QGraphicsItemList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -1262,7 +1262,7 @@ This function was introduced in  Qt 4.6.
 
 See also items(), collidingItems(), and Sorting.
 */
-func (this *QGraphicsScene) ItemAt_1(x float64, y float64, deviceTransform qtgui.QTransform_ITF) *QGraphicsItem /*777 QGraphicsItem **/ {
+func (this *QGraphicsScene) ItemAt1(x float64, y float64, deviceTransform qtgui.QTransform_ITF) *QGraphicsItem /*777 QGraphicsItem **/ {
 	var convArg2 unsafe.Pointer
 	if deviceTransform != nil && deviceTransform.QTransform_PTR() != nil {
 		convArg2 = deviceTransform.QTransform_PTR().GetCthis()
@@ -1352,7 +1352,7 @@ This function was introduced in  Qt 4.6.
 
 See also clearSelection() and selectionArea().
 */
-func (this *QGraphicsScene) SetSelectionArea_1(path qtgui.QPainterPath_ITF, mode int, deviceTransform qtgui.QTransform_ITF) {
+func (this *QGraphicsScene) SetSelectionArea1(path qtgui.QPainterPath_ITF, mode int, deviceTransform qtgui.QTransform_ITF) {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1381,7 +1381,7 @@ This function was introduced in  Qt 4.6.
 
 See also clearSelection() and selectionArea().
 */
-func (this *QGraphicsScene) SetSelectionArea_1_(path qtgui.QPainterPath_ITF) {
+func (this *QGraphicsScene) SetSelectionArea1p(path qtgui.QPainterPath_ITF) {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1410,7 +1410,7 @@ This function was introduced in  Qt 4.6.
 
 See also clearSelection() and selectionArea().
 */
-func (this *QGraphicsScene) SetSelectionArea_1_1(path qtgui.QPainterPath_ITF, mode int) {
+func (this *QGraphicsScene) SetSelectionArea1p1(path qtgui.QPainterPath_ITF, mode int) {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1437,7 +1437,7 @@ This function was introduced in  Qt 4.6.
 
 See also clearSelection() and selectionArea().
 */
-func (this *QGraphicsScene) SetSelectionArea_2(path qtgui.QPainterPath_ITF, selectionOperation int, mode int, deviceTransform qtgui.QTransform_ITF) {
+func (this *QGraphicsScene) SetSelectionArea2(path qtgui.QPainterPath_ITF, selectionOperation int, mode int, deviceTransform qtgui.QTransform_ITF) {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1466,7 +1466,7 @@ This function was introduced in  Qt 4.6.
 
 See also clearSelection() and selectionArea().
 */
-func (this *QGraphicsScene) SetSelectionArea_2_(path qtgui.QPainterPath_ITF, selectionOperation int) {
+func (this *QGraphicsScene) SetSelectionArea2p(path qtgui.QPainterPath_ITF, selectionOperation int) {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1495,7 +1495,7 @@ This function was introduced in  Qt 4.6.
 
 See also clearSelection() and selectionArea().
 */
-func (this *QGraphicsScene) SetSelectionArea_2_1(path qtgui.QPainterPath_ITF, selectionOperation int, mode int) {
+func (this *QGraphicsScene) SetSelectionArea2p1(path qtgui.QPainterPath_ITF, selectionOperation int, mode int) {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1598,7 +1598,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addLine(), addPath(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddEllipse__(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
+func (this *QGraphicsScene) AddEllipsep(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -1626,7 +1626,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addLine(), addPath(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddEllipse__1(rect qtcore.QRectF_ITF, pen qtgui.QPen_ITF) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
+func (this *QGraphicsScene) AddEllipsep1(rect qtcore.QRectF_ITF, pen qtgui.QPen_ITF) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -1656,7 +1656,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addLine(), addPath(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddEllipse_1(x float64, y float64, w float64, h float64, pen qtgui.QPen_ITF, brush qtgui.QBrush_ITF) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
+func (this *QGraphicsScene) AddEllipse1(x float64, y float64, w float64, h float64, pen qtgui.QPen_ITF, brush qtgui.QBrush_ITF) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
 	var convArg4 unsafe.Pointer
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg4 = pen.QPen_PTR().GetCthis()
@@ -1684,7 +1684,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addLine(), addPath(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddEllipse_1_(x float64, y float64, w float64, h float64) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
+func (this *QGraphicsScene) AddEllipse1p(x float64, y float64, w float64, h float64) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
 	// arg: 4, const QPen &=LValueReference, QPen=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	// arg: 5, const QBrush &=LValueReference, QBrush=Record, , Invalid
@@ -1708,7 +1708,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addLine(), addPath(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddEllipse_1_1(x float64, y float64, w float64, h float64, pen qtgui.QPen_ITF) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
+func (this *QGraphicsScene) AddEllipse1p1(x float64, y float64, w float64, h float64, pen qtgui.QPen_ITF) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
 	var convArg4 unsafe.Pointer
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg4 = pen.QPen_PTR().GetCthis()
@@ -1762,7 +1762,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addPath(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddLine__(line qtcore.QLineF_ITF) *QGraphicsLineItem /*777 QGraphicsLineItem **/ {
+func (this *QGraphicsScene) AddLinep(line qtcore.QLineF_ITF) *QGraphicsLineItem /*777 QGraphicsLineItem **/ {
 	var convArg0 unsafe.Pointer
 	if line != nil && line.QLineF_PTR() != nil {
 		convArg0 = line.QLineF_PTR().GetCthis()
@@ -1788,7 +1788,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addPath(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddLine_1(x1 float64, y1 float64, x2 float64, y2 float64, pen qtgui.QPen_ITF) *QGraphicsLineItem /*777 QGraphicsLineItem **/ {
+func (this *QGraphicsScene) AddLine1(x1 float64, y1 float64, x2 float64, y2 float64, pen qtgui.QPen_ITF) *QGraphicsLineItem /*777 QGraphicsLineItem **/ {
 	var convArg4 unsafe.Pointer
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg4 = pen.QPen_PTR().GetCthis()
@@ -1812,7 +1812,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addPath(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddLine_1_(x1 float64, y1 float64, x2 float64, y2 float64) *QGraphicsLineItem /*777 QGraphicsLineItem **/ {
+func (this *QGraphicsScene) AddLine1p(x1 float64, y1 float64, x2 float64, y2 float64) *QGraphicsLineItem /*777 QGraphicsLineItem **/ {
 	// arg: 4, const QPen &=LValueReference, QPen=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene7addLineEddddRK4QPen", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2, convArg4)
@@ -1866,7 +1866,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addLine(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddPath__(path qtgui.QPainterPath_ITF) *QGraphicsPathItem /*777 QGraphicsPathItem **/ {
+func (this *QGraphicsScene) AddPathp(path qtgui.QPainterPath_ITF) *QGraphicsPathItem /*777 QGraphicsPathItem **/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1894,7 +1894,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addLine(), addPixmap(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddPath__1(path qtgui.QPainterPath_ITF, pen qtgui.QPen_ITF) *QGraphicsPathItem /*777 QGraphicsPathItem **/ {
+func (this *QGraphicsScene) AddPathp1(path qtgui.QPainterPath_ITF, pen qtgui.QPen_ITF) *QGraphicsPathItem /*777 QGraphicsPathItem **/ {
 	var convArg0 unsafe.Pointer
 	if path != nil && path.QPainterPath_PTR() != nil {
 		convArg0 = path.QPainterPath_PTR().GetCthis()
@@ -1980,7 +1980,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addLine(), addPath(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddPolygon__(polygon qtgui.QPolygonF_ITF) *QGraphicsPolygonItem /*777 QGraphicsPolygonItem **/ {
+func (this *QGraphicsScene) AddPolygonp(polygon qtgui.QPolygonF_ITF) *QGraphicsPolygonItem /*777 QGraphicsPolygonItem **/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -2008,7 +2008,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addLine(), addPath(), addRect(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddPolygon__1(polygon qtgui.QPolygonF_ITF, pen qtgui.QPen_ITF) *QGraphicsPolygonItem /*777 QGraphicsPolygonItem **/ {
+func (this *QGraphicsScene) AddPolygonp1(polygon qtgui.QPolygonF_ITF, pen qtgui.QPen_ITF) *QGraphicsPolygonItem /*777 QGraphicsPolygonItem **/ {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -2070,7 +2070,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addLine(), addPixmap(), addPixmap(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddRect__(rect qtcore.QRectF_ITF) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
+func (this *QGraphicsScene) AddRectp(rect qtcore.QRectF_ITF) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -2098,7 +2098,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addLine(), addPixmap(), addPixmap(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddRect__1(rect qtcore.QRectF_ITF, pen qtgui.QPen_ITF) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
+func (this *QGraphicsScene) AddRectp1(rect qtcore.QRectF_ITF, pen qtgui.QPen_ITF) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -2128,7 +2128,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addLine(), addPixmap(), addPixmap(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddRect_1(x float64, y float64, w float64, h float64, pen qtgui.QPen_ITF, brush qtgui.QBrush_ITF) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
+func (this *QGraphicsScene) AddRect1(x float64, y float64, w float64, h float64, pen qtgui.QPen_ITF, brush qtgui.QBrush_ITF) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
 	var convArg4 unsafe.Pointer
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg4 = pen.QPen_PTR().GetCthis()
@@ -2156,7 +2156,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addLine(), addPixmap(), addPixmap(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddRect_1_(x float64, y float64, w float64, h float64) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
+func (this *QGraphicsScene) AddRect1p(x float64, y float64, w float64, h float64) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
 	// arg: 4, const QPen &=LValueReference, QPen=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	// arg: 5, const QBrush &=LValueReference, QBrush=Record, , Invalid
@@ -2180,7 +2180,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addLine(), addPixmap(), addPixmap(), addText(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddRect_1_1(x float64, y float64, w float64, h float64, pen qtgui.QPen_ITF) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
+func (this *QGraphicsScene) AddRect1p1(x float64, y float64, w float64, h float64, pen qtgui.QPen_ITF) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
 	var convArg4 unsafe.Pointer
 	if pen != nil && pen.QPen_PTR() != nil {
 		convArg4 = pen.QPen_PTR().GetCthis()
@@ -2207,7 +2207,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 See also addEllipse(), addLine(), addPixmap(), addPixmap(), addRect(), addItem(), and addWidget().
 */
 func (this *QGraphicsScene) AddText(text string, font qtgui.QFont_ITF) *QGraphicsTextItem /*777 QGraphicsTextItem **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
@@ -2232,8 +2232,8 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addLine(), addPixmap(), addPixmap(), addRect(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddText__(text string) *QGraphicsTextItem /*777 QGraphicsTextItem **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QGraphicsScene) AddTextp(text string) *QGraphicsTextItem /*777 QGraphicsTextItem **/ {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QFont &=LValueReference, QFont=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -2257,7 +2257,7 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 See also addEllipse(), addLine(), addPixmap(), addPixmap(), addRect(), addItem(), and addWidget().
 */
 func (this *QGraphicsScene) AddSimpleText(text string, font qtgui.QFont_ITF) *QGraphicsSimpleTextItem /*777 QGraphicsSimpleTextItem **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
@@ -2282,8 +2282,8 @@ If the item is visible (i.e., QGraphicsItem::isVisible() returns true), QGraphic
 
 See also addEllipse(), addLine(), addPixmap(), addPixmap(), addRect(), addItem(), and addWidget().
 */
-func (this *QGraphicsScene) AddSimpleText__(text string) *QGraphicsSimpleTextItem /*777 QGraphicsSimpleTextItem **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QGraphicsScene) AddSimpleTextp(text string) *QGraphicsSimpleTextItem /*777 QGraphicsSimpleTextItem **/ {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QFont &=LValueReference, QFont=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -2334,7 +2334,7 @@ Note that widgets with the Qt::WA_PaintOnScreen widget attribute set and widgets
 
 See also addEllipse(), addLine(), addPixmap(), addPixmap(), addRect(), addText(), addSimpleText(), and addItem().
 */
-func (this *QGraphicsScene) AddWidget__(widget QWidget_ITF /*777 QWidget **/) *QGraphicsProxyWidget /*777 QGraphicsProxyWidget **/ {
+func (this *QGraphicsScene) AddWidgetp(widget QWidget_ITF /*777 QWidget **/) *QGraphicsProxyWidget /*777 QGraphicsProxyWidget **/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -2420,7 +2420,7 @@ If item is not 0, and the scene does not currently have focus (i.e., hasFocus() 
 
 See also focusItem(), hasFocus(), and setFocus().
 */
-func (this *QGraphicsScene) SetFocusItem__(item QGraphicsItem_ITF /*777 QGraphicsItem **/) {
+func (this *QGraphicsScene) SetFocusItemp(item QGraphicsItem_ITF /*777 QGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsItem_PTR() != nil {
 		convArg0 = item.QGraphicsItem_PTR().GetCthis()
@@ -2476,7 +2476,7 @@ If the scene already has focus, this function does nothing.
 
 See also hasFocus(), clearFocus(), and setFocusItem().
 */
-func (this *QGraphicsScene) SetFocus__() {
+func (this *QGraphicsScene) SetFocusp() {
 	// arg: 0, Qt::FocusReason=Elaborated, Qt::FocusReason=Enum, , Invalid
 	focusReason := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene8setFocusEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), focusReason)
@@ -2662,7 +2662,7 @@ Schedules a redraw of the area rect on the scene.
 
 See also sceneRect() and changed().
 */
-func (this *QGraphicsScene) Update_1(rect qtcore.QRectF_ITF) {
+func (this *QGraphicsScene) Update1(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -2681,7 +2681,7 @@ Schedules a redraw of the area rect on the scene.
 
 See also sceneRect() and changed().
 */
-func (this *QGraphicsScene) Update_1_() {
+func (this *QGraphicsScene) Update1p() {
 	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene6updateERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -2785,7 +2785,7 @@ Note that QGraphicsView currently supports background caching only (see QGraphic
 
 See also QGraphicsView::resetCachedContent().
 */
-func (this *QGraphicsScene) Invalidate__(x float64, y float64, w float64, h float64) {
+func (this *QGraphicsScene) Invalidatep(x float64, y float64, w float64, h float64) {
 	// arg: 4, QGraphicsScene::SceneLayers=Typedef, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>, Unexposed
 	layers := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QGraphicsScene10invalidateEdddd6QFlagsINS_10SceneLayerEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, layers)
@@ -2838,7 +2838,7 @@ Note that QGraphicsView currently supports background caching only (see QGraphic
 
 See also QGraphicsView::resetCachedContent().
 */
-func (this *QGraphicsScene) Invalidate_1(rect qtcore.QRectF_ITF, layers int) {
+func (this *QGraphicsScene) Invalidate1(rect qtcore.QRectF_ITF, layers int) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -2893,7 +2893,7 @@ Note that QGraphicsView currently supports background caching only (see QGraphic
 
 See also QGraphicsView::resetCachedContent().
 */
-func (this *QGraphicsScene) Invalidate_1_() {
+func (this *QGraphicsScene) Invalidate1p() {
 	// arg: 0, const QRectF &=LValueReference, QRectF=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, QGraphicsScene::SceneLayers=Typedef, QGraphicsScene::SceneLayers=Typedef, QFlags<QGraphicsScene::SceneLayer>, Unexposed
@@ -2948,7 +2948,7 @@ Note that QGraphicsView currently supports background caching only (see QGraphic
 
 See also QGraphicsView::resetCachedContent().
 */
-func (this *QGraphicsScene) Invalidate_1_1(rect qtcore.QRectF_ITF) {
+func (this *QGraphicsScene) Invalidate1p1(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -3745,7 +3745,7 @@ func (this *QGraphicsScene) DrawItems(painter qtgui.QPainter_ITF /*777 QPainter 
 /*
 
  */
-func (this *QGraphicsScene) DrawItems__(painter qtgui.QPainter_ITF /*777 QPainter **/, numItems int, items []interface{}, options []interface{}) {
+func (this *QGraphicsScene) DrawItemsp(painter qtgui.QPainter_ITF /*777 QPainter **/, numItems int, items []interface{}, options []interface{}) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()

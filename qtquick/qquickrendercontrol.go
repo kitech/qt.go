@@ -111,10 +111,10 @@ func NewQQuickRenderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QQuick
 /*
 Constructs a QQuickRenderControl object, with parent object parent.
 */
-func (*QQuickRenderControl) NewForInherit__() *QQuickRenderControl {
-	return NewQQuickRenderControl__()
+func (*QQuickRenderControl) NewForInheritp() *QQuickRenderControl {
+	return NewQQuickRenderControlp()
 }
-func NewQQuickRenderControl__() *QQuickRenderControl {
+func NewQQuickRenderControlp() *QQuickRenderControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickRenderControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -280,7 +280,7 @@ Returns the real window that win is being rendered to, if any.
 
 If offset in non-null, it is set to the offset of the rendering inside its window.
 */
-func (this *QQuickRenderControl) RenderWindowFor__(win QQuickWindow_ITF /*777 QQuickWindow **/) *qtgui.QWindow /*777 QWindow **/ {
+func (this *QQuickRenderControl) RenderWindowForp(win QQuickWindow_ITF /*777 QQuickWindow **/) *qtgui.QWindow /*777 QWindow **/ {
 	var convArg0 unsafe.Pointer
 	if win != nil && win.QQuickWindow_PTR() != nil {
 		convArg0 = win.QQuickWindow_PTR().GetCthis()

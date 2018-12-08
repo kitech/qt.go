@@ -92,10 +92,10 @@ func NewQPageSize() *QPageSize {
 /*
 Creates a null QPageSize.
 */
-func (*QPageSize) NewForInherit_1(pageSizeId int) *QPageSize {
-	return NewQPageSize_1(pageSizeId)
+func (*QPageSize) NewForInherit1(pageSizeId int) *QPageSize {
+	return NewQPageSize1(pageSizeId)
 }
-func NewQPageSize_1(pageSizeId int) *QPageSize {
+func NewQPageSize1(pageSizeId int) *QPageSize {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ENS_10PageSizeIdE", qtrt.FFI_TYPE_POINTER, pageSizeId)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQPageSizeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,15 +111,15 @@ func NewQPageSize_1(pageSizeId int) *QPageSize {
 /*
 Creates a null QPageSize.
 */
-func (*QPageSize) NewForInherit_2(pointSize qtcore.QSize_ITF, name string, matchPolicy int) *QPageSize {
-	return NewQPageSize_2(pointSize, name, matchPolicy)
+func (*QPageSize) NewForInherit2(pointSize qtcore.QSize_ITF, name string, matchPolicy int) *QPageSize {
+	return NewQPageSize2(pointSize, name, matchPolicy)
 }
-func NewQPageSize_2(pointSize qtcore.QSize_ITF, name string, matchPolicy int) *QPageSize {
+func NewQPageSize2(pointSize qtcore.QSize_ITF, name string, matchPolicy int) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if pointSize != nil && pointSize.QSize_PTR() != nil {
 		convArg0 = pointSize.QSize_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(name)
+	var tmpArg1 = qtcore.NewQString5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK5QSizeRK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, matchPolicy)
 	qtrt.ErrPrint(err, rv)
@@ -136,10 +136,10 @@ func NewQPageSize_2(pointSize qtcore.QSize_ITF, name string, matchPolicy int) *Q
 /*
 Creates a null QPageSize.
 */
-func (*QPageSize) NewForInherit_2_(pointSize qtcore.QSize_ITF) *QPageSize {
-	return NewQPageSize_2_(pointSize)
+func (*QPageSize) NewForInherit2p(pointSize qtcore.QSize_ITF) *QPageSize {
+	return NewQPageSize2p(pointSize)
 }
-func NewQPageSize_2_(pointSize qtcore.QSize_ITF) *QPageSize {
+func NewQPageSize2p(pointSize qtcore.QSize_ITF) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if pointSize != nil && pointSize.QSize_PTR() != nil {
 		convArg0 = pointSize.QSize_PTR().GetCthis()
@@ -163,15 +163,15 @@ func NewQPageSize_2_(pointSize qtcore.QSize_ITF) *QPageSize {
 /*
 Creates a null QPageSize.
 */
-func (*QPageSize) NewForInherit_2_1(pointSize qtcore.QSize_ITF, name string) *QPageSize {
-	return NewQPageSize_2_1(pointSize, name)
+func (*QPageSize) NewForInherit2p1(pointSize qtcore.QSize_ITF, name string) *QPageSize {
+	return NewQPageSize2p1(pointSize, name)
 }
-func NewQPageSize_2_1(pointSize qtcore.QSize_ITF, name string) *QPageSize {
+func NewQPageSize2p1(pointSize qtcore.QSize_ITF, name string) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if pointSize != nil && pointSize.QSize_PTR() != nil {
 		convArg0 = pointSize.QSize_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(name)
+	var tmpArg1 = qtcore.NewQString5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum, , Invalid
 	matchPolicy := 0
@@ -190,15 +190,15 @@ func NewQPageSize_2_1(pointSize qtcore.QSize_ITF, name string) *QPageSize {
 /*
 Creates a null QPageSize.
 */
-func (*QPageSize) NewForInherit_3(size qtcore.QSizeF_ITF, units int, name string, matchPolicy int) *QPageSize {
-	return NewQPageSize_3(size, units, name, matchPolicy)
+func (*QPageSize) NewForInherit3(size qtcore.QSizeF_ITF, units int, name string, matchPolicy int) *QPageSize {
+	return NewQPageSize3(size, units, name, matchPolicy)
 }
-func NewQPageSize_3(size qtcore.QSizeF_ITF, units int, name string, matchPolicy int) *QPageSize {
+func NewQPageSize3(size qtcore.QSizeF_ITF, units int, name string, matchPolicy int) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
 		convArg0 = size.QSizeF_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(name)
+	var tmpArg2 = qtcore.NewQString5(name)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSizeC2ERK6QSizeFNS_4UnitERK7QStringNS_15SizeMatchPolicyE", qtrt.FFI_TYPE_POINTER, convArg0, units, convArg2, matchPolicy)
 	qtrt.ErrPrint(err, rv)
@@ -215,10 +215,10 @@ func NewQPageSize_3(size qtcore.QSizeF_ITF, units int, name string, matchPolicy 
 /*
 Creates a null QPageSize.
 */
-func (*QPageSize) NewForInherit_3_(size qtcore.QSizeF_ITF, units int) *QPageSize {
-	return NewQPageSize_3_(size, units)
+func (*QPageSize) NewForInherit3p(size qtcore.QSizeF_ITF, units int) *QPageSize {
+	return NewQPageSize3p(size, units)
 }
-func NewQPageSize_3_(size qtcore.QSizeF_ITF, units int) *QPageSize {
+func NewQPageSize3p(size qtcore.QSizeF_ITF, units int) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
 		convArg0 = size.QSizeF_PTR().GetCthis()
@@ -242,15 +242,15 @@ func NewQPageSize_3_(size qtcore.QSizeF_ITF, units int) *QPageSize {
 /*
 Creates a null QPageSize.
 */
-func (*QPageSize) NewForInherit_3_1(size qtcore.QSizeF_ITF, units int, name string) *QPageSize {
-	return NewQPageSize_3_1(size, units, name)
+func (*QPageSize) NewForInherit3p1(size qtcore.QSizeF_ITF, units int, name string) *QPageSize {
+	return NewQPageSize3p1(size, units, name)
 }
-func NewQPageSize_3_1(size qtcore.QSizeF_ITF, units int, name string) *QPageSize {
+func NewQPageSize3p1(size qtcore.QSizeF_ITF, units int, name string) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
 		convArg0 = size.QSizeF_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(name)
+	var tmpArg2 = qtcore.NewQString5(name)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QPageSize::SizeMatchPolicy=Enum, QPageSize::SizeMatchPolicy=Enum, , Invalid
 	matchPolicy := 0
@@ -285,7 +285,7 @@ func (this *QPageSize) Operator_equal(other unsafe.Pointer /*333*/) *QPageSize {
 /*
 
  */
-func (this *QPageSize) Operator_equal_1(other QPageSize_ITF) *QPageSize {
+func (this *QPageSize) Operator_equal1(other QPageSize_ITF) *QPageSize {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QPageSize_PTR() != nil {
 		convArg0 = other.QPageSize_PTR().GetCthis()
@@ -404,7 +404,7 @@ This key should never be shown to end users, it is an internal key only. For a h
 
 See also name().
 */
-func (this *QPageSize) Key_1(pageSizeId int) string {
+func (this *QPageSize) Key1(pageSizeId int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize3keyENS_10PageSizeIdE", qtrt.FFI_TYPE_POINTER, pageSizeId)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -412,9 +412,9 @@ func (this *QPageSize) Key_1(pageSizeId int) string {
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
-func QPageSize_Key_1(pageSizeId int) string {
+func QPageSize_Key1(pageSizeId int) string {
 	var nilthis *QPageSize
-	rv := nilthis.Key_1(pageSizeId)
+	rv := nilthis.Key1(pageSizeId)
 	return rv
 }
 
@@ -451,7 +451,7 @@ If the QPageSize instance was obtained from a print device then the name used is
 
 If the QPageSize is invalid then the name will be an empty string.
 */
-func (this *QPageSize) Name_1(pageSizeId int) string {
+func (this *QPageSize) Name1(pageSizeId int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize4nameENS_10PageSizeIdE", qtrt.FFI_TYPE_POINTER, pageSizeId)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -459,9 +459,9 @@ func (this *QPageSize) Name_1(pageSizeId int) string {
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
-func QPageSize_Name_1(pageSizeId int) string {
+func QPageSize_Name1(pageSizeId int) string {
 	var nilthis *QPageSize
-	rv := nilthis.Name_1(pageSizeId)
+	rv := nilthis.Name1(pageSizeId)
 	return rv
 }
 
@@ -491,7 +491,7 @@ Returns the standard QPageSize::PageSizeId of the page, or QPageSize::Custom.
 
 If the QPageSize is invalid then the ID will be QPageSize::Custom.
 */
-func (this *QPageSize) Id_1(pointSize qtcore.QSize_ITF, matchPolicy int) int {
+func (this *QPageSize) Id1(pointSize qtcore.QSize_ITF, matchPolicy int) int {
 	var convArg0 unsafe.Pointer
 	if pointSize != nil && pointSize.QSize_PTR() != nil {
 		convArg0 = pointSize.QSize_PTR().GetCthis()
@@ -500,9 +500,9 @@ func (this *QPageSize) Id_1(pointSize qtcore.QSize_ITF, matchPolicy int) int {
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QPageSize_Id_1(pointSize qtcore.QSize_ITF, matchPolicy int) int {
+func QPageSize_Id1(pointSize qtcore.QSize_ITF, matchPolicy int) int {
 	var nilthis *QPageSize
-	rv := nilthis.Id_1(pointSize, matchPolicy)
+	rv := nilthis.Id1(pointSize, matchPolicy)
 	return rv
 }
 
@@ -516,7 +516,7 @@ Returns the standard QPageSize::PageSizeId of the page, or QPageSize::Custom.
 
 If the QPageSize is invalid then the ID will be QPageSize::Custom.
 */
-func (this *QPageSize) Id_1_(pointSize qtcore.QSize_ITF) int {
+func (this *QPageSize) Id1p(pointSize qtcore.QSize_ITF) int {
 	var convArg0 unsafe.Pointer
 	if pointSize != nil && pointSize.QSize_PTR() != nil {
 		convArg0 = pointSize.QSize_PTR().GetCthis()
@@ -538,7 +538,7 @@ Returns the standard QPageSize::PageSizeId of the page, or QPageSize::Custom.
 
 If the QPageSize is invalid then the ID will be QPageSize::Custom.
 */
-func (this *QPageSize) Id_2(size qtcore.QSizeF_ITF, units int, matchPolicy int) int {
+func (this *QPageSize) Id2(size qtcore.QSizeF_ITF, units int, matchPolicy int) int {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
 		convArg0 = size.QSizeF_PTR().GetCthis()
@@ -547,9 +547,9 @@ func (this *QPageSize) Id_2(size qtcore.QSizeF_ITF, units int, matchPolicy int) 
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QPageSize_Id_2(size qtcore.QSizeF_ITF, units int, matchPolicy int) int {
+func QPageSize_Id2(size qtcore.QSizeF_ITF, units int, matchPolicy int) int {
 	var nilthis *QPageSize
-	rv := nilthis.Id_2(size, units, matchPolicy)
+	rv := nilthis.Id2(size, units, matchPolicy)
 	return rv
 }
 
@@ -563,7 +563,7 @@ Returns the standard QPageSize::PageSizeId of the page, or QPageSize::Custom.
 
 If the QPageSize is invalid then the ID will be QPageSize::Custom.
 */
-func (this *QPageSize) Id_2_(size qtcore.QSizeF_ITF, units int) int {
+func (this *QPageSize) Id2p(size qtcore.QSizeF_ITF, units int) int {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSizeF_PTR() != nil {
 		convArg0 = size.QSizeF_PTR().GetCthis()
@@ -585,14 +585,14 @@ Returns the standard QPageSize::PageSizeId of the page, or QPageSize::Custom.
 
 If the QPageSize is invalid then the ID will be QPageSize::Custom.
 */
-func (this *QPageSize) Id_3(windowsId int) int {
+func (this *QPageSize) Id3(windowsId int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize2idEi", qtrt.FFI_TYPE_POINTER, windowsId)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QPageSize_Id_3(windowsId int) int {
+func QPageSize_Id3(windowsId int) int {
 	var nilthis *QPageSize
-	rv := nilthis.Id_3(windowsId)
+	rv := nilthis.Id3(windowsId)
 	return rv
 }
 
@@ -630,14 +630,14 @@ If the QPageSize is invalid then the Windows ID will be 0.
 
 See also id().
 */
-func (this *QPageSize) WindowsId_1(pageSizeId int) int {
+func (this *QPageSize) WindowsId1(pageSizeId int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize9windowsIdENS_10PageSizeIdE", qtrt.FFI_TYPE_POINTER, pageSizeId)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QPageSize_WindowsId_1(pageSizeId int) int {
+func QPageSize_WindowsId1(pageSizeId int) int {
 	var nilthis *QPageSize
-	rv := nilthis.WindowsId_1(pageSizeId)
+	rv := nilthis.WindowsId1(pageSizeId)
 	return rv
 }
 
@@ -681,16 +681,16 @@ If the QPageSize is invalid then the QSizeF will be invalid.
 
 See also definitionUnits().
 */
-func (this *QPageSize) DefinitionSize_1(pageSizeId int) *qtcore.QSizeF /*123*/ {
+func (this *QPageSize) DefinitionSize1(pageSizeId int) *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize14definitionSizeENS_10PageSizeIdE", qtrt.FFI_TYPE_POINTER, pageSizeId)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
-func QPageSize_DefinitionSize_1(pageSizeId int) *qtcore.QSizeF /*123*/ {
+func QPageSize_DefinitionSize1(pageSizeId int) *qtcore.QSizeF /*123*/ {
 	var nilthis *QPageSize
-	rv := nilthis.DefinitionSize_1(pageSizeId)
+	rv := nilthis.DefinitionSize1(pageSizeId)
 	return rv
 }
 
@@ -732,14 +732,14 @@ If the QPageSize is invalid then the QPageSize::Unit will be invalid.
 
 See also definitionSize().
 */
-func (this *QPageSize) DefinitionUnits_1(pageSizeId int) int {
+func (this *QPageSize) DefinitionUnits1(pageSizeId int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize15definitionUnitsENS_10PageSizeIdE", qtrt.FFI_TYPE_POINTER, pageSizeId)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
-func QPageSize_DefinitionUnits_1(pageSizeId int) int {
+func QPageSize_DefinitionUnits1(pageSizeId int) int {
 	var nilthis *QPageSize
-	rv := nilthis.DefinitionUnits_1(pageSizeId)
+	rv := nilthis.DefinitionUnits1(pageSizeId)
 	return rv
 }
 
@@ -771,16 +771,16 @@ Returns the size of the page in the required units.
 
 If the QPageSize is invalid then the QSizeF will be invalid.
 */
-func (this *QPageSize) Size_1(pageSizeId int, units int) *qtcore.QSizeF /*123*/ {
+func (this *QPageSize) Size1(pageSizeId int, units int) *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize4sizeENS_10PageSizeIdENS_4UnitE", qtrt.FFI_TYPE_POINTER, pageSizeId, units)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
-func QPageSize_Size_1(pageSizeId int, units int) *qtcore.QSizeF /*123*/ {
+func QPageSize_Size1(pageSizeId int, units int) *qtcore.QSizeF /*123*/ {
 	var nilthis *QPageSize
-	rv := nilthis.Size_1(pageSizeId, units)
+	rv := nilthis.Size1(pageSizeId, units)
 	return rv
 }
 
@@ -812,16 +812,16 @@ Returns the size of the page in Postscript Points (1/72 of an inch).
 
 If the QPageSize is invalid then the QSize will be invalid.
 */
-func (this *QPageSize) SizePoints_1(pageSizeId int) *qtcore.QSize /*123*/ {
+func (this *QPageSize) SizePoints1(pageSizeId int) *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize10sizePointsENS_10PageSizeIdE", qtrt.FFI_TYPE_POINTER, pageSizeId)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
-func QPageSize_SizePoints_1(pageSizeId int) *qtcore.QSize /*123*/ {
+func QPageSize_SizePoints1(pageSizeId int) *qtcore.QSize /*123*/ {
 	var nilthis *QPageSize
-	rv := nilthis.SizePoints_1(pageSizeId)
+	rv := nilthis.SizePoints1(pageSizeId)
 	return rv
 }
 
@@ -853,16 +853,16 @@ Returns the size of the page in Device Pixels at the given resolution.
 
 If the QPageSize is invalid then the QSize will be invalid.
 */
-func (this *QPageSize) SizePixels_1(pageSizeId int, resolution int) *qtcore.QSize /*123*/ {
+func (this *QPageSize) SizePixels1(pageSizeId int, resolution int) *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QPageSize10sizePixelsENS_10PageSizeIdEi", qtrt.FFI_TYPE_POINTER, pageSizeId, resolution)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
-func QPageSize_SizePixels_1(pageSizeId int, resolution int) *qtcore.QSize /*123*/ {
+func QPageSize_SizePixels1(pageSizeId int, resolution int) *qtcore.QSize /*123*/ {
 	var nilthis *QPageSize
-	rv := nilthis.SizePixels_1(pageSizeId, resolution)
+	rv := nilthis.SizePixels1(pageSizeId, resolution)
 	return rv
 }
 

@@ -109,10 +109,10 @@ Constructs a QJSEngine object.
 
 The globalObject() is initialized to have properties as described in ECMA-262, Section 15.1.
 */
-func (*QJSEngine) NewForInherit_1(parent qtcore.QObject_ITF /*777 QObject **/) *QJSEngine {
-	return NewQJSEngine_1(parent)
+func (*QJSEngine) NewForInherit1(parent qtcore.QObject_ITF /*777 QObject **/) *QJSEngine {
+	return NewQJSEngine1(parent)
 }
-func NewQJSEngine_1(parent qtcore.QObject_ITF /*777 QObject **/) *QJSEngine {
+func NewQJSEngine1(parent qtcore.QObject_ITF /*777 QObject **/) *QJSEngine {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
@@ -176,9 +176,9 @@ fileName is used for error reporting. For example, in error objects the file nam
 Note: If an exception was thrown and the exception value is not an Error instance (i.e., QJSValue::isError() returns false), the exception value will still be returned, but there is currently no API for detecting that an exception did occur in this case.
 */
 func (this *QJSEngine) Evaluate(program string, fileName string, lineNumber int) *QJSValue /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(program)
+	var tmpArg0 = qtcore.NewQString5(program)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(fileName)
+	var tmpArg1 = qtcore.NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine8evaluateERK7QStringS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, lineNumber)
 	qtrt.ErrPrint(err, rv)
@@ -205,8 +205,8 @@ fileName is used for error reporting. For example, in error objects the file nam
 
 Note: If an exception was thrown and the exception value is not an Error instance (i.e., QJSValue::isError() returns false), the exception value will still be returned, but there is currently no API for detecting that an exception did occur in this case.
 */
-func (this *QJSEngine) Evaluate__(program string) *QJSValue /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(program)
+func (this *QJSEngine) Evaluatep(program string) *QJSValue /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(program)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
@@ -237,10 +237,10 @@ fileName is used for error reporting. For example, in error objects the file nam
 
 Note: If an exception was thrown and the exception value is not an Error instance (i.e., QJSValue::isError() returns false), the exception value will still be returned, but there is currently no API for detecting that an exception did occur in this case.
 */
-func (this *QJSEngine) Evaluate__1(program string, fileName string) *QJSValue /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(program)
+func (this *QJSEngine) Evaluatep1(program string, fileName string) *QJSValue /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(program)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(fileName)
+	var tmpArg1 = qtcore.NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, int=Int, =Invalid, , Invalid
 	lineNumber := int(1)
@@ -299,7 +299,7 @@ Creates a JavaScript object of class Array with the given length.
 
 See also newObject().
 */
-func (this *QJSEngine) NewArray__() *QJSValue /*123*/ {
+func (this *QJSEngine) NewArrayp() *QJSValue /*123*/ {
 	// arg: 0, uint=Typedef, uint=Typedef, unsigned int, UInt
 	length := uint(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine8newArrayEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), length)
@@ -381,7 +381,7 @@ func (this *QJSEngine) InstallTranslatorFunctions(object QJSValue_ITF) {
 /*
 
  */
-func (this *QJSEngine) InstallTranslatorFunctions__() {
+func (this *QJSEngine) InstallTranslatorFunctionsp() {
 	// arg: 0, const QJSValue &=LValueReference, QJSValue=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine26installTranslatorFunctionsERK8QJSValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -439,7 +439,7 @@ This function was introduced in  Qt 5.6.
 
 See also Extension.
 */
-func (this *QJSEngine) InstallExtensions__(extensions int) {
+func (this *QJSEngine) InstallExtensionsp(extensions int) {
 	// arg: 1, const QJSValue &=LValueReference, QJSValue=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine17installExtensionsE6QFlagsINS_9ExtensionEERK8QJSValue", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extensions, convArg1)

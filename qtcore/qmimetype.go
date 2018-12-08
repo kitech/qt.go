@@ -111,7 +111,7 @@ func (this *QMimeType) Operator_equal(other QMimeType_ITF) *QMimeType {
 /*
 
  */
-func (this *QMimeType) Operator_equal_1(other unsafe.Pointer /*333*/) *QMimeType {
+func (this *QMimeType) Operator_equal1(other unsafe.Pointer /*333*/) *QMimeType {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeTypeaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -395,7 +395,7 @@ Returns true if this mimetype is mimeTypeName, or inherits mimeTypeName (see par
 This method has been made invokable from QML since 5.10.
 */
 func (this *QMimeType) Inherits(mimeTypeName string) bool {
-	var tmpArg0 = NewQString_5(mimeTypeName)
+	var tmpArg0 = NewQString5(mimeTypeName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType8inheritsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

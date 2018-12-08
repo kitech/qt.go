@@ -113,10 +113,10 @@ This QStackedLayout must be installed on a widget later on to become effective.
 
 See also addWidget() and insertWidget().
 */
-func (*QStackedLayout) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/) *QStackedLayout {
-	return NewQStackedLayout_1(parent)
+func (*QStackedLayout) NewForInherit1(parent QWidget_ITF /*777 QWidget **/) *QStackedLayout {
+	return NewQStackedLayout1(parent)
 }
-func NewQStackedLayout_1(parent QWidget_ITF /*777 QWidget **/) *QStackedLayout {
+func NewQStackedLayout1(parent QWidget_ITF /*777 QWidget **/) *QStackedLayout {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -140,10 +140,10 @@ This QStackedLayout must be installed on a widget later on to become effective.
 
 See also addWidget() and insertWidget().
 */
-func (*QStackedLayout) NewForInherit_2(parentLayout QLayout_ITF /*777 QLayout **/) *QStackedLayout {
-	return NewQStackedLayout_2(parentLayout)
+func (*QStackedLayout) NewForInherit2(parentLayout QLayout_ITF /*777 QLayout **/) *QStackedLayout {
+	return NewQStackedLayout2(parentLayout)
 }
-func NewQStackedLayout_2(parentLayout QLayout_ITF /*777 QLayout **/) *QStackedLayout {
+func NewQStackedLayout2(parentLayout QLayout_ITF /*777 QLayout **/) *QStackedLayout {
 	var convArg0 unsafe.Pointer
 	if parentLayout != nil && parentLayout.QLayout_PTR() != nil {
 		convArg0 = parentLayout.QLayout_PTR().GetCthis()

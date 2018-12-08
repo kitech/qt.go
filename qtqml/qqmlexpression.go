@@ -109,10 +109,10 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
-func (*QQmlExpression) NewForInherit_1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
-	return NewQQmlExpression_1(arg0, arg1, arg2, arg3)
+func (*QQmlExpression) NewForInherit1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+	return NewQQmlExpression1(arg0, arg1, arg2, arg3)
 }
-func NewQQmlExpression_1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+func NewQQmlExpression1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlContext_PTR() != nil {
 		convArg0 = arg0.QQmlContext_PTR().GetCthis()
@@ -121,7 +121,7 @@ func NewQQmlExpression_1(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore
 	if arg1 != nil && arg1.QObject_PTR() != nil {
 		convArg1 = arg1.QObject_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(arg2)
+	var tmpArg2 = qtcore.NewQString5(arg2)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if arg3 != nil && arg3.QObject_PTR() != nil {
@@ -144,10 +144,10 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
-func (*QQmlExpression) NewForInherit_1_(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string) *QQmlExpression {
-	return NewQQmlExpression_1_(arg0, arg1, arg2)
+func (*QQmlExpression) NewForInherit1p(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string) *QQmlExpression {
+	return NewQQmlExpression1p(arg0, arg1, arg2)
 }
-func NewQQmlExpression_1_(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string) *QQmlExpression {
+func NewQQmlExpression1p(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcore.QObject_ITF /*777 QObject **/, arg2 string) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlContext_PTR() != nil {
 		convArg0 = arg0.QQmlContext_PTR().GetCthis()
@@ -156,7 +156,7 @@ func NewQQmlExpression_1_(arg0 QQmlContext_ITF /*777 QQmlContext **/, arg1 qtcor
 	if arg1 != nil && arg1.QObject_PTR() != nil {
 		convArg1 = arg1.QObject_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(arg2)
+	var tmpArg2 = qtcore.NewQString5(arg2)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg3 unsafe.Pointer
@@ -177,10 +177,10 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
-func (*QQmlExpression) NewForInherit_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
-	return NewQQmlExpression_2(arg0, arg1, arg2, arg3)
+func (*QQmlExpression) NewForInherit2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+	return NewQQmlExpression2(arg0, arg1, arg2, arg3)
 }
-func NewQQmlExpression_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+func NewQQmlExpression2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/, arg3 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
 		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
@@ -214,10 +214,10 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
-func (*QQmlExpression) NewForInherit_2_(arg0 QQmlScriptString_ITF) *QQmlExpression {
-	return NewQQmlExpression_2_(arg0)
+func (*QQmlExpression) NewForInherit2p(arg0 QQmlScriptString_ITF) *QQmlExpression {
+	return NewQQmlExpression2p(arg0)
 }
-func NewQQmlExpression_2_(arg0 QQmlScriptString_ITF) *QQmlExpression {
+func NewQQmlExpression2p(arg0 QQmlScriptString_ITF) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
 		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
@@ -245,10 +245,10 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
-func (*QQmlExpression) NewForInherit_2_1(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlExpression {
-	return NewQQmlExpression_2_1(arg0, arg1)
+func (*QQmlExpression) NewForInherit2p1(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlExpression {
+	return NewQQmlExpression2p1(arg0, arg1)
 }
-func NewQQmlExpression_2_1(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlExpression {
+func NewQQmlExpression2p1(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
 		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
@@ -278,10 +278,10 @@ Create an invalid QQmlExpression.
 
 As the expression will not have an associated QQmlContext, this will be a null expression object and its value will always be an invalid QVariant.
 */
-func (*QQmlExpression) NewForInherit_2_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
-	return NewQQmlExpression_2_2(arg0, arg1, arg2)
+func (*QQmlExpression) NewForInherit2p2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+	return NewQQmlExpression2p2(arg0, arg1, arg2)
 }
-func NewQQmlExpression_2_2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
+func NewQQmlExpression2p2(arg0 QQmlScriptString_ITF, arg1 QQmlContext_ITF /*777 QQmlContext **/, arg2 qtcore.QObject_ITF /*777 QObject **/) *QQmlExpression {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlScriptString_PTR() != nil {
 		convArg0 = arg0.QQmlScriptString_PTR().GetCthis()
@@ -376,7 +376,7 @@ Set the expression to expression.
 See also expression().
 */
 func (this *QQmlExpression) SetExpression(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression13setExpressionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -471,7 +471,7 @@ func (this *QQmlExpression) ColumnNumber() int {
 Set the location of this expression to line and column of url. This information is used by the script engine.
 */
 func (this *QQmlExpression) SetSourceLocation(fileName string, line int, column int) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression17setSourceLocationERK7QStringii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, line, column)
 	qtrt.ErrPrint(err, rv)
@@ -485,8 +485,8 @@ func (this *QQmlExpression) SetSourceLocation(fileName string, line int, column 
 /*
 Set the location of this expression to line and column of url. This information is used by the script engine.
 */
-func (this *QQmlExpression) SetSourceLocation__(fileName string, line int) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func (this *QQmlExpression) SetSourceLocationp(fileName string, line int) {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, int=Int, =Invalid, , Invalid
 	column := int(0)
@@ -591,7 +591,7 @@ valueIsUndefined is set to true if the expression resulted in an undefined value
 
 See also hasError() and error().
 */
-func (this *QQmlExpression) Evaluate__() *qtcore.QVariant /*123*/ {
+func (this *QQmlExpression) Evaluatep() *qtcore.QVariant /*123*/ {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var valueIsUndefined unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression8evaluateEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), valueIsUndefined)

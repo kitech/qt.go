@@ -92,10 +92,10 @@ func NewQAndroidIntent() *QAndroidIntent {
 /*
 Create a new intent
 */
-func (*QAndroidIntent) NewForInherit_1(intent QAndroidJniObject_ITF) *QAndroidIntent {
-	return NewQAndroidIntent_1(intent)
+func (*QAndroidIntent) NewForInherit1(intent QAndroidJniObject_ITF) *QAndroidIntent {
+	return NewQAndroidIntent1(intent)
 }
-func NewQAndroidIntent_1(intent QAndroidJniObject_ITF) *QAndroidIntent {
+func NewQAndroidIntent1(intent QAndroidJniObject_ITF) *QAndroidIntent {
 	var convArg0 unsafe.Pointer
 	if intent != nil && intent.QAndroidJniObject_PTR() != nil {
 		convArg0 = intent.QAndroidJniObject_PTR().GetCthis()
@@ -115,11 +115,11 @@ func NewQAndroidIntent_1(intent QAndroidJniObject_ITF) *QAndroidIntent {
 /*
 Create a new intent
 */
-func (*QAndroidIntent) NewForInherit_2(action string) *QAndroidIntent {
-	return NewQAndroidIntent_2(action)
+func (*QAndroidIntent) NewForInherit2(action string) *QAndroidIntent {
+	return NewQAndroidIntent2(action)
 }
-func NewQAndroidIntent_2(action string) *QAndroidIntent {
-	var tmpArg0 = qtcore.NewQString_5(action)
+func NewQAndroidIntent2(action string) *QAndroidIntent {
+	var tmpArg0 = qtcore.NewQString5(action)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntentC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -136,10 +136,10 @@ func NewQAndroidIntent_2(action string) *QAndroidIntent {
 /*
 Create a new intent
 */
-func (*QAndroidIntent) NewForInherit_3(packageContext QAndroidJniObject_ITF, className string) *QAndroidIntent {
-	return NewQAndroidIntent_3(packageContext, className)
+func (*QAndroidIntent) NewForInherit3(packageContext QAndroidJniObject_ITF, className string) *QAndroidIntent {
+	return NewQAndroidIntent3(packageContext, className)
 }
-func NewQAndroidIntent_3(packageContext QAndroidJniObject_ITF, className string) *QAndroidIntent {
+func NewQAndroidIntent3(packageContext QAndroidJniObject_ITF, className string) *QAndroidIntent {
 	var convArg0 unsafe.Pointer
 	if packageContext != nil && packageContext.QAndroidJniObject_PTR() != nil {
 		convArg0 = packageContext.QAndroidJniObject_PTR().GetCthis()
@@ -177,7 +177,7 @@ func DeleteQAndroidIntent(this *QAndroidIntent) {
 Sets the key with the data in the Intent extras
 */
 func (this *QAndroidIntent) PutExtra(key string, data qtcore.QByteArray_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
@@ -195,8 +195,8 @@ func (this *QAndroidIntent) PutExtra(key string, data qtcore.QByteArray_ITF) {
 /*
 Sets the key with the data in the Intent extras
 */
-func (this *QAndroidIntent) PutExtra_1(key string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+func (this *QAndroidIntent) PutExtra1(key string, value qtcore.QVariant_ITF) {
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -215,7 +215,7 @@ func (this *QAndroidIntent) PutExtra_1(key string, value qtcore.QVariant_ITF) {
 Returns the extra key data from the Intent extras
 */
 func (this *QAndroidIntent) ExtraBytes(key string) *qtcore.QByteArray /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntent10extraBytesERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -233,7 +233,7 @@ func (this *QAndroidIntent) ExtraBytes(key string) *qtcore.QByteArray /*123*/ {
 Returns the extra key data from the Intent extras as a QVariant
 */
 func (this *QAndroidIntent) ExtraVariant(key string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidIntent12extraVariantERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

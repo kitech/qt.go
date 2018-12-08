@@ -95,10 +95,10 @@ Constructs an empty byte array.
 
 See also isEmpty().
 */
-func (*QByteArray) NewForInherit_1(arg0 string, size int) *QByteArray {
-	return NewQByteArray_1(arg0, size)
+func (*QByteArray) NewForInherit1(arg0 string, size int) *QByteArray {
+	return NewQByteArray1(arg0, size)
 }
-func NewQByteArray_1(arg0 string, size int) *QByteArray {
+func NewQByteArray1(arg0 string, size int) *QByteArray {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayC2EPKci", qtrt.FFI_TYPE_POINTER, convArg0, size)
@@ -118,10 +118,10 @@ Constructs an empty byte array.
 
 See also isEmpty().
 */
-func (*QByteArray) NewForInherit_1_(arg0 string) *QByteArray {
-	return NewQByteArray_1_(arg0)
+func (*QByteArray) NewForInherit1p(arg0 string) *QByteArray {
+	return NewQByteArray1p(arg0)
 }
-func NewQByteArray_1_(arg0 string) *QByteArray {
+func NewQByteArray1p(arg0 string) *QByteArray {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -143,10 +143,10 @@ Constructs an empty byte array.
 
 See also isEmpty().
 */
-func (*QByteArray) NewForInherit_2(size int, c byte) *QByteArray {
-	return NewQByteArray_2(size, c)
+func (*QByteArray) NewForInherit2(size int, c byte) *QByteArray {
+	return NewQByteArray2(size, c)
 }
-func NewQByteArray_2(size int, c byte) *QByteArray {
+func NewQByteArray2(size int, c byte) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayC2Eic", qtrt.FFI_TYPE_POINTER, size, c)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -164,10 +164,10 @@ Constructs an empty byte array.
 
 See also isEmpty().
 */
-func (*QByteArray) NewForInherit_3(size int, arg1 int) *QByteArray {
-	return NewQByteArray_3(size, arg1)
+func (*QByteArray) NewForInherit3(size int, arg1 int) *QByteArray {
+	return NewQByteArray3(size, arg1)
 }
-func NewQByteArray_3(size int, arg1 int) *QByteArray {
+func NewQByteArray3(size int, arg1 int) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayC2EiN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, size, arg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -218,7 +218,7 @@ func (this *QByteArray) Operator_equal(arg0 QByteArray_ITF) *QByteArray {
 /*
 
  */
-func (this *QByteArray) Operator_equal_1(str string) *QByteArray {
+func (this *QByteArray) Operator_equal1(str string) *QByteArray {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayaSEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -236,7 +236,7 @@ func (this *QByteArray) Operator_equal_1(str string) *QByteArray {
 /*
 
  */
-func (this *QByteArray) Operator_equal_2(other unsafe.Pointer /*333*/) *QByteArray {
+func (this *QByteArray) Operator_equal2(other unsafe.Pointer /*333*/) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -388,7 +388,7 @@ Example:
 
 See also resize().
 */
-func (this *QByteArray) Fill__(c byte) *QByteArray {
+func (this *QByteArray) Fillp(c byte) *QByteArray {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray4fillEci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, size)
@@ -556,7 +556,7 @@ Note: A QByteArray can store any byte values including '\0's, but most functions
 
 See also constData() and operator[]().
 */
-func (this *QByteArray) Data_1() string {
+func (this *QByteArray) Data1() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -682,7 +682,7 @@ func (this *QByteArray) Operator_get_index(i int) byte {
 /*
 
  */
-func (this *QByteArray) Operator_get_index_1(i uint) byte {
+func (this *QByteArray) Operator_get_index1(i uint) byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArrayixEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
@@ -696,7 +696,7 @@ func (this *QByteArray) Operator_get_index_1(i uint) byte {
 /*
 
  */
-func (this *QByteArray) Operator_get_index_2(i int) *QByteRef /*123*/ {
+func (this *QByteArray) Operator_get_index2(i int) *QByteRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -712,7 +712,7 @@ func (this *QByteArray) Operator_get_index_2(i int) *QByteRef /*123*/ {
 /*
 
  */
-func (this *QByteArray) Operator_get_index_3(i uint) *QByteRef /*123*/ {
+func (this *QByteArray) Operator_get_index3(i uint) *QByteRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayixEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -758,7 +758,7 @@ This function was introduced in  Qt 5.10.
 
 See also back(), at(), and operator[]().
 */
-func (this *QByteArray) Front_1() *QByteRef /*123*/ {
+func (this *QByteArray) Front1() *QByteRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray5frontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -804,7 +804,7 @@ This function was introduced in  Qt 5.10.
 
 See also front(), at(), and operator[]().
 */
-func (this *QByteArray) Back_1() *QByteRef /*123*/ {
+func (this *QByteArray) Back1() *QByteRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray4backEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -862,7 +862,7 @@ Example:
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QByteArray) IndexOf__(c byte) int {
+func (this *QByteArray) IndexOfp(c byte) int {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfEci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, from)
@@ -892,7 +892,7 @@ Example:
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QByteArray) IndexOf_1(c string, from int) int {
+func (this *QByteArray) IndexOf1(c string, from int) int {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
@@ -922,7 +922,7 @@ Example:
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QByteArray) IndexOf_1_(c string) int {
+func (this *QByteArray) IndexOf1p(c string) int {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -954,7 +954,7 @@ Example:
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QByteArray) IndexOf_2(a QByteArray_ITF, from int) int {
+func (this *QByteArray) IndexOf2(a QByteArray_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
 		convArg0 = a.QByteArray_PTR().GetCthis()
@@ -986,7 +986,7 @@ Example:
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QByteArray) IndexOf_2_(a QByteArray_ITF) int {
+func (this *QByteArray) IndexOf2p(a QByteArray_ITF) int {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
 		convArg0 = a.QByteArray_PTR().GetCthis()
@@ -1020,8 +1020,8 @@ Example:
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QByteArray) IndexOf_3(s string, from int) int {
-	var tmpArg0 = NewQString_5(s)
+func (this *QByteArray) IndexOf3(s string, from int) int {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
@@ -1050,8 +1050,8 @@ Example:
 
 See also lastIndexOf(), contains(), and count().
 */
-func (this *QByteArray) IndexOf_3_(s string) int {
-	var tmpArg0 = NewQString_5(s)
+func (this *QByteArray) IndexOf3p(s string) int {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(0)
@@ -1110,7 +1110,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QByteArray) LastIndexOf__(c byte) int {
+func (this *QByteArray) LastIndexOfp(c byte) int {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfEci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, from)
@@ -1140,7 +1140,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QByteArray) LastIndexOf_1(c string, from int) int {
+func (this *QByteArray) LastIndexOf1(c string, from int) int {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
@@ -1170,7 +1170,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QByteArray) LastIndexOf_1_(c string) int {
+func (this *QByteArray) LastIndexOf1p(c string) int {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -1202,7 +1202,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QByteArray) LastIndexOf_2(a QByteArray_ITF, from int) int {
+func (this *QByteArray) LastIndexOf2(a QByteArray_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
 		convArg0 = a.QByteArray_PTR().GetCthis()
@@ -1234,7 +1234,7 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QByteArray) LastIndexOf_2_(a QByteArray_ITF) int {
+func (this *QByteArray) LastIndexOf2p(a QByteArray_ITF) int {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
 		convArg0 = a.QByteArray_PTR().GetCthis()
@@ -1268,8 +1268,8 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QByteArray) LastIndexOf_3(s string, from int) int {
-	var tmpArg0 = NewQString_5(s)
+func (this *QByteArray) LastIndexOf3(s string, from int) int {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	qtrt.ErrPrint(err, rv)
@@ -1298,8 +1298,8 @@ Example:
 
 See also indexOf(), contains(), and count().
 */
-func (this *QByteArray) LastIndexOf_3_(s string) int {
-	var tmpArg0 = NewQString_5(s)
+func (this *QByteArray) LastIndexOf3p(s string) int {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	from := int(-1)
@@ -1334,7 +1334,7 @@ Returns true if the byte array contains an occurrence of the byte array ba; othe
 
 See also indexOf() and count().
 */
-func (this *QByteArray) Contains_1(a string) bool {
+func (this *QByteArray) Contains1(a string) bool {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8containsEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1352,7 +1352,7 @@ Returns true if the byte array contains an occurrence of the byte array ba; othe
 
 See also indexOf() and count().
 */
-func (this *QByteArray) Contains_2(a QByteArray_ITF) bool {
+func (this *QByteArray) Contains2(a QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
 		convArg0 = a.QByteArray_PTR().GetCthis()
@@ -1388,7 +1388,7 @@ Returns the number of (potentially overlapping) occurrences of byte array ba in 
 
 See also contains() and indexOf().
 */
-func (this *QByteArray) Count_1(a string) int {
+func (this *QByteArray) Count1(a string) int {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5countEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1406,7 +1406,7 @@ Returns the number of (potentially overlapping) occurrences of byte array ba in 
 
 See also contains() and indexOf().
 */
-func (this *QByteArray) Count_2(a QByteArray_ITF) int {
+func (this *QByteArray) Count2(a QByteArray_ITF) int {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
 		convArg0 = a.QByteArray_PTR().GetCthis()
@@ -1426,7 +1426,7 @@ Returns the number of (potentially overlapping) occurrences of byte array ba in 
 
 See also contains() and indexOf().
 */
-func (this *QByteArray) Count_3() int {
+func (this *QByteArray) Count3() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1540,7 +1540,7 @@ Example:
 
 See also left(), right(), chopped(), chop(), and truncate().
 */
-func (this *QByteArray) Mid__(index int) *QByteArray /*123*/ {
+func (this *QByteArray) Midp(index int) *QByteArray /*123*/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	len_ := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray3midEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len_)
@@ -1620,7 +1620,7 @@ Example:
 
 See also endsWith() and left().
 */
-func (this *QByteArray) StartsWith_1(c byte) bool {
+func (this *QByteArray) StartsWith1(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10startsWithEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1645,7 +1645,7 @@ Example:
 
 See also endsWith() and left().
 */
-func (this *QByteArray) StartsWith_2(c string) bool {
+func (this *QByteArray) StartsWith2(c string) bool {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10startsWithEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1701,7 +1701,7 @@ Example:
 
 See also startsWith() and right().
 */
-func (this *QByteArray) EndsWith_1(c byte) bool {
+func (this *QByteArray) EndsWith1(c byte) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8endsWithEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1726,7 +1726,7 @@ Example:
 
 See also startsWith() and right().
 */
-func (this *QByteArray) EndsWith_2(c string) bool {
+func (this *QByteArray) EndsWith2(c string) bool {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8endsWithEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1830,7 +1830,7 @@ Example:
 
 See also toUpper() and 8-bit Character Comparisons.
 */
-func (this *QByteArray) ToLower_1() *QByteArray /*123*/ {
+func (this *QByteArray) ToLower1() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNO10QByteArray7toLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1884,7 +1884,7 @@ Example:
 
 See also toLower() and 8-bit Character Comparisons.
 */
-func (this *QByteArray) ToUpper_1() *QByteArray /*123*/ {
+func (this *QByteArray) ToUpper1() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNO10QByteArray7toUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1946,7 +1946,7 @@ Unlike simplified(), trimmed() leaves internal whitespace alone.
 
 See also simplified().
 */
-func (this *QByteArray) Trimmed_1() *QByteArray /*123*/ {
+func (this *QByteArray) Trimmed1() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNO10QByteArray7trimmedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -2004,7 +2004,7 @@ Example:
 
 See also trimmed().
 */
-func (this *QByteArray) Simplified_1() *QByteArray /*123*/ {
+func (this *QByteArray) Simplified1() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNO10QByteArray10simplifiedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -2064,7 +2064,7 @@ Example:
 
 See also rightJustified().
 */
-func (this *QByteArray) LeftJustified__(width int) *QByteArray /*123*/ {
+func (this *QByteArray) LeftJustifiedp(width int) *QByteArray /*123*/ {
 	// arg: 1, char=Char_S, =Invalid, , Invalid
 	fill := ' '
 	// arg: 2, bool=Bool, =Invalid, , Invalid
@@ -2098,7 +2098,7 @@ Example:
 
 See also rightJustified().
 */
-func (this *QByteArray) LeftJustified__1(width int, fill byte) *QByteArray /*123*/ {
+func (this *QByteArray) LeftJustifiedp1(width int, fill byte) *QByteArray /*123*/ {
 	// arg: 2, bool=Bool, =Invalid, , Invalid
 	truncate := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray13leftJustifiedEicb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
@@ -2160,7 +2160,7 @@ Example:
 
 See also leftJustified().
 */
-func (this *QByteArray) RightJustified__(width int) *QByteArray /*123*/ {
+func (this *QByteArray) RightJustifiedp(width int) *QByteArray /*123*/ {
 	// arg: 1, char=Char_S, =Invalid, , Invalid
 	fill := ' '
 	// arg: 2, bool=Bool, =Invalid, , Invalid
@@ -2194,7 +2194,7 @@ Example:
 
 See also leftJustified().
 */
-func (this *QByteArray) RightJustified__1(width int, fill byte) *QByteArray /*123*/ {
+func (this *QByteArray) RightJustifiedp1(width int, fill byte) *QByteArray /*123*/ {
 	// arg: 2, bool=Bool, =Invalid, , Invalid
 	truncate := false
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray14rightJustifiedEicb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
@@ -2283,7 +2283,7 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_1(index int, len_ int, s string, alen int) *QByteArray {
+func (this *QByteArray) Replace1(index int, len_ int, s string, alen int) *QByteArray {
 	var convArg2 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len_, convArg2, alen)
@@ -2313,7 +2313,7 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_2(index int, len_ int, s QByteArray_ITF) *QByteArray {
+func (this *QByteArray) Replace2(index int, len_ int, s QByteArray_ITF) *QByteArray {
 	var convArg2 unsafe.Pointer
 	if s != nil && s.QByteArray_PTR() != nil {
 		convArg2 = s.QByteArray_PTR().GetCthis()
@@ -2345,7 +2345,7 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_3(before byte, after string) *QByteArray {
+func (this *QByteArray) Replace3(before byte, after string) *QByteArray {
 	var convArg1 = qtrt.CString(after)
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEcPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), before, convArg1)
@@ -2375,7 +2375,7 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_4(before byte, after QByteArray_ITF) *QByteArray {
+func (this *QByteArray) Replace4(before byte, after QByteArray_ITF) *QByteArray {
 	var convArg1 unsafe.Pointer
 	if after != nil && after.QByteArray_PTR() != nil {
 		convArg1 = after.QByteArray_PTR().GetCthis()
@@ -2407,7 +2407,7 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_5(before string, after string) *QByteArray {
+func (this *QByteArray) Replace5(before string, after string) *QByteArray {
 	var convArg0 = qtrt.CString(before)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(after)
@@ -2439,7 +2439,7 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_6(before string, bsize int, after string, asize int) *QByteArray {
+func (this *QByteArray) Replace6(before string, bsize int, after string, asize int) *QByteArray {
 	var convArg0 = qtrt.CString(before)
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = qtrt.CString(after)
@@ -2471,7 +2471,7 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_7(before QByteArray_ITF, after QByteArray_ITF) *QByteArray {
+func (this *QByteArray) Replace7(before QByteArray_ITF, after QByteArray_ITF) *QByteArray {
 	var convArg0 unsafe.Pointer
 	if before != nil && before.QByteArray_PTR() != nil {
 		convArg0 = before.QByteArray_PTR().GetCthis()
@@ -2507,7 +2507,7 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_8(before QByteArray_ITF, after string) *QByteArray {
+func (this *QByteArray) Replace8(before QByteArray_ITF, after string) *QByteArray {
 	var convArg0 unsafe.Pointer
 	if before != nil && before.QByteArray_PTR() != nil {
 		convArg0 = before.QByteArray_PTR().GetCthis()
@@ -2541,7 +2541,7 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_9(before string, after QByteArray_ITF) *QByteArray {
+func (this *QByteArray) Replace9(before string, after QByteArray_ITF) *QByteArray {
 	var convArg0 = qtrt.CString(before)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -2575,7 +2575,7 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_10(before byte, after byte) *QByteArray {
+func (this *QByteArray) Replace10(before byte, after byte) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEcc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), before, after)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2603,8 +2603,8 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_11(before string, after string) *QByteArray {
-	var tmpArg0 = NewQString_5(before)
+func (this *QByteArray) Replace11(before string, after string) *QByteArray {
+	var tmpArg0 = NewQString5(before)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(after)
 	defer qtrt.FreeMem(convArg1)
@@ -2635,8 +2635,8 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_12(c byte, after string) *QByteArray {
-	var tmpArg1 = NewQString_5(after)
+func (this *QByteArray) Replace12(c byte, after string) *QByteArray {
+	var tmpArg1 = NewQString5(after)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEcRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -2665,8 +2665,8 @@ Example:
 
 See also insert() and remove().
 */
-func (this *QByteArray) Replace_13(before string, after QByteArray_ITF) *QByteArray {
-	var tmpArg0 = NewQString_5(before)
+func (this *QByteArray) Replace13(before string, after QByteArray_ITF) *QByteArray {
+	var tmpArg0 = NewQString5(before)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if after != nil && after.QByteArray_PTR() != nil {
@@ -2703,7 +2703,7 @@ func (this *QByteArray) Operator_add_equal(c byte) *QByteArray {
 /*
 
  */
-func (this *QByteArray) Operator_add_equal_1(s string) *QByteArray {
+func (this *QByteArray) Operator_add_equal1(s string) *QByteArray {
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArraypLEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -2721,7 +2721,7 @@ func (this *QByteArray) Operator_add_equal_1(s string) *QByteArray {
 /*
 
  */
-func (this *QByteArray) Operator_add_equal_2(a QByteArray_ITF) *QByteArray {
+func (this *QByteArray) Operator_add_equal2(a QByteArray_ITF) *QByteArray {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
 		convArg0 = a.QByteArray_PTR().GetCthis()
@@ -2741,8 +2741,8 @@ func (this *QByteArray) Operator_add_equal_2(a QByteArray_ITF) *QByteArray {
 /*
 
  */
-func (this *QByteArray) Operator_add_equal_3(s string) *QByteArray {
-	var tmpArg0 = NewQString_5(s)
+func (this *QByteArray) Operator_add_equal3(s string) *QByteArray {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArraypLERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2788,7 +2788,7 @@ func (this *QByteArray) Repeated(times int) *QByteArray /*123*/ {
 
  */
 func (this *QByteArray) Operator_equal_equal(s2 string) bool {
-	var tmpArg0 = NewQString_5(s2)
+	var tmpArg0 = NewQString5(s2)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArrayeqERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2804,7 +2804,7 @@ func (this *QByteArray) Operator_equal_equal(s2 string) bool {
 
  */
 func (this *QByteArray) Operator_not_equal(s2 string) bool {
-	var tmpArg0 = NewQString_5(s2)
+	var tmpArg0 = NewQString5(s2)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArrayneERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2820,7 +2820,7 @@ func (this *QByteArray) Operator_not_equal(s2 string) bool {
 
  */
 func (this *QByteArray) Operator_less_than(s2 string) bool {
-	var tmpArg0 = NewQString_5(s2)
+	var tmpArg0 = NewQString5(s2)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArrayltERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2836,7 +2836,7 @@ func (this *QByteArray) Operator_less_than(s2 string) bool {
 
  */
 func (this *QByteArray) Operator_greater_than(s2 string) bool {
-	var tmpArg0 = NewQString_5(s2)
+	var tmpArg0 = NewQString5(s2)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArraygtERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2852,7 +2852,7 @@ func (this *QByteArray) Operator_greater_than(s2 string) bool {
 
  */
 func (this *QByteArray) Operator_less_than_equal(s2 string) bool {
-	var tmpArg0 = NewQString_5(s2)
+	var tmpArg0 = NewQString5(s2)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArrayleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2868,7 +2868,7 @@ func (this *QByteArray) Operator_less_than_equal(s2 string) bool {
 
  */
 func (this *QByteArray) Operator_greater_than_equal(s2 string) bool {
-	var tmpArg0 = NewQString_5(s2)
+	var tmpArg0 = NewQString5(s2)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArraygeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -2917,7 +2917,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToShort__() int16 {
+func (this *QByteArray) ToShortp() int16 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -2945,7 +2945,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToShort__1(ok *bool) int16 {
+func (this *QByteArray) ToShortp1(ok *bool) int16 {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -2995,7 +2995,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToUShort__() uint16 {
+func (this *QByteArray) ToUShortp() uint16 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -3023,7 +3023,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToUShort__1(ok *bool) uint16 {
+func (this *QByteArray) ToUShortp1(ok *bool) uint16 {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -3089,7 +3089,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToInt__() int {
+func (this *QByteArray) ToIntp() int {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -3125,7 +3125,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToInt__1(ok *bool) int {
+func (this *QByteArray) ToIntp1(ok *bool) int {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5toIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -3175,7 +3175,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToUInt__() uint {
+func (this *QByteArray) ToUIntp() uint {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -3203,7 +3203,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToUInt__1(ok *bool) uint {
+func (this *QByteArray) ToUIntp1(ok *bool) uint {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -3273,7 +3273,7 @@ This function was introduced in  Qt 4.1.
 
 See also number().
 */
-func (this *QByteArray) ToLong__() int {
+func (this *QByteArray) ToLongp() int {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -3311,7 +3311,7 @@ This function was introduced in  Qt 4.1.
 
 See also number().
 */
-func (this *QByteArray) ToLong__1(ok *bool) int {
+func (this *QByteArray) ToLongp1(ok *bool) int {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -3365,7 +3365,7 @@ This function was introduced in  Qt 4.1.
 
 See also number().
 */
-func (this *QByteArray) ToULong__() uint {
+func (this *QByteArray) ToULongp() uint {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -3395,7 +3395,7 @@ This function was introduced in  Qt 4.1.
 
 See also number().
 */
-func (this *QByteArray) ToULong__1(ok *bool) uint {
+func (this *QByteArray) ToULongp1(ok *bool) uint {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -3445,7 +3445,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToLongLong__() int64 {
+func (this *QByteArray) ToLongLongp() int64 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -3473,7 +3473,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToLongLong__1(ok *bool) int64 {
+func (this *QByteArray) ToLongLongp1(ok *bool) int64 {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -3523,7 +3523,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToULongLong__() uint64 {
+func (this *QByteArray) ToULongLongp() uint64 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -3551,7 +3551,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToULongLong__1(ok *bool) uint64 {
+func (this *QByteArray) ToULongLongp1(ok *bool) uint64 {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok, base)
@@ -3597,7 +3597,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToFloat__() float32 {
+func (this *QByteArray) ToFloatp() float32 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
@@ -3655,7 +3655,7 @@ Note: The conversion of the number is performed in the default C locale, irrespe
 
 See also number().
 */
-func (this *QByteArray) ToDouble__() float64 {
+func (this *QByteArray) ToDoublep() float64 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
@@ -3707,7 +3707,7 @@ The algorithm used to encode Base64-encoded data is defined in RFC 4648.
 
 See also fromBase64().
 */
-func (this *QByteArray) ToBase64_1() *QByteArray /*123*/ {
+func (this *QByteArray) ToBase641() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toBase64Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -3743,7 +3743,7 @@ Returns a hex encoded copy of the byte array. The hex encoding uses the numbers 
 
 See also fromHex().
 */
-func (this *QByteArray) ToHex_1(separator byte) *QByteArray /*123*/ {
+func (this *QByteArray) ToHex1(separator byte) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5toHexEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), separator)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -3827,7 +3827,7 @@ This function was introduced in  Qt 4.4.
 
 See also fromPercentEncoding() and QUrl::toPercentEncoding().
 */
-func (this *QByteArray) ToPercentEncoding__() *QByteArray /*123*/ {
+func (this *QByteArray) ToPercentEncodingp() *QByteArray /*123*/ {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = NewQByteArray()
 	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
@@ -3871,7 +3871,7 @@ This function was introduced in  Qt 4.4.
 
 See also fromPercentEncoding() and QUrl::toPercentEncoding().
 */
-func (this *QByteArray) ToPercentEncoding__1(exclude QByteArray_ITF) *QByteArray /*123*/ {
+func (this *QByteArray) ToPercentEncodingp1(exclude QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if exclude != nil && exclude.QByteArray_PTR() != nil {
 		convArg0 = exclude.QByteArray_PTR().GetCthis()
@@ -3917,7 +3917,7 @@ This function was introduced in  Qt 4.4.
 
 See also fromPercentEncoding() and QUrl::toPercentEncoding().
 */
-func (this *QByteArray) ToPercentEncoding__2(exclude QByteArray_ITF, include_ QByteArray_ITF) *QByteArray /*123*/ {
+func (this *QByteArray) ToPercentEncodingp2(exclude QByteArray_ITF, include_ QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if exclude != nil && exclude.QByteArray_PTR() != nil {
 		convArg0 = exclude.QByteArray_PTR().GetCthis()
@@ -3987,7 +3987,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum__(arg0 int16) *QByteArray {
+func (this *QByteArray) SetNump(arg0 int16) *QByteArray {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEsi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
@@ -4019,7 +4019,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_1(arg0 uint16, base int) *QByteArray {
+func (this *QByteArray) SetNum1(arg0 uint16, base int) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -4049,7 +4049,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_1_(arg0 uint16) *QByteArray {
+func (this *QByteArray) SetNum1p(arg0 uint16) *QByteArray {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
@@ -4081,7 +4081,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_2(arg0 int, base int) *QByteArray {
+func (this *QByteArray) SetNum2(arg0 int, base int) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -4111,7 +4111,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_2_(arg0 int) *QByteArray {
+func (this *QByteArray) SetNum2p(arg0 int) *QByteArray {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
@@ -4143,7 +4143,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_3(arg0 uint, base int) *QByteArray {
+func (this *QByteArray) SetNum3(arg0 uint, base int) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEji", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -4173,7 +4173,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_3_(arg0 uint) *QByteArray {
+func (this *QByteArray) SetNum3p(arg0 uint) *QByteArray {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEji", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
@@ -4205,7 +4205,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_4(arg0 int64, base int) *QByteArray {
+func (this *QByteArray) SetNum4(arg0 int64, base int) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumExi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -4235,7 +4235,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_4_(arg0 int64) *QByteArray {
+func (this *QByteArray) SetNum4p(arg0 int64) *QByteArray {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumExi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
@@ -4267,7 +4267,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_5(arg0 uint64, base int) *QByteArray {
+func (this *QByteArray) SetNum5(arg0 uint64, base int) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEyi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -4297,7 +4297,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_5_(arg0 uint64) *QByteArray {
+func (this *QByteArray) SetNum5p(arg0 uint64) *QByteArray {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEyi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
@@ -4329,7 +4329,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_6(arg0 float32, f byte, prec int) *QByteArray {
+func (this *QByteArray) SetNum6(arg0 float32, f byte, prec int) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -4359,7 +4359,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_6_(arg0 float32) *QByteArray {
+func (this *QByteArray) SetNum6p(arg0 float32) *QByteArray {
 	// arg: 1, char=Char_S, =Invalid, , Invalid
 	f := 'g'
 	// arg: 2, int=Int, =Invalid, , Invalid
@@ -4393,7 +4393,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_6_1(arg0 float32, f byte) *QByteArray {
+func (this *QByteArray) SetNum6p1(arg0 float32, f byte) *QByteArray {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
@@ -4425,7 +4425,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_7(arg0 float64, f byte, prec int) *QByteArray {
+func (this *QByteArray) SetNum7(arg0 float64, f byte, prec int) *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -4455,7 +4455,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_7_(arg0 float64) *QByteArray {
+func (this *QByteArray) SetNum7p(arg0 float64) *QByteArray {
 	// arg: 1, char=Char_S, =Invalid, , Invalid
 	f := 'g'
 	// arg: 2, int=Int, =Invalid, , Invalid
@@ -4489,7 +4489,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also number() and toInt().
 */
-func (this *QByteArray) SetNum_7_1(arg0 float64, f byte) *QByteArray {
+func (this *QByteArray) SetNum7p1(arg0 float64, f byte) *QByteArray {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
@@ -4580,7 +4580,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also setNum() and toInt().
 */
-func (this *QByteArray) Number__(arg0 int) *QByteArray /*123*/ {
+func (this *QByteArray) Numberp(arg0 int) *QByteArray /*123*/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEii", qtrt.FFI_TYPE_POINTER, arg0, base)
@@ -4612,16 +4612,16 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also setNum() and toInt().
 */
-func (this *QByteArray) Number_1(arg0 uint, base int) *QByteArray /*123*/ {
+func (this *QByteArray) Number1(arg0 uint, base int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEji", qtrt.FFI_TYPE_POINTER, arg0, base)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QByteArray_Number_1(arg0 uint, base int) *QByteArray /*123*/ {
+func QByteArray_Number1(arg0 uint, base int) *QByteArray /*123*/ {
 	var nilthis *QByteArray
-	rv := nilthis.Number_1(arg0, base)
+	rv := nilthis.Number1(arg0, base)
 	return rv
 }
 
@@ -4647,7 +4647,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also setNum() and toInt().
 */
-func (this *QByteArray) Number_1_(arg0 uint) *QByteArray /*123*/ {
+func (this *QByteArray) Number1p(arg0 uint) *QByteArray /*123*/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEji", qtrt.FFI_TYPE_POINTER, arg0, base)
@@ -4679,16 +4679,16 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also setNum() and toInt().
 */
-func (this *QByteArray) Number_2(arg0 int64, base int) *QByteArray /*123*/ {
+func (this *QByteArray) Number2(arg0 int64, base int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberExi", qtrt.FFI_TYPE_POINTER, arg0, base)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QByteArray_Number_2(arg0 int64, base int) *QByteArray /*123*/ {
+func QByteArray_Number2(arg0 int64, base int) *QByteArray /*123*/ {
 	var nilthis *QByteArray
-	rv := nilthis.Number_2(arg0, base)
+	rv := nilthis.Number2(arg0, base)
 	return rv
 }
 
@@ -4714,7 +4714,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also setNum() and toInt().
 */
-func (this *QByteArray) Number_2_(arg0 int64) *QByteArray /*123*/ {
+func (this *QByteArray) Number2p(arg0 int64) *QByteArray /*123*/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberExi", qtrt.FFI_TYPE_POINTER, arg0, base)
@@ -4746,16 +4746,16 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also setNum() and toInt().
 */
-func (this *QByteArray) Number_3(arg0 uint64, base int) *QByteArray /*123*/ {
+func (this *QByteArray) Number3(arg0 uint64, base int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEyi", qtrt.FFI_TYPE_POINTER, arg0, base)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QByteArray_Number_3(arg0 uint64, base int) *QByteArray /*123*/ {
+func QByteArray_Number3(arg0 uint64, base int) *QByteArray /*123*/ {
 	var nilthis *QByteArray
-	rv := nilthis.Number_3(arg0, base)
+	rv := nilthis.Number3(arg0, base)
 	return rv
 }
 
@@ -4781,7 +4781,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also setNum() and toInt().
 */
-func (this *QByteArray) Number_3_(arg0 uint64) *QByteArray /*123*/ {
+func (this *QByteArray) Number3p(arg0 uint64) *QByteArray /*123*/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	base := int(10)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEyi", qtrt.FFI_TYPE_POINTER, arg0, base)
@@ -4813,16 +4813,16 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also setNum() and toInt().
 */
-func (this *QByteArray) Number_4(arg0 float64, f byte, prec int) *QByteArray /*123*/ {
+func (this *QByteArray) Number4(arg0 float64, f byte, prec int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEdci", qtrt.FFI_TYPE_POINTER, arg0, f, prec)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QByteArray_Number_4(arg0 float64, f byte, prec int) *QByteArray /*123*/ {
+func QByteArray_Number4(arg0 float64, f byte, prec int) *QByteArray /*123*/ {
 	var nilthis *QByteArray
-	rv := nilthis.Number_4(arg0, f, prec)
+	rv := nilthis.Number4(arg0, f, prec)
 	return rv
 }
 
@@ -4848,7 +4848,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also setNum() and toInt().
 */
-func (this *QByteArray) Number_4_(arg0 float64) *QByteArray /*123*/ {
+func (this *QByteArray) Number4p(arg0 float64) *QByteArray /*123*/ {
 	// arg: 1, char=Char_S, =Invalid, , Invalid
 	f := 'g'
 	// arg: 2, int=Int, =Invalid, , Invalid
@@ -4882,7 +4882,7 @@ Note: The format of the number is not localized; the default C locale is used ir
 
 See also setNum() and toInt().
 */
-func (this *QByteArray) Number_4_1(arg0 float64, f byte) *QByteArray /*123*/ {
+func (this *QByteArray) Number4p1(arg0 float64, f byte) *QByteArray /*123*/ {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	prec := int(6)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEdci", qtrt.FFI_TYPE_POINTER, arg0, f, prec)
@@ -4994,7 +4994,7 @@ The algorithm used to decode Base64-encoded data is defined in RFC 4648.
 
 See also toBase64().
 */
-func (this *QByteArray) FromBase64_1(base64 QByteArray_ITF) *QByteArray /*123*/ {
+func (this *QByteArray) FromBase641(base64 QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if base64 != nil && base64.QByteArray_PTR() != nil {
 		convArg0 = base64.QByteArray_PTR().GetCthis()
@@ -5005,9 +5005,9 @@ func (this *QByteArray) FromBase64_1(base64 QByteArray_ITF) *QByteArray /*123*/ 
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QByteArray_FromBase64_1(base64 QByteArray_ITF) *QByteArray /*123*/ {
+func QByteArray_FromBase641(base64 QByteArray_ITF) *QByteArray /*123*/ {
 	var nilthis *QByteArray
-	rv := nilthis.FromBase64_1(base64)
+	rv := nilthis.FromBase641(base64)
 	return rv
 }
 
@@ -5107,7 +5107,7 @@ This function was introduced in  Qt 4.4.
 
 See also toPercentEncoding() and QUrl::fromPercentEncoding().
 */
-func (this *QByteArray) FromPercentEncoding__(pctEncoded QByteArray_ITF) *QByteArray /*123*/ {
+func (this *QByteArray) FromPercentEncodingp(pctEncoded QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if pctEncoded != nil && pctEncoded.QByteArray_PTR() != nil {
 		convArg0 = pctEncoded.QByteArray_PTR().GetCthis()
@@ -5147,7 +5147,7 @@ Returns an STL-style iterator pointing to the first character in the byte-array.
 
 See also constBegin() and end().
 */
-func (this *QByteArray) Begin_1() string {
+func (this *QByteArray) Begin1() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -5213,7 +5213,7 @@ Returns an STL-style iterator pointing to the imaginary character after the last
 
 See also begin() and constEnd().
 */
-func (this *QByteArray) End_1() string {
+func (this *QByteArray) End1() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.GoStringI(rv)
@@ -5274,7 +5274,7 @@ func (this *QByteArray) Push_back(c byte) {
 /*
 This function is provided for STL compatibility. It is equivalent to append(other).
 */
-func (this *QByteArray) Push_back_1(c string) {
+func (this *QByteArray) Push_back1(c string) {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray9push_backEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -5289,7 +5289,7 @@ func (this *QByteArray) Push_back_1(c string) {
 /*
 This function is provided for STL compatibility. It is equivalent to append(other).
 */
-func (this *QByteArray) Push_back_2(a QByteArray_ITF) {
+func (this *QByteArray) Push_back2(a QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
 		convArg0 = a.QByteArray_PTR().GetCthis()
@@ -5319,7 +5319,7 @@ func (this *QByteArray) Push_front(c byte) {
 /*
 This function is provided for STL compatibility. It is equivalent to prepend(other).
 */
-func (this *QByteArray) Push_front_1(c string) {
+func (this *QByteArray) Push_front1(c string) {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray10push_frontEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -5334,7 +5334,7 @@ func (this *QByteArray) Push_front_1(c string) {
 /*
 This function is provided for STL compatibility. It is equivalent to prepend(other).
 */
-func (this *QByteArray) Push_front_2(a QByteArray_ITF) {
+func (this *QByteArray) Push_front2(a QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QByteArray_PTR() != nil {
 		convArg0 = a.QByteArray_PTR().GetCthis()

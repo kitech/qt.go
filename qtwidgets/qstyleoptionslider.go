@@ -91,10 +91,10 @@ func NewQStyleOptionSlider() *QStyleOptionSlider {
 /*
 
  */
-func (*QStyleOptionSlider) NewForInherit_1(version int) *QStyleOptionSlider {
-	return NewQStyleOptionSlider_1(version)
+func (*QStyleOptionSlider) NewForInherit1(version int) *QStyleOptionSlider {
+	return NewQStyleOptionSlider1(version)
 }
-func NewQStyleOptionSlider_1(version int) *QStyleOptionSlider {
+func NewQStyleOptionSlider1(version int) *QStyleOptionSlider {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionSliderC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSliderFromPointer(unsafe.Pointer(uintptr(rv)))

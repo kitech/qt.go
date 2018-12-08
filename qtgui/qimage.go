@@ -134,10 +134,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_1(size qtcore.QSize_ITF, format int) *QImage {
-	return NewQImage_1(size, format)
+func (*QImage) NewForInherit1(size qtcore.QSize_ITF, format int) *QImage {
+	return NewQImage1(size, format)
 }
-func NewQImage_1(size qtcore.QSize_ITF, format int) *QImage {
+func NewQImage1(size qtcore.QSize_ITF, format int) *QImage {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
@@ -159,10 +159,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_2(width int, height int, format int) *QImage {
-	return NewQImage_2(width, height, format)
+func (*QImage) NewForInherit2(width int, height int, format int) *QImage {
+	return NewQImage2(width, height, format)
 }
-func NewQImage_2(width int, height int, format int) *QImage {
+func NewQImage2(width int, height int, format int) *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EiiNS_6FormatE", qtrt.FFI_TYPE_POINTER, width, height, format)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -180,10 +180,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_3(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
-	return NewQImage_3(data, width, height, format, cleanupFunction, cleanupInfo)
+func (*QImage) NewForInherit3(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	return NewQImage3(data, width, height, format, cleanupFunction, cleanupInfo)
 }
-func NewQImage_3(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+func NewQImage3(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -201,10 +201,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_3_(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
-	return NewQImage_3_(data, width, height, format)
+func (*QImage) NewForInherit3p(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
+	return NewQImage3p(data, width, height, format)
 }
-func NewQImage_3_(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
+func NewQImage3p(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
 	// arg: 4, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
 	var cleanupFunction unsafe.Pointer
 	// arg: 5, void *=Pointer, =Invalid, , Invalid
@@ -226,10 +226,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_3_1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
-	return NewQImage_3_1(data, width, height, format, cleanupFunction)
+func (*QImage) NewForInherit3p1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	return NewQImage3p1(data, width, height, format, cleanupFunction)
 }
-func NewQImage_3_1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+func NewQImage3p1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
 	// arg: 5, void *=Pointer, =Invalid, , Invalid
 	var cleanupInfo unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
@@ -249,10 +249,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_4(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
-	return NewQImage_4(data, width, height, format, cleanupFunction, cleanupInfo)
+func (*QImage) NewForInherit4(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	return NewQImage4(data, width, height, format, cleanupFunction, cleanupInfo)
 }
-func NewQImage_4(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+func NewQImage4(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -270,10 +270,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_4_(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
-	return NewQImage_4_(data, width, height, format)
+func (*QImage) NewForInherit4p(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
+	return NewQImage4p(data, width, height, format)
 }
-func NewQImage_4_(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
+func NewQImage4p(data unsafe.Pointer /*666*/, width int, height int, format int) *QImage {
 	// arg: 4, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
 	var cleanupFunction unsafe.Pointer
 	// arg: 5, void *=Pointer, =Invalid, , Invalid
@@ -295,10 +295,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_4_1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
-	return NewQImage_4_1(data, width, height, format, cleanupFunction)
+func (*QImage) NewForInherit4p1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	return NewQImage4p1(data, width, height, format, cleanupFunction)
 }
-func NewQImage_4_1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+func NewQImage4p1(data unsafe.Pointer /*666*/, width int, height int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
 	// arg: 5, void *=Pointer, =Invalid, , Invalid
 	var cleanupInfo unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, format, cleanupFunction, cleanupInfo)
@@ -318,10 +318,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_5(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
-	return NewQImage_5(data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
+func (*QImage) NewForInherit5(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	return NewQImage5(data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
 }
-func NewQImage_5(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+func NewQImage5(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -339,10 +339,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_5_(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
-	return NewQImage_5_(data, width, height, bytesPerLine, format)
+func (*QImage) NewForInherit5p(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
+	return NewQImage5p(data, width, height, bytesPerLine, format)
 }
-func NewQImage_5_(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
+func NewQImage5p(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
 	// arg: 5, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
 	var cleanupFunction unsafe.Pointer
 	// arg: 6, void *=Pointer, =Invalid, , Invalid
@@ -364,10 +364,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_5_1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
-	return NewQImage_5_1(data, width, height, bytesPerLine, format, cleanupFunction)
+func (*QImage) NewForInherit5p1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	return NewQImage5p1(data, width, height, bytesPerLine, format, cleanupFunction)
 }
-func NewQImage_5_1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+func NewQImage5p1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
 	// arg: 6, void *=Pointer, =Invalid, , Invalid
 	var cleanupInfo unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPhiiiNS_6FormatEPFvPvES2_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
@@ -387,10 +387,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_6(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
-	return NewQImage_6(data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
+func (*QImage) NewForInherit6(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+	return NewQImage6(data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
 }
-func NewQImage_6(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
+func NewQImage6(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/, cleanupInfo unsafe.Pointer /*666*/) *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQImageFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -408,10 +408,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_6_(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
-	return NewQImage_6_(data, width, height, bytesPerLine, format)
+func (*QImage) NewForInherit6p(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
+	return NewQImage6p(data, width, height, bytesPerLine, format)
 }
-func NewQImage_6_(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
+func NewQImage6p(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int) *QImage {
 	// arg: 5, QImageCleanupFunction=Typedef, QImageCleanupFunction=Typedef, void (*)(void *), Pointer
 	var cleanupFunction unsafe.Pointer
 	// arg: 6, void *=Pointer, =Invalid, , Invalid
@@ -433,10 +433,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_6_1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
-	return NewQImage_6_1(data, width, height, bytesPerLine, format, cleanupFunction)
+func (*QImage) NewForInherit6p1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+	return NewQImage6p1(data, width, height, bytesPerLine, format, cleanupFunction)
 }
-func NewQImage_6_1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
+func NewQImage6p1(data unsafe.Pointer /*666*/, width int, height int, bytesPerLine int, format int, cleanupFunction unsafe.Pointer /*666*/) *QImage {
 	// arg: 6, void *=Pointer, =Invalid, , Invalid
 	var cleanupInfo unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKhiiiNS_6FormatEPFvPvES3_", qtrt.FFI_TYPE_POINTER, data, width, height, bytesPerLine, format, cleanupFunction, cleanupInfo)
@@ -456,10 +456,10 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_7(xpm []string) *QImage {
-	return NewQImage_7(xpm)
+func (*QImage) NewForInherit7(xpm []string) *QImage {
+	return NewQImage7(xpm)
 }
-func NewQImage_7(xpm []string) *QImage {
+func NewQImage7(xpm []string) *QImage {
 	var convArg0 = qtrt.StringSliceToCCharPP(xpm)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageC2EPKPKc", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -478,11 +478,11 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_8(fileName string, format string) *QImage {
-	return NewQImage_8(fileName, format)
+func (*QImage) NewForInherit8(fileName string, format string) *QImage {
+	return NewQImage8(fileName, format)
 }
-func NewQImage_8(fileName string, format string) *QImage {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQImage8(fileName string, format string) *QImage {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
@@ -503,11 +503,11 @@ Constructs a null image.
 
 See also isNull().
 */
-func (*QImage) NewForInherit_8_(fileName string) *QImage {
-	return NewQImage_8_(fileName)
+func (*QImage) NewForInherit8p(fileName string) *QImage {
+	return NewQImage8p(fileName)
 }
-func NewQImage_8_(fileName string) *QImage {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQImage8p(fileName string) *QImage {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
@@ -561,7 +561,7 @@ func (this *QImage) Operator_equal(arg0 QImage_ITF) *QImage {
 /*
 
  */
-func (this *QImage) Operator_equal_1(other unsafe.Pointer /*333*/) *QImage {
+func (this *QImage) Operator_equal1(other unsafe.Pointer /*333*/) *QImage {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImageaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -725,7 +725,7 @@ If the given rectangle is a null rectangle the entire image is copied.
 
 See also QImage().
 */
-func (this *QImage) Copy__() *QImage /*123*/ {
+func (this *QImage) Copyp() *QImage /*123*/ {
 	// arg: 0, const QRect &=LValueReference, QRect=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4copyERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -751,7 +751,7 @@ If the given rectangle is a null rectangle the entire image is copied.
 
 See also QImage().
 */
-func (this *QImage) Copy_1(x int, y int, w int, h int) *QImage /*123*/ {
+func (this *QImage) Copy1(x int, y int, w int, h int) *QImage /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4copyEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -807,7 +807,7 @@ The specified image conversion flags control how the image data is handled durin
 
 See also Image Formats.
 */
-func (this *QImage) ConvertToFormat__(f int) *QImage /*123*/ {
+func (this *QImage) ConvertToFormatp(f int) *QImage /*123*/ {
 	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR6QImage15convertToFormatENS_6FormatE6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f, flags)
@@ -829,7 +829,7 @@ The specified image conversion flags control how the image data is handled durin
 
 See also Image Formats.
 */
-func (this *QImage) ConvertToFormat_1(f int, flags int) *QImage /*123*/ {
+func (this *QImage) ConvertToFormat1(f int, flags int) *QImage /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNO6QImage15convertToFormatENS_6FormatE6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f, flags)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -849,7 +849,7 @@ The specified image conversion flags control how the image data is handled durin
 
 See also Image Formats.
 */
-func (this *QImage) ConvertToFormat_1_(f int) *QImage /*123*/ {
+func (this *QImage) ConvertToFormat1p(f int) *QImage /*123*/ {
 	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNO6QImage15convertToFormatENS_6FormatE6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f, flags)
@@ -1135,7 +1135,7 @@ Note that QImage uses implicit data sharing. This function performs a deep copy 
 
 See also scanLine(), sizeInBytes(), and constBits().
 */
-func (this *QImage) Bits_1() unsafe.Pointer /*666*/ {
+func (this *QImage) Bits1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4bitsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -1227,7 +1227,7 @@ Warning: If you are accessing 32-bpp image data, cast the returned pointer to QR
 
 See also bytesPerLine(), bits(), Pixel Manipulation, and constScanLine().
 */
-func (this *QImage) ScanLine_1(arg0 int) unsafe.Pointer /*666*/ {
+func (this *QImage) ScanLine1(arg0 int) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage8scanLineEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -1299,7 +1299,7 @@ Returns true if pos is a valid coordinate pair within the image; otherwise retur
 
 See also rect() and QRect::contains().
 */
-func (this *QImage) Valid_1(pt qtcore.QPoint_ITF) bool {
+func (this *QImage) Valid1(pt qtcore.QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPoint_PTR() != nil {
 		convArg0 = pt.QPoint_PTR().GetCthis()
@@ -1339,7 +1339,7 @@ If position is not valid, or if the image is not a paletted image (depth() > 8),
 
 See also valid(), depth(), and Pixel Manipulation.
 */
-func (this *QImage) PixelIndex_1(pt qtcore.QPoint_ITF) int {
+func (this *QImage) PixelIndex1(pt qtcore.QPoint_ITF) int {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPoint_PTR() != nil {
 		convArg0 = pt.QPoint_PTR().GetCthis()
@@ -1383,7 +1383,7 @@ Warning: This function is expensive when used for massive pixel manipulations. U
 
 See also setPixel(), valid(), constBits(), constScanLine(), and Pixel Manipulation.
 */
-func (this *QImage) Pixel_1(pt qtcore.QPoint_ITF) uint {
+func (this *QImage) Pixel1(pt qtcore.QPoint_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPoint_PTR() != nil {
 		convArg0 = pt.QPoint_PTR().GetCthis()
@@ -1430,7 +1430,7 @@ Warning: This function is expensive due to the call of the internal detach() fun
 
 See also pixel() and Pixel Manipulation.
 */
-func (this *QImage) SetPixel_1(pt qtcore.QPoint_ITF, index_or_rgb uint) {
+func (this *QImage) SetPixel1(pt qtcore.QPoint_ITF, index_or_rgb uint) {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPoint_PTR() != nil {
 		convArg0 = pt.QPoint_PTR().GetCthis()
@@ -1479,7 +1479,7 @@ This function was introduced in  Qt 5.6.
 
 See also setPixelColor(), setPixel(), valid(), constBits(), constScanLine(), and Pixel Manipulation.
 */
-func (this *QImage) PixelColor_1(pt qtcore.QPoint_ITF) *QColor /*123*/ {
+func (this *QImage) PixelColor1(pt qtcore.QPoint_ITF) *QColor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPoint_PTR() != nil {
 		convArg0 = pt.QPoint_PTR().GetCthis()
@@ -1532,7 +1532,7 @@ This function was introduced in  Qt 5.6.
 
 See also pixelColor(), pixel(), bits(), scanLine(), and Pixel Manipulation.
 */
-func (this *QImage) SetPixelColor_1(pt qtcore.QPoint_ITF, c QColor_ITF) {
+func (this *QImage) SetPixelColor1(pt qtcore.QPoint_ITF, c QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if pt != nil && pt.QPoint_PTR() != nil {
 		convArg0 = pt.QPoint_PTR().GetCthis()
@@ -1619,7 +1619,7 @@ Note: QImage::pixel() returns the color of the pixel at the given coordinates wh
 
 See also depth() and Image Transformations.
 */
-func (this *QImage) Fill_1(color QColor_ITF) {
+func (this *QImage) Fill1(color QColor_ITF) {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
 		convArg0 = color.QColor_PTR().GetCthis()
@@ -1642,7 +1642,7 @@ Note: QImage::pixel() returns the color of the pixel at the given coordinates wh
 
 See also depth() and Image Transformations.
 */
-func (this *QImage) Fill_2(color int) {
+func (this *QImage) Fill2(color int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage4fillEN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), color)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1732,7 +1732,7 @@ The returned image has little-endian bit order (i.e. the image's format is QImag
 
 See also createHeuristicMask() and Image Transformations.
 */
-func (this *QImage) CreateAlphaMask__() *QImage /*123*/ {
+func (this *QImage) CreateAlphaMaskp() *QImage /*123*/ {
 	// arg: 0, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage15createAlphaMaskE6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
@@ -1786,7 +1786,7 @@ Note that this function disregards the alpha buffer.
 
 See also createAlphaMask() and Image Transformations.
 */
-func (this *QImage) CreateHeuristicMask__() *QImage /*123*/ {
+func (this *QImage) CreateHeuristicMaskp() *QImage /*123*/ {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	clipTight := true
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage19createHeuristicMaskEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), clipTight)
@@ -1824,7 +1824,7 @@ Creates and returns a mask for this image based on the given color value. If the
 
 See also createAlphaMask() and createHeuristicMask().
 */
-func (this *QImage) CreateMaskFromColor__(color uint) *QImage /*123*/ {
+func (this *QImage) CreateMaskFromColorp(color uint) *QImage /*123*/ {
 	// arg: 1, Qt::MaskMode=Elaborated, Qt::MaskMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage19createMaskFromColorEjN2Qt8MaskModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), color, mode)
@@ -1882,7 +1882,7 @@ If the given size is empty, this function returns a null image.
 
 See also isNull() and Image Transformations.
 */
-func (this *QImage) Scaled__(w int, h int) *QImage /*123*/ {
+func (this *QImage) Scaledp(w int, h int) *QImage /*123*/ {
 	// arg: 2, Qt::AspectRatioMode=Elaborated, Qt::AspectRatioMode=Enum, , Invalid
 	aspectMode := 0
 	// arg: 3, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
@@ -1914,7 +1914,7 @@ If the given size is empty, this function returns a null image.
 
 See also isNull() and Image Transformations.
 */
-func (this *QImage) Scaled__1(w int, h int, aspectMode int) *QImage /*123*/ {
+func (this *QImage) Scaledp1(w int, h int, aspectMode int) *QImage /*123*/ {
 	// arg: 3, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage6scaledEiiN2Qt15AspectRatioModeENS0_18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, aspectMode, mode)
@@ -1944,7 +1944,7 @@ If the given size is empty, this function returns a null image.
 
 See also isNull() and Image Transformations.
 */
-func (this *QImage) Scaled_1(s qtcore.QSize_ITF, aspectMode int, mode int) *QImage /*123*/ {
+func (this *QImage) Scaled1(s qtcore.QSize_ITF, aspectMode int, mode int) *QImage /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
@@ -1976,7 +1976,7 @@ If the given size is empty, this function returns a null image.
 
 See also isNull() and Image Transformations.
 */
-func (this *QImage) Scaled_1_(s qtcore.QSize_ITF) *QImage /*123*/ {
+func (this *QImage) Scaled1p(s qtcore.QSize_ITF) *QImage /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
@@ -2012,7 +2012,7 @@ If the given size is empty, this function returns a null image.
 
 See also isNull() and Image Transformations.
 */
-func (this *QImage) Scaled_1_1(s qtcore.QSize_ITF, aspectMode int) *QImage /*123*/ {
+func (this *QImage) Scaled1p1(s qtcore.QSize_ITF, aspectMode int) *QImage /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
@@ -2062,7 +2062,7 @@ If the given width is 0 or negative, a null image is returned.
 
 See also Image Transformations.
 */
-func (this *QImage) ScaledToWidth__(w int) *QImage /*123*/ {
+func (this *QImage) ScaledToWidthp(w int) *QImage /*123*/ {
 	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage13scaledToWidthEiN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, mode)
@@ -2108,7 +2108,7 @@ If the given height is 0 or negative, a null image is returned.
 
 See also Image Transformations.
 */
-func (this *QImage) ScaledToHeight__(h int) *QImage /*123*/ {
+func (this *QImage) ScaledToHeightp(h int) *QImage /*123*/ {
 	// arg: 1, Qt::TransformationMode=Elaborated, Qt::TransformationMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage14scaledToHeightEiN2Qt18TransformationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, mode)
@@ -2154,7 +2154,7 @@ The transformation matrix is internally adjusted to compensate for unwanted tran
 
 See also trueMatrix() and Image Transformations.
 */
-func (this *QImage) Transformed__(matrix QMatrix_ITF) *QImage /*123*/ {
+func (this *QImage) Transformedp(matrix QMatrix_ITF) *QImage /*123*/ {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QMatrix_PTR() != nil {
 		convArg0 = matrix.QMatrix_PTR().GetCthis()
@@ -2180,7 +2180,7 @@ The transformation matrix is internally adjusted to compensate for unwanted tran
 
 See also trueMatrix() and Image Transformations.
 */
-func (this *QImage) Transformed_1(matrix QTransform_ITF, mode int) *QImage /*123*/ {
+func (this *QImage) Transformed1(matrix QTransform_ITF, mode int) *QImage /*123*/ {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()
@@ -2204,7 +2204,7 @@ The transformation matrix is internally adjusted to compensate for unwanted tran
 
 See also trueMatrix() and Image Transformations.
 */
-func (this *QImage) Transformed_1_(matrix QTransform_ITF) *QImage /*123*/ {
+func (this *QImage) Transformed1p(matrix QTransform_ITF) *QImage /*123*/ {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()
@@ -2259,7 +2259,7 @@ When transforming an image using the transformed() function, the transformation 
 
 See also transformed() and Image Transformations.
 */
-func (this *QImage) TrueMatrix_1(arg0 QTransform_ITF, w int, h int) *QTransform /*123*/ {
+func (this *QImage) TrueMatrix1(arg0 QTransform_ITF, w int, h int) *QTransform /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTransform_PTR() != nil {
 		convArg0 = arg0.QTransform_PTR().GetCthis()
@@ -2270,9 +2270,9 @@ func (this *QImage) TrueMatrix_1(arg0 QTransform_ITF, w int, h int) *QTransform 
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
-func QImage_TrueMatrix_1(arg0 QTransform_ITF, w int, h int) *QTransform /*123*/ {
+func QImage_TrueMatrix1(arg0 QTransform_ITF, w int, h int) *QTransform /*123*/ {
 	var nilthis *QImage
-	rv := nilthis.TrueMatrix_1(arg0, w, h)
+	rv := nilthis.TrueMatrix1(arg0, w, h)
 	return rv
 }
 
@@ -2308,7 +2308,7 @@ Note that the original image is not changed.
 
 See also Image Transformations.
 */
-func (this *QImage) Mirrored__() *QImage /*123*/ {
+func (this *QImage) Mirroredp() *QImage /*123*/ {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	horizontally := false
 	// arg: 1, bool=Bool, =Invalid, , Invalid
@@ -2332,7 +2332,7 @@ Note that the original image is not changed.
 
 See also Image Transformations.
 */
-func (this *QImage) Mirrored__1(horizontally bool) *QImage /*123*/ {
+func (this *QImage) Mirroredp1(horizontally bool) *QImage /*123*/ {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	vertically := true
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR6QImage8mirroredEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), horizontally, vertically)
@@ -2354,7 +2354,7 @@ Note that the original image is not changed.
 
 See also Image Transformations.
 */
-func (this *QImage) Mirrored_1(horizontally bool, vertically bool) unsafe.Pointer /*333*/ {
+func (this *QImage) Mirrored1(horizontally bool, vertically bool) unsafe.Pointer /*333*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNO6QImage8mirroredEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), horizontally, vertically)
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv)) //777
@@ -2372,7 +2372,7 @@ Note that the original image is not changed.
 
 See also Image Transformations.
 */
-func (this *QImage) Mirrored_1_() unsafe.Pointer /*333*/ {
+func (this *QImage) Mirrored1p() unsafe.Pointer /*333*/ {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	horizontally := false
 	// arg: 1, bool=Bool, =Invalid, , Invalid
@@ -2394,7 +2394,7 @@ Note that the original image is not changed.
 
 See also Image Transformations.
 */
-func (this *QImage) Mirrored_1_1(horizontally bool) unsafe.Pointer /*333*/ {
+func (this *QImage) Mirrored1p1(horizontally bool) unsafe.Pointer /*333*/ {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	vertically := true
 	rv, err := qtrt.InvokeQtFunc6("_ZNO6QImage8mirroredEbb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), horizontally, vertically)
@@ -2434,7 +2434,7 @@ The original QImage is not changed.
 
 See also Image Transformations.
 */
-func (this *QImage) RgbSwapped_1() unsafe.Pointer /*333*/ {
+func (this *QImage) RgbSwapped1() unsafe.Pointer /*333*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNO6QImage10rgbSwappedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv)) //777
@@ -2477,7 +2477,7 @@ If the image has a premultiplied alpha channel, the image is first converted to 
 
 See also Image Transformations.
 */
-func (this *QImage) InvertPixels__() {
+func (this *QImage) InvertPixelsp() {
 	// arg: 0, QImage::InvertMode=Enum, QImage::InvertMode=Enum, , Invalid
 	arg0 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage12invertPixelsENS_10InvertModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
@@ -2524,8 +2524,8 @@ The file name can either refer to an actual file on disk or to one of the applic
 
 See also Reading and Writing Image Files.
 */
-func (this *QImage) Load_1(fileName string, format string) bool {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func (this *QImage) Load1(fileName string, format string) bool {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
@@ -2548,8 +2548,8 @@ The file name can either refer to an actual file on disk or to one of the applic
 
 See also Reading and Writing Image Files.
 */
-func (this *QImage) Load_1_(fileName string) bool {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func (this *QImage) Load1p(fileName string) bool {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
@@ -2590,7 +2590,7 @@ The loader attempts to read the image using the specified format, e.g., PNG or J
 
 See also Reading and Writing Image Files.
 */
-func (this *QImage) LoadFromData__(buf unsafe.Pointer /*666*/, len_ int) bool {
+func (this *QImage) LoadFromDatap(buf unsafe.Pointer /*666*/, len_ int) bool {
 	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage12loadFromDataEPKhiPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), buf, len_, convArg2)
@@ -2610,7 +2610,7 @@ The loader attempts to read the image using the specified format, e.g., PNG or J
 
 See also Reading and Writing Image Files.
 */
-func (this *QImage) LoadFromData_1(data qtcore.QByteArray_ITF, aformat string) bool {
+func (this *QImage) LoadFromData1(data qtcore.QByteArray_ITF, aformat string) bool {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -2634,7 +2634,7 @@ The loader attempts to read the image using the specified format, e.g., PNG or J
 
 See also Reading and Writing Image Files.
 */
-func (this *QImage) LoadFromData_1_(data qtcore.QByteArray_ITF) bool {
+func (this *QImage) LoadFromData1p(data qtcore.QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -2661,7 +2661,7 @@ Returns true if the image was successfully saved; otherwise returns false.
 See also Reading and Writing Image Files.
 */
 func (this *QImage) Save(fileName string, format string, quality int) bool {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
@@ -2684,8 +2684,8 @@ Returns true if the image was successfully saved; otherwise returns false.
 
 See also Reading and Writing Image Files.
 */
-func (this *QImage) Save__(fileName string) bool {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func (this *QImage) Savep(fileName string) bool {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
@@ -2710,8 +2710,8 @@ Returns true if the image was successfully saved; otherwise returns false.
 
 See also Reading and Writing Image Files.
 */
-func (this *QImage) Save__1(fileName string, format string) bool {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func (this *QImage) Savep1(fileName string, format string) bool {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
@@ -2736,7 +2736,7 @@ Returns true if the image was successfully saved; otherwise returns false.
 
 See also Reading and Writing Image Files.
 */
-func (this *QImage) Save_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string, quality int) bool {
+func (this *QImage) Save1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string, quality int) bool {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -2762,7 +2762,7 @@ Returns true if the image was successfully saved; otherwise returns false.
 
 See also Reading and Writing Image Files.
 */
-func (this *QImage) Save_1_(device qtcore.QIODevice_ITF /*777 QIODevice **/) bool {
+func (this *QImage) Save1p(device qtcore.QIODevice_ITF /*777 QIODevice **/) bool {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -2790,7 +2790,7 @@ Returns true if the image was successfully saved; otherwise returns false.
 
 See also Reading and Writing Image Files.
 */
-func (this *QImage) Save_1_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string) bool {
+func (this *QImage) Save1p1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string) bool {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -2847,7 +2847,7 @@ If the loading of the image fails, the image returned will be a null image.
 
 See also load(), save(), and Reading and Writing Image Files.
 */
-func (this *QImage) FromData__(data unsafe.Pointer /*666*/, size int) *QImage /*123*/ {
+func (this *QImage) FromDatap(data unsafe.Pointer /*666*/, size int) *QImage /*123*/ {
 	// arg: 2, const char *=Pointer, =Invalid, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage8fromDataEPKhiPKc", qtrt.FFI_TYPE_POINTER, data, size, convArg2)
@@ -2871,7 +2871,7 @@ If the loading of the image fails, the image returned will be a null image.
 
 See also load(), save(), and Reading and Writing Image Files.
 */
-func (this *QImage) FromData_1(data qtcore.QByteArray_ITF, format string) *QImage /*123*/ {
+func (this *QImage) FromData1(data qtcore.QByteArray_ITF, format string) *QImage /*123*/ {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -2884,9 +2884,9 @@ func (this *QImage) FromData_1(data qtcore.QByteArray_ITF, format string) *QImag
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQImage)
 	return rv2
 }
-func QImage_FromData_1(data qtcore.QByteArray_ITF, format string) *QImage /*123*/ {
+func QImage_FromData1(data qtcore.QByteArray_ITF, format string) *QImage /*123*/ {
 	var nilthis *QImage
-	rv := nilthis.FromData_1(data, format)
+	rv := nilthis.FromData1(data, format)
 	return rv
 }
 
@@ -2904,7 +2904,7 @@ If the loading of the image fails, the image returned will be a null image.
 
 See also load(), save(), and Reading and Writing Image Files.
 */
-func (this *QImage) FromData_1_(data qtcore.QByteArray_ITF) *QImage /*123*/ {
+func (this *QImage) FromData1p(data qtcore.QByteArray_ITF) *QImage /*123*/ {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -3082,7 +3082,7 @@ Returns the image text associated with the given key. If the specified key is an
 See also setText() and textKeys().
 */
 func (this *QImage) Text(key string) string {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4textERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -3102,7 +3102,7 @@ Returns the image text associated with the given key. If the specified key is an
 
 See also setText() and textKeys().
 */
-func (this *QImage) Text__() string {
+func (this *QImage) Textp() string {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4textERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -3140,9 +3140,9 @@ You can use QImageWriter::supportedImageFormats() to find out which image format
 See also text() and textKeys().
 */
 func (this *QImage) SetText(key string, value string) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(value)
+	var tmpArg1 = qtcore.NewQString5(value)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage7setTextERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

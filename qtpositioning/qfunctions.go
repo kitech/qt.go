@@ -30,7 +30,7 @@ func init() {
 /*
 
  */
-func Operator_or_86(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or86(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN22QGeoPositionInfoSource17PositioningMethodEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -46,7 +46,7 @@ func Operator_or_86(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func QHash_42(coordinate QGeoCoordinate_ITF, seed uint) uint {
+func QHash42(coordinate QGeoCoordinate_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if coordinate != nil && coordinate.QGeoCoordinate_PTR() != nil {
 		convArg0 = coordinate.QGeoCoordinate_PTR().GetCthis()

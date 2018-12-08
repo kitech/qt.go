@@ -91,10 +91,10 @@ func NewQTime() *QTime {
 /*
 
  */
-func (*QTime) NewForInherit_1(h int, m int, s int, ms int) *QTime {
-	return NewQTime_1(h, m, s, ms)
+func (*QTime) NewForInherit1(h int, m int, s int, ms int) *QTime {
+	return NewQTime1(h, m, s, ms)
 }
-func NewQTime_1(h int, m int, s int, ms int) *QTime {
+func NewQTime1(h int, m int, s int, ms int) *QTime {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTimeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,10 +110,10 @@ func NewQTime_1(h int, m int, s int, ms int) *QTime {
 /*
 
  */
-func (*QTime) NewForInherit_1_(h int, m int) *QTime {
-	return NewQTime_1_(h, m)
+func (*QTime) NewForInherit1p(h int, m int) *QTime {
+	return NewQTime1p(h, m)
 }
-func NewQTime_1_(h int, m int) *QTime {
+func NewQTime1p(h int, m int) *QTime {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	s := int(0)
 	// arg: 3, int=Int, =Invalid, , Invalid
@@ -133,10 +133,10 @@ func NewQTime_1_(h int, m int) *QTime {
 /*
 
  */
-func (*QTime) NewForInherit_1_1(h int, m int, s int) *QTime {
-	return NewQTime_1_1(h, m, s)
+func (*QTime) NewForInherit1p1(h int, m int, s int) *QTime {
+	return NewQTime1p1(h, m, s)
 }
-func NewQTime_1_1(h int, m int, s int) *QTime {
+func NewQTime1p1(h int, m int, s int) *QTime {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	ms := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
@@ -192,14 +192,14 @@ If the timeSpec() is Qt::LocalTime or Qt::TimeZone then the date and time are ch
 
 See also QDate::isValid() and QTime::isValid().
 */
-func (this *QTime) IsValid_1(h int, m int, s int, ms int) bool {
+func (this *QTime) IsValid1(h int, m int, s int, ms int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime7isValidEiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QTime_IsValid_1(h int, m int, s int, ms int) bool {
+func QTime_IsValid1(h int, m int, s int, ms int) bool {
 	var nilthis *QTime
-	rv := nilthis.IsValid_1(h, m, s, ms)
+	rv := nilthis.IsValid1(h, m, s, ms)
 	return rv
 }
 
@@ -215,7 +215,7 @@ If the timeSpec() is Qt::LocalTime or Qt::TimeZone then the date and time are ch
 
 See also QDate::isValid() and QTime::isValid().
 */
-func (this *QTime) IsValid_1_(h int, m int, s int) bool {
+func (this *QTime) IsValid1p(h int, m int, s int) bool {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	ms := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime7isValidEiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
@@ -408,7 +408,7 @@ If the datetime is invalid, an empty string will be returned.
 
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
-func (this *QTime) ToString__() string {
+func (this *QTime) ToStringp() string {
 	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
@@ -479,8 +479,8 @@ If the datetime is invalid, an empty string will be returned.
 
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
-func (this *QTime) ToString_1(format string) string {
-	var tmpArg0 = NewQString_5(format)
+func (this *QTime) ToString1(format string) string {
+	var tmpArg0 = NewQString5(format)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8toStringERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -550,7 +550,7 @@ If the datetime is invalid, an empty string will be returned.
 
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
-func (this *QTime) ToString_2(format QStringView_ITF /*123*/) string {
+func (this *QTime) ToString2(format QStringView_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QStringView_PTR() != nil {
 		convArg0 = format.QStringView_PTR().GetCthis()
@@ -585,7 +585,7 @@ func (this *QTime) SetHMS(h int, m int, s int, ms int) bool {
 /*
 
  */
-func (this *QTime) SetHMS__(h int, m int, s int) bool {
+func (this *QTime) SetHMSp(h int, m int, s int) bool {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	ms := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime6setHMSEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, m, s, ms)
@@ -867,7 +867,7 @@ Note for Qt::TextDate: It is recommended that you use the English short month na
 See also toString() and QLocale::toDateTime().
 */
 func (this *QTime) FromString(s string, f int) *QTime /*123*/ {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime10fromStringERK7QStringN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
@@ -893,8 +893,8 @@ Note for Qt::TextDate: It is recommended that you use the English short month na
 
 See also toString() and QLocale::toDateTime().
 */
-func (this *QTime) FromString__(s string) *QTime /*123*/ {
-	var tmpArg0 = NewQString_5(s)
+func (this *QTime) FromStringp(s string) *QTime /*123*/ {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
@@ -917,10 +917,10 @@ Note for Qt::TextDate: It is recommended that you use the English short month na
 
 See also toString() and QLocale::toDateTime().
 */
-func (this *QTime) FromString_1(s string, format string) *QTime /*123*/ {
-	var tmpArg0 = NewQString_5(s)
+func (this *QTime) FromString1(s string, format string) *QTime /*123*/ {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(format)
+	var tmpArg1 = NewQString5(format)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime10fromStringERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -928,9 +928,9 @@ func (this *QTime) FromString_1(s string, format string) *QTime /*123*/ {
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTime)
 	return rv2
 }
-func QTime_FromString_1(s string, format string) *QTime /*123*/ {
+func QTime_FromString1(s string, format string) *QTime /*123*/ {
 	var nilthis *QTime
-	rv := nilthis.FromString_1(s, format)
+	rv := nilthis.FromString1(s, format)
 	return rv
 }
 

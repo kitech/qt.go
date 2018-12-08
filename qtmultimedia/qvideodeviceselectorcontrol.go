@@ -222,8 +222,8 @@ Note: Signal selectedDeviceChanged is overloaded in this class. To connect to th
   connect(videoDeviceSelectorControl, QOverload<int>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged),
       [=](int index){ /-* ... *-/ });
 */
-func (this *QVideoDeviceSelectorControl) SelectedDeviceChanged_1(deviceName string) {
-	var tmpArg0 = qtcore.NewQString_5(deviceName)
+func (this *QVideoDeviceSelectorControl) SelectedDeviceChanged1(deviceName string) {
+	var tmpArg0 = qtcore.NewQString5(deviceName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QVideoDeviceSelectorControl21selectedDeviceChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -273,10 +273,10 @@ func NewQVideoDeviceSelectorControl(parent qtcore.QObject_ITF /*777 QObject **/)
 /*
 Constructs a video device selector control with the given parent.
 */
-func (*QVideoDeviceSelectorControl) NewForInherit__() *QVideoDeviceSelectorControl {
-	return NewQVideoDeviceSelectorControl__()
+func (*QVideoDeviceSelectorControl) NewForInheritp() *QVideoDeviceSelectorControl {
+	return NewQVideoDeviceSelectorControlp()
 }
-func NewQVideoDeviceSelectorControl__() *QVideoDeviceSelectorControl {
+func NewQVideoDeviceSelectorControlp() *QVideoDeviceSelectorControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QVideoDeviceSelectorControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

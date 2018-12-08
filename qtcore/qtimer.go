@@ -112,10 +112,10 @@ func NewQTimer(parent QObject_ITF /*777 QObject **/) *QTimer {
 /*
 Constructs a timer with the given parent.
 */
-func (*QTimer) NewForInherit__() *QTimer {
-	return NewQTimer__()
+func (*QTimer) NewForInheritp() *QTimer {
+	return NewQTimerp()
 }
-func NewQTimer__() *QTimer {
+func NewQTimerp() *QTimer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -348,7 +348,7 @@ Note: This function is reentrant.
 
 See also setSingleShot() and start().
 */
-func (this *QTimer) SingleShot_1(msec int, timerType int, receiver QObject_ITF /*777 const QObject **/, member string) {
+func (this *QTimer) SingleShot1(msec int, timerType int, receiver QObject_ITF /*777 const QObject **/, member string) {
 	var convArg2 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
 		convArg2 = receiver.QObject_PTR().GetCthis()
@@ -358,9 +358,9 @@ func (this *QTimer) SingleShot_1(msec int, timerType int, receiver QObject_ITF /
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer10singleShotEiN2Qt9TimerTypeEPK7QObjectPKc", qtrt.FFI_TYPE_POINTER, msec, timerType, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 }
-func QTimer_SingleShot_1(msec int, timerType int, receiver QObject_ITF /*777 const QObject **/, member string) {
+func QTimer_SingleShot1(msec int, timerType int, receiver QObject_ITF /*777 const QObject **/, member string) {
 	var nilthis *QTimer
-	nilthis.SingleShot_1(msec, timerType, receiver, member)
+	nilthis.SingleShot1(msec, timerType, receiver, member)
 }
 
 // /usr/include/qt/QtCore/qtimer.h:158
@@ -392,7 +392,7 @@ If the timer is already running, it will be stopped and restarted.
 
 If singleShot is true, the timer will be activated only once.
 */
-func (this *QTimer) Start_1() {
+func (this *QTimer) Start1() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }

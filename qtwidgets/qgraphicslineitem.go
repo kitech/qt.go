@@ -110,10 +110,10 @@ func NewQGraphicsLineItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 /*
 
  */
-func (*QGraphicsLineItem) NewForInherit__() *QGraphicsLineItem {
-	return NewQGraphicsLineItem__()
+func (*QGraphicsLineItem) NewForInheritp() *QGraphicsLineItem {
+	return NewQGraphicsLineItemp()
 }
-func NewQGraphicsLineItem__() *QGraphicsLineItem {
+func NewQGraphicsLineItemp() *QGraphicsLineItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsLineItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -131,10 +131,10 @@ func NewQGraphicsLineItem__() *QGraphicsLineItem {
 /*
 
  */
-func (*QGraphicsLineItem) NewForInherit_1(line qtcore.QLineF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
-	return NewQGraphicsLineItem_1(line, parent)
+func (*QGraphicsLineItem) NewForInherit1(line qtcore.QLineF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
+	return NewQGraphicsLineItem1(line, parent)
 }
-func NewQGraphicsLineItem_1(line qtcore.QLineF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
+func NewQGraphicsLineItem1(line qtcore.QLineF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
 	var convArg0 unsafe.Pointer
 	if line != nil && line.QLineF_PTR() != nil {
 		convArg0 = line.QLineF_PTR().GetCthis()
@@ -158,10 +158,10 @@ func NewQGraphicsLineItem_1(line qtcore.QLineF_ITF, parent QGraphicsItem_ITF /*7
 /*
 
  */
-func (*QGraphicsLineItem) NewForInherit_1_(line qtcore.QLineF_ITF) *QGraphicsLineItem {
-	return NewQGraphicsLineItem_1_(line)
+func (*QGraphicsLineItem) NewForInherit1p(line qtcore.QLineF_ITF) *QGraphicsLineItem {
+	return NewQGraphicsLineItem1p(line)
 }
-func NewQGraphicsLineItem_1_(line qtcore.QLineF_ITF) *QGraphicsLineItem {
+func NewQGraphicsLineItem1p(line qtcore.QLineF_ITF) *QGraphicsLineItem {
 	var convArg0 unsafe.Pointer
 	if line != nil && line.QLineF_PTR() != nil {
 		convArg0 = line.QLineF_PTR().GetCthis()
@@ -183,10 +183,10 @@ func NewQGraphicsLineItem_1_(line qtcore.QLineF_ITF) *QGraphicsLineItem {
 /*
 
  */
-func (*QGraphicsLineItem) NewForInherit_2(x1 float64, y1 float64, x2 float64, y2 float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
-	return NewQGraphicsLineItem_2(x1, y1, x2, y2, parent)
+func (*QGraphicsLineItem) NewForInherit2(x1 float64, y1 float64, x2 float64, y2 float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
+	return NewQGraphicsLineItem2(x1, y1, x2, y2, parent)
 }
-func NewQGraphicsLineItem_2(x1 float64, y1 float64, x2 float64, y2 float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
+func NewQGraphicsLineItem2(x1 float64, y1 float64, x2 float64, y2 float64, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsLineItem {
 	var convArg4 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
 		convArg4 = parent.QGraphicsItem_PTR().GetCthis()
@@ -206,10 +206,10 @@ func NewQGraphicsLineItem_2(x1 float64, y1 float64, x2 float64, y2 float64, pare
 /*
 
  */
-func (*QGraphicsLineItem) NewForInherit_2_(x1 float64, y1 float64, x2 float64, y2 float64) *QGraphicsLineItem {
-	return NewQGraphicsLineItem_2_(x1, y1, x2, y2)
+func (*QGraphicsLineItem) NewForInherit2p(x1 float64, y1 float64, x2 float64, y2 float64) *QGraphicsLineItem {
+	return NewQGraphicsLineItem2p(x1, y1, x2, y2)
 }
-func NewQGraphicsLineItem_2_(x1 float64, y1 float64, x2 float64, y2 float64) *QGraphicsLineItem {
+func NewQGraphicsLineItem2p(x1 float64, y1 float64, x2 float64, y2 float64) *QGraphicsLineItem {
 	// arg: 4, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg4 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsLineItemC2EddddP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, x1, y1, x2, y2, convArg4)
@@ -308,7 +308,7 @@ func (this *QGraphicsLineItem) SetLine(line qtcore.QLineF_ITF) {
 /*
 
  */
-func (this *QGraphicsLineItem) SetLine_1(x1 float64, y1 float64, x2 float64, y2 float64) {
+func (this *QGraphicsLineItem) SetLine1(x1 float64, y1 float64, x2 float64, y2 float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsLineItem7setLineEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	qtrt.ErrPrint(err, rv)
 }
@@ -488,7 +488,7 @@ Note: Enabling caching for an item does not guarantee that paint() will be invok
 
 See also setCacheMode(), QPen::width(), Item Coordinates, and ItemUsesExtendedStyleOption.
 */
-func (this *QGraphicsLineItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+func (this *QGraphicsLineItem) Paintp(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()

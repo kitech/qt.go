@@ -259,10 +259,10 @@ func NewQGraphicsProxyWidget(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, w
 /*
 Constructs a new QGraphicsProxy widget. parent and wFlags are passed to QGraphicsItem's constructor.
 */
-func (*QGraphicsProxyWidget) NewForInherit__() *QGraphicsProxyWidget {
-	return NewQGraphicsProxyWidget__()
+func (*QGraphicsProxyWidget) NewForInheritp() *QGraphicsProxyWidget {
+	return NewQGraphicsProxyWidgetp()
 }
-func NewQGraphicsProxyWidget__() *QGraphicsProxyWidget {
+func NewQGraphicsProxyWidgetp() *QGraphicsProxyWidget {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -282,10 +282,10 @@ func NewQGraphicsProxyWidget__() *QGraphicsProxyWidget {
 /*
 Constructs a new QGraphicsProxy widget. parent and wFlags are passed to QGraphicsItem's constructor.
 */
-func (*QGraphicsProxyWidget) NewForInherit__1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsProxyWidget {
-	return NewQGraphicsProxyWidget__1(parent)
+func (*QGraphicsProxyWidget) NewForInheritp1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsProxyWidget {
+	return NewQGraphicsProxyWidgetp1(parent)
 }
-func NewQGraphicsProxyWidget__1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsProxyWidget {
+func NewQGraphicsProxyWidgetp1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsProxyWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
 		convArg0 = parent.QGraphicsItem_PTR().GetCthis()
@@ -959,7 +959,7 @@ func (this *QGraphicsProxyWidget) SizeHint(which int, constraint qtcore.QSizeF_I
 /*
 Reimplemented from QGraphicsLayoutItem::sizeHint().
 */
-func (this *QGraphicsProxyWidget) SizeHint__(which int) *qtcore.QSizeF /*123*/ {
+func (this *QGraphicsProxyWidget) SizeHintp(which int) *qtcore.QSizeF /*123*/ {
 	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)

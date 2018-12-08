@@ -109,10 +109,10 @@ func NewQTimeEdit(parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
 /*
 
  */
-func (*QTimeEdit) NewForInherit__() *QTimeEdit {
-	return NewQTimeEdit__()
+func (*QTimeEdit) NewForInheritp() *QTimeEdit {
+	return NewQTimeEditp()
 }
-func NewQTimeEdit__() *QTimeEdit {
+func NewQTimeEditp() *QTimeEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -130,10 +130,10 @@ func NewQTimeEdit__() *QTimeEdit {
 /*
 
  */
-func (*QTimeEdit) NewForInherit_1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
-	return NewQTimeEdit_1(time, parent)
+func (*QTimeEdit) NewForInherit1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
+	return NewQTimeEdit1(time, parent)
 }
-func NewQTimeEdit_1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
+func NewQTimeEdit1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/) *QTimeEdit {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {
 		convArg0 = time.QTime_PTR().GetCthis()
@@ -157,10 +157,10 @@ func NewQTimeEdit_1(time qtcore.QTime_ITF, parent QWidget_ITF /*777 QWidget **/)
 /*
 
  */
-func (*QTimeEdit) NewForInherit_1_(time qtcore.QTime_ITF) *QTimeEdit {
-	return NewQTimeEdit_1_(time)
+func (*QTimeEdit) NewForInherit1p(time qtcore.QTime_ITF) *QTimeEdit {
+	return NewQTimeEdit1p(time)
 }
-func NewQTimeEdit_1_(time qtcore.QTime_ITF) *QTimeEdit {
+func NewQTimeEdit1p(time qtcore.QTime_ITF) *QTimeEdit {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {
 		convArg0 = time.QTime_PTR().GetCthis()

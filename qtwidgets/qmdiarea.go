@@ -159,10 +159,10 @@ func NewQMdiArea(parent QWidget_ITF /*777 QWidget **/) *QMdiArea {
 /*
 Constructs an empty mdi area. parent is passed to QWidget's constructor.
 */
-func (*QMdiArea) NewForInherit__() *QMdiArea {
-	return NewQMdiArea__()
+func (*QMdiArea) NewForInheritp() *QMdiArea {
+	return NewQMdiAreap()
 }
-func NewQMdiArea__() *QMdiArea {
+func NewQMdiAreap() *QMdiArea {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiAreaC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -325,7 +325,7 @@ Returns the QMdiSubWindow that is added to the MDI area.
 
 See also removeSubWindow().
 */
-func (this *QMdiArea) AddSubWindow__(widget QWidget_ITF /*777 QWidget **/) *QMdiSubWindow /*777 QMdiSubWindow **/ {
+func (this *QMdiArea) AddSubWindowp(widget QWidget_ITF /*777 QWidget **/) *QMdiSubWindow /*777 QMdiSubWindow **/ {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -441,7 +441,7 @@ If on is true, option is enabled on the MDI area; otherwise it is disabled. See 
 
 See also AreaOption and testOption().
 */
-func (this *QMdiArea) SetOption__(option int) {
+func (this *QMdiArea) SetOptionp(option int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QMdiArea9setOptionENS_10AreaOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)

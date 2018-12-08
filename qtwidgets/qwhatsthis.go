@@ -144,7 +144,7 @@ func (this *QWhatsThis) ShowText(pos qtcore.QPoint_ITF, text string, w QWidget_I
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -168,12 +168,12 @@ Shows text as a "What's This?" window, at global position pos. The optional widg
 
 See also hideText().
 */
-func (this *QWhatsThis) ShowText__(pos qtcore.QPoint_ITF, text string) {
+func (this *QWhatsThis) ShowTextp(pos qtcore.QPoint_ITF, text string) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -235,7 +235,7 @@ Returns a ready-made QAction, used to invoke "What's This?" context help, with t
 
 The returned QAction provides a convenient way to let users enter "What's This?" mode.
 */
-func (this *QWhatsThis) CreateAction__() *QAction /*777 QAction **/ {
+func (this *QWhatsThis) CreateActionp() *QAction /*777 QAction **/ {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

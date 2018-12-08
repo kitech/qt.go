@@ -202,10 +202,10 @@ func NewQCameraImageProcessingControl(parent qtcore.QObject_ITF /*777 QObject **
 /*
 Constructs an image processing control object with parent.
 */
-func (*QCameraImageProcessingControl) NewForInherit__() *QCameraImageProcessingControl {
-	return NewQCameraImageProcessingControl__()
+func (*QCameraImageProcessingControl) NewForInheritp() *QCameraImageProcessingControl {
+	return NewQCameraImageProcessingControlp()
 }
-func NewQCameraImageProcessingControl__() *QCameraImageProcessingControl {
+func NewQCameraImageProcessingControlp() *QCameraImageProcessingControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QCameraImageProcessingControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

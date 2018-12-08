@@ -119,7 +119,7 @@ func (*QDockWidget) NewForInherit(title string, parent QWidget_ITF /*777 QWidget
 	return NewQDockWidget(title, parent, flags)
 }
 func NewQDockWidget(title string, parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -144,11 +144,11 @@ The window title is set to title. This title is used when the QDockWidget is doc
 
 See also setWindowTitle().
 */
-func (*QDockWidget) NewForInherit__(title string) *QDockWidget {
-	return NewQDockWidget__(title)
+func (*QDockWidget) NewForInheritp(title string) *QDockWidget {
+	return NewQDockWidgetp(title)
 }
-func NewQDockWidget__(title string) *QDockWidget {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func NewQDockWidgetp(title string) *QDockWidget {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -173,11 +173,11 @@ The window title is set to title. This title is used when the QDockWidget is doc
 
 See also setWindowTitle().
 */
-func (*QDockWidget) NewForInherit__1(title string, parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
-	return NewQDockWidget__1(title, parent)
+func (*QDockWidget) NewForInheritp1(title string, parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
+	return NewQDockWidgetp1(title, parent)
 }
-func NewQDockWidget__1(title string, parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func NewQDockWidgetp1(title string, parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -204,10 +204,10 @@ The window title is set to title. This title is used when the QDockWidget is doc
 
 See also setWindowTitle().
 */
-func (*QDockWidget) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
-	return NewQDockWidget_1(parent, flags)
+func (*QDockWidget) NewForInherit1(parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
+	return NewQDockWidget1(parent, flags)
 }
-func NewQDockWidget_1(parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
+func NewQDockWidget1(parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -231,10 +231,10 @@ The window title is set to title. This title is used when the QDockWidget is doc
 
 See also setWindowTitle().
 */
-func (*QDockWidget) NewForInherit_1_() *QDockWidget {
-	return NewQDockWidget_1_()
+func (*QDockWidget) NewForInherit1p() *QDockWidget {
+	return NewQDockWidget1p()
 }
-func NewQDockWidget_1_() *QDockWidget {
+func NewQDockWidget1p() *QDockWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -258,10 +258,10 @@ The window title is set to title. This title is used when the QDockWidget is doc
 
 See also setWindowTitle().
 */
-func (*QDockWidget) NewForInherit_1_1(parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
-	return NewQDockWidget_1_1(parent)
+func (*QDockWidget) NewForInherit1p1(parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
+	return NewQDockWidget1p1(parent)
 }
-func NewQDockWidget_1_1(parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
+func NewQDockWidget1p1(parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()

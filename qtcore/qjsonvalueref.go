@@ -95,10 +95,10 @@ func NewQJsonValueRef(array QJsonArray_ITF /*777 QJsonArray **/, idx int) *QJson
 /*
 
  */
-func (*QJsonValueRef) NewForInherit_1(object QJsonObject_ITF /*777 QJsonObject **/, idx int) *QJsonValueRef {
-	return NewQJsonValueRef_1(object, idx)
+func (*QJsonValueRef) NewForInherit1(object QJsonObject_ITF /*777 QJsonObject **/, idx int) *QJsonValueRef {
+	return NewQJsonValueRef1(object, idx)
 }
-func NewQJsonValueRef_1(object QJsonObject_ITF /*777 QJsonObject **/, idx int) *QJsonValueRef {
+func NewQJsonValueRef1(object QJsonObject_ITF /*777 QJsonObject **/, idx int) *QJsonValueRef {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QJsonObject_PTR() != nil {
 		convArg0 = object.QJsonObject_PTR().GetCthis()
@@ -138,7 +138,7 @@ func (this *QJsonValueRef) Operator_equal(val QJsonValue_ITF) *QJsonValueRef {
 /*
 
  */
-func (this *QJsonValueRef) Operator_equal_1(val QJsonValueRef_ITF) *QJsonValueRef {
+func (this *QJsonValueRef) Operator_equal1(val QJsonValueRef_ITF) *QJsonValueRef {
 	var convArg0 unsafe.Pointer
 	if val != nil && val.QJsonValueRef_PTR() != nil {
 		convArg0 = val.QJsonValueRef_PTR().GetCthis()
@@ -330,7 +330,7 @@ Converts the value to a bool and returns it.
 
 If type() is not bool, the defaultValue will be returned.
 */
-func (this *QJsonValueRef) ToBool_1(defaultValue bool) bool {
+func (this *QJsonValueRef) ToBool1(defaultValue bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -362,7 +362,7 @@ Converts the value to an int and returns it.
 
 If type() is not Double or the value is not a whole number, the defaultValue will be returned.
 */
-func (this *QJsonValueRef) ToInt_1(defaultValue int) int {
+func (this *QJsonValueRef) ToInt1(defaultValue int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -394,7 +394,7 @@ Converts the value to a double and returns it.
 
 If type() is not Double, the defaultValue will be returned.
 */
-func (this *QJsonValueRef) ToDouble_1(defaultValue float64) float64 {
+func (this *QJsonValueRef) ToDouble1(defaultValue float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), defaultValue)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -433,8 +433,8 @@ If type() is not String, a null QString will be returned.
 
 See also QString::isNull().
 */
-func (this *QJsonValueRef) ToString_1(defaultValue string) string {
-	var tmpArg0 = NewQString_5(defaultValue)
+func (this *QJsonValueRef) ToString1(defaultValue string) string {
+	var tmpArg0 = NewQString5(defaultValue)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

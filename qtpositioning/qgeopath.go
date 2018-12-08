@@ -90,10 +90,10 @@ func NewQGeoPath() *QGeoPath {
 /*
 Constructs a new, empty geo path.
 */
-func (*QGeoPath) NewForInherit_1(other QGeoShape_ITF) *QGeoPath {
-	return NewQGeoPath_1(other)
+func (*QGeoPath) NewForInherit1(other QGeoShape_ITF) *QGeoPath {
+	return NewQGeoPath1(other)
 }
-func NewQGeoPath_1(other QGeoShape_ITF) *QGeoPath {
+func NewQGeoPath1(other QGeoShape_ITF) *QGeoPath {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGeoShape_PTR() != nil {
 		convArg0 = other.QGeoShape_PTR().GetCthis()
@@ -264,7 +264,7 @@ func (this *QGeoPath) Length(indexFrom int, indexTo int) float64 {
 /*
 Returns the length of the path, in meters, from the element indexFrom to the element indexTo. The length is intended to be the sum of the shortest distances for each pair of adjacent points.
 */
-func (this *QGeoPath) Length__() float64 {
+func (this *QGeoPath) Lengthp() float64 {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	indexFrom := int(0)
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -282,7 +282,7 @@ func (this *QGeoPath) Length__() float64 {
 /*
 Returns the length of the path, in meters, from the element indexFrom to the element indexTo. The length is intended to be the sum of the shortest distances for each pair of adjacent points.
 */
-func (this *QGeoPath) Length__1(indexFrom int) float64 {
+func (this *QGeoPath) Lengthp1(indexFrom int) float64 {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	indexTo := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGeoPath6lengthEii", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), indexFrom, indexTo)
@@ -416,7 +416,7 @@ func (this *QGeoPath) RemoveCoordinate(coordinate QGeoCoordinate_ITF) {
 /*
 Removes the last occurrence of coordinate from the path.
 */
-func (this *QGeoPath) RemoveCoordinate_1(index int) {
+func (this *QGeoPath) RemoveCoordinate1(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QGeoPath16removeCoordinateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
 }

@@ -92,11 +92,11 @@ func NewQSslCipher() *QSslCipher {
 /*
 Constructs an empty QSslCipher object.
 */
-func (*QSslCipher) NewForInherit_1(name string) *QSslCipher {
-	return NewQSslCipher_1(name)
+func (*QSslCipher) NewForInherit1(name string) *QSslCipher {
+	return NewQSslCipher1(name)
 }
-func NewQSslCipher_1(name string) *QSslCipher {
-	var tmpArg0 = qtcore.NewQString_5(name)
+func NewQSslCipher1(name string) *QSslCipher {
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslCipherC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -113,11 +113,11 @@ func NewQSslCipher_1(name string) *QSslCipher {
 /*
 Constructs an empty QSslCipher object.
 */
-func (*QSslCipher) NewForInherit_2(name string, protocol int) *QSslCipher {
-	return NewQSslCipher_2(name, protocol)
+func (*QSslCipher) NewForInherit2(name string, protocol int) *QSslCipher {
+	return NewQSslCipher2(name, protocol)
 }
-func NewQSslCipher_2(name string, protocol int) *QSslCipher {
-	var tmpArg0 = qtcore.NewQString_5(name)
+func NewQSslCipher2(name string, protocol int) *QSslCipher {
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslCipherC2ERK7QStringN4QSsl11SslProtocolE", qtrt.FFI_TYPE_POINTER, convArg0, protocol)
 	qtrt.ErrPrint(err, rv)
@@ -150,7 +150,7 @@ func (this *QSslCipher) Operator_equal(other unsafe.Pointer /*333*/) *QSslCipher
 /*
 
  */
-func (this *QSslCipher) Operator_equal_1(other QSslCipher_ITF) *QSslCipher {
+func (this *QSslCipher) Operator_equal1(other QSslCipher_ITF) *QSslCipher {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslCipher_PTR() != nil {
 		convArg0 = other.QSslCipher_PTR().GetCthis()

@@ -107,10 +107,10 @@ func NewQAbstractListModel(parent QObject_ITF /*777 QObject **/) *QAbstractListM
 /*
 
  */
-func (*QAbstractListModel) NewForInherit__() *QAbstractListModel {
-	return NewQAbstractListModel__()
+func (*QAbstractListModel) NewForInheritp() *QAbstractListModel {
+	return NewQAbstractListModelp()
 }
-func NewQAbstractListModel__() *QAbstractListModel {
+func NewQAbstractListModelp() *QAbstractListModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractListModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -171,7 +171,7 @@ When reimplementing this function in a subclass, call createIndex() to generate 
 
 See also createIndex().
 */
-func (this *QAbstractListModel) Index__(row int) *QModelIndex /*123*/ {
+func (this *QAbstractListModel) Indexp(row int) *QModelIndex /*123*/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	column := int(0)
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
@@ -195,7 +195,7 @@ When reimplementing this function in a subclass, call createIndex() to generate 
 
 See also createIndex().
 */
-func (this *QAbstractListModel) Index__1(row int, column int) *QModelIndex /*123*/ {
+func (this *QAbstractListModel) Indexp1(row int, column int) *QModelIndex /*123*/ {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractListModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)

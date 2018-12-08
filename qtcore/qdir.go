@@ -78,7 +78,7 @@ func (*QDir) NewForInherit(path string) *QDir {
 	return NewQDir(path)
 }
 func NewQDir(path string) *QDir {
-	var tmpArg0 = NewQString_5(path)
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -97,10 +97,10 @@ Constructs a QDir object that is a copy of the QDir object for directory dir.
 
 See also operator=().
 */
-func (*QDir) NewForInherit__() *QDir {
-	return NewQDir__()
+func (*QDir) NewForInheritp() *QDir {
+	return NewQDirp()
 }
-func NewQDir__() *QDir {
+func NewQDirp() *QDir {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -120,13 +120,13 @@ Constructs a QDir object that is a copy of the QDir object for directory dir.
 
 See also operator=().
 */
-func (*QDir) NewForInherit_1(path string, nameFilter string, sort int, filter int) *QDir {
-	return NewQDir_1(path, nameFilter, sort, filter)
+func (*QDir) NewForInherit1(path string, nameFilter string, sort int, filter int) *QDir {
+	return NewQDir1(path, nameFilter, sort, filter)
 }
-func NewQDir_1(path string, nameFilter string, sort int, filter int) *QDir {
-	var tmpArg0 = NewQString_5(path)
+func NewQDir1(path string, nameFilter string, sort int, filter int) *QDir {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(nameFilter)
+	var tmpArg1 = NewQString5(nameFilter)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDirC2ERK7QStringS2_6QFlagsINS_8SortFlagEES3_INS_6FilterEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, sort, filter)
 	qtrt.ErrPrint(err, rv)
@@ -145,13 +145,13 @@ Constructs a QDir object that is a copy of the QDir object for directory dir.
 
 See also operator=().
 */
-func (*QDir) NewForInherit_1_(path string, nameFilter string) *QDir {
-	return NewQDir_1_(path, nameFilter)
+func (*QDir) NewForInherit1p(path string, nameFilter string) *QDir {
+	return NewQDir1p(path, nameFilter)
 }
-func NewQDir_1_(path string, nameFilter string) *QDir {
-	var tmpArg0 = NewQString_5(path)
+func NewQDir1p(path string, nameFilter string) *QDir {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(nameFilter)
+	var tmpArg1 = NewQString5(nameFilter)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
@@ -174,13 +174,13 @@ Constructs a QDir object that is a copy of the QDir object for directory dir.
 
 See also operator=().
 */
-func (*QDir) NewForInherit_1_1(path string, nameFilter string, sort int) *QDir {
-	return NewQDir_1_1(path, nameFilter, sort)
+func (*QDir) NewForInherit1p1(path string, nameFilter string, sort int) *QDir {
+	return NewQDir1p1(path, nameFilter, sort)
 }
-func NewQDir_1_1(path string, nameFilter string, sort int) *QDir {
-	var tmpArg0 = NewQString_5(path)
+func NewQDir1p1(path string, nameFilter string, sort int) *QDir {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(nameFilter)
+	var tmpArg1 = NewQString5(nameFilter)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 3, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filter := 0
@@ -234,8 +234,8 @@ func (this *QDir) Operator_equal(arg0 QDir_ITF) *QDir {
 /*
 
  */
-func (this *QDir) Operator_equal_1(path string) *QDir {
-	var tmpArg0 = NewQString_5(path)
+func (this *QDir) Operator_equal1(path string) *QDir {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDiraSERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -252,7 +252,7 @@ func (this *QDir) Operator_equal_1(path string) *QDir {
 /*
 
  */
-func (this *QDir) Operator_equal_2(other unsafe.Pointer /*333*/) *QDir {
+func (this *QDir) Operator_equal2(other unsafe.Pointer /*333*/) *QDir {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDiraSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -292,7 +292,7 @@ The path can be either absolute or relative. Absolute paths begin with the direc
 See also path(), absolutePath(), exists(), cleanPath(), dirName(), absoluteFilePath(), isRelative(), and makeAbsolute().
 */
 func (this *QDir) SetPath(path string) {
-	var tmpArg0 = NewQString_5(path)
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir7setPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -383,7 +383,7 @@ func (this *QDir) CanonicalPath() string {
 
  */
 func (this *QDir) AddResourceSearchPath(path string) {
-	var tmpArg0 = NewQString_5(path)
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir21addResourceSearchPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -423,7 +423,7 @@ This function was introduced in  Qt 4.3.
 See also searchPaths().
 */
 func (this *QDir) SetSearchPaths(prefix string, searchPaths QStringList_ITF) {
-	var tmpArg0 = NewQString_5(prefix)
+	var tmpArg0 = NewQString5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if searchPaths != nil && searchPaths.QStringList_PTR() != nil {
@@ -450,9 +450,9 @@ This function was introduced in  Qt 4.3.
 See also setSearchPaths().
 */
 func (this *QDir) AddSearchPath(prefix string, path string) {
-	var tmpArg0 = NewQString_5(prefix)
+	var tmpArg0 = NewQString5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(path)
+	var tmpArg1 = NewQString5(path)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir13addSearchPathERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -475,7 +475,7 @@ This function was introduced in  Qt 4.3.
 See also setSearchPaths() and addSearchPath().
 */
 func (this *QDir) SearchPaths(prefix string) *QStringList /*123*/ {
-	var tmpArg0 = NewQString_5(prefix)
+	var tmpArg0 = NewQString5(prefix)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir11searchPathsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -521,7 +521,7 @@ Returns the path name of a file in the directory. Does not check if the file act
 See also dirName(), absoluteFilePath(), isRelative(), and canonicalPath().
 */
 func (this *QDir) FilePath(fileName string) string {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir8filePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -542,7 +542,7 @@ Returns the absolute path name of a file in the directory. Does not check if the
 See also relativeFilePath(), filePath(), and canonicalPath().
 */
 func (this *QDir) AbsoluteFilePath(fileName string) string {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir16absoluteFilePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -572,7 +572,7 @@ Returns the path to fileName relative to the directory.
 See also absoluteFilePath(), filePath(), and canonicalPath().
 */
 func (this *QDir) RelativeFilePath(fileName string) string {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir16relativeFilePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -599,7 +599,7 @@ This function was introduced in  Qt 4.2.
 See also fromNativeSeparators() and separator().
 */
 func (this *QDir) ToNativeSeparators(pathName string) string {
-	var tmpArg0 = NewQString_5(pathName)
+	var tmpArg0 = NewQString5(pathName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir18toNativeSeparatorsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -629,7 +629,7 @@ This function was introduced in  Qt 4.2.
 See also toNativeSeparators() and separator().
 */
 func (this *QDir) FromNativeSeparators(pathName string) string {
-	var tmpArg0 = NewQString_5(pathName)
+	var tmpArg0 = NewQString5(pathName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir20fromNativeSeparatorsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -659,7 +659,7 @@ Calling cd("..") is equivalent to calling cdUp().
 See also cdUp(), isReadable(), exists(), and path().
 */
 func (this *QDir) Cd(dirName string) bool {
-	var tmpArg0 = NewQString_5(dirName)
+	var tmpArg0 = NewQString5(dirName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir2cdERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -852,7 +852,7 @@ This function was introduced in  Qt 5.9.
 
 See also count(), entryList(), and setFilter().
 */
-func (this *QDir) IsEmpty__() bool {
+func (this *QDir) IsEmptyp() bool {
 	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filters := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir7isEmptyE6QFlagsINS_6FilterEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters)
@@ -886,7 +886,7 @@ func (this *QDir) Operator_get_index(arg0 int) string {
 
  */
 func (this *QDir) NameFiltersFromString(nameFilter string) *QStringList /*123*/ {
-	var tmpArg0 = NewQString_5(nameFilter)
+	var tmpArg0 = NewQString5(nameFilter)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir21nameFiltersFromStringERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -936,7 +936,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 
 See also entryInfoList(), setNameFilters(), setSorting(), and setFilter().
 */
-func (this *QDir) EntryList__() *QStringList /*123*/ {
+func (this *QDir) EntryListp() *QStringList /*123*/ {
 	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filters := 0
 	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
@@ -962,7 +962,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 
 See also entryInfoList(), setNameFilters(), setSorting(), and setFilter().
 */
-func (this *QDir) EntryList__1(filters int) *QStringList /*123*/ {
+func (this *QDir) EntryListp1(filters int) *QStringList /*123*/ {
 	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir9entryListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
@@ -986,7 +986,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 
 See also entryInfoList(), setNameFilters(), setSorting(), and setFilter().
 */
-func (this *QDir) EntryList_1(nameFilters QStringList_ITF, filters int, sort int) *QStringList /*123*/ {
+func (this *QDir) EntryList1(nameFilters QStringList_ITF, filters int, sort int) *QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg0 = nameFilters.QStringList_PTR().GetCthis()
@@ -1012,7 +1012,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 
 See also entryInfoList(), setNameFilters(), setSorting(), and setFilter().
 */
-func (this *QDir) EntryList_1_(nameFilters QStringList_ITF) *QStringList /*123*/ {
+func (this *QDir) EntryList1p(nameFilters QStringList_ITF) *QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg0 = nameFilters.QStringList_PTR().GetCthis()
@@ -1042,7 +1042,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 
 See also entryInfoList(), setNameFilters(), setSorting(), and setFilter().
 */
-func (this *QDir) EntryList_1_1(nameFilters QStringList_ITF, filters int) *QStringList /*123*/ {
+func (this *QDir) EntryList1p1(nameFilters QStringList_ITF, filters int) *QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg0 = nameFilters.QStringList_PTR().GetCthis()
@@ -1091,7 +1091,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 
 See also entryList(), setNameFilters(), setSorting(), setFilter(), isReadable(), and exists().
 */
-func (this *QDir) EntryInfoList__() *QFileInfoList /*667*/ {
+func (this *QDir) EntryInfoListp() *QFileInfoList /*667*/ {
 	// arg: 0, QDir::Filters=Typedef, QDir::Filters=Typedef, QFlags<QDir::Filter>, Unexposed
 	filters := 0
 	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
@@ -1116,7 +1116,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 
 See also entryList(), setNameFilters(), setSorting(), setFilter(), isReadable(), and exists().
 */
-func (this *QDir) EntryInfoList__1(filters int) *QFileInfoList /*667*/ {
+func (this *QDir) EntryInfoListp1(filters int) *QFileInfoList /*667*/ {
 	// arg: 1, QDir::SortFlags=Typedef, QDir::SortFlags=Typedef, QFlags<QDir::SortFlag>, Unexposed
 	sort := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir13entryInfoListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filters, sort)
@@ -1139,7 +1139,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 
 See also entryList(), setNameFilters(), setSorting(), setFilter(), isReadable(), and exists().
 */
-func (this *QDir) EntryInfoList_1(nameFilters QStringList_ITF, filters int, sort int) *QFileInfoList /*667*/ {
+func (this *QDir) EntryInfoList1(nameFilters QStringList_ITF, filters int, sort int) *QFileInfoList /*667*/ {
 	var convArg0 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg0 = nameFilters.QStringList_PTR().GetCthis()
@@ -1164,7 +1164,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 
 See also entryList(), setNameFilters(), setSorting(), setFilter(), isReadable(), and exists().
 */
-func (this *QDir) EntryInfoList_1_(nameFilters QStringList_ITF) *QFileInfoList /*667*/ {
+func (this *QDir) EntryInfoList1p(nameFilters QStringList_ITF) *QFileInfoList /*667*/ {
 	var convArg0 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg0 = nameFilters.QStringList_PTR().GetCthis()
@@ -1193,7 +1193,7 @@ Returns an empty list if the directory is unreadable, does not exist, or if noth
 
 See also entryList(), setNameFilters(), setSorting(), setFilter(), isReadable(), and exists().
 */
-func (this *QDir) EntryInfoList_1_1(nameFilters QStringList_ITF, filters int) *QFileInfoList /*667*/ {
+func (this *QDir) EntryInfoList1p1(nameFilters QStringList_ITF, filters int) *QFileInfoList /*667*/ {
 	var convArg0 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
 		convArg0 = nameFilters.QStringList_PTR().GetCthis()
@@ -1221,7 +1221,7 @@ If the directory already exists when this function is called, it will return fal
 See also rmdir().
 */
 func (this *QDir) Mkdir(dirName string) bool {
-	var tmpArg0 = NewQString_5(dirName)
+	var tmpArg0 = NewQString5(dirName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir5mkdirERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1243,7 +1243,7 @@ Returns true if successful; otherwise returns false.
 See also mkdir().
 */
 func (this *QDir) Rmdir(dirName string) bool {
-	var tmpArg0 = NewQString_5(dirName)
+	var tmpArg0 = NewQString5(dirName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir5rmdirERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1267,7 +1267,7 @@ If the path already exists when this function is called, it will return true.
 See also rmpath().
 */
 func (this *QDir) Mkpath(dirPath string) bool {
-	var tmpArg0 = NewQString_5(dirPath)
+	var tmpArg0 = NewQString5(dirPath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6mkpathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1289,7 +1289,7 @@ Returns true if successful; otherwise returns false.
 See also mkpath().
 */
 func (this *QDir) Rmpath(dirPath string) bool {
-	var tmpArg0 = NewQString_5(dirPath)
+	var tmpArg0 = NewQString5(dirPath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6rmpathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1368,8 +1368,8 @@ Unless name contains an absolute file path, the file name is assumed to be relat
 
 See also QFileInfo::exists() and QFile::exists().
 */
-func (this *QDir) Exists_1(name string) bool {
-	var tmpArg0 = NewQString_5(name)
+func (this *QDir) Exists1(name string) bool {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QDir6existsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1413,7 +1413,7 @@ Returns true if path is relative; returns false if it is absolute.
 See also isRelative(), isAbsolutePath(), and makeAbsolute().
 */
 func (this *QDir) IsRelativePath(path string) bool {
-	var tmpArg0 = NewQString_5(path)
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir14isRelativePathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1436,7 +1436,7 @@ Returns true if path is absolute; returns false if it is relative.
 See also isAbsolute(), isRelativePath(), makeAbsolute(), and cleanPath().
 */
 func (this *QDir) IsAbsolutePath(path string) bool {
-	var tmpArg0 = NewQString_5(path)
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir14isAbsolutePathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1543,7 +1543,7 @@ Removes the file, fileName.
 Returns true if the file is removed successfully; otherwise returns false.
 */
 func (this *QDir) Remove(fileName string) bool {
-	var tmpArg0 = NewQString_5(fileName)
+	var tmpArg0 = NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir6removeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1565,9 +1565,9 @@ If oldName is a file (not a directory) that can't be renamed right away, Qt will
 See also QFile::rename().
 */
 func (this *QDir) Rename(oldName string, newName string) bool {
-	var tmpArg0 = NewQString_5(oldName)
+	var tmpArg0 = NewQString5(oldName)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(newName)
+	var tmpArg1 = NewQString5(newName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir6renameERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1659,7 +1659,7 @@ Sets the application's current working directory to path. Returns true if the di
 See also current(), currentPath(), home(), root(), and temp().
 */
 func (this *QDir) SetCurrent(path string) bool {
-	var tmpArg0 = NewQString_5(path)
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir10setCurrentERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1901,7 +1901,7 @@ func (this *QDir) Match(filters QStringList_ITF, fileName string) bool {
 	if filters != nil && filters.QStringList_PTR() != nil {
 		convArg0 = filters.QStringList_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(fileName)
+	var tmpArg1 = NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir5matchERK11QStringListRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1923,18 +1923,18 @@ Returns true if the fileName matches the wildcard (glob) pattern filter; otherwi
 
 See also QRegExp wildcard matching, QRegExp::exactMatch(), entryList(), and entryInfoList().
 */
-func (this *QDir) Match_1(filter string, fileName string) bool {
-	var tmpArg0 = NewQString_5(filter)
+func (this *QDir) Match1(filter string, fileName string) bool {
+	var tmpArg0 = NewQString5(filter)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(fileName)
+	var tmpArg1 = NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir5matchERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QDir_Match_1(filter string, fileName string) bool {
+func QDir_Match1(filter string, fileName string) bool {
 	var nilthis *QDir
-	rv := nilthis.Match_1(filter, fileName)
+	rv := nilthis.Match1(filter, fileName)
 	return rv
 }
 
@@ -1951,7 +1951,7 @@ Symbolic links are kept. This function does not return the canonical path, but r
 See also absolutePath() and canonicalPath().
 */
 func (this *QDir) CleanPath(path string) string {
-	var tmpArg0 = NewQString_5(path)
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QDir9cleanPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

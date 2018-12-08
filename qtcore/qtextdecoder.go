@@ -95,10 +95,10 @@ func NewQTextDecoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextDeco
 /*
 
  */
-func (*QTextDecoder) NewForInherit_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextDecoder {
-	return NewQTextDecoder_1(codec, flags)
+func (*QTextDecoder) NewForInherit1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextDecoder {
+	return NewQTextDecoder1(codec, flags)
 }
-func NewQTextDecoder_1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextDecoder {
+func NewQTextDecoder1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int) *QTextDecoder {
 	var convArg0 unsafe.Pointer
 	if codec != nil && codec.QTextCodec_PTR() != nil {
 		convArg0 = codec.QTextCodec_PTR().GetCthis()
@@ -152,7 +152,7 @@ func (this *QTextDecoder) ToUnicode(chars string, len_ int) string {
 /*
 Converts a from the encoding of this codec to Unicode, and returns the result in a QString.
 */
-func (this *QTextDecoder) ToUnicode_1(ba QByteArray_ITF) string {
+func (this *QTextDecoder) ToUnicode1(ba QByteArray_ITF) string {
 	var convArg0 unsafe.Pointer
 	if ba != nil && ba.QByteArray_PTR() != nil {
 		convArg0 = ba.QByteArray_PTR().GetCthis()
@@ -173,8 +173,8 @@ func (this *QTextDecoder) ToUnicode_1(ba QByteArray_ITF) string {
 /*
 Converts a from the encoding of this codec to Unicode, and returns the result in a QString.
 */
-func (this *QTextDecoder) ToUnicode_2(target string, chars string, len_ int) {
-	var tmpArg0 = NewQString_5(target)
+func (this *QTextDecoder) ToUnicode2(target string, chars string, len_ int) {
+	var tmpArg0 = NewQString5(target)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(chars)
 	defer qtrt.FreeMem(convArg1)

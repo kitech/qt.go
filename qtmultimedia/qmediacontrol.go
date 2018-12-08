@@ -125,10 +125,10 @@ func NewQMediaControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaContro
 /*
 Constructs a media control with the given parent.
 */
-func (*QMediaControl) NewForInherit__() *QMediaControl {
-	return NewQMediaControl__()
+func (*QMediaControl) NewForInheritp() *QMediaControl {
+	return NewQMediaControlp()
 }
-func NewQMediaControl__() *QMediaControl {
+func NewQMediaControlp() *QMediaControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QMediaControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

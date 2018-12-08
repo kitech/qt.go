@@ -109,10 +109,10 @@ func NewQGraphicsRotation(parent qtcore.QObject_ITF /*777 QObject **/) *QGraphic
 /*
 
  */
-func (*QGraphicsRotation) NewForInherit__() *QGraphicsRotation {
-	return NewQGraphicsRotation__()
+func (*QGraphicsRotation) NewForInheritp() *QGraphicsRotation {
+	return NewQGraphicsRotationp()
 }
-func NewQGraphicsRotation__() *QGraphicsRotation {
+func NewQGraphicsRotationp() *QGraphicsRotation {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRotationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -238,7 +238,7 @@ func (this *QGraphicsRotation) SetAxis(axis qtgui.QVector3D_ITF) {
 /*
 
  */
-func (this *QGraphicsRotation) SetAxis_1(axis int) {
+func (this *QGraphicsRotation) SetAxis1(axis int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QGraphicsRotation7setAxisEN2Qt4AxisE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), axis)
 	qtrt.ErrPrint(err, rv)
 }

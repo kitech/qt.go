@@ -119,10 +119,10 @@ func NewQMediaPlaylist(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlayl
 /*
 Create a new playlist object with the given parent.
 */
-func (*QMediaPlaylist) NewForInherit__() *QMediaPlaylist {
-	return NewQMediaPlaylist__()
+func (*QMediaPlaylist) NewForInheritp() *QMediaPlaylist {
+	return NewQMediaPlaylistp()
 }
-func NewQMediaPlaylist__() *QMediaPlaylist {
+func NewQMediaPlaylistp() *QMediaPlaylist {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylistC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -256,7 +256,7 @@ Returned value depends on the size of playlist, current position and playback mo
 
 See also QMediaPlaylist::playbackMode() and previousIndex().
 */
-func (this *QMediaPlaylist) NextIndex__() int {
+func (this *QMediaPlaylist) NextIndexp() int {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	steps := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMediaPlaylist9nextIndexEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), steps)
@@ -290,7 +290,7 @@ Returns the index of the item, which would be current after calling previous() s
 
 See also QMediaPlaylist::playbackMode() and nextIndex().
 */
-func (this *QMediaPlaylist) PreviousIndex__() int {
+func (this *QMediaPlaylist) PreviousIndexp() int {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	steps := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMediaPlaylist13previousIndexEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), steps)
@@ -446,7 +446,7 @@ Remove the item from the playlist at position pos.
 
 Returns true if the operation is successful, otherwise return false.
 */
-func (this *QMediaPlaylist) RemoveMedia_1(start int, end_ int) bool {
+func (this *QMediaPlaylist) RemoveMedia1(start int, end_ int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaPlaylist11removeMediaEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -503,7 +503,7 @@ New items are appended to playlist.
 
 QMediaPlaylist::loaded() signal is emitted if playlist was loaded successfully, otherwise the playlist emits loadFailed().
 */
-func (this *QMediaPlaylist) Load__(request qtnetwork.QNetworkRequest_ITF) {
+func (this *QMediaPlaylist) Loadp(request qtnetwork.QNetworkRequest_ITF) {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg0 = request.QNetworkRequest_PTR().GetCthis()
@@ -526,7 +526,7 @@ New items are appended to playlist.
 
 QMediaPlaylist::loaded() signal is emitted if playlist was loaded successfully, otherwise the playlist emits loadFailed().
 */
-func (this *QMediaPlaylist) Load_1(location qtcore.QUrl_ITF, format string) {
+func (this *QMediaPlaylist) Load1(location qtcore.QUrl_ITF, format string) {
 	var convArg0 unsafe.Pointer
 	if location != nil && location.QUrl_PTR() != nil {
 		convArg0 = location.QUrl_PTR().GetCthis()
@@ -549,7 +549,7 @@ New items are appended to playlist.
 
 QMediaPlaylist::loaded() signal is emitted if playlist was loaded successfully, otherwise the playlist emits loadFailed().
 */
-func (this *QMediaPlaylist) Load_1_(location qtcore.QUrl_ITF) {
+func (this *QMediaPlaylist) Load1p(location qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if location != nil && location.QUrl_PTR() != nil {
 		convArg0 = location.QUrl_PTR().GetCthis()
@@ -572,7 +572,7 @@ New items are appended to playlist.
 
 QMediaPlaylist::loaded() signal is emitted if playlist was loaded successfully, otherwise the playlist emits loadFailed().
 */
-func (this *QMediaPlaylist) Load_2(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string) {
+func (this *QMediaPlaylist) Load2(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string) {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -595,7 +595,7 @@ New items are appended to playlist.
 
 QMediaPlaylist::loaded() signal is emitted if playlist was loaded successfully, otherwise the playlist emits loadFailed().
 */
-func (this *QMediaPlaylist) Load_2_(device qtcore.QIODevice_ITF /*777 QIODevice **/) {
+func (this *QMediaPlaylist) Load2p(device qtcore.QIODevice_ITF /*777 QIODevice **/) {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -638,7 +638,7 @@ Save playlist to location. If format is specified, it is used, otherwise format 
 
 Returns true if playlist was saved successfully, otherwise returns false.
 */
-func (this *QMediaPlaylist) Save__(location qtcore.QUrl_ITF) bool {
+func (this *QMediaPlaylist) Savep(location qtcore.QUrl_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if location != nil && location.QUrl_PTR() != nil {
 		convArg0 = location.QUrl_PTR().GetCthis()
@@ -660,7 +660,7 @@ Save playlist to location. If format is specified, it is used, otherwise format 
 
 Returns true if playlist was saved successfully, otherwise returns false.
 */
-func (this *QMediaPlaylist) Save_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string) bool {
+func (this *QMediaPlaylist) Save1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format string) bool {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()

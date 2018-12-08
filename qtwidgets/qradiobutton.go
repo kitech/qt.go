@@ -138,10 +138,10 @@ Constructs a radio button with the given parent, but with no text or pixmap.
 
 The parent argument is passed on to the QAbstractButton constructor.
 */
-func (*QRadioButton) NewForInherit__() *QRadioButton {
-	return NewQRadioButton__()
+func (*QRadioButton) NewForInheritp() *QRadioButton {
+	return NewQRadioButtonp()
 }
-func NewQRadioButton__() *QRadioButton {
+func NewQRadioButtonp() *QRadioButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QRadioButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -161,11 +161,11 @@ Constructs a radio button with the given parent, but with no text or pixmap.
 
 The parent argument is passed on to the QAbstractButton constructor.
 */
-func (*QRadioButton) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
-	return NewQRadioButton_1(text, parent)
+func (*QRadioButton) NewForInherit1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
+	return NewQRadioButton1(text, parent)
 }
-func NewQRadioButton_1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQRadioButton1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -188,11 +188,11 @@ Constructs a radio button with the given parent, but with no text or pixmap.
 
 The parent argument is passed on to the QAbstractButton constructor.
 */
-func (*QRadioButton) NewForInherit_1_(text string) *QRadioButton {
-	return NewQRadioButton_1_(text)
+func (*QRadioButton) NewForInherit1p(text string) *QRadioButton {
+	return NewQRadioButton1p(text)
 }
-func NewQRadioButton_1_(text string) *QRadioButton {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQRadioButton1p(text string) *QRadioButton {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer

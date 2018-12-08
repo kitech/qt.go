@@ -91,10 +91,10 @@ func NewQEventLoopLocker() *QEventLoopLocker {
 /*
 
  */
-func (*QEventLoopLocker) NewForInherit_1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoopLocker {
-	return NewQEventLoopLocker_1(loop)
+func (*QEventLoopLocker) NewForInherit1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoopLocker {
+	return NewQEventLoopLocker1(loop)
 }
-func NewQEventLoopLocker_1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoopLocker {
+func NewQEventLoopLocker1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoopLocker {
 	var convArg0 unsafe.Pointer
 	if loop != nil && loop.QEventLoop_PTR() != nil {
 		convArg0 = loop.QEventLoop_PTR().GetCthis()
@@ -114,10 +114,10 @@ func NewQEventLoopLocker_1(loop QEventLoop_ITF /*777 QEventLoop **/) *QEventLoop
 /*
 
  */
-func (*QEventLoopLocker) NewForInherit_2(thread QThread_ITF /*777 QThread **/) *QEventLoopLocker {
-	return NewQEventLoopLocker_2(thread)
+func (*QEventLoopLocker) NewForInherit2(thread QThread_ITF /*777 QThread **/) *QEventLoopLocker {
+	return NewQEventLoopLocker2(thread)
 }
-func NewQEventLoopLocker_2(thread QThread_ITF /*777 QThread **/) *QEventLoopLocker {
+func NewQEventLoopLocker2(thread QThread_ITF /*777 QThread **/) *QEventLoopLocker {
 	var convArg0 unsafe.Pointer
 	if thread != nil && thread.QThread_PTR() != nil {
 		convArg0 = thread.QThread_PTR().GetCthis()

@@ -95,10 +95,10 @@ Constructs a data stream that has no I/O device.
 
 See also setDevice().
 */
-func (*QDataStream) NewForInherit_1(arg0 QIODevice_ITF /*777 QIODevice **/) *QDataStream {
-	return NewQDataStream_1(arg0)
+func (*QDataStream) NewForInherit1(arg0 QIODevice_ITF /*777 QIODevice **/) *QDataStream {
+	return NewQDataStream1(arg0)
 }
-func NewQDataStream_1(arg0 QIODevice_ITF /*777 QIODevice **/) *QDataStream {
+func NewQDataStream1(arg0 QIODevice_ITF /*777 QIODevice **/) *QDataStream {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QIODevice_PTR() != nil {
 		convArg0 = arg0.QIODevice_PTR().GetCthis()
@@ -120,10 +120,10 @@ Constructs a data stream that has no I/O device.
 
 See also setDevice().
 */
-func (*QDataStream) NewForInherit_2(arg0 QByteArray_ITF /*777 QByteArray **/, flags int) *QDataStream {
-	return NewQDataStream_2(arg0, flags)
+func (*QDataStream) NewForInherit2(arg0 QByteArray_ITF /*777 QByteArray **/, flags int) *QDataStream {
+	return NewQDataStream2(arg0, flags)
 }
-func NewQDataStream_2(arg0 QByteArray_ITF /*777 QByteArray **/, flags int) *QDataStream {
+func NewQDataStream2(arg0 QByteArray_ITF /*777 QByteArray **/, flags int) *QDataStream {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QByteArray_PTR() != nil {
 		convArg0 = arg0.QByteArray_PTR().GetCthis()
@@ -145,10 +145,10 @@ Constructs a data stream that has no I/O device.
 
 See also setDevice().
 */
-func (*QDataStream) NewForInherit_3(arg0 QByteArray_ITF) *QDataStream {
-	return NewQDataStream_3(arg0)
+func (*QDataStream) NewForInherit3(arg0 QByteArray_ITF) *QDataStream {
+	return NewQDataStream3(arg0)
 }
-func NewQDataStream_3(arg0 QByteArray_ITF) *QDataStream {
+func NewQDataStream3(arg0 QByteArray_ITF) *QDataStream {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QByteArray_PTR() != nil {
 		convArg0 = arg0.QByteArray_PTR().GetCthis()
@@ -434,7 +434,7 @@ func (this *QDataStream) Operator_right_shift(i byte) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_right_shift_1(i int16) *QDataStream {
+func (this *QDataStream) Operator_right_shift1(i int16) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERs", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -450,7 +450,7 @@ func (this *QDataStream) Operator_right_shift_1(i int16) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_right_shift_2(i uint16) *QDataStream {
+func (this *QDataStream) Operator_right_shift2(i uint16) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -466,7 +466,7 @@ func (this *QDataStream) Operator_right_shift_2(i uint16) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_right_shift_3(i int) *QDataStream {
+func (this *QDataStream) Operator_right_shift3(i int) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -482,7 +482,7 @@ func (this *QDataStream) Operator_right_shift_3(i int) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_right_shift_4(i uint) *QDataStream {
+func (this *QDataStream) Operator_right_shift4(i uint) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -498,7 +498,7 @@ func (this *QDataStream) Operator_right_shift_4(i uint) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_right_shift_5(i int64) *QDataStream {
+func (this *QDataStream) Operator_right_shift5(i int64) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -514,7 +514,7 @@ func (this *QDataStream) Operator_right_shift_5(i int64) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_right_shift_6(i uint64) *QDataStream {
+func (this *QDataStream) Operator_right_shift6(i uint64) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -530,7 +530,7 @@ func (this *QDataStream) Operator_right_shift_6(i uint64) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_right_shift_7(i bool) *QDataStream {
+func (this *QDataStream) Operator_right_shift7(i bool) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -546,7 +546,7 @@ func (this *QDataStream) Operator_right_shift_7(i bool) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_right_shift_8(f float32) *QDataStream {
+func (this *QDataStream) Operator_right_shift8(f float32) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -562,7 +562,7 @@ func (this *QDataStream) Operator_right_shift_8(f float32) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_right_shift_9(f float64) *QDataStream {
+func (this *QDataStream) Operator_right_shift9(f float64) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -578,7 +578,7 @@ func (this *QDataStream) Operator_right_shift_9(f float64) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_right_shift_10(str unsafe.Pointer /*555*/) *QDataStream {
+func (this *QDataStream) Operator_right_shift10(str unsafe.Pointer /*555*/) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERPc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), str)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -610,7 +610,7 @@ func (this *QDataStream) Operator_left_shift(i byte) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_left_shift_1(i int16) *QDataStream {
+func (this *QDataStream) Operator_left_shift1(i int16) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEs", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -626,7 +626,7 @@ func (this *QDataStream) Operator_left_shift_1(i int16) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_left_shift_2(i uint16) *QDataStream {
+func (this *QDataStream) Operator_left_shift2(i uint16) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -642,7 +642,7 @@ func (this *QDataStream) Operator_left_shift_2(i uint16) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_left_shift_3(i int) *QDataStream {
+func (this *QDataStream) Operator_left_shift3(i int) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -658,7 +658,7 @@ func (this *QDataStream) Operator_left_shift_3(i int) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_left_shift_4(i uint) *QDataStream {
+func (this *QDataStream) Operator_left_shift4(i uint) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -674,7 +674,7 @@ func (this *QDataStream) Operator_left_shift_4(i uint) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_left_shift_5(i int64) *QDataStream {
+func (this *QDataStream) Operator_left_shift5(i int64) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -690,7 +690,7 @@ func (this *QDataStream) Operator_left_shift_5(i int64) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_left_shift_6(i uint64) *QDataStream {
+func (this *QDataStream) Operator_left_shift6(i uint64) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -706,7 +706,7 @@ func (this *QDataStream) Operator_left_shift_6(i uint64) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_left_shift_7(i bool) *QDataStream {
+func (this *QDataStream) Operator_left_shift7(i bool) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -722,7 +722,7 @@ func (this *QDataStream) Operator_left_shift_7(i bool) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_left_shift_8(f float32) *QDataStream {
+func (this *QDataStream) Operator_left_shift8(f float32) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -738,7 +738,7 @@ func (this *QDataStream) Operator_left_shift_8(f float32) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_left_shift_9(f float64) *QDataStream {
+func (this *QDataStream) Operator_left_shift9(f float64) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -754,7 +754,7 @@ func (this *QDataStream) Operator_left_shift_9(f float64) *QDataStream {
 /*
 
  */
-func (this *QDataStream) Operator_left_shift_10(str string) *QDataStream {
+func (this *QDataStream) Operator_left_shift10(str string) *QDataStream {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

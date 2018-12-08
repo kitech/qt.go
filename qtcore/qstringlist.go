@@ -91,11 +91,11 @@ func NewQStringList() *QStringList {
 /*
 Constructs an empty string list.
 */
-func (*QStringList) NewForInherit_1(i string) *QStringList {
-	return NewQStringList_1(i)
+func (*QStringList) NewForInherit1(i string) *QStringList {
+	return NewQStringList1(i)
 }
-func NewQStringList_1(i string) *QStringList {
-	var tmpArg0 = NewQString_5(i)
+func NewQStringList1(i string) *QStringList {
+	var tmpArg0 = NewQString5(i)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -115,7 +115,7 @@ Returns true if the list contains the string str; otherwise returns false. The s
 See also indexOf(), lastIndexOf(), and QString::contains().
 */
 func (this *QStringList) Contains(str string, cs int) bool {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList8containsERK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	qtrt.ErrPrint(err, rv)
@@ -132,8 +132,8 @@ Returns true if the list contains the string str; otherwise returns false. The s
 
 See also indexOf(), lastIndexOf(), and QString::contains().
 */
-func (this *QStringList) Contains__(str string) bool {
-	var tmpArg0 = NewQString_5(str)
+func (this *QStringList) Containsp(str string) bool {
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
 	cs := 0
@@ -152,7 +152,7 @@ Returns true if the list contains the string str; otherwise returns false. The s
 
 See also indexOf(), lastIndexOf(), and QString::contains().
 */
-func (this *QStringList) Contains_1(str QLatin1String_ITF /*123*/, cs int) bool {
+func (this *QStringList) Contains1(str QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
 		convArg0 = str.QLatin1String_PTR().GetCthis()
@@ -172,7 +172,7 @@ Returns true if the list contains the string str; otherwise returns false. The s
 
 See also indexOf(), lastIndexOf(), and QString::contains().
 */
-func (this *QStringList) Contains_1_(str QLatin1String_ITF /*123*/) bool {
+func (this *QStringList) Contains1p(str QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if str != nil && str.QLatin1String_PTR() != nil {
 		convArg0 = str.QLatin1String_PTR().GetCthis()
@@ -213,7 +213,7 @@ func (this *QStringList) Operator_add(other QStringList_ITF) *QStringList /*123*
 
  */
 func (this *QStringList) Operator_left_shift(str string) *QStringList {
-	var tmpArg0 = NewQString_5(str)
+	var tmpArg0 = NewQString5(str)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListlsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -230,7 +230,7 @@ func (this *QStringList) Operator_left_shift(str string) *QStringList {
 /*
 
  */
-func (this *QStringList) Operator_left_shift_1(l QStringList_ITF) *QStringList {
+func (this *QStringList) Operator_left_shift1(l QStringList_ITF) *QStringList {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QStringList_PTR() != nil {
 		convArg0 = l.QStringList_PTR().GetCthis()
@@ -276,7 +276,7 @@ By default, this function is case sensitive.
 
 See also lastIndexOf(), contains(), and QRegExp::exactMatch().
 */
-func (this *QStringList) IndexOf__(rx QRegExp_ITF) int {
+func (this *QStringList) IndexOfp(rx QRegExp_ITF) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
@@ -300,7 +300,7 @@ By default, this function is case sensitive.
 
 See also lastIndexOf(), contains(), and QRegExp::exactMatch().
 */
-func (this *QStringList) IndexOf_1(rx QRegExp_ITF, from int) int {
+func (this *QStringList) IndexOf1(rx QRegExp_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
@@ -322,7 +322,7 @@ By default, this function is case sensitive.
 
 See also lastIndexOf(), contains(), and QRegExp::exactMatch().
 */
-func (this *QStringList) IndexOf_1_(rx QRegExp_ITF) int {
+func (this *QStringList) IndexOf1p(rx QRegExp_ITF) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
@@ -346,7 +346,7 @@ By default, this function is case sensitive.
 
 See also lastIndexOf(), contains(), and QRegExp::exactMatch().
 */
-func (this *QStringList) IndexOf_2(re QRegularExpression_ITF, from int) int {
+func (this *QStringList) IndexOf2(re QRegularExpression_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()
@@ -368,7 +368,7 @@ By default, this function is case sensitive.
 
 See also lastIndexOf(), contains(), and QRegExp::exactMatch().
 */
-func (this *QStringList) IndexOf_2_(re QRegularExpression_ITF) int {
+func (this *QStringList) IndexOf2p(re QRegularExpression_ITF) int {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()
@@ -414,7 +414,7 @@ By default, this function is case sensitive.
 
 See also indexOf(), contains(), and QRegExp::exactMatch().
 */
-func (this *QStringList) LastIndexOf__(rx QRegExp_ITF) int {
+func (this *QStringList) LastIndexOfp(rx QRegExp_ITF) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
@@ -438,7 +438,7 @@ By default, this function is case sensitive.
 
 See also indexOf(), contains(), and QRegExp::exactMatch().
 */
-func (this *QStringList) LastIndexOf_1(rx QRegExp_ITF, from int) int {
+func (this *QStringList) LastIndexOf1(rx QRegExp_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
@@ -460,7 +460,7 @@ By default, this function is case sensitive.
 
 See also indexOf(), contains(), and QRegExp::exactMatch().
 */
-func (this *QStringList) LastIndexOf_1_(rx QRegExp_ITF) int {
+func (this *QStringList) LastIndexOf1p(rx QRegExp_ITF) int {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
@@ -484,7 +484,7 @@ By default, this function is case sensitive.
 
 See also indexOf(), contains(), and QRegExp::exactMatch().
 */
-func (this *QStringList) LastIndexOf_2(re QRegularExpression_ITF, from int) int {
+func (this *QStringList) LastIndexOf2(re QRegularExpression_ITF, from int) int {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()
@@ -506,7 +506,7 @@ By default, this function is case sensitive.
 
 See also indexOf(), contains(), and QRegExp::exactMatch().
 */
-func (this *QStringList) LastIndexOf_2_(re QRegularExpression_ITF) int {
+func (this *QStringList) LastIndexOf2p(re QRegularExpression_ITF) int {
 	var convArg0 unsafe.Pointer
 	if re != nil && re.QRegularExpression_PTR() != nil {
 		convArg0 = re.QRegularExpression_PTR().GetCthis()

@@ -227,7 +227,7 @@ func (this *QRadioDataControl) Error() int {
 /*
 Returns the error state of a radio data.
 */
-func (this *QRadioDataControl) Error_1(err_ int) {
+func (this *QRadioDataControl) Error1(err_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QRadioDataControl5errorEN10QRadioData5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), err_)
 	qtrt.ErrPrint(err, rv)
 }
@@ -258,7 +258,7 @@ func (this *QRadioDataControl) ErrorString() string {
 Signals that the Program Identification stationId has changed
 */
 func (this *QRadioDataControl) StationIdChanged(stationId string) {
-	var tmpArg0 = qtcore.NewQString_5(stationId)
+	var tmpArg0 = qtcore.NewQString5(stationId)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QRadioDataControl16stationIdChangedE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -286,7 +286,7 @@ func (this *QRadioDataControl) ProgramTypeChanged(programType int) {
 Signals that the Program Type Name programTypeName has changed
 */
 func (this *QRadioDataControl) ProgramTypeNameChanged(programTypeName string) {
-	var tmpArg0 = qtcore.NewQString_5(programTypeName)
+	var tmpArg0 = qtcore.NewQString5(programTypeName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QRadioDataControl22programTypeNameChangedE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -301,7 +301,7 @@ func (this *QRadioDataControl) ProgramTypeNameChanged(programTypeName string) {
 Signals that the Program Service stationName has changed
 */
 func (this *QRadioDataControl) StationNameChanged(stationName string) {
-	var tmpArg0 = qtcore.NewQString_5(stationName)
+	var tmpArg0 = qtcore.NewQString5(stationName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QRadioDataControl18stationNameChangedE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -316,7 +316,7 @@ func (this *QRadioDataControl) StationNameChanged(stationName string) {
 Signals that the Radio Text radioText has changed
 */
 func (this *QRadioDataControl) RadioTextChanged(radioText string) {
-	var tmpArg0 = qtcore.NewQString_5(radioText)
+	var tmpArg0 = qtcore.NewQString5(radioText)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QRadioDataControl16radioTextChangedE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -366,10 +366,10 @@ func NewQRadioDataControl(parent qtcore.QObject_ITF /*777 QObject **/) *QRadioDa
 /*
 Constructs a radio data control with the given parent.
 */
-func (*QRadioDataControl) NewForInherit__() *QRadioDataControl {
-	return NewQRadioDataControl__()
+func (*QRadioDataControl) NewForInheritp() *QRadioDataControl {
+	return NewQRadioDataControlp()
 }
-func NewQRadioDataControl__() *QRadioDataControl {
+func NewQRadioDataControlp() *QRadioDataControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QRadioDataControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

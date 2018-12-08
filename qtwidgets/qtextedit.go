@@ -249,10 +249,10 @@ func NewQTextEdit(parent QWidget_ITF /*777 QWidget **/) *QTextEdit {
 /*
 Constructs an empty QTextEdit with parent parent.
 */
-func (*QTextEdit) NewForInherit__() *QTextEdit {
-	return NewQTextEdit__()
+func (*QTextEdit) NewForInheritp() *QTextEdit {
+	return NewQTextEditp()
 }
-func NewQTextEdit__() *QTextEdit {
+func NewQTextEditp() *QTextEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -270,11 +270,11 @@ func NewQTextEdit__() *QTextEdit {
 /*
 Constructs an empty QTextEdit with parent parent.
 */
-func (*QTextEdit) NewForInherit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QTextEdit {
-	return NewQTextEdit_1(text, parent)
+func (*QTextEdit) NewForInherit1(text string, parent QWidget_ITF /*777 QWidget **/) *QTextEdit {
+	return NewQTextEdit1(text, parent)
 }
-func NewQTextEdit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QTextEdit {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQTextEdit1(text string, parent QWidget_ITF /*777 QWidget **/) *QTextEdit {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -295,11 +295,11 @@ func NewQTextEdit_1(text string, parent QWidget_ITF /*777 QWidget **/) *QTextEdi
 /*
 Constructs an empty QTextEdit with parent parent.
 */
-func (*QTextEdit) NewForInherit_1_(text string) *QTextEdit {
-	return NewQTextEdit_1_(text)
+func (*QTextEdit) NewForInherit1p(text string) *QTextEdit {
+	return NewQTextEdit1p(text)
 }
-func NewQTextEdit_1_(text string) *QTextEdit {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQTextEdit1p(text string) *QTextEdit {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -365,7 +365,7 @@ func (this *QTextEdit) Document() *qtgui.QTextDocument /*777 QTextDocument **/ {
 
  */
 func (this *QTextEdit) SetPlaceholderText(placeholderText string) {
-	var tmpArg0 = qtcore.NewQString_5(placeholderText)
+	var tmpArg0 = qtcore.NewQString5(placeholderText)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit18setPlaceholderTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -753,7 +753,7 @@ func (this *QTextEdit) SetTabChangesFocus(b bool) {
 
  */
 func (this *QTextEdit) SetDocumentTitle(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit16setDocumentTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -893,7 +893,7 @@ func (this *QTextEdit) SetWordWrapMode(policy int) {
 Finds the next occurrence of the string, exp, using the given options. Returns true if exp was found and changes the cursor to select the match; otherwise returns false.
 */
 func (this *QTextEdit) Find(exp string, options int) bool {
-	var tmpArg0 = qtcore.NewQString_5(exp)
+	var tmpArg0 = qtcore.NewQString5(exp)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit4findERK7QString6QFlagsIN13QTextDocument8FindFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, options)
 	qtrt.ErrPrint(err, rv)
@@ -908,8 +908,8 @@ func (this *QTextEdit) Find(exp string, options int) bool {
 /*
 Finds the next occurrence of the string, exp, using the given options. Returns true if exp was found and changes the cursor to select the match; otherwise returns false.
 */
-func (this *QTextEdit) Find__(exp string) bool {
-	var tmpArg0 = qtcore.NewQString_5(exp)
+func (this *QTextEdit) Findp(exp string) bool {
+	var tmpArg0 = qtcore.NewQString5(exp)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QTextDocument::FindFlags=Elaborated, QTextDocument::FindFlags=Typedef, QFlags<QTextDocument::FindFlag>, Unexposed
 	options := 0
@@ -926,7 +926,7 @@ func (this *QTextEdit) Find__(exp string) bool {
 /*
 Finds the next occurrence of the string, exp, using the given options. Returns true if exp was found and changes the cursor to select the match; otherwise returns false.
 */
-func (this *QTextEdit) Find_1(exp qtcore.QRegExp_ITF, options int) bool {
+func (this *QTextEdit) Find1(exp qtcore.QRegExp_ITF, options int) bool {
 	var convArg0 unsafe.Pointer
 	if exp != nil && exp.QRegExp_PTR() != nil {
 		convArg0 = exp.QRegExp_PTR().GetCthis()
@@ -944,7 +944,7 @@ func (this *QTextEdit) Find_1(exp qtcore.QRegExp_ITF, options int) bool {
 /*
 Finds the next occurrence of the string, exp, using the given options. Returns true if exp was found and changes the cursor to select the match; otherwise returns false.
 */
-func (this *QTextEdit) Find_1_(exp qtcore.QRegExp_ITF) bool {
+func (this *QTextEdit) Find1p(exp qtcore.QRegExp_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if exp != nil && exp.QRegExp_PTR() != nil {
 		convArg0 = exp.QRegExp_PTR().GetCthis()
@@ -1059,7 +1059,7 @@ This function creates the standard context menu which is shown when the user cli
 
 We recommend that you use the createStandardContextMenu(QPoint) version instead which will enable the actions that are sensitive to where the user clicked.
 */
-func (this *QTextEdit) CreateStandardContextMenu_1(position qtcore.QPoint_ITF) *QMenu /*777 QMenu **/ {
+func (this *QTextEdit) CreateStandardContextMenu1(position qtcore.QPoint_ITF) *QMenu /*777 QMenu **/ {
 	var convArg0 unsafe.Pointer
 	if position != nil && position.QPoint_PTR() != nil {
 		convArg0 = position.QPoint_PTR().GetCthis()
@@ -1117,7 +1117,7 @@ func (this *QTextEdit) CursorRect(cursor qtgui.QTextCursor_ITF) *qtcore.QRect /*
 /*
 returns a rectangle (in viewport coordinates) that includes the cursor.
 */
-func (this *QTextEdit) CursorRect_1() *qtcore.QRect /*123*/ {
+func (this *QTextEdit) CursorRect1() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextEdit10cursorRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1314,7 +1314,7 @@ This function was introduced in  Qt 4.2.
 
 See also QTextCursor::movePosition().
 */
-func (this *QTextEdit) MoveCursor__(operation int) {
+func (this *QTextEdit) MoveCursorp(operation int) {
 	// arg: 1, QTextCursor::MoveMode=Elaborated, QTextCursor::MoveMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit10moveCursorEN11QTextCursor13MoveOperationENS0_8MoveModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), operation, mode)
@@ -1382,7 +1382,7 @@ func (this *QTextEdit) InputMethodQuery(property int) *qtcore.QVariant /*123*/ {
 /*
 Reimplemented from QWidget::inputMethodQuery().
 */
-func (this *QTextEdit) InputMethodQuery_1(query int, argument qtcore.QVariant_ITF /*123*/) *qtcore.QVariant /*123*/ {
+func (this *QTextEdit) InputMethodQuery1(query int, argument qtcore.QVariant_ITF /*123*/) *qtcore.QVariant /*123*/ {
 	var convArg1 unsafe.Pointer
 	if argument != nil && argument.QVariant_PTR() != nil {
 		convArg1 = argument.QVariant_PTR().GetCthis()
@@ -1422,7 +1422,7 @@ Sets the font family of the current format to fontFamily.
 See also fontFamily() and setCurrentFont().
 */
 func (this *QTextEdit) SetFontFamily(fontFamily string) {
-	var tmpArg0 = qtcore.NewQString_5(fontFamily)
+	var tmpArg0 = qtcore.NewQString5(fontFamily)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit13setFontFamilyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1564,7 +1564,7 @@ Note: Setter function for property plainText.
 See also toPlainText().
 */
 func (this *QTextEdit) SetPlainText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit12setPlainTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1579,7 +1579,7 @@ func (this *QTextEdit) SetPlainText(text string) {
 
  */
 func (this *QTextEdit) SetHtml(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit7setHtmlERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1600,7 +1600,7 @@ This function was introduced in  Qt 4.2.
 See also toPlainText() and toHtml().
 */
 func (this *QTextEdit) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1741,7 +1741,7 @@ It is equivalent to
   edit->textCursor().insertText(text);
 */
 func (this *QTextEdit) InsertPlainText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit15insertPlainTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1765,7 +1765,7 @@ It is equivalent to:
 Note: When using this function with a style sheet, the style sheet will only apply to the current block in the document. In order to apply a style sheet throughout a document, use QTextDocument::setDefaultStyleSheet() instead.
 */
 func (this *QTextEdit) InsertHtml(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit10insertHtmlERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1780,7 +1780,7 @@ func (this *QTextEdit) InsertHtml(text string) {
 Scrolls the text edit so that the anchor with the given name is visible; does nothing if the name is empty, or is already visible, or isn't found.
 */
 func (this *QTextEdit) ScrollToAnchor(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit14scrollToAnchorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1811,7 +1811,7 @@ Zooms in on the text by making the base font size range points larger and recalc
 
 See also zoomOut().
 */
-func (this *QTextEdit) ZoomIn__() {
+func (this *QTextEdit) ZoomInp() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	range_ := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit6zoomInEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), range_)
@@ -1847,7 +1847,7 @@ Zooms out on the text by making the base font size range points smaller and reca
 
 See also zoomIn().
 */
-func (this *QTextEdit) ZoomOut__() {
+func (this *QTextEdit) ZoomOutp() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	range_ := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextEdit7zoomOutEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), range_)

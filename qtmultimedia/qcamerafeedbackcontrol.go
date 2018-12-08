@@ -176,7 +176,7 @@ Note: In the case that a valid file path to an unsupported file is given, this f
 This function was introduced in  Qt 5.0.
 */
 func (this *QCameraFeedbackControl) SetEventFeedbackSound(arg0 int, filePath string) bool {
-	var tmpArg1 = qtcore.NewQString_5(filePath)
+	var tmpArg1 = qtcore.NewQString5(filePath)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QCameraFeedbackControl21setEventFeedbackSoundENS_9EventTypeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -214,10 +214,10 @@ func NewQCameraFeedbackControl(parent qtcore.QObject_ITF /*777 QObject **/) *QCa
 /*
 Constructs a camera feedback control object with parent.
 */
-func (*QCameraFeedbackControl) NewForInherit__() *QCameraFeedbackControl {
-	return NewQCameraFeedbackControl__()
+func (*QCameraFeedbackControl) NewForInheritp() *QCameraFeedbackControl {
+	return NewQCameraFeedbackControlp()
 }
-func NewQCameraFeedbackControl__() *QCameraFeedbackControl {
+func NewQCameraFeedbackControlp() *QCameraFeedbackControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QCameraFeedbackControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

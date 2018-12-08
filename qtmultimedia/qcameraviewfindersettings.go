@@ -131,7 +131,7 @@ func (this *QCameraViewfinderSettings) Operator_equal(other QCameraViewfinderSet
 /*
 
  */
-func (this *QCameraViewfinderSettings) Operator_equal_1(other unsafe.Pointer /*333*/) *QCameraViewfinderSettings {
+func (this *QCameraViewfinderSettings) Operator_equal1(other unsafe.Pointer /*333*/) *QCameraViewfinderSettings {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QCameraViewfinderSettingsaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCameraViewfinderSettingsFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -227,7 +227,7 @@ If the camera is used to capture videos or images, the viewfinder resolution mig
 
 See also resolution(), QVideoEncoderSettings::setResolution(), QImageEncoderSettings::setResolution(), and QCamera::supportedViewfinderResolutions().
 */
-func (this *QCameraViewfinderSettings) SetResolution_1(width int, height int) {
+func (this *QCameraViewfinderSettings) SetResolution1(width int, height int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QCameraViewfinderSettings13setResolutionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, height)
 	qtrt.ErrPrint(err, rv)
 }
@@ -382,7 +382,7 @@ Sets the viewfinder pixel aspect ratio.
 
 See also pixelAspectRatio().
 */
-func (this *QCameraViewfinderSettings) SetPixelAspectRatio_1(horizontal int, vertical int) {
+func (this *QCameraViewfinderSettings) SetPixelAspectRatio1(horizontal int, vertical int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QCameraViewfinderSettings19setPixelAspectRatioEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), horizontal, vertical)
 	qtrt.ErrPrint(err, rv)
 }

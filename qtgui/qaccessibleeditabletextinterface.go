@@ -104,7 +104,7 @@ func (this *QAccessibleEditableTextInterface) DeleteText(startOffset int, endOff
 
  */
 func (this *QAccessibleEditableTextInterface) InsertText(offset int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterface10insertTextEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -119,7 +119,7 @@ func (this *QAccessibleEditableTextInterface) InsertText(offset int, text string
 
  */
 func (this *QAccessibleEditableTextInterface) ReplaceText(startOffset int, endOffset int, text string) {
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterface11replaceTextEiiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startOffset, endOffset, convArg2)
 	qtrt.ErrPrint(err, rv)

@@ -129,10 +129,10 @@ func NewQWizardPage(parent QWidget_ITF /*777 QWidget **/) *QWizardPage {
 /*
 
  */
-func (*QWizardPage) NewForInherit__() *QWizardPage {
-	return NewQWizardPage__()
+func (*QWizardPage) NewForInheritp() *QWizardPage {
+	return NewQWizardPagep()
 }
-func NewQWizardPage__() *QWizardPage {
+func NewQWizardPagep() *QWizardPage {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPageC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -166,7 +166,7 @@ func DeleteQWizardPage(this *QWizardPage) {
 
  */
 func (this *QWizardPage) SetTitle(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -198,7 +198,7 @@ func (this *QWizardPage) Title() string {
 
  */
 func (this *QWizardPage) SetSubTitle(subTitle string) {
-	var tmpArg0 = qtcore.NewQString_5(subTitle)
+	var tmpArg0 = qtcore.NewQString5(subTitle)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage11setSubTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -335,7 +335,7 @@ Button texts may also be set on a per-page basis using QWizardPage::setButtonTex
 See also buttonText(), setButton(), button(), setButtonLayout(), setOptions(), and QWizardPage::setButtonText().
 */
 func (this *QWizardPage) SetButtonText(which int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QWizardPage13setButtonTextEN7QWizard12WizardButtonERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -476,7 +476,7 @@ This function can be used to set fields on any page of the wizard.
 See also QWizardPage::registerField(), QWizardPage::setField(), and field().
 */
 func (this *QWizardPage) SetField(name string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -499,7 +499,7 @@ This function can be used to access fields on any page of the wizard.
 See also QWizardPage::registerField(), QWizardPage::field(), and setField().
 */
 func (this *QWizardPage) Field(name string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QWizardPage5fieldERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -517,7 +517,7 @@ func (this *QWizardPage) Field(name string) *qtcore.QVariant /*123*/ {
 
  */
 func (this *QWizardPage) RegisterField(name string, widget QWidget_ITF /*777 QWidget **/, property string, changedSignal string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -539,8 +539,8 @@ func (this *QWizardPage) RegisterField(name string, widget QWidget_ITF /*777 QWi
 /*
 
  */
-func (this *QWizardPage) RegisterField__(name string, widget QWidget_ITF /*777 QWidget **/) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+func (this *QWizardPage) RegisterFieldp(name string, widget QWidget_ITF /*777 QWidget **/) {
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
@@ -562,8 +562,8 @@ func (this *QWizardPage) RegisterField__(name string, widget QWidget_ITF /*777 Q
 /*
 
  */
-func (this *QWizardPage) RegisterField__1(name string, widget QWidget_ITF /*777 QWidget **/, property string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+func (this *QWizardPage) RegisterFieldp1(name string, widget QWidget_ITF /*777 QWidget **/, property string) {
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {

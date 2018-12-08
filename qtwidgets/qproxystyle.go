@@ -118,10 +118,10 @@ Constructs a QProxyStyle object for overriding behavior in the specified style, 
 
 Ownership of style is transferred to QProxyStyle.
 */
-func (*QProxyStyle) NewForInherit__() *QProxyStyle {
-	return NewQProxyStyle__()
+func (*QProxyStyle) NewForInheritp() *QProxyStyle {
+	return NewQProxyStylep()
 }
-func NewQProxyStyle__() *QProxyStyle {
+func NewQProxyStylep() *QProxyStyle {
 	// arg: 0, QStyle *=Pointer, QStyle=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QProxyStyleC2EP6QStyle", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -141,11 +141,11 @@ Constructs a QProxyStyle object for overriding behavior in the specified style, 
 
 Ownership of style is transferred to QProxyStyle.
 */
-func (*QProxyStyle) NewForInherit_1(key string) *QProxyStyle {
-	return NewQProxyStyle_1(key)
+func (*QProxyStyle) NewForInherit1(key string) *QProxyStyle {
+	return NewQProxyStyle1(key)
 }
-func NewQProxyStyle_1(key string) *QProxyStyle {
-	var tmpArg0 = qtcore.NewQString_5(key)
+func NewQProxyStyle1(key string) *QProxyStyle {
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QProxyStyleC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -241,7 +241,7 @@ func (this *QProxyStyle) DrawPrimitive(element int, option QStyleOption_ITF /*77
 /*
 Reimplemented from QStyle::drawPrimitive().
 */
-func (this *QProxyStyle) DrawPrimitive__(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QProxyStyle) DrawPrimitivep(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
@@ -289,7 +289,7 @@ func (this *QProxyStyle) DrawControl(element int, option QStyleOption_ITF /*777 
 /*
 Reimplemented from QStyle::drawControl().
 */
-func (this *QProxyStyle) DrawControl__(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QProxyStyle) DrawControlp(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
@@ -337,7 +337,7 @@ func (this *QProxyStyle) DrawComplexControl(control int, option QStyleOptionComp
 /*
 Reimplemented from QStyle::drawComplexControl().
 */
-func (this *QProxyStyle) DrawComplexControl__(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QProxyStyle) DrawComplexControlp(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOptionComplex_PTR() != nil {
 		convArg1 = option.QStyleOptionComplex_PTR().GetCthis()
@@ -373,7 +373,7 @@ func (this *QProxyStyle) DrawItemText(painter qtgui.QPainter_ITF /*777 QPainter 
 	if pal != nil && pal.QPalette_PTR() != nil {
 		convArg3 = pal.QPalette_PTR().GetCthis()
 	}
-	var tmpArg5 = qtcore.NewQString_5(text)
+	var tmpArg5 = qtcore.NewQString5(text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle12drawItemTextEP8QPainterRK5QRectiRK8QPalettebRK7QStringNS5_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, flags, convArg3, enabled, convArg5, textRole)
 	qtrt.ErrPrint(err, rv)
@@ -387,7 +387,7 @@ func (this *QProxyStyle) DrawItemText(painter qtgui.QPainter_ITF /*777 QPainter 
 /*
 Reimplemented from QStyle::drawItemText().
 */
-func (this *QProxyStyle) DrawItemText__(painter qtgui.QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, flags int, pal qtgui.QPalette_ITF, enabled bool, text string) {
+func (this *QProxyStyle) DrawItemTextp(painter qtgui.QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, flags int, pal qtgui.QPalette_ITF, enabled bool, text string) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -400,7 +400,7 @@ func (this *QProxyStyle) DrawItemText__(painter qtgui.QPainter_ITF /*777 QPainte
 	if pal != nil && pal.QPalette_PTR() != nil {
 		convArg3 = pal.QPalette_PTR().GetCthis()
 	}
-	var tmpArg5 = qtcore.NewQString_5(text)
+	var tmpArg5 = qtcore.NewQString5(text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 6, QPalette::ColorRole=Elaborated, QPalette::ColorRole=Enum, , Invalid
 	textRole := 0
@@ -526,7 +526,7 @@ func (this *QProxyStyle) ItemTextRect(fm qtgui.QFontMetrics_ITF, r qtcore.QRect_
 	if r != nil && r.QRect_PTR() != nil {
 		convArg1 = r.QRect_PTR().GetCthis()
 	}
-	var tmpArg4 = qtcore.NewQString_5(text)
+	var tmpArg4 = qtcore.NewQString5(text)
 	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, flags, enabled, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -593,7 +593,7 @@ func (this *QProxyStyle) HitTestComplexControl(control int, option QStyleOptionC
 /*
 Reimplemented from QStyle::hitTestComplexControl().
 */
-func (this *QProxyStyle) HitTestComplexControl__(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pos qtcore.QPoint_ITF) int {
+func (this *QProxyStyle) HitTestComplexControlp(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pos qtcore.QPoint_ITF) int {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOptionComplex_PTR() != nil {
 		convArg1 = option.QStyleOptionComplex_PTR().GetCthis()
@@ -643,7 +643,7 @@ func (this *QProxyStyle) StyleHint(hint int, option QStyleOption_ITF /*777 const
 /*
 Reimplemented from QStyle::styleHint().
 */
-func (this *QProxyStyle) StyleHint__(hint int) int {
+func (this *QProxyStyle) StyleHintp(hint int) int {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -663,7 +663,7 @@ func (this *QProxyStyle) StyleHint__(hint int) int {
 /*
 Reimplemented from QStyle::styleHint().
 */
-func (this *QProxyStyle) StyleHint__1(hint int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
+func (this *QProxyStyle) StyleHintp1(hint int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
@@ -685,7 +685,7 @@ func (this *QProxyStyle) StyleHint__1(hint int, option QStyleOption_ITF /*777 co
 /*
 Reimplemented from QStyle::styleHint().
 */
-func (this *QProxyStyle) StyleHint__2(hint int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) int {
+func (this *QProxyStyle) StyleHintp2(hint int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) int {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
@@ -731,7 +731,7 @@ func (this *QProxyStyle) PixelMetric(metric int, option QStyleOption_ITF /*777 c
 /*
 Reimplemented from QStyle::pixelMetric().
 */
-func (this *QProxyStyle) PixelMetric__(metric int) int {
+func (this *QProxyStyle) PixelMetricp(metric int) int {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -749,7 +749,7 @@ func (this *QProxyStyle) PixelMetric__(metric int) int {
 /*
 Reimplemented from QStyle::pixelMetric().
 */
-func (this *QProxyStyle) PixelMetric__1(metric int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
+func (this *QProxyStyle) PixelMetricp1(metric int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
@@ -803,7 +803,7 @@ The default implementation returns -1.
 
 See also combinedLayoutSpacing().
 */
-func (this *QProxyStyle) LayoutSpacing__(control1 int, control2 int, orientation int) int {
+func (this *QProxyStyle) LayoutSpacingp(control1 int, control2 int, orientation int) int {
 	// arg: 3, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	// arg: 4, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -827,7 +827,7 @@ The default implementation returns -1.
 
 See also combinedLayoutSpacing().
 */
-func (this *QProxyStyle) LayoutSpacing__1(control1 int, control2 int, orientation int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
+func (this *QProxyStyle) LayoutSpacingp1(control1 int, control2 int, orientation int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg3 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg3 = option.QStyleOption_PTR().GetCthis()
@@ -879,7 +879,7 @@ Returns an icon for the given standardIcon.
 
 Reimplement this slot to provide your own icons in a QStyle subclass. The option argument can be used to pass extra information required to find the appropriate icon. The widget argument is optional and can also be used to help find the icon.
 */
-func (this *QProxyStyle) StandardIcon__(standardIcon int) *qtgui.QIcon /*123*/ {
+func (this *QProxyStyle) StandardIconp(standardIcon int) *qtgui.QIcon /*123*/ {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -903,7 +903,7 @@ Returns an icon for the given standardIcon.
 
 Reimplement this slot to provide your own icons in a QStyle subclass. The option argument can be used to pass extra information required to find the appropriate icon. The widget argument is optional and can also be used to help find the icon.
 */
-func (this *QProxyStyle) StandardIcon__1(standardIcon int, option QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QIcon /*123*/ {
+func (this *QProxyStyle) StandardIconp1(standardIcon int, option QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QIcon /*123*/ {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
@@ -949,7 +949,7 @@ func (this *QProxyStyle) StandardPixmap(standardPixmap int, opt QStyleOption_ITF
 /*
 Reimplemented from QStyle::standardPixmap().
 */
-func (this *QProxyStyle) StandardPixmap__(standardPixmap int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
+func (this *QProxyStyle) StandardPixmapp(standardPixmap int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -1028,7 +1028,7 @@ func (this *QProxyStyle) Polish(widget QWidget_ITF /*777 QWidget **/) {
 /*
 Reimplemented from QStyle::polish().
 */
-func (this *QProxyStyle) Polish_1(pal qtgui.QPalette_ITF) {
+func (this *QProxyStyle) Polish1(pal qtgui.QPalette_ITF) {
 	var convArg0 unsafe.Pointer
 	if pal != nil && pal.QPalette_PTR() != nil {
 		convArg0 = pal.QPalette_PTR().GetCthis()
@@ -1045,7 +1045,7 @@ func (this *QProxyStyle) Polish_1(pal qtgui.QPalette_ITF) {
 /*
 Reimplemented from QStyle::polish().
 */
-func (this *QProxyStyle) Polish_2(app QApplication_ITF /*777 QApplication **/) {
+func (this *QProxyStyle) Polish2(app QApplication_ITF /*777 QApplication **/) {
 	var convArg0 unsafe.Pointer
 	if app != nil && app.QApplication_PTR() != nil {
 		convArg0 = app.QApplication_PTR().GetCthis()
@@ -1079,7 +1079,7 @@ func (this *QProxyStyle) Unpolish(widget QWidget_ITF /*777 QWidget **/) {
 /*
 Reimplemented from QStyle::unpolish().
 */
-func (this *QProxyStyle) Unpolish_1(app QApplication_ITF /*777 QApplication **/) {
+func (this *QProxyStyle) Unpolish1(app QApplication_ITF /*777 QApplication **/) {
 	var convArg0 unsafe.Pointer
 	if app != nil && app.QApplication_PTR() != nil {
 		convArg0 = app.QApplication_PTR().GetCthis()

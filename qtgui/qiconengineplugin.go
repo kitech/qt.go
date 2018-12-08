@@ -108,10 +108,10 @@ func NewQIconEnginePlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QIconEng
 /*
 Constructs a icon engine plugin with the given parent. This is invoked automatically by the plugin loader.
 */
-func (*QIconEnginePlugin) NewForInherit__() *QIconEnginePlugin {
-	return NewQIconEnginePlugin__()
+func (*QIconEnginePlugin) NewForInheritp() *QIconEnginePlugin {
+	return NewQIconEnginePluginp()
 }
-func NewQIconEnginePlugin__() *QIconEnginePlugin {
+func NewQIconEnginePluginp() *QIconEnginePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QIconEnginePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -145,7 +145,7 @@ func DeleteQIconEnginePlugin(this *QIconEnginePlugin) {
 Creates and returns a QIconEngine object for the icon with the given filename.
 */
 func (this *QIconEnginePlugin) Create(filename string) *QIconEngine /*777 QIconEngine **/ {
-	var tmpArg0 = qtcore.NewQString_5(filename)
+	var tmpArg0 = qtcore.NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QIconEnginePlugin6createERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +160,7 @@ func (this *QIconEnginePlugin) Create(filename string) *QIconEngine /*777 QIconE
 /*
 Creates and returns a QIconEngine object for the icon with the given filename.
 */
-func (this *QIconEnginePlugin) Create__() *QIconEngine /*777 QIconEngine **/ {
+func (this *QIconEnginePlugin) Createp() *QIconEngine /*777 QIconEngine **/ {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QIconEnginePlugin6createERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

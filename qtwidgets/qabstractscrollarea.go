@@ -213,10 +213,10 @@ Constructs a viewport.
 
 The parent argument is sent to the QWidget constructor.
 */
-func (*QAbstractScrollArea) NewForInherit__() *QAbstractScrollArea {
-	return NewQAbstractScrollArea__()
+func (*QAbstractScrollArea) NewForInheritp() *QAbstractScrollArea {
+	return NewQAbstractScrollAreap()
 }
-func NewQAbstractScrollArea__() *QAbstractScrollArea {
+func NewQAbstractScrollAreap() *QAbstractScrollArea {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollAreaC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -648,7 +648,7 @@ By default all margins are zero.
 
 See also viewportMargins().
 */
-func (this *QAbstractScrollArea) SetViewportMargins_1(margins qtcore.QMargins_ITF) {
+func (this *QAbstractScrollArea) SetViewportMargins1(margins qtcore.QMargins_ITF) {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()

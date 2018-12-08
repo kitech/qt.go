@@ -110,10 +110,10 @@ func NewQGraphicsPolygonItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *
 /*
 
  */
-func (*QGraphicsPolygonItem) NewForInherit__() *QGraphicsPolygonItem {
-	return NewQGraphicsPolygonItem__()
+func (*QGraphicsPolygonItem) NewForInheritp() *QGraphicsPolygonItem {
+	return NewQGraphicsPolygonItemp()
 }
-func NewQGraphicsPolygonItem__() *QGraphicsPolygonItem {
+func NewQGraphicsPolygonItemp() *QGraphicsPolygonItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QGraphicsPolygonItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -131,10 +131,10 @@ func NewQGraphicsPolygonItem__() *QGraphicsPolygonItem {
 /*
 
  */
-func (*QGraphicsPolygonItem) NewForInherit_1(polygon qtgui.QPolygonF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPolygonItem {
-	return NewQGraphicsPolygonItem_1(polygon, parent)
+func (*QGraphicsPolygonItem) NewForInherit1(polygon qtgui.QPolygonF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPolygonItem {
+	return NewQGraphicsPolygonItem1(polygon, parent)
 }
-func NewQGraphicsPolygonItem_1(polygon qtgui.QPolygonF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPolygonItem {
+func NewQGraphicsPolygonItem1(polygon qtgui.QPolygonF_ITF, parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsPolygonItem {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -158,10 +158,10 @@ func NewQGraphicsPolygonItem_1(polygon qtgui.QPolygonF_ITF, parent QGraphicsItem
 /*
 
  */
-func (*QGraphicsPolygonItem) NewForInherit_1_(polygon qtgui.QPolygonF_ITF) *QGraphicsPolygonItem {
-	return NewQGraphicsPolygonItem_1_(polygon)
+func (*QGraphicsPolygonItem) NewForInherit1p(polygon qtgui.QPolygonF_ITF) *QGraphicsPolygonItem {
+	return NewQGraphicsPolygonItem1p(polygon)
 }
-func NewQGraphicsPolygonItem_1_(polygon qtgui.QPolygonF_ITF) *QGraphicsPolygonItem {
+func NewQGraphicsPolygonItem1p(polygon qtgui.QPolygonF_ITF) *QGraphicsPolygonItem {
 	var convArg0 unsafe.Pointer
 	if polygon != nil && polygon.QPolygonF_PTR() != nil {
 		convArg0 = polygon.QPolygonF_PTR().GetCthis()
@@ -425,7 +425,7 @@ Note: Enabling caching for an item does not guarantee that paint() will be invok
 
 See also setCacheMode(), QPen::width(), Item Coordinates, and ItemUsesExtendedStyleOption.
 */
-func (this *QGraphicsPolygonItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+func (this *QGraphicsPolygonItem) Paintp(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()

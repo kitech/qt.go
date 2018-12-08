@@ -123,10 +123,10 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
-func (*QDialogButtonBox) NewForInherit__() *QDialogButtonBox {
-	return NewQDialogButtonBox__()
+func (*QDialogButtonBox) NewForInheritp() *QDialogButtonBox {
+	return NewQDialogButtonBoxp()
 }
-func NewQDialogButtonBox__() *QDialogButtonBox {
+func NewQDialogButtonBoxp() *QDialogButtonBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -146,10 +146,10 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
-func (*QDialogButtonBox) NewForInherit_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
-	return NewQDialogButtonBox_1(orientation, parent)
+func (*QDialogButtonBox) NewForInherit1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+	return NewQDialogButtonBox1(orientation, parent)
 }
-func NewQDialogButtonBox_1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+func NewQDialogButtonBox1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
@@ -171,10 +171,10 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
-func (*QDialogButtonBox) NewForInherit_1_(orientation int) *QDialogButtonBox {
-	return NewQDialogButtonBox_1_(orientation)
+func (*QDialogButtonBox) NewForInherit1p(orientation int) *QDialogButtonBox {
+	return NewQDialogButtonBox1p(orientation)
 }
-func NewQDialogButtonBox_1_(orientation int) *QDialogButtonBox {
+func NewQDialogButtonBox1p(orientation int) *QDialogButtonBox {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
@@ -194,10 +194,10 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
-func (*QDialogButtonBox) NewForInherit_2(buttons int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
-	return NewQDialogButtonBox_2(buttons, parent)
+func (*QDialogButtonBox) NewForInherit2(buttons int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+	return NewQDialogButtonBox2(buttons, parent)
 }
-func NewQDialogButtonBox_2(buttons int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+func NewQDialogButtonBox2(buttons int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
@@ -219,10 +219,10 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
-func (*QDialogButtonBox) NewForInherit_2_(buttons int) *QDialogButtonBox {
-	return NewQDialogButtonBox_2_(buttons)
+func (*QDialogButtonBox) NewForInherit2p(buttons int) *QDialogButtonBox {
+	return NewQDialogButtonBox2p(buttons)
 }
-func NewQDialogButtonBox_2_(buttons int) *QDialogButtonBox {
+func NewQDialogButtonBox2p(buttons int) *QDialogButtonBox {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2E6QFlagsINS_14StandardButtonEEP7QWidget", qtrt.FFI_TYPE_POINTER, buttons, convArg1)
@@ -242,10 +242,10 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
-func (*QDialogButtonBox) NewForInherit_3(buttons int, orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
-	return NewQDialogButtonBox_3(buttons, orientation, parent)
+func (*QDialogButtonBox) NewForInherit3(buttons int, orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+	return NewQDialogButtonBox3(buttons, orientation, parent)
 }
-func NewQDialogButtonBox_3(buttons int, orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
+func NewQDialogButtonBox3(buttons int, orientation int, parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg2 = parent.QWidget_PTR().GetCthis()
@@ -267,10 +267,10 @@ Constructs an empty, horizontal button box with the given parent.
 
 See also orientation and addButton().
 */
-func (*QDialogButtonBox) NewForInherit_3_(buttons int, orientation int) *QDialogButtonBox {
-	return NewQDialogButtonBox_3_(buttons, orientation)
+func (*QDialogButtonBox) NewForInherit3p(buttons int, orientation int) *QDialogButtonBox {
+	return NewQDialogButtonBox3p(buttons, orientation)
 }
-func NewQDialogButtonBox_3_(buttons int, orientation int) *QDialogButtonBox {
+func NewQDialogButtonBox3p(buttons int, orientation int) *QDialogButtonBox {
 	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2E6QFlagsINS_14StandardButtonEEN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, buttons, orientation, convArg2)
@@ -359,8 +359,8 @@ Note: The button box takes ownership of the button.
 
 See also removeButton() and clear().
 */
-func (this *QDialogButtonBox) AddButton_1(text string, role int) *QPushButton /*777 QPushButton **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QDialogButtonBox) AddButton1(text string, role int) *QPushButton /*777 QPushButton **/ {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonERK7QStringNS_10ButtonRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	qtrt.ErrPrint(err, rv)
@@ -381,7 +381,7 @@ Note: The button box takes ownership of the button.
 
 See also removeButton() and clear().
 */
-func (this *QDialogButtonBox) AddButton_2(button int) *QPushButton /*777 QPushButton **/ {
+func (this *QDialogButtonBox) AddButton2(button int) *QPushButton /*777 QPushButton **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonENS_14StandardButtonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444

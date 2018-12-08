@@ -82,7 +82,7 @@ func Test0(t *testing.T) {
 		//*/
 		log.Println("===========")
 	}
-	tmer := qtcore.NewQTimer__()
+	tmer := qtcore.NewQTimerp()
 	_ = tmer
 	dumpMetaObj(tmer.MetaObject())
 
@@ -123,7 +123,7 @@ func Test1(t *testing.T) interface{} {
 
 	if true {
 		tobj := a.QThread.GetCthis()
-		tmer := qtcore.NewQTimer__()
+		tmer := qtcore.NewQTimerp()
 		tmer.SetInterval(3456)
 		// trigger by go side signal, then timeout() invoke go side slot
 		qtrt.ConnectRaw(tobj, qtrt.QSIGNAL("Clicked123(bool)"), tmer.GetCthis(), qtrt.QSLOT("start()"))

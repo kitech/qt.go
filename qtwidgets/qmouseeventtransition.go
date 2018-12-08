@@ -119,10 +119,10 @@ func NewQMouseEventTransition(sourceState qtcore.QState_ITF /*777 QState **/) *Q
 /*
 Constructs a new mouse event transition with the given sourceState.
 */
-func (*QMouseEventTransition) NewForInherit__() *QMouseEventTransition {
-	return NewQMouseEventTransition__()
+func (*QMouseEventTransition) NewForInheritp() *QMouseEventTransition {
+	return NewQMouseEventTransitionp()
 }
-func NewQMouseEventTransition__() *QMouseEventTransition {
+func NewQMouseEventTransitionp() *QMouseEventTransition {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QMouseEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -140,10 +140,10 @@ func NewQMouseEventTransition__() *QMouseEventTransition {
 /*
 Constructs a new mouse event transition with the given sourceState.
 */
-func (*QMouseEventTransition) NewForInherit_1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int, sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
-	return NewQMouseEventTransition_1(object, type_, button, sourceState)
+func (*QMouseEventTransition) NewForInherit1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int, sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
+	return NewQMouseEventTransition1(object, type_, button, sourceState)
 }
-func NewQMouseEventTransition_1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int, sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
+func NewQMouseEventTransition1(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int, sourceState qtcore.QState_ITF /*777 QState **/) *QMouseEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
 		convArg0 = object.QObject_PTR().GetCthis()
@@ -167,10 +167,10 @@ func NewQMouseEventTransition_1(object qtcore.QObject_ITF /*777 QObject **/, typ
 /*
 Constructs a new mouse event transition with the given sourceState.
 */
-func (*QMouseEventTransition) NewForInherit_1_(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int) *QMouseEventTransition {
-	return NewQMouseEventTransition_1_(object, type_, button)
+func (*QMouseEventTransition) NewForInherit1p(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int) *QMouseEventTransition {
+	return NewQMouseEventTransition1p(object, type_, button)
 }
-func NewQMouseEventTransition_1_(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int) *QMouseEventTransition {
+func NewQMouseEventTransition1p(object qtcore.QObject_ITF /*777 QObject **/, type_ int, button int) *QMouseEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
 		convArg0 = object.QObject_PTR().GetCthis()

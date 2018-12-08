@@ -91,10 +91,10 @@ func NewQXmlStreamStringRef() *QXmlStreamStringRef {
 /*
 
  */
-func (*QXmlStreamStringRef) NewForInherit_1(aString QStringRef_ITF) *QXmlStreamStringRef {
-	return NewQXmlStreamStringRef_1(aString)
+func (*QXmlStreamStringRef) NewForInherit1(aString QStringRef_ITF) *QXmlStreamStringRef {
+	return NewQXmlStreamStringRef1(aString)
 }
-func NewQXmlStreamStringRef_1(aString QStringRef_ITF) *QXmlStreamStringRef {
+func NewQXmlStreamStringRef1(aString QStringRef_ITF) *QXmlStreamStringRef {
 	var convArg0 unsafe.Pointer
 	if aString != nil && aString.QStringRef_PTR() != nil {
 		convArg0 = aString.QStringRef_PTR().GetCthis()
@@ -114,11 +114,11 @@ func NewQXmlStreamStringRef_1(aString QStringRef_ITF) *QXmlStreamStringRef {
 /*
 
  */
-func (*QXmlStreamStringRef) NewForInherit_2(aString string) *QXmlStreamStringRef {
-	return NewQXmlStreamStringRef_2(aString)
+func (*QXmlStreamStringRef) NewForInherit2(aString string) *QXmlStreamStringRef {
+	return NewQXmlStreamStringRef2(aString)
 }
-func NewQXmlStreamStringRef_2(aString string) *QXmlStreamStringRef {
-	var tmpArg0 = NewQString_5(aString)
+func NewQXmlStreamStringRef2(aString string) *QXmlStreamStringRef {
+	var tmpArg0 = NewQString5(aString)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -135,10 +135,10 @@ func NewQXmlStreamStringRef_2(aString string) *QXmlStreamStringRef {
 /*
 
  */
-func (*QXmlStreamStringRef) NewForInherit_3(aString unsafe.Pointer /*333*/) *QXmlStreamStringRef {
-	return NewQXmlStreamStringRef_3(aString)
+func (*QXmlStreamStringRef) NewForInherit3(aString unsafe.Pointer /*333*/) *QXmlStreamStringRef {
+	return NewQXmlStreamStringRef3(aString)
 }
-func NewQXmlStreamStringRef_3(aString unsafe.Pointer /*333*/) *QXmlStreamStringRef {
+func NewQXmlStreamStringRef3(aString unsafe.Pointer /*333*/) *QXmlStreamStringRef {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2EO7QString", qtrt.FFI_TYPE_POINTER, aString)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQXmlStreamStringRefFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -170,7 +170,7 @@ func (this *QXmlStreamStringRef) Operator_equal(other unsafe.Pointer /*333*/) *Q
 /*
 
  */
-func (this *QXmlStreamStringRef) Operator_equal_1(other QXmlStreamStringRef_ITF) *QXmlStreamStringRef {
+func (this *QXmlStreamStringRef) Operator_equal1(other QXmlStreamStringRef_ITF) *QXmlStreamStringRef {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QXmlStreamStringRef_PTR() != nil {
 		convArg0 = other.QXmlStreamStringRef_PTR().GetCthis()

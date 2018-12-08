@@ -91,10 +91,10 @@ func NewQStyleOptionHeader() *QStyleOptionHeader {
 /*
 
  */
-func (*QStyleOptionHeader) NewForInherit_1(version int) *QStyleOptionHeader {
-	return NewQStyleOptionHeader_1(version)
+func (*QStyleOptionHeader) NewForInherit1(version int) *QStyleOptionHeader {
+	return NewQStyleOptionHeader1(version)
 }
-func NewQStyleOptionHeader_1(version int) *QStyleOptionHeader {
+func NewQStyleOptionHeader1(version int) *QStyleOptionHeader {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionHeaderFromPointer(unsafe.Pointer(uintptr(rv)))

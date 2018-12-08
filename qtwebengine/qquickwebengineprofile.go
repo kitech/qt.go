@@ -115,10 +115,10 @@ func NewQQuickWebEngineProfile(parent qtcore.QObject_ITF /*777 QObject **/) *QQu
 /*
 Constructs a new profile with the parent parent.
 */
-func (*QQuickWebEngineProfile) NewForInherit__() *QQuickWebEngineProfile {
-	return NewQQuickWebEngineProfile__()
+func (*QQuickWebEngineProfile) NewForInheritp() *QQuickWebEngineProfile {
+	return NewQQuickWebEngineProfilep()
 }
-func NewQQuickWebEngineProfile__() *QQuickWebEngineProfile {
+func NewQQuickWebEngineProfilep() *QQuickWebEngineProfile {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QQuickWebEngineProfileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -169,7 +169,7 @@ func (this *QQuickWebEngineProfile) StorageName() string {
 
  */
 func (this *QQuickWebEngineProfile) SetStorageName(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QQuickWebEngineProfile14setStorageNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -228,7 +228,7 @@ func (this *QQuickWebEngineProfile) PersistentStoragePath() string {
 
  */
 func (this *QQuickWebEngineProfile) SetPersistentStoragePath(path string) {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QQuickWebEngineProfile24setPersistentStoragePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -260,7 +260,7 @@ func (this *QQuickWebEngineProfile) CachePath() string {
 
  */
 func (this *QQuickWebEngineProfile) SetCachePath(path string) {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QQuickWebEngineProfile12setCachePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -292,7 +292,7 @@ func (this *QQuickWebEngineProfile) HttpUserAgent() string {
 
  */
 func (this *QQuickWebEngineProfile) SetHttpUserAgent(userAgent string) {
-	var tmpArg0 = qtcore.NewQString_5(userAgent)
+	var tmpArg0 = qtcore.NewQString5(userAgent)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QQuickWebEngineProfile16setHttpUserAgentERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -405,7 +405,7 @@ func (this *QQuickWebEngineProfile) HttpAcceptLanguage() string {
 
  */
 func (this *QQuickWebEngineProfile) SetHttpAcceptLanguage(httpAcceptLanguage string) {
-	var tmpArg0 = qtcore.NewQString_5(httpAcceptLanguage)
+	var tmpArg0 = qtcore.NewQString5(httpAcceptLanguage)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QQuickWebEngineProfile21setHttpAcceptLanguageERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

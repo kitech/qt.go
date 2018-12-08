@@ -96,10 +96,10 @@ Constructs an empty host info object with lookup ID id.
 
 See also lookupId().
 */
-func (*QHostInfo) NewForInherit__() *QHostInfo {
-	return NewQHostInfo__()
+func (*QHostInfo) NewForInheritp() *QHostInfo {
+	return NewQHostInfop()
 }
-func NewQHostInfo__() *QHostInfo {
+func NewQHostInfop() *QHostInfo {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	lookupId := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfoC2Ei", qtrt.FFI_TYPE_POINTER, lookupId)
@@ -137,7 +137,7 @@ func (this *QHostInfo) Operator_equal(d QHostInfo_ITF) *QHostInfo {
 /*
 
  */
-func (this *QHostInfo) Operator_equal_1(other unsafe.Pointer /*333*/) *QHostInfo {
+func (this *QHostInfo) Operator_equal1(other unsafe.Pointer /*333*/) *QHostInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfoaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQHostInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -209,7 +209,7 @@ Sets the host name of this QHostInfo to hostName.
 See also hostName().
 */
 func (this *QHostInfo) SetHostName(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo11setHostNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -276,7 +276,7 @@ Sets the human readable description of the error that occurred to str if the loo
 See also errorString() and setError().
 */
 func (this *QHostInfo) SetErrorString(errorString string) {
-	var tmpArg0 = qtcore.NewQString_5(errorString)
+	var tmpArg0 = qtcore.NewQString5(errorString)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo14setErrorStringERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -359,7 +359,7 @@ Note: There is no guarantee on the order the signals will be emitted if you star
 See also abortHostLookup(), addresses(), error(), and fromName().
 */
 func (this *QHostInfo) LookupHost(name string, receiver qtcore.QObject_ITF /*777 QObject **/, member string) int {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -409,7 +409,7 @@ If you pass a literal IP address to name instead of a host name, QHostInfo will 
 See also lookupHost().
 */
 func (this *QHostInfo) FromName(name string) *QHostInfo /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo8fromNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

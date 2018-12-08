@@ -108,7 +108,7 @@ func (this *QNetworkAddressEntry) Operator_equal(other unsafe.Pointer /*333*/) *
 /*
 
  */
-func (this *QNetworkAddressEntry) Operator_equal_1(other QNetworkAddressEntry_ITF) *QNetworkAddressEntry {
+func (this *QNetworkAddressEntry) Operator_equal1(other QNetworkAddressEntry_ITF) *QNetworkAddressEntry {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkAddressEntry_PTR() != nil {
 		convArg0 = other.QNetworkAddressEntry_PTR().GetCthis()

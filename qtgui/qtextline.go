@@ -305,7 +305,7 @@ func (this *QTextLine) CursorToX(cursorPos unsafe.Pointer /*666*/, edge int) flo
 /*
 
  */
-func (this *QTextLine) CursorToX__(cursorPos unsafe.Pointer /*666*/) float64 {
+func (this *QTextLine) CursorToXp(cursorPos unsafe.Pointer /*666*/) float64 {
 	// arg: 1, QTextLine::Edge=Enum, QTextLine::Edge=Enum, , Invalid
 	edge := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEPiNS_4EdgeE", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), cursorPos, edge)
@@ -321,7 +321,7 @@ func (this *QTextLine) CursorToX__(cursorPos unsafe.Pointer /*666*/) float64 {
 /*
 
  */
-func (this *QTextLine) CursorToX_1(cursorPos int, edge int) float64 {
+func (this *QTextLine) CursorToX1(cursorPos int, edge int) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEiNS_4EdgeE", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), cursorPos, edge)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -335,7 +335,7 @@ func (this *QTextLine) CursorToX_1(cursorPos int, edge int) float64 {
 /*
 
  */
-func (this *QTextLine) CursorToX_1_(cursorPos int) float64 {
+func (this *QTextLine) CursorToX1p(cursorPos int) float64 {
 	// arg: 1, QTextLine::Edge=Enum, QTextLine::Edge=Enum, , Invalid
 	edge := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEiNS_4EdgeE", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), cursorPos, edge)
@@ -365,7 +365,7 @@ func (this *QTextLine) XToCursor(x float64, arg1 int) int {
 /*
 
  */
-func (this *QTextLine) XToCursor__(x float64) int {
+func (this *QTextLine) XToCursorp(x float64) int {
 	// arg: 1, QTextLine::CursorPosition=Enum, QTextLine::CursorPosition=Enum, , Invalid
 	arg1 := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9xToCursorEdNS_14CursorPositionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, arg1)
@@ -407,7 +407,7 @@ func (this *QTextLine) SetNumColumns(columns int) {
 /*
 
  */
-func (this *QTextLine) SetNumColumns_1(columns int, alignmentWidth float64) {
+func (this *QTextLine) SetNumColumns1(columns int, alignmentWidth float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextLine13setNumColumnsEid", qtrt.FFI_TYPE_POINTER, this.GetCthis(), columns, alignmentWidth)
 	qtrt.ErrPrint(err, rv)
 }

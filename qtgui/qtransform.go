@@ -100,10 +100,10 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 
 See also reset().
 */
-func (*QTransform) NewForInherit_1() *QTransform {
-	return NewQTransform_1()
+func (*QTransform) NewForInherit1() *QTransform {
+	return NewQTransform1()
 }
-func NewQTransform_1() *QTransform {
+func NewQTransform1() *QTransform {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTransformFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -123,10 +123,10 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 
 See also reset().
 */
-func (*QTransform) NewForInherit_2(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64, h33 float64) *QTransform {
-	return NewQTransform_2(h11, h12, h13, h21, h22, h23, h31, h32, h33)
+func (*QTransform) NewForInherit2(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64, h33 float64) *QTransform {
+	return NewQTransform2(h11, h12, h13, h21, h22, h23, h31, h32, h33)
 }
-func NewQTransform_2(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64, h33 float64) *QTransform {
+func NewQTransform2(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64, h33 float64) *QTransform {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2Eddddddddd", qtrt.FFI_TYPE_POINTER, h11, h12, h13, h21, h22, h23, h31, h32, h33)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTransformFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -146,10 +146,10 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 
 See also reset().
 */
-func (*QTransform) NewForInherit_2_(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64) *QTransform {
-	return NewQTransform_2_(h11, h12, h13, h21, h22, h23, h31, h32)
+func (*QTransform) NewForInherit2p(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64) *QTransform {
+	return NewQTransform2p(h11, h12, h13, h21, h22, h23, h31, h32)
 }
-func NewQTransform_2_(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64) *QTransform {
+func NewQTransform2p(h11 float64, h12 float64, h13 float64, h21 float64, h22 float64, h23 float64, h31 float64, h32 float64) *QTransform {
 	// arg: 8, qreal=Typedef, qreal=Typedef, double, Double
 	h33 := float64(1.0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2Eddddddddd", qtrt.FFI_TYPE_POINTER, h11, h12, h13, h21, h22, h23, h31, h32, h33)
@@ -171,10 +171,10 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 
 See also reset().
 */
-func (*QTransform) NewForInherit_3(h11 float64, h12 float64, h21 float64, h22 float64, dx float64, dy float64) *QTransform {
-	return NewQTransform_3(h11, h12, h21, h22, dx, dy)
+func (*QTransform) NewForInherit3(h11 float64, h12 float64, h21 float64, h22 float64, dx float64, dy float64) *QTransform {
+	return NewQTransform3(h11, h12, h21, h22, dx, dy)
 }
-func NewQTransform_3(h11 float64, h12 float64, h21 float64, h22 float64, dx float64, dy float64) *QTransform {
+func NewQTransform3(h11 float64, h12 float64, h21 float64, h22 float64, dx float64, dy float64) *QTransform {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformC2Edddddd", qtrt.FFI_TYPE_POINTER, h11, h12, h21, h22, dx, dy)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTransformFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -194,10 +194,10 @@ All elements are set to zero except m11 and m22 (specifying the scale) and m33 w
 
 See also reset().
 */
-func (*QTransform) NewForInherit_4(mtx QMatrix_ITF) *QTransform {
-	return NewQTransform_4(mtx)
+func (*QTransform) NewForInherit4(mtx QMatrix_ITF) *QTransform {
+	return NewQTransform4(mtx)
 }
-func NewQTransform_4(mtx QMatrix_ITF) *QTransform {
+func NewQTransform4(mtx QMatrix_ITF) *QTransform {
 	var convArg0 unsafe.Pointer
 	if mtx != nil && mtx.QMatrix_PTR() != nil {
 		convArg0 = mtx.QMatrix_PTR().GetCthis()
@@ -233,7 +233,7 @@ func (this *QTransform) Operator_equal(other unsafe.Pointer /*333*/) *QTransform
 /*
 
  */
-func (this *QTransform) Operator_equal_1(arg0 QTransform_ITF) *QTransform {
+func (this *QTransform) Operator_equal1(arg0 QTransform_ITF) *QTransform {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QTransform_PTR() != nil {
 		convArg0 = arg0.QTransform_PTR().GetCthis()
@@ -610,7 +610,7 @@ If the matrix is singular (not invertible), the returned matrix is the identity 
 
 See also isInvertible().
 */
-func (this *QTransform) Inverted__() *QTransform /*123*/ {
+func (this *QTransform) Invertedp() *QTransform /*123*/ {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
 	var invertible unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform8invertedEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), invertible)
@@ -742,7 +742,7 @@ The angle is specified in degrees.
 
 See also setMatrix().
 */
-func (this *QTransform) Rotate__(a float64) *QTransform {
+func (this *QTransform) Rotatep(a float64) *QTransform {
 	// arg: 1, Qt::Axis=Elaborated, Qt::Axis=Enum, , Invalid
 	axis := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransform6rotateEdN2Qt4AxisE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, axis)
@@ -788,7 +788,7 @@ The angle is specified in radians.
 
 See also setMatrix().
 */
-func (this *QTransform) RotateRadians__(a float64) *QTransform {
+func (this *QTransform) RotateRadiansp(a float64) *QTransform {
 	// arg: 1, Qt::Axis=Elaborated, Qt::Axis=Enum, , Invalid
 	axis := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransform13rotateRadiansEdN2Qt4AxisE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), a, axis)
@@ -955,7 +955,7 @@ func (this *QTransform) Operator_mul_equal(arg0 QTransform_ITF) *QTransform {
 /*
 
  */
-func (this *QTransform) Operator_mul_equal_1(div float64) *QTransform {
+func (this *QTransform) Operator_mul_equal1(div float64) *QTransform {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTransformmLEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), div)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1060,7 +1060,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QTransform) Map_1(p qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
+func (this *QTransform) Map1(p qtcore.QPointF_ITF) *qtcore.QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -1097,7 +1097,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QTransform) Map_2(l qtcore.QLine_ITF) *qtcore.QLine /*123*/ {
+func (this *QTransform) Map2(l qtcore.QLine_ITF) *qtcore.QLine /*123*/ {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QLine_PTR() != nil {
 		convArg0 = l.QLine_PTR().GetCthis()
@@ -1134,7 +1134,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QTransform) Map_3(l qtcore.QLineF_ITF) *qtcore.QLineF /*123*/ {
+func (this *QTransform) Map3(l qtcore.QLineF_ITF) *qtcore.QLineF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QLineF_PTR() != nil {
 		convArg0 = l.QLineF_PTR().GetCthis()
@@ -1171,7 +1171,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QTransform) Map_4(a QPolygonF_ITF) *QPolygonF /*123*/ {
+func (this *QTransform) Map4(a QPolygonF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QPolygonF_PTR() != nil {
 		convArg0 = a.QPolygonF_PTR().GetCthis()
@@ -1208,7 +1208,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QTransform) Map_5(a QPolygon_ITF) *QPolygon /*123*/ {
+func (this *QTransform) Map5(a QPolygon_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a != nil && a.QPolygon_PTR() != nil {
 		convArg0 = a.QPolygon_PTR().GetCthis()
@@ -1245,7 +1245,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QTransform) Map_6(r QRegion_ITF) *QRegion /*123*/ {
+func (this *QTransform) Map6(r QRegion_ITF) *QRegion /*123*/ {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRegion_PTR() != nil {
 		convArg0 = r.QRegion_PTR().GetCthis()
@@ -1282,7 +1282,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QTransform) Map_7(p QPainterPath_ITF) *QPainterPath /*123*/ {
+func (this *QTransform) Map7(p QPainterPath_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainterPath_PTR() != nil {
 		convArg0 = p.QPainterPath_PTR().GetCthis()
@@ -1319,7 +1319,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QTransform) Map_8(x int, y int, tx unsafe.Pointer /*666*/, ty unsafe.Pointer /*666*/) {
+func (this *QTransform) Map8(x int, y int, tx unsafe.Pointer /*666*/, ty unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapEiiPiS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, tx, ty)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1349,7 +1349,7 @@ The point (x, y) is the original point, and (x', y') is the transformed point.
 
 See also Basic Matrix Operations.
 */
-func (this *QTransform) Map_9(x float64, y float64, tx unsafe.Pointer /*666*/, ty unsafe.Pointer /*666*/) {
+func (this *QTransform) Map9(x float64, y float64, tx unsafe.Pointer /*666*/, ty unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTransform3mapEddPdS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, tx, ty)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1453,7 +1453,7 @@ If rotation or shearing has been specified, this function returns the bounding r
 
 See also mapToPolygon() and Basic Matrix Operations.
 */
-func (this *QTransform) MapRect_1(arg0 qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
+func (this *QTransform) MapRect1(arg0 qtcore.QRectF_ITF) *qtcore.QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QRectF_PTR() != nil {
 		convArg0 = arg0.QRectF_PTR().GetCthis()

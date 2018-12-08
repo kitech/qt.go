@@ -100,10 +100,10 @@ func NewQAccessibleValueChangeEvent(obj qtcore.QObject_ITF /*777 QObject **/, va
 /*
 
  */
-func (*QAccessibleValueChangeEvent) NewForInherit_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, val qtcore.QVariant_ITF) *QAccessibleValueChangeEvent {
-	return NewQAccessibleValueChangeEvent_1(iface, val)
+func (*QAccessibleValueChangeEvent) NewForInherit1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, val qtcore.QVariant_ITF) *QAccessibleValueChangeEvent {
+	return NewQAccessibleValueChangeEvent1(iface, val)
 }
-func NewQAccessibleValueChangeEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, val qtcore.QVariant_ITF) *QAccessibleValueChangeEvent {
+func NewQAccessibleValueChangeEvent1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, val qtcore.QVariant_ITF) *QAccessibleValueChangeEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
 		convArg0 = iface.QAccessibleInterface_PTR().GetCthis()

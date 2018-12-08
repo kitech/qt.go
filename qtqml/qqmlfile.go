@@ -93,10 +93,10 @@ func NewQQmlFile() *QQmlFile {
 /*
 
  */
-func (*QQmlFile) NewForInherit_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_ITF) *QQmlFile {
-	return NewQQmlFile_1(arg0, arg1)
+func (*QQmlFile) NewForInherit1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_ITF) *QQmlFile {
+	return NewQQmlFile1(arg0, arg1)
 }
-func NewQQmlFile_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_ITF) *QQmlFile {
+func NewQQmlFile1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_ITF) *QQmlFile {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
@@ -120,15 +120,15 @@ func NewQQmlFile_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore.QUrl_IT
 /*
 
  */
-func (*QQmlFile) NewForInherit_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) *QQmlFile {
-	return NewQQmlFile_2(arg0, arg1)
+func (*QQmlFile) NewForInherit2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) *QQmlFile {
+	return NewQQmlFile2(arg0, arg1)
 }
-func NewQQmlFile_2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) *QQmlFile {
+func NewQQmlFile2(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) *QQmlFile {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFileC2EP10QQmlEngineRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -328,12 +328,12 @@ func (this *QQmlFile) Load(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 qtcore
 /*
 
  */
-func (this *QQmlFile) Load_1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) {
+func (this *QQmlFile) Load1(arg0 QQmlEngine_ITF /*777 QQmlEngine **/, arg1 string) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QQmlEngine_PTR() != nil {
 		convArg0 = arg0.QQmlEngine_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(arg1)
+	var tmpArg1 = qtcore.NewQString5(arg1)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile4loadEP10QQmlEngineRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -360,7 +360,7 @@ func (this *QQmlFile) Clear() {
 /*
 
  */
-func (this *QQmlFile) Clear_1(arg0 qtcore.QObject_ITF /*777 QObject **/) {
+func (this *QQmlFile) Clear1(arg0 qtcore.QObject_ITF /*777 QObject **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
@@ -397,7 +397,7 @@ func (this *QQmlFile) ConnectFinished(arg0 qtcore.QObject_ITF /*777 QObject **/,
 /*
 
  */
-func (this *QQmlFile) ConnectFinished_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 int) bool {
+func (this *QQmlFile) ConnectFinished1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 int) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
@@ -435,7 +435,7 @@ func (this *QQmlFile) ConnectDownloadProgress(arg0 qtcore.QObject_ITF /*777 QObj
 /*
 
  */
-func (this *QQmlFile) ConnectDownloadProgress_1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 int) bool {
+func (this *QQmlFile) ConnectDownloadProgress1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 int) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
@@ -454,7 +454,7 @@ func (this *QQmlFile) ConnectDownloadProgress_1(arg0 qtcore.QObject_ITF /*777 QO
 
  */
 func (this *QQmlFile) IsSynchronous(url string) bool {
-	var tmpArg0 = qtcore.NewQString_5(url)
+	var tmpArg0 = qtcore.NewQString5(url)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile13isSynchronousERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -474,7 +474,7 @@ func QQmlFile_IsSynchronous(url string) bool {
 /*
 
  */
-func (this *QQmlFile) IsSynchronous_1(url qtcore.QUrl_ITF) bool {
+func (this *QQmlFile) IsSynchronous1(url qtcore.QUrl_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
@@ -483,9 +483,9 @@ func (this *QQmlFile) IsSynchronous_1(url qtcore.QUrl_ITF) bool {
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QQmlFile_IsSynchronous_1(url qtcore.QUrl_ITF) bool {
+func QQmlFile_IsSynchronous1(url qtcore.QUrl_ITF) bool {
 	var nilthis *QQmlFile
-	rv := nilthis.IsSynchronous_1(url)
+	rv := nilthis.IsSynchronous1(url)
 	return rv
 }
 
@@ -498,7 +498,7 @@ func QQmlFile_IsSynchronous_1(url qtcore.QUrl_ITF) bool {
 
  */
 func (this *QQmlFile) IsLocalFile(url string) bool {
-	var tmpArg0 = qtcore.NewQString_5(url)
+	var tmpArg0 = qtcore.NewQString5(url)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile11isLocalFileERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -518,7 +518,7 @@ func QQmlFile_IsLocalFile(url string) bool {
 /*
 
  */
-func (this *QQmlFile) IsLocalFile_1(url qtcore.QUrl_ITF) bool {
+func (this *QQmlFile) IsLocalFile1(url qtcore.QUrl_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
@@ -527,9 +527,9 @@ func (this *QQmlFile) IsLocalFile_1(url qtcore.QUrl_ITF) bool {
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QQmlFile_IsLocalFile_1(url qtcore.QUrl_ITF) bool {
+func QQmlFile_IsLocalFile1(url qtcore.QUrl_ITF) bool {
 	var nilthis *QQmlFile
-	rv := nilthis.IsLocalFile_1(url)
+	rv := nilthis.IsLocalFile1(url)
 	return rv
 }
 
@@ -542,7 +542,7 @@ func QQmlFile_IsLocalFile_1(url qtcore.QUrl_ITF) bool {
 
  */
 func (this *QQmlFile) UrlToLocalFileOrQrc(arg0 string) string {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile19urlToLocalFileOrQrcERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -565,7 +565,7 @@ func QQmlFile_UrlToLocalFileOrQrc(arg0 string) string {
 /*
 
  */
-func (this *QQmlFile) UrlToLocalFileOrQrc_1(arg0 qtcore.QUrl_ITF) string {
+func (this *QQmlFile) UrlToLocalFileOrQrc1(arg0 qtcore.QUrl_ITF) string {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QUrl_PTR() != nil {
 		convArg0 = arg0.QUrl_PTR().GetCthis()
@@ -577,9 +577,9 @@ func (this *QQmlFile) UrlToLocalFileOrQrc_1(arg0 qtcore.QUrl_ITF) string {
 	qtcore.DeleteQString(rv2)
 	return rv3
 }
-func QQmlFile_UrlToLocalFileOrQrc_1(arg0 qtcore.QUrl_ITF) string {
+func QQmlFile_UrlToLocalFileOrQrc1(arg0 qtcore.QUrl_ITF) string {
 	var nilthis *QQmlFile
-	rv := nilthis.UrlToLocalFileOrQrc_1(arg0)
+	rv := nilthis.UrlToLocalFileOrQrc1(arg0)
 	return rv
 }
 

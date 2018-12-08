@@ -92,10 +92,10 @@ func NewQPainterPath() *QPainterPath {
 /*
 Constructs an empty QPainterPath object.
 */
-func (*QPainterPath) NewForInherit_1(startPoint qtcore.QPointF_ITF) *QPainterPath {
-	return NewQPainterPath_1(startPoint)
+func (*QPainterPath) NewForInherit1(startPoint qtcore.QPointF_ITF) *QPainterPath {
+	return NewQPainterPath1(startPoint)
 }
-func NewQPainterPath_1(startPoint qtcore.QPointF_ITF) *QPainterPath {
+func NewQPainterPath1(startPoint qtcore.QPointF_ITF) *QPainterPath {
 	var convArg0 unsafe.Pointer
 	if startPoint != nil && startPoint.QPointF_PTR() != nil {
 		convArg0 = startPoint.QPointF_PTR().GetCthis()
@@ -135,7 +135,7 @@ func (this *QPainterPath) Operator_equal(other QPainterPath_ITF) *QPainterPath {
 /*
 
  */
-func (this *QPainterPath) Operator_equal_1(other unsafe.Pointer /*333*/) *QPainterPath {
+func (this *QPainterPath) Operator_equal1(other unsafe.Pointer /*333*/) *QPainterPath {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPathaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -223,7 +223,7 @@ Moves the current point to the given point, implicitly starting a new subpath an
 
 See also closeSubpath() and Composing a QPainterPath.
 */
-func (this *QPainterPath) MoveTo_1(x float64, y float64) {
+func (this *QPainterPath) MoveTo1(x float64, y float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath6moveToEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 }
@@ -257,7 +257,7 @@ Adds a straight line from the current position to the given endPoint. After the 
 
 See also addPolygon(), addRect(), and Composing a QPainterPath.
 */
-func (this *QPainterPath) LineTo_1(x float64, y float64) {
+func (this *QPainterPath) LineTo1(x float64, y float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath6lineToEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 }
@@ -299,7 +299,7 @@ This function was introduced in  Qt 4.2.
 
 See also moveTo() and arcTo().
 */
-func (this *QPainterPath) ArcMoveTo_1(x float64, y float64, w float64, h float64, angle float64) {
+func (this *QPainterPath) ArcMoveTo1(x float64, y float64, w float64, h float64, angle float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath9arcMoveToEddddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, angle)
 	qtrt.ErrPrint(err, rv)
 }
@@ -383,7 +383,7 @@ Note that this function connects the starting point of the arc to the current po
 
 See also arcMoveTo(), addEllipse(), QPainter::drawArc(), QPainter::drawPie(), and Composing a QPainterPath.
 */
-func (this *QPainterPath) ArcTo_1(x float64, y float64, w float64, h float64, startAngle float64, arcLength float64) {
+func (this *QPainterPath) ArcTo1(x float64, y float64, w float64, h float64, startAngle float64, arcLength float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath5arcToEdddddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, startAngle, arcLength)
 	qtrt.ErrPrint(err, rv)
 }
@@ -463,7 +463,7 @@ After the curve is added, the current position is updated to be at the end point
 
 See also quadTo() and Composing a QPainterPath.
 */
-func (this *QPainterPath) CubicTo_1(ctrlPt1x float64, ctrlPt1y float64, ctrlPt2x float64, ctrlPt2y float64, endPtx float64, endPty float64) {
+func (this *QPainterPath) CubicTo1(ctrlPt1x float64, ctrlPt1y float64, ctrlPt2x float64, ctrlPt2y float64, endPtx float64, endPty float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath7cubicToEdddddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ctrlPt1x, ctrlPt1y, ctrlPt2x, ctrlPt2y, endPtx, endPty)
 	qtrt.ErrPrint(err, rv)
 }
@@ -505,7 +505,7 @@ After the curve is added, the current point is updated to be at the end point of
 
 See also cubicTo() and Composing a QPainterPath.
 */
-func (this *QPainterPath) QuadTo_1(ctrlPtx float64, ctrlPty float64, endPtx float64, endPty float64) {
+func (this *QPainterPath) QuadTo1(ctrlPtx float64, ctrlPty float64, endPtx float64, endPty float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath6quadToEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ctrlPtx, ctrlPty, endPtx, endPty)
 	qtrt.ErrPrint(err, rv)
 }
@@ -595,7 +595,7 @@ The rectangle is added as a clockwise set of lines. The painter path's current p
 
 See also addRegion(), lineTo(), and Composing a QPainterPath.
 */
-func (this *QPainterPath) AddRect_1(x float64, y float64, w float64, h float64) {
+func (this *QPainterPath) AddRect1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath7addRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -669,7 +669,7 @@ The ellipse is composed of a clockwise curve, starting and finishing at zero deg
 
 See also arcTo(), QPainter::drawEllipse(), and Composing a QPainterPath.
 */
-func (this *QPainterPath) AddEllipse_1(x float64, y float64, w float64, h float64) {
+func (this *QPainterPath) AddEllipse1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath10addEllipseEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -704,7 +704,7 @@ The ellipse is composed of a clockwise curve, starting and finishing at zero deg
 
 See also arcTo(), QPainter::drawEllipse(), and Composing a QPainterPath.
 */
-func (this *QPainterPath) AddEllipse_2(center qtcore.QPointF_ITF, rx float64, ry float64) {
+func (this *QPainterPath) AddEllipse2(center qtcore.QPointF_ITF, rx float64, ry float64) {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QPointF_PTR() != nil {
 		convArg0 = center.QPointF_PTR().GetCthis()
@@ -790,7 +790,7 @@ func (this *QPainterPath) AddText(point qtcore.QPointF_ITF, f QFont_ITF, text st
 	if f != nil && f.QFont_PTR() != nil {
 		convArg1 = f.QFont_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath7addTextERK7QPointFRK5QFontRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -825,12 +825,12 @@ Adds the given text to this path as a set of closed subpaths created from the fo
 
 See also QPainter::drawText() and Composing a QPainterPath.
 */
-func (this *QPainterPath) AddText_1(x float64, y float64, f QFont_ITF, text string) {
+func (this *QPainterPath) AddText1(x float64, y float64, f QFont_ITF, text string) {
 	var convArg2 unsafe.Pointer
 	if f != nil && f.QFont_PTR() != nil {
 		convArg2 = f.QFont_PTR().GetCthis()
 	}
-	var tmpArg3 = qtcore.NewQString_5(text)
+	var tmpArg3 = qtcore.NewQString5(text)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath7addTextEddRK5QFontRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -911,7 +911,7 @@ This function was introduced in  Qt 4.4.
 
 See also addRect().
 */
-func (this *QPainterPath) AddRoundedRect__(rect qtcore.QRectF_ITF, xRadius float64, yRadius float64) {
+func (this *QPainterPath) AddRoundedRectp(rect qtcore.QRectF_ITF, xRadius float64, yRadius float64) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -936,7 +936,7 @@ This function was introduced in  Qt 4.4.
 
 See also addRect().
 */
-func (this *QPainterPath) AddRoundedRect_1(x float64, y float64, w float64, h float64, xRadius float64, yRadius float64, mode int) {
+func (this *QPainterPath) AddRoundedRect1(x float64, y float64, w float64, h float64, xRadius float64, yRadius float64, mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath14addRoundedRectEddddddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xRadius, yRadius, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -955,7 +955,7 @@ This function was introduced in  Qt 4.4.
 
 See also addRect().
 */
-func (this *QPainterPath) AddRoundedRect_1_(x float64, y float64, w float64, h float64, xRadius float64, yRadius float64) {
+func (this *QPainterPath) AddRoundedRect1p(x float64, y float64, w float64, h float64, xRadius float64, yRadius float64) {
 	// arg: 6, Qt::SizeMode=Elaborated, Qt::SizeMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath14addRoundedRectEddddddN2Qt8SizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xRadius, yRadius, mode)
@@ -987,7 +987,7 @@ func (this *QPainterPath) AddRoundRect(rect qtcore.QRectF_ITF, xRnd int, yRnd in
 /*
 
  */
-func (this *QPainterPath) AddRoundRect_1(x float64, y float64, w float64, h float64, xRnd int, yRnd int) {
+func (this *QPainterPath) AddRoundRect1(x float64, y float64, w float64, h float64, xRnd int, yRnd int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath12addRoundRectEddddii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xRnd, yRnd)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1000,7 +1000,7 @@ func (this *QPainterPath) AddRoundRect_1(x float64, y float64, w float64, h floa
 /*
 
  */
-func (this *QPainterPath) AddRoundRect_2(rect qtcore.QRectF_ITF, roundness int) {
+func (this *QPainterPath) AddRoundRect2(rect qtcore.QRectF_ITF, roundness int) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -1017,7 +1017,7 @@ func (this *QPainterPath) AddRoundRect_2(rect qtcore.QRectF_ITF, roundness int) 
 /*
 
  */
-func (this *QPainterPath) AddRoundRect_3(x float64, y float64, w float64, h float64, roundness int) {
+func (this *QPainterPath) AddRoundRect3(x float64, y float64, w float64, h float64, roundness int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPainterPath12addRoundRectEddddi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, roundness)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1071,7 +1071,7 @@ Returns true if the given point is inside the path, otherwise returns false.
 
 See also intersects().
 */
-func (this *QPainterPath) Contains_1(rect qtcore.QRectF_ITF) bool {
+func (this *QPainterPath) Contains1(rect qtcore.QRectF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()
@@ -1091,7 +1091,7 @@ Returns true if the given point is inside the path, otherwise returns false.
 
 See also intersects().
 */
-func (this *QPainterPath) Contains_2(p QPainterPath_ITF) bool {
+func (this *QPainterPath) Contains2(p QPainterPath_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainterPath_PTR() != nil {
 		convArg0 = p.QPainterPath_PTR().GetCthis()
@@ -1135,7 +1135,7 @@ There is an intersection if any of the lines making up the rectangle crosses a p
 
 See also contains().
 */
-func (this *QPainterPath) Intersects_1(p QPainterPath_ITF) bool {
+func (this *QPainterPath) Intersects1(p QPainterPath_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainterPath_PTR() != nil {
 		convArg0 = p.QPainterPath_PTR().GetCthis()
@@ -1174,7 +1174,7 @@ This function was introduced in  Qt 4.6.
 
 See also translated().
 */
-func (this *QPainterPath) Translate_1(offset qtcore.QPointF_ITF) {
+func (this *QPainterPath) Translate1(offset qtcore.QPointF_ITF) {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPointF_PTR() != nil {
 		convArg0 = offset.QPointF_PTR().GetCthis()
@@ -1215,7 +1215,7 @@ This function was introduced in  Qt 4.6.
 
 See also translate().
 */
-func (this *QPainterPath) Translated_1(offset qtcore.QPointF_ITF) *QPainterPath /*123*/ {
+func (this *QPainterPath) Translated1(offset qtcore.QPointF_ITF) *QPainterPath /*123*/ {
 	var convArg0 unsafe.Pointer
 	if offset != nil && offset.QPointF_PTR() != nil {
 		convArg0 = offset.QPointF_PTR().GetCthis()
@@ -1375,7 +1375,7 @@ Note that rewinding inserts addition lines in the polygon so the outline of the 
 
 See also toSubpathPolygons(), toFillPolygons(), and QPainterPath Conversion.
 */
-func (this *QPainterPath) ToFillPolygon__() *QPolygonF /*123*/ {
+func (this *QPainterPath) ToFillPolygonp() *QPolygonF /*123*/ {
 	// arg: 0, const QMatrix &=LValueReference, QMatrix=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPainterPath13toFillPolygonERK7QMatrix", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1399,7 +1399,7 @@ Note that rewinding inserts addition lines in the polygon so the outline of the 
 
 See also toSubpathPolygons(), toFillPolygons(), and QPainterPath Conversion.
 */
-func (this *QPainterPath) ToFillPolygon_1(matrix QTransform_ITF) *QPolygonF /*123*/ {
+func (this *QPainterPath) ToFillPolygon1(matrix QTransform_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()

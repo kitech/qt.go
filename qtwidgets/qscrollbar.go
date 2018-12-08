@@ -162,10 +162,10 @@ The parent argument is sent to the QWidget constructor.
 
 The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
 */
-func (*QScrollBar) NewForInherit__() *QScrollBar {
-	return NewQScrollBar__()
+func (*QScrollBar) NewForInheritp() *QScrollBar {
+	return NewQScrollBarp()
 }
-func NewQScrollBar__() *QScrollBar {
+func NewQScrollBarp() *QScrollBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -187,10 +187,10 @@ The parent argument is sent to the QWidget constructor.
 
 The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
 */
-func (*QScrollBar) NewForInherit_1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QScrollBar {
-	return NewQScrollBar_1(arg0, parent)
+func (*QScrollBar) NewForInherit1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QScrollBar {
+	return NewQScrollBar1(arg0, parent)
 }
-func NewQScrollBar_1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QScrollBar {
+func NewQScrollBar1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QScrollBar {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
@@ -214,10 +214,10 @@ The parent argument is sent to the QWidget constructor.
 
 The minimum defaults to 0, the maximum to 99, with a singleStep size of 1 and a pageStep size of 10, and an initial value of 0.
 */
-func (*QScrollBar) NewForInherit_1_(arg0 int) *QScrollBar {
-	return NewQScrollBar_1_(arg0)
+func (*QScrollBar) NewForInherit1p(arg0 int) *QScrollBar {
+	return NewQScrollBar1p(arg0)
 }
-func NewQScrollBar_1_(arg0 int) *QScrollBar {
+func NewQScrollBar1p(arg0 int) *QScrollBar {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBarC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)

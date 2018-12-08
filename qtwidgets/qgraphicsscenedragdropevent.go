@@ -93,10 +93,10 @@ func NewQGraphicsSceneDragDropEvent(type_ int) *QGraphicsSceneDragDropEvent {
 /*
 
  */
-func (*QGraphicsSceneDragDropEvent) NewForInherit__() *QGraphicsSceneDragDropEvent {
-	return NewQGraphicsSceneDragDropEvent__()
+func (*QGraphicsSceneDragDropEvent) NewForInheritp() *QGraphicsSceneDragDropEvent {
+	return NewQGraphicsSceneDragDropEventp()
 }
-func NewQGraphicsSceneDragDropEvent__() *QGraphicsSceneDragDropEvent {
+func NewQGraphicsSceneDragDropEventp() *QGraphicsSceneDragDropEvent {
 	// arg: 0, QEvent::Type=Enum, QEvent::Type=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)

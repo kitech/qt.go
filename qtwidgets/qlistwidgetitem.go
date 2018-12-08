@@ -97,10 +97,10 @@ func NewQListWidgetItem(view QListWidget_ITF /*777 QListWidget **/, type_ int) *
 /*
 
  */
-func (*QListWidgetItem) NewForInherit__() *QListWidgetItem {
-	return NewQListWidgetItem__()
+func (*QListWidgetItem) NewForInheritp() *QListWidgetItem {
+	return NewQListWidgetItemp()
 }
-func NewQListWidgetItem__() *QListWidgetItem {
+func NewQListWidgetItemp() *QListWidgetItem {
 	// arg: 0, QListWidget *=Pointer, QListWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -120,10 +120,10 @@ func NewQListWidgetItem__() *QListWidgetItem {
 /*
 
  */
-func (*QListWidgetItem) NewForInherit__1(view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
-	return NewQListWidgetItem__1(view)
+func (*QListWidgetItem) NewForInheritp1(view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
+	return NewQListWidgetItemp1(view)
 }
-func NewQListWidgetItem__1(view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
+func NewQListWidgetItemp1(view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if view != nil && view.QListWidget_PTR() != nil {
 		convArg0 = view.QListWidget_PTR().GetCthis()
@@ -145,11 +145,11 @@ func NewQListWidgetItem__1(view QListWidget_ITF /*777 QListWidget **/) *QListWid
 /*
 
  */
-func (*QListWidgetItem) NewForInherit_1(text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
-	return NewQListWidgetItem_1(text, view, type_)
+func (*QListWidgetItem) NewForInherit1(text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
+	return NewQListWidgetItem1(text, view, type_)
 }
-func NewQListWidgetItem_1(text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQListWidgetItem1(text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if view != nil && view.QListWidget_PTR() != nil {
@@ -170,11 +170,11 @@ func NewQListWidgetItem_1(text string, view QListWidget_ITF /*777 QListWidget **
 /*
 
  */
-func (*QListWidgetItem) NewForInherit_1_(text string) *QListWidgetItem {
-	return NewQListWidgetItem_1_(text)
+func (*QListWidgetItem) NewForInherit1p(text string) *QListWidgetItem {
+	return NewQListWidgetItem1p(text)
 }
-func NewQListWidgetItem_1_(text string) *QListWidgetItem {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQListWidgetItem1p(text string) *QListWidgetItem {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QListWidget *=Pointer, QListWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -195,11 +195,11 @@ func NewQListWidgetItem_1_(text string) *QListWidgetItem {
 /*
 
  */
-func (*QListWidgetItem) NewForInherit_1_1(text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
-	return NewQListWidgetItem_1_1(text, view)
+func (*QListWidgetItem) NewForInherit1p1(text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
+	return NewQListWidgetItem1p1(text, view)
 }
-func NewQListWidgetItem_1_1(text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQListWidgetItem1p1(text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if view != nil && view.QListWidget_PTR() != nil {
@@ -222,15 +222,15 @@ func NewQListWidgetItem_1_1(text string, view QListWidget_ITF /*777 QListWidget 
 /*
 
  */
-func (*QListWidgetItem) NewForInherit_2(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
-	return NewQListWidgetItem_2(icon, text, view, type_)
+func (*QListWidgetItem) NewForInherit2(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
+	return NewQListWidgetItem2(icon, text, view, type_)
 }
-func NewQListWidgetItem_2(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
+func NewQListWidgetItem2(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if view != nil && view.QListWidget_PTR() != nil {
@@ -251,15 +251,15 @@ func NewQListWidgetItem_2(icon qtgui.QIcon_ITF, text string, view QListWidget_IT
 /*
 
  */
-func (*QListWidgetItem) NewForInherit_2_(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
-	return NewQListWidgetItem_2_(icon, text)
+func (*QListWidgetItem) NewForInherit2p(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
+	return NewQListWidgetItem2p(icon, text)
 }
-func NewQListWidgetItem_2_(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
+func NewQListWidgetItem2p(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QListWidget *=Pointer, QListWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -280,15 +280,15 @@ func NewQListWidgetItem_2_(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
 /*
 
  */
-func (*QListWidgetItem) NewForInherit_2_1(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
-	return NewQListWidgetItem_2_1(icon, text, view)
+func (*QListWidgetItem) NewForInherit2p1(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
+	return NewQListWidgetItem2p1(icon, text, view)
 }
-func NewQListWidgetItem_2_1(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
+func NewQListWidgetItem2p1(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF /*777 QListWidget **/) *QListWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if view != nil && view.QListWidget_PTR() != nil {
@@ -453,7 +453,7 @@ func (this *QListWidgetItem) Text() string {
 
  */
 func (this *QListWidgetItem) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -518,7 +518,7 @@ func (this *QListWidgetItem) StatusTip() string {
 
  */
 func (this *QListWidgetItem) SetStatusTip(statusTip string) {
-	var tmpArg0 = qtcore.NewQString_5(statusTip)
+	var tmpArg0 = qtcore.NewQString5(statusTip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem12setStatusTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -550,7 +550,7 @@ func (this *QListWidgetItem) ToolTip() string {
 
  */
 func (this *QListWidgetItem) SetToolTip(toolTip string) {
-	var tmpArg0 = qtcore.NewQString_5(toolTip)
+	var tmpArg0 = qtcore.NewQString5(toolTip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -582,7 +582,7 @@ func (this *QListWidgetItem) WhatsThis() string {
 
  */
 func (this *QListWidgetItem) SetWhatsThis(whatsThis string) {
-	var tmpArg0 = qtcore.NewQString_5(whatsThis)
+	var tmpArg0 = qtcore.NewQString5(whatsThis)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem12setWhatsThisERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

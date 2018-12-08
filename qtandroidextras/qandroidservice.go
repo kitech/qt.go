@@ -91,10 +91,10 @@ func NewQAndroidService(argc int, argv []string, flags int) *QAndroidService {
 /*
 Default constructs an instance of QAndroidService.
 */
-func (*QAndroidService) NewForInherit__(argc int, argv []string) *QAndroidService {
-	return NewQAndroidService__(argc, argv)
+func (*QAndroidService) NewForInheritp(argc int, argv []string) *QAndroidService {
+	return NewQAndroidServicep(argc, argv)
 }
-func NewQAndroidService__(argc int, argv []string) *QAndroidService {
+func NewQAndroidServicep(argc int, argv []string) *QAndroidService {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	// arg: 2, int=Int, =Invalid, , Invalid
 	flags := 0

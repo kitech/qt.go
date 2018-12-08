@@ -121,7 +121,7 @@ func (this *QAudioEncoderSettingsControl) SupportedAudioCodecs() *qtcore.QString
 Returns description of audio codec.
 */
 func (this *QAudioEncoderSettingsControl) CodecDescription(codecName string) string {
-	var tmpArg0 = qtcore.NewQString_5(codecName)
+	var tmpArg0 = qtcore.NewQString5(codecName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QAudioEncoderSettingsControl16codecDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -201,10 +201,10 @@ func NewQAudioEncoderSettingsControl(parent qtcore.QObject_ITF /*777 QObject **/
 /*
 Create a new audio encoder settings control object with the given parent.
 */
-func (*QAudioEncoderSettingsControl) NewForInherit__() *QAudioEncoderSettingsControl {
-	return NewQAudioEncoderSettingsControl__()
+func (*QAudioEncoderSettingsControl) NewForInheritp() *QAudioEncoderSettingsControl {
+	return NewQAudioEncoderSettingsControlp()
 }
-func NewQAudioEncoderSettingsControl__() *QAudioEncoderSettingsControl {
+func NewQAudioEncoderSettingsControlp() *QAudioEncoderSettingsControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QAudioEncoderSettingsControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

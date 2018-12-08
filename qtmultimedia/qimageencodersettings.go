@@ -197,7 +197,7 @@ func (this *QImageEncoderSettings) Codec() string {
 
  */
 func (this *QImageEncoderSettings) SetCodec(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QImageEncoderSettings8setCodecERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -244,7 +244,7 @@ func (this *QImageEncoderSettings) SetResolution(arg0 qtcore.QSize_ITF) {
 /*
 
  */
-func (this *QImageEncoderSettings) SetResolution_1(width int, height int) {
+func (this *QImageEncoderSettings) SetResolution1(width int, height int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QImageEncoderSettings13setResolutionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, height)
 	qtrt.ErrPrint(err, rv)
 }
@@ -285,7 +285,7 @@ func (this *QImageEncoderSettings) SetQuality(quality int) {
 
  */
 func (this *QImageEncoderSettings) EncodingOption(option string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(option)
+	var tmpArg0 = qtcore.NewQString5(option)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QImageEncoderSettings14encodingOptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -303,7 +303,7 @@ func (this *QImageEncoderSettings) EncodingOption(option string) *qtcore.QVarian
 
  */
 func (this *QImageEncoderSettings) SetEncodingOption(option string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(option)
+	var tmpArg0 = qtcore.NewQString5(option)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {

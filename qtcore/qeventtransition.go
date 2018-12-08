@@ -122,10 +122,10 @@ func NewQEventTransition(sourceState QState_ITF /*777 QState **/) *QEventTransit
 /*
 Constructs a new QEventTransition object with the given sourceState.
 */
-func (*QEventTransition) NewForInherit__() *QEventTransition {
-	return NewQEventTransition__()
+func (*QEventTransition) NewForInheritp() *QEventTransition {
+	return NewQEventTransitionp()
 }
-func NewQEventTransition__() *QEventTransition {
+func NewQEventTransitionp() *QEventTransition {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -143,10 +143,10 @@ func NewQEventTransition__() *QEventTransition {
 /*
 Constructs a new QEventTransition object with the given sourceState.
 */
-func (*QEventTransition) NewForInherit_1(object QObject_ITF /*777 QObject **/, type_ int, sourceState QState_ITF /*777 QState **/) *QEventTransition {
-	return NewQEventTransition_1(object, type_, sourceState)
+func (*QEventTransition) NewForInherit1(object QObject_ITF /*777 QObject **/, type_ int, sourceState QState_ITF /*777 QState **/) *QEventTransition {
+	return NewQEventTransition1(object, type_, sourceState)
 }
-func NewQEventTransition_1(object QObject_ITF /*777 QObject **/, type_ int, sourceState QState_ITF /*777 QState **/) *QEventTransition {
+func NewQEventTransition1(object QObject_ITF /*777 QObject **/, type_ int, sourceState QState_ITF /*777 QState **/) *QEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
 		convArg0 = object.QObject_PTR().GetCthis()
@@ -170,10 +170,10 @@ func NewQEventTransition_1(object QObject_ITF /*777 QObject **/, type_ int, sour
 /*
 Constructs a new QEventTransition object with the given sourceState.
 */
-func (*QEventTransition) NewForInherit_1_(object QObject_ITF /*777 QObject **/, type_ int) *QEventTransition {
-	return NewQEventTransition_1_(object, type_)
+func (*QEventTransition) NewForInherit1p(object QObject_ITF /*777 QObject **/, type_ int) *QEventTransition {
+	return NewQEventTransition1p(object, type_)
 }
-func NewQEventTransition_1_(object QObject_ITF /*777 QObject **/, type_ int) *QEventTransition {
+func NewQEventTransition1p(object QObject_ITF /*777 QObject **/, type_ int) *QEventTransition {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
 		convArg0 = object.QObject_PTR().GetCthis()

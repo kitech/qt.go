@@ -92,11 +92,11 @@ func NewQStaticText() *QStaticText {
 /*
 Constructs an empty QStaticText
 */
-func (*QStaticText) NewForInherit_1(text string) *QStaticText {
-	return NewQStaticText_1(text)
+func (*QStaticText) NewForInherit1(text string) *QStaticText {
+	return NewQStaticText1(text)
 }
-func NewQStaticText_1(text string) *QStaticText {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQStaticText1(text string) *QStaticText {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticTextC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -129,7 +129,7 @@ func (this *QStaticText) Operator_equal(other unsafe.Pointer /*333*/) *QStaticTe
 /*
 
  */
-func (this *QStaticText) Operator_equal_1(arg0 QStaticText_ITF) *QStaticText {
+func (this *QStaticText) Operator_equal1(arg0 QStaticText_ITF) *QStaticText {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QStaticText_PTR() != nil {
 		convArg0 = arg0.QStaticText_PTR().GetCthis()
@@ -188,7 +188,7 @@ Note: This function will cause the layout of the text to require recalculation.
 See also text().
 */
 func (this *QStaticText) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -379,7 +379,7 @@ To avoid the overhead of creating the layout the first time you draw the QStatic
 
 See also QPainter::setFont() and QPainter::setMatrix().
 */
-func (this *QStaticText) Prepare__() {
+func (this *QStaticText) Preparep() {
 	// arg: 0, const QTransform &=LValueReference, QTransform=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, const QFont &=LValueReference, QFont=Record, , Invalid
@@ -402,7 +402,7 @@ To avoid the overhead of creating the layout the first time you draw the QStatic
 
 See also QPainter::setFont() and QPainter::setMatrix().
 */
-func (this *QStaticText) Prepare__1(matrix QTransform_ITF) {
+func (this *QStaticText) Preparep1(matrix QTransform_ITF) {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()

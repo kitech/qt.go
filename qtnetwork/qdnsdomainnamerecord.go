@@ -108,7 +108,7 @@ func (this *QDnsDomainNameRecord) Operator_equal(other unsafe.Pointer /*333*/) *
 /*
 
  */
-func (this *QDnsDomainNameRecord) Operator_equal_1(other QDnsDomainNameRecord_ITF) *QDnsDomainNameRecord {
+func (this *QDnsDomainNameRecord) Operator_equal1(other QDnsDomainNameRecord_ITF) *QDnsDomainNameRecord {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDnsDomainNameRecord_PTR() != nil {
 		convArg0 = other.QDnsDomainNameRecord_PTR().GetCthis()

@@ -109,10 +109,10 @@ func NewQAbstractEventDispatcher(parent QObject_ITF /*777 QObject **/) *QAbstrac
 /*
 Constructs a new event dispatcher with the given parent.
 */
-func (*QAbstractEventDispatcher) NewForInherit__() *QAbstractEventDispatcher {
-	return NewQAbstractEventDispatcher__()
+func (*QAbstractEventDispatcher) NewForInheritp() *QAbstractEventDispatcher {
+	return NewQAbstractEventDispatcherp()
 }
-func NewQAbstractEventDispatcher__() *QAbstractEventDispatcher {
+func NewQAbstractEventDispatcherp() *QAbstractEventDispatcher {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -172,7 +172,7 @@ Returns a pointer to the event dispatcher object for the specified thread. If th
 
 Note: If Qt is built without thread support, the thread argument is ignored.
 */
-func (this *QAbstractEventDispatcher) Instance__() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
+func (this *QAbstractEventDispatcher) Instancep() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
 	// arg: 0, QThread *=Pointer, QThread=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher8instanceEP7QThread", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -283,7 +283,7 @@ func (this *QAbstractEventDispatcher) RegisterTimer(interval int, timerType int,
 /*
 Registers a timer with the specified interval and timerType for the given object and returns the timer id.
 */
-func (this *QAbstractEventDispatcher) RegisterTimer_1(timerId int, interval int, timerType int, object QObject_ITF /*777 QObject **/) {
+func (this *QAbstractEventDispatcher) RegisterTimer1(timerId int, interval int, timerType int, object QObject_ITF /*777 QObject **/) {
 	var convArg3 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
 		convArg3 = object.QObject_PTR().GetCthis()

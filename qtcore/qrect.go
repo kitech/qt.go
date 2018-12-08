@@ -95,10 +95,10 @@ Constructs a null rectangle.
 
 See also isNull().
 */
-func (*QRect) NewForInherit_1(topleft QPoint_ITF, bottomright QPoint_ITF) *QRect {
-	return NewQRect_1(topleft, bottomright)
+func (*QRect) NewForInherit1(topleft QPoint_ITF, bottomright QPoint_ITF) *QRect {
+	return NewQRect1(topleft, bottomright)
 }
-func NewQRect_1(topleft QPoint_ITF, bottomright QPoint_ITF) *QRect {
+func NewQRect1(topleft QPoint_ITF, bottomright QPoint_ITF) *QRect {
 	var convArg0 unsafe.Pointer
 	if topleft != nil && topleft.QPoint_PTR() != nil {
 		convArg0 = topleft.QPoint_PTR().GetCthis()
@@ -124,10 +124,10 @@ Constructs a null rectangle.
 
 See also isNull().
 */
-func (*QRect) NewForInherit_2(topleft QPoint_ITF, size QSize_ITF) *QRect {
-	return NewQRect_2(topleft, size)
+func (*QRect) NewForInherit2(topleft QPoint_ITF, size QSize_ITF) *QRect {
+	return NewQRect2(topleft, size)
 }
-func NewQRect_2(topleft QPoint_ITF, size QSize_ITF) *QRect {
+func NewQRect2(topleft QPoint_ITF, size QSize_ITF) *QRect {
 	var convArg0 unsafe.Pointer
 	if topleft != nil && topleft.QPoint_PTR() != nil {
 		convArg0 = topleft.QPoint_PTR().GetCthis()
@@ -153,10 +153,10 @@ Constructs a null rectangle.
 
 See also isNull().
 */
-func (*QRect) NewForInherit_3(left int, top int, width int, height int) *QRect {
-	return NewQRect_3(left, top, width, height)
+func (*QRect) NewForInherit3(left int, top int, width int, height int) *QRect {
+	return NewQRect3(left, top, width, height)
 }
-func NewQRect_3(left int, top int, width int, height int) *QRect {
+func NewQRect3(left int, top int, width int, height int) *QRect {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QRectC2Eiiii", qtrt.FFI_TYPE_POINTER, left, top, width, height)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQRectFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -788,7 +788,7 @@ Moves the rectangle dx along the x axis and dy along the y axis, relative to the
 
 See also moveTopLeft(), moveTo(), and translated().
 */
-func (this *QRect) Translate_1(p QPoint_ITF) {
+func (this *QRect) Translate1(p QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -825,7 +825,7 @@ Returns a copy of the rectangle that is translated dx along the x axis and dy al
 
 See also translate().
 */
-func (this *QRect) Translated_1(p QPoint_ITF) *QRect /*123*/ {
+func (this *QRect) Translated1(p QPoint_ITF) *QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -888,7 +888,7 @@ Moves the rectangle, leaving the top-left corner at the given position (x, y). T
 
 See also translate() and moveTopLeft().
 */
-func (this *QRect) MoveTo_1(p QPoint_ITF) {
+func (this *QRect) MoveTo1(p QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -1199,7 +1199,7 @@ Returns true if the given point is inside or on the edge of the rectangle, other
 
 See also intersects().
 */
-func (this *QRect) Contains__(r QRect_ITF) bool {
+func (this *QRect) Containsp(r QRect_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r != nil && r.QRect_PTR() != nil {
 		convArg0 = r.QRect_PTR().GetCthis()
@@ -1221,7 +1221,7 @@ Returns true if the given point is inside or on the edge of the rectangle, other
 
 See also intersects().
 */
-func (this *QRect) Contains_1(p QPoint_ITF, proper bool) bool {
+func (this *QRect) Contains1(p QPoint_ITF, proper bool) bool {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -1241,7 +1241,7 @@ Returns true if the given point is inside or on the edge of the rectangle, other
 
 See also intersects().
 */
-func (this *QRect) Contains_1_(p QPoint_ITF) bool {
+func (this *QRect) Contains1p(p QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -1263,7 +1263,7 @@ Returns true if the given point is inside or on the edge of the rectangle, other
 
 See also intersects().
 */
-func (this *QRect) Contains_2(x int, y int) bool {
+func (this *QRect) Contains2(x int, y int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect8containsEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -1279,7 +1279,7 @@ Returns true if the given point is inside or on the edge of the rectangle, other
 
 See also intersects().
 */
-func (this *QRect) Contains_3(x int, y int, proper bool) bool {
+func (this *QRect) Contains3(x int, y int, proper bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect8containsEiib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, proper)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

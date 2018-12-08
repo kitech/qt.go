@@ -234,10 +234,10 @@ func NewQGraphicsWidget(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, wFlags
 /*
 Constructs a QGraphicsWidget instance. The optional parent argument is passed to QGraphicsItem's constructor. The optional wFlags argument specifies the widget's window flags (e.g., whether the widget should be a window, a tool, a popup, etc).
 */
-func (*QGraphicsWidget) NewForInherit__() *QGraphicsWidget {
-	return NewQGraphicsWidget__()
+func (*QGraphicsWidget) NewForInheritp() *QGraphicsWidget {
+	return NewQGraphicsWidgetp()
 }
-func NewQGraphicsWidget__() *QGraphicsWidget {
+func NewQGraphicsWidgetp() *QGraphicsWidget {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -257,10 +257,10 @@ func NewQGraphicsWidget__() *QGraphicsWidget {
 /*
 Constructs a QGraphicsWidget instance. The optional parent argument is passed to QGraphicsItem's constructor. The optional wFlags argument specifies the widget's window flags (e.g., whether the widget should be a window, a tool, a popup, etc).
 */
-func (*QGraphicsWidget) NewForInherit__1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsWidget {
-	return NewQGraphicsWidget__1(parent)
+func (*QGraphicsWidget) NewForInheritp1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsWidget {
+	return NewQGraphicsWidgetp1(parent)
 }
-func NewQGraphicsWidget__1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsWidget {
+func NewQGraphicsWidgetp1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsWidget {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QGraphicsItem_PTR() != nil {
 		convArg0 = parent.QGraphicsItem_PTR().GetCthis()
@@ -546,7 +546,7 @@ func (this *QGraphicsWidget) Resize(size qtcore.QSizeF_ITF) {
 /*
 
  */
-func (this *QGraphicsWidget) Resize_1(w float64, h float64) {
+func (this *QGraphicsWidget) Resize1(w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsWidget6resizeEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -592,7 +592,7 @@ func (this *QGraphicsWidget) SetGeometry(rect qtcore.QRectF_ITF) {
 /*
 
  */
-func (this *QGraphicsWidget) SetGeometry_1(x float64, y float64, w float64, h float64) {
+func (this *QGraphicsWidget) SetGeometry1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsWidget11setGeometryEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -804,7 +804,7 @@ func (this *QGraphicsWidget) IsActiveWindow() bool {
 
  */
 func (this *QGraphicsWidget) SetWindowTitle(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsWidget14setWindowTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -962,7 +962,7 @@ This function was introduced in  Qt 4.5.
 
 See also releaseShortcut(), setShortcutEnabled(), and QWidget::grabShortcut().
 */
-func (this *QGraphicsWidget) GrabShortcut__(sequence qtgui.QKeySequence_ITF) int {
+func (this *QGraphicsWidget) GrabShortcutp(sequence qtgui.QKeySequence_ITF) int {
 	var convArg0 unsafe.Pointer
 	if sequence != nil && sequence.QKeySequence_PTR() != nil {
 		convArg0 = sequence.QKeySequence_PTR().GetCthis()
@@ -1026,7 +1026,7 @@ This function was introduced in  Qt 4.5.
 
 See also grabShortcut(), releaseShortcut(), and QWidget::setShortcutEnabled().
 */
-func (this *QGraphicsWidget) SetShortcutEnabled__(id int) {
+func (this *QGraphicsWidget) SetShortcutEnabledp(id int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsWidget18setShortcutEnabledEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, enabled)
@@ -1062,7 +1062,7 @@ This function was introduced in  Qt 4.5.
 
 See also grabShortcut(), releaseShortcut(), and QWidget::setShortcutAutoRepeat().
 */
-func (this *QGraphicsWidget) SetShortcutAutoRepeat__(id int) {
+func (this *QGraphicsWidget) SetShortcutAutoRepeatp(id int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enabled := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsWidget21setShortcutAutoRepeatEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, enabled)
@@ -1171,7 +1171,7 @@ See the class documentation for QGraphicsWidget for a complete list of which att
 
 See also testAttribute() and QWidget::setAttribute().
 */
-func (this *QGraphicsWidget) SetAttribute__(attribute int) {
+func (this *QGraphicsWidget) SetAttributep(attribute int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsWidget12setAttributeEN2Qt15WidgetAttributeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), attribute, on)
@@ -1241,7 +1241,7 @@ func (this *QGraphicsWidget) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/
 /*
 Reimplemented from QGraphicsItem::paint().
 */
-func (this *QGraphicsWidget) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+func (this *QGraphicsWidget) Paintp(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -1297,7 +1297,7 @@ You can reimplement this function in a subclass of QGraphicsWidget to provide cu
 
 See also QGraphicsItem::paint().
 */
-func (this *QGraphicsWidget) PaintWindowFrame__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+func (this *QGraphicsWidget) PaintWindowFramep(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -1465,7 +1465,7 @@ func (this *QGraphicsWidget) SizeHint(which int, constraint qtcore.QSizeF_ITF) *
 /*
 Reimplemented from QGraphicsLayoutItem::sizeHint().
 */
-func (this *QGraphicsWidget) SizeHint__(which int) *qtcore.QSizeF /*123*/ {
+func (this *QGraphicsWidget) SizeHintp(which int) *qtcore.QSizeF /*123*/ {
 	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsWidget8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
@@ -1533,7 +1533,7 @@ func (this *QGraphicsWidget) ItemChange(change int, value qtcore.QVariant_ITF) *
 
  */
 func (this *QGraphicsWidget) PropertyChange(propertyName string, value qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(propertyName)
+	var tmpArg0 = qtcore.NewQString5(propertyName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {

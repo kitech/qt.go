@@ -118,10 +118,10 @@ Constructs an action with parent. If parent is an action group the action will b
 
 Note: The parent argument is optional since Qt 5.7.
 */
-func (*QAction) NewForInherit__() *QAction {
-	return NewQAction__()
+func (*QAction) NewForInheritp() *QAction {
+	return NewQActionp()
 }
-func NewQAction__() *QAction {
+func NewQActionp() *QAction {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QActionC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -141,11 +141,11 @@ Constructs an action with parent. If parent is an action group the action will b
 
 Note: The parent argument is optional since Qt 5.7.
 */
-func (*QAction) NewForInherit_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
-	return NewQAction_1(text, parent)
+func (*QAction) NewForInherit1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
+	return NewQAction1(text, parent)
 }
-func NewQAction_1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQAction1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -168,11 +168,11 @@ Constructs an action with parent. If parent is an action group the action will b
 
 Note: The parent argument is optional since Qt 5.7.
 */
-func (*QAction) NewForInherit_1_(text string) *QAction {
-	return NewQAction_1_(text)
+func (*QAction) NewForInherit1p(text string) *QAction {
+	return NewQAction1p(text)
 }
-func NewQAction_1_(text string) *QAction {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQAction1p(text string) *QAction {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -193,15 +193,15 @@ Constructs an action with parent. If parent is an action group the action will b
 
 Note: The parent argument is optional since Qt 5.7.
 */
-func (*QAction) NewForInherit_2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
-	return NewQAction_2(icon, text, parent)
+func (*QAction) NewForInherit2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
+	return NewQAction2(icon, text, parent)
 }
-func NewQAction_2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
+func NewQAction2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -224,15 +224,15 @@ Constructs an action with parent. If parent is an action group the action will b
 
 Note: The parent argument is optional since Qt 5.7.
 */
-func (*QAction) NewForInherit_2_(icon qtgui.QIcon_ITF, text string) *QAction {
-	return NewQAction_2_(icon, text)
+func (*QAction) NewForInherit2p(icon qtgui.QIcon_ITF, text string) *QAction {
+	return NewQAction2p(icon, text)
 }
-func NewQAction_2_(icon qtgui.QIcon_ITF, text string) *QAction {
+func NewQAction2p(icon qtgui.QIcon_ITF, text string) *QAction {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -337,7 +337,7 @@ func (this *QAction) Icon() *qtgui.QIcon /*123*/ {
 
  */
 func (this *QAction) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -369,7 +369,7 @@ func (this *QAction) Text() string {
 
  */
 func (this *QAction) SetIconText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction11setIconTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -401,7 +401,7 @@ func (this *QAction) IconText() string {
 
  */
 func (this *QAction) SetToolTip(tip string) {
-	var tmpArg0 = qtcore.NewQString_5(tip)
+	var tmpArg0 = qtcore.NewQString5(tip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -433,7 +433,7 @@ func (this *QAction) ToolTip() string {
 
  */
 func (this *QAction) SetStatusTip(statusTip string) {
-	var tmpArg0 = qtcore.NewQString_5(statusTip)
+	var tmpArg0 = qtcore.NewQString5(statusTip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction12setStatusTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -465,7 +465,7 @@ func (this *QAction) StatusTip() string {
 
  */
 func (this *QAction) SetWhatsThis(what string) {
-	var tmpArg0 = qtcore.NewQString_5(what)
+	var tmpArg0 = qtcore.NewQString5(what)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction12setWhatsThisERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -879,7 +879,7 @@ If a null widget is specified, the event is sent to the action's parent.
 
 See also statusTip.
 */
-func (this *QAction) ShowStatusText__() bool {
+func (this *QAction) ShowStatusTextp() bool {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction14showStatusTextEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1137,7 +1137,7 @@ If the action is checkable, checked is true if the action is checked, or false i
 
 See also QAction::activate(), QAction::toggled(), and checked.
 */
-func (this *QAction) Triggered__() {
+func (this *QAction) Triggeredp() {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	checked := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction9triggeredEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), checked)

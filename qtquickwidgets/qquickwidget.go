@@ -208,10 +208,10 @@ func NewQQuickWidget(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidg
 /*
 
  */
-func (*QQuickWidget) NewForInherit__() *QQuickWidget {
-	return NewQQuickWidget__()
+func (*QQuickWidget) NewForInheritp() *QQuickWidget {
+	return NewQQuickWidgetp()
 }
-func NewQQuickWidget__() *QQuickWidget {
+func NewQQuickWidgetp() *QQuickWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -229,10 +229,10 @@ func NewQQuickWidget__() *QQuickWidget {
 /*
 
  */
-func (*QQuickWidget) NewForInherit_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
-	return NewQQuickWidget_1(engine, parent)
+func (*QQuickWidget) NewForInherit1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
+	return NewQQuickWidget1(engine, parent)
 }
-func NewQQuickWidget_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
+func NewQQuickWidget1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QQmlEngine_PTR() != nil {
 		convArg0 = engine.QQmlEngine_PTR().GetCthis()
@@ -256,10 +256,10 @@ func NewQQuickWidget_1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent 
 /*
 
  */
-func (*QQuickWidget) NewForInherit_2(source qtcore.QUrl_ITF, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
-	return NewQQuickWidget_2(source, parent)
+func (*QQuickWidget) NewForInherit2(source qtcore.QUrl_ITF, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
+	return NewQQuickWidget2(source, parent)
 }
-func NewQQuickWidget_2(source qtcore.QUrl_ITF, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
+func NewQQuickWidget2(source qtcore.QUrl_ITF, parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidget {
 	var convArg0 unsafe.Pointer
 	if source != nil && source.QUrl_PTR() != nil {
 		convArg0 = source.QUrl_PTR().GetCthis()
@@ -283,10 +283,10 @@ func NewQQuickWidget_2(source qtcore.QUrl_ITF, parent qtwidgets.QWidget_ITF /*77
 /*
 
  */
-func (*QQuickWidget) NewForInherit_2_(source qtcore.QUrl_ITF) *QQuickWidget {
-	return NewQQuickWidget_2_(source)
+func (*QQuickWidget) NewForInherit2p(source qtcore.QUrl_ITF) *QQuickWidget {
+	return NewQQuickWidget2p(source)
 }
-func NewQQuickWidget_2_(source qtcore.QUrl_ITF) *QQuickWidget {
+func NewQQuickWidget2p(source qtcore.QUrl_ITF) *QQuickWidget {
 	var convArg0 unsafe.Pointer
 	if source != nil && source.QUrl_PTR() != nil {
 		convArg0 = source.QUrl_PTR().GetCthis()
@@ -590,7 +590,7 @@ func (this *QQuickWidget) StatusChanged(arg0 int) {
 
  */
 func (this *QQuickWidget) SceneGraphError(error int, message string) {
-	var tmpArg1 = qtcore.NewQString_5(message)
+	var tmpArg1 = qtcore.NewQString5(message)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget15sceneGraphErrorEN12QQuickWindow15SceneGraphErrorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error, convArg1)
 	qtrt.ErrPrint(err, rv)

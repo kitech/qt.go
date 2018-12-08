@@ -113,10 +113,10 @@ Constructs a style plugin with the given parent.
 
 Note that this constructor is invoked automatically by the moc generated code that exports the plugin, so there is no need for calling it explicitly.
 */
-func (*QStylePlugin) NewForInherit__() *QStylePlugin {
-	return NewQStylePlugin__()
+func (*QStylePlugin) NewForInheritp() *QStylePlugin {
+	return NewQStylePluginp()
 }
-func NewQStylePlugin__() *QStylePlugin {
+func NewQStylePluginp() *QStylePlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -164,7 +164,7 @@ The style key is usually the class name of the required style. Note that the key
   }
 */
 func (this *QStylePlugin) Create(key string) *QStyle /*777 QStyle **/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePlugin6createERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

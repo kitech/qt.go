@@ -22,7 +22,7 @@ func tLength(ptr unsafe.Pointer) int {
 
 func main() {
 	// rs := qtrt.CString("hehehg呵呵")
-	txt := qtcore.NewQString_5("hehehg呵呵")
+	txt := qtcore.NewQString5("hehehg呵呵")
 	log.Println(tLength(txt.GetCthis()), txt.IsEmpty())
 	log.Println(txt.ToUtf8().Data())
 

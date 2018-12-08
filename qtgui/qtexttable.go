@@ -253,7 +253,7 @@ This function was introduced in  Qt 4.1.
 
 See also splitCell().
 */
-func (this *QTextTable) MergeCells_1(cursor QTextCursor_ITF) {
+func (this *QTextTable) MergeCells1(cursor QTextCursor_ITF) {
 	var convArg0 unsafe.Pointer
 	if cursor != nil && cursor.QTextCursor_PTR() != nil {
 		convArg0 = cursor.QTextCursor_PTR().GetCthis()
@@ -341,7 +341,7 @@ Returns the table cell at the given row and column in the table.
 
 See also columns() and rows().
 */
-func (this *QTextTable) CellAt_1(position int) *QTextTableCell /*123*/ {
+func (this *QTextTable) CellAt1(position int) *QTextTableCell /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextTable6cellAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextTableCellFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -359,7 +359,7 @@ Returns the table cell at the given row and column in the table.
 
 See also columns() and rows().
 */
-func (this *QTextTable) CellAt_2(c QTextCursor_ITF) *QTextTableCell /*123*/ {
+func (this *QTextTable) CellAt2(c QTextCursor_ITF) *QTextTableCell /*123*/ {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QTextCursor_PTR() != nil {
 		convArg0 = c.QTextCursor_PTR().GetCthis()

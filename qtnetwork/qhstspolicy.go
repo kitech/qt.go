@@ -92,15 +92,15 @@ func NewQHstsPolicy() *QHstsPolicy {
 /*
 Constructs an invalid (expired) policy with empty host name and subdomains not included.
 */
-func (*QHstsPolicy) NewForInherit_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode int) *QHstsPolicy {
-	return NewQHstsPolicy_1(expiry, flags, host, mode)
+func (*QHstsPolicy) NewForInherit1(expiry qtcore.QDateTime_ITF, flags int, host string, mode int) *QHstsPolicy {
+	return NewQHstsPolicy1(expiry, flags, host, mode)
 }
-func NewQHstsPolicy_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode int) *QHstsPolicy {
+func NewQHstsPolicy1(expiry qtcore.QDateTime_ITF, flags int, host string, mode int) *QHstsPolicy {
 	var convArg0 unsafe.Pointer
 	if expiry != nil && expiry.QDateTime_PTR() != nil {
 		convArg0 = expiry.QDateTime_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(host)
+	var tmpArg2 = qtcore.NewQString5(host)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyC2ERK9QDateTime6QFlagsINS_10PolicyFlagEERK7QStringN4QUrl11ParsingModeE", qtrt.FFI_TYPE_POINTER, convArg0, flags, convArg2, mode)
 	qtrt.ErrPrint(err, rv)
@@ -117,15 +117,15 @@ func NewQHstsPolicy_1(expiry qtcore.QDateTime_ITF, flags int, host string, mode 
 /*
 Constructs an invalid (expired) policy with empty host name and subdomains not included.
 */
-func (*QHstsPolicy) NewForInherit_1_(expiry qtcore.QDateTime_ITF, flags int, host string) *QHstsPolicy {
-	return NewQHstsPolicy_1_(expiry, flags, host)
+func (*QHstsPolicy) NewForInherit1p(expiry qtcore.QDateTime_ITF, flags int, host string) *QHstsPolicy {
+	return NewQHstsPolicy1p(expiry, flags, host)
 }
-func NewQHstsPolicy_1_(expiry qtcore.QDateTime_ITF, flags int, host string) *QHstsPolicy {
+func NewQHstsPolicy1p(expiry qtcore.QDateTime_ITF, flags int, host string) *QHstsPolicy {
 	var convArg0 unsafe.Pointer
 	if expiry != nil && expiry.QDateTime_PTR() != nil {
 		convArg0 = expiry.QDateTime_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(host)
+	var tmpArg2 = qtcore.NewQString5(host)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QUrl::ParsingMode=Elaborated, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
@@ -164,7 +164,7 @@ func (this *QHstsPolicy) Operator_equal(rhs QHstsPolicy_ITF) *QHstsPolicy {
 /*
 
  */
-func (this *QHstsPolicy) Operator_equal_1(other unsafe.Pointer /*333*/) *QHstsPolicy {
+func (this *QHstsPolicy) Operator_equal1(other unsafe.Pointer /*333*/) *QHstsPolicy {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQHstsPolicyFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -215,7 +215,7 @@ Sets a host, host data is interpreted according to mode parameter.
 See also host(), QUrl::setHost(), and QUrl::ParsingMode.
 */
 func (this *QHstsPolicy) SetHost(host string, mode int) {
-	var tmpArg0 = qtcore.NewQString_5(host)
+	var tmpArg0 = qtcore.NewQString5(host)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy7setHostERK7QStringN4QUrl11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	qtrt.ErrPrint(err, rv)
@@ -231,8 +231,8 @@ Sets a host, host data is interpreted according to mode parameter.
 
 See also host(), QUrl::setHost(), and QUrl::ParsingMode.
 */
-func (this *QHstsPolicy) SetHost__(host string) {
-	var tmpArg0 = qtcore.NewQString_5(host)
+func (this *QHstsPolicy) SetHostp(host string) {
+	var tmpArg0 = qtcore.NewQString5(host)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Elaborated, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0

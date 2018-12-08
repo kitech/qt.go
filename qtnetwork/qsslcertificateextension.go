@@ -110,7 +110,7 @@ func (this *QSslCertificateExtension) Operator_equal(other unsafe.Pointer /*333*
 /*
 
  */
-func (this *QSslCertificateExtension) Operator_equal_1(other QSslCertificateExtension_ITF) *QSslCertificateExtension {
+func (this *QSslCertificateExtension) Operator_equal1(other QSslCertificateExtension_ITF) *QSslCertificateExtension {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslCertificateExtension_PTR() != nil {
 		convArg0 = other.QSslCertificateExtension_PTR().GetCthis()

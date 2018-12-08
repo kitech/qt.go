@@ -91,10 +91,10 @@ func NewQStyleOptionComboBox() *QStyleOptionComboBox {
 /*
 
  */
-func (*QStyleOptionComboBox) NewForInherit_1(version int) *QStyleOptionComboBox {
-	return NewQStyleOptionComboBox_1(version)
+func (*QStyleOptionComboBox) NewForInherit1(version int) *QStyleOptionComboBox {
+	return NewQStyleOptionComboBox1(version)
 }
-func NewQStyleOptionComboBox_1(version int) *QStyleOptionComboBox {
+func NewQStyleOptionComboBox1(version int) *QStyleOptionComboBox {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionComboBoxFromPointer(unsafe.Pointer(uintptr(rv)))

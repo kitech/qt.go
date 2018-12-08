@@ -117,10 +117,10 @@ Creates a QNetworkCookieJar object and sets the parent object to be parent.
 
 The cookie jar is initialized to empty.
 */
-func (*QNetworkCookieJar) NewForInherit__() *QNetworkCookieJar {
-	return NewQNetworkCookieJar__()
+func (*QNetworkCookieJar) NewForInheritp() *QNetworkCookieJar {
+	return NewQNetworkCookieJarp()
 }
-func NewQNetworkCookieJar__() *QNetworkCookieJar {
+func NewQNetworkCookieJarp() *QNetworkCookieJar {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkCookieJarC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

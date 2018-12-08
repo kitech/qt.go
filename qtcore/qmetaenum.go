@@ -205,7 +205,7 @@ func (this *QMetaEnum) KeyToValue(key string, ok *bool) int {
 /*
 
  */
-func (this *QMetaEnum) KeyToValue__(key string) int {
+func (this *QMetaEnum) KeyToValuep(key string) int {
 	var convArg0 = qtrt.CString(key)
 	defer qtrt.FreeMem(convArg0)
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
@@ -253,7 +253,7 @@ func (this *QMetaEnum) KeysToValue(keys string, ok *bool) int {
 /*
 
  */
-func (this *QMetaEnum) KeysToValue__(keys string) int {
+func (this *QMetaEnum) KeysToValuep(keys string) int {
 	var convArg0 = qtrt.CString(keys)
 	defer qtrt.FreeMem(convArg0)
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid

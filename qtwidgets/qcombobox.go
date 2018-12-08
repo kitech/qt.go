@@ -184,10 +184,10 @@ func NewQComboBox(parent QWidget_ITF /*777 QWidget **/) *QComboBox {
 /*
 Constructs a combobox with the given parent, using the default model QStandardItemModel.
 */
-func (*QComboBox) NewForInherit__() *QComboBox {
-	return NewQComboBox__()
+func (*QComboBox) NewForInheritp() *QComboBox {
+	return NewQComboBoxp()
 }
-func NewQComboBox__() *QComboBox {
+func NewQComboBoxp() *QComboBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -399,7 +399,7 @@ Returns the index of the item containing the given text; otherwise returns -1.
 The flags specify how the items in the combobox are searched.
 */
 func (this *QComboBox) FindText(text string, flags int) int {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8findTextERK7QString6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -416,8 +416,8 @@ Returns the index of the item containing the given text; otherwise returns -1.
 
 The flags specify how the items in the combobox are searched.
 */
-func (this *QComboBox) FindText__(text string) int {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QComboBox) FindTextp(text string) int {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::MatchFlags=Elaborated, Qt::MatchFlags=Typedef, QFlags<Qt::MatchFlag>, Unexposed
 	flags := 0
@@ -456,7 +456,7 @@ Returns the index of the item containing the given data for the given role; othe
 
 The flags specify how the items in the combobox are searched.
 */
-func (this *QComboBox) FindData__(data qtcore.QVariant_ITF) int {
+func (this *QComboBox) FindDatap(data qtcore.QVariant_ITF) int {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QVariant_PTR() != nil {
 		convArg0 = data.QVariant_PTR().GetCthis()
@@ -480,7 +480,7 @@ Returns the index of the item containing the given data for the given role; othe
 
 The flags specify how the items in the combobox are searched.
 */
-func (this *QComboBox) FindData__1(data qtcore.QVariant_ITF, role int) int {
+func (this *QComboBox) FindDatap1(data qtcore.QVariant_ITF, role int) int {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QVariant_PTR() != nil {
 		convArg0 = data.QVariant_PTR().GetCthis()
@@ -943,7 +943,7 @@ func (this *QComboBox) CurrentData(role int) *qtcore.QVariant /*123*/ {
 /*
 
  */
-func (this *QComboBox) CurrentData__() *qtcore.QVariant /*123*/ {
+func (this *QComboBox) CurrentDatap() *qtcore.QVariant /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::UserRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox11currentDataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
@@ -1018,7 +1018,7 @@ Returns the data for the given role in the given index in the combobox, or QVari
 
 See also setItemData().
 */
-func (this *QComboBox) ItemData__(index int) *qtcore.QVariant /*123*/ {
+func (this *QComboBox) ItemDatap(index int) *qtcore.QVariant /*123*/ {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::UserRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QComboBox8itemDataEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, role)
@@ -1037,7 +1037,7 @@ func (this *QComboBox) ItemData__(index int) *qtcore.QVariant /*123*/ {
 Adds an item to the combobox with the given text, and containing the specified userData (stored in the Qt::UserRole). The item is appended to the list of existing items.
 */
 func (this *QComboBox) AddItem(text string, userData qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if userData != nil && userData.QVariant_PTR() != nil {
@@ -1055,8 +1055,8 @@ func (this *QComboBox) AddItem(text string, userData qtcore.QVariant_ITF) {
 /*
 Adds an item to the combobox with the given text, and containing the specified userData (stored in the Qt::UserRole). The item is appended to the list of existing items.
 */
-func (this *QComboBox) AddItem__(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QComboBox) AddItemp(text string) {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg1 = qtcore.NewQVariant()
@@ -1072,12 +1072,12 @@ func (this *QComboBox) AddItem__(text string) {
 /*
 Adds an item to the combobox with the given text, and containing the specified userData (stored in the Qt::UserRole). The item is appended to the list of existing items.
 */
-func (this *QComboBox) AddItem_1(icon qtgui.QIcon_ITF, text string, userData qtcore.QVariant_ITF) {
+func (this *QComboBox) AddItem1(icon qtgui.QIcon_ITF, text string, userData qtcore.QVariant_ITF) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if userData != nil && userData.QVariant_PTR() != nil {
@@ -1095,12 +1095,12 @@ func (this *QComboBox) AddItem_1(icon qtgui.QIcon_ITF, text string, userData qtc
 /*
 Adds an item to the combobox with the given text, and containing the specified userData (stored in the Qt::UserRole). The item is appended to the list of existing items.
 */
-func (this *QComboBox) AddItem_1_(icon qtgui.QIcon_ITF, text string) {
+func (this *QComboBox) AddItem1p(icon qtgui.QIcon_ITF, text string) {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg2 = qtcore.NewQVariant()
@@ -1138,7 +1138,7 @@ If the index is equal to or higher than the total number of items, the new item 
 See also insertItems().
 */
 func (this *QComboBox) InsertItem(index int, text string, userData qtcore.QVariant_ITF) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if userData != nil && userData.QVariant_PTR() != nil {
@@ -1160,8 +1160,8 @@ If the index is equal to or higher than the total number of items, the new item 
 
 See also insertItems().
 */
-func (this *QComboBox) InsertItem__(index int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+func (this *QComboBox) InsertItemp(index int, text string) {
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg2 = qtcore.NewQVariant()
@@ -1181,12 +1181,12 @@ If the index is equal to or higher than the total number of items, the new item 
 
 See also insertItems().
 */
-func (this *QComboBox) InsertItem_1(index int, icon qtgui.QIcon_ITF, text string, userData qtcore.QVariant_ITF) {
+func (this *QComboBox) InsertItem1(index int, icon qtgui.QIcon_ITF, text string, userData qtcore.QVariant_ITF) {
 	var convArg1 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg1 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if userData != nil && userData.QVariant_PTR() != nil {
@@ -1208,12 +1208,12 @@ If the index is equal to or higher than the total number of items, the new item 
 
 See also insertItems().
 */
-func (this *QComboBox) InsertItem_1_(index int, icon qtgui.QIcon_ITF, text string) {
+func (this *QComboBox) InsertItem1p(index int, icon qtgui.QIcon_ITF, text string) {
 	var convArg1 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg1 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg3 = qtcore.NewQVariant()
@@ -1287,7 +1287,7 @@ Sets the text for the item on the given index in the combobox.
 See also itemText().
 */
 func (this *QComboBox) SetItemText(index int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11setItemTextEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1341,7 +1341,7 @@ Sets the data role for the item on the given index in the combobox to the specif
 
 See also itemData().
 */
-func (this *QComboBox) SetItemData__(index int, value qtcore.QVariant_ITF) {
+func (this *QComboBox) SetItemDatap(index int, value qtcore.QVariant_ITF) {
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg1 = value.QVariant_PTR().GetCthis()
@@ -1497,7 +1497,7 @@ func (this *QComboBox) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 /*
 Reimplemented from QWidget::inputMethodQuery().
 */
-func (this *QComboBox) InputMethodQuery_1(query int, argument qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
+func (this *QComboBox) InputMethodQuery1(query int, argument qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
 	var convArg1 unsafe.Pointer
 	if argument != nil && argument.QVariant_PTR() != nil {
 		convArg1 = argument.QVariant_PTR().GetCthis()
@@ -1546,7 +1546,7 @@ func (this *QComboBox) ClearEditText() {
 Sets the text in the combobox's text edit.
 */
 func (this *QComboBox) SetEditText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11setEditTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1574,7 +1574,7 @@ func (this *QComboBox) SetCurrentIndex(index int) {
 
  */
 func (this *QComboBox) SetCurrentText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox14setCurrentTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1589,7 +1589,7 @@ func (this *QComboBox) SetCurrentText(text string) {
 This signal is emitted when the text in the combobox's line edit widget is changed. The new text is specified by text.
 */
 func (this *QComboBox) EditTextChanged(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox15editTextChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1628,8 +1628,8 @@ Note: Signal activated is overloaded in this class. To connect to this signal by
   connect(comboBox, QOverload<int>::of(&QComboBox::activated),
       [=](int index){ /-* ... *-/ });
 */
-func (this *QComboBox) Activated_1(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func (this *QComboBox) Activated1(arg0 string) {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox9activatedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1668,8 +1668,8 @@ Note: Signal highlighted is overloaded in this class. To connect to this signal 
   connect(comboBox, QOverload<int>::of(&QComboBox::highlighted),
       [=](int index){ /-* ... *-/ });
 */
-func (this *QComboBox) Highlighted_1(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func (this *QComboBox) Highlighted1(arg0 string) {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox11highlightedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1720,8 +1720,8 @@ This function was introduced in  Qt 4.1.
 
 Note: Notifier signal for property currentIndex.
 */
-func (this *QComboBox) CurrentIndexChanged_1(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func (this *QComboBox) CurrentIndexChanged1(arg0 string) {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox19currentIndexChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1740,7 +1740,7 @@ This function was introduced in  Qt 5.0.
 Note: Notifier signal for property currentText.
 */
 func (this *QComboBox) CurrentTextChanged(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QComboBox18currentTextChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

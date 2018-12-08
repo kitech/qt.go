@@ -109,10 +109,10 @@ func NewQQmlApplicationEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QQml
 /*
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
-func (*QQmlApplicationEngine) NewForInherit__() *QQmlApplicationEngine {
-	return NewQQmlApplicationEngine__()
+func (*QQmlApplicationEngine) NewForInheritp() *QQmlApplicationEngine {
+	return NewQQmlApplicationEnginep()
 }
-func NewQQmlApplicationEngine__() *QQmlApplicationEngine {
+func NewQQmlApplicationEnginep() *QQmlApplicationEngine {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -130,10 +130,10 @@ func NewQQmlApplicationEngine__() *QQmlApplicationEngine {
 /*
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
-func (*QQmlApplicationEngine) NewForInherit_1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
-	return NewQQmlApplicationEngine_1(url, parent)
+func (*QQmlApplicationEngine) NewForInherit1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
+	return NewQQmlApplicationEngine1(url, parent)
 }
-func NewQQmlApplicationEngine_1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
+func NewQQmlApplicationEngine1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
@@ -157,10 +157,10 @@ func NewQQmlApplicationEngine_1(url qtcore.QUrl_ITF, parent qtcore.QObject_ITF /
 /*
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
-func (*QQmlApplicationEngine) NewForInherit_1_(url qtcore.QUrl_ITF) *QQmlApplicationEngine {
-	return NewQQmlApplicationEngine_1_(url)
+func (*QQmlApplicationEngine) NewForInherit1p(url qtcore.QUrl_ITF) *QQmlApplicationEngine {
+	return NewQQmlApplicationEngine1p(url)
 }
-func NewQQmlApplicationEngine_1_(url qtcore.QUrl_ITF) *QQmlApplicationEngine {
+func NewQQmlApplicationEngine1p(url qtcore.QUrl_ITF) *QQmlApplicationEngine {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
@@ -182,11 +182,11 @@ func NewQQmlApplicationEngine_1_(url qtcore.QUrl_ITF) *QQmlApplicationEngine {
 /*
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
-func (*QQmlApplicationEngine) NewForInherit_2(filePath string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
-	return NewQQmlApplicationEngine_2(filePath, parent)
+func (*QQmlApplicationEngine) NewForInherit2(filePath string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
+	return NewQQmlApplicationEngine2(filePath, parent)
 }
-func NewQQmlApplicationEngine_2(filePath string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
-	var tmpArg0 = qtcore.NewQString_5(filePath)
+func NewQQmlApplicationEngine2(filePath string, parent qtcore.QObject_ITF /*777 QObject **/) *QQmlApplicationEngine {
+	var tmpArg0 = qtcore.NewQString5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -207,11 +207,11 @@ func NewQQmlApplicationEngine_2(filePath string, parent qtcore.QObject_ITF /*777
 /*
 Create a new QQmlApplicationEngine with the given parent. You will have to call load() later in order to load a QML file.
 */
-func (*QQmlApplicationEngine) NewForInherit_2_(filePath string) *QQmlApplicationEngine {
-	return NewQQmlApplicationEngine_2_(filePath)
+func (*QQmlApplicationEngine) NewForInherit2p(filePath string) *QQmlApplicationEngine {
+	return NewQQmlApplicationEngine2p(filePath)
 }
-func NewQQmlApplicationEngine_2_(filePath string) *QQmlApplicationEngine {
-	var tmpArg0 = qtcore.NewQString_5(filePath)
+func NewQQmlApplicationEngine2p(filePath string) *QQmlApplicationEngine {
+	var tmpArg0 = qtcore.NewQString5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -264,7 +264,7 @@ Returns a list of all the root objects instantiated by the QQmlApplicationEngine
 
 Note: In Qt versions prior to 5.9, this function is marked as non-const.
 */
-func (this *QQmlApplicationEngine) RootObjects_1() *qtcore.QObjectList /*lll*/ {
+func (this *QQmlApplicationEngine) RootObjects1() *qtcore.QObjectList /*lll*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QQmlApplicationEngine11rootObjectsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQObjectListFromPointer(unsafe.Pointer(uintptr(rv))) //5552
@@ -300,8 +300,8 @@ Loads the root QML file located at url. The object tree defined by the file is c
 
 If an error occurs, error messages are printed with qWarning.
 */
-func (this *QQmlApplicationEngine) Load_1(filePath string) {
-	var tmpArg0 = qtcore.NewQString_5(filePath)
+func (this *QQmlApplicationEngine) Load1(filePath string) {
+	var tmpArg0 = qtcore.NewQString5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngine4loadERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -344,7 +344,7 @@ If a url is specified it is used as the base url of the component. This affects 
 
 If an error occurs, error messages are printed with qWarning.
 */
-func (this *QQmlApplicationEngine) LoadData__(data qtcore.QByteArray_ITF) {
+func (this *QQmlApplicationEngine) LoadDatap(data qtcore.QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()

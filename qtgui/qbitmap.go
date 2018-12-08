@@ -94,10 +94,10 @@ Constructs a null bitmap.
 
 See also QPixmap::isNull().
 */
-func (*QBitmap) NewForInherit_1(arg0 QPixmap_ITF) *QBitmap {
-	return NewQBitmap_1(arg0)
+func (*QBitmap) NewForInherit1(arg0 QPixmap_ITF) *QBitmap {
+	return NewQBitmap1(arg0)
 }
-func NewQBitmap_1(arg0 QPixmap_ITF) *QBitmap {
+func NewQBitmap1(arg0 QPixmap_ITF) *QBitmap {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPixmap_PTR() != nil {
 		convArg0 = arg0.QPixmap_PTR().GetCthis()
@@ -119,10 +119,10 @@ Constructs a null bitmap.
 
 See also QPixmap::isNull().
 */
-func (*QBitmap) NewForInherit_2(w int, h int) *QBitmap {
-	return NewQBitmap_2(w, h)
+func (*QBitmap) NewForInherit2(w int, h int) *QBitmap {
+	return NewQBitmap2(w, h)
 }
-func NewQBitmap_2(w int, h int) *QBitmap {
+func NewQBitmap2(w int, h int) *QBitmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2Eii", qtrt.FFI_TYPE_POINTER, w, h)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -140,10 +140,10 @@ Constructs a null bitmap.
 
 See also QPixmap::isNull().
 */
-func (*QBitmap) NewForInherit_3(arg0 qtcore.QSize_ITF) *QBitmap {
-	return NewQBitmap_3(arg0)
+func (*QBitmap) NewForInherit3(arg0 qtcore.QSize_ITF) *QBitmap {
+	return NewQBitmap3(arg0)
 }
-func NewQBitmap_3(arg0 qtcore.QSize_ITF) *QBitmap {
+func NewQBitmap3(arg0 qtcore.QSize_ITF) *QBitmap {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QSize_PTR() != nil {
 		convArg0 = arg0.QSize_PTR().GetCthis()
@@ -165,11 +165,11 @@ Constructs a null bitmap.
 
 See also QPixmap::isNull().
 */
-func (*QBitmap) NewForInherit_4(fileName string, format string) *QBitmap {
-	return NewQBitmap_4(fileName, format)
+func (*QBitmap) NewForInherit4(fileName string, format string) *QBitmap {
+	return NewQBitmap4(fileName, format)
 }
-func NewQBitmap_4(fileName string, format string) *QBitmap {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQBitmap4(fileName string, format string) *QBitmap {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
@@ -190,11 +190,11 @@ Constructs a null bitmap.
 
 See also QPixmap::isNull().
 */
-func (*QBitmap) NewForInherit_4_(fileName string) *QBitmap {
-	return NewQBitmap_4_(fileName)
+func (*QBitmap) NewForInherit4p(fileName string) *QBitmap {
+	return NewQBitmap4p(fileName)
 }
-func NewQBitmap_4_(fileName string) *QBitmap {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQBitmap4p(fileName string) *QBitmap {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const char *=Pointer, =Invalid, , Invalid
 	var convArg1 unsafe.Pointer
@@ -233,7 +233,7 @@ func (this *QBitmap) Operator_equal(other QBitmap_ITF) *QBitmap {
 /*
 
  */
-func (this *QBitmap) Operator_equal_1(other unsafe.Pointer /*333*/) *QBitmap {
+func (this *QBitmap) Operator_equal1(other unsafe.Pointer /*333*/) *QBitmap {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -249,7 +249,7 @@ func (this *QBitmap) Operator_equal_1(other unsafe.Pointer /*333*/) *QBitmap {
 /*
 
  */
-func (this *QBitmap) Operator_equal_2(arg0 QPixmap_ITF) *QBitmap {
+func (this *QBitmap) Operator_equal2(arg0 QPixmap_ITF) *QBitmap {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPixmap_PTR() != nil {
 		convArg0 = arg0.QPixmap_PTR().GetCthis()
@@ -345,7 +345,7 @@ Returns a copy of the given image converted to a bitmap using the specified imag
 
 See also fromData().
 */
-func (this *QBitmap) FromImage__(image QImage_ITF) *QBitmap /*123*/ {
+func (this *QBitmap) FromImagep(image QImage_ITF) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()
@@ -400,7 +400,7 @@ The bitmap data has to be byte aligned and provided in in the bit order specifie
 
 See also fromImage().
 */
-func (this *QBitmap) FromData__(size qtcore.QSize_ITF, bits unsafe.Pointer /*666*/) *QBitmap /*123*/ {
+func (this *QBitmap) FromDatap(size qtcore.QSize_ITF, bits unsafe.Pointer /*666*/) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
@@ -446,7 +446,7 @@ Returns a copy of this bitmap, transformed according to the given matrix.
 
 See also QPixmap::transformed().
 */
-func (this *QBitmap) Transformed_1(matrix QTransform_ITF) *QBitmap /*123*/ {
+func (this *QBitmap) Transformed1(matrix QTransform_ITF) *QBitmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if matrix != nil && matrix.QTransform_PTR() != nil {
 		convArg0 = matrix.QTransform_PTR().GetCthis()

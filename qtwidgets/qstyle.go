@@ -153,7 +153,7 @@ The QWidget::inherits() function may provide enough information to allow class-s
 
 See also unpolish().
 */
-func (this *QStyle) Polish_1(application QApplication_ITF /*777 QApplication **/) {
+func (this *QStyle) Polish1(application QApplication_ITF /*777 QApplication **/) {
 	var convArg0 unsafe.Pointer
 	if application != nil && application.QApplication_PTR() != nil {
 		convArg0 = application.QApplication_PTR().GetCthis()
@@ -178,7 +178,7 @@ The QWidget::inherits() function may provide enough information to allow class-s
 
 See also unpolish().
 */
-func (this *QStyle) Polish_2(palette qtgui.QPalette_ITF) {
+func (this *QStyle) Polish2(palette qtgui.QPalette_ITF) {
 	var convArg0 unsafe.Pointer
 	if palette != nil && palette.QPalette_PTR() != nil {
 		convArg0 = palette.QPalette_PTR().GetCthis()
@@ -224,7 +224,7 @@ Note that unpolish() will only be called if the widget is destroyed. This can ca
 
 See also polish().
 */
-func (this *QStyle) Unpolish_1(application QApplication_ITF /*777 QApplication **/) {
+func (this *QStyle) Unpolish1(application QApplication_ITF /*777 QApplication **/) {
 	var convArg0 unsafe.Pointer
 	if application != nil && application.QApplication_PTR() != nil {
 		convArg0 = application.QApplication_PTR().GetCthis()
@@ -254,7 +254,7 @@ func (this *QStyle) ItemTextRect(fm qtgui.QFontMetrics_ITF, r qtcore.QRect_ITF, 
 	if r != nil && r.QRect_PTR() != nil {
 		convArg1 = r.QRect_PTR().GetCthis()
 	}
-	var tmpArg4 = qtcore.NewQString_5(text)
+	var tmpArg4 = qtcore.NewQString5(text)
 	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, flags, enabled, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -312,7 +312,7 @@ func (this *QStyle) DrawItemText(painter qtgui.QPainter_ITF /*777 QPainter **/, 
 	if pal != nil && pal.QPalette_PTR() != nil {
 		convArg3 = pal.QPalette_PTR().GetCthis()
 	}
-	var tmpArg5 = qtcore.NewQString_5(text)
+	var tmpArg5 = qtcore.NewQString5(text)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QStyle12drawItemTextEP8QPainterRK5QRectiRK8QPalettebRK7QStringNS5_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, flags, convArg3, enabled, convArg5, textRole)
 	qtrt.ErrPrint(err, rv)
@@ -330,7 +330,7 @@ The text is drawn using the painter's pen, and aligned and wrapped according to 
 
 See also Qt::Alignment and drawItemPixmap().
 */
-func (this *QStyle) DrawItemText__(painter qtgui.QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, flags int, pal qtgui.QPalette_ITF, enabled bool, text string) {
+func (this *QStyle) DrawItemTextp(painter qtgui.QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, flags int, pal qtgui.QPalette_ITF, enabled bool, text string) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -343,7 +343,7 @@ func (this *QStyle) DrawItemText__(painter qtgui.QPainter_ITF /*777 QPainter **/
 	if pal != nil && pal.QPalette_PTR() != nil {
 		convArg3 = pal.QPalette_PTR().GetCthis()
 	}
-	var tmpArg5 = qtcore.NewQString_5(text)
+	var tmpArg5 = qtcore.NewQString5(text)
 	var convArg5 = tmpArg5.GetCthis()
 	// arg: 6, QPalette::ColorRole=Elaborated, QPalette::ColorRole=Enum, , Invalid
 	textRole := 0
@@ -493,7 +493,7 @@ State_SunkenSet if the button is down (i.e., the mouse button or the space bar i
 
 See also drawComplexControl() and drawControl().
 */
-func (this *QStyle) DrawPrimitive__(pe int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QStyle) DrawPrimitivep(pe int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -631,7 +631,7 @@ State_DownArrowIndicates that the sort indicator should be pointing down.
 
 See also drawPrimitive() and drawComplexControl().
 */
-func (this *QStyle) DrawControl__(element int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QStyle) DrawControlp(element int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -712,7 +712,7 @@ SE_ProgressBarGrooveQStyleOptionProgressBar
 SE_ProgressBarContentsQStyleOptionProgressBar
 SE_ProgressBarLabelQStyleOptionProgressBar
 */
-func (this *QStyle) SubElementRect__(subElement int, option QStyleOption_ITF /*777 const QStyleOption **/) *qtcore.QRect /*123*/ {
+func (this *QStyle) SubElementRectp(subElement int, option QStyleOption_ITF /*777 const QStyleOption **/) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
@@ -817,7 +817,7 @@ CC_TitleBarQStyleOptionTitleBarState_EnabledSet if the title bar is enabled.
 
 See also drawPrimitive() and drawControl().
 */
-func (this *QStyle) DrawComplexControl__(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QStyle) DrawComplexControlp(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
 		convArg1 = opt.QStyleOptionComplex_PTR().GetCthis()
@@ -878,7 +878,7 @@ The option argument is a pointer to a QStyleOptionComplex object (or one of its 
 
 See also drawComplexControl() and subControlRect().
 */
-func (this *QStyle) HitTestComplexControl__(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pt qtcore.QPoint_ITF) int {
+func (this *QStyle) HitTestComplexControlp(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pt qtcore.QPoint_ITF) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
 		convArg1 = opt.QStyleOptionComplex_PTR().GetCthis()
@@ -934,7 +934,7 @@ The option argument is a pointer to QStyleOptionComplex or one of its subclasses
 
 See also drawComplexControl().
 */
-func (this *QStyle) SubControlRect__(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, sc int) *qtcore.QRect /*123*/ {
+func (this *QStyle) SubControlRectp(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, sc int) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
 		convArg1 = opt.QStyleOptionComplex_PTR().GetCthis()
@@ -1014,7 +1014,7 @@ PM_TabBarBaseOverlapQStyleOptionTab
 
 Some pixel metrics are called from widgets and some are only called internally by the style. If the metric is not called by a widget, it is the discretion of the style author to make use of it. For some styles, this may not be appropriate.
 */
-func (this *QStyle) PixelMetric__(metric int) int {
+func (this *QStyle) PixelMetricp(metric int) int {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -1050,7 +1050,7 @@ PM_TabBarBaseOverlapQStyleOptionTab
 
 Some pixel metrics are called from widgets and some are only called internally by the style. If the metric is not called by a widget, it is the discretion of the style author to make use of it. For some styles, this may not be appropriate.
 */
-func (this *QStyle) PixelMetric__1(metric int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
+func (this *QStyle) PixelMetricp1(metric int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
@@ -1162,7 +1162,7 @@ CT_ToolButtonQStyleOptionToolButton
 
 See also ContentsType and QStyleOption.
 */
-func (this *QStyle) SizeFromContents__(ct int, opt QStyleOption_ITF /*777 const QStyleOption **/, contentsSize qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
+func (this *QStyle) SizeFromContentsp(ct int, opt QStyleOption_ITF /*777 const QStyleOption **/, contentsSize qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -1218,7 +1218,7 @@ Returns an integer representing the specified style hint for the given widget de
 
 returnData is used when the querying widget needs more detailed data than the integer that styleHint() returns. See the QStyleHintReturn class description for details.
 */
-func (this *QStyle) StyleHint__(stylehint int) int {
+func (this *QStyle) StyleHintp(stylehint int) int {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -1240,7 +1240,7 @@ Returns an integer representing the specified style hint for the given widget de
 
 returnData is used when the querying widget needs more detailed data than the integer that styleHint() returns. See the QStyleHintReturn class description for details.
 */
-func (this *QStyle) StyleHint__1(stylehint int, opt QStyleOption_ITF /*777 const QStyleOption **/) int {
+func (this *QStyle) StyleHintp1(stylehint int, opt QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -1264,7 +1264,7 @@ Returns an integer representing the specified style hint for the given widget de
 
 returnData is used when the querying widget needs more detailed data than the integer that styleHint() returns. See the QStyleHintReturn class description for details.
 */
-func (this *QStyle) StyleHint__2(stylehint int, opt QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) int {
+func (this *QStyle) StyleHintp2(stylehint int, opt QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -1312,7 +1312,7 @@ func (this *QStyle) StandardPixmap(standardPixmap int, opt QStyleOption_ITF /*77
 /*
 
  */
-func (this *QStyle) StandardPixmap__(standardPixmap int) *qtgui.QPixmap /*123*/ {
+func (this *QStyle) StandardPixmapp(standardPixmap int) *qtgui.QPixmap /*123*/ {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -1332,7 +1332,7 @@ func (this *QStyle) StandardPixmap__(standardPixmap int) *qtgui.QPixmap /*123*/ 
 /*
 
  */
-func (this *QStyle) StandardPixmap__1(standardPixmap int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
+func (this *QStyle) StandardPixmapp1(standardPixmap int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -1386,7 +1386,7 @@ The standardIcon is a standard pixmap which can follow some existing GUI style o
 
 This function was introduced in  Qt 4.1.
 */
-func (this *QStyle) StandardIcon__(standardIcon int) *qtgui.QIcon /*123*/ {
+func (this *QStyle) StandardIconp(standardIcon int) *qtgui.QIcon /*123*/ {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -1410,7 +1410,7 @@ The standardIcon is a standard pixmap which can follow some existing GUI style o
 
 This function was introduced in  Qt 4.1.
 */
-func (this *QStyle) StandardIcon__1(standardIcon int, option QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QIcon /*123*/ {
+func (this *QStyle) StandardIconp1(standardIcon int, option QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QIcon /*123*/ {
 	var convArg1 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg1 = option.QStyleOption_PTR().GetCthis()
@@ -1557,7 +1557,7 @@ By default, this function assumes that the maximum value is on the right for hor
 
 See also sliderValueFromPosition().
 */
-func (this *QStyle) SliderPositionFromValue__(min int, max int, val int, space int) int {
+func (this *QStyle) SliderPositionFromValuep(min int, max int, val int, space int) int {
 	// arg: 4, bool=Bool, =Invalid, , Invalid
 	upsideDown := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QStyle23sliderPositionFromValueEiiiib", qtrt.FFI_TYPE_POINTER, min, max, val, space, upsideDown)
@@ -1604,7 +1604,7 @@ By default, this function assumes that the maximum value is on the right for hor
 
 See also sliderPositionFromValue().
 */
-func (this *QStyle) SliderValueFromPosition__(min int, max int, pos int, space int) int {
+func (this *QStyle) SliderValueFromPositionp(min int, max int, pos int, space int) int {
 	// arg: 4, bool=Bool, =Invalid, , Invalid
 	upsideDown := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QStyle23sliderValueFromPositionEiiiib", qtrt.FFI_TYPE_POINTER, min, max, pos, space, upsideDown)
@@ -1706,7 +1706,7 @@ This function was introduced in  Qt 4.3.
 
 See also combinedLayoutSpacing().
 */
-func (this *QStyle) LayoutSpacing__(control1 int, control2 int, orientation int) int {
+func (this *QStyle) LayoutSpacingp(control1 int, control2 int, orientation int) int {
 	// arg: 3, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	// arg: 4, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -1730,7 +1730,7 @@ This function was introduced in  Qt 4.3.
 
 See also combinedLayoutSpacing().
 */
-func (this *QStyle) LayoutSpacing__1(control1 int, control2 int, orientation int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
+func (this *QStyle) LayoutSpacingp1(control1 int, control2 int, orientation int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg3 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg3 = option.QStyleOption_PTR().GetCthis()
@@ -1788,7 +1788,7 @@ This function was introduced in  Qt 4.3.
 
 See also layoutSpacing().
 */
-func (this *QStyle) CombinedLayoutSpacing__(controls1 int, controls2 int, orientation int) int {
+func (this *QStyle) CombinedLayoutSpacingp(controls1 int, controls2 int, orientation int) int {
 	// arg: 3, QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	// arg: 4, QWidget *=Pointer, QWidget=Record, , Invalid
@@ -1814,7 +1814,7 @@ This function was introduced in  Qt 4.3.
 
 See also layoutSpacing().
 */
-func (this *QStyle) CombinedLayoutSpacing__1(controls1 int, controls2 int, orientation int, option QStyleOption_ITF /*777 QStyleOption **/) int {
+func (this *QStyle) CombinedLayoutSpacingp1(controls1 int, controls2 int, orientation int, option QStyleOption_ITF /*777 QStyleOption **/) int {
 	var convArg3 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg3 = option.QStyleOption_PTR().GetCthis()

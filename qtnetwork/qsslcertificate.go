@@ -96,10 +96,10 @@ func NewQSslCertificate(device qtcore.QIODevice_ITF /*777 QIODevice **/, format 
 /*
 Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
 */
-func (*QSslCertificate) NewForInherit__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslCertificate {
-	return NewQSslCertificate__(device)
+func (*QSslCertificate) NewForInheritp(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslCertificate {
+	return NewQSslCertificatep(device)
 }
-func NewQSslCertificate__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslCertificate {
+func NewQSslCertificatep(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -121,10 +121,10 @@ func NewQSslCertificate__(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QSsl
 /*
 Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
 */
-func (*QSslCertificate) NewForInherit_1(data qtcore.QByteArray_ITF, format int) *QSslCertificate {
-	return NewQSslCertificate_1(data, format)
+func (*QSslCertificate) NewForInherit1(data qtcore.QByteArray_ITF, format int) *QSslCertificate {
+	return NewQSslCertificate1(data, format)
 }
-func NewQSslCertificate_1(data qtcore.QByteArray_ITF, format int) *QSslCertificate {
+func NewQSslCertificate1(data qtcore.QByteArray_ITF, format int) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -144,10 +144,10 @@ func NewQSslCertificate_1(data qtcore.QByteArray_ITF, format int) *QSslCertifica
 /*
 Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
 */
-func (*QSslCertificate) NewForInherit_1_() *QSslCertificate {
-	return NewQSslCertificate_1_()
+func (*QSslCertificate) NewForInherit1p() *QSslCertificate {
+	return NewQSslCertificate1p()
 }
-func NewQSslCertificate_1_() *QSslCertificate {
+func NewQSslCertificate1p() *QSslCertificate {
 	// arg: 0, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg0 = qtcore.NewQByteArray()
 	// arg: 1, QSsl::EncodingFormat=Elaborated, QSsl::EncodingFormat=Enum, , Invalid
@@ -167,10 +167,10 @@ func NewQSslCertificate_1_() *QSslCertificate {
 /*
 Constructs a QSslCertificate by reading format encoded data from device and using the first certificate found. You can later call isNull() to see if device contained a certificate, and if this certificate was loaded successfully.
 */
-func (*QSslCertificate) NewForInherit_1_1(data qtcore.QByteArray_ITF) *QSslCertificate {
-	return NewQSslCertificate_1_1(data)
+func (*QSslCertificate) NewForInherit1p1(data qtcore.QByteArray_ITF) *QSslCertificate {
+	return NewQSslCertificate1p1(data)
 }
-func NewQSslCertificate_1_1(data qtcore.QByteArray_ITF) *QSslCertificate {
+func NewQSslCertificate1p1(data qtcore.QByteArray_ITF) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -223,7 +223,7 @@ func (this *QSslCertificate) Operator_equal(other unsafe.Pointer /*333*/) *QSslC
 /*
 
  */
-func (this *QSslCertificate) Operator_equal_1(other QSslCertificate_ITF) *QSslCertificate {
+func (this *QSslCertificate) Operator_equal1(other QSslCertificate_ITF) *QSslCertificate {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslCertificate_PTR() != nil {
 		convArg0 = other.QSslCertificate_PTR().GetCthis()
@@ -413,7 +413,7 @@ func (this *QSslCertificate) Digest(algorithm int) *qtcore.QByteArray /*123*/ {
 /*
 Returns a cryptographic digest of this certificate. By default, an MD5 digest will be generated, but you can also specify a custom algorithm.
 */
-func (this *QSslCertificate) Digest__() *qtcore.QByteArray /*123*/ {
+func (this *QSslCertificate) Digestp() *qtcore.QByteArray /*123*/ {
 	// arg: 0, QCryptographicHash::Algorithm=Elaborated, QCryptographicHash::Algorithm=Enum, , Invalid
 	algorithm := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate6digestEN18QCryptographicHash9AlgorithmE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), algorithm)
@@ -451,7 +451,7 @@ Returns the issuer information for the subject from the certificate, or an empty
 
 See also subjectInfo().
 */
-func (this *QSslCertificate) IssuerInfo_1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
+func (this *QSslCertificate) IssuerInfo1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if attribute != nil && attribute.QByteArray_PTR() != nil {
 		convArg0 = attribute.QByteArray_PTR().GetCthis()
@@ -491,7 +491,7 @@ Returns the information for the subject, or an empty list if there is no informa
 
 See also issuerInfo().
 */
-func (this *QSslCertificate) SubjectInfo_1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
+func (this *QSslCertificate) SubjectInfo1(attribute qtcore.QByteArray_ITF) *qtcore.QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if attribute != nil && attribute.QByteArray_PTR() != nil {
 		convArg0 = attribute.QByteArray_PTR().GetCthis()

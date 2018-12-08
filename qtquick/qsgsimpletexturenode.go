@@ -129,7 +129,7 @@ Sets the target rect of this texture node to r.
 
 See also rect().
 */
-func (this *QSGSimpleTextureNode) SetRect_1(x float64, y float64, w float64, h float64) {
+func (this *QSGSimpleTextureNode) SetRect1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -185,7 +185,7 @@ This function was introduced in  Qt 5.5.
 
 See also sourceRect().
 */
-func (this *QSGSimpleTextureNode) SetSourceRect_1(x float64, y float64, w float64, h float64) {
+func (this *QSGSimpleTextureNode) SetSourceRect1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode13setSourceRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }

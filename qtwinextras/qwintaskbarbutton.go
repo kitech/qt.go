@@ -114,10 +114,10 @@ Constructs a QWinTaskbarButton with the specified parent.
 
 If parent is an instance of QWindow, it is automatically assigned as the taskbar button's window.
 */
-func (*QWinTaskbarButton) NewForInherit__() *QWinTaskbarButton {
-	return NewQWinTaskbarButton__()
+func (*QWinTaskbarButton) NewForInheritp() *QWinTaskbarButton {
+	return NewQWinTaskbarButtonp()
 }
-func NewQWinTaskbarButton__() *QWinTaskbarButton {
+func NewQWinTaskbarButtonp() *QWinTaskbarButton {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButtonC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -268,7 +268,7 @@ func (this *QWinTaskbarButton) SetOverlayIcon(icon qtgui.QIcon_ITF) {
 
  */
 func (this *QWinTaskbarButton) SetOverlayAccessibleDescription(description string) {
-	var tmpArg0 = qtcore.NewQString_5(description)
+	var tmpArg0 = qtcore.NewQString5(description)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton31setOverlayAccessibleDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

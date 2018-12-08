@@ -100,10 +100,10 @@ Constructs a QNetworkRequest object with url as the URL to be requested.
 
 See also url() and setUrl().
 */
-func (*QNetworkRequest) NewForInherit__() *QNetworkRequest {
-	return NewQNetworkRequest__()
+func (*QNetworkRequest) NewForInheritp() *QNetworkRequest {
+	return NewQNetworkRequestp()
 }
-func NewQNetworkRequest__() *QNetworkRequest {
+func NewQNetworkRequestp() *QNetworkRequest {
 	// arg: 0, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg0 = qtcore.NewQUrl()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkRequestC2ERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -152,7 +152,7 @@ func (this *QNetworkRequest) Operator_equal(other unsafe.Pointer /*333*/) *QNetw
 /*
 
  */
-func (this *QNetworkRequest) Operator_equal_1(other QNetworkRequest_ITF) *QNetworkRequest {
+func (this *QNetworkRequest) Operator_equal1(other QNetworkRequest_ITF) *QNetworkRequest {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkRequest_PTR() != nil {
 		convArg0 = other.QNetworkRequest_PTR().GetCthis()
@@ -407,7 +407,7 @@ Note: This function does not apply the defaults listed in QNetworkRequest::Attri
 
 See also setAttribute() and QNetworkRequest::Attribute.
 */
-func (this *QNetworkRequest) Attribute__(code int) *qtcore.QVariant /*123*/ {
+func (this *QNetworkRequest) Attributep(code int) *qtcore.QVariant /*123*/ {
 	// arg: 1, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg1 = qtcore.NewQVariant()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest9attributeENS_9AttributeERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1)

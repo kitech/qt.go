@@ -155,10 +155,10 @@ func NewQMediaAudioProbeControl(parent qtcore.QObject_ITF /*777 QObject **/) *QM
 /*
 Create a new media audio probe control object with the given parent.
 */
-func (*QMediaAudioProbeControl) NewForInherit__() *QMediaAudioProbeControl {
-	return NewQMediaAudioProbeControl__()
+func (*QMediaAudioProbeControl) NewForInheritp() *QMediaAudioProbeControl {
+	return NewQMediaAudioProbeControlp()
 }
-func NewQMediaAudioProbeControl__() *QMediaAudioProbeControl {
+func NewQMediaAudioProbeControlp() *QMediaAudioProbeControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QMediaAudioProbeControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

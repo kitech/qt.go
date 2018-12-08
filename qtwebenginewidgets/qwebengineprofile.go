@@ -118,10 +118,10 @@ func NewQWebEngineProfile(parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngi
 /*
 
  */
-func (*QWebEngineProfile) NewForInherit__() *QWebEngineProfile {
-	return NewQWebEngineProfile__()
+func (*QWebEngineProfile) NewForInheritp() *QWebEngineProfile {
+	return NewQWebEngineProfilep()
 }
-func NewQWebEngineProfile__() *QWebEngineProfile {
+func NewQWebEngineProfilep() *QWebEngineProfile {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWebEngineProfileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -139,11 +139,11 @@ func NewQWebEngineProfile__() *QWebEngineProfile {
 /*
 
  */
-func (*QWebEngineProfile) NewForInherit_1(name string, parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineProfile {
-	return NewQWebEngineProfile_1(name, parent)
+func (*QWebEngineProfile) NewForInherit1(name string, parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineProfile {
+	return NewQWebEngineProfile1(name, parent)
 }
-func NewQWebEngineProfile_1(name string, parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineProfile {
-	var tmpArg0 = qtcore.NewQString_5(name)
+func NewQWebEngineProfile1(name string, parent qtcore.QObject_ITF /*777 QObject **/) *QWebEngineProfile {
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QObject_PTR() != nil {
@@ -164,11 +164,11 @@ func NewQWebEngineProfile_1(name string, parent qtcore.QObject_ITF /*777 QObject
 /*
 
  */
-func (*QWebEngineProfile) NewForInherit_1_(name string) *QWebEngineProfile {
-	return NewQWebEngineProfile_1_(name)
+func (*QWebEngineProfile) NewForInherit1p(name string) *QWebEngineProfile {
+	return NewQWebEngineProfile1p(name)
 }
-func NewQWebEngineProfile_1_(name string) *QWebEngineProfile {
-	var tmpArg0 = qtcore.NewQString_5(name)
+func NewQWebEngineProfile1p(name string) *QWebEngineProfile {
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -251,7 +251,7 @@ func (this *QWebEngineProfile) PersistentStoragePath() string {
 
  */
 func (this *QWebEngineProfile) SetPersistentStoragePath(path string) {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWebEngineProfile24setPersistentStoragePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -283,7 +283,7 @@ func (this *QWebEngineProfile) CachePath() string {
 
  */
 func (this *QWebEngineProfile) SetCachePath(path string) {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWebEngineProfile12setCachePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -315,7 +315,7 @@ func (this *QWebEngineProfile) HttpUserAgent() string {
 
  */
 func (this *QWebEngineProfile) SetHttpUserAgent(userAgent string) {
-	var tmpArg0 = qtcore.NewQString_5(userAgent)
+	var tmpArg0 = qtcore.NewQString5(userAgent)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWebEngineProfile16setHttpUserAgentERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -357,7 +357,7 @@ func (this *QWebEngineProfile) SetHttpCacheType(arg0 int) {
 
  */
 func (this *QWebEngineProfile) SetHttpAcceptLanguage(httpAcceptLanguage string) {
-	var tmpArg0 = qtcore.NewQString_5(httpAcceptLanguage)
+	var tmpArg0 = qtcore.NewQString5(httpAcceptLanguage)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWebEngineProfile21setHttpAcceptLanguageERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -110,10 +110,10 @@ func NewQAbstractVideoFilter(parent qtcore.QObject_ITF /*777 QObject **/) *QAbst
 /*
 Constructs a new QAbstractVideoFilter instance with parent object parent.
 */
-func (*QAbstractVideoFilter) NewForInherit__() *QAbstractVideoFilter {
-	return NewQAbstractVideoFilter__()
+func (*QAbstractVideoFilter) NewForInheritp() *QAbstractVideoFilter {
+	return NewQAbstractVideoFilterp()
 }
-func NewQAbstractVideoFilter__() *QAbstractVideoFilter {
+func NewQAbstractVideoFilterp() *QAbstractVideoFilter {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QAbstractVideoFilterC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

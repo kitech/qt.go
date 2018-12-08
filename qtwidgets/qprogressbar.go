@@ -132,10 +132,10 @@ By default, the minimum step value is set to 0, and the maximum to 100.
 
 See also setRange().
 */
-func (*QProgressBar) NewForInherit__() *QProgressBar {
-	return NewQProgressBar__()
+func (*QProgressBar) NewForInheritp() *QProgressBar {
+	return NewQProgressBarp()
 }
-func NewQProgressBar__() *QProgressBar {
+func NewQProgressBarp() *QProgressBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -382,7 +382,7 @@ func (this *QProgressBar) TextDirection() int {
 
  */
 func (this *QProgressBar) SetFormat(format string) {
-	var tmpArg0 = qtcore.NewQString_5(format)
+	var tmpArg0 = qtcore.NewQString5(format)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar9setFormatERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

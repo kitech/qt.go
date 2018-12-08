@@ -91,10 +91,10 @@ func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) 
 /*
 Constructs a QOperatingSystemVersion consisting of the OS type osType, and major, minor, and micro version numbers vmajor, vminor and vmicro, respectively.
 */
-func (*QOperatingSystemVersion) NewForInherit__(osType int, vmajor int) *QOperatingSystemVersion {
-	return NewQOperatingSystemVersion__(osType, vmajor)
+func (*QOperatingSystemVersion) NewForInheritp(osType int, vmajor int) *QOperatingSystemVersion {
+	return NewQOperatingSystemVersionp(osType, vmajor)
 }
-func NewQOperatingSystemVersion__(osType int, vmajor int) *QOperatingSystemVersion {
+func NewQOperatingSystemVersionp(osType int, vmajor int) *QOperatingSystemVersion {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	vminor := int(-1)
 	// arg: 3, int=Int, =Invalid, , Invalid
@@ -114,10 +114,10 @@ func NewQOperatingSystemVersion__(osType int, vmajor int) *QOperatingSystemVersi
 /*
 Constructs a QOperatingSystemVersion consisting of the OS type osType, and major, minor, and micro version numbers vmajor, vminor and vmicro, respectively.
 */
-func (*QOperatingSystemVersion) NewForInherit__1(osType int, vmajor int, vminor int) *QOperatingSystemVersion {
-	return NewQOperatingSystemVersion__1(osType, vmajor, vminor)
+func (*QOperatingSystemVersion) NewForInheritp1(osType int, vmajor int, vminor int) *QOperatingSystemVersion {
+	return NewQOperatingSystemVersionp1(osType, vmajor, vminor)
 }
-func NewQOperatingSystemVersion__1(osType int, vmajor int, vminor int) *QOperatingSystemVersion {
+func NewQOperatingSystemVersionp1(osType int, vmajor int, vminor int) *QOperatingSystemVersion {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	vmicro := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", qtrt.FFI_TYPE_POINTER, osType, vmajor, vminor, vmicro)

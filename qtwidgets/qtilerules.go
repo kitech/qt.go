@@ -93,10 +93,10 @@ func NewQTileRules(horizontalRule int, verticalRule int) *QTileRules {
 /*
 
  */
-func (*QTileRules) NewForInherit_1(rule int) *QTileRules {
-	return NewQTileRules_1(rule)
+func (*QTileRules) NewForInherit1(rule int) *QTileRules {
+	return NewQTileRules1(rule)
 }
-func NewQTileRules_1(rule int) *QTileRules {
+func NewQTileRules1(rule int) *QTileRules {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleE", qtrt.FFI_TYPE_POINTER, rule)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTileRulesFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -112,10 +112,10 @@ func NewQTileRules_1(rule int) *QTileRules {
 /*
 
  */
-func (*QTileRules) NewForInherit_1_() *QTileRules {
-	return NewQTileRules_1_()
+func (*QTileRules) NewForInherit1p() *QTileRules {
+	return NewQTileRules1p()
 }
-func NewQTileRules_1_() *QTileRules {
+func NewQTileRules1p() *QTileRules {
 	// arg: 0, Qt::TileRule=Elaborated, Qt::TileRule=Enum, , Invalid
 	rule := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleE", qtrt.FFI_TYPE_POINTER, rule)

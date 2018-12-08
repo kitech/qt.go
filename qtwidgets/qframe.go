@@ -138,10 +138,10 @@ Constructs a frame widget with frame style NoFrame and a 1-pixel frame width.
 
 The parent and f arguments are passed to the QWidget constructor.
 */
-func (*QFrame) NewForInherit__() *QFrame {
-	return NewQFrame__()
+func (*QFrame) NewForInheritp() *QFrame {
+	return NewQFramep()
 }
-func NewQFrame__() *QFrame {
+func NewQFramep() *QFrame {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
@@ -163,10 +163,10 @@ Constructs a frame widget with frame style NoFrame and a 1-pixel frame width.
 
 The parent and f arguments are passed to the QWidget constructor.
 */
-func (*QFrame) NewForInherit__1(parent QWidget_ITF /*777 QWidget **/) *QFrame {
-	return NewQFrame__1(parent)
+func (*QFrame) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QFrame {
+	return NewQFramep1(parent)
 }
-func NewQFrame__1(parent QWidget_ITF /*777 QWidget **/) *QFrame {
+func NewQFramep1(parent QWidget_ITF /*777 QWidget **/) *QFrame {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()

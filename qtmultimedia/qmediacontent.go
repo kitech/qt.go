@@ -94,10 +94,10 @@ func NewQMediaContent() *QMediaContent {
 /*
 Constructs a null QMediaContent.
 */
-func (*QMediaContent) NewForInherit_1(contentUrl qtcore.QUrl_ITF) *QMediaContent {
-	return NewQMediaContent_1(contentUrl)
+func (*QMediaContent) NewForInherit1(contentUrl qtcore.QUrl_ITF) *QMediaContent {
+	return NewQMediaContent1(contentUrl)
 }
-func NewQMediaContent_1(contentUrl qtcore.QUrl_ITF) *QMediaContent {
+func NewQMediaContent1(contentUrl qtcore.QUrl_ITF) *QMediaContent {
 	var convArg0 unsafe.Pointer
 	if contentUrl != nil && contentUrl.QUrl_PTR() != nil {
 		convArg0 = contentUrl.QUrl_PTR().GetCthis()
@@ -117,10 +117,10 @@ func NewQMediaContent_1(contentUrl qtcore.QUrl_ITF) *QMediaContent {
 /*
 Constructs a null QMediaContent.
 */
-func (*QMediaContent) NewForInherit_2(contentRequest qtnetwork.QNetworkRequest_ITF) *QMediaContent {
-	return NewQMediaContent_2(contentRequest)
+func (*QMediaContent) NewForInherit2(contentRequest qtnetwork.QNetworkRequest_ITF) *QMediaContent {
+	return NewQMediaContent2(contentRequest)
 }
-func NewQMediaContent_2(contentRequest qtnetwork.QNetworkRequest_ITF) *QMediaContent {
+func NewQMediaContent2(contentRequest qtnetwork.QNetworkRequest_ITF) *QMediaContent {
 	var convArg0 unsafe.Pointer
 	if contentRequest != nil && contentRequest.QNetworkRequest_PTR() != nil {
 		convArg0 = contentRequest.QNetworkRequest_PTR().GetCthis()
@@ -140,10 +140,10 @@ func NewQMediaContent_2(contentRequest qtnetwork.QNetworkRequest_ITF) *QMediaCon
 /*
 Constructs a null QMediaContent.
 */
-func (*QMediaContent) NewForInherit_3(contentResource QMediaResource_ITF) *QMediaContent {
-	return NewQMediaContent_3(contentResource)
+func (*QMediaContent) NewForInherit3(contentResource QMediaResource_ITF) *QMediaContent {
+	return NewQMediaContent3(contentResource)
 }
-func NewQMediaContent_3(contentResource QMediaResource_ITF) *QMediaContent {
+func NewQMediaContent3(contentResource QMediaResource_ITF) *QMediaContent {
 	var convArg0 unsafe.Pointer
 	if contentResource != nil && contentResource.QMediaResource_PTR() != nil {
 		convArg0 = contentResource.QMediaResource_PTR().GetCthis()
@@ -163,10 +163,10 @@ func NewQMediaContent_3(contentResource QMediaResource_ITF) *QMediaContent {
 /*
 Constructs a null QMediaContent.
 */
-func (*QMediaContent) NewForInherit_4(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/, contentUrl qtcore.QUrl_ITF, takeOwnership bool) *QMediaContent {
-	return NewQMediaContent_4(playlist, contentUrl, takeOwnership)
+func (*QMediaContent) NewForInherit4(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/, contentUrl qtcore.QUrl_ITF, takeOwnership bool) *QMediaContent {
+	return NewQMediaContent4(playlist, contentUrl, takeOwnership)
 }
-func NewQMediaContent_4(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/, contentUrl qtcore.QUrl_ITF, takeOwnership bool) *QMediaContent {
+func NewQMediaContent4(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/, contentUrl qtcore.QUrl_ITF, takeOwnership bool) *QMediaContent {
 	var convArg0 unsafe.Pointer
 	if playlist != nil && playlist.QMediaPlaylist_PTR() != nil {
 		convArg0 = playlist.QMediaPlaylist_PTR().GetCthis()
@@ -190,10 +190,10 @@ func NewQMediaContent_4(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/, co
 /*
 Constructs a null QMediaContent.
 */
-func (*QMediaContent) NewForInherit_4_(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/) *QMediaContent {
-	return NewQMediaContent_4_(playlist)
+func (*QMediaContent) NewForInherit4p(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/) *QMediaContent {
+	return NewQMediaContent4p(playlist)
 }
-func NewQMediaContent_4_(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/) *QMediaContent {
+func NewQMediaContent4p(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/) *QMediaContent {
 	var convArg0 unsafe.Pointer
 	if playlist != nil && playlist.QMediaPlaylist_PTR() != nil {
 		convArg0 = playlist.QMediaPlaylist_PTR().GetCthis()
@@ -217,10 +217,10 @@ func NewQMediaContent_4_(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/) *
 /*
 Constructs a null QMediaContent.
 */
-func (*QMediaContent) NewForInherit_4_1(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/, contentUrl qtcore.QUrl_ITF) *QMediaContent {
-	return NewQMediaContent_4_1(playlist, contentUrl)
+func (*QMediaContent) NewForInherit4p1(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/, contentUrl qtcore.QUrl_ITF) *QMediaContent {
+	return NewQMediaContent4p1(playlist, contentUrl)
 }
-func NewQMediaContent_4_1(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/, contentUrl qtcore.QUrl_ITF) *QMediaContent {
+func NewQMediaContent4p1(playlist QMediaPlaylist_ITF /*777 QMediaPlaylist **/, contentUrl qtcore.QUrl_ITF) *QMediaContent {
 	var convArg0 unsafe.Pointer
 	if playlist != nil && playlist.QMediaPlaylist_PTR() != nil {
 		convArg0 = playlist.QMediaPlaylist_PTR().GetCthis()

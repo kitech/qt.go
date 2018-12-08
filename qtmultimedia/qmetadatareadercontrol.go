@@ -119,7 +119,7 @@ func (this *QMetaDataReaderControl) IsMetaDataAvailable() bool {
 Returns the meta-data for the given key.
 */
 func (this *QMetaDataReaderControl) MetaData(key string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QMetaDataReaderControl8metaDataERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -181,8 +181,8 @@ Note: Signal metaDataChanged is overloaded in this class. To connect to this sig
   connect(metaDataReaderControl, QOverload<>::of(&QMetaDataReaderControl::metaDataChanged),
       [=](){ /-* ... *-/ });
 */
-func (this *QMetaDataReaderControl) MetaDataChanged_1(key string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+func (this *QMetaDataReaderControl) MetaDataChanged1(key string, value qtcore.QVariant_ITF) {
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -236,10 +236,10 @@ func NewQMetaDataReaderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMe
 /*
 Construct a QMetaDataReaderControl with parent. This class is meant as a base class for service specific meta data providers so this constructor is protected.
 */
-func (*QMetaDataReaderControl) NewForInherit__() *QMetaDataReaderControl {
-	return NewQMetaDataReaderControl__()
+func (*QMetaDataReaderControl) NewForInheritp() *QMetaDataReaderControl {
+	return NewQMetaDataReaderControlp()
 }
-func NewQMetaDataReaderControl__() *QMetaDataReaderControl {
+func NewQMetaDataReaderControlp() *QMetaDataReaderControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QMetaDataReaderControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

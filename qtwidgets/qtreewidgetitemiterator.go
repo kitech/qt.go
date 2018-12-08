@@ -97,10 +97,10 @@ func NewQTreeWidgetItemIterator(widget QTreeWidget_ITF /*777 QTreeWidget **/, fl
 /*
 Constructs an iterator for the same QTreeWidget as it. The current iterator item is set to point on the current item of it.
 */
-func (*QTreeWidgetItemIterator) NewForInherit__(widget QTreeWidget_ITF /*777 QTreeWidget **/) *QTreeWidgetItemIterator {
-	return NewQTreeWidgetItemIterator__(widget)
+func (*QTreeWidgetItemIterator) NewForInheritp(widget QTreeWidget_ITF /*777 QTreeWidget **/) *QTreeWidgetItemIterator {
+	return NewQTreeWidgetItemIteratorp(widget)
 }
-func NewQTreeWidgetItemIterator__(widget QTreeWidget_ITF /*777 QTreeWidget **/) *QTreeWidgetItemIterator {
+func NewQTreeWidgetItemIteratorp(widget QTreeWidget_ITF /*777 QTreeWidget **/) *QTreeWidgetItemIterator {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QTreeWidget_PTR() != nil {
 		convArg0 = widget.QTreeWidget_PTR().GetCthis()
@@ -122,10 +122,10 @@ func NewQTreeWidgetItemIterator__(widget QTreeWidget_ITF /*777 QTreeWidget **/) 
 /*
 Constructs an iterator for the same QTreeWidget as it. The current iterator item is set to point on the current item of it.
 */
-func (*QTreeWidgetItemIterator) NewForInherit_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, flags int) *QTreeWidgetItemIterator {
-	return NewQTreeWidgetItemIterator_1(item, flags)
+func (*QTreeWidgetItemIterator) NewForInherit1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, flags int) *QTreeWidgetItemIterator {
+	return NewQTreeWidgetItemIterator1(item, flags)
 }
-func NewQTreeWidgetItemIterator_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, flags int) *QTreeWidgetItemIterator {
+func NewQTreeWidgetItemIterator1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, flags int) *QTreeWidgetItemIterator {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
@@ -145,10 +145,10 @@ func NewQTreeWidgetItemIterator_1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem
 /*
 Constructs an iterator for the same QTreeWidget as it. The current iterator item is set to point on the current item of it.
 */
-func (*QTreeWidgetItemIterator) NewForInherit_1_(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItemIterator {
-	return NewQTreeWidgetItemIterator_1_(item)
+func (*QTreeWidgetItemIterator) NewForInherit1p(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItemIterator {
+	return NewQTreeWidgetItemIterator1p(item)
 }
-func NewQTreeWidgetItemIterator_1_(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItemIterator {
+func NewQTreeWidgetItemIterator1p(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) *QTreeWidgetItemIterator {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTreeWidgetItem_PTR() != nil {
 		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
@@ -221,7 +221,7 @@ func (this *QTreeWidgetItemIterator) Operator_add_add() *QTreeWidgetItemIterator
 /*
 
  */
-func (this *QTreeWidgetItemIterator) Operator_add_add_1(arg0 int) *QTreeWidgetItemIterator /*123*/ {
+func (this *QTreeWidgetItemIterator) Operator_add_add1(arg0 int) *QTreeWidgetItemIterator /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorppEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTreeWidgetItemIteratorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -269,7 +269,7 @@ func (this *QTreeWidgetItemIterator) Operator_minus_minus() *QTreeWidgetItemIter
 /*
 The prefix -- operator (--it) advances the iterator to the previous matching item and returns a reference to the resulting iterator. Sets the current pointer to 0 if the current item is the first matching item.
 */
-func (this *QTreeWidgetItemIterator) Operator_minus_minus_1(arg0 int) *QTreeWidgetItemIterator /*123*/ {
+func (this *QTreeWidgetItemIterator) Operator_minus_minus1(arg0 int) *QTreeWidgetItemIterator /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratormmEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTreeWidgetItemIteratorFromPointer(unsafe.Pointer(uintptr(rv))) // 333

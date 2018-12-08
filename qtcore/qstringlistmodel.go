@@ -107,10 +107,10 @@ func NewQStringListModel(parent QObject_ITF /*777 QObject **/) *QStringListModel
 /*
 Constructs a string list model with the given parent.
 */
-func (*QStringListModel) NewForInherit__() *QStringListModel {
-	return NewQStringListModel__()
+func (*QStringListModel) NewForInheritp() *QStringListModel {
+	return NewQStringListModelp()
 }
-func NewQStringListModel__() *QStringListModel {
+func NewQStringListModelp() *QStringListModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStringListModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -128,10 +128,10 @@ func NewQStringListModel__() *QStringListModel {
 /*
 Constructs a string list model with the given parent.
 */
-func (*QStringListModel) NewForInherit_1(strings QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QStringListModel {
-	return NewQStringListModel_1(strings, parent)
+func (*QStringListModel) NewForInherit1(strings QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QStringListModel {
+	return NewQStringListModel1(strings, parent)
 }
-func NewQStringListModel_1(strings QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QStringListModel {
+func NewQStringListModel1(strings QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QStringListModel {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {
 		convArg0 = strings.QStringList_PTR().GetCthis()
@@ -155,10 +155,10 @@ func NewQStringListModel_1(strings QStringList_ITF, parent QObject_ITF /*777 QOb
 /*
 Constructs a string list model with the given parent.
 */
-func (*QStringListModel) NewForInherit_1_(strings QStringList_ITF) *QStringListModel {
-	return NewQStringListModel_1_(strings)
+func (*QStringListModel) NewForInherit1p(strings QStringList_ITF) *QStringListModel {
+	return NewQStringListModel1p(strings)
 }
-func NewQStringListModel_1_(strings QStringList_ITF) *QStringListModel {
+func NewQStringListModel1p(strings QStringList_ITF) *QStringListModel {
 	var convArg0 unsafe.Pointer
 	if strings != nil && strings.QStringList_PTR() != nil {
 		convArg0 = strings.QStringList_PTR().GetCthis()
@@ -210,7 +210,7 @@ The optional parent argument is in most models used to specify the parent of the
 
 See also insertRows(), removeRows(), and QAbstractItemModel::rowCount().
 */
-func (this *QStringListModel) RowCount__() int {
+func (this *QStringListModel) RowCountp() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QStringListModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -278,7 +278,7 @@ If the view requests an invalid index, an invalid variant is returned.
 
 See also setData().
 */
-func (this *QStringListModel) Data__(index QModelIndex_ITF) *QVariant /*123*/ {
+func (this *QStringListModel) Datap(index QModelIndex_ITF) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -334,7 +334,7 @@ The dataChanged() signal is emitted if the item is changed.
 
 See also Qt::ItemDataRole and data().
 */
-func (this *QStringListModel) SetData__(index QModelIndex_ITF, value QVariant_ITF) bool {
+func (this *QStringListModel) SetDatap(index QModelIndex_ITF, value QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -412,7 +412,7 @@ The parent index of the rows is optional and is only used for consistency with Q
 
 See also QAbstractItemModel::insertRows().
 */
-func (this *QStringListModel) InsertRows__(row int, count int) bool {
+func (this *QStringListModel) InsertRowsp(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStringListModel10insertRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
@@ -458,7 +458,7 @@ The parent index of the rows is optional and is only used for consistency with Q
 
 See also QAbstractItemModel::removeRows().
 */
-func (this *QStringListModel) RemoveRows__(row int, count int) bool {
+func (this *QStringListModel) RemoveRowsp(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStringListModel10removeRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
@@ -487,7 +487,7 @@ func (this *QStringListModel) Sort(column int, order int) {
 /*
 Reimplemented from QAbstractItemModel::sort().
 */
-func (this *QStringListModel) Sort__(column int) {
+func (this *QStringListModel) Sortp(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QStringListModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)

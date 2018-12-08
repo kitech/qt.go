@@ -139,10 +139,10 @@ func NewQListWidget(parent QWidget_ITF /*777 QWidget **/) *QListWidget {
 /*
 Constructs an empty QListWidget with the given parent.
 */
-func (*QListWidget) NewForInherit__() *QListWidget {
-	return NewQListWidget__()
+func (*QListWidget) NewForInheritp() *QListWidget {
+	return NewQListWidgetp()
 }
-func NewQListWidget__() *QListWidget {
+func NewQListWidgetp() *QListWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -249,8 +249,8 @@ Inserts the item at the position in the list given by row.
 
 See also addItem().
 */
-func (this *QListWidget) InsertItem_1(row int, label string) {
-	var tmpArg1 = qtcore.NewQString_5(label)
+func (this *QListWidget) InsertItem1(row int, label string) {
+	var tmpArg1 = qtcore.NewQString5(label)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget10insertItemEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -284,7 +284,7 @@ func (this *QListWidget) InsertItems(row int, labels qtcore.QStringList_ITF) {
 Inserts an item with the text label at the end of the list widget.
 */
 func (this *QListWidget) AddItem(label string) {
-	var tmpArg0 = qtcore.NewQString_5(label)
+	var tmpArg0 = qtcore.NewQString5(label)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget7addItemERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -298,7 +298,7 @@ func (this *QListWidget) AddItem(label string) {
 /*
 Inserts an item with the text label at the end of the list widget.
 */
-func (this *QListWidget) AddItem_1(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
+func (this *QListWidget) AddItem1(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
 		convArg0 = item.QListWidgetItem_PTR().GetCthis()
@@ -407,7 +407,7 @@ Unless the selection mode is NoSelection, the item is also selected.
 
 See also currentItem().
 */
-func (this *QListWidget) SetCurrentItem_1(item QListWidgetItem_ITF /*777 QListWidgetItem **/, command int) {
+func (this *QListWidget) SetCurrentItem1(item QListWidgetItem_ITF /*777 QListWidgetItem **/, command int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
 		convArg0 = item.QListWidgetItem_PTR().GetCthis()
@@ -451,7 +451,7 @@ func (this *QListWidget) SetCurrentRow(row int) {
 /*
 
  */
-func (this *QListWidget) SetCurrentRow_1(row int, command int) {
+func (this *QListWidget) SetCurrentRow1(row int, command int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget13setCurrentRowEi6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, command)
 	qtrt.ErrPrint(err, rv)
 }
@@ -482,7 +482,7 @@ func (this *QListWidget) ItemAt(p qtcore.QPoint_ITF) *QListWidgetItem /*777 QLis
 /*
 Returns a pointer to the item at the coordinates p. The coordinates are relative to the list widget's viewport().
 */
-func (this *QListWidget) ItemAt_1(x int, y int) *QListWidgetItem /*777 QListWidgetItem **/ {
+func (this *QListWidget) ItemAt1(x int, y int) *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget6itemAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -529,7 +529,7 @@ func (this *QListWidget) SortItems(order int) {
 /*
 Sorts all the items in the list widget according to the specified order.
 */
-func (this *QListWidget) SortItems__() {
+func (this *QListWidget) SortItemsp() {
 	// arg: 0, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget9sortItemsEN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), order)
@@ -828,7 +828,7 @@ Scrolls the view if necessary to ensure that the item is visible.
 
 hint specifies where the item should be located after the operation.
 */
-func (this *QListWidget) ScrollToItem__(item QListWidgetItem_ITF /*777 const QListWidgetItem **/) {
+func (this *QListWidget) ScrollToItemp(item QListWidgetItem_ITF /*777 const QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
 		convArg0 = item.QListWidgetItem_PTR().GetCthis()
@@ -998,7 +998,7 @@ This signal is emitted whenever the current item changes.
 currentText is the text data in the current item. If there is no current item, the currentText is invalid.
 */
 func (this *QListWidget) CurrentTextChanged(currentText string) {
-	var tmpArg0 = qtcore.NewQString_5(currentText)
+	var tmpArg0 = qtcore.NewQString5(currentText)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget18currentTextChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

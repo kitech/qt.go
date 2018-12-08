@@ -138,10 +138,10 @@ Constructs an empty scroll area with the given parent.
 
 See also setWidget().
 */
-func (*QScrollArea) NewForInherit__() *QScrollArea {
-	return NewQScrollArea__()
+func (*QScrollArea) NewForInheritp() *QScrollArea {
+	return NewQScrollAreap()
 }
-func NewQScrollArea__() *QScrollArea {
+func NewQScrollAreap() *QScrollArea {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollAreaC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -330,7 +330,7 @@ func (this *QScrollArea) EnsureVisible(x int, y int, xmargin int, ymargin int) {
 /*
 Scrolls the contents of the scroll area so that the point (x, y) is visible inside the region of the viewport with margins specified in pixels by xmargin and ymargin. If the specified point cannot be reached, the contents are scrolled to the nearest valid position. The default value for both margins is 50 pixels.
 */
-func (this *QScrollArea) EnsureVisible__(x int, y int) {
+func (this *QScrollArea) EnsureVisiblep(x int, y int) {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	xmargin := int(50)
 	// arg: 3, int=Int, =Invalid, , Invalid
@@ -347,7 +347,7 @@ func (this *QScrollArea) EnsureVisible__(x int, y int) {
 /*
 Scrolls the contents of the scroll area so that the point (x, y) is visible inside the region of the viewport with margins specified in pixels by xmargin and ymargin. If the specified point cannot be reached, the contents are scrolled to the nearest valid position. The default value for both margins is 50 pixels.
 */
-func (this *QScrollArea) EnsureVisible__1(x int, y int, xmargin int) {
+func (this *QScrollArea) EnsureVisiblep1(x int, y int, xmargin int) {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	ymargin := int(50)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QScrollArea13ensureVisibleEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, xmargin, ymargin)
@@ -383,7 +383,7 @@ Scrolls the contents of the scroll area so that the childWidget of QScrollArea::
 
 This function was introduced in  Qt 4.2.
 */
-func (this *QScrollArea) EnsureWidgetVisible__(childWidget QWidget_ITF /*777 QWidget **/) {
+func (this *QScrollArea) EnsureWidgetVisiblep(childWidget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if childWidget != nil && childWidget.QWidget_PTR() != nil {
 		convArg0 = childWidget.QWidget_PTR().GetCthis()
@@ -406,7 +406,7 @@ Scrolls the contents of the scroll area so that the childWidget of QScrollArea::
 
 This function was introduced in  Qt 4.2.
 */
-func (this *QScrollArea) EnsureWidgetVisible__1(childWidget QWidget_ITF /*777 QWidget **/, xmargin int) {
+func (this *QScrollArea) EnsureWidgetVisiblep1(childWidget QWidget_ITF /*777 QWidget **/, xmargin int) {
 	var convArg0 unsafe.Pointer
 	if childWidget != nil && childWidget.QWidget_PTR() != nil {
 		convArg0 = childWidget.QWidget_PTR().GetCthis()

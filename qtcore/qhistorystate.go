@@ -122,10 +122,10 @@ func NewQHistoryState(parent QState_ITF /*777 QState **/) *QHistoryState {
 /*
 Constructs a new shallow history state with the given parent state.
 */
-func (*QHistoryState) NewForInherit__() *QHistoryState {
-	return NewQHistoryState__()
+func (*QHistoryState) NewForInheritp() *QHistoryState {
+	return NewQHistoryStatep()
 }
-func NewQHistoryState__() *QHistoryState {
+func NewQHistoryStatep() *QHistoryState {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -143,10 +143,10 @@ func NewQHistoryState__() *QHistoryState {
 /*
 Constructs a new shallow history state with the given parent state.
 */
-func (*QHistoryState) NewForInherit_1(type_ int, parent QState_ITF /*777 QState **/) *QHistoryState {
-	return NewQHistoryState_1(type_, parent)
+func (*QHistoryState) NewForInherit1(type_ int, parent QState_ITF /*777 QState **/) *QHistoryState {
+	return NewQHistoryState1(type_, parent)
 }
-func NewQHistoryState_1(type_ int, parent QState_ITF /*777 QState **/) *QHistoryState {
+func NewQHistoryState1(type_ int, parent QState_ITF /*777 QState **/) *QHistoryState {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QState_PTR() != nil {
 		convArg1 = parent.QState_PTR().GetCthis()
@@ -166,10 +166,10 @@ func NewQHistoryState_1(type_ int, parent QState_ITF /*777 QState **/) *QHistory
 /*
 Constructs a new shallow history state with the given parent state.
 */
-func (*QHistoryState) NewForInherit_1_(type_ int) *QHistoryState {
-	return NewQHistoryState_1_(type_)
+func (*QHistoryState) NewForInherit1p(type_ int) *QHistoryState {
+	return NewQHistoryState1p(type_)
 }
-func NewQHistoryState_1_(type_ int) *QHistoryState {
+func NewQHistoryState1p(type_ int) *QHistoryState {
 	// arg: 1, QState *=Pointer, QState=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2ENS_11HistoryTypeEP6QState", qtrt.FFI_TYPE_POINTER, type_, convArg1)

@@ -110,10 +110,10 @@ func NewQWinTaskbarProgress(parent qtcore.QObject_ITF /*777 QObject **/) *QWinTa
 /*
 Constructs a QWinTaskbarProgress with the parent object parent.
 */
-func (*QWinTaskbarProgress) NewForInherit__() *QWinTaskbarProgress {
-	return NewQWinTaskbarProgress__()
+func (*QWinTaskbarProgress) NewForInheritp() *QWinTaskbarProgress {
+	return NewQWinTaskbarProgressp()
 }
-func NewQWinTaskbarProgress__() *QWinTaskbarProgress {
+func NewQWinTaskbarProgressp() *QWinTaskbarProgress {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QWinTaskbarProgressC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

@@ -97,7 +97,7 @@ func NewQAccessibleWidget(o QWidget_ITF /*777 QWidget **/, r int, name string) *
 	if o != nil && o.QWidget_PTR() != nil {
 		convArg0 = o.QWidget_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(name)
+	var tmpArg2 = qtcore.NewQString5(name)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleWidgetC2EP7QWidgetN11QAccessible4RoleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0, r, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -114,10 +114,10 @@ func NewQAccessibleWidget(o QWidget_ITF /*777 QWidget **/, r int, name string) *
 /*
 Creates a QAccessibleWidget object for widget w. role and name are optional parameters that set the object's role and name properties.
 */
-func (*QAccessibleWidget) NewForInherit__(o QWidget_ITF /*777 QWidget **/) *QAccessibleWidget {
-	return NewQAccessibleWidget__(o)
+func (*QAccessibleWidget) NewForInheritp(o QWidget_ITF /*777 QWidget **/) *QAccessibleWidget {
+	return NewQAccessibleWidgetp(o)
 }
-func NewQAccessibleWidget__(o QWidget_ITF /*777 QWidget **/) *QAccessibleWidget {
+func NewQAccessibleWidgetp(o QWidget_ITF /*777 QWidget **/) *QAccessibleWidget {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QWidget_PTR() != nil {
 		convArg0 = o.QWidget_PTR().GetCthis()
@@ -141,10 +141,10 @@ func NewQAccessibleWidget__(o QWidget_ITF /*777 QWidget **/) *QAccessibleWidget 
 /*
 Creates a QAccessibleWidget object for widget w. role and name are optional parameters that set the object's role and name properties.
 */
-func (*QAccessibleWidget) NewForInherit__1(o QWidget_ITF /*777 QWidget **/, r int) *QAccessibleWidget {
-	return NewQAccessibleWidget__1(o, r)
+func (*QAccessibleWidget) NewForInheritp1(o QWidget_ITF /*777 QWidget **/, r int) *QAccessibleWidget {
+	return NewQAccessibleWidgetp1(o, r)
 }
-func NewQAccessibleWidget__1(o QWidget_ITF /*777 QWidget **/, r int) *QAccessibleWidget {
+func NewQAccessibleWidgetp1(o QWidget_ITF /*777 QWidget **/, r int) *QAccessibleWidget {
 	var convArg0 unsafe.Pointer
 	if o != nil && o.QWidget_PTR() != nil {
 		convArg0 = o.QWidget_PTR().GetCthis()
@@ -392,7 +392,7 @@ func (this *QAccessibleWidget) ActionNames() *qtcore.QStringList /*123*/ {
 Reimplemented from QAccessibleActionInterface::doAction().
 */
 func (this *QAccessibleWidget) DoAction(actionName string) {
-	var tmpArg0 = qtcore.NewQString_5(actionName)
+	var tmpArg0 = qtcore.NewQString5(actionName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleWidget8doActionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -407,7 +407,7 @@ func (this *QAccessibleWidget) DoAction(actionName string) {
 Reimplemented from QAccessibleActionInterface::keyBindingsForAction().
 */
 func (this *QAccessibleWidget) KeyBindingsForAction(actionName string) *qtcore.QStringList /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(actionName)
+	var tmpArg0 = qtcore.NewQString5(actionName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget20keyBindingsForActionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -470,7 +470,7 @@ Registers signal as a controlling signal.
 An object is a Controller to any other object connected to a controlling signal.
 */
 func (this *QAccessibleWidget) AddControllingSignal(signal string) {
-	var tmpArg0 = qtcore.NewQString_5(signal)
+	var tmpArg0 = qtcore.NewQString5(signal)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleWidget20addControllingSignalERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

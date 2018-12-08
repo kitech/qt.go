@@ -123,7 +123,7 @@ func (this *QHttpPart) Operator_equal(other unsafe.Pointer /*333*/) *QHttpPart {
 /*
 
  */
-func (this *QHttpPart) Operator_equal_1(other QHttpPart_ITF) *QHttpPart {
+func (this *QHttpPart) Operator_equal1(other QHttpPart_ITF) *QHttpPart {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QHttpPart_PTR() != nil {
 		convArg0 = other.QHttpPart_PTR().GetCthis()

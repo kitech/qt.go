@@ -95,10 +95,10 @@ func NewQGraphicsItemGroup(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QG
 /*
 
  */
-func (*QGraphicsItemGroup) NewForInherit__() *QGraphicsItemGroup {
-	return NewQGraphicsItemGroup__()
+func (*QGraphicsItemGroup) NewForInheritp() *QGraphicsItemGroup {
+	return NewQGraphicsItemGroupp()
 }
-func NewQGraphicsItemGroup__() *QGraphicsItemGroup {
+func NewQGraphicsItemGroupp() *QGraphicsItemGroup {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsItemGroupC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -276,7 +276,7 @@ Note: Enabling caching for an item does not guarantee that paint() will be invok
 
 See also setCacheMode(), QPen::width(), Item Coordinates, and ItemUsesExtendedStyleOption.
 */
-func (this *QGraphicsItemGroup) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+func (this *QGraphicsItemGroup) Paintp(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()

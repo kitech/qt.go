@@ -137,7 +137,7 @@ Returns the meta-data for the given key.
 See also setMetaData().
 */
 func (this *QMetaDataWriterControl) MetaData(key string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QMetaDataWriterControl8metaDataERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -157,7 +157,7 @@ Sets the value of the meta-data element with the given key.
 See also metaData().
 */
 func (this *QMetaDataWriterControl) SetMetaData(key string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -220,8 +220,8 @@ Note: Signal metaDataChanged is overloaded in this class. To connect to this sig
   connect(metaDataWriterControl, QOverload<>::of(&QMetaDataWriterControl::metaDataChanged),
       [=](){ /-* ... *-/ });
 */
-func (this *QMetaDataWriterControl) MetaDataChanged_1(key string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+func (this *QMetaDataWriterControl) MetaDataChanged1(key string, value qtcore.QVariant_ITF) {
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -288,10 +288,10 @@ func NewQMetaDataWriterControl(parent qtcore.QObject_ITF /*777 QObject **/) *QMe
 /*
 Construct a QMetaDataWriterControl with parent. This class is meant as a base class for service specific meta data providers so this constructor is protected.
 */
-func (*QMetaDataWriterControl) NewForInherit__() *QMetaDataWriterControl {
-	return NewQMetaDataWriterControl__()
+func (*QMetaDataWriterControl) NewForInheritp() *QMetaDataWriterControl {
+	return NewQMetaDataWriterControlp()
 }
-func NewQMetaDataWriterControl__() *QMetaDataWriterControl {
+func NewQMetaDataWriterControlp() *QMetaDataWriterControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QMetaDataWriterControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

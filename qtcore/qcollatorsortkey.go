@@ -107,7 +107,7 @@ func (this *QCollatorSortKey) Operator_equal(other QCollatorSortKey_ITF) *QColla
 /*
 
  */
-func (this *QCollatorSortKey) Operator_equal_1(other unsafe.Pointer /*333*/) *QCollatorSortKey {
+func (this *QCollatorSortKey) Operator_equal1(other unsafe.Pointer /*333*/) *QCollatorSortKey {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCollatorSortKeyaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQCollatorSortKeyFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

@@ -123,10 +123,10 @@ Constructs a color dialog with the given parent.
 
 This function was introduced in  Qt 4.5.
 */
-func (*QColorDialog) NewForInherit__() *QColorDialog {
-	return NewQColorDialog__()
+func (*QColorDialog) NewForInheritp() *QColorDialog {
+	return NewQColorDialogp()
 }
-func NewQColorDialog__() *QColorDialog {
+func NewQColorDialogp() *QColorDialog {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialogC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -146,10 +146,10 @@ Constructs a color dialog with the given parent.
 
 This function was introduced in  Qt 4.5.
 */
-func (*QColorDialog) NewForInherit_1(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QWidget **/) *QColorDialog {
-	return NewQColorDialog_1(initial, parent)
+func (*QColorDialog) NewForInherit1(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QWidget **/) *QColorDialog {
+	return NewQColorDialog1(initial, parent)
 }
-func NewQColorDialog_1(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QWidget **/) *QColorDialog {
+func NewQColorDialog1(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QWidget **/) *QColorDialog {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QColor_PTR() != nil {
 		convArg0 = initial.QColor_PTR().GetCthis()
@@ -175,10 +175,10 @@ Constructs a color dialog with the given parent.
 
 This function was introduced in  Qt 4.5.
 */
-func (*QColorDialog) NewForInherit_1_(initial qtgui.QColor_ITF) *QColorDialog {
-	return NewQColorDialog_1_(initial)
+func (*QColorDialog) NewForInherit1p(initial qtgui.QColor_ITF) *QColorDialog {
+	return NewQColorDialog1p(initial)
 }
-func NewQColorDialog_1_(initial qtgui.QColor_ITF) *QColorDialog {
+func NewQColorDialog1p(initial qtgui.QColor_ITF) *QColorDialog {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QColor_PTR() != nil {
 		convArg0 = initial.QColor_PTR().GetCthis()
@@ -283,7 +283,7 @@ Sets the given option to be enabled if on is true; otherwise, clears the given o
 
 See also options and testOption().
 */
-func (this *QColorDialog) SetOption__(option int) {
+func (this *QColorDialog) SetOptionp(option int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog9setOptionENS_17ColorDialogOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
@@ -396,7 +396,7 @@ func (this *QColorDialog) GetColor(initial qtgui.QColor_ITF, parent QWidget_ITF 
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(title)
+	var tmpArg2 = qtcore.NewQString5(title)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog8getColorERK6QColorP7QWidgetRK7QString6QFlagsINS_17ColorDialogOptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	qtrt.ErrPrint(err, rv)
@@ -422,7 +422,7 @@ The options argument allows you to customize the dialog.
 
 This function was introduced in  Qt 4.5.
 */
-func (this *QColorDialog) GetColor__() *qtgui.QColor /*123*/ {
+func (this *QColorDialog) GetColorp() *qtgui.QColor /*123*/ {
 	// arg: 0, const QColor &=LValueReference, QColor=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
@@ -450,7 +450,7 @@ The options argument allows you to customize the dialog.
 
 This function was introduced in  Qt 4.5.
 */
-func (this *QColorDialog) GetColor__1(initial qtgui.QColor_ITF) *qtgui.QColor /*123*/ {
+func (this *QColorDialog) GetColorp1(initial qtgui.QColor_ITF) *qtgui.QColor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QColor_PTR() != nil {
 		convArg0 = initial.QColor_PTR().GetCthis()
@@ -480,7 +480,7 @@ The options argument allows you to customize the dialog.
 
 This function was introduced in  Qt 4.5.
 */
-func (this *QColorDialog) GetColor__2(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QWidget **/) *qtgui.QColor /*123*/ {
+func (this *QColorDialog) GetColorp2(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QWidget **/) *qtgui.QColor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QColor_PTR() != nil {
 		convArg0 = initial.QColor_PTR().GetCthis()
@@ -512,7 +512,7 @@ The options argument allows you to customize the dialog.
 
 This function was introduced in  Qt 4.5.
 */
-func (this *QColorDialog) GetColor__3(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QWidget **/, title string) *qtgui.QColor /*123*/ {
+func (this *QColorDialog) GetColorp3(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QWidget **/, title string) *qtgui.QColor /*123*/ {
 	var convArg0 unsafe.Pointer
 	if initial != nil && initial.QColor_PTR() != nil {
 		convArg0 = initial.QColor_PTR().GetCthis()
@@ -521,7 +521,7 @@ func (this *QColorDialog) GetColor__3(initial qtgui.QColor_ITF, parent QWidget_I
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(title)
+	var tmpArg2 = qtcore.NewQString5(title)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, QColorDialog::ColorDialogOptions=Typedef, QColorDialog::ColorDialogOptions=Typedef, QFlags<QColorDialog::ColorDialogOption>, Unexposed
 	options := 0
@@ -563,7 +563,7 @@ func QColorDialog_GetRgba(rgba uint, ok *bool, parent QWidget_ITF /*777 QWidget 
 /*
 
  */
-func (this *QColorDialog) GetRgba__() uint {
+func (this *QColorDialog) GetRgbap() uint {
 	// arg: 0, QRgb=Typedef, QRgb=Typedef, unsigned int, UInt
 	rgba := uint(0xffffffff)
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
@@ -583,7 +583,7 @@ func (this *QColorDialog) GetRgba__() uint {
 /*
 
  */
-func (this *QColorDialog) GetRgba__1(rgba uint) uint {
+func (this *QColorDialog) GetRgbap1(rgba uint) uint {
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var ok unsafe.Pointer
 	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
@@ -601,7 +601,7 @@ func (this *QColorDialog) GetRgba__1(rgba uint) uint {
 /*
 
  */
-func (this *QColorDialog) GetRgba__2(rgba uint, ok *bool) uint {
+func (this *QColorDialog) GetRgbap2(rgba uint, ok *bool) uint {
 	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QColorDialog7getRgbaEjPbP7QWidget", qtrt.FFI_TYPE_POINTER, rgba, ok, convArg2)

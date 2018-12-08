@@ -122,10 +122,10 @@ func NewQFinalState(parent QState_ITF /*777 QState **/) *QFinalState {
 /*
 Constructs a new QFinalState object with the given parent state.
 */
-func (*QFinalState) NewForInherit__() *QFinalState {
-	return NewQFinalState__()
+func (*QFinalState) NewForInheritp() *QFinalState {
+	return NewQFinalStatep()
 }
-func NewQFinalState__() *QFinalState {
+func NewQFinalStatep() *QFinalState {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)

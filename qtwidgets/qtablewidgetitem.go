@@ -93,10 +93,10 @@ func NewQTableWidgetItem(type_ int) *QTableWidgetItem {
 /*
 
  */
-func (*QTableWidgetItem) NewForInherit__() *QTableWidgetItem {
-	return NewQTableWidgetItem__()
+func (*QTableWidgetItem) NewForInheritp() *QTableWidgetItem {
+	return NewQTableWidgetItemp()
 }
-func NewQTableWidgetItem__() *QTableWidgetItem {
+func NewQTableWidgetItemp() *QTableWidgetItem {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItemC2Ei", qtrt.FFI_TYPE_POINTER, type_)
@@ -114,11 +114,11 @@ func NewQTableWidgetItem__() *QTableWidgetItem {
 /*
 
  */
-func (*QTableWidgetItem) NewForInherit_1(text string, type_ int) *QTableWidgetItem {
-	return NewQTableWidgetItem_1(text, type_)
+func (*QTableWidgetItem) NewForInherit1(text string, type_ int) *QTableWidgetItem {
+	return NewQTableWidgetItem1(text, type_)
 }
-func NewQTableWidgetItem_1(text string, type_ int) *QTableWidgetItem {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQTableWidgetItem1(text string, type_ int) *QTableWidgetItem {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItemC2ERK7QStringi", qtrt.FFI_TYPE_POINTER, convArg0, type_)
 	qtrt.ErrPrint(err, rv)
@@ -135,11 +135,11 @@ func NewQTableWidgetItem_1(text string, type_ int) *QTableWidgetItem {
 /*
 
  */
-func (*QTableWidgetItem) NewForInherit_1_(text string) *QTableWidgetItem {
-	return NewQTableWidgetItem_1_(text)
+func (*QTableWidgetItem) NewForInherit1p(text string) *QTableWidgetItem {
+	return NewQTableWidgetItem1p(text)
 }
-func NewQTableWidgetItem_1_(text string) *QTableWidgetItem {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQTableWidgetItem1p(text string) *QTableWidgetItem {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
@@ -158,15 +158,15 @@ func NewQTableWidgetItem_1_(text string) *QTableWidgetItem {
 /*
 
  */
-func (*QTableWidgetItem) NewForInherit_2(icon qtgui.QIcon_ITF, text string, type_ int) *QTableWidgetItem {
-	return NewQTableWidgetItem_2(icon, text, type_)
+func (*QTableWidgetItem) NewForInherit2(icon qtgui.QIcon_ITF, text string, type_ int) *QTableWidgetItem {
+	return NewQTableWidgetItem2(icon, text, type_)
 }
-func NewQTableWidgetItem_2(icon qtgui.QIcon_ITF, text string, type_ int) *QTableWidgetItem {
+func NewQTableWidgetItem2(icon qtgui.QIcon_ITF, text string, type_ int) *QTableWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_)
 	qtrt.ErrPrint(err, rv)
@@ -183,15 +183,15 @@ func NewQTableWidgetItem_2(icon qtgui.QIcon_ITF, text string, type_ int) *QTable
 /*
 
  */
-func (*QTableWidgetItem) NewForInherit_2_(icon qtgui.QIcon_ITF, text string) *QTableWidgetItem {
-	return NewQTableWidgetItem_2_(icon, text)
+func (*QTableWidgetItem) NewForInherit2p(icon qtgui.QIcon_ITF, text string) *QTableWidgetItem {
+	return NewQTableWidgetItem2p(icon, text)
 }
-func NewQTableWidgetItem_2_(icon qtgui.QIcon_ITF, text string) *QTableWidgetItem {
+func NewQTableWidgetItem2p(icon qtgui.QIcon_ITF, text string) *QTableWidgetItem {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, int=Int, =Invalid, , Invalid
 	type_ := 0 /*Type*/
@@ -353,7 +353,7 @@ func (this *QTableWidgetItem) Text() string {
 
  */
 func (this *QTableWidgetItem) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -418,7 +418,7 @@ func (this *QTableWidgetItem) StatusTip() string {
 
  */
 func (this *QTableWidgetItem) SetStatusTip(statusTip string) {
-	var tmpArg0 = qtcore.NewQString_5(statusTip)
+	var tmpArg0 = qtcore.NewQString5(statusTip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem12setStatusTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -450,7 +450,7 @@ func (this *QTableWidgetItem) ToolTip() string {
 
  */
 func (this *QTableWidgetItem) SetToolTip(toolTip string) {
-	var tmpArg0 = qtcore.NewQString_5(toolTip)
+	var tmpArg0 = qtcore.NewQString5(toolTip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -482,7 +482,7 @@ func (this *QTableWidgetItem) WhatsThis() string {
 
  */
 func (this *QTableWidgetItem) SetWhatsThis(whatsThis string) {
-	var tmpArg0 = qtcore.NewQString_5(whatsThis)
+	var tmpArg0 = qtcore.NewQString5(whatsThis)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem12setWhatsThisERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

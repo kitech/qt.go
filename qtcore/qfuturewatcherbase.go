@@ -127,10 +127,10 @@ func NewQFutureWatcherBase(parent QObject_ITF /*777 QObject **/) *QFutureWatcher
 /*
 
  */
-func (*QFutureWatcherBase) NewForInherit__() *QFutureWatcherBase {
-	return NewQFutureWatcherBase__()
+func (*QFutureWatcherBase) NewForInheritp() *QFutureWatcherBase {
+	return NewQFutureWatcherBasep()
 }
-func NewQFutureWatcherBase__() *QFutureWatcherBase {
+func NewQFutureWatcherBasep() *QFutureWatcherBase {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBaseC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -455,7 +455,7 @@ func (this *QFutureWatcherBase) ProgressValueChanged(progressValue int) {
 This signal is emitted when the watched future reports textual progress information, progressText.
 */
 func (this *QFutureWatcherBase) ProgressTextChanged(progressText string) {
-	var tmpArg0 = NewQString_5(progressText)
+	var tmpArg0 = NewQString5(progressText)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase19progressTextChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -610,7 +610,7 @@ func (this *QFutureWatcherBase) DisconnectOutputInterface(pendingAssignment bool
 /*
 
  */
-func (this *QFutureWatcherBase) DisconnectOutputInterface__() {
+func (this *QFutureWatcherBase) DisconnectOutputInterfacep() {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	pendingAssignment := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase25disconnectOutputInterfaceEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pendingAssignment)

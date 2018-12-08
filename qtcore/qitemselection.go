@@ -91,10 +91,10 @@ func NewQItemSelection() *QItemSelection {
 /*
 
  */
-func (*QItemSelection) NewForInherit_1(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) *QItemSelection {
-	return NewQItemSelection_1(topLeft, bottomRight)
+func (*QItemSelection) NewForInherit1(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) *QItemSelection {
+	return NewQItemSelection1(topLeft, bottomRight)
 }
-func NewQItemSelection_1(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) *QItemSelection {
+func NewQItemSelection1(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) *QItemSelection {
 	var convArg0 unsafe.Pointer
 	if topLeft != nil && topLeft.QModelIndex_PTR() != nil {
 		convArg0 = topLeft.QModelIndex_PTR().GetCthis()

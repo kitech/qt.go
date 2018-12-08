@@ -148,10 +148,10 @@ Constructs a rubber band of shape s, with parent p.
 
 By default a rectangular rubber band (s is Rectangle) will use a mask, so that a small border of the rectangle is all that is visible. Some styles (e.g., native macOS) will change this and call QWidget::setWindowOpacity() to make a semi-transparent filled selection rectangle.
 */
-func (*QRubberBand) NewForInherit__(arg0 int) *QRubberBand {
-	return NewQRubberBand__(arg0)
+func (*QRubberBand) NewForInheritp(arg0 int) *QRubberBand {
+	return NewQRubberBandp(arg0)
 }
-func NewQRubberBand__(arg0 int) *QRubberBand {
+func NewQRubberBandp(arg0 int) *QRubberBand {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBandC2ENS_5ShapeEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
@@ -219,7 +219,7 @@ Sets the geometry of the rubber band to rect, specified in the coordinate system
 
 See also QWidget::geometry.
 */
-func (this *QRubberBand) SetGeometry_1(x int, y int, w int, h int) {
+func (this *QRubberBand) SetGeometry1(x int, y int, w int, h int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QRubberBand11setGeometryEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }
@@ -249,7 +249,7 @@ Moves the rubberband to point (x, y).
 
 See also resize().
 */
-func (this *QRubberBand) Move_1(p qtcore.QPoint_ITF) {
+func (this *QRubberBand) Move1(p qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -283,7 +283,7 @@ Resizes the rubberband so that its width is width, and its height is height.
 
 See also move().
 */
-func (this *QRubberBand) Resize_1(s qtcore.QSize_ITF) {
+func (this *QRubberBand) Resize1(s qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()

@@ -96,11 +96,11 @@ Constructs an empty text layout.
 
 See also setText().
 */
-func (*QTextLayout) NewForInherit_1(text string) *QTextLayout {
-	return NewQTextLayout_1(text)
+func (*QTextLayout) NewForInherit1(text string) *QTextLayout {
+	return NewQTextLayout1(text)
 }
-func NewQTextLayout_1(text string) *QTextLayout {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQTextLayout1(text string) *QTextLayout {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -119,11 +119,11 @@ Constructs an empty text layout.
 
 See also setText().
 */
-func (*QTextLayout) NewForInherit_2(text string, font QFont_ITF, paintdevice QPaintDevice_ITF /*777 QPaintDevice **/) *QTextLayout {
-	return NewQTextLayout_2(text, font, paintdevice)
+func (*QTextLayout) NewForInherit2(text string, font QFont_ITF, paintdevice QPaintDevice_ITF /*777 QPaintDevice **/) *QTextLayout {
+	return NewQTextLayout2(text, font, paintdevice)
 }
-func NewQTextLayout_2(text string, font QFont_ITF, paintdevice QPaintDevice_ITF /*777 QPaintDevice **/) *QTextLayout {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQTextLayout2(text string, font QFont_ITF, paintdevice QPaintDevice_ITF /*777 QPaintDevice **/) *QTextLayout {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
@@ -150,11 +150,11 @@ Constructs an empty text layout.
 
 See also setText().
 */
-func (*QTextLayout) NewForInherit_2_(text string, font QFont_ITF) *QTextLayout {
-	return NewQTextLayout_2_(text, font)
+func (*QTextLayout) NewForInherit2p(text string, font QFont_ITF) *QTextLayout {
+	return NewQTextLayout2p(text, font)
 }
-func NewQTextLayout_2_(text string, font QFont_ITF) *QTextLayout {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func NewQTextLayout2p(text string, font QFont_ITF) *QTextLayout {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if font != nil && font.QFont_PTR() != nil {
@@ -179,10 +179,10 @@ Constructs an empty text layout.
 
 See also setText().
 */
-func (*QTextLayout) NewForInherit_3(b QTextBlock_ITF) *QTextLayout {
-	return NewQTextLayout_3(b)
+func (*QTextLayout) NewForInherit3(b QTextBlock_ITF) *QTextLayout {
+	return NewQTextLayout3(b)
 }
-func NewQTextLayout_3(b QTextBlock_ITF) *QTextLayout {
+func NewQTextLayout3(b QTextBlock_ITF) *QTextLayout {
 	var convArg0 unsafe.Pointer
 	if b != nil && b.QTextBlock_PTR() != nil {
 		convArg0 = b.QTextBlock_PTR().GetCthis()
@@ -276,7 +276,7 @@ Notice that when using this QTextLayout as part of a QTextDocument this method w
 See also text().
 */
 func (this *QTextLayout) SetText(string string) {
-	var tmpArg0 = qtcore.NewQString_5(string)
+	var tmpArg0 = qtcore.NewQString5(string)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -349,7 +349,7 @@ Sets the position and text of the area in the layout that is processed before ed
 See also preeditAreaPosition() and preeditAreaText().
 */
 func (this *QTextLayout) SetPreeditArea(position int, text string) {
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout14setPreeditAreaEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -647,7 +647,7 @@ Returns the next valid cursor position after oldPos that respects the given curs
 
 See also isValidCursorPosition() and previousCursorPosition().
 */
-func (this *QTextLayout) NextCursorPosition__(oldPos int) int {
+func (this *QTextLayout) NextCursorPositionp(oldPos int) int {
 	// arg: 1, QTextLayout::CursorMode=Enum, QTextLayout::CursorMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout18nextCursorPositionEiNS_10CursorModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
@@ -681,7 +681,7 @@ Returns the first valid cursor position before oldPos that respects the given cu
 
 See also isValidCursorPosition() and nextCursorPosition().
 */
-func (this *QTextLayout) PreviousCursorPosition__(oldPos int) int {
+func (this *QTextLayout) PreviousCursorPositionp(oldPos int) int {
 	// arg: 1, QTextLayout::CursorMode=Enum, QTextLayout::CursorMode=Enum, , Invalid
 	mode := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout22previousCursorPositionEiNS_10CursorModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
@@ -750,7 +750,7 @@ func (this *QTextLayout) DrawCursor(p QPainter_ITF /*777 QPainter **/, pos qtcor
 /*
 Draws a text cursor with the current pen and the specified width at the given position using the painter specified. The corresponding position within the text is specified by cursorPosition.
 */
-func (this *QTextLayout) DrawCursor_1(p QPainter_ITF /*777 QPainter **/, pos qtcore.QPointF_ITF, cursorPosition int, width int) {
+func (this *QTextLayout) DrawCursor1(p QPainter_ITF /*777 QPainter **/, pos qtcore.QPointF_ITF, cursorPosition int, width int) {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPainter_PTR() != nil {
 		convArg0 = p.QPainter_PTR().GetCthis()

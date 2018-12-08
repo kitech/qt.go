@@ -95,10 +95,10 @@ Constructs an empty bit array.
 
 See also isEmpty().
 */
-func (*QBitArray) NewForInherit_1(size int, val bool) *QBitArray {
-	return NewQBitArray_1(size, val)
+func (*QBitArray) NewForInherit1(size int, val bool) *QBitArray {
+	return NewQBitArray1(size, val)
 }
-func NewQBitArray_1(size int, val bool) *QBitArray {
+func NewQBitArray1(size int, val bool) *QBitArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArrayC2Eib", qtrt.FFI_TYPE_POINTER, size, val)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBitArrayFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -116,10 +116,10 @@ Constructs an empty bit array.
 
 See also isEmpty().
 */
-func (*QBitArray) NewForInherit_1_(size int) *QBitArray {
-	return NewQBitArray_1_(size)
+func (*QBitArray) NewForInherit1p(size int) *QBitArray {
+	return NewQBitArray1p(size)
 }
-func NewQBitArray_1_(size int) *QBitArray {
+func NewQBitArray1p(size int) *QBitArray {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	val := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArrayC2Eib", qtrt.FFI_TYPE_POINTER, size, val)
@@ -157,7 +157,7 @@ func (this *QBitArray) Operator_equal(other QBitArray_ITF) *QBitArray {
 /*
 
  */
-func (this *QBitArray) Operator_equal_1(other unsafe.Pointer /*333*/) *QBitArray {
+func (this *QBitArray) Operator_equal1(other unsafe.Pointer /*333*/) *QBitArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArrayaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQBitArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -222,7 +222,7 @@ func (this *QBitArray) Count() int {
 /*
 Same as size().
 */
-func (this *QBitArray) Count_1(on bool) int {
+func (this *QBitArray) Count1(on bool) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArray5countEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -379,7 +379,7 @@ i must be a valid index position in the bit array (i.e., 0 <= i < size()).
 
 See also clearBit() and toggleBit().
 */
-func (this *QBitArray) SetBit_1(i int, val bool) {
+func (this *QBitArray) SetBit1(i int, val bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArray6setBitEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i, val)
 	qtrt.ErrPrint(err, rv)
 }
@@ -463,7 +463,7 @@ func (this *QBitArray) Operator_get_index(i int) *QBitRef /*123*/ {
 /*
 
  */
-func (this *QBitArray) Operator_get_index_1(i int) bool {
+func (this *QBitArray) Operator_get_index1(i int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArrayixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -477,7 +477,7 @@ func (this *QBitArray) Operator_get_index_1(i int) bool {
 /*
 
  */
-func (this *QBitArray) Operator_get_index_2(i uint) *QBitRef /*123*/ {
+func (this *QBitArray) Operator_get_index2(i uint) *QBitRef /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArrayixEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQBitRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -493,7 +493,7 @@ func (this *QBitArray) Operator_get_index_2(i uint) *QBitRef /*123*/ {
 /*
 
  */
-func (this *QBitArray) Operator_get_index_3(i uint) bool {
+func (this *QBitArray) Operator_get_index3(i uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArrayixEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
@@ -661,7 +661,7 @@ Example:
 
 See also resize().
 */
-func (this *QBitArray) Fill__(val bool) bool {
+func (this *QBitArray) Fillp(val bool) bool {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArray4fillEbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val, size)
@@ -691,7 +691,7 @@ Example:
 
 See also resize().
 */
-func (this *QBitArray) Fill_1(val bool, first int, last int) {
+func (this *QBitArray) Fill1(val bool, first int, last int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArray4fillEbii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val, first, last)
 	qtrt.ErrPrint(err, rv)
 }

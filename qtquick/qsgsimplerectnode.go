@@ -101,10 +101,10 @@ func NewQSGSimpleRectNode(rect qtcore.QRectF_ITF, color qtgui.QColor_ITF) *QSGSi
 /*
 Constructs a QSGSimpleRectNode instance which is spanning rect with the color color.
 */
-func (*QSGSimpleRectNode) NewForInherit_1() *QSGSimpleRectNode {
-	return NewQSGSimpleRectNode_1()
+func (*QSGSimpleRectNode) NewForInherit1() *QSGSimpleRectNode {
+	return NewQSGSimpleRectNode1()
 }
-func NewQSGSimpleRectNode_1() *QSGSimpleRectNode {
+func NewQSGSimpleRectNode1() *QSGSimpleRectNode {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGSimpleRectNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSGSimpleRectNodeFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -141,7 +141,7 @@ Sets the rectangle of this rect node to rect.
 
 See also rect().
 */
-func (this *QSGSimpleRectNode) SetRect_1(x float64, y float64, w float64, h float64) {
+func (this *QSGSimpleRectNode) SetRect1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGSimpleRectNode7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }

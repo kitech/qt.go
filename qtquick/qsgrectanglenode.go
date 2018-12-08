@@ -110,7 +110,7 @@ Sets the rectangle of this rect node to rect.
 
 See also rect().
 */
-func (this *QSGRectangleNode) SetRect_1(x float64, y float64, w float64, h float64) {
+func (this *QSGRectangleNode) SetRect1(x float64, y float64, w float64, h float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNode7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	qtrt.ErrPrint(err, rv)
 }

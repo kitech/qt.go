@@ -118,10 +118,10 @@ func NewQNetworkAccessManager(parent qtcore.QObject_ITF /*777 QObject **/) *QNet
 /*
 Constructs a QNetworkAccessManager object that is the center of the Network Access API and sets parent as the parent object.
 */
-func (*QNetworkAccessManager) NewForInherit__() *QNetworkAccessManager {
-	return NewQNetworkAccessManager__()
+func (*QNetworkAccessManager) NewForInheritp() *QNetworkAccessManager {
+	return NewQNetworkAccessManagerp()
 }
-func NewQNetworkAccessManager__() *QNetworkAccessManager {
+func NewQNetworkAccessManagerp() *QNetworkAccessManager {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManagerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -437,7 +437,7 @@ This function was introduced in  Qt 5.10.
 See also isStrictTransportSecurityStoreEnabled(), setStrictTransportSecurityEnabled(), and QStandardPaths::standardLocations().
 */
 func (this *QNetworkAccessManager) EnableStrictTransportSecurityStore(enabled bool, storeDir string) {
-	var tmpArg1 = qtcore.NewQString_5(storeDir)
+	var tmpArg1 = qtcore.NewQString5(storeDir)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager34enableStrictTransportSecurityStoreEbRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -457,7 +457,7 @@ This function was introduced in  Qt 5.10.
 
 See also isStrictTransportSecurityStoreEnabled(), setStrictTransportSecurityEnabled(), and QStandardPaths::standardLocations().
 */
-func (this *QNetworkAccessManager) EnableStrictTransportSecurityStore__(enabled bool) {
+func (this *QNetworkAccessManager) EnableStrictTransportSecurityStorep(enabled bool) {
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager34enableStrictTransportSecurityStoreEbRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled, convArg1)
@@ -566,7 +566,7 @@ Note: Sending a POST request on protocols other than HTTP and HTTPS is undefined
 
 See also get(), put(), deleteResource(), and sendCustomRequest().
 */
-func (this *QNetworkAccessManager) Post_1(request QNetworkRequest_ITF, data qtcore.QByteArray_ITF) *QNetworkReply /*777 QNetworkReply **/ {
+func (this *QNetworkAccessManager) Post1(request QNetworkRequest_ITF, data qtcore.QByteArray_ITF) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg0 = request.QNetworkRequest_PTR().GetCthis()
@@ -594,7 +594,7 @@ Note: Sending a POST request on protocols other than HTTP and HTTPS is undefined
 
 See also get(), put(), deleteResource(), and sendCustomRequest().
 */
-func (this *QNetworkAccessManager) Post_2(request QNetworkRequest_ITF, multiPart QHttpMultiPart_ITF /*777 QHttpMultiPart **/) *QNetworkReply /*777 QNetworkReply **/ {
+func (this *QNetworkAccessManager) Post2(request QNetworkRequest_ITF, multiPart QHttpMultiPart_ITF /*777 QHttpMultiPart **/) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg0 = request.QNetworkRequest_PTR().GetCthis()
@@ -654,7 +654,7 @@ Note: For HTTP, this request will send a PUT request, which most servers do not 
 
 See also get(), post(), deleteResource(), and sendCustomRequest().
 */
-func (this *QNetworkAccessManager) Put_1(request QNetworkRequest_ITF, data qtcore.QByteArray_ITF) *QNetworkReply /*777 QNetworkReply **/ {
+func (this *QNetworkAccessManager) Put1(request QNetworkRequest_ITF, data qtcore.QByteArray_ITF) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg0 = request.QNetworkRequest_PTR().GetCthis()
@@ -684,7 +684,7 @@ Note: For HTTP, this request will send a PUT request, which most servers do not 
 
 See also get(), post(), deleteResource(), and sendCustomRequest().
 */
-func (this *QNetworkAccessManager) Put_2(request QNetworkRequest_ITF, multiPart QHttpMultiPart_ITF /*777 QHttpMultiPart **/) *QNetworkReply /*777 QNetworkReply **/ {
+func (this *QNetworkAccessManager) Put2(request QNetworkRequest_ITF, multiPart QHttpMultiPart_ITF /*777 QHttpMultiPart **/) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg0 = request.QNetworkRequest_PTR().GetCthis()
@@ -780,7 +780,7 @@ This function was introduced in  Qt 4.7.
 
 See also get(), post(), put(), and deleteResource().
 */
-func (this *QNetworkAccessManager) SendCustomRequest__(request QNetworkRequest_ITF, verb qtcore.QByteArray_ITF) *QNetworkReply /*777 QNetworkReply **/ {
+func (this *QNetworkAccessManager) SendCustomRequestp(request QNetworkRequest_ITF, verb qtcore.QByteArray_ITF) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg0 = request.QNetworkRequest_PTR().GetCthis()
@@ -816,7 +816,7 @@ This function was introduced in  Qt 4.7.
 
 See also get(), post(), put(), and deleteResource().
 */
-func (this *QNetworkAccessManager) SendCustomRequest_1(request QNetworkRequest_ITF, verb qtcore.QByteArray_ITF, data qtcore.QByteArray_ITF) *QNetworkReply /*777 QNetworkReply **/ {
+func (this *QNetworkAccessManager) SendCustomRequest1(request QNetworkRequest_ITF, verb qtcore.QByteArray_ITF, data qtcore.QByteArray_ITF) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg0 = request.QNetworkRequest_PTR().GetCthis()
@@ -854,7 +854,7 @@ This function was introduced in  Qt 4.7.
 
 See also get(), post(), put(), and deleteResource().
 */
-func (this *QNetworkAccessManager) SendCustomRequest_2(request QNetworkRequest_ITF, verb qtcore.QByteArray_ITF, multiPart QHttpMultiPart_ITF /*777 QHttpMultiPart **/) *QNetworkReply /*777 QNetworkReply **/ {
+func (this *QNetworkAccessManager) SendCustomRequest2(request QNetworkRequest_ITF, verb qtcore.QByteArray_ITF, multiPart QHttpMultiPart_ITF /*777 QHttpMultiPart **/) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg0 = request.QNetworkRequest_PTR().GetCthis()
@@ -1012,7 +1012,7 @@ This function was introduced in  Qt 5.2.
 See also connectToHost(), get(), post(), put(), and deleteResource().
 */
 func (this *QNetworkAccessManager) ConnectToHostEncrypted(hostName string, port uint16, sslConfiguration QSslConfiguration_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(hostName)
+	var tmpArg0 = qtcore.NewQString5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg2 unsafe.Pointer
 	if sslConfiguration != nil && sslConfiguration.QSslConfiguration_PTR() != nil {
@@ -1038,8 +1038,8 @@ This function was introduced in  Qt 5.2.
 
 See also connectToHost(), get(), post(), put(), and deleteResource().
 */
-func (this *QNetworkAccessManager) ConnectToHostEncrypted__(hostName string) {
-	var tmpArg0 = qtcore.NewQString_5(hostName)
+func (this *QNetworkAccessManager) ConnectToHostEncryptedp(hostName string) {
+	var tmpArg0 = qtcore.NewQString5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(443)
@@ -1065,8 +1065,8 @@ This function was introduced in  Qt 5.2.
 
 See also connectToHost(), get(), post(), put(), and deleteResource().
 */
-func (this *QNetworkAccessManager) ConnectToHostEncrypted__1(hostName string, port uint16) {
-	var tmpArg0 = qtcore.NewQString_5(hostName)
+func (this *QNetworkAccessManager) ConnectToHostEncryptedp1(hostName string, port uint16) {
+	var tmpArg0 = qtcore.NewQString5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, const QSslConfiguration &=LValueReference, QSslConfiguration=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -1089,7 +1089,7 @@ This function was introduced in  Qt 5.2.
 See also connectToHostEncrypted(), get(), post(), put(), and deleteResource().
 */
 func (this *QNetworkAccessManager) ConnectToHost(hostName string, port uint16) {
-	var tmpArg0 = qtcore.NewQString_5(hostName)
+	var tmpArg0 = qtcore.NewQString5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager13connectToHostERK7QStringt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	qtrt.ErrPrint(err, rv)
@@ -1109,8 +1109,8 @@ This function was introduced in  Qt 5.2.
 
 See also connectToHostEncrypted(), get(), post(), put(), and deleteResource().
 */
-func (this *QNetworkAccessManager) ConnectToHost__(hostName string) {
-	var tmpArg0 = qtcore.NewQString_5(hostName)
+func (this *QNetworkAccessManager) ConnectToHostp(hostName string) {
+	var tmpArg0 = qtcore.NewQString5(hostName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short, UShort
 	port := uint16(80)
@@ -1358,7 +1358,7 @@ The default implementation calls QNetworkCookieJar::cookiesForUrl() on the cooki
 
 The returned object must be in an open state.
 */
-func (this *QNetworkAccessManager) CreateRequest__(op int, request QNetworkRequest_ITF) *QNetworkReply /*777 QNetworkReply **/ {
+func (this *QNetworkAccessManager) CreateRequestp(op int, request QNetworkRequest_ITF) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg1 unsafe.Pointer
 	if request != nil && request.QNetworkRequest_PTR() != nil {
 		convArg1 = request.QNetworkRequest_PTR().GetCthis()

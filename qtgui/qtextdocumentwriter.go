@@ -92,10 +92,10 @@ func NewQTextDocumentWriter() *QTextDocumentWriter {
 /*
 Constructs an empty QTextDocumentWriter object. Before writing, you must call setFormat() to set a document format, then setDevice() or setFileName().
 */
-func (*QTextDocumentWriter) NewForInherit_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QTextDocumentWriter {
-	return NewQTextDocumentWriter_1(device, format)
+func (*QTextDocumentWriter) NewForInherit1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QTextDocumentWriter {
+	return NewQTextDocumentWriter1(device, format)
 }
-func NewQTextDocumentWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QTextDocumentWriter {
+func NewQTextDocumentWriter1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QTextDocumentWriter {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -119,11 +119,11 @@ func NewQTextDocumentWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, f
 /*
 Constructs an empty QTextDocumentWriter object. Before writing, you must call setFormat() to set a document format, then setDevice() or setFileName().
 */
-func (*QTextDocumentWriter) NewForInherit_2(fileName string, format qtcore.QByteArray_ITF) *QTextDocumentWriter {
-	return NewQTextDocumentWriter_2(fileName, format)
+func (*QTextDocumentWriter) NewForInherit2(fileName string, format qtcore.QByteArray_ITF) *QTextDocumentWriter {
+	return NewQTextDocumentWriter2(fileName, format)
 }
-func NewQTextDocumentWriter_2(fileName string, format qtcore.QByteArray_ITF) *QTextDocumentWriter {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQTextDocumentWriter2(fileName string, format qtcore.QByteArray_ITF) *QTextDocumentWriter {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if format != nil && format.QByteArray_PTR() != nil {
@@ -144,11 +144,11 @@ func NewQTextDocumentWriter_2(fileName string, format qtcore.QByteArray_ITF) *QT
 /*
 Constructs an empty QTextDocumentWriter object. Before writing, you must call setFormat() to set a document format, then setDevice() or setFileName().
 */
-func (*QTextDocumentWriter) NewForInherit_2_(fileName string) *QTextDocumentWriter {
-	return NewQTextDocumentWriter_2_(fileName)
+func (*QTextDocumentWriter) NewForInherit2p(fileName string) *QTextDocumentWriter {
+	return NewQTextDocumentWriter2p(fileName)
 }
-func NewQTextDocumentWriter_2_(fileName string) *QTextDocumentWriter {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQTextDocumentWriter2p(fileName string) *QTextDocumentWriter {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = qtcore.NewQByteArray()
@@ -269,7 +269,7 @@ Sets the name of the file to be written to fileName. Internally, QTextDocumentWr
 See also fileName() and setDevice().
 */
 func (this *QTextDocumentWriter) SetFileName(fileName string) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -320,7 +320,7 @@ func (this *QTextDocumentWriter) Write(document QTextDocument_ITF /*777 const QT
 /*
 Writes the given document to the assigned device or file and returns true if successful; otherwise returns false.
 */
-func (this *QTextDocumentWriter) Write_1(fragment QTextDocumentFragment_ITF) bool {
+func (this *QTextDocumentWriter) Write1(fragment QTextDocumentFragment_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if fragment != nil && fragment.QTextDocumentFragment_PTR() != nil {
 		convArg0 = fragment.QTextDocumentFragment_PTR().GetCthis()

@@ -185,7 +185,7 @@ Sets the user used for authentication.
 See also user() and QNetworkAccessManager::authenticationRequired().
 */
 func (this *QAuthenticator) SetUser(user string) {
-	var tmpArg0 = qtcore.NewQString_5(user)
+	var tmpArg0 = qtcore.NewQString5(user)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAuthenticator7setUserERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -221,7 +221,7 @@ Sets the password used for authentication.
 See also password() and QNetworkAccessManager::authenticationRequired().
 */
 func (this *QAuthenticator) SetPassword(password string) {
-	var tmpArg0 = qtcore.NewQString_5(password)
+	var tmpArg0 = qtcore.NewQString5(password)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAuthenticator11setPasswordERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func (this *QAuthenticator) Realm() string {
 
  */
 func (this *QAuthenticator) SetRealm(realm string) {
-	var tmpArg0 = qtcore.NewQString_5(realm)
+	var tmpArg0 = qtcore.NewQString5(realm)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAuthenticator8setRealmERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -272,7 +272,7 @@ This function was introduced in  Qt 4.7.
 See also setOption(), options(), and QAuthenticator options.
 */
 func (this *QAuthenticator) Option(opt string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(opt)
+	var tmpArg0 = qtcore.NewQString5(opt)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAuthenticator6optionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -294,7 +294,7 @@ This function was introduced in  Qt 4.7.
 See also options(), option(), and QAuthenticator options.
 */
 func (this *QAuthenticator) SetOption(opt string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(opt)
+	var tmpArg0 = qtcore.NewQString5(opt)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {

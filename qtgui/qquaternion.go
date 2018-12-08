@@ -92,10 +92,10 @@ func NewQQuaternion() *QQuaternion {
 /*
 Constructs an identity quaternion (1, 0, 0, 0), i.e. with the vector (0, 0, 0) and scalar 1.
 */
-func (*QQuaternion) NewForInherit_1(arg0 int) *QQuaternion {
-	return NewQQuaternion_1(arg0)
+func (*QQuaternion) NewForInherit1(arg0 int) *QQuaternion {
+	return NewQQuaternion1(arg0)
 }
-func NewQQuaternion_1(arg0 int) *QQuaternion {
+func NewQQuaternion1(arg0 int) *QQuaternion {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternionC2EN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, arg0)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQQuaternion_1(arg0 int) *QQuaternion {
 /*
 Constructs an identity quaternion (1, 0, 0, 0), i.e. with the vector (0, 0, 0) and scalar 1.
 */
-func (*QQuaternion) NewForInherit_2(scalar float32, xpos float32, ypos float32, zpos float32) *QQuaternion {
-	return NewQQuaternion_2(scalar, xpos, ypos, zpos)
+func (*QQuaternion) NewForInherit2(scalar float32, xpos float32, ypos float32, zpos float32) *QQuaternion {
+	return NewQQuaternion2(scalar, xpos, ypos, zpos)
 }
-func NewQQuaternion_2(scalar float32, xpos float32, ypos float32, zpos float32) *QQuaternion {
+func NewQQuaternion2(scalar float32, xpos float32, ypos float32, zpos float32) *QQuaternion {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternionC2Effff", qtrt.FFI_TYPE_POINTER, scalar, xpos, ypos, zpos)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -130,10 +130,10 @@ func NewQQuaternion_2(scalar float32, xpos float32, ypos float32, zpos float32) 
 /*
 Constructs an identity quaternion (1, 0, 0, 0), i.e. with the vector (0, 0, 0) and scalar 1.
 */
-func (*QQuaternion) NewForInherit_3(scalar float32, vector QVector3D_ITF) *QQuaternion {
-	return NewQQuaternion_3(scalar, vector)
+func (*QQuaternion) NewForInherit3(scalar float32, vector QVector3D_ITF) *QQuaternion {
+	return NewQQuaternion3(scalar, vector)
 }
-func NewQQuaternion_3(scalar float32, vector QVector3D_ITF) *QQuaternion {
+func NewQQuaternion3(scalar float32, vector QVector3D_ITF) *QQuaternion {
 	var convArg1 unsafe.Pointer
 	if vector != nil && vector.QVector3D_PTR() != nil {
 		convArg1 = vector.QVector3D_PTR().GetCthis()
@@ -153,10 +153,10 @@ func NewQQuaternion_3(scalar float32, vector QVector3D_ITF) *QQuaternion {
 /*
 Constructs an identity quaternion (1, 0, 0, 0), i.e. with the vector (0, 0, 0) and scalar 1.
 */
-func (*QQuaternion) NewForInherit_4(vector QVector4D_ITF) *QQuaternion {
-	return NewQQuaternion_4(vector)
+func (*QQuaternion) NewForInherit4(vector QVector4D_ITF) *QQuaternion {
+	return NewQQuaternion4(vector)
 }
-func NewQQuaternion_4(vector QVector4D_ITF) *QQuaternion {
+func NewQQuaternion4(vector QVector4D_ITF) *QQuaternion {
 	var convArg0 unsafe.Pointer
 	if vector != nil && vector.QVector4D_PTR() != nil {
 		convArg0 = vector.QVector4D_PTR().GetCthis()
@@ -243,7 +243,7 @@ Sets the vector component of this quaternion to vector.
 
 See also vector() and setScalar().
 */
-func (this *QQuaternion) SetVector_1(x float32, y float32, z float32) {
+func (this *QQuaternion) SetVector1(x float32, y float32, z float32) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion9setVectorEfff", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, z)
 	qtrt.ErrPrint(err, rv)
 }
@@ -618,7 +618,7 @@ func (this *QQuaternion) Operator_mul_equal(factor float32) *QQuaternion {
 /*
 
  */
-func (this *QQuaternion) Operator_mul_equal_1(quaternion QQuaternion_ITF) *QQuaternion {
+func (this *QQuaternion) Operator_mul_equal1(quaternion QQuaternion_ITF) *QQuaternion {
 	var convArg0 unsafe.Pointer
 	if quaternion != nil && quaternion.QQuaternion_PTR() != nil {
 		convArg0 = quaternion.QQuaternion_PTR().GetCthis()
@@ -695,7 +695,7 @@ This function was introduced in  Qt 5.5.
 
 See also fromAxisAndAngle().
 */
-func (this *QQuaternion) GetAxisAndAngle_1(x unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, z unsafe.Pointer /*666*/, angle unsafe.Pointer /*666*/) {
+func (this *QQuaternion) GetAxisAndAngle1(x unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, z unsafe.Pointer /*666*/, angle unsafe.Pointer /*666*/) {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion15getAxisAndAngleEPfS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, z, angle)
 	qtrt.ErrPrint(err, rv)
 }
@@ -737,16 +737,16 @@ Creates a normalized quaternion that corresponds to rotating through angle degre
 
 See also getAxisAndAngle().
 */
-func (this *QQuaternion) FromAxisAndAngle_1(x float32, y float32, z float32, angle float32) *QQuaternion /*123*/ {
+func (this *QQuaternion) FromAxisAndAngle1(x float32, y float32, z float32, angle float32) *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion16fromAxisAndAngleEffff", qtrt.FFI_TYPE_POINTER, x, y, z, angle)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
 }
-func QQuaternion_FromAxisAndAngle_1(x float32, y float32, z float32, angle float32) *QQuaternion /*123*/ {
+func QQuaternion_FromAxisAndAngle1(x float32, y float32, z float32, angle float32) *QQuaternion /*123*/ {
 	var nilthis *QQuaternion
-	rv := nilthis.FromAxisAndAngle_1(x, y, z, angle)
+	rv := nilthis.FromAxisAndAngle1(x, y, z, angle)
 	return rv
 }
 
@@ -813,16 +813,16 @@ This function was introduced in  Qt 5.5.
 
 See also getEulerAngles().
 */
-func (this *QQuaternion) FromEulerAngles_1(pitch float32, yaw float32, roll float32) *QQuaternion /*123*/ {
+func (this *QQuaternion) FromEulerAngles1(pitch float32, yaw float32, roll float32) *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion15fromEulerAnglesEfff", qtrt.FFI_TYPE_POINTER, pitch, yaw, roll)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
 }
-func QQuaternion_FromEulerAngles_1(pitch float32, yaw float32, roll float32) *QQuaternion /*123*/ {
+func QQuaternion_FromEulerAngles1(pitch float32, yaw float32, roll float32) *QQuaternion /*123*/ {
 	var nilthis *QQuaternion
-	rv := nilthis.FromEulerAngles_1(pitch, yaw, roll)
+	rv := nilthis.FromEulerAngles1(pitch, yaw, roll)
 	return rv
 }
 

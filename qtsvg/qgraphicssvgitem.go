@@ -112,10 +112,10 @@ func NewQGraphicsSvgItem(parentItem qtwidgets.QGraphicsItem_ITF /*777 QGraphicsI
 /*
 Constructs a new SVG item with the given parent.
 */
-func (*QGraphicsSvgItem) NewForInherit__() *QGraphicsSvgItem {
-	return NewQGraphicsSvgItem__()
+func (*QGraphicsSvgItem) NewForInheritp() *QGraphicsSvgItem {
+	return NewQGraphicsSvgItemp()
 }
-func NewQGraphicsSvgItem__() *QGraphicsSvgItem {
+func NewQGraphicsSvgItemp() *QGraphicsSvgItem {
 	// arg: 0, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QGraphicsSvgItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -133,11 +133,11 @@ func NewQGraphicsSvgItem__() *QGraphicsSvgItem {
 /*
 Constructs a new SVG item with the given parent.
 */
-func (*QGraphicsSvgItem) NewForInherit_1(fileName string, parentItem qtwidgets.QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSvgItem {
-	return NewQGraphicsSvgItem_1(fileName, parentItem)
+func (*QGraphicsSvgItem) NewForInherit1(fileName string, parentItem qtwidgets.QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSvgItem {
+	return NewQGraphicsSvgItem1(fileName, parentItem)
 }
-func NewQGraphicsSvgItem_1(fileName string, parentItem qtwidgets.QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSvgItem {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQGraphicsSvgItem1(fileName string, parentItem qtwidgets.QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphicsSvgItem {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parentItem != nil && parentItem.QGraphicsItem_PTR() != nil {
@@ -158,11 +158,11 @@ func NewQGraphicsSvgItem_1(fileName string, parentItem qtwidgets.QGraphicsItem_I
 /*
 Constructs a new SVG item with the given parent.
 */
-func (*QGraphicsSvgItem) NewForInherit_1_(fileName string) *QGraphicsSvgItem {
-	return NewQGraphicsSvgItem_1_(fileName)
+func (*QGraphicsSvgItem) NewForInherit1p(fileName string) *QGraphicsSvgItem {
+	return NewQGraphicsSvgItem1p(fileName)
 }
-func NewQGraphicsSvgItem_1_(fileName string) *QGraphicsSvgItem {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQGraphicsSvgItem1p(fileName string) *QGraphicsSvgItem {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QGraphicsItem *=Pointer, QGraphicsItem=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -217,7 +217,7 @@ Note: Setter function for property elementId.
 See also elementId().
 */
 func (this *QGraphicsSvgItem) SetElementId(id string) {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QGraphicsSvgItem12setElementIdERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -367,7 +367,7 @@ func (this *QGraphicsSvgItem) Paint(painter qtgui.QPainter_ITF /*777 QPainter **
 /*
 Reimplemented from QGraphicsItem::paint().
 */
-func (this *QGraphicsSvgItem) Paint__(painter qtgui.QPainter_ITF /*777 QPainter **/, option qtwidgets.QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
+func (this *QGraphicsSvgItem) Paintp(painter qtgui.QPainter_ITF /*777 QPainter **/, option qtwidgets.QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()

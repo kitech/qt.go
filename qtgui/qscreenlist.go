@@ -53,7 +53,7 @@ type QScreenList struct {
 }
 
 // QList<T> & operator=(const QList<T> &)
-func (this *QScreenList) Operator_equal_0() *QScreenList {
+func (this *QScreenList) Operator_equal0() *QScreenList {
 	// QScreenList_operator_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_operator_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -61,7 +61,7 @@ func (this *QScreenList) Operator_equal_0() *QScreenList {
 }
 
 // QList<T> & operator=(QList<T> &&)
-func (this *QScreenList) Operator_equal_1() *QScreenList {
+func (this *QScreenList) Operator_equal1() *QScreenList {
 	// QScreenList_operator_equal_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_operator_equal_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -69,14 +69,14 @@ func (this *QScreenList) Operator_equal_1() *QScreenList {
 }
 
 // void swap(QList<T> &)
-func (this *QScreenList) Swap_0() {
+func (this *QScreenList) Swap0() {
 	// QScreenList_swap_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_swap_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool operator==(const QList<T> &)
-func (this *QScreenList) Operator_equal_equal_0() bool {
+func (this *QScreenList) Operator_equal_equal0() bool {
 	// QScreenList_operator_equal_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_operator_equal_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -84,7 +84,7 @@ func (this *QScreenList) Operator_equal_equal_0() bool {
 }
 
 // bool operator!=(const QList<T> &)
-func (this *QScreenList) Operator_not_equal_0() bool {
+func (this *QScreenList) Operator_not_equal0() bool {
 	// QScreenList_operator_not_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_operator_not_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -92,7 +92,7 @@ func (this *QScreenList) Operator_not_equal_0() bool {
 }
 
 // int size()
-func (this *QScreenList) Size_0() int {
+func (this *QScreenList) Size0() int {
 	// QScreenList_size_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_size_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -100,21 +100,21 @@ func (this *QScreenList) Size_0() int {
 }
 
 // void detach()
-func (this *QScreenList) Detach_0() {
+func (this *QScreenList) Detach0() {
 	// QScreenList_detach_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_detach_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void detachShared()
-func (this *QScreenList) DetachShared_0() {
+func (this *QScreenList) DetachShared0() {
 	// QScreenList_detachShared_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_detachShared_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool isDetached()
-func (this *QScreenList) IsDetached_0() bool {
+func (this *QScreenList) IsDetached0() bool {
 	// QScreenList_isDetached_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_isDetached_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -122,14 +122,14 @@ func (this *QScreenList) IsDetached_0() bool {
 }
 
 // void setSharable(bool)
-func (this *QScreenList) SetSharable_0() {
+func (this *QScreenList) SetSharable0() {
 	// QScreenList_setSharable_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_setSharable_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool isSharedWith(const QList<T> &)
-func (this *QScreenList) IsSharedWith_0() bool {
+func (this *QScreenList) IsSharedWith0() bool {
 	// QScreenList_isSharedWith_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_isSharedWith_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -137,7 +137,7 @@ func (this *QScreenList) IsSharedWith_0() bool {
 }
 
 // bool isEmpty()
-func (this *QScreenList) IsEmpty_0() bool {
+func (this *QScreenList) IsEmpty0() bool {
 	// QScreenList_isEmpty_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_isEmpty_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -145,14 +145,14 @@ func (this *QScreenList) IsEmpty_0() bool {
 }
 
 // void clear()
-func (this *QScreenList) Clear_0() {
+func (this *QScreenList) Clear0() {
 	// QScreenList_clear_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_clear_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // const T & at(int)
-func (this *QScreenList) At_0() *QScreen {
+func (this *QScreenList) At0() *QScreen {
 	// QScreenList_at_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_at_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +160,7 @@ func (this *QScreenList) At_0() *QScreen {
 }
 
 // const T & operator[](int)
-func (this *QScreenList) Operator_get_index_0() *QScreen {
+func (this *QScreenList) Operator_get_index0() *QScreen {
 	// QScreenList_operator_get_index_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_operator_get_index_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -168,7 +168,7 @@ func (this *QScreenList) Operator_get_index_0() *QScreen {
 }
 
 // T & operator[](int)
-func (this *QScreenList) Operator_get_index_1() *QScreen {
+func (this *QScreenList) Operator_get_index1() *QScreen {
 	// QScreenList_operator_get_index_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_operator_get_index_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -176,56 +176,56 @@ func (this *QScreenList) Operator_get_index_1() *QScreen {
 }
 
 // void reserve(int)
-func (this *QScreenList) Reserve_0() {
+func (this *QScreenList) Reserve0() {
 	// QScreenList_reserve_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_reserve_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void append(const T &)
-func (this *QScreenList) Append_0() {
+func (this *QScreenList) Append0() {
 	// QScreenList_append_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_append_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void append(const QList<T> &)
-func (this *QScreenList) Append_1() {
+func (this *QScreenList) Append1() {
 	// QScreenList_append_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_append_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void prepend(const T &)
-func (this *QScreenList) Prepend_0() {
+func (this *QScreenList) Prepend0() {
 	// QScreenList_prepend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_prepend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void insert(int, const T &)
-func (this *QScreenList) Insert_0() {
+func (this *QScreenList) Insert0() {
 	// QScreenList_insert_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_insert_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void replace(int, const T &)
-func (this *QScreenList) Replace_0() {
+func (this *QScreenList) Replace0() {
 	// QScreenList_replace_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_replace_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void removeAt(int)
-func (this *QScreenList) RemoveAt_0() {
+func (this *QScreenList) RemoveAt0() {
 	// QScreenList_removeAt_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_removeAt_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // int removeAll(const T &)
-func (this *QScreenList) RemoveAll_0() int {
+func (this *QScreenList) RemoveAll0() int {
 	// QScreenList_removeAll_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_removeAll_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -233,7 +233,7 @@ func (this *QScreenList) RemoveAll_0() int {
 }
 
 // bool removeOne(const T &)
-func (this *QScreenList) RemoveOne_0() bool {
+func (this *QScreenList) RemoveOne0() bool {
 	// QScreenList_removeOne_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_removeOne_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -241,7 +241,7 @@ func (this *QScreenList) RemoveOne_0() bool {
 }
 
 // T takeAt(int)
-func (this *QScreenList) TakeAt_0() *QScreen {
+func (this *QScreenList) TakeAt0() *QScreen {
 	// QScreenList_takeAt_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_takeAt_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -249,7 +249,7 @@ func (this *QScreenList) TakeAt_0() *QScreen {
 }
 
 // T takeFirst()
-func (this *QScreenList) TakeFirst_0() *QScreen {
+func (this *QScreenList) TakeFirst0() *QScreen {
 	// QScreenList_takeFirst_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_takeFirst_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -257,7 +257,7 @@ func (this *QScreenList) TakeFirst_0() *QScreen {
 }
 
 // T takeLast()
-func (this *QScreenList) TakeLast_0() *QScreen {
+func (this *QScreenList) TakeLast0() *QScreen {
 	// QScreenList_takeLast_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_takeLast_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -265,21 +265,21 @@ func (this *QScreenList) TakeLast_0() *QScreen {
 }
 
 // void move(int, int)
-func (this *QScreenList) Move_0() {
+func (this *QScreenList) Move0() {
 	// QScreenList_move_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_move_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void swap(int, int)
-func (this *QScreenList) Swap_1() {
+func (this *QScreenList) Swap1() {
 	// QScreenList_swap_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_swap_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // int indexOf(const T &, int)
-func (this *QScreenList) IndexOf_0() int {
+func (this *QScreenList) IndexOf0() int {
 	// QScreenList_indexOf_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_indexOf_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -287,7 +287,7 @@ func (this *QScreenList) IndexOf_0() int {
 }
 
 // int lastIndexOf(const T &, int)
-func (this *QScreenList) LastIndexOf_0() int {
+func (this *QScreenList) LastIndexOf0() int {
 	// QScreenList_lastIndexOf_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_lastIndexOf_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -295,7 +295,7 @@ func (this *QScreenList) LastIndexOf_0() int {
 }
 
 // bool contains(const T &)
-func (this *QScreenList) Contains_0() bool {
+func (this *QScreenList) Contains0() bool {
 	// QScreenList_contains_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_contains_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -303,7 +303,7 @@ func (this *QScreenList) Contains_0() bool {
 }
 
 // int count(const T &)
-func (this *QScreenList) Count_0() int {
+func (this *QScreenList) Count0() int {
 	// QScreenList_count_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_count_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -311,126 +311,126 @@ func (this *QScreenList) Count_0() int {
 }
 
 // QList::iterator begin()
-func (this *QScreenList) Begin_0() {
+func (this *QScreenList) Begin0() {
 	// QScreenList_begin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_begin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator begin()
-func (this *QScreenList) Begin_1() {
+func (this *QScreenList) Begin1() {
 	// QScreenList_begin_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_begin_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator cbegin()
-func (this *QScreenList) Cbegin_0() {
+func (this *QScreenList) Cbegin0() {
 	// QScreenList_cbegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_cbegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator constBegin()
-func (this *QScreenList) ConstBegin_0() {
+func (this *QScreenList) ConstBegin0() {
 	// QScreenList_constBegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_constBegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator end()
-func (this *QScreenList) End_0() {
+func (this *QScreenList) End0() {
 	// QScreenList_end_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_end_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator end()
-func (this *QScreenList) End_1() {
+func (this *QScreenList) End1() {
 	// QScreenList_end_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_end_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator cend()
-func (this *QScreenList) Cend_0() {
+func (this *QScreenList) Cend0() {
 	// QScreenList_cend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_cend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_iterator constEnd()
-func (this *QScreenList) ConstEnd_0() {
+func (this *QScreenList) ConstEnd0() {
 	// QScreenList_constEnd_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_constEnd_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::reverse_iterator rbegin()
-func (this *QScreenList) Rbegin_0() {
+func (this *QScreenList) Rbegin0() {
 	// QScreenList_rbegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_rbegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::reverse_iterator rend()
-func (this *QScreenList) Rend_0() {
+func (this *QScreenList) Rend0() {
 	// QScreenList_rend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_rend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator rbegin()
-func (this *QScreenList) Rbegin_1() {
+func (this *QScreenList) Rbegin1() {
 	// QScreenList_rbegin_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_rbegin_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator rend()
-func (this *QScreenList) Rend_1() {
+func (this *QScreenList) Rend1() {
 	// QScreenList_rend_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_rend_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator crbegin()
-func (this *QScreenList) Crbegin_0() {
+func (this *QScreenList) Crbegin0() {
 	// QScreenList_crbegin_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_crbegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::const_reverse_iterator crend()
-func (this *QScreenList) Crend_0() {
+func (this *QScreenList) Crend0() {
 	// QScreenList_crend_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_crend_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator insert(QList::iterator, const T &)
-func (this *QScreenList) Insert_1() {
+func (this *QScreenList) Insert1() {
 	// QScreenList_insert_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_insert_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator erase(QList::iterator)
-func (this *QScreenList) Erase_0() {
+func (this *QScreenList) Erase0() {
 	// QScreenList_erase_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_erase_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::iterator erase(QList::iterator, QList::iterator)
-func (this *QScreenList) Erase_1() {
+func (this *QScreenList) Erase1() {
 	// QScreenList_erase_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_erase_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // int count()
-func (this *QScreenList) Count_1() int {
+func (this *QScreenList) Count1() int {
 	// QScreenList_count_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_count_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -438,7 +438,7 @@ func (this *QScreenList) Count_1() int {
 }
 
 // int length()
-func (this *QScreenList) Length_0() int {
+func (this *QScreenList) Length0() int {
 	// QScreenList_length_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_length_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -446,7 +446,7 @@ func (this *QScreenList) Length_0() int {
 }
 
 // T & first()
-func (this *QScreenList) First_0() *QScreen {
+func (this *QScreenList) First0() *QScreen {
 	// QScreenList_first_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_first_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -454,7 +454,7 @@ func (this *QScreenList) First_0() *QScreen {
 }
 
 // const T & constFirst()
-func (this *QScreenList) ConstFirst_0() *QScreen {
+func (this *QScreenList) ConstFirst0() *QScreen {
 	// QScreenList_constFirst_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_constFirst_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -462,7 +462,7 @@ func (this *QScreenList) ConstFirst_0() *QScreen {
 }
 
 // const T & first()
-func (this *QScreenList) First_1() *QScreen {
+func (this *QScreenList) First1() *QScreen {
 	// QScreenList_first_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_first_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -470,7 +470,7 @@ func (this *QScreenList) First_1() *QScreen {
 }
 
 // T & last()
-func (this *QScreenList) Last_0() *QScreen {
+func (this *QScreenList) Last0() *QScreen {
 	// QScreenList_last_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_last_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -478,7 +478,7 @@ func (this *QScreenList) Last_0() *QScreen {
 }
 
 // const T & last()
-func (this *QScreenList) Last_1() *QScreen {
+func (this *QScreenList) Last1() *QScreen {
 	// QScreenList_last_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_last_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -486,7 +486,7 @@ func (this *QScreenList) Last_1() *QScreen {
 }
 
 // const T & constLast()
-func (this *QScreenList) ConstLast_0() *QScreen {
+func (this *QScreenList) ConstLast0() *QScreen {
 	// QScreenList_constLast_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_constLast_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -494,21 +494,21 @@ func (this *QScreenList) ConstLast_0() *QScreen {
 }
 
 // void removeFirst()
-func (this *QScreenList) RemoveFirst_0() {
+func (this *QScreenList) RemoveFirst0() {
 	// QScreenList_removeFirst_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_removeFirst_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void removeLast()
-func (this *QScreenList) RemoveLast_0() {
+func (this *QScreenList) RemoveLast0() {
 	// QScreenList_removeLast_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_removeLast_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool startsWith(const T &)
-func (this *QScreenList) StartsWith_0() bool {
+func (this *QScreenList) StartsWith0() bool {
 	// QScreenList_startsWith_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_startsWith_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -516,7 +516,7 @@ func (this *QScreenList) StartsWith_0() bool {
 }
 
 // bool endsWith(const T &)
-func (this *QScreenList) EndsWith_0() bool {
+func (this *QScreenList) EndsWith0() bool {
 	// QScreenList_endsWith_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_endsWith_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -524,7 +524,7 @@ func (this *QScreenList) EndsWith_0() bool {
 }
 
 // QList<T> mid(int, int)
-func (this *QScreenList) Mid_0() *QScreenList {
+func (this *QScreenList) Mid0() *QScreenList {
 	// QScreenList_mid_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_mid_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -532,7 +532,7 @@ func (this *QScreenList) Mid_0() *QScreenList {
 }
 
 // T value(int)
-func (this *QScreenList) Value_0() *QScreen {
+func (this *QScreenList) Value0() *QScreen {
 	// QScreenList_value_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_value_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -540,7 +540,7 @@ func (this *QScreenList) Value_0() *QScreen {
 }
 
 // T value(int, const T &)
-func (this *QScreenList) Value_1() *QScreen {
+func (this *QScreenList) Value1() *QScreen {
 	// QScreenList_value_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_value_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -548,21 +548,21 @@ func (this *QScreenList) Value_1() *QScreen {
 }
 
 // void push_back(const T &)
-func (this *QScreenList) Push_back_0() {
+func (this *QScreenList) Push_back0() {
 	// QScreenList_push_back_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_push_back_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void push_front(const T &)
-func (this *QScreenList) Push_front_0() {
+func (this *QScreenList) Push_front0() {
 	// QScreenList_push_front_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_push_front_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // T & front()
-func (this *QScreenList) Front_0() *QScreen {
+func (this *QScreenList) Front0() *QScreen {
 	// QScreenList_front_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_front_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -570,7 +570,7 @@ func (this *QScreenList) Front_0() *QScreen {
 }
 
 // const T & front()
-func (this *QScreenList) Front_1() *QScreen {
+func (this *QScreenList) Front1() *QScreen {
 	// QScreenList_front_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_front_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -578,7 +578,7 @@ func (this *QScreenList) Front_1() *QScreen {
 }
 
 // T & back()
-func (this *QScreenList) Back_0() *QScreen {
+func (this *QScreenList) Back0() *QScreen {
 	// QScreenList_back_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_back_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -586,7 +586,7 @@ func (this *QScreenList) Back_0() *QScreen {
 }
 
 // const T & back()
-func (this *QScreenList) Back_1() *QScreen {
+func (this *QScreenList) Back1() *QScreen {
 	// QScreenList_back_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_back_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -594,21 +594,21 @@ func (this *QScreenList) Back_1() *QScreen {
 }
 
 // void pop_front()
-func (this *QScreenList) Pop_front_0() {
+func (this *QScreenList) Pop_front0() {
 	// QScreenList_pop_front_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_pop_front_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void pop_back()
-func (this *QScreenList) Pop_back_0() {
+func (this *QScreenList) Pop_back0() {
 	// QScreenList_pop_back_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_pop_back_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool empty()
-func (this *QScreenList) Empty_0() bool {
+func (this *QScreenList) Empty0() bool {
 	// QScreenList_empty_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_empty_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -616,7 +616,7 @@ func (this *QScreenList) Empty_0() bool {
 }
 
 // QList<T> & operator+=(const QList<T> &)
-func (this *QScreenList) Operator_add_equal_0() *QScreenList {
+func (this *QScreenList) Operator_add_equal0() *QScreenList {
 	// QScreenList_operator_add_equal_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_operator_add_equal_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -624,7 +624,7 @@ func (this *QScreenList) Operator_add_equal_0() *QScreenList {
 }
 
 // QList<T> operator+(const QList<T> &)
-func (this *QScreenList) Operator_add_0() *QScreenList {
+func (this *QScreenList) Operator_add0() *QScreenList {
 	// QScreenList_operator_add_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_operator_add_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -632,7 +632,7 @@ func (this *QScreenList) Operator_add_0() *QScreenList {
 }
 
 // QList<T> & operator+=(const T &)
-func (this *QScreenList) Operator_add_equal_1() *QScreenList {
+func (this *QScreenList) Operator_add_equal1() *QScreenList {
 	// QScreenList_operator_add_equal_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_operator_add_equal_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -640,7 +640,7 @@ func (this *QScreenList) Operator_add_equal_1() *QScreenList {
 }
 
 // QList<T> & operator<<(const T &)
-func (this *QScreenList) Operator_left_shift_0() *QScreenList {
+func (this *QScreenList) Operator_left_shift0() *QScreenList {
 	// QScreenList_operator_left_shift_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_operator_left_shift_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -648,7 +648,7 @@ func (this *QScreenList) Operator_left_shift_0() *QScreenList {
 }
 
 // QList<T> & operator<<(const QList<T> &)
-func (this *QScreenList) Operator_left_shift_1() *QScreenList {
+func (this *QScreenList) Operator_left_shift1() *QScreenList {
 	// QScreenList_operator_left_shift_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_operator_left_shift_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -656,21 +656,21 @@ func (this *QScreenList) Operator_left_shift_1() *QScreenList {
 }
 
 // QVector<T> toVector()
-func (this *QScreenList) ToVector_0() {
+func (this *QScreenList) ToVector0() {
 	// QScreenList_toVector_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_toVector_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QSet<T> toSet()
-func (this *QScreenList) ToSet_0() {
+func (this *QScreenList) ToSet0() {
 	// QScreenList_toSet_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_toSet_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList<T> fromVector(const QVector<T> &)
-func (this *QScreenList) FromVector_0() *QScreenList {
+func (this *QScreenList) FromVector0() *QScreenList {
 	// QScreenList_fromVector_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_fromVector_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -678,7 +678,7 @@ func (this *QScreenList) FromVector_0() *QScreenList {
 }
 
 // QList<T> fromSet(const QSet<T> &)
-func (this *QScreenList) FromSet_0() *QScreenList {
+func (this *QScreenList) FromSet0() *QScreenList {
 	// QScreenList_fromSet_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_fromSet_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -686,7 +686,7 @@ func (this *QScreenList) FromSet_0() *QScreenList {
 }
 
 // QList<T> fromStdList(const std::list<T> &)
-func (this *QScreenList) FromStdList_0() *QScreenList {
+func (this *QScreenList) FromStdList0() *QScreenList {
 	// QScreenList_fromStdList_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_fromStdList_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -694,70 +694,70 @@ func (this *QScreenList) FromStdList_0() *QScreenList {
 }
 
 // std::list<T> toStdList()
-func (this *QScreenList) ToStdList_0() {
+func (this *QScreenList) ToStdList0() {
 	// QScreenList_toStdList_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_toStdList_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // QList::Node * detach_helper_grow(int, int)
-func (this *QScreenList) Detach_helper_grow_0() {
+func (this *QScreenList) Detach_helper_grow0() {
 	// QScreenList_detach_helper_grow_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_detach_helper_grow_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void detach_helper(int)
-func (this *QScreenList) Detach_helper_0() {
+func (this *QScreenList) Detach_helper0() {
 	// QScreenList_detach_helper_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_detach_helper_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void detach_helper()
-func (this *QScreenList) Detach_helper_1() {
+func (this *QScreenList) Detach_helper1() {
 	// QScreenList_detach_helper_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_detach_helper_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void dealloc(QListData::Data *)
-func (this *QScreenList) Dealloc_0() {
+func (this *QScreenList) Dealloc0() {
 	// QScreenList_dealloc_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_dealloc_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_construct(QList::Node *, const T &)
-func (this *QScreenList) Node_construct_0() {
+func (this *QScreenList) Node_construct0() {
 	// QScreenList_node_construct_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_node_construct_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_destruct(QList::Node *)
-func (this *QScreenList) Node_destruct_0() {
+func (this *QScreenList) Node_destruct0() {
 	// QScreenList_node_destruct_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_node_destruct_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_copy(QList::Node *, QList::Node *, QList::Node *)
-func (this *QScreenList) Node_copy_0() {
+func (this *QScreenList) Node_copy0() {
 	// QScreenList_node_copy_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_node_copy_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // void node_destruct(QList::Node *, QList::Node *)
-func (this *QScreenList) Node_destruct_1() {
+func (this *QScreenList) Node_destruct1() {
 	// QScreenList_node_destruct_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_node_destruct_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
 // bool isValidIterator(const QList::iterator &)
-func (this *QScreenList) IsValidIterator_0() bool {
+func (this *QScreenList) IsValidIterator0() bool {
 	// QScreenList_isValidIterator_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_isValidIterator_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -765,7 +765,7 @@ func (this *QScreenList) IsValidIterator_0() bool {
 }
 
 // bool op_eq_impl(const QList<T> &, QListData::NotArrayCompatibleLayout)
-func (this *QScreenList) Op_eq_impl_0() bool {
+func (this *QScreenList) Op_eq_impl0() bool {
 	// QScreenList_op_eq_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_op_eq_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -773,7 +773,7 @@ func (this *QScreenList) Op_eq_impl_0() bool {
 }
 
 // bool op_eq_impl(const QList<T> &, QListData::ArrayCompatibleLayout)
-func (this *QScreenList) Op_eq_impl_1() bool {
+func (this *QScreenList) Op_eq_impl1() bool {
 	// QScreenList_op_eq_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_op_eq_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -781,7 +781,7 @@ func (this *QScreenList) Op_eq_impl_1() bool {
 }
 
 // bool contains_impl(const T &, QListData::NotArrayCompatibleLayout)
-func (this *QScreenList) Contains_impl_0() bool {
+func (this *QScreenList) Contains_impl0() bool {
 	// QScreenList_contains_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_contains_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -789,7 +789,7 @@ func (this *QScreenList) Contains_impl_0() bool {
 }
 
 // bool contains_impl(const T &, QListData::ArrayCompatibleLayout)
-func (this *QScreenList) Contains_impl_1() bool {
+func (this *QScreenList) Contains_impl1() bool {
 	// QScreenList_contains_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_contains_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -797,7 +797,7 @@ func (this *QScreenList) Contains_impl_1() bool {
 }
 
 // int count_impl(const T &, QListData::NotArrayCompatibleLayout)
-func (this *QScreenList) Count_impl_0() int {
+func (this *QScreenList) Count_impl0() int {
 	// QScreenList_count_impl_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_count_impl_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
@@ -805,7 +805,7 @@ func (this *QScreenList) Count_impl_0() int {
 }
 
 // int count_impl(const T &, QListData::ArrayCompatibleLayout)
-func (this *QScreenList) Count_impl_1() int {
+func (this *QScreenList) Count_impl1() int {
 	// QScreenList_count_impl_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QScreenList_count_impl_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)

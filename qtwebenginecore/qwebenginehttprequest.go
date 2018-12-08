@@ -102,10 +102,10 @@ func NewQWebEngineHttpRequest(url qtcore.QUrl_ITF, method int) *QWebEngineHttpRe
 /*
 
  */
-func (*QWebEngineHttpRequest) NewForInherit__() *QWebEngineHttpRequest {
-	return NewQWebEngineHttpRequest__()
+func (*QWebEngineHttpRequest) NewForInheritp() *QWebEngineHttpRequest {
+	return NewQWebEngineHttpRequestp()
 }
-func NewQWebEngineHttpRequest__() *QWebEngineHttpRequest {
+func NewQWebEngineHttpRequestp() *QWebEngineHttpRequest {
 	// arg: 0, const QUrl &=LValueReference, QUrl=Record, , Invalid
 	var convArg0 = qtcore.NewQUrl()
 	// arg: 1, const QWebEngineHttpRequest::Method &=LValueReference, QWebEngineHttpRequest::Method=Enum, , Invalid
@@ -125,10 +125,10 @@ func NewQWebEngineHttpRequest__() *QWebEngineHttpRequest {
 /*
 
  */
-func (*QWebEngineHttpRequest) NewForInherit__1(url qtcore.QUrl_ITF) *QWebEngineHttpRequest {
-	return NewQWebEngineHttpRequest__1(url)
+func (*QWebEngineHttpRequest) NewForInheritp1(url qtcore.QUrl_ITF) *QWebEngineHttpRequest {
+	return NewQWebEngineHttpRequestp1(url)
 }
-func NewQWebEngineHttpRequest__1(url qtcore.QUrl_ITF) *QWebEngineHttpRequest {
+func NewQWebEngineHttpRequestp1(url qtcore.QUrl_ITF) *QWebEngineHttpRequest {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
@@ -181,7 +181,7 @@ func (this *QWebEngineHttpRequest) Operator_equal(other unsafe.Pointer /*333*/) 
 /*
 
  */
-func (this *QWebEngineHttpRequest) Operator_equal_1(other QWebEngineHttpRequest_ITF) *QWebEngineHttpRequest {
+func (this *QWebEngineHttpRequest) Operator_equal1(other QWebEngineHttpRequest_ITF) *QWebEngineHttpRequest {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QWebEngineHttpRequest_PTR() != nil {
 		convArg0 = other.QWebEngineHttpRequest_PTR().GetCthis()

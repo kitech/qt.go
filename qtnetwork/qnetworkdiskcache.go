@@ -113,10 +113,10 @@ func NewQNetworkDiskCache(parent qtcore.QObject_ITF /*777 QObject **/) *QNetwork
 /*
 Creates a new disk cache. The parent argument is passed to QAbstractNetworkCache's constructor.
 */
-func (*QNetworkDiskCache) NewForInherit__() *QNetworkDiskCache {
-	return NewQNetworkDiskCache__()
+func (*QNetworkDiskCache) NewForInheritp() *QNetworkDiskCache {
+	return NewQNetworkDiskCachep()
 }
-func NewQNetworkDiskCache__() *QNetworkDiskCache {
+func NewQNetworkDiskCachep() *QNetworkDiskCache {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCacheC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -175,7 +175,7 @@ Prepared cache items will be stored in the new cache directory when they are ins
 See also cacheDirectory() and QDesktopServices::CacheLocation.
 */
 func (this *QNetworkDiskCache) SetCacheDirectory(cacheDir string) {
-	var tmpArg0 = qtcore.NewQString_5(cacheDir)
+	var tmpArg0 = qtcore.NewQString5(cacheDir)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkDiskCache17setCacheDirectoryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -330,7 +330,7 @@ Returns the QNetworkCacheMetaData for the cache file fileName.
 If fileName is not a cache file QNetworkCacheMetaData will be invalid.
 */
 func (this *QNetworkDiskCache) FileMetaData(fileName string) *QNetworkCacheMetaData /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkDiskCache12fileMetaDataERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

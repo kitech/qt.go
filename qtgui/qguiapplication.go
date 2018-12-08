@@ -126,10 +126,10 @@ This application object must be constructed before any paint devices (including 
 
 Note: argc and argv might be changed as Qt removes command line arguments that it recognizes.
 */
-func (*QGuiApplication) NewForInherit__(argc int, argv []string) *QGuiApplication {
-	return NewQGuiApplication__(argc, argv)
+func (*QGuiApplication) NewForInheritp(argc int, argv []string) *QGuiApplication {
+	return NewQGuiApplicationp(argc, argv)
 }
-func NewQGuiApplication__(argc int, argv []string) *QGuiApplication {
+func NewQGuiApplicationp(argc int, argv []string) *QGuiApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	// arg: 2, int=Int, =Invalid, , Invalid
 	arg2 := 0
@@ -164,7 +164,7 @@ func DeleteQGuiApplication(this *QGuiApplication) {
 
  */
 func (this *QGuiApplication) SetApplicationDisplayName(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication25setApplicationDisplayNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -205,7 +205,7 @@ func QGuiApplication_ApplicationDisplayName() string {
 
  */
 func (this *QGuiApplication) SetDesktopFileName(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication18setDesktopFileNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -147,7 +147,7 @@ Note: Writing to memory that is mapped as read-only is undefined, and may result
 
 See also unmap() and mapMode().
 */
-func (this *QAbstractPlanarVideoBuffer) Map_1(mode int, numBytes unsafe.Pointer /*666*/, bytesPerLine unsafe.Pointer, data unsafe.Pointer) int {
+func (this *QAbstractPlanarVideoBuffer) Map1(mode int, numBytes unsafe.Pointer /*666*/, bytesPerLine unsafe.Pointer, data unsafe.Pointer) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractPlanarVideoBuffer3mapEN20QAbstractVideoBuffer7MapModeEPiS2_PPh", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, numBytes, bytesPerLine, data)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111

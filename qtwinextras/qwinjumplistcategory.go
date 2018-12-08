@@ -79,7 +79,7 @@ func (*QWinJumpListCategory) NewForInherit(title string) *QWinJumpListCategory {
 	return NewQWinJumpListCategory(title)
 }
 func NewQWinJumpListCategory(title string) *QWinJumpListCategory {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinJumpListCategoryC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -96,10 +96,10 @@ func NewQWinJumpListCategory(title string) *QWinJumpListCategory {
 /*
 Constructs a custom QWinJumpListCategory with the specified title.
 */
-func (*QWinJumpListCategory) NewForInherit__() *QWinJumpListCategory {
-	return NewQWinJumpListCategory__()
+func (*QWinJumpListCategory) NewForInheritp() *QWinJumpListCategory {
+	return NewQWinJumpListCategoryp()
 }
-func NewQWinJumpListCategory__() *QWinJumpListCategory {
+func NewQWinJumpListCategoryp() *QWinJumpListCategory {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinJumpListCategoryC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -197,7 +197,7 @@ Sets the category title.
 See also title().
 */
 func (this *QWinJumpListCategory) SetTitle(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinJumpListCategory8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -257,7 +257,7 @@ func (this *QWinJumpListCategory) AddItem(item QWinJumpListItem_ITF /*777 QWinJu
 Adds a destination to the category pointing to filePath.
 */
 func (this *QWinJumpListCategory) AddDestination(filePath string) *QWinJumpListItem /*777 QWinJumpListItem **/ {
-	var tmpArg0 = qtcore.NewQString_5(filePath)
+	var tmpArg0 = qtcore.NewQString5(filePath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QWinJumpListCategory14addDestinationERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -273,9 +273,9 @@ func (this *QWinJumpListCategory) AddDestination(filePath string) *QWinJumpListI
 Adds a link to the category using title, executablePath, and optionally arguments.
 */
 func (this *QWinJumpListCategory) AddLink(title string, executablePath string, arguments qtcore.QStringList_ITF) *QWinJumpListItem /*777 QWinJumpListItem **/ {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(executablePath)
+	var tmpArg1 = qtcore.NewQString5(executablePath)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if arguments != nil && arguments.QStringList_PTR() != nil {
@@ -294,10 +294,10 @@ func (this *QWinJumpListCategory) AddLink(title string, executablePath string, a
 /*
 Adds a link to the category using title, executablePath, and optionally arguments.
 */
-func (this *QWinJumpListCategory) AddLink__(title string, executablePath string) *QWinJumpListItem /*777 QWinJumpListItem **/ {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func (this *QWinJumpListCategory) AddLinkp(title string, executablePath string) *QWinJumpListItem /*777 QWinJumpListItem **/ {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(executablePath)
+	var tmpArg1 = qtcore.NewQString5(executablePath)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -314,14 +314,14 @@ func (this *QWinJumpListCategory) AddLink__(title string, executablePath string)
 /*
 Adds a link to the category using title, executablePath, and optionally arguments.
 */
-func (this *QWinJumpListCategory) AddLink_1(icon qtgui.QIcon_ITF, title string, executablePath string, arguments qtcore.QStringList_ITF) *QWinJumpListItem /*777 QWinJumpListItem **/ {
+func (this *QWinJumpListCategory) AddLink1(icon qtgui.QIcon_ITF, title string, executablePath string, arguments qtcore.QStringList_ITF) *QWinJumpListItem /*777 QWinJumpListItem **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(executablePath)
+	var tmpArg2 = qtcore.NewQString5(executablePath)
 	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 unsafe.Pointer
 	if arguments != nil && arguments.QStringList_PTR() != nil {
@@ -340,14 +340,14 @@ func (this *QWinJumpListCategory) AddLink_1(icon qtgui.QIcon_ITF, title string, 
 /*
 Adds a link to the category using title, executablePath, and optionally arguments.
 */
-func (this *QWinJumpListCategory) AddLink_1_(icon qtgui.QIcon_ITF, title string, executablePath string) *QWinJumpListItem /*777 QWinJumpListItem **/ {
+func (this *QWinJumpListCategory) AddLink1p(icon qtgui.QIcon_ITF, title string, executablePath string) *QWinJumpListItem /*777 QWinJumpListItem **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(executablePath)
+	var tmpArg2 = qtcore.NewQString5(executablePath)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg3 unsafe.Pointer

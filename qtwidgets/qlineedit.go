@@ -206,10 +206,10 @@ The parent argument is sent to the QWidget constructor.
 
 See also setText() and setMaxLength().
 */
-func (*QLineEdit) NewForInherit__() *QLineEdit {
-	return NewQLineEdit__()
+func (*QLineEdit) NewForInheritp() *QLineEdit {
+	return NewQLineEditp()
 }
-func NewQLineEdit__() *QLineEdit {
+func NewQLineEditp() *QLineEdit {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEditC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -233,11 +233,11 @@ The parent argument is sent to the QWidget constructor.
 
 See also setText() and setMaxLength().
 */
-func (*QLineEdit) NewForInherit_1(arg0 string, parent QWidget_ITF /*777 QWidget **/) *QLineEdit {
-	return NewQLineEdit_1(arg0, parent)
+func (*QLineEdit) NewForInherit1(arg0 string, parent QWidget_ITF /*777 QWidget **/) *QLineEdit {
+	return NewQLineEdit1(arg0, parent)
 }
-func NewQLineEdit_1(arg0 string, parent QWidget_ITF /*777 QWidget **/) *QLineEdit {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func NewQLineEdit1(arg0 string, parent QWidget_ITF /*777 QWidget **/) *QLineEdit {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -264,11 +264,11 @@ The parent argument is sent to the QWidget constructor.
 
 See also setText() and setMaxLength().
 */
-func (*QLineEdit) NewForInherit_1_(arg0 string) *QLineEdit {
-	return NewQLineEdit_1_(arg0)
+func (*QLineEdit) NewForInherit1p(arg0 string) *QLineEdit {
+	return NewQLineEdit1p(arg0)
 }
-func NewQLineEdit_1_(arg0 string) *QLineEdit {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func NewQLineEdit1p(arg0 string) *QLineEdit {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -354,7 +354,7 @@ func (this *QLineEdit) PlaceholderText() string {
 
  */
 func (this *QLineEdit) SetPlaceholderText(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit18setPlaceholderTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -712,7 +712,7 @@ Moves the cursor forward steps characters. If mark is true each character moved 
 
 See also cursorBackward().
 */
-func (this *QLineEdit) CursorForward__(mark bool) {
+func (this *QLineEdit) CursorForwardp(mark bool) {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	steps := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit13cursorForwardEbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mark, steps)
@@ -744,7 +744,7 @@ Moves the cursor back steps characters. If mark is true each character moved ove
 
 See also cursorForward().
 */
-func (this *QLineEdit) CursorBackward__(mark bool) {
+func (this *QLineEdit) CursorBackwardp(mark bool) {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	steps := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit14cursorBackwardEbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mark, steps)
@@ -1074,7 +1074,7 @@ func (this *QLineEdit) InputMask() string {
 
  */
 func (this *QLineEdit) SetInputMask(inputMask string) {
-	var tmpArg0 = qtcore.NewQString_5(inputMask)
+	var tmpArg0 = qtcore.NewQString5(inputMask)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit12setInputMaskERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1127,7 +1127,7 @@ This function was introduced in  Qt 4.5.
 
 See also textMargins().
 */
-func (this *QLineEdit) SetTextMargins_1(margins qtcore.QMargins_ITF) {
+func (this *QLineEdit) SetTextMargins1(margins qtcore.QMargins_ITF) {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -1206,7 +1206,7 @@ Adds the action to the list of actions at the position.
 
 This function was introduced in  Qt 5.2.
 */
-func (this *QLineEdit) AddAction_1(icon qtgui.QIcon_ITF, position int) *QAction /*777 QAction **/ {
+func (this *QLineEdit) AddAction1(icon qtgui.QIcon_ITF, position int) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
@@ -1225,7 +1225,7 @@ func (this *QLineEdit) AddAction_1(icon qtgui.QIcon_ITF, position int) *QAction 
 
  */
 func (this *QLineEdit) SetText(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1378,7 +1378,7 @@ Unlike textEdited(), this signal is also emitted when the text is changed progra
 Note: Notifier signal for property text.
 */
 func (this *QLineEdit) TextChanged(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit11textChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1395,7 +1395,7 @@ This signal is emitted whenever the text is edited. The text argument is the new
 Unlike textChanged(), this signal is not emitted when the text is changed programmatically, for example, by calling setText().
 */
 func (this *QLineEdit) TextEdited(arg0 string) {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit10textEditedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1781,7 +1781,7 @@ func (this *QLineEdit) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 /*
 Reimplemented from QWidget::inputMethodQuery().
 */
-func (this *QLineEdit) InputMethodQuery_1(property int, argument qtcore.QVariant_ITF /*123*/) *qtcore.QVariant /*123*/ {
+func (this *QLineEdit) InputMethodQuery1(property int, argument qtcore.QVariant_ITF /*123*/) *qtcore.QVariant /*123*/ {
 	var convArg1 unsafe.Pointer
 	if argument != nil && argument.QVariant_PTR() != nil {
 		convArg1 = argument.QVariant_PTR().GetCthis()

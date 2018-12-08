@@ -113,10 +113,10 @@ Constructs a new, empty button group with the given parent.
 
 See also addButton() and setExclusive().
 */
-func (*QButtonGroup) NewForInherit__() *QButtonGroup {
-	return NewQButtonGroup__()
+func (*QButtonGroup) NewForInheritp() *QButtonGroup {
+	return NewQButtonGroupp()
 }
-func NewQButtonGroup__() *QButtonGroup {
+func NewQButtonGroupp() *QButtonGroup {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -197,7 +197,7 @@ Adds the given button to the button group. If id is -1, an id will be assigned t
 
 See also removeButton() and buttons().
 */
-func (this *QButtonGroup) AddButton__(arg0 QAbstractButton_ITF /*777 QAbstractButton **/) {
+func (this *QButtonGroup) AddButtonp(arg0 QAbstractButton_ITF /*777 QAbstractButton **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QAbstractButton_PTR() != nil {
 		convArg0 = arg0.QAbstractButton_PTR().GetCthis()
@@ -365,7 +365,7 @@ Note: Signal buttonClicked is overloaded in this class. To connect to this signa
 
 See also checkedButton() and QAbstractButton::clicked().
 */
-func (this *QButtonGroup) ButtonClicked_1(arg0 int) {
+func (this *QButtonGroup) ButtonClicked1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroup13buttonClickedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -419,7 +419,7 @@ This function was introduced in  Qt 4.2.
 
 See also QAbstractButton::pressed().
 */
-func (this *QButtonGroup) ButtonPressed_1(arg0 int) {
+func (this *QButtonGroup) ButtonPressed1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroup13buttonPressedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -473,7 +473,7 @@ This function was introduced in  Qt 4.2.
 
 See also QAbstractButton::released().
 */
-func (this *QButtonGroup) ButtonReleased_1(arg0 int) {
+func (this *QButtonGroup) ButtonReleased1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroup14buttonReleasedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -527,7 +527,7 @@ This function was introduced in  Qt 5.2.
 
 See also QAbstractButton::toggled().
 */
-func (this *QButtonGroup) ButtonToggled_1(arg0 int, arg1 bool) {
+func (this *QButtonGroup) ButtonToggled1(arg0 int, arg1 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QButtonGroup13buttonToggledEib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	qtrt.ErrPrint(err, rv)
 }

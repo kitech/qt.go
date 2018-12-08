@@ -92,10 +92,10 @@ func NewQIcon() *QIcon {
 /*
 Constructs a null icon.
 */
-func (*QIcon) NewForInherit_1(pixmap QPixmap_ITF) *QIcon {
-	return NewQIcon_1(pixmap)
+func (*QIcon) NewForInherit1(pixmap QPixmap_ITF) *QIcon {
+	return NewQIcon1(pixmap)
 }
-func NewQIcon_1(pixmap QPixmap_ITF) *QIcon {
+func NewQIcon1(pixmap QPixmap_ITF) *QIcon {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
@@ -115,11 +115,11 @@ func NewQIcon_1(pixmap QPixmap_ITF) *QIcon {
 /*
 Constructs a null icon.
 */
-func (*QIcon) NewForInherit_2(fileName string) *QIcon {
-	return NewQIcon_2(fileName)
+func (*QIcon) NewForInherit2(fileName string) *QIcon {
+	return NewQIcon2(fileName)
 }
-func NewQIcon_2(fileName string) *QIcon {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQIcon2(fileName string) *QIcon {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIconC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -136,10 +136,10 @@ func NewQIcon_2(fileName string) *QIcon {
 /*
 Constructs a null icon.
 */
-func (*QIcon) NewForInherit_3(engine QIconEngine_ITF /*777 QIconEngine **/) *QIcon {
-	return NewQIcon_3(engine)
+func (*QIcon) NewForInherit3(engine QIconEngine_ITF /*777 QIconEngine **/) *QIcon {
+	return NewQIcon3(engine)
 }
-func NewQIcon_3(engine QIconEngine_ITF /*777 QIconEngine **/) *QIcon {
+func NewQIcon3(engine QIconEngine_ITF /*777 QIconEngine **/) *QIcon {
 	var convArg0 unsafe.Pointer
 	if engine != nil && engine.QIconEngine_PTR() != nil {
 		convArg0 = engine.QIconEngine_PTR().GetCthis()
@@ -194,7 +194,7 @@ func (this *QIcon) Operator_equal(other QIcon_ITF) *QIcon {
 /*
 
  */
-func (this *QIcon) Operator_equal_1(other unsafe.Pointer /*333*/) *QIcon {
+func (this *QIcon) Operator_equal1(other unsafe.Pointer /*333*/) *QIcon {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIconaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -257,7 +257,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 
 See also actualSize() and paint().
 */
-func (this *QIcon) Pixmap__(size qtcore.QSize_ITF) *QPixmap /*123*/ {
+func (this *QIcon) Pixmapp(size qtcore.QSize_ITF) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
@@ -285,7 +285,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 
 See also actualSize() and paint().
 */
-func (this *QIcon) Pixmap__1(size qtcore.QSize_ITF, mode int) *QPixmap /*123*/ {
+func (this *QIcon) Pixmapp1(size qtcore.QSize_ITF, mode int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
@@ -311,7 +311,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 
 See also actualSize() and paint().
 */
-func (this *QIcon) Pixmap_1(w int, h int, mode int, state int) *QPixmap /*123*/ {
+func (this *QIcon) Pixmap1(w int, h int, mode int, state int) *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiiNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode, state)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -331,7 +331,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 
 See also actualSize() and paint().
 */
-func (this *QIcon) Pixmap_1_(w int, h int) *QPixmap /*123*/ {
+func (this *QIcon) Pixmap1p(w int, h int) *QPixmap /*123*/ {
 	// arg: 2, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
 	// arg: 3, QIcon::State=Enum, QIcon::State=Enum, , Invalid
@@ -355,7 +355,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 
 See also actualSize() and paint().
 */
-func (this *QIcon) Pixmap_1_1(w int, h int, mode int) *QPixmap /*123*/ {
+func (this *QIcon) Pixmap1p1(w int, h int, mode int) *QPixmap /*123*/ {
 	// arg: 3, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiiNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode, state)
@@ -377,7 +377,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 
 See also actualSize() and paint().
 */
-func (this *QIcon) Pixmap_2(extent int, mode int, state int) *QPixmap /*123*/ {
+func (this *QIcon) Pixmap2(extent int, mode int, state int) *QPixmap /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extent, mode, state)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -397,7 +397,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 
 See also actualSize() and paint().
 */
-func (this *QIcon) Pixmap_2_(extent int) *QPixmap /*123*/ {
+func (this *QIcon) Pixmap2p(extent int) *QPixmap /*123*/ {
 	// arg: 1, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
 	// arg: 2, QIcon::State=Enum, QIcon::State=Enum, , Invalid
@@ -421,7 +421,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 
 See also actualSize() and paint().
 */
-func (this *QIcon) Pixmap_2_1(extent int, mode int) *QPixmap /*123*/ {
+func (this *QIcon) Pixmap2p1(extent int, mode int) *QPixmap /*123*/ {
 	// arg: 2, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiNS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extent, mode, state)
@@ -443,7 +443,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 
 See also actualSize() and paint().
 */
-func (this *QIcon) Pixmap_3(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int, state int) *QPixmap /*123*/ {
+func (this *QIcon) Pixmap3(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int, state int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg0 = window.QWindow_PTR().GetCthis()
@@ -471,7 +471,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 
 See also actualSize() and paint().
 */
-func (this *QIcon) Pixmap_3_(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF) *QPixmap /*123*/ {
+func (this *QIcon) Pixmap3p(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg0 = window.QWindow_PTR().GetCthis()
@@ -503,7 +503,7 @@ Setting the Qt::AA_UseHighDpiPixmaps application attribute enables this function
 
 See also actualSize() and paint().
 */
-func (this *QIcon) Pixmap_3_1(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int) *QPixmap /*123*/ {
+func (this *QIcon) Pixmap3p1(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int) *QPixmap /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg0 = window.QWindow_PTR().GetCthis()
@@ -553,7 +553,7 @@ Returns the actual size of the icon for the requested size, mode, and state. The
 
 See also pixmap() and paint().
 */
-func (this *QIcon) ActualSize__(size qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
+func (this *QIcon) ActualSizep(size qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
@@ -579,7 +579,7 @@ Returns the actual size of the icon for the requested size, mode, and state. The
 
 See also pixmap() and paint().
 */
-func (this *QIcon) ActualSize__1(size qtcore.QSize_ITF, mode int) *qtcore.QSize /*123*/ {
+func (this *QIcon) ActualSizep1(size qtcore.QSize_ITF, mode int) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
@@ -603,7 +603,7 @@ Returns the actual size of the icon for the requested size, mode, and state. The
 
 See also pixmap() and paint().
 */
-func (this *QIcon) ActualSize_1(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int, state int) *qtcore.QSize /*123*/ {
+func (this *QIcon) ActualSize1(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int, state int) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg0 = window.QWindow_PTR().GetCthis()
@@ -629,7 +629,7 @@ Returns the actual size of the icon for the requested size, mode, and state. The
 
 See also pixmap() and paint().
 */
-func (this *QIcon) ActualSize_1_(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
+func (this *QIcon) ActualSize1p(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg0 = window.QWindow_PTR().GetCthis()
@@ -659,7 +659,7 @@ Returns the actual size of the icon for the requested size, mode, and state. The
 
 See also pixmap() and paint().
 */
-func (this *QIcon) ActualSize_1_1(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int) *qtcore.QSize /*123*/ {
+func (this *QIcon) ActualSize1p1(window QWindow_ITF /*777 QWindow **/, size qtcore.QSize_ITF, mode int) *qtcore.QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
 		convArg0 = window.QWindow_PTR().GetCthis()
@@ -733,7 +733,7 @@ Uses the painter to paint the icon with specified alignment, required mode, and 
 
 See also actualSize() and pixmap().
 */
-func (this *QIcon) Paint__(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF) {
+func (this *QIcon) Paintp(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -762,7 +762,7 @@ Uses the painter to paint the icon with specified alignment, required mode, and 
 
 See also actualSize() and pixmap().
 */
-func (this *QIcon) Paint__1(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, alignment int) {
+func (this *QIcon) Paintp1(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, alignment int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -789,7 +789,7 @@ Uses the painter to paint the icon with specified alignment, required mode, and 
 
 See also actualSize() and pixmap().
 */
-func (this *QIcon) Paint__2(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, alignment int, mode int) {
+func (this *QIcon) Paintp2(painter QPainter_ITF /*777 QPainter **/, rect qtcore.QRect_ITF, alignment int, mode int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -814,7 +814,7 @@ Uses the painter to paint the icon with specified alignment, required mode, and 
 
 See also actualSize() and pixmap().
 */
-func (this *QIcon) Paint_1(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, alignment int, mode int, state int) {
+func (this *QIcon) Paint1(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, alignment int, mode int, state int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -833,7 +833,7 @@ Uses the painter to paint the icon with specified alignment, required mode, and 
 
 See also actualSize() and pixmap().
 */
-func (this *QIcon) Paint_1_(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int) {
+func (this *QIcon) Paint1p(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -858,7 +858,7 @@ Uses the painter to paint the icon with specified alignment, required mode, and 
 
 See also actualSize() and pixmap().
 */
-func (this *QIcon) Paint_1_1(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, alignment int) {
+func (this *QIcon) Paint1p1(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, alignment int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -881,7 +881,7 @@ Uses the painter to paint the icon with specified alignment, required mode, and 
 
 See also actualSize() and pixmap().
 */
-func (this *QIcon) Paint_1_2(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, alignment int, mode int) {
+func (this *QIcon) Paint1p2(painter QPainter_ITF /*777 QPainter **/, x int, y int, w int, h int, alignment int, mode int) {
 	var convArg0 unsafe.Pointer
 	if painter != nil && painter.QPainter_PTR() != nil {
 		convArg0 = painter.QPainter_PTR().GetCthis()
@@ -992,7 +992,7 @@ Custom icon engines are free to ignore additionally added pixmaps.
 
 See also addFile().
 */
-func (this *QIcon) AddPixmap__(pixmap QPixmap_ITF) {
+func (this *QIcon) AddPixmapp(pixmap QPixmap_ITF) {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
@@ -1017,7 +1017,7 @@ Custom icon engines are free to ignore additionally added pixmaps.
 
 See also addFile().
 */
-func (this *QIcon) AddPixmap__1(pixmap QPixmap_ITF, mode int) {
+func (this *QIcon) AddPixmapp1(pixmap QPixmap_ITF, mode int) {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
@@ -1049,7 +1049,7 @@ Note: When you add a non-empty filename to a QIcon, the icon becomes non-null, e
 See also addPixmap() and QPixmap::devicePixelRatio().
 */
 func (this *QIcon) AddFile(fileName string, size qtcore.QSize_ITF, mode int, state int) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -1079,8 +1079,8 @@ Note: When you add a non-empty filename to a QIcon, the icon becomes non-null, e
 
 See also addPixmap() and QPixmap::devicePixelRatio().
 */
-func (this *QIcon) AddFile__(fileName string) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func (this *QIcon) AddFilep(fileName string) {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QSize &=LValueReference, QSize=Record, , Invalid
 	var convArg1 = qtcore.NewQSize()
@@ -1112,8 +1112,8 @@ Note: When you add a non-empty filename to a QIcon, the icon becomes non-null, e
 
 See also addPixmap() and QPixmap::devicePixelRatio().
 */
-func (this *QIcon) AddFile__1(fileName string, size qtcore.QSize_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func (this *QIcon) AddFilep1(fileName string, size qtcore.QSize_ITF) {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -1147,8 +1147,8 @@ Note: When you add a non-empty filename to a QIcon, the icon becomes non-null, e
 
 See also addPixmap() and QPixmap::devicePixelRatio().
 */
-func (this *QIcon) AddFile__2(fileName string, size qtcore.QSize_ITF, mode int) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func (this *QIcon) AddFilep2(fileName string, size qtcore.QSize_ITF, mode int) {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -1187,7 +1187,7 @@ Returns a list of available icon sizes for the specified mode and state.
 
 This function was introduced in  Qt 4.5.
 */
-func (this *QIcon) AvailableSizes__() *qtcore.QSizeList /*lll*/ {
+func (this *QIcon) AvailableSizesp() *qtcore.QSizeList /*lll*/ {
 	// arg: 0, QIcon::Mode=Enum, QIcon::Mode=Enum, , Invalid
 	mode := 0
 	// arg: 1, QIcon::State=Enum, QIcon::State=Enum, , Invalid
@@ -1208,7 +1208,7 @@ Returns a list of available icon sizes for the specified mode and state.
 
 This function was introduced in  Qt 4.5.
 */
-func (this *QIcon) AvailableSizes__1(mode int) *qtcore.QSizeList /*lll*/ {
+func (this *QIcon) AvailableSizesp1(mode int) *qtcore.QSizeList /*lll*/ {
 	// arg: 1, QIcon::State=Enum, QIcon::State=Enum, , Invalid
 	state := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QIcon14availableSizesENS_4ModeENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode, state)
@@ -1283,7 +1283,7 @@ This function was introduced in  Qt 4.6.
 See also themeName(), setThemeName(), and themeSearchPaths().
 */
 func (this *QIcon) FromTheme(name string) *QIcon /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon9fromThemeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1327,8 +1327,8 @@ This function was introduced in  Qt 4.6.
 
 See also themeName(), setThemeName(), and themeSearchPaths().
 */
-func (this *QIcon) FromTheme_1(name string, fallback QIcon_ITF) *QIcon /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(name)
+func (this *QIcon) FromTheme1(name string, fallback QIcon_ITF) *QIcon /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if fallback != nil && fallback.QIcon_PTR() != nil {
@@ -1340,9 +1340,9 @@ func (this *QIcon) FromTheme_1(name string, fallback QIcon_ITF) *QIcon /*123*/ {
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIcon)
 	return rv2
 }
-func QIcon_FromTheme_1(name string, fallback QIcon_ITF) *QIcon /*123*/ {
+func QIcon_FromTheme1(name string, fallback QIcon_ITF) *QIcon /*123*/ {
 	var nilthis *QIcon
-	rv := nilthis.FromTheme_1(name, fallback)
+	rv := nilthis.FromTheme1(name, fallback)
 	return rv
 }
 
@@ -1359,7 +1359,7 @@ This function was introduced in  Qt 4.6.
 See also themeSearchPaths(), fromTheme(), and setThemeName().
 */
 func (this *QIcon) HasThemeIcon(name string) bool {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon12hasThemeIconERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1470,7 +1470,7 @@ This function was introduced in  Qt 4.6.
 See also themeSearchPaths() and themeName().
 */
 func (this *QIcon) SetThemeName(path string) {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon12setThemeNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

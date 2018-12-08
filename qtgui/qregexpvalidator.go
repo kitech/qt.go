@@ -108,10 +108,10 @@ func NewQRegExpValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpVa
 /*
 
  */
-func (*QRegExpValidator) NewForInherit__() *QRegExpValidator {
-	return NewQRegExpValidator__()
+func (*QRegExpValidator) NewForInheritp() *QRegExpValidator {
+	return NewQRegExpValidatorp()
 }
-func NewQRegExpValidator__() *QRegExpValidator {
+func NewQRegExpValidatorp() *QRegExpValidator {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QRegExpValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -129,10 +129,10 @@ func NewQRegExpValidator__() *QRegExpValidator {
 /*
 
  */
-func (*QRegExpValidator) NewForInherit_1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
-	return NewQRegExpValidator_1(rx, parent)
+func (*QRegExpValidator) NewForInherit1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
+	return NewQRegExpValidator1(rx, parent)
 }
-func NewQRegExpValidator_1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
+func NewQRegExpValidator1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpValidator {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
@@ -156,10 +156,10 @@ func NewQRegExpValidator_1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*77
 /*
 
  */
-func (*QRegExpValidator) NewForInherit_1_(rx qtcore.QRegExp_ITF) *QRegExpValidator {
-	return NewQRegExpValidator_1_(rx)
+func (*QRegExpValidator) NewForInherit1p(rx qtcore.QRegExp_ITF) *QRegExpValidator {
+	return NewQRegExpValidator1p(rx)
 }
-func NewQRegExpValidator_1_(rx qtcore.QRegExp_ITF) *QRegExpValidator {
+func NewQRegExpValidator1p(rx qtcore.QRegExp_ITF) *QRegExpValidator {
 	var convArg0 unsafe.Pointer
 	if rx != nil && rx.QRegExp_PTR() != nil {
 		convArg0 = rx.QRegExp_PTR().GetCthis()
@@ -199,7 +199,7 @@ This virtual function returns Invalid if input is invalid according to this vali
 The function can change both input and pos (the cursor position) if required.
 */
 func (this *QRegExpValidator) Validate(input string, pos int) int {
-	var tmpArg0 = qtcore.NewQString_5(input)
+	var tmpArg0 = qtcore.NewQString5(input)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QRegExpValidator8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	qtrt.ErrPrint(err, rv)

@@ -110,10 +110,10 @@ func NewQVideoProbe(parent qtcore.QObject_ITF /*777 QObject **/) *QVideoProbe {
 /*
 Creates a new QVideoProbe class with parent. After setting the source to monitor with setSource(), the videoFrameProbed() signal will be emitted when video frames are flowing in the source media object.
 */
-func (*QVideoProbe) NewForInherit__() *QVideoProbe {
-	return NewQVideoProbe__()
+func (*QVideoProbe) NewForInheritp() *QVideoProbe {
+	return NewQVideoProbep()
 }
-func NewQVideoProbe__() *QVideoProbe {
+func NewQVideoProbep() *QVideoProbe {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QVideoProbeC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -176,7 +176,7 @@ If the media object does not support monitoring video, this function will return
 
 Any previously monitored objects will no longer be monitored. Passing in the same object will be ignored, but monitoring will continue.
 */
-func (this *QVideoProbe) SetSource_1(source QMediaRecorder_ITF /*777 QMediaRecorder **/) bool {
+func (this *QVideoProbe) SetSource1(source QMediaRecorder_ITF /*777 QMediaRecorder **/) bool {
 	var convArg0 unsafe.Pointer
 	if source != nil && source.QMediaRecorder_PTR() != nil {
 		convArg0 = source.QMediaRecorder_PTR().GetCthis()

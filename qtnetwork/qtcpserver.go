@@ -126,10 +126,10 @@ parent is passed to the QObject constructor.
 
 See also listen() and setSocketDescriptor().
 */
-func (*QTcpServer) NewForInherit__() *QTcpServer {
-	return NewQTcpServer__()
+func (*QTcpServer) NewForInheritp() *QTcpServer {
+	return NewQTcpServerp()
 }
-func NewQTcpServer__() *QTcpServer {
+func NewQTcpServerp() *QTcpServer {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -188,7 +188,7 @@ Returns true on success; otherwise returns false.
 
 See also isListening().
 */
-func (this *QTcpServer) Listen__() bool {
+func (this *QTcpServer) Listenp() bool {
 	// arg: 0, const QHostAddress &=LValueReference, QHostAddress=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, quint16=Typedef, quint16=Typedef, unsigned short, UShort
@@ -210,7 +210,7 @@ Returns true on success; otherwise returns false.
 
 See also isListening().
 */
-func (this *QTcpServer) Listen__1(address QHostAddress_ITF) bool {
+func (this *QTcpServer) Listenp1(address QHostAddress_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if address != nil && address.QHostAddress_PTR() != nil {
 		convArg0 = address.QHostAddress_PTR().GetCthis()
@@ -394,7 +394,7 @@ If msec is -1, this function will not time out.
 
 See also hasPendingConnections() and nextPendingConnection().
 */
-func (this *QTcpServer) WaitForNewConnection__() bool {
+func (this *QTcpServer) WaitForNewConnectionp() bool {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	msec := int(0)
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
@@ -420,7 +420,7 @@ If msec is -1, this function will not time out.
 
 See also hasPendingConnections() and nextPendingConnection().
 */
-func (this *QTcpServer) WaitForNewConnection__1(msec int) bool {
+func (this *QTcpServer) WaitForNewConnectionp1(msec int) bool {
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
 	var timedOut unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, timedOut)

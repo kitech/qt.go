@@ -109,7 +109,7 @@ func (this *QQmlInfo) Operator_left_shift(t qtcore.QChar_ITF /*123*/) *QQmlInfo 
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_1(t bool) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift1(t bool) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -125,7 +125,7 @@ func (this *QQmlInfo) Operator_left_shift_1(t bool) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_2(t byte) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift2(t byte) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -141,7 +141,7 @@ func (this *QQmlInfo) Operator_left_shift_2(t byte) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_3(t int16) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift3(t int16) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEs", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -157,7 +157,7 @@ func (this *QQmlInfo) Operator_left_shift_3(t int16) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_4(t uint16) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift4(t uint16) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEt", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -173,7 +173,7 @@ func (this *QQmlInfo) Operator_left_shift_4(t uint16) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_5(t int) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift5(t int) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -189,7 +189,7 @@ func (this *QQmlInfo) Operator_left_shift_5(t int) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_6(t uint) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift6(t uint) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -205,7 +205,7 @@ func (this *QQmlInfo) Operator_left_shift_6(t uint) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_7(t int) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift7(t int) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -221,7 +221,7 @@ func (this *QQmlInfo) Operator_left_shift_7(t int) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_8(t uint) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift8(t uint) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -237,7 +237,7 @@ func (this *QQmlInfo) Operator_left_shift_8(t uint) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_9(t int64) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift9(t int64) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -253,7 +253,7 @@ func (this *QQmlInfo) Operator_left_shift_9(t int64) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_10(t uint64) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift10(t uint64) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -269,7 +269,7 @@ func (this *QQmlInfo) Operator_left_shift_10(t uint64) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_11(t float32) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift11(t float32) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -285,7 +285,7 @@ func (this *QQmlInfo) Operator_left_shift_11(t float32) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_12(t float64) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift12(t float64) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -301,7 +301,7 @@ func (this *QQmlInfo) Operator_left_shift_12(t float64) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_13(t string) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift13(t string) *QQmlInfo {
 	var convArg0 = qtrt.CString(t)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -319,8 +319,8 @@ func (this *QQmlInfo) Operator_left_shift_13(t string) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_14(t string) *QQmlInfo {
-	var tmpArg0 = qtcore.NewQString_5(t)
+func (this *QQmlInfo) Operator_left_shift14(t string) *QQmlInfo {
+	var tmpArg0 = qtcore.NewQString5(t)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -337,7 +337,7 @@ func (this *QQmlInfo) Operator_left_shift_14(t string) *QQmlInfo {
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_15(t qtcore.QStringRef_ITF) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift15(t qtcore.QStringRef_ITF) *QQmlInfo {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QStringRef_PTR() != nil {
 		convArg0 = t.QStringRef_PTR().GetCthis()
@@ -357,7 +357,7 @@ func (this *QQmlInfo) Operator_left_shift_15(t qtcore.QStringRef_ITF) *QQmlInfo 
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_16(t qtcore.QLatin1String_ITF) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift16(t qtcore.QLatin1String_ITF) *QQmlInfo {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QLatin1String_PTR() != nil {
 		convArg0 = t.QLatin1String_PTR().GetCthis()
@@ -377,7 +377,7 @@ func (this *QQmlInfo) Operator_left_shift_16(t qtcore.QLatin1String_ITF) *QQmlIn
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_17(t qtcore.QByteArray_ITF) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift17(t qtcore.QByteArray_ITF) *QQmlInfo {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QByteArray_PTR() != nil {
 		convArg0 = t.QByteArray_PTR().GetCthis()
@@ -397,7 +397,7 @@ func (this *QQmlInfo) Operator_left_shift_17(t qtcore.QByteArray_ITF) *QQmlInfo 
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_18(t unsafe.Pointer /*666*/) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift18(t unsafe.Pointer /*666*/) *QQmlInfo {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfolsEPKv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQQmlInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -413,7 +413,7 @@ func (this *QQmlInfo) Operator_left_shift_18(t unsafe.Pointer /*666*/) *QQmlInfo
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_19(m qtcore.QTextStreamManipulator_ITF /*123*/) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift19(m qtcore.QTextStreamManipulator_ITF /*123*/) *QQmlInfo {
 	var convArg0 unsafe.Pointer
 	if m != nil && m.QTextStreamManipulator_PTR() != nil {
 		convArg0 = m.QTextStreamManipulator_PTR().GetCthis()
@@ -433,7 +433,7 @@ func (this *QQmlInfo) Operator_left_shift_19(m qtcore.QTextStreamManipulator_ITF
 /*
 
  */
-func (this *QQmlInfo) Operator_left_shift_20(t qtcore.QUrl_ITF) *QQmlInfo {
+func (this *QQmlInfo) Operator_left_shift20(t qtcore.QUrl_ITF) *QQmlInfo {
 	var convArg0 unsafe.Pointer
 	if t != nil && t.QUrl_PTR() != nil {
 		convArg0 = t.QUrl_PTR().GetCthis()

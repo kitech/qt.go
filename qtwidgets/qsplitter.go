@@ -153,10 +153,10 @@ Constructs a horizontal splitter with the parent argument passed on to the QFram
 
 See also setOrientation().
 */
-func (*QSplitter) NewForInherit__() *QSplitter {
-	return NewQSplitter__()
+func (*QSplitter) NewForInheritp() *QSplitter {
+	return NewQSplitterp()
 }
-func NewQSplitter__() *QSplitter {
+func NewQSplitterp() *QSplitter {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSplitterC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -176,10 +176,10 @@ Constructs a horizontal splitter with the parent argument passed on to the QFram
 
 See also setOrientation().
 */
-func (*QSplitter) NewForInherit_1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QSplitter {
-	return NewQSplitter_1(arg0, parent)
+func (*QSplitter) NewForInherit1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QSplitter {
+	return NewQSplitter1(arg0, parent)
 }
-func NewQSplitter_1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QSplitter {
+func NewQSplitter1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QSplitter {
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
@@ -201,10 +201,10 @@ Constructs a horizontal splitter with the parent argument passed on to the QFram
 
 See also setOrientation().
 */
-func (*QSplitter) NewForInherit_1_(arg0 int) *QSplitter {
-	return NewQSplitter_1_(arg0)
+func (*QSplitter) NewForInherit1p(arg0 int) *QSplitter {
+	return NewQSplitter1p(arg0)
 }
-func NewQSplitter_1_(arg0 int) *QSplitter {
+func NewQSplitter1p(arg0 int) *QSplitter {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSplitterC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
@@ -413,7 +413,7 @@ func (this *QSplitter) SetOpaqueResize(opaque bool) {
 /*
 
  */
-func (this *QSplitter) SetOpaqueResize__() {
+func (this *QSplitter) SetOpaqueResizep() {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	opaque := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSplitter15setOpaqueResizeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opaque)

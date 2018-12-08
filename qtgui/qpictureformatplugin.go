@@ -108,10 +108,10 @@ func NewQPictureFormatPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QPict
 /*
 Constructs an picture format plugin with the given parent. This is invoked automatically by the moc generated code that exports the plugin.
 */
-func (*QPictureFormatPlugin) NewForInherit__() *QPictureFormatPlugin {
-	return NewQPictureFormatPlugin__()
+func (*QPictureFormatPlugin) NewForInheritp() *QPictureFormatPlugin {
+	return NewQPictureFormatPluginp()
 }
-func NewQPictureFormatPlugin__() *QPictureFormatPlugin {
+func NewQPictureFormatPluginp() *QPictureFormatPlugin {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -147,9 +147,9 @@ Loads the picture stored in the file called fileName, with the given format, int
 See also savePicture().
 */
 func (this *QPictureFormatPlugin) LoadPicture(format string, filename string, pic QPicture_ITF /*777 QPicture **/) bool {
-	var tmpArg0 = qtcore.NewQString_5(format)
+	var tmpArg0 = qtcore.NewQString5(format)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(filename)
+	var tmpArg1 = qtcore.NewQString5(filename)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if pic != nil && pic.QPicture_PTR() != nil {
@@ -171,9 +171,9 @@ Saves the given picture into the file called fileName, using the specified forma
 See also loadPicture().
 */
 func (this *QPictureFormatPlugin) SavePicture(format string, filename string, pic QPicture_ITF) bool {
-	var tmpArg0 = qtcore.NewQString_5(format)
+	var tmpArg0 = qtcore.NewQString5(format)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(filename)
+	var tmpArg1 = qtcore.NewQString5(filename)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if pic != nil && pic.QPicture_PTR() != nil {
@@ -193,7 +193,7 @@ func (this *QPictureFormatPlugin) SavePicture(format string, filename string, pi
 Installs a QPictureIO picture I/O handler for the picture format format. Returns true on success.
 */
 func (this *QPictureFormatPlugin) InstallIOHandler(format string) bool {
-	var tmpArg0 = qtcore.NewQString_5(format)
+	var tmpArg0 = qtcore.NewQString5(format)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPlugin16installIOHandlerERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

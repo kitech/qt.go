@@ -112,10 +112,10 @@ func NewQAbstractProxyModel(parent QObject_ITF /*777 QObject **/) *QAbstractProx
 /*
 Constructs a proxy model with the given parent.
 */
-func (*QAbstractProxyModel) NewForInherit__() *QAbstractProxyModel {
-	return NewQAbstractProxyModel__()
+func (*QAbstractProxyModel) NewForInheritp() *QAbstractProxyModel {
+	return NewQAbstractProxyModelp()
 }
-func NewQAbstractProxyModel__() *QAbstractProxyModel {
+func NewQAbstractProxyModelp() *QAbstractProxyModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractProxyModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -328,7 +328,7 @@ Reimplemented from QAbstractItemModel::data().
 
 See also setData().
 */
-func (this *QAbstractProxyModel) Data__(proxyIndex QModelIndex_ITF) *QVariant /*123*/ {
+func (this *QAbstractProxyModel) Datap(proxyIndex QModelIndex_ITF) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if proxyIndex != nil && proxyIndex.QModelIndex_PTR() != nil {
 		convArg0 = proxyIndex.QModelIndex_PTR().GetCthis()
@@ -370,7 +370,7 @@ Reimplemented from QAbstractItemModel::headerData().
 
 See also setHeaderData().
 */
-func (this *QAbstractProxyModel) HeaderData__(section int, orientation int) *QVariant /*123*/ {
+func (this *QAbstractProxyModel) HeaderDatap(section int, orientation int) *QVariant /*123*/ {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractProxyModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
@@ -432,7 +432,7 @@ Reimplemented from QAbstractItemModel::setData().
 
 See also data().
 */
-func (this *QAbstractProxyModel) SetData__(index QModelIndex_ITF, value QVariant_ITF) bool {
+func (this *QAbstractProxyModel) SetDatap(index QModelIndex_ITF, value QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -478,7 +478,7 @@ Reimplemented from QAbstractItemModel::setHeaderData().
 
 See also headerData().
 */
-func (this *QAbstractProxyModel) SetHeaderData__(section int, orientation int, value QVariant_ITF) bool {
+func (this *QAbstractProxyModel) SetHeaderDatap(section int, orientation int, value QVariant_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg2 = value.QVariant_PTR().GetCthis()
@@ -566,7 +566,7 @@ func (this *QAbstractProxyModel) Sort(column int, order int) {
 /*
 Reimplemented from QAbstractItemModel::sort().
 */
-func (this *QAbstractProxyModel) Sort__(column int) {
+func (this *QAbstractProxyModel) Sortp(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractProxyModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
@@ -619,7 +619,7 @@ func (this *QAbstractProxyModel) HasChildren(parent QModelIndex_ITF) bool {
 /*
 Reimplemented from QAbstractItemModel::hasChildren().
 */
-func (this *QAbstractProxyModel) HasChildren__() bool {
+func (this *QAbstractProxyModel) HasChildrenp() bool {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

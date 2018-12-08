@@ -116,10 +116,10 @@ func NewQWebEngineUrlSchemeHandler(parent qtcore.QObject_ITF /*777 QObject **/) 
 /*
 
  */
-func (*QWebEngineUrlSchemeHandler) NewForInherit__() *QWebEngineUrlSchemeHandler {
-	return NewQWebEngineUrlSchemeHandler__()
+func (*QWebEngineUrlSchemeHandler) NewForInheritp() *QWebEngineUrlSchemeHandler {
+	return NewQWebEngineUrlSchemeHandlerp()
 }
-func NewQWebEngineUrlSchemeHandler__() *QWebEngineUrlSchemeHandler {
+func NewQWebEngineUrlSchemeHandlerp() *QWebEngineUrlSchemeHandler {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QWebEngineUrlSchemeHandlerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

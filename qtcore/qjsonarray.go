@@ -126,7 +126,7 @@ func (this *QJsonArray) Operator_equal(other QJsonArray_ITF) *QJsonArray {
 /*
 
  */
-func (this *QJsonArray) Operator_equal_1(other unsafe.Pointer /*333*/) *QJsonArray {
+func (this *QJsonArray) Operator_equal1(other unsafe.Pointer /*333*/) *QJsonArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonArrayaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -412,7 +412,7 @@ func (this *QJsonArray) Operator_get_index(i int) *QJsonValueRef /*123*/ {
 /*
 
  */
-func (this *QJsonArray) Operator_get_index_1(i int) *QJsonValue /*123*/ {
+func (this *QJsonArray) Operator_get_index1(i int) *QJsonValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArrayixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -501,7 +501,7 @@ Returns an STL-style iterator pointing to the first item in the array.
 
 See also constBegin() and end().
 */
-func (this *QJsonArray) Begin_1() unsafe.Pointer /*444*/ {
+func (this *QJsonArray) Begin1() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -549,7 +549,7 @@ Returns an STL-style iterator pointing to the imaginary item after the last item
 
 See also begin() and constEnd().
 */
-func (this *QJsonArray) End_1() unsafe.Pointer /*444*/ {
+func (this *QJsonArray) End1() unsafe.Pointer /*444*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))

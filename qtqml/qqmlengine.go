@@ -114,10 +114,10 @@ func NewQQmlEngine(p qtcore.QObject_ITF /*777 QObject **/) *QQmlEngine {
 /*
 Create a new QQmlEngine with the given parent.
 */
-func (*QQmlEngine) NewForInherit__() *QQmlEngine {
-	return NewQQmlEngine__()
+func (*QQmlEngine) NewForInheritp() *QQmlEngine {
+	return NewQQmlEnginep()
 }
-func NewQQmlEngine__() *QQmlEngine {
+func NewQQmlEnginep() *QQmlEngine {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQmlEngineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -260,7 +260,7 @@ The newly added path will be first in the importPathList().
 See also setImportPathList() and QML Modules.
 */
 func (this *QQmlEngine) AddImportPath(dir string) {
-	var tmpArg0 = qtcore.NewQString_5(dir)
+	var tmpArg0 = qtcore.NewQString5(dir)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQmlEngine13addImportPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -322,7 +322,7 @@ The newly added path will be first in the pluginPathList().
 See also setPluginPathList().
 */
 func (this *QQmlEngine) AddPluginPath(dir string) {
-	var tmpArg0 = qtcore.NewQString_5(dir)
+	var tmpArg0 = qtcore.NewQString5(dir)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQmlEngine13addPluginPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -337,9 +337,9 @@ func (this *QQmlEngine) AddPluginPath(dir string) {
 
  */
 func (this *QQmlEngine) AddNamedBundle(name string, fileName string) bool {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(fileName)
+	var tmpArg1 = qtcore.NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQmlEngine14addNamedBundleERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -449,7 +449,7 @@ All required image providers should be added to the engine before any QML source
 See also removeImageProvider(), QQuickImageProvider, and QQmlImageProviderBase.
 */
 func (this *QQmlEngine) AddImageProvider(id string, arg1 unsafe.Pointer /*666*/) {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQmlEngine16addImageProviderERK7QStringP21QQmlImageProviderBase", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -468,7 +468,7 @@ Returns the provider if it was found; otherwise returns 0.
 See also QQuickImageProvider.
 */
 func (this *QQmlEngine) ImageProvider(id string) unsafe.Pointer /*666*/ {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine13imageProviderERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -486,7 +486,7 @@ Removes the image provider for providerId.
 See also addImageProvider() and QQuickImageProvider.
 */
 func (this *QQmlEngine) RemoveImageProvider(id string) {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQmlEngine19removeImageProviderERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -536,7 +536,7 @@ func (this *QQmlEngine) IncubationController() *QQmlIncubationController /*777 Q
 
  */
 func (this *QQmlEngine) SetOfflineStoragePath(dir string) {
-	var tmpArg0 = qtcore.NewQString_5(dir)
+	var tmpArg0 = qtcore.NewQString5(dir)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQmlEngine21setOfflineStoragePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -572,7 +572,7 @@ This function was introduced in  Qt 5.9.
 See also LocalStorage.openDatabaseSync().
 */
 func (this *QQmlEngine) OfflineStorageDatabaseFilePath(databaseName string) string {
-	var tmpArg0 = qtcore.NewQString_5(databaseName)
+	var tmpArg0 = qtcore.NewQString5(databaseName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine30offlineStorageDatabaseFilePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

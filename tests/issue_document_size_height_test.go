@@ -20,7 +20,7 @@ func Test1(t *testing.T) {
 
 	td := qtgui.NewQTextDocument(nil)
 	log.Println(td)
-	td.SetPlainText(qtcore.NewQString_5(`rv, err := ffiqt.InvokeQtFunc7\n("_ZNK5QSize9boundedToERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)`))
+	td.SetPlainText(qtcore.NewQString5(`rv, err := ffiqt.InvokeQtFunc7\n("_ZNK5QSize9boundedToERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)`))
 	td.AdjustSize()
 	{
 		szo := td.Size()

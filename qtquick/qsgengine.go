@@ -111,10 +111,10 @@ func NewQSGEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QSGEngine {
 /*
 Constructs a new QSGEngine with its parent
 */
-func (*QSGEngine) NewForInherit__() *QSGEngine {
-	return NewQSGEngine__()
+func (*QSGEngine) NewForInheritp() *QSGEngine {
+	return NewQSGEnginep()
 }
-func NewQSGEngine__() *QSGEngine {
+func NewQSGEnginep() *QSGEngine {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSGEngineC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -208,7 +208,7 @@ The caller takes ownership of the texture and the texture should only be used wi
 
 See also createTextureFromId(), QSGSimpleTextureNode::setOwnsTexture(), and QQuickWindow::createTextureFromImage().
 */
-func (this *QSGEngine) CreateTextureFromImage__(image qtgui.QImage_ITF) *QSGTexture /*777 QSGTexture **/ {
+func (this *QSGEngine) CreateTextureFromImagep(image qtgui.QImage_ITF) *QSGTexture /*777 QSGTexture **/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()
@@ -258,7 +258,7 @@ The caller takes ownership of the texture object and the texture should only be 
 
 See also createTextureFromImage(), QSGSimpleTextureNode::setOwnsTexture(), and QQuickWindow::createTextureFromId().
 */
-func (this *QSGEngine) CreateTextureFromId__(id uint, size qtcore.QSize_ITF) *QSGTexture /*777 QSGTexture **/ {
+func (this *QSGEngine) CreateTextureFromIdp(id uint, size qtcore.QSize_ITF) *QSGTexture /*777 QSGTexture **/ {
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()

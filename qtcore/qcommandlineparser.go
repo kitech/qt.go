@@ -246,7 +246,7 @@ Sets the application description shown by helpText().
 See also applicationDescription().
 */
 func (this *QCommandLineParser) SetApplicationDescription(description string) {
-	var tmpArg0 = NewQString_5(description)
+	var tmpArg0 = NewQString5(description)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser25setApplicationDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -309,11 +309,11 @@ Example:
 See also addHelpOption() and helpText().
 */
 func (this *QCommandLineParser) AddPositionalArgument(name string, description string, syntax string) {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(description)
+	var tmpArg1 = NewQString5(description)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(syntax)
+	var tmpArg2 = NewQString5(syntax)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -356,10 +356,10 @@ Example:
 
 See also addHelpOption() and helpText().
 */
-func (this *QCommandLineParser) AddPositionalArgument__(name string, description string) {
-	var tmpArg0 = NewQString_5(name)
+func (this *QCommandLineParser) AddPositionalArgumentp(name string, description string) {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(description)
+	var tmpArg1 = NewQString5(description)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
@@ -463,7 +463,7 @@ When invoking one of these options, or when an error happens (for instance an un
 
 See also QCoreApplication::arguments() and parse().
 */
-func (this *QCommandLineParser) Process_1(app QCoreApplication_ITF) {
+func (this *QCommandLineParser) Process1(app QCoreApplication_ITF) {
 	var convArg0 unsafe.Pointer
 	if app != nil && app.QCoreApplication_PTR() != nil {
 		convArg0 = app.QCoreApplication_PTR().GetCthis()
@@ -537,7 +537,7 @@ Example:
   bool verbose = parser.isSet("verbose");
 */
 func (this *QCommandLineParser) IsSet(name string) bool {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -561,7 +561,7 @@ Example:
 
   bool verbose = parser.isSet("verbose");
 */
-func (this *QCommandLineParser) IsSet_1(option QCommandLineOption_ITF) bool {
+func (this *QCommandLineParser) IsSet1(option QCommandLineOption_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QCommandLineOption_PTR() != nil {
 		convArg0 = option.QCommandLineOption_PTR().GetCthis()
@@ -588,7 +588,7 @@ An empty string is returned if the option does not take a value.
 See also values(), QCommandLineOption::setDefaultValue(), and QCommandLineOption::setDefaultValues().
 */
 func (this *QCommandLineParser) Value(name string) string {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -614,7 +614,7 @@ An empty string is returned if the option does not take a value.
 
 See also values(), QCommandLineOption::setDefaultValue(), and QCommandLineOption::setDefaultValues().
 */
-func (this *QCommandLineParser) Value_1(option QCommandLineOption_ITF) string {
+func (this *QCommandLineParser) Value1(option QCommandLineOption_ITF) string {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QCommandLineOption_PTR() != nil {
 		convArg0 = option.QCommandLineOption_PTR().GetCthis()
@@ -644,7 +644,7 @@ An empty list is returned if the option does not take a value.
 See also value(), QCommandLineOption::setDefaultValue(), and QCommandLineOption::setDefaultValues().
 */
 func (this *QCommandLineParser) Values(name string) *QStringList /*123*/ {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser6valuesERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -669,7 +669,7 @@ An empty list is returned if the option does not take a value.
 
 See also value(), QCommandLineOption::setDefaultValue(), and QCommandLineOption::setDefaultValues().
 */
-func (this *QCommandLineParser) Values_1(option QCommandLineOption_ITF) *QStringList /*123*/ {
+func (this *QCommandLineParser) Values1(option QCommandLineOption_ITF) *QStringList /*123*/ {
 	var convArg0 unsafe.Pointer
 	if option != nil && option.QCommandLineOption_PTR() != nil {
 		convArg0 = option.QCommandLineOption_PTR().GetCthis()
@@ -785,7 +785,7 @@ Displays the help information, and exits the application. This is automatically 
 
 See also helpText().
 */
-func (this *QCommandLineParser) ShowHelp__() {
+func (this *QCommandLineParser) ShowHelpp() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	exitCode := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser8showHelpEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), exitCode)

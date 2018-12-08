@@ -145,7 +145,7 @@ func (this *QCommonStyle) DrawPrimitive(pe int, opt QStyleOption_ITF /*777 const
 /*
 Reimplemented from QStyle::drawPrimitive().
 */
-func (this *QCommonStyle) DrawPrimitive__(pe int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QCommonStyle) DrawPrimitivep(pe int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -193,7 +193,7 @@ func (this *QCommonStyle) DrawControl(element int, opt QStyleOption_ITF /*777 co
 /*
 Reimplemented from QStyle::drawControl().
 */
-func (this *QCommonStyle) DrawControl__(element int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QCommonStyle) DrawControlp(element int, opt QStyleOption_ITF /*777 const QStyleOption **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -240,7 +240,7 @@ func (this *QCommonStyle) SubElementRect(r int, opt QStyleOption_ITF /*777 const
 /*
 Reimplemented from QStyle::subElementRect().
 */
-func (this *QCommonStyle) SubElementRect__(r int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtcore.QRect /*123*/ {
+func (this *QCommonStyle) SubElementRectp(r int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -287,7 +287,7 @@ func (this *QCommonStyle) DrawComplexControl(cc int, opt QStyleOptionComplex_ITF
 /*
 Reimplemented from QStyle::drawComplexControl().
 */
-func (this *QCommonStyle) DrawComplexControl__(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
+func (this *QCommonStyle) DrawComplexControlp(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, p qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
 		convArg1 = opt.QStyleOptionComplex_PTR().GetCthis()
@@ -336,7 +336,7 @@ func (this *QCommonStyle) HitTestComplexControl(cc int, opt QStyleOptionComplex_
 /*
 Reimplemented from QStyle::hitTestComplexControl().
 */
-func (this *QCommonStyle) HitTestComplexControl__(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pt qtcore.QPoint_ITF) int {
+func (this *QCommonStyle) HitTestComplexControlp(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pt qtcore.QPoint_ITF) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
 		convArg1 = opt.QStyleOptionComplex_PTR().GetCthis()
@@ -384,7 +384,7 @@ func (this *QCommonStyle) SubControlRect(cc int, opt QStyleOptionComplex_ITF /*7
 /*
 Reimplemented from QStyle::subControlRect().
 */
-func (this *QCommonStyle) SubControlRect__(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, sc int) *qtcore.QRect /*123*/ {
+func (this *QCommonStyle) SubControlRectp(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, sc int) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOptionComplex_PTR() != nil {
 		convArg1 = opt.QStyleOptionComplex_PTR().GetCthis()
@@ -434,7 +434,7 @@ func (this *QCommonStyle) SizeFromContents(ct int, opt QStyleOption_ITF /*777 co
 /*
 Reimplemented from QStyle::sizeFromContents().
 */
-func (this *QCommonStyle) SizeFromContents__(ct int, opt QStyleOption_ITF /*777 const QStyleOption **/, contentsSize qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
+func (this *QCommonStyle) SizeFromContentsp(ct int, opt QStyleOption_ITF /*777 const QStyleOption **/, contentsSize qtcore.QSize_ITF) *qtcore.QSize /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -482,7 +482,7 @@ func (this *QCommonStyle) PixelMetric(m int, opt QStyleOption_ITF /*777 const QS
 /*
 Reimplemented from QStyle::pixelMetric().
 */
-func (this *QCommonStyle) PixelMetric__(m int) int {
+func (this *QCommonStyle) PixelMetricp(m int) int {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -500,7 +500,7 @@ func (this *QCommonStyle) PixelMetric__(m int) int {
 /*
 Reimplemented from QStyle::pixelMetric().
 */
-func (this *QCommonStyle) PixelMetric__1(m int, opt QStyleOption_ITF /*777 const QStyleOption **/) int {
+func (this *QCommonStyle) PixelMetricp1(m int, opt QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -546,7 +546,7 @@ func (this *QCommonStyle) StyleHint(sh int, opt QStyleOption_ITF /*777 const QSt
 /*
 Reimplemented from QStyle::styleHint().
 */
-func (this *QCommonStyle) StyleHint__(sh int) int {
+func (this *QCommonStyle) StyleHintp(sh int) int {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -566,7 +566,7 @@ func (this *QCommonStyle) StyleHint__(sh int) int {
 /*
 Reimplemented from QStyle::styleHint().
 */
-func (this *QCommonStyle) StyleHint__1(sh int, opt QStyleOption_ITF /*777 const QStyleOption **/) int {
+func (this *QCommonStyle) StyleHintp1(sh int, opt QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -588,7 +588,7 @@ func (this *QCommonStyle) StyleHint__1(sh int, opt QStyleOption_ITF /*777 const 
 /*
 Reimplemented from QStyle::styleHint().
 */
-func (this *QCommonStyle) StyleHint__2(sh int, opt QStyleOption_ITF /*777 const QStyleOption **/, w QWidget_ITF /*777 const QWidget **/) int {
+func (this *QCommonStyle) StyleHintp2(sh int, opt QStyleOption_ITF /*777 const QStyleOption **/, w QWidget_ITF /*777 const QWidget **/) int {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -636,7 +636,7 @@ func (this *QCommonStyle) StandardIcon(standardIcon int, opt QStyleOption_ITF /*
 /*
 
  */
-func (this *QCommonStyle) StandardIcon__(standardIcon int) *qtgui.QIcon /*123*/ {
+func (this *QCommonStyle) StandardIconp(standardIcon int) *qtgui.QIcon /*123*/ {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -656,7 +656,7 @@ func (this *QCommonStyle) StandardIcon__(standardIcon int) *qtgui.QIcon /*123*/ 
 /*
 
  */
-func (this *QCommonStyle) StandardIcon__1(standardIcon int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QIcon /*123*/ {
+func (this *QCommonStyle) StandardIconp1(standardIcon int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QIcon /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -702,7 +702,7 @@ func (this *QCommonStyle) StandardPixmap(sp int, opt QStyleOption_ITF /*777 cons
 /*
 Reimplemented from QStyle::standardPixmap().
 */
-func (this *QCommonStyle) StandardPixmap__(sp int) *qtgui.QPixmap /*123*/ {
+func (this *QCommonStyle) StandardPixmapp(sp int) *qtgui.QPixmap /*123*/ {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	// arg: 2, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -722,7 +722,7 @@ func (this *QCommonStyle) StandardPixmap__(sp int) *qtgui.QPixmap /*123*/ {
 /*
 Reimplemented from QStyle::standardPixmap().
 */
-func (this *QCommonStyle) StandardPixmap__1(sp int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
+func (this *QCommonStyle) StandardPixmapp1(sp int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
 	if opt != nil && opt.QStyleOption_PTR() != nil {
 		convArg1 = opt.QStyleOption_PTR().GetCthis()
@@ -790,7 +790,7 @@ func (this *QCommonStyle) LayoutSpacing(control1 int, control2 int, orientation 
 /*
 Reimplemented from QStyle::layoutSpacing().
 */
-func (this *QCommonStyle) LayoutSpacing__(control1 int, control2 int, orientation int) int {
+func (this *QCommonStyle) LayoutSpacingp(control1 int, control2 int, orientation int) int {
 	// arg: 3, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
 	var convArg3 unsafe.Pointer
 	// arg: 4, const QWidget *=Pointer, QWidget=Record, , Invalid
@@ -808,7 +808,7 @@ func (this *QCommonStyle) LayoutSpacing__(control1 int, control2 int, orientatio
 /*
 Reimplemented from QStyle::layoutSpacing().
 */
-func (this *QCommonStyle) LayoutSpacing__1(control1 int, control2 int, orientation int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
+func (this *QCommonStyle) LayoutSpacingp1(control1 int, control2 int, orientation int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg3 unsafe.Pointer
 	if option != nil && option.QStyleOption_PTR() != nil {
 		convArg3 = option.QStyleOption_PTR().GetCthis()
@@ -845,7 +845,7 @@ func (this *QCommonStyle) Polish(arg0 qtgui.QPalette_ITF) {
 /*
 Reimplemented from QStyle::polish().
 */
-func (this *QCommonStyle) Polish_1(app QApplication_ITF /*777 QApplication **/) {
+func (this *QCommonStyle) Polish1(app QApplication_ITF /*777 QApplication **/) {
 	var convArg0 unsafe.Pointer
 	if app != nil && app.QApplication_PTR() != nil {
 		convArg0 = app.QApplication_PTR().GetCthis()
@@ -862,7 +862,7 @@ func (this *QCommonStyle) Polish_1(app QApplication_ITF /*777 QApplication **/) 
 /*
 Reimplemented from QStyle::polish().
 */
-func (this *QCommonStyle) Polish_2(widget QWidget_ITF /*777 QWidget **/) {
+func (this *QCommonStyle) Polish2(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -896,7 +896,7 @@ func (this *QCommonStyle) Unpolish(widget QWidget_ITF /*777 QWidget **/) {
 /*
 Reimplemented from QStyle::unpolish().
 */
-func (this *QCommonStyle) Unpolish_1(application QApplication_ITF /*777 QApplication **/) {
+func (this *QCommonStyle) Unpolish1(application QApplication_ITF /*777 QApplication **/) {
 	var convArg0 unsafe.Pointer
 	if application != nil && application.QApplication_PTR() != nil {
 		convArg0 = application.QApplication_PTR().GetCthis()

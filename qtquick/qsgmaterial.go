@@ -189,7 +189,7 @@ func (this *QSGMaterial) SetFlag(flags int, on bool) {
 /*
 Sets the flags flags on this material if on is true; otherwise clears the attribute.
 */
-func (this *QSGMaterial) SetFlag__(flags int) {
+func (this *QSGMaterial) SetFlagp(flags int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	on := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGMaterial7setFlagE6QFlagsINS_4FlagEEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags, on)

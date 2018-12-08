@@ -95,10 +95,10 @@ func NewQQuickImageProvider(type_ int, flags int) *QQuickImageProvider {
 /*
 Creates an image provider that will provide images of the given type and behave according to the given flags.
 */
-func (*QQuickImageProvider) NewForInherit__(type_ int) *QQuickImageProvider {
-	return NewQQuickImageProvider__(type_)
+func (*QQuickImageProvider) NewForInheritp(type_ int) *QQuickImageProvider {
+	return NewQQuickImageProviderp(type_)
 }
-func NewQQuickImageProvider__(type_ int) *QQuickImageProvider {
+func NewQQuickImageProviderp(type_ int) *QQuickImageProvider {
 	// arg: 1, QQmlImageProviderBase::Flags=Typedef, QQmlImageProviderBase::Flags=Typedef, QFlags<QQmlImageProviderBase::Flag>, Unexposed
 	flags := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProviderC2EN21QQmlImageProviderBase9ImageTypeE6QFlagsINS0_4FlagEE", qtrt.FFI_TYPE_POINTER, type_, flags)
@@ -172,7 +172,7 @@ In all cases, size must be set to the original size of the image. This is used t
 Note: this method may be called by multiple threads, so ensure the implementation of this method is reentrant.
 */
 func (this *QQuickImageProvider) RequestImage(id string, size qtcore.QSize_ITF /*777 QSize **/, requestedSize qtcore.QSize_ITF) *qtgui.QImage /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -206,7 +206,7 @@ In all cases, size must be set to the original size of the image. This is used t
 Note: this method may be called by multiple threads, so ensure the implementation of this method is reentrant.
 */
 func (this *QQuickImageProvider) RequestPixmap(id string, size qtcore.QSize_ITF /*777 QSize **/, requestedSize qtcore.QSize_ITF) *qtgui.QPixmap /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
@@ -240,7 +240,7 @@ In all cases, size must be set to the original size of the image. This is used t
 Note: this method may be called by multiple threads, so ensure the implementation of this method is reentrant.
 */
 func (this *QQuickImageProvider) RequestTexture(id string, size qtcore.QSize_ITF /*777 QSize **/, requestedSize qtcore.QSize_ITF) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {

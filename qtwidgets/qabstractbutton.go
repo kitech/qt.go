@@ -179,10 +179,10 @@ func NewQAbstractButton(parent QWidget_ITF /*777 QWidget **/) *QAbstractButton {
 /*
 Constructs an abstract button with a parent.
 */
-func (*QAbstractButton) NewForInherit__() *QAbstractButton {
-	return NewQAbstractButton__()
+func (*QAbstractButton) NewForInheritp() *QAbstractButton {
+	return NewQAbstractButtonp()
 }
-func NewQAbstractButton__() *QAbstractButton {
+func NewQAbstractButtonp() *QAbstractButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -216,7 +216,7 @@ func DeleteQAbstractButton(this *QAbstractButton) {
 
  */
 func (this *QAbstractButton) SetText(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -569,7 +569,7 @@ This function does nothing if the button is disabled.
 
 See also click().
 */
-func (this *QAbstractButton) AnimateClick__() {
+func (this *QAbstractButton) AnimateClickp() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	msec := int(100)
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton12animateClickEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec)
@@ -682,7 +682,7 @@ If the button is checkable, checked is true if the button is checked, or false i
 
 See also pressed(), released(), and toggled().
 */
-func (this *QAbstractButton) Clicked__() {
+func (this *QAbstractButton) Clickedp() {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
 	checked := false
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButton7clickedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), checked)

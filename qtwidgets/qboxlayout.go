@@ -113,10 +113,10 @@ Constructs a new QBoxLayout with direction dir and parent widget parent.
 
 See also direction().
 */
-func (*QBoxLayout) NewForInherit__(arg0 int) *QBoxLayout {
-	return NewQBoxLayout__(arg0)
+func (*QBoxLayout) NewForInheritp(arg0 int) *QBoxLayout {
+	return NewQBoxLayoutp(arg0)
 }
-func NewQBoxLayout__(arg0 int) *QBoxLayout {
+func NewQBoxLayoutp(arg0 int) *QBoxLayout {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayoutC2ENS_9DirectionEP7QWidget", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
@@ -212,7 +212,7 @@ Adds a stretchable space (a QSpacerItem) with zero minimum size and stretch fact
 
 See also insertStretch(), addItem(), and QSpacerItem.
 */
-func (this *QBoxLayout) AddStretch__() {
+func (this *QBoxLayout) AddStretchp() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout10addStretchEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), stretch)
@@ -281,7 +281,7 @@ The alignment is specified by alignment. The default alignment is 0, which means
 
 See also insertWidget(), addItem(), addLayout(), addStretch(), addSpacing(), and addStrut().
 */
-func (this *QBoxLayout) AddWidget__(arg0 QWidget_ITF /*777 QWidget **/) {
+func (this *QBoxLayout) AddWidgetp(arg0 QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
@@ -310,7 +310,7 @@ The alignment is specified by alignment. The default alignment is 0, which means
 
 See also insertWidget(), addItem(), addLayout(), addStretch(), addSpacing(), and addStrut().
 */
-func (this *QBoxLayout) AddWidget__1(arg0 QWidget_ITF /*777 QWidget **/, stretch int) {
+func (this *QBoxLayout) AddWidgetp1(arg0 QWidget_ITF /*777 QWidget **/, stretch int) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
@@ -350,7 +350,7 @@ Adds layout to the end of the box, with serial stretch factor stretch.
 
 See also insertLayout(), addItem(), and addWidget().
 */
-func (this *QBoxLayout) AddLayout__(layout QLayout_ITF /*777 QLayout **/) {
+func (this *QBoxLayout) AddLayoutp(layout QLayout_ITF /*777 QLayout **/) {
 	var convArg0 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
 		convArg0 = layout.QLayout_PTR().GetCthis()
@@ -435,7 +435,7 @@ Inserts a stretchable space (a QSpacerItem) at position index, with zero minimum
 
 See also addStretch(), insertItem(), and QSpacerItem.
 */
-func (this *QBoxLayout) InsertStretch__(index int) {
+func (this *QBoxLayout) InsertStretchp(index int) {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	stretch := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QBoxLayout13insertStretchEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, stretch)
@@ -504,7 +504,7 @@ The alignment is specified by alignment. The default alignment is 0, which means
 
 See also addWidget() and insertItem().
 */
-func (this *QBoxLayout) InsertWidget__(index int, widget QWidget_ITF /*777 QWidget **/) {
+func (this *QBoxLayout) InsertWidgetp(index int, widget QWidget_ITF /*777 QWidget **/) {
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
@@ -533,7 +533,7 @@ The alignment is specified by alignment. The default alignment is 0, which means
 
 See also addWidget() and insertItem().
 */
-func (this *QBoxLayout) InsertWidget__1(index int, widget QWidget_ITF /*777 QWidget **/, stretch int) {
+func (this *QBoxLayout) InsertWidgetp1(index int, widget QWidget_ITF /*777 QWidget **/, stretch int) {
 	var convArg1 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
@@ -577,7 +577,7 @@ layout becomes a child of the box layout.
 
 See also addLayout() and insertItem().
 */
-func (this *QBoxLayout) InsertLayout__(index int, layout QLayout_ITF /*777 QLayout **/) {
+func (this *QBoxLayout) InsertLayoutp(index int, layout QLayout_ITF /*777 QLayout **/) {
 	var convArg1 unsafe.Pointer
 	if layout != nil && layout.QLayout_PTR() != nil {
 		convArg1 = layout.QLayout_PTR().GetCthis()
@@ -668,7 +668,7 @@ Sets the stretch factor for widget to stretch and returns true if widget is foun
 
 See also setAlignment().
 */
-func (this *QBoxLayout) SetStretchFactor_1(l QLayout_ITF /*777 QLayout **/, stretch int) bool {
+func (this *QBoxLayout) SetStretchFactor1(l QLayout_ITF /*777 QLayout **/, stretch int) bool {
 	var convArg0 unsafe.Pointer
 	if l != nil && l.QLayout_PTR() != nil {
 		convArg0 = l.QLayout_PTR().GetCthis()

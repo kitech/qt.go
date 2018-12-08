@@ -262,10 +262,10 @@ func NewQMediaGaplessPlaybackControl(parent qtcore.QObject_ITF /*777 QObject **/
 /*
 Constructs a new gapless playback control with the given parent.
 */
-func (*QMediaGaplessPlaybackControl) NewForInherit__() *QMediaGaplessPlaybackControl {
-	return NewQMediaGaplessPlaybackControl__()
+func (*QMediaGaplessPlaybackControl) NewForInheritp() *QMediaGaplessPlaybackControl {
+	return NewQMediaGaplessPlaybackControlp()
 }
-func NewQMediaGaplessPlaybackControl__() *QMediaGaplessPlaybackControl {
+func NewQMediaGaplessPlaybackControlp() *QMediaGaplessPlaybackControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QMediaGaplessPlaybackControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

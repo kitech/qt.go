@@ -107,10 +107,10 @@ func NewQFileSystemWatcher(parent QObject_ITF /*777 QObject **/) *QFileSystemWat
 /*
 Constructs a new file system watcher object with the given parent.
 */
-func (*QFileSystemWatcher) NewForInherit__() *QFileSystemWatcher {
-	return NewQFileSystemWatcher__()
+func (*QFileSystemWatcher) NewForInheritp() *QFileSystemWatcher {
+	return NewQFileSystemWatcherp()
 }
-func NewQFileSystemWatcher__() *QFileSystemWatcher {
+func NewQFileSystemWatcherp() *QFileSystemWatcher {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -128,10 +128,10 @@ func NewQFileSystemWatcher__() *QFileSystemWatcher {
 /*
 Constructs a new file system watcher object with the given parent.
 */
-func (*QFileSystemWatcher) NewForInherit_1(paths QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
-	return NewQFileSystemWatcher_1(paths, parent)
+func (*QFileSystemWatcher) NewForInherit1(paths QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
+	return NewQFileSystemWatcher1(paths, parent)
 }
-func NewQFileSystemWatcher_1(paths QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
+func NewQFileSystemWatcher1(paths QStringList_ITF, parent QObject_ITF /*777 QObject **/) *QFileSystemWatcher {
 	var convArg0 unsafe.Pointer
 	if paths != nil && paths.QStringList_PTR() != nil {
 		convArg0 = paths.QStringList_PTR().GetCthis()
@@ -155,10 +155,10 @@ func NewQFileSystemWatcher_1(paths QStringList_ITF, parent QObject_ITF /*777 QOb
 /*
 Constructs a new file system watcher object with the given parent.
 */
-func (*QFileSystemWatcher) NewForInherit_1_(paths QStringList_ITF) *QFileSystemWatcher {
-	return NewQFileSystemWatcher_1_(paths)
+func (*QFileSystemWatcher) NewForInherit1p(paths QStringList_ITF) *QFileSystemWatcher {
+	return NewQFileSystemWatcher1p(paths)
 }
-func NewQFileSystemWatcher_1_(paths QStringList_ITF) *QFileSystemWatcher {
+func NewQFileSystemWatcher1p(paths QStringList_ITF) *QFileSystemWatcher {
 	var convArg0 unsafe.Pointer
 	if paths != nil && paths.QStringList_PTR() != nil {
 		convArg0 = paths.QStringList_PTR().GetCthis()
@@ -206,7 +206,7 @@ Note: There may be a system dependent limit to the number of files and directori
 See also addPaths() and removePath().
 */
 func (this *QFileSystemWatcher) AddPath(file string) bool {
-	var tmpArg0 = NewQString_5(file)
+	var tmpArg0 = NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher7addPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -258,7 +258,7 @@ Reasons for watch removal failing are generally system-dependent, but may be due
 See also removePaths() and addPath().
 */
 func (this *QFileSystemWatcher) RemovePath(file string) bool {
-	var tmpArg0 = NewQString_5(file)
+	var tmpArg0 = NewQString5(file)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher10removePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

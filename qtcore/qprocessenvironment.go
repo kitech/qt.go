@@ -122,7 +122,7 @@ func (this *QProcessEnvironment) Operator_equal(other unsafe.Pointer /*333*/) *Q
 /*
 
  */
-func (this *QProcessEnvironment) Operator_equal_1(other QProcessEnvironment_ITF) *QProcessEnvironment {
+func (this *QProcessEnvironment) Operator_equal1(other QProcessEnvironment_ITF) *QProcessEnvironment {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QProcessEnvironment_PTR() != nil {
 		convArg0 = other.QProcessEnvironment_PTR().GetCthis()
@@ -223,7 +223,7 @@ func (this *QProcessEnvironment) Clear() {
 
  */
 func (this *QProcessEnvironment) Contains(name string) bool {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment8containsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -239,7 +239,7 @@ func (this *QProcessEnvironment) Contains(name string) bool {
 
  */
 func (this *QProcessEnvironment) Remove(name string) {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment6removeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -254,9 +254,9 @@ func (this *QProcessEnvironment) Remove(name string) {
 
  */
 func (this *QProcessEnvironment) Value(name string, defaultValue string) string {
-	var tmpArg0 = NewQString_5(name)
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(defaultValue)
+	var tmpArg1 = NewQString5(defaultValue)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment5valueERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -274,8 +274,8 @@ func (this *QProcessEnvironment) Value(name string, defaultValue string) string 
 /*
 
  */
-func (this *QProcessEnvironment) Value__(name string) string {
-	var tmpArg0 = NewQString_5(name)
+func (this *QProcessEnvironment) Valuep(name string) string {
+	var tmpArg0 = NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()

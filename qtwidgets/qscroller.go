@@ -138,7 +138,7 @@ Returns the scroller for the given target. As long as the object exists this fun
 
 See also hasScroller() and target().
 */
-func (this *QScroller) Scroller_1(target qtcore.QObject_ITF /*777 const QObject **/) *QScroller /*777 const QScroller **/ {
+func (this *QScroller) Scroller1(target qtcore.QObject_ITF /*777 const QObject **/) *QScroller /*777 const QScroller **/ {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QObject_PTR() != nil {
 		convArg0 = target.QObject_PTR().GetCthis()
@@ -147,9 +147,9 @@ func (this *QScroller) Scroller_1(target qtcore.QObject_ITF /*777 const QObject 
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQScrollerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QScroller_Scroller_1(target qtcore.QObject_ITF /*777 const QObject **/) *QScroller /*777 const QScroller **/ {
+func QScroller_Scroller1(target qtcore.QObject_ITF /*777 const QObject **/) *QScroller /*777 const QScroller **/ {
 	var nilthis *QScroller
-	rv := nilthis.Scroller_1(target)
+	rv := nilthis.Scroller1(target)
 	return rv
 }
 
@@ -196,7 +196,7 @@ Note: To avoid unwanted side-effects, mouse events are consumed while the gestur
 
 See also ungrabGesture() and grabbedGesture().
 */
-func (this *QScroller) GrabGesture__(target qtcore.QObject_ITF /*777 QObject **/) int {
+func (this *QScroller) GrabGesturep(target qtcore.QObject_ITF /*777 QObject **/) int {
 	var convArg0 unsafe.Pointer
 	if target != nil && target.QObject_PTR() != nil {
 		convArg0 = target.QObject_PTR().GetCthis()
@@ -320,7 +320,7 @@ The return value is true if the event should be consumed by the calling filter o
 
 Note: Using grabGesture() should be sufficient for most use cases.
 */
-func (this *QScroller) HandleInput__(input int, position qtcore.QPointF_ITF) bool {
+func (this *QScroller) HandleInputp(input int, position qtcore.QPointF_ITF) bool {
 	var convArg1 unsafe.Pointer
 	if position != nil && position.QPointF_PTR() != nil {
 		convArg1 = position.QPointF_PTR().GetCthis()
@@ -505,7 +505,7 @@ pos is given in viewport coordinates.
 
 See also ensureVisible().
 */
-func (this *QScroller) ScrollTo_1(pos qtcore.QPointF_ITF, scrollTime int) {
+func (this *QScroller) ScrollTo1(pos qtcore.QPointF_ITF, scrollTime int) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPointF_PTR() != nil {
 		convArg0 = pos.QPointF_PTR().GetCthis()
@@ -555,7 +555,7 @@ This function performs the actual scrolling by calling scrollTo().
 
 See also scrollTo().
 */
-func (this *QScroller) EnsureVisible_1(rect qtcore.QRectF_ITF, xmargin float64, ymargin float64, scrollTime int) {
+func (this *QScroller) EnsureVisible1(rect qtcore.QRectF_ITF, xmargin float64, ymargin float64, scrollTime int) {
 	var convArg0 unsafe.Pointer
 	if rect != nil && rect.QRectF_PTR() != nil {
 		convArg0 = rect.QRectF_PTR().GetCthis()

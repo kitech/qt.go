@@ -50,7 +50,7 @@ func BindService_(serviceIntent *QAndroidIntent, serviceConnection *QAndroidServ
 }
 
 func CheckPermission_(permission string) int {
-	var tmpArg0 = qtcore.NewQString_5(permission)
+	var tmpArg0 = qtcore.NewQString5(permission)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("QtAndroid_checkPermission", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +114,7 @@ func RunOnAndroidThreadSync_(runnable func(), timeoutMS int) {
 }
 
 func ShouldShowRequestPermissionRationale_handby(permission string) int {
-	var tmpArg0 = qtcore.NewQString_5(permission)
+	var tmpArg0 = qtcore.NewQString5(permission)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("QtAndroid_shouldShowRequestPermissionRationale", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

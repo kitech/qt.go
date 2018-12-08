@@ -111,7 +111,7 @@ func DeleteQQuickAsyncImageProvider(this *QQuickAsyncImageProvider) {
 
  */
 func (this *QQuickAsyncImageProvider) RequestImageResponse(id string, requestedSize qtcore.QSize_ITF) *QQuickImageResponse /*777 QQuickImageResponse **/ {
-	var tmpArg0 = qtcore.NewQString_5(id)
+	var tmpArg0 = qtcore.NewQString5(id)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if requestedSize != nil && requestedSize.QSize_PTR() != nil {

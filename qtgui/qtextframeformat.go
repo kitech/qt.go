@@ -90,10 +90,10 @@ func NewQTextFrameFormat() *QTextFrameFormat {
 /*
 
  */
-func (*QTextFrameFormat) NewForInherit_1(fmt_ QTextFormat_ITF) *QTextFrameFormat {
-	return NewQTextFrameFormat_1(fmt_)
+func (*QTextFrameFormat) NewForInherit1(fmt_ QTextFormat_ITF) *QTextFrameFormat {
+	return NewQTextFrameFormat1(fmt_)
 }
-func NewQTextFrameFormat_1(fmt_ QTextFormat_ITF) *QTextFrameFormat {
+func NewQTextFrameFormat1(fmt_ QTextFormat_ITF) *QTextFrameFormat {
 	var convArg0 unsafe.Pointer
 	if fmt_ != nil && fmt_.QTextFormat_PTR() != nil {
 		convArg0 = fmt_.QTextFormat_PTR().GetCthis()
@@ -416,7 +416,7 @@ func (this *QTextFrameFormat) SetWidth(width float64) {
 /*
 
  */
-func (this *QTextFrameFormat) SetWidth_1(length QTextLength_ITF) {
+func (this *QTextFrameFormat) SetWidth1(length QTextLength_ITF) {
 	var convArg0 unsafe.Pointer
 	if length != nil && length.QTextLength_PTR() != nil {
 		convArg0 = length.QTextLength_PTR().GetCthis()
@@ -462,7 +462,7 @@ func (this *QTextFrameFormat) SetHeight(height float64) {
 /*
 
  */
-func (this *QTextFrameFormat) SetHeight_1(height QTextLength_ITF) {
+func (this *QTextFrameFormat) SetHeight1(height QTextLength_ITF) {
 	var convArg0 unsafe.Pointer
 	if height != nil && height.QTextLength_PTR() != nil {
 		convArg0 = height.QTextLength_PTR().GetCthis()

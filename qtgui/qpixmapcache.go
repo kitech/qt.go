@@ -132,7 +132,7 @@ Example:
 This function was introduced in  Qt 4.6.
 */
 func (this *QPixmapCache) Find(key string) *QPixmap /*777 QPixmap **/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -166,8 +166,8 @@ Example:
 
 This function was introduced in  Qt 4.6.
 */
-func (this *QPixmapCache) Find_1(key string, pixmap QPixmap_ITF) bool {
-	var tmpArg0 = qtcore.NewQString_5(key)
+func (this *QPixmapCache) Find1(key string, pixmap QPixmap_ITF) bool {
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -177,9 +177,9 @@ func (this *QPixmapCache) Find_1(key string, pixmap QPixmap_ITF) bool {
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QPixmapCache_Find_1(key string, pixmap QPixmap_ITF) bool {
+func QPixmapCache_Find1(key string, pixmap QPixmap_ITF) bool {
 	var nilthis *QPixmapCache
-	rv := nilthis.Find_1(key, pixmap)
+	rv := nilthis.Find1(key, pixmap)
 	return rv
 }
 
@@ -205,8 +205,8 @@ Example:
 
 This function was introduced in  Qt 4.6.
 */
-func (this *QPixmapCache) Find_2(key string, pixmap QPixmap_ITF /*777 QPixmap **/) bool {
-	var tmpArg0 = qtcore.NewQString_5(key)
+func (this *QPixmapCache) Find2(key string, pixmap QPixmap_ITF /*777 QPixmap **/) bool {
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
@@ -216,9 +216,9 @@ func (this *QPixmapCache) Find_2(key string, pixmap QPixmap_ITF /*777 QPixmap **
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QPixmapCache_Find_2(key string, pixmap QPixmap_ITF /*777 QPixmap **/) bool {
+func QPixmapCache_Find2(key string, pixmap QPixmap_ITF /*777 QPixmap **/) bool {
 	var nilthis *QPixmapCache
-	rv := nilthis.Find_2(key, pixmap)
+	rv := nilthis.Find2(key, pixmap)
 	return rv
 }
 
@@ -231,7 +231,7 @@ func QPixmapCache_Find_2(key string, pixmap QPixmap_ITF /*777 QPixmap **/) bool 
 Removes the pixmap associated with key from the cache.
 */
 func (this *QPixmapCache) Remove(key string) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache6removeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

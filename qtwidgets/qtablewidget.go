@@ -144,10 +144,10 @@ func NewQTableWidget(parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
 /*
 Creates a new table view with the given parent.
 */
-func (*QTableWidget) NewForInherit__() *QTableWidget {
-	return NewQTableWidget__()
+func (*QTableWidget) NewForInheritp() *QTableWidget {
+	return NewQTableWidgetp()
 }
-func NewQTableWidget__() *QTableWidget {
+func NewQTableWidgetp() *QTableWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTableWidgetC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -165,10 +165,10 @@ func NewQTableWidget__() *QTableWidget {
 /*
 Creates a new table view with the given parent.
 */
-func (*QTableWidget) NewForInherit_1(rows int, columns int, parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
-	return NewQTableWidget_1(rows, columns, parent)
+func (*QTableWidget) NewForInherit1(rows int, columns int, parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
+	return NewQTableWidget1(rows, columns, parent)
 }
-func NewQTableWidget_1(rows int, columns int, parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
+func NewQTableWidget1(rows int, columns int, parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
 	var convArg2 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg2 = parent.QWidget_PTR().GetCthis()
@@ -188,10 +188,10 @@ func NewQTableWidget_1(rows int, columns int, parent QWidget_ITF /*777 QWidget *
 /*
 Creates a new table view with the given parent.
 */
-func (*QTableWidget) NewForInherit_1_(rows int, columns int) *QTableWidget {
-	return NewQTableWidget_1_(rows, columns)
+func (*QTableWidget) NewForInherit1p(rows int, columns int) *QTableWidget {
+	return NewQTableWidget1p(rows, columns)
 }
-func NewQTableWidget_1_(rows int, columns int) *QTableWidget {
+func NewQTableWidget1p(rows int, columns int) *QTableWidget {
 	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTableWidgetC2EiiP7QWidget", qtrt.FFI_TYPE_POINTER, rows, columns, convArg2)
@@ -594,7 +594,7 @@ Unless the selection mode is NoSelection, the item is also selected.
 
 See also currentItem() and setCurrentCell().
 */
-func (this *QTableWidget) SetCurrentItem_1(item QTableWidgetItem_ITF /*777 QTableWidgetItem **/, command int) {
+func (this *QTableWidget) SetCurrentItem1(item QTableWidgetItem_ITF /*777 QTableWidgetItem **/, command int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTableWidgetItem_PTR() != nil {
 		convArg0 = item.QTableWidgetItem_PTR().GetCthis()
@@ -636,7 +636,7 @@ This function was introduced in  Qt 4.1.
 
 See also setCurrentItem(), currentRow(), and currentColumn().
 */
-func (this *QTableWidget) SetCurrentCell_1(row int, column int, command int) {
+func (this *QTableWidget) SetCurrentCell1(row int, column int, command int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTableWidget14setCurrentCellEii6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, command)
 	qtrt.ErrPrint(err, rv)
 }
@@ -662,7 +662,7 @@ func (this *QTableWidget) SortItems(column int, order int) {
 /*
 Sorts all the rows in the table widget based on column and order.
 */
-func (this *QTableWidget) SortItems__(column int) {
+func (this *QTableWidget) SortItemsp(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTableWidget9sortItemsEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
@@ -948,7 +948,7 @@ Returns a pointer to the item at the given point, or returns 0 if point is not c
 
 See also item().
 */
-func (this *QTableWidget) ItemAt_1(x int, y int) *QTableWidgetItem /*777 QTableWidgetItem **/ {
+func (this *QTableWidget) ItemAt1(x int, y int) *QTableWidgetItem /*777 QTableWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTableWidget6itemAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -1038,7 +1038,7 @@ func (this *QTableWidget) ScrollToItem(item QTableWidgetItem_ITF /*777 const QTa
 /*
 Scrolls the view if necessary to ensure that the item is visible. The hint parameter specifies more precisely where the item should be located after the operation.
 */
-func (this *QTableWidget) ScrollToItem__(item QTableWidgetItem_ITF /*777 const QTableWidgetItem **/) {
+func (this *QTableWidget) ScrollToItemp(item QTableWidgetItem_ITF /*777 const QTableWidgetItem **/) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTableWidgetItem_PTR() != nil {
 		convArg0 = item.QTableWidgetItem_PTR().GetCthis()

@@ -127,10 +127,10 @@ Constructs a media recorder which records the media produced by mediaObject.
 
 The parent is passed to QMediaObject.
 */
-func (*QMediaRecorder) NewForInherit__(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QMediaRecorder {
-	return NewQMediaRecorder__(mediaObject)
+func (*QMediaRecorder) NewForInheritp(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QMediaRecorder {
+	return NewQMediaRecorderp(mediaObject)
 }
-func NewQMediaRecorder__(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QMediaRecorder {
+func NewQMediaRecorderp(mediaObject QMediaObject_ITF /*777 QMediaObject **/) *QMediaRecorder {
 	var convArg0 unsafe.Pointer
 	if mediaObject != nil && mediaObject.QMediaObject_PTR() != nil {
 		convArg0 = mediaObject.QMediaObject_PTR().GetCthis()
@@ -319,7 +319,7 @@ Returns the current error state.
 
 See also errorString().
 */
-func (this *QMediaRecorder) Error_1(error int) {
+func (this *QMediaRecorder) Error1(error int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaRecorder5errorENS_5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	qtrt.ErrPrint(err, rv)
 }
@@ -410,7 +410,7 @@ func (this *QMediaRecorder) SupportedContainers() *qtcore.QStringList /*123*/ {
 Returns a description of a container format.
 */
 func (this *QMediaRecorder) ContainerDescription(format string) string {
-	var tmpArg0 = qtcore.NewQString_5(format)
+	var tmpArg0 = qtcore.NewQString5(format)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMediaRecorder20containerDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -445,7 +445,7 @@ func (this *QMediaRecorder) SupportedAudioCodecs() *qtcore.QStringList /*123*/ {
 Returns a description of an audio codec.
 */
 func (this *QMediaRecorder) AudioCodecDescription(codecName string) string {
-	var tmpArg0 = qtcore.NewQString_5(codecName)
+	var tmpArg0 = qtcore.NewQString5(codecName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMediaRecorder21audioCodecDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -482,7 +482,7 @@ Returns a description of a video codec.
 See also setEncodingSettings().
 */
 func (this *QMediaRecorder) VideoCodecDescription(codecName string) string {
-	var tmpArg0 = qtcore.NewQString_5(codecName)
+	var tmpArg0 = qtcore.NewQString5(codecName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMediaRecorder21videoCodecDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -531,7 +531,7 @@ If the encoder supports arbitrary resolutions within the supported range, *conti
 
 See also QVideoEncoderSettings::resolution().
 */
-func (this *QMediaRecorder) SupportedResolutions__() *qtcore.QSizeList /*lll*/ {
+func (this *QMediaRecorder) SupportedResolutionsp() *qtcore.QSizeList /*lll*/ {
 	// arg: 0, const QVideoEncoderSettings &=LValueReference, QVideoEncoderSettings=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	// arg: 1, bool *=Pointer, =Invalid, , Invalid
@@ -556,7 +556,7 @@ If the encoder supports arbitrary resolutions within the supported range, *conti
 
 See also QVideoEncoderSettings::resolution().
 */
-func (this *QMediaRecorder) SupportedResolutions__1(settings QVideoEncoderSettings_ITF) *qtcore.QSizeList /*lll*/ {
+func (this *QMediaRecorder) SupportedResolutionsp1(settings QVideoEncoderSettings_ITF) *qtcore.QSizeList /*lll*/ {
 	var convArg0 unsafe.Pointer
 	if settings != nil && settings.QVideoEncoderSettings_PTR() != nil {
 		convArg0 = settings.QVideoEncoderSettings_PTR().GetCthis()
@@ -685,7 +685,7 @@ It's only possible to change settings when the encoder is in the QMediaEncoder::
 See also audioSettings(), videoSettings(), and containerFormat().
 */
 func (this *QMediaRecorder) SetContainerFormat(container string) {
-	var tmpArg0 = qtcore.NewQString_5(container)
+	var tmpArg0 = qtcore.NewQString5(container)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaRecorder18setContainerFormatERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -714,7 +714,7 @@ func (this *QMediaRecorder) SetEncodingSettings(audioSettings QAudioEncoderSetti
 	if videoSettings != nil && videoSettings.QVideoEncoderSettings_PTR() != nil {
 		convArg1 = videoSettings.QVideoEncoderSettings_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(containerMimeType)
+	var tmpArg2 = qtcore.NewQString5(containerMimeType)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaRecorder19setEncodingSettingsERK21QAudioEncoderSettingsRK21QVideoEncoderSettingsRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -734,7 +734,7 @@ It's only possible to change settings when the encoder is in the QMediaEncoder::
 
 See also audioSettings(), videoSettings(), and containerFormat().
 */
-func (this *QMediaRecorder) SetEncodingSettings__(audioSettings QAudioEncoderSettings_ITF) {
+func (this *QMediaRecorder) SetEncodingSettingsp(audioSettings QAudioEncoderSettings_ITF) {
 	var convArg0 unsafe.Pointer
 	if audioSettings != nil && audioSettings.QAudioEncoderSettings_PTR() != nil {
 		convArg0 = audioSettings.QAudioEncoderSettings_PTR().GetCthis()
@@ -761,7 +761,7 @@ It's only possible to change settings when the encoder is in the QMediaEncoder::
 
 See also audioSettings(), videoSettings(), and containerFormat().
 */
-func (this *QMediaRecorder) SetEncodingSettings__1(audioSettings QAudioEncoderSettings_ITF, videoSettings QVideoEncoderSettings_ITF) {
+func (this *QMediaRecorder) SetEncodingSettingsp1(audioSettings QAudioEncoderSettings_ITF, videoSettings QVideoEncoderSettings_ITF) {
 	var convArg0 unsafe.Pointer
 	if audioSettings != nil && audioSettings.QAudioEncoderSettings_PTR() != nil {
 		convArg0 = audioSettings.QAudioEncoderSettings_PTR().GetCthis()
@@ -815,7 +815,7 @@ Returns the value associated with a meta-data key.
 See also setMetaData().
 */
 func (this *QMediaRecorder) MetaData(key string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QMediaRecorder8metaDataERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -837,7 +837,7 @@ Note: To ensure that meta data is set corretly, it should be set before starting
 See also metaData().
 */
 func (this *QMediaRecorder) SetMetaData(key string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -1095,8 +1095,8 @@ Note: Signal metaDataChanged is overloaded in this class. To connect to this sig
   connect(mediaRecorder, QOverload<>::of(&QMediaRecorder::metaDataChanged),
       [=](){ /-* ... *-/ });
 */
-func (this *QMediaRecorder) MetaDataChanged_1(key string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+func (this *QMediaRecorder) MetaDataChanged1(key string, value qtcore.QVariant_ITF) {
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -1139,7 +1139,7 @@ Note: Signal availabilityChanged is overloaded in this class. To connect to this
   connect(mediaRecorder, QOverload<bool>::of(&QMediaRecorder::availabilityChanged),
       [=](bool available){ /-* ... *-/ });
 */
-func (this *QMediaRecorder) AvailabilityChanged_1(availability int) {
+func (this *QMediaRecorder) AvailabilityChanged1(availability int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QMediaRecorder19availabilityChangedEN11QMultimedia18AvailabilityStatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), availability)
 	qtrt.ErrPrint(err, rv)
 }

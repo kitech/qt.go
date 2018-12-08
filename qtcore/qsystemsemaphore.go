@@ -86,7 +86,7 @@ func (*QSystemSemaphore) NewForInherit(key string, initialValue int, mode int) *
 	return NewQSystemSemaphore(key, initialValue, mode)
 }
 func NewQSystemSemaphore(key string, initialValue int, mode int) *QSystemSemaphore {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphoreC2ERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, convArg0, initialValue, mode)
 	qtrt.ErrPrint(err, rv)
@@ -113,11 +113,11 @@ The mode parameter is only used in Unix systems to handle the case where a semap
 
 See also acquire() and key().
 */
-func (*QSystemSemaphore) NewForInherit__(key string) *QSystemSemaphore {
-	return NewQSystemSemaphore__(key)
+func (*QSystemSemaphore) NewForInheritp(key string) *QSystemSemaphore {
+	return NewQSystemSemaphorep(key)
 }
-func NewQSystemSemaphore__(key string) *QSystemSemaphore {
-	var tmpArg0 = NewQString_5(key)
+func NewQSystemSemaphorep(key string) *QSystemSemaphore {
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	initialValue := int(0)
@@ -148,11 +148,11 @@ The mode parameter is only used in Unix systems to handle the case where a semap
 
 See also acquire() and key().
 */
-func (*QSystemSemaphore) NewForInherit__1(key string, initialValue int) *QSystemSemaphore {
-	return NewQSystemSemaphore__1(key, initialValue)
+func (*QSystemSemaphore) NewForInheritp1(key string, initialValue int) *QSystemSemaphore {
+	return NewQSystemSemaphorep1(key, initialValue)
 }
-func NewQSystemSemaphore__1(key string, initialValue int) *QSystemSemaphore {
-	var tmpArg0 = NewQString_5(key)
+func NewQSystemSemaphorep1(key string, initialValue int) *QSystemSemaphore {
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum, , Invalid
 	mode := 0
@@ -189,7 +189,7 @@ This function works the same as the constructor. It reconstructs this QSystemSem
 See also QSystemSemaphore() and key().
 */
 func (this *QSystemSemaphore) SetKey(key string, initialValue int, mode int) {
-	var tmpArg0 = NewQString_5(key)
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, initialValue, mode)
 	qtrt.ErrPrint(err, rv)
@@ -205,8 +205,8 @@ This function works the same as the constructor. It reconstructs this QSystemSem
 
 See also QSystemSemaphore() and key().
 */
-func (this *QSystemSemaphore) SetKey__(key string) {
-	var tmpArg0 = NewQString_5(key)
+func (this *QSystemSemaphore) SetKeyp(key string) {
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	initialValue := int(0)
@@ -226,8 +226,8 @@ This function works the same as the constructor. It reconstructs this QSystemSem
 
 See also QSystemSemaphore() and key().
 */
-func (this *QSystemSemaphore) SetKey__1(key string, initialValue int) {
-	var tmpArg0 = NewQString_5(key)
+func (this *QSystemSemaphore) SetKeyp1(key string, initialValue int) {
+	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QSystemSemaphore::AccessMode=Enum, QSystemSemaphore::AccessMode=Enum, , Invalid
 	mode := 0
@@ -336,7 +336,7 @@ Ten new resources are now guarded by the semaphore, in addition to the five that
 
 See also acquire().
 */
-func (this *QSystemSemaphore) Release__() bool {
+func (this *QSystemSemaphore) Releasep() bool {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	n := int(1)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore7releaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)

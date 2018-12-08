@@ -97,7 +97,7 @@ func (this *QFileSystemModel) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 This signal is emitted whenever the root path has been changed to a newPath.
 */
 func (this *QFileSystemModel) RootPathChanged(newPath string) {
-	var tmpArg0 = qtcore.NewQString_5(newPath)
+	var tmpArg0 = qtcore.NewQString5(newPath)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel15rootPathChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -112,11 +112,11 @@ func (this *QFileSystemModel) RootPathChanged(newPath string) {
 This signal is emitted whenever a file with the oldName is successfully renamed to newName. The file is located in in the directory path.
 */
 func (this *QFileSystemModel) FileRenamed(path string, oldName string, newName string) {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(oldName)
+	var tmpArg1 = qtcore.NewQString5(oldName)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString_5(newName)
+	var tmpArg2 = qtcore.NewQString5(newName)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -133,7 +133,7 @@ This signal is emitted when the gatherer thread has finished to load the path.
 This function was introduced in  Qt 4.7.
 */
 func (this *QFileSystemModel) DirectoryLoaded(path string) {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel15directoryLoadedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -170,10 +170,10 @@ func NewQFileSystemModel(parent qtcore.QObject_ITF /*777 QObject **/) *QFileSyst
 /*
 Constructs a file system model with the given parent.
 */
-func (*QFileSystemModel) NewForInherit__() *QFileSystemModel {
-	return NewQFileSystemModel__()
+func (*QFileSystemModel) NewForInheritp() *QFileSystemModel {
+	return NewQFileSystemModelp()
 }
-func NewQFileSystemModel__() *QFileSystemModel {
+func NewQFileSystemModelp() *QFileSystemModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -226,7 +226,7 @@ func (this *QFileSystemModel) Index(row int, column int, parent qtcore.QModelInd
 /*
 Reimplemented from QAbstractItemModel::index().
 */
-func (this *QFileSystemModel) Index__(row int, column int) *qtcore.QModelIndex /*123*/ {
+func (this *QFileSystemModel) Indexp(row int, column int) *qtcore.QModelIndex /*123*/ {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
@@ -244,8 +244,8 @@ func (this *QFileSystemModel) Index__(row int, column int) *qtcore.QModelIndex /
 /*
 Reimplemented from QAbstractItemModel::index().
 */
-func (this *QFileSystemModel) Index_1(path string, column int) *qtcore.QModelIndex /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(path)
+func (this *QFileSystemModel) Index1(path string, column int) *qtcore.QModelIndex /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel5indexERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
 	qtrt.ErrPrint(err, rv)
@@ -262,8 +262,8 @@ func (this *QFileSystemModel) Index_1(path string, column int) *qtcore.QModelInd
 /*
 Reimplemented from QAbstractItemModel::index().
 */
-func (this *QFileSystemModel) Index_1_(path string) *qtcore.QModelIndex /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(path)
+func (this *QFileSystemModel) Index1p(path string) *qtcore.QModelIndex /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	column := int(0)
@@ -340,7 +340,7 @@ func (this *QFileSystemModel) HasChildren(parent qtcore.QModelIndex_ITF) bool {
 /*
 Reimplemented from QAbstractItemModel::hasChildren().
 */
-func (this *QFileSystemModel) HasChildren__() bool {
+func (this *QFileSystemModel) HasChildrenp() bool {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -409,7 +409,7 @@ func (this *QFileSystemModel) RowCount(parent qtcore.QModelIndex_ITF) int {
 /*
 Reimplemented from QAbstractItemModel::rowCount().
 */
-func (this *QFileSystemModel) RowCount__() int {
+func (this *QFileSystemModel) RowCountp() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -443,7 +443,7 @@ func (this *QFileSystemModel) ColumnCount(parent qtcore.QModelIndex_ITF) int {
 /*
 Reimplemented from QAbstractItemModel::columnCount().
 */
-func (this *QFileSystemModel) ColumnCount__() int {
+func (this *QFileSystemModel) ColumnCountp() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = qtcore.NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel11columnCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -479,7 +479,7 @@ Returns the data stored under the given role for the item "My Computer".
 
 See also Qt::ItemDataRole.
 */
-func (this *QFileSystemModel) MyComputer__() *qtcore.QVariant /*123*/ {
+func (this *QFileSystemModel) MyComputerp() *qtcore.QVariant /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel10myComputerEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
@@ -521,7 +521,7 @@ Reimplemented from QAbstractItemModel::data().
 
 See also setData().
 */
-func (this *QFileSystemModel) Data__(index qtcore.QModelIndex_ITF) *qtcore.QVariant /*123*/ {
+func (this *QFileSystemModel) Datap(index qtcore.QModelIndex_ITF) *qtcore.QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -569,7 +569,7 @@ Reimplemented from QAbstractItemModel::setData().
 
 See also data().
 */
-func (this *QFileSystemModel) SetData__(index qtcore.QModelIndex_ITF, value qtcore.QVariant_ITF) bool {
+func (this *QFileSystemModel) SetDatap(index qtcore.QModelIndex_ITF, value qtcore.QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -609,7 +609,7 @@ func (this *QFileSystemModel) HeaderData(section int, orientation int, role int)
 /*
 Reimplemented from QAbstractItemModel::headerData().
 */
-func (this *QFileSystemModel) HeaderData__(section int, orientation int) *qtcore.QVariant /*123*/ {
+func (this *QFileSystemModel) HeaderDatap(section int, orientation int) *qtcore.QVariant /*123*/ {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
@@ -658,7 +658,7 @@ func (this *QFileSystemModel) Sort(column int, order int) {
 /*
 Reimplemented from QAbstractItemModel::sort().
 */
-func (this *QFileSystemModel) Sort__(column int) {
+func (this *QFileSystemModel) Sortp(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
@@ -738,7 +738,7 @@ Note: This function does not change the structure of the model or modify the dat
 See also rootPath().
 */
 func (this *QFileSystemModel) SetRootPath(path string) *qtcore.QModelIndex /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(path)
+	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel11setRootPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -1083,7 +1083,7 @@ func (this *QFileSystemModel) Mkdir(parent qtcore.QModelIndex_ITF, name string) 
 	if parent != nil && parent.QModelIndex_PTR() != nil {
 		convArg0 = parent.QModelIndex_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(name)
+	var tmpArg1 = qtcore.NewQString5(name)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

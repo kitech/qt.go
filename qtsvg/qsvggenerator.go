@@ -135,7 +135,7 @@ func (this *QSvgGenerator) Title() string {
 
  */
 func (this *QSvgGenerator) SetTitle(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSvgGenerator8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func (this *QSvgGenerator) Description() string {
 
  */
 func (this *QSvgGenerator) SetDescription(description string) {
-	var tmpArg0 = qtcore.NewQString_5(description)
+	var tmpArg0 = qtcore.NewQString5(description)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSvgGenerator14setDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -267,7 +267,7 @@ func (this *QSvgGenerator) SetViewBox(viewBox qtcore.QRect_ITF) {
 /*
 
  */
-func (this *QSvgGenerator) SetViewBox_1(viewBox qtcore.QRectF_ITF) {
+func (this *QSvgGenerator) SetViewBox1(viewBox qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
 	if viewBox != nil && viewBox.QRectF_PTR() != nil {
 		convArg0 = viewBox.QRectF_PTR().GetCthis()
@@ -302,7 +302,7 @@ func (this *QSvgGenerator) FileName() string {
 
  */
 func (this *QSvgGenerator) SetFileName(fileName string) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSvgGenerator11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

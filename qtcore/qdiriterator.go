@@ -111,10 +111,10 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
-func (*QDirIterator) NewForInherit__(dir QDir_ITF) *QDirIterator {
-	return NewQDirIterator__(dir)
+func (*QDirIterator) NewForInheritp(dir QDir_ITF) *QDirIterator {
+	return NewQDirIteratorp(dir)
 }
-func NewQDirIterator__(dir QDir_ITF) *QDirIterator {
+func NewQDirIteratorp(dir QDir_ITF) *QDirIterator {
 	var convArg0 unsafe.Pointer
 	if dir != nil && dir.QDir_PTR() != nil {
 		convArg0 = dir.QDir_PTR().GetCthis()
@@ -144,11 +144,11 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
-func (*QDirIterator) NewForInherit_1(path string, flags int) *QDirIterator {
-	return NewQDirIterator_1(path, flags)
+func (*QDirIterator) NewForInherit1(path string, flags int) *QDirIterator {
+	return NewQDirIterator1(path, flags)
 }
-func NewQDirIterator_1(path string, flags int) *QDirIterator {
-	var tmpArg0 = NewQString_5(path)
+func NewQDirIterator1(path string, flags int) *QDirIterator {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QString6QFlagsINS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	qtrt.ErrPrint(err, rv)
@@ -173,11 +173,11 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
-func (*QDirIterator) NewForInherit_1_(path string) *QDirIterator {
-	return NewQDirIterator_1_(path)
+func (*QDirIterator) NewForInherit1p(path string) *QDirIterator {
+	return NewQDirIterator1p(path)
 }
-func NewQDirIterator_1_(path string) *QDirIterator {
-	var tmpArg0 = NewQString_5(path)
+func NewQDirIterator1p(path string) *QDirIterator {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>, Unexposed
 	flags := 0
@@ -204,11 +204,11 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
-func (*QDirIterator) NewForInherit_2(path string, filter int, flags int) *QDirIterator {
-	return NewQDirIterator_2(path, filter, flags)
+func (*QDirIterator) NewForInherit2(path string, filter int, flags int) *QDirIterator {
+	return NewQDirIterator2(path, filter, flags)
 }
-func NewQDirIterator_2(path string, filter int, flags int) *QDirIterator {
-	var tmpArg0 = NewQString_5(path)
+func NewQDirIterator2(path string, filter int, flags int) *QDirIterator {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QString6QFlagsIN4QDir6FilterEES3_INS_12IteratorFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, filter, flags)
 	qtrt.ErrPrint(err, rv)
@@ -233,11 +233,11 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
-func (*QDirIterator) NewForInherit_2_(path string, filter int) *QDirIterator {
-	return NewQDirIterator_2_(path, filter)
+func (*QDirIterator) NewForInherit2p(path string, filter int) *QDirIterator {
+	return NewQDirIterator2p(path, filter)
 }
-func NewQDirIterator_2_(path string, filter int) *QDirIterator {
-	var tmpArg0 = NewQString_5(path)
+func NewQDirIterator2p(path string, filter int) *QDirIterator {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 2, QDirIterator::IteratorFlags=Typedef, QDirIterator::IteratorFlags=Typedef, QFlags<QDirIterator::IteratorFlag>, Unexposed
 	flags := 0
@@ -264,11 +264,11 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
-func (*QDirIterator) NewForInherit_3(path string, nameFilters QStringList_ITF, filters int, flags int) *QDirIterator {
-	return NewQDirIterator_3(path, nameFilters, filters, flags)
+func (*QDirIterator) NewForInherit3(path string, nameFilters QStringList_ITF, filters int, flags int) *QDirIterator {
+	return NewQDirIterator3(path, nameFilters, filters, flags)
 }
-func NewQDirIterator_3(path string, nameFilters QStringList_ITF, filters int, flags int) *QDirIterator {
-	var tmpArg0 = NewQString_5(path)
+func NewQDirIterator3(path string, nameFilters QStringList_ITF, filters int, flags int) *QDirIterator {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
@@ -297,11 +297,11 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
-func (*QDirIterator) NewForInherit_3_(path string, nameFilters QStringList_ITF) *QDirIterator {
-	return NewQDirIterator_3_(path, nameFilters)
+func (*QDirIterator) NewForInherit3p(path string, nameFilters QStringList_ITF) *QDirIterator {
+	return NewQDirIterator3p(path, nameFilters)
 }
-func NewQDirIterator_3_(path string, nameFilters QStringList_ITF) *QDirIterator {
-	var tmpArg0 = NewQString_5(path)
+func NewQDirIterator3p(path string, nameFilters QStringList_ITF) *QDirIterator {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {
@@ -334,11 +334,11 @@ Note: To list symlinks that point to non existing files, QDir::System must be pa
 
 See also hasNext(), next(), and IteratorFlags.
 */
-func (*QDirIterator) NewForInherit_3_1(path string, nameFilters QStringList_ITF, filters int) *QDirIterator {
-	return NewQDirIterator_3_1(path, nameFilters, filters)
+func (*QDirIterator) NewForInherit3p1(path string, nameFilters QStringList_ITF, filters int) *QDirIterator {
+	return NewQDirIterator3p1(path, nameFilters, filters)
 }
-func NewQDirIterator_3_1(path string, nameFilters QStringList_ITF, filters int) *QDirIterator {
-	var tmpArg0 = NewQString_5(path)
+func NewQDirIterator3p1(path string, nameFilters QStringList_ITF, filters int) *QDirIterator {
+	var tmpArg0 = NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if nameFilters != nil && nameFilters.QStringList_PTR() != nil {

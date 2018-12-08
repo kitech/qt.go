@@ -96,10 +96,10 @@ func NewQAccessibleTableModelChangeEvent(obj qtcore.QObject_ITF /*777 QObject **
 /*
 
  */
-func (*QAccessibleTableModelChangeEvent) NewForInherit_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
-	return NewQAccessibleTableModelChangeEvent_1(iface, changeType)
+func (*QAccessibleTableModelChangeEvent) NewForInherit1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
+	return NewQAccessibleTableModelChangeEvent1(iface, changeType)
 }
-func NewQAccessibleTableModelChangeEvent_1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
+func NewQAccessibleTableModelChangeEvent1(iface QAccessibleInterface_ITF /*777 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
 	var convArg0 unsafe.Pointer
 	if iface != nil && iface.QAccessibleInterface_PTR() != nil {
 		convArg0 = iface.QAccessibleInterface_PTR().GetCthis()

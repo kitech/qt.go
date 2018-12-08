@@ -131,10 +131,10 @@ Constructs the QAbstractAnimation base class, and passes parent to QObject's con
 
 See also QVariantAnimation and QAnimationGroup.
 */
-func (*QAbstractAnimation) NewForInherit__() *QAbstractAnimation {
-	return NewQAbstractAnimation__()
+func (*QAbstractAnimation) NewForInheritp() *QAbstractAnimation {
+	return NewQAbstractAnimationp()
 }
-func NewQAbstractAnimation__() *QAbstractAnimation {
+func NewQAbstractAnimationp() *QAbstractAnimation {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -426,7 +426,7 @@ If the animation is already running, this function does nothing.
 
 See also stop() and state().
 */
-func (this *QAbstractAnimation) Start__() {
+func (this *QAbstractAnimation) Startp() {
 	// arg: 0, QAbstractAnimation::DeletionPolicy=Elaborated, QAbstractAnimation::DeletionPolicy=Enum, , Invalid
 	policy := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation5startENS_14DeletionPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)

@@ -92,10 +92,10 @@ func NewQSslError() *QSslError {
 /*
 Constructs a QSslError object with no error and default certificate.
 */
-func (*QSslError) NewForInherit_1(error int) *QSslError {
-	return NewQSslError_1(error)
+func (*QSslError) NewForInherit1(error int) *QSslError {
+	return NewQSslError1(error)
 }
-func NewQSslError_1(error int) *QSslError {
+func NewQSslError1(error int) *QSslError {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorE", qtrt.FFI_TYPE_POINTER, error)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQSslErrorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQSslError_1(error int) *QSslError {
 /*
 Constructs a QSslError object with no error and default certificate.
 */
-func (*QSslError) NewForInherit_2(error int, certificate QSslCertificate_ITF) *QSslError {
-	return NewQSslError_2(error, certificate)
+func (*QSslError) NewForInherit2(error int, certificate QSslCertificate_ITF) *QSslError {
+	return NewQSslError2(error, certificate)
 }
-func NewQSslError_2(error int, certificate QSslCertificate_ITF) *QSslError {
+func NewQSslError2(error int, certificate QSslCertificate_ITF) *QSslError {
 	var convArg1 unsafe.Pointer
 	if certificate != nil && certificate.QSslCertificate_PTR() != nil {
 		convArg1 = certificate.QSslCertificate_PTR().GetCthis()
@@ -184,7 +184,7 @@ func (this *QSslError) Operator_equal(other unsafe.Pointer /*333*/) *QSslError {
 /*
 
  */
-func (this *QSslError) Operator_equal_1(other QSslError_ITF) *QSslError {
+func (this *QSslError) Operator_equal1(other QSslError_ITF) *QSslError {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QSslError_PTR() != nil {
 		convArg0 = other.QSslError_PTR().GetCthis()

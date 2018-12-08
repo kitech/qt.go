@@ -259,10 +259,10 @@ func NewQListView(parent QWidget_ITF /*777 QWidget **/) *QListView {
 /*
 Creates a new QListView with the given parent to view a model. Use setModel() to set the model.
 */
-func (*QListView) NewForInherit__() *QListView {
-	return NewQListView__()
+func (*QListView) NewForInheritp() *QListView {
+	return NewQListViewp()
 }
-func NewQListView__() *QListView {
+func NewQListViewp() *QListView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -733,7 +733,7 @@ func (this *QListView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 /*
 Reimplemented from QAbstractItemView::scrollTo().
 */
-func (this *QListView) ScrollTo__(index qtcore.QModelIndex_ITF) {
+func (this *QListView) ScrollTop(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()

@@ -92,10 +92,10 @@ func NewQBrush() *QBrush {
 /*
 Constructs a default black brush with the style Qt::NoBrush (i.e. this brush will not fill shapes).
 */
-func (*QBrush) NewForInherit_1(bs int) *QBrush {
-	return NewQBrush_1(bs)
+func (*QBrush) NewForInherit1(bs int) *QBrush {
+	return NewQBrush1(bs)
 }
-func NewQBrush_1(bs int) *QBrush {
+func NewQBrush1(bs int) *QBrush {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt10BrushStyleE", qtrt.FFI_TYPE_POINTER, bs)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -111,10 +111,10 @@ func NewQBrush_1(bs int) *QBrush {
 /*
 Constructs a default black brush with the style Qt::NoBrush (i.e. this brush will not fill shapes).
 */
-func (*QBrush) NewForInherit_2(color QColor_ITF, bs int) *QBrush {
-	return NewQBrush_2(color, bs)
+func (*QBrush) NewForInherit2(color QColor_ITF, bs int) *QBrush {
+	return NewQBrush2(color, bs)
 }
-func NewQBrush_2(color QColor_ITF, bs int) *QBrush {
+func NewQBrush2(color QColor_ITF, bs int) *QBrush {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
 		convArg0 = color.QColor_PTR().GetCthis()
@@ -134,10 +134,10 @@ func NewQBrush_2(color QColor_ITF, bs int) *QBrush {
 /*
 Constructs a default black brush with the style Qt::NoBrush (i.e. this brush will not fill shapes).
 */
-func (*QBrush) NewForInherit_2_(color QColor_ITF) *QBrush {
-	return NewQBrush_2_(color)
+func (*QBrush) NewForInherit2p(color QColor_ITF) *QBrush {
+	return NewQBrush2p(color)
 }
-func NewQBrush_2_(color QColor_ITF) *QBrush {
+func NewQBrush2p(color QColor_ITF) *QBrush {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
 		convArg0 = color.QColor_PTR().GetCthis()
@@ -159,10 +159,10 @@ func NewQBrush_2_(color QColor_ITF) *QBrush {
 /*
 Constructs a default black brush with the style Qt::NoBrush (i.e. this brush will not fill shapes).
 */
-func (*QBrush) NewForInherit_3(color int, bs int) *QBrush {
-	return NewQBrush_3(color, bs)
+func (*QBrush) NewForInherit3(color int, bs int) *QBrush {
+	return NewQBrush3(color, bs)
 }
-func NewQBrush_3(color int, bs int) *QBrush {
+func NewQBrush3(color int, bs int) *QBrush {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorENS0_10BrushStyleE", qtrt.FFI_TYPE_POINTER, color, bs)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -178,10 +178,10 @@ func NewQBrush_3(color int, bs int) *QBrush {
 /*
 Constructs a default black brush with the style Qt::NoBrush (i.e. this brush will not fill shapes).
 */
-func (*QBrush) NewForInherit_3_(color int) *QBrush {
-	return NewQBrush_3_(color)
+func (*QBrush) NewForInherit3p(color int) *QBrush {
+	return NewQBrush3p(color)
 }
-func NewQBrush_3_(color int) *QBrush {
+func NewQBrush3p(color int) *QBrush {
 	// arg: 1, Qt::BrushStyle=Elaborated, Qt::BrushStyle=Enum, , Invalid
 	bs := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorENS0_10BrushStyleE", qtrt.FFI_TYPE_POINTER, color, bs)
@@ -199,10 +199,10 @@ func NewQBrush_3_(color int) *QBrush {
 /*
 Constructs a default black brush with the style Qt::NoBrush (i.e. this brush will not fill shapes).
 */
-func (*QBrush) NewForInherit_4(color QColor_ITF, pixmap QPixmap_ITF) *QBrush {
-	return NewQBrush_4(color, pixmap)
+func (*QBrush) NewForInherit4(color QColor_ITF, pixmap QPixmap_ITF) *QBrush {
+	return NewQBrush4(color, pixmap)
 }
-func NewQBrush_4(color QColor_ITF, pixmap QPixmap_ITF) *QBrush {
+func NewQBrush4(color QColor_ITF, pixmap QPixmap_ITF) *QBrush {
 	var convArg0 unsafe.Pointer
 	if color != nil && color.QColor_PTR() != nil {
 		convArg0 = color.QColor_PTR().GetCthis()
@@ -226,10 +226,10 @@ func NewQBrush_4(color QColor_ITF, pixmap QPixmap_ITF) *QBrush {
 /*
 Constructs a default black brush with the style Qt::NoBrush (i.e. this brush will not fill shapes).
 */
-func (*QBrush) NewForInherit_5(color int, pixmap QPixmap_ITF) *QBrush {
-	return NewQBrush_5(color, pixmap)
+func (*QBrush) NewForInherit5(color int, pixmap QPixmap_ITF) *QBrush {
+	return NewQBrush5(color, pixmap)
 }
-func NewQBrush_5(color int, pixmap QPixmap_ITF) *QBrush {
+func NewQBrush5(color int, pixmap QPixmap_ITF) *QBrush {
 	var convArg1 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg1 = pixmap.QPixmap_PTR().GetCthis()
@@ -249,10 +249,10 @@ func NewQBrush_5(color int, pixmap QPixmap_ITF) *QBrush {
 /*
 Constructs a default black brush with the style Qt::NoBrush (i.e. this brush will not fill shapes).
 */
-func (*QBrush) NewForInherit_6(pixmap QPixmap_ITF) *QBrush {
-	return NewQBrush_6(pixmap)
+func (*QBrush) NewForInherit6(pixmap QPixmap_ITF) *QBrush {
+	return NewQBrush6(pixmap)
 }
-func NewQBrush_6(pixmap QPixmap_ITF) *QBrush {
+func NewQBrush6(pixmap QPixmap_ITF) *QBrush {
 	var convArg0 unsafe.Pointer
 	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
 		convArg0 = pixmap.QPixmap_PTR().GetCthis()
@@ -272,10 +272,10 @@ func NewQBrush_6(pixmap QPixmap_ITF) *QBrush {
 /*
 Constructs a default black brush with the style Qt::NoBrush (i.e. this brush will not fill shapes).
 */
-func (*QBrush) NewForInherit_7(image QImage_ITF) *QBrush {
-	return NewQBrush_7(image)
+func (*QBrush) NewForInherit7(image QImage_ITF) *QBrush {
+	return NewQBrush7(image)
 }
-func NewQBrush_7(image QImage_ITF) *QBrush {
+func NewQBrush7(image QImage_ITF) *QBrush {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()
@@ -295,10 +295,10 @@ func NewQBrush_7(image QImage_ITF) *QBrush {
 /*
 Constructs a default black brush with the style Qt::NoBrush (i.e. this brush will not fill shapes).
 */
-func (*QBrush) NewForInherit_8(gradient QGradient_ITF) *QBrush {
-	return NewQBrush_8(gradient)
+func (*QBrush) NewForInherit8(gradient QGradient_ITF) *QBrush {
+	return NewQBrush8(gradient)
 }
-func NewQBrush_8(gradient QGradient_ITF) *QBrush {
+func NewQBrush8(gradient QGradient_ITF) *QBrush {
 	var convArg0 unsafe.Pointer
 	if gradient != nil && gradient.QGradient_PTR() != nil {
 		convArg0 = gradient.QGradient_PTR().GetCthis()
@@ -353,7 +353,7 @@ func (this *QBrush) Operator_equal(brush QBrush_ITF) *QBrush {
 /*
 
  */
-func (this *QBrush) Operator_equal_1(other unsafe.Pointer /*333*/) *QBrush {
+func (this *QBrush) Operator_equal1(other unsafe.Pointer /*333*/) *QBrush {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -628,7 +628,7 @@ Note that calling setColor() will not make a difference if the style is a gradie
 
 See also color().
 */
-func (this *QBrush) SetColor_1(color int) {
+func (this *QBrush) SetColor1(color int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush8setColorEN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), color)
 	qtrt.ErrPrint(err, rv)
 }

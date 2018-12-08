@@ -155,10 +155,10 @@ All Qt programs automatically support the following command line options:
 
 See also QCoreApplication::arguments().
 */
-func (*QApplication) NewForInherit__(argc int, argv []string) *QApplication {
-	return NewQApplication__(argc, argv)
+func (*QApplication) NewForInheritp(argc int, argv []string) *QApplication {
+	return NewQApplicationp(argc, argv)
 }
-func NewQApplication__(argc int, argv []string) *QApplication {
+func NewQApplicationp(argc int, argv []string) *QApplication {
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
 	// arg: 2, int=Int, =Invalid, , Invalid
 	arg2 := 0
@@ -264,16 +264,16 @@ Warning: Qt style sheets are currently not supported for custom QStyle subclasse
 
 See also style(), QStyle, setPalette(), and desktopSettingsAware().
 */
-func (this *QApplication) SetStyle_1(arg0 string) *QStyle /*777 QStyle **/ {
-	var tmpArg0 = qtcore.NewQString_5(arg0)
+func (this *QApplication) SetStyle1(arg0 string) *QStyle /*777 QStyle **/ {
+	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication8setStyleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQStyleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QApplication_SetStyle_1(arg0 string) *QStyle /*777 QStyle **/ {
+func QApplication_SetStyle1(arg0 string) *QStyle /*777 QStyle **/ {
 	var nilthis *QApplication
-	rv := nilthis.SetStyle_1(arg0)
+	rv := nilthis.SetStyle1(arg0)
 	return rv
 }
 
@@ -354,7 +354,7 @@ If a widget is passed, the default palette for the widget's class is returned. T
 
 See also setPalette() and QWidget::palette().
 */
-func (this *QApplication) Palette_1(className string) *qtgui.QPalette /*123*/ {
+func (this *QApplication) Palette1(className string) *qtgui.QPalette /*123*/ {
 	var convArg0 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication7paletteEPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -363,9 +363,9 @@ func (this *QApplication) Palette_1(className string) *qtgui.QPalette /*123*/ {
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPalette)
 	return rv2
 }
-func QApplication_Palette_1(className string) *qtgui.QPalette /*123*/ {
+func QApplication_Palette1(className string) *qtgui.QPalette /*123*/ {
 	var nilthis *QApplication
-	rv := nilthis.Palette_1(className)
+	rv := nilthis.Palette1(className)
 	return rv
 }
 
@@ -420,7 +420,7 @@ Note: Some styles do not use the palette for all drawing, for instance, if they 
 
 See also QWidget::setPalette(), palette(), and QStyle::polish().
 */
-func (this *QApplication) SetPalette__(arg0 qtgui.QPalette_ITF) {
+func (this *QApplication) SetPalettep(arg0 qtgui.QPalette_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QPalette_PTR() != nil {
 		convArg0 = arg0.QPalette_PTR().GetCthis()
@@ -464,7 +464,7 @@ Returns the default application font.
 
 See also setFont(), fontMetrics(), and QWidget::font().
 */
-func (this *QApplication) Font_1(arg0 QWidget_ITF /*777 const QWidget **/) *qtgui.QFont /*123*/ {
+func (this *QApplication) Font1(arg0 QWidget_ITF /*777 const QWidget **/) *qtgui.QFont /*123*/ {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
@@ -475,9 +475,9 @@ func (this *QApplication) Font_1(arg0 QWidget_ITF /*777 const QWidget **/) *qtgu
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
-func QApplication_Font_1(arg0 QWidget_ITF /*777 const QWidget **/) *qtgui.QFont /*123*/ {
+func QApplication_Font1(arg0 QWidget_ITF /*777 const QWidget **/) *qtgui.QFont /*123*/ {
 	var nilthis *QApplication
-	rv := nilthis.Font_1(arg0)
+	rv := nilthis.Font1(arg0)
 	return rv
 }
 
@@ -491,7 +491,7 @@ Returns the default application font.
 
 See also setFont(), fontMetrics(), and QWidget::font().
 */
-func (this *QApplication) Font_2(className string) *qtgui.QFont /*123*/ {
+func (this *QApplication) Font2(className string) *qtgui.QFont /*123*/ {
 	var convArg0 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication4fontEPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -500,9 +500,9 @@ func (this *QApplication) Font_2(className string) *qtgui.QFont /*123*/ {
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
-func QApplication_Font_2(className string) *qtgui.QFont /*123*/ {
+func QApplication_Font2(className string) *qtgui.QFont /*123*/ {
 	var nilthis *QApplication
-	rv := nilthis.Font_2(className)
+	rv := nilthis.Font2(className)
 	return rv
 }
 
@@ -549,7 +549,7 @@ Warning: Do not use this function in conjunction with Qt Style Sheets. The font 
 
 See also font(), fontMetrics(), and QWidget::setFont().
 */
-func (this *QApplication) SetFont__(arg0 qtgui.QFont_ITF) {
+func (this *QApplication) SetFontp(arg0 qtgui.QFont_ITF) {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QFont_PTR() != nil {
 		convArg0 = arg0.QFont_PTR().GetCthis()
@@ -880,14 +880,14 @@ This function can be slow.
 
 See also QCursor::pos(), QWidget::grabMouse(), and QWidget::grabKeyboard().
 */
-func (this *QApplication) WidgetAt_1(x int, y int) *QWidget /*777 QWidget **/ {
+func (this *QApplication) WidgetAt1(x int, y int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication8widgetAtEii", qtrt.FFI_TYPE_POINTER, x, y)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QApplication_WidgetAt_1(x int, y int) *QWidget /*777 QWidget **/ {
+func QApplication_WidgetAt1(x int, y int) *QWidget /*777 QWidget **/ {
 	var nilthis *QApplication
-	rv := nilthis.WidgetAt_1(x, y)
+	rv := nilthis.WidgetAt1(x, y)
 	return rv
 }
 
@@ -922,14 +922,14 @@ func QApplication_TopLevelAt(p qtcore.QPoint_ITF) *QWidget /*777 QWidget **/ {
 /*
 Returns the top-level widget at the given point; returns 0 if there is no such widget.
 */
-func (this *QApplication) TopLevelAt_1(x int, y int) *QWidget /*777 QWidget **/ {
+func (this *QApplication) TopLevelAt1(x int, y int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication10topLevelAtEii", qtrt.FFI_TYPE_POINTER, x, y)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
-func QApplication_TopLevelAt_1(x int, y int) *QWidget /*777 QWidget **/ {
+func QApplication_TopLevelAt1(x int, y int) *QWidget /*777 QWidget **/ {
 	var nilthis *QApplication
-	rv := nilthis.TopLevelAt_1(x, y)
+	rv := nilthis.TopLevelAt1(x, y)
 	return rv
 }
 
@@ -999,7 +999,7 @@ On X11, this will cause the window to be marked as "demands attention", the wind
 
 This function was introduced in  Qt 4.3.
 */
-func (this *QApplication) Alert__(widget QWidget_ITF /*777 QWidget **/) {
+func (this *QApplication) Alertp(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
@@ -1326,7 +1326,7 @@ Note: All effects are disabled on screens running at less than 16-bit color dept
 
 See also isEffectEnabled(), Qt::UIEffect, and setDesktopSettingsAware().
 */
-func (this *QApplication) SetEffectEnabled__(arg0 int) {
+func (this *QApplication) SetEffectEnabledp(arg0 int) {
 	// arg: 1, bool=Bool, =Invalid, , Invalid
 	enable := true
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication16setEffectEnabledEN2Qt8UIEffectEb", qtrt.FFI_TYPE_POINTER, arg0, enable)
@@ -1437,7 +1437,7 @@ func (this *QApplication) StyleSheet() string {
 
  */
 func (this *QApplication) SetStyleSheet(sheet string) {
-	var tmpArg0 = qtcore.NewQString_5(sheet)
+	var tmpArg0 = qtcore.NewQString5(sheet)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication13setStyleSheetERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -92,10 +92,10 @@ func NewQTextLength() *QTextLength {
 /*
 
  */
-func (*QTextLength) NewForInherit_1(type_ int, value float64) *QTextLength {
-	return NewQTextLength_1(type_, value)
+func (*QTextLength) NewForInherit1(type_ int, value float64) *QTextLength {
+	return NewQTextLength1(type_, value)
 }
-func NewQTextLength_1(type_ int, value float64) *QTextLength {
+func NewQTextLength1(type_ int, value float64) *QTextLength {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLengthC2ENS_4TypeEd", qtrt.FFI_TYPE_POINTER, type_, value)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQTextLengthFromPointer(unsafe.Pointer(uintptr(rv)))

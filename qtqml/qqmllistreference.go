@@ -93,10 +93,10 @@ func NewQQmlListReference() *QQmlListReference {
 /*
 
  */
-func (*QQmlListReference) NewForInherit_1(arg0 qtcore.QObject_ITF /*777 QObject **/, property string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlListReference {
-	return NewQQmlListReference_1(arg0, property, arg2)
+func (*QQmlListReference) NewForInherit1(arg0 qtcore.QObject_ITF /*777 QObject **/, property string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlListReference {
+	return NewQQmlListReference1(arg0, property, arg2)
 }
-func NewQQmlListReference_1(arg0 qtcore.QObject_ITF /*777 QObject **/, property string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlListReference {
+func NewQQmlListReference1(arg0 qtcore.QObject_ITF /*777 QObject **/, property string, arg2 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlListReference {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()
@@ -122,10 +122,10 @@ func NewQQmlListReference_1(arg0 qtcore.QObject_ITF /*777 QObject **/, property 
 /*
 
  */
-func (*QQmlListReference) NewForInherit_1_(arg0 qtcore.QObject_ITF /*777 QObject **/, property string) *QQmlListReference {
-	return NewQQmlListReference_1_(arg0, property)
+func (*QQmlListReference) NewForInherit1p(arg0 qtcore.QObject_ITF /*777 QObject **/, property string) *QQmlListReference {
+	return NewQQmlListReference1p(arg0, property)
 }
-func NewQQmlListReference_1_(arg0 qtcore.QObject_ITF /*777 QObject **/, property string) *QQmlListReference {
+func NewQQmlListReference1p(arg0 qtcore.QObject_ITF /*777 QObject **/, property string) *QQmlListReference {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
 		convArg0 = arg0.QObject_PTR().GetCthis()

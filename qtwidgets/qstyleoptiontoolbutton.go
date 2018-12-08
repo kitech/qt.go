@@ -91,10 +91,10 @@ func NewQStyleOptionToolButton() *QStyleOptionToolButton {
 /*
 
  */
-func (*QStyleOptionToolButton) NewForInherit_1(version int) *QStyleOptionToolButton {
-	return NewQStyleOptionToolButton_1(version)
+func (*QStyleOptionToolButton) NewForInherit1(version int) *QStyleOptionToolButton {
+	return NewQStyleOptionToolButton1(version)
 }
-func NewQStyleOptionToolButton_1(version int) *QStyleOptionToolButton {
+func NewQStyleOptionToolButton1(version int) *QStyleOptionToolButton {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionToolButtonC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionToolButtonFromPointer(unsafe.Pointer(uintptr(rv)))

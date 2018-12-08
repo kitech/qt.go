@@ -92,10 +92,10 @@ func NewQImageWriter() *QImageWriter {
 /*
 Constructs an empty QImageWriter object. Before writing, you must call setFormat() to set an image format, then setDevice() or setFileName().
 */
-func (*QImageWriter) NewForInherit_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageWriter {
-	return NewQImageWriter_1(device, format)
+func (*QImageWriter) NewForInherit1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageWriter {
+	return NewQImageWriter1(device, format)
 }
-func NewQImageWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageWriter {
+func NewQImageWriter1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qtcore.QByteArray_ITF) *QImageWriter {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -119,11 +119,11 @@ func NewQImageWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format q
 /*
 Constructs an empty QImageWriter object. Before writing, you must call setFormat() to set an image format, then setDevice() or setFileName().
 */
-func (*QImageWriter) NewForInherit_2(fileName string, format qtcore.QByteArray_ITF) *QImageWriter {
-	return NewQImageWriter_2(fileName, format)
+func (*QImageWriter) NewForInherit2(fileName string, format qtcore.QByteArray_ITF) *QImageWriter {
+	return NewQImageWriter2(fileName, format)
 }
-func NewQImageWriter_2(fileName string, format qtcore.QByteArray_ITF) *QImageWriter {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQImageWriter2(fileName string, format qtcore.QByteArray_ITF) *QImageWriter {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if format != nil && format.QByteArray_PTR() != nil {
@@ -144,11 +144,11 @@ func NewQImageWriter_2(fileName string, format qtcore.QByteArray_ITF) *QImageWri
 /*
 Constructs an empty QImageWriter object. Before writing, you must call setFormat() to set an image format, then setDevice() or setFileName().
 */
-func (*QImageWriter) NewForInherit_2_(fileName string) *QImageWriter {
-	return NewQImageWriter_2_(fileName)
+func (*QImageWriter) NewForInherit2p(fileName string) *QImageWriter {
+	return NewQImageWriter2p(fileName)
 }
-func NewQImageWriter_2_(fileName string) *QImageWriter {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func NewQImageWriter2p(fileName string) *QImageWriter {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QByteArray &=LValueReference, QByteArray=Record, , Invalid
 	var convArg1 = qtcore.NewQByteArray()
@@ -267,7 +267,7 @@ Sets the file name of QImageWriter to fileName. Internally, QImageWriter will cr
 See also fileName() and setDevice().
 */
 func (this *QImageWriter) SetFileName(fileName string) {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriter11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -564,7 +564,7 @@ func (this *QImageWriter) SetTransformation(orientation int) {
 
  */
 func (this *QImageWriter) SetDescription(description string) {
-	var tmpArg0 = qtcore.NewQString_5(description)
+	var tmpArg0 = qtcore.NewQString5(description)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriter14setDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -614,9 +614,9 @@ This function was introduced in  Qt 4.1.
 See also QImage::setText() and QImageReader::text().
 */
 func (this *QImageWriter) SetText(key string, text string) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QImageWriter7setTextERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)

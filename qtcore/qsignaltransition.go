@@ -122,10 +122,10 @@ func NewQSignalTransition(sourceState QState_ITF /*777 QState **/) *QSignalTrans
 /*
 Constructs a new signal transition with the given sourceState.
 */
-func (*QSignalTransition) NewForInherit__() *QSignalTransition {
-	return NewQSignalTransition__()
+func (*QSignalTransition) NewForInheritp() *QSignalTransition {
+	return NewQSignalTransitionp()
 }
-func NewQSignalTransition__() *QSignalTransition {
+func NewQSignalTransitionp() *QSignalTransition {
 	// arg: 0, QState *=Pointer, QState=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -143,10 +143,10 @@ func NewQSignalTransition__() *QSignalTransition {
 /*
 Constructs a new signal transition with the given sourceState.
 */
-func (*QSignalTransition) NewForInherit_1(sender QObject_ITF /*777 const QObject **/, signal string, sourceState QState_ITF /*777 QState **/) *QSignalTransition {
-	return NewQSignalTransition_1(sender, signal, sourceState)
+func (*QSignalTransition) NewForInherit1(sender QObject_ITF /*777 const QObject **/, signal string, sourceState QState_ITF /*777 QState **/) *QSignalTransition {
+	return NewQSignalTransition1(sender, signal, sourceState)
 }
-func NewQSignalTransition_1(sender QObject_ITF /*777 const QObject **/, signal string, sourceState QState_ITF /*777 QState **/) *QSignalTransition {
+func NewQSignalTransition1(sender QObject_ITF /*777 const QObject **/, signal string, sourceState QState_ITF /*777 QState **/) *QSignalTransition {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
 		convArg0 = sender.QObject_PTR().GetCthis()
@@ -172,10 +172,10 @@ func NewQSignalTransition_1(sender QObject_ITF /*777 const QObject **/, signal s
 /*
 Constructs a new signal transition with the given sourceState.
 */
-func (*QSignalTransition) NewForInherit_1_(sender QObject_ITF /*777 const QObject **/, signal string) *QSignalTransition {
-	return NewQSignalTransition_1_(sender, signal)
+func (*QSignalTransition) NewForInherit1p(sender QObject_ITF /*777 const QObject **/, signal string) *QSignalTransition {
+	return NewQSignalTransition1p(sender, signal)
 }
-func NewQSignalTransition_1_(sender QObject_ITF /*777 const QObject **/, signal string) *QSignalTransition {
+func NewQSignalTransition1p(sender QObject_ITF /*777 const QObject **/, signal string) *QSignalTransition {
 	var convArg0 unsafe.Pointer
 	if sender != nil && sender.QObject_PTR() != nil {
 		convArg0 = sender.QObject_PTR().GetCthis()

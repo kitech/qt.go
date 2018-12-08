@@ -108,7 +108,7 @@ func (this *QNetworkInterface) Operator_equal(other unsafe.Pointer /*333*/) *QNe
 /*
 
  */
-func (this *QNetworkInterface) Operator_equal_1(other QNetworkInterface_ITF) *QNetworkInterface {
+func (this *QNetworkInterface) Operator_equal1(other QNetworkInterface_ITF) *QNetworkInterface {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkInterface_PTR() != nil {
 		convArg0 = other.QNetworkInterface_PTR().GetCthis()
@@ -275,7 +275,7 @@ This function was introduced in  Qt 5.7.
 See also interfaceFromName(), interfaceNameFromIndex(), and QNetworkDatagram::interfaceIndex().
 */
 func (this *QNetworkInterface) InterfaceIndexFromName(name string) int {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterface22interfaceIndexFromNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -300,7 +300,7 @@ The string name may be either an actual interface name (such as "eth0" or "en1")
 See also name() and isValid().
 */
 func (this *QNetworkInterface) InterfaceFromName(name string) *QNetworkInterface /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterface17interfaceFromNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -34,7 +34,7 @@ func init() {
 /*
 
  */
-func Operator_or_88(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or88(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN9QJSEngine9ExtensionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -50,7 +50,7 @@ func Operator_or_88(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 /*
 
  */
-func Operator_or_89(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or89(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN21QQmlImageProviderBase4FlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -108,7 +108,7 @@ func QmlDebug(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_ITF
 /*
 
  */
-func QmlDebug_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
+func QmlDebug1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QObject_PTR() != nil {
 		convArg0 = me.QObject_PTR().GetCthis()
@@ -152,7 +152,7 @@ func QmlInfo(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_ITF)
 /*
 
  */
-func QmlInfo_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
+func QmlInfo1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QObject_PTR() != nil {
 		convArg0 = me.QObject_PTR().GetCthis()
@@ -253,7 +253,7 @@ func QmlWarning(me qtcore.QObject_ITF /*777 const QObject **/, error QQmlError_I
 /*
 
  */
-func QmlWarning_1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
+func QmlWarning1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
 	var convArg0 unsafe.Pointer
 	if me != nil && me.QObject_PTR() != nil {
 		convArg0 = me.QObject_PTR().GetCthis()
@@ -323,7 +323,7 @@ func QjsEngine(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QJSEngine /*777
 /*
 
  */
-func QHash_43(key QQmlProperty_ITF) uint {
+func QHash43(key QQmlProperty_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QQmlProperty_PTR() != nil {
 		convArg0 = key.QQmlProperty_PTR().GetCthis()
@@ -350,7 +350,7 @@ func QmlRegisterUncreatableMetaObject(staticMetaObject qtcore.QMetaObject_ITF, u
 	defer qtrt.FreeMem(convArg1)
 	var convArg4 = qtrt.CString(qmlName)
 	defer qtrt.FreeMem(convArg4)
-	var tmpArg5 = qtcore.NewQString_5(reason)
+	var tmpArg5 = qtcore.NewQString5(reason)
 	var convArg5 = tmpArg5.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z32qmlRegisterUncreatableMetaObjectRK11QMetaObjectPKciiS3_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, versionMajor, versionMinor, convArg4, convArg5)
 	qtrt.ErrPrint(err, rv)
@@ -370,7 +370,7 @@ func QmlRegisterTypeNotAvailable(uri string, versionMajor int, versionMinor int,
 	defer qtrt.FreeMem(convArg0)
 	var convArg3 = qtrt.CString(qmlName)
 	defer qtrt.FreeMem(convArg3)
-	var tmpArg4 = qtcore.NewQString_5(message)
+	var tmpArg4 = qtcore.NewQString5(message)
 	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z27qmlRegisterTypeNotAvailablePKciiS0_RK7QString", qtrt.FFI_TYPE_POINTER, convArg0, versionMajor, versionMinor, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -420,7 +420,7 @@ func QmlRegisterSingletonType(url qtcore.QUrl_ITF, uri string, versionMajor int,
 /*
 
  */
-func QmlRegisterSingletonType_1(uri string, versionMajor int, versionMinor int, typeName string, callback unsafe.Pointer /*666*/) int {
+func QmlRegisterSingletonType1(uri string, versionMajor int, versionMinor int, typeName string, callback unsafe.Pointer /*666*/) int {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)
 	var convArg3 = qtrt.CString(typeName)

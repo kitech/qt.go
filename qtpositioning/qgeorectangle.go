@@ -90,10 +90,10 @@ func NewQGeoRectangle() *QGeoRectangle {
 /*
 Constructs a new, invalid geo rectangle.
 */
-func (*QGeoRectangle) NewForInherit_1(center QGeoCoordinate_ITF, degreesWidth float64, degreesHeight float64) *QGeoRectangle {
-	return NewQGeoRectangle_1(center, degreesWidth, degreesHeight)
+func (*QGeoRectangle) NewForInherit1(center QGeoCoordinate_ITF, degreesWidth float64, degreesHeight float64) *QGeoRectangle {
+	return NewQGeoRectangle1(center, degreesWidth, degreesHeight)
 }
-func NewQGeoRectangle_1(center QGeoCoordinate_ITF, degreesWidth float64, degreesHeight float64) *QGeoRectangle {
+func NewQGeoRectangle1(center QGeoCoordinate_ITF, degreesWidth float64, degreesHeight float64) *QGeoRectangle {
 	var convArg0 unsafe.Pointer
 	if center != nil && center.QGeoCoordinate_PTR() != nil {
 		convArg0 = center.QGeoCoordinate_PTR().GetCthis()
@@ -113,10 +113,10 @@ func NewQGeoRectangle_1(center QGeoCoordinate_ITF, degreesWidth float64, degrees
 /*
 Constructs a new, invalid geo rectangle.
 */
-func (*QGeoRectangle) NewForInherit_2(topLeft QGeoCoordinate_ITF, bottomRight QGeoCoordinate_ITF) *QGeoRectangle {
-	return NewQGeoRectangle_2(topLeft, bottomRight)
+func (*QGeoRectangle) NewForInherit2(topLeft QGeoCoordinate_ITF, bottomRight QGeoCoordinate_ITF) *QGeoRectangle {
+	return NewQGeoRectangle2(topLeft, bottomRight)
 }
-func NewQGeoRectangle_2(topLeft QGeoCoordinate_ITF, bottomRight QGeoCoordinate_ITF) *QGeoRectangle {
+func NewQGeoRectangle2(topLeft QGeoCoordinate_ITF, bottomRight QGeoCoordinate_ITF) *QGeoRectangle {
 	var convArg0 unsafe.Pointer
 	if topLeft != nil && topLeft.QGeoCoordinate_PTR() != nil {
 		convArg0 = topLeft.QGeoCoordinate_PTR().GetCthis()
@@ -140,10 +140,10 @@ func NewQGeoRectangle_2(topLeft QGeoCoordinate_ITF, bottomRight QGeoCoordinate_I
 /*
 Constructs a new, invalid geo rectangle.
 */
-func (*QGeoRectangle) NewForInherit_3(other QGeoShape_ITF) *QGeoRectangle {
-	return NewQGeoRectangle_3(other)
+func (*QGeoRectangle) NewForInherit3(other QGeoShape_ITF) *QGeoRectangle {
+	return NewQGeoRectangle3(other)
 }
-func NewQGeoRectangle_3(other QGeoShape_ITF) *QGeoRectangle {
+func NewQGeoRectangle3(other QGeoShape_ITF) *QGeoRectangle {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGeoShape_PTR() != nil {
 		convArg0 = other.QGeoShape_PTR().GetCthis()

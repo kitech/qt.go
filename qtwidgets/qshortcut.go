@@ -118,10 +118,10 @@ Constructs a QShortcut object for the parent widget. Since no shortcut key seque
 
 See also setKey().
 */
-func (*QShortcut) NewForInherit_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string, context int) *QShortcut {
-	return NewQShortcut_1(key, parent, member, ambiguousMember, context)
+func (*QShortcut) NewForInherit1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string, context int) *QShortcut {
+	return NewQShortcut1(key, parent, member, ambiguousMember, context)
 }
-func NewQShortcut_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string, context int) *QShortcut {
+func NewQShortcut1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string, context int) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
 		convArg0 = key.QKeySequence_PTR().GetCthis()
@@ -151,10 +151,10 @@ Constructs a QShortcut object for the parent widget. Since no shortcut key seque
 
 See also setKey().
 */
-func (*QShortcut) NewForInherit_1_(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QShortcut {
-	return NewQShortcut_1_(key, parent)
+func (*QShortcut) NewForInherit1p(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QShortcut {
+	return NewQShortcut1p(key, parent)
 }
-func NewQShortcut_1_(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QShortcut {
+func NewQShortcut1p(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
 		convArg0 = key.QKeySequence_PTR().GetCthis()
@@ -186,10 +186,10 @@ Constructs a QShortcut object for the parent widget. Since no shortcut key seque
 
 See also setKey().
 */
-func (*QShortcut) NewForInherit_1_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string) *QShortcut {
-	return NewQShortcut_1_1(key, parent, member)
+func (*QShortcut) NewForInherit1p1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string) *QShortcut {
+	return NewQShortcut1p1(key, parent, member)
 }
-func NewQShortcut_1_1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string) *QShortcut {
+func NewQShortcut1p1(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
 		convArg0 = key.QKeySequence_PTR().GetCthis()
@@ -221,10 +221,10 @@ Constructs a QShortcut object for the parent widget. Since no shortcut key seque
 
 See also setKey().
 */
-func (*QShortcut) NewForInherit_1_2(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string) *QShortcut {
-	return NewQShortcut_1_2(key, parent, member, ambiguousMember)
+func (*QShortcut) NewForInherit1p2(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string) *QShortcut {
+	return NewQShortcut1p2(key, parent, member, ambiguousMember)
 }
-func NewQShortcut_1_2(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string) *QShortcut {
+func NewQShortcut1p2(key qtgui.QKeySequence_ITF, parent QWidget_ITF /*777 QWidget **/, member string, ambiguousMember string) *QShortcut {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QKeySequence_PTR() != nil {
 		convArg0 = key.QKeySequence_PTR().GetCthis()
@@ -357,7 +357,7 @@ func (this *QShortcut) Context() int {
 
  */
 func (this *QShortcut) SetWhatsThis(text string) {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QShortcut12setWhatsThisERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

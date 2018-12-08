@@ -114,10 +114,10 @@ func NewQFontComboBox(parent QWidget_ITF /*777 QWidget **/) *QFontComboBox {
 /*
 Constructs a font combobox with the given parent.
 */
-func (*QFontComboBox) NewForInherit__() *QFontComboBox {
-	return NewQFontComboBox__()
+func (*QFontComboBox) NewForInheritp() *QFontComboBox {
+	return NewQFontComboBoxp()
 }
-func NewQFontComboBox__() *QFontComboBox {
+func NewQFontComboBoxp() *QFontComboBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontComboBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)

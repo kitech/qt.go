@@ -91,10 +91,10 @@ func NewQStyleOptionDockWidget() *QStyleOptionDockWidget {
 /*
 
  */
-func (*QStyleOptionDockWidget) NewForInherit_1(version int) *QStyleOptionDockWidget {
-	return NewQStyleOptionDockWidget_1(version)
+func (*QStyleOptionDockWidget) NewForInherit1(version int) *QStyleOptionDockWidget {
+	return NewQStyleOptionDockWidget1(version)
 }
-func NewQStyleOptionDockWidget_1(version int) *QStyleOptionDockWidget {
+func NewQStyleOptionDockWidget1(version int) *QStyleOptionDockWidget {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQStyleOptionDockWidgetFromPointer(unsafe.Pointer(uintptr(rv)))

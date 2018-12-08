@@ -247,7 +247,7 @@ Returns the value associated with a meta-data key.
 See the list of predefined meta-data keys.
 */
 func (this *QMediaObject) MetaData(key string) *qtcore.QVariant /*123*/ {
-	var tmpArg0 = qtcore.NewQString_5(key)
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMediaObject8metaDataERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -337,8 +337,8 @@ Note: Signal metaDataChanged is overloaded in this class. To connect to this sig
   connect(mediaObject, QOverload<>::of(&QMediaObject::metaDataChanged),
       [=](){ /-* ... *-/ });
 */
-func (this *QMediaObject) MetaDataChanged_1(key string, value qtcore.QVariant_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(key)
+func (this *QMediaObject) MetaDataChanged1(key string, value qtcore.QVariant_ITF) {
+	var tmpArg0 = qtcore.NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
@@ -381,7 +381,7 @@ Note: Signal availabilityChanged is overloaded in this class. To connect to this
   connect(mediaObject, QOverload<bool>::of(&QMediaObject::availabilityChanged),
       [=](bool available){ /-* ... *-/ });
 */
-func (this *QMediaObject) AvailabilityChanged_1(availability int) {
+func (this *QMediaObject) AvailabilityChanged1(availability int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMediaObject19availabilityChangedEN11QMultimedia18AvailabilityStatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), availability)
 	qtrt.ErrPrint(err, rv)
 }

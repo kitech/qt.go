@@ -91,10 +91,10 @@ func NewQEasingCurve(type_ int) *QEasingCurve {
 /*
 Constructs an easing curve of the given type.
 */
-func (*QEasingCurve) NewForInherit__() *QEasingCurve {
-	return NewQEasingCurve__()
+func (*QEasingCurve) NewForInheritp() *QEasingCurve {
+	return NewQEasingCurvep()
 }
-func NewQEasingCurve__() *QEasingCurve {
+func NewQEasingCurvep() *QEasingCurve {
 	// arg: 0, QEasingCurve::Type=Enum, QEasingCurve::Type=Enum, , Invalid
 	type_ := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QEasingCurveC2ENS_4TypeE", qtrt.FFI_TYPE_POINTER, type_)
@@ -147,7 +147,7 @@ func (this *QEasingCurve) Operator_equal(other QEasingCurve_ITF) *QEasingCurve {
 /*
 
  */
-func (this *QEasingCurve) Operator_equal_1(other unsafe.Pointer /*333*/) *QEasingCurve {
+func (this *QEasingCurve) Operator_equal1(other unsafe.Pointer /*333*/) *QEasingCurve {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QEasingCurveaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

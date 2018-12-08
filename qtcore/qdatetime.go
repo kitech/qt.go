@@ -95,10 +95,10 @@ Constructs a null datetime (i.e. null date and null time). A null datetime is in
 
 See also isValid().
 */
-func (*QDateTime) NewForInherit_1(arg0 QDate_ITF) *QDateTime {
-	return NewQDateTime_1(arg0)
+func (*QDateTime) NewForInherit1(arg0 QDate_ITF) *QDateTime {
+	return NewQDateTime1(arg0)
 }
-func NewQDateTime_1(arg0 QDate_ITF) *QDateTime {
+func NewQDateTime1(arg0 QDate_ITF) *QDateTime {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDate_PTR() != nil {
 		convArg0 = arg0.QDate_PTR().GetCthis()
@@ -120,10 +120,10 @@ Constructs a null datetime (i.e. null date and null time). A null datetime is in
 
 See also isValid().
 */
-func (*QDateTime) NewForInherit_2(arg0 QDate_ITF, arg1 QTime_ITF, spec int) *QDateTime {
-	return NewQDateTime_2(arg0, arg1, spec)
+func (*QDateTime) NewForInherit2(arg0 QDate_ITF, arg1 QTime_ITF, spec int) *QDateTime {
+	return NewQDateTime2(arg0, arg1, spec)
 }
-func NewQDateTime_2(arg0 QDate_ITF, arg1 QTime_ITF, spec int) *QDateTime {
+func NewQDateTime2(arg0 QDate_ITF, arg1 QTime_ITF, spec int) *QDateTime {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDate_PTR() != nil {
 		convArg0 = arg0.QDate_PTR().GetCthis()
@@ -149,10 +149,10 @@ Constructs a null datetime (i.e. null date and null time). A null datetime is in
 
 See also isValid().
 */
-func (*QDateTime) NewForInherit_2_(arg0 QDate_ITF, arg1 QTime_ITF) *QDateTime {
-	return NewQDateTime_2_(arg0, arg1)
+func (*QDateTime) NewForInherit2p(arg0 QDate_ITF, arg1 QTime_ITF) *QDateTime {
+	return NewQDateTime2p(arg0, arg1)
 }
-func NewQDateTime_2_(arg0 QDate_ITF, arg1 QTime_ITF) *QDateTime {
+func NewQDateTime2p(arg0 QDate_ITF, arg1 QTime_ITF) *QDateTime {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QDate_PTR() != nil {
 		convArg0 = arg0.QDate_PTR().GetCthis()
@@ -180,10 +180,10 @@ Constructs a null datetime (i.e. null date and null time). A null datetime is in
 
 See also isValid().
 */
-func (*QDateTime) NewForInherit_3(date QDate_ITF, time QTime_ITF, spec int, offsetSeconds int) *QDateTime {
-	return NewQDateTime_3(date, time, spec, offsetSeconds)
+func (*QDateTime) NewForInherit3(date QDate_ITF, time QTime_ITF, spec int, offsetSeconds int) *QDateTime {
+	return NewQDateTime3(date, time, spec, offsetSeconds)
 }
-func NewQDateTime_3(date QDate_ITF, time QTime_ITF, spec int, offsetSeconds int) *QDateTime {
+func NewQDateTime3(date QDate_ITF, time QTime_ITF, spec int, offsetSeconds int) *QDateTime {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
 		convArg0 = date.QDate_PTR().GetCthis()
@@ -209,10 +209,10 @@ Constructs a null datetime (i.e. null date and null time). A null datetime is in
 
 See also isValid().
 */
-func (*QDateTime) NewForInherit_4(date QDate_ITF, time QTime_ITF, timeZone QTimeZone_ITF) *QDateTime {
-	return NewQDateTime_4(date, time, timeZone)
+func (*QDateTime) NewForInherit4(date QDate_ITF, time QTime_ITF, timeZone QTimeZone_ITF) *QDateTime {
+	return NewQDateTime4(date, time, timeZone)
 }
-func NewQDateTime_4(date QDate_ITF, time QTime_ITF, timeZone QTimeZone_ITF) *QDateTime {
+func NewQDateTime4(date QDate_ITF, time QTime_ITF, timeZone QTimeZone_ITF) *QDateTime {
 	var convArg0 unsafe.Pointer
 	if date != nil && date.QDate_PTR() != nil {
 		convArg0 = date.QDate_PTR().GetCthis()
@@ -271,7 +271,7 @@ func (this *QDateTime) Operator_equal(other unsafe.Pointer /*333*/) *QDateTime {
 /*
 
  */
-func (this *QDateTime) Operator_equal_1(other QDateTime_ITF) *QDateTime {
+func (this *QDateTime) Operator_equal1(other QDateTime_ITF) *QDateTime {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QDateTime_PTR() != nil {
 		convArg0 = other.QDateTime_PTR().GetCthis()
@@ -817,7 +817,7 @@ If the datetime is invalid, an empty string will be returned.
 
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
-func (this *QDateTime) ToString__() string {
+func (this *QDateTime) ToStringp() string {
 	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
@@ -888,8 +888,8 @@ If the datetime is invalid, an empty string will be returned.
 
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
-func (this *QDateTime) ToString_1(format string) string {
-	var tmpArg0 = NewQString_5(format)
+func (this *QDateTime) ToString1(format string) string {
+	var tmpArg0 = NewQString5(format)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime8toStringERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -959,7 +959,7 @@ If the datetime is invalid, an empty string will be returned.
 
 See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
 */
-func (this *QDateTime) ToString_2(format QStringView_ITF /*123*/) string {
+func (this *QDateTime) ToString2(format QStringView_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QStringView_PTR() != nil {
 		convArg0 = format.QStringView_PTR().GetCthis()
@@ -1500,7 +1500,7 @@ Note for Qt::TextDate: It is recommended that you use the English short month na
 See also toString() and QLocale::toDateTime().
 */
 func (this *QDateTime) FromString(s string, f int) *QDateTime /*123*/ {
-	var tmpArg0 = NewQString_5(s)
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime10fromStringERK7QStringN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	qtrt.ErrPrint(err, rv)
@@ -1526,8 +1526,8 @@ Note for Qt::TextDate: It is recommended that you use the English short month na
 
 See also toString() and QLocale::toDateTime().
 */
-func (this *QDateTime) FromString__(s string) *QDateTime /*123*/ {
-	var tmpArg0 = NewQString_5(s)
+func (this *QDateTime) FromStringp(s string) *QDateTime /*123*/ {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
@@ -1550,10 +1550,10 @@ Note for Qt::TextDate: It is recommended that you use the English short month na
 
 See also toString() and QLocale::toDateTime().
 */
-func (this *QDateTime) FromString_1(s string, format string) *QDateTime /*123*/ {
-	var tmpArg0 = NewQString_5(s)
+func (this *QDateTime) FromString1(s string, format string) *QDateTime /*123*/ {
+	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(format)
+	var tmpArg1 = NewQString5(format)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime10fromStringERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -1561,9 +1561,9 @@ func (this *QDateTime) FromString_1(s string, format string) *QDateTime /*123*/ 
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
 }
-func QDateTime_FromString_1(s string, format string) *QDateTime /*123*/ {
+func QDateTime_FromString1(s string, format string) *QDateTime /*123*/ {
 	var nilthis *QDateTime
-	rv := nilthis.FromString_1(s, format)
+	rv := nilthis.FromString1(s, format)
 	return rv
 }
 
@@ -1623,16 +1623,16 @@ func QDateTime_FromTime_t(secsSince1Jan1970UTC uint) *QDateTime /*123*/ {
 /*
 
  */
-func (this *QDateTime) FromTime_t_1(secsSince1Jan1970UTC uint, spec int, offsetFromUtc int) *QDateTime /*123*/ {
+func (this *QDateTime) FromTime_t1(secsSince1Jan1970UTC uint, spec int, offsetFromUtc int) *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime10fromTime_tEjN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, secsSince1Jan1970UTC, spec, offsetFromUtc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
 }
-func QDateTime_FromTime_t_1(secsSince1Jan1970UTC uint, spec int, offsetFromUtc int) *QDateTime /*123*/ {
+func QDateTime_FromTime_t1(secsSince1Jan1970UTC uint, spec int, offsetFromUtc int) *QDateTime /*123*/ {
 	var nilthis *QDateTime
-	rv := nilthis.FromTime_t_1(secsSince1Jan1970UTC, spec, offsetFromUtc)
+	rv := nilthis.FromTime_t1(secsSince1Jan1970UTC, spec, offsetFromUtc)
 	return rv
 }
 
@@ -1644,7 +1644,7 @@ func QDateTime_FromTime_t_1(secsSince1Jan1970UTC uint, spec int, offsetFromUtc i
 /*
 
  */
-func (this *QDateTime) FromTime_t_1_(secsSince1Jan1970UTC uint, spec int) *QDateTime /*123*/ {
+func (this *QDateTime) FromTime_t1p(secsSince1Jan1970UTC uint, spec int) *QDateTime /*123*/ {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	offsetFromUtc := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime10fromTime_tEjN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, secsSince1Jan1970UTC, spec, offsetFromUtc)
@@ -1662,7 +1662,7 @@ func (this *QDateTime) FromTime_t_1_(secsSince1Jan1970UTC uint, spec int) *QDate
 /*
 
  */
-func (this *QDateTime) FromTime_t_2(secsSince1Jan1970UTC uint, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
+func (this *QDateTime) FromTime_t2(secsSince1Jan1970UTC uint, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
 	var convArg1 unsafe.Pointer
 	if timeZone != nil && timeZone.QTimeZone_PTR() != nil {
 		convArg1 = timeZone.QTimeZone_PTR().GetCthis()
@@ -1673,9 +1673,9 @@ func (this *QDateTime) FromTime_t_2(secsSince1Jan1970UTC uint, timeZone QTimeZon
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
 }
-func QDateTime_FromTime_t_2(secsSince1Jan1970UTC uint, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
+func QDateTime_FromTime_t2(secsSince1Jan1970UTC uint, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
 	var nilthis *QDateTime
-	rv := nilthis.FromTime_t_2(secsSince1Jan1970UTC, timeZone)
+	rv := nilthis.FromTime_t2(secsSince1Jan1970UTC, timeZone)
 	return rv
 }
 
@@ -1720,16 +1720,16 @@ This function was introduced in  Qt 4.7.
 
 See also toMSecsSinceEpoch() and setMSecsSinceEpoch().
 */
-func (this *QDateTime) FromMSecsSinceEpoch_1(msecs int64, spec int, offsetFromUtc int) *QDateTime /*123*/ {
+func (this *QDateTime) FromMSecsSinceEpoch1(msecs int64, spec int, offsetFromUtc int) *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime19fromMSecsSinceEpochExN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, msecs, spec, offsetFromUtc)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
 }
-func QDateTime_FromMSecsSinceEpoch_1(msecs int64, spec int, offsetFromUtc int) *QDateTime /*123*/ {
+func QDateTime_FromMSecsSinceEpoch1(msecs int64, spec int, offsetFromUtc int) *QDateTime /*123*/ {
 	var nilthis *QDateTime
-	rv := nilthis.FromMSecsSinceEpoch_1(msecs, spec, offsetFromUtc)
+	rv := nilthis.FromMSecsSinceEpoch1(msecs, spec, offsetFromUtc)
 	return rv
 }
 
@@ -1747,7 +1747,7 @@ This function was introduced in  Qt 4.7.
 
 See also toMSecsSinceEpoch() and setMSecsSinceEpoch().
 */
-func (this *QDateTime) FromMSecsSinceEpoch_1_(msecs int64, spec int) *QDateTime /*123*/ {
+func (this *QDateTime) FromMSecsSinceEpoch1p(msecs int64, spec int) *QDateTime /*123*/ {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	offsetFromUtc := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime19fromMSecsSinceEpochExN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, msecs, spec, offsetFromUtc)
@@ -1771,7 +1771,7 @@ This function was introduced in  Qt 4.7.
 
 See also toMSecsSinceEpoch() and setMSecsSinceEpoch().
 */
-func (this *QDateTime) FromMSecsSinceEpoch_2(msecs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
+func (this *QDateTime) FromMSecsSinceEpoch2(msecs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
 	var convArg1 unsafe.Pointer
 	if timeZone != nil && timeZone.QTimeZone_PTR() != nil {
 		convArg1 = timeZone.QTimeZone_PTR().GetCthis()
@@ -1782,9 +1782,9 @@ func (this *QDateTime) FromMSecsSinceEpoch_2(msecs int64, timeZone QTimeZone_ITF
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
 }
-func QDateTime_FromMSecsSinceEpoch_2(msecs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
+func QDateTime_FromMSecsSinceEpoch2(msecs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
 	var nilthis *QDateTime
-	rv := nilthis.FromMSecsSinceEpoch_2(msecs, timeZone)
+	rv := nilthis.FromMSecsSinceEpoch2(msecs, timeZone)
 	return rv
 }
 
@@ -1837,7 +1837,7 @@ This function was introduced in  Qt 5.8.
 
 See also toSecsSinceEpoch() and setSecsSinceEpoch().
 */
-func (this *QDateTime) FromSecsSinceEpoch__(secs int64) *QDateTime /*123*/ {
+func (this *QDateTime) FromSecsSinceEpochp(secs int64) *QDateTime /*123*/ {
 	// arg: 1, Qt::TimeSpec=Elaborated, Qt::TimeSpec=Enum, , Invalid
 	spe := 0
 	// arg: 2, int=Int, =Invalid, , Invalid
@@ -1867,7 +1867,7 @@ This function was introduced in  Qt 5.8.
 
 See also toSecsSinceEpoch() and setSecsSinceEpoch().
 */
-func (this *QDateTime) FromSecsSinceEpoch__1(secs int64, spe int) *QDateTime /*123*/ {
+func (this *QDateTime) FromSecsSinceEpochp1(secs int64, spe int) *QDateTime /*123*/ {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	offsetFromUtc := int(0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDateTime18fromSecsSinceEpochExN2Qt8TimeSpecEi", qtrt.FFI_TYPE_POINTER, secs, spe, offsetFromUtc)
@@ -1895,7 +1895,7 @@ This function was introduced in  Qt 5.8.
 
 See also toSecsSinceEpoch() and setSecsSinceEpoch().
 */
-func (this *QDateTime) FromSecsSinceEpoch_1(secs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
+func (this *QDateTime) FromSecsSinceEpoch1(secs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
 	var convArg1 unsafe.Pointer
 	if timeZone != nil && timeZone.QTimeZone_PTR() != nil {
 		convArg1 = timeZone.QTimeZone_PTR().GetCthis()
@@ -1906,9 +1906,9 @@ func (this *QDateTime) FromSecsSinceEpoch_1(secs int64, timeZone QTimeZone_ITF) 
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
 }
-func QDateTime_FromSecsSinceEpoch_1(secs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
+func QDateTime_FromSecsSinceEpoch1(secs int64, timeZone QTimeZone_ITF) *QDateTime /*123*/ {
 	var nilthis *QDateTime
-	rv := nilthis.FromSecsSinceEpoch_1(secs, timeZone)
+	rv := nilthis.FromSecsSinceEpoch1(secs, timeZone)
 	return rv
 }
 

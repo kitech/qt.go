@@ -118,7 +118,7 @@ func (this *QGestureEvent) SetAccepted(arg0 QGesture_ITF /*777 QGesture **/, arg
 /*
 
  */
-func (this *QGestureEvent) SetAccepted_1(arg0 int, arg1 bool) {
+func (this *QGestureEvent) SetAccepted1(arg0 int, arg1 bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEN2Qt11GestureTypeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	qtrt.ErrPrint(err, rv)
 }
@@ -148,7 +148,7 @@ func (this *QGestureEvent) Accept(arg0 QGesture_ITF /*777 QGesture **/) {
 /*
 
  */
-func (this *QGestureEvent) Accept_1(arg0 int) {
+func (this *QGestureEvent) Accept1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGestureEvent6acceptEN2Qt11GestureTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -178,7 +178,7 @@ func (this *QGestureEvent) Ignore(arg0 QGesture_ITF /*777 QGesture **/) {
 /*
 
  */
-func (this *QGestureEvent) Ignore_1(arg0 int) {
+func (this *QGestureEvent) Ignore1(arg0 int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGestureEvent6ignoreEN2Qt11GestureTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 }
@@ -209,7 +209,7 @@ func (this *QGestureEvent) IsAccepted(arg0 QGesture_ITF /*777 QGesture **/) bool
 /*
 
  */
-func (this *QGestureEvent) IsAccepted_1(arg0 int) bool {
+func (this *QGestureEvent) IsAccepted1(arg0 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEN2Qt11GestureTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0

@@ -122,10 +122,10 @@ The icon is initially invisible.
 
 See also visible.
 */
-func (*QSystemTrayIcon) NewForInherit__() *QSystemTrayIcon {
-	return NewQSystemTrayIcon__()
+func (*QSystemTrayIcon) NewForInheritp() *QSystemTrayIcon {
+	return NewQSystemTrayIconp()
 }
-func NewQSystemTrayIcon__() *QSystemTrayIcon {
+func NewQSystemTrayIconp() *QSystemTrayIcon {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIconC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -147,10 +147,10 @@ The icon is initially invisible.
 
 See also visible.
 */
-func (*QSystemTrayIcon) NewForInherit_1(icon qtgui.QIcon_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTrayIcon {
-	return NewQSystemTrayIcon_1(icon, parent)
+func (*QSystemTrayIcon) NewForInherit1(icon qtgui.QIcon_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTrayIcon {
+	return NewQSystemTrayIcon1(icon, parent)
 }
-func NewQSystemTrayIcon_1(icon qtgui.QIcon_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTrayIcon {
+func NewQSystemTrayIcon1(icon qtgui.QIcon_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTrayIcon {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
@@ -178,10 +178,10 @@ The icon is initially invisible.
 
 See also visible.
 */
-func (*QSystemTrayIcon) NewForInherit_1_(icon qtgui.QIcon_ITF) *QSystemTrayIcon {
-	return NewQSystemTrayIcon_1_(icon)
+func (*QSystemTrayIcon) NewForInherit1p(icon qtgui.QIcon_ITF) *QSystemTrayIcon {
+	return NewQSystemTrayIcon1p(icon)
 }
-func NewQSystemTrayIcon_1_(icon qtgui.QIcon_ITF) *QSystemTrayIcon {
+func NewQSystemTrayIcon1p(icon qtgui.QIcon_ITF) *QSystemTrayIcon {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
@@ -310,7 +310,7 @@ func (this *QSystemTrayIcon) ToolTip() string {
 
  */
 func (this *QSystemTrayIcon) SetToolTip(tip string) {
-	var tmpArg0 = qtcore.NewQString_5(tip)
+	var tmpArg0 = qtcore.NewQString5(tip)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -456,9 +456,9 @@ This function was introduced in  Qt 4.3.
 See also show() and supportsMessages().
 */
 func (this *QSystemTrayIcon) ShowMessage(title string, msg string, icon qtgui.QIcon_ITF, msecs int) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(msg)
+	var tmpArg1 = qtcore.NewQString5(msg)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -488,10 +488,10 @@ This function was introduced in  Qt 4.3.
 
 See also show() and supportsMessages().
 */
-func (this *QSystemTrayIcon) ShowMessage__(title string, msg string, icon qtgui.QIcon_ITF) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func (this *QSystemTrayIcon) ShowMessagep(title string, msg string, icon qtgui.QIcon_ITF) {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(msg)
+	var tmpArg1 = qtcore.NewQString5(msg)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -523,10 +523,10 @@ This function was introduced in  Qt 4.3.
 
 See also show() and supportsMessages().
 */
-func (this *QSystemTrayIcon) ShowMessage_1(title string, msg string, icon int, msecs int) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func (this *QSystemTrayIcon) ShowMessage1(title string, msg string, icon int, msecs int) {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(msg)
+	var tmpArg1 = qtcore.NewQString5(msg)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_NS_11MessageIconEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, icon, msecs)
 	qtrt.ErrPrint(err, rv)
@@ -552,10 +552,10 @@ This function was introduced in  Qt 4.3.
 
 See also show() and supportsMessages().
 */
-func (this *QSystemTrayIcon) ShowMessage_1_(title string, msg string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func (this *QSystemTrayIcon) ShowMessage1p(title string, msg string) {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(msg)
+	var tmpArg1 = qtcore.NewQString5(msg)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QSystemTrayIcon::MessageIcon=Elaborated, QSystemTrayIcon::MessageIcon=Enum, , Invalid
 	icon := 0
@@ -585,10 +585,10 @@ This function was introduced in  Qt 4.3.
 
 See also show() and supportsMessages().
 */
-func (this *QSystemTrayIcon) ShowMessage_1_1(title string, msg string, icon int) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func (this *QSystemTrayIcon) ShowMessage1p1(title string, msg string, icon int) {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = qtcore.NewQString_5(msg)
+	var tmpArg1 = qtcore.NewQString5(msg)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 3, int=Int, =Invalid, , Invalid
 	msecs := int(10000)

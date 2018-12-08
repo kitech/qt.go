@@ -86,7 +86,7 @@ func (this *QArrayData) Data() unsafe.Pointer /*666*/ {
 /*
 
  */
-func (this *QArrayData) Data_1() unsafe.Pointer /*666*/ {
+func (this *QArrayData) Data1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
@@ -175,7 +175,7 @@ func QArrayData_Allocate(objectSize uint, alignment uint, capacity uint, options
 /*
 
  */
-func (this *QArrayData) Allocate__(objectSize uint, alignment uint, capacity uint) *QArrayData /*777 QArrayData **/ {
+func (this *QArrayData) Allocatep(objectSize uint, alignment uint, capacity uint) *QArrayData /*777 QArrayData **/ {
 	// arg: 3, QArrayData::AllocationOptions=Typedef, QArrayData::AllocationOptions=Typedef, QFlags<QArrayData::AllocationOption>, Unexposed
 	options := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QArrayData8allocateEmmm6QFlagsINS_16AllocationOptionEE", qtrt.FFI_TYPE_POINTER, objectSize, alignment, capacity, options)

@@ -79,7 +79,7 @@ func (*QGeoAreaMonitorInfo) NewForInherit(name string) *QGeoAreaMonitorInfo {
 	return NewQGeoAreaMonitorInfo(name)
 }
 func NewQGeoAreaMonitorInfo(name string) *QGeoAreaMonitorInfo {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGeoAreaMonitorInfoC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -98,10 +98,10 @@ Constructs a QGeoAreaMonitorInfo object with the specified name.
 
 See also name().
 */
-func (*QGeoAreaMonitorInfo) NewForInherit__() *QGeoAreaMonitorInfo {
-	return NewQGeoAreaMonitorInfo__()
+func (*QGeoAreaMonitorInfo) NewForInheritp() *QGeoAreaMonitorInfo {
+	return NewQGeoAreaMonitorInfop()
 }
-func NewQGeoAreaMonitorInfo__() *QGeoAreaMonitorInfo {
+func NewQGeoAreaMonitorInfop() *QGeoAreaMonitorInfo {
 	// arg: 0, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg0 = qtcore.NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGeoAreaMonitorInfoC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -212,7 +212,7 @@ Sets the user visibile name.
 See also name().
 */
 func (this *QGeoAreaMonitorInfo) SetName(name string) {
-	var tmpArg0 = qtcore.NewQString_5(name)
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGeoAreaMonitorInfo7setNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

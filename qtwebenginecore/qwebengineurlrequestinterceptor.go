@@ -116,10 +116,10 @@ func NewQWebEngineUrlRequestInterceptor(p qtcore.QObject_ITF /*777 QObject **/) 
 /*
 
  */
-func (*QWebEngineUrlRequestInterceptor) NewForInherit__() *QWebEngineUrlRequestInterceptor {
-	return NewQWebEngineUrlRequestInterceptor__()
+func (*QWebEngineUrlRequestInterceptor) NewForInheritp() *QWebEngineUrlRequestInterceptor {
+	return NewQWebEngineUrlRequestInterceptorp()
 }
-func NewQWebEngineUrlRequestInterceptor__() *QWebEngineUrlRequestInterceptor {
+func NewQWebEngineUrlRequestInterceptorp() *QWebEngineUrlRequestInterceptor {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN31QWebEngineUrlRequestInterceptorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

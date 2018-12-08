@@ -193,10 +193,10 @@ Constructs a menu with parent parent.
 
 Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
 */
-func (*QMenu) NewForInherit__() *QMenu {
-	return NewQMenu__()
+func (*QMenu) NewForInheritp() *QMenu {
+	return NewQMenup()
 }
-func NewQMenu__() *QMenu {
+func NewQMenup() *QMenu {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenuC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -216,11 +216,11 @@ Constructs a menu with parent parent.
 
 Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
 */
-func (*QMenu) NewForInherit_1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
-	return NewQMenu_1(title, parent)
+func (*QMenu) NewForInherit1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
+	return NewQMenu1(title, parent)
 }
-func NewQMenu_1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func NewQMenu1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -243,11 +243,11 @@ Constructs a menu with parent parent.
 
 Although a popup menu is always a top-level widget, if a parent is passed the popup menu will be deleted when that parent is destroyed (as with any other QObject).
 */
-func (*QMenu) NewForInherit_1_(title string) *QMenu {
-	return NewQMenu_1_(title)
+func (*QMenu) NewForInherit1p(title string) *QMenu {
+	return NewQMenu1p(title)
 }
-func NewQMenu_1_(title string) *QMenu {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func NewQMenu1p(title string) *QMenu {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -288,7 +288,7 @@ QMenu takes ownership of the returned QAction.
 See also QWidget::addAction().
 */
 func (this *QMenu) AddAction(text string) *QAction /*777 QAction **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu9addActionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -309,12 +309,12 @@ QMenu takes ownership of the returned QAction.
 
 See also QWidget::addAction().
 */
-func (this *QMenu) AddAction_1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
+func (this *QMenu) AddAction1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu9addActionERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -335,8 +335,8 @@ QMenu takes ownership of the returned QAction.
 
 See also QWidget::addAction().
 */
-func (this *QMenu) AddAction_2(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string, shortcut qtgui.QKeySequence_ITF) *QAction /*777 QAction **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QMenu) AddAction2(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string, shortcut qtgui.QKeySequence_ITF) *QAction /*777 QAction **/ {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -367,8 +367,8 @@ QMenu takes ownership of the returned QAction.
 
 See also QWidget::addAction().
 */
-func (this *QMenu) AddAction_2_(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QMenu) AddAction2p(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -397,12 +397,12 @@ QMenu takes ownership of the returned QAction.
 
 See also QWidget::addAction().
 */
-func (this *QMenu) AddAction_3(icon qtgui.QIcon_ITF, text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string, shortcut qtgui.QKeySequence_ITF) *QAction /*777 QAction **/ {
+func (this *QMenu) AddAction3(icon qtgui.QIcon_ITF, text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string, shortcut qtgui.QKeySequence_ITF) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -433,12 +433,12 @@ QMenu takes ownership of the returned QAction.
 
 See also QWidget::addAction().
 */
-func (this *QMenu) AddAction_3_(icon qtgui.QIcon_ITF, text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
+func (this *QMenu) AddAction3p(icon qtgui.QIcon_ITF, text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -483,8 +483,8 @@ This convenience function adds menu as a submenu to this menu. It returns menu's
 
 See also QWidget::addAction() and QMenu::menuAction().
 */
-func (this *QMenu) AddMenu_1(title string) *QMenu /*777 QMenu **/ {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func (this *QMenu) AddMenu1(title string) *QMenu /*777 QMenu **/ {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu7addMenuERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -501,12 +501,12 @@ This convenience function adds menu as a submenu to this menu. It returns menu's
 
 See also QWidget::addAction() and QMenu::menuAction().
 */
-func (this *QMenu) AddMenu_2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 QMenu **/ {
+func (this *QMenu) AddMenu2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 QMenu **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(title)
+	var tmpArg1 = qtcore.NewQString5(title)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu7addMenuERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -548,7 +548,7 @@ This function was introduced in  Qt 5.1.
 See also QWidget::addAction().
 */
 func (this *QMenu) AddSection(text string) *QAction /*777 QAction **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu10addSectionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -571,12 +571,12 @@ This function was introduced in  Qt 5.1.
 
 See also QWidget::addAction().
 */
-func (this *QMenu) AddSection_1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
+func (this *QMenu) AddSection1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu10addSectionERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -650,7 +650,7 @@ func (this *QMenu) InsertSection(before QAction_ITF /*777 QAction **/, text stri
 	if before != nil && before.QAction_PTR() != nil {
 		convArg0 = before.QAction_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu13insertSectionEP7QActionRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -673,7 +673,7 @@ This function was introduced in  Qt 5.1.
 
 See also QWidget::insertAction() and addSection().
 */
-func (this *QMenu) InsertSection_1(before QAction_ITF /*777 QAction **/, icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
+func (this *QMenu) InsertSection1(before QAction_ITF /*777 QAction **/, icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if before != nil && before.QAction_PTR() != nil {
 		convArg0 = before.QAction_PTR().GetCthis()
@@ -682,7 +682,7 @@ func (this *QMenu) InsertSection_1(before QAction_ITF /*777 QAction **/, icon qt
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg1 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg2 = qtcore.NewQString_5(text)
+	var tmpArg2 = qtcore.NewQString5(text)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -794,7 +794,7 @@ This function was introduced in  Qt 5.7.
 
 See also hideTearOffMenu(), isTearOffMenuVisible(), and isTearOffEnabled().
 */
-func (this *QMenu) ShowTearOffMenu_1(pos qtcore.QPoint_ITF) {
+func (this *QMenu) ShowTearOffMenu1(pos qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
@@ -925,7 +925,7 @@ When positioning a menu with exec() or popup(), bear in mind that you cannot rel
 
 See also QWidget::mapToGlobal() and exec().
 */
-func (this *QMenu) Popup__(pos qtcore.QPoint_ITF) {
+func (this *QMenu) Popupp(pos qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
@@ -1004,7 +1004,7 @@ or in reaction to a QMouseEvent *e:
 
   exec(e->globalPos());
 */
-func (this *QMenu) Exec_1(pos qtcore.QPoint_ITF, at QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
+func (this *QMenu) Exec1(pos qtcore.QPoint_ITF, at QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
@@ -1049,7 +1049,7 @@ or in reaction to a QMouseEvent *e:
 
   exec(e->globalPos());
 */
-func (this *QMenu) Exec_1_(pos qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
+func (this *QMenu) Exec1p(pos qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
@@ -1155,7 +1155,7 @@ func (this *QMenu) Title() string {
 
  */
 func (this *QMenu) SetTitle(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -105,7 +105,7 @@ func QAbstractConcatenable_ConvertFromAscii(a string, len_ int, out_ QChar_ITF) 
 /*
 
  */
-func (this *QAbstractConcatenable) ConvertFromAscii_1(a byte, out_ QChar_ITF) {
+func (this *QAbstractConcatenable) ConvertFromAscii1(a byte, out_ QChar_ITF) {
 	var convArg1 unsafe.Pointer
 	if out_ != nil && out_.QChar_PTR() != nil {
 		convArg1 = out_.QChar_PTR().GetCthis()
@@ -113,9 +113,9 @@ func (this *QAbstractConcatenable) ConvertFromAscii_1(a byte, out_ QChar_ITF) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEcRP5QChar", qtrt.FFI_TYPE_POINTER, a, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
-func QAbstractConcatenable_ConvertFromAscii_1(a byte, out_ QChar_ITF) {
+func QAbstractConcatenable_ConvertFromAscii1(a byte, out_ QChar_ITF) {
 	var nilthis *QAbstractConcatenable
-	nilthis.ConvertFromAscii_1(a, out_)
+	nilthis.ConvertFromAscii1(a, out_)
 }
 
 // /usr/include/qt/QtCore/qstringbuilder.h:66

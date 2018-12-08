@@ -128,7 +128,7 @@ Saves the grab result as an image to fileName. Returns true if successful; other
 Note: In Qt versions prior to 5.9, this function is marked as non-const.
 */
 func (this *QQuickItemGrabResult) SaveToFile(fileName string) bool {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickItemGrabResult10saveToFileERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -145,8 +145,8 @@ Saves the grab result as an image to fileName. Returns true if successful; other
 
 Note: In Qt versions prior to 5.9, this function is marked as non-const.
 */
-func (this *QQuickItemGrabResult) SaveToFile_1(fileName string) bool {
-	var tmpArg0 = qtcore.NewQString_5(fileName)
+func (this *QQuickItemGrabResult) SaveToFile1(fileName string) bool {
+	var tmpArg0 = qtcore.NewQString5(fileName)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult10saveToFileERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -154,10 +154,10 @@ func NewQMediaAvailabilityControl(parent qtcore.QObject_ITF /*777 QObject **/) *
 /*
 Constructs an availability control object with parent.
 */
-func (*QMediaAvailabilityControl) NewForInherit__() *QMediaAvailabilityControl {
-	return NewQMediaAvailabilityControl__()
+func (*QMediaAvailabilityControl) NewForInheritp() *QMediaAvailabilityControl {
+	return NewQMediaAvailabilityControlp()
 }
-func NewQMediaAvailabilityControl__() *QMediaAvailabilityControl {
+func NewQMediaAvailabilityControlp() *QMediaAvailabilityControl {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN25QMediaAvailabilityControlC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)

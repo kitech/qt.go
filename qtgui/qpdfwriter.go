@@ -103,7 +103,7 @@ func (*QPdfWriter) NewForInherit(filename string) *QPdfWriter {
 	return NewQPdfWriter(filename)
 }
 func NewQPdfWriter(filename string) *QPdfWriter {
-	var tmpArg0 = qtcore.NewQString_5(filename)
+	var tmpArg0 = qtcore.NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPdfWriterC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -120,10 +120,10 @@ func NewQPdfWriter(filename string) *QPdfWriter {
 /*
 Constructs a PDF writer that will write the pdf to filename.
 */
-func (*QPdfWriter) NewForInherit_1(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QPdfWriter {
-	return NewQPdfWriter_1(device)
+func (*QPdfWriter) NewForInherit1(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QPdfWriter {
+	return NewQPdfWriter1(device)
 }
-func NewQPdfWriter_1(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QPdfWriter {
+func NewQPdfWriter1(device qtcore.QIODevice_ITF /*777 QIODevice **/) *QPdfWriter {
 	var convArg0 unsafe.Pointer
 	if device != nil && device.QIODevice_PTR() != nil {
 		convArg0 = device.QIODevice_PTR().GetCthis()
@@ -217,7 +217,7 @@ Sets the title of the document being created to title.
 See also title().
 */
 func (this *QPdfWriter) SetTitle(title string) {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPdfWriter8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ Sets the creator of the document to creator.
 See also creator().
 */
 func (this *QPdfWriter) SetCreator(creator string) {
-	var tmpArg0 = qtcore.NewQString_5(creator)
+	var tmpArg0 = qtcore.NewQString5(creator)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QPdfWriter10setCreatorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

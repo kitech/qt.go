@@ -124,7 +124,7 @@ Tries to find a file or directory called fileName in the standard locations for 
 The full path to the first file or directory (depending on options) found is returned. If no such file or directory can be found, an empty string is returned.
 */
 func (this *QStandardPaths) Locate(type_ int, fileName string, options int) string {
-	var tmpArg1 = NewQString_5(fileName)
+	var tmpArg1 = NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths6locateENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, options)
 	qtrt.ErrPrint(err, rv)
@@ -149,8 +149,8 @@ Tries to find a file or directory called fileName in the standard locations for 
 
 The full path to the first file or directory (depending on options) found is returned. If no such file or directory can be found, an empty string is returned.
 */
-func (this *QStandardPaths) Locate__(type_ int, fileName string) string {
-	var tmpArg1 = NewQString_5(fileName)
+func (this *QStandardPaths) Locatep(type_ int, fileName string) string {
+	var tmpArg1 = NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QStandardPaths::LocateOptions=Typedef, QStandardPaths::LocateOptions=Typedef, QFlags<QStandardPaths::LocateOption>, Unexposed
 	options := 0
@@ -175,7 +175,7 @@ The options flag allows to specify whether to look for files or directories.
 Returns the list of all the files that were found.
 */
 func (this *QStandardPaths) LocateAll(type_ int, fileName string, options int) *QStringList /*123*/ {
-	var tmpArg1 = NewQString_5(fileName)
+	var tmpArg1 = NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths9locateAllENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, options)
 	qtrt.ErrPrint(err, rv)
@@ -201,8 +201,8 @@ The options flag allows to specify whether to look for files or directories.
 
 Returns the list of all the files that were found.
 */
-func (this *QStandardPaths) LocateAll__(type_ int, fileName string) *QStringList /*123*/ {
-	var tmpArg1 = NewQString_5(fileName)
+func (this *QStandardPaths) LocateAllp(type_ int, fileName string) *QStringList /*123*/ {
+	var tmpArg1 = NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QStandardPaths::LocateOptions=Typedef, QStandardPaths::LocateOptions=Typedef, QFlags<QStandardPaths::LocateOption>, Unexposed
 	options := 0
@@ -254,7 +254,7 @@ Note: On Windows, the usual executable extensions (from the PATHEXT environment 
 Returns the absolute file path to the executable, or an empty string if not found.
 */
 func (this *QStandardPaths) FindExecutable(executableName string, paths QStringList_ITF) string {
-	var tmpArg0 = NewQString_5(executableName)
+	var tmpArg0 = NewQString5(executableName)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if paths != nil && paths.QStringList_PTR() != nil {
@@ -291,8 +291,8 @@ Note: On Windows, the usual executable extensions (from the PATHEXT environment 
 
 Returns the absolute file path to the executable, or an empty string if not found.
 */
-func (this *QStandardPaths) FindExecutable__(executableName string) string {
-	var tmpArg0 = NewQString_5(executableName)
+func (this *QStandardPaths) FindExecutablep(executableName string) string {
+	var tmpArg0 = NewQString5(executableName)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QStringList &=LValueReference, QStringList=Record, , Invalid
 	var convArg1 unsafe.Pointer

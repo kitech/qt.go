@@ -181,10 +181,10 @@ func NewQQuickWindow(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickWindow {
 /*
 Constructs a window for displaying a QML scene with parent window parent.
 */
-func (*QQuickWindow) NewForInherit__() *QQuickWindow {
-	return NewQQuickWindow__()
+func (*QQuickWindow) NewForInheritp() *QQuickWindow {
+	return NewQQuickWindowp()
 }
-func NewQQuickWindow__() *QQuickWindow {
+func NewQQuickWindowp() *QQuickWindow {
 	// arg: 0, QWindow *=Pointer, QWindow=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWindowC2EP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -202,10 +202,10 @@ func NewQQuickWindow__() *QQuickWindow {
 /*
 Constructs a window for displaying a QML scene with parent window parent.
 */
-func (*QQuickWindow) NewForInherit_1(renderControl QQuickRenderControl_ITF /*777 QQuickRenderControl **/) *QQuickWindow {
-	return NewQQuickWindow_1(renderControl)
+func (*QQuickWindow) NewForInherit1(renderControl QQuickRenderControl_ITF /*777 QQuickRenderControl **/) *QQuickWindow {
+	return NewQQuickWindow1(renderControl)
 }
-func NewQQuickWindow_1(renderControl QQuickRenderControl_ITF /*777 QQuickRenderControl **/) *QQuickWindow {
+func NewQQuickWindow1(renderControl QQuickRenderControl_ITF /*777 QQuickRenderControl **/) *QQuickWindow {
 	var convArg0 unsafe.Pointer
 	if renderControl != nil && renderControl.QQuickRenderControl_PTR() != nil {
 		convArg0 = renderControl.QQuickRenderControl_PTR().GetCthis()
@@ -504,7 +504,7 @@ This function can be called from any thread.
 
 See also sceneGraphInitialized() and QSGTexture.
 */
-func (this *QQuickWindow) CreateTextureFromImage_1(image qtgui.QImage_ITF, options int) *QSGTexture /*777 QSGTexture **/ {
+func (this *QQuickWindow) CreateTextureFromImage1(image qtgui.QImage_ITF, options int) *QSGTexture /*777 QSGTexture **/ {
 	var convArg0 unsafe.Pointer
 	if image != nil && image.QImage_PTR() != nil {
 		convArg0 = image.QImage_PTR().GetCthis()
@@ -564,7 +564,7 @@ Note: This function only has an effect when using the default OpenGL scene graph
 
 See also sceneGraphInitialized() and QSGTexture.
 */
-func (this *QQuickWindow) CreateTextureFromId__(id uint, size qtcore.QSize_ITF) *QSGTexture /*777 QSGTexture **/ {
+func (this *QQuickWindow) CreateTextureFromIdp(id uint, size qtcore.QSize_ITF) *QSGTexture /*777 QSGTexture **/ {
 	var convArg1 unsafe.Pointer
 	if size != nil && size.QSize_PTR() != nil {
 		convArg1 = size.QSize_PTR().GetCthis()
@@ -894,15 +894,15 @@ This function was introduced in  Qt 5.8.
 
 See also sceneGraphBackend().
 */
-func (this *QQuickWindow) SetSceneGraphBackend_1(backend string) {
-	var tmpArg0 = qtcore.NewQString_5(backend)
+func (this *QQuickWindow) SetSceneGraphBackend1(backend string) {
+	var tmpArg0 = qtcore.NewQString5(backend)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWindow20setSceneGraphBackendERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 }
-func QQuickWindow_SetSceneGraphBackend_1(backend string) {
+func QQuickWindow_SetSceneGraphBackend1(backend string) {
 	var nilthis *QQuickWindow
-	nilthis.SetSceneGraphBackend_1(backend)
+	nilthis.SetSceneGraphBackend1(backend)
 }
 
 // /usr/include/qt/QtQuick/qquickwindow.h:173
@@ -1263,7 +1263,7 @@ This signal will be emitted from the gui thread.
 This function was introduced in  Qt 5.3.
 */
 func (this *QQuickWindow) SceneGraphError(error int, message string) {
-	var tmpArg1 = qtcore.NewQString_5(message)
+	var tmpArg1 = qtcore.NewQString5(message)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWindow15sceneGraphErrorENS_15SceneGraphErrorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error, convArg1)
 	qtrt.ErrPrint(err, rv)

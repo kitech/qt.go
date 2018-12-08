@@ -85,7 +85,7 @@ func (this *QToolTip) ShowText(pos qtcore.QPoint_ITF, text string, w QWidget_ITF
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -113,12 +113,12 @@ The rect is in the coordinates of the widget you specify with w. If the rect is 
 
 If text is empty the tool tip is hidden. If the text is the same as the currently shown tooltip, the tip will not move. You can force moving by first hiding the tip with an empty text, and then showing the new tip at the new position.
 */
-func (this *QToolTip) ShowText__(pos qtcore.QPoint_ITF, text string) {
+func (this *QToolTip) ShowTextp(pos qtcore.QPoint_ITF, text string) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg2 unsafe.Pointer
@@ -140,12 +140,12 @@ The rect is in the coordinates of the widget you specify with w. If the rect is 
 
 If text is empty the tool tip is hidden. If the text is the same as the currently shown tooltip, the tip will not move. You can force moving by first hiding the tip with an empty text, and then showing the new tip at the new position.
 */
-func (this *QToolTip) ShowText_1(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF) {
+func (this *QToolTip) ShowText1(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -158,9 +158,9 @@ func (this *QToolTip) ShowText_1(pos qtcore.QPoint_ITF, text string, w QWidget_I
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
 }
-func QToolTip_ShowText_1(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF) {
+func QToolTip_ShowText1(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF) {
 	var nilthis *QToolTip
-	nilthis.ShowText_1(pos, text, w, rect)
+	nilthis.ShowText1(pos, text, w, rect)
 }
 
 // /usr/include/qt/QtWidgets/qtooltip.h:58
@@ -177,12 +177,12 @@ The rect is in the coordinates of the widget you specify with w. If the rect is 
 
 If text is empty the tool tip is hidden. If the text is the same as the currently shown tooltip, the tip will not move. You can force moving by first hiding the tip with an empty text, and then showing the new tip at the new position.
 */
-func (this *QToolTip) ShowText_2(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF, msecShowTime int) {
+func (this *QToolTip) ShowText2(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF, msecShowTime int) {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if w != nil && w.QWidget_PTR() != nil {
@@ -195,9 +195,9 @@ func (this *QToolTip) ShowText_2(pos qtcore.QPoint_ITF, text string, w QWidget_I
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, msecShowTime)
 	qtrt.ErrPrint(err, rv)
 }
-func QToolTip_ShowText_2(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF, msecShowTime int) {
+func QToolTip_ShowText2(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777 QWidget **/, rect qtcore.QRect_ITF, msecShowTime int) {
 	var nilthis *QToolTip
-	nilthis.ShowText_2(pos, text, w, rect, msecShowTime)
+	nilthis.ShowText2(pos, text, w, rect, msecShowTime)
 }
 
 // /usr/include/qt/QtWidgets/qtooltip.h:59

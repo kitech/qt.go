@@ -90,10 +90,10 @@ func NewQGeoPolygon() *QGeoPolygon {
 /*
 Constructs a new, empty geo path.
 */
-func (*QGeoPolygon) NewForInherit_1(other QGeoShape_ITF) *QGeoPolygon {
-	return NewQGeoPolygon_1(other)
+func (*QGeoPolygon) NewForInherit1(other QGeoShape_ITF) *QGeoPolygon {
+	return NewQGeoPolygon1(other)
 }
-func NewQGeoPolygon_1(other QGeoShape_ITF) *QGeoPolygon {
+func NewQGeoPolygon1(other QGeoShape_ITF) *QGeoPolygon {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QGeoShape_PTR() != nil {
 		convArg0 = other.QGeoShape_PTR().GetCthis()
@@ -233,7 +233,7 @@ func (this *QGeoPolygon) Length(indexFrom int, indexTo int) float64 {
 /*
 Returns the length of the polygon's perimeter, in meters, from the element indexFrom to the element indexTo. The length is intended to be the sum of the shortest distances for each pair of adjacent points.
 */
-func (this *QGeoPolygon) Length__() float64 {
+func (this *QGeoPolygon) Lengthp() float64 {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	indexFrom := int(0)
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -251,7 +251,7 @@ func (this *QGeoPolygon) Length__() float64 {
 /*
 Returns the length of the polygon's perimeter, in meters, from the element indexFrom to the element indexTo. The length is intended to be the sum of the shortest distances for each pair of adjacent points.
 */
-func (this *QGeoPolygon) Length__1(indexFrom int) float64 {
+func (this *QGeoPolygon) Lengthp1(indexFrom int) float64 {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	indexTo := int(-1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QGeoPolygon6lengthEii", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), indexFrom, indexTo)
@@ -385,7 +385,7 @@ func (this *QGeoPolygon) RemoveCoordinate(coordinate QGeoCoordinate_ITF) {
 /*
 Removes the last occurrence of coordinate from the polygon.
 */
-func (this *QGeoPolygon) RemoveCoordinate_1(index int) {
+func (this *QGeoPolygon) RemoveCoordinate1(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGeoPolygon16removeCoordinateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
 }

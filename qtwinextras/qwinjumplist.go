@@ -110,10 +110,10 @@ func NewQWinJumpList(parent qtcore.QObject_ITF /*777 QObject **/) *QWinJumpList 
 /*
 Constructs a QWinJumpList with the parent object parent.
 */
-func (*QWinJumpList) NewForInherit__() *QWinJumpList {
-	return NewQWinJumpList__()
+func (*QWinJumpList) NewForInheritp() *QWinJumpList {
+	return NewQWinJumpListp()
 }
-func NewQWinJumpList__() *QWinJumpList {
+func NewQWinJumpListp() *QWinJumpList {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWinJumpListC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -164,7 +164,7 @@ func (this *QWinJumpList) Identifier() string {
 
  */
 func (this *QWinJumpList) SetIdentifier(identifier string) {
-	var tmpArg0 = qtcore.NewQString_5(identifier)
+	var tmpArg0 = qtcore.NewQString5(identifier)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QWinJumpList13setIdentifierERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

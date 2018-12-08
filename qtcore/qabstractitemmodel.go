@@ -202,10 +202,10 @@ func NewQAbstractItemModel(parent QObject_ITF /*777 QObject **/) *QAbstractItemM
 /*
 Constructs an abstract item model with the given parent.
 */
-func (*QAbstractItemModel) NewForInherit__() *QAbstractItemModel {
-	return NewQAbstractItemModel__()
+func (*QAbstractItemModel) NewForInheritp() *QAbstractItemModel {
+	return NewQAbstractItemModelp()
 }
-func NewQAbstractItemModel__() *QAbstractItemModel {
+func NewQAbstractItemModelp() *QAbstractItemModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -256,7 +256,7 @@ func (this *QAbstractItemModel) HasIndex(row int, column int, parent QModelIndex
 /*
 Returns true if the model returns a valid QModelIndex for row and column with parent, otherwise returns false.
 */
-func (this *QAbstractItemModel) HasIndex__(row int, column int) bool {
+func (this *QAbstractItemModel) HasIndexp(row int, column int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
@@ -300,7 +300,7 @@ When reimplementing this function in a subclass, call createIndex() to generate 
 
 See also createIndex().
 */
-func (this *QAbstractItemModel) Index__(row int, column int) *QModelIndex /*123*/ {
+func (this *QAbstractItemModel) Indexp(row int, column int) *QModelIndex /*123*/ {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel5indexEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
@@ -396,7 +396,7 @@ Note: When implementing a table based model, rowCount() should return 0 when the
 
 See also columnCount().
 */
-func (this *QAbstractItemModel) RowCount__() int {
+func (this *QAbstractItemModel) RowCountp() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel8rowCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -462,7 +462,7 @@ Note: When implementing a table based model, columnCount() should return 0 when 
 
 See also rowCount().
 */
-func (this *QAbstractItemModel) ColumnCount__() int {
+func (this *QAbstractItemModel) ColumnCountp() int {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel11columnCountERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -508,7 +508,7 @@ Note that it is undefined behavior to report that a particular index hasChildren
 
 See also parent() and index().
 */
-func (this *QAbstractItemModel) HasChildren__() bool {
+func (this *QAbstractItemModel) HasChildrenp() bool {
 	// arg: 0, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg0 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -552,7 +552,7 @@ Note: If you do not have a value to return, return an invalid QVariant instead o
 
 See also Qt::ItemDataRole, setData(), and headerData().
 */
-func (this *QAbstractItemModel) Data__(index QModelIndex_ITF) *QVariant /*123*/ {
+func (this *QAbstractItemModel) Datap(index QModelIndex_ITF) *QVariant /*123*/ {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -612,7 +612,7 @@ The base class implementation returns false. This function and data() must be re
 
 See also Qt::ItemDataRole, data(), and itemData().
 */
-func (this *QAbstractItemModel) SetData__(index QModelIndex_ITF, value QVariant_ITF) bool {
+func (this *QAbstractItemModel) SetDatap(index QModelIndex_ITF, value QVariant_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -660,7 +660,7 @@ For horizontal headers, the section number corresponds to the column number. Sim
 
 See also Qt::ItemDataRole, setHeaderData(), and QHeaderView.
 */
-func (this *QAbstractItemModel) HeaderData__(section int, orientation int) *QVariant /*123*/ {
+func (this *QAbstractItemModel) HeaderDatap(section int, orientation int) *QVariant /*123*/ {
 	// arg: 2, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::DisplayRole*/
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
@@ -708,7 +708,7 @@ When reimplementing this function, the headerDataChanged() signal must be emitte
 
 See also Qt::ItemDataRole and headerData().
 */
-func (this *QAbstractItemModel) SetHeaderData__(section int, orientation int, value QVariant_ITF) bool {
+func (this *QAbstractItemModel) SetHeaderDatap(section int, orientation int, value QVariant_ITF) bool {
 	var convArg2 unsafe.Pointer
 	if value != nil && value.QVariant_PTR() != nil {
 		convArg2 = value.QVariant_PTR().GetCthis()
@@ -896,7 +896,7 @@ If you implement your own model, you can reimplement this function if you want t
 
 See also insertColumns(), removeRows(), beginInsertRows(), and endInsertRows().
 */
-func (this *QAbstractItemModel) InsertRows__(row int, count int) bool {
+func (this *QAbstractItemModel) InsertRowsp(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
@@ -958,7 +958,7 @@ If you implement your own model, you can reimplement this function if you want t
 
 See also insertRows(), removeColumns(), beginInsertColumns(), and endInsertColumns().
 */
-func (this *QAbstractItemModel) InsertColumns__(column int, count int) bool {
+func (this *QAbstractItemModel) InsertColumnsp(column int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel13insertColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
@@ -1008,7 +1008,7 @@ If you implement your own model, you can reimplement this function if you want t
 
 See also removeRow(), removeColumns(), insertColumns(), beginRemoveRows(), and endRemoveRows().
 */
-func (this *QAbstractItemModel) RemoveRows__(row int, count int) bool {
+func (this *QAbstractItemModel) RemoveRowsp(row int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
@@ -1058,7 +1058,7 @@ If you implement your own model, you can reimplement this function if you want t
 
 See also removeColumn(), removeRows(), insertColumns(), beginRemoveColumns(), and endRemoveColumns().
 */
-func (this *QAbstractItemModel) RemoveColumns__(column int, count int) bool {
+func (this *QAbstractItemModel) RemoveColumnsp(column int, count int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg2 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
@@ -1164,7 +1164,7 @@ Returns true if the row is inserted; otherwise returns false.
 
 See also insertRows(), insertColumn(), and removeRow().
 */
-func (this *QAbstractItemModel) InsertRow__(row int) bool {
+func (this *QAbstractItemModel) InsertRowp(row int) bool {
 	// arg: 1, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg1 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel9insertRowEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
@@ -1206,7 +1206,7 @@ Returns true if the column is inserted; otherwise returns false.
 
 See also insertColumns(), insertRow(), and removeColumn().
 */
-func (this *QAbstractItemModel) InsertColumn__(column int) bool {
+func (this *QAbstractItemModel) InsertColumnp(column int) bool {
 	// arg: 1, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg1 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
@@ -1252,7 +1252,7 @@ This is a convenience function that calls removeRows(). The QAbstractItemModel i
 
 See also removeRows(), removeColumn(), and insertRow().
 */
-func (this *QAbstractItemModel) RemoveRow__(row int) bool {
+func (this *QAbstractItemModel) RemoveRowp(row int) bool {
 	// arg: 1, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg1 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel9removeRowEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
@@ -1294,7 +1294,7 @@ Returns true if the column is removed; otherwise returns false.
 
 See also removeColumns(), removeRow(), and insertColumn().
 */
-func (this *QAbstractItemModel) RemoveColumn__(column int) bool {
+func (this *QAbstractItemModel) RemoveColumnp(column int) bool {
 	// arg: 1, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
 	var convArg1 = NewQModelIndex()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel12removeColumnEiRK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
@@ -1448,7 +1448,7 @@ Sorts the model by column in the given order.
 
 The base class implementation does nothing.
 */
-func (this *QAbstractItemModel) Sort__(column int) {
+func (this *QAbstractItemModel) Sortp(column int) {
 	// arg: 1, Qt::SortOrder=Elaborated, Qt::SortOrder=Enum, , Invalid
 	order := 0
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
@@ -1520,7 +1520,7 @@ By default, this function will perform a wrapping, string-based comparison on al
 
 Note: The default implementation of this function only searches columns. Reimplement this function to include a different search behavior.
 */
-func (this *QAbstractItemModel) Match__(start QModelIndex_ITF, role int, value QVariant_ITF) *QModelIndexList /*667*/ {
+func (this *QAbstractItemModel) Matchp(start QModelIndex_ITF, role int, value QVariant_ITF) *QModelIndexList /*667*/ {
 	var convArg0 unsafe.Pointer
 	if start != nil && start.QModelIndex_PTR() != nil {
 		convArg0 = start.QModelIndex_PTR().GetCthis()
@@ -1553,7 +1553,7 @@ By default, this function will perform a wrapping, string-based comparison on al
 
 Note: The default implementation of this function only searches columns. Reimplement this function to include a different search behavior.
 */
-func (this *QAbstractItemModel) Match__1(start QModelIndex_ITF, role int, value QVariant_ITF, hits int) *QModelIndexList /*667*/ {
+func (this *QAbstractItemModel) Matchp1(start QModelIndex_ITF, role int, value QVariant_ITF, hits int) *QModelIndexList /*667*/ {
 	var convArg0 unsafe.Pointer
 	if start != nil && start.QModelIndex_PTR() != nil {
 		convArg0 = start.QModelIndex_PTR().GetCthis()
@@ -1731,7 +1731,7 @@ When using a QSortFilterProxyModel, its indexes have their own internal pointer.
 
 This function provides a consistent interface that model subclasses must use to create model indexes.
 */
-func (this *QAbstractItemModel) CreateIndex__(row int, column int) *QModelIndex /*123*/ {
+func (this *QAbstractItemModel) CreateIndexp(row int, column int) *QModelIndex /*123*/ {
 	// arg: 2, void *=Pointer, =Invalid, , Invalid
 	var data unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel11createIndexEiiPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, data)
@@ -1753,7 +1753,7 @@ When using a QSortFilterProxyModel, its indexes have their own internal pointer.
 
 This function provides a consistent interface that model subclasses must use to create model indexes.
 */
-func (this *QAbstractItemModel) CreateIndex_1(row int, column int, id uint64) *QModelIndex /*123*/ {
+func (this *QAbstractItemModel) CreateIndex1(row int, column int, id uint64) *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel11createIndexEiiy", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column, id)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333

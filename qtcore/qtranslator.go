@@ -107,10 +107,10 @@ func NewQTranslator(parent QObject_ITF /*777 QObject **/) *QTranslator {
 /*
 Constructs an empty message file object with parent parent that is not connected to any file.
 */
-func (*QTranslator) NewForInherit__() *QTranslator {
-	return NewQTranslator__()
+func (*QTranslator) NewForInheritp() *QTranslator {
+	return NewQTranslatorp()
 }
-func NewQTranslator__() *QTranslator {
+func NewQTranslatorp() *QTranslator {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -182,7 +182,7 @@ If you need to programatically insert translations into a QTranslator, this func
 
 See also load().
 */
-func (this *QTranslator) Translate__(context string, sourceText string) string {
+func (this *QTranslator) Translatep(context string, sourceText string) string {
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(sourceText)
@@ -215,7 +215,7 @@ If you need to programatically insert translations into a QTranslator, this func
 
 See also load().
 */
-func (this *QTranslator) Translate__1(context string, sourceText string, disambiguation string) string {
+func (this *QTranslator) Translatep1(context string, sourceText string, disambiguation string) string {
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(sourceText)
@@ -261,13 +261,13 @@ The previous contents of this translator object are discarded.
 If the file name does not exist, other file names are tried in the following order:
 */
 func (this *QTranslator) Load(filename string, directory string, search_delimiters string, suffix string) bool {
-	var tmpArg0 = NewQString_5(filename)
+	var tmpArg0 = NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(directory)
+	var tmpArg1 = NewQString5(directory)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(search_delimiters)
+	var tmpArg2 = NewQString5(search_delimiters)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = NewQString_5(suffix)
+	var tmpArg3 = NewQString5(suffix)
 	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QStringS2_S2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	qtrt.ErrPrint(err, rv)
@@ -288,8 +288,8 @@ The previous contents of this translator object are discarded.
 
 If the file name does not exist, other file names are tried in the following order:
 */
-func (this *QTranslator) Load__(filename string) bool {
-	var tmpArg0 = NewQString_5(filename)
+func (this *QTranslator) Loadp(filename string) bool {
+	var tmpArg0 = NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg1 = NewQString()
@@ -316,10 +316,10 @@ The previous contents of this translator object are discarded.
 
 If the file name does not exist, other file names are tried in the following order:
 */
-func (this *QTranslator) Load__1(filename string, directory string) bool {
-	var tmpArg0 = NewQString_5(filename)
+func (this *QTranslator) Loadp1(filename string, directory string) bool {
+	var tmpArg0 = NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(directory)
+	var tmpArg1 = NewQString5(directory)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
@@ -344,12 +344,12 @@ The previous contents of this translator object are discarded.
 
 If the file name does not exist, other file names are tried in the following order:
 */
-func (this *QTranslator) Load__2(filename string, directory string, search_delimiters string) bool {
-	var tmpArg0 = NewQString_5(filename)
+func (this *QTranslator) Loadp2(filename string, directory string, search_delimiters string) bool {
+	var tmpArg0 = NewQString5(filename)
 	var convArg0 = tmpArg0.GetCthis()
-	var tmpArg1 = NewQString_5(directory)
+	var tmpArg1 = NewQString5(directory)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(search_delimiters)
+	var tmpArg2 = NewQString5(search_delimiters)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
@@ -372,18 +372,18 @@ The previous contents of this translator object are discarded.
 
 If the file name does not exist, other file names are tried in the following order:
 */
-func (this *QTranslator) Load_1(locale QLocale_ITF, filename string, prefix string, directory string, suffix string) bool {
+func (this *QTranslator) Load1(locale QLocale_ITF, filename string, prefix string, directory string, suffix string) bool {
 	var convArg0 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
 		convArg0 = locale.QLocale_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(filename)
+	var tmpArg1 = NewQString5(filename)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(prefix)
+	var tmpArg2 = NewQString5(prefix)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = NewQString_5(directory)
+	var tmpArg3 = NewQString5(directory)
 	var convArg3 = tmpArg3.GetCthis()
-	var tmpArg4 = NewQString_5(suffix)
+	var tmpArg4 = NewQString5(suffix)
 	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4)
 	qtrt.ErrPrint(err, rv)
@@ -404,12 +404,12 @@ The previous contents of this translator object are discarded.
 
 If the file name does not exist, other file names are tried in the following order:
 */
-func (this *QTranslator) Load_1_(locale QLocale_ITF, filename string) bool {
+func (this *QTranslator) Load1p(locale QLocale_ITF, filename string) bool {
 	var convArg0 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
 		convArg0 = locale.QLocale_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(filename)
+	var tmpArg1 = NewQString5(filename)
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
@@ -436,14 +436,14 @@ The previous contents of this translator object are discarded.
 
 If the file name does not exist, other file names are tried in the following order:
 */
-func (this *QTranslator) Load_1_1(locale QLocale_ITF, filename string, prefix string) bool {
+func (this *QTranslator) Load1p1(locale QLocale_ITF, filename string, prefix string) bool {
 	var convArg0 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
 		convArg0 = locale.QLocale_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(filename)
+	var tmpArg1 = NewQString5(filename)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(prefix)
+	var tmpArg2 = NewQString5(prefix)
 	var convArg2 = tmpArg2.GetCthis()
 	// arg: 3, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg3 = NewQString()
@@ -468,16 +468,16 @@ The previous contents of this translator object are discarded.
 
 If the file name does not exist, other file names are tried in the following order:
 */
-func (this *QTranslator) Load_1_2(locale QLocale_ITF, filename string, prefix string, directory string) bool {
+func (this *QTranslator) Load1p2(locale QLocale_ITF, filename string, prefix string, directory string) bool {
 	var convArg0 unsafe.Pointer
 	if locale != nil && locale.QLocale_PTR() != nil {
 		convArg0 = locale.QLocale_PTR().GetCthis()
 	}
-	var tmpArg1 = NewQString_5(filename)
+	var tmpArg1 = NewQString5(filename)
 	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = NewQString_5(prefix)
+	var tmpArg2 = NewQString5(prefix)
 	var convArg2 = tmpArg2.GetCthis()
-	var tmpArg3 = NewQString_5(directory)
+	var tmpArg3 = NewQString5(directory)
 	var convArg3 = tmpArg3.GetCthis()
 	// arg: 4, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg4 = NewQString()
@@ -500,8 +500,8 @@ The previous contents of this translator object are discarded.
 
 If the file name does not exist, other file names are tried in the following order:
 */
-func (this *QTranslator) Load_2(data unsafe.Pointer /*666*/, len_ int, directory string) bool {
-	var tmpArg2 = NewQString_5(directory)
+func (this *QTranslator) Load2(data unsafe.Pointer /*666*/, len_ int, directory string) bool {
+	var tmpArg2 = NewQString5(directory)
 	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadEPKhiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), data, len_, convArg2)
 	qtrt.ErrPrint(err, rv)
@@ -522,7 +522,7 @@ The previous contents of this translator object are discarded.
 
 If the file name does not exist, other file names are tried in the following order:
 */
-func (this *QTranslator) Load_2_(data unsafe.Pointer /*666*/, len_ int) bool {
+func (this *QTranslator) Load2p(data unsafe.Pointer /*666*/, len_ int) bool {
 	// arg: 2, const QString &=LValueReference, QString=Record, , Invalid
 	var convArg2 = NewQString()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadEPKhiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), data, len_, convArg2)

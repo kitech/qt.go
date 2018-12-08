@@ -95,10 +95,10 @@ func NewQGraphicsGridLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayout
 /*
 Constructs a QGraphicsGridLayout instance. parent is passed to QGraphicsLayout's constructor.
 */
-func (*QGraphicsGridLayout) NewForInherit__() *QGraphicsGridLayout {
-	return NewQGraphicsGridLayout__()
+func (*QGraphicsGridLayout) NewForInheritp() *QGraphicsGridLayout {
+	return NewQGraphicsGridLayoutp()
 }
-func NewQGraphicsGridLayout__() *QGraphicsGridLayout {
+func NewQGraphicsGridLayoutp() *QGraphicsGridLayout {
 	// arg: 0, QGraphicsLayoutItem *=Pointer, QGraphicsLayoutItem=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsGridLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -148,7 +148,7 @@ func (this *QGraphicsGridLayout) AddItem(item QGraphicsLayoutItem_ITF /*777 QGra
 /*
 Adds item to the grid on row and column. You can specify a rowSpan and columnSpan and an optional alignment.
 */
-func (this *QGraphicsGridLayout) AddItem__(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, row int, column int, rowSpan int, columnSpan int) {
+func (this *QGraphicsGridLayout) AddItemp(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, row int, column int, rowSpan int, columnSpan int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsLayoutItem_PTR() != nil {
 		convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
@@ -167,7 +167,7 @@ func (this *QGraphicsGridLayout) AddItem__(item QGraphicsLayoutItem_ITF /*777 QG
 /*
 Adds item to the grid on row and column. You can specify a rowSpan and columnSpan and an optional alignment.
 */
-func (this *QGraphicsGridLayout) AddItem_1(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, row int, column int, alignment int) {
+func (this *QGraphicsGridLayout) AddItem1(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, row int, column int, alignment int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsLayoutItem_PTR() != nil {
 		convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
@@ -184,7 +184,7 @@ func (this *QGraphicsGridLayout) AddItem_1(item QGraphicsLayoutItem_ITF /*777 QG
 /*
 Adds item to the grid on row and column. You can specify a rowSpan and columnSpan and an optional alignment.
 */
-func (this *QGraphicsGridLayout) AddItem_1_(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, row int, column int) {
+func (this *QGraphicsGridLayout) AddItem1p(item QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem **/, row int, column int) {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QGraphicsLayoutItem_PTR() != nil {
 		convArg0 = item.QGraphicsLayoutItem_PTR().GetCthis()
@@ -759,7 +759,7 @@ func (this *QGraphicsGridLayout) ItemAt(row int, column int) *QGraphicsLayoutIte
 /*
 Returns a pointer to the layout item at (row, column).
 */
-func (this *QGraphicsGridLayout) ItemAt_1(index int) *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/ {
+func (this *QGraphicsGridLayout) ItemAt1(index int) *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout6itemAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -877,7 +877,7 @@ func (this *QGraphicsGridLayout) SizeHint(which int, constraint qtcore.QSizeF_IT
 /*
 Reimplemented from QGraphicsLayoutItem::sizeHint().
 */
-func (this *QGraphicsGridLayout) SizeHint__(which int) *qtcore.QSizeF /*123*/ {
+func (this *QGraphicsGridLayout) SizeHintp(which int) *qtcore.QSizeF /*123*/ {
 	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)

@@ -128,7 +128,7 @@ func (this *QXmlStreamNotationDeclaration) Operator_equal(arg0 QXmlStreamNotatio
 /*
 
  */
-func (this *QXmlStreamNotationDeclaration) Operator_equal_1(other unsafe.Pointer /*333*/) *QXmlStreamNotationDeclaration {
+func (this *QXmlStreamNotationDeclaration) Operator_equal1(other unsafe.Pointer /*333*/) *QXmlStreamNotationDeclaration {
 	rv, err := qtrt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQXmlStreamNotationDeclarationFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

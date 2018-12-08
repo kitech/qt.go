@@ -119,7 +119,7 @@ func (*QToolBar) NewForInherit(title string, parent QWidget_ITF /*777 QWidget **
 	return NewQToolBar(title, parent)
 }
 func NewQToolBar(title string, parent QWidget_ITF /*777 QWidget **/) *QToolBar {
-	var tmpArg0 = qtcore.NewQString_5(title)
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
@@ -144,11 +144,11 @@ The given window title identifies the toolbar and is shown in the context menu p
 
 See also setWindowTitle().
 */
-func (*QToolBar) NewForInherit__(title string) *QToolBar {
-	return NewQToolBar__(title)
+func (*QToolBar) NewForInheritp(title string) *QToolBar {
+	return NewQToolBarp(title)
 }
-func NewQToolBar__(title string) *QToolBar {
-	var tmpArg0 = qtcore.NewQString_5(title)
+func NewQToolBarp(title string) *QToolBar {
+	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
@@ -171,10 +171,10 @@ The given window title identifies the toolbar and is shown in the context menu p
 
 See also setWindowTitle().
 */
-func (*QToolBar) NewForInherit_1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
-	return NewQToolBar_1(parent)
+func (*QToolBar) NewForInherit1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
+	return NewQToolBar1(parent)
 }
-func NewQToolBar_1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
+func NewQToolBar1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 	var convArg0 unsafe.Pointer
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
@@ -198,10 +198,10 @@ The given window title identifies the toolbar and is shown in the context menu p
 
 See also setWindowTitle().
 */
-func (*QToolBar) NewForInherit_1_() *QToolBar {
-	return NewQToolBar_1_()
+func (*QToolBar) NewForInherit1p() *QToolBar {
+	return NewQToolBar1p()
 }
-func NewQToolBar_1_() *QToolBar {
+func NewQToolBar1p() *QToolBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -347,7 +347,7 @@ This is an overloaded function.
 Creates a new action with the given text. This action is added to the end of the toolbar.
 */
 func (this *QToolBar) AddAction(text string) *QAction /*777 QAction **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar9addActionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -364,12 +364,12 @@ This is an overloaded function.
 
 Creates a new action with the given text. This action is added to the end of the toolbar.
 */
-func (this *QToolBar) AddAction_1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
+func (this *QToolBar) AddAction1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolBar9addActionERK5QIconRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -386,8 +386,8 @@ This is an overloaded function.
 
 Creates a new action with the given text. This action is added to the end of the toolbar.
 */
-func (this *QToolBar) AddAction_2(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
-	var tmpArg0 = qtcore.NewQString_5(text)
+func (this *QToolBar) AddAction2(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
+	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -410,12 +410,12 @@ This is an overloaded function.
 
 Creates a new action with the given text. This action is added to the end of the toolbar.
 */
-func (this *QToolBar) AddAction_3(icon qtgui.QIcon_ITF, text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
+func (this *QToolBar) AddAction3(icon qtgui.QIcon_ITF, text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
-	var tmpArg1 = qtcore.NewQString_5(text)
+	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 unsafe.Pointer
 	if receiver != nil && receiver.QObject_PTR() != nil {
@@ -566,7 +566,7 @@ Returns the action at point p. This function returns zero if no action was found
 
 See also QWidget::childAt().
 */
-func (this *QToolBar) ActionAt_1(x int, y int) *QAction /*777 QAction **/ {
+func (this *QToolBar) ActionAt1(x int, y int) *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QToolBar8actionAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444

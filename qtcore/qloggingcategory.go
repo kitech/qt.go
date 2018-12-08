@@ -97,10 +97,10 @@ Constructs a QLoggingCategory object with the provided category name. All messag
 
 If category is 0, the category name is changed to "default".
 */
-func (*QLoggingCategory) NewForInherit_1(category string, severityLevel int) *QLoggingCategory {
-	return NewQLoggingCategory_1(category, severityLevel)
+func (*QLoggingCategory) NewForInherit1(category string, severityLevel int) *QLoggingCategory {
+	return NewQLoggingCategory1(category, severityLevel)
 }
-func NewQLoggingCategory_1(category string, severityLevel int) *QLoggingCategory {
+func NewQLoggingCategory1(category string, severityLevel int) *QLoggingCategory {
 	var convArg0 = qtrt.CString(category)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc9QtMsgType", qtrt.FFI_TYPE_POINTER, convArg0, severityLevel)
@@ -279,7 +279,7 @@ Example:
 Note: The rules might be ignored if a custom category filter is installed with installFilter(), or if the user defined QT_LOGGING_CONF or QT_LOGGING_RULES environment variable.
 */
 func (this *QLoggingCategory) SetFilterRules(rules string) {
-	var tmpArg0 = NewQString_5(rules)
+	var tmpArg0 = NewQString5(rules)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QLoggingCategory14setFilterRulesERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)

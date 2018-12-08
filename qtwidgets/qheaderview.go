@@ -254,10 +254,10 @@ func NewQHeaderView(orientation int, parent QWidget_ITF /*777 QWidget **/) *QHea
 /*
 Creates a new generic header with the given orientation and parent.
 */
-func (*QHeaderView) NewForInherit__(orientation int) *QHeaderView {
-	return NewQHeaderView__(orientation)
+func (*QHeaderView) NewForInheritp(orientation int) *QHeaderView {
+	return NewQHeaderViewp(orientation)
 }
-func NewQHeaderView__(orientation int) *QHeaderView {
+func NewQHeaderViewp(orientation int) *QHeaderView {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHeaderViewC2EN2Qt11OrientationEP7QWidget", qtrt.FFI_TYPE_POINTER, orientation, convArg1)
@@ -440,7 +440,7 @@ Returns the section that covers the given position in the viewport.
 
 See also visualIndexAt() and isSectionHidden().
 */
-func (this *QHeaderView) LogicalIndexAt_1(x int, y int) int {
+func (this *QHeaderView) LogicalIndexAt1(x int, y int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHeaderView14logicalIndexAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -456,7 +456,7 @@ Returns the section that covers the given position in the viewport.
 
 See also visualIndexAt() and isSectionHidden().
 */
-func (this *QHeaderView) LogicalIndexAt_2(pos qtcore.QPoint_ITF) int {
+func (this *QHeaderView) LogicalIndexAt2(pos qtcore.QPoint_ITF) int {
 	var convArg0 unsafe.Pointer
 	if pos != nil && pos.QPoint_PTR() != nil {
 		convArg0 = pos.QPoint_PTR().GetCthis()
@@ -588,7 +588,7 @@ Resizes the sections according to the given mode, ignoring the current resize mo
 
 See also resizeMode() and sectionResized().
 */
-func (this *QHeaderView) ResizeSections_1() {
+func (this *QHeaderView) ResizeSections1() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHeaderView14resizeSectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
@@ -868,7 +868,7 @@ This function was introduced in  Qt 5.0.
 
 See also sectionResizeMode(), resizeMode(), length(), and sectionResized().
 */
-func (this *QHeaderView) SetSectionResizeMode_1(logicalIndex int, mode int) {
+func (this *QHeaderView) SetSectionResizeMode1(logicalIndex int, mode int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHeaderView20setSectionResizeModeEiNS_10ResizeModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), logicalIndex, mode)
 	qtrt.ErrPrint(err, rv)
 }
@@ -1592,7 +1592,7 @@ func (this *QHeaderView) InitializeSections() {
 /*
 
  */
-func (this *QHeaderView) InitializeSections_1(start int, end_ int) {
+func (this *QHeaderView) InitializeSections1(start int, end_ int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHeaderView18initializeSectionsEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), start, end_)
 	qtrt.ErrPrint(err, rv)
 }

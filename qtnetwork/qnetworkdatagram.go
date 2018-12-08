@@ -100,10 +100,10 @@ The payload can be modified by using setData() and the destination address can b
 
 If the destination address is left undefined, QUdpSocket::writeDatagram() will attempt to send the datagram to the address last associated with, by using QUdpSocket::connectToHost().
 */
-func (*QNetworkDatagram) NewForInherit_1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF, port uint16) *QNetworkDatagram {
-	return NewQNetworkDatagram_1(data, destinationAddress, port)
+func (*QNetworkDatagram) NewForInherit1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF, port uint16) *QNetworkDatagram {
+	return NewQNetworkDatagram1(data, destinationAddress, port)
 }
-func NewQNetworkDatagram_1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF, port uint16) *QNetworkDatagram {
+func NewQNetworkDatagram1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF, port uint16) *QNetworkDatagram {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -131,10 +131,10 @@ The payload can be modified by using setData() and the destination address can b
 
 If the destination address is left undefined, QUdpSocket::writeDatagram() will attempt to send the datagram to the address last associated with, by using QUdpSocket::connectToHost().
 */
-func (*QNetworkDatagram) NewForInherit_1_(data qtcore.QByteArray_ITF) *QNetworkDatagram {
-	return NewQNetworkDatagram_1_(data)
+func (*QNetworkDatagram) NewForInherit1p(data qtcore.QByteArray_ITF) *QNetworkDatagram {
+	return NewQNetworkDatagram1p(data)
 }
-func NewQNetworkDatagram_1_(data qtcore.QByteArray_ITF) *QNetworkDatagram {
+func NewQNetworkDatagram1p(data qtcore.QByteArray_ITF) *QNetworkDatagram {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -162,10 +162,10 @@ The payload can be modified by using setData() and the destination address can b
 
 If the destination address is left undefined, QUdpSocket::writeDatagram() will attempt to send the datagram to the address last associated with, by using QUdpSocket::connectToHost().
 */
-func (*QNetworkDatagram) NewForInherit_1_1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF) *QNetworkDatagram {
-	return NewQNetworkDatagram_1_1(data, destinationAddress)
+func (*QNetworkDatagram) NewForInherit1p1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF) *QNetworkDatagram {
+	return NewQNetworkDatagram1p1(data, destinationAddress)
 }
-func NewQNetworkDatagram_1_1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF) *QNetworkDatagram {
+func NewQNetworkDatagram1p1(data qtcore.QByteArray_ITF, destinationAddress QHostAddress_ITF) *QNetworkDatagram {
 	var convArg0 unsafe.Pointer
 	if data != nil && data.QByteArray_PTR() != nil {
 		convArg0 = data.QByteArray_PTR().GetCthis()
@@ -211,7 +211,7 @@ func (this *QNetworkDatagram) Operator_equal(other QNetworkDatagram_ITF) *QNetwo
 /*
 
  */
-func (this *QNetworkDatagram) Operator_equal_1(other unsafe.Pointer /*333*/) *QNetworkDatagram {
+func (this *QNetworkDatagram) Operator_equal1(other unsafe.Pointer /*333*/) *QNetworkDatagram {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagramaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQNetworkDatagramFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -446,7 +446,7 @@ The port number port must be the port number associated with the socket, if ther
 
 See also QUdpSocket::writeDatagram(), senderAddress(), senderPort(), and setDestination().
 */
-func (this *QNetworkDatagram) SetSender__(address QHostAddress_ITF) {
+func (this *QNetworkDatagram) SetSenderp(address QHostAddress_ITF) {
 	var convArg0 unsafe.Pointer
 	if address != nil && address.QHostAddress_PTR() != nil {
 		convArg0 = address.QHostAddress_PTR().GetCthis()
@@ -650,7 +650,7 @@ Note: This function comes with both rvalue- and lvalue-reference qualifier overl
 
   udpSocket->writeDatagram(std::move(datagram).makeReply(replyData));
 */
-func (this *QNetworkDatagram) MakeReply_1(payload qtcore.QByteArray_ITF) *QNetworkDatagram /*123*/ {
+func (this *QNetworkDatagram) MakeReply1(payload qtcore.QByteArray_ITF) *QNetworkDatagram /*123*/ {
 	var convArg0 unsafe.Pointer
 	if payload != nil && payload.QByteArray_PTR() != nil {
 		convArg0 = payload.QByteArray_PTR().GetCthis()
