@@ -28,6 +28,7 @@ import "log"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
+import "github.com/kitech/qt.go/qtwidgets"
 
 //  ext block end
 
@@ -123,6 +124,9 @@ func init() {
 	}
 	if false {
 		qtgui.KeepMe()
+	}
+	if false {
+		qtwidgets.KeepMe()
 	}
 }
 
