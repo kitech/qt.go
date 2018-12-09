@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qlocalserver.h

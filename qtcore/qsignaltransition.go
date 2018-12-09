@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qsignaltransition.h

@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qtreeview.h
