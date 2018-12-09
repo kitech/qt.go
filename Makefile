@@ -101,6 +101,7 @@ updoc:
 	curl -POST -d "path=github.com/kitech/qt.go/qtwebenginewidgets" "https://godoc.org/-/refresh"
 	curl -POST -d "path=github.com/kitech/qt.go/qtsvg" "https://godoc.org/-/refresh"
 	curl -POST -d "path=github.com/kitech/qt.go/qtmultimedia" "https://godoc.org/-/refresh"
+	curl -POST -d "path=github.com/kitech/qt.go/qtmeta" "https://godoc.org/-/refresh"
 
 wcs: wcbases wcqmls wcextras wcwebengines
 wcbases:

@@ -341,7 +341,7 @@ func mksignalfn(thisty string, cobjptr unsafe.Pointer, cmdo unsafe.Pointer, sign
 			log.Panicln("wtf", cobjptr, cmdo, args)
 		}
 		qtrt.InvokeQtFunc6("C_ZN11QMetaObject8activateEP7QObjectPKS_iPPv", qtrt.FFI_TYPE_POINTER, cobjptr, cmdo, signal_index, args_)
-		if DebugQtMeta {
+		if debugQtMeta {
 			log.Printf("emited signal: %s(%p)::%s:%d(%v|%v)\n", thisty, cobjptr, signal_name, signal_index, args, fullargs)
 		}
 		// void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
@@ -350,11 +350,13 @@ func mksignalfn(thisty string, cobjptr unsafe.Pointer, cmdo unsafe.Pointer, sign
 	}
 }
 
-var DebugQtMeta = false
+var debugQtMeta = false
 
 func init() {
-	DebugQtMeta = os.Getenv("QTGO_DEBUG_QTMETA") == "1" || os.Getenv("QTGO_DEBUG_QTMETA") == "true"
+	debugQtMeta = os.Getenv("QTGO_DEBUG_QTMETA") == "1" ||
+		strings.ToLower(os.Getenv("QTGO_DEBUG_QTMETA")) == "true"
 }
+func SetDebugQtMeta(on bool) { debugQtMeta = on }
 
 /////
 var mdcache = &_QtMetaDatas{

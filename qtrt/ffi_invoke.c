@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include "ffi.h"
 
+//
 static ffi_type* itype2stype(int itype){
     switch (itype) {
     case FFI_TYPE_VOID:
@@ -40,7 +41,7 @@ static ffi_type* itype2stype(int itype){
   argtypes int[20]
   argvals uint64_t[20] it's should be arguments's address but store in uint64_t
  */
-void ffi_call_ex(void*fn, int retype, uint64_t* retval, int argc, uint8_t* argtys, uint64_t* argvals) {
+void ffi_call_ex_impl(void*fn, int retype, uint64_t* retval, int argc, uint8_t* argtys, uint64_t* argvals) {
     ffi_cif cif;
     ffi_type *ffitys[20] = {0};
     void *ffivals[20] = {0};
@@ -61,7 +62,7 @@ void ffi_call_ex(void*fn, int retype, uint64_t* retval, int argc, uint8_t* argty
   argtypes int[20]
   argvals uint64_t[20] it's should be arguments's address but store in uint64_t
 */
-void ffi_call_var_ex(void*fn, int retype, uint64_t* retval, int fixedargc, int totalargc,
+void ffi_call_var_ex_impl(void*fn, int retype, uint64_t* retval, int fixedargc, int totalargc,
                      uint8_t* argtys, uint64_t* argvals) {
     ffi_cif cif;
     ffi_type *ffitys[20] = {0};
@@ -76,4 +77,25 @@ void ffi_call_var_ex(void*fn, int retype, uint64_t* retval, int fixedargc, int t
     if (ffi_prep_cif_var(&cif, FFI_DEFAULT_ABI, fixedargc, totalargc, retyp, ffitys) == FFI_OK) {
         ffi_call(&cif, fn, retval, ffivals);
     }
+}
+
+//
+void (*ffi_call_ex_fnptr)(void*fn, int retype, uint64_t* retval, int argc,
+                       uint8_t* argtys, uint64_t* argvals) = &ffi_call_ex_impl;
+void (*ffi_call_var_ex_fnptr)(void*fn, int retype, uint64_t* retval, int fixedargc, int totalargc,
+                           uint8_t* argtys, uint64_t* argvals) = &ffi_call_var_ex_impl;
+
+void set_so_ffi_call_ex(void* ex_fnptr, void* varex_fnptr) {
+    if (ex_fnptr != 0 && varex_fnptr != 0) {
+        ffi_call_ex_fnptr = ex_fnptr;
+        ffi_call_var_ex_fnptr = varex_fnptr;
+    }
+}
+
+void ffi_call_ex(void*fn, int retype, uint64_t* retval, int argc, uint8_t* argtys, uint64_t* argvals) {
+    ffi_call_ex_fnptr(fn, retype, retval, argc, argtys, argvals);
+}
+void ffi_call_var_ex(void*fn, int retype, uint64_t* retval, int fixedargc, int totalargc,
+                          uint8_t* argtys, uint64_t* argvals) {
+    ffi_call_var_ex_fnptr(fn, retype, retval, fixedargc, totalargc, argtys, argvals);
 }

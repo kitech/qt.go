@@ -94,3 +94,6 @@ Go side signal/slot: [syntax document](https://github.com/kitech/qt.go/blob/mast
 Qt.Go uses FFI to call wrapped Qt functions and methods, so there is no compile/link time dependency on Qt, only a run time dependency.
 
 This should make the development and testing phases much faster.
+
+[Internal document](https://github.com/kitech/qt.go/blob/master/docs/qt-go-internals.md)
+

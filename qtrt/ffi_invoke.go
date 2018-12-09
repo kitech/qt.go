@@ -50,6 +50,7 @@ static void ffi_call_0(void*fn) {
 
 extern void ffi_call_ex(void*fn, int retype, uint64_t *rc, int argc, uint8_t* argtys, uint64_t* argvals);
 extern void ffi_call_var_ex(void*fn, int retype, uint64_t *rc, int fixedargc, int totalargc, uint8_t* argtys, uint64_t* argvals);
+extern void set_so_ffi_call_ex(void* ex_fnptr, void* varex_fnptr);
 
 static void ffi_call_1(void*fn) {
 
@@ -163,6 +164,7 @@ func SetDebugFFICall(on bool) { debugFFICall = on }
 func init() {
 	log.SetFlags(log.Flags() | log.Lshortfile)
 	init_ffi_invoke()
+	init_so_ffi_call()
 
 	// TODO maybe run when first qtcall
 	init_destroyedDynSlot()
@@ -223,6 +225,14 @@ func init_ffi_invoke() {
 	for _, modname := range mods {
 		libpath := getLibFile(getLibDirp(), modname)
 		loadModule(libpath, modname)
+	}
+}
+
+func init_so_ffi_call() {
+	ex_fnptr := GetQtSymAddrRaw("ffi_call_ex")
+	varex_fnptr := GetQtSymAddrRaw("ffi_call_var_ex")
+	if ex_fnptr != nil && varex_fnptr != nil {
+		C.set_so_ffi_call_ex(ex_fnptr, varex_fnptr)
 	}
 }
 
@@ -342,7 +352,9 @@ func GetQtSymAddrRaw(symname string) unsafe.Pointer {
 		}
 		return addr
 	}
-	log.Println(fmt.Errorf("Symbol not found: %s", symname))
+	if debugFFICall {
+		log.Println(fmt.Errorf("Symbol not found: %s", symname))
+	}
 	return nil
 }
 

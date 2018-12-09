@@ -1,3 +1,5 @@
+#!/bin/sh
+
 source ~/triline/shell/android-ndk-env.sh
 
 
