@@ -65,14 +65,14 @@ func (this *QWidgetListx) Count(that *QWidget) int {
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
-func (this *QWidgetListx) Count_1() int {
+func (this *QWidgetListx) Count1() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QWidgetList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QWidgetListx) ConvertToSlice() (lst []*QWidget) {
-	for i := 0; i < this.Count_1(); i++ {
+	for i := 0; i < this.Count1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return
@@ -119,14 +119,14 @@ func (this *QWidgetSetx) Count(that *QWidget) int {
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
-func (this *QWidgetSetx) Count_1() int {
+func (this *QWidgetSetx) Count1() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QWidgetSet_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QWidgetSetx) ConvertToSlice() (lst []*QWidget) {
-	for i := 0; i < this.Count_1(); i++ {
+	for i := 0; i < this.Count1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return
@@ -176,14 +176,14 @@ func (this *QGraphicsItemListx) Count(that *QGraphicsItem) int {
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
-func (this *QGraphicsItemListx) Count_1() int {
+func (this *QGraphicsItemListx) Count1() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsItemList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QGraphicsItemListx) ConvertToSlice() (lst []*QGraphicsItem) {
-	for i := 0; i < this.Count_1(); i++ {
+	for i := 0; i < this.Count1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return

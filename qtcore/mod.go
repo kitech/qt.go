@@ -56,14 +56,14 @@ func (this *QObjectListx) Count(that *QObject) int {
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
-func (this *QObjectListx) Count_1() int {
+func (this *QObjectListx) Count1() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QObjectList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QObjectListx) ConvertToSlice() (lst []*QObject) {
-	for i := 0; i < this.Count_1(); i++ {
+	for i := 0; i < this.Count1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return
@@ -113,14 +113,14 @@ func (this *QFileInfoListx) Count(that *QFileInfo) int {
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
-func (this *QFileInfoListx) Count_1() int {
+func (this *QFileInfoListx) Count1() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QFileInfoList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QFileInfoListx) ConvertToSlice() (lst []*QFileInfo) {
-	for i := 0; i < this.Count_1(); i++ {
+	for i := 0; i < this.Count1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return
@@ -170,14 +170,14 @@ func (this *QModelIndexListx) Count(that *QModelIndex) int {
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
-func (this *QModelIndexListx) Count_1() int {
+func (this *QModelIndexListx) Count1() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QModelIndexList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
 func (this *QModelIndexListx) ConvertToSlice() (lst []*QModelIndex) {
-	for i := 0; i < this.Count_1(); i++ {
+	for i := 0; i < this.Count1(); i++ {
 		lst = append(lst, this.At(i))
 	}
 	return
@@ -222,7 +222,7 @@ func (this *QVariantListx) At(i int) *QVariant {
 	return NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 }
 
-func (this *QVariantListx) Count_1() int {
+func (this *QVariantListx) Count1() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QVariantList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
@@ -295,7 +295,7 @@ func (this *QStringListx) Count(s string) int {
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
-func (this *QStringListx) Count_1() int {
+func (this *QStringListx) Count1() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QStringList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
@@ -366,7 +366,7 @@ func (this *QUrlListx) Count(s string) int {
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
-func (this *QUrlListx) Count_1() int {
+func (this *QUrlListx) Count1() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QUrlList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)
@@ -437,7 +437,7 @@ func (this *QSizeListx) Count(s string) int {
 	return qtrt.Cretval2go("int", rv).(int)
 }
 
-func (this *QSizeListx) Count_1() int {
+func (this *QSizeListx) Count1() int {
 	rv, err := qtrt.InvokeQtFunc6("C_QSizeList_count_1", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int)

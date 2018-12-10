@@ -86,6 +86,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"path/filepath"
 	"reflect"
 	"regexp"
 	"runtime"
@@ -196,11 +197,16 @@ func init_ffi_invoke() {
 			ErrPrint(err)
 			appdir := string(bcc[:bytes.IndexByte(bcc, 0)])
 			for i := 0; i < 9; i++ {
-				d := fmt.Sprintf("/data/app/%s%s/lib/%s/", appdir,
-					IfElseStr(i == 0, "", fmt.Sprintf("-%d", i)), archs[runtime.GOARCH])
+				d := fmt.Sprintf("/data/app/%s-%s/lib/%s/", appdir,
+					IfElseStr(i == 0, "", fmt.Sprintf("%d", i)), archs[runtime.GOARCH])
 				if FileExist(d) {
 					return d
 				}
+			}
+			dirs, err := filepath.Glob(fmt.Sprintf("/data/app/%s-*", appdir))
+			ErrPrint(err)
+			if len(dirs) > 0 {
+				return dirs[0] + fmt.Sprintf("/lib/%s/", archs[runtime.GOARCH])
 			}
 		}
 		return ""
