@@ -21,5 +21,6 @@ pwd
 export CGO_ENABLED=1
 export CGO_CFLAGS="-I/usr/local/opt/libffi/lib/libffi-3.2.1/include"
 export CGO_LDFLAGS="-L/usr/local/opt/libffi/lib"
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH"
 make qtrt- bases qmls extras tools
 
