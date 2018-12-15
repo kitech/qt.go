@@ -18,7 +18,7 @@ package qtqml
 
 /*
 #include <stdlib.h>
-// extern C begin: 46
+// extern C begin: 8
 */
 // import "C"
 import "unsafe"
@@ -254,6 +254,34 @@ func (this *QJSEngine) Evaluatep1(program string, fileName string) *QJSValue /*1
 // /usr/include/qt/QtQml/qjsengine.h:72
 // index:0
 // Public Visibility=Default Availability=Available
+// [8] QJSValue importModule(const QString &)
+
+/*
+Imports the module located at fileName and returns a module namespace object that contains all exported variables, constants and functions as properties.
+
+If this is the first time the module is imported in the engine, the file is loaded from the specified location in either the local file system or the Qt resource system and evaluated as an ECMAScript module. The file is expected to be encoded in UTF-8 text.
+
+Subsequent imports of the same module will return the previously imported instance. Modules are singletons and remain around until the engine is destroyed.
+
+The specified fileName will internally be normalized using QFileInfo::canonicalFilePath(). That means that multiple imports of the same file on disk using different relative paths will load the file only once.
+
+Note: If an exception is thrown during the loading of the module, the return value will be the exception (typically an Error object; see QJSValue::isError()).
+
+This function was introduced in  Qt 5.12.
+*/
+func (this *QJSEngine) ImportModule(fileName string) *QJSValue /*123*/ {
+	var tmpArg0 = qtcore.NewQString5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine12importModuleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
+	return rv2
+}
+
+// /usr/include/qt/QtQml/qjsengine.h:74
+// index:0
+// Public Visibility=Default Availability=Available
 // [8] QJSValue newObject()
 
 /*
@@ -271,7 +299,7 @@ func (this *QJSEngine) NewObject() *QJSValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qjsengine.h:73
+// /usr/include/qt/QtQml/qjsengine.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJSValue newArray(uint)
@@ -289,7 +317,7 @@ func (this *QJSEngine) NewArray(length uint) *QJSValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qjsengine.h:73
+// /usr/include/qt/QtQml/qjsengine.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJSValue newArray(uint)
@@ -309,7 +337,7 @@ func (this *QJSEngine) NewArrayp() *QJSValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qjsengine.h:75
+// /usr/include/qt/QtQml/qjsengine.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJSValue newQObject(QObject *)
@@ -339,7 +367,55 @@ func (this *QJSEngine) NewQObject(object qtcore.QObject_ITF /*777 QObject **/) *
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qjsengine.h:96
+// /usr/include/qt/QtQml/qjsengine.h:87
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QJSValue newErrorObject(QJSValue::ErrorType, const QString &)
+
+/*
+Creates a JavaScript object of class Error.
+
+The prototype of the created object will be errorType.
+
+This function was introduced in  Qt 5.12.
+
+See also newObject(), throwError(), and QJSValue::isError().
+*/
+func (this *QJSEngine) NewErrorObject(errorType int, message string) *QJSValue /*123*/ {
+	var tmpArg1 = qtcore.NewQString5(message)
+	var convArg1 = tmpArg1.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine14newErrorObjectEN8QJSValue9ErrorTypeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), errorType, convArg1)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
+	return rv2
+}
+
+// /usr/include/qt/QtQml/qjsengine.h:87
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QJSValue newErrorObject(QJSValue::ErrorType, const QString &)
+
+/*
+Creates a JavaScript object of class Error.
+
+The prototype of the created object will be errorType.
+
+This function was introduced in  Qt 5.12.
+
+See also newObject(), throwError(), and QJSValue::isError().
+*/
+func (this *QJSEngine) NewErrorObjectp(errorType int) *QJSValue /*123*/ {
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
+	var convArg1 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine14newErrorObjectEN8QJSValue9ErrorTypeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), errorType, convArg1)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
+	return rv2
+}
+
+// /usr/include/qt/QtQml/qjsengine.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void collectGarbage()
@@ -356,7 +432,7 @@ func (this *QJSEngine) CollectGarbage() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qjsengine.h:99
+// /usr/include/qt/QtQml/qjsengine.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void installTranslatorFunctions(const QJSValue &)
@@ -373,7 +449,7 @@ func (this *QJSEngine) InstallTranslatorFunctions(object QJSValue_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qjsengine.h:99
+// /usr/include/qt/QtQml/qjsengine.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void installTranslatorFunctions(const QJSValue &)
@@ -388,7 +464,7 @@ func (this *QJSEngine) InstallTranslatorFunctionsp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qjsengine.h:110
+// /usr/include/qt/QtQml/qjsengine.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void installExtensions(QJSEngine::Extensions, const QJSValue &)
@@ -418,7 +494,7 @@ func (this *QJSEngine) InstallExtensions(extensions int, object QJSValue_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qjsengine.h:110
+// /usr/include/qt/QtQml/qjsengine.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void installExtensions(QJSEngine::Extensions, const QJSValue &)
@@ -446,10 +522,10 @@ func (this *QJSEngine) InstallExtensionsp(extensions int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qjsengine.h:112
+// /usr/include/qt/QtQml/qjsengine.h:116
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [8] QV8Engine * handle() const
+// [8] QV4::ExecutionEngine * handle() const
 
 /*
 
@@ -458,6 +534,225 @@ func (this *QJSEngine) Handle() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QJSEngine6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtQml/qjsengine.h:118
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void throwError(const QString &)
+
+/*
+Throws a run-time error (exception) with the given message.
+
+This method is the C++ counterpart of a throw() expression in JavaScript. It enables C++ code to report run-time errors to QJSEngine. Therefore it should only be called from C++ code that was invoked by a JavaScript function through QJSEngine.
+
+When returning from C++, the engine will interrupt the normal flow of execution and call the the next pre-registered exception handler with an error object that contains the given message. The error object will point to the location of the top-most context on the JavaScript caller stack; specifically, it will have properties lineNumber, fileName and stack. These properties are described in Script Exceptions.
+
+In the following example a C++ method in FileAccess.cpp throws an error in qmlFile.qml at the position where readFileAsText() is called:
+
+
+  // qmlFile.qml
+  function someFunction() {
+    ...
+    var text = FileAccess.readFileAsText("/path/to/file.txt");
+  }
+
+
+
+
+  // FileAccess.cpp
+  // Assuming that FileAccess is a QObject-derived class that has been
+  // registered as a singleton type and provides an invokable method
+  // readFileAsText()
+
+  QJSValue FileAccess::readFileAsText(const QString & filePath) {
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly)) {
+      jsEngine->throwError(file.errorString());
+      return QString();
+    }
+
+    ...
+    return content;
+  }
+
+
+
+It is also possible to catch the thrown error in JavaScript:
+
+
+  // qmlFile.qml
+  function someFunction() {
+    ...
+    var text;
+    try {
+      text = FileAccess.readFileAsText("/path/to/file.txt");
+    } catch (error) {
+      console.warn("In " + error.fileName + ":" + "error.lineNumber" +
+                   ": " + error.message);
+    }
+  }
+
+
+
+If you need a more specific run-time error to describe an exception, you can use the throwError(QJSValue::ErrorType errorType, const QString &message) overload.
+
+This function was introduced in  Qt 5.12.
+
+See also Script Exceptions.
+*/
+func (this *QJSEngine) ThrowError(message string) {
+	var tmpArg0 = qtcore.NewQString5(message)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine10throwErrorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtQml/qjsengine.h:119
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void throwError(QJSValue::ErrorType, const QString &)
+
+/*
+Throws a run-time error (exception) with the given message.
+
+This method is the C++ counterpart of a throw() expression in JavaScript. It enables C++ code to report run-time errors to QJSEngine. Therefore it should only be called from C++ code that was invoked by a JavaScript function through QJSEngine.
+
+When returning from C++, the engine will interrupt the normal flow of execution and call the the next pre-registered exception handler with an error object that contains the given message. The error object will point to the location of the top-most context on the JavaScript caller stack; specifically, it will have properties lineNumber, fileName and stack. These properties are described in Script Exceptions.
+
+In the following example a C++ method in FileAccess.cpp throws an error in qmlFile.qml at the position where readFileAsText() is called:
+
+
+  // qmlFile.qml
+  function someFunction() {
+    ...
+    var text = FileAccess.readFileAsText("/path/to/file.txt");
+  }
+
+
+
+
+  // FileAccess.cpp
+  // Assuming that FileAccess is a QObject-derived class that has been
+  // registered as a singleton type and provides an invokable method
+  // readFileAsText()
+
+  QJSValue FileAccess::readFileAsText(const QString & filePath) {
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly)) {
+      jsEngine->throwError(file.errorString());
+      return QString();
+    }
+
+    ...
+    return content;
+  }
+
+
+
+It is also possible to catch the thrown error in JavaScript:
+
+
+  // qmlFile.qml
+  function someFunction() {
+    ...
+    var text;
+    try {
+      text = FileAccess.readFileAsText("/path/to/file.txt");
+    } catch (error) {
+      console.warn("In " + error.fileName + ":" + "error.lineNumber" +
+                   ": " + error.message);
+    }
+  }
+
+
+
+If you need a more specific run-time error to describe an exception, you can use the throwError(QJSValue::ErrorType errorType, const QString &message) overload.
+
+This function was introduced in  Qt 5.12.
+
+See also Script Exceptions.
+*/
+func (this *QJSEngine) ThrowError1(errorType int, message string) {
+	var tmpArg1 = qtcore.NewQString5(message)
+	var convArg1 = tmpArg1.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine10throwErrorEN8QJSValue9ErrorTypeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), errorType, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtQml/qjsengine.h:119
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void throwError(QJSValue::ErrorType, const QString &)
+
+/*
+Throws a run-time error (exception) with the given message.
+
+This method is the C++ counterpart of a throw() expression in JavaScript. It enables C++ code to report run-time errors to QJSEngine. Therefore it should only be called from C++ code that was invoked by a JavaScript function through QJSEngine.
+
+When returning from C++, the engine will interrupt the normal flow of execution and call the the next pre-registered exception handler with an error object that contains the given message. The error object will point to the location of the top-most context on the JavaScript caller stack; specifically, it will have properties lineNumber, fileName and stack. These properties are described in Script Exceptions.
+
+In the following example a C++ method in FileAccess.cpp throws an error in qmlFile.qml at the position where readFileAsText() is called:
+
+
+  // qmlFile.qml
+  function someFunction() {
+    ...
+    var text = FileAccess.readFileAsText("/path/to/file.txt");
+  }
+
+
+
+
+  // FileAccess.cpp
+  // Assuming that FileAccess is a QObject-derived class that has been
+  // registered as a singleton type and provides an invokable method
+  // readFileAsText()
+
+  QJSValue FileAccess::readFileAsText(const QString & filePath) {
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly)) {
+      jsEngine->throwError(file.errorString());
+      return QString();
+    }
+
+    ...
+    return content;
+  }
+
+
+
+It is also possible to catch the thrown error in JavaScript:
+
+
+  // qmlFile.qml
+  function someFunction() {
+    ...
+    var text;
+    try {
+      text = FileAccess.readFileAsText("/path/to/file.txt");
+    } catch (error) {
+      console.warn("In " + error.fileName + ":" + "error.lineNumber" +
+                   ": " + error.message);
+    }
+  }
+
+
+
+If you need a more specific run-time error to describe an exception, you can use the throwError(QJSValue::ErrorType errorType, const QString &message) overload.
+
+This function was introduced in  Qt 5.12.
+
+See also Script Exceptions.
+*/
+func (this *QJSEngine) ThrowError1p(errorType int) {
+	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
+	var convArg1 = qtcore.NewQString()
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine10throwErrorEN8QJSValue9ErrorTypeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), errorType, convArg1)
+	qtrt.ErrPrint(err, rv)
 }
 
 /*

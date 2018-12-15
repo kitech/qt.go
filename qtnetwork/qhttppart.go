@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qhttpmultipart.h
@@ -65,7 +67,7 @@ func (*QHttpPart) NewFromPointer(cthis unsafe.Pointer) *QHttpPart {
 	return NewQHttpPartFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:58
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpPart()
@@ -84,7 +86,7 @@ func NewQHttpPart() *QHttpPart {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:60
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QHttpPart()
@@ -99,7 +101,7 @@ func DeleteQHttpPart(this *QHttpPart) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:62
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:64
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QHttpPart & operator=(QHttpPart &&)
@@ -115,7 +117,7 @@ func (this *QHttpPart) Operator_equal(other unsafe.Pointer /*333*/) *QHttpPart {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:64
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:66
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QHttpPart & operator=(const QHttpPart &)
@@ -135,7 +137,7 @@ func (this *QHttpPart) Operator_equal1(other QHttpPart_ITF) *QHttpPart {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:66
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:68
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QHttpPart &)
@@ -152,7 +154,7 @@ func (this *QHttpPart) Swap(other QHttpPart_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:68
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QHttpPart &) const
@@ -170,7 +172,7 @@ func (this *QHttpPart) Operator_equal_equal(other QHttpPart_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:69
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:71
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QHttpPart &) const
@@ -188,7 +190,7 @@ func (this *QHttpPart) Operator_not_equal(other QHttpPart_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:72
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
@@ -205,7 +207,7 @@ func (this *QHttpPart) SetHeader(header int, value qtcore.QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:73
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRawHeader(const QByteArray &, const QByteArray &)
@@ -226,7 +228,7 @@ func (this *QHttpPart) SetRawHeader(headerName qtcore.QByteArray_ITF, headerValu
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:75
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBody(const QByteArray &)
@@ -243,7 +245,7 @@ func (this *QHttpPart) SetBody(body qtcore.QByteArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:76
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBodyDevice(QIODevice *)

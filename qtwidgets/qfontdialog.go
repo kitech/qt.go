@@ -382,8 +382,6 @@ func (this *QFontDialog) Options() int {
 // [-2] void open(QObject *, const char *)
 
 /*
-This is an overloaded function.
-
 Opens the dialog and connects its fontSelected() signal to the slot specified by receiver and member.
 
 The signal will be disconnected from the slot when the dialog is closed.
@@ -407,7 +405,7 @@ func (this *QFontDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, mem
 // [-2] void setVisible(bool)
 
 /*
-Reimplemented from QWidget::setVisible().
+Reimplemented from QDialog::setVisible().
 */
 func (this *QFontDialog) SetVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFontDialog10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)

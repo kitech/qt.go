@@ -154,7 +154,7 @@ func (this *QCameraLocksControl) Unlock(locks int) {
 // [-2] void lockStatusChanged(QCamera::LockType, QCamera::LockStatus, QCamera::LockChangeReason)
 
 /*
-Signals the lock status was changed with a specified reason.
+Signals the lock type status was changed with the specified reason.
 */
 func (this *QCameraLocksControl) LockStatusChanged(type_ int, status int, reason int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraLocksControl17lockStatusChangedEN7QCamera8LockTypeENS0_10LockStatusENS0_16LockChangeReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, status, reason)

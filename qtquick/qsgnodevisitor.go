@@ -118,7 +118,7 @@ func (*QSGNodeVisitor) NewFromPointer(cthis unsafe.Pointer) *QSGNodeVisitor {
 	return NewQSGNodeVisitorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:337
+// /usr/include/qt/QtQuick/qsgnode.h:332
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGNodeVisitor()
@@ -133,7 +133,7 @@ func DeleteQSGNodeVisitor(this *QSGNodeVisitor) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:340
+// /usr/include/qt/QtQuick/qsgnode.h:335
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterTransformNode(QSGTransformNode *)
@@ -150,7 +150,7 @@ func (this *QSGNodeVisitor) EnterTransformNode(arg0 QSGTransformNode_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:341
+// /usr/include/qt/QtQuick/qsgnode.h:336
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveTransformNode(QSGTransformNode *)
@@ -167,7 +167,7 @@ func (this *QSGNodeVisitor) LeaveTransformNode(arg0 QSGTransformNode_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:342
+// /usr/include/qt/QtQuick/qsgnode.h:337
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterClipNode(QSGClipNode *)
@@ -184,7 +184,7 @@ func (this *QSGNodeVisitor) EnterClipNode(arg0 QSGClipNode_ITF /*777 QSGClipNode
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:343
+// /usr/include/qt/QtQuick/qsgnode.h:338
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveClipNode(QSGClipNode *)
@@ -201,7 +201,7 @@ func (this *QSGNodeVisitor) LeaveClipNode(arg0 QSGClipNode_ITF /*777 QSGClipNode
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:344
+// /usr/include/qt/QtQuick/qsgnode.h:339
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterGeometryNode(QSGGeometryNode *)
@@ -218,7 +218,7 @@ func (this *QSGNodeVisitor) EnterGeometryNode(arg0 QSGGeometryNode_ITF /*777 QSG
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:345
+// /usr/include/qt/QtQuick/qsgnode.h:340
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveGeometryNode(QSGGeometryNode *)
@@ -235,7 +235,7 @@ func (this *QSGNodeVisitor) LeaveGeometryNode(arg0 QSGGeometryNode_ITF /*777 QSG
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:346
+// /usr/include/qt/QtQuick/qsgnode.h:341
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void enterOpacityNode(QSGOpacityNode *)
@@ -252,7 +252,7 @@ func (this *QSGNodeVisitor) EnterOpacityNode(arg0 QSGOpacityNode_ITF /*777 QSGOp
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:347
+// /usr/include/qt/QtQuick/qsgnode.h:342
 // index:0
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void leaveOpacityNode(QSGOpacityNode *)
@@ -269,7 +269,7 @@ func (this *QSGNodeVisitor) LeaveOpacityNode(arg0 QSGOpacityNode_ITF /*777 QSGOp
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:348
+// /usr/include/qt/QtQuick/qsgnode.h:343
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void visitNode(QSGNode *)
@@ -286,7 +286,7 @@ func (this *QSGNodeVisitor) VisitNode(n QSGNode_ITF /*777 QSGNode **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:349
+// /usr/include/qt/QtQuick/qsgnode.h:344
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void visitChildren(QSGNode *)

@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qabstractanimation.h
@@ -77,7 +79,7 @@ func (*QAnimationDriver) NewFromPointer(cthis unsafe.Pointer) *QAnimationDriver 
 	return NewQAnimationDriverFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:135
+// /usr/include/qt/QtCore/qabstractanimation.h:134
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -91,7 +93,7 @@ func (this *QAnimationDriver) MetaObject() *QMetaObject /*777 const QMetaObject 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:139
+// /usr/include/qt/QtCore/qabstractanimation.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAnimationDriver(QObject *)
@@ -114,7 +116,7 @@ func NewQAnimationDriver(parent QObject_ITF /*777 QObject **/) *QAnimationDriver
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:139
+// /usr/include/qt/QtCore/qabstractanimation.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAnimationDriver(QObject *)
@@ -135,7 +137,7 @@ func NewQAnimationDriverp() *QAnimationDriver {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:140
+// /usr/include/qt/QtCore/qabstractanimation.h:139
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAnimationDriver()
@@ -150,7 +152,7 @@ func DeleteQAnimationDriver(this *QAnimationDriver) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:142
+// /usr/include/qt/QtCore/qabstractanimation.h:141
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void advance()
@@ -163,7 +165,7 @@ func (this *QAnimationDriver) Advance() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:144
+// /usr/include/qt/QtCore/qabstractanimation.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void install()
@@ -176,7 +178,7 @@ func (this *QAnimationDriver) Install() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:145
+// /usr/include/qt/QtCore/qabstractanimation.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void uninstall()
@@ -189,7 +191,7 @@ func (this *QAnimationDriver) Uninstall() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:147
+// /usr/include/qt/QtCore/qabstractanimation.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRunning() const
@@ -203,7 +205,7 @@ func (this *QAnimationDriver) IsRunning() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:149
+// /usr/include/qt/QtCore/qabstractanimation.h:148
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 elapsed() const
@@ -217,7 +219,7 @@ func (this *QAnimationDriver) Elapsed() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:152
+// /usr/include/qt/QtCore/qabstractanimation.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStartTime(qint64)
@@ -230,7 +232,7 @@ func (this *QAnimationDriver) SetStartTime(startTime int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:153
+// /usr/include/qt/QtCore/qabstractanimation.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 startTime() const
@@ -244,7 +246,7 @@ func (this *QAnimationDriver) StartTime() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:156
+// /usr/include/qt/QtCore/qabstractanimation.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void started()
@@ -257,7 +259,7 @@ func (this *QAnimationDriver) Started() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:157
+// /usr/include/qt/QtCore/qabstractanimation.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stopped()
@@ -270,7 +272,7 @@ func (this *QAnimationDriver) Stopped() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:161
+// /usr/include/qt/QtCore/qabstractanimation.h:160
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void advanceAnimation(qint64)
@@ -283,7 +285,7 @@ func (this *QAnimationDriver) AdvanceAnimation(timeStep int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:161
+// /usr/include/qt/QtCore/qabstractanimation.h:160
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void advanceAnimation(qint64)
@@ -298,7 +300,7 @@ func (this *QAnimationDriver) AdvanceAnimationp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:162
+// /usr/include/qt/QtCore/qabstractanimation.h:161
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void start()
@@ -317,7 +319,7 @@ func (this *QAnimationDriver) Start() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:163
+// /usr/include/qt/QtCore/qabstractanimation.h:162
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void stop()

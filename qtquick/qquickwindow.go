@@ -136,7 +136,7 @@ func (*QQuickWindow) NewFromPointer(cthis unsafe.Pointer) *QQuickWindow {
 	return NewQQuickWindowFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:71
+// /usr/include/qt/QtQuick/qquickwindow.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -150,7 +150,7 @@ func (this *QQuickWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:109
+// /usr/include/qt/QtQuick/qquickwindow.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWindow(QWindow *)
@@ -173,7 +173,7 @@ func NewQQuickWindow(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickWindow {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:109
+// /usr/include/qt/QtQuick/qquickwindow.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWindow(QWindow *)
@@ -194,7 +194,7 @@ func NewQQuickWindowp() *QQuickWindow {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:110
+// /usr/include/qt/QtQuick/qquickwindow.h:112
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWindow(QQuickRenderControl *)
@@ -217,7 +217,7 @@ func NewQQuickWindow1(renderControl QQuickRenderControl_ITF /*777 QQuickRenderCo
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:112
+// /usr/include/qt/QtQuick/qquickwindow.h:114
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickWindow()
@@ -232,7 +232,7 @@ func DeleteQQuickWindow(this *QQuickWindow) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:114
+// /usr/include/qt/QtQuick/qquickwindow.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * contentItem() const
@@ -246,7 +246,7 @@ func (this *QQuickWindow) ContentItem() *QQuickItem /*777 QQuickItem **/ {
 	return /*==*/ NewQQuickItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:116
+// /usr/include/qt/QtQuick/qquickwindow.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * activeFocusItem() const
@@ -260,7 +260,7 @@ func (this *QQuickWindow) ActiveFocusItem() *QQuickItem /*777 QQuickItem **/ {
 	return /*==*/ NewQQuickItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:117
+// /usr/include/qt/QtQuick/qquickwindow.h:119
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QObject * focusObject() const
@@ -274,7 +274,7 @@ func (this *QQuickWindow) FocusObject() *qtcore.QObject /*777 QObject **/ {
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:119
+// /usr/include/qt/QtQuick/qquickwindow.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * mouseGrabberItem() const
@@ -288,7 +288,7 @@ func (this *QQuickWindow) MouseGrabberItem() *QQuickItem /*777 QQuickItem **/ {
 	return /*==*/ NewQQuickItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:122
+// /usr/include/qt/QtQuick/qquickwindow.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool sendEvent(QQuickItem *, QEvent *)
@@ -310,7 +310,7 @@ func (this *QQuickWindow) SendEvent(arg0 QQuickItem_ITF /*777 QQuickItem **/, ar
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:125
+// /usr/include/qt/QtQuick/qquickwindow.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage grabWindow()
@@ -332,7 +332,7 @@ func (this *QQuickWindow) GrabWindow() *qtgui.QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:130
+// /usr/include/qt/QtQuick/qquickwindow.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRenderTarget(uint, const QSize &)
@@ -357,7 +357,7 @@ func (this *QQuickWindow) SetRenderTarget(fboId uint, size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:131
+// /usr/include/qt/QtQuick/qquickwindow.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint renderTargetId() const
@@ -371,7 +371,7 @@ func (this *QQuickWindow) RenderTargetId() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:132
+// /usr/include/qt/QtQuick/qquickwindow.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize renderTargetSize() const
@@ -387,7 +387,7 @@ func (this *QQuickWindow) RenderTargetSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:134
+// /usr/include/qt/QtQuick/qquickwindow.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetOpenGLState()
@@ -412,7 +412,7 @@ func (this *QQuickWindow) ResetOpenGLState() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:136
+// /usr/include/qt/QtQuick/qquickwindow.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlIncubationController * incubationController() const
@@ -428,7 +428,7 @@ func (this *QQuickWindow) IncubationController() *qtqml.QQmlIncubationController
 	return qtqml.NewQQmlIncubationControllerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:139
+// /usr/include/qt/QtQuick/qquickwindow.h:141
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * accessibleRoot() const
@@ -442,7 +442,7 @@ func (this *QQuickWindow) AccessibleRoot() *qtgui.QAccessibleInterface /*777 QAc
 	return qtgui.NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:143
+// /usr/include/qt/QtQuick/qquickwindow.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromImage(const QImage &) const
@@ -478,7 +478,7 @@ func (this *QQuickWindow) CreateTextureFromImage(image qtgui.QImage_ITF) *QSGTex
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:144
+// /usr/include/qt/QtQuick/qquickwindow.h:146
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromImage(const QImage &, QQuickWindow::CreateTextureOptions) const
@@ -514,7 +514,7 @@ func (this *QQuickWindow) CreateTextureFromImage1(image qtgui.QImage_ITF, option
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:145
+// /usr/include/qt/QtQuick/qquickwindow.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromId(uint, const QSize &, QQuickWindow::CreateTextureOptions) const
@@ -544,7 +544,7 @@ func (this *QQuickWindow) CreateTextureFromId(id uint, size qtcore.QSize_ITF, op
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:145
+// /usr/include/qt/QtQuick/qquickwindow.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromId(uint, const QSize &, QQuickWindow::CreateTextureOptions) const
@@ -576,7 +576,7 @@ func (this *QQuickWindow) CreateTextureFromIdp(id uint, size qtcore.QSize_ITF) *
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:147
+// /usr/include/qt/QtQuick/qquickwindow.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClearBeforeRendering(bool)
@@ -595,7 +595,7 @@ func (this *QQuickWindow) SetClearBeforeRendering(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:148
+// /usr/include/qt/QtQuick/qquickwindow.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool clearBeforeRendering() const
@@ -611,7 +611,7 @@ func (this *QQuickWindow) ClearBeforeRendering() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:150
+// /usr/include/qt/QtQuick/qquickwindow.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColor(const QColor &)
@@ -628,7 +628,7 @@ func (this *QQuickWindow) SetColor(color qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:151
+// /usr/include/qt/QtQuick/qquickwindow.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor color() const
@@ -644,7 +644,7 @@ func (this *QQuickWindow) Color() *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:153
+// /usr/include/qt/QtQuick/qquickwindow.h:155
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool hasDefaultAlphaBuffer()
@@ -667,7 +667,7 @@ func QQuickWindow_HasDefaultAlphaBuffer() bool {
 	return rv
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:154
+// /usr/include/qt/QtQuick/qquickwindow.h:156
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultAlphaBuffer(bool)
@@ -690,7 +690,7 @@ func QQuickWindow_SetDefaultAlphaBuffer(useAlpha bool) {
 	nilthis.SetDefaultAlphaBuffer(useAlpha)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:156
+// /usr/include/qt/QtQuick/qquickwindow.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPersistentOpenGLContext(bool)
@@ -713,7 +713,7 @@ func (this *QQuickWindow) SetPersistentOpenGLContext(persistent bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:157
+// /usr/include/qt/QtQuick/qquickwindow.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isPersistentOpenGLContext() const
@@ -729,7 +729,7 @@ func (this *QQuickWindow) IsPersistentOpenGLContext() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:159
+// /usr/include/qt/QtQuick/qquickwindow.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPersistentSceneGraph(bool)
@@ -750,7 +750,7 @@ func (this *QQuickWindow) SetPersistentSceneGraph(persistent bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:160
+// /usr/include/qt/QtQuick/qquickwindow.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isPersistentSceneGraph() const
@@ -766,7 +766,7 @@ func (this *QQuickWindow) IsPersistentSceneGraph() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:163
+// /usr/include/qt/QtQuick/qquickwindow.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSceneGraphInitialized() const
@@ -780,7 +780,7 @@ func (this *QQuickWindow) IsSceneGraphInitialized() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:165
+// /usr/include/qt/QtQuick/qquickwindow.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scheduleRenderJob(QRunnable *, QQuickWindow::RenderStage)
@@ -813,7 +813,7 @@ func (this *QQuickWindow) ScheduleRenderJob(job qtcore.QRunnable_ITF /*777 QRunn
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:167
+// /usr/include/qt/QtQuick/qquickwindow.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal effectiveDevicePixelRatio() const
@@ -831,7 +831,7 @@ func (this *QQuickWindow) EffectiveDevicePixelRatio() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:169
+// /usr/include/qt/QtQuick/qquickwindow.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGRendererInterface * rendererInterface() const
@@ -853,7 +853,7 @@ func (this *QQuickWindow) RendererInterface() *QSGRendererInterface /*777 QSGRen
 	return /*==*/ NewQSGRendererInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:171
+// /usr/include/qt/QtQuick/qquickwindow.h:173
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setSceneGraphBackend(QSGRendererInterface::GraphicsApi)
@@ -878,7 +878,7 @@ func QQuickWindow_SetSceneGraphBackend(api int) {
 	nilthis.SetSceneGraphBackend(api)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:172
+// /usr/include/qt/QtQuick/qquickwindow.h:174
 // index:1
 // Public static Visibility=Default Availability=Available
 // [-2] void setSceneGraphBackend(const QString &)
@@ -905,7 +905,7 @@ func QQuickWindow_SetSceneGraphBackend1(backend string) {
 	nilthis.SetSceneGraphBackend1(backend)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:173
+// /usr/include/qt/QtQuick/qquickwindow.h:175
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString sceneGraphBackend()
@@ -933,7 +933,7 @@ func QQuickWindow_SceneGraphBackend() string {
 	return rv
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:175
+// /usr/include/qt/QtQuick/qquickwindow.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGRectangleNode * createRectangleNode() const
@@ -953,7 +953,7 @@ func (this *QQuickWindow) CreateRectangleNode() *QSGRectangleNode /*777 QSGRecta
 	return /*==*/ NewQSGRectangleNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:176
+// /usr/include/qt/QtQuick/qquickwindow.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGImageNode * createImageNode() const
@@ -973,7 +973,7 @@ func (this *QQuickWindow) CreateImageNode() *QSGImageNode /*777 QSGImageNode **/
 	return /*==*/ NewQSGImageNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:177
+// /usr/include/qt/QtQuick/qquickwindow.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGNinePatchNode * createNinePatchNode() const
@@ -989,7 +989,7 @@ func (this *QQuickWindow) CreateNinePatchNode() *QSGNinePatchNode /*777 QSGNineP
 	return /*==*/ NewQSGNinePatchNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:179
+// /usr/include/qt/QtQuick/qquickwindow.h:181
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QQuickWindow::TextRenderType textRenderType()
@@ -1012,7 +1012,7 @@ func QQuickWindow_TextRenderType() int {
 	return rv
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:180
+// /usr/include/qt/QtQuick/qquickwindow.h:182
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setTextRenderType(QQuickWindow::TextRenderType)
@@ -1035,7 +1035,7 @@ func QQuickWindow_SetTextRenderType(renderType int) {
 	nilthis.SetTextRenderType(renderType)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:183
+// /usr/include/qt/QtQuick/qquickwindow.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void frameSwapped()
@@ -1050,7 +1050,7 @@ func (this *QQuickWindow) FrameSwapped() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:185
+// /usr/include/qt/QtQuick/qquickwindow.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sceneGraphInitialized()
@@ -1065,7 +1065,7 @@ func (this *QQuickWindow) SceneGraphInitialized() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:186
+// /usr/include/qt/QtQuick/qquickwindow.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sceneGraphInvalidated()
@@ -1084,7 +1084,7 @@ func (this *QQuickWindow) SceneGraphInvalidated() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:187
+// /usr/include/qt/QtQuick/qquickwindow.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void beforeSynchronizing()
@@ -1107,7 +1107,7 @@ func (this *QQuickWindow) BeforeSynchronizing() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:188
+// /usr/include/qt/QtQuick/qquickwindow.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void afterSynchronizing()
@@ -1132,7 +1132,7 @@ func (this *QQuickWindow) AfterSynchronizing() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:189
+// /usr/include/qt/QtQuick/qquickwindow.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void beforeRendering()
@@ -1155,7 +1155,7 @@ func (this *QQuickWindow) BeforeRendering() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:190
+// /usr/include/qt/QtQuick/qquickwindow.h:192
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void afterRendering()
@@ -1178,7 +1178,7 @@ func (this *QQuickWindow) AfterRendering() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:191
+// /usr/include/qt/QtQuick/qquickwindow.h:193
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void afterAnimating()
@@ -1195,7 +1195,7 @@ func (this *QQuickWindow) AfterAnimating() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:192
+// /usr/include/qt/QtQuick/qquickwindow.h:194
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sceneGraphAboutToStop()
@@ -1218,7 +1218,7 @@ func (this *QQuickWindow) SceneGraphAboutToStop() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:195
+// /usr/include/qt/QtQuick/qquickwindow.h:197
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void colorChanged(const QColor &)
@@ -1235,7 +1235,7 @@ func (this *QQuickWindow) ColorChanged(arg0 qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:196
+// /usr/include/qt/QtQuick/qquickwindow.h:198
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activeFocusItemChanged()
@@ -1248,7 +1248,7 @@ func (this *QQuickWindow) ActiveFocusItemChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:197
+// /usr/include/qt/QtQuick/qquickwindow.h:199
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sceneGraphError(QQuickWindow::SceneGraphError, const QString &)
@@ -1269,7 +1269,7 @@ func (this *QQuickWindow) SceneGraphError(error int, message string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:201
+// /usr/include/qt/QtQuick/qquickwindow.h:203
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update()
@@ -1284,7 +1284,7 @@ func (this *QQuickWindow) Update() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:202
+// /usr/include/qt/QtQuick/qquickwindow.h:204
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void releaseResources()
@@ -1301,7 +1301,7 @@ func (this *QQuickWindow) ReleaseResources() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:207
+// /usr/include/qt/QtQuick/qquickwindow.h:210
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void exposeEvent(QExposeEvent *)
@@ -1318,7 +1318,7 @@ func (this *QQuickWindow) ExposeEvent(arg0 qtgui.QExposeEvent_ITF /*777 QExposeE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:208
+// /usr/include/qt/QtQuick/qquickwindow.h:211
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -1335,7 +1335,7 @@ func (this *QQuickWindow) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:210
+// /usr/include/qt/QtQuick/qquickwindow.h:213
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -1352,7 +1352,7 @@ func (this *QQuickWindow) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:211
+// /usr/include/qt/QtQuick/qquickwindow.h:214
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
@@ -1369,7 +1369,7 @@ func (this *QQuickWindow) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:214
+// /usr/include/qt/QtQuick/qquickwindow.h:217
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
@@ -1386,7 +1386,7 @@ func (this *QQuickWindow) FocusInEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:215
+// /usr/include/qt/QtQuick/qquickwindow.h:218
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
@@ -1403,7 +1403,7 @@ func (this *QQuickWindow) FocusOutEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:217
+// /usr/include/qt/QtQuick/qquickwindow.h:220
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -1421,7 +1421,7 @@ func (this *QQuickWindow) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:218
+// /usr/include/qt/QtQuick/qquickwindow.h:221
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -1438,7 +1438,7 @@ func (this *QQuickWindow) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:219
+// /usr/include/qt/QtQuick/qquickwindow.h:222
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
@@ -1455,7 +1455,7 @@ func (this *QQuickWindow) KeyReleaseEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:220
+// /usr/include/qt/QtQuick/qquickwindow.h:223
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -1472,7 +1472,7 @@ func (this *QQuickWindow) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMous
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:221
+// /usr/include/qt/QtQuick/qquickwindow.h:224
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -1489,7 +1489,7 @@ func (this *QQuickWindow) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMo
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:222
+// /usr/include/qt/QtQuick/qquickwindow.h:225
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
@@ -1506,7 +1506,7 @@ func (this *QQuickWindow) MouseDoubleClickEvent(arg0 qtgui.QMouseEvent_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:223
+// /usr/include/qt/QtQuick/qquickwindow.h:226
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -1523,7 +1523,7 @@ func (this *QQuickWindow) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouse
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickwindow.h:225
+// /usr/include/qt/QtQuick/qquickwindow.h:228
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)

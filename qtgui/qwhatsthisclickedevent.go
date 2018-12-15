@@ -63,7 +63,7 @@ func (*QWhatsThisClickedEvent) NewFromPointer(cthis unsafe.Pointer) *QWhatsThisC
 	return NewQWhatsThisClickedEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:713
+// /usr/include/qt/QtGui/qevent.h:718
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWhatsThisClickedEvent(const QString &)
@@ -84,7 +84,7 @@ func NewQWhatsThisClickedEvent(href string) *QWhatsThisClickedEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:714
+// /usr/include/qt/QtGui/qevent.h:719
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWhatsThisClickedEvent()
@@ -99,7 +99,7 @@ func DeleteQWhatsThisClickedEvent(this *QWhatsThisClickedEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:716
+// /usr/include/qt/QtGui/qevent.h:721
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString href() const

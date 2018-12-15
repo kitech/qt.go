@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qdnslookup.h
@@ -63,7 +65,7 @@ func (*QDnsLookup) NewFromPointer(cthis unsafe.Pointer) *QDnsLookup {
 	return NewQDnsLookupFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:186
+// /usr/include/qt/QtNetwork/qdnslookup.h:188
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -77,7 +79,7 @@ func (this *QDnsLookup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:221
+// /usr/include/qt/QtNetwork/qdnslookup.h:223
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(QObject *)
@@ -102,7 +104,7 @@ func NewQDnsLookup(parent qtcore.QObject_ITF /*777 QObject **/) *QDnsLookup {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:221
+// /usr/include/qt/QtNetwork/qdnslookup.h:223
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(QObject *)
@@ -125,7 +127,7 @@ func NewQDnsLookupp() *QDnsLookup {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:222
+// /usr/include/qt/QtNetwork/qdnslookup.h:224
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(QDnsLookup::Type, const QString &, QObject *)
@@ -152,7 +154,7 @@ func NewQDnsLookup1(type_ int, name string, parent qtcore.QObject_ITF /*777 QObj
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:222
+// /usr/include/qt/QtNetwork/qdnslookup.h:224
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(QDnsLookup::Type, const QString &, QObject *)
@@ -177,7 +179,7 @@ func NewQDnsLookup1p(type_ int, name string) *QDnsLookup {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:223
+// /usr/include/qt/QtNetwork/qdnslookup.h:225
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
@@ -208,7 +210,7 @@ func NewQDnsLookup2(type_ int, name string, nameserver QHostAddress_ITF, parent 
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:223
+// /usr/include/qt/QtNetwork/qdnslookup.h:225
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsLookup(QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
@@ -237,7 +239,7 @@ func NewQDnsLookup2p(type_ int, name string, nameserver QHostAddress_ITF) *QDnsL
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:224
+// /usr/include/qt/QtNetwork/qdnslookup.h:226
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDnsLookup()
@@ -252,7 +254,7 @@ func DeleteQDnsLookup(this *QDnsLookup) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:226
+// /usr/include/qt/QtNetwork/qdnslookup.h:228
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDnsLookup::Error error() const
@@ -266,7 +268,7 @@ func (this *QDnsLookup) Error() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:227
+// /usr/include/qt/QtNetwork/qdnslookup.h:229
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
@@ -283,7 +285,7 @@ func (this *QDnsLookup) ErrorString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:228
+// /usr/include/qt/QtNetwork/qdnslookup.h:230
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFinished() const
@@ -297,7 +299,7 @@ func (this *QDnsLookup) IsFinished() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:230
+// /usr/include/qt/QtNetwork/qdnslookup.h:232
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
@@ -314,7 +316,7 @@ func (this *QDnsLookup) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:231
+// /usr/include/qt/QtNetwork/qdnslookup.h:233
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setName(const QString &)
@@ -329,7 +331,7 @@ func (this *QDnsLookup) SetName(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:233
+// /usr/include/qt/QtNetwork/qdnslookup.h:235
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDnsLookup::Type type() const
@@ -343,7 +345,7 @@ func (this *QDnsLookup) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:234
+// /usr/include/qt/QtNetwork/qdnslookup.h:236
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setType(QDnsLookup::Type)
@@ -356,7 +358,7 @@ func (this *QDnsLookup) SetType(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:236
+// /usr/include/qt/QtNetwork/qdnslookup.h:238
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QHostAddress nameserver() const
@@ -372,7 +374,7 @@ func (this *QDnsLookup) Nameserver() *QHostAddress /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:237
+// /usr/include/qt/QtNetwork/qdnslookup.h:239
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNameserver(const QHostAddress &)
@@ -389,7 +391,7 @@ func (this *QDnsLookup) SetNameserver(nameserver QHostAddress_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:249
+// /usr/include/qt/QtNetwork/qdnslookup.h:251
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void abort()
@@ -404,7 +406,7 @@ func (this *QDnsLookup) Abort() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:250
+// /usr/include/qt/QtNetwork/qdnslookup.h:252
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void lookup()
@@ -419,7 +421,7 @@ func (this *QDnsLookup) Lookup() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:253
+// /usr/include/qt/QtNetwork/qdnslookup.h:255
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void finished()
@@ -434,7 +436,7 @@ func (this *QDnsLookup) Finished() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:254
+// /usr/include/qt/QtNetwork/qdnslookup.h:256
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void nameChanged(const QString &)
@@ -451,7 +453,7 @@ func (this *QDnsLookup) NameChanged(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:255
+// /usr/include/qt/QtNetwork/qdnslookup.h:257
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void typeChanged(QDnsLookup::Type)
@@ -466,7 +468,7 @@ func (this *QDnsLookup) TypeChanged(type_ int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:256
+// /usr/include/qt/QtNetwork/qdnslookup.h:258
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void nameserverChanged(const QHostAddress &)

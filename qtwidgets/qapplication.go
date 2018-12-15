@@ -319,8 +319,6 @@ func QApplication_SetColorSpec(arg0 int) {
 // [16] QPalette palette(const QWidget *)
 
 /*
-This is an overloaded function.
-
 If a widget is passed, the default palette for the widget's class is returned. This may or may not be the application palette. In most cases there is no special palette for certain types of widgets, but one notable exception is the popup menu under Windows, if the user has defined a special background color for menus in the display settings.
 
 See also setPalette() and QWidget::palette().
@@ -348,8 +346,6 @@ func QApplication_Palette(arg0 QWidget_ITF /*777 const QWidget **/) *qtgui.QPale
 // [16] QPalette palette(const char *)
 
 /*
-This is an overloaded function.
-
 If a widget is passed, the default palette for the widget's class is returned. This may or may not be the application palette. In most cases there is no special palette for certain types of widgets, but one notable exception is the popup menu under Windows, if the user has defined a special background color for menus in the display settings.
 
 See also setPalette() and QWidget::palette().
@@ -1368,8 +1364,8 @@ func QApplication_Exec() int {
 // [1] bool notify(QObject *, QEvent *)
 
 /*
-
- */
+Reimplemented from QGuiApplication::notify().
+*/
 func (this *QApplication) Notify(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -1529,8 +1525,8 @@ func QApplication_AboutQt() {
 // [1] bool event(QEvent *)
 
 /*
-
- */
+Reimplemented from QGuiApplication::event().
+*/
 func (this *QApplication) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QEvent_PTR() != nil {

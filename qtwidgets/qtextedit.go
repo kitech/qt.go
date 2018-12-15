@@ -1021,6 +1021,8 @@ Loads the resource specified by the given type and name.
 
 This function is an extension of QTextDocument::loadResource().
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also QTextDocument::loadResource().
 */
 func (this *QTextEdit) LoadResource(type_ int, name qtcore.QUrl_ITF) *qtcore.QVariant /*123*/ {
@@ -1826,8 +1828,6 @@ func (this *QTextEdit) ZoomInp() {
 // [-2] void zoomOut(int)
 
 /*
-This is an overloaded function.
-
 Zooms out on the text by making the base font size range points smaller and recalculating all font sizes to be the new size. This does not change the size of any images.
 
 See also zoomIn().
@@ -1843,8 +1843,6 @@ func (this *QTextEdit) ZoomOut(range_ int) {
 // [-2] void zoomOut(int)
 
 /*
-This is an overloaded function.
-
 Zooms out on the text by making the base font size range points smaller and recalculating all font sizes to be the new size. This does not change the size of any images.
 
 See also zoomIn().
@@ -2006,7 +2004,7 @@ func (this *QTextEdit) TimerEvent(e qtcore.QTimerEvent_ITF /*777 QTimerEvent **/
 // [-2] void keyPressEvent(QKeyEvent *)
 
 /*
-Reimplemented from QWidget::keyPressEvent().
+Reimplemented from QAbstractScrollArea::keyPressEvent().
 */
 func (this *QTextEdit) KeyPressEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2040,7 +2038,7 @@ func (this *QTextEdit) KeyReleaseEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent **/
 // [-2] void resizeEvent(QResizeEvent *)
 
 /*
-Reimplemented from QWidget::resizeEvent().
+Reimplemented from QAbstractScrollArea::resizeEvent().
 */
 func (this *QTextEdit) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2057,7 +2055,7 @@ func (this *QTextEdit) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEvent *
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QAbstractScrollArea::paintEvent().
 
 This event handler can be reimplemented in a subclass to receive paint events passed in event. It is usually unnecessary to reimplement this function in a subclass of QTextEdit.
 
@@ -2078,7 +2076,7 @@ func (this *QTextEdit) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/)
 // [-2] void mousePressEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mousePressEvent().
+Reimplemented from QAbstractScrollArea::mousePressEvent().
 */
 func (this *QTextEdit) MousePressEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2095,7 +2093,7 @@ func (this *QTextEdit) MousePressEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent
 // [-2] void mouseMoveEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseMoveEvent().
+Reimplemented from QAbstractScrollArea::mouseMoveEvent().
 */
 func (this *QTextEdit) MouseMoveEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2112,7 +2110,7 @@ func (this *QTextEdit) MouseMoveEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent 
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseReleaseEvent().
+Reimplemented from QAbstractScrollArea::mouseReleaseEvent().
 */
 func (this *QTextEdit) MouseReleaseEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2129,7 +2127,7 @@ func (this *QTextEdit) MouseReleaseEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEve
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseDoubleClickEvent().
+Reimplemented from QAbstractScrollArea::mouseDoubleClickEvent().
 */
 func (this *QTextEdit) MouseDoubleClickEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2160,7 +2158,7 @@ func (this *QTextEdit) FocusNextPrevChild(next bool) bool {
 // [-2] void contextMenuEvent(QContextMenuEvent *)
 
 /*
-Reimplemented from QWidget::contextMenuEvent().
+Reimplemented from QAbstractScrollArea::contextMenuEvent().
 
 Shows the standard context menu created with createStandardContextMenu().
 
@@ -2193,7 +2191,7 @@ func (this *QTextEdit) ContextMenuEvent(e qtgui.QContextMenuEvent_ITF /*777 QCon
 // [-2] void dragEnterEvent(QDragEnterEvent *)
 
 /*
-Reimplemented from QWidget::dragEnterEvent().
+Reimplemented from QAbstractScrollArea::dragEnterEvent().
 */
 func (this *QTextEdit) DragEnterEvent(e qtgui.QDragEnterEvent_ITF /*777 QDragEnterEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2210,7 +2208,7 @@ func (this *QTextEdit) DragEnterEvent(e qtgui.QDragEnterEvent_ITF /*777 QDragEnt
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
 
 /*
-Reimplemented from QWidget::dragLeaveEvent().
+Reimplemented from QAbstractScrollArea::dragLeaveEvent().
 */
 func (this *QTextEdit) DragLeaveEvent(e qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2227,7 +2225,7 @@ func (this *QTextEdit) DragLeaveEvent(e qtgui.QDragLeaveEvent_ITF /*777 QDragLea
 // [-2] void dragMoveEvent(QDragMoveEvent *)
 
 /*
-Reimplemented from QWidget::dragMoveEvent().
+Reimplemented from QAbstractScrollArea::dragMoveEvent().
 */
 func (this *QTextEdit) DragMoveEvent(e qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2244,7 +2242,7 @@ func (this *QTextEdit) DragMoveEvent(e qtgui.QDragMoveEvent_ITF /*777 QDragMoveE
 // [-2] void dropEvent(QDropEvent *)
 
 /*
-Reimplemented from QWidget::dropEvent().
+Reimplemented from QAbstractScrollArea::dropEvent().
 */
 func (this *QTextEdit) DropEvent(e qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2312,7 +2310,7 @@ func (this *QTextEdit) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **/)
 // [-2] void changeEvent(QEvent *)
 
 /*
-Reimplemented from QWidget::changeEvent().
+Reimplemented from QFrame::changeEvent().
 */
 func (this *QTextEdit) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2329,7 +2327,7 @@ func (this *QTextEdit) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 // [-2] void wheelEvent(QWheelEvent *)
 
 /*
-Reimplemented from QWidget::wheelEvent().
+Reimplemented from QAbstractScrollArea::wheelEvent().
 */
 func (this *QTextEdit) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer

@@ -342,7 +342,7 @@ func (this *QStackedLayout) SizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSize() const
 
 /*
-Reimplemented from QLayoutItem::minimumSize().
+Reimplemented from QLayout::minimumSize().
 */
 func (this *QStackedLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStackedLayout11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -386,7 +386,7 @@ func (this *QStackedLayout) TakeAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ 
 // [-2] void setGeometry(const QRect &)
 
 /*
-Reimplemented from QLayoutItem::setGeometry().
+Reimplemented from QLayout::setGeometry().
 */
 func (this *QStackedLayout) SetGeometry(rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer

@@ -257,7 +257,7 @@ func (this *QAbstractEventDispatcher) UnregisterSocketNotifier(notifier QSocketN
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:90
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int registerTimer(int, Qt::TimerType, QObject *)
@@ -275,7 +275,7 @@ func (this *QAbstractEventDispatcher) RegisterTimer(interval int, timerType int,
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:91
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:92
 // index:1
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void registerTimer(int, int, Qt::TimerType, QObject *)
@@ -292,7 +292,7 @@ func (this *QAbstractEventDispatcher) RegisterTimer1(timerId int, interval int, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:92
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:93
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool unregisterTimer(int)
@@ -308,7 +308,7 @@ func (this *QAbstractEventDispatcher) UnregisterTimer(timerId int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:93
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:94
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool unregisterTimers(QObject *)
@@ -328,7 +328,7 @@ func (this *QAbstractEventDispatcher) UnregisterTimers(object QObject_ITF /*777 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:96
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:97
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int remainingTime(int)
@@ -344,7 +344,7 @@ func (this *QAbstractEventDispatcher) RemainingTime(timerId int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:103
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:104
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void wakeUp()
@@ -361,7 +361,7 @@ func (this *QAbstractEventDispatcher) WakeUp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:104
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:105
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void interrupt()
@@ -374,7 +374,7 @@ func (this *QAbstractEventDispatcher) Interrupt() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:105
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:106
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void flush()
@@ -387,7 +387,7 @@ func (this *QAbstractEventDispatcher) Flush() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:107
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:108
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void startingUp()
@@ -400,7 +400,7 @@ func (this *QAbstractEventDispatcher) StartingUp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:108
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:109
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void closingDown()
@@ -413,7 +413,7 @@ func (this *QAbstractEventDispatcher) ClosingDown() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:110
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void installNativeEventFilter(QAbstractNativeEventFilter *)
@@ -444,7 +444,7 @@ func (this *QAbstractEventDispatcher) InstallNativeEventFilter(filterObj QAbstra
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:111
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeNativeEventFilter(QAbstractNativeEventFilter *)
@@ -469,7 +469,7 @@ func (this *QAbstractEventDispatcher) RemoveNativeEventFilter(filterObj QAbstrac
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:112
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool filterNativeEvent(const QByteArray &, void *, long *)
@@ -495,7 +495,7 @@ func (this *QAbstractEventDispatcher) FilterNativeEvent(eventType QByteArray_ITF
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:119
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void aboutToBlock()
@@ -510,7 +510,7 @@ func (this *QAbstractEventDispatcher) AboutToBlock() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstracteventdispatcher.h:120
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void awake()

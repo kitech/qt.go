@@ -359,7 +359,7 @@ func (this *QLabel) Pixmap() *qtgui.QPixmap /*777 const QPixmap **/ {
 // [8] const QPicture * picture() const
 
 /*
-Returns the label's picture or 0 if the label doesn't have a picture.
+Returns the label's picture or nullptr if the label doesn't have a picture.
 
 See also setPicture().
 */
@@ -375,7 +375,7 @@ func (this *QLabel) Picture() *qtgui.QPicture /*777 const QPicture **/ {
 // [8] QMovie * movie() const
 
 /*
-Returns a pointer to the label's movie, or 0 if no movie has been set.
+Returns a pointer to the label's movie, or nullptr if no movie has been set.
 
 See also setMovie().
 */
@@ -553,7 +553,7 @@ func (this *QLabel) SetScaledContents(arg0 bool) {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QFrame::sizeHint().
 */
 func (this *QLabel) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLabel8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -606,7 +606,7 @@ In a dialog, you might create two data entry widgets and a label for each, and s
 
 With the code above, the focus jumps to the Name field when the user presses Alt+N, and to the Phone field when the user presses Alt+P.
 
-To unset a previously set buddy, call this function with buddy set to 0.
+To unset a previously set buddy, call this function with buddy set to nullptr.
 
 See also buddy(), setText(), QShortcut, and setAlignment().
 */
@@ -625,7 +625,7 @@ func (this *QLabel) SetBuddy(arg0 QWidget_ITF /*777 QWidget **/) {
 // [8] QWidget * buddy() const
 
 /*
-Returns this label's buddy, or 0 if no buddy is currently set.
+Returns this label's buddy, or nullptr if no buddy is currently set.
 
 See also setBuddy().
 */
@@ -938,7 +938,7 @@ func (this *QLabel) LinkHovered(link string) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QFrame::event().
 */
 func (this *QLabel) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -973,7 +973,7 @@ func (this *QLabel) KeyPressEvent(ev qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QFrame::paintEvent().
 */
 func (this *QLabel) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -990,7 +990,7 @@ func (this *QLabel) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/)
 // [-2] void changeEvent(QEvent *)
 
 /*
-Reimplemented from QWidget::changeEvent().
+Reimplemented from QFrame::changeEvent().
 */
 func (this *QLabel) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer

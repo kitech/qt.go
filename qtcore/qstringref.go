@@ -64,7 +64,7 @@ func (*QStringRef) NewFromPointer(cthis unsafe.Pointer) *QStringRef {
 	return NewQStringRefFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1420
+// /usr/include/qt/QtCore/qstring.h:1436
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStringRef()
@@ -83,7 +83,7 @@ func NewQStringRef() *QStringRef {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstring.h:1421
+// /usr/include/qt/QtCore/qstring.h:1437
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStringRef(const QString *, int, int)
@@ -104,7 +104,7 @@ func NewQStringRef1(string string, position int, size int) *QStringRef {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstring.h:1422
+// /usr/include/qt/QtCore/qstring.h:1438
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStringRef(const QString *)
@@ -125,7 +125,7 @@ func NewQStringRef2(string string) *QStringRef {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstring.h:1431
+// /usr/include/qt/QtCore/qstring.h:1447
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef & operator=(QStringRef &&)
@@ -141,7 +141,7 @@ func (this *QStringRef) Operator_equal(other unsafe.Pointer /*333*/) *QStringRef
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1433
+// /usr/include/qt/QtCore/qstring.h:1449
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef & operator=(const QStringRef &)
@@ -161,7 +161,7 @@ func (this *QStringRef) Operator_equal1(other QStringRef_ITF) *QStringRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1505
+// /usr/include/qt/QtCore/qstring.h:1521
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef & operator=(const QString *)
@@ -179,7 +179,7 @@ func (this *QStringRef) Operator_equal2(string string) *QStringRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1438
+// /usr/include/qt/QtCore/qstring.h:1454
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QStringRef()
@@ -194,7 +194,7 @@ func DeleteQStringRef(this *QStringRef) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1441
+// /usr/include/qt/QtCore/qstring.h:1457
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QString * string() const
@@ -211,7 +211,7 @@ func (this *QStringRef) String() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1442
+// /usr/include/qt/QtCore/qstring.h:1458
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int position() const
@@ -225,7 +225,7 @@ func (this *QStringRef) Position() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1443
+// /usr/include/qt/QtCore/qstring.h:1459
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int size() const
@@ -253,7 +253,7 @@ func (this *QStringRef) Size() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1444
+// /usr/include/qt/QtCore/qstring.h:1460
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int count() const
@@ -271,7 +271,7 @@ func (this *QStringRef) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1461
+// /usr/include/qt/QtCore/qstring.h:1477
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int count(const QString &, Qt::CaseSensitivity) const
@@ -291,7 +291,7 @@ func (this *QStringRef) Count1(s string, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1461
+// /usr/include/qt/QtCore/qstring.h:1477
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int count(const QString &, Qt::CaseSensitivity) const
@@ -313,7 +313,7 @@ func (this *QStringRef) Count1p(s string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1462
+// /usr/include/qt/QtCore/qstring.h:1478
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int count(QChar, Qt::CaseSensitivity) const
@@ -335,7 +335,7 @@ func (this *QStringRef) Count2(c QChar_ITF /*123*/, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1462
+// /usr/include/qt/QtCore/qstring.h:1478
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int count(QChar, Qt::CaseSensitivity) const
@@ -359,7 +359,7 @@ func (this *QStringRef) Count2p(c QChar_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1463
+// /usr/include/qt/QtCore/qstring.h:1479
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int count(const QStringRef &, Qt::CaseSensitivity) const
@@ -381,7 +381,7 @@ func (this *QStringRef) Count3(s QStringRef_ITF, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1463
+// /usr/include/qt/QtCore/qstring.h:1479
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int count(const QStringRef &, Qt::CaseSensitivity) const
@@ -405,7 +405,7 @@ func (this *QStringRef) Count3p(s QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1445
+// /usr/include/qt/QtCore/qstring.h:1461
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int length() const
@@ -421,7 +421,7 @@ func (this *QStringRef) Length() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1447
+// /usr/include/qt/QtCore/qstring.h:1463
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -455,7 +455,7 @@ func (this *QStringRef) IndexOf(str string, from int, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1447
+// /usr/include/qt/QtCore/qstring.h:1463
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -493,7 +493,7 @@ func (this *QStringRef) IndexOfp(str string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1447
+// /usr/include/qt/QtCore/qstring.h:1463
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -529,7 +529,7 @@ func (this *QStringRef) IndexOfp1(str string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1448
+// /usr/include/qt/QtCore/qstring.h:1464
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QChar, int, Qt::CaseSensitivity) const
@@ -565,7 +565,7 @@ func (this *QStringRef) IndexOf1(ch QChar_ITF /*123*/, from int, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1448
+// /usr/include/qt/QtCore/qstring.h:1464
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QChar, int, Qt::CaseSensitivity) const
@@ -605,7 +605,7 @@ func (this *QStringRef) IndexOf1p(ch QChar_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1448
+// /usr/include/qt/QtCore/qstring.h:1464
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QChar, int, Qt::CaseSensitivity) const
@@ -643,7 +643,7 @@ func (this *QStringRef) IndexOf1p1(ch QChar_ITF /*123*/, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1449
+// /usr/include/qt/QtCore/qstring.h:1465
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -679,7 +679,7 @@ func (this *QStringRef) IndexOf2(str QLatin1String_ITF /*123*/, from int, cs int
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1449
+// /usr/include/qt/QtCore/qstring.h:1465
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -719,7 +719,7 @@ func (this *QStringRef) IndexOf2p(str QLatin1String_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1449
+// /usr/include/qt/QtCore/qstring.h:1465
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -757,7 +757,7 @@ func (this *QStringRef) IndexOf2p1(str QLatin1String_ITF /*123*/, from int) int 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1450
+// /usr/include/qt/QtCore/qstring.h:1466
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -793,7 +793,7 @@ func (this *QStringRef) IndexOf3(str QStringRef_ITF, from int, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1450
+// /usr/include/qt/QtCore/qstring.h:1466
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -833,7 +833,7 @@ func (this *QStringRef) IndexOf3p(str QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1450
+// /usr/include/qt/QtCore/qstring.h:1466
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -871,7 +871,7 @@ func (this *QStringRef) IndexOf3p1(str QStringRef_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1451
+// /usr/include/qt/QtCore/qstring.h:1467
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -903,7 +903,7 @@ func (this *QStringRef) LastIndexOf(str string, from int, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1451
+// /usr/include/qt/QtCore/qstring.h:1467
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -939,7 +939,7 @@ func (this *QStringRef) LastIndexOfp(str string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1451
+// /usr/include/qt/QtCore/qstring.h:1467
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -973,7 +973,7 @@ func (this *QStringRef) LastIndexOfp1(str string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1452
+// /usr/include/qt/QtCore/qstring.h:1468
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QChar, int, Qt::CaseSensitivity) const
@@ -1007,7 +1007,7 @@ func (this *QStringRef) LastIndexOf1(ch QChar_ITF /*123*/, from int, cs int) int
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1452
+// /usr/include/qt/QtCore/qstring.h:1468
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QChar, int, Qt::CaseSensitivity) const
@@ -1045,7 +1045,7 @@ func (this *QStringRef) LastIndexOf1p(ch QChar_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1452
+// /usr/include/qt/QtCore/qstring.h:1468
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QChar, int, Qt::CaseSensitivity) const
@@ -1081,7 +1081,7 @@ func (this *QStringRef) LastIndexOf1p1(ch QChar_ITF /*123*/, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1453
+// /usr/include/qt/QtCore/qstring.h:1469
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -1115,7 +1115,7 @@ func (this *QStringRef) LastIndexOf2(str QLatin1String_ITF /*123*/, from int, cs
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1453
+// /usr/include/qt/QtCore/qstring.h:1469
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -1153,7 +1153,7 @@ func (this *QStringRef) LastIndexOf2p(str QLatin1String_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1453
+// /usr/include/qt/QtCore/qstring.h:1469
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -1189,7 +1189,7 @@ func (this *QStringRef) LastIndexOf2p1(str QLatin1String_ITF /*123*/, from int) 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1454
+// /usr/include/qt/QtCore/qstring.h:1470
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -1223,7 +1223,7 @@ func (this *QStringRef) LastIndexOf3(str QStringRef_ITF, from int, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1454
+// /usr/include/qt/QtCore/qstring.h:1470
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -1261,7 +1261,7 @@ func (this *QStringRef) LastIndexOf3p(str QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1454
+// /usr/include/qt/QtCore/qstring.h:1470
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -1297,7 +1297,7 @@ func (this *QStringRef) LastIndexOf3p1(str QStringRef_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1456
+// /usr/include/qt/QtCore/qstring.h:1472
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QString &, Qt::CaseSensitivity) const
@@ -1325,7 +1325,7 @@ func (this *QStringRef) Contains(str string, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1456
+// /usr/include/qt/QtCore/qstring.h:1472
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QString &, Qt::CaseSensitivity) const
@@ -1355,7 +1355,7 @@ func (this *QStringRef) Containsp(str string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1457
+// /usr/include/qt/QtCore/qstring.h:1473
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QChar, Qt::CaseSensitivity) const
@@ -1385,7 +1385,7 @@ func (this *QStringRef) Contains1(ch QChar_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1457
+// /usr/include/qt/QtCore/qstring.h:1473
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QChar, Qt::CaseSensitivity) const
@@ -1417,7 +1417,7 @@ func (this *QStringRef) Contains1p(ch QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1458
+// /usr/include/qt/QtCore/qstring.h:1474
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QLatin1String, Qt::CaseSensitivity) const
@@ -1447,7 +1447,7 @@ func (this *QStringRef) Contains2(str QLatin1String_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1458
+// /usr/include/qt/QtCore/qstring.h:1474
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QLatin1String, Qt::CaseSensitivity) const
@@ -1479,7 +1479,7 @@ func (this *QStringRef) Contains2p(str QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1459
+// /usr/include/qt/QtCore/qstring.h:1475
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QStringRef &, Qt::CaseSensitivity) const
@@ -1509,7 +1509,7 @@ func (this *QStringRef) Contains3(str QStringRef_ITF, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1459
+// /usr/include/qt/QtCore/qstring.h:1475
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QStringRef &, Qt::CaseSensitivity) const
@@ -1541,7 +1541,7 @@ func (this *QStringRef) Contains3p(str QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1470
+// /usr/include/qt/QtCore/qstring.h:1486
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef left(int) const
@@ -1567,7 +1567,7 @@ func (this *QStringRef) Left(n int) *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1471
+// /usr/include/qt/QtCore/qstring.h:1487
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef right(int) const
@@ -1593,7 +1593,7 @@ func (this *QStringRef) Right(n int) *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1472
+// /usr/include/qt/QtCore/qstring.h:1488
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef mid(int, int) const
@@ -1622,7 +1622,7 @@ func (this *QStringRef) Mid(pos int, n int) *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1472
+// /usr/include/qt/QtCore/qstring.h:1488
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef mid(int, int) const
@@ -1653,7 +1653,7 @@ func (this *QStringRef) Midp(pos int) *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1473
+// /usr/include/qt/QtCore/qstring.h:1489
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef chopped(int) const
@@ -1675,7 +1675,7 @@ func (this *QStringRef) Chopped(n int) *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1476
+// /usr/include/qt/QtCore/qstring.h:1492
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void truncate(int)
@@ -1703,7 +1703,7 @@ func (this *QStringRef) Truncate(pos int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1477
+// /usr/include/qt/QtCore/qstring.h:1493
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void chop(int)
@@ -1731,7 +1731,7 @@ func (this *QStringRef) Chop(n int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1485
+// /usr/include/qt/QtCore/qstring.h:1501
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRightToLeft() const
@@ -1747,7 +1747,7 @@ func (this *QStringRef) IsRightToLeft() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1487
+// /usr/include/qt/QtCore/qstring.h:1503
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, Qt::CaseSensitivity) const
@@ -1776,7 +1776,7 @@ func (this *QStringRef) StartsWith(s QStringView_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1487
+// /usr/include/qt/QtCore/qstring.h:1503
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, Qt::CaseSensitivity) const
@@ -1807,7 +1807,7 @@ func (this *QStringRef) StartsWithp(s QStringView_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1489
+// /usr/include/qt/QtCore/qstring.h:1505
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity) const
@@ -1836,7 +1836,7 @@ func (this *QStringRef) StartsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1489
+// /usr/include/qt/QtCore/qstring.h:1505
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity) const
@@ -1867,7 +1867,7 @@ func (this *QStringRef) StartsWith1p(s QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1490
+// /usr/include/qt/QtCore/qstring.h:1506
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QChar, Qt::CaseSensitivity) const
@@ -1896,7 +1896,7 @@ func (this *QStringRef) StartsWith2(c QChar_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1490
+// /usr/include/qt/QtCore/qstring.h:1506
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QChar, Qt::CaseSensitivity) const
@@ -1927,7 +1927,7 @@ func (this *QStringRef) StartsWith2p(c QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1492
+// /usr/include/qt/QtCore/qstring.h:1508
 // index:3
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QString &, Qt::CaseSensitivity) const
@@ -1954,7 +1954,7 @@ func (this *QStringRef) StartsWith3(s string, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1492
+// /usr/include/qt/QtCore/qstring.h:1508
 // index:3
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QString &, Qt::CaseSensitivity) const
@@ -1983,7 +1983,7 @@ func (this *QStringRef) StartsWith3p(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1493
+// /usr/include/qt/QtCore/qstring.h:1509
 // index:4
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QStringRef &, Qt::CaseSensitivity) const
@@ -2012,7 +2012,7 @@ func (this *QStringRef) StartsWith4(c QStringRef_ITF, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1493
+// /usr/include/qt/QtCore/qstring.h:1509
 // index:4
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QStringRef &, Qt::CaseSensitivity) const
@@ -2043,7 +2043,7 @@ func (this *QStringRef) StartsWith4p(c QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1496
+// /usr/include/qt/QtCore/qstring.h:1512
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, Qt::CaseSensitivity) const
@@ -2072,7 +2072,7 @@ func (this *QStringRef) EndsWith(s QStringView_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1496
+// /usr/include/qt/QtCore/qstring.h:1512
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, Qt::CaseSensitivity) const
@@ -2103,7 +2103,7 @@ func (this *QStringRef) EndsWithp(s QStringView_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1498
+// /usr/include/qt/QtCore/qstring.h:1514
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity) const
@@ -2132,7 +2132,7 @@ func (this *QStringRef) EndsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1498
+// /usr/include/qt/QtCore/qstring.h:1514
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity) const
@@ -2163,7 +2163,7 @@ func (this *QStringRef) EndsWith1p(s QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1499
+// /usr/include/qt/QtCore/qstring.h:1515
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QChar, Qt::CaseSensitivity) const
@@ -2192,7 +2192,7 @@ func (this *QStringRef) EndsWith2(c QChar_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1499
+// /usr/include/qt/QtCore/qstring.h:1515
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QChar, Qt::CaseSensitivity) const
@@ -2223,7 +2223,7 @@ func (this *QStringRef) EndsWith2p(c QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1501
+// /usr/include/qt/QtCore/qstring.h:1517
 // index:3
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QString &, Qt::CaseSensitivity) const
@@ -2250,7 +2250,7 @@ func (this *QStringRef) EndsWith3(s string, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1501
+// /usr/include/qt/QtCore/qstring.h:1517
 // index:3
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QString &, Qt::CaseSensitivity) const
@@ -2279,7 +2279,7 @@ func (this *QStringRef) EndsWith3p(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1502
+// /usr/include/qt/QtCore/qstring.h:1518
 // index:4
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QStringRef &, Qt::CaseSensitivity) const
@@ -2308,7 +2308,7 @@ func (this *QStringRef) EndsWith4(c QStringRef_ITF, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1502
+// /usr/include/qt/QtCore/qstring.h:1518
 // index:4
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QStringRef &, Qt::CaseSensitivity) const
@@ -2339,7 +2339,7 @@ func (this *QStringRef) EndsWith4p(c QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1507
+// /usr/include/qt/QtCore/qstring.h:1523
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QChar * unicode() const
@@ -2357,7 +2357,7 @@ func (this *QStringRef) Unicode() *QChar /*777 const QChar **/ {
 	return /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qstring.h:1513
+// /usr/include/qt/QtCore/qstring.h:1529
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QChar * data() const
@@ -2389,7 +2389,7 @@ func (this *QStringRef) Data() *QChar /*777 const QChar **/ {
 	return /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qstring.h:1514
+// /usr/include/qt/QtCore/qstring.h:1530
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QChar * constData() const
@@ -2409,7 +2409,7 @@ func (this *QStringRef) ConstData() *QChar /*777 const QChar **/ {
 	return /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qstring.h:1516
+// /usr/include/qt/QtCore/qstring.h:1532
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringRef::const_iterator begin() const
@@ -2426,7 +2426,7 @@ func (this *QStringRef) Begin() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1517
+// /usr/include/qt/QtCore/qstring.h:1533
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringRef::const_iterator cbegin() const
@@ -2445,7 +2445,7 @@ func (this *QStringRef) Cbegin() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1518
+// /usr/include/qt/QtCore/qstring.h:1534
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringRef::const_iterator constBegin() const
@@ -2462,7 +2462,7 @@ func (this *QStringRef) ConstBegin() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1519
+// /usr/include/qt/QtCore/qstring.h:1535
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringRef::const_iterator end() const
@@ -2479,7 +2479,7 @@ func (this *QStringRef) End() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1520
+// /usr/include/qt/QtCore/qstring.h:1536
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringRef::const_iterator cend() const
@@ -2498,7 +2498,7 @@ func (this *QStringRef) Cend() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1521
+// /usr/include/qt/QtCore/qstring.h:1537
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringRef::const_iterator constEnd() const
@@ -2515,7 +2515,7 @@ func (this *QStringRef) ConstEnd() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1531
+// /usr/include/qt/QtCore/qstring.h:1547
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toLatin1() const
@@ -2525,7 +2525,7 @@ Returns a Latin-1 representation of the string as a QByteArray.
 
 The returned byte array is undefined if the string contains non-Latin1 characters. Those characters may be suppressed or replaced with a question mark.
 
-See also fromLatin1(), toUtf8(), toLocal8Bit(), QTextCodec, and qConvertToLatin1().
+See also fromLatin1(), toUtf8(), toLocal8Bit(), and QTextCodec.
 */
 func (this *QStringRef) ToLatin1() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -2535,7 +2535,7 @@ func (this *QStringRef) ToLatin1() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1532
+// /usr/include/qt/QtCore/qstring.h:1548
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toUtf8() const
@@ -2545,7 +2545,7 @@ Returns a UTF-8 representation of the string as a QByteArray.
 
 UTF-8 is a Unicode codec and can represent all characters in a Unicode string like QString.
 
-See also fromUtf8(), toLatin1(), toLocal8Bit(), QTextCodec, and qConvertToUtf8().
+See also fromUtf8(), toLatin1(), toLocal8Bit(), and QTextCodec.
 */
 func (this *QStringRef) ToUtf8() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef6toUtf8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -2555,7 +2555,7 @@ func (this *QStringRef) ToUtf8() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1533
+// /usr/include/qt/QtCore/qstring.h:1549
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toLocal8Bit() const
@@ -2577,7 +2577,7 @@ func (this *QStringRef) ToLocal8Bit() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1536
+// /usr/include/qt/QtCore/qstring.h:1552
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void clear()
@@ -2592,7 +2592,7 @@ func (this *QStringRef) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1537
+// /usr/include/qt/QtCore/qstring.h:1553
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const
@@ -2609,7 +2609,7 @@ func (this *QStringRef) ToString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1538
+// /usr/include/qt/QtCore/qstring.h:1554
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isEmpty() const
@@ -2635,7 +2635,7 @@ func (this *QStringRef) IsEmpty() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1539
+// /usr/include/qt/QtCore/qstring.h:1555
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -2662,7 +2662,7 @@ func (this *QStringRef) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1541
+// /usr/include/qt/QtCore/qstring.h:1557
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef appendTo(QString *) const
@@ -2680,7 +2680,7 @@ func (this *QStringRef) AppendTo(string string) *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1543
+// /usr/include/qt/QtCore/qstring.h:1559
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] const QChar at(int) const
@@ -2700,7 +2700,7 @@ func (this *QStringRef) At(i int) *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1545
+// /usr/include/qt/QtCore/qstring.h:1561
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar operator[](int) const
@@ -2716,7 +2716,7 @@ func (this *QStringRef) Operator_get_index(i int) *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1546
+// /usr/include/qt/QtCore/qstring.h:1562
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar front() const
@@ -2740,7 +2740,7 @@ func (this *QStringRef) Front() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1547
+// /usr/include/qt/QtCore/qstring.h:1563
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar back() const
@@ -2764,7 +2764,7 @@ func (this *QStringRef) Back() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1551
+// /usr/include/qt/QtCore/qstring.h:1567
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const char *) const
@@ -2780,7 +2780,7 @@ func (this *QStringRef) Operator_equal_equal(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1552
+// /usr/include/qt/QtCore/qstring.h:1568
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const char *) const
@@ -2796,7 +2796,7 @@ func (this *QStringRef) Operator_not_equal(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1553
+// /usr/include/qt/QtCore/qstring.h:1569
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const char *) const
@@ -2812,7 +2812,7 @@ func (this *QStringRef) Operator_less_than(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1554
+// /usr/include/qt/QtCore/qstring.h:1570
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(const char *) const
@@ -2828,7 +2828,7 @@ func (this *QStringRef) Operator_less_than_equal(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1555
+// /usr/include/qt/QtCore/qstring.h:1571
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(const char *) const
@@ -2844,7 +2844,7 @@ func (this *QStringRef) Operator_greater_than(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1556
+// /usr/include/qt/QtCore/qstring.h:1572
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(const char *) const
@@ -2860,7 +2860,7 @@ func (this *QStringRef) Operator_greater_than_equal(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1559
+// /usr/include/qt/QtCore/qstring.h:1575
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QString &, Qt::CaseSensitivity) const
@@ -2891,7 +2891,7 @@ func (this *QStringRef) Compare(s string, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1559
+// /usr/include/qt/QtCore/qstring.h:1575
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QString &, Qt::CaseSensitivity) const
@@ -2924,7 +2924,7 @@ func (this *QStringRef) Comparep(s string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1560
+// /usr/include/qt/QtCore/qstring.h:1576
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, Qt::CaseSensitivity) const
@@ -2957,7 +2957,7 @@ func (this *QStringRef) Compare1(s QStringRef_ITF, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1560
+// /usr/include/qt/QtCore/qstring.h:1576
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, Qt::CaseSensitivity) const
@@ -2992,7 +2992,7 @@ func (this *QStringRef) Compare1p(s QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1561
+// /usr/include/qt/QtCore/qstring.h:1577
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int compare(QLatin1String, Qt::CaseSensitivity) const
@@ -3025,7 +3025,7 @@ func (this *QStringRef) Compare2(s QLatin1String_ITF /*123*/, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1561
+// /usr/include/qt/QtCore/qstring.h:1577
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int compare(QLatin1String, Qt::CaseSensitivity) const
@@ -3060,7 +3060,7 @@ func (this *QStringRef) Compare2p(s QLatin1String_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1563
+// /usr/include/qt/QtCore/qstring.h:1579
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [4] int compare(const QByteArray &, Qt::CaseSensitivity) const
@@ -3093,7 +3093,7 @@ func (this *QStringRef) Compare3(s QByteArray_ITF, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1563
+// /usr/include/qt/QtCore/qstring.h:1579
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [4] int compare(const QByteArray &, Qt::CaseSensitivity) const
@@ -3128,7 +3128,7 @@ func (this *QStringRef) Compare3p(s QByteArray_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1566
+// /usr/include/qt/QtCore/qstring.h:1582
 // index:4
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, const QString &, Qt::CaseSensitivity)
@@ -3168,7 +3168,7 @@ func QStringRef_Compare4(s1 QStringRef_ITF, s2 string, arg2 int) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:1566
+// /usr/include/qt/QtCore/qstring.h:1582
 // index:4
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, const QString &, Qt::CaseSensitivity)
@@ -3205,7 +3205,7 @@ func (this *QStringRef) Compare4p(s1 QStringRef_ITF, s2 string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1568
+// /usr/include/qt/QtCore/qstring.h:1584
 // index:5
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, const QStringRef &, Qt::CaseSensitivity)
@@ -3247,7 +3247,7 @@ func QStringRef_Compare5(s1 QStringRef_ITF, s2 QStringRef_ITF, arg2 int) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:1568
+// /usr/include/qt/QtCore/qstring.h:1584
 // index:5
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, const QStringRef &, Qt::CaseSensitivity)
@@ -3286,7 +3286,7 @@ func (this *QStringRef) Compare5p(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1570
+// /usr/include/qt/QtCore/qstring.h:1586
 // index:6
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, QLatin1String, Qt::CaseSensitivity)
@@ -3328,7 +3328,7 @@ func QStringRef_Compare6(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/, cs int
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:1570
+// /usr/include/qt/QtCore/qstring.h:1586
 // index:6
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, QLatin1String, Qt::CaseSensitivity)
@@ -3367,7 +3367,7 @@ func (this *QStringRef) Compare6p(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1573
+// /usr/include/qt/QtCore/qstring.h:1589
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QString &) const
@@ -3389,7 +3389,7 @@ func (this *QStringRef) LocaleAwareCompare(s string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1574
+// /usr/include/qt/QtCore/qstring.h:1590
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QStringRef &) const
@@ -3413,7 +3413,7 @@ func (this *QStringRef) LocaleAwareCompare1(s QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1575
+// /usr/include/qt/QtCore/qstring.h:1591
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QStringRef &, const QString &)
@@ -3444,7 +3444,7 @@ func QStringRef_LocaleAwareCompare2(s1 QStringRef_ITF, s2 string) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:1576
+// /usr/include/qt/QtCore/qstring.h:1592
 // index:3
 // Public static Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QStringRef &, const QStringRef &)
@@ -3477,7 +3477,7 @@ func QStringRef_LocaleAwareCompare3(s1 QStringRef_ITF, s2 QStringRef_ITF) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:1578
+// /usr/include/qt/QtCore/qstring.h:1594
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef trimmed() const
@@ -3508,7 +3508,7 @@ func (this *QStringRef) Trimmed() *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1579
+// /usr/include/qt/QtCore/qstring.h:1595
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(bool *, int) const
@@ -3516,7 +3516,7 @@ func (this *QStringRef) Trimmed() *QStringRef /*123*/ {
 /*
 Returns the string converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3532,6 +3532,8 @@ Example:
   short dec = str.toShort(&ok, 10);   // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toUShort(), toInt(), and QLocale::toShort().
 */
@@ -3541,7 +3543,7 @@ func (this *QStringRef) ToShort(ok *bool, base int) int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1579
+// /usr/include/qt/QtCore/qstring.h:1595
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(bool *, int) const
@@ -3549,7 +3551,7 @@ func (this *QStringRef) ToShort(ok *bool, base int) int16 {
 /*
 Returns the string converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3565,6 +3567,8 @@ Example:
   short dec = str.toShort(&ok, 10);   // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toUShort(), toInt(), and QLocale::toShort().
 */
@@ -3578,7 +3582,7 @@ func (this *QStringRef) ToShortp() int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1579
+// /usr/include/qt/QtCore/qstring.h:1595
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(bool *, int) const
@@ -3586,7 +3590,7 @@ func (this *QStringRef) ToShortp() int16 {
 /*
 Returns the string converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3603,6 +3607,8 @@ Example:
 
 
 
+This function ignores leading and trailing whitespace.
+
 See also number(), toUShort(), toInt(), and QLocale::toShort().
 */
 func (this *QStringRef) ToShortp1(ok *bool) int16 {
@@ -3613,7 +3619,7 @@ func (this *QStringRef) ToShortp1(ok *bool) int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1580
+// /usr/include/qt/QtCore/qstring.h:1596
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(bool *, int) const
@@ -3621,7 +3627,7 @@ func (this *QStringRef) ToShortp1(ok *bool) int16 {
 /*
 Returns the string converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3637,6 +3643,8 @@ Example:
   ushort dec = str.toUShort(&ok, 10);     // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toShort(), and QLocale::toUShort().
 */
@@ -3646,7 +3654,7 @@ func (this *QStringRef) ToUShort(ok *bool, base int) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1580
+// /usr/include/qt/QtCore/qstring.h:1596
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(bool *, int) const
@@ -3654,7 +3662,7 @@ func (this *QStringRef) ToUShort(ok *bool, base int) uint16 {
 /*
 Returns the string converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3670,6 +3678,8 @@ Example:
   ushort dec = str.toUShort(&ok, 10);     // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toShort(), and QLocale::toUShort().
 */
@@ -3683,7 +3693,7 @@ func (this *QStringRef) ToUShortp() uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1580
+// /usr/include/qt/QtCore/qstring.h:1596
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(bool *, int) const
@@ -3691,7 +3701,7 @@ func (this *QStringRef) ToUShortp() uint16 {
 /*
 Returns the string converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3708,6 +3718,8 @@ Example:
 
 
 
+This function ignores leading and trailing whitespace.
+
 See also number(), toShort(), and QLocale::toUShort().
 */
 func (this *QStringRef) ToUShortp1(ok *bool) uint16 {
@@ -3718,7 +3730,7 @@ func (this *QStringRef) ToUShortp1(ok *bool) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1581
+// /usr/include/qt/QtCore/qstring.h:1597
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(bool *, int) const
@@ -3726,7 +3738,7 @@ func (this *QStringRef) ToUShortp1(ok *bool) uint16 {
 /*
 Returns the string converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3741,6 +3753,8 @@ Example:
   int dec = str.toInt(&ok, 10);       // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toUInt(), toDouble(), and QLocale::toInt().
 */
@@ -3750,7 +3764,7 @@ func (this *QStringRef) ToInt(ok *bool, base int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1581
+// /usr/include/qt/QtCore/qstring.h:1597
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(bool *, int) const
@@ -3758,7 +3772,7 @@ func (this *QStringRef) ToInt(ok *bool, base int) int {
 /*
 Returns the string converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3773,6 +3787,8 @@ Example:
   int dec = str.toInt(&ok, 10);       // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toUInt(), toDouble(), and QLocale::toInt().
 */
@@ -3786,7 +3802,7 @@ func (this *QStringRef) ToIntp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1581
+// /usr/include/qt/QtCore/qstring.h:1597
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(bool *, int) const
@@ -3794,7 +3810,7 @@ func (this *QStringRef) ToIntp() int {
 /*
 Returns the string converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3810,6 +3826,8 @@ Example:
 
 
 
+This function ignores leading and trailing whitespace.
+
 See also number(), toUInt(), toDouble(), and QLocale::toInt().
 */
 func (this *QStringRef) ToIntp1(ok *bool) int {
@@ -3820,7 +3838,7 @@ func (this *QStringRef) ToIntp1(ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1582
+// /usr/include/qt/QtCore/qstring.h:1598
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(bool *, int) const
@@ -3828,7 +3846,7 @@ func (this *QStringRef) ToIntp1(ok *bool) int {
 /*
 Returns the string converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3844,6 +3862,8 @@ Example:
   uint dec = str.toUInt(&ok, 10);     // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toInt(), and QLocale::toUInt().
 */
@@ -3853,7 +3873,7 @@ func (this *QStringRef) ToUInt(ok *bool, base int) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1582
+// /usr/include/qt/QtCore/qstring.h:1598
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(bool *, int) const
@@ -3861,7 +3881,7 @@ func (this *QStringRef) ToUInt(ok *bool, base int) uint {
 /*
 Returns the string converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3877,6 +3897,8 @@ Example:
   uint dec = str.toUInt(&ok, 10);     // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toInt(), and QLocale::toUInt().
 */
@@ -3890,7 +3912,7 @@ func (this *QStringRef) ToUIntp() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1582
+// /usr/include/qt/QtCore/qstring.h:1598
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(bool *, int) const
@@ -3898,7 +3920,7 @@ func (this *QStringRef) ToUIntp() uint {
 /*
 Returns the string converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3915,6 +3937,8 @@ Example:
 
 
 
+This function ignores leading and trailing whitespace.
+
 See also number(), toInt(), and QLocale::toUInt().
 */
 func (this *QStringRef) ToUIntp1(ok *bool) uint {
@@ -3925,7 +3949,7 @@ func (this *QStringRef) ToUIntp1(ok *bool) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1583
+// /usr/include/qt/QtCore/qstring.h:1599
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] long toLong(bool *, int) const
@@ -3933,7 +3957,7 @@ func (this *QStringRef) ToUIntp1(ok *bool) uint {
 /*
 Returns the string converted to a long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3949,6 +3973,8 @@ Example:
   long dec = str.toLong(&ok, 10);     // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toULong(), toInt(), and QLocale::toInt().
 */
@@ -3958,7 +3984,7 @@ func (this *QStringRef) ToLong(ok *bool, base int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1583
+// /usr/include/qt/QtCore/qstring.h:1599
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] long toLong(bool *, int) const
@@ -3966,7 +3992,7 @@ func (this *QStringRef) ToLong(ok *bool, base int) int {
 /*
 Returns the string converted to a long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -3982,6 +4008,8 @@ Example:
   long dec = str.toLong(&ok, 10);     // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toULong(), toInt(), and QLocale::toInt().
 */
@@ -3995,7 +4023,7 @@ func (this *QStringRef) ToLongp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1583
+// /usr/include/qt/QtCore/qstring.h:1599
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] long toLong(bool *, int) const
@@ -4003,7 +4031,7 @@ func (this *QStringRef) ToLongp() int {
 /*
 Returns the string converted to a long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -4020,6 +4048,8 @@ Example:
 
 
 
+This function ignores leading and trailing whitespace.
+
 See also number(), toULong(), toInt(), and QLocale::toInt().
 */
 func (this *QStringRef) ToLongp1(ok *bool) int {
@@ -4030,7 +4060,7 @@ func (this *QStringRef) ToLongp1(ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1584
+// /usr/include/qt/QtCore/qstring.h:1600
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] ulong toULong(bool *, int) const
@@ -4038,7 +4068,7 @@ func (this *QStringRef) ToLongp1(ok *bool) int {
 /*
 Returns the string converted to an unsigned long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -4054,6 +4084,8 @@ Example:
   ulong dec = str.toULong(&ok, 10);   // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number() and QLocale::toUInt().
 */
@@ -4063,7 +4095,7 @@ func (this *QStringRef) ToULong(ok *bool, base int) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1584
+// /usr/include/qt/QtCore/qstring.h:1600
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] ulong toULong(bool *, int) const
@@ -4071,7 +4103,7 @@ func (this *QStringRef) ToULong(ok *bool, base int) uint {
 /*
 Returns the string converted to an unsigned long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -4087,6 +4119,8 @@ Example:
   ulong dec = str.toULong(&ok, 10);   // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number() and QLocale::toUInt().
 */
@@ -4100,7 +4134,7 @@ func (this *QStringRef) ToULongp() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1584
+// /usr/include/qt/QtCore/qstring.h:1600
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] ulong toULong(bool *, int) const
@@ -4108,7 +4142,7 @@ func (this *QStringRef) ToULongp() uint {
 /*
 Returns the string converted to an unsigned long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -4125,6 +4159,8 @@ Example:
 
 
 
+This function ignores leading and trailing whitespace.
+
 See also number() and QLocale::toUInt().
 */
 func (this *QStringRef) ToULongp1(ok *bool) uint {
@@ -4135,7 +4171,7 @@ func (this *QStringRef) ToULongp1(ok *bool) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1585
+// /usr/include/qt/QtCore/qstring.h:1601
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(bool *, int) const
@@ -4143,7 +4179,7 @@ func (this *QStringRef) ToULongp1(ok *bool) uint {
 /*
 Returns the string converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -4159,6 +4195,8 @@ Example:
   qint64 dec = str.toLongLong(&ok, 10);      // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toULongLong(), toInt(), and QLocale::toLongLong().
 */
@@ -4168,7 +4206,7 @@ func (this *QStringRef) ToLongLong(ok *bool, base int) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1585
+// /usr/include/qt/QtCore/qstring.h:1601
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(bool *, int) const
@@ -4176,7 +4214,7 @@ func (this *QStringRef) ToLongLong(ok *bool, base int) int64 {
 /*
 Returns the string converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -4192,6 +4230,8 @@ Example:
   qint64 dec = str.toLongLong(&ok, 10);      // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toULongLong(), toInt(), and QLocale::toLongLong().
 */
@@ -4205,7 +4245,7 @@ func (this *QStringRef) ToLongLongp() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1585
+// /usr/include/qt/QtCore/qstring.h:1601
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(bool *, int) const
@@ -4213,7 +4253,7 @@ func (this *QStringRef) ToLongLongp() int64 {
 /*
 Returns the string converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -4230,6 +4270,8 @@ Example:
 
 
 
+This function ignores leading and trailing whitespace.
+
 See also number(), toULongLong(), toInt(), and QLocale::toLongLong().
 */
 func (this *QStringRef) ToLongLongp1(ok *bool) int64 {
@@ -4240,7 +4282,7 @@ func (this *QStringRef) ToLongLongp1(ok *bool) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1586
+// /usr/include/qt/QtCore/qstring.h:1602
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(bool *, int) const
@@ -4248,7 +4290,7 @@ func (this *QStringRef) ToLongLongp1(ok *bool) int64 {
 /*
 Returns the string converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -4264,6 +4306,8 @@ Example:
   quint64 dec = str.toULongLong(&ok, 10);    // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toLongLong(), and QLocale::toULongLong().
 */
@@ -4273,7 +4317,7 @@ func (this *QStringRef) ToULongLong(ok *bool, base int) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1586
+// /usr/include/qt/QtCore/qstring.h:1602
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(bool *, int) const
@@ -4281,7 +4325,7 @@ func (this *QStringRef) ToULongLong(ok *bool, base int) uint64 {
 /*
 Returns the string converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -4297,6 +4341,8 @@ Example:
   quint64 dec = str.toULongLong(&ok, 10);    // dec == 0, ok == false
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), toLongLong(), and QLocale::toULongLong().
 */
@@ -4310,7 +4356,7 @@ func (this *QStringRef) ToULongLongp() uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1586
+// /usr/include/qt/QtCore/qstring.h:1602
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(bool *, int) const
@@ -4318,7 +4364,7 @@ func (this *QStringRef) ToULongLongp() uint64 {
 /*
 Returns the string converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
 
@@ -4335,6 +4381,8 @@ Example:
 
 
 
+This function ignores leading and trailing whitespace.
+
 See also number(), toLongLong(), and QLocale::toULongLong().
 */
 func (this *QStringRef) ToULongLongp1(ok *bool) uint64 {
@@ -4345,7 +4393,7 @@ func (this *QStringRef) ToULongLongp1(ok *bool) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1587
+// /usr/include/qt/QtCore/qstring.h:1603
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(bool *) const
@@ -4353,9 +4401,15 @@ func (this *QStringRef) ToULongLongp1(ok *bool) uint64 {
 /*
 Returns the string converted to a float value.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true. Returns 0.0 if the conversion fails.
+Returns 0.0 if the conversion fails.
+
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
+
+Warning: The QString content may only contain valid numerical characters which includes the plus/minus sign, the character e used in scientific notation, and the decimal point. Including the unit or additional characters leads to a conversion error.
 
 The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toFloat()
+
+For historical reasons, this function does not handle thousands group separators. If you need to convert such numbers, use QLocale::toFloat().
 
 Example:
 
@@ -4367,9 +4421,14 @@ Example:
   QString str2 = "R2D2";
   str2.toFloat(&ok);          // returns 0.0, sets ok to false
 
+  QString str3 = "1234.56 Volt";
+  str3.toFloat(&ok);          // returns 0.0, sets ok to false
 
 
-See also number(), toDouble(), toInt(), and QLocale::toFloat().
+
+This function ignores leading and trailing whitespace.
+
+See also number(), toDouble(), toInt(), QLocale::toFloat(), and trimmed().
 */
 func (this *QStringRef) ToFloat(ok *bool) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStringRef7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
@@ -4377,7 +4436,7 @@ func (this *QStringRef) ToFloat(ok *bool) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1587
+// /usr/include/qt/QtCore/qstring.h:1603
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(bool *) const
@@ -4385,9 +4444,15 @@ func (this *QStringRef) ToFloat(ok *bool) float32 {
 /*
 Returns the string converted to a float value.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true. Returns 0.0 if the conversion fails.
+Returns 0.0 if the conversion fails.
+
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
+
+Warning: The QString content may only contain valid numerical characters which includes the plus/minus sign, the character e used in scientific notation, and the decimal point. Including the unit or additional characters leads to a conversion error.
 
 The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toFloat()
+
+For historical reasons, this function does not handle thousands group separators. If you need to convert such numbers, use QLocale::toFloat().
 
 Example:
 
@@ -4399,9 +4464,14 @@ Example:
   QString str2 = "R2D2";
   str2.toFloat(&ok);          // returns 0.0, sets ok to false
 
+  QString str3 = "1234.56 Volt";
+  str3.toFloat(&ok);          // returns 0.0, sets ok to false
 
 
-See also number(), toDouble(), toInt(), and QLocale::toFloat().
+
+This function ignores leading and trailing whitespace.
+
+See also number(), toDouble(), toInt(), QLocale::toFloat(), and trimmed().
 */
 func (this *QStringRef) ToFloatp() float32 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
@@ -4411,7 +4481,7 @@ func (this *QStringRef) ToFloatp() float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1588
+// /usr/include/qt/QtCore/qstring.h:1604
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(bool *) const
@@ -4421,7 +4491,7 @@ Returns the string converted to a double value.
 
 Returns 0.0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 
   QString str = "1234.56";
@@ -4429,13 +4499,15 @@ If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
 
 
 
-Warning: The QString content may only contain valid numerical characters which includes the plus/minus sign, the characters g and e used in scientific notation, and the decimal point. Including the unit or additional characters leads to a conversion error.
+Warning: The QString content may only contain valid numerical characters which includes the plus/minus sign, the character e used in scientific notation, and the decimal point. Including the unit or additional characters leads to a conversion error.
 
 
   bool ok;
   double d;
 
   d = QString( "1234.56e-02" ).toDouble(&ok); // ok == true, d == 12.3456
+
+  d = QString( "1234.56e-02 Volt" ).toDouble(&ok); // ok == false, d == 0
 
 
 
@@ -4454,6 +4526,8 @@ For historical reasons, this function does not handle thousands group separators
   d = QString( "1234567.89" ).toDouble(&ok); // ok == true
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), QLocale::setDefault(), QLocale::toDouble(), and trimmed().
 */
@@ -4463,7 +4537,7 @@ func (this *QStringRef) ToDouble(ok *bool) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1588
+// /usr/include/qt/QtCore/qstring.h:1604
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(bool *) const
@@ -4473,7 +4547,7 @@ Returns the string converted to a double value.
 
 Returns 0.0 if the conversion fails.
 
-If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 
   QString str = "1234.56";
@@ -4481,13 +4555,15 @@ If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
 
 
 
-Warning: The QString content may only contain valid numerical characters which includes the plus/minus sign, the characters g and e used in scientific notation, and the decimal point. Including the unit or additional characters leads to a conversion error.
+Warning: The QString content may only contain valid numerical characters which includes the plus/minus sign, the character e used in scientific notation, and the decimal point. Including the unit or additional characters leads to a conversion error.
 
 
   bool ok;
   double d;
 
   d = QString( "1234.56e-02" ).toDouble(&ok); // ok == true, d == 12.3456
+
+  d = QString( "1234.56e-02 Volt" ).toDouble(&ok); // ok == false, d == 0
 
 
 
@@ -4506,6 +4582,8 @@ For historical reasons, this function does not handle thousands group separators
   d = QString( "1234567.89" ).toDouble(&ok); // ok == true
 
 
+
+This function ignores leading and trailing whitespace.
 
 See also number(), QLocale::setDefault(), QLocale::toDouble(), and trimmed().
 */

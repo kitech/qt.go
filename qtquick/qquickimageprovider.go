@@ -68,7 +68,7 @@ func (*QQuickImageProvider) NewFromPointer(cthis unsafe.Pointer) *QQuickImagePro
 	return NewQQuickImageProviderFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:92
+// /usr/include/qt/QtQuick/qquickimageprovider.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickImageProvider(QQmlImageProviderBase::ImageType, QQmlImageProviderBase::Flags)
@@ -87,7 +87,7 @@ func NewQQuickImageProvider(type_ int, flags int) *QQuickImageProvider {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:92
+// /usr/include/qt/QtQuick/qquickimageprovider.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickImageProvider(QQmlImageProviderBase::ImageType, QQmlImageProviderBase::Flags)
@@ -108,7 +108,7 @@ func NewQQuickImageProviderp(type_ int) *QQuickImageProvider {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:93
+// /usr/include/qt/QtQuick/qquickimageprovider.h:100
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickImageProvider()
@@ -123,7 +123,7 @@ func DeleteQQuickImageProvider(this *QQuickImageProvider) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:95
+// /usr/include/qt/QtQuick/qquickimageprovider.h:102
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QQmlImageProviderBase::ImageType imageType() const
@@ -139,7 +139,7 @@ func (this *QQuickImageProvider) ImageType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:96
+// /usr/include/qt/QtQuick/qquickimageprovider.h:103
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QQmlImageProviderBase::Flags flags() const
@@ -155,7 +155,7 @@ func (this *QQuickImageProvider) Flags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:103
+// /usr/include/qt/QtQuick/qquickimageprovider.h:110
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QImage requestImage(const QString &, QSize *, const QSize &)
@@ -189,7 +189,7 @@ func (this *QQuickImageProvider) RequestImage(id string, size qtcore.QSize_ITF /
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:104
+// /usr/include/qt/QtQuick/qquickimageprovider.h:111
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QPixmap requestPixmap(const QString &, QSize *, const QSize &)
@@ -223,7 +223,7 @@ func (this *QQuickImageProvider) RequestPixmap(id string, size qtcore.QSize_ITF 
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:105
+// /usr/include/qt/QtQuick/qquickimageprovider.h:112
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QQuickTextureFactory * requestTexture(const QString &, QSize *, const QSize &)

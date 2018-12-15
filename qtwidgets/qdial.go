@@ -316,7 +316,7 @@ func (this *QDial) SetWrapping(on bool) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractSlider::event().
 */
 func (this *QDial) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

@@ -734,27 +734,28 @@ func (this *QSGGeometry) SetLineWidth(w float32) {
 }
 
 /*
+This enum identifies several attribute types.
 
 
- */
+*/
 type QSGGeometry__AttributeType = int
 
-//
+// Don't care
 const QSGGeometry__UnknownAttribute QSGGeometry__AttributeType = 0
 
-//
+// Position
 const QSGGeometry__PositionAttribute QSGGeometry__AttributeType = 1
 
-//
+// Color
 const QSGGeometry__ColorAttribute QSGGeometry__AttributeType = 2
 
-//
+// Texture coordinate
 const QSGGeometry__TexCoordAttribute QSGGeometry__AttributeType = 3
 
-//
+// Texture coordinate 1
 const QSGGeometry__TexCoord1Attribute QSGGeometry__AttributeType = 4
 
-//
+// Texture coordinate 2
 const QSGGeometry__TexCoord2Attribute QSGGeometry__AttributeType = 5
 
 func (this *QSGGeometry) AttributeTypeItemName(val int) string {

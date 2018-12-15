@@ -769,7 +769,7 @@ func QGuiApplication_QueryKeyboardModifiers() int {
 // [4] Qt::MouseButtons mouseButtons()
 
 /*
-Returns the current state of the buttons on the mouse. The current state is updated syncronously as the event queue is emptied of events that will spontaneously change the mouse state (QEvent::MouseButtonPress and QEvent::MouseButtonRelease events).
+Returns the current state of the buttons on the mouse. The current state is updated synchronously as the event queue is emptied of events that will spontaneously change the mouse state (QEvent::MouseButtonPress and QEvent::MouseButtonRelease events).
 
 It should be noted this may not reflect the actual buttons held on the input device at the time of calling but rather the mouse buttons as last reported in one of the above events. If no mouse buttons are being held Qt::NoButton is returned.
 
@@ -1449,7 +1449,7 @@ This signal deals with session management. It is invoked when the session manage
 
 For example, a text editor would create a temporary file that includes the current contents of its edit buffers, the location of the cursor and other aspects of the current editing session.
 
-You should never exit the application within this signal. Instead, the session manager may or may not do this afterwards, depending on the context. Futhermore, most session managers will very likely request a saved state immediately after the application has been started. This permits the session manager to learn about the application's restart policy.
+You should never exit the application within this signal. Instead, the session manager may or may not do this afterwards, depending on the context. Furthermore, most session managers will very likely request a saved state immediately after the application has been started. This permits the session manager to learn about the application's restart policy.
 
 Warning: Within this signal, no user interaction is possible, unless you ask the manager for explicit permission. See QSessionManager::allowsInteraction() and QSessionManager::allowsErrorInteraction() for details.
 
@@ -1502,13 +1502,34 @@ func (this *QGuiApplication) ApplicationDisplayNameChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:192
+// /usr/include/qt/QtGui/qguiapplication.h:190
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void fontChanged(const QFont &)
+
+/*
+This signal is emitted when the font of the application changes.
+
+This function was introduced in  Qt 5.11.
+
+See also font().
+*/
+func (this *QGuiApplication) FontChanged(font QFont_ITF) {
+	var convArg0 unsafe.Pointer
+	if font != nil && font.QFont_PTR() != nil {
+		convArg0 = font.QFont_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication11fontChangedERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qguiapplication.h:193
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QCoreApplication::event().
 */
 func (this *QGuiApplication) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

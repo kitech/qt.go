@@ -63,7 +63,7 @@ func (*QCloseEvent) NewFromPointer(cthis unsafe.Pointer) *QCloseEvent {
 	return NewQCloseEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:477
+// /usr/include/qt/QtGui/qevent.h:482
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCloseEvent()
@@ -82,7 +82,7 @@ func NewQCloseEvent() *QCloseEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:478
+// /usr/include/qt/QtGui/qevent.h:483
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCloseEvent()

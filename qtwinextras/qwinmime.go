@@ -67,7 +67,7 @@ func (*QWinMime) NewFromPointer(cthis unsafe.Pointer) *QWinMime {
 	return NewQWinMimeFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinmime.h:58
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinmime.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWinMime()
@@ -86,7 +86,7 @@ func NewQWinMime() *QWinMime {
 	return gothis
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinmime.h:59
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinmime.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWinMime()
@@ -101,7 +101,7 @@ func DeleteQWinMime(this *QWinMime) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinmime.h:71
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinmime.h:79
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int registerMimeType(const QString &)

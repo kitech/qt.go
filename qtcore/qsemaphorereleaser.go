@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qsemaphore.h
@@ -64,7 +66,7 @@ func (*QSemaphoreReleaser) NewFromPointer(cthis unsafe.Pointer) *QSemaphoreRelea
 	return NewQSemaphoreReleaserFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:75
+// /usr/include/qt/QtCore/qsemaphore.h:77
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser()
@@ -83,7 +85,7 @@ func NewQSemaphoreReleaser() *QSemaphoreReleaser {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:76
+// /usr/include/qt/QtCore/qsemaphore.h:78
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser(QSemaphore &, int)
@@ -106,7 +108,7 @@ func NewQSemaphoreReleaser1(sem QSemaphore_ITF, n int) *QSemaphoreReleaser {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:76
+// /usr/include/qt/QtCore/qsemaphore.h:78
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser(QSemaphore &, int)
@@ -131,7 +133,7 @@ func NewQSemaphoreReleaser1p(sem QSemaphore_ITF) *QSemaphoreReleaser {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:78
+// /usr/include/qt/QtCore/qsemaphore.h:80
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser(QSemaphore *, int)
@@ -154,7 +156,7 @@ func NewQSemaphoreReleaser2(sem QSemaphore_ITF /*777 QSemaphore **/, n int) *QSe
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:78
+// /usr/include/qt/QtCore/qsemaphore.h:80
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSemaphoreReleaser(QSemaphore *, int)
@@ -179,7 +181,7 @@ func NewQSemaphoreReleaser2p(sem QSemaphore_ITF /*777 QSemaphore **/) *QSemaphor
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:86
+// /usr/include/qt/QtCore/qsemaphore.h:88
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QSemaphoreReleaser()
@@ -194,7 +196,7 @@ func DeleteQSemaphoreReleaser(this *QSemaphoreReleaser) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:92
+// /usr/include/qt/QtCore/qsemaphore.h:94
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSemaphoreReleaser &)
@@ -211,7 +213,7 @@ func (this *QSemaphoreReleaser) Swap(other QSemaphoreReleaser_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:98
+// /usr/include/qt/QtCore/qsemaphore.h:100
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSemaphore * semaphore() const
@@ -225,7 +227,7 @@ func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*777 QSemaphore **/ {
 	return /*==*/ NewQSemaphoreFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:101
+// /usr/include/qt/QtCore/qsemaphore.h:103
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSemaphore * cancel()

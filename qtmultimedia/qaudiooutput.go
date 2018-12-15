@@ -618,8 +618,8 @@ func (this *QAudioOutput) SetCategory(category string) {
 /*
 This signal is emitted when the device state has changed. This is the current state of the audio output.
 */
-func (this *QAudioOutput) StateChanged(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QAudioOutput12stateChangedEN6QAudio5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QAudioOutput) StateChanged(state int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QAudioOutput12stateChangedEN6QAudio5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	qtrt.ErrPrint(err, rv)
 }
 

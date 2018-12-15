@@ -66,7 +66,7 @@ func (*QSGTransformNode) NewFromPointer(cthis unsafe.Pointer) *QSGTransformNode 
 	return NewQSGTransformNodeFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:284
+// /usr/include/qt/QtQuick/qsgnode.h:279
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGTransformNode()
@@ -85,7 +85,7 @@ func NewQSGTransformNode() *QSGTransformNode {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:285
+// /usr/include/qt/QtQuick/qsgnode.h:280
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGTransformNode()
@@ -100,7 +100,7 @@ func DeleteQSGTransformNode(this *QSGTransformNode) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:287
+// /usr/include/qt/QtQuick/qsgnode.h:282
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMatrix(const QMatrix4x4 &)
@@ -117,7 +117,7 @@ func (this *QSGTransformNode) SetMatrix(matrix qtgui.QMatrix4x4_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:288
+// /usr/include/qt/QtQuick/qsgnode.h:283
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [68] const QMatrix4x4 & matrix() const
@@ -133,7 +133,7 @@ func (this *QSGTransformNode) Matrix() *qtgui.QMatrix4x4 {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:290
+// /usr/include/qt/QtQuick/qsgnode.h:285
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCombinedMatrix(const QMatrix4x4 &)
@@ -150,7 +150,7 @@ func (this *QSGTransformNode) SetCombinedMatrix(matrix qtgui.QMatrix4x4_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:291
+// /usr/include/qt/QtQuick/qsgnode.h:286
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [68] const QMatrix4x4 & combinedMatrix() const

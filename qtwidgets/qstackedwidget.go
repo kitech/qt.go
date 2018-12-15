@@ -367,7 +367,7 @@ func (this *QStackedWidget) WidgetRemoved(index int) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QFrame::event().
 */
 func (this *QStackedWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

@@ -101,7 +101,7 @@ func (this *QIODevice) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:83
+// /usr/include/qt/QtCore/qiodevice.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIODevice()
@@ -120,7 +120,7 @@ func NewQIODevice() *QIODevice {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:85
+// /usr/include/qt/QtCore/qiodevice.h:87
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QIODevice(QObject *)
@@ -143,7 +143,7 @@ func NewQIODevice1(parent QObject_ITF /*777 QObject **/) *QIODevice {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:87
+// /usr/include/qt/QtCore/qiodevice.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIODevice()
@@ -158,7 +158,7 @@ func DeleteQIODevice(this *QIODevice) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:89
+// /usr/include/qt/QtCore/qiodevice.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QIODevice::OpenMode openMode() const
@@ -174,7 +174,7 @@ func (this *QIODevice) OpenMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:91
+// /usr/include/qt/QtCore/qiodevice.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextModeEnabled(bool)
@@ -191,7 +191,7 @@ func (this *QIODevice) SetTextModeEnabled(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:92
+// /usr/include/qt/QtCore/qiodevice.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTextModeEnabled() const
@@ -207,7 +207,7 @@ func (this *QIODevice) IsTextModeEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:94
+// /usr/include/qt/QtCore/qiodevice.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isOpen() const
@@ -223,7 +223,7 @@ func (this *QIODevice) IsOpen() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:95
+// /usr/include/qt/QtCore/qiodevice.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadable() const
@@ -241,7 +241,7 @@ func (this *QIODevice) IsReadable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:96
+// /usr/include/qt/QtCore/qiodevice.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isWritable() const
@@ -259,7 +259,7 @@ func (this *QIODevice) IsWritable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:97
+// /usr/include/qt/QtCore/qiodevice.h:99
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isSequential() const
@@ -279,7 +279,7 @@ func (this *QIODevice) IsSequential() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:99
+// /usr/include/qt/QtCore/qiodevice.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int readChannelCount() const
@@ -297,7 +297,7 @@ func (this *QIODevice) ReadChannelCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:100
+// /usr/include/qt/QtCore/qiodevice.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int writeChannelCount() const
@@ -315,7 +315,7 @@ func (this *QIODevice) WriteChannelCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:101
+// /usr/include/qt/QtCore/qiodevice.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentReadChannel() const
@@ -333,7 +333,7 @@ func (this *QIODevice) CurrentReadChannel() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:102
+// /usr/include/qt/QtCore/qiodevice.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentReadChannel(int)
@@ -350,7 +350,7 @@ func (this *QIODevice) SetCurrentReadChannel(channel int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:103
+// /usr/include/qt/QtCore/qiodevice.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentWriteChannel() const
@@ -368,7 +368,7 @@ func (this *QIODevice) CurrentWriteChannel() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:104
+// /usr/include/qt/QtCore/qiodevice.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentWriteChannel(int)
@@ -385,7 +385,7 @@ func (this *QIODevice) SetCurrentWriteChannel(channel int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:106
+// /usr/include/qt/QtCore/qiodevice.h:108
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool open(QIODevice::OpenMode)
@@ -401,7 +401,7 @@ func (this *QIODevice) Open(mode int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:107
+// /usr/include/qt/QtCore/qiodevice.h:109
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void close()
@@ -416,7 +416,7 @@ func (this *QIODevice) Close() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:111
+// /usr/include/qt/QtCore/qiodevice.h:113
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 pos() const
@@ -434,7 +434,7 @@ func (this *QIODevice) Pos() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:112
+// /usr/include/qt/QtCore/qiodevice.h:114
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 size() const
@@ -452,7 +452,7 @@ func (this *QIODevice) Size() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:113
+// /usr/include/qt/QtCore/qiodevice.h:115
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool seek(qint64)
@@ -470,7 +470,7 @@ func (this *QIODevice) Seek(pos int64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:114
+// /usr/include/qt/QtCore/qiodevice.h:116
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool atEnd() const
@@ -488,7 +488,7 @@ func (this *QIODevice) AtEnd() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:115
+// /usr/include/qt/QtCore/qiodevice.h:117
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool reset()
@@ -506,7 +506,7 @@ func (this *QIODevice) Reset() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:117
+// /usr/include/qt/QtCore/qiodevice.h:119
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 bytesAvailable() const
@@ -532,7 +532,7 @@ func (this *QIODevice) BytesAvailable() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:118
+// /usr/include/qt/QtCore/qiodevice.h:120
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 bytesToWrite() const
@@ -550,7 +550,7 @@ func (this *QIODevice) BytesToWrite() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:120
+// /usr/include/qt/QtCore/qiodevice.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 read(char *, qint64)
@@ -570,7 +570,7 @@ func (this *QIODevice) Read(data string, maxlen int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:121
+// /usr/include/qt/QtCore/qiodevice.h:123
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray read(qint64)
@@ -590,7 +590,7 @@ func (this *QIODevice) Read1(maxlen int64) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:122
+// /usr/include/qt/QtCore/qiodevice.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray readAll()
@@ -608,7 +608,7 @@ func (this *QIODevice) ReadAll() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:123
+// /usr/include/qt/QtCore/qiodevice.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 readLine(char *, qint64)
@@ -654,7 +654,7 @@ func (this *QIODevice) ReadLine(data string, maxlen int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:124
+// /usr/include/qt/QtCore/qiodevice.h:126
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray readLine(qint64)
@@ -700,7 +700,7 @@ func (this *QIODevice) ReadLine1(maxlen int64) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:124
+// /usr/include/qt/QtCore/qiodevice.h:126
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray readLine(qint64)
@@ -748,7 +748,7 @@ func (this *QIODevice) ReadLine1p() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:125
+// /usr/include/qt/QtCore/qiodevice.h:127
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canReadLine() const
@@ -778,7 +778,7 @@ func (this *QIODevice) CanReadLine() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:127
+// /usr/include/qt/QtCore/qiodevice.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void startTransaction()
@@ -799,7 +799,7 @@ func (this *QIODevice) StartTransaction() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:128
+// /usr/include/qt/QtCore/qiodevice.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void commitTransaction()
@@ -818,7 +818,7 @@ func (this *QIODevice) CommitTransaction() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:129
+// /usr/include/qt/QtCore/qiodevice.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void rollbackTransaction()
@@ -837,7 +837,7 @@ func (this *QIODevice) RollbackTransaction() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:130
+// /usr/include/qt/QtCore/qiodevice.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTransactionStarted() const
@@ -855,7 +855,7 @@ func (this *QIODevice) IsTransactionStarted() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:132
+// /usr/include/qt/QtCore/qiodevice.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 write(const char *, qint64)
@@ -873,7 +873,7 @@ func (this *QIODevice) Write(data string, len_ int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:133
+// /usr/include/qt/QtCore/qiodevice.h:135
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] qint64 write(const char *)
@@ -891,7 +891,7 @@ func (this *QIODevice) Write1(data string) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:134
+// /usr/include/qt/QtCore/qiodevice.h:136
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] qint64 write(const QByteArray &)
@@ -911,7 +911,7 @@ func (this *QIODevice) Write2(data QByteArray_ITF) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:137
+// /usr/include/qt/QtCore/qiodevice.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 peek(char *, qint64)
@@ -946,7 +946,7 @@ func (this *QIODevice) Peek(data string, maxlen int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:138
+// /usr/include/qt/QtCore/qiodevice.h:140
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray peek(qint64)
@@ -981,7 +981,7 @@ func (this *QIODevice) Peek1(maxlen int64) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:139
+// /usr/include/qt/QtCore/qiodevice.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 skip(qint64)
@@ -1007,7 +1007,7 @@ func (this *QIODevice) Skip(maxSize int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:141
+// /usr/include/qt/QtCore/qiodevice.h:143
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForReadyRead(int)
@@ -1033,7 +1033,7 @@ func (this *QIODevice) WaitForReadyRead(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:142
+// /usr/include/qt/QtCore/qiodevice.h:144
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForBytesWritten(int)
@@ -1059,7 +1059,7 @@ func (this *QIODevice) WaitForBytesWritten(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:144
+// /usr/include/qt/QtCore/qiodevice.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ungetChar(char)
@@ -1076,7 +1076,7 @@ func (this *QIODevice) UngetChar(c byte) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:145
+// /usr/include/qt/QtCore/qiodevice.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool putChar(char)
@@ -1092,7 +1092,7 @@ func (this *QIODevice) PutChar(c byte) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:146
+// /usr/include/qt/QtCore/qiodevice.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool getChar(char *)
@@ -1110,7 +1110,7 @@ func (this *QIODevice) GetChar(c string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:148
+// /usr/include/qt/QtCore/qiodevice.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
@@ -1129,7 +1129,7 @@ func (this *QIODevice) ErrorString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:152
+// /usr/include/qt/QtCore/qiodevice.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void readyRead()
@@ -1148,7 +1148,7 @@ func (this *QIODevice) ReadyRead() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:153
+// /usr/include/qt/QtCore/qiodevice.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void channelReadyRead(int)
@@ -1167,7 +1167,7 @@ func (this *QIODevice) ChannelReadyRead(channel int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:154
+// /usr/include/qt/QtCore/qiodevice.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void bytesWritten(qint64)
@@ -1184,7 +1184,7 @@ func (this *QIODevice) BytesWritten(bytes int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:155
+// /usr/include/qt/QtCore/qiodevice.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void channelBytesWritten(int, qint64)
@@ -1203,7 +1203,7 @@ func (this *QIODevice) ChannelBytesWritten(channel int, bytes int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:156
+// /usr/include/qt/QtCore/qiodevice.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void aboutToClose()
@@ -1216,7 +1216,7 @@ func (this *QIODevice) AboutToClose() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:157
+// /usr/include/qt/QtCore/qiodevice.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void readChannelFinished()
@@ -1233,7 +1233,7 @@ func (this *QIODevice) ReadChannelFinished() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:166
+// /usr/include/qt/QtCore/qiodevice.h:168
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [8] qint64 readData(char *, qint64)
@@ -1259,7 +1259,7 @@ func (this *QIODevice) ReadData(data string, maxlen int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:167
+// /usr/include/qt/QtCore/qiodevice.h:169
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 readLineData(char *, qint64)
@@ -1281,7 +1281,7 @@ func (this *QIODevice) ReadLineData(data string, maxlen int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:168
+// /usr/include/qt/QtCore/qiodevice.h:170
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [8] qint64 writeData(const char *, qint64)
@@ -1303,7 +1303,7 @@ func (this *QIODevice) WriteData(data string, len_ int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:170
+// /usr/include/qt/QtCore/qiodevice.h:172
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setOpenMode(QIODevice::OpenMode)
@@ -1318,7 +1318,7 @@ func (this *QIODevice) SetOpenMode(openMode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:172
+// /usr/include/qt/QtCore/qiodevice.h:174
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setErrorString(const QString &)
@@ -1364,6 +1364,12 @@ const QIODevice__Text QIODevice__OpenModeFlag = 16
 
 //
 const QIODevice__Unbuffered QIODevice__OpenModeFlag = 32
+
+//
+const QIODevice__NewOnly QIODevice__OpenModeFlag = 64
+
+//
+const QIODevice__ExistingOnly QIODevice__OpenModeFlag = 128
 
 func (this *QIODevice) OpenModeFlagItemName(val int) string {
 	return qtrt.GetClassEnumItemName(this, val)

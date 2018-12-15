@@ -637,7 +637,7 @@ func (this *QDockWidget) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEven
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QDockWidget) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

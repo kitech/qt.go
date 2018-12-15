@@ -63,7 +63,7 @@ func (*QDoubleValidator) NewFromPointer(cthis unsafe.Pointer) *QDoubleValidator 
 	return NewQDoubleValidatorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:126
+// /usr/include/qt/QtGui/qvalidator.h:128
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -77,7 +77,7 @@ func (this *QDoubleValidator) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:133
+// /usr/include/qt/QtGui/qvalidator.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(QObject *)
@@ -100,7 +100,7 @@ func NewQDoubleValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QDoubleVa
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:133
+// /usr/include/qt/QtGui/qvalidator.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(QObject *)
@@ -121,7 +121,7 @@ func NewQDoubleValidatorp() *QDoubleValidator {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:134
+// /usr/include/qt/QtGui/qvalidator.h:136
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(double, double, int, QObject *)
@@ -144,7 +144,7 @@ func NewQDoubleValidator1(bottom float64, top float64, decimals int, parent qtco
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:134
+// /usr/include/qt/QtGui/qvalidator.h:136
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleValidator(double, double, int, QObject *)
@@ -165,7 +165,7 @@ func NewQDoubleValidator1p(bottom float64, top float64, decimals int) *QDoubleVa
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:135
+// /usr/include/qt/QtGui/qvalidator.h:137
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDoubleValidator()
@@ -180,7 +180,7 @@ func DeleteQDoubleValidator(this *QDoubleValidator) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:142
+// /usr/include/qt/QtGui/qvalidator.h:144
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
@@ -198,7 +198,7 @@ func (this *QDoubleValidator) Validate(arg0 string, arg1 int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:144
+// /usr/include/qt/QtGui/qvalidator.h:146
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRange(double, double, int)
@@ -211,7 +211,7 @@ func (this *QDoubleValidator) SetRange(bottom float64, top float64, decimals int
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:144
+// /usr/include/qt/QtGui/qvalidator.h:146
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRange(double, double, int)
@@ -226,7 +226,7 @@ func (this *QDoubleValidator) SetRangep(bottom float64, top float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:145
+// /usr/include/qt/QtGui/qvalidator.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBottom(double)
@@ -239,7 +239,7 @@ func (this *QDoubleValidator) SetBottom(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:146
+// /usr/include/qt/QtGui/qvalidator.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTop(double)
@@ -252,7 +252,7 @@ func (this *QDoubleValidator) SetTop(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:147
+// /usr/include/qt/QtGui/qvalidator.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDecimals(int)
@@ -265,7 +265,7 @@ func (this *QDoubleValidator) SetDecimals(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:148
+// /usr/include/qt/QtGui/qvalidator.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNotation(QDoubleValidator::Notation)
@@ -278,7 +278,7 @@ func (this *QDoubleValidator) SetNotation(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:150
+// /usr/include/qt/QtGui/qvalidator.h:152
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] double bottom() const
@@ -292,7 +292,7 @@ func (this *QDoubleValidator) Bottom() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:151
+// /usr/include/qt/QtGui/qvalidator.h:153
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] double top() const
@@ -306,7 +306,7 @@ func (this *QDoubleValidator) Top() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:152
+// /usr/include/qt/QtGui/qvalidator.h:154
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int decimals() const
@@ -320,7 +320,7 @@ func (this *QDoubleValidator) Decimals() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:153
+// /usr/include/qt/QtGui/qvalidator.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDoubleValidator::Notation notation() const
@@ -334,7 +334,7 @@ func (this *QDoubleValidator) Notation() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:156
+// /usr/include/qt/QtGui/qvalidator.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void bottomChanged(double)
@@ -347,7 +347,7 @@ func (this *QDoubleValidator) BottomChanged(bottom float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:157
+// /usr/include/qt/QtGui/qvalidator.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void topChanged(double)
@@ -360,7 +360,7 @@ func (this *QDoubleValidator) TopChanged(top float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:158
+// /usr/include/qt/QtGui/qvalidator.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void decimalsChanged(int)
@@ -373,7 +373,7 @@ func (this *QDoubleValidator) DecimalsChanged(decimals int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:159
+// /usr/include/qt/QtGui/qvalidator.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void notationChanged(QDoubleValidator::Notation)

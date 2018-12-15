@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 22
+// extern C begin: 48
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func (*QUuid) NewFromPointer(cthis unsafe.Pointer) *QUuid {
 	return NewQUuidFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/quuid.h:89
+// /usr/include/qt/QtCore/quuid.h:96
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QUuid()
@@ -83,7 +83,7 @@ func NewQUuid() *QUuid {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/quuid.h:91
+// /usr/include/qt/QtCore/quuid.h:98
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QUuid(uint, ushort, ushort, uchar, uchar, uchar, uchar, uchar, uchar, uchar, uchar)
@@ -102,7 +102,7 @@ func NewQUuid1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte,
 	return gothis
 }
 
-// /usr/include/qt/QtCore/quuid.h:119
+// /usr/include/qt/QtCore/quuid.h:126
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QUuid(const QString &)
@@ -123,7 +123,7 @@ func NewQUuid2(arg0 string) *QUuid {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/quuid.h:122
+// /usr/include/qt/QtCore/quuid.h:129
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QUuid(const char *)
@@ -144,7 +144,7 @@ func NewQUuid3(arg0 string) *QUuid {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/quuid.h:124
+// /usr/include/qt/QtCore/quuid.h:132
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QUuid(const QByteArray &)
@@ -167,7 +167,7 @@ func NewQUuid4(arg0 QByteArray_ITF) *QUuid {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/quuid.h:120
+// /usr/include/qt/QtCore/quuid.h:127
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromString(QStringView)
@@ -196,7 +196,7 @@ func QUuid_FromString(string QStringView_ITF /*123*/) *QUuid /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/quuid.h:121
+// /usr/include/qt/QtCore/quuid.h:128
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromString(QLatin1String)
@@ -225,7 +225,7 @@ func QUuid_FromString1(string QLatin1String_ITF /*123*/) *QUuid /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/quuid.h:123
+// /usr/include/qt/QtCore/quuid.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const
@@ -250,7 +250,32 @@ func (this *QUuid) ToString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/quuid.h:125
+// /usr/include/qt/QtCore/quuid.h:131
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QString toString(QUuid::StringFormat) const
+
+/*
+Returns the string representation of this QUuid. The string is formatted as five hex fields separated by '-' and enclosed in curly braces, i.e., "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}" where 'x' is a hex digit. From left to right, the five hex fields are obtained from the four public data members in QUuid as follows:
+
+
+ Field #Source
+1data1
+2data2
+3data3
+4data4[0] .. data4[1]
+5data4[2] .. data4[7]
+*/
+func (this *QUuid) ToString1(mode int) string {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid8toStringENS_12StringFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/quuid.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toByteArray() const
@@ -277,7 +302,34 @@ func (this *QUuid) ToByteArray() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/quuid.h:126
+// /usr/include/qt/QtCore/quuid.h:134
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toByteArray(QUuid::StringFormat) const
+
+/*
+Returns the binary representation of this QUuid. The byte array is formatted as five hex fields separated by '-' and enclosed in curly braces, i.e., "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}" where 'x' is a hex digit. From left to right, the five hex fields are obtained from the four public data members in QUuid as follows:
+
+
+ Field #Source
+1data1
+2data2
+3data3
+4data4[0] .. data4[1]
+5data4[2] .. data4[7]
+
+
+This function was introduced in  Qt 4.8.
+*/
+func (this *QUuid) ToByteArray1(mode int) *QByteArray /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QUuid11toByteArrayENS_12StringFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/quuid.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toRfc4122() const
@@ -305,7 +357,7 @@ func (this *QUuid) ToRfc4122() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/quuid.h:127
+// /usr/include/qt/QtCore/quuid.h:136
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid fromRfc4122(const QByteArray &)
@@ -338,7 +390,7 @@ func QUuid_FromRfc4122(arg0 QByteArray_ITF) *QUuid /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/quuid.h:128
+// /usr/include/qt/QtCore/quuid.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -352,7 +404,7 @@ func (this *QUuid) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/quuid.h:130
+// /usr/include/qt/QtCore/quuid.h:139
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QUuid &) const
@@ -370,7 +422,7 @@ func (this *QUuid) Operator_equal_equal(orig QUuid_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/quuid.h:143
+// /usr/include/qt/QtCore/quuid.h:152
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QUuid &) const
@@ -388,7 +440,7 @@ func (this *QUuid) Operator_not_equal(orig QUuid_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/quuid.h:148
+// /usr/include/qt/QtCore/quuid.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator<(const QUuid &) const
@@ -406,7 +458,7 @@ func (this *QUuid) Operator_less_than(other QUuid_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/quuid.h:149
+// /usr/include/qt/QtCore/quuid.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator>(const QUuid &) const
@@ -424,7 +476,7 @@ func (this *QUuid) Operator_greater_than(other QUuid_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/quuid.h:192
+// /usr/include/qt/QtCore/quuid.h:201
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid createUuid()
@@ -447,7 +499,7 @@ func QUuid_CreateUuid() *QUuid /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/quuid.h:194
+// /usr/include/qt/QtCore/quuid.h:203
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid createUuidV3(const QUuid &, const QByteArray &)
@@ -480,7 +532,7 @@ func QUuid_CreateUuidV3(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/quuid.h:196
+// /usr/include/qt/QtCore/quuid.h:207
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [16] QUuid createUuidV3(const QUuid &, const QString &)
@@ -511,7 +563,7 @@ func QUuid_CreateUuidV31(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/quuid.h:195
+// /usr/include/qt/QtCore/quuid.h:205
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QUuid createUuidV5(const QUuid &, const QByteArray &)
@@ -544,7 +596,7 @@ func QUuid_CreateUuidV5(ns QUuid_ITF, baseData QByteArray_ITF) *QUuid /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/quuid.h:201
+// /usr/include/qt/QtCore/quuid.h:213
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [16] QUuid createUuidV5(const QUuid &, const QString &)
@@ -575,7 +627,7 @@ func QUuid_CreateUuidV51(ns QUuid_ITF, baseData string) *QUuid /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/quuid.h:208
+// /usr/include/qt/QtCore/quuid.h:219
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QUuid::Variant variant() const
@@ -591,7 +643,7 @@ func (this *QUuid) Variant() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/quuid.h:209
+// /usr/include/qt/QtCore/quuid.h:220
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QUuid::Version version() const
@@ -707,6 +759,42 @@ func (this *QUuid) VersionItemName(val int) string {
 func QUuid_VersionItemName(val int) string {
 	var nilthis *QUuid
 	return nilthis.VersionItemName(val)
+}
+
+/*
+This enum is used by toString(StringFormat) to control the formatting of the string representation. The possible values are:
+
+
+
+This enum was introduced or modified in  Qt 5.11.
+
+*/
+type QUuid__StringFormat = int
+
+//
+const QUuid__WithBraces QUuid__StringFormat = 0
+
+//
+const QUuid__WithoutBraces QUuid__StringFormat = 1
+
+// Only the hex digits, without braces or dashes. Note that QUuid cannot parse this back again as input.
+const QUuid__Id128 QUuid__StringFormat = 3
+
+func (this *QUuid) StringFormatItemName(val int) string {
+	switch val {
+	case QUuid__WithBraces: // 0
+		return "WithBraces"
+	case QUuid__WithoutBraces: // 1
+		return "WithoutBraces"
+	case QUuid__Id128: // 3
+		return "Id128"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QUuid_StringFormatItemName(val int) string {
+	var nilthis *QUuid
+	return nilthis.StringFormatItemName(val)
 }
 
 //  body block end

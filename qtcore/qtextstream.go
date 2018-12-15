@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 21
+// extern C begin: 109
 */
 // import "C"
 import "unsafe"
@@ -1552,12 +1552,32 @@ func (this *QTextStream) Operator_left_shift12(s string) *QTextStream {
 // /usr/include/qt/QtCore/qtextstream.h:187
 // index:13
 // Public Visibility=Default Availability=Available
+// [16] QTextStream & operator<<(QStringView)
+
+/*
+
+ */
+func (this *QTextStream) Operator_left_shift13(s QStringView_ITF /*123*/) *QTextStream {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringView_PTR() != nil {
+		convArg0 = s.QStringView_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextStream)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qtextstream.h:188
+// index:14
+// Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(QLatin1String)
 
 /*
 
  */
-func (this *QTextStream) Operator_left_shift13(s QLatin1String_ITF /*123*/) *QTextStream {
+func (this *QTextStream) Operator_left_shift14(s QLatin1String_ITF /*123*/) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -1569,15 +1589,15 @@ func (this *QTextStream) Operator_left_shift13(s QLatin1String_ITF /*123*/) *QTe
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:188
-// index:14
+// /usr/include/qt/QtCore/qtextstream.h:189
+// index:15
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(const QStringRef &)
 
 /*
 
  */
-func (this *QTextStream) Operator_left_shift14(s QStringRef_ITF) *QTextStream {
+func (this *QTextStream) Operator_left_shift15(s QStringRef_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringRef_PTR() != nil {
 		convArg0 = s.QStringRef_PTR().GetCthis()
@@ -1589,15 +1609,15 @@ func (this *QTextStream) Operator_left_shift14(s QStringRef_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:189
-// index:15
+// /usr/include/qt/QtCore/qtextstream.h:190
+// index:16
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(const QByteArray &)
 
 /*
 
  */
-func (this *QTextStream) Operator_left_shift15(array QByteArray_ITF) *QTextStream {
+func (this *QTextStream) Operator_left_shift16(array QByteArray_ITF) *QTextStream {
 	var convArg0 unsafe.Pointer
 	if array != nil && array.QByteArray_PTR() != nil {
 		convArg0 = array.QByteArray_PTR().GetCthis()
@@ -1609,15 +1629,15 @@ func (this *QTextStream) Operator_left_shift15(array QByteArray_ITF) *QTextStrea
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:190
-// index:16
+// /usr/include/qt/QtCore/qtextstream.h:191
+// index:17
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(const char *)
 
 /*
 
  */
-func (this *QTextStream) Operator_left_shift16(c string) *QTextStream {
+func (this *QTextStream) Operator_left_shift17(c string) *QTextStream {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1627,15 +1647,15 @@ func (this *QTextStream) Operator_left_shift16(c string) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:191
-// index:17
+// /usr/include/qt/QtCore/qtextstream.h:192
+// index:18
 // Public Visibility=Default Availability=Available
 // [16] QTextStream & operator<<(const void *)
 
 /*
 
  */
-func (this *QTextStream) Operator_left_shift17(ptr unsafe.Pointer /*666*/) *QTextStream {
+func (this *QTextStream) Operator_left_shift18(ptr unsafe.Pointer /*666*/) *QTextStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamlsEPKv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ptr)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

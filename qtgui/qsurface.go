@@ -65,7 +65,7 @@ func (*QSurface) NewFromPointer(cthis unsafe.Pointer) *QSurface {
 	return NewQSurfaceFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qsurface.h:72
+// /usr/include/qt/QtGui/qsurface.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSurface()
@@ -80,7 +80,7 @@ func DeleteQSurface(this *QSurface) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qsurface.h:74
+// /usr/include/qt/QtGui/qsurface.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSurface::SurfaceClass surfaceClass() const
@@ -94,7 +94,7 @@ func (this *QSurface) SurfaceClass() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qsurface.h:76
+// /usr/include/qt/QtGui/qsurface.h:80
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSurfaceFormat format() const
@@ -110,7 +110,7 @@ func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qsurface.h:79
+// /usr/include/qt/QtGui/qsurface.h:83
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSurface::SurfaceType surfaceType() const
@@ -124,7 +124,7 @@ func (this *QSurface) SurfaceType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qsurface.h:80
+// /usr/include/qt/QtGui/qsurface.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool supportsOpenGL() const
@@ -140,7 +140,7 @@ func (this *QSurface) SupportsOpenGL() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qsurface.h:82
+// /usr/include/qt/QtGui/qsurface.h:86
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSize size() const
@@ -156,7 +156,7 @@ func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qsurface.h:85
+// /usr/include/qt/QtGui/qsurface.h:89
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QSurface(QSurface::SurfaceClass)
@@ -225,6 +225,9 @@ const QSurface__OpenVGSurface QSurface__SurfaceType = 3
 // The surface is a Vulkan compatible surface and can be used in conjunction with the Vulkan graphics API.
 const QSurface__VulkanSurface QSurface__SurfaceType = 4
 
+// The surface is a Metal compatible surface and can be used in conjunction with Apple's Metal graphics API. This surface type is supported on macOS only.
+const QSurface__MetalSurface QSurface__SurfaceType = 5
+
 func (this *QSurface) SurfaceTypeItemName(val int) string {
 	switch val {
 	case QSurface__RasterSurface: // 0
@@ -237,6 +240,8 @@ func (this *QSurface) SurfaceTypeItemName(val int) string {
 		return "OpenVGSurface"
 	case QSurface__VulkanSurface: // 4
 		return "VulkanSurface"
+	case QSurface__MetalSurface: // 5
+		return "MetalSurface"
 	default:
 		return fmt.Sprintf("%d", val)
 	}

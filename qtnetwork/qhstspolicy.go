@@ -193,8 +193,8 @@ func DeleteQHstsPolicy(this *QHstsPolicy) {
 // [-2] void swap(QHstsPolicy &)
 
 /*
-
- */
+Swaps this policy with the other policy.
+*/
 func (this *QHstsPolicy) Swap(other QHstsPolicy_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QHstsPolicy_PTR() != nil {

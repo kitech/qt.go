@@ -533,14 +533,14 @@ func (this *QQuaternion) Conjugate() *QQuaternion /*123*/ {
 Rotates vector with this quaternion to produce a new vector in 3D space. The following code:
 
 
-  QVector3D result = q.rotatedVector(vector);
+      QVector3D result = q.rotatedVector(vector);
 
 
 
 is equivalent to the following:
 
 
-  QVector3D result = (q * QQuaternion(0, vector) * q.conjugated()).vector();
+      QVector3D result = (q * QQuaternion(0, vector) * q.conjugated()).vector();
 */
 func (this *QQuaternion) RotatedVector(vector QVector3D_ITF) *QVector3D /*123*/ {
 	var convArg0 unsafe.Pointer

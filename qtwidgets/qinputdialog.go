@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 96
+// extern C begin: 97
 */
 // import "C"
 import "unsafe"
@@ -737,8 +737,6 @@ func (this *QInputDialog) CancelButtonText() string {
 // [-2] void open(QObject *, const char *)
 
 /*
-This is an overloaded function.
-
 This function connects one of its signals to the slot specified by receiver and member. The specific signal depends on the arguments that are specified in member. These are:
 
 
@@ -769,7 +767,7 @@ func (this *QInputDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, me
 // [8] QSize minimumSizeHint() const
 
 /*
-Reimplemented from QWidget::minimumSizeHint().
+Reimplemented from QDialog::minimumSizeHint().
 */
 func (this *QInputDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -785,7 +783,7 @@ func (this *QInputDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QDialog::sizeHint().
 */
 func (this *QInputDialog) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -801,7 +799,7 @@ func (this *QInputDialog) SizeHint() *qtcore.QSize /*123*/ {
 // [-2] void setVisible(bool)
 
 /*
-Reimplemented from QWidget::setVisible().
+Reimplemented from QDialog::setVisible().
 */
 func (this *QInputDialog) SetVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
@@ -818,7 +816,7 @@ Static convenience function to get a string from the user.
 
 title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
 
 If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
 
@@ -870,7 +868,7 @@ Static convenience function to get a string from the user.
 
 title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
 
 If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
 
@@ -925,7 +923,7 @@ Static convenience function to get a string from the user.
 
 title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
 
 If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
 
@@ -978,7 +976,7 @@ Static convenience function to get a string from the user.
 
 title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
 
 If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
 
@@ -1031,7 +1029,7 @@ Static convenience function to get a string from the user.
 
 title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
 
 If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
 
@@ -1082,7 +1080,7 @@ Static convenience function to get a string from the user.
 
 title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the line edit. mode is the echo mode the line edit will use. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
 
 If the dialog is accepted, this function returns the text in the dialog's line edit. If the dialog is rejected, a null QString is returned.
 
@@ -1131,7 +1129,7 @@ Static convenience function to get a multiline string from the user.
 
 title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the plain text edit. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
 
 If the dialog is accepted, this function returns the text in the dialog's plain text edit. If the dialog is rejected, a null QString is returned.
 
@@ -1184,7 +1182,7 @@ Static convenience function to get a multiline string from the user.
 
 title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the plain text edit. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
 
 If the dialog is accepted, this function returns the text in the dialog's plain text edit. If the dialog is rejected, a null QString is returned.
 
@@ -1238,7 +1236,7 @@ Static convenience function to get a multiline string from the user.
 
 title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the plain text edit. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
 
 If the dialog is accepted, this function returns the text in the dialog's plain text edit. If the dialog is rejected, a null QString is returned.
 
@@ -1292,7 +1290,7 @@ Static convenience function to get a multiline string from the user.
 
 title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the plain text edit. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
 
 If the dialog is accepted, this function returns the text in the dialog's plain text edit. If the dialog is rejected, a null QString is returned.
 
@@ -1344,7 +1342,7 @@ Static convenience function to get a multiline string from the user.
 
 title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). text is the default text which is placed in the plain text edit. inputMethodHints is the input method hints that will be used in the edit widget if an input method is active.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the specified widget flags.
 
 If the dialog is accepted, this function returns the text in the dialog's plain text edit. If the dialog is rejected, a null QString is returned.
 
@@ -1396,7 +1394,7 @@ title is the text which is displayed in the title bar of the dialog. label is th
 
 If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
 
 This function returns the text of the current item, or if editable is true, the current text of the combo box.
 
@@ -1454,7 +1452,7 @@ title is the text which is displayed in the title bar of the dialog. label is th
 
 If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
 
 This function returns the text of the current item, or if editable is true, the current text of the combo box.
 
@@ -1517,7 +1515,7 @@ title is the text which is displayed in the title bar of the dialog. label is th
 
 If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
 
 This function returns the text of the current item, or if editable is true, the current text of the combo box.
 
@@ -1578,7 +1576,7 @@ title is the text which is displayed in the title bar of the dialog. label is th
 
 If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
 
 This function returns the text of the current item, or if editable is true, the current text of the combo box.
 
@@ -1637,7 +1635,7 @@ title is the text which is displayed in the title bar of the dialog. label is th
 
 If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
 
 This function returns the text of the current item, or if editable is true, the current text of the combo box.
 
@@ -1694,7 +1692,7 @@ title is the text which is displayed in the title bar of the dialog. label is th
 
 If editable is true the user can enter their own text; otherwise, the user may only select one of the existing items.
 
-If ok is nonnull *a ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
+If ok is nonnull *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
 
 This function returns the text of the current item, or if editable is true, the current text of the combo box.
 

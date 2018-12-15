@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 33
+// extern C begin: 35
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func (*QBitRef) NewFromPointer(cthis unsafe.Pointer) *QBitRef {
 	return NewQBitRefFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qbitarray.h:152
+// /usr/include/qt/QtCore/qbitarray.h:155
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!() const
@@ -78,7 +78,7 @@ func (this *QBitRef) Operator_not() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbitarray.h:153
+// /usr/include/qt/QtCore/qbitarray.h:156
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QBitRef & operator=(const QBitRef &)
@@ -98,7 +98,7 @@ func (this *QBitRef) Operator_equal(val QBitRef_ITF) *QBitRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbitarray.h:154
+// /usr/include/qt/QtCore/qbitarray.h:157
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QBitRef & operator=(bool)

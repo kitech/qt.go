@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h
@@ -18,7 +20,7 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 35
+// extern C begin: 40
 */
 // import "C"
 import "unsafe"
@@ -67,7 +69,7 @@ func (*QSslPreSharedKeyAuthenticator) NewFromPointer(cthis unsafe.Pointer) *QSsl
 	return NewQSslPreSharedKeyAuthenticatorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:55
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSslPreSharedKeyAuthenticator()
@@ -88,7 +90,7 @@ func NewQSslPreSharedKeyAuthenticator() *QSslPreSharedKeyAuthenticator {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:56
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSslPreSharedKeyAuthenticator()
@@ -103,7 +105,7 @@ func DeleteQSslPreSharedKeyAuthenticator(this *QSslPreSharedKeyAuthenticator) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:58
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSslPreSharedKeyAuthenticator & operator=(const QSslPreSharedKeyAuthenticator &)
@@ -123,7 +125,7 @@ func (this *QSslPreSharedKeyAuthenticator) Operator_equal(authenticator QSslPreS
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:61
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:63
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QSslPreSharedKeyAuthenticator & operator=(QSslPreSharedKeyAuthenticator &&)
@@ -139,7 +141,7 @@ func (this *QSslPreSharedKeyAuthenticator) Operator_equal1(other unsafe.Pointer 
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:64
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:66
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslPreSharedKeyAuthenticator &)
@@ -156,7 +158,7 @@ func (this *QSslPreSharedKeyAuthenticator) Swap(other QSslPreSharedKeyAuthentica
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:66
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray identityHint() const
@@ -172,7 +174,7 @@ func (this *QSslPreSharedKeyAuthenticator) IdentityHint() *qtcore.QByteArray /*1
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:68
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIdentity(const QByteArray &)
@@ -193,7 +195,7 @@ func (this *QSslPreSharedKeyAuthenticator) SetIdentity(identity qtcore.QByteArra
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:69
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray identity() const
@@ -211,7 +213,7 @@ func (this *QSslPreSharedKeyAuthenticator) Identity() *qtcore.QByteArray /*123*/
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:70
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maximumIdentityLength() const
@@ -229,7 +231,7 @@ func (this *QSslPreSharedKeyAuthenticator) MaximumIdentityLength() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:72
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreSharedKey(const QByteArray &)
@@ -250,7 +252,7 @@ func (this *QSslPreSharedKeyAuthenticator) SetPreSharedKey(preSharedKey qtcore.Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:73
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray preSharedKey() const
@@ -268,7 +270,7 @@ func (this *QSslPreSharedKeyAuthenticator) PreSharedKey() *qtcore.QByteArray /*1
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:74
+// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maximumPreSharedKeyLength() const

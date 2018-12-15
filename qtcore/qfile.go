@@ -716,7 +716,7 @@ func (this *QFile) Open1p(fd int, ioFlags int) bool {
 // [8] qint64 size() const
 
 /*
-Reimplemented from QIODevice::size().
+Reimplemented from QFileDevice::size().
 */
 func (this *QFile) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

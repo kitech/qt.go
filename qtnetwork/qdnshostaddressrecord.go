@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qdnslookup.h
@@ -65,7 +67,7 @@ func (*QDnsHostAddressRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsHostAddr
 	return NewQDnsHostAddressRecordFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:87
+// /usr/include/qt/QtNetwork/qdnslookup.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsHostAddressRecord()
@@ -84,7 +86,7 @@ func NewQDnsHostAddressRecord() *QDnsHostAddressRecord {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:90
+// /usr/include/qt/QtNetwork/qdnslookup.h:92
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDnsHostAddressRecord & operator=(QDnsHostAddressRecord &&)
@@ -100,7 +102,7 @@ func (this *QDnsHostAddressRecord) Operator_equal(other unsafe.Pointer /*333*/) 
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:92
+// /usr/include/qt/QtNetwork/qdnslookup.h:94
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QDnsHostAddressRecord & operator=(const QDnsHostAddressRecord &)
@@ -120,7 +122,7 @@ func (this *QDnsHostAddressRecord) Operator_equal1(other QDnsHostAddressRecord_I
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:93
+// /usr/include/qt/QtNetwork/qdnslookup.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDnsHostAddressRecord()
@@ -135,7 +137,7 @@ func DeleteQDnsHostAddressRecord(this *QDnsHostAddressRecord) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:95
+// /usr/include/qt/QtNetwork/qdnslookup.h:97
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsHostAddressRecord &)
@@ -152,7 +154,7 @@ func (this *QDnsHostAddressRecord) Swap(other QDnsHostAddressRecord_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:97
+// /usr/include/qt/QtNetwork/qdnslookup.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
@@ -169,7 +171,7 @@ func (this *QDnsHostAddressRecord) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:98
+// /usr/include/qt/QtNetwork/qdnslookup.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] quint32 timeToLive() const
@@ -183,7 +185,7 @@ func (this *QDnsHostAddressRecord) TimeToLive() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:99
+// /usr/include/qt/QtNetwork/qdnslookup.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QHostAddress value() const

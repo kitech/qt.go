@@ -63,7 +63,7 @@ func (*QDragEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QDragEnterEvent {
 	return NewQDragEnterEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:662
+// /usr/include/qt/QtGui/qevent.h:667
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDragEnterEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers)
@@ -90,7 +90,7 @@ func NewQDragEnterEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeDat
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:664
+// /usr/include/qt/QtGui/qevent.h:669
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDragEnterEvent()

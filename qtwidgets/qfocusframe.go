@@ -206,7 +206,7 @@ func (this *QFocusFrame) Widget() *QWidget /*777 QWidget **/ {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QFocusFrame) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

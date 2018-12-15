@@ -80,7 +80,7 @@ func (this *QSGEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:70
+// /usr/include/qt/QtQuick/qsgengine.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGEngine(QObject *)
@@ -103,7 +103,7 @@ func NewQSGEngine(parent qtcore.QObject_ITF /*777 QObject **/) *QSGEngine {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:70
+// /usr/include/qt/QtQuick/qsgengine.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGEngine(QObject *)
@@ -124,7 +124,7 @@ func NewQSGEnginep() *QSGEngine {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:71
+// /usr/include/qt/QtQuick/qsgengine.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGEngine()
@@ -139,7 +139,7 @@ func DeleteQSGEngine(this *QSGEngine) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:74
+// /usr/include/qt/QtQuick/qsgengine.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void invalidate()
@@ -154,7 +154,7 @@ func (this *QSGEngine) Invalidate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:76
+// /usr/include/qt/QtQuick/qsgengine.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGAbstractRenderer * createRenderer() const
@@ -170,7 +170,7 @@ func (this *QSGEngine) CreateRenderer() *QSGAbstractRenderer /*777 QSGAbstractRe
 	return /*==*/ NewQSGAbstractRendererFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:77
+// /usr/include/qt/QtQuick/qsgengine.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromImage(const QImage &, QSGEngine::CreateTextureOptions) const
@@ -194,7 +194,7 @@ func (this *QSGEngine) CreateTextureFromImage(image qtgui.QImage_ITF, options in
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:77
+// /usr/include/qt/QtQuick/qsgengine.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromImage(const QImage &, QSGEngine::CreateTextureOptions) const
@@ -220,7 +220,7 @@ func (this *QSGEngine) CreateTextureFromImagep(image qtgui.QImage_ITF) *QSGTextu
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:78
+// /usr/include/qt/QtQuick/qsgengine.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromId(uint, const QSize &, QSGEngine::CreateTextureOptions) const
@@ -244,7 +244,7 @@ func (this *QSGEngine) CreateTextureFromId(id uint, size qtcore.QSize_ITF, optio
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:78
+// /usr/include/qt/QtQuick/qsgengine.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * createTextureFromId(uint, const QSize &, QSGEngine::CreateTextureOptions) const
@@ -270,7 +270,7 @@ func (this *QSGEngine) CreateTextureFromIdp(id uint, size qtcore.QSize_ITF) *QSG
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:79
+// /usr/include/qt/QtQuick/qsgengine.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGRendererInterface * rendererInterface() const
@@ -288,7 +288,7 @@ func (this *QSGEngine) RendererInterface() *QSGRendererInterface /*777 QSGRender
 	return /*==*/ NewQSGRendererInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:80
+// /usr/include/qt/QtQuick/qsgengine.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGRectangleNode * createRectangleNode() const
@@ -308,7 +308,7 @@ func (this *QSGEngine) CreateRectangleNode() *QSGRectangleNode /*777 QSGRectangl
 	return /*==*/ NewQSGRectangleNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:81
+// /usr/include/qt/QtQuick/qsgengine.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGImageNode * createImageNode() const
@@ -328,7 +328,7 @@ func (this *QSGEngine) CreateImageNode() *QSGImageNode /*777 QSGImageNode **/ {
 	return /*==*/ NewQSGImageNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgengine.h:82
+// /usr/include/qt/QtQuick/qsgengine.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGNinePatchNode * createNinePatchNode() const

@@ -2268,6 +2268,8 @@ If a rectangle with an invalid size is specified (the default), the entire widge
 
 This function was introduced in  Qt 5.0.
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also render() and QPixmap.
 */
 func (this *QWidget) Grab(rectangle qtcore.QRect_ITF) *qtgui.QPixmap /*123*/ {
@@ -2293,6 +2295,8 @@ Renders the widget into a pixmap restricted by the given rectangle. If the widge
 If a rectangle with an invalid size is specified (the default), the entire widget is painted.
 
 This function was introduced in  Qt 5.0.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also render() and QPixmap.
 */
@@ -5973,9 +5977,9 @@ func (this *QWidget) HideEvent(event qtgui.QHideEvent_ITF /*777 QHideEvent **/) 
 /*
 This special event handler can be reimplemented in a subclass to receive native platform events identified by eventType which are passed in the message parameter.
 
-In your reimplementation of this function, if you want to stop the event being handled by Qt, return true and set result. If you return false, this native event is passed back to Qt, which translates the event into a Qt event and sends it to the widget.
+In your reimplementation of this function, if you want to stop the event being handled by Qt, return true and set result. The result parameter has meaning only on Windows. If you return false, this native event is passed back to Qt, which translates the event into a Qt event and sends it to the widget.
 
-Note: Events are only delivered to this event handler if the widget is has a native Window handle.
+Note: Events are only delivered to this event handler if the widget has a native window handle.
 
 Note: This function superseedes the event filter functions x11Event(), winEvent() and macEvent() of Qt 4.
 
@@ -5983,6 +5987,10 @@ Note: This function superseedes the event filter functions x11Event(), winEvent(
  PlatformEvent Type IdentifierMessage TypeResult Type
 Windows"windows_generic_MSG"MSG *LRESULT
 macOS"NSEvent"NSEvent *
+XCB"xcb_generic_event_t"xcb_generic_event_t *
+
+
+See also QAbstractNativeEventFilter.
 */
 func (this *QWidget) NativeEvent(eventType qtcore.QByteArray_ITF, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool {
 	var convArg0 unsafe.Pointer

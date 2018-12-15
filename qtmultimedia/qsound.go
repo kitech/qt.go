@@ -87,6 +87,8 @@ func (this *QSound) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 /*
 Plays the sound stored in the file specified by the given filename.
 
+The file can either be a local file or in a resource.
+
 See also stop(), loopsRemaining(), and isFinished().
 */
 func (this *QSound) Play(filename string) {
@@ -108,6 +110,8 @@ func QSound_Play(filename string) {
 /*
 Plays the sound stored in the file specified by the given filename.
 
+The file can either be a local file or in a resource.
+
 See also stop(), loopsRemaining(), and isFinished().
 */
 func (this *QSound) Play1() {
@@ -122,6 +126,8 @@ func (this *QSound) Play1() {
 
 /*
 Constructs a QSound object from the file specified by the given filename and with the given parent.
+
+The file can either be a local file or in a resource.
 
 See also play().
 */
@@ -149,6 +155,8 @@ func NewQSound(filename string, parent qtcore.QObject_ITF /*777 QObject **/) *QS
 
 /*
 Constructs a QSound object from the file specified by the given filename and with the given parent.
+
+The file can either be a local file or in a resource.
 
 See also play().
 */

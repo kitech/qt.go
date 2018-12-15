@@ -64,7 +64,7 @@ func (*QJsonValuePtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
 	return NewQJsonValuePtrFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:226
+// /usr/include/qt/QtCore/qjsonvalue.h:227
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QJsonValuePtr(const QJsonValue &)
@@ -87,7 +87,7 @@ func NewQJsonValuePtr(val QJsonValue_ITF) *QJsonValuePtr {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:229
+// /usr/include/qt/QtCore/qjsonvalue.h:230
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [24] QJsonValue & operator*()
@@ -103,7 +103,7 @@ func (this *QJsonValuePtr) Operator_mul() *QJsonValue {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:230
+// /usr/include/qt/QtCore/qjsonvalue.h:231
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QJsonValue * operator->()

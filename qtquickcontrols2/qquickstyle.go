@@ -176,11 +176,13 @@ func QQuickStyle_SetFallbackStyle(style string) {
 // [8] QStringList availableStyles()
 
 /*
-Returns the names of the available built-in styles.
+Returns the names of the available styles.
 
 Note: The method must be called after creating an instance of QGuiApplication.
 
 This function was introduced in  Qt 5.9.
+
+See also stylePathList() and addStylePath().
 */
 func (this *QQuickStyle) AvailableStyles() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle15availableStylesEv", qtrt.FFI_TYPE_POINTER)
@@ -193,6 +195,69 @@ func QQuickStyle_AvailableStyles() *qtcore.QStringList /*123*/ {
 	var nilthis *QQuickStyle
 	rv := nilthis.AvailableStyles()
 	return rv
+}
+
+// /usr/include/qt/QtQuickControls2/qquickstyle.h:54
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList stylePathList()
+
+/*
+Returns the list of directories where Qt Quick Controls 2 searches for available styles.
+
+By default, the list contains paths specified in the QT_QUICK_CONTROLS_STYLE_PATH environment variable, and any existing QtQuick/Controls.2 sub-directories in QQmlEngine::importPathList().
+
+This function was introduced in  Qt 5.12.
+
+See also addStylePath() and availableStyles().
+*/
+func (this *QQuickStyle) StylePathList() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle13stylePathListEv", qtrt.FFI_TYPE_POINTER)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QQuickStyle_StylePathList() *qtcore.QStringList /*123*/ {
+	var nilthis *QQuickStyle
+	rv := nilthis.StylePathList()
+	return rv
+}
+
+// /usr/include/qt/QtQuickControls2/qquickstyle.h:55
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void addStylePath(const QString &)
+
+/*
+Adds path as a directory where Qt Quick Controls 2 searches for available styles.
+
+The path may be any local filesystem directory or Qt Resource directory. For example, the following paths are all valid:
+
+
+/path/to/styles/
+file:///path/to/styles/
+:/path/to/styles/
+qrc:/path/to/styles/)
+
+
+The path will be converted into canonical form before it is added to the style path list.
+
+The newly added path will be first in the stylePathList().
+
+This function was introduced in  Qt 5.12.
+
+See also stylePathList() and availableStyles().
+*/
+func (this *QQuickStyle) AddStylePath(path string) {
+	var tmpArg0 = qtcore.NewQString5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle12addStylePathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+func QQuickStyle_AddStylePath(path string) {
+	var nilthis *QQuickStyle
+	nilthis.AddStylePath(path)
 }
 
 func DeleteQQuickStyle(this *QQuickStyle) {

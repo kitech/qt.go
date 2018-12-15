@@ -186,8 +186,8 @@ func (this *QCameraImageCaptureControl) CancelCapture() {
 /*
 Signals that a capture control's ready state has changed.
 */
-func (this *QCameraImageCaptureControl) ReadyForCaptureChanged(arg0 bool) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl22readyForCaptureChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QCameraImageCaptureControl) ReadyForCaptureChanged(ready bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl22readyForCaptureChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ready)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -199,8 +199,8 @@ func (this *QCameraImageCaptureControl) ReadyForCaptureChanged(arg0 bool) {
 /*
 Signals that an image with it requestId has just been exposed. This signal can be used for the shutter sound or other indicaton.
 */
-func (this *QCameraImageCaptureControl) ImageExposed(id int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl12imageExposedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id)
+func (this *QCameraImageCaptureControl) ImageExposed(requestId int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl12imageExposedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), requestId)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -212,12 +212,12 @@ func (this *QCameraImageCaptureControl) ImageExposed(id int) {
 /*
 Signals that an image with it requestId has been captured and a preview is available.
 */
-func (this *QCameraImageCaptureControl) ImageCaptured(id int, preview qtgui.QImage_ITF) {
+func (this *QCameraImageCaptureControl) ImageCaptured(requestId int, preview qtgui.QImage_ITF) {
 	var convArg1 unsafe.Pointer
 	if preview != nil && preview.QImage_PTR() != nil {
 		convArg1 = preview.QImage_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl13imageCapturedEiRK6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl13imageCapturedEiRK6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), requestId, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -250,12 +250,12 @@ func (this *QCameraImageCaptureControl) ImageMetadataAvailable(id int, key strin
 /*
 Signals that a captured buffer with a requestId is available.
 */
-func (this *QCameraImageCaptureControl) ImageAvailable(id int, buffer QVideoFrame_ITF) {
+func (this *QCameraImageCaptureControl) ImageAvailable(requestId int, buffer QVideoFrame_ITF) {
 	var convArg1 unsafe.Pointer
 	if buffer != nil && buffer.QVideoFrame_PTR() != nil {
 		convArg1 = buffer.QVideoFrame_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl14imageAvailableEiRK11QVideoFrame", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl14imageAvailableEiRK11QVideoFrame", qtrt.FFI_TYPE_POINTER, this.GetCthis(), requestId, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -267,10 +267,10 @@ func (this *QCameraImageCaptureControl) ImageAvailable(id int, buffer QVideoFram
 /*
 Signals that a captured image with a requestId has been saved to fileName.
 */
-func (this *QCameraImageCaptureControl) ImageSaved(id int, fileName string) {
+func (this *QCameraImageCaptureControl) ImageSaved(requestId int, fileName string) {
 	var tmpArg1 = qtcore.NewQString5(fileName)
 	var convArg1 = tmpArg1.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl10imageSavedEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QCameraImageCaptureControl10imageSavedEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), requestId, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
 

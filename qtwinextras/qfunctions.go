@@ -48,7 +48,7 @@ func ToHBITMAP(p qtgui.QPixmap_ITF, format int) unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:85
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:87
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [32] QPixmap fromHICON(HICON)
@@ -64,7 +64,7 @@ func FromHICON(icon unsafe.Pointer /*666*/) *qtgui.QPixmap /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:87
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:89
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QRegion fromHRGN(HRGN)
@@ -98,7 +98,7 @@ func ToHICON(p qtgui.QPixmap_ITF) unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:86
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:88
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] HRGN toHRGN(const QRegion &)
@@ -116,7 +116,7 @@ func ToHRGN(region qtgui.QRegion_ITF) unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:114
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:116
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void setCurrentProcessExplicitAppUserModelID(const QString &)
@@ -131,7 +131,7 @@ func SetCurrentProcessExplicitAppUserModelID(id string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:95
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:97
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void setWindowExcludedFromPeek(QWindow *, bool)
@@ -148,7 +148,7 @@ func SetWindowExcludedFromPeek(window qtgui.QWindow_ITF /*777 QWindow **/, exclu
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:124
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:126
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void setWindowExcludedFromPeek(QWidget *, bool)
@@ -165,7 +165,7 @@ func SetWindowExcludedFromPeek1(window qtwidgets.QWidget_ITF /*777 QWidget **/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:102
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:104
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void extendFrameIntoClientArea(QWindow *, int, int, int, int)
@@ -182,7 +182,7 @@ func ExtendFrameIntoClientArea(window qtgui.QWindow_ITF /*777 QWindow **/, left 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:103
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:105
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [-2] void extendFrameIntoClientArea(QWindow *, const QMargins &)
@@ -203,7 +203,7 @@ func ExtendFrameIntoClientArea1(window qtgui.QWindow_ITF /*777 QWindow **/, marg
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:172
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:174
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void extendFrameIntoClientArea(QWidget *, int, int, int, int)
@@ -220,7 +220,7 @@ func ExtendFrameIntoClientArea2(window qtwidgets.QWidget_ITF /*777 QWidget **/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:166
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:168
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void extendFrameIntoClientArea(QWidget *, const QMargins &)
@@ -241,7 +241,7 @@ func ExtendFrameIntoClientArea3(window qtwidgets.QWidget_ITF /*777 QWidget **/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:96
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:98
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool isWindowExcludedFromPeek(QWindow *)
@@ -259,7 +259,7 @@ func IsWindowExcludedFromPeek(window qtgui.QWindow_ITF /*777 QWindow **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:130
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:132
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool isWindowExcludedFromPeek(QWidget *)
@@ -277,7 +277,7 @@ func IsWindowExcludedFromPeek1(window qtwidgets.QWidget_ITF /*777 QWidget **/) b
 	return rv != 0
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:108
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:110
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void disableBlurBehindWindow(QWindow *)
@@ -294,7 +294,7 @@ func DisableBlurBehindWindow(window qtgui.QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:196
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:198
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void disableBlurBehindWindow(QWidget *)
@@ -311,7 +311,7 @@ func DisableBlurBehindWindow1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:98
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:100
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool isWindowPeekDisallowed(QWindow *)
@@ -329,7 +329,7 @@ func IsWindowPeekDisallowed(window qtgui.QWindow_ITF /*777 QWindow **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:144
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:146
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool isWindowPeekDisallowed(QWidget *)
@@ -347,7 +347,7 @@ func IsWindowPeekDisallowed1(window qtwidgets.QWidget_ITF /*777 QWidget **/) boo
 	return rv != 0
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:90
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:92
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString errorStringFromHresult(HRESULT)
@@ -364,7 +364,7 @@ func ErrorStringFromHresult(hresult int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:106
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:108
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void enableBlurBehindWindow(QWindow *, const QRegion &)
@@ -385,7 +385,7 @@ func EnableBlurBehindWindow(window qtgui.QWindow_ITF /*777 QWindow **/, region q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:107
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:109
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [-2] void enableBlurBehindWindow(QWindow *)
@@ -402,7 +402,7 @@ func EnableBlurBehindWindow1(window qtgui.QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:184
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:186
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void enableBlurBehindWindow(QWidget *, const QRegion &)
@@ -423,7 +423,7 @@ func EnableBlurBehindWindow2(window qtwidgets.QWidget_ITF /*777 QWidget **/, reg
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:190
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:192
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void enableBlurBehindWindow(QWidget *)
@@ -440,7 +440,7 @@ func EnableBlurBehindWindow3(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:119
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:121
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void taskbarActivateTabAlt(QWindow *)
@@ -457,7 +457,7 @@ func TaskbarActivateTabAlt(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:214
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:216
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void taskbarActivateTabAlt(QWidget *)
@@ -474,7 +474,7 @@ func TaskbarActivateTabAlt1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:99
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:101
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void setWindowFlip3DPolicy(QWindow *, QtWin::WindowFlip3DPolicy)
@@ -491,7 +491,7 @@ func SetWindowFlip3DPolicy(window qtgui.QWindow_ITF /*777 QWindow **/, policy in
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:152
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:154
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void setWindowFlip3DPolicy(QWidget *, QtWin::WindowFlip3DPolicy)
@@ -508,7 +508,7 @@ func SetWindowFlip3DPolicy1(window qtwidgets.QWidget_ITF /*777 QWidget **/, poli
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:97
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:99
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void setWindowDisallowPeek(QWindow *, bool)
@@ -525,7 +525,7 @@ func SetWindowDisallowPeek(window qtgui.QWindow_ITF /*777 QWindow **/, disallow 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:138
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:140
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void setWindowDisallowPeek(QWidget *, bool)
@@ -542,7 +542,7 @@ func SetWindowDisallowPeek1(window qtwidgets.QWidget_ITF /*777 QWidget **/, disa
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:111
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:113
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void setCompositionEnabled(bool)
@@ -555,7 +555,7 @@ func SetCompositionEnabled(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:93
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:95
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QColor realColorizationColor()
@@ -571,7 +571,7 @@ func RealColorizationColor() *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:116
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:118
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void markFullscreenWindow(QWindow *, bool)
@@ -588,7 +588,7 @@ func MarkFullscreenWindow(arg0 qtgui.QWindow_ITF /*777 QWindow **/, fullscreen b
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:202
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:204
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void markFullscreenWindow(QWidget *, bool)
@@ -605,7 +605,7 @@ func MarkFullscreenWindow1(window qtwidgets.QWidget_ITF /*777 QWidget **/, fulls
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:110
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:112
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool isCompositionEnabled()
@@ -619,7 +619,7 @@ func IsCompositionEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:112
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:114
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool isCompositionOpaque()
@@ -633,7 +633,7 @@ func IsCompositionOpaque() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:100
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:102
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] QtWin::WindowFlip3DPolicy windowFlip3DPolicy(QWindow *)
@@ -651,7 +651,7 @@ func WindowFlip3DPolicy(arg0 qtgui.QWindow_ITF /*777 QWindow **/) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:158
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:160
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] QtWin::WindowFlip3DPolicy windowFlip3DPolicy(QWidget *)
@@ -669,7 +669,7 @@ func WindowFlip3DPolicy1(window qtwidgets.QWidget_ITF /*777 QWidget **/) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:118
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:120
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void taskbarActivateTab(QWindow *)
@@ -686,7 +686,7 @@ func TaskbarActivateTab(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:208
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:210
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void taskbarActivateTab(QWidget *)
@@ -703,7 +703,7 @@ func TaskbarActivateTab1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:104
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:106
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void resetExtendedFrame(QWindow *)
@@ -720,7 +720,7 @@ func ResetExtendedFrame(window qtgui.QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:178
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:180
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void resetExtendedFrame(QWidget *)
@@ -737,7 +737,7 @@ func ResetExtendedFrame1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:89
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:91
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString stringFromHresult(HRESULT)
@@ -754,7 +754,7 @@ func StringFromHresult(hresult int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:92
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:94
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QColor colorizationColor(bool *)
@@ -770,7 +770,7 @@ func ColorizationColor(opaqueBlend *bool) *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:121
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:123
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void taskbarDeleteTab(QWindow *)
@@ -787,7 +787,7 @@ func TaskbarDeleteTab(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:226
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:228
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void taskbarDeleteTab(QWidget *)
@@ -804,15 +804,31 @@ func TaskbarDeleteTab1(window qtwidgets.QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:84
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:86
 // index:0
+// Invalid Visibility=Default Availability=Available
+// [32] QImage imageFromHBITMAP(HBITMAP, QtWin::HBitmapFormat)
+
+/*
+
+ */
+func ImageFromHBITMAP(bitmap unsafe.Pointer /*666*/, format int) *qtgui.QImage /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin16imageFromHBITMAPEP9HBITMAP__NS_13HBitmapFormatE", qtrt.FFI_TYPE_POINTER, bitmap, format)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtgui.NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQImage)
+	return rv2
+}
+
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:85
+// index:1
 // Invalid Visibility=Default Availability=Available
 // [32] QImage imageFromHBITMAP(HDC, HBITMAP, int, int)
 
 /*
 
  */
-func ImageFromHBITMAP(hdc unsafe.Pointer /*666*/, bitmap unsafe.Pointer /*666*/, width int, height int) *qtgui.QImage /*123*/ {
+func ImageFromHBITMAP1(hdc unsafe.Pointer /*666*/, bitmap unsafe.Pointer /*666*/, width int, height int) *qtgui.QImage /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin16imageFromHBITMAPEP5HDC__P9HBITMAP__ii", qtrt.FFI_TYPE_POINTER, hdc, bitmap, width, height)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtgui.NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -820,7 +836,25 @@ func ImageFromHBITMAP(hdc unsafe.Pointer /*666*/, bitmap unsafe.Pointer /*666*/,
 	return rv2
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:120
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:84
+// index:0
+// Invalid Visibility=Default Availability=Available
+// [8] HBITMAP imageToHBITMAP(const QImage &, QtWin::HBitmapFormat)
+
+/*
+
+ */
+func ImageToHBITMAP(image qtgui.QImage_ITF, format int) unsafe.Pointer /*666*/ {
+	var convArg0 unsafe.Pointer
+	if image != nil && image.QImage_PTR() != nil {
+		convArg0 = image.QImage_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QtWin14imageToHBITMAPERK6QImageNS_13HBitmapFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:122
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void taskbarAddTab(QWindow *)
@@ -837,7 +871,7 @@ func TaskbarAddTab(arg0 qtgui.QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:220
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinfunctions.h:222
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void taskbarAddTab(QWidget *)

@@ -196,6 +196,20 @@ func (this *QTextDecoder) HasFailure() bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qtextcodec.h:165
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool needsMoreData() const
+
+/*
+
+ */
+func (this *QTextDecoder) NeedsMoreData() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextDecoder13needsMoreDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 //  body block end
 
 //  keep block begin

@@ -309,6 +309,8 @@ func (this *QGeoCircle) Radius() float64 {
 Translates this geo circle by degreesLatitude northwards and degreesLongitude eastwards.
 
 Negative values of degreesLatitude and degreesLongitude correspond to southward and westward translation respectively.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoCircle) Translate(degreesLatitude float64, degreesLongitude float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QGeoCircle9translateEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), degreesLatitude, degreesLongitude)
@@ -324,6 +326,8 @@ func (this *QGeoCircle) Translate(degreesLatitude float64, degreesLongitude floa
 Returns a copy of this geo circle translated by degreesLatitude northwards and degreesLongitude eastwards.
 
 Negative values of degreesLatitude and degreesLongitude correspond to southward and westward translation respectively.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also translate().
 */
@@ -344,6 +348,8 @@ func (this *QGeoCircle) Translated(degreesLatitude float64, degreesLongitude flo
 Extends the geo circle to also cover the coordinate coordinate
 
 This function was introduced in  Qt 5.9.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoCircle) ExtendCircle(coordinate QGeoCoordinate_ITF) {
 	var convArg0 unsafe.Pointer
@@ -363,6 +369,8 @@ func (this *QGeoCircle) ExtendCircle(coordinate QGeoCoordinate_ITF) {
 Returns the geo circle properties as a string.
 
 This function was introduced in  Qt 5.5.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoCircle) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QGeoCircle8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

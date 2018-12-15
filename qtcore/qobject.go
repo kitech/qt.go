@@ -155,6 +155,8 @@ The destructor of a parent object destroys all child objects.
 
 Setting parent to 0 constructs an object with no parent. If the object is a widget, it will become a top-level window.
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also parent(), findChild(), and findChildren().
 */
 func (*QObject) NewForInherit(parent QObject_ITF /*777 QObject **/) *QObject {
@@ -185,6 +187,8 @@ The parent of an object may be viewed as the object's owner. For instance, a dia
 The destructor of a parent object destroys all child objects.
 
 Setting parent to 0 constructs an object with no parent. If the object is a widget, it will become a top-level window.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also parent(), findChild(), and findChildren().
 */
@@ -239,7 +243,7 @@ Example:
       MyClass(QWidget *parent = 0);
       ~MyClass();
 
-      bool event(QEvent* ev)
+      bool event(QEvent* ev) override
       {
           if (ev->type() == QEvent::PolishRequest) {
               // overwrite handling of PolishRequest if any
@@ -289,7 +293,7 @@ Example:
       MainWindow();
 
   protected:
-      bool eventFilter(QObject *obj, QEvent *ev);
+      bool eventFilter(QObject *obj, QEvent *ev) override;
 
   private:
       QTextEdit *textEdit;
@@ -341,7 +345,7 @@ func (this *QObject) EventFilter(watched QObject_ITF /*777 QObject **/, event QE
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:145
+// /usr/include/qt/QtCore/qobject.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString objectName() const
@@ -358,7 +362,7 @@ func (this *QObject) ObjectName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qobject.h:146
+// /usr/include/qt/QtCore/qobject.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setObjectName(const QString &)
@@ -373,7 +377,7 @@ func (this *QObject) SetObjectName(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:148
+// /usr/include/qt/QtCore/qobject.h:142
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isWidgetType() const
@@ -389,7 +393,7 @@ func (this *QObject) IsWidgetType() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:149
+// /usr/include/qt/QtCore/qobject.h:143
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isWindowType() const
@@ -405,7 +409,7 @@ func (this *QObject) IsWindowType() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:151
+// /usr/include/qt/QtCore/qobject.h:145
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool signalsBlocked() const
@@ -423,7 +427,7 @@ func (this *QObject) SignalsBlocked() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:152
+// /usr/include/qt/QtCore/qobject.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool blockSignals(bool)
@@ -445,7 +449,7 @@ func (this *QObject) BlockSignals(b bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:154
+// /usr/include/qt/QtCore/qobject.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QThread * thread() const
@@ -461,7 +465,7 @@ func (this *QObject) Thread() *QThread /*777 QThread **/ {
 	return /*==*/ NewQThreadFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobject.h:155
+// /usr/include/qt/QtCore/qobject.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void moveToThread(QThread *)
@@ -495,7 +499,7 @@ func (this *QObject) MoveToThread(thread QThread_ITF /*777 QThread **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:157
+// /usr/include/qt/QtCore/qobject.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int startTimer(int, Qt::TimerType)
@@ -520,7 +524,7 @@ Example:
       MyObject(QObject *parent = 0);
 
   protected:
-      void timerEvent(QTimerEvent *event);
+      void timerEvent(QTimerEvent *event) override;
   };
 
   MyObject::MyObject(QObject *parent)
@@ -561,7 +565,7 @@ func (this *QObject) StartTimer(interval int, timerType int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobject.h:157
+// /usr/include/qt/QtCore/qobject.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int startTimer(int, Qt::TimerType)
@@ -586,7 +590,7 @@ Example:
       MyObject(QObject *parent = 0);
 
   protected:
-      void timerEvent(QTimerEvent *event);
+      void timerEvent(QTimerEvent *event) override;
   };
 
   MyObject::MyObject(QObject *parent)
@@ -629,7 +633,7 @@ func (this *QObject) StartTimerp(interval int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobject.h:165
+// /usr/include/qt/QtCore/qobject.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void killTimer(int)
@@ -646,7 +650,7 @@ func (this *QObject) KillTimer(id int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:208
+// /usr/include/qt/QtCore/qobject.h:202
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QObjectList & children() const
@@ -673,7 +677,7 @@ func (this *QObject) Children() *QObjectList {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qobject.h:210
+// /usr/include/qt/QtCore/qobject.h:204
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setParent(QObject *)
@@ -692,7 +696,7 @@ func (this *QObject) SetParent(parent QObject_ITF /*777 QObject **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:211
+// /usr/include/qt/QtCore/qobject.h:205
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void installEventFilter(QObject *)
@@ -718,7 +722,7 @@ Here's a KeyPressEater class that eats the key presses of its monitored objects:
       ...
 
   protected:
-      bool eventFilter(QObject *obj, QEvent *event);
+      bool eventFilter(QObject *obj, QEvent *event) override;
   };
 
   bool KeyPressEater::eventFilter(QObject *obj, QEvent *event)
@@ -764,7 +768,7 @@ func (this *QObject) InstallEventFilter(filterObj QObject_ITF /*777 QObject **/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:212
+// /usr/include/qt/QtCore/qobject.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeEventFilter(QObject *)
@@ -787,7 +791,7 @@ func (this *QObject) RemoveEventFilter(obj QObject_ITF /*777 QObject **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:214
+// /usr/include/qt/QtCore/qobject.h:208
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, const char *, const QObject *, const char *, Qt::ConnectionType)
@@ -889,7 +893,7 @@ func QObject_Connect(sender QObject_ITF /*777 const QObject **/, signal string, 
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobject.h:214
+// /usr/include/qt/QtCore/qobject.h:208
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, const char *, const QObject *, const char *, Qt::ConnectionType)
@@ -988,7 +992,7 @@ func (this *QObject) Connectp(sender QObject_ITF /*777 const QObject **/, signal
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:217
+// /usr/include/qt/QtCore/qobject.h:211
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, const QMetaMethod &, const QObject *, const QMetaMethod &, Qt::ConnectionType)
@@ -1094,7 +1098,7 @@ func QObject_Connect1(sender QObject_ITF /*777 const QObject **/, signal QMetaMe
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobject.h:217
+// /usr/include/qt/QtCore/qobject.h:211
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, const QMetaMethod &, const QObject *, const QMetaMethod &, Qt::ConnectionType)
@@ -1197,7 +1201,7 @@ func (this *QObject) Connect1p(sender QObject_ITF /*777 const QObject **/, signa
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:221
+// /usr/include/qt/QtCore/qobject.h:215
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, const char *, const char *, Qt::ConnectionType) const
@@ -1290,7 +1294,7 @@ func (this *QObject) Connect2(sender QObject_ITF /*777 const QObject **/, signal
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:221
+// /usr/include/qt/QtCore/qobject.h:215
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, const char *, const char *, Qt::ConnectionType) const
@@ -1385,7 +1389,7 @@ func (this *QObject) Connect2p(sender QObject_ITF /*777 const QObject **/, signa
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:343
+// /usr/include/qt/QtCore/qobject.h:337
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool disconnect(const QObject *, const char *, const QObject *, const char *)
@@ -1420,7 +1424,7 @@ func QObject_Disconnect(sender QObject_ITF /*777 const QObject **/, signal strin
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobject.h:345
+// /usr/include/qt/QtCore/qobject.h:339
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool disconnect(const QObject *, const QMetaMethod &, const QObject *, const QMetaMethod &)
@@ -1459,7 +1463,7 @@ func QObject_Disconnect1(sender QObject_ITF /*777 const QObject **/, signal QMet
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobject.h:347
+// /usr/include/qt/QtCore/qobject.h:341
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool disconnect(const char *, const QObject *, const char *) const
@@ -1485,7 +1489,7 @@ func (this *QObject) Disconnect2(signal string, receiver QObject_ITF /*777 const
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:347
+// /usr/include/qt/QtCore/qobject.h:341
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool disconnect(const char *, const QObject *, const char *) const
@@ -1509,7 +1513,7 @@ func (this *QObject) Disconnect2p() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:347
+// /usr/include/qt/QtCore/qobject.h:341
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool disconnect(const char *, const QObject *, const char *) const
@@ -1533,7 +1537,7 @@ func (this *QObject) Disconnect2p1(signal string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:347
+// /usr/include/qt/QtCore/qobject.h:341
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool disconnect(const char *, const QObject *, const char *) const
@@ -1559,7 +1563,7 @@ func (this *QObject) Disconnect2p2(signal string, receiver QObject_ITF /*777 con
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:350
+// /usr/include/qt/QtCore/qobject.h:344
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool disconnect(const QObject *, const char *) const
@@ -1583,7 +1587,7 @@ func (this *QObject) Disconnect3(receiver QObject_ITF /*777 const QObject **/, m
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:350
+// /usr/include/qt/QtCore/qobject.h:344
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool disconnect(const QObject *, const char *) const
@@ -1607,7 +1611,7 @@ func (this *QObject) Disconnect3p(receiver QObject_ITF /*777 const QObject **/) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:391
+// /usr/include/qt/QtCore/qobject.h:385
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void dumpObjectTree()
@@ -1624,7 +1628,7 @@ func (this *QObject) DumpObjectTree() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:394
+// /usr/include/qt/QtCore/qobject.h:388
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void dumpObjectTree() const
@@ -1641,7 +1645,7 @@ func (this *QObject) DumpObjectTree1() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:392
+// /usr/include/qt/QtCore/qobject.h:386
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void dumpObjectInfo()
@@ -1658,7 +1662,7 @@ func (this *QObject) DumpObjectInfo() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:395
+// /usr/include/qt/QtCore/qobject.h:389
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void dumpObjectInfo() const
@@ -1675,7 +1679,7 @@ func (this *QObject) DumpObjectInfo1() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:398
+// /usr/include/qt/QtCore/qobject.h:392
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setProperty(const char *, const QVariant &)
@@ -1705,7 +1709,7 @@ func (this *QObject) SetProperty(name string, value QVariant_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:399
+// /usr/include/qt/QtCore/qobject.h:393
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant property(const char *) const
@@ -1729,7 +1733,7 @@ func (this *QObject) Property(name string) *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qobject.h:404
+// /usr/include/qt/QtCore/qobject.h:398
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] uint registerUserData()
@@ -1748,7 +1752,7 @@ func QObject_RegisterUserData() uint {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobject.h:405
+// /usr/include/qt/QtCore/qobject.h:399
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUserData(uint, QObjectUserData *)
@@ -1765,7 +1769,7 @@ func (this *QObject) SetUserData(id uint, data QObjectUserData_ITF /*777 QObject
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:406
+// /usr/include/qt/QtCore/qobject.h:400
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObjectUserData * userData(uint) const
@@ -1779,7 +1783,7 @@ func (this *QObject) UserData(id uint) *QObjectUserData /*777 QObjectUserData **
 	return /*==*/ NewQObjectUserDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobject.h:410
+// /usr/include/qt/QtCore/qobject.h:404
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void destroyed(QObject *)
@@ -1800,7 +1804,7 @@ func (this *QObject) Destroyed(arg0 QObject_ITF /*777 QObject **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:410
+// /usr/include/qt/QtCore/qobject.h:404
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void destroyed(QObject *)
@@ -1819,7 +1823,7 @@ func (this *QObject) Destroyedp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:414
+// /usr/include/qt/QtCore/qobject.h:408
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QObject * parent() const
@@ -1835,7 +1839,7 @@ func (this *QObject) Parent() *QObject /*777 QObject **/ {
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobject.h:416
+// /usr/include/qt/QtCore/qobject.h:410
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool inherits(const char *) const
@@ -1872,7 +1876,7 @@ func (this *QObject) Inherits(classname string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:420
+// /usr/include/qt/QtCore/qobject.h:414
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void deleteLater()
@@ -1893,7 +1897,7 @@ func (this *QObject) DeleteLater() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:423
+// /usr/include/qt/QtCore/qobject.h:417
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QObject * sender() const
@@ -1915,7 +1919,7 @@ func (this *QObject) Sender() *QObject /*777 QObject **/ {
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobject.h:424
+// /usr/include/qt/QtCore/qobject.h:418
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int senderSignalIndex() const
@@ -1939,7 +1943,7 @@ func (this *QObject) SenderSignalIndex() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobject.h:425
+// /usr/include/qt/QtCore/qobject.h:419
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int receivers(const char *) const
@@ -1972,7 +1976,7 @@ func (this *QObject) Receivers(signal string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobject.h:426
+// /usr/include/qt/QtCore/qobject.h:420
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool isSignalConnected(const QMetaMethod &) const
@@ -2008,7 +2012,7 @@ func (this *QObject) IsSignalConnected(signal QMetaMethod_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobject.h:428
+// /usr/include/qt/QtCore/qobject.h:422
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
@@ -2029,7 +2033,7 @@ func (this *QObject) TimerEvent(event QTimerEvent_ITF /*777 QTimerEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:429
+// /usr/include/qt/QtCore/qobject.h:423
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void childEvent(QChildEvent *)
@@ -2056,7 +2060,7 @@ func (this *QObject) ChildEvent(event QChildEvent_ITF /*777 QChildEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:430
+// /usr/include/qt/QtCore/qobject.h:424
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void customEvent(QEvent *)
@@ -2075,7 +2079,7 @@ func (this *QObject) CustomEvent(event QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:432
+// /usr/include/qt/QtCore/qobject.h:426
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void connectNotify(const QMetaMethod &)
@@ -2109,7 +2113,7 @@ func (this *QObject) ConnectNotify(signal QMetaMethod_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:433
+// /usr/include/qt/QtCore/qobject.h:427
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void disconnectNotify(const QMetaMethod &)

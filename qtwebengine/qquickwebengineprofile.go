@@ -70,7 +70,7 @@ func (*QQuickWebEngineProfile) NewFromPointer(cthis unsafe.Pointer) *QQuickWebEn
 	return NewQQuickWebEngineProfileFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:66
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -84,7 +84,7 @@ func (this *QQuickWebEngineProfile) MetaObject() *qtcore.QMetaObject /*777 const
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:81
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWebEngineProfile(QObject *)
@@ -107,7 +107,7 @@ func NewQQuickWebEngineProfile(parent qtcore.QObject_ITF /*777 QObject **/) *QQu
 	return gothis
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:81
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWebEngineProfile(QObject *)
@@ -128,7 +128,7 @@ func NewQQuickWebEngineProfilep() *QQuickWebEngineProfile {
 	return gothis
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:82
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickWebEngineProfile()
@@ -143,7 +143,7 @@ func DeleteQQuickWebEngineProfile(this *QQuickWebEngineProfile) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:98
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString storageName() const
@@ -160,7 +160,7 @@ func (this *QQuickWebEngineProfile) StorageName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:99
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStorageName(const QString &)
@@ -175,7 +175,7 @@ func (this *QQuickWebEngineProfile) SetStorageName(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:101
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isOffTheRecord() const
@@ -189,7 +189,7 @@ func (this *QQuickWebEngineProfile) IsOffTheRecord() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:102
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOffTheRecord(bool)
@@ -202,7 +202,7 @@ func (this *QQuickWebEngineProfile) SetOffTheRecord(offTheRecord bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:104
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString persistentStoragePath() const
@@ -219,7 +219,7 @@ func (this *QQuickWebEngineProfile) PersistentStoragePath() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:105
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPersistentStoragePath(const QString &)
@@ -234,7 +234,7 @@ func (this *QQuickWebEngineProfile) SetPersistentStoragePath(path string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:107
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString cachePath() const
@@ -251,7 +251,7 @@ func (this *QQuickWebEngineProfile) CachePath() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:108
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCachePath(const QString &)
@@ -266,7 +266,7 @@ func (this *QQuickWebEngineProfile) SetCachePath(path string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:110
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString httpUserAgent() const
@@ -283,7 +283,7 @@ func (this *QQuickWebEngineProfile) HttpUserAgent() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:111
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHttpUserAgent(const QString &)
@@ -298,7 +298,7 @@ func (this *QQuickWebEngineProfile) SetHttpUserAgent(userAgent string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:113
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickWebEngineProfile::HttpCacheType httpCacheType() const
@@ -312,7 +312,7 @@ func (this *QQuickWebEngineProfile) HttpCacheType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:114
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHttpCacheType(QQuickWebEngineProfile::HttpCacheType)
@@ -325,7 +325,7 @@ func (this *QQuickWebEngineProfile) SetHttpCacheType(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:116
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickWebEngineProfile::PersistentCookiesPolicy persistentCookiesPolicy() const
@@ -339,7 +339,7 @@ func (this *QQuickWebEngineProfile) PersistentCookiesPolicy() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:117
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPersistentCookiesPolicy(QQuickWebEngineProfile::PersistentCookiesPolicy)
@@ -352,7 +352,7 @@ func (this *QQuickWebEngineProfile) SetPersistentCookiesPolicy(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:119
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int httpCacheMaximumSize() const
@@ -366,7 +366,7 @@ func (this *QQuickWebEngineProfile) HttpCacheMaximumSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:120
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHttpCacheMaximumSize(int)
@@ -379,7 +379,7 @@ func (this *QQuickWebEngineProfile) SetHttpCacheMaximumSize(maxSize int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:122
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString httpAcceptLanguage() const
@@ -396,7 +396,7 @@ func (this *QQuickWebEngineProfile) HttpAcceptLanguage() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:123
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHttpAcceptLanguage(const QString &)
@@ -411,7 +411,7 @@ func (this *QQuickWebEngineProfile) SetHttpAcceptLanguage(httpAcceptLanguage str
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:125
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWebEngineCookieStore * cookieStore() const
@@ -425,7 +425,7 @@ func (this *QQuickWebEngineProfile) CookieStore() *qtwebenginecore.QWebEngineCoo
 	return qtwebenginecore.NewQWebEngineCookieStoreFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:127
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRequestInterceptor(QWebEngineUrlRequestInterceptor *)
@@ -446,7 +446,7 @@ func (this *QQuickWebEngineProfile) SetRequestInterceptor(interceptor qtwebengin
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:129
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QWebEngineUrlSchemeHandler * urlSchemeHandler(const QByteArray &) const
@@ -464,13 +464,15 @@ func (this *QQuickWebEngineProfile) UrlSchemeHandler(arg0 qtcore.QByteArray_ITF)
 	return qtwebenginecore.NewQWebEngineUrlSchemeHandlerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:130
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void installUrlSchemeHandler(const QByteArray &, QWebEngineUrlSchemeHandler *)
 
 /*
 Registers a handler handler for custom URL scheme scheme in the profile.
+
+It is recommended to first register the scheme with QWebEngineUrlScheme::registerScheme at application startup.
 */
 func (this *QQuickWebEngineProfile) InstallUrlSchemeHandler(scheme qtcore.QByteArray_ITF, arg1 qtwebenginecore.QWebEngineUrlSchemeHandler_ITF /*777 QWebEngineUrlSchemeHandler **/) {
 	var convArg0 unsafe.Pointer
@@ -485,7 +487,7 @@ func (this *QQuickWebEngineProfile) InstallUrlSchemeHandler(scheme qtcore.QByteA
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:131
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeUrlScheme(const QByteArray &)
@@ -504,7 +506,7 @@ func (this *QQuickWebEngineProfile) RemoveUrlScheme(scheme qtcore.QByteArray_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:132
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeUrlSchemeHandler(QWebEngineUrlSchemeHandler *)
@@ -523,7 +525,7 @@ func (this *QQuickWebEngineProfile) RemoveUrlSchemeHandler(arg0 qtwebenginecore.
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:133
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAllUrlSchemeHandlers()
@@ -536,7 +538,7 @@ func (this *QQuickWebEngineProfile) RemoveAllUrlSchemeHandlers() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:135
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearHttpCache()
@@ -546,6 +548,8 @@ Removes the profile's cache entries.
 
 This function was introduced in  Qt 5.7.
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also WebEngineProfile::clearHttpCache.
 */
 func (this *QQuickWebEngineProfile) ClearHttpCache() {
@@ -553,7 +557,7 @@ func (this *QQuickWebEngineProfile) ClearHttpCache() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:137
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpellCheckLanguages(const QStringList &)
@@ -570,7 +574,7 @@ func (this *QQuickWebEngineProfile) SetSpellCheckLanguages(languages qtcore.QStr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:138
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList spellCheckLanguages() const
@@ -592,7 +596,7 @@ func (this *QQuickWebEngineProfile) SpellCheckLanguages() *qtcore.QStringList /*
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:139
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpellCheckEnabled(bool)
@@ -605,7 +609,7 @@ func (this *QQuickWebEngineProfile) SetSpellCheckEnabled(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:140
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSpellCheckEnabled() const
@@ -619,7 +623,7 @@ func (this *QQuickWebEngineProfile) IsSpellCheckEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:144
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:140
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QQuickWebEngineProfile * defaultProfile()
@@ -642,7 +646,7 @@ func QQuickWebEngineProfile_DefaultProfile() *QQuickWebEngineProfile /*777 QQuic
 	return rv
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:147
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void storageNameChanged()
@@ -655,7 +659,7 @@ func (this *QQuickWebEngineProfile) StorageNameChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:148
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void offTheRecordChanged()
@@ -668,7 +672,7 @@ func (this *QQuickWebEngineProfile) OffTheRecordChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:149
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void persistentStoragePathChanged()
@@ -681,7 +685,7 @@ func (this *QQuickWebEngineProfile) PersistentStoragePathChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:150
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cachePathChanged()
@@ -694,7 +698,7 @@ func (this *QQuickWebEngineProfile) CachePathChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:151
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void httpUserAgentChanged()
@@ -707,7 +711,7 @@ func (this *QQuickWebEngineProfile) HttpUserAgentChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:152
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void httpCacheTypeChanged()
@@ -720,7 +724,7 @@ func (this *QQuickWebEngineProfile) HttpCacheTypeChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:153
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void persistentCookiesPolicyChanged()
@@ -733,7 +737,7 @@ func (this *QQuickWebEngineProfile) PersistentCookiesPolicyChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:154
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void httpCacheMaximumSizeChanged()
@@ -746,7 +750,7 @@ func (this *QQuickWebEngineProfile) HttpCacheMaximumSizeChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:155
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void httpAcceptLanguageChanged()
@@ -759,7 +763,7 @@ func (this *QQuickWebEngineProfile) HttpAcceptLanguageChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:156
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void spellCheckLanguagesChanged()
@@ -772,7 +776,7 @@ func (this *QQuickWebEngineProfile) SpellCheckLanguagesChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:157
+// /usr/include/qt/QtWebEngine/qquickwebengineprofile.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void spellCheckEnabledChanged()
@@ -792,10 +796,10 @@ This enum describes the HTTP cache type:
 */
 type QQuickWebEngineProfile__HttpCacheType = int
 
-// Use an in-memory cache. This is the only setting possible if off-the-record is set or no cache path is available.
+// Use an in-memory cache. This is the default if off-the-record is set.
 const QQuickWebEngineProfile__MemoryHttpCache QQuickWebEngineProfile__HttpCacheType = 0
 
-// Use a disk cache. This is the default.
+// Use a disk cache. This is the default if off-the-record is not set. Falls back to MemoryHttpCache if off-the-record is set.
 const QQuickWebEngineProfile__DiskHttpCache QQuickWebEngineProfile__HttpCacheType = 1
 
 //

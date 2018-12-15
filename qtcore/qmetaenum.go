@@ -100,6 +100,20 @@ func (this *QMetaEnum) Name() string {
 // /usr/include/qt/QtCore/qmetaobject.h:212
 // index:0
 // Public Visibility=Default Availability=Available
+// [8] const char * enumName() const
+
+/*
+
+ */
+func (this *QMetaEnum) EnumName() string {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMetaEnum8enumNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.GoStringI(rv)
+}
+
+// /usr/include/qt/QtCore/qmetaobject.h:213
+// index:0
+// Public Visibility=Default Availability=Available
 // [1] bool isFlag() const
 
 /*
@@ -111,7 +125,7 @@ func (this *QMetaEnum) IsFlag() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:213
+// /usr/include/qt/QtCore/qmetaobject.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isScoped() const
@@ -125,7 +139,7 @@ func (this *QMetaEnum) IsScoped() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:215
+// /usr/include/qt/QtCore/qmetaobject.h:216
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyCount() const
@@ -139,7 +153,7 @@ func (this *QMetaEnum) KeyCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:216
+// /usr/include/qt/QtCore/qmetaobject.h:217
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * key(int) const
@@ -153,7 +167,7 @@ func (this *QMetaEnum) Key(index int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:217
+// /usr/include/qt/QtCore/qmetaobject.h:218
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int value(int) const
@@ -167,7 +181,7 @@ func (this *QMetaEnum) Value(index int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:219
+// /usr/include/qt/QtCore/qmetaobject.h:220
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * scope() const
@@ -181,7 +195,7 @@ func (this *QMetaEnum) Scope() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:221
+// /usr/include/qt/QtCore/qmetaobject.h:222
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyToValue(const char *, bool *) const
@@ -197,7 +211,7 @@ func (this *QMetaEnum) KeyToValue(key string, ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:221
+// /usr/include/qt/QtCore/qmetaobject.h:222
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyToValue(const char *, bool *) const
@@ -215,7 +229,7 @@ func (this *QMetaEnum) KeyToValuep(key string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:222
+// /usr/include/qt/QtCore/qmetaobject.h:223
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * valueToKey(int) const
@@ -229,7 +243,7 @@ func (this *QMetaEnum) ValueToKey(value int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:223
+// /usr/include/qt/QtCore/qmetaobject.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keysToValue(const char *, bool *) const
@@ -245,7 +259,7 @@ func (this *QMetaEnum) KeysToValue(keys string, ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:223
+// /usr/include/qt/QtCore/qmetaobject.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keysToValue(const char *, bool *) const
@@ -263,7 +277,7 @@ func (this *QMetaEnum) KeysToValuep(keys string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:224
+// /usr/include/qt/QtCore/qmetaobject.h:225
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray valueToKeys(int) const
@@ -279,7 +293,7 @@ func (this *QMetaEnum) ValueToKeys(value int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:226
+// /usr/include/qt/QtCore/qmetaobject.h:227
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QMetaObject * enclosingMetaObject() const
@@ -293,7 +307,7 @@ func (this *QMetaEnum) EnclosingMetaObject() *QMetaObject /*777 const QMetaObjec
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:228
+// /usr/include/qt/QtCore/qmetaobject.h:229
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const

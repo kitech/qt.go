@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qdnslookup.h
@@ -65,7 +67,7 @@ func (*QDnsTextRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsTextRecord {
 	return NewQDnsTextRecordFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:163
+// /usr/include/qt/QtNetwork/qdnslookup.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsTextRecord()
@@ -84,7 +86,7 @@ func NewQDnsTextRecord() *QDnsTextRecord {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:166
+// /usr/include/qt/QtNetwork/qdnslookup.h:168
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDnsTextRecord & operator=(QDnsTextRecord &&)
@@ -100,7 +102,7 @@ func (this *QDnsTextRecord) Operator_equal(other unsafe.Pointer /*333*/) *QDnsTe
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:168
+// /usr/include/qt/QtNetwork/qdnslookup.h:170
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QDnsTextRecord & operator=(const QDnsTextRecord &)
@@ -120,7 +122,7 @@ func (this *QDnsTextRecord) Operator_equal1(other QDnsTextRecord_ITF) *QDnsTextR
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:169
+// /usr/include/qt/QtNetwork/qdnslookup.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDnsTextRecord()
@@ -135,7 +137,7 @@ func DeleteQDnsTextRecord(this *QDnsTextRecord) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:171
+// /usr/include/qt/QtNetwork/qdnslookup.h:173
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsTextRecord &)
@@ -152,7 +154,7 @@ func (this *QDnsTextRecord) Swap(other QDnsTextRecord_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:173
+// /usr/include/qt/QtNetwork/qdnslookup.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
@@ -169,7 +171,7 @@ func (this *QDnsTextRecord) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:174
+// /usr/include/qt/QtNetwork/qdnslookup.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] quint32 timeToLive() const

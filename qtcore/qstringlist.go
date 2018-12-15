@@ -64,7 +64,7 @@ func (*QStringList) NewFromPointer(cthis unsafe.Pointer) *QStringList {
 	return NewQStringListFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:105
+// /usr/include/qt/QtCore/qstringlist.h:103
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStringList()
@@ -83,7 +83,7 @@ func NewQStringList() *QStringList {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:106
+// /usr/include/qt/QtCore/qstringlist.h:104
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStringList(const QString &)
@@ -104,7 +104,7 @@ func NewQStringList1(i string) *QStringList {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:122
+// /usr/include/qt/QtCore/qstringlist.h:121
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QString &, Qt::CaseSensitivity) const
@@ -122,7 +122,7 @@ func (this *QStringList) Contains(str string, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:122
+// /usr/include/qt/QtCore/qstringlist.h:121
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QString &, Qt::CaseSensitivity) const
@@ -184,7 +184,49 @@ func (this *QStringList) Contains1p(str QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:125
+// /usr/include/qt/QtCore/qstringlist.h:124
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool contains(QStringView, Qt::CaseSensitivity) const
+
+/*
+Returns true if the list contains the string str; otherwise returns false. The search is case insensitive if cs is Qt::CaseInsensitive; the search is case sensitive by default.
+
+See also indexOf(), lastIndexOf(), and QString::contains().
+*/
+func (this *QStringList) Contains2(str QStringView_ITF /*123*/, cs int) bool {
+	var convArg0 unsafe.Pointer
+	if str != nil && str.QStringView_PTR() != nil {
+		convArg0 = str.QStringView_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList8containsE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstringlist.h:124
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool contains(QStringView, Qt::CaseSensitivity) const
+
+/*
+Returns true if the list contains the string str; otherwise returns false. The search is case insensitive if cs is Qt::CaseInsensitive; the search is case sensitive by default.
+
+See also indexOf(), lastIndexOf(), and QString::contains().
+*/
+func (this *QStringList) Contains2p(str QStringView_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if str != nil && str.QStringView_PTR() != nil {
+		convArg0 = str.QStringView_PTR().GetCthis()
+	}
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
+	cs := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList8containsE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstringlist.h:126
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringList operator+(const QStringList &) const
@@ -204,7 +246,7 @@ func (this *QStringList) Operator_add(other QStringList_ITF) *QStringList /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:127
+// /usr/include/qt/QtCore/qstringlist.h:128
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringList & operator<<(const QString &)
@@ -222,7 +264,7 @@ func (this *QStringList) Operator_left_shift(str string) *QStringList {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:129
+// /usr/include/qt/QtCore/qstringlist.h:130
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QStringList & operator<<(const QStringList &)
@@ -242,15 +284,13 @@ func (this *QStringList) Operator_left_shift1(l QStringList_ITF) *QStringList {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:135
+// /usr/include/qt/QtCore/qstringlist.h:136
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(const QRegExp &, int) const
 
 /*
 Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
-
-By default, this function is case sensitive.
 
 See also lastIndexOf(), contains(), and QRegExp::exactMatch().
 */
@@ -264,15 +304,13 @@ func (this *QStringList) IndexOf(rx QRegExp_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:135
+// /usr/include/qt/QtCore/qstringlist.h:136
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(const QRegExp &, int) const
 
 /*
 Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
-
-By default, this function is case sensitive.
 
 See also lastIndexOf(), contains(), and QRegExp::exactMatch().
 */
@@ -288,15 +326,13 @@ func (this *QStringList) IndexOfp(rx QRegExp_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:137
+// /usr/include/qt/QtCore/qstringlist.h:138
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(QRegExp &, int) const
 
 /*
 Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
-
-By default, this function is case sensitive.
 
 See also lastIndexOf(), contains(), and QRegExp::exactMatch().
 */
@@ -310,15 +346,13 @@ func (this *QStringList) IndexOf1(rx QRegExp_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:137
+// /usr/include/qt/QtCore/qstringlist.h:138
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int indexOf(QRegExp &, int) const
 
 /*
 Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
-
-By default, this function is case sensitive.
 
 See also lastIndexOf(), contains(), and QRegExp::exactMatch().
 */
@@ -342,8 +376,6 @@ func (this *QStringList) IndexOf1p(rx QRegExp_ITF) int {
 /*
 Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
 
-By default, this function is case sensitive.
-
 See also lastIndexOf(), contains(), and QRegExp::exactMatch().
 */
 func (this *QStringList) IndexOf2(re QRegularExpression_ITF, from int) int {
@@ -364,8 +396,6 @@ func (this *QStringList) IndexOf2(re QRegularExpression_ITF, from int) int {
 /*
 Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
 
-By default, this function is case sensitive.
-
 See also lastIndexOf(), contains(), and QRegExp::exactMatch().
 */
 func (this *QStringList) IndexOf2p(re QRegularExpression_ITF) int {
@@ -380,15 +410,13 @@ func (this *QStringList) IndexOf2p(re QRegularExpression_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:136
+// /usr/include/qt/QtCore/qstringlist.h:137
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegExp &, int) const
 
 /*
 Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
-
-By default, this function is case sensitive.
 
 See also indexOf(), contains(), and QRegExp::exactMatch().
 */
@@ -402,15 +430,13 @@ func (this *QStringList) LastIndexOf(rx QRegExp_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:136
+// /usr/include/qt/QtCore/qstringlist.h:137
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegExp &, int) const
 
 /*
 Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
-
-By default, this function is case sensitive.
 
 See also indexOf(), contains(), and QRegExp::exactMatch().
 */
@@ -426,15 +452,13 @@ func (this *QStringList) LastIndexOfp(rx QRegExp_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:138
+// /usr/include/qt/QtCore/qstringlist.h:139
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(QRegExp &, int) const
 
 /*
 Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
-
-By default, this function is case sensitive.
 
 See also indexOf(), contains(), and QRegExp::exactMatch().
 */
@@ -448,15 +472,13 @@ func (this *QStringList) LastIndexOf1(rx QRegExp_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:138
+// /usr/include/qt/QtCore/qstringlist.h:139
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int lastIndexOf(QRegExp &, int) const
 
 /*
 Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
-
-By default, this function is case sensitive.
 
 See also indexOf(), contains(), and QRegExp::exactMatch().
 */
@@ -480,8 +502,6 @@ func (this *QStringList) LastIndexOf1p(rx QRegExp_ITF) int {
 /*
 Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
 
-By default, this function is case sensitive.
-
 See also indexOf(), contains(), and QRegExp::exactMatch().
 */
 func (this *QStringList) LastIndexOf2(re QRegularExpression_ITF, from int) int {
@@ -501,8 +521,6 @@ func (this *QStringList) LastIndexOf2(re QRegularExpression_ITF, from int) int {
 
 /*
 Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
-
-By default, this function is case sensitive.
 
 See also indexOf(), contains(), and QRegExp::exactMatch().
 */

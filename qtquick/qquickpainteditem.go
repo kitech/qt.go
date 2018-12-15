@@ -144,7 +144,7 @@ func DeleteQQuickPaintedItem(this *QQuickPaintedItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:75
+// /usr/include/qt/QtQuick/qquickpainteditem.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRect &)
@@ -165,7 +165,7 @@ func (this *QQuickPaintedItem) Update(rect qtcore.QRect_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:75
+// /usr/include/qt/QtQuick/qquickpainteditem.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRect &)
@@ -184,7 +184,7 @@ func (this *QQuickPaintedItem) Updatep() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:77
+// /usr/include/qt/QtQuick/qquickpainteditem.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool opaquePainting() const
@@ -202,7 +202,7 @@ func (this *QQuickPaintedItem) OpaquePainting() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:78
+// /usr/include/qt/QtQuick/qquickpainteditem.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpaquePainting(bool)
@@ -221,7 +221,7 @@ func (this *QQuickPaintedItem) SetOpaquePainting(opaque bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:80
+// /usr/include/qt/QtQuick/qquickpainteditem.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool antialiasing() const
@@ -239,7 +239,7 @@ func (this *QQuickPaintedItem) Antialiasing() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:81
+// /usr/include/qt/QtQuick/qquickpainteditem.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAntialiasing(bool)
@@ -256,7 +256,7 @@ func (this *QQuickPaintedItem) SetAntialiasing(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:83
+// /usr/include/qt/QtQuick/qquickpainteditem.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool mipmap() const
@@ -274,7 +274,7 @@ func (this *QQuickPaintedItem) Mipmap() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:84
+// /usr/include/qt/QtQuick/qquickpainteditem.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMipmap(bool)
@@ -293,7 +293,7 @@ func (this *QQuickPaintedItem) SetMipmap(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:86
+// /usr/include/qt/QtQuick/qquickpainteditem.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickPaintedItem::PerformanceHints performanceHints() const
@@ -311,7 +311,7 @@ func (this *QQuickPaintedItem) PerformanceHints() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:87
+// /usr/include/qt/QtQuick/qquickpainteditem.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPerformanceHint(QQuickPaintedItem::PerformanceHint, bool)
@@ -328,7 +328,7 @@ func (this *QQuickPaintedItem) SetPerformanceHint(hint int, enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:87
+// /usr/include/qt/QtQuick/qquickpainteditem.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPerformanceHint(QQuickPaintedItem::PerformanceHint, bool)
@@ -347,7 +347,7 @@ func (this *QQuickPaintedItem) SetPerformanceHintp(hint int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:88
+// /usr/include/qt/QtQuick/qquickpainteditem.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPerformanceHints(QQuickPaintedItem::PerformanceHints)
@@ -364,7 +364,7 @@ func (this *QQuickPaintedItem) SetPerformanceHints(hints int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:90
+// /usr/include/qt/QtQuick/qquickpainteditem.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF contentsBoundingRect() const
@@ -380,7 +380,7 @@ func (this *QQuickPaintedItem) ContentsBoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:92
+// /usr/include/qt/QtQuick/qquickpainteditem.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize contentsSize() const
@@ -396,7 +396,7 @@ func (this *QQuickPaintedItem) ContentsSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:93
+// /usr/include/qt/QtQuick/qquickpainteditem.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContentsSize(const QSize &)
@@ -413,7 +413,7 @@ func (this *QQuickPaintedItem) SetContentsSize(arg0 qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:94
+// /usr/include/qt/QtQuick/qquickpainteditem.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetContentsSize()
@@ -426,7 +426,7 @@ func (this *QQuickPaintedItem) ResetContentsSize() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:96
+// /usr/include/qt/QtQuick/qquickpainteditem.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal contentsScale() const
@@ -440,7 +440,7 @@ func (this *QQuickPaintedItem) ContentsScale() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:97
+// /usr/include/qt/QtQuick/qquickpainteditem.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContentsScale(qreal)
@@ -453,7 +453,7 @@ func (this *QQuickPaintedItem) SetContentsScale(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:99
+// /usr/include/qt/QtQuick/qquickpainteditem.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize textureSize() const
@@ -469,7 +469,7 @@ func (this *QQuickPaintedItem) TextureSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:100
+// /usr/include/qt/QtQuick/qquickpainteditem.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextureSize(const QSize &)
@@ -486,7 +486,7 @@ func (this *QQuickPaintedItem) SetTextureSize(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:102
+// /usr/include/qt/QtQuick/qquickpainteditem.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor fillColor() const
@@ -502,7 +502,7 @@ func (this *QQuickPaintedItem) FillColor() *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:103
+// /usr/include/qt/QtQuick/qquickpainteditem.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFillColor(const QColor &)
@@ -519,7 +519,7 @@ func (this *QQuickPaintedItem) SetFillColor(arg0 qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:105
+// /usr/include/qt/QtQuick/qquickpainteditem.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickPaintedItem::RenderTarget renderTarget() const
@@ -533,7 +533,7 @@ func (this *QQuickPaintedItem) RenderTarget() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:106
+// /usr/include/qt/QtQuick/qquickpainteditem.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRenderTarget(QQuickPaintedItem::RenderTarget)
@@ -546,7 +546,7 @@ func (this *QQuickPaintedItem) SetRenderTarget(target int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:108
+// /usr/include/qt/QtQuick/qquickpainteditem.h:109
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *)
@@ -575,7 +575,7 @@ func (this *QQuickPaintedItem) Paint(painter qtgui.QPainter_ITF /*777 QPainter *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:110
+// /usr/include/qt/QtQuick/qquickpainteditem.h:111
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isTextureProvider() const
@@ -589,7 +589,7 @@ func (this *QQuickPaintedItem) IsTextureProvider() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:111
+// /usr/include/qt/QtQuick/qquickpainteditem.h:112
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGTextureProvider * textureProvider() const
@@ -603,7 +603,7 @@ func (this *QQuickPaintedItem) TextureProvider() *QSGTextureProvider /*777 QSGTe
 	return /*==*/ NewQSGTextureProviderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:114
+// /usr/include/qt/QtQuick/qquickpainteditem.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void fillColorChanged()
@@ -616,7 +616,7 @@ func (this *QQuickPaintedItem) FillColorChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:115
+// /usr/include/qt/QtQuick/qquickpainteditem.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void contentsSizeChanged()
@@ -629,7 +629,7 @@ func (this *QQuickPaintedItem) ContentsSizeChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:116
+// /usr/include/qt/QtQuick/qquickpainteditem.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void contentsScaleChanged()
@@ -642,7 +642,7 @@ func (this *QQuickPaintedItem) ContentsScaleChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:117
+// /usr/include/qt/QtQuick/qquickpainteditem.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void renderTargetChanged()
@@ -655,7 +655,7 @@ func (this *QQuickPaintedItem) RenderTargetChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:118
+// /usr/include/qt/QtQuick/qquickpainteditem.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void textureSizeChanged()
@@ -668,7 +668,7 @@ func (this *QQuickPaintedItem) TextureSizeChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickpainteditem.h:123
+// /usr/include/qt/QtQuick/qquickpainteditem.h:124
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void releaseResources()

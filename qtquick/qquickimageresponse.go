@@ -18,7 +18,7 @@ package qtquick
 
 /*
 #include <stdlib.h>
-// extern C begin: 7
+// extern C begin: 8
 */
 // import "C"
 import "unsafe"
@@ -66,7 +66,7 @@ func (*QQuickImageResponse) NewFromPointer(cthis unsafe.Pointer) *QQuickImageRes
 	return NewQQuickImageResponseFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:73
+// /usr/include/qt/QtQuick/qquickimageprovider.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -80,7 +80,7 @@ func (this *QQuickImageResponse) MetaObject() *qtcore.QMetaObject /*777 const QM
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:75
+// /usr/include/qt/QtQuick/qquickimageprovider.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickImageResponse()
@@ -99,7 +99,7 @@ func NewQQuickImageResponse() *QQuickImageResponse {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:76
+// /usr/include/qt/QtQuick/qquickimageprovider.h:79
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickImageResponse()
@@ -114,7 +114,7 @@ func DeleteQQuickImageResponse(this *QQuickImageResponse) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:78
+// /usr/include/qt/QtQuick/qquickimageprovider.h:81
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QQuickTextureFactory * textureFactory() const
@@ -128,7 +128,7 @@ func (this *QQuickImageResponse) TextureFactory() *QQuickTextureFactory /*777 QQ
 	return /*==*/ NewQQuickTextureFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:79
+// /usr/include/qt/QtQuick/qquickimageprovider.h:82
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString errorString() const
@@ -145,7 +145,7 @@ func (this *QQuickImageResponse) ErrorString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:82
+// /usr/include/qt/QtQuick/qquickimageprovider.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void cancel()
@@ -158,7 +158,7 @@ func (this *QQuickImageResponse) Cancel() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:85
+// /usr/include/qt/QtQuick/qquickimageprovider.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void finished()

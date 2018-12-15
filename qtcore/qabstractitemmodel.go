@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h
@@ -157,7 +159,7 @@ func (*QAbstractItemModel) NewFromPointer(cthis unsafe.Pointer) *QAbstractItemMo
 	return NewQAbstractItemModelFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:167
+// /usr/include/qt/QtCore/qabstractitemmodel.h:171
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -171,7 +173,7 @@ func (this *QAbstractItemModel) MetaObject() *QMetaObject /*777 const QMetaObjec
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:174
+// /usr/include/qt/QtCore/qabstractitemmodel.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractItemModel(QObject *)
@@ -194,7 +196,7 @@ func NewQAbstractItemModel(parent QObject_ITF /*777 QObject **/) *QAbstractItemM
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:174
+// /usr/include/qt/QtCore/qabstractitemmodel.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractItemModel(QObject *)
@@ -215,7 +217,7 @@ func NewQAbstractItemModelp() *QAbstractItemModel {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:175
+// /usr/include/qt/QtCore/qabstractitemmodel.h:179
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractItemModel()
@@ -230,13 +232,15 @@ func DeleteQAbstractItemModel(this *QAbstractItemModel) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:177
+// /usr/include/qt/QtCore/qabstractitemmodel.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasIndex(int, int, const QModelIndex &) const
 
 /*
 Returns true if the model returns a valid QModelIndex for row and column with parent, otherwise returns false.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QAbstractItemModel) HasIndex(row int, column int, parent QModelIndex_ITF) bool {
 	var convArg2 unsafe.Pointer
@@ -248,13 +252,15 @@ func (this *QAbstractItemModel) HasIndex(row int, column int, parent QModelIndex
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:177
+// /usr/include/qt/QtCore/qabstractitemmodel.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasIndex(int, int, const QModelIndex &) const
 
 /*
 Returns true if the model returns a valid QModelIndex for row and column with parent, otherwise returns false.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QAbstractItemModel) HasIndexp(row int, column int) bool {
 	// arg: 2, const QModelIndex &=LValueReference, QModelIndex=Record, , Invalid
@@ -264,7 +270,7 @@ func (this *QAbstractItemModel) HasIndexp(row int, column int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:178
+// /usr/include/qt/QtCore/qabstractitemmodel.h:182
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
@@ -273,6 +279,8 @@ func (this *QAbstractItemModel) HasIndexp(row int, column int) bool {
 Returns the index of the item in the model specified by the given row, column and parent index.
 
 When reimplementing this function in a subclass, call createIndex() to generate model indexes that other components can use to refer to items in your model.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also createIndex().
 */
@@ -288,7 +296,7 @@ func (this *QAbstractItemModel) Index(row int, column int, parent QModelIndex_IT
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:178
+// /usr/include/qt/QtCore/qabstractitemmodel.h:182
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
@@ -297,6 +305,8 @@ func (this *QAbstractItemModel) Index(row int, column int, parent QModelIndex_IT
 Returns the index of the item in the model specified by the given row, column and parent index.
 
 When reimplementing this function in a subclass, call createIndex() to generate model indexes that other components can use to refer to items in your model.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also createIndex().
 */
@@ -310,7 +320,7 @@ func (this *QAbstractItemModel) Indexp(row int, column int) *QModelIndex /*123*/
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:180
+// /usr/include/qt/QtCore/qabstractitemmodel.h:184
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [24] QModelIndex parent(const QModelIndex &) const
@@ -321,6 +331,8 @@ Returns the parent of the model item with the given index. If the item has no pa
 A common convention used in models that expose tree data structures is that only items in the first column have children. For that case, when reimplementing this function in a subclass the column of the returned QModelIndex would be 0.
 
 When reimplementing this function in a subclass, be careful to avoid calling QModelIndex member functions, such as QModelIndex::parent(), since indexes belonging to your model will simply call your implementation, leading to infinite recursion.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also createIndex().
 */
@@ -336,7 +348,7 @@ func (this *QAbstractItemModel) Parent(child QModelIndex_ITF) *QModelIndex /*123
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:182
+// /usr/include/qt/QtCore/qabstractitemmodel.h:186
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &) const
@@ -347,6 +359,8 @@ Returns the sibling at row and column for the item at index, or an invalid QMode
 sibling() is just a convenience function that finds the item's parent, and uses it to retrieve the index of the child item in the specified row and column.
 
 This method can optionally be overridden for implementation-specific optimization.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also index(), QModelIndex::row(), and QModelIndex::column().
 */
@@ -362,7 +376,7 @@ func (this *QAbstractItemModel) Sibling(row int, column int, idx QModelIndex_ITF
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:183
+// /usr/include/qt/QtCore/qabstractitemmodel.h:187
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
@@ -371,6 +385,8 @@ func (this *QAbstractItemModel) Sibling(row int, column int, idx QModelIndex_ITF
 Returns the number of rows under the given parent. When the parent is valid it means that rowCount is returning the number of children of parent.
 
 Note: When implementing a table based model, rowCount() should return 0 when the parent is valid.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also columnCount().
 */
@@ -384,7 +400,7 @@ func (this *QAbstractItemModel) RowCount(parent QModelIndex_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:183
+// /usr/include/qt/QtCore/qabstractitemmodel.h:187
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
@@ -393,6 +409,8 @@ func (this *QAbstractItemModel) RowCount(parent QModelIndex_ITF) int {
 Returns the number of rows under the given parent. When the parent is valid it means that rowCount is returning the number of children of parent.
 
 Note: When implementing a table based model, rowCount() should return 0 when the parent is valid.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also columnCount().
 */
@@ -404,7 +422,7 @@ func (this *QAbstractItemModel) RowCountp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:184
+// /usr/include/qt/QtCore/qabstractitemmodel.h:188
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int columnCount(const QModelIndex &) const
@@ -425,6 +443,8 @@ For example:
 
 
 Note: When implementing a table based model, columnCount() should return 0 when the parent is valid.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also rowCount().
 */
@@ -438,7 +458,7 @@ func (this *QAbstractItemModel) ColumnCount(parent QModelIndex_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:184
+// /usr/include/qt/QtCore/qabstractitemmodel.h:188
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int columnCount(const QModelIndex &) const
@@ -460,6 +480,8 @@ For example:
 
 Note: When implementing a table based model, columnCount() should return 0 when the parent is valid.
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also rowCount().
 */
 func (this *QAbstractItemModel) ColumnCountp() int {
@@ -470,7 +492,7 @@ func (this *QAbstractItemModel) ColumnCountp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:185
+// /usr/include/qt/QtCore/qabstractitemmodel.h:189
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
@@ -481,6 +503,8 @@ Returns true if parent has any children; otherwise returns false.
 Use rowCount() on the parent to find out the number of children.
 
 Note that it is undefined behavior to report that a particular index hasChildren with this method if the same index has the flag Qt::ItemNeverHasChildren set.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also parent() and index().
 */
@@ -494,7 +518,7 @@ func (this *QAbstractItemModel) HasChildren(parent QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:185
+// /usr/include/qt/QtCore/qabstractitemmodel.h:189
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
@@ -506,6 +530,8 @@ Use rowCount() on the parent to find out the number of children.
 
 Note that it is undefined behavior to report that a particular index hasChildren with this method if the same index has the flag Qt::ItemNeverHasChildren set.
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also parent() and index().
 */
 func (this *QAbstractItemModel) HasChildrenp() bool {
@@ -516,7 +542,7 @@ func (this *QAbstractItemModel) HasChildrenp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:187
+// /usr/include/qt/QtCore/qabstractitemmodel.h:191
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
@@ -525,6 +551,8 @@ func (this *QAbstractItemModel) HasChildrenp() bool {
 Returns the data stored under the given role for the item referred to by the index.
 
 Note: If you do not have a value to return, return an invalid QVariant instead of returning 0.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also Qt::ItemDataRole, setData(), and headerData().
 */
@@ -540,7 +568,7 @@ func (this *QAbstractItemModel) Data(index QModelIndex_ITF, role int) *QVariant 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:187
+// /usr/include/qt/QtCore/qabstractitemmodel.h:191
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
@@ -549,6 +577,8 @@ func (this *QAbstractItemModel) Data(index QModelIndex_ITF, role int) *QVariant 
 Returns the data stored under the given role for the item referred to by the index.
 
 Note: If you do not have a value to return, return an invalid QVariant instead of returning 0.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also Qt::ItemDataRole, setData(), and headerData().
 */
@@ -566,7 +596,7 @@ func (this *QAbstractItemModel) Datap(index QModelIndex_ITF) *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:188
+// /usr/include/qt/QtCore/qabstractitemmodel.h:192
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
@@ -579,6 +609,8 @@ Returns true if successful; otherwise returns false.
 The dataChanged() signal should be emitted if the data was successfully set.
 
 The base class implementation returns false. This function and data() must be reimplemented for editable models.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also Qt::ItemDataRole, data(), and itemData().
 */
@@ -596,7 +628,7 @@ func (this *QAbstractItemModel) SetData(index QModelIndex_ITF, value QVariant_IT
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:188
+// /usr/include/qt/QtCore/qabstractitemmodel.h:192
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
@@ -609,6 +641,8 @@ Returns true if successful; otherwise returns false.
 The dataChanged() signal should be emitted if the data was successfully set.
 
 The base class implementation returns false. This function and data() must be reimplemented for editable models.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also Qt::ItemDataRole, data(), and itemData().
 */
@@ -628,7 +662,7 @@ func (this *QAbstractItemModel) SetDatap(index QModelIndex_ITF, value QVariant_I
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:190
+// /usr/include/qt/QtCore/qabstractitemmodel.h:194
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
@@ -637,6 +671,8 @@ func (this *QAbstractItemModel) SetDatap(index QModelIndex_ITF, value QVariant_I
 Returns the data for the given role and section in the header with the specified orientation.
 
 For horizontal headers, the section number corresponds to the column number. Similarly, for vertical headers, the section number corresponds to the row number.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also Qt::ItemDataRole, setHeaderData(), and QHeaderView.
 */
@@ -648,7 +684,7 @@ func (this *QAbstractItemModel) HeaderData(section int, orientation int, role in
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:190
+// /usr/include/qt/QtCore/qabstractitemmodel.h:194
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
@@ -657,6 +693,8 @@ func (this *QAbstractItemModel) HeaderData(section int, orientation int, role in
 Returns the data for the given role and section in the header with the specified orientation.
 
 For horizontal headers, the section number corresponds to the column number. Similarly, for vertical headers, the section number corresponds to the row number.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also Qt::ItemDataRole, setHeaderData(), and QHeaderView.
 */
@@ -670,7 +708,7 @@ func (this *QAbstractItemModel) HeaderDatap(section int, orientation int) *QVari
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:192
+// /usr/include/qt/QtCore/qabstractitemmodel.h:196
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
@@ -694,7 +732,7 @@ func (this *QAbstractItemModel) SetHeaderData(section int, orientation int, valu
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:192
+// /usr/include/qt/QtCore/qabstractitemmodel.h:196
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
@@ -720,7 +758,7 @@ func (this *QAbstractItemModel) SetHeaderDatap(section int, orientation int, val
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:198
+// /usr/include/qt/QtCore/qabstractitemmodel.h:205
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
@@ -742,7 +780,7 @@ func (this *QAbstractItemModel) MimeTypes() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:200
+// /usr/include/qt/QtCore/qabstractitemmodel.h:207
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canDropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &) const
@@ -768,7 +806,7 @@ func (this *QAbstractItemModel) CanDropMimeData(data QMimeData_ITF /*777 const Q
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:202
+// /usr/include/qt/QtCore/qabstractitemmodel.h:209
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
@@ -802,7 +840,7 @@ func (this *QAbstractItemModel) DropMimeData(data QMimeData_ITF /*777 const QMim
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:204
+// /usr/include/qt/QtCore/qabstractitemmodel.h:211
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
@@ -822,7 +860,7 @@ func (this *QAbstractItemModel) SupportedDropActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:206
+// /usr/include/qt/QtCore/qabstractitemmodel.h:213
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDragActions() const
@@ -842,7 +880,7 @@ func (this *QAbstractItemModel) SupportedDragActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:212
+// /usr/include/qt/QtCore/qabstractitemmodel.h:219
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
@@ -874,7 +912,7 @@ func (this *QAbstractItemModel) InsertRows(row int, count int, parent QModelInde
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:212
+// /usr/include/qt/QtCore/qabstractitemmodel.h:219
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
@@ -904,7 +942,7 @@ func (this *QAbstractItemModel) InsertRowsp(row int, count int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:213
+// /usr/include/qt/QtCore/qabstractitemmodel.h:220
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertColumns(int, int, const QModelIndex &)
@@ -936,7 +974,7 @@ func (this *QAbstractItemModel) InsertColumns(column int, count int, parent QMod
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:213
+// /usr/include/qt/QtCore/qabstractitemmodel.h:220
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertColumns(int, int, const QModelIndex &)
@@ -966,7 +1004,7 @@ func (this *QAbstractItemModel) InsertColumnsp(column int, count int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:214
+// /usr/include/qt/QtCore/qabstractitemmodel.h:221
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
@@ -992,7 +1030,7 @@ func (this *QAbstractItemModel) RemoveRows(row int, count int, parent QModelInde
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:214
+// /usr/include/qt/QtCore/qabstractitemmodel.h:221
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
@@ -1016,7 +1054,7 @@ func (this *QAbstractItemModel) RemoveRowsp(row int, count int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:215
+// /usr/include/qt/QtCore/qabstractitemmodel.h:222
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeColumns(int, int, const QModelIndex &)
@@ -1042,7 +1080,7 @@ func (this *QAbstractItemModel) RemoveColumns(column int, count int, parent QMod
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:215
+// /usr/include/qt/QtCore/qabstractitemmodel.h:222
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeColumns(int, int, const QModelIndex &)
@@ -1066,7 +1104,7 @@ func (this *QAbstractItemModel) RemoveColumnsp(column int, count int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:216
+// /usr/include/qt/QtCore/qabstractitemmodel.h:223
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool moveRows(const QModelIndex &, int, int, const QModelIndex &, int)
@@ -1096,7 +1134,7 @@ func (this *QAbstractItemModel) MoveRows(sourceParent QModelIndex_ITF, sourceRow
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:218
+// /usr/include/qt/QtCore/qabstractitemmodel.h:225
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool moveColumns(const QModelIndex &, int, int, const QModelIndex &, int)
@@ -1126,7 +1164,7 @@ func (this *QAbstractItemModel) MoveColumns(sourceParent QModelIndex_ITF, source
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:221
+// /usr/include/qt/QtCore/qabstractitemmodel.h:228
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool insertRow(int, const QModelIndex &)
@@ -1150,7 +1188,7 @@ func (this *QAbstractItemModel) InsertRow(row int, parent QModelIndex_ITF) bool 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:221
+// /usr/include/qt/QtCore/qabstractitemmodel.h:228
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool insertRow(int, const QModelIndex &)
@@ -1172,7 +1210,7 @@ func (this *QAbstractItemModel) InsertRowp(row int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:222
+// /usr/include/qt/QtCore/qabstractitemmodel.h:229
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool insertColumn(int, const QModelIndex &)
@@ -1194,7 +1232,7 @@ func (this *QAbstractItemModel) InsertColumn(column int, parent QModelIndex_ITF)
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:222
+// /usr/include/qt/QtCore/qabstractitemmodel.h:229
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool insertColumn(int, const QModelIndex &)
@@ -1214,7 +1252,7 @@ func (this *QAbstractItemModel) InsertColumnp(column int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:223
+// /usr/include/qt/QtCore/qabstractitemmodel.h:230
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool removeRow(int, const QModelIndex &)
@@ -1238,7 +1276,7 @@ func (this *QAbstractItemModel) RemoveRow(row int, parent QModelIndex_ITF) bool 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:223
+// /usr/include/qt/QtCore/qabstractitemmodel.h:230
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool removeRow(int, const QModelIndex &)
@@ -1260,7 +1298,7 @@ func (this *QAbstractItemModel) RemoveRowp(row int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:224
+// /usr/include/qt/QtCore/qabstractitemmodel.h:231
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool removeColumn(int, const QModelIndex &)
@@ -1282,7 +1320,7 @@ func (this *QAbstractItemModel) RemoveColumn(column int, parent QModelIndex_ITF)
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:224
+// /usr/include/qt/QtCore/qabstractitemmodel.h:231
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool removeColumn(int, const QModelIndex &)
@@ -1302,7 +1340,7 @@ func (this *QAbstractItemModel) RemoveColumnp(column int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:225
+// /usr/include/qt/QtCore/qabstractitemmodel.h:232
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool moveRow(const QModelIndex &, int, const QModelIndex &, int)
@@ -1328,7 +1366,7 @@ func (this *QAbstractItemModel) MoveRow(sourceParent QModelIndex_ITF, sourceRow 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:227
+// /usr/include/qt/QtCore/qabstractitemmodel.h:234
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool moveColumn(const QModelIndex &, int, const QModelIndex &, int)
@@ -1354,7 +1392,7 @@ func (this *QAbstractItemModel) MoveColumn(sourceParent QModelIndex_ITF, sourceC
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:230
+// /usr/include/qt/QtCore/qabstractitemmodel.h:237
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fetchMore(const QModelIndex &)
@@ -1365,6 +1403,8 @@ Fetches any available data for the items with the parent specified by the parent
 Reimplement this if you are populating your model incrementally.
 
 The default implementation does nothing.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also canFetchMore().
 */
@@ -1377,7 +1417,7 @@ func (this *QAbstractItemModel) FetchMore(parent QModelIndex_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:231
+// /usr/include/qt/QtCore/qabstractitemmodel.h:238
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canFetchMore(const QModelIndex &) const
@@ -1388,6 +1428,8 @@ Returns true if there is more data available for parent; otherwise returns false
 The default implementation always returns false.
 
 If canFetchMore() returns true, the fetchMore() function should be called. This is the behavior of QAbstractItemView, for example.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also fetchMore().
 */
@@ -1401,7 +1443,7 @@ func (this *QAbstractItemModel) CanFetchMore(parent QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:232
+// /usr/include/qt/QtCore/qabstractitemmodel.h:239
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &) const
@@ -1410,6 +1452,8 @@ func (this *QAbstractItemModel) CanFetchMore(parent QModelIndex_ITF) bool {
 Returns the item flags for the given index.
 
 The base class implementation returns a combination of flags that enables the item (ItemIsEnabled) and allows it to be selected (ItemIsSelectable).
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also Qt::ItemFlags.
 */
@@ -1423,7 +1467,7 @@ func (this *QAbstractItemModel) Flags(index QModelIndex_ITF) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:233
+// /usr/include/qt/QtCore/qabstractitemmodel.h:240
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
@@ -1438,7 +1482,7 @@ func (this *QAbstractItemModel) Sort(column int, order int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:233
+// /usr/include/qt/QtCore/qabstractitemmodel.h:240
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
@@ -1455,7 +1499,7 @@ func (this *QAbstractItemModel) Sortp(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:234
+// /usr/include/qt/QtCore/qabstractitemmodel.h:241
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex buddy(const QModelIndex &) const
@@ -1477,7 +1521,7 @@ func (this *QAbstractItemModel) Buddy(index QModelIndex_ITF) *QModelIndex /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:235
+// /usr/include/qt/QtCore/qabstractitemmodel.h:242
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QModelIndexList match(const QModelIndex &, int, const QVariant &, int, Qt::MatchFlags) const
@@ -1490,6 +1534,8 @@ The search begins from the start index, and continues until the number of matchi
 By default, this function will perform a wrapping, string-based comparison on all items, searching for items that begin with the search term specified by value.
 
 Note: The default implementation of this function only searches columns. Reimplement this function to include a different search behavior.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QAbstractItemModel) Match(start QModelIndex_ITF, role int, value QVariant_ITF, hits int, flags int) *QModelIndexList /*667*/ {
 	var convArg0 unsafe.Pointer
@@ -1506,7 +1552,7 @@ func (this *QAbstractItemModel) Match(start QModelIndex_ITF, role int, value QVa
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:235
+// /usr/include/qt/QtCore/qabstractitemmodel.h:242
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QModelIndexList match(const QModelIndex &, int, const QVariant &, int, Qt::MatchFlags) const
@@ -1519,6 +1565,8 @@ The search begins from the start index, and continues until the number of matchi
 By default, this function will perform a wrapping, string-based comparison on all items, searching for items that begin with the search term specified by value.
 
 Note: The default implementation of this function only searches columns. Reimplement this function to include a different search behavior.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QAbstractItemModel) Matchp(start QModelIndex_ITF, role int, value QVariant_ITF) *QModelIndexList /*667*/ {
 	var convArg0 unsafe.Pointer
@@ -1539,7 +1587,7 @@ func (this *QAbstractItemModel) Matchp(start QModelIndex_ITF, role int, value QV
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:235
+// /usr/include/qt/QtCore/qabstractitemmodel.h:242
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QModelIndexList match(const QModelIndex &, int, const QVariant &, int, Qt::MatchFlags) const
@@ -1552,6 +1600,8 @@ The search begins from the start index, and continues until the number of matchi
 By default, this function will perform a wrapping, string-based comparison on all items, searching for items that begin with the search term specified by value.
 
 Note: The default implementation of this function only searches columns. Reimplement this function to include a different search behavior.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QAbstractItemModel) Matchp1(start QModelIndex_ITF, role int, value QVariant_ITF, hits int) *QModelIndexList /*667*/ {
 	var convArg0 unsafe.Pointer
@@ -1570,7 +1620,7 @@ func (this *QAbstractItemModel) Matchp1(start QModelIndex_ITF, role int, value Q
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:239
+// /usr/include/qt/QtCore/qabstractitemmodel.h:246
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize span(const QModelIndex &) const
@@ -1592,7 +1642,93 @@ func (this *QAbstractItemModel) Span(index QModelIndex_ITF) *QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:255
+// /usr/include/qt/QtCore/qabstractitemmodel.h:269
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool checkIndex(const QModelIndex &, QAbstractItemModel::CheckIndexOptions) const
+
+/*
+This function checks whether index is a legal model index for this model. A legal model index is either an invalid model index, or a valid model index for which all the following holds:
+
+
+the index' model is this;
+the index' row is greater or equal than zero;
+the index' row is less than the row count for the index' parent;
+the index' column is greater or equal than zero;
+the index' column is less than the column count for the index' parent.
+
+
+The options argument may change some of these checks. If options contains IndexIsValid, then index must be a valid index; this is useful when reimplementing functions such as data() or setData(), which expect valid indexes.
+
+If options contains DoNotUseParent, then the checks that would call parent() are omitted; this allows calling this function from a parent() reimplementation (otherwise, this would result in endless recursion and a crash).
+
+If options does not contain DoNotUseParent, and it contains ParentIsInvalid, then an additional check is performed: the parent index is checked for not being valid. This is useful when implementing flat models such as lists or tables, where no model index should have a valid parent index.
+
+This function returns true if all the checks succeeded, and false otherwise. This allows to use the function in Q_ASSERT and similar other debugging mechanisms. If some check failed, a warning message will be printed in the qt.core.qabstractitemmodel.checkindex logging category, containing some information that may be useful for debugging the failure.
+
+Note: This function is a debugging helper for implementing your own item models. When developing complex models, as well as when building complicated model hierarchies (e.g. using proxy models), it is useful to call this function in order to catch bugs relative to illegal model indices (as defined above) accidentally passed to some QAbstractItemModel API.
+
+Warning: Note that it's undefined behavior to pass illegal indices to item models, so applications must refrain from doing so, and not rely on any "defensive" programming that item models could employ to handle illegal indexes gracefully.
+
+This function was introduced in  Qt 5.11.
+
+See also QModelIndex.
+*/
+func (this *QAbstractItemModel) CheckIndex(index QModelIndex_ITF, options int) bool {
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel10checkIndexERK11QModelIndex6QFlagsINS_16CheckIndexOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, options)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:269
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool checkIndex(const QModelIndex &, QAbstractItemModel::CheckIndexOptions) const
+
+/*
+This function checks whether index is a legal model index for this model. A legal model index is either an invalid model index, or a valid model index for which all the following holds:
+
+
+the index' model is this;
+the index' row is greater or equal than zero;
+the index' row is less than the row count for the index' parent;
+the index' column is greater or equal than zero;
+the index' column is less than the column count for the index' parent.
+
+
+The options argument may change some of these checks. If options contains IndexIsValid, then index must be a valid index; this is useful when reimplementing functions such as data() or setData(), which expect valid indexes.
+
+If options contains DoNotUseParent, then the checks that would call parent() are omitted; this allows calling this function from a parent() reimplementation (otherwise, this would result in endless recursion and a crash).
+
+If options does not contain DoNotUseParent, and it contains ParentIsInvalid, then an additional check is performed: the parent index is checked for not being valid. This is useful when implementing flat models such as lists or tables, where no model index should have a valid parent index.
+
+This function returns true if all the checks succeeded, and false otherwise. This allows to use the function in Q_ASSERT and similar other debugging mechanisms. If some check failed, a warning message will be printed in the qt.core.qabstractitemmodel.checkindex logging category, containing some information that may be useful for debugging the failure.
+
+Note: This function is a debugging helper for implementing your own item models. When developing complex models, as well as when building complicated model hierarchies (e.g. using proxy models), it is useful to call this function in order to catch bugs relative to illegal model indices (as defined above) accidentally passed to some QAbstractItemModel API.
+
+Warning: Note that it's undefined behavior to pass illegal indices to item models, so applications must refrain from doing so, and not rely on any "defensive" programming that item models could employ to handle illegal indexes gracefully.
+
+This function was introduced in  Qt 5.11.
+
+See also QModelIndex.
+*/
+func (this *QAbstractItemModel) CheckIndexp(index QModelIndex_ITF) bool {
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
+	// arg: 1, QAbstractItemModel::CheckIndexOptions=Typedef, QAbstractItemModel::CheckIndexOptions=Typedef, QFlags<QAbstractItemModel::CheckIndexOption>, Unexposed
+	options := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel10checkIndexERK11QModelIndex6QFlagsINS_16CheckIndexOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, options)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:273
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void headerDataChanged(Qt::Orientation, int, int)
@@ -1611,7 +1747,7 @@ func (this *QAbstractItemModel) HeaderDataChanged(orientation int, first int, la
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:281
+// /usr/include/qt/QtCore/qabstractitemmodel.h:299
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool submit()
@@ -1629,7 +1765,7 @@ func (this *QAbstractItemModel) Submit() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:282
+// /usr/include/qt/QtCore/qabstractitemmodel.h:300
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void revert()
@@ -1644,7 +1780,7 @@ func (this *QAbstractItemModel) Revert() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:286
+// /usr/include/qt/QtCore/qabstractitemmodel.h:304
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void resetInternalData()
@@ -1666,7 +1802,7 @@ This slot is provided the convenience of subclasses of concrete proxy models, su
 
       ...
 
-      QVariant data(const QModelIndex &index, int role)
+      QVariant data(const QModelIndex &index, int role) override
       {
           if (role != Qt::BackgroundRole)
               return QSortFilterProxyModel::data(index, role);
@@ -1699,7 +1835,7 @@ func (this *QAbstractItemModel) ResetInternalData() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:291
+// /usr/include/qt/QtCore/qabstractitemmodel.h:309
 // index:0
 // Protected inline Visibility=Default Availability=Available
 // [24] QModelIndex createIndex(int, int, void *) const
@@ -1719,7 +1855,7 @@ func (this *QAbstractItemModel) CreateIndex(row int, column int, data unsafe.Poi
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:291
+// /usr/include/qt/QtCore/qabstractitemmodel.h:309
 // index:0
 // Protected inline Visibility=Default Availability=Available
 // [24] QModelIndex createIndex(int, int, void *) const
@@ -1741,7 +1877,7 @@ func (this *QAbstractItemModel) CreateIndexp(row int, column int) *QModelIndex /
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:292
+// /usr/include/qt/QtCore/qabstractitemmodel.h:310
 // index:1
 // Protected inline Visibility=Default Availability=Available
 // [24] QModelIndex createIndex(int, int, quintptr) const
@@ -1761,7 +1897,7 @@ func (this *QAbstractItemModel) CreateIndex1(row int, column int, id uint64) *QM
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:295
+// /usr/include/qt/QtCore/qabstractitemmodel.h:313
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool decodeData(int, int, const QModelIndex &, QDataStream &)
@@ -1783,7 +1919,7 @@ func (this *QAbstractItemModel) DecodeData(row int, column int, parent QModelInd
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:297
+// /usr/include/qt/QtCore/qabstractitemmodel.h:315
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void beginInsertRows(const QModelIndex &, int, int)
@@ -1825,7 +1961,7 @@ func (this *QAbstractItemModel) BeginInsertRows(parent QModelIndex_ITF, first in
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:298
+// /usr/include/qt/QtCore/qabstractitemmodel.h:316
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void endInsertRows()
@@ -1842,7 +1978,7 @@ func (this *QAbstractItemModel) EndInsertRows() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:300
+// /usr/include/qt/QtCore/qabstractitemmodel.h:318
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void beginRemoveRows(const QModelIndex &, int, int)
@@ -1876,7 +2012,7 @@ func (this *QAbstractItemModel) BeginRemoveRows(parent QModelIndex_ITF, first in
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:301
+// /usr/include/qt/QtCore/qabstractitemmodel.h:319
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void endRemoveRows()
@@ -1893,7 +2029,7 @@ func (this *QAbstractItemModel) EndRemoveRows() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:303
+// /usr/include/qt/QtCore/qabstractitemmodel.h:321
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool beginMoveRows(const QModelIndex &, int, int, const QModelIndex &, int)
@@ -1958,7 +2094,7 @@ func (this *QAbstractItemModel) BeginMoveRows(sourceParent QModelIndex_ITF, sour
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:304
+// /usr/include/qt/QtCore/qabstractitemmodel.h:322
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void endMoveRows()
@@ -1977,7 +2113,7 @@ func (this *QAbstractItemModel) EndMoveRows() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:306
+// /usr/include/qt/QtCore/qabstractitemmodel.h:324
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void beginInsertColumns(const QModelIndex &, int, int)
@@ -2019,7 +2155,7 @@ func (this *QAbstractItemModel) BeginInsertColumns(parent QModelIndex_ITF, first
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:307
+// /usr/include/qt/QtCore/qabstractitemmodel.h:325
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void endInsertColumns()
@@ -2036,7 +2172,7 @@ func (this *QAbstractItemModel) EndInsertColumns() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:309
+// /usr/include/qt/QtCore/qabstractitemmodel.h:327
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void beginRemoveColumns(const QModelIndex &, int, int)
@@ -2070,7 +2206,7 @@ func (this *QAbstractItemModel) BeginRemoveColumns(parent QModelIndex_ITF, first
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:310
+// /usr/include/qt/QtCore/qabstractitemmodel.h:328
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void endRemoveColumns()
@@ -2087,7 +2223,7 @@ func (this *QAbstractItemModel) EndRemoveColumns() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:312
+// /usr/include/qt/QtCore/qabstractitemmodel.h:330
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool beginMoveColumns(const QModelIndex &, int, int, const QModelIndex &, int)
@@ -2121,7 +2257,7 @@ func (this *QAbstractItemModel) BeginMoveColumns(sourceParent QModelIndex_ITF, s
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:313
+// /usr/include/qt/QtCore/qabstractitemmodel.h:331
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void endMoveColumns()
@@ -2140,7 +2276,7 @@ func (this *QAbstractItemModel) EndMoveColumns() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:324
+// /usr/include/qt/QtCore/qabstractitemmodel.h:342
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void beginResetModel()
@@ -2169,7 +2305,7 @@ func (this *QAbstractItemModel) BeginResetModel() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:325
+// /usr/include/qt/QtCore/qabstractitemmodel.h:343
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void endResetModel()
@@ -2190,7 +2326,7 @@ func (this *QAbstractItemModel) EndResetModel() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:327
+// /usr/include/qt/QtCore/qabstractitemmodel.h:345
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void changePersistentIndex(const QModelIndex &, const QModelIndex &)
@@ -2215,7 +2351,7 @@ func (this *QAbstractItemModel) ChangePersistentIndex(from QModelIndex_ITF, to Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:329
+// /usr/include/qt/QtCore/qabstractitemmodel.h:347
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QModelIndexList persistentIndexList() const
@@ -2257,6 +2393,32 @@ func (this *QAbstractItemModel) LayoutChangeHintItemName(val int) string {
 func QAbstractItemModel_LayoutChangeHintItemName(val int) string {
 	var nilthis *QAbstractItemModel
 	return nilthis.LayoutChangeHintItemName(val)
+}
+
+/*
+
+
+ */
+type QAbstractItemModel__CheckIndexOption = int
+
+//
+const QAbstractItemModel__NoOption QAbstractItemModel__CheckIndexOption = 0
+
+//
+const QAbstractItemModel__IndexIsValid QAbstractItemModel__CheckIndexOption = 1
+
+//
+const QAbstractItemModel__DoNotUseParent QAbstractItemModel__CheckIndexOption = 2
+
+//
+const QAbstractItemModel__ParentIsInvalid QAbstractItemModel__CheckIndexOption = 4
+
+func (this *QAbstractItemModel) CheckIndexOptionItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractItemModel_CheckIndexOptionItemName(val int) string {
+	var nilthis *QAbstractItemModel
+	return nilthis.CheckIndexOptionItemName(val)
 }
 
 //  body block end

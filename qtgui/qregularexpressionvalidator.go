@@ -65,7 +65,7 @@ func (*QRegularExpressionValidator) NewFromPointer(cthis unsafe.Pointer) *QRegul
 	return NewQRegularExpressionValidatorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:203
+// /usr/include/qt/QtGui/qvalidator.h:205
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -79,7 +79,7 @@ func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*777 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:207
+// /usr/include/qt/QtGui/qvalidator.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionValidator(QObject *)
@@ -102,7 +102,7 @@ func NewQRegularExpressionValidator(parent qtcore.QObject_ITF /*777 QObject **/)
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:207
+// /usr/include/qt/QtGui/qvalidator.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionValidator(QObject *)
@@ -123,7 +123,7 @@ func NewQRegularExpressionValidatorp() *QRegularExpressionValidator {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:208
+// /usr/include/qt/QtGui/qvalidator.h:210
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionValidator(const QRegularExpression &, QObject *)
@@ -150,7 +150,7 @@ func NewQRegularExpressionValidator1(re qtcore.QRegularExpression_ITF, parent qt
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:208
+// /usr/include/qt/QtGui/qvalidator.h:210
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionValidator(const QRegularExpression &, QObject *)
@@ -175,7 +175,7 @@ func NewQRegularExpressionValidator1p(re qtcore.QRegularExpression_ITF) *QRegula
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:209
+// /usr/include/qt/QtGui/qvalidator.h:211
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRegularExpressionValidator()
@@ -190,7 +190,7 @@ func DeleteQRegularExpressionValidator(this *QRegularExpressionValidator) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:211
+// /usr/include/qt/QtGui/qvalidator.h:213
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
@@ -208,7 +208,7 @@ func (this *QRegularExpressionValidator) Validate(input string, pos int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:213
+// /usr/include/qt/QtGui/qvalidator.h:215
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpression regularExpression() const
@@ -224,7 +224,7 @@ func (this *QRegularExpressionValidator) RegularExpression() *qtcore.QRegularExp
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:216
+// /usr/include/qt/QtGui/qvalidator.h:218
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRegularExpression(const QRegularExpression &)
@@ -241,7 +241,7 @@ func (this *QRegularExpressionValidator) SetRegularExpression(re qtcore.QRegular
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:219
+// /usr/include/qt/QtGui/qvalidator.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void regularExpressionChanged(const QRegularExpression &)

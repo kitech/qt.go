@@ -1180,7 +1180,7 @@ func (this *QStyle) SizeFromContentsp(ct int, opt QStyleOption_ITF /*777 const Q
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:748
+// /usr/include/qt/QtWidgets/qstyle.h:751
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
@@ -1208,7 +1208,7 @@ func (this *QStyle) StyleHint(stylehint int, opt QStyleOption_ITF /*777 const QS
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:748
+// /usr/include/qt/QtWidgets/qstyle.h:751
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
@@ -1230,7 +1230,7 @@ func (this *QStyle) StyleHintp(stylehint int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:748
+// /usr/include/qt/QtWidgets/qstyle.h:751
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
@@ -1254,7 +1254,7 @@ func (this *QStyle) StyleHintp1(stylehint int, opt QStyleOption_ITF /*777 const 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:748
+// /usr/include/qt/QtWidgets/qstyle.h:751
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
@@ -1280,7 +1280,7 @@ func (this *QStyle) StyleHintp2(stylehint int, opt QStyleOption_ITF /*777 const 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:828
+// /usr/include/qt/QtWidgets/qstyle.h:831
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1304,7 +1304,7 @@ func (this *QStyle) StandardPixmap(standardPixmap int, opt QStyleOption_ITF /*77
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:828
+// /usr/include/qt/QtWidgets/qstyle.h:831
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1324,7 +1324,7 @@ func (this *QStyle) StandardPixmapp(standardPixmap int) *qtgui.QPixmap /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:828
+// /usr/include/qt/QtWidgets/qstyle.h:831
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1346,7 +1346,7 @@ func (this *QStyle) StandardPixmapp1(standardPixmap int, opt QStyleOption_ITF /*
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:831
+// /usr/include/qt/QtWidgets/qstyle.h:834
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1374,7 +1374,7 @@ func (this *QStyle) StandardIcon(standardIcon int, option QStyleOption_ITF /*777
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:831
+// /usr/include/qt/QtWidgets/qstyle.h:834
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1398,7 +1398,7 @@ func (this *QStyle) StandardIconp(standardIcon int) *qtgui.QIcon /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:831
+// /usr/include/qt/QtWidgets/qstyle.h:834
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1424,7 +1424,7 @@ func (this *QStyle) StandardIconp1(standardIcon int, option QStyleOption_ITF /*7
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:834
+// /usr/include/qt/QtWidgets/qstyle.h:837
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QPixmap generatedIconPixmap(QIcon::Mode, const QPixmap &, const QStyleOption *) const
@@ -1454,7 +1454,7 @@ func (this *QStyle) GeneratedIconPixmap(iconMode int, pixmap qtgui.QPixmap_ITF, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:837
+// /usr/include/qt/QtWidgets/qstyle.h:840
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QRect visualRect(Qt::LayoutDirection, const QRect &, const QRect &)
@@ -1487,7 +1487,7 @@ func QStyle_VisualRect(direction int, boundingRect qtcore.QRect_ITF, logicalRect
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:839
+// /usr/include/qt/QtWidgets/qstyle.h:842
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QPoint visualPos(Qt::LayoutDirection, const QRect &, const QPoint &)
@@ -1518,7 +1518,7 @@ func QStyle_VisualPos(direction int, boundingRect qtcore.QRect_ITF, logicalPos q
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:841
+// /usr/include/qt/QtWidgets/qstyle.h:844
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int sliderPositionFromValue(int, int, int, int, bool)
@@ -1543,7 +1543,7 @@ func QStyle_SliderPositionFromValue(min int, max int, val int, space int, upside
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:841
+// /usr/include/qt/QtWidgets/qstyle.h:844
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int sliderPositionFromValue(int, int, int, int, bool)
@@ -1565,7 +1565,7 @@ func (this *QStyle) SliderPositionFromValuep(min int, max int, val int, space in
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:843
+// /usr/include/qt/QtWidgets/qstyle.h:846
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int sliderValueFromPosition(int, int, int, int, bool)
@@ -1590,7 +1590,7 @@ func QStyle_SliderValueFromPosition(min int, max int, pos int, space int, upside
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:843
+// /usr/include/qt/QtWidgets/qstyle.h:846
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int sliderValueFromPosition(int, int, int, int, bool)
@@ -1612,7 +1612,7 @@ func (this *QStyle) SliderValueFromPositionp(min int, max int, pos int, space in
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:845
+// /usr/include/qt/QtWidgets/qstyle.h:848
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] Qt::Alignment visualAlignment(Qt::LayoutDirection, Qt::Alignment)
@@ -1635,7 +1635,7 @@ func QStyle_VisualAlignment(direction int, alignment int) int {
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:846
+// /usr/include/qt/QtWidgets/qstyle.h:849
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QRect alignedRect(Qt::LayoutDirection, Qt::Alignment, const QSize &, const QRect &)
@@ -1664,7 +1664,7 @@ func QStyle_AlignedRect(direction int, alignment int, size qtcore.QSize_ITF, rec
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:849
+// /usr/include/qt/QtWidgets/qstyle.h:852
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
@@ -1692,7 +1692,7 @@ func (this *QStyle) LayoutSpacing(control1 int, control2 int, orientation int, o
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:849
+// /usr/include/qt/QtWidgets/qstyle.h:852
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
@@ -1716,7 +1716,7 @@ func (this *QStyle) LayoutSpacingp(control1 int, control2 int, orientation int) 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:849
+// /usr/include/qt/QtWidgets/qstyle.h:852
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
@@ -1742,7 +1742,7 @@ func (this *QStyle) LayoutSpacingp1(control1 int, control2 int, orientation int,
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:852
+// /usr/include/qt/QtWidgets/qstyle.h:855
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int combinedLayoutSpacing(QSizePolicy::ControlTypes, QSizePolicy::ControlTypes, Qt::Orientation, QStyleOption *, QWidget *) const
@@ -1772,7 +1772,7 @@ func (this *QStyle) CombinedLayoutSpacing(controls1 int, controls2 int, orientat
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:852
+// /usr/include/qt/QtWidgets/qstyle.h:855
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int combinedLayoutSpacing(QSizePolicy::ControlTypes, QSizePolicy::ControlTypes, Qt::Orientation, QStyleOption *, QWidget *) const
@@ -1798,7 +1798,7 @@ func (this *QStyle) CombinedLayoutSpacingp(controls1 int, controls2 int, orienta
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:852
+// /usr/include/qt/QtWidgets/qstyle.h:855
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int combinedLayoutSpacing(QSizePolicy::ControlTypes, QSizePolicy::ControlTypes, Qt::Orientation, QStyleOption *, QWidget *) const
@@ -1826,7 +1826,7 @@ func (this *QStyle) CombinedLayoutSpacingp1(controls1 int, controls2 int, orient
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:856
+// /usr/include/qt/QtWidgets/qstyle.h:859
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QStyle * proxy() const
@@ -1943,50 +1943,9 @@ func QStyle_StateFlagItemName(val int) string {
 /*
 This enum describes the various primitive elements. A primitive element is a common GUI element, such as a checkbox indicator or button bevel.
 
-QStyle::PE_PanelButtonCommand?Button used to initiate an action, for example, a QPushButton.
-QStyle::PE_PanelButtonBevel?Generic panel with a button bevel.
-QStyle::PE_PanelButtonTool?Panel for a Tool button, used with QToolButton.
-QStyle::PE_PanelLineEdit?Panel for a QLineEdit.
-QStyle::PE_IndicatorButtonDropDown?Indicator for a drop down button, for example, a tool button that displays a menu.
-QStyle::PE_IndicatorArrowUp?Generic Up arrow.
-QStyle::PE_IndicatorArrowDown?Generic Down arrow.
-QStyle::PE_IndicatorArrowRight?Generic Right arrow.
-QStyle::PE_IndicatorArrowLeft?Generic Left arrow.
-QStyle::PE_IndicatorSpinUp?Up symbol for a spin widget, for example a QSpinBox.
-QStyle::PE_IndicatorSpinDown?Down symbol for a spin widget.
-QStyle::PE_IndicatorSpinPlus?Increase symbol for a spin widget.
-QStyle::PE_IndicatorSpinMinus?Decrease symbol for a spin widget.
 QStyle::PE_IndicatorItemViewItemCheckPE_IndicatorViewItemCheckOn/off indicator for a view item.
-QStyle::PE_IndicatorCheckBox?On/off indicator, for example, a QCheckBox.
-QStyle::PE_IndicatorRadioButton?Exclusive on/off indicator, for example, a QRadioButton.
-QStyle::PE_IndicatorDockWidgetResizeHandle?Resize handle for dock windows.
-QStyle::PE_PanelMenuBar?Panel for menu bars.
-QStyle::PE_PanelScrollAreaCorner?Panel at the bottom-right (or bottom-left) corner of a scroll area.
-QStyle::PE_FrameTabWidget?Frame for tab widgets.
-QStyle::PE_FrameButtonBevel?Panel frame for a button bevel.
-QStyle::PE_FrameButtonTool?Panel frame for a tool button.
-QStyle::PE_IndicatorHeaderArrow?Arrow used to indicate sorting on a list or table header.
 QStyle::PE_FrameStatusBarItemPE_FrameStatusBarFrame for an item of a status bar; see also QStatusBar.
-QStyle::PE_FrameWindow?Frame around a MDI window or a docking window.
-QStyle::PE_IndicatorMenuCheckMark?Check mark used in a menu.
-QStyle::PE_IndicatorProgressChunk?Section of a progress bar indicator; see also QProgressBar.
-QStyle::PE_IndicatorBranch?Lines used to represent the branch of a tree in a tree view.
-QStyle::PE_IndicatorToolBarHandle?The handle of a toolbar.
-QStyle::PE_IndicatorToolBarSeparator?The separator in a toolbar.
-QStyle::PE_PanelToolBar?The panel for a toolbar.
-QStyle::PE_PanelTipLabel?The panel for a tip label.
-QStyle::PE_FrameTabBarBase?The frame that is drawn for a tab bar, ususally drawn for a tab bar that isn't part of a tab widget.
-QStyle::PE_IndicatorTabTear?Deprecated. Use PE_IndicatorTabTearLeft instead.
 QStyle::PE_IndicatorTabTearLeftPE_IndicatorTabTearAn indicator that a tab is partially scrolled out on the left side of the visible tab bar when there are many tabs.
-QStyle::PE_IndicatorTabTearRight?An indicator that a tab is partially scrolled out on the right side of the visible tab bar when there are many tabs.
-QStyle::PE_IndicatorColumnViewArrow?An arrow in a QColumnView.
-QStyle::PE_Widget?A plain QWidget.
-QStyle::PE_IndicatorItemViewItemDrop?An indicator that is drawn to show where an item in an item view is about to be dropped during a drag-and-drop operation in an item view.
-QStyle::PE_PanelItemViewItem?The background for an item in an item view.
-QStyle::PE_PanelItemViewRow?The background of a row in an item view.
-QStyle::PE_PanelStatusBar?The panel for a status bar.
-QStyle::PE_IndicatorTabClose?The close button on a tab bar.
-QStyle::PE_PanelMenu?The panel for a menu.
 
 
 See also drawPrimitive().
@@ -2021,10 +1980,10 @@ const QStyle__PE_FrameStatusBar QStyle__PrimitiveElement = 7
 //
 const QStyle__PE_FrameStatusBarItem QStyle__PrimitiveElement = 7
 
-//
+// Frame for tab widgets.
 const QStyle__PE_FrameTabWidget QStyle__PrimitiveElement = 8
 
-//
+// Frame around a MDI window or a docking window.
 const QStyle__PE_FrameWindow QStyle__PrimitiveElement = 9
 
 //
@@ -2329,41 +2288,8 @@ func QStyle_ControlElementItemName(val int) string {
 /*
 This enum represents a sub-area of a widget. Style implementations use these areas to draw the different parts of a widget.
 
-QStyle::SE_PushButtonLayoutItem?Area that counts for the parent layout.
-QStyle::SE_CheckBoxLayoutItem?Area that counts for the parent layout.
-QStyle::SE_DateTimeEditLayoutItem?Area that counts for the parent layout.
-QStyle::SE_RadioButtonLayoutItem?Area that counts for the parent layout.
-QStyle::SE_SliderLayoutItem?Area that counts for the parent layout.
-QStyle::SE_SpinBoxLayoutItem?Area that counts for the parent layout.
-QStyle::SE_ProgressBarLayoutItem?Area that counts for the parent layout.
-QStyle::SE_FrameContents?Area for a frame's contents.
-QStyle::SE_ShapedFrameContents?Area for a frame's contents using the shape in QStyleOptionFrame; see QFrame
-QStyle::SE_FrameLayoutItem?Area that counts for the parent layout.
-QStyle::SE_LabelLayoutItem?Area that counts for the parent layout.
-QStyle::SE_LineEditContents?Area for a line edit's contents.
-QStyle::SE_TabWidgetLayoutItem?Area that counts for the parent layout.
-QStyle::SE_ToolButtonLayoutItem?Area that counts for the parent layout.
 QStyle::SE_ItemViewItemCheckIndicatorSE_ViewItemCheckIndicatorArea for a view item's check mark.
-QStyle::SE_TabBarTearIndicator?Deprecated. Use SE_TabBarTearIndicatorLeft instead.
 QStyle::SE_TabBarTearIndicatorLeftSE_TabBarTearIndicatorArea for the tear indicator on the left side of a tab bar with scroll arrows.
-QStyle::SE_TabBarTearIndicatorRight?Area for the tear indicator on the right side of a tab bar with scroll arrows.
-QStyle::SE_TabBarScrollLeftButton?Area for the scroll left button on a tab bar with scroll buttons.
-QStyle::SE_TabBarScrollRightButton?Area for the scroll right button on a tab bar with scroll buttons.
-QStyle::SE_TreeViewDisclosureItem?Area for the actual disclosure item in a tree branch.
-QStyle::SE_DialogButtonBoxLayoutItem?Area that counts for the parent layout.
-QStyle::SE_GroupBoxLayoutItem?Area that counts for the parent layout.
-QStyle::SE_DockWidgetFloatButton?The float button of a dock widget.
-QStyle::SE_DockWidgetTitleBarText?The text bounds of the dock widgets title.
-QStyle::SE_DockWidgetCloseButton?The close button of a dock widget.
-QStyle::SE_DockWidgetIcon?The icon of a dock widget.
-QStyle::SE_ComboBoxLayoutItem?Area that counts for the parent layout.
-QStyle::SE_ItemViewItemDecoration?Area for a view item's decoration (icon).
-QStyle::SE_ItemViewItemText?Area for a view item's text.
-QStyle::SE_ItemViewItemFocusRect?Area for a view item's focus rect.
-QStyle::SE_TabBarTabLeftButton?Area for a widget on the left side of a tab in a tab bar.
-QStyle::SE_TabBarTabRightButton?Area for a widget on the right side of a tab in a tab bar.
-QStyle::SE_TabBarTabText?Area for the text on a tab in a tab bar.
-QStyle::SE_ToolBarHandle?Area for the handle of a tool bar.
 
 
 See also subElementRect().
@@ -2753,58 +2679,12 @@ func QStyle_SubControlItemName(val int) string {
 /*
 This enum describes the various available pixel metrics. A pixel metric is a style dependent size represented by a single pixel value.
 
-QStyle::PM_DockWidgetTitleBarButtonMargin?Amount of whitespace between dock widget's title bar button labels and the frame.
 QStyle::PM_MDIFrameWidthPM_MdiSubWindowFrameWidthObsolete. Use PM_MdiSubWindowFrameWidth instead.
 QStyle::PM_MDIMinimizedWidthPM_MdiSubWindowMinimizedWidthObsolete. Use PM_MdiSubWindowMinimizedWidth instead.
-QStyle::PM_MdiSubWindowMinimizedWidth?Width of a minimized MDI window.
-QStyle::PM_LayoutLeftMargin?Default left margin for a QLayout.
-QStyle::PM_LayoutTopMargin?Default top margin for a QLayout.
-QStyle::PM_LayoutRightMargin?Default right margin for a QLayout.
-QStyle::PM_LayoutBottomMargin?Default bottom margin for a QLayout.
-QStyle::PM_LayoutHorizontalSpacing?Default horizontal spacing for a QLayout.
-QStyle::PM_LayoutVerticalSpacing?Default vertical spacing for a QLayout.
-QStyle::PM_DockWidgetTitleMargin?Margin of the dock window title.
-QStyle::PM_ToolBarFrameWidth?Width of the frame around toolbars.
-QStyle::PM_ToolBarHandleExtent?Width of a toolbar handle in a horizontal toolbar and the height of the handle in a vertical toolbar.
-QStyle::PM_ToolBarItemMargin?Spacing between the toolbar frame and the items.
-QStyle::PM_ToolBarItemSpacing?Spacing between toolbar items.
-QStyle::PM_ToolBarSeparatorExtent?Width of a toolbar separator in a horizontal toolbar and the height of a separator in a vertical toolbar.
-QStyle::PM_ToolBarExtensionExtent?Width of a toolbar extension button in a horizontal toolbar and the height of the button in a vertical toolbar.
-QStyle::PM_TabBarScrollButtonWidth?
-QStyle::PM_TabBarTabShiftHorizontal?Horizontal pixel shift when a tab is selected.
-QStyle::PM_TabBarTabShiftVertical?Vertical pixel shift when a tab is selected.
-QStyle::PM_HeaderMarkSize?The size of the sort indicator in a header.
-QStyle::PM_HeaderGripMargin?The size of the resize grip in a header.
-QStyle::PM_HeaderMargin?The size of the margin between the sort indicator and the text.
-QStyle::PM_SpinBoxSliderHeight?The height of the optional spin box slider.
-QStyle::PM_ToolBarIconSize?Default tool bar icon size
-QStyle::PM_SmallIconSize?Default small icon size
-QStyle::PM_LargeIconSize?Default large icon size
-QStyle::PM_FocusFrameHMargin?Horizontal margin that the focus frame will outset the widget by.
-QStyle::PM_FocusFrameVMargin?Vertical margin that the focus frame will outset the widget by.
-QStyle::PM_IconViewIconSize?The default size for icons in an icon view.
-QStyle::PM_ListViewIconSize?The default size for icons in a list view.
-QStyle::PM_ToolTipLabelFrameWidth?The frame width for a tool tip label.
-QStyle::PM_CheckBoxLabelSpacing?The spacing between a check box indicator and its label.
-QStyle::PM_RadioButtonLabelSpacing?The spacing between a radio button indicator and its label.
-QStyle::PM_TabBarIconSize?The default icon size for a tab bar.
-QStyle::PM_SizeGripSize?The size of a size grip.
-QStyle::PM_MessageBoxIconSize?The size of the standard icons in a message box
-QStyle::PM_ButtonIconSize?The default size of button icons
-QStyle::PM_TextCursorWidth?The width of the cursor in a line edit or text edit
-QStyle::PM_TabBar_ScrollButtonOverlap?The distance between the left and right buttons in a tab bar.
-QStyle::PM_TabCloseIndicatorWidth?The default width of a close button on a tab in a tab bar.
-QStyle::PM_TabCloseIndicatorHeight?The default height of a close button on a tab in a tab bar.
-QStyle::PM_ScrollView_ScrollBarSpacing?Distance between frame and scrollbar with SH_ScrollView_FrameOnlyAroundContents set.
-QStyle::PM_ScrollView_ScrollBarOverlap?Overlap between scroll bars and scroll content
-QStyle::PM_SubMenuOverlap?The horizontal overlap between a submenu and its parent.
 
 
 The following values are obsolete:
 
-QStyle::PM_DefaultTopLevelMargin?Use PM_LayoutLeftMargin, PM_LayoutTopMargin, PM_LayoutRightMargin, and PM_LayoutBottomMargin instead.
-QStyle::PM_DefaultChildMargin?Use PM_LayoutLeftMargin, PM_LayoutTopMargin, PM_LayoutRightMargin, and PM_LayoutBottomMargin instead.
-QStyle::PM_DefaultLayoutSpacing?Use PM_LayoutHorizontalSpacing and PM_LayoutVerticalSpacing instead.
 
 
 See also pixelMetric().
@@ -3234,80 +3114,7 @@ func QStyle_RequestSoftwareInputPanelItemName(val int) string {
 /*
 This enum describes the available style hints. A style hint is a general look and/or feel hint.
 
-QStyle::SH_ScrollBar_ContextMenu?Whether or not a scroll bar has a context menu.
-QStyle::SH_ScrollBar_LeftClickAbsolutePosition?A boolean value. If true, left clicking on a scroll bar causes the slider to jump to that position. If false, left clicking will behave as appropriate for each control.
-QStyle::SH_ScrollBar_RollBetweenButtons?A boolean value. If true, when clicking a scroll bar button (SC_ScrollBarAddLine or SC_ScrollBarSubLine) and dragging over to the opposite button (rolling) will press the new button and release the old one. When it is false, the original button is released and nothing happens (like a push button).
-QStyle::SH_Menu_KeyboardSearch?Typing causes a menu to be search for relevant items, otherwise only mnemnonic is considered.
-QStyle::SH_Menu_Scrollable?Whether popup menus must support scrolling.
-QStyle::SH_Menu_SloppySubMenus?Whether popup menus must support the user moving the mouse cursor to a submenu while crossing other items of the menu. This is supported on most modern desktop platforms.
-QStyle::SH_Menu_FillScreenWithScroll?Whether scrolling popups should fill the screen as they are scrolled.
-QStyle::SH_Menu_SelectionWrap?Whether popups should allow the selections to wrap, that is when selection should the next item be the first item.
-QStyle::SH_ListViewExpand_SelectMouseType?Which type of mouse event should cause a list view expansion to be selected.
-QStyle::SH_TabBar_PreferNoArrows?Whether a tab bar should suggest a size to prevent scoll arrows.
 QStyle::SH_ScrollBar_StopMouseOverSliderSH_Slider_StopMouseOverSliderObsolete. Use SH_Slider_StopMouseOverSlider instead.
-QStyle::SH_BlinkCursorWhenTextSelected?Whether cursor should blink when text is selected.
-QStyle::SH_RichText_FullWidthSelection?Whether richtext selections should extend to the full width of the document.
-QStyle::SH_GroupBox_TextLabelVerticalAlignment?How to vertically align a group box's text label.
-QStyle::SH_GroupBox_TextLabelColor?How to paint a group box's text label.
-QStyle::SH_DialogButtons_DefaultButton?Which button gets the default status in a dialog's button widget.
-QStyle::SH_ToolBox_SelectedPageTitleBold?Boldness of the selected page title in a QToolBox.
-QStyle::SH_LineEdit_PasswordCharacter?The Unicode character to be used for passwords.
-QStyle::SH_Table_GridLineColor?The RGB value of the grid for a table.
-QStyle::SH_UnderlineShortcut?Whether shortcuts are underlined.
-QStyle::SH_SpellCheckUnderlineStyle?Obsolete. Use SpellCheckUnderlineStyle hint in QPlatformTheme instead.
-QStyle::SH_SpinBox_AnimateButton?Animate a click when up or down is pressed in a spin box.
-QStyle::SH_SpinBox_KeyPressAutoRepeatRate?Auto-repeat interval for spinbox key presses.
-QStyle::SH_SpinBox_ClickAutoRepeatRate?Auto-repeat interval for spinbox mouse clicks.
-QStyle::SH_SpinBox_ClickAutoRepeatThreshold?Auto-repeat threshold for spinbox mouse clicks.
-QStyle::SH_DrawMenuBarSeparator?Indicates whether or not the menu bar draws separators.
-QStyle::SH_TitleBar_ModifyNotification?Indicates if the title bar should show a '*' for windows that are modified.
-QStyle::SH_Button_FocusPolicy?The default focus policy for buttons.
-QStyle::SH_MessageBox_UseBorderForButtonSpacing?A boolean indicating what the to use the border of the buttons (computed as half the button height) for the spacing of the button in a message box.
-QStyle::SH_MessageBox_CenterButtons?A boolean indicating whether the buttons in the message box should be centered or not (see QDialogButtonBox::setCentered()).
-QStyle::SH_MessageBox_TextInteractionFlags?A boolean indicating if the text in a message box should allow user interfactions (e.g. selection) or not.
-QStyle::SH_TitleBar_AutoRaise?A boolean indicating whether controls on a title bar ought to update when the mouse is over them.
-QStyle::SH_ToolButton_PopupDelay?An int indicating the popup delay in milliseconds for menus attached to tool buttons.
-QStyle::SH_FocusFrame_Mask?The mask of the focus frame.
-QStyle::SH_RubberBand_Mask?The mask of the rubber band.
-QStyle::SH_WindowFrame_Mask?The mask of the window frame.
-QStyle::SH_SpinControls_DisableOnBounds?Determines if the spin controls will shown as disabled when reaching the spin range boundary.
-QStyle::SH_Dial_BackgroundRole?Defines the style's preferred background role (as QPalette::ColorRole) for a dial widget.
-QStyle::SH_ComboBox_LayoutDirection?The layout direction for the combo box. By default it should be the same as indicated by the QStyleOption::direction variable.
-QStyle::SH_ItemView_EllipsisLocation?The location where ellipses should be added for item text that is too long to fit in an view item.
-QStyle::SH_ItemView_ShowDecorationSelected?When an item in an item view is selected, also highlight the branch or other decoration.
-QStyle::SH_ItemView_ActivateItemOnSingleClick?Emit the activated signal when the user single clicks on an item in an item in an item view. Otherwise the signal is emitted when the user double clicks on an item.
-QStyle::SH_Slider_AbsoluteSetButtons?Which mouse buttons cause a slider to set the value to the position clicked on.
-QStyle::SH_Slider_PageSetButtons?Which mouse buttons cause a slider to page step the value.
-QStyle::SH_TabBar_ElideMode?The default eliding style for a tab bar.
-QStyle::SH_DialogButtonLayout?Controls how buttons are laid out in a QDialogButtonBox, returns a QDialogButtonBox::ButtonLayout enum.
-QStyle::SH_WizardStyle?Controls the look and feel of a QWizard. Returns a QWizard::WizardStyle enum.
-QStyle::SH_FormLayoutWrapPolicy?Provides a default for how rows are wrapped in a QFormLayout. Returns a QFormLayout::RowWrapPolicy enum.
-QStyle::SH_FormLayoutFieldGrowthPolicy?Provides a default for how fields can grow in a QFormLayout. Returns a QFormLayout::FieldGrowthPolicy enum.
-QStyle::SH_FormLayoutFormAlignment?Provides a default for how a QFormLayout aligns its contents within the available space. Returns a Qt::Alignment enum.
-QStyle::SH_FormLayoutLabelAlignment?Provides a default for how a QFormLayout aligns labels within the available space. Returns a Qt::Alignment enum.
-QStyle::SH_ItemView_ArrowKeysNavigateIntoChildren?Controls whether the tree view will select the first child when it is exapanded and the right arrow key is pressed.
-QStyle::SH_ComboBox_PopupFrameStyle?The frame style used when drawing a combobox popup menu.
-QStyle::SH_DialogButtonBox_ButtonsHaveIcons?Indicates whether or not StandardButtons in QDialogButtonBox should have icons or not.
-QStyle::SH_ItemView_MovementWithoutUpdatingSelection?The item view is able to indicate a current item without changing the selection.
-QStyle::SH_ToolTip_Mask?The mask of a tool tip.
-QStyle::SH_FocusFrame_AboveWidget?The FocusFrame is stacked above the widget that it is "focusing on".
-QStyle::SH_TextControl_FocusIndicatorTextCharFormat?Specifies the text format used to highlight focused anchors in rich text documents displayed for example in QTextBrowser. The format has to be a QTextCharFormat returned in the variant of the QStyleHintReturnVariant return value. The QTextFormat::OutlinePen property is used for the outline and QTextFormat::BackgroundBrush for the background of the highlighted area.
-QStyle::SH_Menu_FlashTriggeredItem?Flash triggered item.
-QStyle::SH_Menu_FadeOutOnHide?Fade out the menu instead of hiding it immediately.
-QStyle::SH_TabWidget_DefaultTabPosition?Default position of the tab bar in a tab widget.
-QStyle::SH_ToolBar_Movable?Determines if the tool bar is movable by default.
-QStyle::SH_ItemView_PaintAlternatingRowColorsForEmptyArea?Whether QTreeView paints alternating row colors for the area that does not have any items.
-QStyle::SH_Menu_Mask?The mask for a popup menu.
-QStyle::SH_ItemView_DrawDelegateFrame?Determines if there should be a frame for a delegate widget.
-QStyle::SH_TabBar_CloseButtonPosition?Determines the position of the close button on a tab in a tab bar.
-QStyle::SH_DockWidget_ButtonsHaveFrame?Determines if dockwidget buttons should have frames. Default is true.
-QStyle::SH_ToolButtonStyle?Determines the default system style for tool buttons that uses Qt::ToolButtonFollowStyle.
-QStyle::SH_RequestSoftwareInputPanel?Determines when a software input panel should be requested by input widgets. Returns an enum of type QStyle::RequestSoftwareInputPanel.
-QStyle::SH_ScrollBar_Transient?Determines if the style supports transient scroll bars. Transient scroll bars appear when the content is scrolled and disappear when they are no longer needed.
-QStyle::SH_Menu_SupportsSections?Determines if the style displays sections in menus or treat them as plain separators. Sections are separators with a text and icon hint.
-QStyle::SH_ToolTip_WakeUpDelay?Determines the delay before a tooltip is shown, in milliseconds.
-QStyle::SH_ToolTip_FallAsleepDelay?Determines the delay (in milliseconds) before a new wake time is needed when a tooltip is shown (notice: shown, not hidden). When a new wake isn't needed, a user-requested tooltip will be shown nearly instantly.
-QStyle::SH_Widget_Animate?Deprecated. Use SH_Widget_Animation_Duration instead.
 
 
 See also styleHint().
@@ -3662,6 +3469,15 @@ const QStyle__SH_TitleBar_ShowToolTipsOnButtons QStyle__StyleHint = 113
 
 //
 const QStyle__SH_Widget_Animation_Duration QStyle__StyleHint = 114
+
+//
+const QStyle__SH_ComboBox_AllowWheelScrolling QStyle__StyleHint = 115
+
+//
+const QStyle__SH_SpinBox_ButtonsInsideFrame QStyle__StyleHint = 116
+
+//
+const QStyle__SH_SpinBox_StepModifier QStyle__StyleHint = 117
 
 //
 const QStyle__SH_CustomBase QStyle__StyleHint = -268435456

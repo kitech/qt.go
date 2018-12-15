@@ -155,6 +155,8 @@ func DeleteQQuickWebEngineScript(this *QQuickWebEngineScript) {
 
 /*
 Returns the script object as string.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QQuickWebEngineScript) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QQuickWebEngineScript8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -471,7 +473,7 @@ func QQuickWebEngineScript_InjectionPointItemName(val int) string {
 }
 
 /*
-The world ID defining which isolated world the script is executed in.
+The world ID defining which isolated world the script is executed in. Besides these predefined IDs custom IDs can be used, but must be integers between 0 and 256.
 
 
 */

@@ -240,8 +240,8 @@ func DeleteQNetworkDatagram(this *QNetworkDatagram) {
 // [-2] void swap(QNetworkDatagram &)
 
 /*
-
- */
+Swaps this instance with other.
+*/
 func (this *QNetworkDatagram) Swap(other QNetworkDatagram_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QNetworkDatagram_PTR() != nil {
@@ -564,40 +564,8 @@ func (this *QNetworkDatagram) SetData(data qtcore.QByteArray_ITF) {
 // [8] QNetworkDatagram makeReply(const QByteArray &) const
 
 /*
-Creates a new QNetworkDatagram representing a reply to this incoming datagram and sets the payload data to data. This function is a very convenient way of responding to a datagram back to the original sender.
 
-Example:
-
-
-  void Server::readPendingDatagrams()
-  {
-      while (udpSocket->hasPendingDatagrams()) {
-          QNetworkDatagram datagram = udpSocket->receiveDatagram();
-          QByteArray replyData = processThePayload(datagram.data());
-          udpSocket->writeDatagram(datagram.makeReply(replyData));
-      }
-  }
-
-
-
-This function is especially convenient since it will automatically copy parameters from this datagram to the new datagram as appropriate:
-
-
-this datagram's sender address and port are copied to the new datagram's destination address and port;
-this datagram's interface index, if any, is copied to the new datagram's interface index;
-this datagram's destination address and port are copied to the new datagram's sender address and port only if the address is IPv6 global (non-multicast) address;
-the hop count limit on the new datagram is reset to the default (-1);
-
-
-If QNetworkDatagram is modified in a future version of Qt to carry further metadata, this function will copy that metadata as appropriate.
-
-This datagram's destination address is not copied if it is an IPv4 address because it is not possible to tell an IPv4 broadcast address apart from a regular IPv4 address without an exhaustive search of all addresses assigned to this machine. Attempting to send a datagram with the sender address equal to the broadcast address is likely to fail. However, this should not affect the communication as network interfaces with multiple IPv4 addresses are uncommon, so the address the operating system will select will likely be one the peer will understand.
-
-Note: This function comes with both rvalue- and lvalue-reference qualifier overloads, so it is a good idea to make sure this object is rvalue, if possible, before calling makeReply, so as to make better use of move semantics. To achieve that, the example above would use:
-
-
-  udpSocket->writeDatagram(std::move(datagram).makeReply(replyData));
-*/
+ */
 func (this *QNetworkDatagram) MakeReply(payload qtcore.QByteArray_ITF) *QNetworkDatagram /*123*/ {
 	var convArg0 unsafe.Pointer
 	if payload != nil && payload.QByteArray_PTR() != nil {
@@ -616,40 +584,8 @@ func (this *QNetworkDatagram) MakeReply(payload qtcore.QByteArray_ITF) *QNetwork
 // [8] QNetworkDatagram makeReply(const QByteArray &)
 
 /*
-Creates a new QNetworkDatagram representing a reply to this incoming datagram and sets the payload data to data. This function is a very convenient way of responding to a datagram back to the original sender.
 
-Example:
-
-
-  void Server::readPendingDatagrams()
-  {
-      while (udpSocket->hasPendingDatagrams()) {
-          QNetworkDatagram datagram = udpSocket->receiveDatagram();
-          QByteArray replyData = processThePayload(datagram.data());
-          udpSocket->writeDatagram(datagram.makeReply(replyData));
-      }
-  }
-
-
-
-This function is especially convenient since it will automatically copy parameters from this datagram to the new datagram as appropriate:
-
-
-this datagram's sender address and port are copied to the new datagram's destination address and port;
-this datagram's interface index, if any, is copied to the new datagram's interface index;
-this datagram's destination address and port are copied to the new datagram's sender address and port only if the address is IPv6 global (non-multicast) address;
-the hop count limit on the new datagram is reset to the default (-1);
-
-
-If QNetworkDatagram is modified in a future version of Qt to carry further metadata, this function will copy that metadata as appropriate.
-
-This datagram's destination address is not copied if it is an IPv4 address because it is not possible to tell an IPv4 broadcast address apart from a regular IPv4 address without an exhaustive search of all addresses assigned to this machine. Attempting to send a datagram with the sender address equal to the broadcast address is likely to fail. However, this should not affect the communication as network interfaces with multiple IPv4 addresses are uncommon, so the address the operating system will select will likely be one the peer will understand.
-
-Note: This function comes with both rvalue- and lvalue-reference qualifier overloads, so it is a good idea to make sure this object is rvalue, if possible, before calling makeReply, so as to make better use of move semantics. To achieve that, the example above would use:
-
-
-  udpSocket->writeDatagram(std::move(datagram).makeReply(replyData));
-*/
+ */
 func (this *QNetworkDatagram) MakeReply1(payload qtcore.QByteArray_ITF) *QNetworkDatagram /*123*/ {
 	var convArg0 unsafe.Pointer
 	if payload != nil && payload.QByteArray_PTR() != nil {

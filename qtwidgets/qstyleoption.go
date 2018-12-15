@@ -225,13 +225,6 @@ func (this *QStyleOption) Operator_equal(other QStyleOption_ITF) *QStyleOption {
 /*
 This enum is used internally by QStyleOption, its subclasses, and qstyleoption_cast() to determine the type of style option. In general you do not need to worry about this unless you want to create your own QStyleOption subclass and your own styles.
 
-QStyleOption::SO_ComboBox?QStyleOptionComboBox
-QStyleOption::SO_GroupBox?QStyleOptionGroupBox
-QStyleOption::SO_SizeGrip?QStyleOptionSizeGrip
-QStyleOption::SO_Slider?QStyleOptionSlider
-QStyleOption::SO_SpinBox?QStyleOptionSpinBox
-QStyleOption::SO_TitleBar?QStyleOptionTitleBar
-QStyleOption::SO_ToolButton?QStyleOptionToolButton
 
 
 The following values are used for custom controls:

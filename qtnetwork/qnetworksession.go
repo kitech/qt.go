@@ -302,18 +302,19 @@ The following property keys are guaranteed to be specified on all platforms:
  KeyDescription
 ActiveConfigurationIf the session isOpen() this property returns the identifier of the QNetworkConfiguration that is used by this session; otherwise an empty string.The main purpose of this key is to determine which Internet access point is used if the session is based on a ServiceNetwork. The following code snippet highlights the difference:
 
-  QNetworkConfigurationManager mgr;
-  QNetworkConfiguration ap = mgr.defaultConfiguration();
-  QNetworkSession *session = new QNetworkSession(ap);
-  ... //code activates session
+      QNetworkConfigurationManager mgr;
+      QNetworkConfiguration ap = mgr.defaultConfiguration();
+      QNetworkSession *session = new QNetworkSession(ap);
+      ... //code activates session
 
-  QString ident = session->sessionProperty("ActiveConfiguration").toString();
-  if ( ap.type() == QNetworkConfiguration::ServiceNetwork ) {
-      Q_ASSERT( ap.identifier() != ident );
-      Q_ASSERT( ap.children().contains( mgr.configurationFromIdentifier(ident) ) );
-  } else if ( ap.type() == QNetworkConfiguration::InternetAccessPoint ) {
-      Q_ASSERT( ap.identifier() == ident );
-  }
+      QString ident = session->sessionProperty("ActiveConfiguration").toString();
+      if ( ap.type() == QNetworkConfiguration::ServiceNetwork ) {
+          Q_ASSERT( ap.identifier() != ident );
+          Q_ASSERT( ap.children().contains( mgr.configurationFromIdentifier(ident) ) );
+      } else if ( ap.type() == QNetworkConfiguration::InternetAccessPoint ) {
+          Q_ASSERT( ap.identifier() == ident );
+      }
+                  \endcode
 
 
 
@@ -442,9 +443,9 @@ Waits until the session has been opened, up to msecs milliseconds. If the sessio
 The following example waits up to one second for the session to be opened:
 
 
-  session->open();
-  if (session->waitForOpened(1000))
-      qDebug("Open!");
+      session->open();
+      if (session->waitForOpened(1000))
+          qDebug("Open!");
 
 
 
@@ -469,9 +470,9 @@ Waits until the session has been opened, up to msecs milliseconds. If the sessio
 The following example waits up to one second for the session to be opened:
 
 
-  session->open();
-  if (session->waitForOpened(1000))
-      qDebug("Open!");
+      session->open();
+      if (session->waitForOpened(1000))
+          qDebug("Open!");
 
 
 

@@ -669,7 +669,7 @@ func (this *QMdiSubWindow) EventFilter(object qtcore.QObject_ITF /*777 QObject *
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QMdiSubWindow) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

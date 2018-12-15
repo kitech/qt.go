@@ -18,7 +18,7 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 67
+// extern C begin: 34
 */
 // import "C"
 import "unsafe"
@@ -65,7 +65,7 @@ func (*QSslConfiguration) NewFromPointer(cthis unsafe.Pointer) *QSslConfiguratio
 	return NewQSslConfigurationFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:79
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSslConfiguration()
@@ -86,7 +86,7 @@ func NewQSslConfiguration() *QSslConfiguration {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:81
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSslConfiguration()
@@ -101,7 +101,7 @@ func DeleteQSslConfiguration(this *QSslConfiguration) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:83
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:89
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSslConfiguration & operator=(QSslConfiguration &&)
@@ -117,7 +117,7 @@ func (this *QSslConfiguration) Operator_equal(other unsafe.Pointer /*333*/) *QSs
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:85
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:91
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QSslConfiguration & operator=(const QSslConfiguration &)
@@ -137,7 +137,7 @@ func (this *QSslConfiguration) Operator_equal1(other QSslConfiguration_ITF) *QSs
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:87
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:93
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslConfiguration &)
@@ -156,7 +156,7 @@ func (this *QSslConfiguration) Swap(other QSslConfiguration_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:90
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QSslConfiguration &) const
@@ -174,7 +174,7 @@ func (this *QSslConfiguration) Operator_equal_equal(other QSslConfiguration_ITF)
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:91
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:97
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QSslConfiguration &) const
@@ -192,7 +192,7 @@ func (this *QSslConfiguration) Operator_not_equal(other QSslConfiguration_ITF) b
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:94
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -210,7 +210,7 @@ func (this *QSslConfiguration) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:96
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSsl::SslProtocol protocol() const
@@ -226,7 +226,7 @@ func (this *QSslConfiguration) Protocol() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:97
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProtocol(QSsl::SslProtocol)
@@ -243,7 +243,7 @@ func (this *QSslConfiguration) SetProtocol(protocol int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:100
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSslSocket::PeerVerifyMode peerVerifyMode() const
@@ -261,7 +261,7 @@ func (this *QSslConfiguration) PeerVerifyMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:101
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPeerVerifyMode(QSslSocket::PeerVerifyMode)
@@ -278,7 +278,7 @@ func (this *QSslConfiguration) SetPeerVerifyMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:103
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int peerVerifyDepth() const
@@ -296,7 +296,7 @@ func (this *QSslConfiguration) PeerVerifyDepth() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:104
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPeerVerifyDepth(int)
@@ -313,7 +313,7 @@ func (this *QSslConfiguration) SetPeerVerifyDepth(depth int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:110
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSslCertificate localCertificate() const
@@ -331,7 +331,7 @@ func (this *QSslConfiguration) LocalCertificate() *QSslCertificate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:111
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLocalCertificate(const QSslCertificate &)
@@ -354,7 +354,7 @@ func (this *QSslConfiguration) SetLocalCertificate(certificate QSslCertificate_I
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:113
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSslCertificate peerCertificate() const
@@ -380,7 +380,7 @@ func (this *QSslConfiguration) PeerCertificate() *QSslCertificate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:115
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSslCipher sessionCipher() const
@@ -400,7 +400,7 @@ func (this *QSslConfiguration) SessionCipher() *QSslCipher /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:116
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSsl::SslProtocol sessionProtocol() const
@@ -418,7 +418,7 @@ func (this *QSslConfiguration) SessionProtocol() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:119
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSslKey privateKey() const
@@ -436,7 +436,7 @@ func (this *QSslConfiguration) PrivateKey() *QSslKey /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:120
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPrivateKey(const QSslKey &)
@@ -457,7 +457,7 @@ func (this *QSslConfiguration) SetPrivateKey(key QSslKey_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:132
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSslOption(QSsl::SslOption, bool)
@@ -472,7 +472,7 @@ func (this *QSslConfiguration) SetSslOption(option int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:133
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testSslOption(QSsl::SslOption) const
@@ -490,7 +490,7 @@ func (this *QSslConfiguration) TestSslOption(option int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:135
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray sessionTicket() const
@@ -512,7 +512,7 @@ func (this *QSslConfiguration) SessionTicket() *qtcore.QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:136
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSessionTicket(const QByteArray &)
@@ -533,7 +533,7 @@ func (this *QSslConfiguration) SetSessionTicket(sessionTicket qtcore.QByteArray_
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:137
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int sessionTicketLifeTimeHint() const
@@ -551,7 +551,7 @@ func (this *QSslConfiguration) SessionTicketLifeTimeHint() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:139
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSslKey ephemeralServerKey() const
@@ -571,7 +571,7 @@ func (this *QSslConfiguration) EphemeralServerKey() *QSslKey /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:146
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray preSharedKeyIdentityHint() const
@@ -591,7 +591,7 @@ func (this *QSslConfiguration) PreSharedKeyIdentityHint() *qtcore.QByteArray /*1
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:147
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreSharedKeyIdentityHint(const QByteArray &)
@@ -614,7 +614,7 @@ func (this *QSslConfiguration) SetPreSharedKeyIdentityHint(hint qtcore.QByteArra
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:149
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSslDiffieHellmanParameters diffieHellmanParameters() const
@@ -636,7 +636,7 @@ func (this *QSslConfiguration) DiffieHellmanParameters() *QSslDiffieHellmanParam
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:150
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDiffieHellmanParameters(const QSslDiffieHellmanParameters &)
@@ -659,7 +659,36 @@ func (this *QSslConfiguration) SetDiffieHellmanParameters(dhparams QSslDiffieHel
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:152
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:159
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setBackendConfigurationOption(const QByteArray &, const QVariant &)
+
+/*
+Sets the option name in the backend-specific configuration to value.
+
+Options supported by the OpenSSL (>= 1.0.2) backend are available in the supported configuration file commands documentation. The expected type for the value parameter is a QByteArray for all options. The examples show how to use some of the options.
+
+Note: The backend-specific configuration will be applied after the general configuration. Using the backend-specific configuration to set a general configuration option again will overwrite the general configuration option.
+
+This function was introduced in  Qt 5.11.
+
+See also backendConfiguration() and setBackendConfiguration().
+*/
+func (this *QSslConfiguration) SetBackendConfigurationOption(name qtcore.QByteArray_ITF, value qtcore.QVariant_ITF) {
+	var convArg0 unsafe.Pointer
+	if name != nil && name.QByteArray_PTR() != nil {
+		convArg0 = name.QByteArray_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if value != nil && value.QVariant_PTR() != nil {
+		convArg1 = value.QVariant_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration29setBackendConfigurationOptionERK10QByteArrayRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:162
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QSslConfiguration defaultConfiguration()
@@ -671,7 +700,7 @@ The default SSL configuration consists of:
 
 
 no local certificate and no private key
-protocol SecureProtocols (meaning either TLS 1.0 or SSL 3 will be used)
+protocol SecureProtocols
 the system's default CA certificate list
 the cipher list equal to the list of the SSL libraries' supported SSL ciphers that are 128 bits or more
 
@@ -691,7 +720,7 @@ func QSslConfiguration_DefaultConfiguration() *QSslConfiguration /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:153
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:163
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultConfiguration(const QSslConfiguration &)
@@ -714,7 +743,93 @@ func QSslConfiguration_SetDefaultConfiguration(configuration QSslConfiguration_I
 	nilthis.SetDefaultConfiguration(configuration)
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:168
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:166
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool dtlsCookieVerificationEnabled() const
+
+/*
+This function returns true if DTLS cookie verification was enabled on a server-side socket.
+
+See also setDtlsCookieVerificationEnabled().
+*/
+func (this *QSslConfiguration) DtlsCookieVerificationEnabled() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslConfiguration29dtlsCookieVerificationEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:167
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setDtlsCookieVerificationEnabled(bool)
+
+/*
+This function enables DTLS cookie verification when enable is true.
+
+See also dtlsCookieVerificationEnabled().
+*/
+func (this *QSslConfiguration) SetDtlsCookieVerificationEnabled(enable bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration32setDtlsCookieVerificationEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:169
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QSslConfiguration defaultDtlsConfiguration()
+
+/*
+Returns the default DTLS configuration to be used in new DTLS connections.
+
+The default DTLS configuration consists of:
+
+
+no local certificate and no private key
+protocol DtlsV1_2OrLater
+the system's default CA certificate list
+the cipher list equal to the list of the SSL libraries' supported TLS 1.2 ciphers that use 128 or more secret bits for the cipher.
+
+
+See also setDefaultDtlsConfiguration().
+*/
+func (this *QSslConfiguration) DefaultDtlsConfiguration() *QSslConfiguration /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration24defaultDtlsConfigurationEv", qtrt.FFI_TYPE_POINTER)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQSslConfigurationFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslConfiguration)
+	return rv2
+}
+func QSslConfiguration_DefaultDtlsConfiguration() *QSslConfiguration /*123*/ {
+	var nilthis *QSslConfiguration
+	rv := nilthis.DefaultDtlsConfiguration()
+	return rv
+}
+
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:170
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void setDefaultDtlsConfiguration(const QSslConfiguration &)
+
+/*
+Sets the default DTLS configuration to be used in new DTLS connections to be configuration. Existing connections are not affected by this call.
+
+See also defaultDtlsConfiguration().
+*/
+func (this *QSslConfiguration) SetDefaultDtlsConfiguration(configuration QSslConfiguration_ITF) {
+	var convArg0 unsafe.Pointer
+	if configuration != nil && configuration.QSslConfiguration_PTR() != nil {
+		convArg0 = configuration.QSslConfiguration_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslConfiguration27setDefaultDtlsConfigurationERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+func QSslConfiguration_SetDefaultDtlsConfiguration(configuration QSslConfiguration_ITF) {
+	var nilthis *QSslConfiguration
+	nilthis.SetDefaultDtlsConfiguration(configuration)
+}
+
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray nextNegotiatedProtocol() const
@@ -736,7 +851,7 @@ func (this *QSslConfiguration) NextNegotiatedProtocol() *qtcore.QByteArray /*123
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslconfiguration.h:169
+// /usr/include/qt/QtNetwork/qsslconfiguration.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSslConfiguration::NextProtocolNegotiationStatus nextProtocolNegotiationStatus() const

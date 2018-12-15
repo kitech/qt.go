@@ -134,6 +134,23 @@ This function provides a way to customize the behavior of openUrl(). If openUrl(
 
 The provided method must be implemented as a slot that only accepts a single QUrl argument.
 
+To use this function for receiving data from other apps on iOS you also need to add the custom scheme to the CFBundleURLSchemes list in your Info.plist file:
+
+
+  <key>CFBundleURLTypes</key>
+  <array>
+      <dict>
+          <key>CFBundleURLSchemes</key>
+          <array>
+              <string>myapp</string>
+          </array>
+      </dict>
+  </array>
+
+
+
+For more information, see the Apple Developer Documentation for Communicating with Other Apps Using Custom URLs.
+
 If setUrlHandler() is used to set a new handler for a scheme which already has a handler, the existing handler is simply replaced with the new one. Since QDesktopServices does not take ownership of handlers, no objects are deleted when a handler is replaced.
 
 Note that the handler will always be called from within the same thread that calls QDesktopServices::openUrl().

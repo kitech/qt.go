@@ -62,15 +62,63 @@ func init() {
 //  header block end
 
 //  body block begin
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:128
+// index:105
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QWebEngineContextMenuData::MediaFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or105(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN25QWebEngineContextMenuData9MediaFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:129
+// index:106
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QWebEngineContextMenuData::EditFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or106(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN25QWebEngineContextMenuData8EditFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtWebEngineWidgets/qwebenginepage.h:375
+// index:107
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QWebEnginePage::FindFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or107(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN14QWebEnginePage8FindFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
 // /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:82
-// index:86
+// index:89
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QWebEngineHistoryItem &, QWebEngineHistoryItem &)
 
 /*
 
  */
-func Swap86(value1 QWebEngineHistoryItem_ITF, value2 QWebEngineHistoryItem_ITF) {
+func Swap89(value1 QWebEngineHistoryItem_ITF, value2 QWebEngineHistoryItem_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QWebEngineHistoryItem_PTR() != nil {
 		convArg0 = value1.QWebEngineHistoryItem_PTR().GetCthis()
@@ -84,14 +132,14 @@ func Swap86(value1 QWebEngineHistoryItem_ITF, value2 QWebEngineHistoryItem_ITF) 
 }
 
 // /usr/include/qt/QtWebEngineWidgets/qwebenginescript.h:105
-// index:87
+// index:90
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QWebEngineScript &, QWebEngineScript &)
 
 /*
 
  */
-func Swap87(value1 QWebEngineScript_ITF, value2 QWebEngineScript_ITF) {
+func Swap90(value1 QWebEngineScript_ITF, value2 QWebEngineScript_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QWebEngineScript_PTR() != nil {
 		convArg0 = value1.QWebEngineScript_PTR().GetCthis()

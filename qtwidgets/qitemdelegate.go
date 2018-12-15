@@ -673,7 +673,7 @@ Return
 Esc
 
 
-In the case of Tab, Backtab, Enter and Return key press events, the editor's data is comitted to the model and the editor is closed. If the event is a Tab key press the view will open an editor on the next item in the view. Likewise, if the event is a Backtab key press the view will open an editor on the previous item in the view.
+In the case of Tab, Backtab, Enter and Return key press events, the editor's data is committed to the model and the editor is closed. If the event is a Tab key press the view will open an editor on the next item in the view. Likewise, if the event is a Backtab key press the view will open an editor on the previous item in the view.
 
 If the event is a Esc key press event, the editor is closed without committing its data.
 

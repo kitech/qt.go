@@ -446,7 +446,7 @@ func (this *QPushButton) ShowMenu() {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractButton::event().
 */
 func (this *QPushButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -464,7 +464,7 @@ func (this *QPushButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QAbstractButton::paintEvent().
 */
 func (this *QPushButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -481,7 +481,7 @@ func (this *QPushButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent
 // [-2] void keyPressEvent(QKeyEvent *)
 
 /*
-Reimplemented from QWidget::keyPressEvent().
+Reimplemented from QAbstractButton::keyPressEvent().
 */
 func (this *QPushButton) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -498,7 +498,7 @@ func (this *QPushButton) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent 
 // [-2] void focusInEvent(QFocusEvent *)
 
 /*
-Reimplemented from QWidget::focusInEvent().
+Reimplemented from QAbstractButton::focusInEvent().
 */
 func (this *QPushButton) FocusInEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -515,7 +515,7 @@ func (this *QPushButton) FocusInEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEve
 // [-2] void focusOutEvent(QFocusEvent *)
 
 /*
-Reimplemented from QWidget::focusOutEvent().
+Reimplemented from QAbstractButton::focusOutEvent().
 */
 func (this *QPushButton) FocusOutEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer

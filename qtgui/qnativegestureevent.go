@@ -63,7 +63,7 @@ func (*QNativeGestureEvent) NewFromPointer(cthis unsafe.Pointer) *QNativeGesture
 	return NewQNativeGestureEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:305
+// /usr/include/qt/QtGui/qevent.h:310
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNativeGestureEvent(Qt::NativeGestureType, const QPointF &, const QPointF &, const QPointF &, qreal, ulong, quint64)
@@ -94,7 +94,7 @@ func NewQNativeGestureEvent(type_ int, localPos qtcore.QPointF_ITF, windowPos qt
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:308
+// /usr/include/qt/QtGui/qevent.h:313
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QNativeGestureEvent(Qt::NativeGestureType, const QTouchDevice *, const QPointF &, const QPointF &, const QPointF &, qreal, ulong, quint64)
@@ -129,7 +129,7 @@ func NewQNativeGestureEvent1(type_ int, dev QTouchDevice_ITF /*777 const QTouchD
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:310
+// /usr/include/qt/QtGui/qevent.h:315
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QNativeGestureEvent()
@@ -144,7 +144,7 @@ func DeleteQNativeGestureEvent(this *QNativeGestureEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:311
+// /usr/include/qt/QtGui/qevent.h:316
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::NativeGestureType gestureType() const
@@ -158,7 +158,7 @@ func (this *QNativeGestureEvent) GestureType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:312
+// /usr/include/qt/QtGui/qevent.h:317
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal value() const
@@ -172,7 +172,7 @@ func (this *QNativeGestureEvent) Value() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:315
+// /usr/include/qt/QtGui/qevent.h:320
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint pos() const
@@ -188,7 +188,7 @@ func (this *QNativeGestureEvent) Pos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:316
+// /usr/include/qt/QtGui/qevent.h:321
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint globalPos() const
@@ -204,7 +204,7 @@ func (this *QNativeGestureEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:318
+// /usr/include/qt/QtGui/qevent.h:323
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & localPos() const
@@ -220,7 +220,7 @@ func (this *QNativeGestureEvent) LocalPos() *qtcore.QPointF {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:319
+// /usr/include/qt/QtGui/qevent.h:324
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & windowPos() const
@@ -236,7 +236,7 @@ func (this *QNativeGestureEvent) WindowPos() *qtcore.QPointF {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:320
+// /usr/include/qt/QtGui/qevent.h:325
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & screenPos() const
@@ -252,7 +252,7 @@ func (this *QNativeGestureEvent) ScreenPos() *qtcore.QPointF {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:322
+// /usr/include/qt/QtGui/qevent.h:327
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QTouchDevice * device() const

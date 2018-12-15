@@ -1137,7 +1137,7 @@ func (this *QPainter) SetTransformp(transform QTransform_ITF) {
 // [88] const QTransform & transform() const
 
 /*
-Returns the world transformation matrix.
+Alias for worldTransform(). Returns the world transformation matrix.
 
 See also setTransform() and worldTransform().
 */
@@ -3670,6 +3670,10 @@ Draws a tiled pixmap, inside the given rectangle with its origin at the given po
 
 Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fill (tile) an area with a pixmap, but is potentially much more efficient depending on the underlying window system.
 
+drawTiledPixmap() will produce the same visual tiling pattern on high-dpi displays (with devicePixelRatio > 1), compared to normal- dpi displays. Set the devicePixelRatio on the pixmap to control the tile size. For example, setting it to 2 halves the tile width and height (on both 1x and 2x displays), and produces high-resolution output on 2x displays.
+
+The position offset is always in the painter coordinate system, indepentent of display devicePixelRatio.
+
 See also drawPixmap().
 */
 func (this *QPainter) DrawTiledPixmap(rect qtcore.QRectF_ITF, pm QPixmap_ITF, offset qtcore.QPointF_ITF) {
@@ -3699,6 +3703,10 @@ Draws a tiled pixmap, inside the given rectangle with its origin at the given po
 
 Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fill (tile) an area with a pixmap, but is potentially much more efficient depending on the underlying window system.
 
+drawTiledPixmap() will produce the same visual tiling pattern on high-dpi displays (with devicePixelRatio > 1), compared to normal- dpi displays. Set the devicePixelRatio on the pixmap to control the tile size. For example, setting it to 2 halves the tile width and height (on both 1x and 2x displays), and produces high-resolution output on 2x displays.
+
+The position offset is always in the painter coordinate system, indepentent of display devicePixelRatio.
+
 See also drawPixmap().
 */
 func (this *QPainter) DrawTiledPixmapp(rect qtcore.QRectF_ITF, pm QPixmap_ITF) {
@@ -3726,6 +3734,10 @@ Draws a tiled pixmap, inside the given rectangle with its origin at the given po
 
 Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fill (tile) an area with a pixmap, but is potentially much more efficient depending on the underlying window system.
 
+drawTiledPixmap() will produce the same visual tiling pattern on high-dpi displays (with devicePixelRatio > 1), compared to normal- dpi displays. Set the devicePixelRatio on the pixmap to control the tile size. For example, setting it to 2 halves the tile width and height (on both 1x and 2x displays), and produces high-resolution output on 2x displays.
+
+The position offset is always in the painter coordinate system, indepentent of display devicePixelRatio.
+
 See also drawPixmap().
 */
 func (this *QPainter) DrawTiledPixmap1(x int, y int, w int, h int, arg4 QPixmap_ITF, sx int, sy int) {
@@ -3746,6 +3758,10 @@ func (this *QPainter) DrawTiledPixmap1(x int, y int, w int, h int, arg4 QPixmap_
 Draws a tiled pixmap, inside the given rectangle with its origin at the given position.
 
 Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fill (tile) an area with a pixmap, but is potentially much more efficient depending on the underlying window system.
+
+drawTiledPixmap() will produce the same visual tiling pattern on high-dpi displays (with devicePixelRatio > 1), compared to normal- dpi displays. Set the devicePixelRatio on the pixmap to control the tile size. For example, setting it to 2 halves the tile width and height (on both 1x and 2x displays), and produces high-resolution output on 2x displays.
+
+The position offset is always in the painter coordinate system, indepentent of display devicePixelRatio.
 
 See also drawPixmap().
 */
@@ -3772,6 +3788,10 @@ Draws a tiled pixmap, inside the given rectangle with its origin at the given po
 
 Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fill (tile) an area with a pixmap, but is potentially much more efficient depending on the underlying window system.
 
+drawTiledPixmap() will produce the same visual tiling pattern on high-dpi displays (with devicePixelRatio > 1), compared to normal- dpi displays. Set the devicePixelRatio on the pixmap to control the tile size. For example, setting it to 2 halves the tile width and height (on both 1x and 2x displays), and produces high-resolution output on 2x displays.
+
+The position offset is always in the painter coordinate system, indepentent of display devicePixelRatio.
+
 See also drawPixmap().
 */
 func (this *QPainter) DrawTiledPixmap1p1(x int, y int, w int, h int, arg4 QPixmap_ITF, sx int) {
@@ -3794,6 +3814,10 @@ func (this *QPainter) DrawTiledPixmap1p1(x int, y int, w int, h int, arg4 QPixma
 Draws a tiled pixmap, inside the given rectangle with its origin at the given position.
 
 Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fill (tile) an area with a pixmap, but is potentially much more efficient depending on the underlying window system.
+
+drawTiledPixmap() will produce the same visual tiling pattern on high-dpi displays (with devicePixelRatio > 1), compared to normal- dpi displays. Set the devicePixelRatio on the pixmap to control the tile size. For example, setting it to 2 halves the tile width and height (on both 1x and 2x displays), and produces high-resolution output on 2x displays.
+
+The position offset is always in the painter coordinate system, indepentent of display devicePixelRatio.
 
 See also drawPixmap().
 */
@@ -3823,6 +3847,10 @@ func (this *QPainter) DrawTiledPixmap2(arg0 qtcore.QRect_ITF, arg1 QPixmap_ITF, 
 Draws a tiled pixmap, inside the given rectangle with its origin at the given position.
 
 Calling drawTiledPixmap() is similar to calling drawPixmap() several times to fill (tile) an area with a pixmap, but is potentially much more efficient depending on the underlying window system.
+
+drawTiledPixmap() will produce the same visual tiling pattern on high-dpi displays (with devicePixelRatio > 1), compared to normal- dpi displays. Set the devicePixelRatio on the pixmap to control the tile size. For example, setting it to 2 halves the tile width and height (on both 1x and 2x displays), and produces high-resolution output on 2x displays.
+
+The position offset is always in the painter coordinate system, indepentent of display devicePixelRatio.
 
 See also drawPixmap().
 */
@@ -6257,6 +6285,65 @@ func (this *QPainter) FillRect11(r qtcore.QRectF_ITF, style int) {
 }
 
 // /usr/include/qt/QtGui/qpainter.h:451
+// index:12
+// Public inline Visibility=Default Availability=Available
+// [-2] void fillRect(int, int, int, int, QGradient::Preset)
+
+/*
+Fills the given rectangle with the brush specified.
+
+Alternatively, you can specify a QColor instead of a QBrush; the QBrush constructor (taking a QColor argument) will automatically create a solid pattern brush.
+
+See also drawRect().
+*/
+func (this *QPainter) FillRect12(x int, y int, w int, h int, preset int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8fillRectEiiiiN9QGradient6PresetE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, preset)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpainter.h:452
+// index:13
+// Public inline Visibility=Default Availability=Available
+// [-2] void fillRect(const QRect &, QGradient::Preset)
+
+/*
+Fills the given rectangle with the brush specified.
+
+Alternatively, you can specify a QColor instead of a QBrush; the QBrush constructor (taking a QColor argument) will automatically create a solid pattern brush.
+
+See also drawRect().
+*/
+func (this *QPainter) FillRect13(r qtcore.QRect_ITF, preset int) {
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRect_PTR() != nil {
+		convArg0 = r.QRect_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8fillRectERK5QRectN9QGradient6PresetE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, preset)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpainter.h:453
+// index:14
+// Public inline Visibility=Default Availability=Available
+// [-2] void fillRect(const QRectF &, QGradient::Preset)
+
+/*
+Fills the given rectangle with the brush specified.
+
+Alternatively, you can specify a QColor instead of a QBrush; the QBrush constructor (taking a QColor argument) will automatically create a solid pattern brush.
+
+See also drawRect().
+*/
+func (this *QPainter) FillRect14(r qtcore.QRectF_ITF, preset int) {
+	var convArg0 unsafe.Pointer
+	if r != nil && r.QRectF_PTR() != nil {
+		convArg0 = r.QRectF_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPainter8fillRectERK6QRectFN9QGradient6PresetE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, preset)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpainter.h:455
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void eraseRect(const QRectF &)
@@ -6280,7 +6367,7 @@ func (this *QPainter) EraseRect(arg0 qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:452
+// /usr/include/qt/QtGui/qpainter.h:456
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void eraseRect(int, int, int, int)
@@ -6300,7 +6387,7 @@ func (this *QPainter) EraseRect1(x int, y int, w int, h int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:453
+// /usr/include/qt/QtGui/qpainter.h:457
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void eraseRect(const QRect &)
@@ -6324,7 +6411,7 @@ func (this *QPainter) EraseRect2(arg0 qtcore.QRect_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:455
+// /usr/include/qt/QtGui/qpainter.h:459
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRenderHint(QPainter::RenderHint, bool)
@@ -6339,7 +6426,7 @@ func (this *QPainter) SetRenderHint(hint int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:455
+// /usr/include/qt/QtGui/qpainter.h:459
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRenderHint(QPainter::RenderHint, bool)
@@ -6356,7 +6443,7 @@ func (this *QPainter) SetRenderHintp(hint int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:456
+// /usr/include/qt/QtGui/qpainter.h:460
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRenderHints(QPainter::RenderHints, bool)
@@ -6373,7 +6460,7 @@ func (this *QPainter) SetRenderHints(hints int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:456
+// /usr/include/qt/QtGui/qpainter.h:460
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRenderHints(QPainter::RenderHints, bool)
@@ -6392,7 +6479,7 @@ func (this *QPainter) SetRenderHintsp(hints int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:457
+// /usr/include/qt/QtGui/qpainter.h:461
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QPainter::RenderHints renderHints() const
@@ -6408,7 +6495,7 @@ func (this *QPainter) RenderHints() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:458
+// /usr/include/qt/QtGui/qpainter.h:462
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool testRenderHint(QPainter::RenderHint) const
@@ -6426,7 +6513,7 @@ func (this *QPainter) TestRenderHint(hint int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpainter.h:460
+// /usr/include/qt/QtGui/qpainter.h:464
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPaintEngine * paintEngine() const
@@ -6442,7 +6529,7 @@ func (this *QPainter) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	return /*==*/ NewQPaintEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qpainter.h:462
+// /usr/include/qt/QtGui/qpainter.h:466
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setRedirected(const QPaintDevice *, QPaintDevice *, const QPoint &)
@@ -6471,7 +6558,7 @@ func QPainter_SetRedirected(device QPaintDevice_ITF /*777 const QPaintDevice **/
 	nilthis.SetRedirected(device, replacement, offset)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:462
+// /usr/include/qt/QtGui/qpainter.h:466
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setRedirected(const QPaintDevice *, QPaintDevice *, const QPoint &)
@@ -6494,7 +6581,7 @@ func (this *QPainter) SetRedirectedp(device QPaintDevice_ITF /*777 const QPaintD
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:464
+// /usr/include/qt/QtGui/qpainter.h:468
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QPaintDevice * redirected(const QPaintDevice *, QPoint *)
@@ -6521,7 +6608,7 @@ func QPainter_Redirected(device QPaintDevice_ITF /*777 const QPaintDevice **/, o
 	return rv
 }
 
-// /usr/include/qt/QtGui/qpainter.h:464
+// /usr/include/qt/QtGui/qpainter.h:468
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QPaintDevice * redirected(const QPaintDevice *, QPoint *)
@@ -6541,7 +6628,7 @@ func (this *QPainter) Redirectedp(device QPaintDevice_ITF /*777 const QPaintDevi
 	return /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qpainter.h:465
+// /usr/include/qt/QtGui/qpainter.h:469
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void restoreRedirected(const QPaintDevice *)
@@ -6562,7 +6649,7 @@ func QPainter_RestoreRedirected(device QPaintDevice_ITF /*777 const QPaintDevice
 	nilthis.RestoreRedirected(device)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:467
+// /usr/include/qt/QtGui/qpainter.h:471
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void beginNativePainting()
@@ -6609,7 +6696,7 @@ func (this *QPainter) BeginNativePainting() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpainter.h:468
+// /usr/include/qt/QtGui/qpainter.h:472
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void endNativePainting()

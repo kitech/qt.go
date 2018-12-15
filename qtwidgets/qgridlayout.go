@@ -18,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 53
+// extern C begin: 54
 */
 // import "C"
 import "unsafe"
@@ -162,7 +162,7 @@ func (this *QGridLayout) SizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSize() const
 
 /*
-Reimplemented from QLayoutItem::minimumSize().
+Reimplemented from QLayout::minimumSize().
 */
 func (this *QGridLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QGridLayout11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -178,7 +178,7 @@ func (this *QGridLayout) MinimumSize() *qtcore.QSize /*123*/ {
 // [8] QSize maximumSize() const
 
 /*
-Reimplemented from QLayoutItem::maximumSize().
+Reimplemented from QLayout::maximumSize().
 */
 func (this *QGridLayout) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QGridLayout11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -501,7 +501,7 @@ func (this *QGridLayout) MinimumHeightForWidth(arg0 int) int {
 // [4] Qt::Orientations expandingDirections() const
 
 /*
-Reimplemented from QLayoutItem::expandingDirections().
+Reimplemented from QLayout::expandingDirections().
 */
 func (this *QGridLayout) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QGridLayout19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -515,7 +515,7 @@ func (this *QGridLayout) ExpandingDirections() int {
 // [-2] void invalidate()
 
 /*
-Reimplemented from QLayoutItem::invalidate().
+Reimplemented from QLayout::invalidate().
 */
 func (this *QGridLayout) Invalidate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QGridLayout10invalidateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -814,7 +814,7 @@ func (this *QGridLayout) Count() int {
 // [-2] void setGeometry(const QRect &)
 
 /*
-Reimplemented from QLayoutItem::setGeometry().
+Reimplemented from QLayout::setGeometry().
 */
 func (this *QGridLayout) SetGeometry(arg0 qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer

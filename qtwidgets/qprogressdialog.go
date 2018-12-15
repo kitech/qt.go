@@ -469,7 +469,7 @@ func (this *QProgressDialog) Value() int {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QDialog::sizeHint().
 
 Returns a size that fits the contents of the progress dialog. The progress dialog resizes itself as required, so you should not need to call this yourself.
 */
@@ -572,8 +572,6 @@ func (this *QProgressDialog) AutoClose() bool {
 // [-2] void open(QObject *, const char *)
 
 /*
-This is an overloaded function.
-
 Opens the dialog and connects its canceled() signal to the slot specified by receiver and member.
 
 The signal will be disconnected from the slot when the dialog is closed.
@@ -743,7 +741,7 @@ func (this *QProgressDialog) Canceled() {
 // [-2] void resizeEvent(QResizeEvent *)
 
 /*
-Reimplemented from QWidget::resizeEvent().
+Reimplemented from QDialog::resizeEvent().
 */
 func (this *QProgressDialog) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -760,7 +758,7 @@ func (this *QProgressDialog) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QRes
 // [-2] void closeEvent(QCloseEvent *)
 
 /*
-Reimplemented from QWidget::closeEvent().
+Reimplemented from QDialog::closeEvent().
 */
 func (this *QProgressDialog) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -794,7 +792,7 @@ func (this *QProgressDialog) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **
 // [-2] void showEvent(QShowEvent *)
 
 /*
-Reimplemented from QWidget::showEvent().
+Reimplemented from QDialog::showEvent().
 */
 func (this *QProgressDialog) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	var convArg0 unsafe.Pointer

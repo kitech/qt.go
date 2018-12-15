@@ -195,7 +195,7 @@ func DeleteQTabWidget(this *QTabWidget) {
 // [4] int addTab(QWidget *, const QString &)
 
 /*
-Adds a tab with the given page and label to the tab widget, and returns the index of the tab in the tab bar.
+Adds a tab with the given page and label to the tab widget, and returns the index of the tab in the tab bar. Ownership of page is passed on to the QTabWidget.
 
 If the tab's label contains an ampersand, the letter following the ampersand is used as a shortcut for the tab, e.g. if the label is "Bro&wse" then Alt+W becomes a shortcut which will move the focus to this tab.
 
@@ -221,7 +221,7 @@ func (this *QTabWidget) AddTab(widget QWidget_ITF /*777 QWidget **/, arg1 string
 // [4] int addTab(QWidget *, const QIcon &, const QString &)
 
 /*
-Adds a tab with the given page and label to the tab widget, and returns the index of the tab in the tab bar.
+Adds a tab with the given page and label to the tab widget, and returns the index of the tab in the tab bar. Ownership of page is passed on to the QTabWidget.
 
 If the tab's label contains an ampersand, the letter following the ampersand is used as a shortcut for the tab, e.g. if the label is "Bro&wse" then Alt+W becomes a shortcut which will move the focus to this tab.
 
@@ -251,7 +251,7 @@ func (this *QTabWidget) AddTab1(widget QWidget_ITF /*777 QWidget **/, icon qtgui
 // [4] int insertTab(int, QWidget *, const QString &)
 
 /*
-Inserts a tab with the given label and page into the tab widget at the specified index, and returns the index of the inserted tab in the tab bar.
+Inserts a tab with the given label and page into the tab widget at the specified index, and returns the index of the inserted tab in the tab bar. Ownership of page is passed on to the QTabWidget.
 
 The label is displayed in the tab and may vary in appearance depending on the configuration of the tab widget.
 
@@ -283,7 +283,7 @@ func (this *QTabWidget) InsertTab(index int, widget QWidget_ITF /*777 QWidget **
 // [4] int insertTab(int, QWidget *, const QIcon &, const QString &)
 
 /*
-Inserts a tab with the given label and page into the tab widget at the specified index, and returns the index of the inserted tab in the tab bar.
+Inserts a tab with the given label and page into the tab widget at the specified index, and returns the index of the inserted tab in the tab bar. Ownership of page is passed on to the QTabWidget.
 
 The label is displayed in the tab and may vary in appearance depending on the configuration of the tab widget.
 
@@ -425,8 +425,6 @@ func (this *QTabWidget) TabIcon(index int) *qtgui.QIcon /*123*/ {
 // [-2] void setTabIcon(int, const QIcon &)
 
 /*
-This is an overloaded function.
-
 Sets the icon for the tab at position index.
 
 See also tabIcon().
@@ -1268,7 +1266,7 @@ func (this *QTabWidget) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QTabWidget) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

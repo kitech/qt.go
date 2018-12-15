@@ -26,15 +26,15 @@ func init() {
 //  header block end
 
 //  body block begin
-// /usr/include/qt/QtQml/qjsengine.h:131
-// index:88
+// /usr/include/qt/QtQml/qjsengine.h:137
+// index:89
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QJSEngine::Extensions::enum_type, int)
 
 /*
 
  */
-func Operator_or88(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or89(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN9QJSEngine9ExtensionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -42,15 +42,15 @@ func Operator_or88(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:81
-// index:89
+// /usr/include/qt/QtQml/qqmlengine.h:80
+// index:90
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QQmlImageProviderBase::Flags::enum_type, int)
 
 /*
 
  */
-func Operator_or89(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+func Operator_or90(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN21QQmlImageProviderBase4FlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -58,7 +58,7 @@ func Operator_or89(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qqml.h:549
+// /usr/include/qt/QtQml/qqml.h:581
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QQmlEngine * qmlEngine(const QObject *)
@@ -164,7 +164,7 @@ func QmlInfo1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qqml.h:550
+// /usr/include/qt/QtQml/qqml.h:582
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QObject * qmlAttachedPropertiesObjectById(int, const QObject *, bool)
@@ -182,7 +182,7 @@ func QmlAttachedPropertiesObjectById(arg0 int, arg1 qtcore.QObject_ITF /*777 con
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqml.h:551
+// /usr/include/qt/QtQml/qqml.h:583
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QObject * qmlAttachedPropertiesObject(int *, const QObject *, const QMetaObject *, bool)
@@ -204,7 +204,7 @@ func QmlAttachedPropertiesObject(arg0 unsafe.Pointer /*666*/, arg1 qtcore.QObjec
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqml.h:547
+// /usr/include/qt/QtQml/qqml.h:579
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qmlExecuteDeferred(QObject *)
@@ -265,7 +265,7 @@ func QmlWarning1(me qtcore.QObject_ITF /*777 const QObject **/) *QQmlInfo /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qqml.h:548
+// /usr/include/qt/QtQml/qqml.h:580
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QQmlContext * qmlContext(const QObject *)
@@ -283,7 +283,7 @@ func QmlContext(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QQmlContext /*
 	return /*==*/ NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlprivate.h:307
+// /usr/include/qt/QtQml/qqmlprivate.h:318
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int qmlregister(QQmlPrivate::RegistrationType, void *)
@@ -297,7 +297,25 @@ func Qmlregister(arg0 int, arg1 unsafe.Pointer /*666*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtQml/qjsengine.h:158
+// /usr/include/qt/QtQml/qqml.h:680
+// index:0
+// Invalid Visibility=Default Availability=Available
+// [4] int qmlTypeId(const char *, int, int, const char *)
+
+/*
+
+ */
+func QmlTypeId(uri string, versionMajor int, versionMinor int, qmlName string) int {
+	var convArg0 = qtrt.CString(uri)
+	defer qtrt.FreeMem(convArg0)
+	var convArg3 = qtrt.CString(qmlName)
+	defer qtrt.FreeMem(convArg3)
+	rv, err := qtrt.InvokeQtFunc6("_Z9qmlTypeIdPKciiS0_", qtrt.FFI_TYPE_POINTER, convArg0, versionMajor, versionMinor, convArg3)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtQml/qjsengine.h:164
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QJSEngine * qjsEngine(const QObject *)
@@ -316,14 +334,14 @@ func QjsEngine(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QJSEngine /*777
 }
 
 // /usr/include/qt/QtQml/qqmlproperty.h:130
-// index:43
+// index:50
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QQmlProperty &)
 
 /*
 
  */
-func QHash43(key QQmlProperty_ITF) uint {
+func QHash50(key QQmlProperty_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QQmlProperty_PTR() != nil {
 		convArg0 = key.QQmlProperty_PTR().GetCthis()
@@ -390,7 +408,7 @@ func QmlClearTypeRegistrations() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqml.h:610
+// /usr/include/qt/QtQml/qqml.h:642
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qmlRegisterSingletonType(const QUrl &, const char *, int, int, const char *)
@@ -412,7 +430,7 @@ func QmlRegisterSingletonType(url qtcore.QUrl_ITF, uri string, versionMajor int,
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtQml/qqml.h:578
+// /usr/include/qt/QtQml/qqml.h:610
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qmlRegisterSingletonType(const char *, int, int, const char *, QJSValue (*)(QQmlEngine *, QJSEngine *))
@@ -430,7 +448,7 @@ func QmlRegisterSingletonType1(uri string, versionMajor int, versionMinor int, t
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtQml/qqml.h:576
+// /usr/include/qt/QtQml/qqml.h:608
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qmlRegisterBaseTypes(const char *, int, int)
@@ -445,7 +463,7 @@ func QmlRegisterBaseTypes(uri string, versionMajor int, versionMinor int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqml.h:567
+// /usr/include/qt/QtQml/qqml.h:599
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qmlRegisterModule(const char *, int, int)
@@ -460,7 +478,7 @@ func QmlRegisterModule(uri string, versionMajor int, versionMinor int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqml.h:566
+// /usr/include/qt/QtQml/qqml.h:598
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qmlProtectModule(const char *, int)
@@ -476,7 +494,7 @@ func QmlProtectModule(uri string, majVersion int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqml.h:629
+// /usr/include/qt/QtQml/qqml.h:661
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qmlRegisterType(const QUrl &, const char *, int, int, const char *)

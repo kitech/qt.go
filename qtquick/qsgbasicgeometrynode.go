@@ -66,7 +66,7 @@ func (*QSGBasicGeometryNode) NewFromPointer(cthis unsafe.Pointer) *QSGBasicGeome
 	return NewQSGBasicGeometryNodeFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:198
+// /usr/include/qt/QtQuick/qsgnode.h:193
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGBasicGeometryNode()
@@ -81,7 +81,7 @@ func DeleteQSGBasicGeometryNode(this *QSGBasicGeometryNode) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:200
+// /usr/include/qt/QtQuick/qsgnode.h:195
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGeometry(QSGGeometry *)
@@ -98,7 +98,7 @@ func (this *QSGBasicGeometryNode) SetGeometry(geometry QSGGeometry_ITF /*777 QSG
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:201
+// /usr/include/qt/QtQuick/qsgnode.h:196
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QSGGeometry * geometry() const
@@ -112,7 +112,7 @@ func (this *QSGBasicGeometryNode) Geometry() *QSGGeometry /*777 const QSGGeometr
 	return /*==*/ NewQSGGeometryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:202
+// /usr/include/qt/QtQuick/qsgnode.h:197
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QSGGeometry * geometry()
@@ -126,7 +126,7 @@ func (this *QSGBasicGeometryNode) Geometry1() *QSGGeometry /*777 QSGGeometry **/
 	return /*==*/ NewQSGGeometryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:204
+// /usr/include/qt/QtQuick/qsgnode.h:199
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QMatrix4x4 * matrix() const
@@ -140,7 +140,7 @@ func (this *QSGBasicGeometryNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix
 	return qtgui.NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:205
+// /usr/include/qt/QtQuick/qsgnode.h:200
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QSGClipNode * clipList() const
@@ -154,7 +154,7 @@ func (this *QSGBasicGeometryNode) ClipList() *QSGClipNode /*777 const QSGClipNod
 	return /*==*/ NewQSGClipNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:207
+// /usr/include/qt/QtQuick/qsgnode.h:202
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRendererMatrix(const QMatrix4x4 *)
@@ -171,7 +171,7 @@ func (this *QSGBasicGeometryNode) SetRendererMatrix(m qtgui.QMatrix4x4_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:208
+// /usr/include/qt/QtQuick/qsgnode.h:203
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRendererClipList(const QSGClipNode *)
@@ -188,7 +188,7 @@ func (this *QSGBasicGeometryNode) SetRendererClipList(c QSGClipNode_ITF /*777 co
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:211
+// /usr/include/qt/QtQuick/qsgnode.h:206
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QSGBasicGeometryNode(QSGNode::NodeType)

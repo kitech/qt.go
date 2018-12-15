@@ -149,7 +149,7 @@ func (this *QStringView) Data() *QChar /*777 const QChar **/ {
 /*
 Returns a const pointer to the first character in the string.
 
-storage_type is char16_t, except on MSVC 2013 (which lacks char16_t support), where it is wchar_t instead.
+storage_type is char16_t.
 
 Note: The character array represented by the return value is not null-terminated.
 
@@ -187,7 +187,7 @@ Returns a Latin-1 representation of the string as a QByteArray.
 
 The behavior is undefined if the string contains non-Latin1 characters.
 
-See also toUtf8(), toLocal8Bit(), QTextCodec, and qConvertToLatin1().
+See also toUtf8(), toLocal8Bit(), and QTextCodec.
 */
 func (this *QStringView) ToLatin1() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -207,7 +207,7 @@ Returns a UTF-8 representation of the string as a QByteArray.
 
 UTF-8 is a Unicode codec and can represent all characters in a Unicode string like QString.
 
-See also toLatin1(), toLocal8Bit(), QTextCodec, and qConvertToUtf8().
+See also toLatin1(), toLocal8Bit(), and QTextCodec.
 */
 func (this *QStringView) ToUtf8() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView6toUtf8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -420,15 +420,61 @@ func (this *QStringView) Trimmed() *QStringView /*123*/ {
 // /usr/include/qt/QtCore/qstringview.h:253
 // index:0
 // Public inline Visibility=Default Availability=Available
+// [4] int compare(QStringView, Qt::CaseSensitivity) const
+
+/*
+Compares this string-view with the other string-view and returns an integer less than, equal to, or greater than zero if this string-view is less than, equal to, or greater than the other string-view.
+
+If cs is Qt::CaseSensitive, the comparison is case sensitive; otherwise the comparison is case insensitive.
+
+This function was introduced in  Qt 5.12.
+
+See also operator==(), operator<(), and operator>().
+*/
+func (this *QStringView) Compare(other QStringView_ITF /*123*/, cs int) int {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QStringView_PTR() != nil {
+		convArg0 = other.QStringView_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView7compareES_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qstringview.h:253
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int compare(QStringView, Qt::CaseSensitivity) const
+
+/*
+Compares this string-view with the other string-view and returns an integer less than, equal to, or greater than zero if this string-view is less than, equal to, or greater than the other string-view.
+
+If cs is Qt::CaseSensitive, the comparison is case sensitive; otherwise the comparison is case insensitive.
+
+This function was introduced in  Qt 5.12.
+
+See also operator==(), operator<(), and operator>().
+*/
+func (this *QStringView) Comparep(other QStringView_ITF /*123*/) int {
+	var convArg0 unsafe.Pointer
+	if other != nil && other.QStringView_PTR() != nil {
+		convArg0 = other.QStringView_PTR().GetCthis()
+	}
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
+	cs := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView7compareES_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qstringview.h:256
+// index:0
+// Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, Qt::CaseSensitivity) const
 
 /*
-Returns true if this string-view starts with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also endsWith().
-*/
+ */
 func (this *QStringView) StartsWith(s QStringView_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
@@ -439,18 +485,14 @@ func (this *QStringView) StartsWith(s QStringView_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:253
+// /usr/include/qt/QtCore/qstringview.h:256
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, Qt::CaseSensitivity) const
 
 /*
-Returns true if this string-view starts with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also endsWith().
-*/
+ */
 func (this *QStringView) StartsWithp(s QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
@@ -463,18 +505,14 @@ func (this *QStringView) StartsWithp(s QStringView_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:255
+// /usr/include/qt/QtCore/qstringview.h:258
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity) const
 
 /*
-Returns true if this string-view starts with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also endsWith().
-*/
+ */
 func (this *QStringView) StartsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
@@ -485,18 +523,14 @@ func (this *QStringView) StartsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:255
+// /usr/include/qt/QtCore/qstringview.h:258
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity) const
 
 /*
-Returns true if this string-view starts with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also endsWith().
-*/
+ */
 func (this *QStringView) StartsWith1p(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
@@ -509,18 +543,14 @@ func (this *QStringView) StartsWith1p(s QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:256
+// /usr/include/qt/QtCore/qstringview.h:259
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QChar) const
 
 /*
-Returns true if this string-view starts with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also endsWith().
-*/
+ */
 func (this *QStringView) StartsWith2(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
@@ -531,18 +561,14 @@ func (this *QStringView) StartsWith2(c QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:258
+// /usr/include/qt/QtCore/qstringview.h:261
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool startsWith(QChar, Qt::CaseSensitivity) const
 
 /*
-Returns true if this string-view starts with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also endsWith().
-*/
+ */
 func (this *QStringView) StartsWith3(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
@@ -553,18 +579,14 @@ func (this *QStringView) StartsWith3(c QChar_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:261
+// /usr/include/qt/QtCore/qstringview.h:264
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, Qt::CaseSensitivity) const
 
 /*
-Returns true if this string-view ends with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also startsWith().
-*/
+ */
 func (this *QStringView) EndsWith(s QStringView_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
@@ -575,18 +597,14 @@ func (this *QStringView) EndsWith(s QStringView_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:261
+// /usr/include/qt/QtCore/qstringview.h:264
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, Qt::CaseSensitivity) const
 
 /*
-Returns true if this string-view ends with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also startsWith().
-*/
+ */
 func (this *QStringView) EndsWithp(s QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QStringView_PTR() != nil {
@@ -599,18 +617,14 @@ func (this *QStringView) EndsWithp(s QStringView_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:263
+// /usr/include/qt/QtCore/qstringview.h:266
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity) const
 
 /*
-Returns true if this string-view ends with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also startsWith().
-*/
+ */
 func (this *QStringView) EndsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
@@ -621,18 +635,14 @@ func (this *QStringView) EndsWith1(s QLatin1String_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:263
+// /usr/include/qt/QtCore/qstringview.h:266
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity) const
 
 /*
-Returns true if this string-view ends with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also startsWith().
-*/
+ */
 func (this *QStringView) EndsWith1p(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
@@ -645,18 +655,14 @@ func (this *QStringView) EndsWith1p(s QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:264
+// /usr/include/qt/QtCore/qstringview.h:267
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QChar) const
 
 /*
-Returns true if this string-view ends with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also startsWith().
-*/
+ */
 func (this *QStringView) EndsWith2(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
@@ -667,18 +673,14 @@ func (this *QStringView) EndsWith2(c QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:266
+// /usr/include/qt/QtCore/qstringview.h:269
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool endsWith(QChar, Qt::CaseSensitivity) const
 
 /*
-Returns true if this string-view ends with string-view str, Latin-1 string l1, or character ch, respectively; otherwise returns false.
 
-If cs is Qt::CaseSensitive (the default), the search is case-sensitive; otherwise the search is case-insensitive.
-
-See also startsWith().
-*/
+ */
 func (this *QStringView) EndsWith3(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
@@ -690,6 +692,24 @@ func (this *QStringView) EndsWith3(c QChar_ITF /*123*/, cs int) bool {
 }
 
 // /usr/include/qt/QtCore/qstringview.h:272
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isRightToLeft() const
+
+/*
+Returns true if the string is read right to left.
+
+This function was introduced in  Qt 5.11.
+
+See also QString::isRightToLeft().
+*/
+func (this *QStringView) IsRightToLeft() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView13isRightToLeftEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstringview.h:278
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringView::const_iterator begin() const
@@ -708,7 +728,7 @@ func (this *QStringView) Begin() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringview.h:273
+// /usr/include/qt/QtCore/qstringview.h:279
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringView::const_iterator end() const
@@ -727,7 +747,7 @@ func (this *QStringView) End() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringview.h:274
+// /usr/include/qt/QtCore/qstringview.h:280
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringView::const_iterator cbegin() const
@@ -746,7 +766,7 @@ func (this *QStringView) Cbegin() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringview.h:275
+// /usr/include/qt/QtCore/qstringview.h:281
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QStringView::const_iterator cend() const
@@ -765,7 +785,7 @@ func (this *QStringView) Cend() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringview.h:281
+// /usr/include/qt/QtCore/qstringview.h:287
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool empty() const
@@ -783,7 +803,7 @@ func (this *QStringView) Empty() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:282
+// /usr/include/qt/QtCore/qstringview.h:288
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar front() const
@@ -805,7 +825,7 @@ func (this *QStringView) Front() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringview.h:283
+// /usr/include/qt/QtCore/qstringview.h:289
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar back() const
@@ -827,7 +847,7 @@ func (this *QStringView) Back() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringview.h:288
+// /usr/include/qt/QtCore/qstringview.h:294
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -845,7 +865,7 @@ func (this *QStringView) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:289
+// /usr/include/qt/QtCore/qstringview.h:295
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isEmpty() const
@@ -863,7 +883,7 @@ func (this *QStringView) IsEmpty() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringview.h:290
+// /usr/include/qt/QtCore/qstringview.h:296
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int length() const
@@ -883,7 +903,7 @@ func (this *QStringView) Length() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringview.h:292
+// /usr/include/qt/QtCore/qstringview.h:298
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar first() const
@@ -905,7 +925,7 @@ func (this *QStringView) First() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringview.h:293
+// /usr/include/qt/QtCore/qstringview.h:299
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar last() const

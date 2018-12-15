@@ -63,7 +63,7 @@ func (*QValidator) NewFromPointer(cthis unsafe.Pointer) *QValidator {
 	return NewQValidatorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:60
+// /usr/include/qt/QtGui/qvalidator.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -77,7 +77,7 @@ func (this *QValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:62
+// /usr/include/qt/QtGui/qvalidator.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QValidator(QObject *)
@@ -100,7 +100,7 @@ func NewQValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QValidator {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:62
+// /usr/include/qt/QtGui/qvalidator.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QValidator(QObject *)
@@ -121,7 +121,7 @@ func NewQValidatorp() *QValidator {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:63
+// /usr/include/qt/QtGui/qvalidator.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QValidator()
@@ -136,7 +136,7 @@ func DeleteQValidator(this *QValidator) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:71
+// /usr/include/qt/QtGui/qvalidator.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLocale(const QLocale &)
@@ -155,7 +155,7 @@ func (this *QValidator) SetLocale(locale qtcore.QLocale_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:72
+// /usr/include/qt/QtGui/qvalidator.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QLocale locale() const
@@ -173,7 +173,7 @@ func (this *QValidator) Locale() *qtcore.QLocale /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:74
+// /usr/include/qt/QtGui/qvalidator.h:76
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
@@ -191,7 +191,7 @@ func (this *QValidator) Validate(arg0 string, arg1 int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:75
+// /usr/include/qt/QtGui/qvalidator.h:77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fixup(QString &) const
@@ -208,7 +208,7 @@ func (this *QValidator) Fixup(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:78
+// /usr/include/qt/QtGui/qvalidator.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void changed()

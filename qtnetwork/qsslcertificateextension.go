@@ -67,7 +67,7 @@ func (*QSslCertificateExtension) NewFromPointer(cthis unsafe.Pointer) *QSslCerti
 	return NewQSslCertificateExtensionFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qsslcertificateextension.h:59
+// /usr/include/qt/QtNetwork/qsslcertificateextension.h:56
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCertificateExtension()
@@ -86,7 +86,7 @@ func NewQSslCertificateExtension() *QSslCertificateExtension {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qsslcertificateextension.h:62
+// /usr/include/qt/QtNetwork/qsslcertificateextension.h:59
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSslCertificateExtension & operator=(QSslCertificateExtension &&)
@@ -102,7 +102,7 @@ func (this *QSslCertificateExtension) Operator_equal(other unsafe.Pointer /*333*
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslcertificateextension.h:64
+// /usr/include/qt/QtNetwork/qsslcertificateextension.h:61
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QSslCertificateExtension & operator=(const QSslCertificateExtension &)
@@ -122,7 +122,7 @@ func (this *QSslCertificateExtension) Operator_equal1(other QSslCertificateExten
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslcertificateextension.h:65
+// /usr/include/qt/QtNetwork/qsslcertificateextension.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSslCertificateExtension()
@@ -137,7 +137,7 @@ func DeleteQSslCertificateExtension(this *QSslCertificateExtension) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qsslcertificateextension.h:67
+// /usr/include/qt/QtNetwork/qsslcertificateextension.h:64
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QSslCertificateExtension &)
@@ -154,7 +154,7 @@ func (this *QSslCertificateExtension) Swap(other QSslCertificateExtension_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslcertificateextension.h:69
+// /usr/include/qt/QtNetwork/qsslcertificateextension.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString oid() const
@@ -171,7 +171,7 @@ func (this *QSslCertificateExtension) Oid() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qsslcertificateextension.h:70
+// /usr/include/qt/QtNetwork/qsslcertificateextension.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
@@ -188,7 +188,7 @@ func (this *QSslCertificateExtension) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qsslcertificateextension.h:71
+// /usr/include/qt/QtNetwork/qsslcertificateextension.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant value() const
@@ -204,7 +204,7 @@ func (this *QSslCertificateExtension) Value() *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qsslcertificateextension.h:72
+// /usr/include/qt/QtNetwork/qsslcertificateextension.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCritical() const
@@ -218,7 +218,7 @@ func (this *QSslCertificateExtension) IsCritical() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qsslcertificateextension.h:74
+// /usr/include/qt/QtNetwork/qsslcertificateextension.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSupported() const

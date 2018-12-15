@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 9
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func (*QDataStream) NewFromPointer(cthis unsafe.Pointer) *QDataStream {
 	return NewQDataStreamFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:123
+// /usr/include/qt/QtCore/qdatastream.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDataStream()
@@ -85,7 +85,7 @@ func NewQDataStream() *QDataStream {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:124
+// /usr/include/qt/QtCore/qdatastream.h:126
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDataStream(QIODevice *)
@@ -110,7 +110,7 @@ func NewQDataStream1(arg0 QIODevice_ITF /*777 QIODevice **/) *QDataStream {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:125
+// /usr/include/qt/QtCore/qdatastream.h:127
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDataStream(QByteArray *, QIODevice::OpenMode)
@@ -135,7 +135,7 @@ func NewQDataStream2(arg0 QByteArray_ITF /*777 QByteArray **/, flags int) *QData
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:126
+// /usr/include/qt/QtCore/qdatastream.h:128
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDataStream(const QByteArray &)
@@ -160,7 +160,7 @@ func NewQDataStream3(arg0 QByteArray_ITF) *QDataStream {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:127
+// /usr/include/qt/QtCore/qdatastream.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDataStream()
@@ -175,7 +175,7 @@ func DeleteQDataStream(this *QDataStream) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:129
+// /usr/include/qt/QtCore/qdatastream.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIODevice * device() const
@@ -191,7 +191,7 @@ func (this *QDataStream) Device() *QIODevice /*777 QIODevice **/ {
 	return /*==*/ NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:130
+// /usr/include/qt/QtCore/qdatastream.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
@@ -212,7 +212,7 @@ func (this *QDataStream) SetDevice(arg0 QIODevice_ITF /*777 QIODevice **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:131
+// /usr/include/qt/QtCore/qdatastream.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unsetDevice()
@@ -225,7 +225,7 @@ func (this *QDataStream) UnsetDevice() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:133
+// /usr/include/qt/QtCore/qdatastream.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool atEnd() const
@@ -241,7 +241,7 @@ func (this *QDataStream) AtEnd() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:135
+// /usr/include/qt/QtCore/qdatastream.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDataStream::Status status() const
@@ -257,7 +257,7 @@ func (this *QDataStream) Status() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:136
+// /usr/include/qt/QtCore/qdatastream.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStatus(QDataStream::Status)
@@ -274,7 +274,7 @@ func (this *QDataStream) SetStatus(status int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:137
+// /usr/include/qt/QtCore/qdatastream.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetStatus()
@@ -289,7 +289,7 @@ func (this *QDataStream) ResetStatus() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:139
+// /usr/include/qt/QtCore/qdatastream.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDataStream::FloatingPointPrecision floatingPointPrecision() const
@@ -307,7 +307,7 @@ func (this *QDataStream) FloatingPointPrecision() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:140
+// /usr/include/qt/QtCore/qdatastream.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFloatingPointPrecision(QDataStream::FloatingPointPrecision)
@@ -332,7 +332,7 @@ func (this *QDataStream) SetFloatingPointPrecision(precision int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:142
+// /usr/include/qt/QtCore/qdatastream.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDataStream::ByteOrder byteOrder() const
@@ -348,7 +348,7 @@ func (this *QDataStream) ByteOrder() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:143
+// /usr/include/qt/QtCore/qdatastream.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setByteOrder(QDataStream::ByteOrder)
@@ -367,7 +367,7 @@ func (this *QDataStream) SetByteOrder(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:145
+// /usr/include/qt/QtCore/qdatastream.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int version() const
@@ -383,7 +383,7 @@ func (this *QDataStream) Version() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:146
+// /usr/include/qt/QtCore/qdatastream.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVersion(int)
@@ -410,7 +410,7 @@ func (this *QDataStream) SetVersion(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:149
+// /usr/include/qt/QtCore/qdatastream.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator>>(quint8 &)
@@ -426,7 +426,7 @@ func (this *QDataStream) Operator_right_shift(i byte) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:150
+// /usr/include/qt/QtCore/qdatastream.h:152
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator>>(qint16 &)
@@ -442,7 +442,7 @@ func (this *QDataStream) Operator_right_shift1(i int16) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:151
+// /usr/include/qt/QtCore/qdatastream.h:153
 // index:2
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator>>(quint16 &)
@@ -458,7 +458,7 @@ func (this *QDataStream) Operator_right_shift2(i uint16) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:152
+// /usr/include/qt/QtCore/qdatastream.h:154
 // index:3
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator>>(qint32 &)
@@ -474,9 +474,9 @@ func (this *QDataStream) Operator_right_shift3(i int) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:153
+// /usr/include/qt/QtCore/qdatastream.h:155
 // index:4
-// Public Visibility=Default Availability=Available
+// Public inline Visibility=Default Availability=Available
 // [32] QDataStream & operator>>(quint32 &)
 
 /*
@@ -490,7 +490,7 @@ func (this *QDataStream) Operator_right_shift4(i uint) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:154
+// /usr/include/qt/QtCore/qdatastream.h:156
 // index:5
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator>>(qint64 &)
@@ -506,7 +506,7 @@ func (this *QDataStream) Operator_right_shift5(i int64) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:155
+// /usr/include/qt/QtCore/qdatastream.h:157
 // index:6
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator>>(quint64 &)
@@ -522,7 +522,7 @@ func (this *QDataStream) Operator_right_shift6(i uint64) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:158
+// /usr/include/qt/QtCore/qdatastream.h:160
 // index:7
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator>>(bool &)
@@ -538,32 +538,16 @@ func (this *QDataStream) Operator_right_shift7(i bool) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:160
+// /usr/include/qt/QtCore/qdatastream.h:161
 // index:8
 // Public Visibility=Default Availability=Available
-// [32] QDataStream & operator>>(float &)
+// [32] QDataStream & operator>>(qfloat16 &)
 
 /*
 
  */
-func (this *QDataStream) Operator_right_shift8(f float32) *QDataStream {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &f)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qdatastream.h:161
-// index:9
-// Public Visibility=Default Availability=Available
-// [32] QDataStream & operator>>(double &)
-
-/*
-
- */
-func (this *QDataStream) Operator_right_shift9(f float64) *QDataStream {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &f)
+func (this *QDataStream) Operator_right_shift8(f unsafe.Pointer /*555*/) *QDataStream {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsER8qfloat16", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
@@ -571,14 +555,46 @@ func (this *QDataStream) Operator_right_shift9(f float64) *QDataStream {
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:162
+// index:9
+// Public Visibility=Default Availability=Available
+// [32] QDataStream & operator>>(float &)
+
+/*
+
+ */
+func (this *QDataStream) Operator_right_shift9(f float32) *QDataStream {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &f)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qdatastream.h:163
 // index:10
+// Public Visibility=Default Availability=Available
+// [32] QDataStream & operator>>(double &)
+
+/*
+
+ */
+func (this *QDataStream) Operator_right_shift10(f float64) *QDataStream {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &f)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qdatastream.h:164
+// index:11
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator>>(char *&)
 
 /*
 
  */
-func (this *QDataStream) Operator_right_shift10(str unsafe.Pointer /*555*/) *QDataStream {
+func (this *QDataStream) Operator_right_shift11(str unsafe.Pointer /*555*/) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamrsERPc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), str)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -586,7 +602,7 @@ func (this *QDataStream) Operator_right_shift10(str unsafe.Pointer /*555*/) *QDa
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:165
+// /usr/include/qt/QtCore/qdatastream.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator<<(quint8)
@@ -602,7 +618,7 @@ func (this *QDataStream) Operator_left_shift(i byte) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:166
+// /usr/include/qt/QtCore/qdatastream.h:168
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator<<(qint16)
@@ -618,7 +634,7 @@ func (this *QDataStream) Operator_left_shift1(i int16) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:167
+// /usr/include/qt/QtCore/qdatastream.h:169
 // index:2
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator<<(quint16)
@@ -634,7 +650,7 @@ func (this *QDataStream) Operator_left_shift2(i uint16) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:168
+// /usr/include/qt/QtCore/qdatastream.h:170
 // index:3
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator<<(qint32)
@@ -650,9 +666,9 @@ func (this *QDataStream) Operator_left_shift3(i int) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:169
+// /usr/include/qt/QtCore/qdatastream.h:171
 // index:4
-// Public Visibility=Default Availability=Available
+// Public inline Visibility=Default Availability=Available
 // [32] QDataStream & operator<<(quint32)
 
 /*
@@ -666,7 +682,7 @@ func (this *QDataStream) Operator_left_shift4(i uint) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:170
+// /usr/include/qt/QtCore/qdatastream.h:172
 // index:5
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator<<(qint64)
@@ -682,7 +698,7 @@ func (this *QDataStream) Operator_left_shift5(i int64) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:171
+// /usr/include/qt/QtCore/qdatastream.h:173
 // index:6
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator<<(quint64)
@@ -698,7 +714,7 @@ func (this *QDataStream) Operator_left_shift6(i uint64) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:173
+// /usr/include/qt/QtCore/qdatastream.h:175
 // index:7
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator<<(bool)
@@ -714,32 +730,16 @@ func (this *QDataStream) Operator_left_shift7(i bool) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:175
+// /usr/include/qt/QtCore/qdatastream.h:176
 // index:8
 // Public Visibility=Default Availability=Available
-// [32] QDataStream & operator<<(float)
+// [32] QDataStream & operator<<(qfloat16)
 
 /*
 
  */
-func (this *QDataStream) Operator_left_shift8(f float32) *QDataStream {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qdatastream.h:176
-// index:9
-// Public Visibility=Default Availability=Available
-// [32] QDataStream & operator<<(double)
-
-/*
-
- */
-func (this *QDataStream) Operator_left_shift9(f float64) *QDataStream {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
+func (this *QDataStream) Operator_left_shift8(f unsafe.Pointer /*444*/) *QDataStream {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsE8qfloat16", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
@@ -747,14 +747,46 @@ func (this *QDataStream) Operator_left_shift9(f float64) *QDataStream {
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:177
+// index:9
+// Public Visibility=Default Availability=Available
+// [32] QDataStream & operator<<(float)
+
+/*
+
+ */
+func (this *QDataStream) Operator_left_shift9(f float32) *QDataStream {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qdatastream.h:178
 // index:10
+// Public Visibility=Default Availability=Available
+// [32] QDataStream & operator<<(double)
+
+/*
+
+ */
+func (this *QDataStream) Operator_left_shift10(f float64) *QDataStream {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qdatastream.h:179
+// index:11
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & operator<<(const char *)
 
 /*
 
  */
-func (this *QDataStream) Operator_left_shift10(str string) *QDataStream {
+func (this *QDataStream) Operator_left_shift11(str string) *QDataStream {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStreamlsEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -764,7 +796,7 @@ func (this *QDataStream) Operator_left_shift10(str string) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:179
+// /usr/include/qt/QtCore/qdatastream.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & readBytes(char *&, uint &)
@@ -788,7 +820,7 @@ func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len_ uint) *QDat
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:180
+// /usr/include/qt/QtCore/qdatastream.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int readRawData(char *, int)
@@ -796,7 +828,7 @@ func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len_ uint) *QDat
 /*
 Reads at most len bytes from the stream into s and returns the number of bytes read. If an error occurs, this function returns -1.
 
-The buffer s must be preallocated. The data is not encoded.
+The buffer s must be preallocated. The data is not decoded.
 
 See also readBytes(), QIODevice::read(), and writeRawData().
 */
@@ -808,7 +840,7 @@ func (this *QDataStream) ReadRawData(arg0 string, len_ int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:182
+// /usr/include/qt/QtCore/qdatastream.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QDataStream & writeBytes(const char *, uint)
@@ -830,7 +862,7 @@ func (this *QDataStream) WriteBytes(arg0 string, len_ uint) *QDataStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:183
+// /usr/include/qt/QtCore/qdatastream.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int writeRawData(const char *, int)
@@ -848,7 +880,7 @@ func (this *QDataStream) WriteRawData(arg0 string, len_ int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:185
+// /usr/include/qt/QtCore/qdatastream.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int skipRawData(int)
@@ -868,7 +900,7 @@ func (this *QDataStream) SkipRawData(len_ int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:187
+// /usr/include/qt/QtCore/qdatastream.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void startTransaction()
@@ -893,7 +925,7 @@ func (this *QDataStream) StartTransaction() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:188
+// /usr/include/qt/QtCore/qdatastream.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool commitTransaction()
@@ -915,7 +947,7 @@ func (this *QDataStream) CommitTransaction() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:189
+// /usr/include/qt/QtCore/qdatastream.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void rollbackTransaction()
@@ -944,7 +976,7 @@ func (this *QDataStream) RollbackTransaction() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:190
+// /usr/include/qt/QtCore/qdatastream.h:192
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void abortTransaction()
@@ -1065,7 +1097,13 @@ const QDataStream__Qt_5_9 QDataStream__Version = 17
 const QDataStream__Qt_5_10 QDataStream__Version = 17
 
 //
-const QDataStream__Qt_DefaultCompiledVersion QDataStream__Version = 17
+const QDataStream__Qt_5_11 QDataStream__Version = 17
+
+//
+const QDataStream__Qt_5_12 QDataStream__Version = 18
+
+//
+const QDataStream__Qt_DefaultCompiledVersion QDataStream__Version = 18
 
 func (this *QDataStream) VersionItemName(val int) string {
 	switch val {
@@ -1114,7 +1152,7 @@ func (this *QDataStream) VersionItemName(val int) string {
 		// case QDataStream__Qt_5_5: // 16
 		// return ""
 	case QDataStream__Qt_5_6: // 17
-		return "Qt_5_6,Qt_5_7,Qt_5_8,Qt_5_9,Qt_5_10,Qt_DefaultCompiledVersion"
+		return "Qt_5_6,Qt_5_7,Qt_5_8,Qt_5_9,Qt_5_10,Qt_5_11"
 		// case QDataStream__Qt_5_7: // 17
 		// return ""
 		// case QDataStream__Qt_5_8: // 17
@@ -1123,7 +1161,11 @@ func (this *QDataStream) VersionItemName(val int) string {
 		// return ""
 		// case QDataStream__Qt_5_10: // 17
 		// return ""
-		// case QDataStream__Qt_DefaultCompiledVersion: // 17
+		// case QDataStream__Qt_5_11: // 17
+		// return ""
+	case QDataStream__Qt_5_12: // 18
+		return "Qt_5_12,Qt_DefaultCompiledVersion"
+		// case QDataStream__Qt_DefaultCompiledVersion: // 18
 		// return ""
 	default:
 		return fmt.Sprintf("%d", val)

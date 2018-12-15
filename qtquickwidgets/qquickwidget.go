@@ -18,7 +18,7 @@ package qtquickwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 5
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
@@ -132,6 +132,11 @@ func (this *QQuickWidget) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*77
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
+// bool focusNextPrevChild(bool)
+func (this *QQuickWidget) InheritFocusNextPrevChild(f func(next bool) bool) {
+	qtrt.SetAllInheritCallback(this, "focusNextPrevChild", f)
+}
+
 /*
 
  */
@@ -163,7 +168,7 @@ func (*QQuickWidget) NewFromPointer(cthis unsafe.Pointer) *QQuickWidget {
 	return NewQQuickWidgetFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:61
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -177,7 +182,7 @@ func (this *QQuickWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:67
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWidget(QWidget *)
@@ -200,7 +205,7 @@ func NewQQuickWidget(parent qtwidgets.QWidget_ITF /*777 QWidget **/) *QQuickWidg
 	return gothis
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:67
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWidget(QWidget *)
@@ -221,7 +226,7 @@ func NewQQuickWidgetp() *QQuickWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:68
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:67
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWidget(QQmlEngine *, QWidget *)
@@ -248,7 +253,7 @@ func NewQQuickWidget1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent q
 	return gothis
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:69
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:68
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWidget(const QUrl &, QWidget *)
@@ -275,7 +280,7 @@ func NewQQuickWidget2(source qtcore.QUrl_ITF, parent qtwidgets.QWidget_ITF /*777
 	return gothis
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:69
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:68
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickWidget(const QUrl &, QWidget *)
@@ -300,7 +305,7 @@ func NewQQuickWidget2p(source qtcore.QUrl_ITF) *QQuickWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:70
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:69
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickWidget()
@@ -315,7 +320,7 @@ func DeleteQQuickWidget(this *QQuickWidget) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:72
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl source() const
@@ -331,7 +336,7 @@ func (this *QQuickWidget) Source() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:74
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlEngine * engine() const
@@ -345,7 +350,7 @@ func (this *QQuickWidget) Engine() *qtqml.QQmlEngine /*777 QQmlEngine **/ {
 	return qtqml.NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:75
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlContext * rootContext() const
@@ -359,7 +364,7 @@ func (this *QQuickWidget) RootContext() *qtqml.QQmlContext /*777 QQmlContext **/
 	return qtqml.NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:77
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * rootObject() const
@@ -373,7 +378,7 @@ func (this *QQuickWidget) RootObject() *qtquick.QQuickItem /*777 QQuickItem **/ 
 	return qtquick.NewQQuickItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:81
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickWidget::ResizeMode resizeMode() const
@@ -387,7 +392,7 @@ func (this *QQuickWidget) ResizeMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:82
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setResizeMode(QQuickWidget::ResizeMode)
@@ -400,7 +405,7 @@ func (this *QQuickWidget) SetResizeMode(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:86
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickWidget::Status status() const
@@ -414,7 +419,7 @@ func (this *QQuickWidget) Status() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:90
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -430,7 +435,7 @@ func (this *QQuickWidget) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:91
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize initialSize() const
@@ -446,7 +451,7 @@ func (this *QQuickWidget) InitialSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:93
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QSurfaceFormat &)
@@ -463,7 +468,7 @@ func (this *QQuickWidget) SetFormat(format qtgui.QSurfaceFormat_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:94
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSurfaceFormat format() const
@@ -479,7 +484,7 @@ func (this *QQuickWidget) Format() *qtgui.QSurfaceFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:96
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage grabFramebuffer() const
@@ -495,7 +500,7 @@ func (this *QQuickWidget) GrabFramebuffer() *qtgui.QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:98
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClearColor(const QColor &)
@@ -512,7 +517,7 @@ func (this *QQuickWidget) SetClearColor(color qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:100
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickWindow * quickWindow() const
@@ -526,7 +531,7 @@ func (this *QQuickWidget) QuickWindow() *qtquick.QQuickWindow /*777 QQuickWindow
 	return qtquick.NewQQuickWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:103
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSource(const QUrl &)
@@ -543,7 +548,7 @@ func (this *QQuickWidget) SetSource(arg0 qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:104
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContent(const QUrl &, QQmlComponent *, QObject *)
@@ -568,7 +573,7 @@ func (this *QQuickWidget) SetContent(url qtcore.QUrl_ITF, component qtqml.QQmlCo
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:107
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void statusChanged(QQuickWidget::Status)
@@ -581,7 +586,7 @@ func (this *QQuickWidget) StatusChanged(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:108
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sceneGraphError(QQuickWindow::SceneGraphError, const QString &)
@@ -596,7 +601,7 @@ func (this *QQuickWidget) SceneGraphError(error int, message string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:118
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:117
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -613,7 +618,7 @@ func (this *QQuickWidget) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:119
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:118
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
@@ -630,7 +635,7 @@ func (this *QQuickWidget) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:121
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:120
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -647,7 +652,7 @@ func (this *QQuickWidget) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:122
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:121
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
@@ -664,7 +669,7 @@ func (this *QQuickWidget) KeyReleaseEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:123
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:122
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -681,7 +686,7 @@ func (this *QQuickWidget) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMous
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:124
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:123
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -698,7 +703,7 @@ func (this *QQuickWidget) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMo
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:125
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:124
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -715,7 +720,7 @@ func (this *QQuickWidget) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouse
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:126
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:125
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
@@ -732,7 +737,7 @@ func (this *QQuickWidget) MouseDoubleClickEvent(arg0 qtgui.QMouseEvent_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:128
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:127
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -749,7 +754,7 @@ func (this *QQuickWidget) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:129
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:128
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
@@ -766,7 +771,7 @@ func (this *QQuickWidget) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:131
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:130
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
@@ -783,7 +788,7 @@ func (this *QQuickWidget) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocusE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:132
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:131
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
@@ -800,7 +805,7 @@ func (this *QQuickWidget) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QFocus
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:135
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:134
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
@@ -817,7 +822,7 @@ func (this *QQuickWidget) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:139
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:138
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QDragEnterEvent *)
@@ -834,7 +839,7 @@ func (this *QQuickWidget) DragEnterEvent(arg0 qtgui.QDragEnterEvent_ITF /*777 QD
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:140
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:139
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
@@ -851,7 +856,7 @@ func (this *QQuickWidget) DragMoveEvent(arg0 qtgui.QDragMoveEvent_ITF /*777 QDra
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:141
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:140
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
@@ -868,7 +873,7 @@ func (this *QQuickWidget) DragLeaveEvent(arg0 qtgui.QDragLeaveEvent_ITF /*777 QD
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:142
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:141
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
@@ -885,7 +890,7 @@ func (this *QQuickWidget) DropEvent(arg0 qtgui.QDropEvent_ITF /*777 QDropEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:145
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:144
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -903,7 +908,7 @@ func (this *QQuickWidget) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuickWidgets/qquickwidget.h:146
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:145
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -918,6 +923,20 @@ func (this *QQuickWidget) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEve
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtQuickWidgets/qquickwidget.h:146
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool focusNextPrevChild(bool)
+
+/*
+
+ */
+func (this *QQuickWidget) FocusNextPrevChild(next bool) bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget18focusNextPrevChildEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), next)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
 }
 
 /*

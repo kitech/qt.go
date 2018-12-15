@@ -1569,18 +1569,10 @@ func (this *QFont) Resolve2(mask uint) {
 /*
 Style hints are used by the font matching algorithm to find an appropriate default family if a selected font family is not available.
 
-QFont::AnyStyle?leaves the font matching algorithm to choose the family. This is the default.
 QFont::SansSerifHelveticathe font matcher prefer sans serif fonts.
 QFont::SerifTimesthe font matcher prefers serif fonts.
-QFont::Times?is a synonym for Serif.
 QFont::TypeWriterCourierthe font matcher prefers fixed pitch fonts.
-QFont::Courier?a synonym for TypeWriter.
-QFont::OldEnglish?the font matcher prefers decorative fonts.
 QFont::DecorativeOldEnglishis a synonym for OldEnglish.
-QFont::Monospace?the font matcher prefers fonts that map to the CSS generic font-family 'monospace'.
-QFont::Fantasy?the font matcher prefers fonts that map to the CSS generic font-family 'fantasy'.
-QFont::Cursive?the font matcher prefers fonts that map to the CSS generic font-family 'cursive'.
-QFont::System?the font matcher prefers system fonts.
 
 */
 type QFont__StyleHint = int
@@ -1591,37 +1583,37 @@ const QFont__Helvetica QFont__StyleHint = 0
 //
 const QFont__SansSerif QFont__StyleHint = 0
 
-//
+// is a synonym for Serif.
 const QFont__Times QFont__StyleHint = 1
 
 //
 const QFont__Serif QFont__StyleHint = 1
 
-//
+// a synonym for TypeWriter.
 const QFont__Courier QFont__StyleHint = 2
 
 //
 const QFont__TypeWriter QFont__StyleHint = 2
 
-//
+// the font matcher prefers decorative fonts.
 const QFont__OldEnglish QFont__StyleHint = 3
 
 //
 const QFont__Decorative QFont__StyleHint = 3
 
-//
+// the font matcher prefers system fonts.
 const QFont__System QFont__StyleHint = 4
 
-//
+// leaves the font matching algorithm to choose the family. This is the default.
 const QFont__AnyStyle QFont__StyleHint = 5
 
-//
+// the font matcher prefers fonts that map to the CSS generic font-family 'cursive'.
 const QFont__Cursive QFont__StyleHint = 6
 
-//
+// the font matcher prefers fonts that map to the CSS generic font-family 'monospace'.
 const QFont__Monospace QFont__StyleHint = 7
 
-//
+// the font matcher prefers fonts that map to the CSS generic font-family 'fantasy'.
 const QFont__Fantasy QFont__StyleHint = 8
 
 func (this *QFont) StyleHintItemName(val int) string {

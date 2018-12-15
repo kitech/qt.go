@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 27
 */
 // import "C"
 import "unsafe"
@@ -201,6 +201,27 @@ func (this *QCryptographicHash) Hash(data QByteArray_ITF, method int) *QByteArra
 func QCryptographicHash_Hash(data QByteArray_ITF, method int) *QByteArray /*123*/ {
 	var nilthis *QCryptographicHash
 	rv := nilthis.Hash(data, method)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qcryptographichash.h:104
+// index:0
+// Public static Visibility=Default Availability=Available
+// [4] int hashLength(QCryptographicHash::Algorithm)
+
+/*
+Returns the size of the output of the selected hash method in bytes.
+
+This function was introduced in  Qt 5.12.
+*/
+func (this *QCryptographicHash) HashLength(method int) int {
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCryptographicHash10hashLengthENS_9AlgorithmE", qtrt.FFI_TYPE_POINTER, method)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QCryptographicHash_HashLength(method int) int {
+	var nilthis *QCryptographicHash
+	rv := nilthis.HashLength(method)
 	return rv
 }
 

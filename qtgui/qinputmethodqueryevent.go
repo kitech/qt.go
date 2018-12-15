@@ -63,7 +63,7 @@ func (*QInputMethodQueryEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMetho
 	return NewQInputMethodQueryEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:581
+// /usr/include/qt/QtGui/qevent.h:586
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QInputMethodQueryEvent(Qt::InputMethodQueries)
@@ -82,7 +82,7 @@ func NewQInputMethodQueryEvent(queries int) *QInputMethodQueryEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:582
+// /usr/include/qt/QtGui/qevent.h:587
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QInputMethodQueryEvent()
@@ -97,7 +97,7 @@ func DeleteQInputMethodQueryEvent(this *QInputMethodQueryEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:584
+// /usr/include/qt/QtGui/qevent.h:589
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::InputMethodQueries queries() const
@@ -111,7 +111,7 @@ func (this *QInputMethodQueryEvent) Queries() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:586
+// /usr/include/qt/QtGui/qevent.h:591
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(Qt::InputMethodQuery, const QVariant &)
@@ -128,7 +128,7 @@ func (this *QInputMethodQueryEvent) SetValue(query int, value qtcore.QVariant_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:587
+// /usr/include/qt/QtGui/qevent.h:592
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant value(Qt::InputMethodQuery) const

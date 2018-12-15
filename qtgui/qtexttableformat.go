@@ -63,7 +63,7 @@ func (*QTextTableFormat) NewFromPointer(cthis unsafe.Pointer) *QTextTableFormat 
 	return NewQTextTableFormatFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:887
+// /usr/include/qt/QtGui/qtextformat.h:901
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextTableFormat()
@@ -82,7 +82,7 @@ func NewQTextTableFormat() *QTextTableFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:923
+// /usr/include/qt/QtGui/qtextformat.h:937
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextTableFormat(const QTextFormat &)
@@ -105,7 +105,7 @@ func NewQTextTableFormat1(fmt_ QTextFormat_ITF) *QTextTableFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:889
+// /usr/include/qt/QtGui/qtextformat.h:903
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -119,7 +119,7 @@ func (this *QTextTableFormat) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:891
+// /usr/include/qt/QtGui/qtextformat.h:905
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int columns() const
@@ -133,7 +133,7 @@ func (this *QTextTableFormat) Columns() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:893
+// /usr/include/qt/QtGui/qtextformat.h:907
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setColumns(int)
@@ -146,7 +146,7 @@ func (this *QTextTableFormat) SetColumns(columns int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:901
+// /usr/include/qt/QtGui/qtextformat.h:915
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void clearColumnWidthConstraints()
@@ -159,7 +159,7 @@ func (this *QTextTableFormat) ClearColumnWidthConstraints() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:904
+// /usr/include/qt/QtGui/qtextformat.h:918
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal cellSpacing() const
@@ -173,7 +173,7 @@ func (this *QTextTableFormat) CellSpacing() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:906
+// /usr/include/qt/QtGui/qtextformat.h:920
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCellSpacing(qreal)
@@ -186,7 +186,7 @@ func (this *QTextTableFormat) SetCellSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:909
+// /usr/include/qt/QtGui/qtextformat.h:923
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal cellPadding() const
@@ -200,7 +200,7 @@ func (this *QTextTableFormat) CellPadding() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:911
+// /usr/include/qt/QtGui/qtextformat.h:925
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCellPadding(qreal)
@@ -213,7 +213,7 @@ func (this *QTextTableFormat) SetCellPadding(padding float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:913
+// /usr/include/qt/QtGui/qtextformat.h:927
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAlignment(Qt::Alignment)
@@ -226,7 +226,7 @@ func (this *QTextTableFormat) SetAlignment(alignment int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:914
+// /usr/include/qt/QtGui/qtextformat.h:928
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment() const
@@ -240,7 +240,7 @@ func (this *QTextTableFormat) Alignment() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:917
+// /usr/include/qt/QtGui/qtextformat.h:931
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHeaderRowCount(int)
@@ -253,7 +253,7 @@ func (this *QTextTableFormat) SetHeaderRowCount(count int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:919
+// /usr/include/qt/QtGui/qtextformat.h:933
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int headerRowCount() const

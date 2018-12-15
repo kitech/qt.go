@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qpropertyanimation.h
@@ -77,7 +79,7 @@ func (*QPropertyAnimation) NewFromPointer(cthis unsafe.Pointer) *QPropertyAnimat
 	return NewQPropertyAnimationFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:53
+// /usr/include/qt/QtCore/qpropertyanimation.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -91,7 +93,7 @@ func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:58
+// /usr/include/qt/QtCore/qpropertyanimation.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *)
@@ -114,7 +116,7 @@ func NewQPropertyAnimation(parent QObject_ITF /*777 QObject **/) *QPropertyAnima
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:58
+// /usr/include/qt/QtCore/qpropertyanimation.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *)
@@ -135,7 +137,7 @@ func NewQPropertyAnimationp() *QPropertyAnimation {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:59
+// /usr/include/qt/QtCore/qpropertyanimation.h:58
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *, const QByteArray &, QObject *)
@@ -166,7 +168,7 @@ func NewQPropertyAnimation1(target QObject_ITF /*777 QObject **/, propertyName Q
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:59
+// /usr/include/qt/QtCore/qpropertyanimation.h:58
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPropertyAnimation(QObject *, const QByteArray &, QObject *)
@@ -195,7 +197,7 @@ func NewQPropertyAnimation1p(target QObject_ITF /*777 QObject **/, propertyName 
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:60
+// /usr/include/qt/QtCore/qpropertyanimation.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPropertyAnimation()
@@ -210,7 +212,7 @@ func DeleteQPropertyAnimation(this *QPropertyAnimation) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:62
+// /usr/include/qt/QtCore/qpropertyanimation.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * targetObject() const
@@ -224,7 +226,7 @@ func (this *QPropertyAnimation) TargetObject() *QObject /*777 QObject **/ {
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:63
+// /usr/include/qt/QtCore/qpropertyanimation.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTargetObject(QObject *)
@@ -241,7 +243,7 @@ func (this *QPropertyAnimation) SetTargetObject(target QObject_ITF /*777 QObject
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:65
+// /usr/include/qt/QtCore/qpropertyanimation.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray propertyName() const
@@ -257,7 +259,7 @@ func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:66
+// /usr/include/qt/QtCore/qpropertyanimation.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPropertyName(const QByteArray &)
@@ -274,13 +276,13 @@ func (this *QPropertyAnimation) SetPropertyName(propertyName QByteArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:69
+// /usr/include/qt/QtCore/qpropertyanimation.h:68
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QVariantAnimation::event().
 */
 func (this *QPropertyAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -292,7 +294,7 @@ func (this *QPropertyAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:70
+// /usr/include/qt/QtCore/qpropertyanimation.h:69
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentValue(const QVariant &)
@@ -313,13 +315,13 @@ func (this *QPropertyAnimation) UpdateCurrentValue(value QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qpropertyanimation.h:71
+// /usr/include/qt/QtCore/qpropertyanimation.h:70
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 
 /*
-Reimplemented from QAbstractAnimation::updateState().
+Reimplemented from QVariantAnimation::updateState().
 
 If the startValue is not defined when the state of the animation changes from Stopped to Running, the current property value is used as the initial value for the animation.
 */

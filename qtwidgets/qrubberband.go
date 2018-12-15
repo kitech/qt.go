@@ -300,7 +300,7 @@ func (this *QRubberBand) Resize1(s qtcore.QSize_ITF) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QRubberBand) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

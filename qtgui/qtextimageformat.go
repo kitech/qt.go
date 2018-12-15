@@ -63,7 +63,7 @@ func (*QTextImageFormat) NewFromPointer(cthis unsafe.Pointer) *QTextImageFormat 
 	return NewQTextImageFormatFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:735
+// /usr/include/qt/QtGui/qtextformat.h:742
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextImageFormat()
@@ -82,7 +82,7 @@ func NewQTextImageFormat() *QTextImageFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:752
+// /usr/include/qt/QtGui/qtextformat.h:763
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextImageFormat(const QTextFormat &)
@@ -105,7 +105,7 @@ func NewQTextImageFormat1(format QTextFormat_ITF) *QTextImageFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:737
+// /usr/include/qt/QtGui/qtextformat.h:744
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -119,7 +119,7 @@ func (this *QTextImageFormat) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:739
+// /usr/include/qt/QtGui/qtextformat.h:746
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setName(const QString &)
@@ -134,7 +134,7 @@ func (this *QTextImageFormat) SetName(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:740
+// /usr/include/qt/QtGui/qtextformat.h:747
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString name() const
@@ -151,7 +151,7 @@ func (this *QTextImageFormat) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:743
+// /usr/include/qt/QtGui/qtextformat.h:750
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWidth(qreal)
@@ -164,7 +164,7 @@ func (this *QTextImageFormat) SetWidth(width float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:744
+// /usr/include/qt/QtGui/qtextformat.h:751
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal width() const
@@ -178,7 +178,7 @@ func (this *QTextImageFormat) Width() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:747
+// /usr/include/qt/QtGui/qtextformat.h:754
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHeight(qreal)
@@ -191,7 +191,7 @@ func (this *QTextImageFormat) SetHeight(height float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:748
+// /usr/include/qt/QtGui/qtextformat.h:755
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal height() const
@@ -203,6 +203,48 @@ func (this *QTextImageFormat) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtGui/qtextformat.h:758
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void setQuality(int)
+
+/*
+
+ */
+func (this *QTextImageFormat) SetQuality(quality int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormat10setQualityEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), quality)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qtextformat.h:758
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void setQuality(int)
+
+/*
+
+ */
+func (this *QTextImageFormat) SetQualityp() {
+	// arg: 0, int=Int, =Invalid, , Invalid
+	quality := int(100)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormat10setQualityEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), quality)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qtextformat.h:759
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int quality() const
+
+/*
+
+ */
+func (this *QTextImageFormat) Quality() int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat7qualityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 func DeleteQTextImageFormat(this *QTextImageFormat) {

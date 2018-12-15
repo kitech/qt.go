@@ -18,7 +18,7 @@ package qtmultimedia
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 30
 */
 // import "C"
 import "unsafe"

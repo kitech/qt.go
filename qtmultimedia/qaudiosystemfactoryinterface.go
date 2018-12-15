@@ -69,7 +69,7 @@ func (*QAudioSystemFactoryInterface) NewFromPointer(cthis unsafe.Pointer) *QAudi
 	return NewQAudioSystemFactoryInterfaceFromPointer(cthis)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:62
+// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:59
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAbstractAudioInput * createInput(const QByteArray &)
@@ -87,7 +87,7 @@ func (this *QAudioSystemFactoryInterface) CreateInput(device qtcore.QByteArray_I
 	return /*==*/ NewQAbstractAudioInputFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:63
+// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:60
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAbstractAudioOutput * createOutput(const QByteArray &)
@@ -105,7 +105,7 @@ func (this *QAudioSystemFactoryInterface) CreateOutput(device qtcore.QByteArray_
 	return /*==*/ NewQAbstractAudioOutputFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:64
+// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:61
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAbstractAudioDeviceInfo * createDeviceInfo(const QByteArray &, QAudio::Mode)
@@ -123,7 +123,7 @@ func (this *QAudioSystemFactoryInterface) CreateDeviceInfo(device qtcore.QByteAr
 	return /*==*/ NewQAbstractAudioDeviceInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:65
+// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAudioSystemFactoryInterface()

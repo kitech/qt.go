@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qidentityproxymodel.h
@@ -307,7 +309,7 @@ func (this *QIdentityProxyModel) RowCountp() int {
 // [16] QVariant headerData(int, Qt::Orientation, int) const
 
 /*
-Reimplemented from QAbstractItemModel::headerData().
+Reimplemented from QAbstractProxyModel::headerData().
 */
 func (this *QIdentityProxyModel) HeaderData(section int, orientation int, role int) *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel10headerDataEiN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, role)
@@ -323,7 +325,7 @@ func (this *QIdentityProxyModel) HeaderData(section int, orientation int, role i
 // [16] QVariant headerData(int, Qt::Orientation, int) const
 
 /*
-Reimplemented from QAbstractItemModel::headerData().
+Reimplemented from QAbstractProxyModel::headerData().
 */
 func (this *QIdentityProxyModel) HeaderDatap(section int, orientation int) *QVariant /*123*/ {
 	// arg: 2, int=Int, =Invalid, , Invalid
@@ -341,7 +343,7 @@ func (this *QIdentityProxyModel) HeaderDatap(section int, orientation int) *QVar
 // [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
 
 /*
-Reimplemented from QAbstractItemModel::dropMimeData().
+Reimplemented from QAbstractProxyModel::dropMimeData().
 */
 func (this *QIdentityProxyModel) DropMimeData(data QMimeData_ITF /*777 const QMimeData **/, action int, row int, column int, parent QModelIndex_ITF) bool {
 	var convArg0 unsafe.Pointer
@@ -363,7 +365,7 @@ func (this *QIdentityProxyModel) DropMimeData(data QMimeData_ITF /*777 const QMi
 // [24] QModelIndex sibling(int, int, const QModelIndex &) const
 
 /*
-Reimplemented from QAbstractItemModel::sibling().
+Reimplemented from QAbstractProxyModel::sibling().
 */
 func (this *QIdentityProxyModel) Sibling(row int, column int, idx QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer

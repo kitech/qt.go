@@ -393,7 +393,7 @@ func (this *QGraphicsProxyWidget) SubWidgetRect(widget QWidget_ITF /*777 const Q
 // [-2] void setGeometry(const QRectF &)
 
 /*
-Reimplemented from QGraphicsLayoutItem::setGeometry().
+Reimplemented from QGraphicsWidget::setGeometry().
 */
 func (this *QGraphicsProxyWidget) SetGeometry(rect qtcore.QRectF_ITF) {
 	var convArg0 unsafe.Pointer
@@ -410,7 +410,7 @@ func (this *QGraphicsProxyWidget) SetGeometry(rect qtcore.QRectF_ITF) {
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
 
 /*
-Reimplemented from QGraphicsItem::paint().
+Reimplemented from QGraphicsWidget::paint().
 */
 func (this *QGraphicsProxyWidget) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/, option QStyleOptionGraphicsItem_ITF /*777 const QStyleOptionGraphicsItem **/, widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
@@ -435,7 +435,7 @@ func (this *QGraphicsProxyWidget) Paint(painter qtgui.QPainter_ITF /*777 QPainte
 // [4] int type() const
 
 /*
-Reimplemented from QGraphicsItem::type().
+Reimplemented from QGraphicsWidget::type().
 */
 func (this *QGraphicsProxyWidget) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -475,7 +475,7 @@ func (this *QGraphicsProxyWidget) CreateProxyForChildWidget(child QWidget_ITF /*
 // [16] QVariant itemChange(QGraphicsItem::GraphicsItemChange, const QVariant &)
 
 /*
-Reimplemented from QGraphicsItem::itemChange().
+Reimplemented from QGraphicsWidget::itemChange().
 */
 func (this *QGraphicsProxyWidget) ItemChange(change int, value qtcore.QVariant_ITF) *qtcore.QVariant /*123*/ {
 	var convArg1 unsafe.Pointer
@@ -495,7 +495,7 @@ func (this *QGraphicsProxyWidget) ItemChange(change int, value qtcore.QVariant_I
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QGraphicsWidget::event().
 */
 func (this *QGraphicsProxyWidget) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -671,7 +671,7 @@ func (this *QGraphicsProxyWidget) HoverEnterEvent(event QGraphicsSceneHoverEvent
 // [-2] void hoverLeaveEvent(QGraphicsSceneHoverEvent *)
 
 /*
-Reimplemented from QGraphicsItem::hoverLeaveEvent().
+Reimplemented from QGraphicsWidget::hoverLeaveEvent().
 */
 func (this *QGraphicsProxyWidget) HoverLeaveEvent(event QGraphicsSceneHoverEvent_ITF /*777 QGraphicsSceneHoverEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -688,7 +688,7 @@ func (this *QGraphicsProxyWidget) HoverLeaveEvent(event QGraphicsSceneHoverEvent
 // [-2] void hoverMoveEvent(QGraphicsSceneHoverEvent *)
 
 /*
-Reimplemented from QGraphicsItem::hoverMoveEvent().
+Reimplemented from QGraphicsWidget::hoverMoveEvent().
 */
 func (this *QGraphicsProxyWidget) HoverMoveEvent(event QGraphicsSceneHoverEvent_ITF /*777 QGraphicsSceneHoverEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -858,7 +858,7 @@ func (this *QGraphicsProxyWidget) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*77
 // [-2] void focusInEvent(QFocusEvent *)
 
 /*
-Reimplemented from QGraphicsItem::focusInEvent().
+Reimplemented from QGraphicsWidget::focusInEvent().
 */
 func (this *QGraphicsProxyWidget) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -875,7 +875,7 @@ func (this *QGraphicsProxyWidget) FocusInEvent(event qtgui.QFocusEvent_ITF /*777
 // [-2] void focusOutEvent(QFocusEvent *)
 
 /*
-Reimplemented from QGraphicsItem::focusOutEvent().
+Reimplemented from QGraphicsWidget::focusOutEvent().
 */
 func (this *QGraphicsProxyWidget) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -939,7 +939,7 @@ func (this *QGraphicsProxyWidget) InputMethodEvent(event qtgui.QInputMethodEvent
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
 
 /*
-Reimplemented from QGraphicsLayoutItem::sizeHint().
+Reimplemented from QGraphicsWidget::sizeHint().
 */
 func (this *QGraphicsProxyWidget) SizeHint(which int, constraint qtcore.QSizeF_ITF) *qtcore.QSizeF /*123*/ {
 	var convArg1 unsafe.Pointer
@@ -959,7 +959,7 @@ func (this *QGraphicsProxyWidget) SizeHint(which int, constraint qtcore.QSizeF_I
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
 
 /*
-Reimplemented from QGraphicsLayoutItem::sizeHint().
+Reimplemented from QGraphicsWidget::sizeHint().
 */
 func (this *QGraphicsProxyWidget) SizeHintp(which int) *qtcore.QSizeF /*123*/ {
 	// arg: 1, const QSizeF &=LValueReference, QSizeF=Record, , Invalid

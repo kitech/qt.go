@@ -433,7 +433,7 @@ Returns the left bearing of character ch in the font.
 
 The left bearing is the right-ward distance of the left-most pixel of the character from the logical origin of the character. This value is negative if the pixels of the character extend to the left of the logical origin.
 
-See width(QChar) for a graphical description of this metric.
+See width() for a graphical description of this metric.
 
 See also rightBearing(), minLeftBearing(), and width().
 */
@@ -471,18 +471,14 @@ func (this *QFontMetrics) RightBearing(arg0 qtcore.QChar_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:93
+// /usr/include/qt/QtGui/qfontmetrics.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int width(const QString &, int) const
 
 /*
-Returns the width in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
 
-Note that this value is not equal to boundingRect().width(); boundingRect() returns a rectangle describing the pixels this string will cover whereas width() returns the distance to where the next string should be drawn.
-
-See also boundingRect().
-*/
+ */
 func (this *QFontMetrics) Width(arg0 string, len_ int) int {
 	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -491,18 +487,14 @@ func (this *QFontMetrics) Width(arg0 string, len_ int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:93
+// /usr/include/qt/QtGui/qfontmetrics.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int width(const QString &, int) const
 
 /*
-Returns the width in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
 
-Note that this value is not equal to boundingRect().width(); boundingRect() returns a rectangle describing the pixels this string will cover whereas width() returns the distance to where the next string should be drawn.
-
-See also boundingRect().
-*/
+ */
 func (this *QFontMetrics) Widthp(arg0 string) int {
 	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -513,18 +505,14 @@ func (this *QFontMetrics) Widthp(arg0 string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:94
+// /usr/include/qt/QtGui/qfontmetrics.h:96
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int width(const QString &, int, int) const
 
 /*
-Returns the width in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
 
-Note that this value is not equal to boundingRect().width(); boundingRect() returns a rectangle describing the pixels this string will cover whereas width() returns the distance to where the next string should be drawn.
-
-See also boundingRect().
-*/
+ */
 func (this *QFontMetrics) Width1(arg0 string, len_ int, flags int) int {
 	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
@@ -533,18 +521,14 @@ func (this *QFontMetrics) Width1(arg0 string, len_ int, flags int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:96
+// /usr/include/qt/QtGui/qfontmetrics.h:97
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int width(QChar) const
 
 /*
-Returns the width in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
 
-Note that this value is not equal to boundingRect().width(); boundingRect() returns a rectangle describing the pixels this string will cover whereas width() returns the distance to where the next string should be drawn.
-
-See also boundingRect().
-*/
+ */
 func (this *QFontMetrics) Width2(arg0 qtcore.QChar_ITF /*123*/) int {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QChar_PTR() != nil {
@@ -555,7 +539,77 @@ func (this *QFontMetrics) Width2(arg0 qtcore.QChar_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:98
+// /usr/include/qt/QtGui/qfontmetrics.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int horizontalAdvance(const QString &, int) const
+
+/*
+Returns the horizontal advance in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
+
+This is the distance appropriate for drawing a subsequent character after text.
+
+This function was introduced in  Qt 5.11.
+
+See also boundingRect().
+*/
+func (this *QFontMetrics) HorizontalAdvance(arg0 string, len_ int) int {
+	var tmpArg0 = qtcore.NewQString5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics17horizontalAdvanceERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtGui/qfontmetrics.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int horizontalAdvance(const QString &, int) const
+
+/*
+Returns the horizontal advance in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
+
+This is the distance appropriate for drawing a subsequent character after text.
+
+This function was introduced in  Qt 5.11.
+
+See also boundingRect().
+*/
+func (this *QFontMetrics) HorizontalAdvancep(arg0 string) int {
+	var tmpArg0 = qtcore.NewQString5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
+	// arg: 1, int=Int, =Invalid, , Invalid
+	len_ := int(-1)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics17horizontalAdvanceERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len_)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtGui/qfontmetrics.h:101
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] int horizontalAdvance(QChar) const
+
+/*
+Returns the horizontal advance in pixels of the first len characters of text. If len is negative (the default), the entire string is used.
+
+This is the distance appropriate for drawing a subsequent character after text.
+
+This function was introduced in  Qt 5.11.
+
+See also boundingRect().
+*/
+func (this *QFontMetrics) HorizontalAdvance1(arg0 qtcore.QChar_ITF /*123*/) int {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QChar_PTR() != nil {
+		convArg0 = arg0.QChar_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QFontMetrics17horizontalAdvanceE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtGui/qfontmetrics.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int charWidth(const QString &, int) const
@@ -571,7 +625,7 @@ func (this *QFontMetrics) CharWidth(str string, pos int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:101
+// /usr/include/qt/QtGui/qfontmetrics.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect boundingRect(QChar) const
@@ -583,7 +637,7 @@ Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for ita
 
 Note that the rectangle usually extends both above and below the base line.
 
-Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or horizontalAdvance() instead.
 
 See also width().
 */
@@ -599,7 +653,7 @@ func (this *QFontMetrics) BoundingRect(arg0 qtcore.QChar_ITF /*123*/) *qtcore.QR
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:103
+// /usr/include/qt/QtGui/qfontmetrics.h:109
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QRect boundingRect(const QString &) const
@@ -611,7 +665,7 @@ Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for ita
 
 Note that the rectangle usually extends both above and below the base line.
 
-Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or horizontalAdvance() instead.
 
 See also width().
 */
@@ -625,7 +679,7 @@ func (this *QFontMetrics) BoundingRect1(text string) *qtcore.QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:104
+// /usr/include/qt/QtGui/qfontmetrics.h:110
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QRect boundingRect(const QRect &, int, const QString &, int, int *) const
@@ -637,7 +691,7 @@ Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for ita
 
 Note that the rectangle usually extends both above and below the base line.
 
-Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or horizontalAdvance() instead.
 
 See also width().
 */
@@ -655,7 +709,7 @@ func (this *QFontMetrics) BoundingRect2(r qtcore.QRect_ITF, flags int, text stri
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:104
+// /usr/include/qt/QtGui/qfontmetrics.h:110
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QRect boundingRect(const QRect &, int, const QString &, int, int *) const
@@ -667,7 +721,7 @@ Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for ita
 
 Note that the rectangle usually extends both above and below the base line.
 
-Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or horizontalAdvance() instead.
 
 See also width().
 */
@@ -689,7 +743,7 @@ func (this *QFontMetrics) BoundingRect2p(r qtcore.QRect_ITF, flags int, text str
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:104
+// /usr/include/qt/QtGui/qfontmetrics.h:110
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QRect boundingRect(const QRect &, int, const QString &, int, int *) const
@@ -701,7 +755,7 @@ Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for ita
 
 Note that the rectangle usually extends both above and below the base line.
 
-Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or horizontalAdvance() instead.
 
 See also width().
 */
@@ -721,7 +775,7 @@ func (this *QFontMetrics) BoundingRect2p1(r qtcore.QRect_ITF, flags int, text st
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:105
+// /usr/include/qt/QtGui/qfontmetrics.h:111
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [16] QRect boundingRect(int, int, int, int, int, const QString &, int, int *) const
@@ -733,7 +787,7 @@ Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for ita
 
 Note that the rectangle usually extends both above and below the base line.
 
-Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or horizontalAdvance() instead.
 
 See also width().
 */
@@ -747,7 +801,7 @@ func (this *QFontMetrics) BoundingRect3(x int, y int, w int, h int, flags int, t
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:105
+// /usr/include/qt/QtGui/qfontmetrics.h:111
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [16] QRect boundingRect(int, int, int, int, int, const QString &, int, int *) const
@@ -759,7 +813,7 @@ Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for ita
 
 Note that the rectangle usually extends both above and below the base line.
 
-Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or horizontalAdvance() instead.
 
 See also width().
 */
@@ -777,7 +831,7 @@ func (this *QFontMetrics) BoundingRect3p(x int, y int, w int, h int, flags int, 
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:105
+// /usr/include/qt/QtGui/qfontmetrics.h:111
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [16] QRect boundingRect(int, int, int, int, int, const QString &, int, int *) const
@@ -789,7 +843,7 @@ Note that the bounding rectangle may extend to the left of (0, 0) (e.g., for ita
 
 Note that the rectangle usually extends both above and below the base line.
 
-Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or width() instead.
+Warning: The width of the returned rectangle is not the advance width of the character. Use boundingRect(const QString &) or horizontalAdvance() instead.
 
 See also width().
 */
@@ -805,7 +859,7 @@ func (this *QFontMetrics) BoundingRect3p1(x int, y int, w int, h int, flags int,
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:108
+// /usr/include/qt/QtGui/qfontmetrics.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize size(int, const QString &, int, int *) const
@@ -840,7 +894,7 @@ func (this *QFontMetrics) Size(flags int, str string, tabstops int, tabarray uns
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:108
+// /usr/include/qt/QtGui/qfontmetrics.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize size(int, const QString &, int, int *) const
@@ -879,7 +933,7 @@ func (this *QFontMetrics) Sizep(flags int, str string) *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:108
+// /usr/include/qt/QtGui/qfontmetrics.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize size(int, const QString &, int, int *) const
@@ -916,7 +970,7 @@ func (this *QFontMetrics) Sizep1(flags int, str string, tabstops int) *qtcore.QS
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:110
+// /usr/include/qt/QtGui/qfontmetrics.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect tightBoundingRect(const QString &) const
@@ -926,7 +980,7 @@ Returns a tight bounding rectangle around the characters in the string specified
 
 Note that the bounding rectangle may extend to the left of (0, 0), e.g. for italicized fonts, and that the width of the returned rectangle might be different than what the width() method returns.
 
-If you want to know the advance width of the string (to lay out a set of strings next to each other), use width() instead.
+If you want to know the advance width of the string (to lay out a set of strings next to each other), use horizontalAdvance() instead.
 
 Newline characters are processed as normal characters, not as linebreaks.
 
@@ -946,7 +1000,7 @@ func (this *QFontMetrics) TightBoundingRect(text string) *qtcore.QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:112
+// /usr/include/qt/QtGui/qfontmetrics.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString elidedText(const QString &, Qt::TextElideMode, int, int) const
@@ -975,7 +1029,7 @@ func (this *QFontMetrics) ElidedText(text string, mode int, width int, flags int
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:112
+// /usr/include/qt/QtGui/qfontmetrics.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString elidedText(const QString &, Qt::TextElideMode, int, int) const
@@ -1006,7 +1060,7 @@ func (this *QFontMetrics) ElidedTextp(text string, mode int, width int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:114
+// /usr/include/qt/QtGui/qfontmetrics.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int underlinePos() const
@@ -1022,7 +1076,7 @@ func (this *QFontMetrics) UnderlinePos() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:115
+// /usr/include/qt/QtGui/qfontmetrics.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int overlinePos() const
@@ -1038,7 +1092,7 @@ func (this *QFontMetrics) OverlinePos() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:116
+// /usr/include/qt/QtGui/qfontmetrics.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int strikeOutPos() const
@@ -1054,7 +1108,7 @@ func (this *QFontMetrics) StrikeOutPos() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:117
+// /usr/include/qt/QtGui/qfontmetrics.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lineWidth() const
@@ -1070,7 +1124,7 @@ func (this *QFontMetrics) LineWidth() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:119
+// /usr/include/qt/QtGui/qfontmetrics.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QFontMetrics &) const
@@ -1088,7 +1142,7 @@ func (this *QFontMetrics) Operator_equal_equal(other QFontMetrics_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfontmetrics.h:120
+// /usr/include/qt/QtGui/qfontmetrics.h:126
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QFontMetrics &) const

@@ -154,6 +154,8 @@ The properties, signals and public methods of the object are published to the re
 
 Note: A current limitation is that objects must be registered before any client is initialized.
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also QWebChannel::registerObjects(), QWebChannel::deregisterObject(), and QWebChannel::registeredObjects().
 */
 func (this *QWebChannel) RegisterObject(id string, object qtcore.QObject_ITF /*777 QObject **/) {
@@ -176,6 +178,8 @@ func (this *QWebChannel) RegisterObject(id string, object qtcore.QObject_ITF /*7
 Deregisters the given object from the QWebChannel.
 
 Remote clients will receive a destroyed signal for the given object.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also QWebChannel::registerObjects(), QWebChannel::registerObject(), and QWebChannel::registeredObjects().
 */

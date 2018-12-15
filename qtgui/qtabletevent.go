@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 23
+// extern C begin: 24
 */
 // import "C"
 import "unsafe"
@@ -63,7 +63,7 @@ func (*QTabletEvent) NewFromPointer(cthis unsafe.Pointer) *QTabletEvent {
 	return NewQTabletEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:250
+// /usr/include/qt/QtGui/qevent.h:255
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTabletEvent(QEvent::Type, const QPointF &, const QPointF &, int, int, qreal, int, int, qreal, qreal, int, Qt::KeyboardModifiers, qint64)
@@ -90,7 +90,7 @@ func NewQTabletEvent(t int, pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_ITF
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:254
+// /usr/include/qt/QtGui/qevent.h:259
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTabletEvent(QEvent::Type, const QPointF &, const QPointF &, int, int, qreal, int, int, qreal, qreal, int, Qt::KeyboardModifiers, qint64, Qt::MouseButton, Qt::MouseButtons)
@@ -117,7 +117,7 @@ func NewQTabletEvent1(t int, pos qtcore.QPointF_ITF, globalPos qtcore.QPointF_IT
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:259
+// /usr/include/qt/QtGui/qevent.h:264
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTabletEvent()
@@ -132,7 +132,7 @@ func DeleteQTabletEvent(this *QTabletEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:261
+// /usr/include/qt/QtGui/qevent.h:266
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint pos() const
@@ -148,7 +148,7 @@ func (this *QTabletEvent) Pos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:262
+// /usr/include/qt/QtGui/qevent.h:267
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint globalPos() const
@@ -164,7 +164,7 @@ func (this *QTabletEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:267
+// /usr/include/qt/QtGui/qevent.h:272
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & posF() const
@@ -180,7 +180,7 @@ func (this *QTabletEvent) PosF() *qtcore.QPointF {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:268
+// /usr/include/qt/QtGui/qevent.h:273
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & globalPosF() const
@@ -196,7 +196,7 @@ func (this *QTabletEvent) GlobalPosF() *qtcore.QPointF {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:270
+// /usr/include/qt/QtGui/qevent.h:275
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int x() const
@@ -210,7 +210,7 @@ func (this *QTabletEvent) X() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:271
+// /usr/include/qt/QtGui/qevent.h:276
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int y() const
@@ -224,7 +224,7 @@ func (this *QTabletEvent) Y() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:272
+// /usr/include/qt/QtGui/qevent.h:277
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalX() const
@@ -238,7 +238,7 @@ func (this *QTabletEvent) GlobalX() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:273
+// /usr/include/qt/QtGui/qevent.h:278
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalY() const
@@ -252,7 +252,7 @@ func (this *QTabletEvent) GlobalY() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:274
+// /usr/include/qt/QtGui/qevent.h:279
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal hiResGlobalX() const
@@ -266,7 +266,7 @@ func (this *QTabletEvent) HiResGlobalX() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:275
+// /usr/include/qt/QtGui/qevent.h:280
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal hiResGlobalY() const
@@ -280,7 +280,7 @@ func (this *QTabletEvent) HiResGlobalY() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:276
+// /usr/include/qt/QtGui/qevent.h:281
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QTabletEvent::TabletDevice device() const
@@ -294,7 +294,7 @@ func (this *QTabletEvent) Device() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:277
+// /usr/include/qt/QtGui/qevent.h:282
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QTabletEvent::PointerType pointerType() const
@@ -308,7 +308,7 @@ func (this *QTabletEvent) PointerType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:278
+// /usr/include/qt/QtGui/qevent.h:283
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qint64 uniqueId() const
@@ -322,7 +322,7 @@ func (this *QTabletEvent) UniqueId() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qevent.h:279
+// /usr/include/qt/QtGui/qevent.h:284
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal pressure() const
@@ -336,7 +336,7 @@ func (this *QTabletEvent) Pressure() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:280
+// /usr/include/qt/QtGui/qevent.h:285
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int z() const
@@ -350,7 +350,7 @@ func (this *QTabletEvent) Z() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:281
+// /usr/include/qt/QtGui/qevent.h:286
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal tangentialPressure() const
@@ -364,7 +364,7 @@ func (this *QTabletEvent) TangentialPressure() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:282
+// /usr/include/qt/QtGui/qevent.h:287
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal rotation() const
@@ -378,7 +378,7 @@ func (this *QTabletEvent) Rotation() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:283
+// /usr/include/qt/QtGui/qevent.h:288
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int xTilt() const
@@ -392,7 +392,7 @@ func (this *QTabletEvent) XTilt() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:284
+// /usr/include/qt/QtGui/qevent.h:289
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int yTilt() const
@@ -406,7 +406,7 @@ func (this *QTabletEvent) YTilt() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:285
+// /usr/include/qt/QtGui/qevent.h:290
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButton button() const
@@ -420,7 +420,7 @@ func (this *QTabletEvent) Button() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:286
+// /usr/include/qt/QtGui/qevent.h:291
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButtons buttons() const

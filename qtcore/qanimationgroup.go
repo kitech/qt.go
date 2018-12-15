@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qanimationgroup.h
@@ -67,7 +69,7 @@ func (*QAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QAnimationGroup {
 	return NewQAnimationGroupFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:53
+// /usr/include/qt/QtCore/qanimationgroup.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -81,7 +83,7 @@ func (this *QAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject *
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:56
+// /usr/include/qt/QtCore/qanimationgroup.h:55
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAnimationGroup(QObject *)
@@ -104,7 +106,7 @@ func NewQAnimationGroup(parent QObject_ITF /*777 QObject **/) *QAnimationGroup {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:56
+// /usr/include/qt/QtCore/qanimationgroup.h:55
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAnimationGroup(QObject *)
@@ -125,7 +127,7 @@ func NewQAnimationGroupp() *QAnimationGroup {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:57
+// /usr/include/qt/QtCore/qanimationgroup.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAnimationGroup()
@@ -140,7 +142,7 @@ func DeleteQAnimationGroup(this *QAnimationGroup) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:59
+// /usr/include/qt/QtCore/qanimationgroup.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractAnimation * animationAt(int) const
@@ -156,7 +158,7 @@ func (this *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation /*777 QA
 	return /*==*/ NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:60
+// /usr/include/qt/QtCore/qanimationgroup.h:59
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int animationCount() const
@@ -172,7 +174,7 @@ func (this *QAnimationGroup) AnimationCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:61
+// /usr/include/qt/QtCore/qanimationgroup.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfAnimation(QAbstractAnimation *) const
@@ -192,7 +194,7 @@ func (this *QAnimationGroup) IndexOfAnimation(animation QAbstractAnimation_ITF /
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:62
+// /usr/include/qt/QtCore/qanimationgroup.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addAnimation(QAbstractAnimation *)
@@ -213,7 +215,7 @@ func (this *QAnimationGroup) AddAnimation(animation QAbstractAnimation_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:63
+// /usr/include/qt/QtCore/qanimationgroup.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertAnimation(int, QAbstractAnimation *)
@@ -234,7 +236,7 @@ func (this *QAnimationGroup) InsertAnimation(index int, animation QAbstractAnima
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:64
+// /usr/include/qt/QtCore/qanimationgroup.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAnimation(QAbstractAnimation *)
@@ -253,7 +255,7 @@ func (this *QAnimationGroup) RemoveAnimation(animation QAbstractAnimation_ITF /*
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:65
+// /usr/include/qt/QtCore/qanimationgroup.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractAnimation * takeAnimation(int)
@@ -271,7 +273,7 @@ func (this *QAnimationGroup) TakeAnimation(index int) *QAbstractAnimation /*777 
 	return /*==*/ NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:66
+// /usr/include/qt/QtCore/qanimationgroup.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -286,13 +288,13 @@ func (this *QAnimationGroup) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qanimationgroup.h:70
+// /usr/include/qt/QtCore/qanimationgroup.h:69
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractAnimation::event().
 */
 func (this *QAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

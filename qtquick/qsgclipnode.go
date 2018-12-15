@@ -66,7 +66,7 @@ func (*QSGClipNode) NewFromPointer(cthis unsafe.Pointer) *QSGClipNode {
 	return NewQSGClipNodeFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:264
+// /usr/include/qt/QtQuick/qsgnode.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGClipNode()
@@ -85,7 +85,7 @@ func NewQSGClipNode() *QSGClipNode {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:265
+// /usr/include/qt/QtQuick/qsgnode.h:260
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGClipNode()
@@ -100,7 +100,7 @@ func DeleteQSGClipNode(this *QSGClipNode) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:267
+// /usr/include/qt/QtQuick/qsgnode.h:262
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIsRectangular(bool)
@@ -113,7 +113,7 @@ func (this *QSGClipNode) SetIsRectangular(rectHint bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:268
+// /usr/include/qt/QtQuick/qsgnode.h:263
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isRectangular() const
@@ -127,7 +127,7 @@ func (this *QSGClipNode) IsRectangular() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:270
+// /usr/include/qt/QtQuick/qsgnode.h:265
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClipRect(const QRectF &)
@@ -144,7 +144,7 @@ func (this *QSGClipNode) SetClipRect(arg0 qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:271
+// /usr/include/qt/QtQuick/qsgnode.h:266
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QRectF clipRect() const

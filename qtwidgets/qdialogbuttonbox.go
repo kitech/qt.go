@@ -620,7 +620,7 @@ func (this *QDialogButtonBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent *
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QDialogButtonBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -633,43 +633,39 @@ func (this *QDialogButtonBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bo
 }
 
 /*
-This enum describes the roles that can be used to describe buttons in the button box. Combinations of these roles are as flags used to describe different aspects of their behavior.
 
 
-
-See also StandardButton.
-
-*/
+ */
 type QDialogButtonBox__ButtonRole = int
 
 //
 const QDialogButtonBox__InvalidRole QDialogButtonBox__ButtonRole = -1
 
-// Clicking the button causes the dialog to be accepted (e.g. OK).
+//
 const QDialogButtonBox__AcceptRole QDialogButtonBox__ButtonRole = 0
 
-// Clicking the button causes the dialog to be rejected (e.g. Cancel).
+//
 const QDialogButtonBox__RejectRole QDialogButtonBox__ButtonRole = 1
 
-// Clicking the button causes a destructive change (e.g. for Discarding Changes) and closes the dialog.
+//
 const QDialogButtonBox__DestructiveRole QDialogButtonBox__ButtonRole = 2
 
-// Clicking the button causes changes to the elements within the dialog.
+//
 const QDialogButtonBox__ActionRole QDialogButtonBox__ButtonRole = 3
 
-// The button can be clicked to request help.
+//
 const QDialogButtonBox__HelpRole QDialogButtonBox__ButtonRole = 4
 
-// The button is a "Yes"-like button.
+//
 const QDialogButtonBox__YesRole QDialogButtonBox__ButtonRole = 5
 
-// The button is a "No"-like button.
+//
 const QDialogButtonBox__NoRole QDialogButtonBox__ButtonRole = 6
 
-// The button resets the dialog's fields to default values.
+//
 const QDialogButtonBox__ResetRole QDialogButtonBox__ButtonRole = 7
 
-// The button applies current changes.
+//
 const QDialogButtonBox__ApplyRole QDialogButtonBox__ButtonRole = 8
 
 //

@@ -1094,7 +1094,6 @@ func (this *QDirModel) Refreshp() {
 ConstantValue
 QDirModel::FileIconRoleQt::DecorationRole
 QDirModel::FilePathRoleQt::UserRole + 1
-QDirModel::FileNameRole?
 
 */
 type QDirModel__Roles = int

@@ -63,7 +63,7 @@ func (*QGeoPath) NewFromPointer(cthis unsafe.Pointer) *QGeoPath {
 	return NewQGeoPathFromPointer(cthis)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:57
+// /usr/include/qt/QtPositioning/qgeopath.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGeoPath()
@@ -82,7 +82,7 @@ func NewQGeoPath() *QGeoPath {
 	return gothis
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:60
+// /usr/include/qt/QtPositioning/qgeopath.h:61
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGeoPath(const QGeoShape &)
@@ -105,7 +105,7 @@ func NewQGeoPath1(other QGeoShape_ITF) *QGeoPath {
 	return gothis
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:62
+// /usr/include/qt/QtPositioning/qgeopath.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QGeoPath()
@@ -120,7 +120,7 @@ func DeleteQGeoPath(this *QGeoPath) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:64
+// /usr/include/qt/QtPositioning/qgeopath.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGeoPath & operator=(const QGeoPath &)
@@ -140,7 +140,7 @@ func (this *QGeoPath) Operator_equal(other QGeoPath_ITF) *QGeoPath {
 	return rv2
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:67
+// /usr/include/qt/QtPositioning/qgeopath.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QGeoPath &) const
@@ -158,7 +158,7 @@ func (this *QGeoPath) Operator_equal_equal(other QGeoPath_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:70
+// /usr/include/qt/QtPositioning/qgeopath.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QGeoPath &) const
@@ -179,6 +179,36 @@ func (this *QGeoPath) Operator_not_equal(other QGeoPath_ITF) bool {
 // /usr/include/qt/QtPositioning/qgeopath.h:75
 // index:0
 // Public Visibility=Default Availability=Available
+// [-2] void clearPath()
+
+/*
+Clears the path.
+
+This function was introduced in  Qt 5.12.
+*/
+func (this *QGeoPath) ClearPath() {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QGeoPath9clearPathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtPositioning/qgeopath.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QVariantList variantPath() const
+
+/*
+
+ */
+func (this *QGeoPath) VariantPath() *qtcore.QVariantList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGeoPath11variantPathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQVariantListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
+// /usr/include/qt/QtPositioning/qgeopath.h:79
+// index:0
+// Public Visibility=Default Availability=Available
 // [-2] void setWidth(const qreal &)
 
 /*
@@ -189,13 +219,13 @@ func (this *QGeoPath) SetWidth(width float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:76
+// /usr/include/qt/QtPositioning/qgeopath.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal width() const
 
 /*
-Returns the width of the path, in meters. This information is used in the contains method The default value is 0.
+Returns the width of the path, in meters. This information is used in the contains method. The default value is 0.
 
 Note: Getter function for property width.
 
@@ -207,7 +237,7 @@ func (this *QGeoPath) Width() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:78
+// /usr/include/qt/QtPositioning/qgeopath.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void translate(double, double)
@@ -216,13 +246,15 @@ func (this *QGeoPath) Width() float64 {
 Translates this geo path by degreesLatitude northwards and degreesLongitude eastwards.
 
 Negative values of degreesLatitude and degreesLongitude correspond to southward and westward translation respectively.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) Translate(degreesLatitude float64, degreesLongitude float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QGeoPath9translateEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), degreesLatitude, degreesLongitude)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:79
+// /usr/include/qt/QtPositioning/qgeopath.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGeoPath translated(double, double) const
@@ -231,6 +263,8 @@ func (this *QGeoPath) Translate(degreesLatitude float64, degreesLongitude float6
 Returns a copy of this geo path translated by degreesLatitude northwards and degreesLongitude eastwards.
 
 Negative values of degreesLatitude and degreesLongitude correspond to southward and westward translation respectively.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also translate().
 */
@@ -242,13 +276,15 @@ func (this *QGeoPath) Translated(degreesLatitude float64, degreesLongitude float
 	return rv2
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:80
+// /usr/include/qt/QtPositioning/qgeopath.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double length(int, int) const
 
 /*
 Returns the length of the path, in meters, from the element indexFrom to the element indexTo. The length is intended to be the sum of the shortest distances for each pair of adjacent points.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) Length(indexFrom int, indexTo int) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGeoPath6lengthEii", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), indexFrom, indexTo)
@@ -256,13 +292,15 @@ func (this *QGeoPath) Length(indexFrom int, indexTo int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:80
+// /usr/include/qt/QtPositioning/qgeopath.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double length(int, int) const
 
 /*
 Returns the length of the path, in meters, from the element indexFrom to the element indexTo. The length is intended to be the sum of the shortest distances for each pair of adjacent points.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) Lengthp() float64 {
 	// arg: 0, int=Int, =Invalid, , Invalid
@@ -274,13 +312,15 @@ func (this *QGeoPath) Lengthp() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:80
+// /usr/include/qt/QtPositioning/qgeopath.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double length(int, int) const
 
 /*
 Returns the length of the path, in meters, from the element indexFrom to the element indexTo. The length is intended to be the sum of the shortest distances for each pair of adjacent points.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) Lengthp1(indexFrom int) float64 {
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -290,7 +330,7 @@ func (this *QGeoPath) Lengthp1(indexFrom int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:81
+// /usr/include/qt/QtPositioning/qgeopath.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int size() const
@@ -299,6 +339,8 @@ func (this *QGeoPath) Lengthp1(indexFrom int) float64 {
 Returns the number of elements in the path.
 
 This function was introduced in  Qt 5.10.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGeoPath4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -306,13 +348,15 @@ func (this *QGeoPath) Size() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:82
+// /usr/include/qt/QtPositioning/qgeopath.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addCoordinate(const QGeoCoordinate &)
 
 /*
 Appends coordinate to the path.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) AddCoordinate(coordinate QGeoCoordinate_ITF) {
 	var convArg0 unsafe.Pointer
@@ -323,13 +367,15 @@ func (this *QGeoPath) AddCoordinate(coordinate QGeoCoordinate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:83
+// /usr/include/qt/QtPositioning/qgeopath.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertCoordinate(int, const QGeoCoordinate &)
 
 /*
 Inserts coordinate at the specified index.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) InsertCoordinate(index int, coordinate QGeoCoordinate_ITF) {
 	var convArg1 unsafe.Pointer
@@ -340,13 +386,15 @@ func (this *QGeoPath) InsertCoordinate(index int, coordinate QGeoCoordinate_ITF)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:84
+// /usr/include/qt/QtPositioning/qgeopath.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void replaceCoordinate(int, const QGeoCoordinate &)
 
 /*
 Replaces the path element at the specified index with coordinate.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) ReplaceCoordinate(index int, coordinate QGeoCoordinate_ITF) {
 	var convArg1 unsafe.Pointer
@@ -357,13 +405,15 @@ func (this *QGeoPath) ReplaceCoordinate(index int, coordinate QGeoCoordinate_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:85
+// /usr/include/qt/QtPositioning/qgeopath.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGeoCoordinate coordinateAt(int) const
 
 /*
 Returns the coordinate at index .
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) CoordinateAt(index int) *QGeoCoordinate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGeoPath12coordinateAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
@@ -373,13 +423,15 @@ func (this *QGeoPath) CoordinateAt(index int) *QGeoCoordinate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:86
+// /usr/include/qt/QtPositioning/qgeopath.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool containsCoordinate(const QGeoCoordinate &) const
 
 /*
 Returns true if the path contains coordinate as one of the elements.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) ContainsCoordinate(coordinate QGeoCoordinate_ITF) bool {
 	var convArg0 unsafe.Pointer
@@ -391,13 +443,15 @@ func (this *QGeoPath) ContainsCoordinate(coordinate QGeoCoordinate_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:87
+// /usr/include/qt/QtPositioning/qgeopath.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeCoordinate(const QGeoCoordinate &)
 
 /*
 Removes the last occurrence of coordinate from the path.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) RemoveCoordinate(coordinate QGeoCoordinate_ITF) {
 	var convArg0 unsafe.Pointer
@@ -408,26 +462,30 @@ func (this *QGeoPath) RemoveCoordinate(coordinate QGeoCoordinate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:88
+// /usr/include/qt/QtPositioning/qgeopath.h:92
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void removeCoordinate(int)
 
 /*
 Removes the last occurrence of coordinate from the path.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) RemoveCoordinate1(index int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QGeoPath16removeCoordinateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:90
+// /usr/include/qt/QtPositioning/qgeopath.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const
 
 /*
 Returns the geo path properties as a string.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoPath) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGeoPath8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

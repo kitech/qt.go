@@ -152,7 +152,7 @@ func (this *QMediaContainerControl) SetContainerFormat(format string) {
 // [8] QString containerDescription(const QString &) const
 
 /*
-Returns a description of the container format.
+Returns a description of the container formatMimeType.
 */
 func (this *QMediaContainerControl) ContainerDescription(formatMimeType string) string {
 	var tmpArg0 = qtcore.NewQString5(formatMimeType)

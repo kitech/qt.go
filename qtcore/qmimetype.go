@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qmimetype.h
@@ -393,6 +395,8 @@ func (this *QMimeType) PreferredSuffix() string {
 Returns true if this mimetype is mimeTypeName, or inherits mimeTypeName (see parentMimeTypes()), or mimeTypeName is an alias for this mimetype.
 
 This method has been made invokable from QML since 5.10.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QMimeType) Inherits(mimeTypeName string) bool {
 	var tmpArg0 = NewQString5(mimeTypeName)

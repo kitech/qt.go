@@ -783,7 +783,7 @@ func (this *QSslSocket) SetPeerVerifyName(hostName string) {
 // [8] qint64 bytesAvailable() const
 
 /*
-Reimplemented from QIODevice::bytesAvailable().
+Reimplemented from QAbstractSocket::bytesAvailable().
 
 Returns the number of decrypted bytes that are immediately available for reading.
 */
@@ -799,7 +799,7 @@ func (this *QSslSocket) BytesAvailable() int64 {
 // [8] qint64 bytesToWrite() const
 
 /*
-Reimplemented from QIODevice::bytesToWrite().
+Reimplemented from QAbstractSocket::bytesToWrite().
 
 Returns the number of unencrypted bytes that are waiting to be encrypted and written to the network.
 */
@@ -815,7 +815,7 @@ func (this *QSslSocket) BytesToWrite() int64 {
 // [1] bool canReadLine() const
 
 /*
-Reimplemented from QIODevice::canReadLine().
+Reimplemented from QAbstractSocket::canReadLine().
 
 Returns true if you can read one while line (terminated by a single ASCII '\n' character) of decrypted characters; otherwise, false is returned.
 */
@@ -831,7 +831,7 @@ func (this *QSslSocket) CanReadLine() bool {
 // [-2] void close()
 
 /*
-Reimplemented from QIODevice::close().
+Reimplemented from QAbstractSocket::close().
 */
 func (this *QSslSocket) Close() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket5closeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -844,7 +844,7 @@ func (this *QSslSocket) Close() {
 // [1] bool atEnd() const
 
 /*
-Reimplemented from QIODevice::atEnd().
+Reimplemented from QAbstractSocket::atEnd().
 */
 func (this *QSslSocket) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslSocket5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1561,7 +1561,7 @@ func (this *QSslSocket) WaitForEncryptedp() bool {
 // [1] bool waitForReadyRead(int)
 
 /*
-Reimplemented from QIODevice::waitForReadyRead().
+Reimplemented from QAbstractSocket::waitForReadyRead().
 */
 func (this *QSslSocket) WaitForReadyRead(msecs int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
@@ -1575,7 +1575,7 @@ func (this *QSslSocket) WaitForReadyRead(msecs int) bool {
 // [1] bool waitForReadyRead(int)
 
 /*
-Reimplemented from QIODevice::waitForReadyRead().
+Reimplemented from QAbstractSocket::waitForReadyRead().
 */
 func (this *QSslSocket) WaitForReadyReadp() bool {
 	// arg: 0, int=Int, =Invalid, , Invalid
@@ -1591,7 +1591,7 @@ func (this *QSslSocket) WaitForReadyReadp() bool {
 // [1] bool waitForBytesWritten(int)
 
 /*
-Reimplemented from QIODevice::waitForBytesWritten().
+Reimplemented from QAbstractSocket::waitForBytesWritten().
 */
 func (this *QSslSocket) WaitForBytesWritten(msecs int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslSocket19waitForBytesWrittenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
@@ -1605,7 +1605,7 @@ func (this *QSslSocket) WaitForBytesWritten(msecs int) bool {
 // [1] bool waitForBytesWritten(int)
 
 /*
-Reimplemented from QIODevice::waitForBytesWritten().
+Reimplemented from QAbstractSocket::waitForBytesWritten().
 */
 func (this *QSslSocket) WaitForBytesWrittenp() bool {
 	// arg: 0, int=Int, =Invalid, , Invalid
@@ -1924,7 +1924,7 @@ func (this *QSslSocket) PreSharedKeyAuthenticationRequired(authenticator QSslPre
 // [8] qint64 readData(char *, qint64)
 
 /*
-Reimplemented from QIODevice::readData().
+Reimplemented from QAbstractSocket::readData().
 */
 func (this *QSslSocket) ReadData(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
@@ -1940,7 +1940,7 @@ func (this *QSslSocket) ReadData(data string, maxlen int64) int64 {
 // [8] qint64 writeData(const char *, qint64)
 
 /*
-Reimplemented from QIODevice::writeData().
+Reimplemented from QAbstractSocket::writeData().
 */
 func (this *QSslSocket) WriteData(data string, len_ int64) int64 {
 	var convArg0 = qtrt.CString(data)

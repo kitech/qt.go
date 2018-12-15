@@ -1684,7 +1684,10 @@ const Qt__WA_TabletTracking Qt__WidgetAttribute = 129
 const Qt__WA_ContentsMarginsRespectsSafeArea Qt__WidgetAttribute = 130
 
 //
-const Qt__WA_AttributeCount Qt__WidgetAttribute = 131
+const Qt__WA_StyleSheetTarget Qt__WidgetAttribute = 131
+
+//
+const Qt__WA_AttributeCount Qt__WidgetAttribute = 132
 
 func WidgetAttributeItemName(val int) string {
 	switch val {
@@ -1914,7 +1917,9 @@ func WidgetAttributeItemName(val int) string {
 		return "WA_TabletTracking"
 	case Qt__WA_ContentsMarginsRespectsSafeArea: // 130
 		return "WA_ContentsMarginsRespectsSafeArea"
-	case Qt__WA_AttributeCount: // 131
+	case Qt__WA_StyleSheetTarget: // 131
+		return "WA_StyleSheetTarget"
+	case Qt__WA_AttributeCount: // 132
 		return "WA_AttributeCount"
 	default:
 		return fmt.Sprintf("%d", val)
@@ -3020,6 +3025,96 @@ const Qt__Key_Dead_Hook Qt__Key = 16781921
 const Qt__Key_Dead_Horn Qt__Key = 16781922
 
 //
+const Qt__Key_Dead_Stroke Qt__Key = 16781923
+
+//
+const Qt__Key_Dead_Abovecomma Qt__Key = 16781924
+
+//
+const Qt__Key_Dead_Abovereversedcomma Qt__Key = 16781925
+
+//
+const Qt__Key_Dead_Doublegrave Qt__Key = 16781926
+
+//
+const Qt__Key_Dead_Belowring Qt__Key = 16781927
+
+//
+const Qt__Key_Dead_Belowmacron Qt__Key = 16781928
+
+//
+const Qt__Key_Dead_Belowcircumflex Qt__Key = 16781929
+
+//
+const Qt__Key_Dead_Belowtilde Qt__Key = 16781930
+
+//
+const Qt__Key_Dead_Belowbreve Qt__Key = 16781931
+
+//
+const Qt__Key_Dead_Belowdiaeresis Qt__Key = 16781932
+
+//
+const Qt__Key_Dead_Invertedbreve Qt__Key = 16781933
+
+//
+const Qt__Key_Dead_Belowcomma Qt__Key = 16781934
+
+//
+const Qt__Key_Dead_Currency Qt__Key = 16781935
+
+//
+const Qt__Key_Dead_a Qt__Key = 16781952
+
+//
+const Qt__Key_Dead_A Qt__Key = 16781953
+
+//
+const Qt__Key_Dead_e Qt__Key = 16781954
+
+//
+const Qt__Key_Dead_E Qt__Key = 16781955
+
+//
+const Qt__Key_Dead_i Qt__Key = 16781956
+
+//
+const Qt__Key_Dead_I Qt__Key = 16781957
+
+//
+const Qt__Key_Dead_o Qt__Key = 16781958
+
+//
+const Qt__Key_Dead_O Qt__Key = 16781959
+
+//
+const Qt__Key_Dead_u Qt__Key = 16781960
+
+//
+const Qt__Key_Dead_U Qt__Key = 16781961
+
+//
+const Qt__Key_Dead_Small_Schwa Qt__Key = 16781962
+
+//
+const Qt__Key_Dead_Capital_Schwa Qt__Key = 16781963
+
+//
+const Qt__Key_Dead_Greek Qt__Key = 16781964
+
+//
+const Qt__Key_Dead_Lowline Qt__Key = 16781968
+
+//
+const Qt__Key_Dead_Aboveverticalline Qt__Key = 16781969
+
+//
+const Qt__Key_Dead_Belowverticalline Qt__Key = 16781970
+
+//
+const Qt__Key_Dead_Longsolidusoverlay Qt__Key = 16781971
+
+//
 const Qt__Key_Back Qt__Key = 16777313
 
 //
@@ -4079,6 +4174,66 @@ func KeyItemName(val int) string {
 		return "Key_Dead_Hook"
 	case Qt__Key_Dead_Horn: // 16781922
 		return "Key_Dead_Horn"
+	case Qt__Key_Dead_Stroke: // 16781923
+		return "Key_Dead_Stroke"
+	case Qt__Key_Dead_Abovecomma: // 16781924
+		return "Key_Dead_Abovecomma"
+	case Qt__Key_Dead_Abovereversedcomma: // 16781925
+		return "Key_Dead_Abovereversedcomma"
+	case Qt__Key_Dead_Doublegrave: // 16781926
+		return "Key_Dead_Doublegrave"
+	case Qt__Key_Dead_Belowring: // 16781927
+		return "Key_Dead_Belowring"
+	case Qt__Key_Dead_Belowmacron: // 16781928
+		return "Key_Dead_Belowmacron"
+	case Qt__Key_Dead_Belowcircumflex: // 16781929
+		return "Key_Dead_Belowcircumflex"
+	case Qt__Key_Dead_Belowtilde: // 16781930
+		return "Key_Dead_Belowtilde"
+	case Qt__Key_Dead_Belowbreve: // 16781931
+		return "Key_Dead_Belowbreve"
+	case Qt__Key_Dead_Belowdiaeresis: // 16781932
+		return "Key_Dead_Belowdiaeresis"
+	case Qt__Key_Dead_Invertedbreve: // 16781933
+		return "Key_Dead_Invertedbreve"
+	case Qt__Key_Dead_Belowcomma: // 16781934
+		return "Key_Dead_Belowcomma"
+	case Qt__Key_Dead_Currency: // 16781935
+		return "Key_Dead_Currency"
+	case Qt__Key_Dead_a: // 16781952
+		return "Key_Dead_a"
+	case Qt__Key_Dead_A: // 16781953
+		return "Key_Dead_A"
+	case Qt__Key_Dead_e: // 16781954
+		return "Key_Dead_e"
+	case Qt__Key_Dead_E: // 16781955
+		return "Key_Dead_E"
+	case Qt__Key_Dead_i: // 16781956
+		return "Key_Dead_i"
+	case Qt__Key_Dead_I: // 16781957
+		return "Key_Dead_I"
+	case Qt__Key_Dead_o: // 16781958
+		return "Key_Dead_o"
+	case Qt__Key_Dead_O: // 16781959
+		return "Key_Dead_O"
+	case Qt__Key_Dead_u: // 16781960
+		return "Key_Dead_u"
+	case Qt__Key_Dead_U: // 16781961
+		return "Key_Dead_U"
+	case Qt__Key_Dead_Small_Schwa: // 16781962
+		return "Key_Dead_Small_Schwa"
+	case Qt__Key_Dead_Capital_Schwa: // 16781963
+		return "Key_Dead_Capital_Schwa"
+	case Qt__Key_Dead_Greek: // 16781964
+		return "Key_Dead_Greek"
+	case Qt__Key_Dead_Lowline: // 16781968
+		return "Key_Dead_Lowline"
+	case Qt__Key_Dead_Aboveverticalline: // 16781969
+		return "Key_Dead_Aboveverticalline"
+	case Qt__Key_Dead_Belowverticalline: // 16781970
+		return "Key_Dead_Belowverticalline"
+	case Qt__Key_Dead_Longsolidusoverlay: // 16781971
+		return "Key_Dead_Longsolidusoverlay"
 	case Qt__Key_Back: // 16777313
 		return "Key_Back"
 	case Qt__Key_Forward: // 16777314
@@ -5160,11 +5315,6 @@ func ToolBarAreaSizesItemName(val int) string {
 }
 
 /*
-Qt::SystemLocaleShortDate?The short format used by the operating system.
-Qt::SystemLocaleLongDate?The long format used by the operating system.
-Qt::DefaultLocaleShortDate?The short format specified by the application's locale.
-Qt::DefaultLocaleLongDate?The long format used by the application's locale.
-Qt::LocaleDate?This enum value is deprecated. Use Qt::DefaultLocaleShortDate instead (or Qt::DefaultLocaleLongDate if you want long dates).
 Qt::LocalDateSystemLocaleDateThis enum value is deprecated. Use Qt::SystemLocaleShortDate instead (or Qt::SystemLocaleLongDate if you want long dates).
 
 
@@ -5184,19 +5334,19 @@ const Qt__SystemLocaleDate Qt__DateFormat = 2
 //
 const Qt__LocalDate Qt__DateFormat = 2
 
-//
+// This enum value is deprecated. Use Qt::DefaultLocaleShortDate instead (or Qt::DefaultLocaleLongDate if you want long dates).
 const Qt__LocaleDate Qt__DateFormat = 3
 
-//
+// The short format used by the operating system.
 const Qt__SystemLocaleShortDate Qt__DateFormat = 4
 
-//
+// The long format used by the operating system.
 const Qt__SystemLocaleLongDate Qt__DateFormat = 5
 
-//
+// The short format specified by the application's locale.
 const Qt__DefaultLocaleShortDate Qt__DateFormat = 6
 
-//
+// The long format used by the application's locale.
 const Qt__DefaultLocaleLongDate Qt__DateFormat = 7
 
 //
@@ -5968,6 +6118,12 @@ const Qt__ImhPreferLatin Qt__InputMethodHint = 512
 const Qt__ImhMultiLine Qt__InputMethodHint = 1024
 
 //
+const Qt__ImhNoEditMenu Qt__InputMethodHint = 2048
+
+//
+const Qt__ImhNoTextHandles Qt__InputMethodHint = 4096
+
+//
 const Qt__ImhDigitsOnly Qt__InputMethodHint = 65536
 
 //
@@ -6020,6 +6176,10 @@ func InputMethodHintItemName(val int) string {
 		return "ImhPreferLatin"
 	case Qt__ImhMultiLine: // 1024
 		return "ImhMultiLine"
+	case Qt__ImhNoEditMenu: // 2048
+		return "ImhNoEditMenu"
+	case Qt__ImhNoTextHandles: // 4096
+		return "ImhNoTextHandles"
 	case Qt__ImhDigitsOnly: // 65536
 		return "ImhDigitsOnly"
 	case Qt__ImhFormattedNumbersOnly: // 131072
@@ -7108,7 +7268,7 @@ This enum type describes the mode for moving focus.
 
 
 
-Note: In 4.6, cursor navigation is only implemented for Symbian OS. On other platforms, it behaves as NavigationModeNone.
+Note: Cursor navigation is not currently implemented on any platform and behaves as NavigationModeNone.
 
 This enum was introduced or modified in  Qt 4.6.
 
@@ -7222,8 +7382,11 @@ const Qt__ScrollBegin Qt__ScrollPhase = 1
 // The scrolling distance has changed (default).
 const Qt__ScrollUpdate Qt__ScrollPhase = 2
 
-// Scrolling has ended, but the scrolling distance did not change anymore.
+// Scrolling has ended, and the scrolling distance did not change anymore.
 const Qt__ScrollEnd Qt__ScrollPhase = 3
+
+//
+const Qt__ScrollMomentum Qt__ScrollPhase = 4
 
 func ScrollPhaseItemName(val int) string {
 	switch val {
@@ -7235,6 +7398,8 @@ func ScrollPhaseItemName(val int) string {
 		return "ScrollUpdate"
 	case Qt__ScrollEnd: // 3
 		return "ScrollEnd"
+	case Qt__ScrollMomentum: // 4
+		return "ScrollMomentum"
 	default:
 		return fmt.Sprintf("%d", val)
 	}
@@ -8024,6 +8189,18 @@ func _Rb_tree_colorItemName(val int) string {
 
 
  */
+type Qt__QCborSimpleType = int // core
+func QCborSimpleTypeItemName(val int) string {
+	switch val {
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
 type Qt__IteratorCapability = int // core
 //
 const Qt__ForwardCapability Qt__IteratorCapability = 1
@@ -8074,6 +8251,157 @@ func _Manager_operationItemName(val int) string {
 		return "__clone_functor"
 	case Qt____destroy_functor: // 3
 		return "__destroy_functor"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__QCborTag = int // core
+func QCborTagItemName(val int) string {
+	switch val {
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__QCborKnownTags = int // core
+//
+const Qt__DateTimeString Qt__QCborKnownTags = 0
+
+//
+const Qt__UnixTime_t Qt__QCborKnownTags = 1
+
+//
+const Qt__PositiveBignum Qt__QCborKnownTags = 2
+
+//
+const Qt__NegativeBignum Qt__QCborKnownTags = 3
+
+//
+const Qt__Decimal Qt__QCborKnownTags = 4
+
+//
+const Qt__Bigfloat Qt__QCborKnownTags = 5
+
+//
+const Qt__COSE_Encrypt0 Qt__QCborKnownTags = 16
+
+//
+const Qt__COSE_Mac0 Qt__QCborKnownTags = 17
+
+//
+const Qt__COSE_Sign1 Qt__QCborKnownTags = 18
+
+//
+const Qt__ExpectedBase64url Qt__QCborKnownTags = 21
+
+//
+const Qt__ExpectedBase64 Qt__QCborKnownTags = 22
+
+//
+const Qt__ExpectedBase16 Qt__QCborKnownTags = 23
+
+//
+const Qt__EncodedCbor Qt__QCborKnownTags = 24
+
+//
+const Qt__Url Qt__QCborKnownTags = 32
+
+//
+const Qt__Base64url Qt__QCborKnownTags = 33
+
+//
+const Qt__Base64 Qt__QCborKnownTags = 34
+
+//
+const Qt__RegularExpression Qt__QCborKnownTags = 35
+
+//
+const Qt__MimeMessage Qt__QCborKnownTags = 36
+
+//
+const Qt__Uuid Qt__QCborKnownTags = 37
+
+//
+const Qt__COSE_Encrypt Qt__QCborKnownTags = 96
+
+//
+const Qt__COSE_Mac Qt__QCborKnownTags = 97
+
+//
+const Qt__COSE_Sign Qt__QCborKnownTags = 98
+
+//
+const Qt__Signature Qt__QCborKnownTags = 55799
+
+func QCborKnownTagsItemName(val int) string {
+	switch val {
+	case Qt__DateTimeString: // 0
+		return "DateTimeString"
+	case Qt__UnixTime_t: // 1
+		return "UnixTime_t"
+	case Qt__PositiveBignum: // 2
+		return "PositiveBignum"
+	case Qt__NegativeBignum: // 3
+		return "NegativeBignum"
+	case Qt__Decimal: // 4
+		return "Decimal"
+	case Qt__Bigfloat: // 5
+		return "Bigfloat"
+	case Qt__COSE_Encrypt0: // 16
+		return "COSE_Encrypt0"
+	case Qt__COSE_Mac0: // 17
+		return "COSE_Mac0"
+	case Qt__COSE_Sign1: // 18
+		return "COSE_Sign1"
+	case Qt__ExpectedBase64url: // 21
+		return "ExpectedBase64url"
+	case Qt__ExpectedBase64: // 22
+		return "ExpectedBase64"
+	case Qt__ExpectedBase16: // 23
+		return "ExpectedBase16"
+	case Qt__EncodedCbor: // 24
+		return "EncodedCbor"
+	case Qt__Url: // 32
+		return "Url"
+	case Qt__Base64url: // 33
+		return "Base64url"
+	case Qt__Base64: // 34
+		return "Base64"
+	case Qt__RegularExpression: // 35
+		return "RegularExpression"
+	case Qt__MimeMessage: // 36
+		return "MimeMessage"
+	case Qt__Uuid: // 37
+		return "Uuid"
+	case Qt__COSE_Encrypt: // 96
+		return "COSE_Encrypt"
+	case Qt__COSE_Mac: // 97
+		return "COSE_Mac"
+	case Qt__COSE_Sign: // 98
+		return "COSE_Sign"
+	case Qt__Signature: // 55799
+		return "Signature"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__QCborNegativeInteger = int // core
+func QCborNegativeIntegerItemName(val int) string {
+	switch val {
 	default:
 		return fmt.Sprintf("%d", val)
 	}
@@ -8388,10 +8716,10 @@ Note: most servers understand both SSL and TLS, but it is recommended to use TLS
 
 */
 type Qt__SslProtocol = int // network
-// SSLv3
+//
 const Qt__SslV3 Qt__SslProtocol = 0
 
-// SSLv2
+//
 const Qt__SslV2 Qt__SslProtocol = 1
 
 //
@@ -8422,6 +8750,24 @@ const Qt__TlsV1_1OrLater Qt__SslProtocol = 9
 const Qt__TlsV1_2OrLater Qt__SslProtocol = 10
 
 //
+const Qt__DtlsV1_0 Qt__SslProtocol = 11
+
+//
+const Qt__DtlsV1_0OrLater Qt__SslProtocol = 12
+
+//
+const Qt__DtlsV1_2 Qt__SslProtocol = 13
+
+//
+const Qt__DtlsV1_2OrLater Qt__SslProtocol = 14
+
+//
+const Qt__TlsV1_3 Qt__SslProtocol = 15
+
+//
+const Qt__TlsV1_3OrLater Qt__SslProtocol = 16
+
+//
 const Qt__UnknownProtocol Qt__SslProtocol = -1
 
 func SslProtocolItemName(val int) string {
@@ -8448,6 +8794,18 @@ func SslProtocolItemName(val int) string {
 		return "TlsV1_1OrLater"
 	case Qt__TlsV1_2OrLater: // 10
 		return "TlsV1_2OrLater"
+	case Qt__DtlsV1_0: // 11
+		return "DtlsV1_0"
+	case Qt__DtlsV1_0OrLater: // 12
+		return "DtlsV1_0OrLater"
+	case Qt__DtlsV1_2: // 13
+		return "DtlsV1_2"
+	case Qt__DtlsV1_2OrLater: // 14
+		return "DtlsV1_2OrLater"
+	case Qt__TlsV1_3: // 15
+		return "TlsV1_3"
+	case Qt__TlsV1_3OrLater: // 16
+		return "TlsV1_3OrLater"
 	case Qt__UnknownProtocol: // -1
 		return "UnknownProtocol"
 	default:
@@ -8502,6 +8860,78 @@ func SslOptionItemName(val int) string {
 		return "SslOptionDisableSessionPersistence"
 	case Qt__SslOptionDisableServerCipherPreference: // 128
 		return "SslOptionDisableServerCipherPreference"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+Describes errors that can be found by QDtls and QDtlsClientVerifier.
+
+This enum describes general and TLS-specific errors that can be encountered by objects of the classes QDtlsClientVerifier and QDtls.
+
+NoError0No error occurred, the last operation was successful.
+InvalidInputParameters1Input parameters provided by a caller were invalid.
+InvalidOperation2An operation was attempted in a state that did not permit it.
+UnderlyingSocketError3QUdpSocket::writeDatagram() failed, QUdpSocket::error() and QUdpSocket::errorString() can provide more specific information.
+RemoteClosedConnectionError4TLS shutdown alert message was received.
+PeerVerificationError5Peer's identity could not be verified during the TLS handshake.
+TlsInitializationError6An error occurred while initializing an underlying TLS backend.
+TlsFatalError7A fatal error occurred during TLS handshake, other than peer verification error or TLS initialization error.
+TlsNonFatalError8A failure to encrypt or decrypt a datagram, non-fatal, meaning QDtls can continue working after this error.
+
+
+This enum was introduced or modified in  Qt 5.12.
+
+*/
+type Qt__QDtlsError = int // network
+//
+const Qt__NoError Qt__QDtlsError = 0
+
+//
+const Qt__InvalidInputParameters Qt__QDtlsError = 1
+
+//
+const Qt__InvalidOperation Qt__QDtlsError = 2
+
+//
+const Qt__UnderlyingSocketError Qt__QDtlsError = 3
+
+//
+const Qt__RemoteClosedConnectionError Qt__QDtlsError = 4
+
+//
+const Qt__PeerVerificationError Qt__QDtlsError = 5
+
+//
+const Qt__TlsInitializationError Qt__QDtlsError = 6
+
+//
+const Qt__TlsFatalError Qt__QDtlsError = 7
+
+//
+const Qt__TlsNonFatalError Qt__QDtlsError = 8
+
+func QDtlsErrorItemName(val int) string {
+	switch val {
+	case Qt__NoError: // 0
+		return "NoError"
+	case Qt__InvalidInputParameters: // 1
+		return "InvalidInputParameters"
+	case Qt__InvalidOperation: // 2
+		return "InvalidOperation"
+	case Qt__UnderlyingSocketError: // 3
+		return "UnderlyingSocketError"
+	case Qt__RemoteClosedConnectionError: // 4
+		return "RemoteClosedConnectionError"
+	case Qt__PeerVerificationError: // 5
+		return "PeerVerificationError"
+	case Qt__TlsInitializationError: // 6
+		return "TlsInitializationError"
+	case Qt__TlsFatalError: // 7
+		return "TlsFatalError"
+	case Qt__TlsNonFatalError: // 8
+		return "TlsNonFatalError"
 	default:
 		return fmt.Sprintf("%d", val)
 	}
@@ -8728,9 +9158,6 @@ func AvailabilityStatusItemName(val int) string {
 
  */
 type Qt__Error = int // multimedia
-// No errors have occurred
-const Qt__NoError Qt__Error = 0
-
 // An error occurred opening the audio device
 const Qt__OpenError Qt__Error = 1
 
@@ -8858,6 +9285,9 @@ const Qt__SonificationRole Qt__Role = 8
 // Game audio
 const Qt__GameRole Qt__Role = 9
 
+//
+const Qt__CustomRole Qt__Role = 10
+
 func RoleItemName(val int) string {
 	switch val {
 	case Qt__UnknownRole: // 0
@@ -8880,6 +9310,8 @@ func RoleItemName(val int) string {
 		return "SonificationRole"
 	case Qt__GameRole: // 9
 		return "GameRole"
+	case Qt__CustomRole: // 10
+		return "CustomRole"
 	default:
 		return fmt.Sprintf("%d", val)
 	}
@@ -11064,6 +11496,80 @@ func _PROC_THREAD_ATTRIBUTE_NUMItemName(val int) string {
 		return "ProcThreadAttributeWin32kFilter"
 	case Qt__ProcThreadAttributeSafeOpenPromptOriginClaim: // 17
 		return "ProcThreadAttributeSafeOpenPromptOriginClaim"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagINPUT_MESSAGE_DEVICE_TYPE = int // stdglobal
+//
+const Qt__IMDT_UNAVAILABLE Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 0
+
+//
+const Qt__IMDT_KEYBOARD Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 1
+
+//
+const Qt__IMDT_MOUSE Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 2
+
+//
+const Qt__IMDT_TOUCH Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 4
+
+//
+const Qt__IMDT_PEN Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 8
+
+//
+const Qt__IMDT_TOUCHPAD Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 16
+
+func tagINPUT_MESSAGE_DEVICE_TYPEItemName(val int) string {
+	switch val {
+	case Qt__IMDT_UNAVAILABLE: // 0
+		return "IMDT_UNAVAILABLE"
+	case Qt__IMDT_KEYBOARD: // 1
+		return "IMDT_KEYBOARD"
+	case Qt__IMDT_MOUSE: // 2
+		return "IMDT_MOUSE"
+	case Qt__IMDT_TOUCH: // 4
+		return "IMDT_TOUCH"
+	case Qt__IMDT_PEN: // 8
+		return "IMDT_PEN"
+	case Qt__IMDT_TOUCHPAD: // 16
+		return "IMDT_TOUCHPAD"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagINPUT_MESSAGE_ORIGIN_ID = int // stdglobal
+//
+const Qt__IMO_UNAVAILABLE Qt__tagINPUT_MESSAGE_ORIGIN_ID = 0
+
+//
+const Qt__IMO_HARDWARE Qt__tagINPUT_MESSAGE_ORIGIN_ID = 1
+
+//
+const Qt__IMO_INJECTED Qt__tagINPUT_MESSAGE_ORIGIN_ID = 2
+
+//
+const Qt__IMO_SYSTEM Qt__tagINPUT_MESSAGE_ORIGIN_ID = 4
+
+func tagINPUT_MESSAGE_ORIGIN_IDItemName(val int) string {
+	switch val {
+	case Qt__IMO_UNAVAILABLE: // 0
+		return "IMO_UNAVAILABLE"
+	case Qt__IMO_HARDWARE: // 1
+		return "IMO_HARDWARE"
+	case Qt__IMO_INJECTED: // 2
+		return "IMO_INJECTED"
+	case Qt__IMO_SYSTEM: // 4
+		return "IMO_SYSTEM"
 	default:
 		return fmt.Sprintf("%d", val)
 	}

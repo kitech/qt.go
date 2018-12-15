@@ -79,7 +79,7 @@ func (this *QMediaPlayer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:122
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMediaPlayer(QObject *, QMediaPlayer::Flags)
@@ -102,7 +102,7 @@ func NewQMediaPlayer(parent qtcore.QObject_ITF /*777 QObject **/, flags int) *QM
 	return gothis
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:122
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMediaPlayer(QObject *, QMediaPlayer::Flags)
@@ -125,7 +125,7 @@ func NewQMediaPlayerp() *QMediaPlayer {
 	return gothis
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:122
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMediaPlayer(QObject *, QMediaPlayer::Flags)
@@ -150,7 +150,7 @@ func NewQMediaPlayerp1(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaPlaye
 	return gothis
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:123
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:124
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMediaPlayer()
@@ -165,7 +165,7 @@ func DeleteQMediaPlayer(this *QMediaPlayer) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:125
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:126
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMultimedia::SupportEstimate hasSupport(const QString &, const QStringList &, QMediaPlayer::Flags)
@@ -192,7 +192,7 @@ func QMediaPlayer_HasSupport(mimeType string, codecs qtcore.QStringList_ITF, fla
 	return rv
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:125
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:126
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMultimedia::SupportEstimate hasSupport(const QString &, const QStringList &, QMediaPlayer::Flags)
@@ -214,7 +214,7 @@ func (this *QMediaPlayer) HasSupportp(mimeType string) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:125
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:126
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMultimedia::SupportEstimate hasSupport(const QString &, const QStringList &, QMediaPlayer::Flags)
@@ -238,7 +238,7 @@ func (this *QMediaPlayer) HasSupportp1(mimeType string, codecs qtcore.QStringLis
 	return int(rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:128
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:129
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList supportedMimeTypes(QMediaPlayer::Flags)
@@ -259,7 +259,7 @@ func QMediaPlayer_SupportedMimeTypes(flags int) *qtcore.QStringList /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:128
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:129
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList supportedMimeTypes(QMediaPlayer::Flags)
@@ -277,7 +277,7 @@ func (this *QMediaPlayer) SupportedMimeTypesp() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:132
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVideoOutput(QAbstractVideoSurface *)
@@ -296,7 +296,7 @@ func (this *QMediaPlayer) SetVideoOutput(surface QAbstractVideoSurface_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:134
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMediaContent media() const
@@ -312,7 +312,7 @@ func (this *QMediaPlayer) Media() *QMediaContent /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:135
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QIODevice * mediaStream() const
@@ -330,7 +330,7 @@ func (this *QMediaPlayer) MediaStream() *qtcore.QIODevice /*777 const QIODevice 
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:136
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMediaPlaylist * playlist() const
@@ -344,7 +344,7 @@ func (this *QMediaPlayer) Playlist() *QMediaPlaylist /*777 QMediaPlaylist **/ {
 	return /*==*/ NewQMediaPlaylistFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:137
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMediaContent currentMedia() const
@@ -360,7 +360,7 @@ func (this *QMediaPlayer) CurrentMedia() *QMediaContent /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:139
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMediaPlayer::State state() const
@@ -374,7 +374,7 @@ func (this *QMediaPlayer) State() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:140
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMediaPlayer::MediaStatus mediaStatus() const
@@ -388,7 +388,7 @@ func (this *QMediaPlayer) MediaStatus() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:142
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 duration() const
@@ -402,7 +402,7 @@ func (this *QMediaPlayer) Duration() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:143
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 position() const
@@ -416,7 +416,7 @@ func (this *QMediaPlayer) Position() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:145
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int volume() const
@@ -430,7 +430,7 @@ func (this *QMediaPlayer) Volume() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:146
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isMuted() const
@@ -444,7 +444,7 @@ func (this *QMediaPlayer) IsMuted() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:147
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAudioAvailable() const
@@ -458,7 +458,7 @@ func (this *QMediaPlayer) IsAudioAvailable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:148
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVideoAvailable() const
@@ -472,7 +472,7 @@ func (this *QMediaPlayer) IsVideoAvailable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:150
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int bufferStatus() const
@@ -486,7 +486,7 @@ func (this *QMediaPlayer) BufferStatus() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:152
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSeekable() const
@@ -500,7 +500,7 @@ func (this *QMediaPlayer) IsSeekable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:153
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal playbackRate() const
@@ -514,7 +514,7 @@ func (this *QMediaPlayer) PlaybackRate() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:155
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMediaPlayer::Error error() const
@@ -528,7 +528,7 @@ func (this *QMediaPlayer) Error() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:204
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:209
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void error(QMediaPlayer::Error)
@@ -541,7 +541,7 @@ func (this *QMediaPlayer) Error1(error int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:156
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
@@ -558,7 +558,7 @@ func (this *QMediaPlayer) ErrorString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:158
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkConfiguration currentNetworkConfiguration() const
@@ -574,7 +574,7 @@ func (this *QMediaPlayer) CurrentNetworkConfiguration() *qtnetwork.QNetworkConfi
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:160
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:161
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QMultimedia::AvailabilityStatus availability() const
@@ -588,7 +588,7 @@ func (this *QMediaPlayer) Availability() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:162
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAudio::Role audioRole() const
@@ -602,7 +602,7 @@ func (this *QMediaPlayer) AudioRole() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:163
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAudioRole(QAudio::Role)
@@ -615,7 +615,59 @@ func (this *QMediaPlayer) SetAudioRole(audioRole int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:166
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString customAudioRole() const
+
+/*
+
+ */
+func (this *QMediaPlayer) CustomAudioRole() string {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMediaPlayer15customAudioRoleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
 // /usr/include/qt/QtMultimedia/qmediaplayer.h:167
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setCustomAudioRole(const QString &)
+
+/*
+
+ */
+func (this *QMediaPlayer) SetCustomAudioRole(audioRole string) {
+	var tmpArg0 = qtcore.NewQString5(audioRole)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QMediaPlayer18setCustomAudioRoleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:168
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList supportedCustomAudioRoles() const
+
+/*
+Returns a list of supported custom audio roles. An empty list may indicate that the supported custom audio roles aren't known. The list may not be complete.
+
+This function was introduced in  Qt 5.11.
+
+See also customAudioRole.
+*/
+func (this *QMediaPlayer) SupportedCustomAudioRoles() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMediaPlayer25supportedCustomAudioRolesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void play()
@@ -628,7 +680,7 @@ func (this *QMediaPlayer) Play() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:168
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void pause()
@@ -641,7 +693,7 @@ func (this *QMediaPlayer) Pause() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:169
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stop()
@@ -654,7 +706,7 @@ func (this *QMediaPlayer) Stop() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:171
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(qint64)
@@ -667,7 +719,7 @@ func (this *QMediaPlayer) SetPosition(position int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:172
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVolume(int)
@@ -680,7 +732,7 @@ func (this *QMediaPlayer) SetVolume(volume int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:173
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMuted(bool)
@@ -693,7 +745,7 @@ func (this *QMediaPlayer) SetMuted(muted bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:175
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPlaybackRate(qreal)
@@ -706,7 +758,7 @@ func (this *QMediaPlayer) SetPlaybackRate(rate float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:177
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMedia(const QMediaContent &, QIODevice *)
@@ -737,7 +789,7 @@ func (this *QMediaPlayer) SetMedia(media QMediaContent_ITF, stream qtcore.QIODev
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:177
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMedia(const QMediaContent &, QIODevice *)
@@ -766,7 +818,7 @@ func (this *QMediaPlayer) SetMediap(media QMediaContent_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:178
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPlaylist(QMediaPlaylist *)
@@ -783,7 +835,7 @@ func (this *QMediaPlayer) SetPlaylist(playlist QMediaPlaylist_ITF /*777 QMediaPl
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:183
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mediaChanged(const QMediaContent &)
@@ -804,7 +856,7 @@ func (this *QMediaPlayer) MediaChanged(media QMediaContent_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:184
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentMediaChanged(const QMediaContent &)
@@ -825,7 +877,7 @@ func (this *QMediaPlayer) CurrentMediaChanged(media QMediaContent_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:186
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stateChanged(QMediaPlayer::State)
@@ -840,7 +892,7 @@ func (this *QMediaPlayer) StateChanged(newState int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:187
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mediaStatusChanged(QMediaPlayer::MediaStatus)
@@ -857,7 +909,7 @@ func (this *QMediaPlayer) MediaStatusChanged(status int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:189
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:193
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void durationChanged(qint64)
@@ -872,7 +924,7 @@ func (this *QMediaPlayer) DurationChanged(duration int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:190
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:194
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void positionChanged(qint64)
@@ -887,7 +939,7 @@ func (this *QMediaPlayer) PositionChanged(position int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:192
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:196
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void volumeChanged(int)
@@ -902,7 +954,7 @@ func (this *QMediaPlayer) VolumeChanged(volume int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:193
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:197
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mutedChanged(bool)
@@ -917,7 +969,7 @@ func (this *QMediaPlayer) MutedChanged(muted bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:194
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:198
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void audioAvailableChanged(bool)
@@ -932,7 +984,7 @@ func (this *QMediaPlayer) AudioAvailableChanged(available bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:195
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:199
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void videoAvailableChanged(bool)
@@ -947,7 +999,7 @@ func (this *QMediaPlayer) VideoAvailableChanged(videoAvailable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:197
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:201
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void bufferStatusChanged(int)
@@ -962,7 +1014,7 @@ func (this *QMediaPlayer) BufferStatusChanged(percentFilled int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:199
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:203
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void seekableChanged(bool)
@@ -977,7 +1029,7 @@ func (this *QMediaPlayer) SeekableChanged(seekable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:200
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:204
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void playbackRateChanged(qreal)
@@ -992,7 +1044,7 @@ func (this *QMediaPlayer) PlaybackRateChanged(rate float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:202
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void audioRoleChanged(QAudio::Role)
@@ -1001,13 +1053,34 @@ func (this *QMediaPlayer) PlaybackRateChanged(rate float64) {
 Signals that the audio role of the media player has changed.
 
 This function was introduced in  Qt 5.6.
+
+Note: Notifier signal for property audioRole.
 */
 func (this *QMediaPlayer) AudioRoleChanged(role int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMediaPlayer16audioRoleChangedEN6QAudio4RoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:206
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:207
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void customAudioRoleChanged(const QString &)
+
+/*
+Signals that the audio role of the media player has changed.
+
+This function was introduced in  Qt 5.11.
+
+Note: Notifier signal for property customAudioRole.
+*/
+func (this *QMediaPlayer) CustomAudioRoleChanged(role string) {
+	var tmpArg0 = qtcore.NewQString5(role)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QMediaPlayer22customAudioRoleChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:211
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void networkConfigurationChanged(const QNetworkConfiguration &)
@@ -1024,7 +1097,7 @@ func (this *QMediaPlayer) NetworkConfigurationChanged(configuration qtnetwork.QN
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:208
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:213
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool bind(QObject *)
@@ -1042,7 +1115,7 @@ func (this *QMediaPlayer) Bind(arg0 qtcore.QObject_ITF /*777 QObject **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtMultimedia/qmediaplayer.h:209
+// /usr/include/qt/QtMultimedia/qmediaplayer.h:214
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void unbind(QObject *)

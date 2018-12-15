@@ -80,7 +80,7 @@ func (this *QUndoStack) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:95
+// /usr/include/qt/QtWidgets/qundostack.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoStack(QObject *)
@@ -105,7 +105,7 @@ func NewQUndoStack(parent qtcore.QObject_ITF /*777 QObject **/) *QUndoStack {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:95
+// /usr/include/qt/QtWidgets/qundostack.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoStack(QObject *)
@@ -128,7 +128,7 @@ func NewQUndoStackp() *QUndoStack {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:96
+// /usr/include/qt/QtWidgets/qundostack.h:101
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QUndoStack()
@@ -143,7 +143,7 @@ func DeleteQUndoStack(this *QUndoStack) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:97
+// /usr/include/qt/QtWidgets/qundostack.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -162,7 +162,7 @@ func (this *QUndoStack) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:99
+// /usr/include/qt/QtWidgets/qundostack.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void push(QUndoCommand *)
@@ -191,7 +191,7 @@ func (this *QUndoStack) Push(cmd QUndoCommand_ITF /*777 QUndoCommand **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:101
+// /usr/include/qt/QtWidgets/qundostack.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canUndo() const
@@ -203,6 +203,8 @@ This function returns false if the stack is empty, or if the bottom command on t
 
 Synonymous with index() == 0.
 
+Note: Getter function for property canUndo.
+
 See also index() and canRedo().
 */
 func (this *QUndoStack) CanUndo() bool {
@@ -211,7 +213,7 @@ func (this *QUndoStack) CanUndo() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:102
+// /usr/include/qt/QtWidgets/qundostack.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canRedo() const
@@ -223,6 +225,8 @@ This function returns false if the stack is empty or if the top command on the s
 
 Synonymous with index() == count().
 
+Note: Getter function for property canRedo.
+
 See also index() and canUndo().
 */
 func (this *QUndoStack) CanRedo() bool {
@@ -231,13 +235,15 @@ func (this *QUndoStack) CanRedo() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:103
+// /usr/include/qt/QtWidgets/qundostack.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString undoText() const
 
 /*
 Returns the text of the command which will be undone in the next call to undo().
+
+Note: Getter function for property undoText.
 
 See also QUndoCommand::actionText() and redoText().
 */
@@ -250,13 +256,15 @@ func (this *QUndoStack) UndoText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:104
+// /usr/include/qt/QtWidgets/qundostack.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString redoText() const
 
 /*
 Returns the text of the command which will be redone in the next call to redo().
+
+Note: Getter function for property redoText.
 
 See also QUndoCommand::actionText() and undoText().
 */
@@ -269,7 +277,7 @@ func (this *QUndoStack) RedoText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:106
+// /usr/include/qt/QtWidgets/qundostack.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
@@ -285,7 +293,7 @@ func (this *QUndoStack) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:107
+// /usr/include/qt/QtWidgets/qundostack.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int index() const
@@ -301,7 +309,7 @@ func (this *QUndoStack) Index() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:108
+// /usr/include/qt/QtWidgets/qundostack.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text(int) const
@@ -320,7 +328,7 @@ func (this *QUndoStack) Text(idx int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:111
+// /usr/include/qt/QtWidgets/qundostack.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * createUndoAction(QObject *, const QString &) const
@@ -346,7 +354,7 @@ func (this *QUndoStack) CreateUndoAction(parent qtcore.QObject_ITF /*777 QObject
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:111
+// /usr/include/qt/QtWidgets/qundostack.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * createUndoAction(QObject *, const QString &) const
@@ -372,7 +380,7 @@ func (this *QUndoStack) CreateUndoActionp(parent qtcore.QObject_ITF /*777 QObjec
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:113
+// /usr/include/qt/QtWidgets/qundostack.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * createRedoAction(QObject *, const QString &) const
@@ -398,7 +406,7 @@ func (this *QUndoStack) CreateRedoAction(parent qtcore.QObject_ITF /*777 QObject
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:113
+// /usr/include/qt/QtWidgets/qundostack.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * createRedoAction(QObject *, const QString &) const
@@ -424,7 +432,7 @@ func (this *QUndoStack) CreateRedoActionp(parent qtcore.QObject_ITF /*777 QObjec
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:117
+// /usr/include/qt/QtWidgets/qundostack.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isActive() const
@@ -438,13 +446,15 @@ func (this *QUndoStack) IsActive() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:118
+// /usr/include/qt/QtWidgets/qundostack.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isClean() const
 
 /*
 If the stack is in the clean state, returns true; otherwise returns false.
+
+Note: Getter function for property clean.
 
 See also setClean() and cleanIndex().
 */
@@ -454,7 +464,7 @@ func (this *QUndoStack) IsClean() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:119
+// /usr/include/qt/QtWidgets/qundostack.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int cleanIndex() const
@@ -472,7 +482,7 @@ func (this *QUndoStack) CleanIndex() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:121
+// /usr/include/qt/QtWidgets/qundostack.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void beginMacro(const QString &)
@@ -525,7 +535,7 @@ func (this *QUndoStack) BeginMacro(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:122
+// /usr/include/qt/QtWidgets/qundostack.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void endMacro()
@@ -542,7 +552,7 @@ func (this *QUndoStack) EndMacro() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:124
+// /usr/include/qt/QtWidgets/qundostack.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUndoLimit(int)
@@ -555,7 +565,7 @@ func (this *QUndoStack) SetUndoLimit(limit int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:125
+// /usr/include/qt/QtWidgets/qundostack.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int undoLimit() const
@@ -569,7 +579,7 @@ func (this *QUndoStack) UndoLimit() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:127
+// /usr/include/qt/QtWidgets/qundostack.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QUndoCommand * command(int) const
@@ -589,7 +599,7 @@ func (this *QUndoStack) Command(index int) *QUndoCommand /*777 const QUndoComman
 	return /*==*/ NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:130
+// /usr/include/qt/QtWidgets/qundostack.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClean()
@@ -608,7 +618,7 @@ func (this *QUndoStack) SetClean() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:131
+// /usr/include/qt/QtWidgets/qundostack.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetClean()
@@ -633,7 +643,7 @@ func (this *QUndoStack) ResetClean() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:132
+// /usr/include/qt/QtWidgets/qundostack.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIndex(int)
@@ -648,7 +658,7 @@ func (this *QUndoStack) SetIndex(idx int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:133
+// /usr/include/qt/QtWidgets/qundostack.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void undo()
@@ -667,7 +677,7 @@ func (this *QUndoStack) Undo() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:134
+// /usr/include/qt/QtWidgets/qundostack.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void redo()
@@ -686,7 +696,7 @@ func (this *QUndoStack) Redo() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:135
+// /usr/include/qt/QtWidgets/qundostack.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActive(bool)
@@ -699,7 +709,7 @@ func (this *QUndoStack) SetActive(active bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:135
+// /usr/include/qt/QtWidgets/qundostack.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActive(bool)
@@ -714,7 +724,7 @@ func (this *QUndoStack) SetActivep() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:138
+// /usr/include/qt/QtWidgets/qundostack.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void indexChanged(int)
@@ -731,13 +741,15 @@ func (this *QUndoStack) IndexChanged(idx int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:139
+// /usr/include/qt/QtWidgets/qundostack.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cleanChanged(bool)
 
 /*
 This signal is emitted whenever the stack enters or leaves the clean state. If clean is true, the stack is in a clean state; otherwise this signal indicates that it has left the clean state.
+
+Note: Notifier signal for property clean.
 
 See also isClean() and setClean().
 */
@@ -746,39 +758,45 @@ func (this *QUndoStack) CleanChanged(clean bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:140
+// /usr/include/qt/QtWidgets/qundostack.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void canUndoChanged(bool)
 
 /*
 This signal is emitted whenever the value of canUndo() changes. It is used to enable or disable the undo action returned by createUndoAction(). canUndo specifies the new value.
+
+Note: Notifier signal for property canUndo.
 */
 func (this *QUndoStack) CanUndoChanged(canUndo bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStack14canUndoChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), canUndo)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:141
+// /usr/include/qt/QtWidgets/qundostack.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void canRedoChanged(bool)
 
 /*
 This signal is emitted whenever the value of canRedo() changes. It is used to enable or disable the redo action returned by createRedoAction(). canRedo specifies the new value.
+
+Note: Notifier signal for property canRedo.
 */
 func (this *QUndoStack) CanRedoChanged(canRedo bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QUndoStack14canRedoChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), canRedo)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:142
+// /usr/include/qt/QtWidgets/qundostack.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void undoTextChanged(const QString &)
 
 /*
 This signal is emitted whenever the value of undoText() changes. It is used to update the text property of the undo action returned by createUndoAction(). undoText specifies the new text.
+
+Note: Notifier signal for property undoText.
 */
 func (this *QUndoStack) UndoTextChanged(undoText string) {
 	var tmpArg0 = qtcore.NewQString5(undoText)
@@ -787,13 +805,15 @@ func (this *QUndoStack) UndoTextChanged(undoText string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:143
+// /usr/include/qt/QtWidgets/qundostack.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void redoTextChanged(const QString &)
 
 /*
 This signal is emitted whenever the value of redoText() changes. It is used to update the text property of the redo action returned by createRedoAction(). redoText specifies the new text.
+
+Note: Notifier signal for property redoText.
 */
 func (this *QUndoStack) RedoTextChanged(redoText string) {
 	var tmpArg0 = qtcore.NewQString5(redoText)

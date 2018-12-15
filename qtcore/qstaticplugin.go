@@ -64,7 +64,7 @@ func (*QStaticPlugin) NewFromPointer(cthis unsafe.Pointer) *QStaticPlugin {
 	return NewQStaticPluginFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qplugin.h:74
+// /usr/include/qt/QtCore/qplugin.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject metaData() const

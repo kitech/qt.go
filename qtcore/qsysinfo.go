@@ -422,7 +422,7 @@ This function returns the same as QHostInfo::localHostName().
 
 This function was introduced in  Qt 5.6.
 
-See also QHostInfo::localDomainName.
+See also QHostInfo::localDomainName and machineUniqueId().
 */
 func (this *QSysInfo) MachineHostName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo15machineHostNameEv", qtrt.FFI_TYPE_POINTER)
@@ -435,6 +435,62 @@ func (this *QSysInfo) MachineHostName() string {
 func QSysInfo_MachineHostName() string {
 	var nilthis *QSysInfo
 	rv := nilthis.MachineHostName()
+	return rv
+}
+
+// /usr/include/qt/QtCore/qsysinfo.h:243
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QByteArray machineUniqueId()
+
+/*
+Returns a unique ID for this machine, if one can be determined. If no unique ID could be determined, this function returns an empty byte array. Unlike machineHostName(), the value returned by this function is likely globally unique.
+
+A unique ID is useful in network operations to identify this machine for an extended period of time, when the IP address could change or if this machine could have more than one IP address. For example, the ID could be used when communicating with a server or when storing device-specific data in shared network storage.
+
+Note that on some systems, this value will persist across reboots and on some it will not. Applications should not blindly depend on this fact without verifying the OS capabilities. In particular, on Linux systems, this ID is usually permanent and it matches the D-Bus machine ID, except for nodes without their own storage (replicated nodes).
+
+This function was introduced in  Qt 5.11.
+
+See also machineHostName() and bootUniqueId().
+*/
+func (this *QSysInfo) MachineUniqueId() *QByteArray /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo15machineUniqueIdEv", qtrt.FFI_TYPE_POINTER)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+func QSysInfo_MachineUniqueId() *QByteArray /*123*/ {
+	var nilthis *QSysInfo
+	rv := nilthis.MachineUniqueId()
+	return rv
+}
+
+// /usr/include/qt/QtCore/qsysinfo.h:244
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QByteArray bootUniqueId()
+
+/*
+Returns a unique ID for this machine's boot, if one can be determined. If no unique ID could be determined, this function returns an empty byte array. This value is expected to change after every boot and can be considered globally unique.
+
+This function is currently only implemented for Linux and Apple operating systems.
+
+This function was introduced in  Qt 5.11.
+
+See also machineUniqueId().
+*/
+func (this *QSysInfo) BootUniqueId() *QByteArray /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo12bootUniqueIdEv", qtrt.FFI_TYPE_POINTER)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+func QSysInfo_BootUniqueId() *QByteArray /*123*/ {
+	var nilthis *QSysInfo
+	rv := nilthis.BootUniqueId()
 	return rv
 }
 

@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 33
+// extern C begin: 37
 */
 // import "C"
 import "unsafe"
@@ -322,8 +322,8 @@ func (this *QCursor) Operator_equal1(other unsafe.Pointer /*333*/) *QCursor {
 // [-2] void swap(QCursor &)
 
 /*
-
- */
+Swaps this cursor with the other cursor.
+*/
 func (this *QCursor) Swap(other QCursor_ITF) {
 	var convArg0 unsafe.Pointer
 	if other != nil && other.QCursor_PTR() != nil {

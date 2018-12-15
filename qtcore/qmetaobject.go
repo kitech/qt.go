@@ -64,7 +64,7 @@ func (*QMetaObject) NewFromPointer(cthis unsafe.Pointer) *QMetaObject {
 	return NewQMetaObjectFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:345
+// /usr/include/qt/QtCore/qobjectdefs.h:340
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * className() const
@@ -78,7 +78,7 @@ func (this *QMetaObject) ClassName() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:346
+// /usr/include/qt/QtCore/qobjectdefs.h:341
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QMetaObject * superClass() const
@@ -92,7 +92,7 @@ func (this *QMetaObject) SuperClass() *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:349
+// /usr/include/qt/QtCore/qobjectdefs.h:344
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * cast(QObject *) const
@@ -110,7 +110,7 @@ func (this *QMetaObject) Cast(obj QObject_ITF /*777 QObject **/) *QObject /*777 
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:350
+// /usr/include/qt/QtCore/qobjectdefs.h:345
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] const QObject * cast(const QObject *) const
@@ -128,7 +128,7 @@ func (this *QMetaObject) Cast1(obj QObject_ITF /*777 const QObject **/) *QObject
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:356
+// /usr/include/qt/QtCore/qobjectdefs.h:351
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int methodOffset() const
@@ -142,7 +142,7 @@ func (this *QMetaObject) MethodOffset() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:357
+// /usr/include/qt/QtCore/qobjectdefs.h:352
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int enumeratorOffset() const
@@ -156,7 +156,7 @@ func (this *QMetaObject) EnumeratorOffset() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:358
+// /usr/include/qt/QtCore/qobjectdefs.h:353
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int propertyOffset() const
@@ -170,7 +170,7 @@ func (this *QMetaObject) PropertyOffset() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:359
+// /usr/include/qt/QtCore/qobjectdefs.h:354
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int classInfoOffset() const
@@ -184,7 +184,7 @@ func (this *QMetaObject) ClassInfoOffset() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:361
+// /usr/include/qt/QtCore/qobjectdefs.h:356
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int constructorCount() const
@@ -198,7 +198,7 @@ func (this *QMetaObject) ConstructorCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:362
+// /usr/include/qt/QtCore/qobjectdefs.h:357
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int methodCount() const
@@ -212,7 +212,7 @@ func (this *QMetaObject) MethodCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:363
+// /usr/include/qt/QtCore/qobjectdefs.h:358
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int enumeratorCount() const
@@ -226,7 +226,7 @@ func (this *QMetaObject) EnumeratorCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:364
+// /usr/include/qt/QtCore/qobjectdefs.h:359
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int propertyCount() const
@@ -240,7 +240,7 @@ func (this *QMetaObject) PropertyCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:365
+// /usr/include/qt/QtCore/qobjectdefs.h:360
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int classInfoCount() const
@@ -254,7 +254,7 @@ func (this *QMetaObject) ClassInfoCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:367
+// /usr/include/qt/QtCore/qobjectdefs.h:362
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfConstructor(const char *) const
@@ -270,7 +270,7 @@ func (this *QMetaObject) IndexOfConstructor(constructor string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:368
+// /usr/include/qt/QtCore/qobjectdefs.h:363
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfMethod(const char *) const
@@ -286,7 +286,7 @@ func (this *QMetaObject) IndexOfMethod(method string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:369
+// /usr/include/qt/QtCore/qobjectdefs.h:364
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfSignal(const char *) const
@@ -302,7 +302,7 @@ func (this *QMetaObject) IndexOfSignal(signal string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:370
+// /usr/include/qt/QtCore/qobjectdefs.h:365
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfSlot(const char *) const
@@ -318,7 +318,7 @@ func (this *QMetaObject) IndexOfSlot(slot string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:371
+// /usr/include/qt/QtCore/qobjectdefs.h:366
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfEnumerator(const char *) const
@@ -334,7 +334,7 @@ func (this *QMetaObject) IndexOfEnumerator(name string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:372
+// /usr/include/qt/QtCore/qobjectdefs.h:367
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfProperty(const char *) const
@@ -350,7 +350,7 @@ func (this *QMetaObject) IndexOfProperty(name string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:373
+// /usr/include/qt/QtCore/qobjectdefs.h:368
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfClassInfo(const char *) const
@@ -366,7 +366,7 @@ func (this *QMetaObject) IndexOfClassInfo(name string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:375
+// /usr/include/qt/QtCore/qobjectdefs.h:370
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMetaMethod constructor(int) const
@@ -382,7 +382,7 @@ func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:376
+// /usr/include/qt/QtCore/qobjectdefs.h:371
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMetaMethod method(int) const
@@ -398,7 +398,7 @@ func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:377
+// /usr/include/qt/QtCore/qobjectdefs.h:372
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMetaEnum enumerator(int) const
@@ -414,7 +414,7 @@ func (this *QMetaObject) Enumerator(index int) *QMetaEnum /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:378
+// /usr/include/qt/QtCore/qobjectdefs.h:373
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QMetaProperty property(int) const
@@ -430,7 +430,7 @@ func (this *QMetaObject) Property(index int) *QMetaProperty /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:379
+// /usr/include/qt/QtCore/qobjectdefs.h:374
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMetaClassInfo classInfo(int) const
@@ -446,7 +446,7 @@ func (this *QMetaObject) ClassInfo(index int) *QMetaClassInfo /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:380
+// /usr/include/qt/QtCore/qobjectdefs.h:375
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QMetaProperty userProperty() const
@@ -462,7 +462,7 @@ func (this *QMetaObject) UserProperty() *QMetaProperty /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:382
+// /usr/include/qt/QtCore/qobjectdefs.h:377
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool checkConnectArgs(const char *, const char *)
@@ -485,7 +485,7 @@ func QMetaObject_CheckConnectArgs(signal string, method string) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:383
+// /usr/include/qt/QtCore/qobjectdefs.h:378
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool checkConnectArgs(const QMetaMethod &, const QMetaMethod &)
@@ -512,7 +512,7 @@ func QMetaObject_CheckConnectArgs1(signal QMetaMethod_ITF, method QMetaMethod_IT
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:385
+// /usr/include/qt/QtCore/qobjectdefs.h:380
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray normalizedSignature(const char *)
@@ -535,7 +535,7 @@ func QMetaObject_NormalizedSignature(method string) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:386
+// /usr/include/qt/QtCore/qobjectdefs.h:381
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray normalizedType(const char *)
@@ -558,7 +558,7 @@ func QMetaObject_NormalizedType(type_ string) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:389
+// /usr/include/qt/QtCore/qobjectdefs.h:384
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, int, const QObject *, int, int, int *)
@@ -585,7 +585,7 @@ func QMetaObject_Connect(sender QObject_ITF /*777 const QObject **/, signal_inde
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:389
+// /usr/include/qt/QtCore/qobjectdefs.h:384
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, int, const QObject *, int, int, int *)
@@ -611,7 +611,7 @@ func (this *QMetaObject) Connectp(sender QObject_ITF /*777 const QObject **/, si
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:389
+// /usr/include/qt/QtCore/qobjectdefs.h:384
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QMetaObject::Connection connect(const QObject *, int, const QObject *, int, int, int *)
@@ -635,7 +635,7 @@ func (this *QMetaObject) Connectp1(sender QObject_ITF /*777 const QObject **/, s
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:393
+// /usr/include/qt/QtCore/qobjectdefs.h:388
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool disconnect(const QObject *, int, const QObject *, int)
@@ -662,7 +662,7 @@ func QMetaObject_Disconnect(sender QObject_ITF /*777 const QObject **/, signal_i
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:395
+// /usr/include/qt/QtCore/qobjectdefs.h:390
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool disconnectOne(const QObject *, int, const QObject *, int)
@@ -689,7 +689,7 @@ func QMetaObject_DisconnectOne(sender QObject_ITF /*777 const QObject **/, signa
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:398
+// /usr/include/qt/QtCore/qobjectdefs.h:393
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void connectSlotsByName(QObject *)
@@ -710,7 +710,7 @@ func QMetaObject_ConnectSlotsByName(o QObject_ITF /*777 QObject **/) {
 	nilthis.ConnectSlotsByName(o)
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:401
+// /usr/include/qt/QtCore/qobjectdefs.h:396
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void activate(QObject *, int, void **)
@@ -731,7 +731,7 @@ func QMetaObject_Activate(sender QObject_ITF /*777 QObject **/, signal_index int
 	nilthis.Activate(sender, signal_index, argv)
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:403
+// /usr/include/qt/QtCore/qobjectdefs.h:398
 // index:1
 // Public static Visibility=Default Availability=Available
 // [-2] void activate(QObject *, int, int, void **)
@@ -752,7 +752,7 @@ func QMetaObject_Activate1(sender QObject_ITF /*777 QObject **/, signal_offset i
 	nilthis.Activate1(sender, signal_offset, local_signal_index, argv)
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:405
+// /usr/include/qt/QtCore/qobjectdefs.h:400
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -821,7 +821,7 @@ func QMetaObject_InvokeMethod(obj QObject_ITF /*777 QObject **/, member string, 
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:405
+// /usr/include/qt/QtCore/qobjectdefs.h:400
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -865,7 +865,7 @@ func (this *QMetaObject) InvokeMethodp(obj QObject_ITF /*777 QObject **/, member
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:405
+// /usr/include/qt/QtCore/qobjectdefs.h:400
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -911,7 +911,7 @@ func (this *QMetaObject) InvokeMethodp1(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:405
+// /usr/include/qt/QtCore/qobjectdefs.h:400
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -959,7 +959,7 @@ func (this *QMetaObject) InvokeMethodp2(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:405
+// /usr/include/qt/QtCore/qobjectdefs.h:400
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1009,7 +1009,7 @@ func (this *QMetaObject) InvokeMethodp3(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:405
+// /usr/include/qt/QtCore/qobjectdefs.h:400
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1061,7 +1061,7 @@ func (this *QMetaObject) InvokeMethodp4(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:405
+// /usr/include/qt/QtCore/qobjectdefs.h:400
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1115,7 +1115,7 @@ func (this *QMetaObject) InvokeMethodp5(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:405
+// /usr/include/qt/QtCore/qobjectdefs.h:400
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1171,7 +1171,7 @@ func (this *QMetaObject) InvokeMethodp6(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:405
+// /usr/include/qt/QtCore/qobjectdefs.h:400
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1229,7 +1229,7 @@ func (this *QMetaObject) InvokeMethodp7(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:405
+// /usr/include/qt/QtCore/qobjectdefs.h:400
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1289,7 +1289,7 @@ func (this *QMetaObject) InvokeMethodp8(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:405
+// /usr/include/qt/QtCore/qobjectdefs.h:400
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1351,7 +1351,7 @@ func (this *QMetaObject) InvokeMethodp9(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:419
+// /usr/include/qt/QtCore/qobjectdefs.h:414
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1420,7 +1420,7 @@ func QMetaObject_InvokeMethod1(obj QObject_ITF /*777 QObject **/, member string,
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:419
+// /usr/include/qt/QtCore/qobjectdefs.h:414
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1464,7 +1464,7 @@ func (this *QMetaObject) InvokeMethod1p(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:419
+// /usr/include/qt/QtCore/qobjectdefs.h:414
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1510,7 +1510,7 @@ func (this *QMetaObject) InvokeMethod1p1(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:419
+// /usr/include/qt/QtCore/qobjectdefs.h:414
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1558,7 +1558,7 @@ func (this *QMetaObject) InvokeMethod1p2(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:419
+// /usr/include/qt/QtCore/qobjectdefs.h:414
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1608,7 +1608,7 @@ func (this *QMetaObject) InvokeMethod1p3(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:419
+// /usr/include/qt/QtCore/qobjectdefs.h:414
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1660,7 +1660,7 @@ func (this *QMetaObject) InvokeMethod1p4(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:419
+// /usr/include/qt/QtCore/qobjectdefs.h:414
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1714,7 +1714,7 @@ func (this *QMetaObject) InvokeMethod1p5(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:419
+// /usr/include/qt/QtCore/qobjectdefs.h:414
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1770,7 +1770,7 @@ func (this *QMetaObject) InvokeMethod1p6(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:419
+// /usr/include/qt/QtCore/qobjectdefs.h:414
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1828,7 +1828,7 @@ func (this *QMetaObject) InvokeMethod1p7(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:419
+// /usr/include/qt/QtCore/qobjectdefs.h:414
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1888,7 +1888,7 @@ func (this *QMetaObject) InvokeMethod1p8(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:419
+// /usr/include/qt/QtCore/qobjectdefs.h:414
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -1950,7 +1950,7 @@ func (this *QMetaObject) InvokeMethod1p9(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:436
+// /usr/include/qt/QtCore/qobjectdefs.h:431
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2015,7 +2015,7 @@ func QMetaObject_InvokeMethod2(obj QObject_ITF /*777 QObject **/, member string,
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:436
+// /usr/include/qt/QtCore/qobjectdefs.h:431
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2055,7 +2055,7 @@ func (this *QMetaObject) InvokeMethod2p(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:436
+// /usr/include/qt/QtCore/qobjectdefs.h:431
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2097,7 +2097,7 @@ func (this *QMetaObject) InvokeMethod2p1(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:436
+// /usr/include/qt/QtCore/qobjectdefs.h:431
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2141,7 +2141,7 @@ func (this *QMetaObject) InvokeMethod2p2(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:436
+// /usr/include/qt/QtCore/qobjectdefs.h:431
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2187,7 +2187,7 @@ func (this *QMetaObject) InvokeMethod2p3(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:436
+// /usr/include/qt/QtCore/qobjectdefs.h:431
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2235,7 +2235,7 @@ func (this *QMetaObject) InvokeMethod2p4(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:436
+// /usr/include/qt/QtCore/qobjectdefs.h:431
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2285,7 +2285,7 @@ func (this *QMetaObject) InvokeMethod2p5(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:436
+// /usr/include/qt/QtCore/qobjectdefs.h:431
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2337,7 +2337,7 @@ func (this *QMetaObject) InvokeMethod2p6(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:436
+// /usr/include/qt/QtCore/qobjectdefs.h:431
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2391,7 +2391,7 @@ func (this *QMetaObject) InvokeMethod2p7(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:436
+// /usr/include/qt/QtCore/qobjectdefs.h:431
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2447,7 +2447,7 @@ func (this *QMetaObject) InvokeMethod2p8(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:436
+// /usr/include/qt/QtCore/qobjectdefs.h:431
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2505,7 +2505,7 @@ func (this *QMetaObject) InvokeMethod2p9(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:453
+// /usr/include/qt/QtCore/qobjectdefs.h:448
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2570,7 +2570,7 @@ func QMetaObject_InvokeMethod3(obj QObject_ITF /*777 QObject **/, member string,
 	return rv
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:453
+// /usr/include/qt/QtCore/qobjectdefs.h:448
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2610,7 +2610,7 @@ func (this *QMetaObject) InvokeMethod3p(obj QObject_ITF /*777 QObject **/, membe
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:453
+// /usr/include/qt/QtCore/qobjectdefs.h:448
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2652,7 +2652,7 @@ func (this *QMetaObject) InvokeMethod3p1(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:453
+// /usr/include/qt/QtCore/qobjectdefs.h:448
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2696,7 +2696,7 @@ func (this *QMetaObject) InvokeMethod3p2(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:453
+// /usr/include/qt/QtCore/qobjectdefs.h:448
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2742,7 +2742,7 @@ func (this *QMetaObject) InvokeMethod3p3(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:453
+// /usr/include/qt/QtCore/qobjectdefs.h:448
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2790,7 +2790,7 @@ func (this *QMetaObject) InvokeMethod3p4(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:453
+// /usr/include/qt/QtCore/qobjectdefs.h:448
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2840,7 +2840,7 @@ func (this *QMetaObject) InvokeMethod3p5(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:453
+// /usr/include/qt/QtCore/qobjectdefs.h:448
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2892,7 +2892,7 @@ func (this *QMetaObject) InvokeMethod3p6(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:453
+// /usr/include/qt/QtCore/qobjectdefs.h:448
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -2946,7 +2946,7 @@ func (this *QMetaObject) InvokeMethod3p7(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:453
+// /usr/include/qt/QtCore/qobjectdefs.h:448
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -3002,7 +3002,7 @@ func (this *QMetaObject) InvokeMethod3p8(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:453
+// /usr/include/qt/QtCore/qobjectdefs.h:448
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [1] bool invokeMethod(QObject *, const char *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
@@ -3060,7 +3060,7 @@ func (this *QMetaObject) InvokeMethod3p9(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3114,7 +3114,7 @@ func (this *QMetaObject) NewInstance(val0 QGenericArgument_ITF /*123*/, val1 QGe
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3148,7 +3148,7 @@ func (this *QMetaObject) NewInstancep() *QObject /*777 QObject **/ {
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3184,7 +3184,7 @@ func (this *QMetaObject) NewInstancep1(val0 QGenericArgument_ITF /*123*/) *QObje
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3222,7 +3222,7 @@ func (this *QMetaObject) NewInstancep2(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3262,7 +3262,7 @@ func (this *QMetaObject) NewInstancep3(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3304,7 +3304,7 @@ func (this *QMetaObject) NewInstancep4(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3348,7 +3348,7 @@ func (this *QMetaObject) NewInstancep5(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3394,7 +3394,7 @@ func (this *QMetaObject) NewInstancep6(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3442,7 +3442,7 @@ func (this *QMetaObject) NewInstancep7(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3492,7 +3492,7 @@ func (this *QMetaObject) NewInstancep8(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3544,7 +3544,7 @@ func (this *QMetaObject) NewInstancep9(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:581
+// /usr/include/qt/QtCore/qobjectdefs.h:572
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int static_metacall(QMetaObject::Call, int, void **) const
@@ -3558,7 +3558,7 @@ func (this *QMetaObject) Static_metacall(arg0 int, arg1 int, arg2 unsafe.Pointer
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:582
+// /usr/include/qt/QtCore/qobjectdefs.h:573
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int metacall(QObject *, QMetaObject::Call, int, void **)

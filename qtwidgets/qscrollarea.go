@@ -260,7 +260,7 @@ func (this *QScrollArea) SetWidgetResizable(resizable bool) {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QAbstractScrollArea::sizeHint().
 */
 func (this *QScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QScrollArea8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -425,7 +425,7 @@ func (this *QScrollArea) EnsureWidgetVisiblep1(childWidget QWidget_ITF /*777 QWi
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractScrollArea::event().
 */
 func (this *QScrollArea) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -443,8 +443,8 @@ func (this *QScrollArea) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // [1] bool eventFilter(QObject *, QEvent *)
 
 /*
-Reimplemented from QObject::eventFilter().
-*/
+
+ */
 func (this *QScrollArea) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QObject_PTR() != nil {
@@ -465,7 +465,7 @@ func (this *QScrollArea) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, 
 // [-2] void resizeEvent(QResizeEvent *)
 
 /*
-Reimplemented from QWidget::resizeEvent().
+Reimplemented from QAbstractScrollArea::resizeEvent().
 */
 func (this *QScrollArea) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer

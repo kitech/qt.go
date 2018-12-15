@@ -63,7 +63,7 @@ func (*QDragLeaveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragLeaveEvent {
 	return NewQDragLeaveEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:671
+// /usr/include/qt/QtGui/qevent.h:676
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDragLeaveEvent()
@@ -82,7 +82,7 @@ func NewQDragLeaveEvent() *QDragLeaveEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:672
+// /usr/include/qt/QtGui/qevent.h:677
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDragLeaveEvent()

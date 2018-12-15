@@ -63,7 +63,7 @@ func (*QRegExpValidator) NewFromPointer(cthis unsafe.Pointer) *QRegExpValidator 
 	return NewQRegExpValidatorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:173
+// /usr/include/qt/QtGui/qvalidator.h:175
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -77,7 +77,7 @@ func (this *QRegExpValidator) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:177
+// /usr/include/qt/QtGui/qvalidator.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegExpValidator(QObject *)
@@ -100,7 +100,7 @@ func NewQRegExpValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QRegExpVa
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:177
+// /usr/include/qt/QtGui/qvalidator.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegExpValidator(QObject *)
@@ -121,7 +121,7 @@ func NewQRegExpValidatorp() *QRegExpValidator {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:178
+// /usr/include/qt/QtGui/qvalidator.h:180
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegExpValidator(const QRegExp &, QObject *)
@@ -148,7 +148,7 @@ func NewQRegExpValidator1(rx qtcore.QRegExp_ITF, parent qtcore.QObject_ITF /*777
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:178
+// /usr/include/qt/QtGui/qvalidator.h:180
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegExpValidator(const QRegExp &, QObject *)
@@ -173,7 +173,7 @@ func NewQRegExpValidator1p(rx qtcore.QRegExp_ITF) *QRegExpValidator {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:179
+// /usr/include/qt/QtGui/qvalidator.h:181
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRegExpValidator()
@@ -188,7 +188,7 @@ func DeleteQRegExpValidator(this *QRegExpValidator) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:181
+// /usr/include/qt/QtGui/qvalidator.h:183
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
@@ -206,7 +206,7 @@ func (this *QRegExpValidator) Validate(input string, pos int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:183
+// /usr/include/qt/QtGui/qvalidator.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRegExp(const QRegExp &)
@@ -223,7 +223,7 @@ func (this *QRegExpValidator) SetRegExp(rx qtcore.QRegExp_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:184
+// /usr/include/qt/QtGui/qvalidator.h:186
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QRegExp & regExp() const
@@ -239,7 +239,7 @@ func (this *QRegExpValidator) RegExp() *qtcore.QRegExp {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:187
+// /usr/include/qt/QtGui/qvalidator.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void regExpChanged(const QRegExp &)

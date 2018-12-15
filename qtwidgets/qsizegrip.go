@@ -347,7 +347,7 @@ func (this *QSizeGrip) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, ar
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QSizeGrip) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

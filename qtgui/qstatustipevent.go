@@ -63,7 +63,7 @@ func (*QStatusTipEvent) NewFromPointer(cthis unsafe.Pointer) *QStatusTipEvent {
 	return NewQStatusTipEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:700
+// /usr/include/qt/QtGui/qevent.h:705
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStatusTipEvent(const QString &)
@@ -84,7 +84,7 @@ func NewQStatusTipEvent(tip string) *QStatusTipEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:701
+// /usr/include/qt/QtGui/qevent.h:706
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStatusTipEvent()
@@ -99,7 +99,7 @@ func DeleteQStatusTipEvent(this *QStatusTipEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:703
+// /usr/include/qt/QtGui/qevent.h:708
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString tip() const

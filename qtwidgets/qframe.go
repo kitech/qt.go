@@ -411,7 +411,7 @@ func (this *QFrame) SetFrameRect(arg0 qtcore.QRect_ITF) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QFrame) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

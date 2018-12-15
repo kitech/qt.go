@@ -64,7 +64,7 @@ func (*QOperatingSystemVersion) NewFromPointer(cthis unsafe.Pointer) *QOperating
 	return NewQOperatingSystemVersionFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:85
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:86
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QOperatingSystemVersion(QOperatingSystemVersion::OSType, int, int, int)
@@ -83,7 +83,7 @@ func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) 
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:85
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:86
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QOperatingSystemVersion(QOperatingSystemVersion::OSType, int, int, int)
@@ -106,7 +106,7 @@ func NewQOperatingSystemVersionp(osType int, vmajor int) *QOperatingSystemVersio
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:85
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:86
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QOperatingSystemVersion(QOperatingSystemVersion::OSType, int, int, int)
@@ -127,7 +127,7 @@ func NewQOperatingSystemVersionp1(osType int, vmajor int, vminor int) *QOperatin
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:93
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:94
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QOperatingSystemVersion current()
@@ -150,7 +150,7 @@ func QOperatingSystemVersion_Current() *QOperatingSystemVersion /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:95
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:96
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [4] QOperatingSystemVersion::OSType currentType()
@@ -171,7 +171,7 @@ func QOperatingSystemVersion_CurrentType() int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:114
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:115
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int majorVersion() const
@@ -191,7 +191,7 @@ func (this *QOperatingSystemVersion) MajorVersion() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:115
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:116
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int minorVersion() const
@@ -211,7 +211,7 @@ func (this *QOperatingSystemVersion) MinorVersion() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:116
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:117
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int microVersion() const
@@ -231,7 +231,7 @@ func (this *QOperatingSystemVersion) MicroVersion() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:118
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:119
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int segmentCount() const
@@ -245,7 +245,7 @@ func (this *QOperatingSystemVersion) SegmentCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:124
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:125
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QOperatingSystemVersion::OSType type() const
@@ -261,7 +261,7 @@ func (this *QOperatingSystemVersion) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:125
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const

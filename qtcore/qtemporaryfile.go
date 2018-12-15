@@ -269,7 +269,7 @@ func (this *QTemporaryFile) Open1(flags int) bool {
 // [8] QString fileName() const
 
 /*
-Reimplemented from QFileDevice::fileName().
+Reimplemented from QFile::fileName().
 
 Returns the complete unique filename backing the QTemporaryFile object. This string is null before the QTemporaryFile is opened, afterwards it will contain the fileTemplate() plus additional characters to make it unique.
 
@@ -393,11 +393,11 @@ If file is not already a native file, then a QTemporaryFile is created in QDir::
 For example:
 
 
-  QFile f(":/resources/file.txt");
-  QTemporaryFile::createNativeFile(f); // Returns a pointer to a temporary file
+    QFile f(":/resources/file.txt");
+    QTemporaryFile::createNativeFile(f); // Returns a pointer to a temporary file
 
-  QFile f("/users/qt/file.txt");
-  QTemporaryFile::createNativeFile(f); // Returns 0
+    QFile f("/users/qt/file.txt");
+    QTemporaryFile::createNativeFile(f); // Returns 0
 
 
 
@@ -427,11 +427,11 @@ If file is not already a native file, then a QTemporaryFile is created in QDir::
 For example:
 
 
-  QFile f(":/resources/file.txt");
-  QTemporaryFile::createNativeFile(f); // Returns a pointer to a temporary file
+    QFile f(":/resources/file.txt");
+    QTemporaryFile::createNativeFile(f); // Returns a pointer to a temporary file
 
-  QFile f("/users/qt/file.txt");
-  QTemporaryFile::createNativeFile(f); // Returns 0
+    QFile f("/users/qt/file.txt");
+    QTemporaryFile::createNativeFile(f); // Returns 0
 
 
 

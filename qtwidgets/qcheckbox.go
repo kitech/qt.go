@@ -356,7 +356,7 @@ func (this *QCheckBox) StateChanged(arg0 int) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractButton::event().
 */
 func (this *QCheckBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -418,7 +418,7 @@ func (this *QCheckBox) NextCheckState() {
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QAbstractButton::paintEvent().
 */
 func (this *QCheckBox) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -435,7 +435,7 @@ func (this *QCheckBox) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent *
 // [-2] void mouseMoveEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseMoveEvent().
+Reimplemented from QAbstractButton::mouseMoveEvent().
 */
 func (this *QCheckBox) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer

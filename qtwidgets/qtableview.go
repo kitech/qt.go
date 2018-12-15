@@ -1188,7 +1188,7 @@ func (this *QTableView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QAbstractScrollArea::paintEvent().
 
 Paints the table on receipt of the given paint event event.
 */
@@ -1207,7 +1207,7 @@ func (this *QTableView) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/
 // [-2] void timerEvent(QTimerEvent *)
 
 /*
-Reimplemented from QObject::timerEvent().
+Reimplemented from QAbstractItemView::timerEvent().
 */
 func (this *QTableView) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1351,7 +1351,7 @@ func (this *QTableView) UpdateGeometries() {
 // [8] QSize viewportSizeHint() const
 
 /*
-Reimplemented from QAbstractScrollArea::viewportSizeHint().
+Reimplemented from QAbstractItemView::viewportSizeHint().
 */
 func (this *QTableView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView16viewportSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

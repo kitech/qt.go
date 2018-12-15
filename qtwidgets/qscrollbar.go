@@ -266,7 +266,7 @@ func (this *QScrollBar) SizeHint() *qtcore.QSize /*123*/ {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractSlider::event().
 */
 func (this *QScrollBar) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -284,7 +284,7 @@ func (this *QScrollBar) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // [-2] void wheelEvent(QWheelEvent *)
 
 /*
-Reimplemented from QWidget::wheelEvent().
+Reimplemented from QAbstractSlider::wheelEvent().
 */
 func (this *QScrollBar) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer

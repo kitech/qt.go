@@ -337,7 +337,7 @@ func (this *QPalette) Swap(other QPalette_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpalette.h:104
+// /usr/include/qt/QtGui/qpalette.h:105
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QPalette::ColorGroup currentColorGroup() const
@@ -353,7 +353,7 @@ func (this *QPalette) CurrentColorGroup() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qpalette.h:105
+// /usr/include/qt/QtGui/qpalette.h:106
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCurrentColorGroup(QPalette::ColorGroup)
@@ -368,7 +368,7 @@ func (this *QPalette) SetCurrentColorGroup(cg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpalette.h:107
+// /usr/include/qt/QtGui/qpalette.h:108
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QColor & color(QPalette::ColorGroup, QPalette::ColorRole) const
@@ -386,7 +386,7 @@ func (this *QPalette) Color(cg int, cr int) *QColor {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:121
+// /usr/include/qt/QtGui/qpalette.h:122
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] const QColor & color(QPalette::ColorRole) const
@@ -404,7 +404,7 @@ func (this *QPalette) Color1(cr int) *QColor {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:109
+// /usr/include/qt/QtGui/qpalette.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QBrush & brush(QPalette::ColorGroup, QPalette::ColorRole) const
@@ -422,7 +422,7 @@ func (this *QPalette) Brush(cg int, cr int) *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:122
+// /usr/include/qt/QtGui/qpalette.h:123
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & brush(QPalette::ColorRole) const
@@ -440,7 +440,7 @@ func (this *QPalette) Brush1(cr int) *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:110
+// /usr/include/qt/QtGui/qpalette.h:111
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setColor(QPalette::ColorGroup, QPalette::ColorRole, const QColor &)
@@ -459,7 +459,7 @@ func (this *QPalette) SetColor(cg int, cr int, color QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpalette.h:111
+// /usr/include/qt/QtGui/qpalette.h:112
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setColor(QPalette::ColorRole, const QColor &)
@@ -478,7 +478,7 @@ func (this *QPalette) SetColor1(cr int, color QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpalette.h:112
+// /usr/include/qt/QtGui/qpalette.h:113
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBrush(QPalette::ColorRole, const QBrush &)
@@ -497,7 +497,7 @@ func (this *QPalette) SetBrush(cr int, brush QBrush_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpalette.h:114
+// /usr/include/qt/QtGui/qpalette.h:115
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setBrush(QPalette::ColorGroup, QPalette::ColorRole, const QBrush &)
@@ -516,7 +516,7 @@ func (this *QPalette) SetBrush1(cg int, cr int, brush QBrush_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpalette.h:113
+// /usr/include/qt/QtGui/qpalette.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isBrushSet(QPalette::ColorGroup, QPalette::ColorRole) const
@@ -534,7 +534,7 @@ func (this *QPalette) IsBrushSet(cg int, cr int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpalette.h:115
+// /usr/include/qt/QtGui/qpalette.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColorGroup(QPalette::ColorGroup, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &)
@@ -585,7 +585,7 @@ func (this *QPalette) SetColorGroup(cr int, windowText QBrush_ITF, button QBrush
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpalette.h:119
+// /usr/include/qt/QtGui/qpalette.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEqual(QPalette::ColorGroup, QPalette::ColorGroup) const
@@ -599,7 +599,7 @@ func (this *QPalette) IsEqual(cr1 int, cr2 int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpalette.h:123
+// /usr/include/qt/QtGui/qpalette.h:124
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & foreground() const
@@ -615,7 +615,7 @@ func (this *QPalette) Foreground() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:124
+// /usr/include/qt/QtGui/qpalette.h:125
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & windowText() const
@@ -633,7 +633,7 @@ func (this *QPalette) WindowText() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:125
+// /usr/include/qt/QtGui/qpalette.h:126
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & button() const
@@ -651,7 +651,7 @@ func (this *QPalette) Button() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:126
+// /usr/include/qt/QtGui/qpalette.h:127
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & light() const
@@ -669,7 +669,7 @@ func (this *QPalette) Light() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:127
+// /usr/include/qt/QtGui/qpalette.h:128
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & dark() const
@@ -687,7 +687,7 @@ func (this *QPalette) Dark() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:128
+// /usr/include/qt/QtGui/qpalette.h:129
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & mid() const
@@ -705,7 +705,7 @@ func (this *QPalette) Mid() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:129
+// /usr/include/qt/QtGui/qpalette.h:130
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & text() const
@@ -723,7 +723,7 @@ func (this *QPalette) Text() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:130
+// /usr/include/qt/QtGui/qpalette.h:131
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & base() const
@@ -741,7 +741,7 @@ func (this *QPalette) Base() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:131
+// /usr/include/qt/QtGui/qpalette.h:132
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & alternateBase() const
@@ -759,7 +759,7 @@ func (this *QPalette) AlternateBase() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:132
+// /usr/include/qt/QtGui/qpalette.h:133
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & toolTipBase() const
@@ -781,7 +781,7 @@ func (this *QPalette) ToolTipBase() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:133
+// /usr/include/qt/QtGui/qpalette.h:134
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & toolTipText() const
@@ -803,7 +803,7 @@ func (this *QPalette) ToolTipText() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:134
+// /usr/include/qt/QtGui/qpalette.h:135
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & background() const
@@ -819,7 +819,7 @@ func (this *QPalette) Background() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:135
+// /usr/include/qt/QtGui/qpalette.h:136
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & window() const
@@ -837,7 +837,7 @@ func (this *QPalette) Window() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:136
+// /usr/include/qt/QtGui/qpalette.h:137
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & midlight() const
@@ -855,7 +855,7 @@ func (this *QPalette) Midlight() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:137
+// /usr/include/qt/QtGui/qpalette.h:138
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & brightText() const
@@ -873,7 +873,7 @@ func (this *QPalette) BrightText() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:138
+// /usr/include/qt/QtGui/qpalette.h:139
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & buttonText() const
@@ -891,7 +891,7 @@ func (this *QPalette) ButtonText() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:139
+// /usr/include/qt/QtGui/qpalette.h:140
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & shadow() const
@@ -909,7 +909,7 @@ func (this *QPalette) Shadow() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:140
+// /usr/include/qt/QtGui/qpalette.h:141
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & highlight() const
@@ -927,7 +927,7 @@ func (this *QPalette) Highlight() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:141
+// /usr/include/qt/QtGui/qpalette.h:142
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & highlightedText() const
@@ -945,7 +945,7 @@ func (this *QPalette) HighlightedText() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:142
+// /usr/include/qt/QtGui/qpalette.h:143
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & link() const
@@ -963,7 +963,7 @@ func (this *QPalette) Link() *QBrush {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:143
+// /usr/include/qt/QtGui/qpalette.h:144
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & linkVisited() const
@@ -983,6 +983,28 @@ func (this *QPalette) LinkVisited() *QBrush {
 
 // /usr/include/qt/QtGui/qpalette.h:145
 // index:0
+// Public inline Visibility=Default Availability=Available
+// [8] const QBrush & placeholderText() const
+
+/*
+Returns the placeholder text brush of the current color group.
+
+Note: Before Qt 5.12, the placeholder text color was hard-coded in the code as QPalette::text().color() where an alpha of 128 was applied. We continue to support this behavior by default, unless you set your own brush. One can get back the original placeholder color setting the special QBrush default constructor as placeholder brush.
+
+This function was introduced in  Qt 5.12.
+
+See also ColorRole and brush().
+*/
+func (this *QPalette) PlaceholderText() *QBrush {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette15placeholderTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qpalette.h:147
+// index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QPalette &) const
 
@@ -999,7 +1021,7 @@ func (this *QPalette) Operator_equal_equal(p QPalette_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpalette.h:146
+// /usr/include/qt/QtGui/qpalette.h:148
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QPalette &) const
@@ -1017,7 +1039,7 @@ func (this *QPalette) Operator_not_equal(p QPalette_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpalette.h:147
+// /usr/include/qt/QtGui/qpalette.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCopyOf(const QPalette &) const
@@ -1037,7 +1059,7 @@ func (this *QPalette) IsCopyOf(p QPalette_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpalette.h:152
+// /usr/include/qt/QtGui/qpalette.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 cacheKey() const
@@ -1053,7 +1075,7 @@ func (this *QPalette) CacheKey() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qpalette.h:154
+// /usr/include/qt/QtGui/qpalette.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPalette resolve(const QPalette &) const
@@ -1073,7 +1095,7 @@ func (this *QPalette) Resolve(arg0 QPalette_ITF) *QPalette /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpalette.h:155
+// /usr/include/qt/QtGui/qpalette.h:157
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] uint resolve() const
@@ -1087,7 +1109,7 @@ func (this *QPalette) Resolve1() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qpalette.h:156
+// /usr/include/qt/QtGui/qpalette.h:158
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void resolve(uint)
@@ -1247,7 +1269,10 @@ const QPalette__ToolTipBase QPalette__ColorRole = 18
 const QPalette__ToolTipText QPalette__ColorRole = 19
 
 //
-const QPalette__NColorRoles QPalette__ColorRole = 20
+const QPalette__PlaceholderText QPalette__ColorRole = 20
+
+//
+const QPalette__NColorRoles QPalette__ColorRole = 21
 
 //
 const QPalette__Foreground QPalette__ColorRole = 0
@@ -1297,7 +1322,9 @@ func (this *QPalette) ColorRoleItemName(val int) string {
 		return "ToolTipBase"
 	case QPalette__ToolTipText: // 19
 		return "ToolTipText"
-	case QPalette__NColorRoles: // 20
+	case QPalette__PlaceholderText: // 20
+		return "PlaceholderText"
+	case QPalette__NColorRoles: // 21
 		return "NColorRoles"
 		// case QPalette__Foreground: // 0
 		// return ""

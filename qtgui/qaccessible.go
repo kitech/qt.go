@@ -304,8 +304,6 @@ func DeleteQAccessible(this *QAccessible) {
 /*
 This enum type defines accessible event types.
 
-Internal: Used when creating subclasses of QAccessibleEvent.
-
 
 
 The values for this enum are defined to be the same as those defined in the IAccessible2 and MSAA specifications.
@@ -1174,7 +1172,7 @@ See also QAccessibleInterface::interface_cast(), QAccessibleTextInterface, QAcce
 */
 type QAccessible__InterfaceType = int
 
-// For text that supports selections or is more than one line. Simple labels do not need to implement this interface. For text that can be edited by the user.
+// For text that supports selections or is more than one line. Simple labels do not need to implement this interface.
 const QAccessible__TextInterface QAccessible__InterfaceType = 0
 
 //
@@ -1183,7 +1181,7 @@ const QAccessible__EditableTextInterface QAccessible__InterfaceType = 1
 // For objects that are used to manipulate a value, for example slider or scroll bar.
 const QAccessible__ValueInterface QAccessible__InterfaceType = 2
 
-// For interactive objects that allow the user to trigger an action. Basically everything that allows for example mouse interaction. For objects that represent an image. This interface is generally less important.
+// For interactive objects that allow the user to trigger an action. Basically everything that allows for example mouse interaction.
 const QAccessible__ActionInterface QAccessible__InterfaceType = 3
 
 //

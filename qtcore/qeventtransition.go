@@ -319,7 +319,7 @@ func (this *QEventTransition) OnTransition(event QEvent_ITF /*777 QEvent **/) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractTransition::event().
 */
 func (this *QEventTransition) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

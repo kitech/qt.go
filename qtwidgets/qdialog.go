@@ -483,6 +483,8 @@ Shows the dialog as a modal dialog, blocking until the user closes it. The funct
 
 If the dialog is application modal, users cannot interact with any other window in the same application until they close the dialog. If the dialog is window modal, only interaction with the parent window is blocked while the dialog is open. By default, the dialog is application modal.
 
+Note: Avoid using this function; instead, use open(). Unlike exec(), open() is asynchronous, and does not spin an additional event loop. This prevents a series of dangerous bugs from happening (e.g. deleting the dialog's parent while the dialog is open via exec()). When using open() you can connect to the finished() signal of QDialog to be notified when the dialog is closed.
+
 See also open(), show(), result(), and setWindowModality().
 */
 func (this *QDialog) Exec() int {
@@ -497,7 +499,9 @@ func (this *QDialog) Exec() int {
 // [-2] void done(int)
 
 /*
-Closes the dialog and sets its result code to r. If this dialog is shown with exec(), done() causes the local event loop to finish, and exec() to return r.
+Closes the dialog and sets its result code to r. The finished() signal will emit r; if r is QDialog::Accepted or QDialog::Rejected, the accepted() or the rejected() signals will also be emitted, respectively.
+
+If this dialog is shown with exec(), done() also causes the local event loop to finish, and exec() to return r.
 
 As with QWidget::close(), done() deletes the dialog if the Qt::WA_DeleteOnClose flag is set. If the dialog is the application's main widget, the application terminates. If the dialog is the last window closed, the QApplication::lastWindowClosed() signal is emitted.
 

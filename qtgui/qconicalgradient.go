@@ -63,7 +63,7 @@ func (*QConicalGradient) NewFromPointer(cthis unsafe.Pointer) *QConicalGradient 
 	return NewQConicalGradientFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:306
+// /usr/include/qt/QtGui/qbrush.h:480
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QConicalGradient()
@@ -82,7 +82,7 @@ func NewQConicalGradient() *QConicalGradient {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:307
+// /usr/include/qt/QtGui/qbrush.h:481
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QConicalGradient(const QPointF &, qreal)
@@ -105,7 +105,7 @@ func NewQConicalGradient1(center qtcore.QPointF_ITF, startAngle float64) *QConic
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:308
+// /usr/include/qt/QtGui/qbrush.h:482
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QConicalGradient(qreal, qreal, qreal)
@@ -124,7 +124,7 @@ func NewQConicalGradient2(cx float64, cy float64, startAngle float64) *QConicalG
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:310
+// /usr/include/qt/QtGui/qbrush.h:484
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF center() const
@@ -140,7 +140,7 @@ func (this *QConicalGradient) Center() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qbrush.h:311
+// /usr/include/qt/QtGui/qbrush.h:485
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCenter(const QPointF &)
@@ -157,7 +157,7 @@ func (this *QConicalGradient) SetCenter(center qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:312
+// /usr/include/qt/QtGui/qbrush.h:486
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCenter(qreal, qreal)
@@ -170,7 +170,7 @@ func (this *QConicalGradient) SetCenter1(x float64, y float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:314
+// /usr/include/qt/QtGui/qbrush.h:488
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal angle() const
@@ -184,7 +184,7 @@ func (this *QConicalGradient) Angle() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qbrush.h:315
+// /usr/include/qt/QtGui/qbrush.h:489
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAngle(qreal)

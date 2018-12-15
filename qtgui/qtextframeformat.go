@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 9
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
@@ -63,7 +63,7 @@ func (*QTextFrameFormat) NewFromPointer(cthis unsafe.Pointer) *QTextFrameFormat 
 	return NewQTextFrameFormatFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:770
+// /usr/include/qt/QtGui/qtextformat.h:784
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextFrameFormat()
@@ -82,7 +82,7 @@ func NewQTextFrameFormat() *QTextFrameFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:852
+// /usr/include/qt/QtGui/qtextformat.h:866
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextFrameFormat(const QTextFormat &)
@@ -105,7 +105,7 @@ func NewQTextFrameFormat1(fmt_ QTextFormat_ITF) *QTextFrameFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:772
+// /usr/include/qt/QtGui/qtextformat.h:786
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -119,7 +119,7 @@ func (this *QTextFrameFormat) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:796
+// /usr/include/qt/QtGui/qtextformat.h:810
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPosition(QTextFrameFormat::Position)
@@ -132,7 +132,7 @@ func (this *QTextFrameFormat) SetPosition(f int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:798
+// /usr/include/qt/QtGui/qtextformat.h:812
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QTextFrameFormat::Position position() const
@@ -146,7 +146,7 @@ func (this *QTextFrameFormat) Position() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:801
+// /usr/include/qt/QtGui/qtextformat.h:815
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBorder(qreal)
@@ -159,7 +159,7 @@ func (this *QTextFrameFormat) SetBorder(border float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:802
+// /usr/include/qt/QtGui/qtextformat.h:816
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal border() const
@@ -173,7 +173,7 @@ func (this *QTextFrameFormat) Border() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:805
+// /usr/include/qt/QtGui/qtextformat.h:819
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBorderBrush(const QBrush &)
@@ -190,7 +190,7 @@ func (this *QTextFrameFormat) SetBorderBrush(brush QBrush_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:807
+// /usr/include/qt/QtGui/qtextformat.h:821
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush borderBrush() const
@@ -206,7 +206,7 @@ func (this *QTextFrameFormat) BorderBrush() *QBrush /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:810
+// /usr/include/qt/QtGui/qtextformat.h:824
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBorderStyle(QTextFrameFormat::BorderStyle)
@@ -219,7 +219,7 @@ func (this *QTextFrameFormat) SetBorderStyle(style int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:812
+// /usr/include/qt/QtGui/qtextformat.h:826
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QTextFrameFormat::BorderStyle borderStyle() const
@@ -233,7 +233,7 @@ func (this *QTextFrameFormat) BorderStyle() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:815
+// /usr/include/qt/QtGui/qtextformat.h:829
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMargin(qreal)
@@ -246,7 +246,7 @@ func (this *QTextFrameFormat) SetMargin(margin float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:816
+// /usr/include/qt/QtGui/qtextformat.h:830
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal margin() const
@@ -260,7 +260,7 @@ func (this *QTextFrameFormat) Margin() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:819
+// /usr/include/qt/QtGui/qtextformat.h:833
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTopMargin(qreal)
@@ -273,7 +273,7 @@ func (this *QTextFrameFormat) SetTopMargin(margin float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:820
+// /usr/include/qt/QtGui/qtextformat.h:834
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal topMargin() const
@@ -287,7 +287,7 @@ func (this *QTextFrameFormat) TopMargin() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:822
+// /usr/include/qt/QtGui/qtextformat.h:836
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBottomMargin(qreal)
@@ -300,7 +300,7 @@ func (this *QTextFrameFormat) SetBottomMargin(margin float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:823
+// /usr/include/qt/QtGui/qtextformat.h:837
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal bottomMargin() const
@@ -314,7 +314,7 @@ func (this *QTextFrameFormat) BottomMargin() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:825
+// /usr/include/qt/QtGui/qtextformat.h:839
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setLeftMargin(qreal)
@@ -327,7 +327,7 @@ func (this *QTextFrameFormat) SetLeftMargin(margin float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:826
+// /usr/include/qt/QtGui/qtextformat.h:840
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal leftMargin() const
@@ -341,7 +341,7 @@ func (this *QTextFrameFormat) LeftMargin() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:828
+// /usr/include/qt/QtGui/qtextformat.h:842
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRightMargin(qreal)
@@ -354,7 +354,7 @@ func (this *QTextFrameFormat) SetRightMargin(margin float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:829
+// /usr/include/qt/QtGui/qtextformat.h:843
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal rightMargin() const
@@ -368,7 +368,7 @@ func (this *QTextFrameFormat) RightMargin() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:831
+// /usr/include/qt/QtGui/qtextformat.h:845
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPadding(qreal)
@@ -381,7 +381,7 @@ func (this *QTextFrameFormat) SetPadding(padding float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:832
+// /usr/include/qt/QtGui/qtextformat.h:846
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal padding() const
@@ -395,7 +395,7 @@ func (this *QTextFrameFormat) Padding() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:835
+// /usr/include/qt/QtGui/qtextformat.h:849
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWidth(qreal)
@@ -408,7 +408,7 @@ func (this *QTextFrameFormat) SetWidth(width float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:836
+// /usr/include/qt/QtGui/qtextformat.h:850
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWidth(const QTextLength &)
@@ -425,7 +425,7 @@ func (this *QTextFrameFormat) SetWidth1(length QTextLength_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:838
+// /usr/include/qt/QtGui/qtextformat.h:852
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QTextLength width() const
@@ -441,7 +441,7 @@ func (this *QTextFrameFormat) Width() *QTextLength /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:841
+// /usr/include/qt/QtGui/qtextformat.h:855
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHeight(qreal)
@@ -454,7 +454,7 @@ func (this *QTextFrameFormat) SetHeight(height float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:842
+// /usr/include/qt/QtGui/qtextformat.h:856
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHeight(const QTextLength &)
@@ -471,7 +471,7 @@ func (this *QTextFrameFormat) SetHeight1(height QTextLength_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:843
+// /usr/include/qt/QtGui/qtextformat.h:857
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QTextLength height() const
@@ -487,7 +487,7 @@ func (this *QTextFrameFormat) Height() *QTextLength /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:846
+// /usr/include/qt/QtGui/qtextformat.h:860
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPageBreakPolicy(QTextFormat::PageBreakFlags)
@@ -500,7 +500,7 @@ func (this *QTextFrameFormat) SetPageBreakPolicy(flags int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:848
+// /usr/include/qt/QtGui/qtextformat.h:862
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QTextFormat::PageBreakFlags pageBreakPolicy() const

@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 25
+// extern C begin: 27
 */
 // import "C"
 import "unsafe"
@@ -463,7 +463,7 @@ func (this *QSplashScreen) MessageChanged(message string) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QSplashScreen) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

@@ -64,7 +64,7 @@ func (*QContainerImplHelper) NewFromPointer(cthis unsafe.Pointer) *QContainerImp
 	return NewQContainerImplHelperFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qarraydata.h:373
+// /usr/include/qt/QtCore/qarraydata.h:375
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QtPrivate::QContainerImplHelper::CutResult mid(int, int *, int *)

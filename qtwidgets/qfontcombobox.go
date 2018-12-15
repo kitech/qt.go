@@ -220,7 +220,7 @@ func (this *QFontComboBox) CurrentFont() *qtgui.QFont /*123*/ {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QComboBox::sizeHint().
 */
 func (this *QFontComboBox) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontComboBox8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -274,7 +274,7 @@ func (this *QFontComboBox) CurrentFontChanged(f qtgui.QFont_ITF) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QComboBox::event().
 */
 func (this *QFontComboBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

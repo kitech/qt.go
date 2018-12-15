@@ -378,7 +378,7 @@ func (this *QLCDNumber) IntValue() int {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QFrame::sizeHint().
 */
 func (this *QLCDNumber) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -541,7 +541,7 @@ func (this *QLCDNumber) Overflow() {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QFrame::event().
 */
 func (this *QLCDNumber) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -559,7 +559,7 @@ func (this *QLCDNumber) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QFrame::paintEvent().
 */
 func (this *QLCDNumber) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer

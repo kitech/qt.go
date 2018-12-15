@@ -64,7 +64,7 @@ func (*QSequentialIterable) NewFromPointer(cthis unsafe.Pointer) *QSequentialIte
 	return NewQSequentialIterableFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:623
+// /usr/include/qt/QtCore/qvariant.h:647
 // index:0
 // Public Visibility=Default Availability=Available
 // [112] QSequentialIterable::const_iterator begin() const
@@ -78,7 +78,7 @@ func (this *QSequentialIterable) Begin() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qvariant.h:624
+// /usr/include/qt/QtCore/qvariant.h:648
 // index:0
 // Public Visibility=Default Availability=Available
 // [112] QSequentialIterable::const_iterator end() const
@@ -92,7 +92,7 @@ func (this *QSequentialIterable) End() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qvariant.h:626
+// /usr/include/qt/QtCore/qvariant.h:650
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant at(int) const
@@ -108,7 +108,7 @@ func (this *QSequentialIterable) At(idx int) *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:627
+// /usr/include/qt/QtCore/qvariant.h:651
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int size() const
@@ -122,7 +122,7 @@ func (this *QSequentialIterable) Size() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qvariant.h:629
+// /usr/include/qt/QtCore/qvariant.h:653
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canReverseIterate() const

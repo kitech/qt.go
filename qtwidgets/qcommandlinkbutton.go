@@ -302,7 +302,7 @@ func (this *QCommandLinkButton) SetDescription(description string) {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QPushButton::sizeHint().
 */
 func (this *QCommandLinkButton) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -332,7 +332,7 @@ func (this *QCommandLinkButton) HeightForWidth(arg0 int) int {
 // [8] QSize minimumSizeHint() const
 
 /*
-Reimplemented from QWidget::minimumSizeHint().
+Reimplemented from QPushButton::minimumSizeHint().
 */
 func (this *QCommandLinkButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -348,7 +348,7 @@ func (this *QCommandLinkButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QPushButton::event().
 */
 func (this *QCommandLinkButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -366,7 +366,7 @@ func (this *QCommandLinkButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QPushButton::paintEvent().
 */
 func (this *QCommandLinkButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer

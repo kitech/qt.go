@@ -68,7 +68,7 @@ func (*QSGNode) NewFromPointer(cthis unsafe.Pointer) *QSGNode {
 	return NewQSGNodeFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:130
+// /usr/include/qt/QtQuick/qsgnode.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGNode()
@@ -87,7 +87,7 @@ func NewQSGNode() *QSGNode {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:165
+// /usr/include/qt/QtQuick/qsgnode.h:160
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QSGNode(QSGNode::NodeType)
@@ -106,7 +106,7 @@ func NewQSGNode1(type_ int) *QSGNode {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:131
+// /usr/include/qt/QtQuick/qsgnode.h:126
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGNode()
@@ -121,7 +121,7 @@ func DeleteQSGNode(this *QSGNode) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:133
+// /usr/include/qt/QtQuick/qsgnode.h:128
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSGNode * parent() const
@@ -135,7 +135,7 @@ func (this *QSGNode) Parent() *QSGNode /*777 QSGNode **/ {
 	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:135
+// /usr/include/qt/QtQuick/qsgnode.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeChildNode(QSGNode *)
@@ -152,7 +152,7 @@ func (this *QSGNode) RemoveChildNode(node QSGNode_ITF /*777 QSGNode **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:136
+// /usr/include/qt/QtQuick/qsgnode.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAllChildNodes()
@@ -165,7 +165,7 @@ func (this *QSGNode) RemoveAllChildNodes() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:137
+// /usr/include/qt/QtQuick/qsgnode.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void prependChildNode(QSGNode *)
@@ -184,7 +184,7 @@ func (this *QSGNode) PrependChildNode(node QSGNode_ITF /*777 QSGNode **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:138
+// /usr/include/qt/QtQuick/qsgnode.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void appendChildNode(QSGNode *)
@@ -203,7 +203,7 @@ func (this *QSGNode) AppendChildNode(node QSGNode_ITF /*777 QSGNode **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:139
+// /usr/include/qt/QtQuick/qsgnode.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertChildNodeBefore(QSGNode *, QSGNode *)
@@ -226,7 +226,7 @@ func (this *QSGNode) InsertChildNodeBefore(node QSGNode_ITF /*777 QSGNode **/, b
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:140
+// /usr/include/qt/QtQuick/qsgnode.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertChildNodeAfter(QSGNode *, QSGNode *)
@@ -249,7 +249,7 @@ func (this *QSGNode) InsertChildNodeAfter(node QSGNode_ITF /*777 QSGNode **/, af
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:141
+// /usr/include/qt/QtQuick/qsgnode.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reparentChildNodesTo(QSGNode *)
@@ -266,7 +266,7 @@ func (this *QSGNode) ReparentChildNodesTo(newParent QSGNode_ITF /*777 QSGNode **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:143
+// /usr/include/qt/QtQuick/qsgnode.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int childCount() const
@@ -280,7 +280,7 @@ func (this *QSGNode) ChildCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:144
+// /usr/include/qt/QtQuick/qsgnode.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGNode * childAtIndex(int) const
@@ -296,7 +296,7 @@ func (this *QSGNode) ChildAtIndex(i int) *QSGNode /*777 QSGNode **/ {
 	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:145
+// /usr/include/qt/QtQuick/qsgnode.h:140
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSGNode * firstChild() const
@@ -312,7 +312,7 @@ func (this *QSGNode) FirstChild() *QSGNode /*777 QSGNode **/ {
 	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:146
+// /usr/include/qt/QtQuick/qsgnode.h:141
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSGNode * lastChild() const
@@ -328,7 +328,7 @@ func (this *QSGNode) LastChild() *QSGNode /*777 QSGNode **/ {
 	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:147
+// /usr/include/qt/QtQuick/qsgnode.h:142
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSGNode * nextSibling() const
@@ -344,7 +344,7 @@ func (this *QSGNode) NextSibling() *QSGNode /*777 QSGNode **/ {
 	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:148
+// /usr/include/qt/QtQuick/qsgnode.h:143
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSGNode * previousSibling() const
@@ -360,7 +360,7 @@ func (this *QSGNode) PreviousSibling() *QSGNode /*777 QSGNode **/ {
 	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:150
+// /usr/include/qt/QtQuick/qsgnode.h:145
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QSGNode::NodeType type() const
@@ -374,7 +374,7 @@ func (this *QSGNode) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:152
+// /usr/include/qt/QtQuick/qsgnode.h:147
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void clearDirty()
@@ -387,7 +387,7 @@ func (this *QSGNode) ClearDirty() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:153
+// /usr/include/qt/QtQuick/qsgnode.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void markDirty(QSGNode::DirtyState)
@@ -400,7 +400,7 @@ func (this *QSGNode) MarkDirty(bits int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:154
+// /usr/include/qt/QtQuick/qsgnode.h:149
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QSGNode::DirtyState dirtyState() const
@@ -414,7 +414,7 @@ func (this *QSGNode) DirtyState() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:156
+// /usr/include/qt/QtQuick/qsgnode.h:151
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isSubtreeBlocked() const
@@ -432,7 +432,7 @@ func (this *QSGNode) IsSubtreeBlocked() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:158
+// /usr/include/qt/QtQuick/qsgnode.h:153
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QSGNode::Flags flags() const
@@ -448,7 +448,7 @@ func (this *QSGNode) Flags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:159
+// /usr/include/qt/QtQuick/qsgnode.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(QSGNode::Flag, bool)
@@ -463,7 +463,7 @@ func (this *QSGNode) SetFlag(arg0 int, arg1 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:159
+// /usr/include/qt/QtQuick/qsgnode.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(QSGNode::Flag, bool)
@@ -480,7 +480,7 @@ func (this *QSGNode) SetFlagp(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:160
+// /usr/include/qt/QtQuick/qsgnode.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(QSGNode::Flags, bool)
@@ -495,7 +495,7 @@ func (this *QSGNode) SetFlags(arg0 int, arg1 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:160
+// /usr/include/qt/QtQuick/qsgnode.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(QSGNode::Flags, bool)
@@ -512,7 +512,7 @@ func (this *QSGNode) SetFlagsp(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:162
+// /usr/include/qt/QtQuick/qsgnode.h:157
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void preprocess()

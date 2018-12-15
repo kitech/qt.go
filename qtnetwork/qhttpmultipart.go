@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qhttpmultipart.h
@@ -63,7 +65,7 @@ func (*QHttpMultiPart) NewFromPointer(cthis unsafe.Pointer) *QHttpMultiPart {
 	return NewQHttpMultiPartFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:90
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:92
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -77,7 +79,7 @@ func (this *QHttpMultiPart) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:101
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(QObject *)
@@ -102,7 +104,7 @@ func NewQHttpMultiPart(parent qtcore.QObject_ITF /*777 QObject **/) *QHttpMultiP
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:101
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(QObject *)
@@ -125,7 +127,7 @@ func NewQHttpMultiPartp() *QHttpMultiPart {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:102
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:104
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(QHttpMultiPart::ContentType, QObject *)
@@ -150,7 +152,7 @@ func NewQHttpMultiPart1(contentType int, parent qtcore.QObject_ITF /*777 QObject
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:102
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:104
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpMultiPart(QHttpMultiPart::ContentType, QObject *)
@@ -173,7 +175,7 @@ func NewQHttpMultiPart1p(contentType int) *QHttpMultiPart {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:103
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:105
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHttpMultiPart()
@@ -188,7 +190,7 @@ func DeleteQHttpMultiPart(this *QHttpMultiPart) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:107
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContentType(QHttpMultiPart::ContentType)
@@ -203,7 +205,7 @@ func (this *QHttpMultiPart) SetContentType(contentType int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:109
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray boundary() const
@@ -221,7 +223,7 @@ func (this *QHttpMultiPart) Boundary() *qtcore.QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:110
+// /usr/include/qt/QtNetwork/qhttpmultipart.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBoundary(const QByteArray &)

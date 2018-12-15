@@ -65,7 +65,7 @@ func (*QPointingDeviceUniqueId) NewFromPointer(cthis unsafe.Pointer) *QPointingD
 	return NewQPointingDeviceUniqueIdFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:809
+// /usr/include/qt/QtGui/qevent.h:814
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPointingDeviceUniqueId()
@@ -84,7 +84,7 @@ func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:813
+// /usr/include/qt/QtGui/qevent.h:818
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QPointingDeviceUniqueId fromNumericId(qint64)
@@ -105,7 +105,7 @@ func QPointingDeviceUniqueId_FromNumericId(id int64) *QPointingDeviceUniqueId /*
 	return rv
 }
 
-// /usr/include/qt/QtGui/qevent.h:815
+// /usr/include/qt/QtGui/qevent.h:820
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -119,7 +119,7 @@ func (this *QPointingDeviceUniqueId) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qevent.h:816
+// /usr/include/qt/QtGui/qevent.h:821
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 numericId() const

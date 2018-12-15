@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qpauseanimation.h
@@ -72,7 +74,7 @@ func (*QPauseAnimation) NewFromPointer(cthis unsafe.Pointer) *QPauseAnimation {
 	return NewQPauseAnimationFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qpauseanimation.h:54
+// /usr/include/qt/QtCore/qpauseanimation.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -86,7 +88,7 @@ func (this *QPauseAnimation) MetaObject() *QMetaObject /*777 const QMetaObject *
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qpauseanimation.h:57
+// /usr/include/qt/QtCore/qpauseanimation.h:56
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPauseAnimation(QObject *)
@@ -109,7 +111,7 @@ func NewQPauseAnimation(parent QObject_ITF /*777 QObject **/) *QPauseAnimation {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qpauseanimation.h:57
+// /usr/include/qt/QtCore/qpauseanimation.h:56
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPauseAnimation(QObject *)
@@ -130,7 +132,7 @@ func NewQPauseAnimationp() *QPauseAnimation {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qpauseanimation.h:58
+// /usr/include/qt/QtCore/qpauseanimation.h:57
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPauseAnimation(int, QObject *)
@@ -153,7 +155,7 @@ func NewQPauseAnimation1(msecs int, parent QObject_ITF /*777 QObject **/) *QPaus
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qpauseanimation.h:58
+// /usr/include/qt/QtCore/qpauseanimation.h:57
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPauseAnimation(int, QObject *)
@@ -174,7 +176,7 @@ func NewQPauseAnimation1p(msecs int) *QPauseAnimation {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qpauseanimation.h:59
+// /usr/include/qt/QtCore/qpauseanimation.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPauseAnimation()
@@ -189,7 +191,7 @@ func DeleteQPauseAnimation(this *QPauseAnimation) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qpauseanimation.h:61
+// /usr/include/qt/QtCore/qpauseanimation.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int duration() const
@@ -203,7 +205,7 @@ func (this *QPauseAnimation) Duration() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qpauseanimation.h:62
+// /usr/include/qt/QtCore/qpauseanimation.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDuration(int)
@@ -216,13 +218,13 @@ func (this *QPauseAnimation) SetDuration(msecs int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qpauseanimation.h:65
+// /usr/include/qt/QtCore/qpauseanimation.h:64
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractAnimation::event().
 */
 func (this *QPauseAnimation) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -234,7 +236,7 @@ func (this *QPauseAnimation) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qpauseanimation.h:66
+// /usr/include/qt/QtCore/qpauseanimation.h:65
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentTime(int)

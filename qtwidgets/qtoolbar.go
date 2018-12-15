@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qtoolbar.h
@@ -89,7 +91,7 @@ func (*QToolBar) NewFromPointer(cthis unsafe.Pointer) *QToolBar {
 	return NewQToolBarFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:61
+// /usr/include/qt/QtWidgets/qtoolbar.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -103,7 +105,7 @@ func (this *QToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:79
+// /usr/include/qt/QtWidgets/qtoolbar.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBar(const QString &, QWidget *)
@@ -132,7 +134,7 @@ func NewQToolBar(title string, parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:79
+// /usr/include/qt/QtWidgets/qtoolbar.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBar(const QString &, QWidget *)
@@ -159,7 +161,7 @@ func NewQToolBarp(title string) *QToolBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:80
+// /usr/include/qt/QtWidgets/qtoolbar.h:79
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBar(QWidget *)
@@ -186,7 +188,7 @@ func NewQToolBar1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:80
+// /usr/include/qt/QtWidgets/qtoolbar.h:79
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBar(QWidget *)
@@ -211,7 +213,7 @@ func NewQToolBar1p() *QToolBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:81
+// /usr/include/qt/QtWidgets/qtoolbar.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QToolBar()
@@ -226,7 +228,7 @@ func DeleteQToolBar(this *QToolBar) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:83
+// /usr/include/qt/QtWidgets/qtoolbar.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMovable(bool)
@@ -239,7 +241,7 @@ func (this *QToolBar) SetMovable(movable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:84
+// /usr/include/qt/QtWidgets/qtoolbar.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isMovable() const
@@ -253,7 +255,7 @@ func (this *QToolBar) IsMovable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:86
+// /usr/include/qt/QtWidgets/qtoolbar.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAllowedAreas(Qt::ToolBarAreas)
@@ -266,7 +268,7 @@ func (this *QToolBar) SetAllowedAreas(areas int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:87
+// /usr/include/qt/QtWidgets/qtoolbar.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ToolBarAreas allowedAreas() const
@@ -280,7 +282,7 @@ func (this *QToolBar) AllowedAreas() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:89
+// /usr/include/qt/QtWidgets/qtoolbar.h:88
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isAreaAllowed(Qt::ToolBarArea) const
@@ -294,7 +296,7 @@ func (this *QToolBar) IsAreaAllowed(area int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:92
+// /usr/include/qt/QtWidgets/qtoolbar.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)
@@ -307,7 +309,7 @@ func (this *QToolBar) SetOrientation(orientation int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:93
+// /usr/include/qt/QtWidgets/qtoolbar.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
@@ -321,7 +323,7 @@ func (this *QToolBar) Orientation() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:95
+// /usr/include/qt/QtWidgets/qtoolbar.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -336,14 +338,12 @@ func (this *QToolBar) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:98
+// /usr/include/qt/QtWidgets/qtoolbar.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QString &)
 
 /*
-This is an overloaded function.
-
 Creates a new action with the given text. This action is added to the end of the toolbar.
 */
 func (this *QToolBar) AddAction(text string) *QAction /*777 QAction **/ {
@@ -354,14 +354,12 @@ func (this *QToolBar) AddAction(text string) *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:99
+// /usr/include/qt/QtWidgets/qtoolbar.h:98
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &)
 
 /*
-This is an overloaded function.
-
 Creates a new action with the given text. This action is added to the end of the toolbar.
 */
 func (this *QToolBar) AddAction1(icon qtgui.QIcon_ITF, text string) *QAction /*777 QAction **/ {
@@ -376,14 +374,12 @@ func (this *QToolBar) AddAction1(icon qtgui.QIcon_ITF, text string) *QAction /*7
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:100
+// /usr/include/qt/QtWidgets/qtoolbar.h:99
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QString &, const QObject *, const char *)
 
 /*
-This is an overloaded function.
-
 Creates a new action with the given text. This action is added to the end of the toolbar.
 */
 func (this *QToolBar) AddAction2(text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
@@ -400,14 +396,12 @@ func (this *QToolBar) AddAction2(text string, receiver qtcore.QObject_ITF /*777 
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:101
+// /usr/include/qt/QtWidgets/qtoolbar.h:100
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &, const QObject *, const char *)
 
 /*
-This is an overloaded function.
-
 Creates a new action with the given text. This action is added to the end of the toolbar.
 */
 func (this *QToolBar) AddAction3(icon qtgui.QIcon_ITF, text string, receiver qtcore.QObject_ITF /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
@@ -428,7 +422,7 @@ func (this *QToolBar) AddAction3(icon qtgui.QIcon_ITF, text string, receiver qtc
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:155
+// /usr/include/qt/QtWidgets/qtoolbar.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addSeparator()
@@ -444,7 +438,7 @@ func (this *QToolBar) AddSeparator() *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:156
+// /usr/include/qt/QtWidgets/qtoolbar.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertSeparator(QAction *)
@@ -464,7 +458,7 @@ func (this *QToolBar) InsertSeparator(before QAction_ITF /*777 QAction **/) *QAc
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:158
+// /usr/include/qt/QtWidgets/qtoolbar.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addWidget(QWidget *)
@@ -490,7 +484,7 @@ func (this *QToolBar) AddWidget(widget QWidget_ITF /*777 QWidget **/) *QAction /
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:159
+// /usr/include/qt/QtWidgets/qtoolbar.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertWidget(QAction *, QWidget *)
@@ -516,7 +510,7 @@ func (this *QToolBar) InsertWidget(before QAction_ITF /*777 QAction **/, widget 
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:161
+// /usr/include/qt/QtWidgets/qtoolbar.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect actionGeometry(QAction *) const
@@ -536,7 +530,7 @@ func (this *QToolBar) ActionGeometry(action QAction_ITF /*777 QAction **/) *qtco
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:162
+// /usr/include/qt/QtWidgets/qtoolbar.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * actionAt(const QPoint &) const
@@ -556,7 +550,7 @@ func (this *QToolBar) ActionAt(p qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:163
+// /usr/include/qt/QtWidgets/qtoolbar.h:162
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QAction * actionAt(int, int) const
@@ -572,7 +566,7 @@ func (this *QToolBar) ActionAt1(x int, y int) *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:165
+// /usr/include/qt/QtWidgets/qtoolbar.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * toggleViewAction() const
@@ -590,7 +584,7 @@ func (this *QToolBar) ToggleViewAction() *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:167
+// /usr/include/qt/QtWidgets/qtoolbar.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize iconSize() const
@@ -606,7 +600,7 @@ func (this *QToolBar) IconSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:168
+// /usr/include/qt/QtWidgets/qtoolbar.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ToolButtonStyle toolButtonStyle() const
@@ -620,7 +614,7 @@ func (this *QToolBar) ToolButtonStyle() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:170
+// /usr/include/qt/QtWidgets/qtoolbar.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widgetForAction(QAction *) const
@@ -642,7 +636,7 @@ func (this *QToolBar) WidgetForAction(action QAction_ITF /*777 QAction **/) *QWi
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:172
+// /usr/include/qt/QtWidgets/qtoolbar.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFloatable() const
@@ -656,7 +650,7 @@ func (this *QToolBar) IsFloatable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:173
+// /usr/include/qt/QtWidgets/qtoolbar.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFloatable(bool)
@@ -669,7 +663,7 @@ func (this *QToolBar) SetFloatable(floatable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:174
+// /usr/include/qt/QtWidgets/qtoolbar.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFloating() const
@@ -683,7 +677,7 @@ func (this *QToolBar) IsFloating() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:177
+// /usr/include/qt/QtWidgets/qtoolbar.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconSize(const QSize &)
@@ -700,7 +694,7 @@ func (this *QToolBar) SetIconSize(iconSize qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:178
+// /usr/include/qt/QtWidgets/qtoolbar.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setToolButtonStyle(Qt::ToolButtonStyle)
@@ -713,7 +707,7 @@ func (this *QToolBar) SetToolButtonStyle(toolButtonStyle int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:181
+// /usr/include/qt/QtWidgets/qtoolbar.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void actionTriggered(QAction *)
@@ -730,15 +724,13 @@ func (this *QToolBar) ActionTriggered(action QAction_ITF /*777 QAction **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:182
+// /usr/include/qt/QtWidgets/qtoolbar.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void movableChanged(bool)
 
 /*
 This signal is emitted when the toolbar becomes movable or fixed. If the toolbar can be moved, movable is true; otherwise it is false.
-
-Note: Notifier signal for property movable.
 
 See also movable.
 */
@@ -747,15 +739,13 @@ func (this *QToolBar) MovableChanged(movable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:183
+// /usr/include/qt/QtWidgets/qtoolbar.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void allowedAreasChanged(Qt::ToolBarAreas)
 
 /*
 This signal is emitted when the collection of allowed areas for the toolbar is changed. The new areas in which the toolbar can be positioned are specified by allowedAreas.
-
-Note: Notifier signal for property allowedAreas.
 
 See also allowedAreas.
 */
@@ -764,15 +754,13 @@ func (this *QToolBar) AllowedAreasChanged(allowedAreas int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:184
+// /usr/include/qt/QtWidgets/qtoolbar.h:183
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void orientationChanged(Qt::Orientation)
 
 /*
 This signal is emitted when the orientation of the toolbar changes. The orientation parameter holds the toolbar's new orientation.
-
-Note: Notifier signal for property orientation.
 
 See also orientation.
 */
@@ -781,7 +769,7 @@ func (this *QToolBar) OrientationChanged(orientation int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:185
+// /usr/include/qt/QtWidgets/qtoolbar.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void iconSizeChanged(const QSize &)
@@ -802,7 +790,7 @@ func (this *QToolBar) IconSizeChanged(iconSize qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:186
+// /usr/include/qt/QtWidgets/qtoolbar.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toolButtonStyleChanged(Qt::ToolButtonStyle)
@@ -819,7 +807,7 @@ func (this *QToolBar) ToolButtonStyleChanged(toolButtonStyle int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:187
+// /usr/include/qt/QtWidgets/qtoolbar.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void topLevelChanged(bool)
@@ -836,7 +824,7 @@ func (this *QToolBar) TopLevelChanged(topLevel bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:188
+// /usr/include/qt/QtWidgets/qtoolbar.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void visibilityChanged(bool)
@@ -851,7 +839,7 @@ func (this *QToolBar) VisibilityChanged(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:191
+// /usr/include/qt/QtWidgets/qtoolbar.h:190
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void actionEvent(QActionEvent *)
@@ -868,7 +856,7 @@ func (this *QToolBar) ActionEvent(event qtgui.QActionEvent_ITF /*777 QActionEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:192
+// /usr/include/qt/QtWidgets/qtoolbar.h:191
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -885,7 +873,7 @@ func (this *QToolBar) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:193
+// /usr/include/qt/QtWidgets/qtoolbar.h:192
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -902,13 +890,13 @@ func (this *QToolBar) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:194
+// /usr/include/qt/QtWidgets/qtoolbar.h:193
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QToolBar) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -920,7 +908,7 @@ func (this *QToolBar) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtoolbar.h:195
+// /usr/include/qt/QtWidgets/qtoolbar.h:194
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionToolBar *) const

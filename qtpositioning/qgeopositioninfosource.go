@@ -472,6 +472,21 @@ func (this *QGeoPositionInfoSource) UpdateTimeout() {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtPositioning/qgeopositioninfosource.h:104
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void supportedPositioningMethodsChanged()
+
+/*
+This signal is emitted after the supportedPositioningMethods change.
+
+This function was introduced in  Qt 5.12.
+*/
+func (this *QGeoPositionInfoSource) SupportedPositioningMethodsChanged() {
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QGeoPositionInfoSource34supportedPositioningMethodsChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
 /*
 The Error enumeration represents the errors which can occur.
 

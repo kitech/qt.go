@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -503,8 +503,8 @@ The following example shows a URL where the scheme is "ftp":
 To set the scheme, the following call is used:
 
 
-  QUrl url;
-  url.setScheme("ftp");
+      QUrl url;
+      url.setScheme("ftp");
 
 
 
@@ -869,7 +869,7 @@ For non-hierarchical schemes, the path will be everything following the scheme d
 
 
 
-The path data is interpreted according to mode: in StrictMode, any '%' characters must be followed by exactly two hexadecimal characters and some characters (including space) are not allowed in undecoded form. In TolerantMode (the default), all characters are accepted in undecoded form and the tolerant parser will correct stray '%' not followed by two hex characters. In DecodedMode, '%' stand for themselves and encoded characters are not possible.
+The path data is interpreted according to mode: in StrictMode, any '%' characters must be followed by exactly two hexadecimal characters and some characters (including space) are not allowed in undecoded form. In TolerantMode, all characters are accepted in undecoded form and the tolerant parser will correct stray '%' not followed by two hex characters. In DecodedMode, '%' stand for themselves and encoded characters are not possible.
 
 QUrl::DecodedMode should be used when setting the path from a data source which is not a URL, such as a dialog shown to the user or with a path obtained by calling path() with the QUrl::FullyDecoded formatting option.
 
@@ -896,7 +896,7 @@ For non-hierarchical schemes, the path will be everything following the scheme d
 
 
 
-The path data is interpreted according to mode: in StrictMode, any '%' characters must be followed by exactly two hexadecimal characters and some characters (including space) are not allowed in undecoded form. In TolerantMode (the default), all characters are accepted in undecoded form and the tolerant parser will correct stray '%' not followed by two hex characters. In DecodedMode, '%' stand for themselves and encoded characters are not possible.
+The path data is interpreted according to mode: in StrictMode, any '%' characters must be followed by exactly two hexadecimal characters and some characters (including space) are not allowed in undecoded form. In TolerantMode, all characters are accepted in undecoded form and the tolerant parser will correct stray '%' not followed by two hex characters. In DecodedMode, '%' stand for themselves and encoded characters are not possible.
 
 QUrl::DecodedMode should be used when setting the path from a data source which is not a URL, such as a dialog shown to the user or with a path obtained by calling path() with the QUrl::FullyDecoded formatting option.
 
@@ -1185,38 +1185,38 @@ This function also accepts paths with a doubled leading slash (or backslash) to 
 An empty localFile leads to an empty URL (since Qt 5.4).
 
 
-  qDebug() << QUrl::fromLocalFile("file.txt");            // QUrl("file:file.txt")
-  qDebug() << QUrl::fromLocalFile("/home/user/file.txt"); // QUrl("file:///home/user/file.txt")
-  qDebug() << QUrl::fromLocalFile("file:file.txt");       // doesn't make sense; expects path, not url with scheme
+      qDebug() << QUrl::fromLocalFile("file.txt");            // QUrl("file:file.txt")
+      qDebug() << QUrl::fromLocalFile("/home/user/file.txt"); // QUrl("file:///home/user/file.txt")
+      qDebug() << QUrl::fromLocalFile("file:file.txt");       // doesn't make sense; expects path, not url with scheme
 
 
 
 In the first line in snippet above, a file URL is constructed from a local, relative path. A file URL with a relative path only makes sense if there is a base URL to resolve it against. For example:
 
 
-  QUrl url = QUrl::fromLocalFile("file.txt");
-  QUrl baseUrl = QUrl("file:/home/user/");
-  // wrong: prints QUrl("file:file.txt"), as url already has a scheme
-  qDebug() << baseUrl.resolved(url);
+      QUrl url = QUrl::fromLocalFile("file.txt");
+      QUrl baseUrl = QUrl("file:/home/user/");
+      // wrong: prints QUrl("file:file.txt"), as url already has a scheme
+      qDebug() << baseUrl.resolved(url);
 
 
 
 To resolve such a URL, it's necessary to remove the scheme beforehand:
 
 
-  // correct: prints QUrl("file:///home/user/file.txt")
-  url.setScheme(QString());
-  qDebug() << baseUrl.resolved(url);
+      // correct: prints QUrl("file:///home/user/file.txt")
+      url.setScheme(QString());
+      qDebug() << baseUrl.resolved(url);
 
 
 
 For this reason, it is better to use a relative URL (that is, no scheme) for relative file paths:
 
 
-  QUrl url = QUrl("file.txt");
-  QUrl baseUrl = QUrl("file:/home/user/");
-  // prints QUrl("file:///home/user/file.txt")
-  qDebug() << baseUrl.resolved(url);
+      QUrl url = QUrl("file.txt");
+      QUrl baseUrl = QUrl("file:/home/user/");
+      // prints QUrl("file:///home/user/file.txt")
+      qDebug() << baseUrl.resolved(url);
 
 
 
@@ -1248,9 +1248,9 @@ Returns the path of this URL formatted as a local file path. The path returned w
 If this URL contains a non-empty hostname, it will be encoded in the returned value in the form found on SMB networks (for example, "//servername/path/to/file.txt").
 
 
-  qDebug() << QUrl("file:file.txt").toLocalFile();            // "file:file.txt"
-  qDebug() << QUrl("file:/home/user/file.txt").toLocalFile(); // "file:///home/user/file.txt"
-  qDebug() << QUrl("file.txt").toLocalFile();                 // ""; wasn't a local file as it had no scheme
+      qDebug() << QUrl("file:file.txt").toLocalFile();            // "file:file.txt"
+      qDebug() << QUrl("file:/home/user/file.txt").toLocalFile(); // "file:///home/user/file.txt"
+      qDebug() << QUrl("file.txt").toLocalFile();                 // ""; wasn't a local file as it had no scheme
 
 
 

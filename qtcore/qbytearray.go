@@ -64,7 +64,7 @@ func (*QByteArray) NewFromPointer(cthis unsafe.Pointer) *QByteArray {
 	return NewQByteArrayFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:170
+// /usr/include/qt/QtCore/qbytearray.h:171
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QByteArray()
@@ -85,7 +85,7 @@ func NewQByteArray() *QByteArray {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:171
+// /usr/include/qt/QtCore/qbytearray.h:172
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QByteArray(const char *, int)
@@ -108,7 +108,7 @@ func NewQByteArray1(arg0 string, size int) *QByteArray {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:171
+// /usr/include/qt/QtCore/qbytearray.h:172
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QByteArray(const char *, int)
@@ -133,7 +133,7 @@ func NewQByteArray1p(arg0 string) *QByteArray {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:172
+// /usr/include/qt/QtCore/qbytearray.h:173
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QByteArray(int, char)
@@ -154,7 +154,7 @@ func NewQByteArray2(size int, c byte) *QByteArray {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:173
+// /usr/include/qt/QtCore/qbytearray.h:174
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QByteArray(int, Qt::Initialization)
@@ -175,7 +175,7 @@ func NewQByteArray3(size int, arg1 int) *QByteArray {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:175
+// /usr/include/qt/QtCore/qbytearray.h:176
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QByteArray()
@@ -190,7 +190,7 @@ func DeleteQByteArray(this *QByteArray) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:177
+// /usr/include/qt/QtCore/qbytearray.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & operator=(const QByteArray &)
@@ -210,7 +210,7 @@ func (this *QByteArray) Operator_equal(arg0 QByteArray_ITF) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:178
+// /usr/include/qt/QtCore/qbytearray.h:179
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & operator=(const char *)
@@ -228,7 +228,7 @@ func (this *QByteArray) Operator_equal1(str string) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:181
+// /usr/include/qt/QtCore/qbytearray.h:182
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & operator=(QByteArray &&)
@@ -244,7 +244,7 @@ func (this *QByteArray) Operator_equal2(other unsafe.Pointer /*333*/) *QByteArra
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:185
+// /usr/include/qt/QtCore/qbytearray.h:186
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QByteArray &)
@@ -263,7 +263,7 @@ func (this *QByteArray) Swap(other QByteArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:188
+// /usr/include/qt/QtCore/qbytearray.h:189
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int size() const
@@ -292,7 +292,7 @@ func (this *QByteArray) Size() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:189
+// /usr/include/qt/QtCore/qbytearray.h:190
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isEmpty() const
@@ -317,7 +317,7 @@ func (this *QByteArray) IsEmpty() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:190
+// /usr/include/qt/QtCore/qbytearray.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resize(int)
@@ -336,7 +336,7 @@ func (this *QByteArray) Resize(size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:192
+// /usr/include/qt/QtCore/qbytearray.h:193
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & fill(char, int)
@@ -366,7 +366,7 @@ func (this *QByteArray) Fill(c byte, size int) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:192
+// /usr/include/qt/QtCore/qbytearray.h:193
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & fill(char, int)
@@ -398,7 +398,7 @@ func (this *QByteArray) Fillp(c byte) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:194
+// /usr/include/qt/QtCore/qbytearray.h:195
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int capacity() const
@@ -416,7 +416,7 @@ func (this *QByteArray) Capacity() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:195
+// /usr/include/qt/QtCore/qbytearray.h:196
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void reserve(int)
@@ -433,7 +433,7 @@ func (this *QByteArray) Reserve(size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:196
+// /usr/include/qt/QtCore/qbytearray.h:197
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void squeeze()
@@ -450,7 +450,7 @@ func (this *QByteArray) Squeeze() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:202
+// /usr/include/qt/QtCore/qbytearray.h:203
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] char * data()
@@ -506,7 +506,7 @@ func (this *QByteArray) Data() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:203
+// /usr/include/qt/QtCore/qbytearray.h:204
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] const char * data() const
@@ -562,7 +562,7 @@ func (this *QByteArray) Data1() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:204
+// /usr/include/qt/QtCore/qbytearray.h:205
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const char * constData() const
@@ -582,7 +582,7 @@ func (this *QByteArray) ConstData() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:205
+// /usr/include/qt/QtCore/qbytearray.h:206
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void detach()
@@ -595,7 +595,7 @@ func (this *QByteArray) Detach() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:206
+// /usr/include/qt/QtCore/qbytearray.h:207
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDetached() const
@@ -609,7 +609,7 @@ func (this *QByteArray) IsDetached() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:207
+// /usr/include/qt/QtCore/qbytearray.h:208
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSharedWith(const QByteArray &) const
@@ -627,7 +627,7 @@ func (this *QByteArray) IsSharedWith(other QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:208
+// /usr/include/qt/QtCore/qbytearray.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -642,7 +642,7 @@ func (this *QByteArray) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:210
+// /usr/include/qt/QtCore/qbytearray.h:211
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] char at(int) const
@@ -660,7 +660,7 @@ func (this *QByteArray) At(i int) byte {
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:211
+// /usr/include/qt/QtCore/qbytearray.h:212
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] char operator[](int) const
@@ -674,7 +674,7 @@ func (this *QByteArray) Operator_get_index(i int) byte {
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:212
+// /usr/include/qt/QtCore/qbytearray.h:213
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] char operator[](uint) const
@@ -688,7 +688,7 @@ func (this *QByteArray) Operator_get_index1(i uint) byte {
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:213
+// /usr/include/qt/QtCore/qbytearray.h:214
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [16] QByteRef operator[](int)
@@ -704,7 +704,7 @@ func (this *QByteArray) Operator_get_index2(i int) *QByteRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:214
+// /usr/include/qt/QtCore/qbytearray.h:215
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [16] QByteRef operator[](uint)
@@ -720,7 +720,7 @@ func (this *QByteArray) Operator_get_index3(i uint) *QByteRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:215
+// /usr/include/qt/QtCore/qbytearray.h:216
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] char front() const
@@ -742,7 +742,7 @@ func (this *QByteArray) Front() byte {
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:216
+// /usr/include/qt/QtCore/qbytearray.h:217
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QByteRef front()
@@ -766,7 +766,7 @@ func (this *QByteArray) Front1() *QByteRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:217
+// /usr/include/qt/QtCore/qbytearray.h:218
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] char back() const
@@ -788,7 +788,7 @@ func (this *QByteArray) Back() byte {
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:218
+// /usr/include/qt/QtCore/qbytearray.h:219
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QByteRef back()
@@ -812,7 +812,7 @@ func (this *QByteArray) Back1() *QByteRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:220
+// /usr/include/qt/QtCore/qbytearray.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(char, int) const
@@ -840,7 +840,7 @@ func (this *QByteArray) IndexOf(c byte, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:220
+// /usr/include/qt/QtCore/qbytearray.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(char, int) const
@@ -870,7 +870,7 @@ func (this *QByteArray) IndexOfp(c byte) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:221
+// /usr/include/qt/QtCore/qbytearray.h:222
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const char *, int) const
@@ -900,7 +900,7 @@ func (this *QByteArray) IndexOf1(c string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:221
+// /usr/include/qt/QtCore/qbytearray.h:222
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const char *, int) const
@@ -932,7 +932,7 @@ func (this *QByteArray) IndexOf1p(c string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:222
+// /usr/include/qt/QtCore/qbytearray.h:223
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QByteArray &, int) const
@@ -964,7 +964,7 @@ func (this *QByteArray) IndexOf2(a QByteArray_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:222
+// /usr/include/qt/QtCore/qbytearray.h:223
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QByteArray &, int) const
@@ -998,7 +998,7 @@ func (this *QByteArray) IndexOf2p(a QByteArray_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:331
+// /usr/include/qt/QtCore/qbytearray.h:338
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QString &, int) const
@@ -1028,7 +1028,7 @@ func (this *QByteArray) IndexOf3(s string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:331
+// /usr/include/qt/QtCore/qbytearray.h:338
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QString &, int) const
@@ -1060,7 +1060,7 @@ func (this *QByteArray) IndexOf3p(s string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:223
+// /usr/include/qt/QtCore/qbytearray.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(char, int) const
@@ -1088,7 +1088,7 @@ func (this *QByteArray) LastIndexOf(c byte, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:223
+// /usr/include/qt/QtCore/qbytearray.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(char, int) const
@@ -1118,7 +1118,7 @@ func (this *QByteArray) LastIndexOfp(c byte) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:224
+// /usr/include/qt/QtCore/qbytearray.h:225
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const char *, int) const
@@ -1148,7 +1148,7 @@ func (this *QByteArray) LastIndexOf1(c string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:224
+// /usr/include/qt/QtCore/qbytearray.h:225
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const char *, int) const
@@ -1180,7 +1180,7 @@ func (this *QByteArray) LastIndexOf1p(c string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:225
+// /usr/include/qt/QtCore/qbytearray.h:226
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QByteArray &, int) const
@@ -1212,7 +1212,7 @@ func (this *QByteArray) LastIndexOf2(a QByteArray_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:225
+// /usr/include/qt/QtCore/qbytearray.h:226
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QByteArray &, int) const
@@ -1246,7 +1246,7 @@ func (this *QByteArray) LastIndexOf2p(a QByteArray_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:332
+// /usr/include/qt/QtCore/qbytearray.h:339
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QString &, int) const
@@ -1276,7 +1276,7 @@ func (this *QByteArray) LastIndexOf3(s string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:332
+// /usr/include/qt/QtCore/qbytearray.h:339
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QString &, int) const
@@ -1308,7 +1308,7 @@ func (this *QByteArray) LastIndexOf3p(s string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:227
+// /usr/include/qt/QtCore/qbytearray.h:228
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(char) const
@@ -1324,7 +1324,7 @@ func (this *QByteArray) Contains(c byte) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:228
+// /usr/include/qt/QtCore/qbytearray.h:229
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const char *) const
@@ -1342,7 +1342,7 @@ func (this *QByteArray) Contains1(a string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:229
+// /usr/include/qt/QtCore/qbytearray.h:230
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QByteArray &) const
@@ -1362,7 +1362,7 @@ func (this *QByteArray) Contains2(a QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:230
+// /usr/include/qt/QtCore/qbytearray.h:231
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count(char) const
@@ -1378,7 +1378,7 @@ func (this *QByteArray) Count(c byte) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:231
+// /usr/include/qt/QtCore/qbytearray.h:232
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int count(const char *) const
@@ -1396,7 +1396,7 @@ func (this *QByteArray) Count1(a string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:232
+// /usr/include/qt/QtCore/qbytearray.h:233
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int count(const QByteArray &) const
@@ -1416,7 +1416,7 @@ func (this *QByteArray) Count2(a QByteArray_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:433
+// /usr/include/qt/QtCore/qbytearray.h:440
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [4] int count() const
@@ -1432,7 +1432,95 @@ func (this *QByteArray) Count3() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:234
+// /usr/include/qt/QtCore/qbytearray.h:235
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int compare(const char *, Qt::CaseSensitivity) const
+
+/*
+Returns an integer less than, equal to, or greater than zero depending on whether this QByteArray sorts before, at the same position, or after the string pointed to by c. The comparison is performed according to case sensitivity cs.
+
+This function was introduced in  Qt 5.12.
+
+See also operator==.
+*/
+func (this *QByteArray) Compare(c string, cs int) int {
+	var convArg0 = qtrt.CString(c)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7compareEPKcN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:235
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int compare(const char *, Qt::CaseSensitivity) const
+
+/*
+Returns an integer less than, equal to, or greater than zero depending on whether this QByteArray sorts before, at the same position, or after the string pointed to by c. The comparison is performed according to case sensitivity cs.
+
+This function was introduced in  Qt 5.12.
+
+See also operator==.
+*/
+func (this *QByteArray) Comparep(c string) int {
+	var convArg0 = qtrt.CString(c)
+	defer qtrt.FreeMem(convArg0)
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
+	cs := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7compareEPKcN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:236
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [4] int compare(const QByteArray &, Qt::CaseSensitivity) const
+
+/*
+Returns an integer less than, equal to, or greater than zero depending on whether this QByteArray sorts before, at the same position, or after the string pointed to by c. The comparison is performed according to case sensitivity cs.
+
+This function was introduced in  Qt 5.12.
+
+See also operator==.
+*/
+func (this *QByteArray) Compare1(a QByteArray_ITF, cs int) int {
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QByteArray_PTR() != nil {
+		convArg0 = a.QByteArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7compareERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:236
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [4] int compare(const QByteArray &, Qt::CaseSensitivity) const
+
+/*
+Returns an integer less than, equal to, or greater than zero depending on whether this QByteArray sorts before, at the same position, or after the string pointed to by c. The comparison is performed according to case sensitivity cs.
+
+This function was introduced in  Qt 5.12.
+
+See also operator==.
+*/
+func (this *QByteArray) Compare1p(a QByteArray_ITF) int {
+	var convArg0 unsafe.Pointer
+	if a != nil && a.QByteArray_PTR() != nil {
+		convArg0 = a.QByteArray_PTR().GetCthis()
+	}
+	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
+	cs := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7compareERKS_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:238
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray left(int) const
@@ -1461,7 +1549,7 @@ func (this *QByteArray) Left(len_ int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:235
+// /usr/include/qt/QtCore/qbytearray.h:239
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray right(int) const
@@ -1490,7 +1578,7 @@ func (this *QByteArray) Right(len_ int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:236
+// /usr/include/qt/QtCore/qbytearray.h:240
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray mid(int, int) const
@@ -1519,7 +1607,7 @@ func (this *QByteArray) Mid(index int, len_ int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:236
+// /usr/include/qt/QtCore/qbytearray.h:240
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray mid(int, int) const
@@ -1550,7 +1638,7 @@ func (this *QByteArray) Midp(index int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:237
+// /usr/include/qt/QtCore/qbytearray.h:241
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray chopped(int) const
@@ -1572,7 +1660,7 @@ func (this *QByteArray) Chopped(len_ int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:240
+// /usr/include/qt/QtCore/qbytearray.h:244
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QByteArray &) const
@@ -1601,7 +1689,7 @@ func (this *QByteArray) StartsWith(a QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:241
+// /usr/include/qt/QtCore/qbytearray.h:245
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(char) const
@@ -1626,7 +1714,7 @@ func (this *QByteArray) StartsWith1(c byte) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:242
+// /usr/include/qt/QtCore/qbytearray.h:246
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const char *) const
@@ -1653,7 +1741,7 @@ func (this *QByteArray) StartsWith2(c string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:244
+// /usr/include/qt/QtCore/qbytearray.h:248
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QByteArray &) const
@@ -1682,7 +1770,7 @@ func (this *QByteArray) EndsWith(a QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:245
+// /usr/include/qt/QtCore/qbytearray.h:249
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(char) const
@@ -1707,7 +1795,7 @@ func (this *QByteArray) EndsWith1(c byte) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:246
+// /usr/include/qt/QtCore/qbytearray.h:250
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const char *) const
@@ -1734,7 +1822,43 @@ func (this *QByteArray) EndsWith2(c string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:248
+// /usr/include/qt/QtCore/qbytearray.h:252
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isUpper() const
+
+/*
+Returns true if this byte array contains only uppercase letters, otherwise returns false. The byte array is interpreted as a Latin-1 encoded string.
+
+This function was introduced in  Qt 5.12.
+
+See also isLower() and toUpper().
+*/
+func (this *QByteArray) IsUpper() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7isUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:253
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isLower() const
+
+/*
+Returns true if this byte array contains only lowercase letters, otherwise returns false. The byte array is interpreted as a Latin-1 encoded string.
+
+This function was introduced in  Qt 5.12.
+
+See also isUpper() and toLower().
+*/
+func (this *QByteArray) IsLower() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7isLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:255
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void truncate(int)
@@ -1759,7 +1883,7 @@ func (this *QByteArray) Truncate(pos int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:249
+// /usr/include/qt/QtCore/qbytearray.h:256
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void chop(int)
@@ -1784,7 +1908,7 @@ func (this *QByteArray) Chop(n int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:259
+// /usr/include/qt/QtCore/qbytearray.h:266
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toLower() const
@@ -1801,7 +1925,7 @@ Example:
 
 
 
-See also toUpper() and 8-bit Character Comparisons.
+See also isLower(), toUpper(), and 8-bit Character Comparisons.
 */
 func (this *QByteArray) ToLower() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR10QByteArray7toLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1811,7 +1935,7 @@ func (this *QByteArray) ToLower() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:261
+// /usr/include/qt/QtCore/qbytearray.h:268
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toLower()
@@ -1828,7 +1952,7 @@ Example:
 
 
 
-See also toUpper() and 8-bit Character Comparisons.
+See also isLower(), toUpper(), and 8-bit Character Comparisons.
 */
 func (this *QByteArray) ToLower1() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNO10QByteArray7toLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1838,7 +1962,7 @@ func (this *QByteArray) ToLower1() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:263
+// /usr/include/qt/QtCore/qbytearray.h:270
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toUpper() const
@@ -1855,7 +1979,7 @@ Example:
 
 
 
-See also toLower() and 8-bit Character Comparisons.
+See also isUpper(), toLower(), and 8-bit Character Comparisons.
 */
 func (this *QByteArray) ToUpper() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR10QByteArray7toUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1865,7 +1989,7 @@ func (this *QByteArray) ToUpper() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:265
+// /usr/include/qt/QtCore/qbytearray.h:272
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toUpper()
@@ -1882,7 +2006,7 @@ Example:
 
 
 
-See also toLower() and 8-bit Character Comparisons.
+See also isUpper(), toLower(), and 8-bit Character Comparisons.
 */
 func (this *QByteArray) ToUpper1() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNO10QByteArray7toUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1892,7 +2016,7 @@ func (this *QByteArray) ToUpper1() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:267
+// /usr/include/qt/QtCore/qbytearray.h:274
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray trimmed() const
@@ -1923,7 +2047,7 @@ func (this *QByteArray) Trimmed() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:269
+// /usr/include/qt/QtCore/qbytearray.h:276
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray trimmed()
@@ -1954,7 +2078,7 @@ func (this *QByteArray) Trimmed1() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:271
+// /usr/include/qt/QtCore/qbytearray.h:278
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray simplified() const
@@ -1983,7 +2107,7 @@ func (this *QByteArray) Simplified() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:273
+// /usr/include/qt/QtCore/qbytearray.h:280
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray simplified()
@@ -2012,7 +2136,7 @@ func (this *QByteArray) Simplified1() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:285
+// /usr/include/qt/QtCore/qbytearray.h:292
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray leftJustified(int, char, bool) const
@@ -2042,7 +2166,7 @@ func (this *QByteArray) LeftJustified(width int, fill byte, truncate bool) *QByt
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:285
+// /usr/include/qt/QtCore/qbytearray.h:292
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray leftJustified(int, char, bool) const
@@ -2076,7 +2200,7 @@ func (this *QByteArray) LeftJustifiedp(width int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:285
+// /usr/include/qt/QtCore/qbytearray.h:292
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray leftJustified(int, char, bool) const
@@ -2108,7 +2232,7 @@ func (this *QByteArray) LeftJustifiedp1(width int, fill byte) *QByteArray /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:286
+// /usr/include/qt/QtCore/qbytearray.h:293
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray rightJustified(int, char, bool) const
@@ -2138,7 +2262,7 @@ func (this *QByteArray) RightJustified(width int, fill byte, truncate bool) *QBy
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:286
+// /usr/include/qt/QtCore/qbytearray.h:293
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray rightJustified(int, char, bool) const
@@ -2172,7 +2296,7 @@ func (this *QByteArray) RightJustifiedp(width int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:286
+// /usr/include/qt/QtCore/qbytearray.h:293
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray rightJustified(int, char, bool) const
@@ -2204,7 +2328,7 @@ func (this *QByteArray) RightJustifiedp1(width int, fill byte) *QByteArray /*123
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:303
+// /usr/include/qt/QtCore/qbytearray.h:310
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & remove(int, int)
@@ -2233,7 +2357,7 @@ func (this *QByteArray) Remove(index int, len_ int) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:304
+// /usr/include/qt/QtCore/qbytearray.h:311
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(int, int, const char *)
@@ -2263,7 +2387,7 @@ func (this *QByteArray) Replace(index int, len_ int, s string) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:305
+// /usr/include/qt/QtCore/qbytearray.h:312
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(int, int, const char *, int)
@@ -2293,7 +2417,7 @@ func (this *QByteArray) Replace1(index int, len_ int, s string, alen int) *QByte
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:306
+// /usr/include/qt/QtCore/qbytearray.h:313
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(int, int, const QByteArray &)
@@ -2325,7 +2449,7 @@ func (this *QByteArray) Replace2(index int, len_ int, s QByteArray_ITF) *QByteAr
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:307
+// /usr/include/qt/QtCore/qbytearray.h:314
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & replace(char, const char *)
@@ -2355,7 +2479,7 @@ func (this *QByteArray) Replace3(before byte, after string) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:308
+// /usr/include/qt/QtCore/qbytearray.h:315
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(char, const QByteArray &)
@@ -2387,7 +2511,7 @@ func (this *QByteArray) Replace4(before byte, after QByteArray_ITF) *QByteArray 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:309
+// /usr/include/qt/QtCore/qbytearray.h:316
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & replace(const char *, const char *)
@@ -2419,7 +2543,7 @@ func (this *QByteArray) Replace5(before string, after string) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:310
+// /usr/include/qt/QtCore/qbytearray.h:317
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(const char *, int, const char *, int)
@@ -2451,7 +2575,7 @@ func (this *QByteArray) Replace6(before string, bsize int, after string, asize i
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:311
+// /usr/include/qt/QtCore/qbytearray.h:318
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(const QByteArray &, const QByteArray &)
@@ -2487,7 +2611,7 @@ func (this *QByteArray) Replace7(before QByteArray_ITF, after QByteArray_ITF) *Q
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:312
+// /usr/include/qt/QtCore/qbytearray.h:319
 // index:8
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & replace(const QByteArray &, const char *)
@@ -2521,7 +2645,7 @@ func (this *QByteArray) Replace8(before QByteArray_ITF, after string) *QByteArra
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:313
+// /usr/include/qt/QtCore/qbytearray.h:320
 // index:9
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(const char *, const QByteArray &)
@@ -2555,7 +2679,7 @@ func (this *QByteArray) Replace9(before string, after QByteArray_ITF) *QByteArra
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:314
+// /usr/include/qt/QtCore/qbytearray.h:321
 // index:10
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(char, char)
@@ -2583,7 +2707,7 @@ func (this *QByteArray) Replace10(before byte, after byte) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:326
+// /usr/include/qt/QtCore/qbytearray.h:333
 // index:11
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(const QString &, const char *)
@@ -2615,7 +2739,7 @@ func (this *QByteArray) Replace11(before string, after string) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:327
+// /usr/include/qt/QtCore/qbytearray.h:334
 // index:12
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(char, const QString &)
@@ -2645,7 +2769,7 @@ func (this *QByteArray) Replace12(c byte, after string) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:328
+// /usr/include/qt/QtCore/qbytearray.h:335
 // index:13
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(const QString &, const QByteArray &)
@@ -2679,7 +2803,7 @@ func (this *QByteArray) Replace13(before string, after QByteArray_ITF) *QByteArr
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:315
+// /usr/include/qt/QtCore/qbytearray.h:322
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & operator+=(char)
@@ -2695,7 +2819,7 @@ func (this *QByteArray) Operator_add_equal(c byte) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:316
+// /usr/include/qt/QtCore/qbytearray.h:323
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & operator+=(const char *)
@@ -2713,7 +2837,7 @@ func (this *QByteArray) Operator_add_equal1(s string) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:317
+// /usr/include/qt/QtCore/qbytearray.h:324
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & operator+=(const QByteArray &)
@@ -2733,7 +2857,7 @@ func (this *QByteArray) Operator_add_equal2(a QByteArray_ITF) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:330
+// /usr/include/qt/QtCore/qbytearray.h:337
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & operator+=(const QString &)
@@ -2751,7 +2875,7 @@ func (this *QByteArray) Operator_add_equal3(s string) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:321
+// /usr/include/qt/QtCore/qbytearray.h:328
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray repeated(int) const
@@ -2779,7 +2903,7 @@ func (this *QByteArray) Repeated(times int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:335
+// /usr/include/qt/QtCore/qbytearray.h:342
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QString &) const
@@ -2795,7 +2919,7 @@ func (this *QByteArray) Operator_equal_equal(s2 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:336
+// /usr/include/qt/QtCore/qbytearray.h:343
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QString &) const
@@ -2811,7 +2935,7 @@ func (this *QByteArray) Operator_not_equal(s2 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:337
+// /usr/include/qt/QtCore/qbytearray.h:344
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const QString &) const
@@ -2827,7 +2951,7 @@ func (this *QByteArray) Operator_less_than(s2 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:338
+// /usr/include/qt/QtCore/qbytearray.h:345
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(const QString &) const
@@ -2843,7 +2967,7 @@ func (this *QByteArray) Operator_greater_than(s2 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:339
+// /usr/include/qt/QtCore/qbytearray.h:346
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(const QString &) const
@@ -2859,7 +2983,7 @@ func (this *QByteArray) Operator_less_than_equal(s2 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:340
+// /usr/include/qt/QtCore/qbytearray.h:347
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(const QString &) const
@@ -2875,7 +2999,7 @@ func (this *QByteArray) Operator_greater_than_equal(s2 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:343
+// /usr/include/qt/QtCore/qbytearray.h:350
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(bool *, int) const
@@ -2887,7 +3011,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -2899,7 +3023,7 @@ func (this *QByteArray) ToShort(ok *bool, base int) int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:343
+// /usr/include/qt/QtCore/qbytearray.h:350
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(bool *, int) const
@@ -2911,7 +3035,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -2927,7 +3051,7 @@ func (this *QByteArray) ToShortp() int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:343
+// /usr/include/qt/QtCore/qbytearray.h:350
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(bool *, int) const
@@ -2939,7 +3063,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -2953,7 +3077,7 @@ func (this *QByteArray) ToShortp1(ok *bool) int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:344
+// /usr/include/qt/QtCore/qbytearray.h:351
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(bool *, int) const
@@ -2965,7 +3089,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -2977,7 +3101,7 @@ func (this *QByteArray) ToUShort(ok *bool, base int) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:344
+// /usr/include/qt/QtCore/qbytearray.h:351
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(bool *, int) const
@@ -2989,7 +3113,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3005,7 +3129,7 @@ func (this *QByteArray) ToUShortp() uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:344
+// /usr/include/qt/QtCore/qbytearray.h:351
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(bool *, int) const
@@ -3017,7 +3141,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3031,7 +3155,7 @@ func (this *QByteArray) ToUShortp1(ok *bool) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:345
+// /usr/include/qt/QtCore/qbytearray.h:352
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(bool *, int) const
@@ -3043,7 +3167,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 
   QByteArray str("FF");
@@ -3063,7 +3187,7 @@ func (this *QByteArray) ToInt(ok *bool, base int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:345
+// /usr/include/qt/QtCore/qbytearray.h:352
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(bool *, int) const
@@ -3075,7 +3199,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 
   QByteArray str("FF");
@@ -3099,7 +3223,7 @@ func (this *QByteArray) ToIntp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:345
+// /usr/include/qt/QtCore/qbytearray.h:352
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(bool *, int) const
@@ -3111,7 +3235,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 
   QByteArray str("FF");
@@ -3133,7 +3257,7 @@ func (this *QByteArray) ToIntp1(ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:346
+// /usr/include/qt/QtCore/qbytearray.h:353
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(bool *, int) const
@@ -3145,7 +3269,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3157,7 +3281,7 @@ func (this *QByteArray) ToUInt(ok *bool, base int) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:346
+// /usr/include/qt/QtCore/qbytearray.h:353
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(bool *, int) const
@@ -3169,7 +3293,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3185,7 +3309,7 @@ func (this *QByteArray) ToUIntp() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:346
+// /usr/include/qt/QtCore/qbytearray.h:353
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(bool *, int) const
@@ -3197,7 +3321,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3211,7 +3335,7 @@ func (this *QByteArray) ToUIntp1(ok *bool) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:347
+// /usr/include/qt/QtCore/qbytearray.h:354
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] long toLong(bool *, int) const
@@ -3223,7 +3347,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 
   QByteArray str("FF");
@@ -3245,7 +3369,7 @@ func (this *QByteArray) ToLong(ok *bool, base int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:347
+// /usr/include/qt/QtCore/qbytearray.h:354
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] long toLong(bool *, int) const
@@ -3257,7 +3381,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 
   QByteArray str("FF");
@@ -3283,7 +3407,7 @@ func (this *QByteArray) ToLongp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:347
+// /usr/include/qt/QtCore/qbytearray.h:354
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] long toLong(bool *, int) const
@@ -3295,7 +3419,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 
   QByteArray str("FF");
@@ -3319,7 +3443,7 @@ func (this *QByteArray) ToLongp1(ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:348
+// /usr/include/qt/QtCore/qbytearray.h:355
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] ulong toULong(bool *, int) const
@@ -3331,7 +3455,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3345,7 +3469,7 @@ func (this *QByteArray) ToULong(ok *bool, base int) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:348
+// /usr/include/qt/QtCore/qbytearray.h:355
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] ulong toULong(bool *, int) const
@@ -3357,7 +3481,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3375,7 +3499,7 @@ func (this *QByteArray) ToULongp() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:348
+// /usr/include/qt/QtCore/qbytearray.h:355
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] ulong toULong(bool *, int) const
@@ -3387,7 +3511,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3403,7 +3527,7 @@ func (this *QByteArray) ToULongp1(ok *bool) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:349
+// /usr/include/qt/QtCore/qbytearray.h:356
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(bool *, int) const
@@ -3415,7 +3539,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3427,7 +3551,7 @@ func (this *QByteArray) ToLongLong(ok *bool, base int) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:349
+// /usr/include/qt/QtCore/qbytearray.h:356
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(bool *, int) const
@@ -3439,7 +3563,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3455,7 +3579,7 @@ func (this *QByteArray) ToLongLongp() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:349
+// /usr/include/qt/QtCore/qbytearray.h:356
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(bool *, int) const
@@ -3467,7 +3591,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3481,7 +3605,7 @@ func (this *QByteArray) ToLongLongp1(ok *bool) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:350
+// /usr/include/qt/QtCore/qbytearray.h:357
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(bool *, int) const
@@ -3493,7 +3617,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3505,7 +3629,7 @@ func (this *QByteArray) ToULongLong(ok *bool, base int) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:350
+// /usr/include/qt/QtCore/qbytearray.h:357
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(bool *, int) const
@@ -3517,7 +3641,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3533,7 +3657,7 @@ func (this *QByteArray) ToULongLongp() uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:350
+// /usr/include/qt/QtCore/qbytearray.h:357
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(bool *, int) const
@@ -3545,7 +3669,7 @@ If base is 0, the base is determined automatically using the following rules: If
 
 Returns 0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
 
@@ -3559,7 +3683,7 @@ func (this *QByteArray) ToULongLongp1(ok *bool) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:351
+// /usr/include/qt/QtCore/qbytearray.h:358
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(bool *) const
@@ -3569,9 +3693,23 @@ Returns the byte array converted to a float value.
 
 Returns 0.0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
+
+
+  QByteArray string("1234.56");
+  bool ok;
+  float a = string.toFloat(&ok);    // a == 1234.56, ok == true
+
+  string = "1234.56 Volt";
+  a = str.toFloat(&ok);              // a == 0, ok == false
+
+
+
+Warning: The QByteArray content may only contain valid numerical characters which includes the plus/minus sign, the character e used in scientific notation, and the decimal point. Including the unit or additional characters leads to a conversion error.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
+
+This function ignores leading and trailing whitespace.
 
 See also number().
 */
@@ -3581,7 +3719,7 @@ func (this *QByteArray) ToFloat(ok *bool) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:351
+// /usr/include/qt/QtCore/qbytearray.h:358
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(bool *) const
@@ -3591,9 +3729,23 @@ Returns the byte array converted to a float value.
 
 Returns 0.0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
+
+
+  QByteArray string("1234.56");
+  bool ok;
+  float a = string.toFloat(&ok);    // a == 1234.56, ok == true
+
+  string = "1234.56 Volt";
+  a = str.toFloat(&ok);              // a == 0, ok == false
+
+
+
+Warning: The QByteArray content may only contain valid numerical characters which includes the plus/minus sign, the character e used in scientific notation, and the decimal point. Including the unit or additional characters leads to a conversion error.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
+
+This function ignores leading and trailing whitespace.
 
 See also number().
 */
@@ -3605,7 +3757,7 @@ func (this *QByteArray) ToFloatp() float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:352
+// /usr/include/qt/QtCore/qbytearray.h:359
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(bool *) const
@@ -3615,15 +3767,23 @@ Returns the byte array converted to a double value.
 
 Returns 0.0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 
   QByteArray string("1234.56");
-  double a = string.toDouble();   // a == 1234.56
+  bool ok;
+  double a = string.toDouble(&ok);   // a == 1234.56, ok == true
+
+  string = "1234.56 Volt";
+  a = str.toDouble(&ok);             // a == 0, ok == false
 
 
+
+Warning: The QByteArray content may only contain valid numerical characters which includes the plus/minus sign, the character e used in scientific notation, and the decimal point. Including the unit or additional characters leads to a conversion error.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
+
+This function ignores leading and trailing whitespace.
 
 See also number().
 */
@@ -3633,7 +3793,7 @@ func (this *QByteArray) ToDouble(ok *bool) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:352
+// /usr/include/qt/QtCore/qbytearray.h:359
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(bool *) const
@@ -3643,15 +3803,23 @@ Returns the byte array converted to a double value.
 
 Returns 0.0 if the conversion fails.
 
-If ok is not 0: if a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
 
   QByteArray string("1234.56");
-  double a = string.toDouble();   // a == 1234.56
+  bool ok;
+  double a = string.toDouble(&ok);   // a == 1234.56, ok == true
+
+  string = "1234.56 Volt";
+  a = str.toDouble(&ok);             // a == 0, ok == false
 
 
+
+Warning: The QByteArray content may only contain valid numerical characters which includes the plus/minus sign, the character e used in scientific notation, and the decimal point. Including the unit or additional characters leads to a conversion error.
 
 Note: The conversion of the number is performed in the default C locale, irrespective of the user's locale.
+
+This function ignores leading and trailing whitespace.
 
 See also number().
 */
@@ -3663,7 +3831,7 @@ func (this *QByteArray) ToDoublep() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:353
+// /usr/include/qt/QtCore/qbytearray.h:360
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toBase64(QByteArray::Base64Options) const
@@ -3689,7 +3857,7 @@ func (this *QByteArray) ToBase64(options int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:354
+// /usr/include/qt/QtCore/qbytearray.h:361
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toBase64() const
@@ -3715,7 +3883,7 @@ func (this *QByteArray) ToBase641() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:355
+// /usr/include/qt/QtCore/qbytearray.h:362
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toHex() const
@@ -3733,7 +3901,7 @@ func (this *QByteArray) ToHex() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:356
+// /usr/include/qt/QtCore/qbytearray.h:363
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toHex(char) const
@@ -3751,7 +3919,7 @@ func (this *QByteArray) ToHex1(separator byte) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:357
+// /usr/include/qt/QtCore/qbytearray.h:364
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toPercentEncoding(const QByteArray &, const QByteArray &, char) const
@@ -3797,7 +3965,7 @@ func (this *QByteArray) ToPercentEncoding(exclude QByteArray_ITF, include_ QByte
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:357
+// /usr/include/qt/QtCore/qbytearray.h:364
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toPercentEncoding(const QByteArray &, const QByteArray &, char) const
@@ -3841,7 +4009,7 @@ func (this *QByteArray) ToPercentEncodingp() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:357
+// /usr/include/qt/QtCore/qbytearray.h:364
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toPercentEncoding(const QByteArray &, const QByteArray &, char) const
@@ -3887,7 +4055,7 @@ func (this *QByteArray) ToPercentEncodingp1(exclude QByteArray_ITF) *QByteArray 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:357
+// /usr/include/qt/QtCore/qbytearray.h:364
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toPercentEncoding(const QByteArray &, const QByteArray &, char) const
@@ -3935,7 +4103,7 @@ func (this *QByteArray) ToPercentEncodingp2(exclude QByteArray_ITF, include_ QBy
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:361
+// /usr/include/qt/QtCore/qbytearray.h:368
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(short, int)
@@ -3965,7 +4133,7 @@ func (this *QByteArray) SetNum(arg0 int16, base int) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:361
+// /usr/include/qt/QtCore/qbytearray.h:368
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(short, int)
@@ -3997,7 +4165,7 @@ func (this *QByteArray) SetNump(arg0 int16) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:362
+// /usr/include/qt/QtCore/qbytearray.h:369
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(ushort, int)
@@ -4027,7 +4195,7 @@ func (this *QByteArray) SetNum1(arg0 uint16, base int) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:362
+// /usr/include/qt/QtCore/qbytearray.h:369
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(ushort, int)
@@ -4059,7 +4227,7 @@ func (this *QByteArray) SetNum1p(arg0 uint16) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:363
+// /usr/include/qt/QtCore/qbytearray.h:370
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(int, int)
@@ -4089,7 +4257,7 @@ func (this *QByteArray) SetNum2(arg0 int, base int) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:363
+// /usr/include/qt/QtCore/qbytearray.h:370
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(int, int)
@@ -4121,7 +4289,7 @@ func (this *QByteArray) SetNum2p(arg0 int) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:364
+// /usr/include/qt/QtCore/qbytearray.h:371
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(uint, int)
@@ -4151,7 +4319,7 @@ func (this *QByteArray) SetNum3(arg0 uint, base int) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:364
+// /usr/include/qt/QtCore/qbytearray.h:371
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(uint, int)
@@ -4183,7 +4351,7 @@ func (this *QByteArray) SetNum3p(arg0 uint) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:365
+// /usr/include/qt/QtCore/qbytearray.h:372
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(qlonglong, int)
@@ -4213,7 +4381,7 @@ func (this *QByteArray) SetNum4(arg0 int64, base int) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:365
+// /usr/include/qt/QtCore/qbytearray.h:372
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(qlonglong, int)
@@ -4245,7 +4413,7 @@ func (this *QByteArray) SetNum4p(arg0 int64) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:366
+// /usr/include/qt/QtCore/qbytearray.h:373
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(qulonglong, int)
@@ -4275,7 +4443,7 @@ func (this *QByteArray) SetNum5(arg0 uint64, base int) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:366
+// /usr/include/qt/QtCore/qbytearray.h:373
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(qulonglong, int)
@@ -4307,7 +4475,7 @@ func (this *QByteArray) SetNum5p(arg0 uint64) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:367
+// /usr/include/qt/QtCore/qbytearray.h:374
 // index:6
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(float, char, int)
@@ -4337,7 +4505,7 @@ func (this *QByteArray) SetNum6(arg0 float32, f byte, prec int) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:367
+// /usr/include/qt/QtCore/qbytearray.h:374
 // index:6
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(float, char, int)
@@ -4371,7 +4539,7 @@ func (this *QByteArray) SetNum6p(arg0 float32) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:367
+// /usr/include/qt/QtCore/qbytearray.h:374
 // index:6
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(float, char, int)
@@ -4403,7 +4571,7 @@ func (this *QByteArray) SetNum6p1(arg0 float32, f byte) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:368
+// /usr/include/qt/QtCore/qbytearray.h:375
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(double, char, int)
@@ -4433,7 +4601,7 @@ func (this *QByteArray) SetNum7(arg0 float64, f byte, prec int) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:368
+// /usr/include/qt/QtCore/qbytearray.h:375
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(double, char, int)
@@ -4467,7 +4635,7 @@ func (this *QByteArray) SetNum7p(arg0 float64) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:368
+// /usr/include/qt/QtCore/qbytearray.h:375
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(double, char, int)
@@ -4499,7 +4667,7 @@ func (this *QByteArray) SetNum7p1(arg0 float64, f byte) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:369
+// /usr/include/qt/QtCore/qbytearray.h:376
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setRawData(const char *, uint)
@@ -4523,7 +4691,7 @@ func (this *QByteArray) SetRawData(a string, n uint) *QByteArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:371
+// /usr/include/qt/QtCore/qbytearray.h:378
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(int, int)
@@ -4558,7 +4726,7 @@ func QByteArray_Number(arg0 int, base int) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:371
+// /usr/include/qt/QtCore/qbytearray.h:378
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(int, int)
@@ -4590,7 +4758,7 @@ func (this *QByteArray) Numberp(arg0 int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:372
+// /usr/include/qt/QtCore/qbytearray.h:379
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(uint, int)
@@ -4625,7 +4793,7 @@ func QByteArray_Number1(arg0 uint, base int) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:372
+// /usr/include/qt/QtCore/qbytearray.h:379
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(uint, int)
@@ -4657,7 +4825,7 @@ func (this *QByteArray) Number1p(arg0 uint) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:373
+// /usr/include/qt/QtCore/qbytearray.h:380
 // index:2
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(qlonglong, int)
@@ -4692,7 +4860,7 @@ func QByteArray_Number2(arg0 int64, base int) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:373
+// /usr/include/qt/QtCore/qbytearray.h:380
 // index:2
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(qlonglong, int)
@@ -4724,7 +4892,7 @@ func (this *QByteArray) Number2p(arg0 int64) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:374
+// /usr/include/qt/QtCore/qbytearray.h:381
 // index:3
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(qulonglong, int)
@@ -4759,7 +4927,7 @@ func QByteArray_Number3(arg0 uint64, base int) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:374
+// /usr/include/qt/QtCore/qbytearray.h:381
 // index:3
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(qulonglong, int)
@@ -4791,7 +4959,7 @@ func (this *QByteArray) Number3p(arg0 uint64) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:375
+// /usr/include/qt/QtCore/qbytearray.h:382
 // index:4
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(double, char, int)
@@ -4826,7 +4994,7 @@ func QByteArray_Number4(arg0 float64, f byte, prec int) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:375
+// /usr/include/qt/QtCore/qbytearray.h:382
 // index:4
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(double, char, int)
@@ -4860,7 +5028,7 @@ func (this *QByteArray) Number4p(arg0 float64) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:375
+// /usr/include/qt/QtCore/qbytearray.h:382
 // index:4
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(double, char, int)
@@ -4892,7 +5060,7 @@ func (this *QByteArray) Number4p1(arg0 float64, f byte) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:376
+// /usr/include/qt/QtCore/qbytearray.h:383
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray fromRawData(const char *, int)
@@ -4906,10 +5074,10 @@ Here is an example of how to read data using a QDataStream on raw data in memory
 
 
    static const char mydata[] = {
-      0x00, 0x00, 0x03, 0x84, 0x78, 0x9c, 0x3b, 0x76,
-      0xec, 0x18, 0xc3, 0x31, 0x0a, 0xf1, 0xcc, 0x99,
+      '\x00', '\x00', '\x03', '\x84', '\x78', '\x9c', '\x3b', '\x76',
+      '\xec', '\x18', '\xc3', '\x31', '\x0a', '\xf1', '\xcc', '\x99',
       ...
-      0x6d, 0x5b
+      '\x6d', '\x5b'
   };
 
   QByteArray data = QByteArray::fromRawData(mydata, sizeof(mydata));
@@ -4937,7 +5105,7 @@ func QByteArray_FromRawData(arg0 string, size int) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:377
+// /usr/include/qt/QtCore/qbytearray.h:384
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray fromBase64(const QByteArray &, QByteArray::Base64Options)
@@ -4974,7 +5142,7 @@ func QByteArray_FromBase64(base64 QByteArray_ITF, options int) *QByteArray /*123
 	return rv
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:378
+// /usr/include/qt/QtCore/qbytearray.h:385
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray fromBase64(const QByteArray &)
@@ -5011,7 +5179,7 @@ func QByteArray_FromBase641(base64 QByteArray_ITF) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:379
+// /usr/include/qt/QtCore/qbytearray.h:386
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray fromHex(const QByteArray &)
@@ -5046,7 +5214,7 @@ func QByteArray_FromHex(hexEncoded QByteArray_ITF) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:380
+// /usr/include/qt/QtCore/qbytearray.h:387
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray fromPercentEncoding(const QByteArray &, char)
@@ -5085,7 +5253,7 @@ func QByteArray_FromPercentEncoding(pctEncoded QByteArray_ITF, percent byte) *QB
 	return rv
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:380
+// /usr/include/qt/QtCore/qbytearray.h:387
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray fromPercentEncoding(const QByteArray &, char)
@@ -5121,7 +5289,7 @@ func (this *QByteArray) FromPercentEncodingp(pctEncoded QByteArray_ITF) *QByteAr
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:399
+// /usr/include/qt/QtCore/qbytearray.h:406
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::iterator begin()
@@ -5137,7 +5305,7 @@ func (this *QByteArray) Begin() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:400
+// /usr/include/qt/QtCore/qbytearray.h:407
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator begin() const
@@ -5153,7 +5321,7 @@ func (this *QByteArray) Begin1() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:401
+// /usr/include/qt/QtCore/qbytearray.h:408
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator cbegin() const
@@ -5171,7 +5339,7 @@ func (this *QByteArray) Cbegin() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:402
+// /usr/include/qt/QtCore/qbytearray.h:409
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator constBegin() const
@@ -5187,7 +5355,7 @@ func (this *QByteArray) ConstBegin() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:403
+// /usr/include/qt/QtCore/qbytearray.h:410
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::iterator end()
@@ -5203,7 +5371,7 @@ func (this *QByteArray) End() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:404
+// /usr/include/qt/QtCore/qbytearray.h:411
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator end() const
@@ -5219,7 +5387,7 @@ func (this *QByteArray) End1() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:405
+// /usr/include/qt/QtCore/qbytearray.h:412
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator cend() const
@@ -5237,7 +5405,7 @@ func (this *QByteArray) Cend() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:406
+// /usr/include/qt/QtCore/qbytearray.h:413
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator constEnd() const
@@ -5253,7 +5421,7 @@ func (this *QByteArray) ConstEnd() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:422
+// /usr/include/qt/QtCore/qbytearray.h:429
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_back(char)
@@ -5266,7 +5434,7 @@ func (this *QByteArray) Push_back(c byte) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:423
+// /usr/include/qt/QtCore/qbytearray.h:430
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_back(const char *)
@@ -5281,7 +5449,7 @@ func (this *QByteArray) Push_back1(c string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:424
+// /usr/include/qt/QtCore/qbytearray.h:431
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_back(const QByteArray &)
@@ -5298,7 +5466,7 @@ func (this *QByteArray) Push_back2(a QByteArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:425
+// /usr/include/qt/QtCore/qbytearray.h:432
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_front(char)
@@ -5311,7 +5479,7 @@ func (this *QByteArray) Push_front(c byte) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:426
+// /usr/include/qt/QtCore/qbytearray.h:433
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_front(const char *)
@@ -5326,7 +5494,7 @@ func (this *QByteArray) Push_front1(c string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:427
+// /usr/include/qt/QtCore/qbytearray.h:434
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_front(const QByteArray &)
@@ -5343,7 +5511,7 @@ func (this *QByteArray) Push_front2(a QByteArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:428
+// /usr/include/qt/QtCore/qbytearray.h:435
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void shrink_to_fit()
@@ -5358,7 +5526,7 @@ func (this *QByteArray) Shrink_to_fit() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:431
+// /usr/include/qt/QtCore/qbytearray.h:438
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] std::string toStdString() const
@@ -5378,7 +5546,7 @@ func (this *QByteArray) ToStdString() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:434
+// /usr/include/qt/QtCore/qbytearray.h:441
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int length() const
@@ -5392,7 +5560,7 @@ func (this *QByteArray) Length() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:435
+// /usr/include/qt/QtCore/qbytearray.h:442
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const

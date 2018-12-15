@@ -517,8 +517,8 @@ Signals that a camera's shutter speed has changed.
 
 Note: Notifier signal for property shutterSpeed.
 */
-func (this *QCameraExposure) ShutterSpeedChanged(arg0 float64) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QCameraExposure19shutterSpeedChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QCameraExposure) ShutterSpeedChanged(speed float64) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QCameraExposure19shutterSpeedChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), speed)
 	qtrt.ErrPrint(err, rv)
 }
 

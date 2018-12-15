@@ -452,7 +452,7 @@ func (this *QState) OnExit(event QEvent_ITF /*777 QEvent **/) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractState::event().
 */
 func (this *QState) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

@@ -314,7 +314,7 @@ func (this *QMouseEventTransition) SetHitTestPath(path qtgui.QPainterPath_ITF) {
 // [-2] void onTransition(QEvent *)
 
 /*
-Reimplemented from QAbstractTransition::onTransition().
+Reimplemented from QEventTransition::onTransition().
 */
 func (this *QMouseEventTransition) OnTransition(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -331,7 +331,7 @@ func (this *QMouseEventTransition) OnTransition(event qtcore.QEvent_ITF /*777 QE
 // [1] bool eventTest(QEvent *)
 
 /*
-Reimplemented from QAbstractTransition::eventTest().
+Reimplemented from QEventTransition::eventTest().
 */
 func (this *QMouseEventTransition) EventTest(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

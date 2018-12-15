@@ -69,7 +69,7 @@ func (*QWebEngineCookieStore) NewFromPointer(cthis unsafe.Pointer) *QWebEngineCo
 	return NewQWebEngineCookieStoreFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:60
+// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -83,7 +83,7 @@ func (this *QWebEngineCookieStore) MetaObject() *qtcore.QMetaObject /*777 const 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:63
+// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWebEngineCookieStore()
@@ -93,12 +93,12 @@ func (this *QWebEngineCookieStore) MetaObject() *qtcore.QMetaObject /*777 const 
  */
 func DeleteQWebEngineCookieStore(this *QWebEngineCookieStore) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QWebEngineCookieStoreD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 16)
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:65
+// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCookie(const QNetworkCookie &, const QUrl &)
@@ -119,7 +119,7 @@ func (this *QWebEngineCookieStore) SetCookie(cookie qtnetwork.QNetworkCookie_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:65
+// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCookie(const QNetworkCookie &, const QUrl &)
@@ -138,7 +138,7 @@ func (this *QWebEngineCookieStore) SetCookiep(cookie qtnetwork.QNetworkCookie_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:66
+// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void deleteCookie(const QNetworkCookie &, const QUrl &)
@@ -159,7 +159,7 @@ func (this *QWebEngineCookieStore) DeleteCookie(cookie qtnetwork.QNetworkCookie_
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:66
+// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void deleteCookie(const QNetworkCookie &, const QUrl &)
@@ -178,7 +178,7 @@ func (this *QWebEngineCookieStore) DeleteCookiep(cookie qtnetwork.QNetworkCookie
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:67
+// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void deleteSessionCookies()
@@ -191,7 +191,7 @@ func (this *QWebEngineCookieStore) DeleteSessionCookies() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:68
+// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void deleteAllCookies()
@@ -204,7 +204,7 @@ func (this *QWebEngineCookieStore) DeleteAllCookies() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:69
+// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void loadAllCookies()
@@ -217,7 +217,7 @@ func (this *QWebEngineCookieStore) LoadAllCookies() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:72
+// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cookieAdded(const QNetworkCookie &)
@@ -234,7 +234,7 @@ func (this *QWebEngineCookieStore) CookieAdded(cookie qtnetwork.QNetworkCookie_I
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:73
+// /usr/include/qt/QtWebEngineCore/qwebenginecookiestore.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cookieRemoved(const QNetworkCookie &)

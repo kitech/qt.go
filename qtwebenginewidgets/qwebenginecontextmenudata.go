@@ -18,7 +18,7 @@ package qtwebenginewidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 5
 */
 // import "C"
 import "unsafe"
@@ -77,7 +77,7 @@ func (*QWebEngineContextMenuData) NewFromPointer(cthis unsafe.Pointer) *QWebEngi
 	return NewQWebEngineContextMenuDataFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:56
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWebEngineContextMenuData()
@@ -96,7 +96,7 @@ func NewQWebEngineContextMenuData() *QWebEngineContextMenuData {
 	return gothis
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:58
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWebEngineContextMenuData & operator=(const QWebEngineContextMenuData &)
@@ -116,7 +116,7 @@ func (this *QWebEngineContextMenuData) Operator_equal(other QWebEngineContextMen
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:59
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QWebEngineContextMenuData()
@@ -131,7 +131,7 @@ func DeleteQWebEngineContextMenuData(this *QWebEngineContextMenuData) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:70
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -145,7 +145,7 @@ func (this *QWebEngineContextMenuData) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:72
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint position() const
@@ -161,7 +161,7 @@ func (this *QWebEngineContextMenuData) Position() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:73
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString selectedText() const
@@ -178,7 +178,7 @@ func (this *QWebEngineContextMenuData) SelectedText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:74
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString linkText() const
@@ -195,7 +195,7 @@ func (this *QWebEngineContextMenuData) LinkText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:75
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl linkUrl() const
@@ -211,7 +211,7 @@ func (this *QWebEngineContextMenuData) LinkUrl() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:76
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl mediaUrl() const
@@ -227,7 +227,7 @@ func (this *QWebEngineContextMenuData) MediaUrl() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:77
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QWebEngineContextMenuData::MediaType mediaType() const
@@ -241,7 +241,7 @@ func (this *QWebEngineContextMenuData) MediaType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:78
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isContentEditable() const
@@ -255,7 +255,7 @@ func (this *QWebEngineContextMenuData) IsContentEditable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:79
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString misspelledWord() const
@@ -272,7 +272,7 @@ func (this *QWebEngineContextMenuData) MisspelledWord() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:80
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList spellCheckerSuggestions() const
@@ -286,6 +286,34 @@ func (this *QWebEngineContextMenuData) SpellCheckerSuggestions() *qtcore.QString
 	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
+}
+
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:115
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QWebEngineContextMenuData::MediaFlags mediaFlags() const
+
+/*
+
+ */
+func (this *QWebEngineContextMenuData) MediaFlags() int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK25QWebEngineContextMenuData10mediaFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return int(rv)
+}
+
+// /usr/include/qt/QtWebEngineWidgets/qwebenginecontextmenudata.h:116
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QWebEngineContextMenuData::EditFlags editFlags() const
+
+/*
+
+ */
+func (this *QWebEngineContextMenuData) EditFlags() int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK25QWebEngineContextMenuData9editFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return int(rv)
 }
 
 /*
@@ -338,6 +366,135 @@ func (this *QWebEngineContextMenuData) MediaTypeItemName(val int) string {
 func QWebEngineContextMenuData_MediaTypeItemName(val int) string {
 	var nilthis *QWebEngineContextMenuData
 	return nilthis.MediaTypeItemName(val)
+}
+
+/*
+
+
+ */
+type QWebEngineContextMenuData__MediaFlag = int
+
+//
+const QWebEngineContextMenuData__MediaInError QWebEngineContextMenuData__MediaFlag = 1
+
+//
+const QWebEngineContextMenuData__MediaPaused QWebEngineContextMenuData__MediaFlag = 2
+
+//
+const QWebEngineContextMenuData__MediaMuted QWebEngineContextMenuData__MediaFlag = 4
+
+//
+const QWebEngineContextMenuData__MediaLoop QWebEngineContextMenuData__MediaFlag = 8
+
+//
+const QWebEngineContextMenuData__MediaCanSave QWebEngineContextMenuData__MediaFlag = 16
+
+//
+const QWebEngineContextMenuData__MediaHasAudio QWebEngineContextMenuData__MediaFlag = 32
+
+//
+const QWebEngineContextMenuData__MediaCanToggleControls QWebEngineContextMenuData__MediaFlag = 64
+
+//
+const QWebEngineContextMenuData__MediaControls QWebEngineContextMenuData__MediaFlag = 128
+
+//
+const QWebEngineContextMenuData__MediaCanPrint QWebEngineContextMenuData__MediaFlag = 256
+
+//
+const QWebEngineContextMenuData__MediaCanRotate QWebEngineContextMenuData__MediaFlag = 512
+
+func (this *QWebEngineContextMenuData) MediaFlagItemName(val int) string {
+	switch val {
+	case QWebEngineContextMenuData__MediaInError: // 1
+		return "MediaInError"
+	case QWebEngineContextMenuData__MediaPaused: // 2
+		return "MediaPaused"
+	case QWebEngineContextMenuData__MediaMuted: // 4
+		return "MediaMuted"
+	case QWebEngineContextMenuData__MediaLoop: // 8
+		return "MediaLoop"
+	case QWebEngineContextMenuData__MediaCanSave: // 16
+		return "MediaCanSave"
+	case QWebEngineContextMenuData__MediaHasAudio: // 32
+		return "MediaHasAudio"
+	case QWebEngineContextMenuData__MediaCanToggleControls: // 64
+		return "MediaCanToggleControls"
+	case QWebEngineContextMenuData__MediaControls: // 128
+		return "MediaControls"
+	case QWebEngineContextMenuData__MediaCanPrint: // 256
+		return "MediaCanPrint"
+	case QWebEngineContextMenuData__MediaCanRotate: // 512
+		return "MediaCanRotate"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineContextMenuData_MediaFlagItemName(val int) string {
+	var nilthis *QWebEngineContextMenuData
+	return nilthis.MediaFlagItemName(val)
+}
+
+/*
+
+
+ */
+type QWebEngineContextMenuData__EditFlag = int
+
+//
+const QWebEngineContextMenuData__CanUndo QWebEngineContextMenuData__EditFlag = 1
+
+//
+const QWebEngineContextMenuData__CanRedo QWebEngineContextMenuData__EditFlag = 2
+
+//
+const QWebEngineContextMenuData__CanCut QWebEngineContextMenuData__EditFlag = 4
+
+//
+const QWebEngineContextMenuData__CanCopy QWebEngineContextMenuData__EditFlag = 8
+
+//
+const QWebEngineContextMenuData__CanPaste QWebEngineContextMenuData__EditFlag = 16
+
+//
+const QWebEngineContextMenuData__CanDelete QWebEngineContextMenuData__EditFlag = 32
+
+//
+const QWebEngineContextMenuData__CanSelectAll QWebEngineContextMenuData__EditFlag = 64
+
+//
+const QWebEngineContextMenuData__CanTranslate QWebEngineContextMenuData__EditFlag = 128
+
+//
+const QWebEngineContextMenuData__CanEditRichly QWebEngineContextMenuData__EditFlag = 256
+
+func (this *QWebEngineContextMenuData) EditFlagItemName(val int) string {
+	switch val {
+	case QWebEngineContextMenuData__CanUndo: // 1
+		return "CanUndo"
+	case QWebEngineContextMenuData__CanRedo: // 2
+		return "CanRedo"
+	case QWebEngineContextMenuData__CanCut: // 4
+		return "CanCut"
+	case QWebEngineContextMenuData__CanCopy: // 8
+		return "CanCopy"
+	case QWebEngineContextMenuData__CanPaste: // 16
+		return "CanPaste"
+	case QWebEngineContextMenuData__CanDelete: // 32
+		return "CanDelete"
+	case QWebEngineContextMenuData__CanSelectAll: // 64
+		return "CanSelectAll"
+	case QWebEngineContextMenuData__CanTranslate: // 128
+		return "CanTranslate"
+	case QWebEngineContextMenuData__CanEditRichly: // 256
+		return "CanEditRichly"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QWebEngineContextMenuData_EditFlagItemName(val int) string {
+	var nilthis *QWebEngineContextMenuData
+	return nilthis.EditFlagItemName(val)
 }
 
 //  body block end

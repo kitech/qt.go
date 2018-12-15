@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 56
+// extern C begin: 57
 */
 // import "C"
 import "unsafe"
@@ -1250,7 +1250,7 @@ func (this *QMainWindow) ContextMenuEvent(event qtgui.QContextMenuEvent_ITF /*77
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QMainWindow) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

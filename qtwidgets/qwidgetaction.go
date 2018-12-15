@@ -220,7 +220,7 @@ func (this *QWidgetAction) ReleaseWidget(widget QWidget_ITF /*777 QWidget **/) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAction::event().
 */
 func (this *QWidgetAction) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

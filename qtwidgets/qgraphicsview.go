@@ -327,7 +327,7 @@ func DeleteQGraphicsView(this *QGraphicsView) {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QAbstractScrollArea::sizeHint().
 */
 func (this *QGraphicsView) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -2504,7 +2504,7 @@ func (this *QGraphicsView) SetupViewport(widget QWidget_ITF /*777 QWidget **/) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractScrollArea::event().
 */
 func (this *QGraphicsView) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -2540,7 +2540,7 @@ func (this *QGraphicsView) ViewportEvent(event qtcore.QEvent_ITF /*777 QEvent **
 // [-2] void contextMenuEvent(QContextMenuEvent *)
 
 /*
-Reimplemented from QWidget::contextMenuEvent().
+Reimplemented from QAbstractScrollArea::contextMenuEvent().
 */
 func (this *QGraphicsView) ContextMenuEvent(event qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2557,7 +2557,7 @@ func (this *QGraphicsView) ContextMenuEvent(event qtgui.QContextMenuEvent_ITF /*
 // [-2] void dragEnterEvent(QDragEnterEvent *)
 
 /*
-Reimplemented from QWidget::dragEnterEvent().
+Reimplemented from QAbstractScrollArea::dragEnterEvent().
 */
 func (this *QGraphicsView) DragEnterEvent(event qtgui.QDragEnterEvent_ITF /*777 QDragEnterEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2574,7 +2574,7 @@ func (this *QGraphicsView) DragEnterEvent(event qtgui.QDragEnterEvent_ITF /*777 
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
 
 /*
-Reimplemented from QWidget::dragLeaveEvent().
+Reimplemented from QAbstractScrollArea::dragLeaveEvent().
 */
 func (this *QGraphicsView) DragLeaveEvent(event qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2591,7 +2591,7 @@ func (this *QGraphicsView) DragLeaveEvent(event qtgui.QDragLeaveEvent_ITF /*777 
 // [-2] void dragMoveEvent(QDragMoveEvent *)
 
 /*
-Reimplemented from QWidget::dragMoveEvent().
+Reimplemented from QAbstractScrollArea::dragMoveEvent().
 */
 func (this *QGraphicsView) DragMoveEvent(event qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2608,7 +2608,7 @@ func (this *QGraphicsView) DragMoveEvent(event qtgui.QDragMoveEvent_ITF /*777 QD
 // [-2] void dropEvent(QDropEvent *)
 
 /*
-Reimplemented from QWidget::dropEvent().
+Reimplemented from QAbstractScrollArea::dropEvent().
 */
 func (this *QGraphicsView) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2673,7 +2673,7 @@ func (this *QGraphicsView) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QFocu
 // [-2] void keyPressEvent(QKeyEvent *)
 
 /*
-Reimplemented from QWidget::keyPressEvent().
+Reimplemented from QAbstractScrollArea::keyPressEvent().
 */
 func (this *QGraphicsView) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2707,7 +2707,7 @@ func (this *QGraphicsView) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QKeyE
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseDoubleClickEvent().
+Reimplemented from QAbstractScrollArea::mouseDoubleClickEvent().
 */
 func (this *QGraphicsView) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2724,7 +2724,7 @@ func (this *QGraphicsView) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF /*7
 // [-2] void mousePressEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mousePressEvent().
+Reimplemented from QAbstractScrollArea::mousePressEvent().
 */
 func (this *QGraphicsView) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2741,7 +2741,7 @@ func (this *QGraphicsView) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMo
 // [-2] void mouseMoveEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseMoveEvent().
+Reimplemented from QAbstractScrollArea::mouseMoveEvent().
 */
 func (this *QGraphicsView) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2758,7 +2758,7 @@ func (this *QGraphicsView) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMou
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseReleaseEvent().
+Reimplemented from QAbstractScrollArea::mouseReleaseEvent().
 */
 func (this *QGraphicsView) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2775,7 +2775,7 @@ func (this *QGraphicsView) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 Q
 // [-2] void wheelEvent(QWheelEvent *)
 
 /*
-Reimplemented from QWidget::wheelEvent().
+Reimplemented from QAbstractScrollArea::wheelEvent().
 */
 func (this *QGraphicsView) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2792,7 +2792,7 @@ func (this *QGraphicsView) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEv
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QAbstractScrollArea::paintEvent().
 */
 func (this *QGraphicsView) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2809,7 +2809,7 @@ func (this *QGraphicsView) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEv
 // [-2] void resizeEvent(QResizeEvent *)
 
 /*
-Reimplemented from QWidget::resizeEvent().
+Reimplemented from QAbstractScrollArea::resizeEvent().
 */
 func (this *QGraphicsView) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer

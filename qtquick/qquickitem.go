@@ -249,13 +249,15 @@ func (this *QQuickItem) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:199
+// /usr/include/qt/QtQuick/qquickitem.h:201
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickItem(QQuickItem *)
 
 /*
 Constructs a QQuickItem with the given parent.
+
+The parent will be used as both the visual parent and the QObject parent.
 */
 func (*QQuickItem) NewForInherit(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickItem {
 	return NewQQuickItem(parent)
@@ -272,13 +274,15 @@ func NewQQuickItem(parent QQuickItem_ITF /*777 QQuickItem **/) *QQuickItem {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:199
+// /usr/include/qt/QtQuick/qquickitem.h:201
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickItem(QQuickItem *)
 
 /*
 Constructs a QQuickItem with the given parent.
+
+The parent will be used as both the visual parent and the QObject parent.
 */
 func (*QQuickItem) NewForInheritp() *QQuickItem {
 	return NewQQuickItemp()
@@ -293,7 +297,7 @@ func NewQQuickItemp() *QQuickItem {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:200
+// /usr/include/qt/QtQuick/qquickitem.h:202
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickItem()
@@ -308,7 +312,7 @@ func DeleteQQuickItem(this *QQuickItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:202
+// /usr/include/qt/QtQuick/qquickitem.h:204
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickWindow * window() const
@@ -324,7 +328,7 @@ func (this *QQuickItem) Window() *QQuickWindow /*777 QQuickWindow **/ {
 	return /*==*/ NewQQuickWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:203
+// /usr/include/qt/QtQuick/qquickitem.h:205
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * parentItem() const
@@ -338,7 +342,7 @@ func (this *QQuickItem) ParentItem() *QQuickItem /*777 QQuickItem **/ {
 	return /*==*/ NewQQuickItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:204
+// /usr/include/qt/QtQuick/qquickitem.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setParentItem(QQuickItem *)
@@ -355,7 +359,7 @@ func (this *QQuickItem) SetParentItem(parent QQuickItem_ITF /*777 QQuickItem **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:205
+// /usr/include/qt/QtQuick/qquickitem.h:207
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stackBefore(const QQuickItem *)
@@ -380,7 +384,7 @@ func (this *QQuickItem) StackBefore(arg0 QQuickItem_ITF /*777 const QQuickItem *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:206
+// /usr/include/qt/QtQuick/qquickitem.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stackAfter(const QQuickItem *)
@@ -405,7 +409,7 @@ func (this *QQuickItem) StackAfter(arg0 QQuickItem_ITF /*777 const QQuickItem **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:208
+// /usr/include/qt/QtQuick/qquickitem.h:210
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF childrenRect()
@@ -421,7 +425,7 @@ func (this *QQuickItem) ChildrenRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:209
+// /usr/include/qt/QtQuick/qquickitem.h:211
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] QList<QQuickItem *> childItems() const
@@ -436,7 +440,7 @@ func (this *QQuickItem) ChildItems() *QQuickItemList /*lll*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:211
+// /usr/include/qt/QtQuick/qquickitem.h:213
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool clip() const
@@ -450,7 +454,7 @@ func (this *QQuickItem) Clip() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:212
+// /usr/include/qt/QtQuick/qquickitem.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClip(bool)
@@ -463,7 +467,7 @@ func (this *QQuickItem) SetClip(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:214
+// /usr/include/qt/QtQuick/qquickitem.h:216
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString state() const
@@ -480,7 +484,7 @@ func (this *QQuickItem) State() string {
 	return rv3
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:215
+// /usr/include/qt/QtQuick/qquickitem.h:217
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setState(const QString &)
@@ -495,7 +499,7 @@ func (this *QQuickItem) SetState(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:217
+// /usr/include/qt/QtQuick/qquickitem.h:219
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal baselineOffset() const
@@ -509,7 +513,7 @@ func (this *QQuickItem) BaselineOffset() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:218
+// /usr/include/qt/QtQuick/qquickitem.h:220
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBaselineOffset(qreal)
@@ -522,7 +526,7 @@ func (this *QQuickItem) SetBaselineOffset(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:222
+// /usr/include/qt/QtQuick/qquickitem.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal x() const
@@ -536,7 +540,7 @@ func (this *QQuickItem) X() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:223
+// /usr/include/qt/QtQuick/qquickitem.h:225
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal y() const
@@ -550,7 +554,7 @@ func (this *QQuickItem) Y() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:224
+// /usr/include/qt/QtQuick/qquickitem.h:226
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF position() const
@@ -566,7 +570,7 @@ func (this *QQuickItem) Position() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:225
+// /usr/include/qt/QtQuick/qquickitem.h:227
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setX(qreal)
@@ -579,7 +583,7 @@ func (this *QQuickItem) SetX(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:226
+// /usr/include/qt/QtQuick/qquickitem.h:228
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setY(qreal)
@@ -592,7 +596,7 @@ func (this *QQuickItem) SetY(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:227
+// /usr/include/qt/QtQuick/qquickitem.h:229
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(const QPointF &)
@@ -609,7 +613,7 @@ func (this *QQuickItem) SetPosition(arg0 qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:229
+// /usr/include/qt/QtQuick/qquickitem.h:231
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal width() const
@@ -623,7 +627,7 @@ func (this *QQuickItem) Width() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:230
+// /usr/include/qt/QtQuick/qquickitem.h:232
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidth(qreal)
@@ -636,7 +640,7 @@ func (this *QQuickItem) SetWidth(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:231
+// /usr/include/qt/QtQuick/qquickitem.h:233
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetWidth()
@@ -649,7 +653,7 @@ func (this *QQuickItem) ResetWidth() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:232
+// /usr/include/qt/QtQuick/qquickitem.h:234
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setImplicitWidth(qreal)
@@ -662,7 +666,7 @@ func (this *QQuickItem) SetImplicitWidth(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:233
+// /usr/include/qt/QtQuick/qquickitem.h:235
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal implicitWidth() const
@@ -680,7 +684,7 @@ func (this *QQuickItem) ImplicitWidth() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:235
+// /usr/include/qt/QtQuick/qquickitem.h:237
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal height() const
@@ -694,7 +698,7 @@ func (this *QQuickItem) Height() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:236
+// /usr/include/qt/QtQuick/qquickitem.h:238
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHeight(qreal)
@@ -707,7 +711,7 @@ func (this *QQuickItem) SetHeight(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:237
+// /usr/include/qt/QtQuick/qquickitem.h:239
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetHeight()
@@ -720,7 +724,7 @@ func (this *QQuickItem) ResetHeight() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:238
+// /usr/include/qt/QtQuick/qquickitem.h:240
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setImplicitHeight(qreal)
@@ -733,7 +737,7 @@ func (this *QQuickItem) SetImplicitHeight(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:239
+// /usr/include/qt/QtQuick/qquickitem.h:241
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal implicitHeight() const
@@ -747,7 +751,7 @@ func (this *QQuickItem) ImplicitHeight() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:241
+// /usr/include/qt/QtQuick/qquickitem.h:243
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF size() const
@@ -767,7 +771,7 @@ func (this *QQuickItem) Size() *qtcore.QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:242
+// /usr/include/qt/QtQuick/qquickitem.h:244
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSize(const QSizeF &)
@@ -788,7 +792,7 @@ func (this *QQuickItem) SetSize(size qtcore.QSizeF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:244
+// /usr/include/qt/QtQuick/qquickitem.h:246
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickItem::TransformOrigin transformOrigin() const
@@ -802,7 +806,7 @@ func (this *QQuickItem) TransformOrigin() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:245
+// /usr/include/qt/QtQuick/qquickitem.h:247
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransformOrigin(QQuickItem::TransformOrigin)
@@ -815,7 +819,7 @@ func (this *QQuickItem) SetTransformOrigin(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:246
+// /usr/include/qt/QtQuick/qquickitem.h:248
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF transformOriginPoint() const
@@ -831,7 +835,7 @@ func (this *QQuickItem) TransformOriginPoint() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:247
+// /usr/include/qt/QtQuick/qquickitem.h:249
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransformOriginPoint(const QPointF &)
@@ -848,7 +852,7 @@ func (this *QQuickItem) SetTransformOriginPoint(arg0 qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:249
+// /usr/include/qt/QtQuick/qquickitem.h:251
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal z() const
@@ -862,7 +866,7 @@ func (this *QQuickItem) Z() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:250
+// /usr/include/qt/QtQuick/qquickitem.h:252
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setZ(qreal)
@@ -875,7 +879,7 @@ func (this *QQuickItem) SetZ(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:252
+// /usr/include/qt/QtQuick/qquickitem.h:254
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal rotation() const
@@ -889,7 +893,7 @@ func (this *QQuickItem) Rotation() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:253
+// /usr/include/qt/QtQuick/qquickitem.h:255
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRotation(qreal)
@@ -902,7 +906,7 @@ func (this *QQuickItem) SetRotation(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:254
+// /usr/include/qt/QtQuick/qquickitem.h:256
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal scale() const
@@ -916,7 +920,7 @@ func (this *QQuickItem) Scale() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:255
+// /usr/include/qt/QtQuick/qquickitem.h:257
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScale(qreal)
@@ -929,7 +933,7 @@ func (this *QQuickItem) SetScale(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:257
+// /usr/include/qt/QtQuick/qquickitem.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal opacity() const
@@ -943,7 +947,7 @@ func (this *QQuickItem) Opacity() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:258
+// /usr/include/qt/QtQuick/qquickitem.h:260
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpacity(qreal)
@@ -956,7 +960,7 @@ func (this *QQuickItem) SetOpacity(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:260
+// /usr/include/qt/QtQuick/qquickitem.h:262
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVisible() const
@@ -970,7 +974,7 @@ func (this *QQuickItem) IsVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:261
+// /usr/include/qt/QtQuick/qquickitem.h:263
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVisible(bool)
@@ -983,7 +987,7 @@ func (this *QQuickItem) SetVisible(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:263
+// /usr/include/qt/QtQuick/qquickitem.h:265
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEnabled() const
@@ -997,7 +1001,7 @@ func (this *QQuickItem) IsEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:264
+// /usr/include/qt/QtQuick/qquickitem.h:266
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(bool)
@@ -1010,7 +1014,7 @@ func (this *QQuickItem) SetEnabled(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:266
+// /usr/include/qt/QtQuick/qquickitem.h:268
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool smooth() const
@@ -1024,7 +1028,7 @@ func (this *QQuickItem) Smooth() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:267
+// /usr/include/qt/QtQuick/qquickitem.h:269
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSmooth(bool)
@@ -1037,7 +1041,7 @@ func (this *QQuickItem) SetSmooth(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:269
+// /usr/include/qt/QtQuick/qquickitem.h:271
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool activeFocusOnTab() const
@@ -1051,7 +1055,7 @@ func (this *QQuickItem) ActiveFocusOnTab() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:270
+// /usr/include/qt/QtQuick/qquickitem.h:272
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActiveFocusOnTab(bool)
@@ -1064,7 +1068,7 @@ func (this *QQuickItem) SetActiveFocusOnTab(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:272
+// /usr/include/qt/QtQuick/qquickitem.h:274
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool antialiasing() const
@@ -1078,7 +1082,7 @@ func (this *QQuickItem) Antialiasing() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:273
+// /usr/include/qt/QtQuick/qquickitem.h:275
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAntialiasing(bool)
@@ -1091,7 +1095,7 @@ func (this *QQuickItem) SetAntialiasing(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:274
+// /usr/include/qt/QtQuick/qquickitem.h:276
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetAntialiasing()
@@ -1104,7 +1108,7 @@ func (this *QQuickItem) ResetAntialiasing() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:276
+// /usr/include/qt/QtQuick/qquickitem.h:278
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QQuickItem::Flags flags() const
@@ -1120,7 +1124,7 @@ func (this *QQuickItem) Flags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:277
+// /usr/include/qt/QtQuick/qquickitem.h:279
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(QQuickItem::Flag, bool)
@@ -1135,7 +1139,7 @@ func (this *QQuickItem) SetFlag(flag int, enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:277
+// /usr/include/qt/QtQuick/qquickitem.h:279
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(QQuickItem::Flag, bool)
@@ -1152,7 +1156,7 @@ func (this *QQuickItem) SetFlagp(flag int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:278
+// /usr/include/qt/QtQuick/qquickitem.h:280
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(QQuickItem::Flags)
@@ -1167,7 +1171,7 @@ func (this *QQuickItem) SetFlags(flags int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:280
+// /usr/include/qt/QtQuick/qquickitem.h:282
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
@@ -1183,7 +1187,7 @@ func (this *QQuickItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:281
+// /usr/include/qt/QtQuick/qquickitem.h:283
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF clipRect() const
@@ -1199,7 +1203,7 @@ func (this *QQuickItem) ClipRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:283
+// /usr/include/qt/QtQuick/qquickitem.h:285
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasActiveFocus() const
@@ -1213,7 +1217,7 @@ func (this *QQuickItem) HasActiveFocus() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:284
+// /usr/include/qt/QtQuick/qquickitem.h:286
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFocus() const
@@ -1227,7 +1231,7 @@ func (this *QQuickItem) HasFocus() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:285
+// /usr/include/qt/QtQuick/qquickitem.h:287
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFocus(bool)
@@ -1240,7 +1244,7 @@ func (this *QQuickItem) SetFocus(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:286
+// /usr/include/qt/QtQuick/qquickitem.h:288
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setFocus(bool, Qt::FocusReason)
@@ -1253,7 +1257,7 @@ func (this *QQuickItem) SetFocus1(focus bool, reason int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:287
+// /usr/include/qt/QtQuick/qquickitem.h:289
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFocusScope() const
@@ -1267,7 +1271,7 @@ func (this *QQuickItem) IsFocusScope() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:288
+// /usr/include/qt/QtQuick/qquickitem.h:290
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * scopedFocusItem() const
@@ -1283,7 +1287,7 @@ func (this *QQuickItem) ScopedFocusItem() *QQuickItem /*777 QQuickItem **/ {
 	return /*==*/ NewQQuickItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:290
+// /usr/include/qt/QtQuick/qquickitem.h:292
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAncestorOf(const QQuickItem *) const
@@ -1305,7 +1309,7 @@ func (this *QQuickItem) IsAncestorOf(child QQuickItem_ITF /*777 const QQuickItem
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:292
+// /usr/include/qt/QtQuick/qquickitem.h:294
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButtons acceptedMouseButtons() const
@@ -1325,7 +1329,7 @@ func (this *QQuickItem) AcceptedMouseButtons() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:293
+// /usr/include/qt/QtQuick/qquickitem.h:295
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceptedMouseButtons(Qt::MouseButtons)
@@ -1340,7 +1344,7 @@ func (this *QQuickItem) SetAcceptedMouseButtons(buttons int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:294
+// /usr/include/qt/QtQuick/qquickitem.h:296
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool acceptHoverEvents() const
@@ -1360,7 +1364,7 @@ func (this *QQuickItem) AcceptHoverEvents() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:295
+// /usr/include/qt/QtQuick/qquickitem.h:297
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceptHoverEvents(bool)
@@ -1375,7 +1379,7 @@ func (this *QQuickItem) SetAcceptHoverEvents(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:296
+// /usr/include/qt/QtQuick/qquickitem.h:298
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool acceptTouchEvents() const
@@ -1397,7 +1401,7 @@ func (this *QQuickItem) AcceptTouchEvents() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:297
+// /usr/include/qt/QtQuick/qquickitem.h:299
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceptTouchEvents(bool)
@@ -1414,7 +1418,7 @@ func (this *QQuickItem) SetAcceptTouchEvents(accept bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:300
+// /usr/include/qt/QtQuick/qquickitem.h:302
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCursor cursor() const
@@ -1436,7 +1440,7 @@ func (this *QQuickItem) Cursor() *qtgui.QCursor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:301
+// /usr/include/qt/QtQuick/qquickitem.h:303
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCursor(const QCursor &)
@@ -1455,7 +1459,7 @@ func (this *QQuickItem) SetCursor(cursor qtgui.QCursor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:302
+// /usr/include/qt/QtQuick/qquickitem.h:304
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unsetCursor()
@@ -1470,7 +1474,7 @@ func (this *QQuickItem) UnsetCursor() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:305
+// /usr/include/qt/QtQuick/qquickitem.h:307
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isUnderMouse() const
@@ -1484,7 +1488,7 @@ func (this *QQuickItem) IsUnderMouse() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:306
+// /usr/include/qt/QtQuick/qquickitem.h:308
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void grabMouse()
@@ -1501,7 +1505,7 @@ func (this *QQuickItem) GrabMouse() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:307
+// /usr/include/qt/QtQuick/qquickitem.h:309
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ungrabMouse()
@@ -1516,7 +1520,7 @@ func (this *QQuickItem) UngrabMouse() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:308
+// /usr/include/qt/QtQuick/qquickitem.h:310
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool keepMouseGrab() const
@@ -1532,7 +1536,7 @@ func (this *QQuickItem) KeepMouseGrab() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:309
+// /usr/include/qt/QtQuick/qquickitem.h:311
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeepMouseGrab(bool)
@@ -1551,7 +1555,7 @@ func (this *QQuickItem) SetKeepMouseGrab(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:310
+// /usr/include/qt/QtQuick/qquickitem.h:312
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool filtersChildMouseEvents() const
@@ -1567,7 +1571,7 @@ func (this *QQuickItem) FiltersChildMouseEvents() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:311
+// /usr/include/qt/QtQuick/qquickitem.h:313
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFiltersChildMouseEvents(bool)
@@ -1584,7 +1588,7 @@ func (this *QQuickItem) SetFiltersChildMouseEvents(filter bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:314
+// /usr/include/qt/QtQuick/qquickitem.h:316
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ungrabTouchPoints()
@@ -1601,7 +1605,7 @@ func (this *QQuickItem) UngrabTouchPoints() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:315
+// /usr/include/qt/QtQuick/qquickitem.h:317
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool keepTouchGrab() const
@@ -1617,7 +1621,7 @@ func (this *QQuickItem) KeepTouchGrab() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:316
+// /usr/include/qt/QtQuick/qquickitem.h:318
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeepTouchGrab(bool)
@@ -1636,7 +1640,7 @@ func (this *QQuickItem) SetKeepTouchGrab(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:319
+// /usr/include/qt/QtQuick/qquickitem.h:321
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool grabToImage(const QJSValue &, const QSize &)
@@ -1668,7 +1672,7 @@ func (this *QQuickItem) GrabToImage(callback qtqml.QJSValue_ITF, targetSize qtco
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:319
+// /usr/include/qt/QtQuick/qquickitem.h:321
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool grabToImage(const QJSValue &, const QSize &)
@@ -1698,7 +1702,7 @@ func (this *QQuickItem) GrabToImagep(callback qtqml.QJSValue_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:322
+// /usr/include/qt/QtQuick/qquickitem.h:324
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &) const
@@ -1709,6 +1713,8 @@ Returns true if this item contains point, which is in local coordinates; returns
 This function can be overwritten in order to handle point collisions in items with custom shapes. The default implementation checks if the point is inside the item's bounding rect.
 
 Note that this method is generally used to check whether the item is under the mouse cursor, and for that reason, the implementation of this function should be as light-weight as possible.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QQuickItem) Contains(point qtcore.QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
@@ -1720,7 +1726,38 @@ func (this *QQuickItem) Contains(point qtcore.QPointF_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:324
+// /usr/include/qt/QtQuick/qquickitem.h:325
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QObject * containmentMask() const
+
+/*
+
+ */
+func (this *QQuickItem) ContainmentMask() *qtcore.QObject /*777 QObject **/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem15containmentMaskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtQuick/qquickitem.h:326
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setContainmentMask(QObject *)
+
+/*
+
+ */
+func (this *QQuickItem) SetContainmentMask(mask qtcore.QObject_ITF /*777 QObject **/) {
+	var convArg0 unsafe.Pointer
+	if mask != nil && mask.QObject_PTR() != nil {
+		convArg0 = mask.QObject_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem18setContainmentMaskEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtQuick/qquickitem.h:328
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QTransform itemTransform(QQuickItem *, bool *) const
@@ -1740,13 +1777,15 @@ func (this *QQuickItem) ItemTransform(arg0 QQuickItem_ITF /*777 QQuickItem **/, 
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:325
+// /usr/include/qt/QtQuick/qquickitem.h:329
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapToItem(const QQuickItem *, const QPointF &) const
 
 /*
 Maps the given point in this item's coordinate system to the equivalent point within item's coordinate system, and returns the mapped coordinate.
+
+The following properties of the item are used in the mapping: x, y, scale, rotation, transformOrigin, and transform.
 
 If item is 0, this maps point to the coordinate system of the scene.
 
@@ -1768,13 +1807,15 @@ func (this *QQuickItem) MapToItem(item QQuickItem_ITF /*777 const QQuickItem **/
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:326
+// /usr/include/qt/QtQuick/qquickitem.h:330
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapToScene(const QPointF &) const
 
 /*
 Maps the given point in this item's coordinate system to the equivalent point within the scene's coordinate system, and returns the mapped coordinate.
+
+The following properties of the item are used in the mapping: x, y, scale, rotation, transformOrigin, and transform.
 
 See also Concepts - Visual Coordinates in Qt Quick.
 */
@@ -1790,13 +1831,15 @@ func (this *QQuickItem) MapToScene(point qtcore.QPointF_ITF) *qtcore.QPointF /*1
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:327
+// /usr/include/qt/QtQuick/qquickitem.h:331
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapToGlobal(const QPointF &) const
 
 /*
 Maps the given point in this item's coordinate system to the equivalent point within global screen coordinate system, and returns the mapped coordinate.
+
+The following properties of the item are used in the mapping: x, y, scale, rotation, transformOrigin, and transform.
 
 For example, this may be helpful to add a popup to a Qt Quick component.
 
@@ -1818,13 +1861,15 @@ func (this *QQuickItem) MapToGlobal(point qtcore.QPointF_ITF) *qtcore.QPointF /*
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:328
+// /usr/include/qt/QtQuick/qquickitem.h:332
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectToItem(const QQuickItem *, const QRectF &) const
 
 /*
 Maps the given rect in this item's coordinate system to the equivalent rectangular area within item's coordinate system, and returns the mapped rectangle value.
+
+The following properties of the item are used in the mapping: x, y, scale, rotation, transformOrigin, and transform.
 
 If item is 0, this maps rect to the coordinate system of the scene.
 
@@ -1846,13 +1891,15 @@ func (this *QQuickItem) MapRectToItem(item QQuickItem_ITF /*777 const QQuickItem
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:329
+// /usr/include/qt/QtQuick/qquickitem.h:333
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectToScene(const QRectF &) const
 
 /*
 Maps the given rect in this item's coordinate system to the equivalent rectangular area within the scene's coordinate system, and returns the mapped rectangle value.
+
+The following properties of the item are used in the mapping: x, y, scale, rotation, transformOrigin, and transform.
 
 See also Concepts - Visual Coordinates in Qt Quick.
 */
@@ -1868,13 +1915,15 @@ func (this *QQuickItem) MapRectToScene(rect qtcore.QRectF_ITF) *qtcore.QRectF /*
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:330
+// /usr/include/qt/QtQuick/qquickitem.h:334
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapFromItem(const QQuickItem *, const QPointF &) const
 
 /*
 Maps the given point in item's coordinate system to the equivalent point within this item's coordinate system, and returns the mapped coordinate.
+
+The following properties of the item are used in the mapping: x, y, scale, rotation, transformOrigin, and transform.
 
 If item is 0, this maps point from the coordinate system of the scene.
 
@@ -1896,13 +1945,15 @@ func (this *QQuickItem) MapFromItem(item QQuickItem_ITF /*777 const QQuickItem *
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:331
+// /usr/include/qt/QtQuick/qquickitem.h:335
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapFromScene(const QPointF &) const
 
 /*
 Maps the given point in the scene's coordinate system to the equivalent point within this item's coordinate system, and returns the mapped coordinate.
+
+The following properties of the item are used in the mapping: x, y, scale, rotation, transformOrigin, and transform.
 
 See also Concepts - Visual Coordinates in Qt Quick.
 */
@@ -1918,13 +1969,15 @@ func (this *QQuickItem) MapFromScene(point qtcore.QPointF_ITF) *qtcore.QPointF /
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:332
+// /usr/include/qt/QtQuick/qquickitem.h:336
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapFromGlobal(const QPointF &) const
 
 /*
 Maps the given point in the global screen coordinate system to the equivalent point within this item's coordinate system, and returns the mapped coordinate.
+
+The following properties of the item are used in the mapping: x, y, scale, rotation, transformOrigin, and transform.
 
 For example, this may be helpful to add a popup to a Qt Quick component.
 
@@ -1946,13 +1999,15 @@ func (this *QQuickItem) MapFromGlobal(point qtcore.QPointF_ITF) *qtcore.QPointF 
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:333
+// /usr/include/qt/QtQuick/qquickitem.h:337
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectFromItem(const QQuickItem *, const QRectF &) const
 
 /*
 Maps the given rect in item's coordinate system to the equivalent rectangular area within this item's coordinate system, and returns the mapped rectangle value.
+
+The following properties of the item are used in the mapping: x, y, scale, rotation, transformOrigin, and transform.
 
 If item is 0, this maps rect from the coordinate system of the scene.
 
@@ -1974,13 +2029,15 @@ func (this *QQuickItem) MapRectFromItem(item QQuickItem_ITF /*777 const QQuickIt
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:334
+// /usr/include/qt/QtQuick/qquickitem.h:338
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectFromScene(const QRectF &) const
 
 /*
 Maps the given rect in the scene's coordinate system to the equivalent rectangular area within this item's coordinate system, and returns the mapped rectangle value.
+
+The following properties of the item are used in the mapping: x, y, scale, rotation, transformOrigin, and transform.
 
 See also Concepts - Visual Coordinates in Qt Quick.
 */
@@ -1996,7 +2053,7 @@ func (this *QQuickItem) MapRectFromScene(rect qtcore.QRectF_ITF) *qtcore.QRectF 
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:336
+// /usr/include/qt/QtQuick/qquickitem.h:340
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void polish()
@@ -2011,7 +2068,7 @@ func (this *QQuickItem) Polish() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:342
+// /usr/include/qt/QtQuick/qquickitem.h:346
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void forceActiveFocus()
@@ -2023,6 +2080,8 @@ This method sets focus on the item and ensures that all ancestor FocusScope obje
 
 The reason for the focus change will be Qt::OtherFocusReason. Use the overloaded method to specify the focus reason to enable better handling of the focus change.
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also activeFocus.
 */
 func (this *QQuickItem) ForceActiveFocus() {
@@ -2030,7 +2089,7 @@ func (this *QQuickItem) ForceActiveFocus() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:343
+// /usr/include/qt/QtQuick/qquickitem.h:347
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void forceActiveFocus(Qt::FocusReason)
@@ -2042,6 +2101,8 @@ This method sets focus on the item and ensures that all ancestor FocusScope obje
 
 The reason for the focus change will be Qt::OtherFocusReason. Use the overloaded method to specify the focus reason to enable better handling of the focus change.
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also activeFocus.
 */
 func (this *QQuickItem) ForceActiveFocus1(reason int) {
@@ -2049,13 +2110,15 @@ func (this *QQuickItem) ForceActiveFocus1(reason int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:344
+// /usr/include/qt/QtQuick/qquickitem.h:348
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * nextItemInFocusChain(bool)
 
 /*
 Returns the item in the focus chain which is next to this item. If forward is true, or not supplied, it is the next item in the forwards direction. If forward is false, it is the next item in the backwards direction.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QQuickItem) NextItemInFocusChain(forward bool) *QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem20nextItemInFocusChainEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), forward)
@@ -2063,13 +2126,15 @@ func (this *QQuickItem) NextItemInFocusChain(forward bool) *QQuickItem /*777 QQu
 	return /*==*/ NewQQuickItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:344
+// /usr/include/qt/QtQuick/qquickitem.h:348
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * nextItemInFocusChain(bool)
 
 /*
 Returns the item in the focus chain which is next to this item. If forward is true, or not supplied, it is the next item in the forwards direction. If forward is false, it is the next item in the backwards direction.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QQuickItem) NextItemInFocusChainp() *QQuickItem /*777 QQuickItem **/ {
 	// arg: 0, bool=Bool, =Invalid, , Invalid
@@ -2079,7 +2144,7 @@ func (this *QQuickItem) NextItemInFocusChainp() *QQuickItem /*777 QQuickItem **/
 	return /*==*/ NewQQuickItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:345
+// /usr/include/qt/QtQuick/qquickitem.h:349
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQuickItem * childAt(qreal, qreal) const
@@ -2088,6 +2153,8 @@ func (this *QQuickItem) NextItemInFocusChainp() *QQuickItem /*777 QQuickItem **/
 Returns the first visible child item found at point (x, y) within the coordinate system of this item.
 
 Returns 0 if there is no such item.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QQuickItem) ChildAt(x float64, y float64) *QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQuickItem7childAtEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
@@ -2095,7 +2162,7 @@ func (this *QQuickItem) ChildAt(x float64, y float64) *QQuickItem /*777 QQuickIt
 	return /*==*/ NewQQuickItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:348
+// /usr/include/qt/QtQuick/qquickitem.h:352
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
@@ -2115,7 +2182,7 @@ func (this *QQuickItem) InputMethodQuery(query int) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:358
+// /usr/include/qt/QtQuick/qquickitem.h:362
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isTextureProvider() const
@@ -2131,7 +2198,7 @@ func (this *QQuickItem) IsTextureProvider() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:359
+// /usr/include/qt/QtQuick/qquickitem.h:363
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGTextureProvider * textureProvider() const
@@ -2147,7 +2214,7 @@ func (this *QQuickItem) TextureProvider() *QSGTextureProvider /*777 QSGTexturePr
 	return /*==*/ NewQSGTextureProviderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:362
+// /usr/include/qt/QtQuick/qquickitem.h:366
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update()
@@ -2164,7 +2231,7 @@ func (this *QQuickItem) Update() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:365
+// /usr/include/qt/QtQuick/qquickitem.h:369
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void childrenRectChanged(const QRectF &)
@@ -2181,7 +2248,7 @@ func (this *QQuickItem) ChildrenRectChanged(arg0 qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:366
+// /usr/include/qt/QtQuick/qquickitem.h:370
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void baselineOffsetChanged(qreal)
@@ -2194,7 +2261,7 @@ func (this *QQuickItem) BaselineOffsetChanged(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:367
+// /usr/include/qt/QtQuick/qquickitem.h:371
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stateChanged(const QString &)
@@ -2209,7 +2276,7 @@ func (this *QQuickItem) StateChanged(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:368
+// /usr/include/qt/QtQuick/qquickitem.h:372
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void focusChanged(bool)
@@ -2222,7 +2289,7 @@ func (this *QQuickItem) FocusChanged(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:369
+// /usr/include/qt/QtQuick/qquickitem.h:373
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activeFocusChanged(bool)
@@ -2235,7 +2302,7 @@ func (this *QQuickItem) ActiveFocusChanged(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:370
+// /usr/include/qt/QtQuick/qquickitem.h:374
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activeFocusOnTabChanged(bool)
@@ -2248,7 +2315,7 @@ func (this *QQuickItem) ActiveFocusOnTabChanged(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:371
+// /usr/include/qt/QtQuick/qquickitem.h:375
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void parentChanged(QQuickItem *)
@@ -2265,7 +2332,7 @@ func (this *QQuickItem) ParentChanged(arg0 QQuickItem_ITF /*777 QQuickItem **/) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:372
+// /usr/include/qt/QtQuick/qquickitem.h:376
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void transformOriginChanged(QQuickItem::TransformOrigin)
@@ -2278,7 +2345,7 @@ func (this *QQuickItem) TransformOriginChanged(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:373
+// /usr/include/qt/QtQuick/qquickitem.h:377
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void smoothChanged(bool)
@@ -2291,7 +2358,7 @@ func (this *QQuickItem) SmoothChanged(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:374
+// /usr/include/qt/QtQuick/qquickitem.h:378
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void antialiasingChanged(bool)
@@ -2304,7 +2371,7 @@ func (this *QQuickItem) AntialiasingChanged(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:375
+// /usr/include/qt/QtQuick/qquickitem.h:379
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clipChanged(bool)
@@ -2317,7 +2384,7 @@ func (this *QQuickItem) ClipChanged(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:376
+// /usr/include/qt/QtQuick/qquickitem.h:380
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void windowChanged(QQuickWindow *)
@@ -2334,7 +2401,7 @@ func (this *QQuickItem) WindowChanged(window QQuickWindow_ITF /*777 QQuickWindow
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:378
+// /usr/include/qt/QtQuick/qquickitem.h:382
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void childrenChanged()
@@ -2347,7 +2414,7 @@ func (this *QQuickItem) ChildrenChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:379
+// /usr/include/qt/QtQuick/qquickitem.h:383
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void opacityChanged()
@@ -2360,7 +2427,7 @@ func (this *QQuickItem) OpacityChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:380
+// /usr/include/qt/QtQuick/qquickitem.h:384
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void enabledChanged()
@@ -2373,7 +2440,7 @@ func (this *QQuickItem) EnabledChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:381
+// /usr/include/qt/QtQuick/qquickitem.h:385
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void visibleChanged()
@@ -2386,7 +2453,7 @@ func (this *QQuickItem) VisibleChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:382
+// /usr/include/qt/QtQuick/qquickitem.h:386
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void visibleChildrenChanged()
@@ -2399,7 +2466,7 @@ func (this *QQuickItem) VisibleChildrenChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:383
+// /usr/include/qt/QtQuick/qquickitem.h:387
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void rotationChanged()
@@ -2412,7 +2479,7 @@ func (this *QQuickItem) RotationChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:384
+// /usr/include/qt/QtQuick/qquickitem.h:388
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scaleChanged()
@@ -2425,7 +2492,7 @@ func (this *QQuickItem) ScaleChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:386
+// /usr/include/qt/QtQuick/qquickitem.h:390
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void xChanged()
@@ -2438,7 +2505,7 @@ func (this *QQuickItem) XChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:387
+// /usr/include/qt/QtQuick/qquickitem.h:391
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void yChanged()
@@ -2451,7 +2518,7 @@ func (this *QQuickItem) YChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:388
+// /usr/include/qt/QtQuick/qquickitem.h:392
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void widthChanged()
@@ -2464,7 +2531,7 @@ func (this *QQuickItem) WidthChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:389
+// /usr/include/qt/QtQuick/qquickitem.h:393
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void heightChanged()
@@ -2477,7 +2544,7 @@ func (this *QQuickItem) HeightChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:390
+// /usr/include/qt/QtQuick/qquickitem.h:394
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void zChanged()
@@ -2490,7 +2557,7 @@ func (this *QQuickItem) ZChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:391
+// /usr/include/qt/QtQuick/qquickitem.h:395
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void implicitWidthChanged()
@@ -2503,7 +2570,7 @@ func (this *QQuickItem) ImplicitWidthChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:392
+// /usr/include/qt/QtQuick/qquickitem.h:396
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void implicitHeightChanged()
@@ -2516,7 +2583,20 @@ func (this *QQuickItem) ImplicitHeightChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:395
+// /usr/include/qt/QtQuick/qquickitem.h:397
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void containmentMaskChanged()
+
+/*
+
+ */
+func (this *QQuickItem) ContainmentMaskChanged() {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem22containmentMaskChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtQuick/qquickitem.h:400
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -2534,7 +2614,7 @@ func (this *QQuickItem) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:397
+// /usr/include/qt/QtQuick/qquickitem.h:402
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool isComponentComplete() const
@@ -2552,7 +2632,7 @@ func (this *QQuickItem) IsComponentComplete() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:401
+// /usr/include/qt/QtQuick/qquickitem.h:406
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void updateInputMethod(Qt::InputMethodQueries)
@@ -2565,7 +2645,7 @@ func (this *QQuickItem) UpdateInputMethod(queries int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:401
+// /usr/include/qt/QtQuick/qquickitem.h:406
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void updateInputMethod(Qt::InputMethodQueries)
@@ -2580,7 +2660,7 @@ func (this *QQuickItem) UpdateInputMethodp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:404
+// /usr/include/qt/QtQuick/qquickitem.h:409
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool widthValid() const
@@ -2594,7 +2674,7 @@ func (this *QQuickItem) WidthValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:405
+// /usr/include/qt/QtQuick/qquickitem.h:410
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool heightValid() const
@@ -2608,7 +2688,7 @@ func (this *QQuickItem) HeightValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:406
+// /usr/include/qt/QtQuick/qquickitem.h:411
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setImplicitSize(qreal, qreal)
@@ -2621,7 +2701,7 @@ func (this *QQuickItem) SetImplicitSize(arg0 float64, arg1 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:408
+// /usr/include/qt/QtQuick/qquickitem.h:413
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void classBegin()
@@ -2636,7 +2716,7 @@ func (this *QQuickItem) ClassBegin() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:409
+// /usr/include/qt/QtQuick/qquickitem.h:414
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void componentComplete()
@@ -2651,13 +2731,15 @@ func (this *QQuickItem) ComponentComplete() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:411
+// /usr/include/qt/QtQuick/qquickitem.h:416
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
 
 /*
 This event handler can be reimplemented in a subclass to receive key press events for an item. The event information is provided by the event parameter.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2668,13 +2750,15 @@ func (this *QQuickItem) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:412
+// /usr/include/qt/QtQuick/qquickitem.h:417
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
 
 /*
 This event handler can be reimplemented in a subclass to receive key release events for an item. The event information is provided by the event parameter.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2685,13 +2769,15 @@ func (this *QQuickItem) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:414
+// /usr/include/qt/QtQuick/qquickitem.h:419
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void inputMethodEvent(QInputMethodEvent *)
 
 /*
 This event handler can be reimplemented in a subclass to receive input method events for an item. The event information is provided by the event parameter.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) InputMethodEvent(arg0 qtgui.QInputMethodEvent_ITF /*777 QInputMethodEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2702,13 +2788,17 @@ func (this *QQuickItem) InputMethodEvent(arg0 qtgui.QInputMethodEvent_ITF /*777 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:416
+// /usr/include/qt/QtQuick/qquickitem.h:421
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
 
 /*
 This event handler can be reimplemented in a subclass to receive focus-in events for an item. The event information is provided by the event parameter.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
+
+If you do reimplement this function, you should call the base class implementation.
 */
 func (this *QQuickItem) FocusInEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2719,13 +2809,15 @@ func (this *QQuickItem) FocusInEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:417
+// /usr/include/qt/QtQuick/qquickitem.h:422
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
 
 /*
 This event handler can be reimplemented in a subclass to receive focus-out events for an item. The event information is provided by the event parameter.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) FocusOutEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2736,13 +2828,15 @@ func (this *QQuickItem) FocusOutEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:418
+// /usr/include/qt/QtQuick/qquickitem.h:423
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
 
 /*
 This event handler can be reimplemented in a subclass to receive mouse press events for an item. The event information is provided by the event parameter.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2753,13 +2847,15 @@ func (this *QQuickItem) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouse
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:419
+// /usr/include/qt/QtQuick/qquickitem.h:424
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
 
 /*
 This event handler can be reimplemented in a subclass to receive mouse move events for an item. The event information is provided by the event parameter.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2770,13 +2866,15 @@ func (this *QQuickItem) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:420
+// /usr/include/qt/QtQuick/qquickitem.h:425
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 
 /*
 This event handler can be reimplemented in a subclass to receive mouse release events for an item. The event information is provided by the event parameter.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2787,13 +2885,15 @@ func (this *QQuickItem) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMou
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:421
+// /usr/include/qt/QtQuick/qquickitem.h:426
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
 
 /*
 This event handler can be reimplemented in a subclass to receive mouse double-click events for an item. The event information is provided by the event parameter.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2804,22 +2904,20 @@ func (this *QQuickItem) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF /*777 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:422
+// /usr/include/qt/QtQuick/qquickitem.h:427
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseUngrabEvent()
 
 /*
 This event handler can be reimplemented in a subclass to be notified when a mouse ungrab event has occurred on this item.
-
-See also ungrabMouse().
 */
 func (this *QQuickItem) MouseUngrabEvent() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickItem16mouseUngrabEventEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:423
+// /usr/include/qt/QtQuick/qquickitem.h:428
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void touchUngrabEvent()
@@ -2832,13 +2930,15 @@ func (this *QQuickItem) TouchUngrabEvent() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:425
+// /usr/include/qt/QtQuick/qquickitem.h:430
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
 
 /*
 This event handler can be reimplemented in a subclass to receive wheel events for an item. The event information is provided by the event parameter.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2849,13 +2949,15 @@ func (this *QQuickItem) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:427
+// /usr/include/qt/QtQuick/qquickitem.h:432
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void touchEvent(QTouchEvent *)
 
 /*
 This event handler can be reimplemented in a subclass to receive touch events for an item. The event information is provided by the event parameter.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) TouchEvent(event qtgui.QTouchEvent_ITF /*777 QTouchEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2866,7 +2968,7 @@ func (this *QQuickItem) TouchEvent(event qtgui.QTouchEvent_ITF /*777 QTouchEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:428
+// /usr/include/qt/QtQuick/qquickitem.h:433
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverEnterEvent(QHoverEvent *)
@@ -2875,6 +2977,8 @@ func (this *QQuickItem) TouchEvent(event qtgui.QTouchEvent_ITF /*777 QTouchEvent
 This event handler can be reimplemented in a subclass to receive hover-enter events for an item. The event information is provided by the event parameter.
 
 Hover events are only provided if acceptHoverEvents() is true.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) HoverEnterEvent(event qtgui.QHoverEvent_ITF /*777 QHoverEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2885,7 +2989,7 @@ func (this *QQuickItem) HoverEnterEvent(event qtgui.QHoverEvent_ITF /*777 QHover
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:429
+// /usr/include/qt/QtQuick/qquickitem.h:434
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverMoveEvent(QHoverEvent *)
@@ -2894,6 +2998,8 @@ func (this *QQuickItem) HoverEnterEvent(event qtgui.QHoverEvent_ITF /*777 QHover
 This event handler can be reimplemented in a subclass to receive hover-move events for an item. The event information is provided by the event parameter.
 
 Hover events are only provided if acceptHoverEvents() is true.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) HoverMoveEvent(event qtgui.QHoverEvent_ITF /*777 QHoverEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2904,7 +3010,7 @@ func (this *QQuickItem) HoverMoveEvent(event qtgui.QHoverEvent_ITF /*777 QHoverE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:430
+// /usr/include/qt/QtQuick/qquickitem.h:435
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverLeaveEvent(QHoverEvent *)
@@ -2913,6 +3019,8 @@ func (this *QQuickItem) HoverMoveEvent(event qtgui.QHoverEvent_ITF /*777 QHoverE
 This event handler can be reimplemented in a subclass to receive hover-leave events for an item. The event information is provided by the event parameter.
 
 Hover events are only provided if acceptHoverEvents() is true.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 */
 func (this *QQuickItem) HoverLeaveEvent(event qtgui.QHoverEvent_ITF /*777 QHoverEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2923,7 +3031,7 @@ func (this *QQuickItem) HoverLeaveEvent(event qtgui.QHoverEvent_ITF /*777 QHover
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:432
+// /usr/include/qt/QtQuick/qquickitem.h:437
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QDragEnterEvent *)
@@ -2932,6 +3040,8 @@ func (this *QQuickItem) HoverLeaveEvent(event qtgui.QHoverEvent_ITF /*777 QHover
 This event handler can be reimplemented in a subclass to receive drag-enter events for an item. The event information is provided by the event parameter.
 
 Drag and drop events are only provided if the ItemAcceptsDrops flag has been set for this item.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 
 See also Drag and Drag and Drop.
 */
@@ -2944,7 +3054,7 @@ func (this *QQuickItem) DragEnterEvent(arg0 qtgui.QDragEnterEvent_ITF /*777 QDra
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:433
+// /usr/include/qt/QtQuick/qquickitem.h:438
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
@@ -2953,6 +3063,8 @@ func (this *QQuickItem) DragEnterEvent(arg0 qtgui.QDragEnterEvent_ITF /*777 QDra
 This event handler can be reimplemented in a subclass to receive drag-move events for an item. The event information is provided by the event parameter.
 
 Drag and drop events are only provided if the ItemAcceptsDrops flag has been set for this item.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 
 See also Drag and Drag and Drop.
 */
@@ -2965,7 +3077,7 @@ func (this *QQuickItem) DragMoveEvent(arg0 qtgui.QDragMoveEvent_ITF /*777 QDragM
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:434
+// /usr/include/qt/QtQuick/qquickitem.h:439
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
@@ -2974,6 +3086,8 @@ func (this *QQuickItem) DragMoveEvent(arg0 qtgui.QDragMoveEvent_ITF /*777 QDragM
 This event handler can be reimplemented in a subclass to receive drag-leave events for an item. The event information is provided by the event parameter.
 
 Drag and drop events are only provided if the ItemAcceptsDrops flag has been set for this item.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 
 See also Drag and Drag and Drop.
 */
@@ -2986,7 +3100,7 @@ func (this *QQuickItem) DragLeaveEvent(arg0 qtgui.QDragLeaveEvent_ITF /*777 QDra
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:435
+// /usr/include/qt/QtQuick/qquickitem.h:440
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
@@ -2995,6 +3109,8 @@ func (this *QQuickItem) DragLeaveEvent(arg0 qtgui.QDragLeaveEvent_ITF /*777 QDra
 This event handler can be reimplemented in a subclass to receive drop events for an item. The event information is provided by the event parameter.
 
 Drag and drop events are only provided if the ItemAcceptsDrops flag has been set for this item.
+
+The event is accepted by default, so it is not necessary to explicitly accept the event if you reimplement this function. If you don't accept the event, call event->ignore().
 
 See also Drag and Drag and Drop.
 */
@@ -3007,7 +3123,7 @@ func (this *QQuickItem) DropEvent(arg0 qtgui.QDropEvent_ITF /*777 QDropEvent **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:437
+// /usr/include/qt/QtQuick/qquickitem.h:442
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool childMouseEventFilter(QQuickItem *, QEvent *)
@@ -3035,7 +3151,7 @@ func (this *QQuickItem) ChildMouseEventFilter(arg0 QQuickItem_ITF /*777 QQuickIt
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:438
+// /usr/include/qt/QtQuick/qquickitem.h:443
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void windowDeactivateEvent()
@@ -3048,7 +3164,7 @@ func (this *QQuickItem) WindowDeactivateEvent() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:440
+// /usr/include/qt/QtQuick/qquickitem.h:445
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void geometryChanged(const QRectF &, const QRectF &)
@@ -3071,7 +3187,7 @@ func (this *QQuickItem) GeometryChanged(newGeometry qtcore.QRectF_ITF, oldGeomet
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:444
+// /usr/include/qt/QtQuick/qquickitem.h:449
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void releaseResources()
@@ -3090,7 +3206,7 @@ func (this *QQuickItem) ReleaseResources() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:445
+// /usr/include/qt/QtQuick/qquickitem.h:450
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updatePolish()

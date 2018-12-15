@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 14
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func (*QMetaProperty) NewFromPointer(cthis unsafe.Pointer) *QMetaProperty {
 	return NewQMetaPropertyFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:248
+// /usr/include/qt/QtCore/qmetaobject.h:249
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMetaProperty()
@@ -83,7 +83,7 @@ func NewQMetaProperty() *QMetaProperty {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:250
+// /usr/include/qt/QtCore/qmetaobject.h:251
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * name() const
@@ -97,7 +97,7 @@ func (this *QMetaProperty) Name() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:251
+// /usr/include/qt/QtCore/qmetaobject.h:252
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * typeName() const
@@ -111,7 +111,7 @@ func (this *QMetaProperty) TypeName() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:252
+// /usr/include/qt/QtCore/qmetaobject.h:253
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QVariant::Type type() const
@@ -125,7 +125,7 @@ func (this *QMetaProperty) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:253
+// /usr/include/qt/QtCore/qmetaobject.h:254
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int userType() const
@@ -139,7 +139,7 @@ func (this *QMetaProperty) UserType() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:254
+// /usr/include/qt/QtCore/qmetaobject.h:255
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int propertyIndex() const
@@ -153,7 +153,7 @@ func (this *QMetaProperty) PropertyIndex() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:256
+// /usr/include/qt/QtCore/qmetaobject.h:257
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadable() const
@@ -167,7 +167,7 @@ func (this *QMetaProperty) IsReadable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:257
+// /usr/include/qt/QtCore/qmetaobject.h:258
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isWritable() const
@@ -181,7 +181,7 @@ func (this *QMetaProperty) IsWritable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:258
+// /usr/include/qt/QtCore/qmetaobject.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isResettable() const
@@ -195,7 +195,7 @@ func (this *QMetaProperty) IsResettable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:259
+// /usr/include/qt/QtCore/qmetaobject.h:260
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDesignable(const QObject *) const
@@ -213,7 +213,7 @@ func (this *QMetaProperty) IsDesignable(obj QObject_ITF /*777 const QObject **/)
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:259
+// /usr/include/qt/QtCore/qmetaobject.h:260
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDesignable(const QObject *) const
@@ -229,7 +229,7 @@ func (this *QMetaProperty) IsDesignablep() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:260
+// /usr/include/qt/QtCore/qmetaobject.h:261
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isScriptable(const QObject *) const
@@ -247,7 +247,7 @@ func (this *QMetaProperty) IsScriptable(obj QObject_ITF /*777 const QObject **/)
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:260
+// /usr/include/qt/QtCore/qmetaobject.h:261
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isScriptable(const QObject *) const
@@ -263,7 +263,7 @@ func (this *QMetaProperty) IsScriptablep() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:261
+// /usr/include/qt/QtCore/qmetaobject.h:262
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isStored(const QObject *) const
@@ -281,7 +281,7 @@ func (this *QMetaProperty) IsStored(obj QObject_ITF /*777 const QObject **/) boo
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:261
+// /usr/include/qt/QtCore/qmetaobject.h:262
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isStored(const QObject *) const
@@ -297,7 +297,7 @@ func (this *QMetaProperty) IsStoredp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:262
+// /usr/include/qt/QtCore/qmetaobject.h:263
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEditable(const QObject *) const
@@ -315,7 +315,7 @@ func (this *QMetaProperty) IsEditable(obj QObject_ITF /*777 const QObject **/) b
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:262
+// /usr/include/qt/QtCore/qmetaobject.h:263
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEditable(const QObject *) const
@@ -331,7 +331,7 @@ func (this *QMetaProperty) IsEditablep() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:263
+// /usr/include/qt/QtCore/qmetaobject.h:264
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isUser(const QObject *) const
@@ -349,7 +349,7 @@ func (this *QMetaProperty) IsUser(obj QObject_ITF /*777 const QObject **/) bool 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:263
+// /usr/include/qt/QtCore/qmetaobject.h:264
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isUser(const QObject *) const
@@ -365,7 +365,7 @@ func (this *QMetaProperty) IsUserp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:264
+// /usr/include/qt/QtCore/qmetaobject.h:265
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isConstant() const
@@ -379,7 +379,7 @@ func (this *QMetaProperty) IsConstant() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:265
+// /usr/include/qt/QtCore/qmetaobject.h:266
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFinal() const
@@ -393,7 +393,7 @@ func (this *QMetaProperty) IsFinal() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:267
+// /usr/include/qt/QtCore/qmetaobject.h:268
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFlagType() const
@@ -407,7 +407,7 @@ func (this *QMetaProperty) IsFlagType() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:268
+// /usr/include/qt/QtCore/qmetaobject.h:269
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEnumType() const
@@ -421,7 +421,7 @@ func (this *QMetaProperty) IsEnumType() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:269
+// /usr/include/qt/QtCore/qmetaobject.h:270
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMetaEnum enumerator() const
@@ -439,7 +439,7 @@ func (this *QMetaProperty) Enumerator() *QMetaEnum /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:271
+// /usr/include/qt/QtCore/qmetaobject.h:272
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasNotifySignal() const
@@ -453,7 +453,7 @@ func (this *QMetaProperty) HasNotifySignal() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:272
+// /usr/include/qt/QtCore/qmetaobject.h:273
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMetaMethod notifySignal() const
@@ -469,7 +469,7 @@ func (this *QMetaProperty) NotifySignal() *QMetaMethod /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:273
+// /usr/include/qt/QtCore/qmetaobject.h:274
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int notifySignalIndex() const
@@ -483,7 +483,7 @@ func (this *QMetaProperty) NotifySignalIndex() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:275
+// /usr/include/qt/QtCore/qmetaobject.h:276
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int revision() const
@@ -497,7 +497,7 @@ func (this *QMetaProperty) Revision() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:277
+// /usr/include/qt/QtCore/qmetaobject.h:278
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant read(const QObject *) const
@@ -517,7 +517,7 @@ func (this *QMetaProperty) Read(obj QObject_ITF /*777 const QObject **/) *QVaria
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:278
+// /usr/include/qt/QtCore/qmetaobject.h:279
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool write(QObject *, const QVariant &) const
@@ -539,7 +539,7 @@ func (this *QMetaProperty) Write(obj QObject_ITF /*777 QObject **/, value QVaria
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:279
+// /usr/include/qt/QtCore/qmetaobject.h:280
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool reset(QObject *) const
@@ -557,7 +557,7 @@ func (this *QMetaProperty) Reset(obj QObject_ITF /*777 QObject **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:281
+// /usr/include/qt/QtCore/qmetaobject.h:282
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant readOnGadget(const void *) const
@@ -573,7 +573,7 @@ func (this *QMetaProperty) ReadOnGadget(gadget unsafe.Pointer /*666*/) *QVariant
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:282
+// /usr/include/qt/QtCore/qmetaobject.h:283
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool writeOnGadget(void *, const QVariant &) const
@@ -591,7 +591,7 @@ func (this *QMetaProperty) WriteOnGadget(gadget unsafe.Pointer /*666*/, value QV
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:283
+// /usr/include/qt/QtCore/qmetaobject.h:284
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool resetOnGadget(void *) const
@@ -605,7 +605,7 @@ func (this *QMetaProperty) ResetOnGadget(gadget unsafe.Pointer /*666*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:285
+// /usr/include/qt/QtCore/qmetaobject.h:286
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasStdCppSet() const
@@ -619,7 +619,7 @@ func (this *QMetaProperty) HasStdCppSet() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:286
+// /usr/include/qt/QtCore/qmetaobject.h:287
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -633,7 +633,7 @@ func (this *QMetaProperty) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:287
+// /usr/include/qt/QtCore/qmetaobject.h:288
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QMetaObject * enclosingMetaObject() const

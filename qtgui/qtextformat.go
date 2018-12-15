@@ -65,7 +65,7 @@ func (*QTextFormat) NewFromPointer(cthis unsafe.Pointer) *QTextFormat {
 	return NewQTextFormatFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:288
+// /usr/include/qt/QtGui/qtextformat.h:290
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextFormat()
@@ -86,7 +86,7 @@ func NewQTextFormat() *QTextFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:290
+// /usr/include/qt/QtGui/qtextformat.h:292
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextFormat(int)
@@ -107,7 +107,7 @@ func NewQTextFormat1(type_ int) *QTextFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:293
+// /usr/include/qt/QtGui/qtextformat.h:295
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextFormat & operator=(const QTextFormat &)
@@ -127,7 +127,7 @@ func (this *QTextFormat) Operator_equal(rhs QTextFormat_ITF) *QTextFormat {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:294
+// /usr/include/qt/QtGui/qtextformat.h:296
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextFormat()
@@ -142,7 +142,7 @@ func DeleteQTextFormat(this *QTextFormat) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:296
+// /usr/include/qt/QtGui/qtextformat.h:298
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QTextFormat &)
@@ -161,7 +161,7 @@ func (this *QTextFormat) Swap(other QTextFormat_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:299
+// /usr/include/qt/QtGui/qtextformat.h:301
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void merge(const QTextFormat &)
@@ -178,7 +178,7 @@ func (this *QTextFormat) Merge(other QTextFormat_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:301
+// /usr/include/qt/QtGui/qtextformat.h:303
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -192,7 +192,7 @@ func (this *QTextFormat) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:302
+// /usr/include/qt/QtGui/qtextformat.h:304
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isEmpty() const
@@ -210,7 +210,7 @@ func (this *QTextFormat) IsEmpty() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:304
+// /usr/include/qt/QtGui/qtextformat.h:306
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int type() const
@@ -226,7 +226,7 @@ func (this *QTextFormat) Type() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:306
+// /usr/include/qt/QtGui/qtextformat.h:308
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int objectIndex() const
@@ -242,7 +242,7 @@ func (this *QTextFormat) ObjectIndex() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:307
+// /usr/include/qt/QtGui/qtextformat.h:309
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setObjectIndex(int)
@@ -257,7 +257,7 @@ func (this *QTextFormat) SetObjectIndex(object int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:309
+// /usr/include/qt/QtGui/qtextformat.h:311
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant property(int) const
@@ -275,7 +275,7 @@ func (this *QTextFormat) Property(propertyId int) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:310
+// /usr/include/qt/QtGui/qtextformat.h:312
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProperty(int, const QVariant &)
@@ -294,7 +294,7 @@ func (this *QTextFormat) SetProperty(propertyId int, value qtcore.QVariant_ITF) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:311
+// /usr/include/qt/QtGui/qtextformat.h:313
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearProperty(int)
@@ -309,7 +309,7 @@ func (this *QTextFormat) ClearProperty(propertyId int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:312
+// /usr/include/qt/QtGui/qtextformat.h:314
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasProperty(int) const
@@ -325,7 +325,7 @@ func (this *QTextFormat) HasProperty(propertyId int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:314
+// /usr/include/qt/QtGui/qtextformat.h:316
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool boolProperty(int) const
@@ -341,7 +341,7 @@ func (this *QTextFormat) BoolProperty(propertyId int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:315
+// /usr/include/qt/QtGui/qtextformat.h:317
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int intProperty(int) const
@@ -357,7 +357,7 @@ func (this *QTextFormat) IntProperty(propertyId int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:316
+// /usr/include/qt/QtGui/qtextformat.h:318
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal doubleProperty(int) const
@@ -373,7 +373,7 @@ func (this *QTextFormat) DoubleProperty(propertyId int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:317
+// /usr/include/qt/QtGui/qtextformat.h:319
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString stringProperty(int) const
@@ -392,7 +392,7 @@ func (this *QTextFormat) StringProperty(propertyId int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:318
+// /usr/include/qt/QtGui/qtextformat.h:320
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor colorProperty(int) const
@@ -410,7 +410,7 @@ func (this *QTextFormat) ColorProperty(propertyId int) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:319
+// /usr/include/qt/QtGui/qtextformat.h:321
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPen penProperty(int) const
@@ -428,7 +428,7 @@ func (this *QTextFormat) PenProperty(propertyId int) *QPen /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:320
+// /usr/include/qt/QtGui/qtextformat.h:322
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QBrush brushProperty(int) const
@@ -446,7 +446,7 @@ func (this *QTextFormat) BrushProperty(propertyId int) *QBrush /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:321
+// /usr/include/qt/QtGui/qtextformat.h:323
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextLength lengthProperty(int) const
@@ -464,7 +464,7 @@ func (this *QTextFormat) LengthProperty(propertyId int) *QTextLength /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:327
+// /usr/include/qt/QtGui/qtextformat.h:329
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int propertyCount() const
@@ -480,7 +480,7 @@ func (this *QTextFormat) PropertyCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:329
+// /usr/include/qt/QtGui/qtextformat.h:331
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setObjectType(int)
@@ -495,7 +495,7 @@ func (this *QTextFormat) SetObjectType(type_ int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:330
+// /usr/include/qt/QtGui/qtextformat.h:332
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int objectType() const
@@ -511,7 +511,7 @@ func (this *QTextFormat) ObjectType() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:333
+// /usr/include/qt/QtGui/qtextformat.h:335
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isCharFormat() const
@@ -525,7 +525,7 @@ func (this *QTextFormat) IsCharFormat() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:334
+// /usr/include/qt/QtGui/qtextformat.h:336
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isBlockFormat() const
@@ -539,7 +539,7 @@ func (this *QTextFormat) IsBlockFormat() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:335
+// /usr/include/qt/QtGui/qtextformat.h:337
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isListFormat() const
@@ -553,7 +553,7 @@ func (this *QTextFormat) IsListFormat() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:336
+// /usr/include/qt/QtGui/qtextformat.h:338
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isFrameFormat() const
@@ -567,7 +567,7 @@ func (this *QTextFormat) IsFrameFormat() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:337
+// /usr/include/qt/QtGui/qtextformat.h:339
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isImageFormat() const
@@ -581,7 +581,7 @@ func (this *QTextFormat) IsImageFormat() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:338
+// /usr/include/qt/QtGui/qtextformat.h:340
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isTableFormat() const
@@ -595,7 +595,7 @@ func (this *QTextFormat) IsTableFormat() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:339
+// /usr/include/qt/QtGui/qtextformat.h:341
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isTableCellFormat() const
@@ -611,7 +611,7 @@ func (this *QTextFormat) IsTableCellFormat() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:341
+// /usr/include/qt/QtGui/qtextformat.h:343
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextBlockFormat toBlockFormat() const
@@ -627,7 +627,7 @@ func (this *QTextFormat) ToBlockFormat() *QTextBlockFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:342
+// /usr/include/qt/QtGui/qtextformat.h:344
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextCharFormat toCharFormat() const
@@ -643,7 +643,7 @@ func (this *QTextFormat) ToCharFormat() *QTextCharFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:343
+// /usr/include/qt/QtGui/qtextformat.h:345
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextListFormat toListFormat() const
@@ -659,7 +659,7 @@ func (this *QTextFormat) ToListFormat() *QTextListFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:344
+// /usr/include/qt/QtGui/qtextformat.h:346
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextTableFormat toTableFormat() const
@@ -675,7 +675,7 @@ func (this *QTextFormat) ToTableFormat() *QTextTableFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:345
+// /usr/include/qt/QtGui/qtextformat.h:347
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextFrameFormat toFrameFormat() const
@@ -691,7 +691,7 @@ func (this *QTextFormat) ToFrameFormat() *QTextFrameFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:346
+// /usr/include/qt/QtGui/qtextformat.h:348
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextImageFormat toImageFormat() const
@@ -707,7 +707,7 @@ func (this *QTextFormat) ToImageFormat() *QTextImageFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:347
+// /usr/include/qt/QtGui/qtextformat.h:349
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextTableCellFormat toTableCellFormat() const
@@ -725,7 +725,7 @@ func (this *QTextFormat) ToTableCellFormat() *QTextTableCellFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:349
+// /usr/include/qt/QtGui/qtextformat.h:351
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QTextFormat &) const
@@ -743,7 +743,7 @@ func (this *QTextFormat) Operator_equal_equal(rhs QTextFormat_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:350
+// /usr/include/qt/QtGui/qtextformat.h:352
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QTextFormat &) const
@@ -761,7 +761,7 @@ func (this *QTextFormat) Operator_not_equal(rhs QTextFormat_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:353
+// /usr/include/qt/QtGui/qtextformat.h:355
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setLayoutDirection(Qt::LayoutDirection)
@@ -776,7 +776,7 @@ func (this *QTextFormat) SetLayoutDirection(direction int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:355
+// /usr/include/qt/QtGui/qtextformat.h:357
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::LayoutDirection layoutDirection() const
@@ -792,7 +792,7 @@ func (this *QTextFormat) LayoutDirection() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:358
+// /usr/include/qt/QtGui/qtextformat.h:360
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackground(const QBrush &)
@@ -811,7 +811,7 @@ func (this *QTextFormat) SetBackground(brush QBrush_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:360
+// /usr/include/qt/QtGui/qtextformat.h:362
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush background() const
@@ -829,7 +829,7 @@ func (this *QTextFormat) Background() *QBrush /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:362
+// /usr/include/qt/QtGui/qtextformat.h:364
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void clearBackground()
@@ -844,7 +844,7 @@ func (this *QTextFormat) ClearBackground() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:365
+// /usr/include/qt/QtGui/qtextformat.h:367
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setForeground(const QBrush &)
@@ -863,7 +863,7 @@ func (this *QTextFormat) SetForeground(brush QBrush_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:367
+// /usr/include/qt/QtGui/qtextformat.h:369
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush foreground() const
@@ -881,7 +881,7 @@ func (this *QTextFormat) Foreground() *QBrush /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:369
+// /usr/include/qt/QtGui/qtextformat.h:371
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void clearForeground()
@@ -915,7 +915,7 @@ const QTextFormat__BlockFormat QTextFormat__FormatType = 1
 // The object formats a single character
 const QTextFormat__CharFormat QTextFormat__FormatType = 2
 
-// The object formats a list Unused Value, a table's FormatType is FrameFormat.
+// The object formats a list
 const QTextFormat__ListFormat QTextFormat__FormatType = 3
 
 //
@@ -1057,6 +1057,9 @@ const QTextFormat__BlockNonBreakableLines QTextFormat__Property = 4176
 
 //
 const QTextFormat__BlockTrailingHorizontalRulerWidth QTextFormat__Property = 4192
+
+//
+const QTextFormat__HeadingLevel QTextFormat__Property = 4208
 
 //
 const QTextFormat__FirstFontProperty QTextFormat__Property = 8160
@@ -1239,6 +1242,9 @@ const QTextFormat__ImageWidth QTextFormat__Property = 20496
 const QTextFormat__ImageHeight QTextFormat__Property = 20497
 
 //
+const QTextFormat__ImageQuality QTextFormat__Property = 20500
+
+//
 const QTextFormat__FullWidthSelection QTextFormat__Property = 24576
 
 //
@@ -1287,6 +1293,8 @@ func (this *QTextFormat) PropertyItemName(val int) string {
 		return "BlockNonBreakableLines"
 	case QTextFormat__BlockTrailingHorizontalRulerWidth: // 4192
 		return "BlockTrailingHorizontalRulerWidth"
+	case QTextFormat__HeadingLevel: // 4208
+		return "HeadingLevel"
 	case QTextFormat__FirstFontProperty: // 8160
 		return "FirstFontProperty,FontCapitalization"
 		// case QTextFormat__FontCapitalization: // 8160
@@ -1407,6 +1415,8 @@ func (this *QTextFormat) PropertyItemName(val int) string {
 		return "ImageWidth"
 	case QTextFormat__ImageHeight: // 20497
 		return "ImageHeight"
+	case QTextFormat__ImageQuality: // 20500
+		return "ImageQuality"
 	case QTextFormat__FullWidthSelection: // 24576
 		return "FullWidthSelection"
 	case QTextFormat__PageBreakPolicy: // 28672

@@ -84,7 +84,7 @@ func (this *QMacToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // [-2] void QMacToolBar(QObject *)
 
 /*
-Constructs a QMacToolBar with the given parent
+Default constructs an instance of QMacToolBar.
 */
 func (*QMacToolBar) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 	return NewQMacToolBar(parent)
@@ -107,7 +107,7 @@ func NewQMacToolBar(parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 // [-2] void QMacToolBar(QObject *)
 
 /*
-Constructs a QMacToolBar with the given parent
+Default constructs an instance of QMacToolBar.
 */
 func (*QMacToolBar) NewForInheritp() *QMacToolBar {
 	return NewQMacToolBarp()
@@ -128,7 +128,7 @@ func NewQMacToolBarp() *QMacToolBar {
 // [-2] void QMacToolBar(const QString &, QObject *)
 
 /*
-Constructs a QMacToolBar with the given parent
+Default constructs an instance of QMacToolBar.
 */
 func (*QMacToolBar) NewForInherit1(identifier string, parent qtcore.QObject_ITF /*777 QObject **/) *QMacToolBar {
 	return NewQMacToolBar1(identifier, parent)
@@ -153,7 +153,7 @@ func NewQMacToolBar1(identifier string, parent qtcore.QObject_ITF /*777 QObject 
 // [-2] void QMacToolBar(const QString &, QObject *)
 
 /*
-Constructs a QMacToolBar with the given parent
+Default constructs an instance of QMacToolBar.
 */
 func (*QMacToolBar) NewForInherit1p(identifier string) *QMacToolBar {
 	return NewQMacToolBar1p(identifier)
@@ -191,8 +191,8 @@ func DeleteQMacToolBar(this *QMacToolBar) {
 // [8] QMacToolBarItem * addItem(const QIcon &, const QString &)
 
 /*
-Add a toolbar item with icon and text.
-*/
+
+ */
 func (this *QMacToolBar) AddItem(icon qtgui.QIcon_ITF, text string) *QMacToolBarItem /*777 QMacToolBarItem **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -211,8 +211,8 @@ func (this *QMacToolBar) AddItem(icon qtgui.QIcon_ITF, text string) *QMacToolBar
 // [8] QMacToolBarItem * addAllowedItem(const QIcon &, const QString &)
 
 /*
-Add atoolbar item with icon and text to the toolbar customization menu.
-*/
+
+ */
 func (this *QMacToolBar) AddAllowedItem(icon qtgui.QIcon_ITF, text string) *QMacToolBarItem /*777 QMacToolBarItem **/ {
 	var convArg0 unsafe.Pointer
 	if icon != nil && icon.QIcon_PTR() != nil {
@@ -259,8 +259,8 @@ func (this *QMacToolBar) AddAllowedStandardItem(standardItem int) *QMacToolBarIt
 // [-2] void addSeparator()
 
 /*
-Add a toolbar separator item.
-*/
+
+ */
 func (this *QMacToolBar) AddSeparator() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar12addSeparatorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -272,10 +272,8 @@ func (this *QMacToolBar) AddSeparator() {
 // [-2] void attachToWindow(QWindow *)
 
 /*
-Attaches the toolbar to window. The toolbar will be displayed at the top of the native window, under and attached to the title bar above the QWindow. The toolbar is displayed outside the QWidnow area.
 
-Use QWidget::windowHandle() to get a QWindow pointer from a QWidget instance. At app startup the QWindow might not have been created yet, call QWidget::winId() to make sure it is.
-*/
+ */
 func (this *QMacToolBar) AttachToWindow(window qtgui.QWindow_ITF /*777 QWindow **/) {
 	var convArg0 unsafe.Pointer
 	if window != nil && window.QWindow_PTR() != nil {
@@ -291,8 +289,8 @@ func (this *QMacToolBar) AttachToWindow(window qtgui.QWindow_ITF /*777 QWindow *
 // [-2] void detachFromWindow()
 
 /*
-Detatches the toolbar from the current window.
-*/
+
+ */
 func (this *QMacToolBar) DetachFromWindow() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QMacToolBar16detachFromWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -304,8 +302,8 @@ func (this *QMacToolBar) DetachFromWindow() {
 // [8] NSToolbar * nativeToolbar() const
 
 /*
-Returns the naitve NSTooolbar object.
-*/
+
+ */
 func (this *QMacToolBar) NativeToolbar() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMacToolBar13nativeToolbarEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

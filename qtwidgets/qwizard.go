@@ -821,7 +821,7 @@ func (this *QWizard) SetDefaultProperty(className string, property string, chang
 // [-2] void setVisible(bool)
 
 /*
-Reimplemented from QWidget::setVisible().
+Reimplemented from QDialog::setVisible().
 */
 func (this *QWizard) SetVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWizard10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
@@ -834,7 +834,7 @@ func (this *QWizard) SetVisible(visible bool) {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QDialog::sizeHint().
 */
 func (this *QWizard) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWizard8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1018,7 +1018,7 @@ func (this *QWizard) Restart() {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QWizard) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -1036,7 +1036,7 @@ func (this *QWizard) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // [-2] void resizeEvent(QResizeEvent *)
 
 /*
-Reimplemented from QWidget::resizeEvent().
+Reimplemented from QDialog::resizeEvent().
 */
 func (this *QWizard) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer

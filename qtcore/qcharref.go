@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 262
+// extern C begin: 266
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func (*QCharRef) NewFromPointer(cthis unsafe.Pointer) *QCharRef {
 	return NewQCharRefFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1036
+// /usr/include/qt/QtCore/qstring.h:1052
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QCharRef & operator=(QChar)
@@ -84,7 +84,7 @@ func (this *QCharRef) Operator_equal(c QChar_ITF /*123*/) *QCharRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1042
+// /usr/include/qt/QtCore/qstring.h:1058
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QCharRef & operator=(char)
@@ -100,7 +100,7 @@ func (this *QCharRef) Operator_equal1(c byte) *QCharRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1044
+// /usr/include/qt/QtCore/qstring.h:1060
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [16] QCharRef & operator=(uchar)
@@ -116,7 +116,7 @@ func (this *QCharRef) Operator_equal2(c byte) *QCharRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1047
+// /usr/include/qt/QtCore/qstring.h:1063
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [16] QCharRef & operator=(const QCharRef &)
@@ -136,7 +136,7 @@ func (this *QCharRef) Operator_equal3(c QCharRef_ITF) *QCharRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1048
+// /usr/include/qt/QtCore/qstring.h:1064
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [16] QCharRef & operator=(ushort)
@@ -152,7 +152,7 @@ func (this *QCharRef) Operator_equal4(rc uint16) *QCharRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1049
+// /usr/include/qt/QtCore/qstring.h:1065
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [16] QCharRef & operator=(short)
@@ -168,7 +168,7 @@ func (this *QCharRef) Operator_equal5(rc int16) *QCharRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1050
+// /usr/include/qt/QtCore/qstring.h:1066
 // index:6
 // Public inline Visibility=Default Availability=Available
 // [16] QCharRef & operator=(uint)
@@ -184,7 +184,7 @@ func (this *QCharRef) Operator_equal6(rc uint) *QCharRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1051
+// /usr/include/qt/QtCore/qstring.h:1067
 // index:7
 // Public inline Visibility=Default Availability=Available
 // [16] QCharRef & operator=(int)
@@ -200,7 +200,7 @@ func (this *QCharRef) Operator_equal7(rc int) *QCharRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1054
+// /usr/include/qt/QtCore/qstring.h:1070
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -227,7 +227,7 @@ func (this *QCharRef) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1055
+// /usr/include/qt/QtCore/qstring.h:1071
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isPrint() const
@@ -241,7 +241,7 @@ func (this *QCharRef) IsPrint() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1056
+// /usr/include/qt/QtCore/qstring.h:1072
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isPunct() const
@@ -255,7 +255,7 @@ func (this *QCharRef) IsPunct() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1057
+// /usr/include/qt/QtCore/qstring.h:1073
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSpace() const
@@ -269,7 +269,7 @@ func (this *QCharRef) IsSpace() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1058
+// /usr/include/qt/QtCore/qstring.h:1074
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isMark() const
@@ -283,7 +283,7 @@ func (this *QCharRef) IsMark() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1059
+// /usr/include/qt/QtCore/qstring.h:1075
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isLetter() const
@@ -297,7 +297,7 @@ func (this *QCharRef) IsLetter() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1060
+// /usr/include/qt/QtCore/qstring.h:1076
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNumber() const
@@ -311,7 +311,7 @@ func (this *QCharRef) IsNumber() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1061
+// /usr/include/qt/QtCore/qstring.h:1077
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isLetterOrNumber()
@@ -325,7 +325,7 @@ func (this *QCharRef) IsLetterOrNumber() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1062
+// /usr/include/qt/QtCore/qstring.h:1078
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDigit() const
@@ -339,35 +339,43 @@ func (this *QCharRef) IsDigit() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1063
+// /usr/include/qt/QtCore/qstring.h:1079
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isLower() const
 
 /*
+Returns true if the string only contains lowercase letters, otherwise returns false.
 
- */
+This function was introduced in  Qt 5.12.
+
+See also QChar::isLower() and isUpper().
+*/
 func (this *QCharRef) IsLower() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7isLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1064
+// /usr/include/qt/QtCore/qstring.h:1080
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isUpper() const
 
 /*
+Returns true if the string only contains uppercase letters, otherwise returns false.
 
- */
+This function was introduced in  Qt 5.12.
+
+See also QChar::isUpper() and isLower().
+*/
 func (this *QCharRef) IsUpper() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef7isUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1065
+// /usr/include/qt/QtCore/qstring.h:1081
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isTitleCase() const
@@ -381,7 +389,7 @@ func (this *QCharRef) IsTitleCase() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1067
+// /usr/include/qt/QtCore/qstring.h:1083
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int digitValue() const
@@ -395,7 +403,7 @@ func (this *QCharRef) DigitValue() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1068
+// /usr/include/qt/QtCore/qstring.h:1084
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar toLower() const
@@ -421,7 +429,7 @@ func (this *QCharRef) ToLower() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1069
+// /usr/include/qt/QtCore/qstring.h:1085
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar toUpper() const
@@ -447,7 +455,7 @@ func (this *QCharRef) ToUpper() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1070
+// /usr/include/qt/QtCore/qstring.h:1086
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar toTitleCase() const
@@ -463,7 +471,7 @@ func (this *QCharRef) ToTitleCase() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1072
+// /usr/include/qt/QtCore/qstring.h:1088
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::Category category() const
@@ -477,7 +485,7 @@ func (this *QCharRef) Category() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1073
+// /usr/include/qt/QtCore/qstring.h:1089
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::Direction direction() const
@@ -491,7 +499,7 @@ func (this *QCharRef) Direction() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1074
+// /usr/include/qt/QtCore/qstring.h:1090
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::JoiningType joiningType() const
@@ -505,7 +513,7 @@ func (this *QCharRef) JoiningType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1076
+// /usr/include/qt/QtCore/qstring.h:1092
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::Joining joining() const
@@ -519,7 +527,7 @@ func (this *QCharRef) Joining() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1089
+// /usr/include/qt/QtCore/qstring.h:1105
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool hasMirrored() const
@@ -533,7 +541,7 @@ func (this *QCharRef) HasMirrored() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1090
+// /usr/include/qt/QtCore/qstring.h:1106
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar mirroredChar() const
@@ -549,7 +557,7 @@ func (this *QCharRef) MirroredChar() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1091
+// /usr/include/qt/QtCore/qstring.h:1107
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString decomposition() const
@@ -566,7 +574,7 @@ func (this *QCharRef) Decomposition() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1092
+// /usr/include/qt/QtCore/qstring.h:1108
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::Decomposition decompositionTag() const
@@ -580,7 +588,7 @@ func (this *QCharRef) DecompositionTag() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1093
+// /usr/include/qt/QtCore/qstring.h:1109
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] uchar combiningClass() const
@@ -594,7 +602,7 @@ func (this *QCharRef) CombiningClass() byte {
 	return byte(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1095
+// /usr/include/qt/QtCore/qstring.h:1111
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::Script script() const
@@ -608,7 +616,7 @@ func (this *QCharRef) Script() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1097
+// /usr/include/qt/QtCore/qstring.h:1113
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::UnicodeVersion unicodeVersion() const
@@ -622,7 +630,7 @@ func (this *QCharRef) UnicodeVersion() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1099
+// /usr/include/qt/QtCore/qstring.h:1115
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] uchar cell() const
@@ -636,7 +644,7 @@ func (this *QCharRef) Cell() byte {
 	return byte(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1100
+// /usr/include/qt/QtCore/qstring.h:1116
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] uchar row() const
@@ -650,7 +658,7 @@ func (this *QCharRef) Row() byte {
 	return byte(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1101
+// /usr/include/qt/QtCore/qstring.h:1117
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCell(uchar)
@@ -663,7 +671,7 @@ func (this *QCharRef) SetCell(cell byte) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1102
+// /usr/include/qt/QtCore/qstring.h:1118
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRow(uchar)
@@ -676,7 +684,7 @@ func (this *QCharRef) SetRow(row byte) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1107
+// /usr/include/qt/QtCore/qstring.h:1123
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] char toLatin1() const
@@ -686,7 +694,7 @@ Returns a Latin-1 representation of the string as a QByteArray.
 
 The returned byte array is undefined if the string contains non-Latin1 characters. Those characters may be suppressed or replaced with a question mark.
 
-See also fromLatin1(), toUtf8(), toLocal8Bit(), QTextCodec, and qConvertToLatin1().
+See also fromLatin1(), toUtf8(), toLocal8Bit(), and QTextCodec.
 */
 func (this *QCharRef) ToLatin1() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QCharRef8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -694,7 +702,7 @@ func (this *QCharRef) ToLatin1() byte {
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:1108
+// /usr/include/qt/QtCore/qstring.h:1124
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] ushort unicode() const
@@ -712,7 +720,7 @@ func (this *QCharRef) Unicode() uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:1109
+// /usr/include/qt/QtCore/qstring.h:1125
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [2] ushort & unicode()

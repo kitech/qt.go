@@ -710,7 +710,7 @@ func (this *QDir) NameFilters() *QStringList /*123*/ {
 /*
 Sets the name filters used by entryList() and entryInfoList() to the list of filters specified by nameFilters.
 
-Each name filter is a wildcard (globbing) filter that understands * and ? wildcards. (See QRegExp wildcard matching.)
+Each name filter is a wildcard (globbing) filter that understands * and ? wildcards. See QRegularExpression Wildcard Matching.
 
 For example, the following code sets three name filters on a QDir to ensure that only files with extensions typically used for C++ source files are listed:
 
@@ -1841,7 +1841,7 @@ func QDir_RootPath() string {
 /*
 Returns the system's temporary directory.
 
-The directory is constructed using the absolute path of the temporary directory, ensuring that its path() will be the same as its absolutePath().
+The directory is constructed using the absolute canonical path of the temporary directory, ensuring that its path() will be the same as its absolutePath().
 
 See tempPath() for details.
 
@@ -1866,7 +1866,7 @@ func QDir_Temp() *QDir /*123*/ {
 // [8] QString tempPath()
 
 /*
-Returns the absolute path of the system's temporary directory.
+Returns the absolute canonical path of the system's temporary directory.
 
 On Unix/Linux systems this is the path in the TMPDIR environment variable or /tmp if TMPDIR is not defined. On Windows this is usually the path in the TEMP or TMP environment variable. The path returned by this method doesn't end with a directory separator unless it is the root directory (of a drive).
 
@@ -1894,7 +1894,7 @@ func QDir_TempPath() string {
 /*
 Returns true if the fileName matches the wildcard (glob) pattern filter; otherwise returns false. The filter may contain multiple patterns separated by spaces or semicolons. The matching is case insensitive.
 
-See also QRegExp wildcard matching, QRegExp::exactMatch(), entryList(), and entryInfoList().
+See also QRegularExpression Wildcard Matching, entryList(), and entryInfoList().
 */
 func (this *QDir) Match(filters QStringList_ITF, fileName string) bool {
 	var convArg0 unsafe.Pointer
@@ -1921,7 +1921,7 @@ func QDir_Match(filters QStringList_ITF, fileName string) bool {
 /*
 Returns true if the fileName matches the wildcard (glob) pattern filter; otherwise returns false. The filter may contain multiple patterns separated by spaces or semicolons. The matching is case insensitive.
 
-See also QRegExp wildcard matching, QRegExp::exactMatch(), entryList(), and entryInfoList().
+See also QRegularExpression Wildcard Matching, entryList(), and entryInfoList().
 */
 func (this *QDir) Match1(filter string, fileName string) bool {
 	var tmpArg0 = NewQString5(filter)

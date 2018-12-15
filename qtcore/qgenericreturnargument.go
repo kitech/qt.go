@@ -62,7 +62,7 @@ func (*QGenericReturnArgument) NewFromPointer(cthis unsafe.Pointer) *QGenericRet
 	return NewQGenericReturnArgumentFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:310
+// /usr/include/qt/QtCore/qobjectdefs.h:305
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericReturnArgument(const char *, void *)
@@ -83,7 +83,7 @@ func NewQGenericReturnArgument(aName string, aData unsafe.Pointer /*666*/) *QGen
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:310
+// /usr/include/qt/QtCore/qobjectdefs.h:305
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericReturnArgument(const char *, void *)
@@ -106,7 +106,7 @@ func NewQGenericReturnArgumentp() *QGenericReturnArgument {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:310
+// /usr/include/qt/QtCore/qobjectdefs.h:305
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericReturnArgument(const char *, void *)

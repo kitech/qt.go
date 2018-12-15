@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h
@@ -82,7 +84,7 @@ func (*QParallelAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QParallelA
 	return NewQParallelAnimationGroupFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qparallelanimationgroup.h:53
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -96,7 +98,7 @@ func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMeta
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qparallelanimationgroup.h:56
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:55
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QParallelAnimationGroup(QObject *)
@@ -119,7 +121,7 @@ func NewQParallelAnimationGroup(parent QObject_ITF /*777 QObject **/) *QParallel
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qparallelanimationgroup.h:56
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:55
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QParallelAnimationGroup(QObject *)
@@ -140,7 +142,7 @@ func NewQParallelAnimationGroupp() *QParallelAnimationGroup {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qparallelanimationgroup.h:57
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QParallelAnimationGroup()
@@ -155,7 +157,7 @@ func DeleteQParallelAnimationGroup(this *QParallelAnimationGroup) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qparallelanimationgroup.h:59
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int duration() const
@@ -169,13 +171,13 @@ func (this *QParallelAnimationGroup) Duration() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qparallelanimationgroup.h:63
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:62
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAnimationGroup::event().
 */
 func (this *QParallelAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -187,7 +189,7 @@ func (this *QParallelAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bo
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qparallelanimationgroup.h:65
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:64
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentTime(int)
@@ -200,7 +202,7 @@ func (this *QParallelAnimationGroup) UpdateCurrentTime(currentTime int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qparallelanimationgroup.h:66
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:65
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
@@ -213,7 +215,7 @@ func (this *QParallelAnimationGroup) UpdateState(newState int, oldState int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qparallelanimationgroup.h:67
+// /usr/include/qt/QtCore/qparallelanimationgroup.h:66
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateDirection(QAbstractAnimation::Direction)

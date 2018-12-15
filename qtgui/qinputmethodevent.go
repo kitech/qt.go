@@ -63,7 +63,7 @@ func (*QInputMethodEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMethodEven
 	return NewQInputMethodEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:555
+// /usr/include/qt/QtGui/qevent.h:560
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QInputMethodEvent()
@@ -82,7 +82,7 @@ func NewQInputMethodEvent() *QInputMethodEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:557
+// /usr/include/qt/QtGui/qevent.h:562
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QInputMethodEvent()
@@ -97,7 +97,7 @@ func DeleteQInputMethodEvent(this *QInputMethodEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:559
+// /usr/include/qt/QtGui/qevent.h:564
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCommitString(const QString &, int, int)
@@ -112,7 +112,7 @@ func (this *QInputMethodEvent) SetCommitString(commitString string, replaceFrom 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:559
+// /usr/include/qt/QtGui/qevent.h:564
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCommitString(const QString &, int, int)
@@ -131,7 +131,7 @@ func (this *QInputMethodEvent) SetCommitStringp(commitString string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:559
+// /usr/include/qt/QtGui/qevent.h:564
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCommitString(const QString &, int, int)
@@ -148,7 +148,7 @@ func (this *QInputMethodEvent) SetCommitStringp1(commitString string, replaceFro
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:561
+// /usr/include/qt/QtGui/qevent.h:566
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QString & preeditString() const
@@ -165,7 +165,7 @@ func (this *QInputMethodEvent) PreeditString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qevent.h:563
+// /usr/include/qt/QtGui/qevent.h:568
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QString & commitString() const
@@ -182,7 +182,7 @@ func (this *QInputMethodEvent) CommitString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qevent.h:564
+// /usr/include/qt/QtGui/qevent.h:569
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int replacementStart() const
@@ -196,7 +196,7 @@ func (this *QInputMethodEvent) ReplacementStart() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:565
+// /usr/include/qt/QtGui/qevent.h:570
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int replacementLength() const

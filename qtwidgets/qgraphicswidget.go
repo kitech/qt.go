@@ -1626,7 +1626,7 @@ func (this *QGraphicsWidget) WindowFrameSectionAt(pos qtcore.QPointF_ITF) int {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QGraphicsObject::event().
 
 Handles the event. QGraphicsWidget handles the following events:
 

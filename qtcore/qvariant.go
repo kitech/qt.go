@@ -84,7 +84,7 @@ func (*QVariant) NewFromPointer(cthis unsafe.Pointer) *QVariant {
 	return NewQVariantFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:199
+// /usr/include/qt/QtCore/qvariant.h:205
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVariant()
@@ -103,7 +103,7 @@ func NewQVariant() *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:201
+// /usr/include/qt/QtCore/qvariant.h:207
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(QVariant::Type)
@@ -122,7 +122,7 @@ func NewQVariant1(type_ int) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:202
+// /usr/include/qt/QtCore/qvariant.h:208
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(int, const void *)
@@ -141,7 +141,7 @@ func NewQVariant2(typeId int, copy unsafe.Pointer /*666*/) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:203
+// /usr/include/qt/QtCore/qvariant.h:209
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(int, const void *, uint)
@@ -160,7 +160,7 @@ func NewQVariant3(typeId int, copy unsafe.Pointer /*666*/, flags uint) *QVariant
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:207
+// /usr/include/qt/QtCore/qvariant.h:213
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(QDataStream &)
@@ -183,7 +183,7 @@ func NewQVariant4(s QDataStream_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:210
+// /usr/include/qt/QtCore/qvariant.h:216
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(int)
@@ -202,7 +202,7 @@ func NewQVariant5(i int) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:211
+// /usr/include/qt/QtCore/qvariant.h:217
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(uint)
@@ -221,7 +221,7 @@ func NewQVariant6(ui uint) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:212
+// /usr/include/qt/QtCore/qvariant.h:218
 // index:7
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(qlonglong)
@@ -240,7 +240,7 @@ func NewQVariant7(ll int64) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:213
+// /usr/include/qt/QtCore/qvariant.h:219
 // index:8
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(qulonglong)
@@ -259,7 +259,7 @@ func NewQVariant8(ull uint64) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:214
+// /usr/include/qt/QtCore/qvariant.h:220
 // index:9
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(bool)
@@ -278,7 +278,7 @@ func NewQVariant9(b bool) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:215
+// /usr/include/qt/QtCore/qvariant.h:221
 // index:10
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(double)
@@ -297,7 +297,7 @@ func NewQVariant10(d float64) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:216
+// /usr/include/qt/QtCore/qvariant.h:222
 // index:11
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(float)
@@ -316,7 +316,7 @@ func NewQVariant11(f float32) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:218
+// /usr/include/qt/QtCore/qvariant.h:224
 // index:12
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const char *)
@@ -337,7 +337,7 @@ func NewQVariant12(str string) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:221
+// /usr/include/qt/QtCore/qvariant.h:227
 // index:13
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QByteArray &)
@@ -360,7 +360,7 @@ func NewQVariant13(bytearray QByteArray_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:222
+// /usr/include/qt/QtCore/qvariant.h:228
 // index:14
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QBitArray &)
@@ -383,7 +383,7 @@ func NewQVariant14(bitarray QBitArray_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:223
+// /usr/include/qt/QtCore/qvariant.h:229
 // index:15
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QString &)
@@ -404,7 +404,7 @@ func NewQVariant15(string string) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:224
+// /usr/include/qt/QtCore/qvariant.h:230
 // index:16
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(QLatin1String)
@@ -427,7 +427,7 @@ func NewQVariant16(string QLatin1String_ITF /*123*/) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:225
+// /usr/include/qt/QtCore/qvariant.h:231
 // index:17
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QStringList &)
@@ -450,7 +450,7 @@ func NewQVariant17(stringlist QStringList_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:226
+// /usr/include/qt/QtCore/qvariant.h:232
 // index:18
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(QChar)
@@ -473,7 +473,7 @@ func NewQVariant18(qchar QChar_ITF /*123*/) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:227
+// /usr/include/qt/QtCore/qvariant.h:233
 // index:19
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QDate &)
@@ -496,7 +496,7 @@ func NewQVariant19(date QDate_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:228
+// /usr/include/qt/QtCore/qvariant.h:234
 // index:20
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QTime &)
@@ -519,7 +519,7 @@ func NewQVariant20(time QTime_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:229
+// /usr/include/qt/QtCore/qvariant.h:235
 // index:21
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QDateTime &)
@@ -542,7 +542,7 @@ func NewQVariant21(datetime QDateTime_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:234
+// /usr/include/qt/QtCore/qvariant.h:240
 // index:22
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QSize &)
@@ -565,7 +565,7 @@ func NewQVariant22(size QSize_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:235
+// /usr/include/qt/QtCore/qvariant.h:241
 // index:23
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QSizeF &)
@@ -588,7 +588,7 @@ func NewQVariant23(size QSizeF_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:236
+// /usr/include/qt/QtCore/qvariant.h:242
 // index:24
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QPoint &)
@@ -611,7 +611,7 @@ func NewQVariant24(pt QPoint_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:237
+// /usr/include/qt/QtCore/qvariant.h:243
 // index:25
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QPointF &)
@@ -634,7 +634,7 @@ func NewQVariant25(pt QPointF_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:238
+// /usr/include/qt/QtCore/qvariant.h:244
 // index:26
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QLine &)
@@ -657,7 +657,7 @@ func NewQVariant26(line QLine_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:239
+// /usr/include/qt/QtCore/qvariant.h:245
 // index:27
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QLineF &)
@@ -680,7 +680,7 @@ func NewQVariant27(line QLineF_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:240
+// /usr/include/qt/QtCore/qvariant.h:246
 // index:28
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QRect &)
@@ -703,7 +703,7 @@ func NewQVariant28(rect QRect_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:241
+// /usr/include/qt/QtCore/qvariant.h:247
 // index:29
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QRectF &)
@@ -726,7 +726,7 @@ func NewQVariant29(rect QRectF_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:243
+// /usr/include/qt/QtCore/qvariant.h:249
 // index:30
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QLocale &)
@@ -749,7 +749,7 @@ func NewQVariant30(locale QLocale_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:245
+// /usr/include/qt/QtCore/qvariant.h:251
 // index:31
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QRegExp &)
@@ -772,7 +772,7 @@ func NewQVariant31(regExp QRegExp_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:249
+// /usr/include/qt/QtCore/qvariant.h:254
 // index:32
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QRegularExpression &)
@@ -795,7 +795,7 @@ func NewQVariant32(re QRegularExpression_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:251
+// /usr/include/qt/QtCore/qvariant.h:257
 // index:33
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QUrl &)
@@ -818,7 +818,7 @@ func NewQVariant33(url QUrl_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:252
+// /usr/include/qt/QtCore/qvariant.h:258
 // index:34
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QEasingCurve &)
@@ -841,7 +841,7 @@ func NewQVariant34(easing QEasingCurve_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:253
+// /usr/include/qt/QtCore/qvariant.h:259
 // index:35
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QUuid &)
@@ -864,64 +864,18 @@ func NewQVariant35(uuid QUuid_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:254
+// /usr/include/qt/QtCore/qvariant.h:260
 // index:36
-// Public Visibility=Default Availability=Available
-// [-2] void QVariant(const QModelIndex &)
-
-/*
-Constructs an invalid variant.
-*/
-func (*QVariant) NewForInherit36(modelIndex QModelIndex_ITF) *QVariant {
-	return NewQVariant36(modelIndex)
-}
-func NewQVariant36(modelIndex QModelIndex_ITF) *QVariant {
-	var convArg0 unsafe.Pointer
-	if modelIndex != nil && modelIndex.QModelIndex_PTR() != nil {
-		convArg0 = modelIndex.QModelIndex_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK11QModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQVariant)
-	return gothis
-}
-
-// /usr/include/qt/QtCore/qvariant.h:255
-// index:37
-// Public Visibility=Default Availability=Available
-// [-2] void QVariant(const QPersistentModelIndex &)
-
-/*
-Constructs an invalid variant.
-*/
-func (*QVariant) NewForInherit37(modelIndex QPersistentModelIndex_ITF) *QVariant {
-	return NewQVariant37(modelIndex)
-}
-func NewQVariant37(modelIndex QPersistentModelIndex_ITF) *QVariant {
-	var convArg0 unsafe.Pointer
-	if modelIndex != nil && modelIndex.QPersistentModelIndex_PTR() != nil {
-		convArg0 = modelIndex.QPersistentModelIndex_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK21QPersistentModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQVariant)
-	return gothis
-}
-
-// /usr/include/qt/QtCore/qvariant.h:256
-// index:38
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QJsonValue &)
 
 /*
 Constructs an invalid variant.
 */
-func (*QVariant) NewForInherit38(jsonValue QJsonValue_ITF) *QVariant {
-	return NewQVariant38(jsonValue)
+func (*QVariant) NewForInherit36(jsonValue QJsonValue_ITF) *QVariant {
+	return NewQVariant36(jsonValue)
 }
-func NewQVariant38(jsonValue QJsonValue_ITF) *QVariant {
+func NewQVariant36(jsonValue QJsonValue_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if jsonValue != nil && jsonValue.QJsonValue_PTR() != nil {
 		convArg0 = jsonValue.QJsonValue_PTR().GetCthis()
@@ -933,18 +887,18 @@ func NewQVariant38(jsonValue QJsonValue_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:257
-// index:39
+// /usr/include/qt/QtCore/qvariant.h:261
+// index:37
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QJsonObject &)
 
 /*
 Constructs an invalid variant.
 */
-func (*QVariant) NewForInherit39(jsonObject QJsonObject_ITF) *QVariant {
-	return NewQVariant39(jsonObject)
+func (*QVariant) NewForInherit37(jsonObject QJsonObject_ITF) *QVariant {
+	return NewQVariant37(jsonObject)
 }
-func NewQVariant39(jsonObject QJsonObject_ITF) *QVariant {
+func NewQVariant37(jsonObject QJsonObject_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if jsonObject != nil && jsonObject.QJsonObject_PTR() != nil {
 		convArg0 = jsonObject.QJsonObject_PTR().GetCthis()
@@ -956,18 +910,18 @@ func NewQVariant39(jsonObject QJsonObject_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:258
-// index:40
+// /usr/include/qt/QtCore/qvariant.h:262
+// index:38
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QJsonArray &)
 
 /*
 Constructs an invalid variant.
 */
-func (*QVariant) NewForInherit40(jsonArray QJsonArray_ITF) *QVariant {
-	return NewQVariant40(jsonArray)
+func (*QVariant) NewForInherit38(jsonArray QJsonArray_ITF) *QVariant {
+	return NewQVariant38(jsonArray)
 }
-func NewQVariant40(jsonArray QJsonArray_ITF) *QVariant {
+func NewQVariant38(jsonArray QJsonArray_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if jsonArray != nil && jsonArray.QJsonArray_PTR() != nil {
 		convArg0 = jsonArray.QJsonArray_PTR().GetCthis()
@@ -979,18 +933,18 @@ func NewQVariant40(jsonArray QJsonArray_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:259
-// index:41
+// /usr/include/qt/QtCore/qvariant.h:263
+// index:39
 // Public Visibility=Default Availability=Available
 // [-2] void QVariant(const QJsonDocument &)
 
 /*
 Constructs an invalid variant.
 */
-func (*QVariant) NewForInherit41(jsonDocument QJsonDocument_ITF) *QVariant {
-	return NewQVariant41(jsonDocument)
+func (*QVariant) NewForInherit39(jsonDocument QJsonDocument_ITF) *QVariant {
+	return NewQVariant39(jsonDocument)
 }
-func NewQVariant41(jsonDocument QJsonDocument_ITF) *QVariant {
+func NewQVariant39(jsonDocument QJsonDocument_ITF) *QVariant {
 	var convArg0 unsafe.Pointer
 	if jsonDocument != nil && jsonDocument.QJsonDocument_PTR() != nil {
 		convArg0 = jsonDocument.QJsonDocument_PTR().GetCthis()
@@ -1002,7 +956,53 @@ func NewQVariant41(jsonDocument QJsonDocument_ITF) *QVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariant.h:200
+// /usr/include/qt/QtCore/qvariant.h:266
+// index:40
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QModelIndex &)
+
+/*
+Constructs an invalid variant.
+*/
+func (*QVariant) NewForInherit40(modelIndex QModelIndex_ITF) *QVariant {
+	return NewQVariant40(modelIndex)
+}
+func NewQVariant40(modelIndex QModelIndex_ITF) *QVariant {
+	var convArg0 unsafe.Pointer
+	if modelIndex != nil && modelIndex.QModelIndex_PTR() != nil {
+		convArg0 = modelIndex.QModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK11QModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:267
+// index:41
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QPersistentModelIndex &)
+
+/*
+Constructs an invalid variant.
+*/
+func (*QVariant) NewForInherit41(modelIndex QPersistentModelIndex_ITF) *QVariant {
+	return NewQVariant41(modelIndex)
+}
+func NewQVariant41(modelIndex QPersistentModelIndex_ITF) *QVariant {
+	var convArg0 unsafe.Pointer
+	if modelIndex != nil && modelIndex.QPersistentModelIndex_PTR() != nil {
+		convArg0 = modelIndex.QPersistentModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariantC2ERK21QPersistentModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QVariant()
@@ -1017,7 +1017,7 @@ func DeleteQVariant(this *QVariant) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:262
+// /usr/include/qt/QtCore/qvariant.h:270
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant & operator=(const QVariant &)
@@ -1037,7 +1037,7 @@ func (this *QVariant) Operator_equal(other QVariant_ITF) *QVariant {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:266
+// /usr/include/qt/QtCore/qvariant.h:274
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QVariant & operator=(QVariant &&)
@@ -1053,7 +1053,7 @@ func (this *QVariant) Operator_equal1(other unsafe.Pointer /*333*/) *QVariant {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:270
+// /usr/include/qt/QtCore/qvariant.h:278
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QVariant &)
@@ -1072,7 +1072,7 @@ func (this *QVariant) Swap(other QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:272
+// /usr/include/qt/QtCore/qvariant.h:280
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QVariant::Type type() const
@@ -1094,7 +1094,7 @@ func (this *QVariant) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:273
+// /usr/include/qt/QtCore/qvariant.h:281
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int userType() const
@@ -1110,7 +1110,7 @@ func (this *QVariant) UserType() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qvariant.h:274
+// /usr/include/qt/QtCore/qvariant.h:282
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * typeName() const
@@ -1124,7 +1124,7 @@ func (this *QVariant) TypeName() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:276
+// /usr/include/qt/QtCore/qvariant.h:284
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canConvert(int) const
@@ -1227,7 +1227,7 @@ func (this *QVariant) CanConvert(targetTypeId int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:277
+// /usr/include/qt/QtCore/qvariant.h:285
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool convert(int)
@@ -1241,7 +1241,7 @@ A QVariant containing a pointer to a type derived from QObject will also convert
 
 Note: converting QVariants that are null due to not being initialized or having failed a previous conversion will always fail, changing the type, remaining null, and returning false.
 
-See also canConvert() and clear().
+See also canConvert(int targetTypeId) and clear().
 */
 func (this *QVariant) Convert(targetTypeId int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QVariant7convertEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), targetTypeId)
@@ -1249,7 +1249,7 @@ func (this *QVariant) Convert(targetTypeId int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:467
+// /usr/include/qt/QtCore/qvariant.h:485
 // index:1
 // Protected Visibility=Default Availability=Available
 // [1] bool convert(const int, void *) const
@@ -1263,7 +1263,7 @@ A QVariant containing a pointer to a type derived from QObject will also convert
 
 Note: converting QVariants that are null due to not being initialized or having failed a previous conversion will always fail, changing the type, remaining null, and returning false.
 
-See also canConvert() and clear().
+See also canConvert(int targetTypeId) and clear().
 */
 func (this *QVariant) Convert1(t int, ptr unsafe.Pointer /*666*/) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7convertEiPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t, ptr)
@@ -1271,7 +1271,7 @@ func (this *QVariant) Convert1(t int, ptr unsafe.Pointer /*666*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:279
+// /usr/include/qt/QtCore/qvariant.h:287
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -1285,7 +1285,7 @@ func (this *QVariant) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:280
+// /usr/include/qt/QtCore/qvariant.h:288
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -1295,7 +1295,7 @@ Returns true if this is a null variant, false otherwise. A variant is considered
 
 Warning: Null variants is not a single state and two null variants may easily return false on the == operator if they do not contain similar null values.
 
-See also QVariant(Type) and convert(int).
+See also convert(int).
 */
 func (this *QVariant) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1303,7 +1303,7 @@ func (this *QVariant) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:282
+// /usr/include/qt/QtCore/qvariant.h:290
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -1316,7 +1316,7 @@ func (this *QVariant) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:284
+// /usr/include/qt/QtCore/qvariant.h:292
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void detach()
@@ -1329,7 +1329,7 @@ func (this *QVariant) Detach() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:285
+// /usr/include/qt/QtCore/qvariant.h:293
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDetached() const
@@ -1343,7 +1343,7 @@ func (this *QVariant) IsDetached() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:287
+// /usr/include/qt/QtCore/qvariant.h:295
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(bool *) const
@@ -1355,7 +1355,7 @@ If ok is non-null: *ok is set to true if the value could be converted to an int;
 
 Warning: If the value is convertible to a QMetaType::LongLong but is too large to be represented in an int, the resulting arithmetic overflow will not be reflected in ok. A simple workaround is to use QString::toInt().
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToInt(ok *bool) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant5toIntEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
@@ -1363,7 +1363,7 @@ func (this *QVariant) ToInt(ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qvariant.h:287
+// /usr/include/qt/QtCore/qvariant.h:295
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(bool *) const
@@ -1375,7 +1375,7 @@ If ok is non-null: *ok is set to true if the value could be converted to an int;
 
 Warning: If the value is convertible to a QMetaType::LongLong but is too large to be represented in an int, the resulting arithmetic overflow will not be reflected in ok. A simple workaround is to use QString::toInt().
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToIntp() int {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
@@ -1385,7 +1385,7 @@ func (this *QVariant) ToIntp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qvariant.h:288
+// /usr/include/qt/QtCore/qvariant.h:296
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(bool *) const
@@ -1397,7 +1397,7 @@ If ok is non-null: *ok is set to true if the value could be converted to an unsi
 
 Warning: If the value is convertible to a QMetaType::ULongLong but is too large to be represented in an unsigned int, the resulting arithmetic overflow will not be reflected in ok. A simple workaround is to use QString::toUInt().
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToUInt(ok *bool) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
@@ -1405,7 +1405,7 @@ func (this *QVariant) ToUInt(ok *bool) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qvariant.h:288
+// /usr/include/qt/QtCore/qvariant.h:296
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(bool *) const
@@ -1417,7 +1417,7 @@ If ok is non-null: *ok is set to true if the value could be converted to an unsi
 
 Warning: If the value is convertible to a QMetaType::ULongLong but is too large to be represented in an unsigned int, the resulting arithmetic overflow will not be reflected in ok. A simple workaround is to use QString::toUInt().
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToUIntp() uint {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
@@ -1427,7 +1427,7 @@ func (this *QVariant) ToUIntp() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qvariant.h:289
+// /usr/include/qt/QtCore/qvariant.h:297
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(bool *) const
@@ -1437,7 +1437,7 @@ Returns the variant as a long long int if the variant has userType() QMetaType::
 
 If ok is non-null: *ok is set to true if the value could be converted to an int; otherwise *ok is set to false.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToLongLong(ok *bool) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
@@ -1445,7 +1445,7 @@ func (this *QVariant) ToLongLong(ok *bool) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qvariant.h:289
+// /usr/include/qt/QtCore/qvariant.h:297
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(bool *) const
@@ -1455,7 +1455,7 @@ Returns the variant as a long long int if the variant has userType() QMetaType::
 
 If ok is non-null: *ok is set to true if the value could be converted to an int; otherwise *ok is set to false.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToLongLongp() int64 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
@@ -1465,7 +1465,7 @@ func (this *QVariant) ToLongLongp() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qvariant.h:290
+// /usr/include/qt/QtCore/qvariant.h:298
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(bool *) const
@@ -1475,7 +1475,7 @@ Returns the variant as an unsigned long long int if the variant has type() QMeta
 
 If ok is non-null: *ok is set to true if the value could be converted to an int; otherwise *ok is set to false.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToULongLong(ok *bool) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ok)
@@ -1483,7 +1483,7 @@ func (this *QVariant) ToULongLong(ok *bool) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qvariant.h:290
+// /usr/include/qt/QtCore/qvariant.h:298
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(bool *) const
@@ -1493,7 +1493,7 @@ Returns the variant as an unsigned long long int if the variant has type() QMeta
 
 If ok is non-null: *ok is set to true if the value could be converted to an int; otherwise *ok is set to false.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToULongLongp() uint64 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
@@ -1503,7 +1503,7 @@ func (this *QVariant) ToULongLongp() uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qvariant.h:291
+// /usr/include/qt/QtCore/qvariant.h:299
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool toBool() const
@@ -1513,7 +1513,7 @@ Returns the variant as a bool if the variant has userType() Bool.
 
 Returns true if the variant has userType() QMetaType::Bool, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::UInt, or QMetaType::ULongLong and the value is non-zero, or if the variant has type QMetaType::QString or QMetaType::QByteArray and its lower-case content is not one of the following: empty, "0" or "false"; otherwise returns false.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToBool() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toBoolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1521,7 +1521,7 @@ func (this *QVariant) ToBool() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:292
+// /usr/include/qt/QtCore/qvariant.h:300
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(bool *) const
@@ -1531,7 +1531,7 @@ Returns the variant as a double if the variant has userType() QMetaType::Double,
 
 If ok is non-null: *ok is set to true if the value could be converted to a double; otherwise *ok is set to false.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToDouble(ok *bool) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
@@ -1539,7 +1539,7 @@ func (this *QVariant) ToDouble(ok *bool) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qvariant.h:292
+// /usr/include/qt/QtCore/qvariant.h:300
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(bool *) const
@@ -1549,7 +1549,7 @@ Returns the variant as a double if the variant has userType() QMetaType::Double,
 
 If ok is non-null: *ok is set to true if the value could be converted to a double; otherwise *ok is set to false.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToDoublep() float64 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
@@ -1559,7 +1559,7 @@ func (this *QVariant) ToDoublep() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qvariant.h:293
+// /usr/include/qt/QtCore/qvariant.h:301
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(bool *) const
@@ -1571,7 +1571,7 @@ If ok is non-null: *ok is set to true if the value could be converted to a doubl
 
 This function was introduced in  Qt 4.6.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToFloat(ok *bool) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
@@ -1579,7 +1579,7 @@ func (this *QVariant) ToFloat(ok *bool) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qvariant.h:293
+// /usr/include/qt/QtCore/qvariant.h:301
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(bool *) const
@@ -1591,7 +1591,7 @@ If ok is non-null: *ok is set to true if the value could be converted to a doubl
 
 This function was introduced in  Qt 4.6.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToFloatp() float32 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
@@ -1601,7 +1601,7 @@ func (this *QVariant) ToFloatp() float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qvariant.h:294
+// /usr/include/qt/QtCore/qvariant.h:302
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal toReal(bool *) const
@@ -1613,7 +1613,7 @@ If ok is non-null: *ok is set to true if the value could be converted to a doubl
 
 This function was introduced in  Qt 4.6.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToReal(ok *bool) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toRealEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), ok)
@@ -1621,7 +1621,7 @@ func (this *QVariant) ToReal(ok *bool) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qvariant.h:294
+// /usr/include/qt/QtCore/qvariant.h:302
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal toReal(bool *) const
@@ -1633,7 +1633,7 @@ If ok is non-null: *ok is set to true if the value could be converted to a doubl
 
 This function was introduced in  Qt 4.6.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToRealp() float64 {
 	// arg: 0, bool *=Pointer, =Invalid, , Invalid
@@ -1643,7 +1643,7 @@ func (this *QVariant) ToRealp() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qvariant.h:295
+// /usr/include/qt/QtCore/qvariant.h:303
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toByteArray() const
@@ -1651,7 +1651,7 @@ func (this *QVariant) ToRealp() float64 {
 /*
 Returns the variant as a QByteArray if the variant has userType() QMetaType::QByteArray or QMetaType::QString (converted using QString::fromUtf8()); otherwise returns an empty byte array.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToByteArray() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toByteArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1661,7 +1661,7 @@ func (this *QVariant) ToByteArray() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:296
+// /usr/include/qt/QtCore/qvariant.h:304
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QBitArray toBitArray() const
@@ -1669,7 +1669,7 @@ func (this *QVariant) ToByteArray() *QByteArray /*123*/ {
 /*
 Returns the variant as a QBitArray if the variant has userType() QMetaType::QBitArray; otherwise returns an empty bit array.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToBitArray() *QBitArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10toBitArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1679,15 +1679,19 @@ func (this *QVariant) ToBitArray() *QBitArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:297
+// /usr/include/qt/QtCore/qvariant.h:305
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const
 
 /*
-Returns the variant as a QString if the variant has userType() QMetaType::QString, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::QDate, QMetaType::QDateTime, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QStringList, QMetaType::QTime, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns an empty string.
+Returns the variant as a QString if the variant has a userType() including, but not limited to:
 
-See also canConvert() and convert().
+QMetaType::QString, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::QDate, QMetaType::QDateTime, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QStringList, QMetaType::QTime, QMetaType::UInt, or QMetaType::ULongLong.
+
+Calling QVariant::toString() on an unsupported variant returns an empty string.
+
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1698,7 +1702,7 @@ func (this *QVariant) ToString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qvariant.h:298
+// /usr/include/qt/QtCore/qvariant.h:306
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList toStringList() const
@@ -1706,7 +1710,7 @@ func (this *QVariant) ToString() string {
 /*
 Returns the variant as a QStringList if the variant has userType() QMetaType::QStringList, QMetaType::QString, or QMetaType::QVariantList of a type that can be converted to QString; otherwise returns an empty list.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToStringList() *QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant12toStringListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1716,7 +1720,7 @@ func (this *QVariant) ToStringList() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:299
+// /usr/include/qt/QtCore/qvariant.h:307
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar toChar() const
@@ -1724,7 +1728,7 @@ func (this *QVariant) ToStringList() *QStringList /*123*/ {
 /*
 Returns the variant as a QChar if the variant has userType() QMetaType::QChar, QMetaType::Int, or QMetaType::UInt; otherwise returns an invalid QChar.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToChar() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toCharEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1734,7 +1738,7 @@ func (this *QVariant) ToChar() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:300
+// /usr/include/qt/QtCore/qvariant.h:308
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDate toDate() const
@@ -1744,7 +1748,7 @@ Returns the variant as a QDate if the variant has userType() QMetaType::QDate, Q
 
 If the type() is QMetaType::QString, an invalid date will be returned if the string cannot be parsed as a Qt::ISODate format date.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToDate() *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toDateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1754,7 +1758,7 @@ func (this *QVariant) ToDate() *QDate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:301
+// /usr/include/qt/QtCore/qvariant.h:309
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTime toTime() const
@@ -1764,7 +1768,7 @@ Returns the variant as a QTime if the variant has userType() QMetaType::QTime, Q
 
 If the type() is QMetaType::QString, an invalid time will be returned if the string cannot be parsed as a Qt::ISODate format time.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToTime() *QTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1774,7 +1778,7 @@ func (this *QVariant) ToTime() *QTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:302
+// /usr/include/qt/QtCore/qvariant.h:310
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime toDateTime() const
@@ -1784,7 +1788,7 @@ Returns the variant as a QDateTime if the variant has userType() QMetaType::QDat
 
 If the type() is QMetaType::QString, an invalid date/time will be returned if the string cannot be parsed as a Qt::ISODate format date/time.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToDateTime() *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant10toDateTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1794,7 +1798,7 @@ func (this *QVariant) ToDateTime() *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:308
+// /usr/include/qt/QtCore/qvariant.h:316
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint toPoint() const
@@ -1802,7 +1806,7 @@ func (this *QVariant) ToDateTime() *QDateTime /*123*/ {
 /*
 Returns the variant as a QPoint if the variant has userType() QMetaType::QPoint or QMetaType::QPointF; otherwise returns a null QPoint.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToPoint() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1812,7 +1816,7 @@ func (this *QVariant) ToPoint() *QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:309
+// /usr/include/qt/QtCore/qvariant.h:317
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF toPointF() const
@@ -1820,7 +1824,7 @@ func (this *QVariant) ToPoint() *QPoint /*123*/ {
 /*
 Returns the variant as a QPointF if the variant has userType() QMetaType::QPoint or QMetaType::QPointF; otherwise returns a null QPointF.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToPointF() *QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toPointFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1830,7 +1834,7 @@ func (this *QVariant) ToPointF() *QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:310
+// /usr/include/qt/QtCore/qvariant.h:318
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect toRect() const
@@ -1838,7 +1842,7 @@ func (this *QVariant) ToPointF() *QPointF /*123*/ {
 /*
 Returns the variant as a QRect if the variant has userType() QMetaType::QRect; otherwise returns an invalid QRect.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToRect() *QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1848,7 +1852,7 @@ func (this *QVariant) ToRect() *QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:311
+// /usr/include/qt/QtCore/qvariant.h:319
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize toSize() const
@@ -1856,7 +1860,7 @@ func (this *QVariant) ToRect() *QRect /*123*/ {
 /*
 Returns the variant as a QSize if the variant has userType() QMetaType::QSize; otherwise returns an invalid QSize.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToSize() *QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1866,7 +1870,7 @@ func (this *QVariant) ToSize() *QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:312
+// /usr/include/qt/QtCore/qvariant.h:320
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF toSizeF() const
@@ -1874,7 +1878,7 @@ func (this *QVariant) ToSize() *QSize /*123*/ {
 /*
 Returns the variant as a QSizeF if the variant has userType() QMetaType::QSizeF; otherwise returns an invalid QSizeF.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toSizeFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1884,7 +1888,7 @@ func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:313
+// /usr/include/qt/QtCore/qvariant.h:321
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QLine toLine() const
@@ -1892,7 +1896,7 @@ func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
 /*
 Returns the variant as a QLine if the variant has userType() QMetaType::QLine; otherwise returns an invalid QLine.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToLine() *QLine /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1902,7 +1906,7 @@ func (this *QVariant) ToLine() *QLine /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:314
+// /usr/include/qt/QtCore/qvariant.h:322
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QLineF toLineF() const
@@ -1910,7 +1914,7 @@ func (this *QVariant) ToLine() *QLine /*123*/ {
 /*
 Returns the variant as a QLineF if the variant has userType() QMetaType::QLineF; otherwise returns an invalid QLineF.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToLineF() *QLineF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toLineFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1920,7 +1924,7 @@ func (this *QVariant) ToLineF() *QLineF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:315
+// /usr/include/qt/QtCore/qvariant.h:323
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF toRectF() const
@@ -1928,7 +1932,7 @@ func (this *QVariant) ToLineF() *QLineF /*123*/ {
 /*
 Returns the variant as a QRectF if the variant has userType() QMetaType::QRect or QMetaType::QRectF; otherwise returns an invalid QRectF.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToRectF() *QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant7toRectFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1938,7 +1942,7 @@ func (this *QVariant) ToRectF() *QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:317
+// /usr/include/qt/QtCore/qvariant.h:325
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QLocale toLocale() const
@@ -1946,7 +1950,7 @@ func (this *QVariant) ToRectF() *QRectF /*123*/ {
 /*
 Returns the variant as a QLocale if the variant has userType() QMetaType::QLocale; otherwise returns an invalid QLocale.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToLocale() *QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toLocaleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1956,7 +1960,7 @@ func (this *QVariant) ToLocale() *QLocale /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:319
+// /usr/include/qt/QtCore/qvariant.h:327
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegExp toRegExp() const
@@ -1966,7 +1970,7 @@ Returns the variant as a QRegExp if the variant has userType() QMetaType::QRegEx
 
 This function was introduced in  Qt 4.1.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToRegExp() *QRegExp /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant8toRegExpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1976,7 +1980,7 @@ func (this *QVariant) ToRegExp() *QRegExp /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:323
+// /usr/include/qt/QtCore/qvariant.h:330
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpression toRegularExpression() const
@@ -1986,7 +1990,7 @@ Returns the variant as a QRegularExpression if the variant has userType() QRegul
 
 This function was introduced in  Qt 5.0.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToRegularExpression() *QRegularExpression /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant19toRegularExpressionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1996,7 +2000,7 @@ func (this *QVariant) ToRegularExpression() *QRegularExpression /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:325
+// /usr/include/qt/QtCore/qvariant.h:333
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl toUrl() const
@@ -2004,7 +2008,7 @@ func (this *QVariant) ToRegularExpression() *QRegularExpression /*123*/ {
 /*
 Returns the variant as a QUrl if the variant has userType() QMetaType::QUrl; otherwise returns an invalid QUrl.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToUrl() *QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant5toUrlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -2014,7 +2018,7 @@ func (this *QVariant) ToUrl() *QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:326
+// /usr/include/qt/QtCore/qvariant.h:334
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QEasingCurve toEasingCurve() const
@@ -2024,7 +2028,7 @@ Returns the variant as a QEasingCurve if the variant has userType() QMetaType::Q
 
 This function was introduced in  Qt 4.7.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToEasingCurve() *QEasingCurve /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant13toEasingCurveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -2034,7 +2038,7 @@ func (this *QVariant) ToEasingCurve() *QEasingCurve /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:327
+// /usr/include/qt/QtCore/qvariant.h:335
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QUuid toUuid() const
@@ -2044,7 +2048,7 @@ Returns the variant as a QUuid if the variant has type() QMetaType::QUuid, QMeta
 
 This function was introduced in  Qt 5.0.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToUuid() *QUuid /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6toUuidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -2054,47 +2058,7 @@ func (this *QVariant) ToUuid() *QUuid /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:328
-// index:0
-// Public Visibility=Default Availability=Available
-// [24] QModelIndex toModelIndex() const
-
-/*
-Returns the variant as a QModelIndex if the variant has userType() QModelIndex; otherwise returns a default constructed QModelIndex.
-
-This function was introduced in  Qt 5.0.
-
-See also canConvert(), convert(), and toPersistentModelIndex().
-*/
-func (this *QVariant) ToModelIndex() *QModelIndex /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant12toModelIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qvariant.h:329
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QPersistentModelIndex toPersistentModelIndex() const
-
-/*
-Returns the variant as a QPersistentModelIndex if the variant has userType() QPersistentModelIndex; otherwise returns a default constructed QPersistentModelIndex.
-
-This function was introduced in  Qt 5.5.
-
-See also canConvert(), convert(), and toModelIndex().
-*/
-func (this *QVariant) ToPersistentModelIndex() *QPersistentModelIndex /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant22toPersistentModelIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPersistentModelIndex)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qvariant.h:330
+// /usr/include/qt/QtCore/qvariant.h:336
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QJsonValue toJsonValue() const
@@ -2104,7 +2068,7 @@ Returns the variant as a QJsonValue if the variant has userType() QJsonValue; ot
 
 This function was introduced in  Qt 5.0.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToJsonValue() *QJsonValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toJsonValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -2114,7 +2078,7 @@ func (this *QVariant) ToJsonValue() *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:331
+// /usr/include/qt/QtCore/qvariant.h:337
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject toJsonObject() const
@@ -2124,7 +2088,7 @@ Returns the variant as a QJsonObject if the variant has userType() QJsonObject; 
 
 This function was introduced in  Qt 5.0.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToJsonObject() *QJsonObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant12toJsonObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -2134,7 +2098,7 @@ func (this *QVariant) ToJsonObject() *QJsonObject /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:332
+// /usr/include/qt/QtCore/qvariant.h:338
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonArray toJsonArray() const
@@ -2144,7 +2108,7 @@ Returns the variant as a QJsonArray if the variant has userType() QJsonArray; ot
 
 This function was introduced in  Qt 5.0.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToJsonArray() *QJsonArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant11toJsonArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -2154,7 +2118,7 @@ func (this *QVariant) ToJsonArray() *QJsonArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:333
+// /usr/include/qt/QtCore/qvariant.h:339
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJsonDocument toJsonDocument() const
@@ -2164,7 +2128,7 @@ Returns the variant as a QJsonDocument if the variant has userType() QJsonDocume
 
 This function was introduced in  Qt 5.0.
 
-See also canConvert() and convert().
+See also canConvert(int targetTypeId) and convert().
 */
 func (this *QVariant) ToJsonDocument() *QJsonDocument /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant14toJsonDocumentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -2174,7 +2138,47 @@ func (this *QVariant) ToJsonDocument() *QJsonDocument /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:337
+// /usr/include/qt/QtCore/qvariant.h:342
+// index:0
+// Public Visibility=Default Availability=Available
+// [24] QModelIndex toModelIndex() const
+
+/*
+Returns the variant as a QModelIndex if the variant has userType() QModelIndex; otherwise returns a default constructed QModelIndex.
+
+This function was introduced in  Qt 5.0.
+
+See also canConvert(int targetTypeId), convert(), and toPersistentModelIndex().
+*/
+func (this *QVariant) ToModelIndex() *QModelIndex /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant12toModelIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qvariant.h:343
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QPersistentModelIndex toPersistentModelIndex() const
+
+/*
+Returns the variant as a QPersistentModelIndex if the variant has userType() QPersistentModelIndex; otherwise returns a default constructed QPersistentModelIndex.
+
+This function was introduced in  Qt 5.5.
+
+See also canConvert(int targetTypeId), convert(), and toModelIndex().
+*/
+func (this *QVariant) ToPersistentModelIndex() *QPersistentModelIndex /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant22toPersistentModelIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPersistentModelIndex)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qvariant.h:347
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void load(QDataStream &)
@@ -2191,7 +2195,7 @@ func (this *QVariant) Load(ds QDataStream_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:338
+// /usr/include/qt/QtCore/qvariant.h:348
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void save(QDataStream &) const
@@ -2208,7 +2212,7 @@ func (this *QVariant) Save(ds QDataStream_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:340
+// /usr/include/qt/QtCore/qvariant.h:350
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] const char * typeToName(int)
@@ -2229,7 +2233,7 @@ func QVariant_TypeToName(typeId int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qvariant.h:341
+// /usr/include/qt/QtCore/qvariant.h:351
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QVariant::Type nameToType(const char *)
@@ -2252,7 +2256,7 @@ func QVariant_NameToType(name string) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qvariant.h:343
+// /usr/include/qt/QtCore/qvariant.h:353
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] void * data()
@@ -2266,7 +2270,7 @@ func (this *QVariant) Data() unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qvariant.h:345
+// /usr/include/qt/QtCore/qvariant.h:355
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] const void * data() const
@@ -2280,7 +2284,7 @@ func (this *QVariant) Data1() unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qvariant.h:344
+// /usr/include/qt/QtCore/qvariant.h:354
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const void * constData() const
@@ -2294,7 +2298,7 @@ func (this *QVariant) ConstData() unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qvariant.h:436
+// /usr/include/qt/QtCore/qvariant.h:454
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QVariant &) const
@@ -2312,7 +2316,7 @@ func (this *QVariant) Operator_equal_equal(v QVariant_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:438
+// /usr/include/qt/QtCore/qvariant.h:456
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QVariant &) const
@@ -2330,7 +2334,7 @@ func (this *QVariant) Operator_not_equal(v QVariant_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:440
+// /usr/include/qt/QtCore/qvariant.h:458
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const QVariant &) const
@@ -2348,7 +2352,7 @@ func (this *QVariant) Operator_less_than(v QVariant_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:442
+// /usr/include/qt/QtCore/qvariant.h:460
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(const QVariant &) const
@@ -2366,7 +2370,7 @@ func (this *QVariant) Operator_less_than_equal(v QVariant_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:444
+// /usr/include/qt/QtCore/qvariant.h:462
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(const QVariant &) const
@@ -2384,7 +2388,7 @@ func (this *QVariant) Operator_greater_than(v QVariant_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:446
+// /usr/include/qt/QtCore/qvariant.h:464
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(const QVariant &) const
@@ -2402,7 +2406,7 @@ func (this *QVariant) Operator_greater_than_equal(v QVariant_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:464
+// /usr/include/qt/QtCore/qvariant.h:482
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void create(int, const void *)
@@ -2415,7 +2419,7 @@ func (this *QVariant) Create(type_ int, copy unsafe.Pointer /*666*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:465
+// /usr/include/qt/QtCore/qvariant.h:483
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool cmp(const QVariant &) const
@@ -2433,7 +2437,7 @@ func (this *QVariant) Cmp(other QVariant_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:466
+// /usr/include/qt/QtCore/qvariant.h:484
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int compare(const QVariant &) const
@@ -2560,7 +2564,7 @@ const QVariant__ModelIndex QVariant__Type = 42
 const QVariant__PersistentModelIndex QVariant__Type = 50
 
 //
-const QVariant__LastCoreType QVariant__Type = 51
+const QVariant__LastCoreType QVariant__Type = 55
 
 //
 const QVariant__Font QVariant__Type = 64
@@ -2713,7 +2717,7 @@ func (this *QVariant) TypeItemName(val int) string {
 		return "ModelIndex"
 	case QVariant__PersistentModelIndex: // 50
 		return "PersistentModelIndex"
-	case QVariant__LastCoreType: // 51
+	case QVariant__LastCoreType: // 55
 		return "LastCoreType"
 	case QVariant__Font: // 64
 		return "Font"

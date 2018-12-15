@@ -315,6 +315,11 @@ func (this *QAbstractItemView) InheritInputMethodEvent(f func(event *qtgui.QInpu
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
 
+// bool eventFilter(QObject *, QEvent *)
+func (this *QAbstractItemView) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
+	qtrt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
 // QAbstractItemView::DropIndicatorPosition dropIndicatorPosition()
 func (this *QAbstractItemView) InheritDropIndicatorPosition(f func() int) {
 	qtrt.SetAllInheritCallback(this, "dropIndicatorPosition", f)
@@ -2486,7 +2491,7 @@ func (this *QAbstractItemView) FocusNextPrevChild(next bool) bool {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractScrollArea::event().
 */
 func (this *QAbstractItemView) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -2524,7 +2529,7 @@ func (this *QAbstractItemView) ViewportEvent(event qtcore.QEvent_ITF /*777 QEven
 // [-2] void mousePressEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mousePressEvent().
+Reimplemented from QAbstractScrollArea::mousePressEvent().
 
 This function is called with the given event when a mouse button is pressed while the cursor is inside the widget. If a valid item is pressed on it is made into the current item. This function emits the pressed() signal.
 */
@@ -2543,7 +2548,7 @@ func (this *QAbstractItemView) MousePressEvent(event qtgui.QMouseEvent_ITF /*777
 // [-2] void mouseMoveEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseMoveEvent().
+Reimplemented from QAbstractScrollArea::mouseMoveEvent().
 
 This function is called with the given event when a mouse move event is sent to the widget. If a selection is in progress and new items are moved over the selection is extended; if a drag is in progress it is continued.
 */
@@ -2562,7 +2567,7 @@ func (this *QAbstractItemView) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseReleaseEvent().
+Reimplemented from QAbstractScrollArea::mouseReleaseEvent().
 
 This function is called with the given event when a mouse button is released, after a mouse press event on the widget. If a user presses the mouse inside your widget and then drags the mouse to another location before releasing the mouse button, your widget receives the release event. The function will emit the clicked() signal if an item was being pressed.
 */
@@ -2581,7 +2586,7 @@ func (this *QAbstractItemView) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*7
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseDoubleClickEvent().
+Reimplemented from QAbstractScrollArea::mouseDoubleClickEvent().
 
 This function is called with the given event when a mouse button is double clicked inside the widget. If the double-click is on a valid item it emits the doubleClicked() signal and calls edit() on the item.
 */
@@ -2600,7 +2605,7 @@ func (this *QAbstractItemView) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF
 // [-2] void dragEnterEvent(QDragEnterEvent *)
 
 /*
-Reimplemented from QWidget::dragEnterEvent().
+Reimplemented from QAbstractScrollArea::dragEnterEvent().
 
 This function is called with the given event when a drag and drop operation enters the widget. If the drag is over a valid dropping place (e.g. over an item that accepts drops), the event is accepted; otherwise it is ignored.
 
@@ -2621,7 +2626,7 @@ func (this *QAbstractItemView) DragEnterEvent(event qtgui.QDragEnterEvent_ITF /*
 // [-2] void dragMoveEvent(QDragMoveEvent *)
 
 /*
-Reimplemented from QWidget::dragMoveEvent().
+Reimplemented from QAbstractScrollArea::dragMoveEvent().
 
 This function is called continuously with the given event during a drag and drop operation over the widget. It can cause the view to scroll if, for example, the user drags a selection to view's right or bottom edge. In this case, the event will be accepted; otherwise it will be ignored.
 
@@ -2642,7 +2647,7 @@ func (this *QAbstractItemView) DragMoveEvent(event qtgui.QDragMoveEvent_ITF /*77
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
 
 /*
-Reimplemented from QWidget::dragLeaveEvent().
+Reimplemented from QAbstractScrollArea::dragLeaveEvent().
 
 This function is called when the item being dragged leaves the view. The event describes the state of the drag and drop operation.
 */
@@ -2661,7 +2666,7 @@ func (this *QAbstractItemView) DragLeaveEvent(event qtgui.QDragLeaveEvent_ITF /*
 // [-2] void dropEvent(QDropEvent *)
 
 /*
-Reimplemented from QWidget::dropEvent().
+Reimplemented from QAbstractScrollArea::dropEvent().
 
 This function is called with the given event when a drop event occurs over the widget. If the model accepts the even position the drop event is accepted; otherwise it is ignored.
 
@@ -2724,7 +2729,7 @@ func (this *QAbstractItemView) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 Q
 // [-2] void keyPressEvent(QKeyEvent *)
 
 /*
-Reimplemented from QWidget::keyPressEvent().
+Reimplemented from QAbstractScrollArea::keyPressEvent().
 
 This function is called with the given event when a key event is sent to the widget. The default implementation handles basic cursor movement, e.g. Up, Down, Left, Right, Home, PageUp, and PageDown; the activated() signal is emitted if the current index is valid and the activation key is pressed (e.g. Enter or Return, depending on the platform). This function is where editing is initiated by key press, e.g. if F2 is pressed.
 
@@ -2745,7 +2750,7 @@ func (this *QAbstractItemView) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKe
 // [-2] void resizeEvent(QResizeEvent *)
 
 /*
-Reimplemented from QWidget::resizeEvent().
+Reimplemented from QAbstractScrollArea::resizeEvent().
 
 This function is called with the given event when a resize event is sent to the widget.
 
@@ -2798,7 +2803,29 @@ func (this *QAbstractItemView) InputMethodEvent(event qtgui.QInputMethodEvent_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:352
+// /usr/include/qt/QtWidgets/qabstractitemview.h:349
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+
+ */
+func (this *QAbstractItemView) EventFilter(object qtcore.QObject_ITF /*777 QObject **/, event qtcore.QEvent_ITF /*777 QEvent **/) bool {
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QObject_PTR() != nil {
+		convArg0 = object.QObject_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if event != nil && event.QEvent_PTR() != nil {
+		convArg1 = event.QEvent_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qabstractitemview.h:353
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] QAbstractItemView::DropIndicatorPosition dropIndicatorPosition() const
@@ -2814,7 +2841,7 @@ func (this *QAbstractItemView) DropIndicatorPosition() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:355
+// /usr/include/qt/QtWidgets/qabstractitemview.h:356
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize viewportSizeHint() const

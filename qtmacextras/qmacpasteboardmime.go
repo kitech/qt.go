@@ -72,7 +72,7 @@ func (*QMacPasteboardMime) NewFromPointer(cthis unsafe.Pointer) *QMacPasteboardM
 // [-2] void QMacPasteboardMime(char)
 
 /*
-Constructs a new conversion object of type t, adding it to the globally accessed list of available converters.
+Default constructs an instance of QMacPasteboardMime.
 */
 func (*QMacPasteboardMime) NewForInherit(arg0 byte) *QMacPasteboardMime {
 	return NewQMacPasteboardMime(arg0)
@@ -187,8 +187,8 @@ func (this *QMacPasteboardMime) FlavorFor(mime string) string {
 // [4] int count(QMimeData *)
 
 /*
-Returns the item count for the given mimeData
-*/
+
+ */
 func (this *QMacPasteboardMime) Count(mimeData qtcore.QMimeData_ITF /*777 QMimeData **/) int {
 	var convArg0 unsafe.Pointer
 	if mimeData != nil && mimeData.QMimeData_PTR() != nil {

@@ -195,7 +195,7 @@ func DeleteQMdiArea(this *QMdiArea) {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QAbstractScrollArea::sizeHint().
 */
 func (this *QMdiArea) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -211,7 +211,7 @@ func (this *QMdiArea) SizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSizeHint() const
 
 /*
-Reimplemented from QWidget::minimumSizeHint().
+Reimplemented from QAbstractScrollArea::minimumSizeHint().
 */
 func (this *QMdiArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMdiArea15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -785,7 +785,7 @@ func (this *QMdiArea) SetupViewport(viewport QWidget_ITF /*777 QWidget **/) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractScrollArea::event().
 */
 func (this *QMdiArea) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -803,8 +803,8 @@ func (this *QMdiArea) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // [1] bool eventFilter(QObject *, QEvent *)
 
 /*
-Reimplemented from QObject::eventFilter().
-*/
+
+ */
 func (this *QMdiArea) EventFilter(object qtcore.QObject_ITF /*777 QObject **/, event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if object != nil && object.QObject_PTR() != nil {
@@ -825,7 +825,7 @@ func (this *QMdiArea) EventFilter(object qtcore.QObject_ITF /*777 QObject **/, e
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QAbstractScrollArea::paintEvent().
 */
 func (this *QMdiArea) PaintEvent(paintEvent qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -859,7 +859,7 @@ func (this *QMdiArea) ChildEvent(childEvent qtcore.QChildEvent_ITF /*777 QChildE
 // [-2] void resizeEvent(QResizeEvent *)
 
 /*
-Reimplemented from QWidget::resizeEvent().
+Reimplemented from QAbstractScrollArea::resizeEvent().
 */
 func (this *QMdiArea) ResizeEvent(resizeEvent qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer

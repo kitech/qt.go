@@ -18,7 +18,7 @@ package qtwebenginewidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 13
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
@@ -73,7 +73,7 @@ func (*QWebEngineDownloadItem) NewFromPointer(cthis unsafe.Pointer) *QWebEngineD
 	return NewQWebEngineDownloadItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:54
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -87,7 +87,7 @@ func (this *QWebEngineDownloadItem) MetaObject() *qtcore.QMetaObject /*777 const
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:56
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWebEngineDownloadItem()
@@ -102,7 +102,7 @@ func DeleteQWebEngineDownloadItem(this *QWebEngineDownloadItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:114
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] quint32 id() const
@@ -116,7 +116,7 @@ func (this *QWebEngineDownloadItem) Id() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:115
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QWebEngineDownloadItem::DownloadState state() const
@@ -130,7 +130,7 @@ func (this *QWebEngineDownloadItem) State() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:116
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 totalBytes() const
@@ -144,7 +144,7 @@ func (this *QWebEngineDownloadItem) TotalBytes() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:117
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 receivedBytes() const
@@ -158,7 +158,7 @@ func (this *QWebEngineDownloadItem) ReceivedBytes() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:118
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl url() const
@@ -174,7 +174,7 @@ func (this *QWebEngineDownloadItem) Url() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:119
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString mimeType() const
@@ -191,7 +191,7 @@ func (this *QWebEngineDownloadItem) MimeType() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:120
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString path() const
@@ -208,7 +208,7 @@ func (this *QWebEngineDownloadItem) Path() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:121
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPath(QString)
@@ -223,7 +223,7 @@ func (this *QWebEngineDownloadItem) SetPath(path string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:122
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFinished() const
@@ -237,7 +237,7 @@ func (this *QWebEngineDownloadItem) IsFinished() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:123
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isPaused() const
@@ -251,7 +251,7 @@ func (this *QWebEngineDownloadItem) IsPaused() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:124
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QWebEngineDownloadItem::SavePageFormat savePageFormat() const
@@ -265,7 +265,7 @@ func (this *QWebEngineDownloadItem) SavePageFormat() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:125
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSavePageFormat(QWebEngineDownloadItem::SavePageFormat)
@@ -278,9 +278,9 @@ func (this *QWebEngineDownloadItem) SetSavePageFormat(format int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:126
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:127
 // index:0
-// Public Visibility=Default Availability=Available
+// Public Visibility=Default Availability=Deprecated
 // [4] QWebEngineDownloadItem::DownloadType type() const
 
 /*
@@ -292,7 +292,7 @@ func (this *QWebEngineDownloadItem) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:127
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QWebEngineDownloadItem::DownloadInterruptReason interruptReason() const
@@ -306,7 +306,7 @@ func (this *QWebEngineDownloadItem) InterruptReason() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:128
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString interruptReasonString() const
@@ -323,7 +323,35 @@ func (this *QWebEngineDownloadItem) InterruptReasonString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:131
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:130
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isSavePageDownload() const
+
+/*
+
+ */
+func (this *QWebEngineDownloadItem) IsSavePageDownload() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK22QWebEngineDownloadItem18isSavePageDownloadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:132
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QWebEnginePage * page() const
+
+/*
+
+ */
+func (this *QWebEngineDownloadItem) Page() *QWebEnginePage /*777 QWebEnginePage **/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK22QWebEngineDownloadItem4pageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQWebEnginePageFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void accept()
@@ -336,7 +364,7 @@ func (this *QWebEngineDownloadItem) Accept() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:132
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cancel()
@@ -349,7 +377,7 @@ func (this *QWebEngineDownloadItem) Cancel() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:133
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void pause()
@@ -362,7 +390,7 @@ func (this *QWebEngineDownloadItem) Pause() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:134
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resume()
@@ -375,7 +403,7 @@ func (this *QWebEngineDownloadItem) Resume() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:137
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void finished()
@@ -388,7 +416,7 @@ func (this *QWebEngineDownloadItem) Finished() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:138
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stateChanged(QWebEngineDownloadItem::DownloadState)
@@ -401,7 +429,7 @@ func (this *QWebEngineDownloadItem) StateChanged(state int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:139
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void downloadProgress(qint64, qint64)
@@ -414,7 +442,7 @@ func (this *QWebEngineDownloadItem) DownloadProgress(bytesReceived int64, bytesT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:140
+// /usr/include/qt/QtWebEngineWidgets/qwebenginedownloaditem.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void isPausedChanged(bool)

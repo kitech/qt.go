@@ -596,7 +596,7 @@ func (this *QAbstractSpinBox) InterpretText() {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QAbstractSpinBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -661,16 +661,18 @@ func (this *QAbstractSpinBox) Fixup(input string) {
 // [-2] void stepBy(int)
 
 /*
-Virtual function that is called whenever the user triggers a step. The steps parameter indicates how many steps were taken, e.g. Pressing Qt::Key_Down will trigger a call to stepBy(-1), whereas pressing Qt::Key_Prior will trigger a call to stepBy(10).
+Virtual function that is called whenever the user triggers a step. The steps parameter indicates how many steps were taken. For example, pressing Qt::Key_Down will trigger a call to stepBy(-1), whereas pressing Qt::Key_PageUp will trigger a call to stepBy(10).
 
 If you subclass QAbstractSpinBox you must reimplement this function. Note that this function is called even if the resulting value will be outside the bounds of minimum and maximum. It's this function's job to handle these situations.
+
+See also stepUp(), stepDown(), and keyPressEvent().
 */
 func (this *QAbstractSpinBox) StepBy(steps int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox6stepByEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), steps)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:131
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stepUp()
@@ -685,7 +687,7 @@ func (this *QAbstractSpinBox) StepUp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:132
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stepDown()
@@ -700,7 +702,7 @@ func (this *QAbstractSpinBox) StepDown() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:133
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectAll()
@@ -713,7 +715,7 @@ func (this *QAbstractSpinBox) SelectAll() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:134
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:141
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void clear()
@@ -726,7 +728,7 @@ func (this *QAbstractSpinBox) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:136
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:143
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -743,7 +745,7 @@ func (this *QAbstractSpinBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QRe
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:137
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:144
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -761,6 +763,9 @@ UpThis will invoke stepBy(1)
 DownThis will invoke stepBy(-1)
 Page upThis will invoke stepBy(10)
 Page downThis will invoke stepBy(-10)
+
+
+See also stepBy().
 */
 func (this *QAbstractSpinBox) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -771,7 +776,7 @@ func (this *QAbstractSpinBox) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKey
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:138
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:145
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
@@ -788,7 +793,7 @@ func (this *QAbstractSpinBox) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QK
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:140
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:147
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
@@ -805,7 +810,7 @@ func (this *QAbstractSpinBox) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWhee
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:142
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:149
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
@@ -822,7 +827,7 @@ func (this *QAbstractSpinBox) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFo
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:143
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:150
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
@@ -839,7 +844,7 @@ func (this *QAbstractSpinBox) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:145
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:152
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
@@ -856,7 +861,7 @@ func (this *QAbstractSpinBox) ContextMenuEvent(event qtgui.QContextMenuEvent_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:147
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:154
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -873,7 +878,7 @@ func (this *QAbstractSpinBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:148
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:155
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
@@ -890,7 +895,7 @@ func (this *QAbstractSpinBox) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QClos
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:149
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:156
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
@@ -907,7 +912,7 @@ func (this *QAbstractSpinBox) HideEvent(event qtgui.QHideEvent_ITF /*777 QHideEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:150
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:157
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -924,7 +929,7 @@ func (this *QAbstractSpinBox) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:151
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:158
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -941,7 +946,7 @@ func (this *QAbstractSpinBox) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:152
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:159
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -958,7 +963,7 @@ func (this *QAbstractSpinBox) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:153
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:160
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
@@ -975,7 +980,7 @@ func (this *QAbstractSpinBox) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTim
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:154
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:161
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -992,7 +997,7 @@ func (this *QAbstractSpinBox) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPain
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:155
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:162
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -1009,7 +1014,7 @@ func (this *QAbstractSpinBox) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:156
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:163
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSpinBox *) const
@@ -1028,7 +1033,7 @@ func (this *QAbstractSpinBox) InitStyleOption(option QStyleOptionSpinBox_ITF /*7
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:158
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:165
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QLineEdit * lineEdit() const
@@ -1044,7 +1049,7 @@ func (this *QAbstractSpinBox) LineEdit() *QLineEdit /*777 QLineEdit **/ {
 	return /*==*/ NewQLineEditFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:159
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:166
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setLineEdit(QLineEdit *)
@@ -1067,7 +1072,7 @@ func (this *QAbstractSpinBox) SetLineEdit(edit QLineEdit_ITF /*777 QLineEdit **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:161
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:168
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] QAbstractSpinBox::StepEnabled stepEnabled() const
@@ -1089,7 +1094,7 @@ func (this *QAbstractSpinBox) StepEnabled() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:163
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void editingFinished()
@@ -1176,6 +1181,28 @@ func (this *QAbstractSpinBox) CorrectionModeItemName(val int) string {
 func QAbstractSpinBox_CorrectionModeItemName(val int) string {
 	var nilthis *QAbstractSpinBox
 	return nilthis.CorrectionModeItemName(val)
+}
+
+/*
+ConstantValue
+QAbstractSpinBox::DefaultStepType0
+QAbstractSpinBox::AdaptiveDecimalStepType1
+
+*/
+type QAbstractSpinBox__StepType = int
+
+//
+const QAbstractSpinBox__DefaultStepType QAbstractSpinBox__StepType = 0
+
+//
+const QAbstractSpinBox__AdaptiveDecimalStepType QAbstractSpinBox__StepType = 1
+
+func (this *QAbstractSpinBox) StepTypeItemName(val int) string {
+	return qtrt.GetClassEnumItemName(this, val)
+}
+func QAbstractSpinBox_StepTypeItemName(val int) string {
+	var nilthis *QAbstractSpinBox
+	return nilthis.StepTypeItemName(val)
 }
 
 //  body block end

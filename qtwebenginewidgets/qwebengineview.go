@@ -18,7 +18,7 @@ package qtwebenginewidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 13
+// extern C begin: 16
 */
 // import "C"
 import "unsafe"
@@ -553,7 +553,7 @@ func (this *QWebEngineView) SetZoomFactor(factor float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:106
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:100
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -569,7 +569,7 @@ func (this *QWebEngineView) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:107
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWebEngineSettings * settings() const
@@ -583,7 +583,7 @@ func (this *QWebEngineView) Settings() *QWebEngineSettings /*777 QWebEngineSetti
 	return /*==*/ NewQWebEngineSettingsFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:110
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stop()
@@ -596,7 +596,7 @@ func (this *QWebEngineView) Stop() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:111
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void back()
@@ -609,7 +609,7 @@ func (this *QWebEngineView) Back() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:112
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void forward()
@@ -622,7 +622,7 @@ func (this *QWebEngineView) Forward() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:113
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reload()
@@ -635,7 +635,7 @@ func (this *QWebEngineView) Reload() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:116
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void loadStarted()
@@ -648,7 +648,7 @@ func (this *QWebEngineView) LoadStarted() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:117
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void loadProgress(int)
@@ -661,7 +661,7 @@ func (this *QWebEngineView) LoadProgress(progress int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:118
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void loadFinished(bool)
@@ -674,7 +674,7 @@ func (this *QWebEngineView) LoadFinished(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:119
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void titleChanged(const QString &)
@@ -689,7 +689,7 @@ func (this *QWebEngineView) TitleChanged(title string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:120
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectionChanged()
@@ -702,7 +702,7 @@ func (this *QWebEngineView) SelectionChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:121
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void urlChanged(const QUrl &)
@@ -719,7 +719,7 @@ func (this *QWebEngineView) UrlChanged(arg0 qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:122
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void iconUrlChanged(const QUrl &)
@@ -736,7 +736,7 @@ func (this *QWebEngineView) IconUrlChanged(arg0 qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:123
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void iconChanged(const QIcon &)
@@ -753,7 +753,7 @@ func (this *QWebEngineView) IconChanged(arg0 qtgui.QIcon_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:124
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void renderProcessTerminated(QWebEnginePage::RenderProcessTerminationStatus, int)
@@ -766,7 +766,7 @@ func (this *QWebEngineView) RenderProcessTerminated(terminationStatus int, exitC
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:128
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:122
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QWebEngineView * createWindow(QWebEnginePage::WebWindowType)
@@ -780,7 +780,7 @@ func (this *QWebEngineView) CreateWindow(type_ int) *QWebEngineView /*777 QWebEn
 	return /*==*/ NewQWebEngineViewFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:129
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:124
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
@@ -797,7 +797,7 @@ func (this *QWebEngineView) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_ITF /*
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:130
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:126
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -815,7 +815,7 @@ func (this *QWebEngineView) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool 
 	return rv != 0
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:131
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:127
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -832,7 +832,7 @@ func (this *QWebEngineView) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:132
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:128
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
@@ -849,7 +849,7 @@ func (this *QWebEngineView) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:133
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:130
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QDragEnterEvent *)
@@ -866,7 +866,7 @@ func (this *QWebEngineView) DragEnterEvent(e qtgui.QDragEnterEvent_ITF /*777 QDr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:134
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:131
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
@@ -883,7 +883,7 @@ func (this *QWebEngineView) DragLeaveEvent(e qtgui.QDragLeaveEvent_ITF /*777 QDr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:135
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:132
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
@@ -900,7 +900,7 @@ func (this *QWebEngineView) DragMoveEvent(e qtgui.QDragMoveEvent_ITF /*777 QDrag
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:136
+// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:133
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)

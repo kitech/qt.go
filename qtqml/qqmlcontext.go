@@ -18,7 +18,7 @@ package qtqml
 
 /*
 #include <stdlib.h>
-// extern C begin: 27
+// extern C begin: 28
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func (*QQmlContext) NewFromPointer(cthis unsafe.Pointer) *QQmlContext {
 	return NewQQmlContextFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:61
+// /usr/include/qt/QtQml/qqmlcontext.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -78,7 +78,7 @@ func (this *QQmlContext) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:65
+// /usr/include/qt/QtQml/qqmlcontext.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlContext(QQmlEngine *, QObject *)
@@ -105,7 +105,7 @@ func NewQQmlContext(parent QQmlEngine_ITF /*777 QQmlEngine **/, objParent qtcore
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:65
+// /usr/include/qt/QtQml/qqmlcontext.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlContext(QQmlEngine *, QObject *)
@@ -130,7 +130,7 @@ func NewQQmlContextp(parent QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlContext {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:66
+// /usr/include/qt/QtQml/qqmlcontext.h:70
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlContext(QQmlContext *, QObject *)
@@ -157,7 +157,7 @@ func NewQQmlContext1(parent QQmlContext_ITF /*777 QQmlContext **/, objParent qtc
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:66
+// /usr/include/qt/QtQml/qqmlcontext.h:70
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlContext(QQmlContext *, QObject *)
@@ -182,7 +182,7 @@ func NewQQmlContext1p(parent QQmlContext_ITF /*777 QQmlContext **/) *QQmlContext
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:67
+// /usr/include/qt/QtQml/qqmlcontext.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlContext()
@@ -197,7 +197,7 @@ func DeleteQQmlContext(this *QQmlContext) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:69
+// /usr/include/qt/QtQml/qqmlcontext.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -213,7 +213,7 @@ func (this *QQmlContext) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:71
+// /usr/include/qt/QtQml/qqmlcontext.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlEngine * engine() const
@@ -227,7 +227,7 @@ func (this *QQmlContext) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 	return /*==*/ NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:72
+// /usr/include/qt/QtQml/qqmlcontext.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlContext * parentContext() const
@@ -241,7 +241,7 @@ func (this *QQmlContext) ParentContext() *QQmlContext /*777 QQmlContext **/ {
 	return /*==*/ NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:74
+// /usr/include/qt/QtQml/qqmlcontext.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * contextObject() const
@@ -257,7 +257,7 @@ func (this *QQmlContext) ContextObject() *qtcore.QObject /*777 QObject **/ {
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:75
+// /usr/include/qt/QtQml/qqmlcontext.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContextObject(QObject *)
@@ -276,7 +276,7 @@ func (this *QQmlContext) SetContextObject(arg0 qtcore.QObject_ITF /*777 QObject 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:77
+// /usr/include/qt/QtQml/qqmlcontext.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant contextProperty(const QString &) const
@@ -296,7 +296,7 @@ func (this *QQmlContext) ContextProperty(arg0 string) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:78
+// /usr/include/qt/QtQml/qqmlcontext.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContextProperty(const QString &, QObject *)
@@ -319,7 +319,7 @@ func (this *QQmlContext) SetContextProperty(arg0 string, arg1 qtcore.QObject_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:79
+// /usr/include/qt/QtQml/qqmlcontext.h:83
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setContextProperty(const QString &, const QVariant &)
@@ -342,7 +342,7 @@ func (this *QQmlContext) SetContextProperty1(arg0 string, arg1 qtcore.QVariant_I
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:82
+// /usr/include/qt/QtQml/qqmlcontext.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString nameForObject(QObject *) const
@@ -365,7 +365,7 @@ func (this *QQmlContext) NameForObject(arg0 qtcore.QObject_ITF /*777 QObject **/
 	return rv3
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:84
+// /usr/include/qt/QtQml/qqmlcontext.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl resolvedUrl(const QUrl &)
@@ -387,7 +387,7 @@ func (this *QQmlContext) ResolvedUrl(arg0 qtcore.QUrl_ITF) *qtcore.QUrl /*123*/ 
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:86
+// /usr/include/qt/QtQml/qqmlcontext.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBaseUrl(const QUrl &)
@@ -408,7 +408,7 @@ func (this *QQmlContext) SetBaseUrl(arg0 qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlcontext.h:87
+// /usr/include/qt/QtQml/qqmlcontext.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl baseUrl() const

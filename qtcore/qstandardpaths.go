@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 62
+// extern C begin: 65
 */
 // import "C"
 import "unsafe"
@@ -468,7 +468,7 @@ See also writableLocation(), standardLocations(), displayName(), locate(), and l
 */
 type QStandardPaths__StandardLocation = int
 
-// Returns the user's desktop directory. This is a generic value. On systems with no concept of a desktop.
+// Returns the user's desktop directory. This is a generic value. On systems with no concept of a desktop, this is the same as QStandardPaths::HomeLocation.
 const QStandardPaths__DesktopLocation QStandardPaths__StandardLocation = 0
 
 // Returns the directory containing user document files. This is a generic value. The returned path is never empty.

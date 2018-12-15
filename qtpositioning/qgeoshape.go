@@ -156,6 +156,8 @@ func (this *QGeoShape) IsEmpty() bool {
 
 /*
 Returns whether the coordinate coordinate is contained within this geo shape.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoShape) Contains(coordinate QGeoCoordinate_ITF) bool {
 	var convArg0 unsafe.Pointer
@@ -176,6 +178,8 @@ func (this *QGeoShape) Contains(coordinate QGeoCoordinate_ITF) bool {
 Returns a QGeoRectangle representing the geographical bounding rectangle of the geo shape, that defines the latitudinal/longitudinal bounds of the geo shape.
 
 This function was introduced in  Qt 5.9.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoShape) BoundingGeoRectangle() *QGeoRectangle /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGeoShape20boundingGeoRectangleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -194,6 +198,8 @@ func (this *QGeoShape) BoundingGeoRectangle() *QGeoRectangle /*123*/ {
 Returns the coordinate located at the geometric center of the geo shape.
 
 This function was introduced in  Qt 5.5.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoShape) Center() *QGeoCoordinate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGeoShape6centerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -285,6 +291,8 @@ func (this *QGeoShape) Operator_equal(other QGeoShape_ITF) *QGeoShape {
 Returns a string representation of this geo shape.
 
 This function was introduced in  Qt 5.5.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoShape) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGeoShape8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -302,19 +310,19 @@ Describes the type of the shape.
 */
 type QGeoShape__ShapeType = int
 
-// A shape of unknown type.
+// A shape of unknown type
 const QGeoShape__UnknownType QGeoShape__ShapeType = 0
 
-// A rectangular shape.
+// A rectangular shape
 const QGeoShape__RectangleType QGeoShape__ShapeType = 1
 
-// A circular shape.
+// A circular shape
 const QGeoShape__CircleType QGeoShape__ShapeType = 2
 
-// A path type.
+// A path type
 const QGeoShape__PathType QGeoShape__ShapeType = 3
 
-//
+// A polygon type
 const QGeoShape__PolygonType QGeoShape__ShapeType = 4
 
 func (this *QGeoShape) ShapeTypeItemName(val int) string {

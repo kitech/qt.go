@@ -143,6 +143,26 @@ func (this *QAndroidJniEnvironment) Operator_minus_greater() unsafe.Pointer /*66
 	return unsafe.Pointer(uintptr(rv))
 }
 
+// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] jclass findClass(const char *)
+
+/*
+Searches for className using all available class loaders. Qt on Android uses a custom class loader to load all the .jar files and it must be used to find any classes that are created by that class loader because these classes are not visible in the default class loader.
+
+Returns the class pointer or null if is not found.
+
+This function was introduced in  Qt 5.12.
+*/
+func (this *QAndroidJniEnvironment) FindClass(className string) unsafe.Pointer /*666*/ {
+	var convArg0 = qtrt.CString(className)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QAndroidJniEnvironment9findClassEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
 //  body block end
 
 //  keep block begin

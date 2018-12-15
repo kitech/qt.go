@@ -284,7 +284,7 @@ func (this *QColumnView) ScrollTop(index qtcore.QModelIndex_ITF) {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QAbstractScrollArea::sizeHint().
 */
 func (this *QColumnView) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QColumnView8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -484,7 +484,7 @@ func (this *QColumnView) MoveCursor(cursorAction int, modifiers int) *qtcore.QMo
 // [-2] void resizeEvent(QResizeEvent *)
 
 /*
-Reimplemented from QWidget::resizeEvent().
+Reimplemented from QAbstractItemView::resizeEvent().
 */
 func (this *QColumnView) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer

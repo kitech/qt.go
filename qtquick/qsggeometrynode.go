@@ -66,7 +66,7 @@ func (*QSGGeometryNode) NewFromPointer(cthis unsafe.Pointer) *QSGGeometryNode {
 	return NewQSGGeometryNodeFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:231
+// /usr/include/qt/QtQuick/qsgnode.h:226
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGGeometryNode()
@@ -85,7 +85,7 @@ func NewQSGGeometryNode() *QSGGeometryNode {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:232
+// /usr/include/qt/QtQuick/qsgnode.h:227
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGGeometryNode()
@@ -100,7 +100,7 @@ func DeleteQSGGeometryNode(this *QSGGeometryNode) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:234
+// /usr/include/qt/QtQuick/qsgnode.h:229
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaterial(QSGMaterial *)
@@ -117,7 +117,7 @@ func (this *QSGGeometryNode) SetMaterial(material QSGMaterial_ITF /*777 QSGMater
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:235
+// /usr/include/qt/QtQuick/qsgnode.h:230
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSGMaterial * material() const
@@ -131,7 +131,7 @@ func (this *QSGGeometryNode) Material() *QSGMaterial /*777 QSGMaterial **/ {
 	return /*==*/ NewQSGMaterialFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:237
+// /usr/include/qt/QtQuick/qsgnode.h:232
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpaqueMaterial(QSGMaterial *)
@@ -148,7 +148,7 @@ func (this *QSGGeometryNode) SetOpaqueMaterial(material QSGMaterial_ITF /*777 QS
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:238
+// /usr/include/qt/QtQuick/qsgnode.h:233
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSGMaterial * opaqueMaterial() const
@@ -162,7 +162,7 @@ func (this *QSGGeometryNode) OpaqueMaterial() *QSGMaterial /*777 QSGMaterial **/
 	return /*==*/ NewQSGMaterialFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:240
+// /usr/include/qt/QtQuick/qsgnode.h:235
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSGMaterial * activeMaterial() const
@@ -176,7 +176,7 @@ func (this *QSGGeometryNode) ActiveMaterial() *QSGMaterial /*777 QSGMaterial **/
 	return /*==*/ NewQSGMaterialFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:242
+// /usr/include/qt/QtQuick/qsgnode.h:237
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRenderOrder(int)
@@ -189,7 +189,7 @@ func (this *QSGGeometryNode) SetRenderOrder(order int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:243
+// /usr/include/qt/QtQuick/qsgnode.h:238
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int renderOrder() const
@@ -203,7 +203,7 @@ func (this *QSGGeometryNode) RenderOrder() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:245
+// /usr/include/qt/QtQuick/qsgnode.h:240
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInheritedOpacity(qreal)
@@ -216,7 +216,7 @@ func (this *QSGGeometryNode) SetInheritedOpacity(opacity float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:246
+// /usr/include/qt/QtQuick/qsgnode.h:241
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal inheritedOpacity() const

@@ -2438,7 +2438,7 @@ func (this *QWindow) OpacityChanged(opacity float64) {
 // [-2] void exposeEvent(QExposeEvent *)
 
 /*
-The expose event (ev) is sent by the window system whenever the window's exposure on screen changes.
+The expose event (ev) is sent by the window system whenever an area of the window is invalidated, for example due to the exposure in the windowing system changing.
 
 The application can start rendering into the window with QBackingStore and QOpenGLContext as soon as it gets an exposeEvent() such that isExposed() is true.
 

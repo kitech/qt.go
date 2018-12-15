@@ -526,6 +526,43 @@ func (this *QVideoSurfaceFormat) SetYCbCrColorSpace(colorSpace int) {
 // /usr/include/qt/QtMultimedia/qvideosurfaceformat.h:120
 // index:0
 // Public Visibility=Default Availability=Available
+// [1] bool isMirrored() const
+
+/*
+Returns true if the surface is mirrored around its vertical axis. This is typically needed for video frames coming from a front camera of a mobile device.
+
+Note: The mirroring here differs from QImage::mirrored, as a vertically mirrored QImage will be mirrored around its x-axis.
+
+This function was introduced in  Qt 5.11.
+*/
+func (this *QVideoSurfaceFormat) IsMirrored() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QVideoSurfaceFormat10isMirroredEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtMultimedia/qvideosurfaceformat.h:121
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setMirrored(bool)
+
+/*
+Sets if the surface is mirrored around its vertical axis. This is typically needed for video frames coming from a front camera of a mobile device. Default value is false.
+
+Note: The mirroring here differs from QImage::mirrored, as a vertically mirrored QImage will be mirrored around its x-axis.
+
+This function was introduced in  Qt 5.11.
+
+See also isMirrored().
+*/
+func (this *QVideoSurfaceFormat) SetMirrored(mirrored bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QVideoSurfaceFormat11setMirroredEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mirrored)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtMultimedia/qvideosurfaceformat.h:123
+// index:0
+// Public Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
 
 /*
@@ -541,7 +578,7 @@ func (this *QVideoSurfaceFormat) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qvideosurfaceformat.h:123
+// /usr/include/qt/QtMultimedia/qvideosurfaceformat.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant property(const char *) const
@@ -561,7 +598,7 @@ func (this *QVideoSurfaceFormat) Property(name string) *qtcore.QVariant /*123*/ 
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qvideosurfaceformat.h:124
+// /usr/include/qt/QtMultimedia/qvideosurfaceformat.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProperty(const char *, const QVariant &)

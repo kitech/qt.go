@@ -236,7 +236,7 @@ Opens the file using OpenMode mode, returning true if successful; otherwise fals
 
 Important: the mode must include QIODevice::WriteOnly. It may also have additional flags, such as QIODevice::Text and QIODevice::Unbuffered.
 
-QIODevice::ReadWrite and QIODevice::Append are not supported at the moment.
+QIODevice::ReadWrite, QIODevice::Append, QIODevice::NewOnly and QIODevice::ExistingOnly are not supported at the moment.
 
 See also QIODevice::OpenMode and setFileName().
 */
@@ -332,7 +332,7 @@ func (this *QSaveFile) DirectWriteFallback() bool {
 // [8] qint64 writeData(const char *, qint64)
 
 /*
-Reimplemented from QIODevice::writeData().
+Reimplemented from QFileDevice::writeData().
 */
 func (this *QSaveFile) WriteData(data string, len_ int64) int64 {
 	var convArg0 = qtrt.CString(data)

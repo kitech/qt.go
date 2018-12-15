@@ -373,6 +373,8 @@ setWorkingDirectory()
 
 All other properties of the QProcess object are ignored.
 
+Note: The called process inherits the console window of the calling process. To suppress console output, redirect standard/error output to QProcess::nullDevice().
+
 This function was introduced in  Qt 5.10.
 
 See also start(), startDetached(const QString &program, const QStringList &arguments, const QString &workingDirectory, qint64 *pid), and startDetached(const QString &command).
@@ -414,6 +416,8 @@ setWorkingDirectory()
 
 
 All other properties of the QProcess object are ignored.
+
+Note: The called process inherits the console window of the calling process. To suppress console output, redirect standard/error output to QProcess::nullDevice().
 
 This function was introduced in  Qt 5.10.
 
@@ -458,6 +462,8 @@ setWorkingDirectory()
 
 
 All other properties of the QProcess object are ignored.
+
+Note: The called process inherits the console window of the calling process. To suppress console output, redirect standard/error output to QProcess::nullDevice().
 
 This function was introduced in  Qt 5.10.
 
@@ -514,6 +520,8 @@ setWorkingDirectory()
 
 All other properties of the QProcess object are ignored.
 
+Note: The called process inherits the console window of the calling process. To suppress console output, redirect standard/error output to QProcess::nullDevice().
+
 This function was introduced in  Qt 5.10.
 
 See also start(), startDetached(const QString &program, const QStringList &arguments, const QString &workingDirectory, qint64 *pid), and startDetached(const QString &command).
@@ -565,6 +573,8 @@ setWorkingDirectory()
 
 
 All other properties of the QProcess object are ignored.
+
+Note: The called process inherits the console window of the calling process. To suppress console output, redirect standard/error output to QProcess::nullDevice().
 
 This function was introduced in  Qt 5.10.
 
@@ -618,6 +628,8 @@ setWorkingDirectory()
 
 
 All other properties of the QProcess object are ignored.
+
+Note: The called process inherits the console window of the calling process. To suppress console output, redirect standard/error output to QProcess::nullDevice().
 
 This function was introduced in  Qt 5.10.
 
@@ -1894,7 +1906,7 @@ This function is called in the child process context just before the program is 
   {
       ...
    protected:
-       void setupChildProcess();
+       void setupChildProcess() override;
       ...
   };
 

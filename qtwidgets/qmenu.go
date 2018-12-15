@@ -281,8 +281,6 @@ func DeleteQMenu(this *QMenu) {
 // [8] QAction * addAction(const QString &)
 
 /*
-This is an overloaded function.
-
 This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
 
 QMenu takes ownership of the returned QAction.
@@ -303,8 +301,6 @@ func (this *QMenu) AddAction(text string) *QAction /*777 QAction **/ {
 // [8] QAction * addAction(const QIcon &, const QString &)
 
 /*
-This is an overloaded function.
-
 This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
 
 QMenu takes ownership of the returned QAction.
@@ -329,8 +325,6 @@ func (this *QMenu) AddAction1(icon qtgui.QIcon_ITF, text string) *QAction /*777 
 // [8] QAction * addAction(const QString &, const QObject *, const char *, const QKeySequence &)
 
 /*
-This is an overloaded function.
-
 This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
 
 QMenu takes ownership of the returned QAction.
@@ -361,8 +355,6 @@ func (this *QMenu) AddAction2(text string, receiver qtcore.QObject_ITF /*777 con
 // [8] QAction * addAction(const QString &, const QObject *, const char *, const QKeySequence &)
 
 /*
-This is an overloaded function.
-
 This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
 
 QMenu takes ownership of the returned QAction.
@@ -391,8 +383,6 @@ func (this *QMenu) AddAction2p(text string, receiver qtcore.QObject_ITF /*777 co
 // [8] QAction * addAction(const QIcon &, const QString &, const QObject *, const char *, const QKeySequence &)
 
 /*
-This is an overloaded function.
-
 This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
 
 QMenu takes ownership of the returned QAction.
@@ -427,8 +417,6 @@ func (this *QMenu) AddAction3(icon qtgui.QIcon_ITF, text string, receiver qtcore
 // [8] QAction * addAction(const QIcon &, const QString &, const QObject *, const char *, const QKeySequence &)
 
 /*
-This is an overloaded function.
-
 This convenience function creates a new action with text. The function adds the newly created action to the menu's list of actions, and returns it.
 
 QMenu takes ownership of the returned QAction.
@@ -1571,7 +1559,7 @@ func (this *QMenu) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/)
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QMenu) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

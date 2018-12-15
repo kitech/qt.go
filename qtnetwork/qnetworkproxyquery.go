@@ -18,7 +18,7 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 17
 */
 // import "C"
 import "unsafe"

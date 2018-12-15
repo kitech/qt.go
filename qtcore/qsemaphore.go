@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qsemaphore.h
@@ -64,7 +66,7 @@ func (*QSemaphore) NewFromPointer(cthis unsafe.Pointer) *QSemaphore {
 	return NewQSemaphoreFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:55
+// /usr/include/qt/QtCore/qsemaphore.h:54
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSemaphore(int)
@@ -85,7 +87,7 @@ func NewQSemaphore(n int) *QSemaphore {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:55
+// /usr/include/qt/QtCore/qsemaphore.h:54
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSemaphore(int)
@@ -108,7 +110,7 @@ func NewQSemaphorep() *QSemaphore {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:56
+// /usr/include/qt/QtCore/qsemaphore.h:55
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSemaphore()
@@ -123,7 +125,7 @@ func DeleteQSemaphore(this *QSemaphore) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:58
+// /usr/include/qt/QtCore/qsemaphore.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void acquire(int)
@@ -138,7 +140,7 @@ func (this *QSemaphore) Acquire(n int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:58
+// /usr/include/qt/QtCore/qsemaphore.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void acquire(int)
@@ -155,7 +157,7 @@ func (this *QSemaphore) Acquirep() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:59
+// /usr/include/qt/QtCore/qsemaphore.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryAcquire(int)
@@ -180,7 +182,7 @@ func (this *QSemaphore) TryAcquire(n int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:59
+// /usr/include/qt/QtCore/qsemaphore.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryAcquire(int)
@@ -207,7 +209,7 @@ func (this *QSemaphore) TryAcquirep() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:60
+// /usr/include/qt/QtCore/qsemaphore.h:59
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool tryAcquire(int, int)
@@ -232,7 +234,7 @@ func (this *QSemaphore) TryAcquire1(n int, timeout int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:62
+// /usr/include/qt/QtCore/qsemaphore.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void release(int)
@@ -259,7 +261,7 @@ func (this *QSemaphore) Release(n int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:62
+// /usr/include/qt/QtCore/qsemaphore.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void release(int)
@@ -288,7 +290,7 @@ func (this *QSemaphore) Releasep() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsemaphore.h:64
+// /usr/include/qt/QtCore/qsemaphore.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int available() const

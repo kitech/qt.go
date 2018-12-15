@@ -186,6 +186,8 @@ func (this *QQmlPropertyMap) Clear(key string) {
 Returns the list of keys.
 
 Keys that have been cleared will still appear in this list, even though their associated values are invalid QVariants.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QQmlPropertyMap) Keys() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap4keysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

@@ -63,7 +63,7 @@ func (*QWindowStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWindowSta
 	return NewQWindowStateChangeEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:783
+// /usr/include/qt/QtGui/qevent.h:788
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWindowStateChangeEvent(Qt::WindowStates, bool)
@@ -82,7 +82,7 @@ func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateCha
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:783
+// /usr/include/qt/QtGui/qevent.h:788
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWindowStateChangeEvent(Qt::WindowStates, bool)
@@ -103,7 +103,7 @@ func NewQWindowStateChangeEventp(aOldState int) *QWindowStateChangeEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:784
+// /usr/include/qt/QtGui/qevent.h:789
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWindowStateChangeEvent()
@@ -118,7 +118,7 @@ func DeleteQWindowStateChangeEvent(this *QWindowStateChangeEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:786
+// /usr/include/qt/QtGui/qevent.h:791
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::WindowStates oldState() const
@@ -132,7 +132,7 @@ func (this *QWindowStateChangeEvent) OldState() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:787
+// /usr/include/qt/QtGui/qevent.h:792
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isOverride() const

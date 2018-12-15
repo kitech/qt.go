@@ -63,7 +63,7 @@ func (*QHelpEvent) NewFromPointer(cthis unsafe.Pointer) *QHelpEvent {
 	return NewQHelpEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:680
+// /usr/include/qt/QtGui/qevent.h:685
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHelpEvent(QEvent::Type, const QPoint &, const QPoint &)
@@ -90,7 +90,7 @@ func NewQHelpEvent(type_ int, pos qtcore.QPoint_ITF, globalPos qtcore.QPoint_ITF
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:681
+// /usr/include/qt/QtGui/qevent.h:686
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHelpEvent()
@@ -105,7 +105,7 @@ func DeleteQHelpEvent(this *QHelpEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:683
+// /usr/include/qt/QtGui/qevent.h:688
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int x() const
@@ -119,7 +119,7 @@ func (this *QHelpEvent) X() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:684
+// /usr/include/qt/QtGui/qevent.h:689
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int y() const
@@ -133,7 +133,7 @@ func (this *QHelpEvent) Y() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:685
+// /usr/include/qt/QtGui/qevent.h:690
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalX() const
@@ -147,7 +147,7 @@ func (this *QHelpEvent) GlobalX() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:686
+// /usr/include/qt/QtGui/qevent.h:691
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalY() const
@@ -161,7 +161,7 @@ func (this *QHelpEvent) GlobalY() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:688
+// /usr/include/qt/QtGui/qevent.h:693
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & pos() const
@@ -177,7 +177,7 @@ func (this *QHelpEvent) Pos() *qtcore.QPoint {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:689
+// /usr/include/qt/QtGui/qevent.h:694
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & globalPos() const

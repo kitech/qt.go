@@ -64,7 +64,7 @@ func (*QMetaClassInfo) NewFromPointer(cthis unsafe.Pointer) *QMetaClassInfo {
 	return NewQMetaClassInfoFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:303
+// /usr/include/qt/QtCore/qmetaobject.h:304
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMetaClassInfo()
@@ -83,7 +83,7 @@ func NewQMetaClassInfo() *QMetaClassInfo {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:304
+// /usr/include/qt/QtCore/qmetaobject.h:305
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * name() const
@@ -97,7 +97,7 @@ func (this *QMetaClassInfo) Name() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:305
+// /usr/include/qt/QtCore/qmetaobject.h:306
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * value() const
@@ -111,7 +111,7 @@ func (this *QMetaClassInfo) Value() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qmetaobject.h:306
+// /usr/include/qt/QtCore/qmetaobject.h:307
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QMetaObject * enclosingMetaObject() const

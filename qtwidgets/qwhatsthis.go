@@ -68,7 +68,7 @@ func (*QWhatsThis) NewFromPointer(cthis unsafe.Pointer) *QWhatsThis {
 	return NewQWhatsThisFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qwhatsthis.h:58
+// /usr/include/qt/QtWidgets/qwhatsthis.h:60
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void enterWhatsThisMode()
@@ -89,7 +89,7 @@ func QWhatsThis_EnterWhatsThisMode() {
 	nilthis.EnterWhatsThisMode()
 }
 
-// /usr/include/qt/QtWidgets/qwhatsthis.h:59
+// /usr/include/qt/QtWidgets/qwhatsthis.h:61
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool inWhatsThisMode()
@@ -110,7 +110,7 @@ func QWhatsThis_InWhatsThisMode() bool {
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qwhatsthis.h:60
+// /usr/include/qt/QtWidgets/qwhatsthis.h:62
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void leaveWhatsThisMode()
@@ -131,7 +131,7 @@ func QWhatsThis_LeaveWhatsThisMode() {
 	nilthis.LeaveWhatsThisMode()
 }
 
-// /usr/include/qt/QtWidgets/qwhatsthis.h:62
+// /usr/include/qt/QtWidgets/qwhatsthis.h:64
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void showText(const QPoint &, const QString &, QWidget *)
@@ -160,7 +160,7 @@ func QWhatsThis_ShowText(pos qtcore.QPoint_ITF, text string, w QWidget_ITF /*777
 	nilthis.ShowText(pos, text, w)
 }
 
-// /usr/include/qt/QtWidgets/qwhatsthis.h:62
+// /usr/include/qt/QtWidgets/qwhatsthis.h:64
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void showText(const QPoint &, const QString &, QWidget *)
@@ -183,7 +183,7 @@ func (this *QWhatsThis) ShowTextp(pos qtcore.QPoint_ITF, text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwhatsthis.h:63
+// /usr/include/qt/QtWidgets/qwhatsthis.h:65
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void hideText()
@@ -202,7 +202,7 @@ func QWhatsThis_HideText() {
 	nilthis.HideText()
 }
 
-// /usr/include/qt/QtWidgets/qwhatsthis.h:65
+// /usr/include/qt/QtWidgets/qwhatsthis.h:68
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QAction * createAction(QObject *)
@@ -227,7 +227,7 @@ func QWhatsThis_CreateAction(parent qtcore.QObject_ITF /*777 QObject **/) *QActi
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qwhatsthis.h:65
+// /usr/include/qt/QtWidgets/qwhatsthis.h:68
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QAction * createAction(QObject *)

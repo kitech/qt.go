@@ -18,7 +18,7 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 24
 */
 // import "C"
 import "unsafe"
@@ -65,7 +65,7 @@ func (*QNetworkInterface) NewFromPointer(cthis unsafe.Pointer) *QNetworkInterfac
 	return NewQNetworkInterfaceFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:104
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkInterface()
@@ -84,7 +84,7 @@ func NewQNetworkInterface() *QNetworkInterface {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:107
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:146
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QNetworkInterface & operator=(QNetworkInterface &&)
@@ -100,7 +100,7 @@ func (this *QNetworkInterface) Operator_equal(other unsafe.Pointer /*333*/) *QNe
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:109
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:148
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QNetworkInterface & operator=(const QNetworkInterface &)
@@ -120,7 +120,7 @@ func (this *QNetworkInterface) Operator_equal1(other QNetworkInterface_ITF) *QNe
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:110
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QNetworkInterface()
@@ -135,7 +135,7 @@ func DeleteQNetworkInterface(this *QNetworkInterface) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:112
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:151
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkInterface &)
@@ -154,7 +154,7 @@ func (this *QNetworkInterface) Swap(other QNetworkInterface_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:114
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -168,7 +168,7 @@ func (this *QNetworkInterface) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:116
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int index() const
@@ -186,7 +186,27 @@ func (this *QNetworkInterface) Index() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:117
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:156
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int maximumTransmissionUnit() const
+
+/*
+Returns the maximum transmission unit on this interface, if known, or 0 otherwise.
+
+The maximum transmission unit is the largest packet that may be sent on this interface without incurring link-level fragmentation. Applications may use this value to calculate the size of the payload that will fit an unfragmented UDP datagram. Remember to subtract the sizes of headers used in your communication over the interface, e.g. TCP (20 bytes) or UDP (12), IPv4 (20) or IPv6 (40, absent some form of header compression), when computing how big a payload you can transmit. Also note that the MTU along the full path (the Path MTU) to the destination may be smaller than the interface's MTU.
+
+This function was introduced in  Qt 5.11.
+
+See also QUdpSocket.
+*/
+func (this *QNetworkInterface) MaximumTransmissionUnit() int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface23maximumTransmissionUnitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
@@ -203,7 +223,7 @@ func (this *QNetworkInterface) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:118
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString humanReadableName() const
@@ -224,7 +244,7 @@ func (this *QNetworkInterface) HumanReadableName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:119
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QNetworkInterface::InterfaceFlags flags() const
@@ -238,7 +258,25 @@ func (this *QNetworkInterface) Flags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:120
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:160
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QNetworkInterface::InterfaceType type() const
+
+/*
+Returns the type of this interface, if it could be determined. If it could not be determined, this function returns QNetworkInterface::Unknown.
+
+This function was introduced in  Qt 5.11.
+
+See also hardwareAddress().
+*/
+func (this *QNetworkInterface) Type() int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return int(rv)
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString hardwareAddress() const
@@ -247,6 +285,8 @@ func (this *QNetworkInterface) Flags() int {
 Returns the low-level hardware address for this interface. On Ethernet interfaces, this will be a MAC address in string representation, separated by colons.
 
 Other interface types may have other types of hardware addresses. Implementations should not depend on this function returning a valid MAC address.
+
+See also type().
 */
 func (this *QNetworkInterface) HardwareAddress() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface15hardwareAddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -257,7 +297,7 @@ func (this *QNetworkInterface) HardwareAddress() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:123
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:164
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int interfaceIndexFromName(const QString &)
@@ -266,7 +306,7 @@ func (this *QNetworkInterface) HardwareAddress() string {
 Returns the index of the interface whose name is name or 0 if there is no interface with that name. This function should produce the same result as the following code, but will probably execute faster.
 
 
-  QNetworkInterface::interfaceFromName(name).index()
+      QNetworkInterface::interfaceFromName(name).index()
 
 
 
@@ -287,7 +327,7 @@ func QNetworkInterface_InterfaceIndexFromName(name string) int {
 	return rv
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:124
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:165
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QNetworkInterface interfaceFromName(const QString &)
@@ -314,7 +354,7 @@ func QNetworkInterface_InterfaceFromName(name string) *QNetworkInterface /*123*/
 	return rv
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:125
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:166
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QNetworkInterface interfaceFromIndex(int)
@@ -337,7 +377,7 @@ func QNetworkInterface_InterfaceFromIndex(index int) *QNetworkInterface /*123*/ 
 	return rv
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:126
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:167
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString interfaceNameFromIndex(int)
@@ -346,7 +386,7 @@ func QNetworkInterface_InterfaceFromIndex(index int) *QNetworkInterface /*123*/ 
 Returns the name of the interface whose index is index or an empty string if there is no interface with that index. This function should produce the same result as the following code, but will probably execute faster.
 
 
-  QNetworkInterface::interfaceFromIndex(index).name()
+      QNetworkInterface::interfaceFromIndex(index).name()
 
 
 
@@ -413,6 +453,101 @@ func (this *QNetworkInterface) InterfaceFlagItemName(val int) string {
 func QNetworkInterface_InterfaceFlagItemName(val int) string {
 	var nilthis *QNetworkInterface
 	return nilthis.InterfaceFlagItemName(val)
+}
+
+/*
+Specifies the type of hardware (PHY layer, OSI level 1) this interface is, if it could be determined. Interface types that are not among those listed below will generally be listed as Unknown, though future versions of Qt may add new enumeration values.
+
+The possible values are:
+
+
+*/
+type QNetworkInterface__InterfaceType = int
+
+//
+const QNetworkInterface__Loopback QNetworkInterface__InterfaceType = 1
+
+// A type of interface determined to be virtual, but not any of the other possible types. For example, tunnel interfaces are (currently) detected as virtual ones.
+const QNetworkInterface__Virtual QNetworkInterface__InterfaceType = 2
+
+//
+const QNetworkInterface__Ethernet QNetworkInterface__InterfaceType = 3
+
+// Serial Line Internet Protocol interfaces.
+const QNetworkInterface__Slip QNetworkInterface__InterfaceType = 4
+
+//
+const QNetworkInterface__CanBus QNetworkInterface__InterfaceType = 5
+
+// Point-to-Point Protocol interfaces, establishing a direct connection between two nodes over a lower transport layer (often serial over radio or physical line).
+const QNetworkInterface__Ppp QNetworkInterface__InterfaceType = 6
+
+//
+const QNetworkInterface__Fddi QNetworkInterface__InterfaceType = 7
+
+//
+const QNetworkInterface__Wifi QNetworkInterface__InterfaceType = 8
+
+//
+const QNetworkInterface__Ieee80211 QNetworkInterface__InterfaceType = 8
+
+// Interfaces using the Linux Phonet socket family, for communication with cellular modems. See the Linux kernel documentation for more information.
+const QNetworkInterface__Phonet QNetworkInterface__InterfaceType = 9
+
+//
+const QNetworkInterface__Ieee802154 QNetworkInterface__InterfaceType = 10
+
+//
+const QNetworkInterface__SixLoWPAN QNetworkInterface__InterfaceType = 11
+
+//
+const QNetworkInterface__Ieee80216 QNetworkInterface__InterfaceType = 12
+
+//
+const QNetworkInterface__Ieee1394 QNetworkInterface__InterfaceType = 13
+
+// The interface type could not be determined or is not one of the other listed types.
+const QNetworkInterface__Unknown QNetworkInterface__InterfaceType = 0
+
+func (this *QNetworkInterface) InterfaceTypeItemName(val int) string {
+	switch val {
+	case QNetworkInterface__Loopback: // 1
+		return "Loopback"
+	case QNetworkInterface__Virtual: // 2
+		return "Virtual"
+	case QNetworkInterface__Ethernet: // 3
+		return "Ethernet"
+	case QNetworkInterface__Slip: // 4
+		return "Slip"
+	case QNetworkInterface__CanBus: // 5
+		return "CanBus"
+	case QNetworkInterface__Ppp: // 6
+		return "Ppp"
+	case QNetworkInterface__Fddi: // 7
+		return "Fddi"
+	case QNetworkInterface__Wifi: // 8
+		return "Wifi,Ieee80211"
+		// case QNetworkInterface__Ieee80211: // 8
+		// return ""
+	case QNetworkInterface__Phonet: // 9
+		return "Phonet"
+	case QNetworkInterface__Ieee802154: // 10
+		return "Ieee802154"
+	case QNetworkInterface__SixLoWPAN: // 11
+		return "SixLoWPAN"
+	case QNetworkInterface__Ieee80216: // 12
+		return "Ieee80216"
+	case QNetworkInterface__Ieee1394: // 13
+		return "Ieee1394"
+	case QNetworkInterface__Unknown: // 0
+		return "Unknown"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkInterface_InterfaceTypeItemName(val int) string {
+	var nilthis *QNetworkInterface
+	return nilthis.InterfaceTypeItemName(val)
 }
 
 //  body block end

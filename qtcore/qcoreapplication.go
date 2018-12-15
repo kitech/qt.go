@@ -591,6 +591,8 @@ After this function has been called, the application leaves the main event loop 
 
 By convention, a returnCode of 0 means success, and any non-zero value indicates an error.
 
+It's good practice to always connect signals to this slot using a QueuedConnection. If a signal connected (non-queued) to this slot is emitted before control enters the main event loop (such as before "int main" calls exec()), the slot has no effect and the application never exits. Using a queued connection ensures that the slot will not be invoked until after control enters the main event loop.
+
 Note that unlike the C library function of the same name, this function does return to the caller -- it is event processing that stops.
 
 See also quit() and exec().
@@ -615,6 +617,8 @@ Tells the application to exit with a return code.
 After this function has been called, the application leaves the main event loop and returns from the call to exec(). The exec() function returns returnCode. If the event loop is not running, this function does nothing.
 
 By convention, a returnCode of 0 means success, and any non-zero value indicates an error.
+
+It's good practice to always connect signals to this slot using a QueuedConnection. If a signal connected (non-queued) to this slot is emitted before control enters the main event loop (such as before "int main" calls exec()), the slot has no effect and the application never exits. Using a queued connection ensures that the slot will not be invoked until after control enters the main event loop.
 
 Note that unlike the C library function of the same name, this function does return to the caller -- it is event processing that stops.
 
@@ -827,7 +831,7 @@ Removes all events of the given eventType that were posted using postEvent() for
 
 The events are not dispatched, instead they are removed from the queue. You should never need to call this function. If you do call it, be aware that killing events may cause receiver to break one or more invariants.
 
-If receiver is null, the events of eventType are removed for all objects. If eventType is 0, all the events are removed for receiver. You should never call this function with eventType of 0. If you do call it in this way, be aware that killing events may cause receiver to break one or more invariants.
+If receiver is null, the events of eventType are removed for all objects. If eventType is 0, all the events are removed for receiver. You should never call this function with eventType of 0.
 
 Note: This function is thread-safe.
 
@@ -856,7 +860,7 @@ Removes all events of the given eventType that were posted using postEvent() for
 
 The events are not dispatched, instead they are removed from the queue. You should never need to call this function. If you do call it, be aware that killing events may cause receiver to break one or more invariants.
 
-If receiver is null, the events of eventType are removed for all objects. If eventType is 0, all the events are removed for receiver. You should never call this function with eventType of 0. If you do call it in this way, be aware that killing events may cause receiver to break one or more invariants.
+If receiver is null, the events of eventType are removed for all objects. If eventType is 0, all the events are removed for receiver. You should never call this function with eventType of 0.
 
 Note: This function is thread-safe.
 
@@ -1504,11 +1508,13 @@ Tells the application to exit with return code 0 (success). Equivalent to callin
 
 It's common to connect the QGuiApplication::lastWindowClosed() signal to quit(), and you also often connect e.g. QAbstractButton::clicked() or signals in QAction, QMenu, or QMenuBar to it.
 
+It's good practice to always connect signals to this slot using a QueuedConnection. If a signal connected (non-queued) to this slot is emitted before control enters the main event loop (such as before "int main" calls exec()), the slot has no effect and the application never exits. Using a queued connection ensures that the slot will not be invoked until after control enters the main event loop.
+
 Example:
 
 
   QPushButton *quitButton = new QPushButton("Quit");
-  connect(quitButton, SIGNAL(clicked()), &app, SLOT(quit()));
+  connect(quitButton, SIGNAL(clicked()), &app, SLOT(quit()), Qt::QueuedConnection);
 
 
 
@@ -1600,7 +1606,7 @@ func (this *QCoreApplication) Event(arg0 QEvent_ITF /*777 QEvent **/) bool {
 type QCoreApplication__ = int
 
 //
-const QCoreApplication__ApplicationFlags QCoreApplication__ = 330241
+const QCoreApplication__ApplicationFlags QCoreApplication__ = 330752
 
 func (this *QCoreApplication) ItemName(val int) string {
 	return qtrt.GetClassEnumItemName(this, val)

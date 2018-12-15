@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h
@@ -18,7 +20,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 17
 */
 // import "C"
 import "unsafe"
@@ -64,7 +66,7 @@ func (*QPersistentModelIndex) NewFromPointer(cthis unsafe.Pointer) *QPersistentM
 	return NewQPersistentModelIndexFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:107
+// /usr/include/qt/QtCore/qabstractitemmodel.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPersistentModelIndex()
@@ -83,7 +85,7 @@ func NewQPersistentModelIndex() *QPersistentModelIndex {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:108
+// /usr/include/qt/QtCore/qabstractitemmodel.h:112
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPersistentModelIndex(const QModelIndex &)
@@ -106,7 +108,7 @@ func NewQPersistentModelIndex1(index QModelIndex_ITF) *QPersistentModelIndex {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:110
+// /usr/include/qt/QtCore/qabstractitemmodel.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QPersistentModelIndex()
@@ -121,7 +123,7 @@ func DeleteQPersistentModelIndex(this *QPersistentModelIndex) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:111
+// /usr/include/qt/QtCore/qabstractitemmodel.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator<(const QPersistentModelIndex &) const
@@ -139,7 +141,7 @@ func (this *QPersistentModelIndex) Operator_less_than(other QPersistentModelInde
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:112
+// /usr/include/qt/QtCore/qabstractitemmodel.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QPersistentModelIndex &) const
@@ -157,7 +159,7 @@ func (this *QPersistentModelIndex) Operator_equal_equal(other QPersistentModelIn
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:123
+// /usr/include/qt/QtCore/qabstractitemmodel.h:127
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QModelIndex &) const
@@ -175,7 +177,7 @@ func (this *QPersistentModelIndex) Operator_equal_equal1(other QModelIndex_ITF) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:113
+// /usr/include/qt/QtCore/qabstractitemmodel.h:117
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QPersistentModelIndex &) const
@@ -193,7 +195,7 @@ func (this *QPersistentModelIndex) Operator_not_equal(other QPersistentModelInde
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:124
+// /usr/include/qt/QtCore/qabstractitemmodel.h:128
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QModelIndex &) const
@@ -211,7 +213,7 @@ func (this *QPersistentModelIndex) Operator_not_equal1(other QModelIndex_ITF) bo
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:115
+// /usr/include/qt/QtCore/qabstractitemmodel.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPersistentModelIndex & operator=(const QPersistentModelIndex &)
@@ -231,7 +233,7 @@ func (this *QPersistentModelIndex) Operator_equal(other QPersistentModelIndex_IT
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:119
+// /usr/include/qt/QtCore/qabstractitemmodel.h:123
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QPersistentModelIndex & operator=(QPersistentModelIndex &&)
@@ -247,7 +249,7 @@ func (this *QPersistentModelIndex) Operator_equal1(other unsafe.Pointer /*333*/)
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:125
+// /usr/include/qt/QtCore/qabstractitemmodel.h:129
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPersistentModelIndex & operator=(const QModelIndex &)
@@ -267,7 +269,7 @@ func (this *QPersistentModelIndex) Operator_equal2(other QModelIndex_ITF) *QPers
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:122
+// /usr/include/qt/QtCore/qabstractitemmodel.h:126
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPersistentModelIndex &)
@@ -284,7 +286,7 @@ func (this *QPersistentModelIndex) Swap(other QPersistentModelIndex_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:127
+// /usr/include/qt/QtCore/qabstractitemmodel.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int row() const
@@ -298,7 +300,7 @@ func (this *QPersistentModelIndex) Row() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:128
+// /usr/include/qt/QtCore/qabstractitemmodel.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int column() const
@@ -312,7 +314,7 @@ func (this *QPersistentModelIndex) Column() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:129
+// /usr/include/qt/QtCore/qabstractitemmodel.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] void * internalPointer() const
@@ -326,7 +328,7 @@ func (this *QPersistentModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:130
+// /usr/include/qt/QtCore/qabstractitemmodel.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] quintptr internalId() const
@@ -340,7 +342,7 @@ func (this *QPersistentModelIndex) InternalId() uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:131
+// /usr/include/qt/QtCore/qabstractitemmodel.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex parent() const
@@ -352,6 +354,8 @@ A common convention used in models that expose tree data structures is that only
 
 When reimplementing this function in a subclass, be careful to avoid calling QModelIndex member functions, such as QModelIndex::parent(), since indexes belonging to your model will simply call your implementation, leading to infinite recursion.
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also createIndex().
 */
 func (this *QPersistentModelIndex) Parent() *QModelIndex /*123*/ {
@@ -362,7 +366,7 @@ func (this *QPersistentModelIndex) Parent() *QModelIndex /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:132
+// /usr/include/qt/QtCore/qabstractitemmodel.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int) const
@@ -374,6 +378,8 @@ sibling() is just a convenience function that finds the item's parent, and uses 
 
 This method can optionally be overridden for implementation-specific optimization.
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also index(), QModelIndex::row(), and QModelIndex::column().
 */
 func (this *QPersistentModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
@@ -384,7 +390,7 @@ func (this *QPersistentModelIndex) Sibling(row int, column int) *QModelIndex /*1
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:134
+// /usr/include/qt/QtCore/qabstractitemmodel.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex child(int, int) const
@@ -400,7 +406,7 @@ func (this *QPersistentModelIndex) Child(row int, column int) *QModelIndex /*123
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:136
+// /usr/include/qt/QtCore/qabstractitemmodel.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant data(int) const
@@ -409,6 +415,8 @@ func (this *QPersistentModelIndex) Child(row int, column int) *QModelIndex /*123
 Returns the data stored under the given role for the item referred to by the index.
 
 Note: If you do not have a value to return, return an invalid QVariant instead of returning 0.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also Qt::ItemDataRole, setData(), and headerData().
 */
@@ -420,7 +428,7 @@ func (this *QPersistentModelIndex) Data(role int) *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:136
+// /usr/include/qt/QtCore/qabstractitemmodel.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant data(int) const
@@ -429,6 +437,8 @@ func (this *QPersistentModelIndex) Data(role int) *QVariant /*123*/ {
 Returns the data stored under the given role for the item referred to by the index.
 
 Note: If you do not have a value to return, return an invalid QVariant instead of returning 0.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also Qt::ItemDataRole, setData(), and headerData().
 */
@@ -442,7 +452,7 @@ func (this *QPersistentModelIndex) Datap() *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:137
+// /usr/include/qt/QtCore/qabstractitemmodel.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags() const
@@ -452,6 +462,8 @@ Returns the item flags for the given index.
 
 The base class implementation returns a combination of flags that enables the item (ItemIsEnabled) and allows it to be selected (ItemIsSelectable).
 
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
+
 See also Qt::ItemFlags.
 */
 func (this *QPersistentModelIndex) Flags() int {
@@ -460,7 +472,7 @@ func (this *QPersistentModelIndex) Flags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:138
+// /usr/include/qt/QtCore/qabstractitemmodel.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QAbstractItemModel * model() const
@@ -474,7 +486,7 @@ func (this *QPersistentModelIndex) Model() *QAbstractItemModel /*777 const QAbst
 	return /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:139
+// /usr/include/qt/QtCore/qabstractitemmodel.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const

@@ -1024,7 +1024,7 @@ func (this *QTreeWidget) ItemBelow(item QTreeWidgetItem_ITF /*777 const QTreeWid
 // [-2] void setSelectionModel(QItemSelectionModel *)
 
 /*
-Reimplemented from QAbstractItemView::setSelectionModel().
+Reimplemented from QTreeView::setSelectionModel().
 */
 func (this *QTreeWidget) SetSelectionModel(selectionModel qtcore.QItemSelectionModel_ITF /*777 QItemSelectionModel **/) {
 	var convArg0 unsafe.Pointer
@@ -1223,7 +1223,7 @@ func (this *QTreeWidget) ItemEntered(item QTreeWidgetItem_ITF /*777 QTreeWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:342
+// /usr/include/qt/QtWidgets/qtreewidget.h:343
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemChanged(QTreeWidgetItem *, int)
@@ -1240,7 +1240,7 @@ func (this *QTreeWidget) ItemChanged(item QTreeWidgetItem_ITF /*777 QTreeWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:343
+// /usr/include/qt/QtWidgets/qtreewidget.h:344
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemExpanded(QTreeWidgetItem *)
@@ -1261,7 +1261,7 @@ func (this *QTreeWidget) ItemExpanded(item QTreeWidgetItem_ITF /*777 QTreeWidget
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:344
+// /usr/include/qt/QtWidgets/qtreewidget.h:345
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemCollapsed(QTreeWidgetItem *)
@@ -1282,7 +1282,7 @@ func (this *QTreeWidget) ItemCollapsed(item QTreeWidgetItem_ITF /*777 QTreeWidge
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:345
+// /usr/include/qt/QtWidgets/qtreewidget.h:346
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)
@@ -1305,7 +1305,7 @@ func (this *QTreeWidget) CurrentItemChanged(current QTreeWidgetItem_ITF /*777 QT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:346
+// /usr/include/qt/QtWidgets/qtreewidget.h:347
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemSelectionChanged()
@@ -1318,13 +1318,13 @@ func (this *QTreeWidget) ItemSelectionChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:349
+// /usr/include/qt/QtWidgets/qtreewidget.h:350
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractItemView::event().
 */
 func (this *QTreeWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -1336,7 +1336,7 @@ func (this *QTreeWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:350
+// /usr/include/qt/QtWidgets/qtreewidget.h:351
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
@@ -1354,7 +1354,7 @@ func (this *QTreeWidget) MimeTypes() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:356
+// /usr/include/qt/QtWidgets/qtreewidget.h:357
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(QTreeWidgetItem *, int, const QMimeData *, Qt::DropAction)
@@ -1380,7 +1380,7 @@ func (this *QTreeWidget) DropMimeData(parent QTreeWidgetItem_ITF /*777 QTreeWidg
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:358
+// /usr/include/qt/QtWidgets/qtreewidget.h:359
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
@@ -1396,7 +1396,7 @@ func (this *QTreeWidget) SupportedDropActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:367
+// /usr/include/qt/QtWidgets/qtreewidget.h:368
 // index:0
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(const QTreeWidgetItem *, int) const
@@ -1420,7 +1420,7 @@ func (this *QTreeWidget) IndexFromItem(item QTreeWidgetItem_ITF /*777 const QTre
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:367
+// /usr/include/qt/QtWidgets/qtreewidget.h:368
 // index:0
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(const QTreeWidgetItem *, int) const
@@ -1446,7 +1446,7 @@ func (this *QTreeWidget) IndexFromItemp(item QTreeWidgetItem_ITF /*777 const QTr
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:368
+// /usr/include/qt/QtWidgets/qtreewidget.h:370
 // index:1
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(QTreeWidgetItem *, int) const
@@ -1470,7 +1470,7 @@ func (this *QTreeWidget) IndexFromItem1(item QTreeWidgetItem_ITF /*777 QTreeWidg
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:368
+// /usr/include/qt/QtWidgets/qtreewidget.h:370
 // index:1
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(QTreeWidgetItem *, int) const
@@ -1496,7 +1496,7 @@ func (this *QTreeWidget) IndexFromItem1p(item QTreeWidgetItem_ITF /*777 QTreeWid
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:369
+// /usr/include/qt/QtWidgets/qtreewidget.h:372
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * itemFromIndex(const QModelIndex &) const
@@ -1516,13 +1516,13 @@ func (this *QTreeWidget) ItemFromIndex(index qtcore.QModelIndex_ITF) *QTreeWidge
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:373
+// /usr/include/qt/QtWidgets/qtreewidget.h:376
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
 
 /*
-Reimplemented from QWidget::dropEvent().
+Reimplemented from QAbstractItemView::dropEvent().
 */
 func (this *QTreeWidget) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
 	var convArg0 unsafe.Pointer

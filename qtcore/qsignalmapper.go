@@ -82,8 +82,6 @@ func (this *QSignalMapper) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // [-2] void QSignalMapper(QObject *)
 
 /*
-This function is deprecated.
-
 Constructs a QSignalMapper with parent parent.
 */
 func (*QSignalMapper) NewForInherit(parent QObject_ITF /*777 QObject **/) *QSignalMapper {
@@ -107,8 +105,6 @@ func NewQSignalMapper(parent QObject_ITF /*777 QObject **/) *QSignalMapper {
 // [-2] void QSignalMapper(QObject *)
 
 /*
-This function is deprecated.
-
 Constructs a QSignalMapper with parent parent.
 */
 func (*QSignalMapper) NewForInheritp() *QSignalMapper {

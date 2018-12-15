@@ -576,8 +576,8 @@ func (this *QAudioInput) State() int {
 /*
 This signal is emitted when the device state has changed.
 */
-func (this *QAudioInput) StateChanged(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QAudioInput12stateChangedEN6QAudio5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QAudioInput) StateChanged(state int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QAudioInput12stateChangedEN6QAudio5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	qtrt.ErrPrint(err, rv)
 }
 

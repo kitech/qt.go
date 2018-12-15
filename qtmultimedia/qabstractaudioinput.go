@@ -65,7 +65,7 @@ func (*QAbstractAudioInput) NewFromPointer(cthis unsafe.Pointer) *QAbstractAudio
 	return NewQAbstractAudioInputFromPointer(cthis)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:109
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:106
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -79,7 +79,7 @@ func (this *QAbstractAudioInput) MetaObject() *qtcore.QMetaObject /*777 const QM
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:112
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:109
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void start(QIODevice *)
@@ -96,7 +96,7 @@ func (this *QAbstractAudioInput) Start(device qtcore.QIODevice_ITF /*777 QIODevi
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:113
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:110
 // index:1
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIODevice * start()
@@ -110,7 +110,7 @@ func (this *QAbstractAudioInput) Start1() *qtcore.QIODevice /*777 QIODevice **/ 
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:114
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:111
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void stop()
@@ -123,7 +123,7 @@ func (this *QAbstractAudioInput) Stop() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:115
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:112
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void reset()
@@ -136,7 +136,7 @@ func (this *QAbstractAudioInput) Reset() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:116
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:113
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void suspend()
@@ -149,7 +149,7 @@ func (this *QAbstractAudioInput) Suspend() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:117
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:114
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void resume()
@@ -162,7 +162,7 @@ func (this *QAbstractAudioInput) Resume() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:118
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:115
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int bytesReady() const
@@ -176,7 +176,7 @@ func (this *QAbstractAudioInput) BytesReady() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:119
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:116
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int periodSize() const
@@ -190,7 +190,7 @@ func (this *QAbstractAudioInput) PeriodSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:120
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:117
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setBufferSize(int)
@@ -203,7 +203,7 @@ func (this *QAbstractAudioInput) SetBufferSize(value int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:121
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:118
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int bufferSize() const
@@ -217,7 +217,7 @@ func (this *QAbstractAudioInput) BufferSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:122
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:119
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setNotifyInterval(int)
@@ -230,7 +230,7 @@ func (this *QAbstractAudioInput) SetNotifyInterval(milliSeconds int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:123
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:120
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int notifyInterval() const
@@ -244,7 +244,7 @@ func (this *QAbstractAudioInput) NotifyInterval() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:124
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:121
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] qint64 processedUSecs() const
@@ -258,7 +258,7 @@ func (this *QAbstractAudioInput) ProcessedUSecs() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:125
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:122
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] qint64 elapsedUSecs() const
@@ -272,7 +272,7 @@ func (this *QAbstractAudioInput) ElapsedUSecs() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:126
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:123
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QAudio::Error error() const
@@ -286,7 +286,7 @@ func (this *QAbstractAudioInput) Error() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:127
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:124
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QAudio::State state() const
@@ -300,7 +300,7 @@ func (this *QAbstractAudioInput) State() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:128
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:125
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setFormat(const QAudioFormat &)
@@ -317,7 +317,7 @@ func (this *QAbstractAudioInput) SetFormat(fmt_ QAudioFormat_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:129
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:126
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAudioFormat format() const
@@ -333,7 +333,7 @@ func (this *QAbstractAudioInput) Format() *QAudioFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:130
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:127
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setVolume(qreal)
@@ -346,7 +346,7 @@ func (this *QAbstractAudioInput) SetVolume(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:131
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:128
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] qreal volume() const
@@ -360,7 +360,7 @@ func (this *QAbstractAudioInput) Volume() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:134
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void errorChanged(QAudio::Error)
@@ -368,12 +368,12 @@ func (this *QAbstractAudioInput) Volume() float64 {
 /*
 
  */
-func (this *QAbstractAudioInput) ErrorChanged(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractAudioInput12errorChangedEN6QAudio5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QAbstractAudioInput) ErrorChanged(error int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractAudioInput12errorChangedEN6QAudio5ErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:135
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stateChanged(QAudio::State)
@@ -381,12 +381,12 @@ func (this *QAbstractAudioInput) ErrorChanged(arg0 int) {
 /*
 
  */
-func (this *QAbstractAudioInput) StateChanged(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractAudioInput12stateChangedEN6QAudio5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QAbstractAudioInput) StateChanged(state int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractAudioInput12stateChangedEN6QAudio5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:136
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void notify()

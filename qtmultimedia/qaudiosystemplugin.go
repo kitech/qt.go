@@ -69,7 +69,7 @@ func (*QAudioSystemPlugin) NewFromPointer(cthis unsafe.Pointer) *QAudioSystemPlu
 	return NewQAudioSystemPluginFromPointer(cthis)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:77
+// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -83,13 +83,13 @@ func (this *QAudioSystemPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMe
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:81
+// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAudioSystemPlugin(QObject *)
 
 /*
-Construct a new audio plugin with parent. This is invoked automatically by the Q_PLUGIN_METADATA() macro.
+Constructs a new audio plugin with parent. This is invoked automatically by the Q_PLUGIN_METADATA() macro.
 */
 func (*QAudioSystemPlugin) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioSystemPlugin {
 	return NewQAudioSystemPlugin(parent)
@@ -106,13 +106,13 @@ func NewQAudioSystemPlugin(parent qtcore.QObject_ITF /*777 QObject **/) *QAudioS
 	return gothis
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:81
+// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAudioSystemPlugin(QObject *)
 
 /*
-Construct a new audio plugin with parent. This is invoked automatically by the Q_PLUGIN_METADATA() macro.
+Constructs a new audio plugin with parent. This is invoked automatically by the Q_PLUGIN_METADATA() macro.
 */
 func (*QAudioSystemPlugin) NewForInheritp() *QAudioSystemPlugin {
 	return NewQAudioSystemPluginp()
@@ -127,7 +127,7 @@ func NewQAudioSystemPluginp() *QAudioSystemPlugin {
 	return gothis
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:82
+// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAudioSystemPlugin()
@@ -142,7 +142,7 @@ func DeleteQAudioSystemPlugin(this *QAudioSystemPlugin) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:85
+// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:79
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAbstractAudioInput * createInput(const QByteArray &)
@@ -160,7 +160,7 @@ func (this *QAudioSystemPlugin) CreateInput(device qtcore.QByteArray_ITF) *QAbst
 	return /*==*/ NewQAbstractAudioInputFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:86
+// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:80
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAbstractAudioOutput * createOutput(const QByteArray &)
@@ -178,7 +178,7 @@ func (this *QAudioSystemPlugin) CreateOutput(device qtcore.QByteArray_ITF) *QAbs
 	return /*==*/ NewQAbstractAudioOutputFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:87
+// /usr/include/qt/QtMultimedia/qaudiosystemplugin.h:81
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAbstractAudioDeviceInfo * createDeviceInfo(const QByteArray &, QAudio::Mode)

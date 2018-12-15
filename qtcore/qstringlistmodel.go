@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qstringlistmodel.h
@@ -62,7 +64,7 @@ func (*QStringListModel) NewFromPointer(cthis unsafe.Pointer) *QStringListModel 
 	return NewQStringListModelFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:53
+// /usr/include/qt/QtCore/qstringlistmodel.h:52
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -76,7 +78,7 @@ func (this *QStringListModel) MetaObject() *QMetaObject /*777 const QMetaObject 
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:55
+// /usr/include/qt/QtCore/qstringlistmodel.h:54
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStringListModel(QObject *)
@@ -99,7 +101,7 @@ func NewQStringListModel(parent QObject_ITF /*777 QObject **/) *QStringListModel
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:55
+// /usr/include/qt/QtCore/qstringlistmodel.h:54
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStringListModel(QObject *)
@@ -120,7 +122,7 @@ func NewQStringListModelp() *QStringListModel {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:56
+// /usr/include/qt/QtCore/qstringlistmodel.h:55
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStringListModel(const QStringList &, QObject *)
@@ -147,7 +149,7 @@ func NewQStringListModel1(strings QStringList_ITF, parent QObject_ITF /*777 QObj
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:56
+// /usr/include/qt/QtCore/qstringlistmodel.h:55
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStringListModel(const QStringList &, QObject *)
@@ -172,7 +174,7 @@ func NewQStringListModel1p(strings QStringList_ITF) *QStringListModel {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:58
+// /usr/include/qt/QtCore/qstringlistmodel.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
@@ -196,7 +198,7 @@ func (this *QStringListModel) RowCount(parent QModelIndex_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:58
+// /usr/include/qt/QtCore/qstringlistmodel.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
@@ -218,13 +220,13 @@ func (this *QStringListModel) RowCountp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:59
+// /usr/include/qt/QtCore/qstringlistmodel.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &) const
 
 /*
-Reimplemented from QAbstractItemModel::sibling().
+Reimplemented from QAbstractListModel::sibling().
 */
 func (this *QStringListModel) Sibling(row int, column int, idx QModelIndex_ITF) *QModelIndex /*123*/ {
 	var convArg2 unsafe.Pointer
@@ -238,7 +240,7 @@ func (this *QStringListModel) Sibling(row int, column int, idx QModelIndex_ITF) 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:61
+// /usr/include/qt/QtCore/qstringlistmodel.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
@@ -264,7 +266,7 @@ func (this *QStringListModel) Data(index QModelIndex_ITF, role int) *QVariant /*
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:61
+// /usr/include/qt/QtCore/qstringlistmodel.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
@@ -292,7 +294,7 @@ func (this *QStringListModel) Datap(index QModelIndex_ITF) *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:62
+// /usr/include/qt/QtCore/qstringlistmodel.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
@@ -320,7 +322,7 @@ func (this *QStringListModel) SetData(index QModelIndex_ITF, value QVariant_ITF,
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:62
+// /usr/include/qt/QtCore/qstringlistmodel.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
@@ -350,13 +352,13 @@ func (this *QStringListModel) SetDatap(index QModelIndex_ITF, value QVariant_ITF
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:64
+// /usr/include/qt/QtCore/qstringlistmodel.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &) const
 
 /*
-Reimplemented from QAbstractItemModel::flags().
+Reimplemented from QAbstractListModel::flags().
 
 Returns the flags for the item with the given index.
 
@@ -374,7 +376,7 @@ func (this *QStringListModel) Flags(index QModelIndex_ITF) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:66
+// /usr/include/qt/QtCore/qstringlistmodel.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
@@ -398,7 +400,7 @@ func (this *QStringListModel) InsertRows(row int, count int, parent QModelIndex_
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:66
+// /usr/include/qt/QtCore/qstringlistmodel.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool insertRows(int, int, const QModelIndex &)
@@ -420,7 +422,7 @@ func (this *QStringListModel) InsertRowsp(row int, count int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:67
+// /usr/include/qt/QtCore/qstringlistmodel.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
@@ -444,7 +446,7 @@ func (this *QStringListModel) RemoveRows(row int, count int, parent QModelIndex_
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:67
+// /usr/include/qt/QtCore/qstringlistmodel.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool removeRows(int, int, const QModelIndex &)
@@ -466,7 +468,7 @@ func (this *QStringListModel) RemoveRowsp(row int, count int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:69
+// /usr/include/qt/QtCore/qstringlistmodel.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
@@ -479,7 +481,7 @@ func (this *QStringListModel) Sort(column int, order int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:69
+// /usr/include/qt/QtCore/qstringlistmodel.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
@@ -494,7 +496,7 @@ func (this *QStringListModel) Sortp(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:71
+// /usr/include/qt/QtCore/qstringlistmodel.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList stringList() const
@@ -512,7 +514,7 @@ func (this *QStringListModel) StringList() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:72
+// /usr/include/qt/QtCore/qstringlistmodel.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStringList(const QStringList &)
@@ -531,7 +533,7 @@ func (this *QStringListModel) SetStringList(strings QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstringlistmodel.h:74
+// /usr/include/qt/QtCore/qstringlistmodel.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const

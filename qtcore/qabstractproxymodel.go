@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h
@@ -67,7 +69,7 @@ func (*QAbstractProxyModel) NewFromPointer(cthis unsafe.Pointer) *QAbstractProxy
 	return NewQAbstractProxyModelFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:55
+// /usr/include/qt/QtCore/qabstractproxymodel.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -81,7 +83,7 @@ func (this *QAbstractProxyModel) MetaObject() *QMetaObject /*777 const QMetaObje
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:59
+// /usr/include/qt/QtCore/qabstractproxymodel.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractProxyModel(QObject *)
@@ -104,7 +106,7 @@ func NewQAbstractProxyModel(parent QObject_ITF /*777 QObject **/) *QAbstractProx
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:59
+// /usr/include/qt/QtCore/qabstractproxymodel.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractProxyModel(QObject *)
@@ -125,7 +127,7 @@ func NewQAbstractProxyModelp() *QAbstractProxyModel {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:60
+// /usr/include/qt/QtCore/qabstractproxymodel.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractProxyModel()
@@ -140,7 +142,7 @@ func DeleteQAbstractProxyModel(this *QAbstractProxyModel) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:62
+// /usr/include/qt/QtCore/qabstractproxymodel.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSourceModel(QAbstractItemModel *)
@@ -163,7 +165,7 @@ func (this *QAbstractProxyModel) SetSourceModel(sourceModel QAbstractItemModel_I
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:63
+// /usr/include/qt/QtCore/qabstractproxymodel.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemModel * sourceModel() const
@@ -181,13 +183,15 @@ func (this *QAbstractProxyModel) SourceModel() *QAbstractItemModel /*777 QAbstra
 	return /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:65
+// /usr/include/qt/QtCore/qabstractproxymodel.h:64
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [24] QModelIndex mapToSource(const QModelIndex &) const
 
 /*
 Reimplement this function to return the model index in the source model that corresponds to the proxyIndex in the proxy model.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also mapFromSource().
 */
@@ -203,13 +207,15 @@ func (this *QAbstractProxyModel) MapToSource(proxyIndex QModelIndex_ITF) *QModel
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:66
+// /usr/include/qt/QtCore/qabstractproxymodel.h:65
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [24] QModelIndex mapFromSource(const QModelIndex &) const
 
 /*
 Reimplement this function to return the model index in the proxy model that corresponds to the sourceIndex from the source model.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also mapToSource().
 */
@@ -225,7 +231,7 @@ func (this *QAbstractProxyModel) MapFromSource(sourceIndex QModelIndex_ITF) *QMo
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:68
+// /usr/include/qt/QtCore/qabstractproxymodel.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QItemSelection mapSelectionToSource(const QItemSelection &) const
@@ -234,6 +240,8 @@ func (this *QAbstractProxyModel) MapFromSource(sourceIndex QModelIndex_ITF) *QMo
 Returns a source selection mapped from the specified proxySelection.
 
 Reimplement this method to map proxy selections to source selections.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QAbstractProxyModel) MapSelectionToSource(selection QItemSelection_ITF) *QItemSelection /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -247,7 +255,7 @@ func (this *QAbstractProxyModel) MapSelectionToSource(selection QItemSelection_I
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:69
+// /usr/include/qt/QtCore/qabstractproxymodel.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QItemSelection mapSelectionFromSource(const QItemSelection &) const
@@ -256,6 +264,8 @@ func (this *QAbstractProxyModel) MapSelectionToSource(selection QItemSelection_I
 Returns a proxy selection mapped from the specified sourceSelection.
 
 Reimplement this method to map source selections to proxy selections.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QAbstractProxyModel) MapSelectionFromSource(selection QItemSelection_ITF) *QItemSelection /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -269,7 +279,7 @@ func (this *QAbstractProxyModel) MapSelectionFromSource(selection QItemSelection
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:71
+// /usr/include/qt/QtCore/qabstractproxymodel.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool submit()
@@ -283,7 +293,7 @@ func (this *QAbstractProxyModel) Submit() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:72
+// /usr/include/qt/QtCore/qabstractproxymodel.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void revert()
@@ -296,7 +306,7 @@ func (this *QAbstractProxyModel) Revert() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:74
+// /usr/include/qt/QtCore/qabstractproxymodel.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
@@ -318,7 +328,7 @@ func (this *QAbstractProxyModel) Data(proxyIndex QModelIndex_ITF, role int) *QVa
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:74
+// /usr/include/qt/QtCore/qabstractproxymodel.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
@@ -342,7 +352,7 @@ func (this *QAbstractProxyModel) Datap(proxyIndex QModelIndex_ITF) *QVariant /*1
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:75
+// /usr/include/qt/QtCore/qabstractproxymodel.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
@@ -360,7 +370,7 @@ func (this *QAbstractProxyModel) HeaderData(section int, orientation int, role i
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:75
+// /usr/include/qt/QtCore/qabstractproxymodel.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
@@ -380,7 +390,7 @@ func (this *QAbstractProxyModel) HeaderDatap(section int, orientation int) *QVar
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:77
+// /usr/include/qt/QtCore/qabstractproxymodel.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &) const
@@ -398,7 +408,7 @@ func (this *QAbstractProxyModel) Flags(index QModelIndex_ITF) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:79
+// /usr/include/qt/QtCore/qabstractproxymodel.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
@@ -422,7 +432,7 @@ func (this *QAbstractProxyModel) SetData(index QModelIndex_ITF, value QVariant_I
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:79
+// /usr/include/qt/QtCore/qabstractproxymodel.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
@@ -448,7 +458,7 @@ func (this *QAbstractProxyModel) SetDatap(index QModelIndex_ITF, value QVariant_
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:81
+// /usr/include/qt/QtCore/qabstractproxymodel.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
@@ -468,7 +478,7 @@ func (this *QAbstractProxyModel) SetHeaderData(section int, orientation int, val
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:81
+// /usr/include/qt/QtCore/qabstractproxymodel.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
@@ -490,7 +500,7 @@ func (this *QAbstractProxyModel) SetHeaderDatap(section int, orientation int, va
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:83
+// /usr/include/qt/QtCore/qabstractproxymodel.h:82
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex buddy(const QModelIndex &) const
@@ -510,7 +520,7 @@ func (this *QAbstractProxyModel) Buddy(index QModelIndex_ITF) *QModelIndex /*123
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:84
+// /usr/include/qt/QtCore/qabstractproxymodel.h:83
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canFetchMore(const QModelIndex &) const
@@ -528,7 +538,7 @@ func (this *QAbstractProxyModel) CanFetchMore(parent QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:85
+// /usr/include/qt/QtCore/qabstractproxymodel.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fetchMore(const QModelIndex &)
@@ -545,7 +555,7 @@ func (this *QAbstractProxyModel) FetchMore(parent QModelIndex_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:86
+// /usr/include/qt/QtCore/qabstractproxymodel.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
@@ -558,7 +568,7 @@ func (this *QAbstractProxyModel) Sort(column int, order int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:86
+// /usr/include/qt/QtCore/qabstractproxymodel.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
@@ -573,7 +583,7 @@ func (this *QAbstractProxyModel) Sortp(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:87
+// /usr/include/qt/QtCore/qabstractproxymodel.h:86
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize span(const QModelIndex &) const
@@ -593,7 +603,7 @@ func (this *QAbstractProxyModel) Span(index QModelIndex_ITF) *QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:88
+// /usr/include/qt/QtCore/qabstractproxymodel.h:87
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
@@ -611,7 +621,7 @@ func (this *QAbstractProxyModel) HasChildren(parent QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:88
+// /usr/include/qt/QtCore/qabstractproxymodel.h:87
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
@@ -627,7 +637,7 @@ func (this *QAbstractProxyModel) HasChildrenp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:89
+// /usr/include/qt/QtCore/qabstractproxymodel.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &) const
@@ -647,7 +657,7 @@ func (this *QAbstractProxyModel) Sibling(row int, column int, idx QModelIndex_IT
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:92
+// /usr/include/qt/QtCore/qabstractproxymodel.h:91
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canDropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &) const
@@ -671,7 +681,7 @@ func (this *QAbstractProxyModel) CanDropMimeData(data QMimeData_ITF /*777 const 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:94
+// /usr/include/qt/QtCore/qabstractproxymodel.h:93
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
@@ -695,7 +705,7 @@ func (this *QAbstractProxyModel) DropMimeData(data QMimeData_ITF /*777 const QMi
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:96
+// /usr/include/qt/QtCore/qabstractproxymodel.h:95
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
@@ -711,7 +721,7 @@ func (this *QAbstractProxyModel) MimeTypes() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:97
+// /usr/include/qt/QtCore/qabstractproxymodel.h:96
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDragActions() const
@@ -725,7 +735,7 @@ func (this *QAbstractProxyModel) SupportedDragActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:98
+// /usr/include/qt/QtCore/qabstractproxymodel.h:97
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
@@ -739,7 +749,7 @@ func (this *QAbstractProxyModel) SupportedDropActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qabstractproxymodel.h:104
+// /usr/include/qt/QtCore/qabstractproxymodel.h:103
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void resetInternalData()

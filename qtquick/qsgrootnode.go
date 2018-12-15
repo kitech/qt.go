@@ -66,7 +66,7 @@ func (*QSGRootNode) NewFromPointer(cthis unsafe.Pointer) *QSGRootNode {
 	return NewQSGRootNodeFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:302
+// /usr/include/qt/QtQuick/qsgnode.h:297
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGRootNode()
@@ -85,7 +85,7 @@ func NewQSGRootNode() *QSGRootNode {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:303
+// /usr/include/qt/QtQuick/qsgnode.h:298
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGRootNode()

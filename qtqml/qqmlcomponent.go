@@ -734,7 +734,23 @@ func (this *QQmlComponent) CreationContext() *QQmlContext /*777 QQmlContext **/ 
 	return /*==*/ NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlcomponent.h:113
+// /usr/include/qt/QtQml/qqmlcomponent.h:112
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QQmlEngine * engine() const
+
+/*
+Returns the QQmlEngine of this component.
+
+This function was introduced in  Qt 5.12.
+*/
+func (this *QQmlComponent) Engine() *QQmlEngine /*777 QQmlEngine **/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlComponent6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtQml/qqmlcomponent.h:114
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QQmlComponentAttached * qmlAttachedProperties(QObject *)
@@ -757,7 +773,7 @@ func QQmlComponent_QmlAttachedProperties(arg0 qtcore.QObject_ITF /*777 QObject *
 	return rv
 }
 
-// /usr/include/qt/QtQml/qqmlcomponent.h:116
+// /usr/include/qt/QtQml/qqmlcomponent.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void loadUrl(const QUrl &)
@@ -767,7 +783,7 @@ Load the QQmlComponent from the provided url.
 
 Ensure that the URL provided is full and correct, in particular, use QUrl::fromLocalFile() when loading a file from the local filesystem.
 
-Relative paths will be resolved against the engine's baseUrl(), which is the current working directory unless specified.
+Relative paths will be resolved against QQmlEngine::baseUrl(), which is the current working directory unless specified.
 */
 func (this *QQmlComponent) LoadUrl(url qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
@@ -778,7 +794,7 @@ func (this *QQmlComponent) LoadUrl(url qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlcomponent.h:117
+// /usr/include/qt/QtQml/qqmlcomponent.h:118
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void loadUrl(const QUrl &, QQmlComponent::CompilationMode)
@@ -788,7 +804,7 @@ Load the QQmlComponent from the provided url.
 
 Ensure that the URL provided is full and correct, in particular, use QUrl::fromLocalFile() when loading a file from the local filesystem.
 
-Relative paths will be resolved against the engine's baseUrl(), which is the current working directory unless specified.
+Relative paths will be resolved against QQmlEngine::baseUrl(), which is the current working directory unless specified.
 */
 func (this *QQmlComponent) LoadUrl1(url qtcore.QUrl_ITF, mode int) {
 	var convArg0 unsafe.Pointer
@@ -799,7 +815,7 @@ func (this *QQmlComponent) LoadUrl1(url qtcore.QUrl_ITF, mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlcomponent.h:118
+// /usr/include/qt/QtQml/qqmlcomponent.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setData(const QByteArray &, const QUrl &)
@@ -820,7 +836,7 @@ func (this *QQmlComponent) SetData(arg0 qtcore.QByteArray_ITF, baseUrl qtcore.QU
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlcomponent.h:121
+// /usr/include/qt/QtQml/qqmlcomponent.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void statusChanged(QQmlComponent::Status)
@@ -835,7 +851,7 @@ func (this *QQmlComponent) StatusChanged(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlcomponent.h:122
+// /usr/include/qt/QtQml/qqmlcomponent.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void progressChanged(qreal)

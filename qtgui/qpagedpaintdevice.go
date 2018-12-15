@@ -74,8 +74,8 @@ func (*QPagedPaintDevice) NewFromPointer(cthis unsafe.Pointer) *QPagedPaintDevic
 // [-2] void QPagedPaintDevice()
 
 /*
-Constructs a new paged paint device.
-*/
+
+ */
 func (*QPagedPaintDevice) NewForInherit() *QPagedPaintDevice {
 	return NewQPagedPaintDevice()
 }
@@ -1069,9 +1069,6 @@ func QPagedPaintDevice_PageSizeItemName(val int) string {
 The PdfVersion enum describes the version of the PDF file that is produced by QPrinter or QPdfWriter.
 
 
-
-This enum was introduced or modified in  Qt 5.10.
-
 */
 type QPagedPaintDevice__PdfVersion = int
 
@@ -1081,12 +1078,17 @@ const QPagedPaintDevice__PdfVersion_1_4 QPagedPaintDevice__PdfVersion = 0
 //
 const QPagedPaintDevice__PdfVersion_A1b QPagedPaintDevice__PdfVersion = 1
 
+//
+const QPagedPaintDevice__PdfVersion_1_6 QPagedPaintDevice__PdfVersion = 2
+
 func (this *QPagedPaintDevice) PdfVersionItemName(val int) string {
 	switch val {
 	case QPagedPaintDevice__PdfVersion_1_4: // 0
 		return "PdfVersion_1_4"
 	case QPagedPaintDevice__PdfVersion_A1b: // 1
 		return "PdfVersion_A1b"
+	case QPagedPaintDevice__PdfVersion_1_6: // 2
+		return "PdfVersion_1_6"
 	default:
 		return fmt.Sprintf("%d", val)
 	}

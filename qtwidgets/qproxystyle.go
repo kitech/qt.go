@@ -214,7 +214,7 @@ func (this *QProxyStyle) SetBaseStyle(style QStyle_ITF /*777 QStyle **/) {
 // [-2] void drawPrimitive(QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::drawPrimitive().
+Reimplemented from QCommonStyle::drawPrimitive().
 */
 func (this *QProxyStyle) DrawPrimitive(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/, widget QWidget_ITF /*777 const QWidget **/) {
 	var convArg1 unsafe.Pointer
@@ -239,7 +239,7 @@ func (this *QProxyStyle) DrawPrimitive(element int, option QStyleOption_ITF /*77
 // [-2] void drawPrimitive(QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::drawPrimitive().
+Reimplemented from QCommonStyle::drawPrimitive().
 */
 func (this *QProxyStyle) DrawPrimitivep(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
@@ -262,7 +262,7 @@ func (this *QProxyStyle) DrawPrimitivep(element int, option QStyleOption_ITF /*7
 // [-2] void drawControl(QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::drawControl().
+Reimplemented from QCommonStyle::drawControl().
 */
 func (this *QProxyStyle) DrawControl(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/, widget QWidget_ITF /*777 const QWidget **/) {
 	var convArg1 unsafe.Pointer
@@ -287,7 +287,7 @@ func (this *QProxyStyle) DrawControl(element int, option QStyleOption_ITF /*777 
 // [-2] void drawControl(QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::drawControl().
+Reimplemented from QCommonStyle::drawControl().
 */
 func (this *QProxyStyle) DrawControlp(element int, option QStyleOption_ITF /*777 const QStyleOption **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
@@ -310,7 +310,7 @@ func (this *QProxyStyle) DrawControlp(element int, option QStyleOption_ITF /*777
 // [-2] void drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::drawComplexControl().
+Reimplemented from QCommonStyle::drawComplexControl().
 */
 func (this *QProxyStyle) DrawComplexControl(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, painter qtgui.QPainter_ITF /*777 QPainter **/, widget QWidget_ITF /*777 const QWidget **/) {
 	var convArg1 unsafe.Pointer
@@ -335,7 +335,7 @@ func (this *QProxyStyle) DrawComplexControl(control int, option QStyleOptionComp
 // [-2] void drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::drawComplexControl().
+Reimplemented from QCommonStyle::drawComplexControl().
 */
 func (this *QProxyStyle) DrawComplexControlp(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, painter qtgui.QPainter_ITF /*777 QPainter **/) {
 	var convArg1 unsafe.Pointer
@@ -439,7 +439,7 @@ func (this *QProxyStyle) DrawItemPixmap(painter qtgui.QPainter_ITF /*777 QPainte
 // [8] QSize sizeFromContents(QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *) const
 
 /*
-Reimplemented from QStyle::sizeFromContents().
+Reimplemented from QCommonStyle::sizeFromContents().
 */
 func (this *QProxyStyle) SizeFromContents(type_ int, option QStyleOption_ITF /*777 const QStyleOption **/, size qtcore.QSize_ITF, widget QWidget_ITF /*777 const QWidget **/) *qtcore.QSize /*123*/ {
 	var convArg1 unsafe.Pointer
@@ -467,7 +467,7 @@ func (this *QProxyStyle) SizeFromContents(type_ int, option QStyleOption_ITF /*7
 // [16] QRect subElementRect(QStyle::SubElement, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::subElementRect().
+Reimplemented from QCommonStyle::subElementRect().
 */
 func (this *QProxyStyle) SubElementRect(element int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
@@ -491,7 +491,7 @@ func (this *QProxyStyle) SubElementRect(element int, option QStyleOption_ITF /*7
 // [16] QRect subControlRect(QStyle::ComplexControl, const QStyleOptionComplex *, QStyle::SubControl, const QWidget *) const
 
 /*
-Reimplemented from QStyle::subControlRect().
+Reimplemented from QCommonStyle::subControlRect().
 */
 func (this *QProxyStyle) SubControlRect(cc int, opt QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, sc int, widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	var convArg1 unsafe.Pointer
@@ -565,7 +565,7 @@ func (this *QProxyStyle) ItemPixmapRect(r qtcore.QRect_ITF, flags int, pixmap qt
 // [4] QStyle::SubControl hitTestComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
 
 /*
-Reimplemented from QStyle::hitTestComplexControl().
+Reimplemented from QCommonStyle::hitTestComplexControl().
 */
 func (this *QProxyStyle) HitTestComplexControl(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pos qtcore.QPoint_ITF, widget QWidget_ITF /*777 const QWidget **/) int {
 	var convArg1 unsafe.Pointer
@@ -591,7 +591,7 @@ func (this *QProxyStyle) HitTestComplexControl(control int, option QStyleOptionC
 // [4] QStyle::SubControl hitTestComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *) const
 
 /*
-Reimplemented from QStyle::hitTestComplexControl().
+Reimplemented from QCommonStyle::hitTestComplexControl().
 */
 func (this *QProxyStyle) HitTestComplexControlp(control int, option QStyleOptionComplex_ITF /*777 const QStyleOptionComplex **/, pos qtcore.QPoint_ITF) int {
 	var convArg1 unsafe.Pointer
@@ -615,7 +615,7 @@ func (this *QProxyStyle) HitTestComplexControlp(control int, option QStyleOption
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
-Reimplemented from QStyle::styleHint().
+Reimplemented from QCommonStyle::styleHint().
 */
 func (this *QProxyStyle) StyleHint(hint int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/, returnData QStyleHintReturn_ITF /*777 QStyleHintReturn **/) int {
 	var convArg1 unsafe.Pointer
@@ -641,7 +641,7 @@ func (this *QProxyStyle) StyleHint(hint int, option QStyleOption_ITF /*777 const
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
-Reimplemented from QStyle::styleHint().
+Reimplemented from QCommonStyle::styleHint().
 */
 func (this *QProxyStyle) StyleHintp(hint int) int {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
@@ -661,7 +661,7 @@ func (this *QProxyStyle) StyleHintp(hint int) int {
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
-Reimplemented from QStyle::styleHint().
+Reimplemented from QCommonStyle::styleHint().
 */
 func (this *QProxyStyle) StyleHintp1(hint int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg1 unsafe.Pointer
@@ -683,7 +683,7 @@ func (this *QProxyStyle) StyleHintp1(hint int, option QStyleOption_ITF /*777 con
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
 
 /*
-Reimplemented from QStyle::styleHint().
+Reimplemented from QCommonStyle::styleHint().
 */
 func (this *QProxyStyle) StyleHintp2(hint int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) int {
 	var convArg1 unsafe.Pointer
@@ -707,7 +707,7 @@ func (this *QProxyStyle) StyleHintp2(hint int, option QStyleOption_ITF /*777 con
 // [4] int pixelMetric(QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::pixelMetric().
+Reimplemented from QCommonStyle::pixelMetric().
 */
 func (this *QProxyStyle) PixelMetric(metric int, option QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) int {
 	var convArg1 unsafe.Pointer
@@ -729,7 +729,7 @@ func (this *QProxyStyle) PixelMetric(metric int, option QStyleOption_ITF /*777 c
 // [4] int pixelMetric(QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::pixelMetric().
+Reimplemented from QCommonStyle::pixelMetric().
 */
 func (this *QProxyStyle) PixelMetricp(metric int) int {
 	// arg: 1, const QStyleOption *=Pointer, QStyleOption=Record, , Invalid
@@ -747,7 +747,7 @@ func (this *QProxyStyle) PixelMetricp(metric int) int {
 // [4] int pixelMetric(QStyle::PixelMetric, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::pixelMetric().
+Reimplemented from QCommonStyle::pixelMetric().
 */
 func (this *QProxyStyle) PixelMetricp1(metric int, option QStyleOption_ITF /*777 const QStyleOption **/) int {
 	var convArg1 unsafe.Pointer
@@ -767,7 +767,7 @@ func (this *QProxyStyle) PixelMetricp1(metric int, option QStyleOption_ITF /*777
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::layoutSpacing().
+Reimplemented from QCommonStyle::layoutSpacing().
 
 This slot is called by layoutSpacing() to determine the spacing that should be used between control1 and control2 in a layout. orientation specifies whether the controls are laid out side by side or stacked vertically. The option parameter can be used to pass extra information about the parent widget. The widget parameter is optional and can also be used if option is 0.
 
@@ -795,7 +795,7 @@ func (this *QProxyStyle) LayoutSpacing(control1 int, control2 int, orientation i
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::layoutSpacing().
+Reimplemented from QCommonStyle::layoutSpacing().
 
 This slot is called by layoutSpacing() to determine the spacing that should be used between control1 and control2 in a layout. orientation specifies whether the controls are laid out side by side or stacked vertically. The option parameter can be used to pass extra information about the parent widget. The widget parameter is optional and can also be used if option is 0.
 
@@ -819,7 +819,7 @@ func (this *QProxyStyle) LayoutSpacingp(control1 int, control2 int, orientation 
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::layoutSpacing().
+Reimplemented from QCommonStyle::layoutSpacing().
 
 This slot is called by layoutSpacing() to determine the spacing that should be used between control1 and control2 in a layout. orientation specifies whether the controls are laid out side by side or stacked vertically. The option parameter can be used to pass extra information about the parent widget. The widget parameter is optional and can also be used if option is 0.
 
@@ -845,8 +845,6 @@ func (this *QProxyStyle) LayoutSpacingp1(control1 int, control2 int, orientation
 // [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::standardIcon().
-
 Returns an icon for the given standardIcon.
 
 Reimplement this slot to provide your own icons in a QStyle subclass. The option argument can be used to pass extra information required to find the appropriate icon. The widget argument is optional and can also be used to help find the icon.
@@ -873,8 +871,6 @@ func (this *QProxyStyle) StandardIcon(standardIcon int, option QStyleOption_ITF 
 // [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::standardIcon().
-
 Returns an icon for the given standardIcon.
 
 Reimplement this slot to provide your own icons in a QStyle subclass. The option argument can be used to pass extra information required to find the appropriate icon. The widget argument is optional and can also be used to help find the icon.
@@ -897,8 +893,6 @@ func (this *QProxyStyle) StandardIconp(standardIcon int) *qtgui.QIcon /*123*/ {
 // [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::standardIcon().
-
 Returns an icon for the given standardIcon.
 
 Reimplement this slot to provide your own icons in a QStyle subclass. The option argument can be used to pass extra information required to find the appropriate icon. The widget argument is optional and can also be used to help find the icon.
@@ -923,7 +917,7 @@ func (this *QProxyStyle) StandardIconp1(standardIcon int, option QStyleOption_IT
 // [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::standardPixmap().
+Reimplemented from QCommonStyle::standardPixmap().
 */
 func (this *QProxyStyle) StandardPixmap(standardPixmap int, opt QStyleOption_ITF /*777 const QStyleOption **/, widget QWidget_ITF /*777 const QWidget **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
@@ -947,7 +941,7 @@ func (this *QProxyStyle) StandardPixmap(standardPixmap int, opt QStyleOption_ITF
 // [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
 
 /*
-Reimplemented from QStyle::standardPixmap().
+Reimplemented from QCommonStyle::standardPixmap().
 */
 func (this *QProxyStyle) StandardPixmapp(standardPixmap int, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
@@ -969,7 +963,7 @@ func (this *QProxyStyle) StandardPixmapp(standardPixmap int, opt QStyleOption_IT
 // [32] QPixmap generatedIconPixmap(QIcon::Mode, const QPixmap &, const QStyleOption *) const
 
 /*
-Reimplemented from QStyle::generatedIconPixmap().
+Reimplemented from QCommonStyle::generatedIconPixmap().
 */
 func (this *QProxyStyle) GeneratedIconPixmap(iconMode int, pixmap qtgui.QPixmap_ITF, opt QStyleOption_ITF /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
 	var convArg1 unsafe.Pointer
@@ -1009,7 +1003,7 @@ func (this *QProxyStyle) StandardPalette() *qtgui.QPalette /*123*/ {
 // [-2] void polish(QWidget *)
 
 /*
-Reimplemented from QStyle::polish().
+Reimplemented from QCommonStyle::polish().
 */
 func (this *QProxyStyle) Polish(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
@@ -1026,7 +1020,7 @@ func (this *QProxyStyle) Polish(widget QWidget_ITF /*777 QWidget **/) {
 // [-2] void polish(QPalette &)
 
 /*
-Reimplemented from QStyle::polish().
+Reimplemented from QCommonStyle::polish().
 */
 func (this *QProxyStyle) Polish1(pal qtgui.QPalette_ITF) {
 	var convArg0 unsafe.Pointer
@@ -1043,7 +1037,7 @@ func (this *QProxyStyle) Polish1(pal qtgui.QPalette_ITF) {
 // [-2] void polish(QApplication *)
 
 /*
-Reimplemented from QStyle::polish().
+Reimplemented from QCommonStyle::polish().
 */
 func (this *QProxyStyle) Polish2(app QApplication_ITF /*777 QApplication **/) {
 	var convArg0 unsafe.Pointer
@@ -1060,7 +1054,7 @@ func (this *QProxyStyle) Polish2(app QApplication_ITF /*777 QApplication **/) {
 // [-2] void unpolish(QWidget *)
 
 /*
-Reimplemented from QStyle::unpolish().
+Reimplemented from QCommonStyle::unpolish().
 */
 func (this *QProxyStyle) Unpolish(widget QWidget_ITF /*777 QWidget **/) {
 	var convArg0 unsafe.Pointer
@@ -1077,7 +1071,7 @@ func (this *QProxyStyle) Unpolish(widget QWidget_ITF /*777 QWidget **/) {
 // [-2] void unpolish(QApplication *)
 
 /*
-Reimplemented from QStyle::unpolish().
+Reimplemented from QCommonStyle::unpolish().
 */
 func (this *QProxyStyle) Unpolish1(app QApplication_ITF /*777 QApplication **/) {
 	var convArg0 unsafe.Pointer

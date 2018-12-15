@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtgui
 
 // /usr/include/qt/QtGui/qstandarditemmodel.h
@@ -75,7 +77,7 @@ func (*QStandardItem) NewFromPointer(cthis unsafe.Pointer) *QStandardItem {
 	return NewQStandardItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qstandarditemmodel.h:65
+// /usr/include/qt/QtGui/qstandarditemmodel.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItem()
@@ -94,7 +96,7 @@ func NewQStandardItem() *QStandardItem {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qstandarditemmodel.h:66
+// /usr/include/qt/QtGui/qstandarditemmodel.h:65
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItem(const QString &)
@@ -115,7 +117,7 @@ func NewQStandardItem1(text string) *QStandardItem {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qstandarditemmodel.h:67
+// /usr/include/qt/QtGui/qstandarditemmodel.h:66
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItem(const QIcon &, const QString &)
@@ -140,7 +142,7 @@ func NewQStandardItem2(icon QIcon_ITF, text string) *QStandardItem {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qstandarditemmodel.h:68
+// /usr/include/qt/QtGui/qstandarditemmodel.h:67
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItem(int, int)
@@ -159,7 +161,7 @@ func NewQStandardItem3(rows int, columns int) *QStandardItem {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qstandarditemmodel.h:68
+// /usr/include/qt/QtGui/qstandarditemmodel.h:67
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QStandardItem(int, int)
@@ -180,7 +182,7 @@ func NewQStandardItem3p(rows int) *QStandardItem {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qstandarditemmodel.h:69
+// /usr/include/qt/QtGui/qstandarditemmodel.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStandardItem()
@@ -195,7 +197,7 @@ func DeleteQStandardItem(this *QStandardItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qstandarditemmodel.h:71
+// /usr/include/qt/QtGui/qstandarditemmodel.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(int) const
@@ -213,7 +215,7 @@ func (this *QStandardItem) Data(role int) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qstandarditemmodel.h:71
+// /usr/include/qt/QtGui/qstandarditemmodel.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(int) const
@@ -233,7 +235,7 @@ func (this *QStandardItem) Datap() *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qstandarditemmodel.h:72
+// /usr/include/qt/QtGui/qstandarditemmodel.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setData(const QVariant &, int)
@@ -252,7 +254,7 @@ func (this *QStandardItem) SetData(value qtcore.QVariant_ITF, role int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstandarditemmodel.h:72
+// /usr/include/qt/QtGui/qstandarditemmodel.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setData(const QVariant &, int)
@@ -270,6 +272,19 @@ func (this *QStandardItem) SetDatap(value qtcore.QVariant_ITF) {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	role := 0 /*Qt::UserRole + 1*/
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem7setDataERK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qstandarditemmodel.h:72
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void clearData()
+
+/*
+
+ */
+func (this *QStandardItem) ClearData() {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QStandardItem9clearDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 

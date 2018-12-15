@@ -383,7 +383,9 @@ func (this *QRegion) IsNull() bool {
 // [8] QRegion::const_iterator begin() const
 
 /*
-Returns a const_iterator pointing to the beginning of the range of rectangles that make up this range, in the order in which rects() returns them.
+Returns a const_iterator pointing to the beginning of the range of non-overlapping rectangles that make up the region.
+
+The union of all the rectangles is equal to the original region.
 
 This function was introduced in  Qt 5.8.
 
@@ -419,7 +421,9 @@ func (this *QRegion) Cbegin() *qtcore.QRect /*777 const QRect **/ {
 // [8] QRegion::const_iterator end() const
 
 /*
-Returns a const_iterator pointing to one past the end of the range of rectangles that make up this range, in the order in which rects() returns them.
+Returns a const_iterator pointing to one past the end of non-overlapping rectangles that make up the region.
+
+The union of all the rectangles is equal to the original region.
 
 This function was introduced in  Qt 5.8.
 
@@ -783,7 +787,7 @@ func (this *QRegion) BoundingRect() *qtcore.QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:126
+// /usr/include/qt/QtGui/qregion.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRects(const QRect *, int)
@@ -809,13 +813,13 @@ func (this *QRegion) SetRects(rect qtcore.QRect_ITF /*777 const QRect **/, num i
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qregion.h:127
+// /usr/include/qt/QtGui/qregion.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int rectCount() const
 
 /*
-Returns the number of rectangles that will be returned in rects().
+Returns the number of rectangles that this region is composed of. Same as end() - begin().
 
 This function was introduced in  Qt 4.6.
 */
@@ -825,7 +829,7 @@ func (this *QRegion) RectCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qregion.h:138
+// /usr/include/qt/QtGui/qregion.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion operator|(const QRegion &) const
@@ -845,7 +849,7 @@ func (this *QRegion) Operator_or(r QRegion_ITF) *QRegion /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:139
+// /usr/include/qt/QtGui/qregion.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion operator+(const QRegion &) const
@@ -865,7 +869,7 @@ func (this *QRegion) Operator_add(r QRegion_ITF) *QRegion /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:140
+// /usr/include/qt/QtGui/qregion.h:143
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegion operator+(const QRect &) const
@@ -885,7 +889,7 @@ func (this *QRegion) Operator_add1(r qtcore.QRect_ITF) *QRegion /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:141
+// /usr/include/qt/QtGui/qregion.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion operator&(const QRegion &) const
@@ -905,7 +909,7 @@ func (this *QRegion) Operator_and(r QRegion_ITF) *QRegion /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:142
+// /usr/include/qt/QtGui/qregion.h:145
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegion operator&(const QRect &) const
@@ -925,7 +929,7 @@ func (this *QRegion) Operator_and1(r qtcore.QRect_ITF) *QRegion /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:143
+// /usr/include/qt/QtGui/qregion.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion operator-(const QRegion &) const
@@ -947,7 +951,7 @@ func (this *QRegion) Operator_minus(r QRegion_ITF) *QRegion /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:144
+// /usr/include/qt/QtGui/qregion.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion operator^(const QRegion &) const
@@ -967,7 +971,7 @@ func (this *QRegion) Operator_caret(r QRegion_ITF) *QRegion /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:146
+// /usr/include/qt/QtGui/qregion.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion & operator|=(const QRegion &)
@@ -987,7 +991,7 @@ func (this *QRegion) Operator_or_equal(r QRegion_ITF) *QRegion {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:147
+// /usr/include/qt/QtGui/qregion.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion & operator+=(const QRegion &)
@@ -1007,7 +1011,7 @@ func (this *QRegion) Operator_add_equal(r QRegion_ITF) *QRegion {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:148
+// /usr/include/qt/QtGui/qregion.h:151
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegion & operator+=(const QRect &)
@@ -1027,7 +1031,7 @@ func (this *QRegion) Operator_add_equal1(r qtcore.QRect_ITF) *QRegion {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:149
+// /usr/include/qt/QtGui/qregion.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion & operator&=(const QRegion &)
@@ -1047,7 +1051,7 @@ func (this *QRegion) Operator_and_equal(r QRegion_ITF) *QRegion {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:150
+// /usr/include/qt/QtGui/qregion.h:153
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegion & operator&=(const QRect &)
@@ -1067,7 +1071,7 @@ func (this *QRegion) Operator_and_equal1(r qtcore.QRect_ITF) *QRegion {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:151
+// /usr/include/qt/QtGui/qregion.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion & operator-=(const QRegion &)
@@ -1087,7 +1091,7 @@ func (this *QRegion) Operator_minus_equal(r QRegion_ITF) *QRegion {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:152
+// /usr/include/qt/QtGui/qregion.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion & operator^=(const QRegion &)
@@ -1107,7 +1111,7 @@ func (this *QRegion) Operator_caret_equal(r QRegion_ITF) *QRegion {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qregion.h:154
+// /usr/include/qt/QtGui/qregion.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QRegion &) const
@@ -1125,7 +1129,7 @@ func (this *QRegion) Operator_equal_equal(r QRegion_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qregion.h:155
+// /usr/include/qt/QtGui/qregion.h:158
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QRegion &) const

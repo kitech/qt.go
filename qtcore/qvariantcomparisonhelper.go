@@ -66,7 +66,7 @@ func (*QVariantComparisonHelper) NewFromPointer(cthis unsafe.Pointer) *QVariantC
 	return NewQVariantComparisonHelperFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:560
+// /usr/include/qt/QtCore/qvariant.h:583
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QVariantComparisonHelper(const QVariant &)

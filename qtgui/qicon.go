@@ -1278,9 +1278,11 @@ Note: By default, only X11 will support themed icons. In order to use themed ico
 
 Note: Qt will make use of GTK's icon-theme.cache if present to speed up the lookup. These caches can be generated using gtk-update-icon-cache: https://developer.gnome.org/gtk3/stable/gtk-update-icon-cache.html.
 
+Note: If an icon can't be found in the current theme, then it will be searched in fallbackSearchPaths() as an unthemed icon.
+
 This function was introduced in  Qt 4.6.
 
-See also themeName(), setThemeName(), and themeSearchPaths().
+See also themeName(), setThemeName(), themeSearchPaths(), and fallbackSearchPaths().
 */
 func (this *QIcon) FromTheme(name string) *QIcon /*123*/ {
 	var tmpArg0 = qtcore.NewQString5(name)
@@ -1323,9 +1325,11 @@ Note: By default, only X11 will support themed icons. In order to use themed ico
 
 Note: Qt will make use of GTK's icon-theme.cache if present to speed up the lookup. These caches can be generated using gtk-update-icon-cache: https://developer.gnome.org/gtk3/stable/gtk-update-icon-cache.html.
 
+Note: If an icon can't be found in the current theme, then it will be searched in fallbackSearchPaths() as an unthemed icon.
+
 This function was introduced in  Qt 4.6.
 
-See also themeName(), setThemeName(), and themeSearchPaths().
+See also themeName(), setThemeName(), themeSearchPaths(), and fallbackSearchPaths().
 */
 func (this *QIcon) FromTheme1(name string, fallback QIcon_ITF) *QIcon /*123*/ {
 	var tmpArg0 = qtcore.NewQString5(name)
@@ -1430,6 +1434,65 @@ func QIcon_SetThemeSearchPaths(searchpath qtcore.QStringList_ITF) {
 // /usr/include/qt/QtGui/qicon.h:121
 // index:0
 // Public static Visibility=Default Availability=Available
+// [8] QStringList fallbackSearchPaths()
+
+/*
+Returns the fallback search paths for icons.
+
+The default value will depend on the platform.
+
+This function was introduced in  Qt 5.11.
+
+See also setFallbackSearchPaths() and themeSearchPaths().
+*/
+func (this *QIcon) FallbackSearchPaths() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon19fallbackSearchPathsEv", qtrt.FFI_TYPE_POINTER)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QIcon_FallbackSearchPaths() *qtcore.QStringList /*123*/ {
+	var nilthis *QIcon
+	rv := nilthis.FallbackSearchPaths()
+	return rv
+}
+
+// /usr/include/qt/QtGui/qicon.h:122
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void setFallbackSearchPaths(const QStringList &)
+
+/*
+Sets the fallback search paths for icons to paths.
+
+Note: To add some path without replacing existing ones:
+
+
+      QIcon::setFallbackSearchPaths(QIcon::fallbackSearchPaths() << "my/search/path");
+
+
+
+This function was introduced in  Qt 5.11.
+
+See also fallbackSearchPaths() and setThemeSearchPaths().
+*/
+func (this *QIcon) SetFallbackSearchPaths(paths qtcore.QStringList_ITF) {
+	var convArg0 unsafe.Pointer
+	if paths != nil && paths.QStringList_PTR() != nil {
+		convArg0 = paths.QStringList_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon22setFallbackSearchPathsERK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+func QIcon_SetFallbackSearchPaths(paths qtcore.QStringList_ITF) {
+	var nilthis *QIcon
+	nilthis.SetFallbackSearchPaths(paths)
+}
+
+// /usr/include/qt/QtGui/qicon.h:124
+// index:0
+// Public static Visibility=Default Availability=Available
 // [8] QString themeName()
 
 /*
@@ -1455,7 +1518,7 @@ func QIcon_ThemeName() string {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qicon.h:122
+// /usr/include/qt/QtGui/qicon.h:125
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setThemeName(const QString &)
@@ -1463,7 +1526,7 @@ func QIcon_ThemeName() string {
 /*
 Sets the current icon theme to name.
 
-The name should correspond to a directory name in the themeSearchPath() containing an index.theme file describing it's contents.
+The name should correspond to a directory name in the themeSearchPath() containing an index.theme file describing its contents.
 
 This function was introduced in  Qt 4.6.
 
@@ -1478,6 +1541,59 @@ func (this *QIcon) SetThemeName(path string) {
 func QIcon_SetThemeName(path string) {
 	var nilthis *QIcon
 	nilthis.SetThemeName(path)
+}
+
+// /usr/include/qt/QtGui/qicon.h:127
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString fallbackThemeName()
+
+/*
+Returns the name of the fallback icon theme.
+
+On X11, if not set, the fallback icon theme depends on your desktop settings. On other platforms it is not set by default.
+
+This function was introduced in  Qt 5.12.
+
+See also setFallbackThemeName() and themeName().
+*/
+func (this *QIcon) FallbackThemeName() string {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon17fallbackThemeNameEv", qtrt.FFI_TYPE_POINTER)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+func QIcon_FallbackThemeName() string {
+	var nilthis *QIcon
+	rv := nilthis.FallbackThemeName()
+	return rv
+}
+
+// /usr/include/qt/QtGui/qicon.h:128
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void setFallbackThemeName(const QString &)
+
+/*
+Sets the fallback icon theme to name.
+
+The name should correspond to a directory name in the themeSearchPath() containing an index.theme file describing its contents.
+
+This function was introduced in  Qt 5.12.
+
+See also fallbackThemeName(), themeSearchPaths(), and themeName().
+*/
+func (this *QIcon) SetFallbackThemeName(name string) {
+	var tmpArg0 = qtcore.NewQString5(name)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon20setFallbackThemeNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+func QIcon_SetFallbackThemeName(name string) {
+	var nilthis *QIcon
+	nilthis.SetFallbackThemeName(name)
 }
 
 /*

@@ -46,15 +46,31 @@ func init() {
 //  header block end
 
 //  body block begin
+// /usr/include/qt/QtWebEngineCore/qwebengineurlscheme.h:113
+// index:104
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QWebEngineUrlScheme::Flags::enum_type, int)
+
+/*
+
+ */
+func Operator_or104(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN19QWebEngineUrlScheme4FlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
+	return rv2
+}
+
 // /usr/include/qt/QtWebEngineCore/qwebenginehttprequest.h:101
-// index:85
+// index:88
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QWebEngineHttpRequest &, QWebEngineHttpRequest &)
 
 /*
 
  */
-func Swap85(value1 QWebEngineHttpRequest_ITF, value2 QWebEngineHttpRequest_ITF) {
+func Swap88(value1 QWebEngineHttpRequest_ITF, value2 QWebEngineHttpRequest_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QWebEngineHttpRequest_PTR() != nil {
 		convArg0 = value1.QWebEngineHttpRequest_PTR().GetCthis()

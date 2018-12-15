@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtgui
 
 // /usr/include/qt/QtGui/qdrag.h
@@ -354,7 +356,7 @@ func (this *QDrag) Exec1(supportedActions int, defaultAction int) int {
 /*
 Sets the drag cursor for the action. This allows you to override the default native cursors. To revert to using the native cursor for action pass in a null QPixmap as cursor.
 
-The action can only be CopyAction, MoveAction or LinkAction. All other values of DropAction are ignored.
+Note: setting the drag cursor for IgnoreAction may not work on all platforms. X11 and macOS has been tested to work. Windows does not support it.
 
 See also dragCursor().
 */

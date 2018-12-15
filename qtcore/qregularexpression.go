@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qregularexpression.h
@@ -18,7 +20,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 74
+// extern C begin: 1
 */
 // import "C"
 import "unsafe"
@@ -348,14 +350,14 @@ Returns a list of captureCount() + 1 elements, containing the names of the named
 For instance, given the regular expression
 
 
-  (?<day>\d\d)-(?<month>\d\d)-(?<year>\d\d\d\d) (\w+) (?<name>\w+)
+      (?<day>\d\d)-(?<month>\d\d)-(?<year>\d\d\d\d) (\w+) (?<name>\w+)
 
 
 
 namedCaptureGroups() will return the following list:
 
 
-  ("", "day", "month", "year", "", "name")
+      ("", "day", "month", "year", "", "name")
 
 
 
@@ -797,13 +799,11 @@ func (this *QRegularExpression) GlobalMatch1p2(subjectRef QStringRef_ITF, offset
 // [-2] void optimize() const
 
 /*
-Forces an immediate optimization of the pattern, including JIT-compiling it (if the JIT compiler is enabled).
-
-Patterns are normally optimized only after a certain number of usages. If you can predict that this QRegularExpression object is going to be used for several matches, it may be convenient to optimize it in advance by calling this function.
+Compiles the pattern immediately, including JIT compiling it (if the JIT is enabled) for optimization.
 
 This function was introduced in  Qt 5.4.
 
-See also QRegularExpression::OptimizeOnFirstUsageOption.
+See also isValid() and Debugging Code that Uses QRegularExpression.
 */
 func (this *QRegularExpression) Optimize() {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression8optimizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -851,7 +851,93 @@ func QRegularExpression_Escape(str string) string {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qregularexpression.h:144
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString wildcardToRegularExpression(const QString &)
+
+/*
+Returns a regular expression representation of the given glob pattern. The transformation is targeting file path globbing, which means in particular that path separators receive special treatment. This implies that it is not just a basic translation from "*" to ".*".
+
+
+  QString wildcard = QRegularExpression::wildcardToRegularExpression("*.jpeg");
+  // Will match files with names like:
+  //    foo.jpeg
+  //    f_o_o.jpeg
+  //    föö.jpeg
+
+
+
+Warning: Unlike QRegExp, this implementation follows closely the definition of wildcard for glob patterns:
+
+
+ cAny character represents itself apart from those mentioned below. Thus c matches the character c.
+?Matches any single character. It is the same as . in full regexps.
+*Matches zero or more of any characters. It is the same as .* in full regexps.
+[abc]Matches one character given in the bracket.
+[a-c]Matches one character from the range given in the bracket.
+[!abc]Matches one character that is not given in the bracket. It is the same as [^abc] in full regexp.
+[!a-c]Matches one character that is not from the range given in the bracket. It is the same as [^a-c] in full regexp.
+
+
+Note: The backslash (\) character is not an escape char in this context. In order to match one of the special characters, place it in square brackets (for example, "[?]").
+
+More information about the implementation can be found in:
+
+
+The Wikipedia Glob article
+man 7 glob
+
+
+This function was introduced in  Qt 5.12.
+
+See also escape().
+*/
+func (this *QRegularExpression) WildcardToRegularExpression(str string) string {
+	var tmpArg0 = NewQString5(str)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpression27wildcardToRegularExpressionERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+func QRegularExpression_WildcardToRegularExpression(str string) string {
+	var nilthis *QRegularExpression
+	rv := nilthis.WildcardToRegularExpression(str)
+	return rv
+}
+
 // /usr/include/qt/QtCore/qregularexpression.h:145
+// index:0
+// Public static inline Visibility=Default Availability=Available
+// [8] QString anchoredPattern(const QString &)
+
+/*
+Returns the expression wrapped between the \A and \z anchors to be used for exact matching.
+
+This function was introduced in  Qt 5.12.
+
+See also Porting from QRegExp's Exact Matching.
+*/
+func (this *QRegularExpression) AnchoredPattern(expression string) string {
+	var tmpArg0 = NewQString5(expression)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QRegularExpression15anchoredPatternERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+func QRegularExpression_AnchoredPattern(expression string) string {
+	var nilthis *QRegularExpression
+	rv := nilthis.AnchoredPattern(expression)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QRegularExpression &) const
@@ -869,7 +955,7 @@ func (this *QRegularExpression) Operator_equal_equal(re QRegularExpression_ITF) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:146
+// /usr/include/qt/QtCore/qregularexpression.h:153
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QRegularExpression &) const

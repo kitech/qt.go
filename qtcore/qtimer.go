@@ -363,7 +363,7 @@ func QTimer_SingleShot1(msec int, timerType int, receiver QObject_ITF /*777 cons
 	nilthis.SingleShot1(msec, timerType, receiver, member)
 }
 
-// /usr/include/qt/QtCore/qtimer.h:158
+// /usr/include/qt/QtCore/qtimer.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start(int)
@@ -380,7 +380,7 @@ func (this *QTimer) Start(msec int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtimer.h:160
+// /usr/include/qt/QtCore/qtimer.h:173
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void start()
@@ -397,7 +397,7 @@ func (this *QTimer) Start1() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtimer.h:161
+// /usr/include/qt/QtCore/qtimer.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stop()
@@ -412,7 +412,7 @@ func (this *QTimer) Stop() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtimer.h:173
+// /usr/include/qt/QtCore/qtimer.h:186
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] std::chrono::milliseconds intervalAsDuration() const
@@ -430,7 +430,7 @@ func (this *QTimer) IntervalAsDuration() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qtimer.h:178
+// /usr/include/qt/QtCore/qtimer.h:191
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] std::chrono::milliseconds remainingTimeAsDuration() const
@@ -448,7 +448,7 @@ func (this *QTimer) RemainingTimeAsDuration() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qtimer.h:200
+// /usr/include/qt/QtCore/qtimer.h:213
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)

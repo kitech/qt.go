@@ -126,6 +126,8 @@ func (this *QQuickItemGrabResult) Url() *qtcore.QUrl /*123*/ {
 Saves the grab result as an image to fileName. Returns true if successful; otherwise returns false.
 
 Note: In Qt versions prior to 5.9, this function is marked as non-const.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QQuickItemGrabResult) SaveToFile(fileName string) bool {
 	var tmpArg0 = qtcore.NewQString5(fileName)
@@ -144,6 +146,8 @@ func (this *QQuickItemGrabResult) SaveToFile(fileName string) bool {
 Saves the grab result as an image to fileName. Returns true if successful; otherwise returns false.
 
 Note: In Qt versions prior to 5.9, this function is marked as non-const.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QQuickItemGrabResult) SaveToFile1(fileName string) bool {
 	var tmpArg0 = qtcore.NewQString5(fileName)

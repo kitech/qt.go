@@ -66,7 +66,7 @@ func (*QSGOpacityNode) NewFromPointer(cthis unsafe.Pointer) *QSGOpacityNode {
 	return NewQSGOpacityNodeFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:319
+// /usr/include/qt/QtQuick/qsgnode.h:314
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSGOpacityNode()
@@ -85,7 +85,7 @@ func NewQSGOpacityNode() *QSGOpacityNode {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:320
+// /usr/include/qt/QtQuick/qsgnode.h:315
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGOpacityNode()
@@ -100,7 +100,7 @@ func DeleteQSGOpacityNode(this *QSGOpacityNode) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:322
+// /usr/include/qt/QtQuick/qsgnode.h:317
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpacity(qreal)
@@ -113,7 +113,7 @@ func (this *QSGOpacityNode) SetOpacity(opacity float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:323
+// /usr/include/qt/QtQuick/qsgnode.h:318
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal opacity() const
@@ -127,7 +127,7 @@ func (this *QSGOpacityNode) Opacity() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:325
+// /usr/include/qt/QtQuick/qsgnode.h:320
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCombinedOpacity(qreal)
@@ -140,7 +140,7 @@ func (this *QSGOpacityNode) SetCombinedOpacity(opacity float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:326
+// /usr/include/qt/QtQuick/qsgnode.h:321
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal combinedOpacity() const
@@ -154,7 +154,7 @@ func (this *QSGOpacityNode) CombinedOpacity() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQuick/qsgnode.h:328
+// /usr/include/qt/QtQuick/qsgnode.h:323
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isSubtreeBlocked() const

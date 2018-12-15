@@ -63,7 +63,7 @@ func (*QRadialGradient) NewFromPointer(cthis unsafe.Pointer) *QRadialGradient {
 	return NewQRadialGradientFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:274
+// /usr/include/qt/QtGui/qbrush.h:448
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRadialGradient()
@@ -82,7 +82,7 @@ func NewQRadialGradient() *QRadialGradient {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:275
+// /usr/include/qt/QtGui/qbrush.h:449
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRadialGradient(const QPointF &, qreal, const QPointF &)
@@ -109,7 +109,7 @@ func NewQRadialGradient1(center qtcore.QPointF_ITF, radius float64, focalPoint q
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:276
+// /usr/include/qt/QtGui/qbrush.h:450
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QRadialGradient(qreal, qreal, qreal, qreal, qreal)
@@ -128,7 +128,7 @@ func NewQRadialGradient2(cx float64, cy float64, radius float64, fx float64, fy 
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:278
+// /usr/include/qt/QtGui/qbrush.h:452
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QRadialGradient(const QPointF &, qreal)
@@ -151,7 +151,7 @@ func NewQRadialGradient3(center qtcore.QPointF_ITF, radius float64) *QRadialGrad
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:279
+// /usr/include/qt/QtGui/qbrush.h:453
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QRadialGradient(qreal, qreal, qreal)
@@ -170,7 +170,7 @@ func NewQRadialGradient4(cx float64, cy float64, radius float64) *QRadialGradien
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:281
+// /usr/include/qt/QtGui/qbrush.h:455
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QRadialGradient(const QPointF &, qreal, const QPointF &, qreal)
@@ -197,7 +197,7 @@ func NewQRadialGradient5(center qtcore.QPointF_ITF, centerRadius float64, focalP
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:282
+// /usr/include/qt/QtGui/qbrush.h:456
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QRadialGradient(qreal, qreal, qreal, qreal, qreal, qreal)
@@ -216,7 +216,7 @@ func NewQRadialGradient6(cx float64, cy float64, centerRadius float64, fx float6
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:284
+// /usr/include/qt/QtGui/qbrush.h:458
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF center() const
@@ -232,7 +232,7 @@ func (this *QRadialGradient) Center() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qbrush.h:285
+// /usr/include/qt/QtGui/qbrush.h:459
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCenter(const QPointF &)
@@ -249,7 +249,7 @@ func (this *QRadialGradient) SetCenter(center qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:286
+// /usr/include/qt/QtGui/qbrush.h:460
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCenter(qreal, qreal)
@@ -262,7 +262,7 @@ func (this *QRadialGradient) SetCenter1(x float64, y float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:288
+// /usr/include/qt/QtGui/qbrush.h:462
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF focalPoint() const
@@ -278,7 +278,7 @@ func (this *QRadialGradient) FocalPoint() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qbrush.h:289
+// /usr/include/qt/QtGui/qbrush.h:463
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFocalPoint(const QPointF &)
@@ -295,7 +295,7 @@ func (this *QRadialGradient) SetFocalPoint(focalPoint qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:290
+// /usr/include/qt/QtGui/qbrush.h:464
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFocalPoint(qreal, qreal)
@@ -308,7 +308,7 @@ func (this *QRadialGradient) SetFocalPoint1(x float64, y float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:292
+// /usr/include/qt/QtGui/qbrush.h:466
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal radius() const
@@ -322,7 +322,7 @@ func (this *QRadialGradient) Radius() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qbrush.h:293
+// /usr/include/qt/QtGui/qbrush.h:467
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRadius(qreal)
@@ -335,7 +335,7 @@ func (this *QRadialGradient) SetRadius(radius float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:295
+// /usr/include/qt/QtGui/qbrush.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal centerRadius() const
@@ -349,7 +349,7 @@ func (this *QRadialGradient) CenterRadius() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qbrush.h:296
+// /usr/include/qt/QtGui/qbrush.h:470
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCenterRadius(qreal)
@@ -362,7 +362,7 @@ func (this *QRadialGradient) SetCenterRadius(radius float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:298
+// /usr/include/qt/QtGui/qbrush.h:472
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal focalRadius() const
@@ -376,7 +376,7 @@ func (this *QRadialGradient) FocalRadius() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qbrush.h:299
+// /usr/include/qt/QtGui/qbrush.h:473
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFocalRadius(qreal)

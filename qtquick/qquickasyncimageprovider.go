@@ -68,7 +68,7 @@ func (*QQuickAsyncImageProvider) NewFromPointer(cthis unsafe.Pointer) *QQuickAsy
 	return NewQQuickAsyncImageProviderFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:115
+// /usr/include/qt/QtQuick/qquickimageprovider.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickAsyncImageProvider()
@@ -87,7 +87,7 @@ func NewQQuickAsyncImageProvider() *QQuickAsyncImageProvider {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:116
+// /usr/include/qt/QtQuick/qquickimageprovider.h:123
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickAsyncImageProvider()
@@ -102,7 +102,7 @@ func DeleteQQuickAsyncImageProvider(this *QQuickAsyncImageProvider) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qquickimageprovider.h:121
+// /usr/include/qt/QtQuick/qquickimageprovider.h:128
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QQuickImageResponse * requestImageResponse(const QString &, const QSize &)

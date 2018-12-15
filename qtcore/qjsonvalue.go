@@ -427,6 +427,26 @@ QMetaType::QVariantHash
 
 QJsonValue::Object
 
+QMetaType::QUrl
+
+QJsonValue::String. The conversion will use QUrl::toString() with flag QUrl::FullyEncoded, so as to ensure maximum compatibility in parsing the URL
+
+QMetaType::QUuid
+
+QJsonValue::String. Since Qt 5.11, the resulting string will not include braces
+
+QMetaType::QCborValue
+
+Whichever type QCborValue::toJsonValue() returns.
+
+QMetaType::QCborArray
+
+QJsonValue::Array. See QCborValue::toJsonValue() for conversion restrictions.
+
+QMetaType::QCborMap
+
+QJsonValue::Map. See QCborValue::toJsonValue() for conversion restrictions and the "stringification" of map keys.
+
 
 For all other QVariant types a conversion to a QString will be attempted. If the returned string is empty, a Null QJsonValue will be stored, otherwise a String value using the returned QString.
 
@@ -646,6 +666,8 @@ func (this *QJsonValue) ToBoolp() bool {
 Converts the value to an int and returns it.
 
 If type() is not Double or the value is not a whole number, the defaultValue will be returned.
+
+This function was introduced in  Qt 5.2.
 */
 func (this *QJsonValue) ToInt(defaultValue int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonValue5toIntEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
@@ -662,6 +684,8 @@ func (this *QJsonValue) ToInt(defaultValue int) int {
 Converts the value to an int and returns it.
 
 If type() is not Double or the value is not a whole number, the defaultValue will be returned.
+
+This function was introduced in  Qt 5.2.
 */
 func (this *QJsonValue) ToIntp() int {
 	// arg: 0, int=Int, =Invalid, , Invalid

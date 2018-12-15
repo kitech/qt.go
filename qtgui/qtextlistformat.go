@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 25
+// extern C begin: 27
 */
 // import "C"
 import "unsafe"
@@ -63,7 +63,7 @@ func (*QTextListFormat) NewFromPointer(cthis unsafe.Pointer) *QTextListFormat {
 	return NewQTextListFormatFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:681
+// /usr/include/qt/QtGui/qtextformat.h:688
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextListFormat()
@@ -82,7 +82,7 @@ func NewQTextListFormat() *QTextListFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:714
+// /usr/include/qt/QtGui/qtextformat.h:721
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextListFormat(const QTextFormat &)
@@ -105,7 +105,7 @@ func NewQTextListFormat1(fmt_ QTextFormat_ITF) *QTextListFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:683
+// /usr/include/qt/QtGui/qtextformat.h:690
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -119,7 +119,7 @@ func (this *QTextListFormat) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:697
+// /usr/include/qt/QtGui/qtextformat.h:704
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setStyle(QTextListFormat::Style)
@@ -132,7 +132,7 @@ func (this *QTextListFormat) SetStyle(style int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:698
+// /usr/include/qt/QtGui/qtextformat.h:705
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QTextListFormat::Style style() const
@@ -146,7 +146,7 @@ func (this *QTextListFormat) Style() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:701
+// /usr/include/qt/QtGui/qtextformat.h:708
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setIndent(int)
@@ -159,7 +159,7 @@ func (this *QTextListFormat) SetIndent(indent int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:702
+// /usr/include/qt/QtGui/qtextformat.h:709
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int indent() const
@@ -173,7 +173,7 @@ func (this *QTextListFormat) Indent() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:705
+// /usr/include/qt/QtGui/qtextformat.h:712
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setNumberPrefix(const QString &)
@@ -188,7 +188,7 @@ func (this *QTextListFormat) SetNumberPrefix(numberPrefix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:706
+// /usr/include/qt/QtGui/qtextformat.h:713
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString numberPrefix() const
@@ -205,7 +205,7 @@ func (this *QTextListFormat) NumberPrefix() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:709
+// /usr/include/qt/QtGui/qtextformat.h:716
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setNumberSuffix(const QString &)
@@ -220,7 +220,7 @@ func (this *QTextListFormat) SetNumberSuffix(numberSuffix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:710
+// /usr/include/qt/QtGui/qtextformat.h:717
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString numberSuffix() const

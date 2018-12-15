@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h
@@ -64,7 +66,7 @@ func (*QItemSelection) NewFromPointer(cthis unsafe.Pointer) *QItemSelection {
 	return NewQItemSelectionFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:250
+// /usr/include/qt/QtCore/qitemselectionmodel.h:252
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QItemSelection()
@@ -83,7 +85,7 @@ func NewQItemSelection() *QItemSelection {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:251
+// /usr/include/qt/QtCore/qitemselectionmodel.h:253
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QItemSelection(const QModelIndex &, const QModelIndex &)
@@ -110,7 +112,7 @@ func NewQItemSelection1(topLeft QModelIndex_ITF, bottomRight QModelIndex_ITF) *Q
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:255
+// /usr/include/qt/QtCore/qitemselectionmodel.h:257
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void select(const QModelIndex &, const QModelIndex &)
@@ -133,7 +135,7 @@ func (this *QItemSelection) Select(topLeft QModelIndex_ITF, bottomRight QModelIn
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:256
+// /usr/include/qt/QtCore/qitemselectionmodel.h:258
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QModelIndex &) const
@@ -151,7 +153,7 @@ func (this *QItemSelection) Contains(index QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:257
+// /usr/include/qt/QtCore/qitemselectionmodel.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList indexes() const
@@ -166,7 +168,7 @@ func (this *QItemSelection) Indexes() *QModelIndexList /*667*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:258
+// /usr/include/qt/QtCore/qitemselectionmodel.h:260
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void merge(const QItemSelection &, QItemSelectionModel::SelectionFlags)
@@ -183,7 +185,7 @@ func (this *QItemSelection) Merge(other QItemSelection_ITF, command int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:259
+// /usr/include/qt/QtCore/qitemselectionmodel.h:261
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void split(const QItemSelectionRange &, const QItemSelectionRange &, QItemSelection *)

@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h
@@ -62,7 +64,7 @@ func (*QAbstractListModel) NewFromPointer(cthis unsafe.Pointer) *QAbstractListMo
 	return NewQAbstractListModelFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:393
+// /usr/include/qt/QtCore/qabstractitemmodel.h:413
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -76,7 +78,7 @@ func (this *QAbstractListModel) MetaObject() *QMetaObject /*777 const QMetaObjec
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:396
+// /usr/include/qt/QtCore/qabstractitemmodel.h:416
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractListModel(QObject *)
@@ -99,7 +101,7 @@ func NewQAbstractListModel(parent QObject_ITF /*777 QObject **/) *QAbstractListM
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:396
+// /usr/include/qt/QtCore/qabstractitemmodel.h:416
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractListModel(QObject *)
@@ -120,7 +122,7 @@ func NewQAbstractListModelp() *QAbstractListModel {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:397
+// /usr/include/qt/QtCore/qabstractitemmodel.h:417
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractListModel()
@@ -135,7 +137,7 @@ func DeleteQAbstractListModel(this *QAbstractListModel) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:399
+// /usr/include/qt/QtCore/qabstractitemmodel.h:419
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
@@ -144,6 +146,8 @@ func DeleteQAbstractListModel(this *QAbstractListModel) {
 Returns the index of the item in the model specified by the given row, column and parent index.
 
 When reimplementing this function in a subclass, call createIndex() to generate model indexes that other components can use to refer to items in your model.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also createIndex().
 */
@@ -159,7 +163,7 @@ func (this *QAbstractListModel) Index(row int, column int, parent QModelIndex_IT
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:399
+// /usr/include/qt/QtCore/qabstractitemmodel.h:419
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
@@ -168,6 +172,8 @@ func (this *QAbstractListModel) Index(row int, column int, parent QModelIndex_IT
 Returns the index of the item in the model specified by the given row, column and parent index.
 
 When reimplementing this function in a subclass, call createIndex() to generate model indexes that other components can use to refer to items in your model.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also createIndex().
 */
@@ -183,7 +189,7 @@ func (this *QAbstractListModel) Indexp(row int) *QModelIndex /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:399
+// /usr/include/qt/QtCore/qabstractitemmodel.h:419
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
@@ -192,6 +198,8 @@ func (this *QAbstractListModel) Indexp(row int) *QModelIndex /*123*/ {
 Returns the index of the item in the model specified by the given row, column and parent index.
 
 When reimplementing this function in a subclass, call createIndex() to generate model indexes that other components can use to refer to items in your model.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also createIndex().
 */
@@ -205,7 +213,7 @@ func (this *QAbstractListModel) Indexp1(row int, column int) *QModelIndex /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:400
+// /usr/include/qt/QtCore/qabstractitemmodel.h:420
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &) const
@@ -216,6 +224,8 @@ Returns the sibling at row and column for the item at index, or an invalid QMode
 sibling() is just a convenience function that finds the item's parent, and uses it to retrieve the index of the child item in the specified row and column.
 
 This method can optionally be overridden for implementation-specific optimization.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also index(), QModelIndex::row(), and QModelIndex::column().
 */
@@ -231,7 +241,7 @@ func (this *QAbstractListModel) Sibling(row int, column int, idx QModelIndex_ITF
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:401
+// /usr/include/qt/QtCore/qabstractitemmodel.h:421
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
@@ -265,7 +275,7 @@ func (this *QAbstractListModel) DropMimeData(data QMimeData_ITF /*777 const QMim
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:404
+// /usr/include/qt/QtCore/qabstractitemmodel.h:424
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &) const
@@ -274,6 +284,8 @@ func (this *QAbstractListModel) DropMimeData(data QMimeData_ITF /*777 const QMim
 Returns the item flags for the given index.
 
 The base class implementation returns a combination of flags that enables the item (ItemIsEnabled) and allows it to be selected (ItemIsSelectable).
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also Qt::ItemFlags.
 */

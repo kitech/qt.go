@@ -18,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 138
+// extern C begin: 139
 */
 // import "C"
 import "unsafe"
@@ -164,7 +164,7 @@ func NewQAccessibleWidgetp1(o QWidget_ITF /*777 QWidget **/, r int) *QAccessible
 // [1] bool isValid() const
 
 /*
-Reimplemented from QAccessibleInterface::isValid().
+Reimplemented from QAccessibleObject::isValid().
 */
 func (this *QAccessibleWidget) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -238,7 +238,7 @@ func (this *QAccessibleWidget) FocusChild() *qtgui.QAccessibleInterface /*777 QA
 // [16] QRect rect() const
 
 /*
-Reimplemented from QAccessibleInterface::rect().
+Reimplemented from QAccessibleObject::rect().
 */
 func (this *QAccessibleWidget) Rect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

@@ -130,7 +130,23 @@ func (this *QWebEngineUrlRequestJob) RequestMethod() *qtcore.QByteArray /*123*/ 
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebengineurlrequestjob.h:76
+// /usr/include/qt/QtWebEngineCore/qwebengineurlrequestjob.h:75
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QUrl initiator() const
+
+/*
+
+ */
+func (this *QWebEngineUrlRequestJob) Initiator() *qtcore.QUrl /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWebEngineUrlRequestJob9initiatorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
+	return rv2
+}
+
+// /usr/include/qt/QtWebEngineCore/qwebengineurlrequestjob.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reply(const QByteArray &, QIODevice *)
@@ -151,7 +167,7 @@ func (this *QWebEngineUrlRequestJob) Reply(contentType qtcore.QByteArray_ITF, de
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebengineurlrequestjob.h:77
+// /usr/include/qt/QtWebEngineCore/qwebengineurlrequestjob.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void fail(QWebEngineUrlRequestJob::Error)
@@ -164,7 +180,7 @@ func (this *QWebEngineUrlRequestJob) Fail(error int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineCore/qwebengineurlrequestjob.h:78
+// /usr/include/qt/QtWebEngineCore/qwebengineurlrequestjob.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void redirect(const QUrl &)

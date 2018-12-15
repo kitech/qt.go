@@ -67,7 +67,7 @@ func (*QAbstractAudioDeviceInfo) NewFromPointer(cthis unsafe.Pointer) *QAbstract
 	return NewQAbstractAudioDeviceInfoFromPointer(cthis)
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:59
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -81,7 +81,7 @@ func (this *QAbstractAudioDeviceInfo) MetaObject() *qtcore.QMetaObject /*777 con
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:62
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:59
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAudioFormat preferredFormat() const
@@ -97,7 +97,7 @@ func (this *QAbstractAudioDeviceInfo) PreferredFormat() *QAudioFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:63
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:60
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool isFormatSupported(const QAudioFormat &) const
@@ -115,7 +115,7 @@ func (this *QAbstractAudioDeviceInfo) IsFormatSupported(format QAudioFormat_ITF)
 	return rv != 0
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:64
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:61
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QString deviceName() const
@@ -132,7 +132,7 @@ func (this *QAbstractAudioDeviceInfo) DeviceName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtMultimedia/qaudiosystem.h:65
+// /usr/include/qt/QtMultimedia/qaudiosystem.h:62
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QStringList supportedCodecs()

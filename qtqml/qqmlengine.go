@@ -69,7 +69,7 @@ func (*QQmlEngine) NewFromPointer(cthis unsafe.Pointer) *QQmlEngine {
 	return NewQQmlEngineFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:98
+// /usr/include/qt/QtQml/qqmlengine.h:97
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -83,7 +83,7 @@ func (this *QQmlEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:100
+// /usr/include/qt/QtQml/qqmlengine.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlEngine(QObject *)
@@ -106,7 +106,7 @@ func NewQQmlEngine(p qtcore.QObject_ITF /*777 QObject **/) *QQmlEngine {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:100
+// /usr/include/qt/QtQml/qqmlengine.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlEngine(QObject *)
@@ -127,7 +127,7 @@ func NewQQmlEnginep() *QQmlEngine {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:101
+// /usr/include/qt/QtQml/qqmlengine.h:100
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlEngine()
@@ -142,7 +142,7 @@ func DeleteQQmlEngine(this *QQmlEngine) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:103
+// /usr/include/qt/QtQml/qqmlengine.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlContext * rootContext() const
@@ -160,7 +160,7 @@ func (this *QQmlEngine) RootContext() *QQmlContext /*777 QQmlContext **/ {
 	return /*==*/ NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:105
+// /usr/include/qt/QtQml/qqmlengine.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearComponentCache()
@@ -181,7 +181,7 @@ func (this *QQmlEngine) ClearComponentCache() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:106
+// /usr/include/qt/QtQml/qqmlengine.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void trimComponentCache()
@@ -200,7 +200,7 @@ func (this *QQmlEngine) TrimComponentCache() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:108
+// /usr/include/qt/QtQml/qqmlengine.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList importPathList() const
@@ -222,7 +222,7 @@ func (this *QQmlEngine) ImportPathList() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:109
+// /usr/include/qt/QtQml/qqmlengine.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setImportPathList(const QStringList &)
@@ -243,7 +243,7 @@ func (this *QQmlEngine) SetImportPathList(paths qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:110
+// /usr/include/qt/QtQml/qqmlengine.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addImportPath(const QString &)
@@ -266,7 +266,7 @@ func (this *QQmlEngine) AddImportPath(dir string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:112
+// /usr/include/qt/QtQml/qqmlengine.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList pluginPathList() const
@@ -286,7 +286,7 @@ func (this *QQmlEngine) PluginPathList() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:113
+// /usr/include/qt/QtQml/qqmlengine.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPluginPathList(const QStringList &)
@@ -307,7 +307,7 @@ func (this *QQmlEngine) SetPluginPathList(paths qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:114
+// /usr/include/qt/QtQml/qqmlengine.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addPluginPath(const QString &)
@@ -328,7 +328,7 @@ func (this *QQmlEngine) AddPluginPath(dir string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:116
+// /usr/include/qt/QtQml/qqmlengine.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool addNamedBundle(const QString &, const QString &)
@@ -346,7 +346,7 @@ func (this *QQmlEngine) AddNamedBundle(name string, fileName string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:121
+// /usr/include/qt/QtQml/qqmlengine.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNetworkAccessManagerFactory(QQmlNetworkAccessManagerFactory *)
@@ -357,6 +357,8 @@ Sets the factory to use for creating QNetworkAccessManager(s).
 QNetworkAccessManager is used for all network access by QML. By implementing a factory it is possible to create custom QNetworkAccessManager with specialized caching, proxy and cookie support.
 
 The factory must be set before executing the engine.
+
+Note: QQmlEngine does not take ownership of the factory.
 
 See also networkAccessManagerFactory().
 */
@@ -369,7 +371,7 @@ func (this *QQmlEngine) SetNetworkAccessManagerFactory(arg0 QQmlNetworkAccessMan
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:122
+// /usr/include/qt/QtQml/qqmlengine.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlNetworkAccessManagerFactory * networkAccessManagerFactory() const
@@ -385,7 +387,7 @@ func (this *QQmlEngine) NetworkAccessManagerFactory() *QQmlNetworkAccessManagerF
 	return /*==*/ NewQQmlNetworkAccessManagerFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:124
+// /usr/include/qt/QtQml/qqmlengine.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkAccessManager * networkAccessManager() const
@@ -403,7 +405,7 @@ func (this *QQmlEngine) NetworkAccessManager() *qtnetwork.QNetworkAccessManager 
 	return qtnetwork.NewQNetworkAccessManagerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:127
+// /usr/include/qt/QtQml/qqmlengine.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUrlInterceptor(QQmlAbstractUrlInterceptor *)
@@ -420,7 +422,7 @@ func (this *QQmlEngine) SetUrlInterceptor(urlInterceptor QQmlAbstractUrlIntercep
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:128
+// /usr/include/qt/QtQml/qqmlengine.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlAbstractUrlInterceptor * urlInterceptor() const
@@ -434,7 +436,7 @@ func (this *QQmlEngine) UrlInterceptor() *QQmlAbstractUrlInterceptor /*777 QQmlA
 	return /*==*/ NewQQmlAbstractUrlInterceptorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:130
+// /usr/include/qt/QtQml/qqmlengine.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addImageProvider(const QString &, QQmlImageProviderBase *)
@@ -455,7 +457,7 @@ func (this *QQmlEngine) AddImageProvider(id string, arg1 unsafe.Pointer /*666*/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:131
+// /usr/include/qt/QtQml/qqmlengine.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlImageProviderBase * imageProvider(const QString &) const
@@ -475,7 +477,7 @@ func (this *QQmlEngine) ImageProvider(id string) unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:132
+// /usr/include/qt/QtQml/qqmlengine.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeImageProvider(const QString &)
@@ -492,7 +494,7 @@ func (this *QQmlEngine) RemoveImageProvider(id string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:134
+// /usr/include/qt/QtQml/qqmlengine.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIncubationController(QQmlIncubationController *)
@@ -511,7 +513,7 @@ func (this *QQmlEngine) SetIncubationController(arg0 QQmlIncubationController_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:135
+// /usr/include/qt/QtQml/qqmlengine.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlIncubationController * incubationController() const
@@ -527,7 +529,7 @@ func (this *QQmlEngine) IncubationController() *QQmlIncubationController /*777 Q
 	return /*==*/ NewQQmlIncubationControllerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:137
+// /usr/include/qt/QtQml/qqmlengine.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOfflineStoragePath(const QString &)
@@ -542,7 +544,7 @@ func (this *QQmlEngine) SetOfflineStoragePath(dir string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:138
+// /usr/include/qt/QtQml/qqmlengine.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString offlineStoragePath() const
@@ -559,7 +561,7 @@ func (this *QQmlEngine) OfflineStoragePath() string {
 	return rv3
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:139
+// /usr/include/qt/QtQml/qqmlengine.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString offlineStorageDatabaseFilePath(const QString &) const
@@ -582,7 +584,7 @@ func (this *QQmlEngine) OfflineStorageDatabaseFilePath(databaseName string) stri
 	return rv3
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:141
+// /usr/include/qt/QtQml/qqmlengine.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl baseUrl() const
@@ -602,7 +604,7 @@ func (this *QQmlEngine) BaseUrl() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:142
+// /usr/include/qt/QtQml/qqmlengine.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBaseUrl(const QUrl &)
@@ -621,7 +623,7 @@ func (this *QQmlEngine) SetBaseUrl(arg0 qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:144
+// /usr/include/qt/QtQml/qqmlengine.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool outputWarningsToStandardError() const
@@ -639,7 +641,7 @@ func (this *QQmlEngine) OutputWarningsToStandardError() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:145
+// /usr/include/qt/QtQml/qqmlengine.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOutputWarningsToStandardError(bool)
@@ -658,7 +660,7 @@ func (this *QQmlEngine) SetOutputWarningsToStandardError(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:148
+// /usr/include/qt/QtQml/qqmlengine.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void retranslate()
@@ -677,7 +679,7 @@ func (this *QQmlEngine) Retranslate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:151
+// /usr/include/qt/QtQml/qqmlengine.h:153
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QQmlContext * contextForObject(const QObject *)
@@ -704,7 +706,7 @@ func QQmlEngine_ContextForObject(arg0 qtcore.QObject_ITF /*777 const QObject **/
 	return rv
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:152
+// /usr/include/qt/QtQml/qqmlengine.h:154
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setContextForObject(QObject *, QQmlContext *)
@@ -733,7 +735,7 @@ func QQmlEngine_SetContextForObject(arg0 qtcore.QObject_ITF /*777 QObject **/, a
 	nilthis.SetContextForObject(arg0, arg1)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:155
+// /usr/include/qt/QtQml/qqmlengine.h:157
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setObjectOwnership(QObject *, QQmlEngine::ObjectOwnership)
@@ -756,7 +758,7 @@ func QQmlEngine_SetObjectOwnership(arg0 qtcore.QObject_ITF /*777 QObject **/, ar
 	nilthis.SetObjectOwnership(arg0, arg1)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:156
+// /usr/include/qt/QtQml/qqmlengine.h:158
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QQmlEngine::ObjectOwnership objectOwnership(QObject *)
@@ -781,7 +783,7 @@ func QQmlEngine_ObjectOwnership(arg0 qtcore.QObject_ITF /*777 QObject **/) int {
 	return rv
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:159
+// /usr/include/qt/QtQml/qqmlengine.h:161
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -799,7 +801,7 @@ func (this *QQmlEngine) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:162
+// /usr/include/qt/QtQml/qqmlengine.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void quit()
@@ -814,7 +816,7 @@ func (this *QQmlEngine) Quit() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:163
+// /usr/include/qt/QtQml/qqmlengine.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void exit(int)

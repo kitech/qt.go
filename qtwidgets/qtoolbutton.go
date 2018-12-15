@@ -453,7 +453,7 @@ func (this *QToolButton) Triggered(arg0 QAction_ITF /*777 QAction **/) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractButton::event().
 */
 func (this *QToolButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -471,7 +471,7 @@ func (this *QToolButton) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // [-2] void mousePressEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mousePressEvent().
+Reimplemented from QAbstractButton::mousePressEvent().
 */
 func (this *QToolButton) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -488,7 +488,7 @@ func (this *QToolButton) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouse
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseReleaseEvent().
+Reimplemented from QAbstractButton::mouseReleaseEvent().
 */
 func (this *QToolButton) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -505,7 +505,7 @@ func (this *QToolButton) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMou
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QAbstractButton::paintEvent().
 
 Paints the button in response to the paint event.
 */
@@ -575,7 +575,7 @@ func (this *QToolButton) LeaveEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 // [-2] void timerEvent(QTimerEvent *)
 
 /*
-Reimplemented from QObject::timerEvent().
+Reimplemented from QAbstractButton::timerEvent().
 */
 func (this *QToolButton) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -592,7 +592,7 @@ func (this *QToolButton) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEven
 // [-2] void changeEvent(QEvent *)
 
 /*
-Reimplemented from QWidget::changeEvent().
+Reimplemented from QAbstractButton::changeEvent().
 */
 func (this *QToolButton) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer

@@ -66,7 +66,7 @@ func (*QJSValue) NewFromPointer(cthis unsafe.Pointer) *QJSValue {
 	return NewQJSValueFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:72
+// /usr/include/qt/QtQml/qjsvalue.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(QJSValue::SpecialValue)
@@ -85,7 +85,7 @@ func NewQJSValue(value int) *QJSValue {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:72
+// /usr/include/qt/QtQml/qjsvalue.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(QJSValue::SpecialValue)
@@ -106,7 +106,7 @@ func NewQJSValuep() *QJSValue {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:82
+// /usr/include/qt/QtQml/qjsvalue.h:93
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(bool)
@@ -125,7 +125,7 @@ func NewQJSValue1(value bool) *QJSValue {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:83
+// /usr/include/qt/QtQml/qjsvalue.h:94
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(int)
@@ -144,7 +144,7 @@ func NewQJSValue2(value int) *QJSValue {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:84
+// /usr/include/qt/QtQml/qjsvalue.h:95
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(uint)
@@ -163,7 +163,7 @@ func NewQJSValue3(value uint) *QJSValue {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:85
+// /usr/include/qt/QtQml/qjsvalue.h:96
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(double)
@@ -182,7 +182,7 @@ func NewQJSValue4(value float64) *QJSValue {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:86
+// /usr/include/qt/QtQml/qjsvalue.h:97
 // index:5
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(const QString &)
@@ -203,7 +203,7 @@ func NewQJSValue5(value string) *QJSValue {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:87
+// /usr/include/qt/QtQml/qjsvalue.h:98
 // index:6
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(const QLatin1String &)
@@ -226,7 +226,7 @@ func NewQJSValue6(value qtcore.QLatin1String_ITF) *QJSValue {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:89
+// /usr/include/qt/QtQml/qjsvalue.h:100
 // index:7
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(const char *)
@@ -247,7 +247,7 @@ func NewQJSValue7(str string) *QJSValue {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:73
+// /usr/include/qt/QtQml/qjsvalue.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QJSValue()
@@ -262,7 +262,7 @@ func DeleteQJSValue(this *QJSValue) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:78
+// /usr/include/qt/QtQml/qjsvalue.h:89
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QJSValue & operator=(QJSValue &&)
@@ -278,7 +278,7 @@ func (this *QJSValue) Operator_equal(other unsafe.Pointer /*333*/) *QJSValue {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:92
+// /usr/include/qt/QtQml/qjsvalue.h:103
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QJSValue & operator=(const QJSValue &)
@@ -298,7 +298,7 @@ func (this *QJSValue) Operator_equal1(other QJSValue_ITF) *QJSValue {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:94
+// /usr/include/qt/QtQml/qjsvalue.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isBool() const
@@ -314,7 +314,7 @@ func (this *QJSValue) IsBool() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:95
+// /usr/include/qt/QtQml/qjsvalue.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNumber() const
@@ -330,7 +330,7 @@ func (this *QJSValue) IsNumber() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:96
+// /usr/include/qt/QtQml/qjsvalue.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -344,7 +344,7 @@ func (this *QJSValue) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:97
+// /usr/include/qt/QtQml/qjsvalue.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isString() const
@@ -360,7 +360,7 @@ func (this *QJSValue) IsString() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:98
+// /usr/include/qt/QtQml/qjsvalue.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isUndefined() const
@@ -374,7 +374,7 @@ func (this *QJSValue) IsUndefined() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:99
+// /usr/include/qt/QtQml/qjsvalue.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVariant() const
@@ -390,7 +390,7 @@ func (this *QJSValue) IsVariant() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:100
+// /usr/include/qt/QtQml/qjsvalue.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isQObject() const
@@ -408,7 +408,7 @@ func (this *QJSValue) IsQObject() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:101
+// /usr/include/qt/QtQml/qjsvalue.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isQMetaObject() const
@@ -426,7 +426,7 @@ func (this *QJSValue) IsQMetaObject() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:102
+// /usr/include/qt/QtQml/qjsvalue.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isObject() const
@@ -444,7 +444,7 @@ func (this *QJSValue) IsObject() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:103
+// /usr/include/qt/QtQml/qjsvalue.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDate() const
@@ -458,7 +458,7 @@ func (this *QJSValue) IsDate() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:104
+// /usr/include/qt/QtQml/qjsvalue.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRegExp() const
@@ -472,7 +472,7 @@ func (this *QJSValue) IsRegExp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:105
+// /usr/include/qt/QtQml/qjsvalue.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isArray() const
@@ -488,7 +488,7 @@ func (this *QJSValue) IsArray() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:106
+// /usr/include/qt/QtQml/qjsvalue.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isError() const
@@ -496,7 +496,7 @@ func (this *QJSValue) IsArray() bool {
 /*
 Returns true if this QJSValue is an object of the Error class; otherwise returns false.
 
-See also QJSEngine - Script Exceptions.
+See also errorType() and QJSEngine - Script Exceptions.
 */
 func (this *QJSValue) IsError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue7isErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -504,7 +504,7 @@ func (this *QJSValue) IsError() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:108
+// /usr/include/qt/QtQml/qjsvalue.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const
@@ -525,7 +525,7 @@ func (this *QJSValue) ToString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:109
+// /usr/include/qt/QtQml/qjsvalue.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toNumber() const
@@ -543,7 +543,7 @@ func (this *QJSValue) ToNumber() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:110
+// /usr/include/qt/QtQml/qjsvalue.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] qint32 toInt() const
@@ -561,7 +561,7 @@ func (this *QJSValue) ToInt() int {
 	return int(rv) // 222
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:111
+// /usr/include/qt/QtQml/qjsvalue.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] quint32 toUInt() const
@@ -579,7 +579,7 @@ func (this *QJSValue) ToUInt() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:112
+// /usr/include/qt/QtQml/qjsvalue.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool toBool() const
@@ -597,7 +597,7 @@ func (this *QJSValue) ToBool() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:113
+// /usr/include/qt/QtQml/qjsvalue.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant toVariant() const
@@ -630,7 +630,7 @@ func (this *QJSValue) ToVariant() *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:114
+// /usr/include/qt/QtQml/qjsvalue.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * toQObject() const
@@ -648,7 +648,7 @@ func (this *QJSValue) ToQObject() *qtcore.QObject /*777 QObject **/ {
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:115
+// /usr/include/qt/QtQml/qjsvalue.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QMetaObject * toQMetaObject() const
@@ -666,7 +666,7 @@ func (this *QJSValue) ToQMetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:116
+// /usr/include/qt/QtQml/qjsvalue.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime toDateTime() const
@@ -684,7 +684,7 @@ func (this *QJSValue) ToDateTime() *qtcore.QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:118
+// /usr/include/qt/QtQml/qjsvalue.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool equals(const QJSValue &) const
@@ -708,7 +708,7 @@ func (this *QJSValue) Equals(other QJSValue_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:119
+// /usr/include/qt/QtQml/qjsvalue.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool strictlyEquals(const QJSValue &) const
@@ -740,7 +740,7 @@ func (this *QJSValue) StrictlyEquals(other QJSValue_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:121
+// /usr/include/qt/QtQml/qjsvalue.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJSValue prototype() const
@@ -758,7 +758,7 @@ func (this *QJSValue) Prototype() *QJSValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:122
+// /usr/include/qt/QtQml/qjsvalue.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPrototype(const QJSValue &)
@@ -779,7 +779,7 @@ func (this *QJSValue) SetPrototype(prototype QJSValue_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:124
+// /usr/include/qt/QtQml/qjsvalue.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJSValue property(const QString &) const
@@ -788,6 +788,8 @@ func (this *QJSValue) SetPrototype(prototype QJSValue_ITF) {
 Returns the value of this QJSValue's property with the given name. If no such property exists, an undefined QJSValue is returned.
 
 If the property is implemented using a getter function (i.e. has the PropertyGetter flag set), calling property() has side-effects on the script engine, since the getter function will be called (possibly resulting in an uncaught script exception). If an exception occurred, property() returns the value that was thrown (typically an Error object).
+
+To access array elements, use the setProperty(quint32 arrayIndex, const QJSValue &value) overload instead.
 
 See also setProperty(), hasProperty(), and QJSValueIterator.
 */
@@ -801,7 +803,7 @@ func (this *QJSValue) Property(name string) *QJSValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:130
+// /usr/include/qt/QtQml/qjsvalue.h:141
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QJSValue property(quint32) const
@@ -810,6 +812,8 @@ func (this *QJSValue) Property(name string) *QJSValue /*123*/ {
 Returns the value of this QJSValue's property with the given name. If no such property exists, an undefined QJSValue is returned.
 
 If the property is implemented using a getter function (i.e. has the PropertyGetter flag set), calling property() has side-effects on the script engine, since the getter function will be called (possibly resulting in an uncaught script exception). If an exception occurred, property() returns the value that was thrown (typically an Error object).
+
+To access array elements, use the setProperty(quint32 arrayIndex, const QJSValue &value) overload instead.
 
 See also setProperty(), hasProperty(), and QJSValueIterator.
 */
@@ -821,7 +825,7 @@ func (this *QJSValue) Property1(arrayIndex uint) *QJSValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:125
+// /usr/include/qt/QtQml/qjsvalue.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProperty(const QString &, const QJSValue &)
@@ -832,6 +836,8 @@ Sets the value of this QJSValue's property with the given name to the given valu
 If this QJSValue is not an object, this function does nothing.
 
 If this QJSValue does not already have a property with name name, a new property is created.
+
+To modify array elements, use the setProperty(quint32 arrayIndex, const QJSValue &value) overload instead.
 
 See also property() and deleteProperty().
 */
@@ -846,7 +852,7 @@ func (this *QJSValue) SetProperty(name string, value QJSValue_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:131
+// /usr/include/qt/QtQml/qjsvalue.h:142
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setProperty(quint32, const QJSValue &)
@@ -857,6 +863,8 @@ Sets the value of this QJSValue's property with the given name to the given valu
 If this QJSValue is not an object, this function does nothing.
 
 If this QJSValue does not already have a property with name name, a new property is created.
+
+To modify array elements, use the setProperty(quint32 arrayIndex, const QJSValue &value) overload instead.
 
 See also property() and deleteProperty().
 */
@@ -869,7 +877,7 @@ func (this *QJSValue) SetProperty1(arrayIndex uint, value QJSValue_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:127
+// /usr/include/qt/QtQml/qjsvalue.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasProperty(const QString &) const
@@ -887,7 +895,7 @@ func (this *QJSValue) HasProperty(name string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:128
+// /usr/include/qt/QtQml/qjsvalue.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasOwnProperty(const QString &) const
@@ -905,7 +913,7 @@ func (this *QJSValue) HasOwnProperty(name string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:133
+// /usr/include/qt/QtQml/qjsvalue.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool deleteProperty(const QString &)
@@ -931,7 +939,7 @@ func (this *QJSValue) DeleteProperty(name string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:135
+// /usr/include/qt/QtQml/qjsvalue.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCallable() const
@@ -947,7 +955,25 @@ func (this *QJSValue) IsCallable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qjsvalue.h:141
+// /usr/include/qt/QtQml/qjsvalue.h:151
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QJSValue::ErrorType errorType() const
+
+/*
+Returns the error type this QJSValue represents if it is an Error object. Otherwise, returns NoError."
+
+This function was introduced in  Qt 5.12.
+
+See also isError() and QJSEngine - Script Exceptions.
+*/
+func (this *QJSValue) ErrorType() int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue9errorTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return int(rv)
+}
+
+// /usr/include/qt/QtQml/qjsvalue.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJSEngine * engine() const
@@ -987,6 +1013,69 @@ func (this *QJSValue) SpecialValueItemName(val int) string {
 func QJSValue_SpecialValueItemName(val int) string {
 	var nilthis *QJSValue
 	return nilthis.SpecialValueItemName(val)
+}
+
+/*
+Use this enum for JavaScript language-specific types of Error objects.
+
+They may be useful when emulating language features in C++ requires the use of specialized exception types. In addition, they may help to more clearly communicate certain typical conditions, instead of throwing a generic JavaScript exception. For example, code that deals with networking and resource locators may find it useful to propagate errors related to malformed locators using the URIError type.
+
+
+
+This enum was introduced or modified in  Qt 5.12.
+
+*/
+type QJSValue__ErrorType = int
+
+//
+const QJSValue__NoError QJSValue__ErrorType = 0
+
+// A generic Error object, but not of a specific sub-type.
+const QJSValue__GenericError QJSValue__ErrorType = 1
+
+//
+const QJSValue__EvalError QJSValue__ErrorType = 2
+
+// A value did not match the expected set or range.
+const QJSValue__RangeError QJSValue__ErrorType = 3
+
+// A non-existing variable referenced.
+const QJSValue__ReferenceError QJSValue__ErrorType = 4
+
+// An invalid token or sequence of tokens was encountered that does not conform with the syntax of the language.
+const QJSValue__SyntaxError QJSValue__ErrorType = 5
+
+// An operand or argument is incompatible with the type expected.
+const QJSValue__TypeError QJSValue__ErrorType = 6
+
+// A URI handling function was used incorrectly or the URI provided is malformed.
+const QJSValue__URIError QJSValue__ErrorType = 7
+
+func (this *QJSValue) ErrorTypeItemName(val int) string {
+	switch val {
+	case QJSValue__NoError: // 0
+		return "NoError"
+	case QJSValue__GenericError: // 1
+		return "GenericError"
+	case QJSValue__EvalError: // 2
+		return "EvalError"
+	case QJSValue__RangeError: // 3
+		return "RangeError"
+	case QJSValue__ReferenceError: // 4
+		return "ReferenceError"
+	case QJSValue__SyntaxError: // 5
+		return "SyntaxError"
+	case QJSValue__TypeError: // 6
+		return "TypeError"
+	case QJSValue__URIError: // 7
+		return "URIError"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QJSValue_ErrorTypeItemName(val int) string {
+	var nilthis *QJSValue
+	return nilthis.ErrorTypeItemName(val)
 }
 
 //  body block end

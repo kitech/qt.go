@@ -259,8 +259,8 @@ func (this *QCameraControl) Error(error int, errorString string) {
 /*
 Signal emitted when the camera capture mode changes.
 */
-func (this *QCameraControl) CaptureModeChanged(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QCameraControl18captureModeChangedE6QFlagsIN7QCamera11CaptureModeEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QCameraControl) CaptureModeChanged(mode int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QCameraControl18captureModeChangedE6QFlagsIN7QCamera11CaptureModeEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	qtrt.ErrPrint(err, rv)
 }
 

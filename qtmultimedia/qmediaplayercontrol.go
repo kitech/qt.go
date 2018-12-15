@@ -224,8 +224,8 @@ Sets the mute state of a player control.
 
 See also isMuted().
 */
-func (this *QMediaPlayerControl) SetMuted(muted bool) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QMediaPlayerControl8setMutedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), muted)
+func (this *QMediaPlayerControl) SetMuted(mute bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QMediaPlayerControl8setMutedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mute)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -426,7 +426,7 @@ func (this *QMediaPlayerControl) Play() {
 /*
 Pauses playback of the current media.
 
-If sucessful the player control will immediately enter the paused state.
+If successful the player control will immediately enter the paused state.
 
 See also state(), play(), and stop().
 */
@@ -505,7 +505,7 @@ func (this *QMediaPlayerControl) PositionChanged(position int64) {
 // [-2] void stateChanged(QMediaPlayer::State)
 
 /*
-Signals that the state of a player control has changed.
+Signals that the state of a player control has changed to newState.
 
 See also state().
 */
@@ -554,8 +554,8 @@ Signals a change in the mute status of a player control.
 
 See also isMuted().
 */
-func (this *QMediaPlayerControl) MutedChanged(muted bool) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QMediaPlayerControl12mutedChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), muted)
+func (this *QMediaPlayerControl) MutedChanged(mute bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QMediaPlayerControl12mutedChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mute)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -565,7 +565,7 @@ func (this *QMediaPlayerControl) MutedChanged(muted bool) {
 // [-2] void audioAvailableChanged(bool)
 
 /*
-Signals that there has been a change in the availability of audio output.
+Signals that there has been a change in the availability of audio output audioAvailable.
 
 See also isAudioAvailable().
 */
@@ -580,7 +580,7 @@ func (this *QMediaPlayerControl) AudioAvailableChanged(audioAvailable bool) {
 // [-2] void videoAvailableChanged(bool)
 
 /*
-Signals that there has been a change in the availability of video output.
+Signal that the availability of visual content has changed to videoAvailable.
 
 See also isVideoAvailable().
 */
@@ -595,7 +595,7 @@ func (this *QMediaPlayerControl) VideoAvailableChanged(videoAvailable bool) {
 // [-2] void bufferStatusChanged(int)
 
 /*
-Signals that buffering progress has changed.
+Signal the amount of the local buffer filled as a percentage by percentFilled.
 
 See also bufferStatus().
 */
@@ -614,8 +614,8 @@ Signals that the seekable state of a player control has changed.
 
 See also isSeekable().
 */
-func (this *QMediaPlayerControl) SeekableChanged(arg0 bool) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QMediaPlayerControl15seekableChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QMediaPlayerControl) SeekableChanged(seekable bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QMediaPlayerControl15seekableChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), seekable)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -629,10 +629,10 @@ Signals that the available media playback ranges have changed.
 
 See also QMediaPlayerControl::availablePlaybackRanges().
 */
-func (this *QMediaPlayerControl) AvailablePlaybackRangesChanged(arg0 QMediaTimeRange_ITF) {
+func (this *QMediaPlayerControl) AvailablePlaybackRangesChanged(ranges QMediaTimeRange_ITF) {
 	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QMediaTimeRange_PTR() != nil {
-		convArg0 = arg0.QMediaTimeRange_PTR().GetCthis()
+	if ranges != nil && ranges.QMediaTimeRange_PTR() != nil {
+		convArg0 = ranges.QMediaTimeRange_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QMediaPlayerControl30availablePlaybackRangesChangedERK15QMediaTimeRange", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

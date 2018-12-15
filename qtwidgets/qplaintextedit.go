@@ -1512,8 +1512,6 @@ func (this *QPlainTextEdit) ZoomInp() {
 // [-2] void zoomOut(int)
 
 /*
-This is an overloaded function.
-
 Zooms out on the text by making the base font size range points smaller and recalculating all font sizes to be the new size. This does not change the size of any images.
 
 See also zoomIn().
@@ -1529,8 +1527,6 @@ func (this *QPlainTextEdit) ZoomOut(range_ int) {
 // [-2] void zoomOut(int)
 
 /*
-This is an overloaded function.
-
 Zooms out on the text by making the base font size range points smaller and recalculating all font sizes to be the new size. This does not change the size of any images.
 
 See also zoomIn().
@@ -1718,7 +1714,7 @@ func (this *QPlainTextEdit) TimerEvent(e qtcore.QTimerEvent_ITF /*777 QTimerEven
 // [-2] void keyPressEvent(QKeyEvent *)
 
 /*
-Reimplemented from QWidget::keyPressEvent().
+Reimplemented from QAbstractScrollArea::keyPressEvent().
 */
 func (this *QPlainTextEdit) KeyPressEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1752,7 +1748,7 @@ func (this *QPlainTextEdit) KeyReleaseEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEven
 // [-2] void resizeEvent(QResizeEvent *)
 
 /*
-Reimplemented from QWidget::resizeEvent().
+Reimplemented from QAbstractScrollArea::resizeEvent().
 */
 func (this *QPlainTextEdit) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1769,7 +1765,7 @@ func (this *QPlainTextEdit) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEv
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QAbstractScrollArea::paintEvent().
 */
 func (this *QPlainTextEdit) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1786,7 +1782,7 @@ func (this *QPlainTextEdit) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent
 // [-2] void mousePressEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mousePressEvent().
+Reimplemented from QAbstractScrollArea::mousePressEvent().
 */
 func (this *QPlainTextEdit) MousePressEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1803,7 +1799,7 @@ func (this *QPlainTextEdit) MousePressEvent(e qtgui.QMouseEvent_ITF /*777 QMouse
 // [-2] void mouseMoveEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseMoveEvent().
+Reimplemented from QAbstractScrollArea::mouseMoveEvent().
 */
 func (this *QPlainTextEdit) MouseMoveEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1820,7 +1816,7 @@ func (this *QPlainTextEdit) MouseMoveEvent(e qtgui.QMouseEvent_ITF /*777 QMouseE
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseReleaseEvent().
+Reimplemented from QAbstractScrollArea::mouseReleaseEvent().
 */
 func (this *QPlainTextEdit) MouseReleaseEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1837,7 +1833,7 @@ func (this *QPlainTextEdit) MouseReleaseEvent(e qtgui.QMouseEvent_ITF /*777 QMou
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseDoubleClickEvent().
+Reimplemented from QAbstractScrollArea::mouseDoubleClickEvent().
 */
 func (this *QPlainTextEdit) MouseDoubleClickEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1868,7 +1864,7 @@ func (this *QPlainTextEdit) FocusNextPrevChild(next bool) bool {
 // [-2] void contextMenuEvent(QContextMenuEvent *)
 
 /*
-Reimplemented from QWidget::contextMenuEvent().
+Reimplemented from QAbstractScrollArea::contextMenuEvent().
 
 Shows the standard context menu created with createStandardContextMenu().
 
@@ -1901,7 +1897,7 @@ func (this *QPlainTextEdit) ContextMenuEvent(e qtgui.QContextMenuEvent_ITF /*777
 // [-2] void dragEnterEvent(QDragEnterEvent *)
 
 /*
-Reimplemented from QWidget::dragEnterEvent().
+Reimplemented from QAbstractScrollArea::dragEnterEvent().
 */
 func (this *QPlainTextEdit) DragEnterEvent(e qtgui.QDragEnterEvent_ITF /*777 QDragEnterEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1918,7 +1914,7 @@ func (this *QPlainTextEdit) DragEnterEvent(e qtgui.QDragEnterEvent_ITF /*777 QDr
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
 
 /*
-Reimplemented from QWidget::dragLeaveEvent().
+Reimplemented from QAbstractScrollArea::dragLeaveEvent().
 */
 func (this *QPlainTextEdit) DragLeaveEvent(e qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1935,7 +1931,7 @@ func (this *QPlainTextEdit) DragLeaveEvent(e qtgui.QDragLeaveEvent_ITF /*777 QDr
 // [-2] void dragMoveEvent(QDragMoveEvent *)
 
 /*
-Reimplemented from QWidget::dragMoveEvent().
+Reimplemented from QAbstractScrollArea::dragMoveEvent().
 */
 func (this *QPlainTextEdit) DragMoveEvent(e qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1952,7 +1948,7 @@ func (this *QPlainTextEdit) DragMoveEvent(e qtgui.QDragMoveEvent_ITF /*777 QDrag
 // [-2] void dropEvent(QDropEvent *)
 
 /*
-Reimplemented from QWidget::dropEvent().
+Reimplemented from QAbstractScrollArea::dropEvent().
 */
 func (this *QPlainTextEdit) DropEvent(e qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2020,7 +2016,7 @@ func (this *QPlainTextEdit) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent
 // [-2] void changeEvent(QEvent *)
 
 /*
-Reimplemented from QWidget::changeEvent().
+Reimplemented from QFrame::changeEvent().
 */
 func (this *QPlainTextEdit) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -2037,7 +2033,7 @@ func (this *QPlainTextEdit) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 // [-2] void wheelEvent(QWheelEvent *)
 
 /*
-Reimplemented from QWidget::wheelEvent().
+Reimplemented from QAbstractScrollArea::wheelEvent().
 */
 func (this *QPlainTextEdit) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer

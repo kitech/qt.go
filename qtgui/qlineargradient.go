@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 11
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -63,7 +63,7 @@ func (*QLinearGradient) NewFromPointer(cthis unsafe.Pointer) *QLinearGradient {
 	return NewQLinearGradientFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:257
+// /usr/include/qt/QtGui/qbrush.h:431
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLinearGradient()
@@ -82,7 +82,7 @@ func NewQLinearGradient() *QLinearGradient {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:258
+// /usr/include/qt/QtGui/qbrush.h:432
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QLinearGradient(const QPointF &, const QPointF &)
@@ -109,7 +109,7 @@ func NewQLinearGradient1(start qtcore.QPointF_ITF, finalStop qtcore.QPointF_ITF)
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:259
+// /usr/include/qt/QtGui/qbrush.h:433
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QLinearGradient(qreal, qreal, qreal, qreal)
@@ -128,7 +128,7 @@ func NewQLinearGradient2(xStart float64, yStart float64, xFinalStop float64, yFi
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qbrush.h:261
+// /usr/include/qt/QtGui/qbrush.h:435
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF start() const
@@ -144,7 +144,7 @@ func (this *QLinearGradient) Start() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qbrush.h:262
+// /usr/include/qt/QtGui/qbrush.h:436
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStart(const QPointF &)
@@ -161,7 +161,7 @@ func (this *QLinearGradient) SetStart(start qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:263
+// /usr/include/qt/QtGui/qbrush.h:437
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setStart(qreal, qreal)
@@ -174,7 +174,7 @@ func (this *QLinearGradient) SetStart1(x float64, y float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:265
+// /usr/include/qt/QtGui/qbrush.h:439
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF finalStop() const
@@ -190,7 +190,7 @@ func (this *QLinearGradient) FinalStop() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qbrush.h:266
+// /usr/include/qt/QtGui/qbrush.h:440
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFinalStop(const QPointF &)
@@ -207,7 +207,7 @@ func (this *QLinearGradient) SetFinalStop(stop qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbrush.h:267
+// /usr/include/qt/QtGui/qbrush.h:441
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFinalStop(qreal, qreal)

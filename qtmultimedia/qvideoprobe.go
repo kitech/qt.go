@@ -210,10 +210,10 @@ func (this *QVideoProbe) IsActive() bool {
 /*
 This signal should be emitted when a video frame is processed in the media service.
 */
-func (this *QVideoProbe) VideoFrameProbed(videoFrame QVideoFrame_ITF) {
+func (this *QVideoProbe) VideoFrameProbed(frame QVideoFrame_ITF) {
 	var convArg0 unsafe.Pointer
-	if videoFrame != nil && videoFrame.QVideoFrame_PTR() != nil {
-		convArg0 = videoFrame.QVideoFrame_PTR().GetCthis()
+	if frame != nil && frame.QVideoFrame_PTR() != nil {
+		convArg0 = frame.QVideoFrame_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QVideoProbe16videoFrameProbedERK11QVideoFrame", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

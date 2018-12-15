@@ -64,7 +64,7 @@ func (*QJsonValueRef) NewFromPointer(cthis unsafe.Pointer) *QJsonValueRef {
 	return NewQJsonValueRefFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:174
+// /usr/include/qt/QtCore/qjsonvalue.h:175
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QJsonValueRef(QJsonArray *, int)
@@ -87,7 +87,7 @@ func NewQJsonValueRef(array QJsonArray_ITF /*777 QJsonArray **/, idx int) *QJson
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:176
+// /usr/include/qt/QtCore/qjsonvalue.h:177
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QJsonValueRef(QJsonObject *, int)
@@ -110,7 +110,7 @@ func NewQJsonValueRef1(object QJsonObject_ITF /*777 QJsonObject **/, idx int) *Q
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:180
+// /usr/include/qt/QtCore/qjsonvalue.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonValueRef & operator=(const QJsonValue &)
@@ -130,7 +130,7 @@ func (this *QJsonValueRef) Operator_equal(val QJsonValue_ITF) *QJsonValueRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:181
+// /usr/include/qt/QtCore/qjsonvalue.h:182
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QJsonValueRef & operator=(const QJsonValueRef &)
@@ -150,7 +150,7 @@ func (this *QJsonValueRef) Operator_equal1(val QJsonValueRef_ITF) *QJsonValueRef
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:183
+// /usr/include/qt/QtCore/qjsonvalue.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant toVariant() const
@@ -180,7 +180,7 @@ func (this *QJsonValueRef) ToVariant() *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:184
+// /usr/include/qt/QtCore/qjsonvalue.h:185
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QJsonValue::Type type() const
@@ -196,7 +196,7 @@ func (this *QJsonValueRef) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:185
+// /usr/include/qt/QtCore/qjsonvalue.h:186
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -210,7 +210,7 @@ func (this *QJsonValueRef) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:186
+// /usr/include/qt/QtCore/qjsonvalue.h:187
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isBool() const
@@ -226,7 +226,7 @@ func (this *QJsonValueRef) IsBool() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:187
+// /usr/include/qt/QtCore/qjsonvalue.h:188
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDouble() const
@@ -242,7 +242,7 @@ func (this *QJsonValueRef) IsDouble() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:188
+// /usr/include/qt/QtCore/qjsonvalue.h:189
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isString() const
@@ -258,7 +258,7 @@ func (this *QJsonValueRef) IsString() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:189
+// /usr/include/qt/QtCore/qjsonvalue.h:190
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isArray() const
@@ -274,7 +274,7 @@ func (this *QJsonValueRef) IsArray() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:190
+// /usr/include/qt/QtCore/qjsonvalue.h:191
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isObject() const
@@ -290,7 +290,7 @@ func (this *QJsonValueRef) IsObject() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:191
+// /usr/include/qt/QtCore/qjsonvalue.h:192
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isUndefined() const
@@ -304,7 +304,7 @@ func (this *QJsonValueRef) IsUndefined() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:193
+// /usr/include/qt/QtCore/qjsonvalue.h:194
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool toBool() const
@@ -320,7 +320,7 @@ func (this *QJsonValueRef) ToBool() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:201
+// /usr/include/qt/QtCore/qjsonvalue.h:202
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool toBool(bool) const
@@ -336,7 +336,7 @@ func (this *QJsonValueRef) ToBool1(defaultValue bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:194
+// /usr/include/qt/QtCore/qjsonvalue.h:195
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int toInt() const
@@ -345,6 +345,8 @@ func (this *QJsonValueRef) ToBool1(defaultValue bool) bool {
 Converts the value to an int and returns it.
 
 If type() is not Double or the value is not a whole number, the defaultValue will be returned.
+
+This function was introduced in  Qt 5.2.
 */
 func (this *QJsonValueRef) ToInt() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -352,7 +354,7 @@ func (this *QJsonValueRef) ToInt() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:202
+// /usr/include/qt/QtCore/qjsonvalue.h:203
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] int toInt(int) const
@@ -361,6 +363,8 @@ func (this *QJsonValueRef) ToInt() int {
 Converts the value to an int and returns it.
 
 If type() is not Double or the value is not a whole number, the defaultValue will be returned.
+
+This function was introduced in  Qt 5.2.
 */
 func (this *QJsonValueRef) ToInt1(defaultValue int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
@@ -368,7 +372,7 @@ func (this *QJsonValueRef) ToInt1(defaultValue int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:195
+// /usr/include/qt/QtCore/qjsonvalue.h:196
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] double toDouble() const
@@ -384,7 +388,7 @@ func (this *QJsonValueRef) ToDouble() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:203
+// /usr/include/qt/QtCore/qjsonvalue.h:204
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] double toDouble(double) const
@@ -400,7 +404,7 @@ func (this *QJsonValueRef) ToDouble1(defaultValue float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:196
+// /usr/include/qt/QtCore/qjsonvalue.h:197
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString() const
@@ -421,7 +425,7 @@ func (this *QJsonValueRef) ToString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:204
+// /usr/include/qt/QtCore/qjsonvalue.h:205
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(const QString &) const
@@ -444,7 +448,7 @@ func (this *QJsonValueRef) ToString1(defaultValue string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:197
+// /usr/include/qt/QtCore/qjsonvalue.h:198
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonArray toArray() const
@@ -462,7 +466,7 @@ func (this *QJsonValueRef) ToArray() *QJsonArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:198
+// /usr/include/qt/QtCore/qjsonvalue.h:199
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject toObject() const
@@ -480,7 +484,7 @@ func (this *QJsonValueRef) ToObject() *QJsonObject /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:206
+// /usr/include/qt/QtCore/qjsonvalue.h:207
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QJsonValue &) const
@@ -498,7 +502,7 @@ func (this *QJsonValueRef) Operator_equal_equal(other QJsonValue_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:207
+// /usr/include/qt/QtCore/qjsonvalue.h:208
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QJsonValue &) const

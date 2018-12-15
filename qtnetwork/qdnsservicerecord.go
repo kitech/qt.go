@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qdnslookup.h
@@ -65,7 +67,7 @@ func (*QDnsServiceRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsServiceRecor
 	return NewQDnsServiceRecordFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:136
+// /usr/include/qt/QtNetwork/qdnslookup.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsServiceRecord()
@@ -84,7 +86,7 @@ func NewQDnsServiceRecord() *QDnsServiceRecord {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:139
+// /usr/include/qt/QtNetwork/qdnslookup.h:141
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDnsServiceRecord & operator=(QDnsServiceRecord &&)
@@ -100,7 +102,7 @@ func (this *QDnsServiceRecord) Operator_equal(other unsafe.Pointer /*333*/) *QDn
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:141
+// /usr/include/qt/QtNetwork/qdnslookup.h:143
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QDnsServiceRecord & operator=(const QDnsServiceRecord &)
@@ -120,7 +122,7 @@ func (this *QDnsServiceRecord) Operator_equal1(other QDnsServiceRecord_ITF) *QDn
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:142
+// /usr/include/qt/QtNetwork/qdnslookup.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDnsServiceRecord()
@@ -135,7 +137,7 @@ func DeleteQDnsServiceRecord(this *QDnsServiceRecord) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:144
+// /usr/include/qt/QtNetwork/qdnslookup.h:146
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsServiceRecord &)
@@ -152,7 +154,7 @@ func (this *QDnsServiceRecord) Swap(other QDnsServiceRecord_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:146
+// /usr/include/qt/QtNetwork/qdnslookup.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
@@ -169,7 +171,7 @@ func (this *QDnsServiceRecord) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:147
+// /usr/include/qt/QtNetwork/qdnslookup.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] quint16 port() const
@@ -183,7 +185,7 @@ func (this *QDnsServiceRecord) Port() uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:148
+// /usr/include/qt/QtNetwork/qdnslookup.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] quint16 priority() const
@@ -197,7 +199,7 @@ func (this *QDnsServiceRecord) Priority() uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:149
+// /usr/include/qt/QtNetwork/qdnslookup.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString target() const
@@ -214,7 +216,7 @@ func (this *QDnsServiceRecord) Target() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:150
+// /usr/include/qt/QtNetwork/qdnslookup.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] quint32 timeToLive() const
@@ -228,7 +230,7 @@ func (this *QDnsServiceRecord) TimeToLive() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:151
+// /usr/include/qt/QtNetwork/qdnslookup.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] quint16 weight() const

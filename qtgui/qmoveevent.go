@@ -63,7 +63,7 @@ func (*QMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QMoveEvent {
 	return NewQMoveEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:421
+// /usr/include/qt/QtGui/qevent.h:426
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMoveEvent(const QPoint &, const QPoint &)
@@ -90,7 +90,7 @@ func NewQMoveEvent(pos qtcore.QPoint_ITF, oldPos qtcore.QPoint_ITF) *QMoveEvent 
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:422
+// /usr/include/qt/QtGui/qevent.h:427
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMoveEvent()
@@ -105,7 +105,7 @@ func DeleteQMoveEvent(this *QMoveEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:424
+// /usr/include/qt/QtGui/qevent.h:429
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & pos() const
@@ -121,7 +121,7 @@ func (this *QMoveEvent) Pos() *qtcore.QPoint {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:425
+// /usr/include/qt/QtGui/qevent.h:430
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & oldPos() const

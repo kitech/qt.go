@@ -55,8 +55,8 @@ func (this *QTableWidget) InheritSupportedDropActions(f func() int) {
 	qtrt.SetAllInheritCallback(this, "supportedDropActions", f)
 }
 
-// QModelIndex indexFromItem(QTableWidgetItem *)
-func (this *QTableWidget) InheritIndexFromItem(f func(item *QTableWidgetItem /*777 QTableWidgetItem **/) unsafe.Pointer) {
+// QModelIndex indexFromItem(const QTableWidgetItem *)
+func (this *QTableWidget) InheritIndexFromItem(f func(item *QTableWidgetItem /*777 const QTableWidgetItem **/) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "indexFromItem", f)
 }
 
@@ -1218,7 +1218,7 @@ func (this *QTableWidget) ItemEntered(item QTableWidgetItem_ITF /*777 QTableWidg
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:305
+// /usr/include/qt/QtWidgets/qtablewidget.h:306
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemChanged(QTableWidgetItem *)
@@ -1235,7 +1235,7 @@ func (this *QTableWidget) ItemChanged(item QTableWidgetItem_ITF /*777 QTableWidg
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:307
+// /usr/include/qt/QtWidgets/qtablewidget.h:308
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentItemChanged(QTableWidgetItem *, QTableWidgetItem *)
@@ -1256,7 +1256,7 @@ func (this *QTableWidget) CurrentItemChanged(current QTableWidgetItem_ITF /*777 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:308
+// /usr/include/qt/QtWidgets/qtablewidget.h:309
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemSelectionChanged()
@@ -1271,7 +1271,7 @@ func (this *QTableWidget) ItemSelectionChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:310
+// /usr/include/qt/QtWidgets/qtablewidget.h:311
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cellPressed(int, int)
@@ -1286,7 +1286,7 @@ func (this *QTableWidget) CellPressed(row int, column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:311
+// /usr/include/qt/QtWidgets/qtablewidget.h:312
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cellClicked(int, int)
@@ -1301,7 +1301,7 @@ func (this *QTableWidget) CellClicked(row int, column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:312
+// /usr/include/qt/QtWidgets/qtablewidget.h:313
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cellDoubleClicked(int, int)
@@ -1316,7 +1316,7 @@ func (this *QTableWidget) CellDoubleClicked(row int, column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:314
+// /usr/include/qt/QtWidgets/qtablewidget.h:315
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cellActivated(int, int)
@@ -1331,7 +1331,7 @@ func (this *QTableWidget) CellActivated(row int, column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:315
+// /usr/include/qt/QtWidgets/qtablewidget.h:316
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cellEntered(int, int)
@@ -1348,7 +1348,7 @@ func (this *QTableWidget) CellEntered(row int, column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:316
+// /usr/include/qt/QtWidgets/qtablewidget.h:317
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cellChanged(int, int)
@@ -1363,7 +1363,7 @@ func (this *QTableWidget) CellChanged(row int, column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:318
+// /usr/include/qt/QtWidgets/qtablewidget.h:319
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentCellChanged(int, int, int, int)
@@ -1378,13 +1378,13 @@ func (this *QTableWidget) CurrentCellChanged(currentRow int, currentColumn int, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:321
+// /usr/include/qt/QtWidgets/qtablewidget.h:322
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractItemView::event().
 */
 func (this *QTableWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -1396,7 +1396,7 @@ func (this *QTableWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:322
+// /usr/include/qt/QtWidgets/qtablewidget.h:323
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
@@ -1414,7 +1414,7 @@ func (this *QTableWidget) MimeTypes() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:328
+// /usr/include/qt/QtWidgets/qtablewidget.h:329
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(int, int, const QMimeData *, Qt::DropAction)
@@ -1434,7 +1434,7 @@ func (this *QTableWidget) DropMimeData(row int, column int, data qtcore.QMimeDat
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:329
+// /usr/include/qt/QtWidgets/qtablewidget.h:330
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
@@ -1450,15 +1450,39 @@ func (this *QTableWidget) SupportedDropActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:338
+// /usr/include/qt/QtWidgets/qtablewidget.h:339
 // index:0
+// Protected Visibility=Default Availability=Available
+// [24] QModelIndex indexFromItem(const QTableWidgetItem *) const
+
+/*
+Returns the QModelIndex associated with the given item.
+
+Note: In Qt versions prior to 5.10, this function took a non-const item.
+*/
+func (this *QTableWidget) IndexFromItem(item QTableWidgetItem_ITF /*777 const QTableWidgetItem **/) *qtcore.QModelIndex /*123*/ {
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QTableWidgetItem_PTR() != nil {
+		convArg0 = item.QTableWidgetItem_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTableWidget13indexFromItemEPK16QTableWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qtablewidget.h:341
+// index:1
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(QTableWidgetItem *) const
 
 /*
 Returns the QModelIndex associated with the given item.
+
+Note: In Qt versions prior to 5.10, this function took a non-const item.
 */
-func (this *QTableWidget) IndexFromItem(item QTableWidgetItem_ITF /*777 QTableWidgetItem **/) *qtcore.QModelIndex /*123*/ {
+func (this *QTableWidget) IndexFromItem1(item QTableWidgetItem_ITF /*777 QTableWidgetItem **/) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QTableWidgetItem_PTR() != nil {
 		convArg0 = item.QTableWidgetItem_PTR().GetCthis()
@@ -1470,7 +1494,7 @@ func (this *QTableWidget) IndexFromItem(item QTableWidgetItem_ITF /*777 QTableWi
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:339
+// /usr/include/qt/QtWidgets/qtablewidget.h:343
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QTableWidgetItem * itemFromIndex(const QModelIndex &) const
@@ -1488,13 +1512,13 @@ func (this *QTableWidget) ItemFromIndex(index qtcore.QModelIndex_ITF) *QTableWid
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:343
+// /usr/include/qt/QtWidgets/qtablewidget.h:347
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
 
 /*
-Reimplemented from QWidget::dropEvent().
+Reimplemented from QAbstractItemView::dropEvent().
 */
 func (this *QTableWidget) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
 	var convArg0 unsafe.Pointer

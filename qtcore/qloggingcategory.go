@@ -73,6 +73,8 @@ func (*QLoggingCategory) NewFromPointer(cthis unsafe.Pointer) *QLoggingCategory 
 Constructs a QLoggingCategory object with the provided category name. All message types for this category are enabled by default.
 
 If category is 0, the category name is changed to "default".
+
+Note that category must be kept valid during the lifetime of this object.
 */
 func (*QLoggingCategory) NewForInherit(category string) *QLoggingCategory {
 	return NewQLoggingCategory(category)
@@ -96,6 +98,8 @@ func NewQLoggingCategory(category string) *QLoggingCategory {
 Constructs a QLoggingCategory object with the provided category name. All message types for this category are enabled by default.
 
 If category is 0, the category name is changed to "default".
+
+Note that category must be kept valid during the lifetime of this object.
 */
 func (*QLoggingCategory) NewForInherit1(category string, severityLevel int) *QLoggingCategory {
 	return NewQLoggingCategory1(category, severityLevel)

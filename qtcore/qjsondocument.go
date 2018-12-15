@@ -400,15 +400,15 @@ func (this *QJsonDocument) ToVariant() *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:137
+// /usr/include/qt/QtCore/qjsondocument.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toJson() const
 
 /*
-Converts the QJsonDocument to a UTF-8 encoded JSON document in the provided format.
+Converts the QJsonDocument to a UTF-8 encoded JSON document.
 
-See also fromJson() and JsonFormat.
+See also fromJson().
 */
 func (this *QJsonDocument) ToJson() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument6toJsonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -418,15 +418,15 @@ func (this *QJsonDocument) ToJson() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:138
+// /usr/include/qt/QtCore/qjsondocument.h:136
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toJson(QJsonDocument::JsonFormat) const
 
 /*
-Converts the QJsonDocument to a UTF-8 encoded JSON document in the provided format.
+Converts the QJsonDocument to a UTF-8 encoded JSON document.
 
-See also fromJson() and JsonFormat.
+See also fromJson().
 */
 func (this *QJsonDocument) ToJson1(format int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonDocument6toJsonENS_10JsonFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
@@ -436,7 +436,7 @@ func (this *QJsonDocument) ToJson1(format int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:141
+// /usr/include/qt/QtCore/qjsondocument.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
@@ -450,7 +450,7 @@ func (this *QJsonDocument) IsEmpty() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:142
+// /usr/include/qt/QtCore/qjsondocument.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isArray() const
@@ -466,7 +466,7 @@ func (this *QJsonDocument) IsArray() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:143
+// /usr/include/qt/QtCore/qjsondocument.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isObject() const
@@ -482,7 +482,7 @@ func (this *QJsonDocument) IsObject() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:145
+// /usr/include/qt/QtCore/qjsondocument.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject object() const
@@ -502,7 +502,7 @@ func (this *QJsonDocument) Object() *QJsonObject /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:146
+// /usr/include/qt/QtCore/qjsondocument.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonArray array() const
@@ -522,7 +522,7 @@ func (this *QJsonDocument) Array() *QJsonArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:148
+// /usr/include/qt/QtCore/qjsondocument.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setObject(const QJsonObject &)
@@ -541,7 +541,7 @@ func (this *QJsonDocument) SetObject(object QJsonObject_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:149
+// /usr/include/qt/QtCore/qjsondocument.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setArray(const QJsonArray &)
@@ -560,7 +560,7 @@ func (this *QJsonDocument) SetArray(array QJsonArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:151
+// /usr/include/qt/QtCore/qjsondocument.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] const QJsonValue operator[](const QString &) const
@@ -578,7 +578,7 @@ func (this *QJsonDocument) Operator_get_index(key string) *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:152
+// /usr/include/qt/QtCore/qjsondocument.h:150
 // index:1
 // Public Visibility=Default Availability=Available
 // [24] const QJsonValue operator[](QLatin1String) const
@@ -598,7 +598,7 @@ func (this *QJsonDocument) Operator_get_index1(key QLatin1String_ITF /*123*/) *Q
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:153
+// /usr/include/qt/QtCore/qjsondocument.h:151
 // index:2
 // Public Visibility=Default Availability=Available
 // [24] const QJsonValue operator[](int) const
@@ -614,7 +614,7 @@ func (this *QJsonDocument) Operator_get_index2(i int) *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:155
+// /usr/include/qt/QtCore/qjsondocument.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QJsonDocument &) const
@@ -632,7 +632,7 @@ func (this *QJsonDocument) Operator_equal_equal(other QJsonDocument_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:156
+// /usr/include/qt/QtCore/qjsondocument.h:154
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QJsonDocument &) const
@@ -650,7 +650,7 @@ func (this *QJsonDocument) Operator_not_equal(other QJsonDocument_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:158
+// /usr/include/qt/QtCore/qjsondocument.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -699,19 +699,25 @@ func QJsonDocument_DataValidationItemName(val int) string {
 /*
 This value defines the format of the JSON byte array produced when converting to a QJsonDocument using toJson().
 
-  {
-      "Array": [
-          true,
-          999,
-          "string"
-      ],
-      "Key": "Value",
-      "null": null
-  }
+      {
+          "Array": [
+              true,
+              999,
+              "string"
+          ],
+          "Key": "Value",
+          "null": null
+      }
 
 
 
-  {"Array":[true,999,"string"],"Key":"Value","null":null}
+      {"Array":[true,999,"string"],"Key":"Value","null":null}
+
+
+
+
+
+This enum was introduced or modified in  Qt 5.1.
 
 */
 type QJsonDocument__JsonFormat = int

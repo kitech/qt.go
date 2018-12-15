@@ -277,7 +277,7 @@ func (this *QKeyEventTransition) SetModifierMask(modifiers int) {
 // [-2] void onTransition(QEvent *)
 
 /*
-Reimplemented from QAbstractTransition::onTransition().
+Reimplemented from QEventTransition::onTransition().
 */
 func (this *QKeyEventTransition) OnTransition(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -294,7 +294,7 @@ func (this *QKeyEventTransition) OnTransition(event qtcore.QEvent_ITF /*777 QEve
 // [1] bool eventTest(QEvent *)
 
 /*
-Reimplemented from QAbstractTransition::eventTest().
+Reimplemented from QEventTransition::eventTest().
 */
 func (this *QKeyEventTransition) EventTest(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

@@ -735,7 +735,7 @@ func (this *QBoxLayout) SizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize minimumSize() const
 
 /*
-Reimplemented from QLayoutItem::minimumSize().
+Reimplemented from QLayout::minimumSize().
 */
 func (this *QBoxLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QBoxLayout11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -751,7 +751,7 @@ func (this *QBoxLayout) MinimumSize() *qtcore.QSize /*123*/ {
 // [8] QSize maximumSize() const
 
 /*
-Reimplemented from QLayoutItem::maximumSize().
+Reimplemented from QLayout::maximumSize().
 */
 func (this *QBoxLayout) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QBoxLayout11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -809,7 +809,7 @@ func (this *QBoxLayout) MinimumHeightForWidth(arg0 int) int {
 // [4] Qt::Orientations expandingDirections() const
 
 /*
-Reimplemented from QLayoutItem::expandingDirections().
+Reimplemented from QLayout::expandingDirections().
 */
 func (this *QBoxLayout) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QBoxLayout19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -823,7 +823,7 @@ func (this *QBoxLayout) ExpandingDirections() int {
 // [-2] void invalidate()
 
 /*
-Reimplemented from QLayoutItem::invalidate().
+Reimplemented from QLayout::invalidate().
 
 Resets cached information.
 */
@@ -880,7 +880,7 @@ func (this *QBoxLayout) Count() int {
 // [-2] void setGeometry(const QRect &)
 
 /*
-Reimplemented from QLayoutItem::setGeometry().
+Reimplemented from QLayout::setGeometry().
 */
 func (this *QBoxLayout) SetGeometry(arg0 qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer

@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qvariantanimation.h
@@ -87,7 +89,7 @@ func (*QVariantAnimation) NewFromPointer(cthis unsafe.Pointer) *QVariantAnimatio
 	return NewQVariantAnimationFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:57
+// /usr/include/qt/QtCore/qvariantanimation.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -101,7 +103,7 @@ func (this *QVariantAnimation) MetaObject() *QMetaObject /*777 const QMetaObject
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:68
+// /usr/include/qt/QtCore/qvariantanimation.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QVariantAnimation(QObject *)
@@ -124,7 +126,7 @@ func NewQVariantAnimation(parent QObject_ITF /*777 QObject **/) *QVariantAnimati
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:68
+// /usr/include/qt/QtCore/qvariantanimation.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QVariantAnimation(QObject *)
@@ -145,7 +147,7 @@ func NewQVariantAnimationp() *QVariantAnimation {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:69
+// /usr/include/qt/QtCore/qvariantanimation.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QVariantAnimation()
@@ -160,7 +162,7 @@ func DeleteQVariantAnimation(this *QVariantAnimation) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:71
+// /usr/include/qt/QtCore/qvariantanimation.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant startValue() const
@@ -176,7 +178,7 @@ func (this *QVariantAnimation) StartValue() *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:72
+// /usr/include/qt/QtCore/qvariantanimation.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStartValue(const QVariant &)
@@ -193,7 +195,7 @@ func (this *QVariantAnimation) SetStartValue(value QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:74
+// /usr/include/qt/QtCore/qvariantanimation.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant endValue() const
@@ -209,7 +211,7 @@ func (this *QVariantAnimation) EndValue() *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:75
+// /usr/include/qt/QtCore/qvariantanimation.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEndValue(const QVariant &)
@@ -226,7 +228,7 @@ func (this *QVariantAnimation) SetEndValue(value QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:77
+// /usr/include/qt/QtCore/qvariantanimation.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant keyValueAt(qreal) const
@@ -244,7 +246,7 @@ func (this *QVariantAnimation) KeyValueAt(step float64) *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:78
+// /usr/include/qt/QtCore/qvariantanimation.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeyValueAt(qreal, const QVariant &)
@@ -263,7 +265,7 @@ func (this *QVariantAnimation) SetKeyValueAt(step float64, value QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:83
+// /usr/include/qt/QtCore/qvariantanimation.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant currentValue() const
@@ -279,7 +281,7 @@ func (this *QVariantAnimation) CurrentValue() *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:85
+// /usr/include/qt/QtCore/qvariantanimation.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int duration() const
@@ -293,7 +295,7 @@ func (this *QVariantAnimation) Duration() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:86
+// /usr/include/qt/QtCore/qvariantanimation.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDuration(int)
@@ -306,7 +308,7 @@ func (this *QVariantAnimation) SetDuration(msecs int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:88
+// /usr/include/qt/QtCore/qvariantanimation.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QEasingCurve easingCurve() const
@@ -322,7 +324,7 @@ func (this *QVariantAnimation) EasingCurve() *QEasingCurve /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:89
+// /usr/include/qt/QtCore/qvariantanimation.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEasingCurve(const QEasingCurve &)
@@ -339,7 +341,7 @@ func (this *QVariantAnimation) SetEasingCurve(easing QEasingCurve_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:94
+// /usr/include/qt/QtCore/qvariantanimation.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(const QVariant &)
@@ -360,13 +362,13 @@ func (this *QVariantAnimation) ValueChanged(value QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:98
+// /usr/include/qt/QtCore/qvariantanimation.h:97
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractAnimation::event().
 */
 func (this *QVariantAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -378,7 +380,7 @@ func (this *QVariantAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:100
+// /usr/include/qt/QtCore/qvariantanimation.h:99
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentTime(int)
@@ -391,7 +393,7 @@ func (this *QVariantAnimation) UpdateCurrentTime(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:101
+// /usr/include/qt/QtCore/qvariantanimation.h:100
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
@@ -404,7 +406,7 @@ func (this *QVariantAnimation) UpdateState(newState int, oldState int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:103
+// /usr/include/qt/QtCore/qvariantanimation.h:102
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentValue(const QVariant &)
@@ -425,7 +427,7 @@ func (this *QVariantAnimation) UpdateCurrentValue(value QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariantanimation.h:104
+// /usr/include/qt/QtCore/qvariantanimation.h:103
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant interpolated(const QVariant &, const QVariant &, qreal) const

@@ -63,7 +63,7 @@ func (*QTextTableCellFormat) NewFromPointer(cthis unsafe.Pointer) *QTextTableCel
 	return NewQTextTableCellFormatFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:945
+// /usr/include/qt/QtGui/qtextformat.h:959
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextTableCellFormat()
@@ -82,7 +82,7 @@ func NewQTextTableCellFormat() *QTextTableCellFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:964
+// /usr/include/qt/QtGui/qtextformat.h:978
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextTableCellFormat(const QTextFormat &)
@@ -105,7 +105,7 @@ func NewQTextTableCellFormat1(fmt_ QTextFormat_ITF) *QTextTableCellFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:947
+// /usr/include/qt/QtGui/qtextformat.h:961
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -119,7 +119,7 @@ func (this *QTextTableCellFormat) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:949
+// /usr/include/qt/QtGui/qtextformat.h:963
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTopPadding(qreal)
@@ -132,7 +132,7 @@ func (this *QTextTableCellFormat) SetTopPadding(padding float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:950
+// /usr/include/qt/QtGui/qtextformat.h:964
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal topPadding() const
@@ -146,7 +146,7 @@ func (this *QTextTableCellFormat) TopPadding() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:952
+// /usr/include/qt/QtGui/qtextformat.h:966
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBottomPadding(qreal)
@@ -159,7 +159,7 @@ func (this *QTextTableCellFormat) SetBottomPadding(padding float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:953
+// /usr/include/qt/QtGui/qtextformat.h:967
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal bottomPadding() const
@@ -173,7 +173,7 @@ func (this *QTextTableCellFormat) BottomPadding() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:955
+// /usr/include/qt/QtGui/qtextformat.h:969
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setLeftPadding(qreal)
@@ -186,7 +186,7 @@ func (this *QTextTableCellFormat) SetLeftPadding(padding float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:956
+// /usr/include/qt/QtGui/qtextformat.h:970
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal leftPadding() const
@@ -200,7 +200,7 @@ func (this *QTextTableCellFormat) LeftPadding() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:958
+// /usr/include/qt/QtGui/qtextformat.h:972
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRightPadding(qreal)
@@ -213,7 +213,7 @@ func (this *QTextTableCellFormat) SetRightPadding(padding float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:959
+// /usr/include/qt/QtGui/qtextformat.h:973
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal rightPadding() const
@@ -227,7 +227,7 @@ func (this *QTextTableCellFormat) RightPadding() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:961
+// /usr/include/qt/QtGui/qtextformat.h:975
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPadding(qreal)

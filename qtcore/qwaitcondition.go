@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 23
+// extern C begin: 22
 */
 // import "C"
 import "unsafe"
@@ -98,7 +98,7 @@ func DeleteQWaitCondition(this *QWaitCondition) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qwaitcondition.h:62
+// /usr/include/qt/QtCore/qwaitcondition.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wait(QMutex *, unsigned long)
@@ -125,7 +125,7 @@ func (this *QWaitCondition) Wait(lockedMutex QMutex_ITF /*777 QMutex **/, time u
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qwaitcondition.h:62
+// /usr/include/qt/QtCore/qwaitcondition.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wait(QMutex *, unsigned long)
@@ -154,8 +154,39 @@ func (this *QWaitCondition) Waitp(lockedMutex QMutex_ITF /*777 QMutex **/) bool 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qwaitcondition.h:63
+// /usr/include/qt/QtCore/qwaitcondition.h:64
 // index:1
+// Public Visibility=Default Availability=Available
+// [1] bool wait(QMutex *, QDeadlineTimer)
+
+/*
+Releases the lockedMutex and waits on the wait condition. The lockedMutex must be initially locked by the calling thread. If lockedMutex is not in a locked state, the behavior is undefined. If lockedMutex is a recursive mutex, this function returns immediately. The lockedMutex will be unlocked, and the calling thread will block until either of these conditions is met:
+
+
+Another thread signals it using wakeOne() or wakeAll(). This function will return true in this case.
+time milliseconds has elapsed. If time is ULONG_MAX (the default), then the wait will never timeout (the event must be signalled). This function will return false if the wait timed out.
+
+
+The lockedMutex will be returned to the same locked state. This function is provided to allow the atomic transition from the locked state to the wait state.
+
+See also wakeOne() and wakeAll().
+*/
+func (this *QWaitCondition) Wait1(lockedMutex QMutex_ITF /*777 QMutex **/, deadline QDeadlineTimer_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if lockedMutex != nil && lockedMutex.QMutex_PTR() != nil {
+		convArg0 = lockedMutex.QMutex_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if deadline != nil && deadline.QDeadlineTimer_PTR() != nil {
+		convArg1 = deadline.QDeadlineTimer_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutex14QDeadlineTimer", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qwaitcondition.h:65
+// index:2
 // Public Visibility=Default Availability=Available
 // [1] bool wait(QReadWriteLock *, unsigned long)
 
@@ -171,7 +202,7 @@ The lockedMutex will be returned to the same locked state. This function is prov
 
 See also wakeOne() and wakeAll().
 */
-func (this *QWaitCondition) Wait1(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/, time uint) bool {
+func (this *QWaitCondition) Wait2(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/, time uint) bool {
 	var convArg0 unsafe.Pointer
 	if lockedReadWriteLock != nil && lockedReadWriteLock.QReadWriteLock_PTR() != nil {
 		convArg0 = lockedReadWriteLock.QReadWriteLock_PTR().GetCthis()
@@ -181,8 +212,8 @@ func (this *QWaitCondition) Wait1(lockedReadWriteLock QReadWriteLock_ITF /*777 Q
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qwaitcondition.h:63
-// index:1
+// /usr/include/qt/QtCore/qwaitcondition.h:65
+// index:2
 // Public Visibility=Default Availability=Available
 // [1] bool wait(QReadWriteLock *, unsigned long)
 
@@ -198,7 +229,7 @@ The lockedMutex will be returned to the same locked state. This function is prov
 
 See also wakeOne() and wakeAll().
 */
-func (this *QWaitCondition) Wait1p(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) bool {
+func (this *QWaitCondition) Wait2p(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/) bool {
 	var convArg0 unsafe.Pointer
 	if lockedReadWriteLock != nil && lockedReadWriteLock.QReadWriteLock_PTR() != nil {
 		convArg0 = lockedReadWriteLock.QReadWriteLock_PTR().GetCthis()
@@ -210,7 +241,38 @@ func (this *QWaitCondition) Wait1p(lockedReadWriteLock QReadWriteLock_ITF /*777 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qwaitcondition.h:65
+// /usr/include/qt/QtCore/qwaitcondition.h:66
+// index:3
+// Public Visibility=Default Availability=Available
+// [1] bool wait(QReadWriteLock *, QDeadlineTimer)
+
+/*
+Releases the lockedMutex and waits on the wait condition. The lockedMutex must be initially locked by the calling thread. If lockedMutex is not in a locked state, the behavior is undefined. If lockedMutex is a recursive mutex, this function returns immediately. The lockedMutex will be unlocked, and the calling thread will block until either of these conditions is met:
+
+
+Another thread signals it using wakeOne() or wakeAll(). This function will return true in this case.
+time milliseconds has elapsed. If time is ULONG_MAX (the default), then the wait will never timeout (the event must be signalled). This function will return false if the wait timed out.
+
+
+The lockedMutex will be returned to the same locked state. This function is provided to allow the atomic transition from the locked state to the wait state.
+
+See also wakeOne() and wakeAll().
+*/
+func (this *QWaitCondition) Wait3(lockedReadWriteLock QReadWriteLock_ITF /*777 QReadWriteLock **/, deadline QDeadlineTimer_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if lockedReadWriteLock != nil && lockedReadWriteLock.QReadWriteLock_PTR() != nil {
+		convArg0 = lockedReadWriteLock.QReadWriteLock_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if deadline != nil && deadline.QDeadlineTimer_PTR() != nil {
+		convArg1 = deadline.QDeadlineTimer_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLock14QDeadlineTimer", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qwaitcondition.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void wakeOne()
@@ -227,7 +289,7 @@ func (this *QWaitCondition) WakeOne() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qwaitcondition.h:66
+// /usr/include/qt/QtCore/qwaitcondition.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void wakeAll()
@@ -242,7 +304,7 @@ func (this *QWaitCondition) WakeAll() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qwaitcondition.h:68
+// /usr/include/qt/QtCore/qwaitcondition.h:71
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void notify_one()
@@ -257,7 +319,7 @@ func (this *QWaitCondition) Notify_one() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qwaitcondition.h:69
+// /usr/include/qt/QtCore/qwaitcondition.h:72
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void notify_all()

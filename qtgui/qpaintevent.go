@@ -63,7 +63,7 @@ func (*QPaintEvent) NewFromPointer(cthis unsafe.Pointer) *QPaintEvent {
 	return NewQPaintEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:405
+// /usr/include/qt/QtGui/qevent.h:410
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPaintEvent(const QRegion &)
@@ -86,7 +86,7 @@ func NewQPaintEvent(paintRegion QRegion_ITF) *QPaintEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:406
+// /usr/include/qt/QtGui/qevent.h:411
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPaintEvent(const QRect &)
@@ -109,7 +109,7 @@ func NewQPaintEvent1(paintRect qtcore.QRect_ITF) *QPaintEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:407
+// /usr/include/qt/QtGui/qevent.h:412
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPaintEvent()
@@ -124,7 +124,7 @@ func DeleteQPaintEvent(this *QPaintEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:409
+// /usr/include/qt/QtGui/qevent.h:414
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QRect & rect() const
@@ -140,7 +140,7 @@ func (this *QPaintEvent) Rect() *qtcore.QRect {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:410
+// /usr/include/qt/QtGui/qevent.h:415
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QRegion & region() const

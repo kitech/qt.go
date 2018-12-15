@@ -300,7 +300,7 @@ func (this *QSlider) TickInterval() int {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractSlider::event().
 */
 func (this *QSlider) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

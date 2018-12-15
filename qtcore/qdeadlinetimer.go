@@ -64,7 +64,7 @@ func (*QDeadlineTimer) NewFromPointer(cthis unsafe.Pointer) *QDeadlineTimer {
 	return NewQDeadlineTimerFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:65
+// /usr/include/qt/QtCore/qdeadlinetimer.h:66
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QDeadlineTimer(Qt::TimerType)
@@ -87,7 +87,7 @@ func NewQDeadlineTimer(type_ int) *QDeadlineTimer {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:65
+// /usr/include/qt/QtCore/qdeadlinetimer.h:66
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QDeadlineTimer(Qt::TimerType)
@@ -112,7 +112,7 @@ func NewQDeadlineTimerp() *QDeadlineTimer {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:67
+// /usr/include/qt/QtCore/qdeadlinetimer.h:68
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QDeadlineTimer(QDeadlineTimer::ForeverConstant, Qt::TimerType)
@@ -135,7 +135,7 @@ func NewQDeadlineTimer1(arg0 int, type_ int) *QDeadlineTimer {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:67
+// /usr/include/qt/QtCore/qdeadlinetimer.h:68
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QDeadlineTimer(QDeadlineTimer::ForeverConstant, Qt::TimerType)
@@ -160,7 +160,7 @@ func NewQDeadlineTimer1p(arg0 int) *QDeadlineTimer {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:69
+// /usr/include/qt/QtCore/qdeadlinetimer.h:70
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDeadlineTimer(qint64, Qt::TimerType)
@@ -183,7 +183,7 @@ func NewQDeadlineTimer2(msecs int64, type_ int) *QDeadlineTimer {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:69
+// /usr/include/qt/QtCore/qdeadlinetimer.h:70
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDeadlineTimer(qint64, Qt::TimerType)
@@ -208,7 +208,7 @@ func NewQDeadlineTimer2p(msecs int64) *QDeadlineTimer {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:71
+// /usr/include/qt/QtCore/qdeadlinetimer.h:72
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDeadlineTimer &)
@@ -225,7 +225,7 @@ func (this *QDeadlineTimer) Swap(other QDeadlineTimer_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:74
+// /usr/include/qt/QtCore/qdeadlinetimer.h:75
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isForever() const
@@ -241,7 +241,7 @@ func (this *QDeadlineTimer) IsForever() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:76
+// /usr/include/qt/QtCore/qdeadlinetimer.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasExpired() const
@@ -259,7 +259,7 @@ func (this *QDeadlineTimer) HasExpired() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:78
+// /usr/include/qt/QtCore/qdeadlinetimer.h:79
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::TimerType timerType() const
@@ -275,7 +275,7 @@ func (this *QDeadlineTimer) TimerType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:80
+// /usr/include/qt/QtCore/qdeadlinetimer.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTimerType(Qt::TimerType)
@@ -292,7 +292,7 @@ func (this *QDeadlineTimer) SetTimerType(type_ int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:82
+// /usr/include/qt/QtCore/qdeadlinetimer.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 remainingTime() const
@@ -303,7 +303,7 @@ Returns the remaining time in this QDeadlineTimer object in milliseconds. If the
 This function is suitable for use in Qt APIs that take a millisecond timeout, such as the many QIODevice waitFor functions or the timed lock functions in QMutex, QWaitCondition, QSemaphore, or QReadWriteLock. For example:
 
 
-  mutex.tryLock(deadline.remainingTime());
+      mutex.tryLock(deadline.remainingTime());
 
 
 
@@ -315,7 +315,7 @@ func (this *QDeadlineTimer) RemainingTime() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:83
+// /usr/include/qt/QtCore/qdeadlinetimer.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 remainingTimeNSecs() const
@@ -331,7 +331,7 @@ func (this *QDeadlineTimer) RemainingTimeNSecs() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:84
+// /usr/include/qt/QtCore/qdeadlinetimer.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRemainingTime(qint64, Qt::TimerType)
@@ -348,7 +348,7 @@ func (this *QDeadlineTimer) SetRemainingTime(msecs int64, type_ int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:84
+// /usr/include/qt/QtCore/qdeadlinetimer.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRemainingTime(qint64, Qt::TimerType)
@@ -367,7 +367,7 @@ func (this *QDeadlineTimer) SetRemainingTimep(msecs int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:85
+// /usr/include/qt/QtCore/qdeadlinetimer.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreciseRemainingTime(qint64, qint64, Qt::TimerType)
@@ -384,7 +384,7 @@ func (this *QDeadlineTimer) SetPreciseRemainingTime(secs int64, nsecs int64, typ
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:85
+// /usr/include/qt/QtCore/qdeadlinetimer.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreciseRemainingTime(qint64, qint64, Qt::TimerType)
@@ -405,7 +405,7 @@ func (this *QDeadlineTimer) SetPreciseRemainingTimep(secs int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:85
+// /usr/include/qt/QtCore/qdeadlinetimer.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreciseRemainingTime(qint64, qint64, Qt::TimerType)
@@ -424,7 +424,7 @@ func (this *QDeadlineTimer) SetPreciseRemainingTimep1(secs int64, nsecs int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:88
+// /usr/include/qt/QtCore/qdeadlinetimer.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 deadline() const
@@ -437,14 +437,14 @@ If this QDeadlineTimer never expires, this function returns std::numeric_limits<
 This function can be used to calculate the amount of time a timer is overdue, by subtracting QDeadlineTimer::current() or QElapsedTimer::msecsSinceReference(), as in the following example:
 
 
-  qint64 realTimeLeft = deadline.deadline();
-  if (realTimeLeft != (std::numeric_limits<qint64>::max)()) {
-      realTimeLeft -= QDeadlineTimer::current().deadline();
-      // or:
-      //QElapsedTimer timer;
-      //timer.start();
-      //realTimeLeft -= timer.msecsSinceReference();
-  }
+      qint64 realTimeLeft = deadline.deadline();
+      if (realTimeLeft != (std::numeric_limits<qint64>::max)()) {
+          realTimeLeft -= QDeadlineTimer::current().deadline();
+          // or:
+          //QElapsedTimer timer;
+          //timer.start();
+          //realTimeLeft -= timer.msecsSinceReference();
+      }
 
 
 
@@ -458,7 +458,7 @@ func (this *QDeadlineTimer) Deadline() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:89
+// /usr/include/qt/QtCore/qdeadlinetimer.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 deadlineNSecs() const
@@ -471,9 +471,9 @@ If this QDeadlineTimer never expires, this function returns std::numeric_limits<
 This function can be used to calculate the amount of time a timer is overdue, by subtracting QDeadlineTimer::current(), as in the following example:
 
 
-  qint64 realTimeLeft = deadline.deadlineNSecs();
-  if (realTimeLeft != std::numeric_limits<qint64>::max())
-      realTimeLeft -= QDeadlineTimer::current().deadlineNSecs();
+      qint64 realTimeLeft = deadline.deadlineNSecs();
+      if (realTimeLeft != std::numeric_limits<qint64>::max())
+          realTimeLeft -= QDeadlineTimer::current().deadlineNSecs();
 
 
 
@@ -487,7 +487,7 @@ func (this *QDeadlineTimer) DeadlineNSecs() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:90
+// /usr/include/qt/QtCore/qdeadlinetimer.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDeadline(qint64, Qt::TimerType)
@@ -504,7 +504,7 @@ func (this *QDeadlineTimer) SetDeadline(msecs int64, timerType int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:90
+// /usr/include/qt/QtCore/qdeadlinetimer.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDeadline(qint64, Qt::TimerType)
@@ -523,7 +523,7 @@ func (this *QDeadlineTimer) SetDeadlinep(msecs int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:91
+// /usr/include/qt/QtCore/qdeadlinetimer.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreciseDeadline(qint64, qint64, Qt::TimerType)
@@ -540,7 +540,7 @@ func (this *QDeadlineTimer) SetPreciseDeadline(secs int64, nsecs int64, type_ in
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:91
+// /usr/include/qt/QtCore/qdeadlinetimer.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreciseDeadline(qint64, qint64, Qt::TimerType)
@@ -561,7 +561,7 @@ func (this *QDeadlineTimer) SetPreciseDeadlinep(secs int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:91
+// /usr/include/qt/QtCore/qdeadlinetimer.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreciseDeadline(qint64, qint64, Qt::TimerType)
@@ -580,7 +580,7 @@ func (this *QDeadlineTimer) SetPreciseDeadlinep1(secs int64, nsecs int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:94
+// /usr/include/qt/QtCore/qdeadlinetimer.h:95
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QDeadlineTimer addNSecs(QDeadlineTimer, qint64)
@@ -607,7 +607,7 @@ func QDeadlineTimer_AddNSecs(dt QDeadlineTimer_ITF /*123*/, nsecs int64) *QDeadl
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:95
+// /usr/include/qt/QtCore/qdeadlinetimer.h:96
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QDeadlineTimer current(Qt::TimerType)
@@ -630,7 +630,7 @@ func QDeadlineTimer_Current(timerType int) *QDeadlineTimer /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:95
+// /usr/include/qt/QtCore/qdeadlinetimer.h:96
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QDeadlineTimer current(Qt::TimerType)
@@ -650,7 +650,7 @@ func (this *QDeadlineTimer) Currentp() *QDeadlineTimer /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:118
+// /usr/include/qt/QtCore/qdeadlinetimer.h:119
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QDeadlineTimer & operator+=(qint64)
@@ -666,7 +666,7 @@ func (this *QDeadlineTimer) Operator_add_equal(msecs int64) *QDeadlineTimer {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:120
+// /usr/include/qt/QtCore/qdeadlinetimer.h:121
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QDeadlineTimer & operator-=(qint64)
@@ -682,7 +682,7 @@ func (this *QDeadlineTimer) Operator_minus_equal(msecs int64) *QDeadlineTimer {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:162
+// /usr/include/qt/QtCore/qdeadlinetimer.h:163
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] std::chrono::nanoseconds remainingTimeAsDuration() const

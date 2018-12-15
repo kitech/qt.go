@@ -791,8 +791,8 @@ Usually the state changes is caused by calling load(), unload(), start() and sto
 
 Note: Notifier signal for property state.
 */
-func (this *QCamera) StateChanged(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera12stateChangedENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QCamera) StateChanged(state int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera12stateChangedENS_5StateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -821,8 +821,8 @@ Signals the camera status has changed.
 
 Note: Notifier signal for property status.
 */
-func (this *QCamera) StatusChanged(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera13statusChangedENS_6StatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QCamera) StatusChanged(status int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera13statusChangedENS_6StatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), status)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -870,8 +870,8 @@ Note: Signal lockStatusChanged is overloaded in this class. To connect to this s
 
 Note: Notifier signal for property lockStatus.
 */
-func (this *QCamera) LockStatusChanged(arg0 int, arg1 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera17lockStatusChangedENS_10LockStatusENS_16LockChangeReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
+func (this *QCamera) LockStatusChanged(status int, reason int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera17lockStatusChangedENS_10LockStatusENS_16LockChangeReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), status, reason)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -893,8 +893,8 @@ Note: Signal lockStatusChanged is overloaded in this class. To connect to this s
 
 Note: Notifier signal for property lockStatus.
 */
-func (this *QCamera) LockStatusChanged1(arg0 int, arg1 int, arg2 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera17lockStatusChangedENS_8LockTypeENS_10LockStatusENS_16LockChangeReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1, arg2)
+func (this *QCamera) LockStatusChanged1(lock int, status int, reason int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QCamera17lockStatusChangedENS_8LockTypeENS_10LockStatusENS_16LockChangeReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), lock, status, reason)
 	qtrt.ErrPrint(err, rv)
 }
 

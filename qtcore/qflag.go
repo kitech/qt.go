@@ -72,11 +72,11 @@ func (*QFlag) NewFromPointer(cthis unsafe.Pointer) *QFlag {
 /*
 
  */
-func (*QFlag) NewForInherit(ai int) *QFlag {
-	return NewQFlag(ai)
+func (*QFlag) NewForInherit(value int) *QFlag {
+	return NewQFlag(value)
 }
-func NewQFlag(ai int) *QFlag {
-	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ei", qtrt.FFI_TYPE_POINTER, ai)
+func NewQFlag(value int) *QFlag {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ei", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)
@@ -91,11 +91,11 @@ func NewQFlag(ai int) *QFlag {
 /*
 
  */
-func (*QFlag) NewForInherit1(ai uint) *QFlag {
-	return NewQFlag1(ai)
+func (*QFlag) NewForInherit1(value uint) *QFlag {
+	return NewQFlag1(value)
 }
-func NewQFlag1(ai uint) *QFlag {
-	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ej", qtrt.FFI_TYPE_POINTER, ai)
+func NewQFlag1(value uint) *QFlag {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ej", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)
@@ -110,11 +110,11 @@ func NewQFlag1(ai uint) *QFlag {
 /*
 
  */
-func (*QFlag) NewForInherit2(ai int16) *QFlag {
-	return NewQFlag2(ai)
+func (*QFlag) NewForInherit2(value int16) *QFlag {
+	return NewQFlag2(value)
 }
-func NewQFlag2(ai int16) *QFlag {
-	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Es", qtrt.FFI_TYPE_POINTER, ai)
+func NewQFlag2(value int16) *QFlag {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Es", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)
@@ -129,11 +129,11 @@ func NewQFlag2(ai int16) *QFlag {
 /*
 
  */
-func (*QFlag) NewForInherit3(ai uint16) *QFlag {
-	return NewQFlag3(ai)
+func (*QFlag) NewForInherit3(value uint16) *QFlag {
+	return NewQFlag3(value)
 }
-func NewQFlag3(ai uint16) *QFlag {
-	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Et", qtrt.FFI_TYPE_POINTER, ai)
+func NewQFlag3(value uint16) *QFlag {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Et", qtrt.FFI_TYPE_POINTER, value)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)

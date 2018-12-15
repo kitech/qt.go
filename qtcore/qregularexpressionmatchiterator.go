@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qregularexpression.h
@@ -66,7 +68,7 @@ func (*QRegularExpressionMatchIterator) NewFromPointer(cthis unsafe.Pointer) *QR
 	return NewQRegularExpressionMatchIteratorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:249
+// /usr/include/qt/QtCore/qregularexpression.h:256
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionMatchIterator()
@@ -85,7 +87,7 @@ func NewQRegularExpressionMatchIterator() *QRegularExpressionMatchIterator {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:250
+// /usr/include/qt/QtCore/qregularexpression.h:257
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QRegularExpressionMatchIterator()
@@ -100,7 +102,7 @@ func DeleteQRegularExpressionMatchIterator(this *QRegularExpressionMatchIterator
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:252
+// /usr/include/qt/QtCore/qregularexpression.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator & operator=(const QRegularExpressionMatchIterator &)
@@ -120,7 +122,7 @@ func (this *QRegularExpressionMatchIterator) Operator_equal(iterator QRegularExp
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:254
+// /usr/include/qt/QtCore/qregularexpression.h:261
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator & operator=(QRegularExpressionMatchIterator &&)
@@ -136,7 +138,7 @@ func (this *QRegularExpressionMatchIterator) Operator_equal1(iterator unsafe.Poi
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:257
+// /usr/include/qt/QtCore/qregularexpression.h:264
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QRegularExpressionMatchIterator &)
@@ -153,7 +155,7 @@ func (this *QRegularExpressionMatchIterator) Swap(other QRegularExpressionMatchI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:259
+// /usr/include/qt/QtCore/qregularexpression.h:266
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -169,7 +171,7 @@ func (this *QRegularExpressionMatchIterator) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:261
+// /usr/include/qt/QtCore/qregularexpression.h:268
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasNext() const
@@ -183,7 +185,7 @@ func (this *QRegularExpressionMatchIterator) HasNext() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:262
+// /usr/include/qt/QtCore/qregularexpression.h:269
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch next()
@@ -199,7 +201,7 @@ func (this *QRegularExpressionMatchIterator) Next() *QRegularExpressionMatch /*1
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:263
+// /usr/include/qt/QtCore/qregularexpression.h:270
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch peekNext() const
@@ -215,7 +217,7 @@ func (this *QRegularExpressionMatchIterator) PeekNext() *QRegularExpressionMatch
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:265
+// /usr/include/qt/QtCore/qregularexpression.h:272
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpression regularExpression() const
@@ -231,7 +233,7 @@ func (this *QRegularExpressionMatchIterator) RegularExpression() *QRegularExpres
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:266
+// /usr/include/qt/QtCore/qregularexpression.h:273
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QRegularExpression::MatchType matchType() const
@@ -245,7 +247,7 @@ func (this *QRegularExpressionMatchIterator) MatchType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:267
+// /usr/include/qt/QtCore/qregularexpression.h:274
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QRegularExpression::MatchOptions matchOptions() const

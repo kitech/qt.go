@@ -713,15 +713,123 @@ func (this *QHostAddress) IsLoopback() bool {
 // /usr/include/qt/QtNetwork/qhostaddress.h:151
 // index:0
 // Public Visibility=Default Availability=Available
+// [1] bool isGlobal() const
+
+/*
+Returns true if the address is an IPv4 or IPv6 global address, false otherwise. A global address is an address that is not reserved for special purposes (like loopback or multicast) or future purposes.
+
+Note that IPv6 unique local unicast addresses are considered global addresses (see isUniqueLocalUnicast()), as are IPv4 addresses reserved for local networks by RFC 1918.
+
+Also note that IPv6 site-local addresses are deprecated and should be considered as global in new applications. This function returns true for site-local addresses too.
+
+This function was introduced in  Qt 5.11.
+
+See also isLoopback(), isSiteLocal(), and isUniqueLocalUnicast().
+*/
+func (this *QHostAddress) IsGlobal() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress8isGlobalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qhostaddress.h:152
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isLinkLocal() const
+
+/*
+Returns true if the address is an IPv4 or IPv6 link-local address, false otherwise.
+
+An IPv4 link-local address is an address in the network 169.254.0.0/16. An IPv6 link-local address is one in the network fe80::/10. See the IANA IPv6 Address Space registry for more information.
+
+This function was introduced in  Qt 5.11.
+
+See also isLoopback(), isGlobal(), isMulticast(), isSiteLocal(), and isUniqueLocalUnicast().
+*/
+func (this *QHostAddress) IsLinkLocal() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress11isLinkLocalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qhostaddress.h:153
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isSiteLocal() const
+
+/*
+Returns true if the address is an IPv6 site-local address, false otherwise.
+
+An IPv6 site-local address is one in the network fec0::/10. See the IANA IPv6 Address Space registry for more information.
+
+IPv6 site-local addresses are deprecated and should not be depended upon in new applications. New applications should not depend on this function and should consider site-local addresses the same as global (which is why isGlobal() also returns true). Site-local addresses were replaced by Unique Local Addresses (ULA).
+
+This function was introduced in  Qt 5.11.
+
+See also isLoopback(), isGlobal(), isMulticast(), isLinkLocal(), and isUniqueLocalUnicast().
+*/
+func (this *QHostAddress) IsSiteLocal() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress11isSiteLocalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qhostaddress.h:154
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isUniqueLocalUnicast() const
+
+/*
+Returns true if the address is an IPv6 unique local unicast address, false otherwise.
+
+An IPv6 unique local unicast address is one in the network fc00::/7. See the IANA IPv6 Address Space registry for more information.
+
+Note that Unique local unicast addresses count as global addresses too. RFC 4193 says that, in practice, "applications may treat these addresses like global scoped addresses." Only routers need care about the distinction.
+
+This function was introduced in  Qt 5.11.
+
+See also isLoopback(), isGlobal(), isMulticast(), isLinkLocal(), and isUniqueLocalUnicast().
+*/
+func (this *QHostAddress) IsUniqueLocalUnicast() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress20isUniqueLocalUnicastEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qhostaddress.h:155
+// index:0
+// Public Visibility=Default Availability=Available
 // [1] bool isMulticast() const
 
 /*
 Returns true if the address is an IPv4 or IPv6 multicast address, false otherwise.
 
 This function was introduced in  Qt 5.6.
+
+See also isLoopback(), isGlobal(), isLinkLocal(), isSiteLocal(), and isUniqueLocalUnicast().
 */
 func (this *QHostAddress) IsMulticast() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress11isMulticastEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qhostaddress.h:156
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isBroadcast() const
+
+/*
+Returns true if the address is the IPv4 broadcast address, false otherwise. The IPv4 broadcast address is 255.255.255.255.
+
+Note that this function does not return true for an IPv4 network's local broadcast address. For that, please use QNetworkInterface to obtain the broadcast addresses of the local machine.
+
+This function was introduced in  Qt 5.11.
+
+See also isLoopback(), isGlobal(), isMulticast(), isLinkLocal(), and isUniqueLocalUnicast().
+*/
+func (this *QHostAddress) IsBroadcast() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress11isBroadcastEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }

@@ -18,7 +18,7 @@ package qtmultimedia
 
 /*
 #include <stdlib.h>
-// extern C begin: 16
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
@@ -65,7 +65,7 @@ func (*QImageEncoderControl) NewFromPointer(cthis unsafe.Pointer) *QImageEncoder
 	return NewQImageEncoderControlFromPointer(cthis)
 }
 
-// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:62
+// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -79,7 +79,7 @@ func (this *QImageEncoderControl) MetaObject() *qtcore.QMetaObject /*777 const Q
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:65
+// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QImageEncoderControl()
@@ -94,7 +94,7 @@ func DeleteQImageEncoderControl(this *QImageEncoderControl) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:67
+// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:64
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QStringList supportedImageCodecs() const
@@ -110,7 +110,7 @@ func (this *QImageEncoderControl) SupportedImageCodecs() *qtcore.QStringList /*1
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:68
+// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:65
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QString imageCodecDescription(const QString &) const
@@ -118,8 +118,8 @@ func (this *QImageEncoderControl) SupportedImageCodecs() *qtcore.QStringList /*1
 /*
 Returns a description of an image codec.
 */
-func (this *QImageEncoderControl) ImageCodecDescription(codecName string) string {
-	var tmpArg0 = qtcore.NewQString5(codecName)
+func (this *QImageEncoderControl) ImageCodecDescription(codec string) string {
+	var tmpArg0 = qtcore.NewQString5(codec)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QImageEncoderControl21imageCodecDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -129,7 +129,7 @@ func (this *QImageEncoderControl) ImageCodecDescription(codecName string) string
 	return rv3
 }
 
-// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:70
+// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:67
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QList<QSize> supportedResolutions(const QImageEncoderSettings &, bool *) const
@@ -152,7 +152,7 @@ func (this *QImageEncoderControl) SupportedResolutions(settings QImageEncoderSet
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:70
+// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:67
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QList<QSize> supportedResolutions(const QImageEncoderSettings &, bool *) const
@@ -177,7 +177,7 @@ func (this *QImageEncoderControl) SupportedResolutionsp(settings QImageEncoderSe
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:73
+// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:70
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QImageEncoderSettings imageSettings() const
@@ -197,7 +197,7 @@ func (this *QImageEncoderControl) ImageSettings() *QImageEncoderSettings /*123*/
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:74
+// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:71
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void setImageSettings(const QImageEncoderSettings &)
@@ -216,7 +216,7 @@ func (this *QImageEncoderControl) SetImageSettings(settings QImageEncoderSetting
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:77
+// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:74
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QImageEncoderControl(QObject *)
@@ -239,7 +239,7 @@ func NewQImageEncoderControl(parent qtcore.QObject_ITF /*777 QObject **/) *QImag
 	return gothis
 }
 
-// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:77
+// /usr/include/qt/QtMultimedia/qimageencodercontrol.h:74
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QImageEncoderControl(QObject *)

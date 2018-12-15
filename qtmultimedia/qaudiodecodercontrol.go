@@ -324,7 +324,7 @@ func (this *QAudioDecoderControl) Duration() int64 {
 // [-2] void stateChanged(QAudioDecoder::State)
 
 /*
-Signals that the state of a player control has changed.
+Signals that the state of a player control has changed to newState.
 
 See also state().
 */

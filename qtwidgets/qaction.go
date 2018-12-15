@@ -1165,7 +1165,7 @@ func (this *QAction) Hovered() {
 // [-2] void toggled(bool)
 
 /*
-This signal is emitted whenever a checkable action changes its isChecked() status. This can be the result of a user interaction, or because setChecked() was called.
+This signal is emitted whenever a checkable action changes its isChecked() status. This can be the result of a user interaction, or because setChecked() was called. As setChecked() changes the QAction, it emits changed() in addition to toggled().
 
 checked is true if the action is checked, or false if the action is unchecked.
 

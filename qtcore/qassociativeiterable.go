@@ -64,7 +64,7 @@ func (*QAssociativeIterable) NewFromPointer(cthis unsafe.Pointer) *QAssociativeI
 	return NewQAssociativeIterableFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:680
+// /usr/include/qt/QtCore/qvariant.h:705
 // index:0
 // Public Visibility=Default Availability=Available
 // [120] QAssociativeIterable::const_iterator begin() const
@@ -78,7 +78,7 @@ func (this *QAssociativeIterable) Begin() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qvariant.h:681
+// /usr/include/qt/QtCore/qvariant.h:706
 // index:0
 // Public Visibility=Default Availability=Available
 // [120] QAssociativeIterable::const_iterator end() const
@@ -92,7 +92,7 @@ func (this *QAssociativeIterable) End() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qvariant.h:682
+// /usr/include/qt/QtCore/qvariant.h:707
 // index:0
 // Public Visibility=Default Availability=Available
 // [120] QAssociativeIterable::const_iterator find(const QVariant &) const
@@ -110,7 +110,7 @@ func (this *QAssociativeIterable) Find(key QVariant_ITF) unsafe.Pointer /*444*/ 
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qvariant.h:684
+// /usr/include/qt/QtCore/qvariant.h:709
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant value(const QVariant &) const
@@ -178,7 +178,7 @@ func (this *QAssociativeIterable) Value(key QVariant_ITF) *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qvariant.h:686
+// /usr/include/qt/QtCore/qvariant.h:711
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int size() const

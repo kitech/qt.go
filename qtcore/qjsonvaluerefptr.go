@@ -64,7 +64,7 @@ func (*QJsonValueRefPtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValueRefPtr 
 	return NewQJsonValueRefPtrFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:237
+// /usr/include/qt/QtCore/qjsonvalue.h:238
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QJsonValueRefPtr(QJsonArray *, int)
@@ -87,7 +87,7 @@ func NewQJsonValueRefPtr(array QJsonArray_ITF /*777 QJsonArray **/, idx int) *QJ
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:239
+// /usr/include/qt/QtCore/qjsonvalue.h:240
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QJsonValueRefPtr(QJsonObject *, int)
@@ -110,7 +110,7 @@ func NewQJsonValueRefPtr1(object QJsonObject_ITF /*777 QJsonObject **/, idx int)
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:242
+// /usr/include/qt/QtCore/qjsonvalue.h:243
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonValueRef & operator*()
@@ -126,7 +126,7 @@ func (this *QJsonValueRefPtr) Operator_mul() *QJsonValueRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:243
+// /usr/include/qt/QtCore/qjsonvalue.h:244
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QJsonValueRef * operator->()

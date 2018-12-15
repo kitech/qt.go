@@ -114,7 +114,7 @@ func (this *QMediaStreamsControl) StreamCount() int {
 // [4] QMediaStreamsControl::StreamType streamType(int)
 
 /*
-Return the type of a media stream.
+Return the type of media stream streamNumber.
 */
 func (this *QMediaStreamsControl) StreamType(streamNumber int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QMediaStreamsControl10streamTypeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), streamNumber)
@@ -128,7 +128,7 @@ func (this *QMediaStreamsControl) StreamType(streamNumber int) int {
 // [16] QVariant metaData(int, const QString &)
 
 /*
-Returns the meta-data value of key for a given stream.
+Returns the meta-data value of key for the given streamNumber.
 
 Useful metadata keys are QMediaMetaData::Title, QMediaMetaData::Description and QMediaMetaData::Language.
 */
@@ -148,7 +148,7 @@ func (this *QMediaStreamsControl) MetaData(streamNumber int, key string) *qtcore
 // [1] bool isActive(int)
 
 /*
-Returns true if the media stream is active.
+Returns true if the media stream streamNumber is active.
 */
 func (this *QMediaStreamsControl) IsActive(streamNumber int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QMediaStreamsControl8isActiveEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), streamNumber)
@@ -162,7 +162,7 @@ func (this *QMediaStreamsControl) IsActive(streamNumber int) bool {
 // [-2] void setActive(int, bool)
 
 /*
-Sets the active state of a media stream.
+Sets the active state of media stream streamNumber.
 
 Setting the active state of a media stream to true will activate it. If any other stream of the same type was previously active it will be deactivated. Setting the active state fo a media stream to false will deactivate it.
 

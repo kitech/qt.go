@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 77
+// extern C begin: 78
 */
 // import "C"
 import "unsafe"
@@ -660,8 +660,8 @@ func (this *QTextBrowser) AnchorClicked(arg0 qtcore.QUrl_ITF) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
-*/
+
+ */
 func (this *QTextBrowser) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
 	if e != nil && e.QEvent_PTR() != nil {
@@ -678,7 +678,7 @@ func (this *QTextBrowser) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // [-2] void keyPressEvent(QKeyEvent *)
 
 /*
-Reimplemented from QWidget::keyPressEvent().
+Reimplemented from QTextEdit::keyPressEvent().
 
 The event ev is used to provide the following keyboard shortcuts:
 
@@ -703,7 +703,7 @@ func (this *QTextBrowser) KeyPressEvent(ev qtgui.QKeyEvent_ITF /*777 QKeyEvent *
 // [-2] void mouseMoveEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseMoveEvent().
+Reimplemented from QTextEdit::mouseMoveEvent().
 */
 func (this *QTextBrowser) MouseMoveEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -720,7 +720,7 @@ func (this *QTextBrowser) MouseMoveEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEv
 // [-2] void mousePressEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mousePressEvent().
+Reimplemented from QTextEdit::mousePressEvent().
 */
 func (this *QTextBrowser) MousePressEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -737,7 +737,7 @@ func (this *QTextBrowser) MousePressEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseE
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseReleaseEvent().
+Reimplemented from QTextEdit::mouseReleaseEvent().
 */
 func (this *QTextBrowser) MouseReleaseEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -754,7 +754,7 @@ func (this *QTextBrowser) MouseReleaseEvent(ev qtgui.QMouseEvent_ITF /*777 QMous
 // [-2] void focusOutEvent(QFocusEvent *)
 
 /*
-Reimplemented from QWidget::focusOutEvent().
+Reimplemented from QTextEdit::focusOutEvent().
 */
 func (this *QTextBrowser) FocusOutEvent(ev qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -771,7 +771,7 @@ func (this *QTextBrowser) FocusOutEvent(ev qtgui.QFocusEvent_ITF /*777 QFocusEve
 // [1] bool focusNextPrevChild(bool)
 
 /*
-Reimplemented from QWidget::focusNextPrevChild().
+Reimplemented from QTextEdit::focusNextPrevChild().
 */
 func (this *QTextBrowser) FocusNextPrevChild(next bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextBrowser18focusNextPrevChildEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), next)
@@ -785,7 +785,7 @@ func (this *QTextBrowser) FocusNextPrevChild(next bool) bool {
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QTextEdit::paintEvent().
 */
 func (this *QTextBrowser) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer

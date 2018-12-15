@@ -135,8 +135,8 @@ func (this *QCameraCaptureBufferFormatControl) SetBufferFormat(format int) {
 /*
 Signals the buffer image capture format changed to format.
 */
-func (this *QCameraCaptureBufferFormatControl) BufferFormatChanged(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN33QCameraCaptureBufferFormatControl19bufferFormatChangedEN11QVideoFrame11PixelFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QCameraCaptureBufferFormatControl) BufferFormatChanged(format int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN33QCameraCaptureBufferFormatControl19bufferFormatChangedEN11QVideoFrame11PixelFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
 }
 

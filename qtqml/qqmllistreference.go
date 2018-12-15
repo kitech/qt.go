@@ -66,7 +66,7 @@ func (*QQmlListReference) NewFromPointer(cthis unsafe.Pointer) *QQmlListReferenc
 	return NewQQmlListReferenceFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:142
+// /usr/include/qt/QtQml/qqmllist.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlListReference()
@@ -85,7 +85,7 @@ func NewQQmlListReference() *QQmlListReference {
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:143
+// /usr/include/qt/QtQml/qqmllist.h:135
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlListReference(QObject *, const char *, QQmlEngine *)
@@ -114,7 +114,7 @@ func NewQQmlListReference1(arg0 qtcore.QObject_ITF /*777 QObject **/, property s
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:143
+// /usr/include/qt/QtQml/qqmllist.h:135
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlListReference(QObject *, const char *, QQmlEngine *)
@@ -141,7 +141,7 @@ func NewQQmlListReference1p(arg0 qtcore.QObject_ITF /*777 QObject **/, property 
 	return gothis
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:145
+// /usr/include/qt/QtQml/qqmllist.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QQmlListReference & operator=(const QQmlListReference &)
@@ -161,7 +161,7 @@ func (this *QQmlListReference) Operator_equal(arg0 QQmlListReference_ITF) *QQmlL
 	return rv2
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:146
+// /usr/include/qt/QtQml/qqmllist.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QQmlListReference()
@@ -176,7 +176,7 @@ func DeleteQQmlListReference(this *QQmlListReference) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:148
+// /usr/include/qt/QtQml/qqmllist.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -190,7 +190,7 @@ func (this *QQmlListReference) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:150
+// /usr/include/qt/QtQml/qqmllist.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * object() const
@@ -204,7 +204,7 @@ func (this *QQmlListReference) Object() *qtcore.QObject /*777 QObject **/ {
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:151
+// /usr/include/qt/QtQml/qqmllist.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QMetaObject * listElementType() const
@@ -218,7 +218,7 @@ func (this *QQmlListReference) ListElementType() *qtcore.QMetaObject /*777 const
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:153
+// /usr/include/qt/QtQml/qqmllist.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canAppend() const
@@ -232,7 +232,7 @@ func (this *QQmlListReference) CanAppend() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:154
+// /usr/include/qt/QtQml/qqmllist.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canAt() const
@@ -246,7 +246,7 @@ func (this *QQmlListReference) CanAt() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:155
+// /usr/include/qt/QtQml/qqmllist.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canClear() const
@@ -260,7 +260,7 @@ func (this *QQmlListReference) CanClear() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:156
+// /usr/include/qt/QtQml/qqmllist.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canCount() const
@@ -274,7 +274,7 @@ func (this *QQmlListReference) CanCount() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:158
+// /usr/include/qt/QtQml/qqmllist.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isManipulable() const
@@ -288,7 +288,7 @@ func (this *QQmlListReference) IsManipulable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:159
+// /usr/include/qt/QtQml/qqmllist.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadable() const
@@ -302,7 +302,7 @@ func (this *QQmlListReference) IsReadable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:162
+// /usr/include/qt/QtQml/qqmllist.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * at(int) const
@@ -316,7 +316,7 @@ func (this *QQmlListReference) At(arg0 int) *qtcore.QObject /*777 QObject **/ {
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:163
+// /usr/include/qt/QtQml/qqmllist.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool clear() const
@@ -330,7 +330,7 @@ func (this *QQmlListReference) Clear() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmllist.h:164
+// /usr/include/qt/QtQml/qqmllist.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const

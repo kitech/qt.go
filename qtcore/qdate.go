@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 49
+// extern C begin: 1
 */
 // import "C"
 import "unsafe"
@@ -457,60 +457,8 @@ func (this *QDate) LongDayNamep(weekday int) string {
 // [8] QString toString(Qt::DateFormat) const
 
 /*
-Returns the datetime as a string. The format parameter determines the format of the result string.
 
-These expressions may be used for the date:
-
-
- ExpressionOutput
-dthe day as number without a leading zero (1 to 31)
-ddthe day as number with a leading zero (01 to 31)
-dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
-ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
-Mthe month as number without a leading zero (1-12)
-MMthe month as number with a leading zero (01-12)
-MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
-MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
-yythe year as two digit number (00-99)
-yyyythe year as four digit number
-
-
-These expressions may be used for the time:
-
-
- ExpressionOutput
-hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
-hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
-Hthe hour without a leading zero (0 to 23, even with AM/PM display)
-HHthe hour with a leading zero (00 to 23, even with AM/PM display)
-mthe minute without a leading zero (0 to 59)
-mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
-AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
-ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
-tthe timezone (for example "CEST")
-
-
-All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
-
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
-
-
- FormatResult
-dd.MM.yyyy21.05.2001
-ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
-h:m:s ap2:13:9 pm
-
-
-If the datetime is invalid, an empty string will be returned.
-
-See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
-*/
+ */
 func (this *QDate) ToString(f int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	qtrt.ErrPrint(err, rv)
@@ -526,60 +474,8 @@ func (this *QDate) ToString(f int) string {
 // [8] QString toString(Qt::DateFormat) const
 
 /*
-Returns the datetime as a string. The format parameter determines the format of the result string.
 
-These expressions may be used for the date:
-
-
- ExpressionOutput
-dthe day as number without a leading zero (1 to 31)
-ddthe day as number with a leading zero (01 to 31)
-dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
-ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
-Mthe month as number without a leading zero (1-12)
-MMthe month as number with a leading zero (01-12)
-MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
-MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
-yythe year as two digit number (00-99)
-yyyythe year as four digit number
-
-
-These expressions may be used for the time:
-
-
- ExpressionOutput
-hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
-hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
-Hthe hour without a leading zero (0 to 23, even with AM/PM display)
-HHthe hour with a leading zero (00 to 23, even with AM/PM display)
-mthe minute without a leading zero (0 to 59)
-mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
-AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
-ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
-tthe timezone (for example "CEST")
-
-
-All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
-
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
-
-
- FormatResult
-dd.MM.yyyy21.05.2001
-ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
-h:m:s ap2:13:9 pm
-
-
-If the datetime is invalid, an empty string will be returned.
-
-See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
-*/
+ */
 func (this *QDate) ToStringp() string {
 	// arg: 0, Qt::DateFormat=Elaborated, Qt::DateFormat=Enum, , Invalid
 	f := 0
@@ -597,60 +493,8 @@ func (this *QDate) ToStringp() string {
 // [8] QString toString(const QString &) const
 
 /*
-Returns the datetime as a string. The format parameter determines the format of the result string.
 
-These expressions may be used for the date:
-
-
- ExpressionOutput
-dthe day as number without a leading zero (1 to 31)
-ddthe day as number with a leading zero (01 to 31)
-dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
-ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
-Mthe month as number without a leading zero (1-12)
-MMthe month as number with a leading zero (01-12)
-MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
-MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
-yythe year as two digit number (00-99)
-yyyythe year as four digit number
-
-
-These expressions may be used for the time:
-
-
- ExpressionOutput
-hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
-hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
-Hthe hour without a leading zero (0 to 23, even with AM/PM display)
-HHthe hour with a leading zero (00 to 23, even with AM/PM display)
-mthe minute without a leading zero (0 to 59)
-mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
-AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
-ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
-tthe timezone (for example "CEST")
-
-
-All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
-
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
-
-
- FormatResult
-dd.MM.yyyy21.05.2001
-ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
-h:m:s ap2:13:9 pm
-
-
-If the datetime is invalid, an empty string will be returned.
-
-See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
-*/
+ */
 func (this *QDate) ToString1(format string) string {
 	var tmpArg0 = NewQString5(format)
 	var convArg0 = tmpArg0.GetCthis()
@@ -668,60 +512,8 @@ func (this *QDate) ToString1(format string) string {
 // [8] QString toString(QStringView) const
 
 /*
-Returns the datetime as a string. The format parameter determines the format of the result string.
 
-These expressions may be used for the date:
-
-
- ExpressionOutput
-dthe day as number without a leading zero (1 to 31)
-ddthe day as number with a leading zero (01 to 31)
-dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
-ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
-Mthe month as number without a leading zero (1-12)
-MMthe month as number with a leading zero (01-12)
-MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
-MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
-yythe year as two digit number (00-99)
-yyyythe year as four digit number
-
-
-These expressions may be used for the time:
-
-
- ExpressionOutput
-hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
-hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
-Hthe hour without a leading zero (0 to 23, even with AM/PM display)
-HHthe hour with a leading zero (00 to 23, even with AM/PM display)
-mthe minute without a leading zero (0 to 59)
-mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
-AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
-ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
-tthe timezone (for example "CEST")
-
-
-All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
-
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
-
-
- FormatResult
-dd.MM.yyyy21.05.2001
-ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
-h:m:s ap2:13:9 pm
-
-
-If the datetime is invalid, an empty string will be returned.
-
-See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
-*/
+ */
 func (this *QDate) ToString2(format QStringView_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if format != nil && format.QStringView_PTR() != nil {

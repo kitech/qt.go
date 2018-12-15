@@ -219,7 +219,7 @@ func (this *QSplitterHandle) Splitter() *QSplitter /*777 QSplitter **/ {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QFrame::sizeHint().
 */
 func (this *QSplitterHandle) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSplitterHandle8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -320,7 +320,7 @@ func (this *QSplitterHandle) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResi
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QFrame::event().
 */
 func (this *QSplitterHandle) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

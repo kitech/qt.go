@@ -561,7 +561,7 @@ func (this *QToolBox) CurrentChanged(index int) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QFrame::event().
 */
 func (this *QToolBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -626,7 +626,7 @@ func (this *QToolBox) ShowEvent(e qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 // [-2] void changeEvent(QEvent *)
 
 /*
-Reimplemented from QWidget::changeEvent().
+Reimplemented from QFrame::changeEvent().
 */
 func (this *QToolBox) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer

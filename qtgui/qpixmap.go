@@ -437,6 +437,8 @@ Returns the default pixmap depth used by the application.
 
 On all platforms the depth of the primary screen will be returned.
 
+Note: QGuiApplication must be created before calling this function.
+
 See also depth(), QColormap::depth(), and Pixmap Information.
 */
 func (this *QPixmap) DefaultDepth() int {

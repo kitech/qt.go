@@ -1052,7 +1052,7 @@ func (this *QFormLayout) TakeAt(index int) *QLayoutItem /*777 QLayoutItem **/ {
 // [-2] void setGeometry(const QRect &)
 
 /*
-Reimplemented from QLayoutItem::setGeometry().
+Reimplemented from QLayout::setGeometry().
 */
 func (this *QFormLayout) SetGeometry(rect qtcore.QRect_ITF) {
 	var convArg0 unsafe.Pointer
@@ -1069,7 +1069,7 @@ func (this *QFormLayout) SetGeometry(rect qtcore.QRect_ITF) {
 // [8] QSize minimumSize() const
 
 /*
-Reimplemented from QLayoutItem::minimumSize().
+Reimplemented from QLayout::minimumSize().
 */
 func (this *QFormLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1101,7 +1101,7 @@ func (this *QFormLayout) SizeHint() *qtcore.QSize /*123*/ {
 // [-2] void invalidate()
 
 /*
-Reimplemented from QLayoutItem::invalidate().
+Reimplemented from QLayout::invalidate().
 */
 func (this *QFormLayout) Invalidate() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFormLayout10invalidateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1142,7 +1142,7 @@ func (this *QFormLayout) HeightForWidth(width int) int {
 // [4] Qt::Orientations expandingDirections() const
 
 /*
-Reimplemented from QLayoutItem::expandingDirections().
+Reimplemented from QLayout::expandingDirections().
 */
 func (this *QFormLayout) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFormLayout19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

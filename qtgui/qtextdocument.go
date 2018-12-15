@@ -621,7 +621,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find(subString string, from int, options int) *QTextCursor /*123*/ {
 	var tmpArg0 = qtcore.NewQString5(subString)
@@ -645,7 +645,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Findp(subString string) *QTextCursor /*123*/ {
 	var tmpArg0 = qtcore.NewQString5(subString)
@@ -673,7 +673,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Findp1(subString string, from int) *QTextCursor /*123*/ {
 	var tmpArg0 = qtcore.NewQString5(subString)
@@ -699,7 +699,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find1(subString string, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
 	var tmpArg0 = qtcore.NewQString5(subString)
@@ -727,7 +727,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find1p(subString string, cursor QTextCursor_ITF) *QTextCursor /*123*/ {
 	var tmpArg0 = qtcore.NewQString5(subString)
@@ -757,7 +757,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find2(expr qtcore.QRegExp_ITF, from int, options int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -783,7 +783,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find2p(expr qtcore.QRegExp_ITF) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -813,7 +813,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find2p1(expr qtcore.QRegExp_ITF, from int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -841,7 +841,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find3(expr qtcore.QRegExp_ITF, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -871,7 +871,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find3p(expr qtcore.QRegExp_ITF, cursor QTextCursor_ITF) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -903,7 +903,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find4(expr qtcore.QRegularExpression_ITF, from int, options int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -929,7 +929,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find4p(expr qtcore.QRegularExpression_ITF) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -959,7 +959,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find4p1(expr qtcore.QRegularExpression_ITF, from int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -987,7 +987,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find5(expr qtcore.QRegularExpression_ITF, cursor QTextCursor_ITF, options int) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -1017,7 +1017,7 @@ Returns a cursor with the match selected if subString was found; otherwise retur
 
 If the given cursor has a selection, the search begins after the selection; otherwise it begins at the cursor's position.
 
-By default the search is case-sensitive, and can match text anywhere in the document.
+By default the search is case insensitive, and can match text anywhere in the document.
 */
 func (this *QTextDocument) Find5p(expr qtcore.QRegularExpression_ITF, cursor QTextCursor_ITF) *QTextCursor /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -2233,6 +2233,8 @@ This function is called by the rich text engine to request data that isn't direc
 When called by Qt, type is one of the values of QTextDocument::ResourceType.
 
 If the QTextDocument is a child object of a QObject that has an invokable loadResource method such as QTextEdit, QTextBrowser or a QTextDocument itself then the default implementation tries to retrieve the data from the parent.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QTextDocument) LoadResource(type_ int, name qtcore.QUrl_ITF) *qtcore.QVariant /*123*/ {
 	var convArg1 unsafe.Pointer

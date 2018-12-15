@@ -328,7 +328,7 @@ func (this *QQmlError) MessageType() int {
 // [-2] void setMessageType(QtMsgType)
 
 /*
-Sets the messageType for this message. The message type determines which QDebug handlers are responsible for recieving the message.
+Sets the messageType for this message. The message type determines which QDebug handlers are responsible for receiving the message.
 
 This function was introduced in  Qt 5.9.
 

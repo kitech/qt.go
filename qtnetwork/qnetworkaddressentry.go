@@ -65,7 +65,7 @@ func (*QNetworkAddressEntry) NewFromPointer(cthis unsafe.Pointer) *QNetworkAddre
 	return NewQNetworkAddressEntryFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:59
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkAddressEntry()
@@ -84,7 +84,7 @@ func NewQNetworkAddressEntry() *QNetworkAddressEntry {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:62
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:68
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QNetworkAddressEntry & operator=(QNetworkAddressEntry &&)
@@ -100,7 +100,7 @@ func (this *QNetworkAddressEntry) Operator_equal(other unsafe.Pointer /*333*/) *
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:64
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:70
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QNetworkAddressEntry & operator=(const QNetworkAddressEntry &)
@@ -120,7 +120,7 @@ func (this *QNetworkAddressEntry) Operator_equal1(other QNetworkAddressEntry_ITF
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:65
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QNetworkAddressEntry()
@@ -135,7 +135,7 @@ func DeleteQNetworkAddressEntry(this *QNetworkAddressEntry) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:67
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:73
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkAddressEntry &)
@@ -154,7 +154,7 @@ func (this *QNetworkAddressEntry) Swap(other QNetworkAddressEntry_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:69
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QNetworkAddressEntry &) const
@@ -172,7 +172,7 @@ func (this *QNetworkAddressEntry) Operator_equal_equal(other QNetworkAddressEntr
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:70
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:76
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QNetworkAddressEntry &) const
@@ -190,7 +190,34 @@ func (this *QNetworkAddressEntry) Operator_not_equal(other QNetworkAddressEntry_
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:73
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:79
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] QNetworkAddressEntry::DnsEligibilityStatus dnsEligibility() const
+
+/*
+
+ */
+func (this *QNetworkAddressEntry) DnsEligibility() int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry14dnsEligibilityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return int(rv)
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:80
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setDnsEligibility(QNetworkAddressEntry::DnsEligibilityStatus)
+
+/*
+
+ */
+func (this *QNetworkAddressEntry) SetDnsEligibility(status int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry17setDnsEligibilityENS_20DnsEligibilityStatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), status)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QHostAddress ip() const
@@ -206,7 +233,7 @@ func (this *QNetworkAddressEntry) Ip() *QHostAddress /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:74
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIp(const QHostAddress &)
@@ -223,7 +250,7 @@ func (this *QNetworkAddressEntry) SetIp(newIp QHostAddress_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:76
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QHostAddress netmask() const
@@ -239,7 +266,7 @@ func (this *QNetworkAddressEntry) Netmask() *QHostAddress /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:77
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNetmask(const QHostAddress &)
@@ -256,7 +283,7 @@ func (this *QNetworkAddressEntry) SetNetmask(newNetmask QHostAddress_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:78
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int prefixLength() const
@@ -270,7 +297,7 @@ func (this *QNetworkAddressEntry) PrefixLength() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:79
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPrefixLength(int)
@@ -283,7 +310,7 @@ func (this *QNetworkAddressEntry) SetPrefixLength(length int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:81
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QHostAddress broadcast() const
@@ -299,7 +326,7 @@ func (this *QNetworkAddressEntry) Broadcast() *QHostAddress /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkinterface.h:82
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBroadcast(const QHostAddress &)
@@ -314,6 +341,146 @@ func (this *QNetworkAddressEntry) SetBroadcast(newBroadcast QHostAddress_ITF) {
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry12setBroadcastERK12QHostAddress", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:93
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isLifetimeKnown() const
+
+/*
+
+ */
+func (this *QNetworkAddressEntry) IsLifetimeKnown() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry15isLifetimeKnownEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:94
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QDeadlineTimer preferredLifetime() const
+
+/*
+
+ */
+func (this *QNetworkAddressEntry) PreferredLifetime() *qtcore.QDeadlineTimer /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry17preferredLifetimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQDeadlineTimerFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDeadlineTimer)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:95
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QDeadlineTimer validityLifetime() const
+
+/*
+
+ */
+func (this *QNetworkAddressEntry) ValidityLifetime() *qtcore.QDeadlineTimer /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry16validityLifetimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQDeadlineTimerFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDeadlineTimer)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:96
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAddressLifetime(QDeadlineTimer, QDeadlineTimer)
+
+/*
+
+ */
+func (this *QNetworkAddressEntry) SetAddressLifetime(preferred qtcore.QDeadlineTimer_ITF /*123*/, validity qtcore.QDeadlineTimer_ITF /*123*/) {
+	var convArg0 unsafe.Pointer
+	if preferred != nil && preferred.QDeadlineTimer_PTR() != nil {
+		convArg0 = preferred.QDeadlineTimer_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if validity != nil && validity.QDeadlineTimer_PTR() != nil {
+		convArg1 = validity.QDeadlineTimer_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry18setAddressLifetimeE14QDeadlineTimerS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:97
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void clearAddressLifetime()
+
+/*
+
+ */
+func (this *QNetworkAddressEntry) ClearAddressLifetime() {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkAddressEntry20clearAddressLifetimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:98
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isPermanent() const
+
+/*
+
+ */
+func (this *QNetworkAddressEntry) IsPermanent() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry11isPermanentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtNetwork/qnetworkinterface.h:99
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isTemporary() const
+
+/*
+
+ */
+func (this *QNetworkAddressEntry) IsTemporary() bool {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry11isTemporaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+/*
+
+
+ */
+type QNetworkAddressEntry__DnsEligibilityStatus = int
+
+//
+const QNetworkAddressEntry__DnsEligibilityUnknown QNetworkAddressEntry__DnsEligibilityStatus = -1
+
+//
+const QNetworkAddressEntry__DnsIneligible QNetworkAddressEntry__DnsEligibilityStatus = 0
+
+//
+const QNetworkAddressEntry__DnsEligible QNetworkAddressEntry__DnsEligibilityStatus = 1
+
+func (this *QNetworkAddressEntry) DnsEligibilityStatusItemName(val int) string {
+	switch val {
+	case QNetworkAddressEntry__DnsEligibilityUnknown: // -1
+		return "DnsEligibilityUnknown"
+	case QNetworkAddressEntry__DnsIneligible: // 0
+		return "DnsIneligible"
+	case QNetworkAddressEntry__DnsEligible: // 1
+		return "DnsEligible"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+func QNetworkAddressEntry_DnsEligibilityStatusItemName(val int) string {
+	var nilthis *QNetworkAddressEntry
+	return nilthis.DnsEligibilityStatusItemName(val)
 }
 
 //  body block end

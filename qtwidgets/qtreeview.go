@@ -60,6 +60,11 @@ func (this *QTreeView) InheritRowsRemoved(f func(parent *qtcore.QModelIndex, fir
 	qtrt.SetAllInheritCallback(this, "rowsRemoved", f)
 }
 
+// void verticalScrollbarValueChanged(int)
+func (this *QTreeView) InheritVerticalScrollbarValueChanged(f func(value int) /*void*/) {
+	qtrt.SetAllInheritCallback(this, "verticalScrollbarValueChanged", f)
+}
+
 // void scrollContentsBy(int, int)
 func (this *QTreeView) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
@@ -1425,7 +1430,20 @@ func (this *QTreeView) RowsRemoved(parent qtcore.QModelIndex_ITF, first int, las
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:175
+// /usr/include/qt/QtWidgets/qtreeview.h:172
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void verticalScrollbarValueChanged(int)
+
+/*
+
+ */
+func (this *QTreeView) VerticalScrollbarValueChanged(value int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView29verticalScrollbarValueChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtreeview.h:176
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void scrollContentsBy(int, int)
@@ -1440,7 +1458,7 @@ func (this *QTreeView) ScrollContentsBy(dx int, dy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:176
+// /usr/include/qt/QtWidgets/qtreeview.h:177
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void rowsInserted(const QModelIndex &, int, int)
@@ -1459,7 +1477,7 @@ func (this *QTreeView) RowsInserted(parent qtcore.QModelIndex_ITF, start int, en
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:177
+// /usr/include/qt/QtWidgets/qtreeview.h:178
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void rowsAboutToBeRemoved(const QModelIndex &, int, int)
@@ -1478,7 +1496,7 @@ func (this *QTreeView) RowsAboutToBeRemoved(parent qtcore.QModelIndex_ITF, start
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:179
+// /usr/include/qt/QtWidgets/qtreeview.h:180
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [24] QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
@@ -1496,7 +1514,7 @@ func (this *QTreeView) MoveCursor(cursorAction int, modifiers int) *qtcore.QMode
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:180
+// /usr/include/qt/QtWidgets/qtreeview.h:181
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int horizontalOffset() const
@@ -1516,7 +1534,7 @@ func (this *QTreeView) HorizontalOffset() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:181
+// /usr/include/qt/QtWidgets/qtreeview.h:182
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int verticalOffset() const
@@ -1534,7 +1552,7 @@ func (this *QTreeView) VerticalOffset() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:183
+// /usr/include/qt/QtWidgets/qtreeview.h:184
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
@@ -1555,7 +1573,7 @@ func (this *QTreeView) SetSelection(rect qtcore.QRect_ITF, command int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:184
+// /usr/include/qt/QtWidgets/qtreeview.h:185
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QRegion visualRegionForSelection(const QItemSelection &) const
@@ -1579,7 +1597,7 @@ func (this *QTreeView) VisualRegionForSelection(selection qtcore.QItemSelection_
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:185
+// /usr/include/qt/QtWidgets/qtreeview.h:186
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QModelIndexList selectedIndexes() const
@@ -1594,13 +1612,13 @@ func (this *QTreeView) SelectedIndexes() *qtcore.QModelIndexList /*667*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:187
+// /usr/include/qt/QtWidgets/qtreeview.h:188
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
 
 /*
-Reimplemented from QObject::timerEvent().
+Reimplemented from QAbstractItemView::timerEvent().
 */
 func (this *QTreeView) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1611,13 +1629,13 @@ func (this *QTreeView) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:188
+// /usr/include/qt/QtWidgets/qtreeview.h:189
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QAbstractScrollArea::paintEvent().
 */
 func (this *QTreeView) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1628,7 +1646,7 @@ func (this *QTreeView) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:190
+// /usr/include/qt/QtWidgets/qtreeview.h:191
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void drawTree(QPainter *, const QRegion &) const
@@ -1653,7 +1671,7 @@ func (this *QTreeView) DrawTree(painter qtgui.QPainter_ITF /*777 QPainter **/, r
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:191
+// /usr/include/qt/QtWidgets/qtreeview.h:192
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void drawRow(QPainter *, const QStyleOptionViewItem &, const QModelIndex &) const
@@ -1680,7 +1698,7 @@ func (this *QTreeView) DrawRow(painter qtgui.QPainter_ITF /*777 QPainter **/, op
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:194
+// /usr/include/qt/QtWidgets/qtreeview.h:195
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void drawBranches(QPainter *, const QRect &, const QModelIndex &) const
@@ -1705,13 +1723,13 @@ func (this *QTreeView) DrawBranches(painter qtgui.QPainter_ITF /*777 QPainter **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:198
+// /usr/include/qt/QtWidgets/qtreeview.h:199
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mousePressEvent().
+Reimplemented from QAbstractItemView::mousePressEvent().
 */
 func (this *QTreeView) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1722,13 +1740,13 @@ func (this *QTreeView) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:199
+// /usr/include/qt/QtWidgets/qtreeview.h:200
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseReleaseEvent().
+Reimplemented from QAbstractItemView::mouseReleaseEvent().
 */
 func (this *QTreeView) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1739,13 +1757,13 @@ func (this *QTreeView) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMous
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:200
+// /usr/include/qt/QtWidgets/qtreeview.h:201
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseDoubleClickEvent().
+Reimplemented from QAbstractItemView::mouseDoubleClickEvent().
 */
 func (this *QTreeView) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1756,13 +1774,13 @@ func (this *QTreeView) MouseDoubleClickEvent(event qtgui.QMouseEvent_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:201
+// /usr/include/qt/QtWidgets/qtreeview.h:202
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mouseMoveEvent().
+Reimplemented from QAbstractItemView::mouseMoveEvent().
 */
 func (this *QTreeView) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1773,13 +1791,13 @@ func (this *QTreeView) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:202
+// /usr/include/qt/QtWidgets/qtreeview.h:203
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
 
 /*
-Reimplemented from QWidget::keyPressEvent().
+Reimplemented from QAbstractItemView::keyPressEvent().
 */
 func (this *QTreeView) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1790,13 +1808,13 @@ func (this *QTreeView) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:204
+// /usr/include/qt/QtWidgets/qtreeview.h:205
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
 
 /*
-Reimplemented from QWidget::dragMoveEvent().
+Reimplemented from QAbstractItemView::dragMoveEvent().
 */
 func (this *QTreeView) DragMoveEvent(event qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1807,13 +1825,13 @@ func (this *QTreeView) DragMoveEvent(event qtgui.QDragMoveEvent_ITF /*777 QDragM
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:206
+// /usr/include/qt/QtWidgets/qtreeview.h:207
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool viewportEvent(QEvent *)
 
 /*
-Reimplemented from QAbstractScrollArea::viewportEvent().
+Reimplemented from QAbstractItemView::viewportEvent().
 */
 func (this *QTreeView) ViewportEvent(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -1825,7 +1843,7 @@ func (this *QTreeView) ViewportEvent(event qtcore.QEvent_ITF /*777 QEvent **/) b
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:208
+// /usr/include/qt/QtWidgets/qtreeview.h:209
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateGeometries()
@@ -1838,13 +1856,13 @@ func (this *QTreeView) UpdateGeometries() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:210
+// /usr/include/qt/QtWidgets/qtreeview.h:211
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize viewportSizeHint() const
 
 /*
-Reimplemented from QAbstractScrollArea::viewportSizeHint().
+Reimplemented from QAbstractItemView::viewportSizeHint().
 */
 func (this *QTreeView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView16viewportSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1854,7 +1872,7 @@ func (this *QTreeView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:212
+// /usr/include/qt/QtWidgets/qtreeview.h:213
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int sizeHintForColumn(int) const
@@ -1876,7 +1894,7 @@ func (this *QTreeView) SizeHintForColumn(column int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:213
+// /usr/include/qt/QtWidgets/qtreeview.h:214
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int indexRowSizeHint(const QModelIndex &) const
@@ -1896,7 +1914,7 @@ func (this *QTreeView) IndexRowSizeHint(index qtcore.QModelIndex_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:214
+// /usr/include/qt/QtWidgets/qtreeview.h:215
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int rowHeight(const QModelIndex &) const
@@ -1918,7 +1936,7 @@ func (this *QTreeView) RowHeight(index qtcore.QModelIndex_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:216
+// /usr/include/qt/QtWidgets/qtreeview.h:217
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void horizontalScrollbarAction(int)
@@ -1931,7 +1949,7 @@ func (this *QTreeView) HorizontalScrollbarAction(action int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:218
+// /usr/include/qt/QtWidgets/qtreeview.h:219
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool isIndexHidden(const QModelIndex &) const
@@ -1949,7 +1967,7 @@ func (this *QTreeView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:219
+// /usr/include/qt/QtWidgets/qtreeview.h:220
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void selectionChanged(const QItemSelection &, const QItemSelection &)
@@ -1970,7 +1988,7 @@ func (this *QTreeView) SelectionChanged(selected qtcore.QItemSelection_ITF, dese
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:221
+// /usr/include/qt/QtWidgets/qtreeview.h:222
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void currentChanged(const QModelIndex &, const QModelIndex &)

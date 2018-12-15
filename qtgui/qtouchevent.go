@@ -63,7 +63,7 @@ func (*QTouchEvent) NewFromPointer(cthis unsafe.Pointer) *QTouchEvent {
 	return NewQTouchEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:947
+// /usr/include/qt/QtGui/qevent.h:952
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTouchEvent()
@@ -78,7 +78,7 @@ func DeleteQTouchEvent(this *QTouchEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:949
+// /usr/include/qt/QtGui/qevent.h:954
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QWindow * window() const
@@ -92,7 +92,7 @@ func (this *QTouchEvent) Window() *QWindow /*777 QWindow **/ {
 	return /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qevent.h:950
+// /usr/include/qt/QtGui/qevent.h:955
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QObject * target() const
@@ -106,7 +106,7 @@ func (this *QTouchEvent) Target() *qtcore.QObject /*777 QObject **/ {
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qevent.h:954
+// /usr/include/qt/QtGui/qevent.h:959
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::TouchPointStates touchPointStates() const
@@ -120,7 +120,7 @@ func (this *QTouchEvent) TouchPointStates() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:956
+// /usr/include/qt/QtGui/qevent.h:961
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QTouchDevice * device() const
@@ -134,7 +134,7 @@ func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 	return /*==*/ NewQTouchDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qevent.h:959
+// /usr/include/qt/QtGui/qevent.h:964
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWindow(QWindow *)
@@ -151,7 +151,7 @@ func (this *QTouchEvent) SetWindow(awindow QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:960
+// /usr/include/qt/QtGui/qevent.h:965
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTarget(QObject *)
@@ -168,7 +168,7 @@ func (this *QTouchEvent) SetTarget(atarget qtcore.QObject_ITF /*777 QObject **/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:961
+// /usr/include/qt/QtGui/qevent.h:966
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTouchPointStates(Qt::TouchPointStates)
@@ -181,7 +181,7 @@ func (this *QTouchEvent) SetTouchPointStates(aTouchPointStates int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:963
+// /usr/include/qt/QtGui/qevent.h:968
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDevice(QTouchDevice *)

@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 26
+// extern C begin: 28
 */
 // import "C"
 import "unsafe"
@@ -66,7 +66,7 @@ func (*QDoubleSpinBox) NewFromPointer(cthis unsafe.Pointer) *QDoubleSpinBox {
 	return NewQDoubleSpinBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:115
+// /usr/include/qt/QtWidgets/qspinbox.h:119
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -80,7 +80,7 @@ func (this *QDoubleSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:126
+// /usr/include/qt/QtWidgets/qspinbox.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleSpinBox(QWidget *)
@@ -103,7 +103,7 @@ func NewQDoubleSpinBox(parent QWidget_ITF /*777 QWidget **/) *QDoubleSpinBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:126
+// /usr/include/qt/QtWidgets/qspinbox.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleSpinBox(QWidget *)
@@ -124,7 +124,7 @@ func NewQDoubleSpinBoxp() *QDoubleSpinBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:127
+// /usr/include/qt/QtWidgets/qspinbox.h:132
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDoubleSpinBox()
@@ -139,7 +139,7 @@ func DeleteQDoubleSpinBox(this *QDoubleSpinBox) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:129
+// /usr/include/qt/QtWidgets/qspinbox.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double value() const
@@ -153,7 +153,7 @@ func (this *QDoubleSpinBox) Value() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:131
+// /usr/include/qt/QtWidgets/qspinbox.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString prefix() const
@@ -170,7 +170,7 @@ func (this *QDoubleSpinBox) Prefix() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:132
+// /usr/include/qt/QtWidgets/qspinbox.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPrefix(const QString &)
@@ -185,7 +185,7 @@ func (this *QDoubleSpinBox) SetPrefix(prefix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:134
+// /usr/include/qt/QtWidgets/qspinbox.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString suffix() const
@@ -202,7 +202,7 @@ func (this *QDoubleSpinBox) Suffix() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:135
+// /usr/include/qt/QtWidgets/qspinbox.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSuffix(const QString &)
@@ -217,7 +217,7 @@ func (this *QDoubleSpinBox) SetSuffix(suffix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:137
+// /usr/include/qt/QtWidgets/qspinbox.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString cleanText() const
@@ -234,7 +234,7 @@ func (this *QDoubleSpinBox) CleanText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:139
+// /usr/include/qt/QtWidgets/qspinbox.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double singleStep() const
@@ -248,7 +248,7 @@ func (this *QDoubleSpinBox) SingleStep() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:140
+// /usr/include/qt/QtWidgets/qspinbox.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSingleStep(double)
@@ -261,7 +261,7 @@ func (this *QDoubleSpinBox) SetSingleStep(val float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:142
+// /usr/include/qt/QtWidgets/qspinbox.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double minimum() const
@@ -275,7 +275,7 @@ func (this *QDoubleSpinBox) Minimum() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:143
+// /usr/include/qt/QtWidgets/qspinbox.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimum(double)
@@ -288,7 +288,7 @@ func (this *QDoubleSpinBox) SetMinimum(min float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:145
+// /usr/include/qt/QtWidgets/qspinbox.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double maximum() const
@@ -302,7 +302,7 @@ func (this *QDoubleSpinBox) Maximum() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:146
+// /usr/include/qt/QtWidgets/qspinbox.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximum(double)
@@ -315,7 +315,7 @@ func (this *QDoubleSpinBox) SetMaximum(max float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:148
+// /usr/include/qt/QtWidgets/qspinbox.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRange(double, double)
@@ -343,7 +343,46 @@ func (this *QDoubleSpinBox) SetRange(min float64, max float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:150
+// /usr/include/qt/QtWidgets/qspinbox.h:155
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QAbstractSpinBox::StepType stepType() const
+
+/*
+
+ */
+func (this *QDoubleSpinBox) StepType() int {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDoubleSpinBox8stepTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:156
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setStepType(QAbstractSpinBox::StepType)
+
+/*
+Sets the step type for the spin box to stepType, which is single step or adaptive decimal step.
+
+Adaptive decimal step means that the step size will continuously be adjusted to one power of ten below the current value. So when the value is 1100, the step is set to 100, so stepping up once increases it to 1200. For 1200 stepping up takes it to 1300. For negative values, stepping down from -1100 goes to -1200.
+
+Step direction is taken into account to handle edges cases, so that stepping down from 100 takes the value to 99 instead of 90. Thus a step up followed by a step down -- or vice versa -- always lands on the starting value; 99 -> 100 -> 99.
+
+Setting this will cause the spin box to disregard the value of singleStep, although it is preserved so that singleStep comes into effect if adaptive decimal step is later turned off.
+
+This function was introduced in  Qt 5.12.
+
+Note: Setter function for property stepType.
+
+See also stepType().
+*/
+func (this *QDoubleSpinBox) SetStepType(stepType int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDoubleSpinBox11setStepTypeEN16QAbstractSpinBox8StepTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), stepType)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int decimals() const
@@ -357,7 +396,7 @@ func (this *QDoubleSpinBox) Decimals() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:151
+// /usr/include/qt/QtWidgets/qspinbox.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDecimals(int)
@@ -370,7 +409,7 @@ func (this *QDoubleSpinBox) SetDecimals(prec int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:153
+// /usr/include/qt/QtWidgets/qspinbox.h:161
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
@@ -386,7 +425,7 @@ func (this *QDoubleSpinBox) Validate(input string, pos int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:154
+// /usr/include/qt/QtWidgets/qspinbox.h:162
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] double valueFromText(const QString &) const
@@ -408,7 +447,7 @@ func (this *QDoubleSpinBox) ValueFromText(text string) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:155
+// /usr/include/qt/QtWidgets/qspinbox.h:163
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString textFromValue(double) const
@@ -431,7 +470,7 @@ func (this *QDoubleSpinBox) TextFromValue(val float64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:156
+// /usr/include/qt/QtWidgets/qspinbox.h:164
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fixup(QString &) const
@@ -446,7 +485,7 @@ func (this *QDoubleSpinBox) Fixup(str string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:159
+// /usr/include/qt/QtWidgets/qspinbox.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(double)
@@ -459,7 +498,7 @@ func (this *QDoubleSpinBox) SetValue(val float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:162
+// /usr/include/qt/QtWidgets/qspinbox.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(double)
@@ -482,7 +521,7 @@ func (this *QDoubleSpinBox) ValueChanged(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:163
+// /usr/include/qt/QtWidgets/qspinbox.h:171
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(const QString &)

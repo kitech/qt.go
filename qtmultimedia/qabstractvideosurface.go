@@ -386,10 +386,10 @@ Signals the native resolution of video surface has changed.
 
 Note: Notifier signal for property nativeResolution.
 */
-func (this *QAbstractVideoSurface) NativeResolutionChanged(arg0 qtcore.QSize_ITF) {
+func (this *QAbstractVideoSurface) NativeResolutionChanged(resolution qtcore.QSize_ITF) {
 	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QSize_PTR() != nil {
-		convArg0 = arg0.QSize_PTR().GetCthis()
+	if resolution != nil && resolution.QSize_PTR() != nil {
+		convArg0 = resolution.QSize_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractVideoSurface23nativeResolutionChangedERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

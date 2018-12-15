@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qregularexpression.h
@@ -18,7 +20,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 23
+// extern C begin: 25
 */
 // import "C"
 import "unsafe"
@@ -64,7 +66,7 @@ func (*QRegularExpressionMatch) NewFromPointer(cthis unsafe.Pointer) *QRegularEx
 	return NewQRegularExpressionMatchFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:178
+// /usr/include/qt/QtCore/qregularexpression.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionMatch()
@@ -83,7 +85,7 @@ func NewQRegularExpressionMatch() *QRegularExpressionMatch {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:179
+// /usr/include/qt/QtCore/qregularexpression.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QRegularExpressionMatch()
@@ -98,7 +100,7 @@ func DeleteQRegularExpressionMatch(this *QRegularExpressionMatch) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:181
+// /usr/include/qt/QtCore/qregularexpression.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch & operator=(const QRegularExpressionMatch &)
@@ -118,7 +120,7 @@ func (this *QRegularExpressionMatch) Operator_equal(match_ QRegularExpressionMat
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:184
+// /usr/include/qt/QtCore/qregularexpression.h:191
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch & operator=(QRegularExpressionMatch &&)
@@ -134,7 +136,7 @@ func (this *QRegularExpressionMatch) Operator_equal1(match_ unsafe.Pointer /*333
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:187
+// /usr/include/qt/QtCore/qregularexpression.h:194
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QRegularExpressionMatch &)
@@ -151,7 +153,7 @@ func (this *QRegularExpressionMatch) Swap(other QRegularExpressionMatch_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:189
+// /usr/include/qt/QtCore/qregularexpression.h:196
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpression regularExpression() const
@@ -167,7 +169,7 @@ func (this *QRegularExpressionMatch) RegularExpression() *QRegularExpression /*1
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:190
+// /usr/include/qt/QtCore/qregularexpression.h:197
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QRegularExpression::MatchType matchType() const
@@ -181,7 +183,7 @@ func (this *QRegularExpressionMatch) MatchType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:191
+// /usr/include/qt/QtCore/qregularexpression.h:198
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QRegularExpression::MatchOptions matchOptions() const
@@ -195,7 +197,7 @@ func (this *QRegularExpressionMatch) MatchOptions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:193
+// /usr/include/qt/QtCore/qregularexpression.h:200
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasMatch() const
@@ -209,7 +211,7 @@ func (this *QRegularExpressionMatch) HasMatch() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:194
+// /usr/include/qt/QtCore/qregularexpression.h:201
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasPartialMatch() const
@@ -223,7 +225,7 @@ func (this *QRegularExpressionMatch) HasPartialMatch() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:196
+// /usr/include/qt/QtCore/qregularexpression.h:203
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -239,7 +241,7 @@ func (this *QRegularExpressionMatch) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:198
+// /usr/include/qt/QtCore/qregularexpression.h:205
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lastCapturedIndex() const
@@ -253,7 +255,7 @@ func (this *QRegularExpressionMatch) LastCapturedIndex() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:200
+// /usr/include/qt/QtCore/qregularexpression.h:207
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString captured(int) const
@@ -270,7 +272,7 @@ func (this *QRegularExpressionMatch) Captured(nth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:200
+// /usr/include/qt/QtCore/qregularexpression.h:207
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString captured(int) const
@@ -289,7 +291,7 @@ func (this *QRegularExpressionMatch) Capturedp() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:205
+// /usr/include/qt/QtCore/qregularexpression.h:212
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString captured(const QString &) const
@@ -308,7 +310,7 @@ func (this *QRegularExpressionMatch) Captured1(name string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:209
+// /usr/include/qt/QtCore/qregularexpression.h:216
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString captured(QStringView) const
@@ -329,7 +331,7 @@ func (this *QRegularExpressionMatch) Captured2(name QStringView_ITF /*123*/) str
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:201
+// /usr/include/qt/QtCore/qregularexpression.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef capturedRef(int) const
@@ -345,7 +347,7 @@ func (this *QRegularExpressionMatch) CapturedRef(nth int) *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:201
+// /usr/include/qt/QtCore/qregularexpression.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef capturedRef(int) const
@@ -363,7 +365,7 @@ func (this *QRegularExpressionMatch) CapturedRefp() *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:206
+// /usr/include/qt/QtCore/qregularexpression.h:213
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QStringRef capturedRef(const QString &) const
@@ -381,7 +383,7 @@ func (this *QRegularExpressionMatch) CapturedRef1(name string) *QStringRef /*123
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:210
+// /usr/include/qt/QtCore/qregularexpression.h:217
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QStringRef capturedRef(QStringView) const
@@ -401,7 +403,7 @@ func (this *QRegularExpressionMatch) CapturedRef2(name QStringView_ITF /*123*/) 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:202
+// /usr/include/qt/QtCore/qregularexpression.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringView capturedView(int) const
@@ -417,7 +419,7 @@ func (this *QRegularExpressionMatch) CapturedView(nth int) *QStringView /*123*/ 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:202
+// /usr/include/qt/QtCore/qregularexpression.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringView capturedView(int) const
@@ -435,7 +437,7 @@ func (this *QRegularExpressionMatch) CapturedViewp() *QStringView /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:211
+// /usr/include/qt/QtCore/qregularexpression.h:218
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QStringView capturedView(QStringView) const
@@ -455,7 +457,7 @@ func (this *QRegularExpressionMatch) CapturedView1(name QStringView_ITF /*123*/)
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:213
+// /usr/include/qt/QtCore/qregularexpression.h:220
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList capturedTexts() const
@@ -471,7 +473,7 @@ func (this *QRegularExpressionMatch) CapturedTexts() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:215
+// /usr/include/qt/QtCore/qregularexpression.h:222
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int capturedStart(int) const
@@ -485,7 +487,7 @@ func (this *QRegularExpressionMatch) CapturedStart(nth int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:215
+// /usr/include/qt/QtCore/qregularexpression.h:222
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int capturedStart(int) const
@@ -501,7 +503,7 @@ func (this *QRegularExpressionMatch) CapturedStartp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:220
+// /usr/include/qt/QtCore/qregularexpression.h:227
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int capturedStart(const QString &) const
@@ -517,7 +519,7 @@ func (this *QRegularExpressionMatch) CapturedStart1(name string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:225
+// /usr/include/qt/QtCore/qregularexpression.h:232
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int capturedStart(QStringView) const
@@ -535,7 +537,7 @@ func (this *QRegularExpressionMatch) CapturedStart2(name QStringView_ITF /*123*/
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:216
+// /usr/include/qt/QtCore/qregularexpression.h:223
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int capturedLength(int) const
@@ -549,7 +551,7 @@ func (this *QRegularExpressionMatch) CapturedLength(nth int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:216
+// /usr/include/qt/QtCore/qregularexpression.h:223
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int capturedLength(int) const
@@ -565,7 +567,7 @@ func (this *QRegularExpressionMatch) CapturedLengthp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:221
+// /usr/include/qt/QtCore/qregularexpression.h:228
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int capturedLength(const QString &) const
@@ -581,7 +583,7 @@ func (this *QRegularExpressionMatch) CapturedLength1(name string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:226
+// /usr/include/qt/QtCore/qregularexpression.h:233
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int capturedLength(QStringView) const
@@ -599,7 +601,7 @@ func (this *QRegularExpressionMatch) CapturedLength2(name QStringView_ITF /*123*
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:217
+// /usr/include/qt/QtCore/qregularexpression.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int capturedEnd(int) const
@@ -613,7 +615,7 @@ func (this *QRegularExpressionMatch) CapturedEnd(nth int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:217
+// /usr/include/qt/QtCore/qregularexpression.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int capturedEnd(int) const
@@ -629,7 +631,7 @@ func (this *QRegularExpressionMatch) CapturedEndp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:222
+// /usr/include/qt/QtCore/qregularexpression.h:229
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int capturedEnd(const QString &) const
@@ -645,7 +647,7 @@ func (this *QRegularExpressionMatch) CapturedEnd1(name string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:227
+// /usr/include/qt/QtCore/qregularexpression.h:234
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int capturedEnd(QStringView) const

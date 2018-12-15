@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qfuturewatcher.h
@@ -82,7 +84,7 @@ func (*QFutureWatcherBase) NewFromPointer(cthis unsafe.Pointer) *QFutureWatcherB
 	return NewQFutureWatcherBaseFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:57
+// /usr/include/qt/QtCore/qfuturewatcher.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -96,7 +98,7 @@ func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*777 const QMetaObjec
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:61
+// /usr/include/qt/QtCore/qfuturewatcher.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFutureWatcherBase(QObject *)
@@ -119,7 +121,7 @@ func NewQFutureWatcherBase(parent QObject_ITF /*777 QObject **/) *QFutureWatcher
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:61
+// /usr/include/qt/QtCore/qfuturewatcher.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFutureWatcherBase(QObject *)
@@ -140,7 +142,7 @@ func NewQFutureWatcherBasep() *QFutureWatcherBase {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:64
+// /usr/include/qt/QtCore/qfuturewatcher.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int progressValue() const
@@ -156,7 +158,7 @@ func (this *QFutureWatcherBase) ProgressValue() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:65
+// /usr/include/qt/QtCore/qfuturewatcher.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int progressMinimum() const
@@ -172,7 +174,7 @@ func (this *QFutureWatcherBase) ProgressMinimum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:66
+// /usr/include/qt/QtCore/qfuturewatcher.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int progressMaximum() const
@@ -188,7 +190,7 @@ func (this *QFutureWatcherBase) ProgressMaximum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:67
+// /usr/include/qt/QtCore/qfuturewatcher.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString progressText() const
@@ -207,13 +209,13 @@ func (this *QFutureWatcherBase) ProgressText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:69
+// /usr/include/qt/QtCore/qfuturewatcher.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isStarted() const
 
 /*
-Returns true if the asynchronous computation represented by the future() has been started; otherwise returns false.
+Returns true if the asynchronous computation represented by the future() has been started, or if no future has been set; otherwise returns false.
 */
 func (this *QFutureWatcherBase) IsStarted() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase9isStartedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -221,7 +223,7 @@ func (this *QFutureWatcherBase) IsStarted() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:70
+// /usr/include/qt/QtCore/qfuturewatcher.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFinished() const
@@ -235,7 +237,7 @@ func (this *QFutureWatcherBase) IsFinished() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:71
+// /usr/include/qt/QtCore/qfuturewatcher.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRunning() const
@@ -249,13 +251,13 @@ func (this *QFutureWatcherBase) IsRunning() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:72
+// /usr/include/qt/QtCore/qfuturewatcher.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCanceled() const
 
 /*
-Returns true if the asynchronous computation has been canceled with the cancel() function; otherwise returns false.
+Returns true if the asynchronous computation has been canceled with the cancel() function, or if no future has been set; otherwise returns false.
 
 Be aware that the computation may still be running even though this function returns true. See cancel() for more details.
 */
@@ -265,7 +267,7 @@ func (this *QFutureWatcherBase) IsCanceled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:73
+// /usr/include/qt/QtCore/qfuturewatcher.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isPaused() const
@@ -283,7 +285,7 @@ func (this *QFutureWatcherBase) IsPaused() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:75
+// /usr/include/qt/QtCore/qfuturewatcher.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void waitForFinished()
@@ -296,7 +298,7 @@ func (this *QFutureWatcherBase) WaitForFinished() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:77
+// /usr/include/qt/QtCore/qfuturewatcher.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPendingResultsLimit(int)
@@ -309,7 +311,7 @@ func (this *QFutureWatcherBase) SetPendingResultsLimit(limit int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:79
+// /usr/include/qt/QtCore/qfuturewatcher.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -327,7 +329,7 @@ func (this *QFutureWatcherBase) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:82
+// /usr/include/qt/QtCore/qfuturewatcher.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void started()
@@ -340,7 +342,7 @@ func (this *QFutureWatcherBase) Started() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:83
+// /usr/include/qt/QtCore/qfuturewatcher.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void finished()
@@ -353,7 +355,7 @@ func (this *QFutureWatcherBase) Finished() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:84
+// /usr/include/qt/QtCore/qfuturewatcher.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void canceled()
@@ -366,7 +368,7 @@ func (this *QFutureWatcherBase) Canceled() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:85
+// /usr/include/qt/QtCore/qfuturewatcher.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void paused()
@@ -381,7 +383,7 @@ func (this *QFutureWatcherBase) Paused() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:86
+// /usr/include/qt/QtCore/qfuturewatcher.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resumed()
@@ -394,20 +396,20 @@ func (this *QFutureWatcherBase) Resumed() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:87
+// /usr/include/qt/QtCore/qfuturewatcher.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resultReadyAt(int)
 
 /*
-This signal is emitted when the watched future reports a ready result at index. If the future reports multiple results, the index will indicate which one it is. Results can be reported out-of-order. To get the result, call future().result(index);
+This signal is emitted when the watched future reports a ready result at index. If the future reports multiple results, the index will indicate which one it is. Results can be reported out-of-order. To get the result, call resultAt(index);
 */
 func (this *QFutureWatcherBase) ResultReadyAt(resultIndex int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase13resultReadyAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), resultIndex)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:88
+// /usr/include/qt/QtCore/qfuturewatcher.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resultsReadyAt(int, int)
@@ -420,7 +422,7 @@ func (this *QFutureWatcherBase) ResultsReadyAt(beginIndex int, endIndex int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:89
+// /usr/include/qt/QtCore/qfuturewatcher.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void progressRangeChanged(int, int)
@@ -433,7 +435,7 @@ func (this *QFutureWatcherBase) ProgressRangeChanged(minimum int, maximum int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:90
+// /usr/include/qt/QtCore/qfuturewatcher.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void progressValueChanged(int)
@@ -446,7 +448,7 @@ func (this *QFutureWatcherBase) ProgressValueChanged(progressValue int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:91
+// /usr/include/qt/QtCore/qfuturewatcher.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void progressTextChanged(const QString &)
@@ -461,7 +463,7 @@ func (this *QFutureWatcherBase) ProgressTextChanged(progressText string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:94
+// /usr/include/qt/QtCore/qfuturewatcher.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cancel()
@@ -478,7 +480,7 @@ func (this *QFutureWatcherBase) Cancel() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:95
+// /usr/include/qt/QtCore/qfuturewatcher.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPaused(bool)
@@ -497,7 +499,7 @@ func (this *QFutureWatcherBase) SetPaused(paused bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:96
+// /usr/include/qt/QtCore/qfuturewatcher.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void pause()
@@ -512,7 +514,7 @@ func (this *QFutureWatcherBase) Pause() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:97
+// /usr/include/qt/QtCore/qfuturewatcher.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resume()
@@ -527,7 +529,7 @@ func (this *QFutureWatcherBase) Resume() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:98
+// /usr/include/qt/QtCore/qfuturewatcher.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void togglePaused()
@@ -542,7 +544,7 @@ func (this *QFutureWatcherBase) TogglePaused() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:101
+// /usr/include/qt/QtCore/qfuturewatcher.h:100
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void connectNotify(const QMetaMethod &)
@@ -559,7 +561,7 @@ func (this *QFutureWatcherBase) ConnectNotify(signal QMetaMethod_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:102
+// /usr/include/qt/QtCore/qfuturewatcher.h:101
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void disconnectNotify(const QMetaMethod &)
@@ -576,7 +578,7 @@ func (this *QFutureWatcherBase) DisconnectNotify(signal QMetaMethod_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:105
+// /usr/include/qt/QtCore/qfuturewatcher.h:104
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void connectOutputInterface()
@@ -589,7 +591,7 @@ func (this *QFutureWatcherBase) ConnectOutputInterface() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:106
+// /usr/include/qt/QtCore/qfuturewatcher.h:105
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void disconnectOutputInterface(bool)
@@ -602,7 +604,7 @@ func (this *QFutureWatcherBase) DisconnectOutputInterface(pendingAssignment bool
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfuturewatcher.h:106
+// /usr/include/qt/QtCore/qfuturewatcher.h:105
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void disconnectOutputInterface(bool)

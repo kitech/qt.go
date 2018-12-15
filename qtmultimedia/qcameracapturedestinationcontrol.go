@@ -149,8 +149,8 @@ func (this *QCameraCaptureDestinationControl) SetCaptureDestination(destination 
 /*
 Signals the image capture destination changed.
 */
-func (this *QCameraCaptureDestinationControl) CaptureDestinationChanged(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN32QCameraCaptureDestinationControl25captureDestinationChangedE6QFlagsIN19QCameraImageCapture18CaptureDestinationEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QCameraCaptureDestinationControl) CaptureDestinationChanged(destination int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN32QCameraCaptureDestinationControl25captureDestinationChangedE6QFlagsIN19QCameraImageCapture18CaptureDestinationEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), destination)
 	qtrt.ErrPrint(err, rv)
 }
 

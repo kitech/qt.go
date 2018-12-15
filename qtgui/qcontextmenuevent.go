@@ -63,7 +63,7 @@ func (*QContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QContextMenuEven
 	return NewQContextMenuEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:511
+// /usr/include/qt/QtGui/qevent.h:516
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QContextMenuEvent(QContextMenuEvent::Reason, const QPoint &, const QPoint &, Qt::KeyboardModifiers)
@@ -90,7 +90,7 @@ func NewQContextMenuEvent(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.QP
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:513
+// /usr/include/qt/QtGui/qevent.h:518
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QContextMenuEvent(QContextMenuEvent::Reason, const QPoint &, const QPoint &)
@@ -117,7 +117,7 @@ func NewQContextMenuEvent1(reason int, pos qtcore.QPoint_ITF, globalPos qtcore.Q
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:514
+// /usr/include/qt/QtGui/qevent.h:519
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QContextMenuEvent(QContextMenuEvent::Reason, const QPoint &)
@@ -140,7 +140,7 @@ func NewQContextMenuEvent2(reason int, pos qtcore.QPoint_ITF) *QContextMenuEvent
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:515
+// /usr/include/qt/QtGui/qevent.h:520
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QContextMenuEvent()
@@ -155,7 +155,7 @@ func DeleteQContextMenuEvent(this *QContextMenuEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:517
+// /usr/include/qt/QtGui/qevent.h:522
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int x() const
@@ -169,7 +169,7 @@ func (this *QContextMenuEvent) X() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:518
+// /usr/include/qt/QtGui/qevent.h:523
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int y() const
@@ -183,7 +183,7 @@ func (this *QContextMenuEvent) Y() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:519
+// /usr/include/qt/QtGui/qevent.h:524
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalX() const
@@ -197,7 +197,7 @@ func (this *QContextMenuEvent) GlobalX() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:520
+// /usr/include/qt/QtGui/qevent.h:525
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int globalY() const
@@ -211,7 +211,7 @@ func (this *QContextMenuEvent) GlobalY() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:522
+// /usr/include/qt/QtGui/qevent.h:527
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & pos() const
@@ -227,7 +227,7 @@ func (this *QContextMenuEvent) Pos() *qtcore.QPoint {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:523
+// /usr/include/qt/QtGui/qevent.h:528
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & globalPos() const
@@ -243,7 +243,7 @@ func (this *QContextMenuEvent) GlobalPos() *qtcore.QPoint {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:525
+// /usr/include/qt/QtGui/qevent.h:530
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QContextMenuEvent::Reason reason() const

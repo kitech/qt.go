@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h
@@ -84,7 +86,7 @@ func (*QSequentialAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QSequent
 	return NewQSequentialAnimationGroupFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:55
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -98,7 +100,7 @@ func (this *QSequentialAnimationGroup) MetaObject() *QMetaObject /*777 const QMe
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:59
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSequentialAnimationGroup(QObject *)
@@ -121,7 +123,7 @@ func NewQSequentialAnimationGroup(parent QObject_ITF /*777 QObject **/) *QSequen
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:59
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSequentialAnimationGroup(QObject *)
@@ -142,7 +144,7 @@ func NewQSequentialAnimationGroupp() *QSequentialAnimationGroup {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:60
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSequentialAnimationGroup()
@@ -157,7 +159,7 @@ func DeleteQSequentialAnimationGroup(this *QSequentialAnimationGroup) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:62
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPauseAnimation * addPause(int)
@@ -173,7 +175,7 @@ func (this *QSequentialAnimationGroup) AddPause(msecs int) *QPauseAnimation /*77
 	return /*==*/ NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:63
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPauseAnimation * insertPause(int, int)
@@ -189,7 +191,7 @@ func (this *QSequentialAnimationGroup) InsertPause(index int, msecs int) *QPause
 	return /*==*/ NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:65
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractAnimation * currentAnimation() const
@@ -203,7 +205,7 @@ func (this *QSequentialAnimationGroup) CurrentAnimation() *QAbstractAnimation /*
 	return /*==*/ NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:66
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int duration() const
@@ -217,7 +219,7 @@ func (this *QSequentialAnimationGroup) Duration() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:69
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentAnimationChanged(QAbstractAnimation *)
@@ -238,13 +240,13 @@ func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current QAbstract
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:73
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:72
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAnimationGroup::event().
 */
 func (this *QSequentialAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -256,7 +258,7 @@ func (this *QSequentialAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:75
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:74
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentTime(int)
@@ -269,7 +271,7 @@ func (this *QSequentialAnimationGroup) UpdateCurrentTime(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:76
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:75
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
@@ -282,7 +284,7 @@ func (this *QSequentialAnimationGroup) UpdateState(newState int, oldState int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsequentialanimationgroup.h:77
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:76
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateDirection(QAbstractAnimation::Direction)

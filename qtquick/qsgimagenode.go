@@ -360,8 +360,12 @@ func (this *QSGImageNode) OwnsTexture() bool {
 // [-2] void rebuildGeometry(QSGGeometry *, QSGTexture *, const QRectF &, QRectF, QSGImageNode::TextureCoordinatesTransformMode)
 
 /*
+Updates the geometry g with the texture, the coordinates in rect, and the texture coordinates from sourceRect.
 
- */
+g is assumed to be a triangle strip of four vertices of type QSGGeometry::TexturedPoint2D.
+
+texCoordMode is used for normalizing the sourceRect.
+*/
 func (this *QSGImageNode) RebuildGeometry(g QSGGeometry_ITF /*777 QSGGeometry **/, texture QSGTexture_ITF /*777 QSGTexture **/, rect qtcore.QRectF_ITF, sourceRect qtcore.QRectF_ITF /*123*/, texCoordMode int) {
 	var convArg0 unsafe.Pointer
 	if g != nil && g.QSGGeometry_PTR() != nil {

@@ -695,9 +695,6 @@ func DeleteQFontDatabase(this *QFontDatabase) {
 
 /*
 QFontDatabase::OtherSymbol(the same as Symbol)
-QFontDatabase::Ogham?
-QFontDatabase::Runic?
-QFontDatabase::Nko?
 
 */
 type QFontDatabase__WritingSystem = int
@@ -804,7 +801,7 @@ const QFontDatabase__Ogham QFontDatabase__WritingSystem = 31
 //
 const QFontDatabase__Runic QFontDatabase__WritingSystem = 32
 
-//
+// 3
 const QFontDatabase__Nko QFontDatabase__WritingSystem = 33
 
 //

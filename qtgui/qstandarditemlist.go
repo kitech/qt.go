@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtgui
 
 // /usr/include/qt/QtGui/qstandarditemmodel.h

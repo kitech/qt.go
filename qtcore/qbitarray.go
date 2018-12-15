@@ -713,6 +713,53 @@ func (this *QBitArray) Truncate(pos int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qbitarray.h:107
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] const char * bits() const
+
+/*
+Returns a pointer to a dense bit array for this QBitArray. Bits are counted upwards from the least significant bit in each byte. The the number of bits relevant in the last byte is given by size() % 8.
+
+This function was introduced in  Qt 5.11.
+
+See also fromBits() and size().
+*/
+func (this *QBitArray) Bits() string {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QBitArray4bitsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.GoStringI(rv)
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:108
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QBitArray fromBits(const char *, qsizetype)
+
+/*
+Creates a QBitArray with the dense bit array located at data, with size bits. The byte array at data must be at least size / 8 (rounded up) bytes long.
+
+If size is not a multiple of 8, this function will include the lowest size % 8 bits from the last byte in data.
+
+This function was introduced in  Qt 5.11.
+
+See also bits().
+*/
+func (this *QBitArray) FromBits(data string, len_ int64) *QBitArray /*123*/ {
+	var convArg0 = qtrt.CString(data)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArray8fromBitsEPKcx", qtrt.FFI_TYPE_POINTER, convArg0, len_)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQBitArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBitArray)
+	return rv2
+}
+func QBitArray_FromBits(data string, len_ int64) *QBitArray /*123*/ {
+	var nilthis *QBitArray
+	rv := nilthis.FromBits(data, len_)
+	return rv
+}
+
 func DeleteQBitArray(this *QBitArray) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QBitArrayD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

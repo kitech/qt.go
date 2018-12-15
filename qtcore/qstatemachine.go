@@ -606,7 +606,7 @@ func (this *QStateMachine) RunningChanged(running bool) {
 // [-2] void onEntry(QEvent *)
 
 /*
-Reimplemented from QAbstractState::onEntry().
+Reimplemented from QState::onEntry().
 
 This function will call start() to start the state machine.
 */
@@ -625,7 +625,7 @@ func (this *QStateMachine) OnEntry(event QEvent_ITF /*777 QEvent **/) {
 // [-2] void onExit(QEvent *)
 
 /*
-Reimplemented from QAbstractState::onExit().
+Reimplemented from QState::onExit().
 
 This function will call stop() to stop the state machine and subsequently emit the stopped() signal.
 */
@@ -712,7 +712,7 @@ func (this *QStateMachine) EndMicrostep(event QEvent_ITF /*777 QEvent **/) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QState::event().
 */
 func (this *QStateMachine) Event(e QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer

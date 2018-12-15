@@ -63,7 +63,7 @@ func (*QShowEvent) NewFromPointer(cthis unsafe.Pointer) *QShowEvent {
 	return NewQShowEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:493
+// /usr/include/qt/QtGui/qevent.h:498
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QShowEvent()
@@ -82,7 +82,7 @@ func NewQShowEvent() *QShowEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:494
+// /usr/include/qt/QtGui/qevent.h:499
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QShowEvent()

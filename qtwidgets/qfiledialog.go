@@ -1300,8 +1300,6 @@ func (this *QFileDialog) Options() int {
 // [-2] void open(QObject *, const char *)
 
 /*
-This is an overloaded function.
-
 This function connects one of its signals to the slot specified by receiver and member. The specific signal depends is filesSelected() if fileMode is ExistingFiles and fileSelected() if fileMode is anything else.
 
 The signal will be disconnected from the slot when the dialog is closed.
@@ -1325,7 +1323,7 @@ func (this *QFileDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, mem
 // [-2] void setVisible(bool)
 
 /*
-Reimplemented from QWidget::setVisible().
+Reimplemented from QDialog::setVisible().
 */
 func (this *QFileDialog) SetVisible(visible bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)

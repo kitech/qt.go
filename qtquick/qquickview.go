@@ -101,7 +101,7 @@ func (*QQuickView) NewFromPointer(cthis unsafe.Pointer) *QQuickView {
 	return NewQQuickViewFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qquickview.h:58
+// /usr/include/qt/QtQuick/qquickview.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -115,7 +115,7 @@ func (this *QQuickView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qquickview.h:63
+// /usr/include/qt/QtQuick/qquickview.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(QWindow *)
@@ -138,7 +138,7 @@ func NewQQuickView(parent qtgui.QWindow_ITF /*777 QWindow **/) *QQuickView {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickview.h:63
+// /usr/include/qt/QtQuick/qquickview.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(QWindow *)
@@ -159,7 +159,7 @@ func NewQQuickViewp() *QQuickView {
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickview.h:64
+// /usr/include/qt/QtQuick/qquickview.h:63
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(QQmlEngine *, QWindow *)
@@ -186,7 +186,7 @@ func NewQQuickView1(engine qtqml.QQmlEngine_ITF /*777 QQmlEngine **/, parent qtg
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickview.h:65
+// /usr/include/qt/QtQuick/qquickview.h:64
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(const QUrl &, QWindow *)
@@ -213,7 +213,7 @@ func NewQQuickView2(source qtcore.QUrl_ITF, parent qtgui.QWindow_ITF /*777 QWind
 	return gothis
 }
 
-// /usr/include/qt/QtQuick/qquickview.h:65
+// /usr/include/qt/QtQuick/qquickview.h:64
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickView(const QUrl &, QWindow *)
@@ -232,6 +232,33 @@ func NewQQuickView2p(source qtcore.QUrl_ITF) *QQuickView {
 	// arg: 1, QWindow *=Pointer, QWindow=Record, , Invalid
 	var convArg1 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewC2ERK4QUrlP7QWindow", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	gothis := NewQQuickViewFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.ConnectDestroyed(gothis, "QQuickView")
+	return gothis
+}
+
+// /usr/include/qt/QtQuick/qquickview.h:65
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickView(const QUrl &, QQuickRenderControl *)
+
+/*
+Constructs a QQuickView with the given parent. The default value of parent is 0.
+*/
+func (*QQuickView) NewForInherit3(source qtcore.QUrl_ITF, renderControl QQuickRenderControl_ITF /*777 QQuickRenderControl **/) *QQuickView {
+	return NewQQuickView3(source, renderControl)
+}
+func NewQQuickView3(source qtcore.QUrl_ITF, renderControl QQuickRenderControl_ITF /*777 QQuickRenderControl **/) *QQuickView {
+	var convArg0 unsafe.Pointer
+	if source != nil && source.QUrl_PTR() != nil {
+		convArg0 = source.QUrl_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if renderControl != nil && renderControl.QQuickRenderControl_PTR() != nil {
+		convArg1 = renderControl.QQuickRenderControl_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QQuickViewC2ERK4QUrlP19QQuickRenderControl", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQQuickViewFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.ConnectDestroyed(gothis, "QQuickView")
@@ -495,7 +522,7 @@ func (this *QQuickView) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent
 // [-2] void keyPressEvent(QKeyEvent *)
 
 /*
-Reimplemented from QWindow::keyPressEvent().
+Reimplemented from QQuickWindow::keyPressEvent().
 */
 func (this *QQuickView) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -512,7 +539,7 @@ func (this *QQuickView) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent *
 // [-2] void keyReleaseEvent(QKeyEvent *)
 
 /*
-Reimplemented from QWindow::keyReleaseEvent().
+Reimplemented from QQuickWindow::keyReleaseEvent().
 */
 func (this *QQuickView) KeyReleaseEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -529,7 +556,7 @@ func (this *QQuickView) KeyReleaseEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent
 // [-2] void mousePressEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWindow::mousePressEvent().
+Reimplemented from QQuickWindow::mousePressEvent().
 */
 func (this *QQuickView) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -546,7 +573,7 @@ func (this *QQuickView) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseE
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWindow::mouseReleaseEvent().
+Reimplemented from QQuickWindow::mouseReleaseEvent().
 */
 func (this *QQuickView) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -563,7 +590,7 @@ func (this *QQuickView) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMous
 // [-2] void mouseMoveEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWindow::mouseMoveEvent().
+Reimplemented from QQuickWindow::mouseMoveEvent().
 */
 func (this *QQuickView) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer

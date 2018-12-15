@@ -118,9 +118,9 @@ func (this *QLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // [-2] void QLayout(QWidget *)
 
 /*
-Constructs a new top-level QLayout, with parent parent. parent may not be 0.
+Constructs a new top-level QLayout, with parent parent. parent may not be a nullptr.
 
-There can be only one top-level layout for a widget. It is returned by QWidget::layout().
+The layout is set directly as the top-level layout for parent. There can be only one top-level layout for a widget. It is returned by QWidget::layout().
 */
 func (*QLayout) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QLayout {
 	return NewQLayout(parent)
@@ -143,9 +143,9 @@ func NewQLayout(parent QWidget_ITF /*777 QWidget **/) *QLayout {
 // [-2] void QLayout()
 
 /*
-Constructs a new top-level QLayout, with parent parent. parent may not be 0.
+Constructs a new top-level QLayout, with parent parent. parent may not be a nullptr.
 
-There can be only one top-level layout for a widget. It is returned by QWidget::layout().
+The layout is set directly as the top-level layout for parent. There can be only one top-level layout for a widget. It is returned by QWidget::layout().
 */
 func (*QLayout) NewForInherit1() *QLayout {
 	return NewQLayout1()
@@ -765,6 +765,28 @@ func (this *QLayout) IndexOf(arg0 QWidget_ITF /*777 QWidget **/) int {
 }
 
 // /usr/include/qt/QtWidgets/qlayout.h:125
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(QLayoutItem *) const
+
+/*
+Searches for widget widget in this layout (not including child layouts).
+
+Returns the index of widget, or -1 if widget is not found.
+
+The default implementation iterates over all items using itemAt()
+*/
+func (this *QLayout) IndexOf1(arg0 QLayoutItem_ITF /*777 QLayoutItem **/) int {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QLayoutItem_PTR() != nil {
+		convArg0 = arg0.QLayoutItem_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLayout7indexOfEP11QLayoutItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qlayout.h:126
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int count() const
@@ -780,7 +802,7 @@ func (this *QLayout) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:126
+// /usr/include/qt/QtWidgets/qlayout.h:127
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isEmpty() const
@@ -794,7 +816,7 @@ func (this *QLayout) IsEmpty() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:127
+// /usr/include/qt/QtWidgets/qlayout.h:128
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QSizePolicy::ControlTypes controlTypes() const
@@ -874,7 +896,7 @@ func (this *QLayout) ReplaceWidgetp(from QWidget_ITF /*777 QWidget **/, to QWidg
 	return /*==*/ NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:132
+// /usr/include/qt/QtWidgets/qlayout.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int totalHeightForWidth(int) const
@@ -888,7 +910,7 @@ func (this *QLayout) TotalHeightForWidth(w int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:133
+// /usr/include/qt/QtWidgets/qlayout.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize totalMinimumSize() const
@@ -904,7 +926,7 @@ func (this *QLayout) TotalMinimumSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:134
+// /usr/include/qt/QtWidgets/qlayout.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize totalMaximumSize() const
@@ -920,7 +942,7 @@ func (this *QLayout) TotalMaximumSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:135
+// /usr/include/qt/QtWidgets/qlayout.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize totalSizeHint() const
@@ -936,7 +958,7 @@ func (this *QLayout) TotalSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:136
+// /usr/include/qt/QtWidgets/qlayout.h:137
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QLayout * layout()
@@ -950,7 +972,7 @@ func (this *QLayout) Layout() *QLayout /*777 QLayout **/ {
 	return /*==*/ NewQLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:138
+// /usr/include/qt/QtWidgets/qlayout.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(bool)
@@ -969,7 +991,7 @@ func (this *QLayout) SetEnabled(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:139
+// /usr/include/qt/QtWidgets/qlayout.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEnabled() const
@@ -985,7 +1007,7 @@ func (this *QLayout) IsEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:142
+// /usr/include/qt/QtWidgets/qlayout.h:143
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QSize closestAcceptableSize(const QWidget *, const QSize &)
@@ -1014,7 +1036,7 @@ func QLayout_ClosestAcceptableSize(w QWidget_ITF /*777 const QWidget **/, s qtco
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:145
+// /usr/include/qt/QtWidgets/qlayout.h:146
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void widgetEvent(QEvent *)
@@ -1031,7 +1053,7 @@ func (this *QLayout) WidgetEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:146
+// /usr/include/qt/QtWidgets/qlayout.h:147
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void childEvent(QChildEvent *)
@@ -1048,7 +1070,7 @@ func (this *QLayout) ChildEvent(e qtcore.QChildEvent_ITF /*777 QChildEvent **/) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:147
+// /usr/include/qt/QtWidgets/qlayout.h:148
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void addChildLayout(QLayout *)
@@ -1069,7 +1091,7 @@ func (this *QLayout) AddChildLayout(l QLayout_ITF /*777 QLayout **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:148
+// /usr/include/qt/QtWidgets/qlayout.h:149
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void addChildWidget(QWidget *)
@@ -1088,7 +1110,7 @@ func (this *QLayout) AddChildWidget(w QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:149
+// /usr/include/qt/QtWidgets/qlayout.h:150
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool adoptLayout(QLayout *)
@@ -1106,7 +1128,7 @@ func (this *QLayout) AdoptLayout(layout QLayout_ITF /*777 QLayout **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlayout.h:151
+// /usr/include/qt/QtWidgets/qlayout.h:152
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QRect alignmentRect(const QRect &) const

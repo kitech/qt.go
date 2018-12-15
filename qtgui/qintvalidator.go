@@ -63,7 +63,7 @@ func (*QIntValidator) NewFromPointer(cthis unsafe.Pointer) *QIntValidator {
 	return NewQIntValidatorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:91
+// /usr/include/qt/QtGui/qvalidator.h:93
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -77,7 +77,7 @@ func (this *QIntValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:96
+// /usr/include/qt/QtGui/qvalidator.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(QObject *)
@@ -100,7 +100,7 @@ func NewQIntValidator(parent qtcore.QObject_ITF /*777 QObject **/) *QIntValidato
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:96
+// /usr/include/qt/QtGui/qvalidator.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(QObject *)
@@ -121,7 +121,7 @@ func NewQIntValidatorp() *QIntValidator {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:97
+// /usr/include/qt/QtGui/qvalidator.h:99
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(int, int, QObject *)
@@ -144,7 +144,7 @@ func NewQIntValidator1(bottom int, top int, parent qtcore.QObject_ITF /*777 QObj
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:97
+// /usr/include/qt/QtGui/qvalidator.h:99
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QIntValidator(int, int, QObject *)
@@ -165,7 +165,7 @@ func NewQIntValidator1p(bottom int, top int) *QIntValidator {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:98
+// /usr/include/qt/QtGui/qvalidator.h:100
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIntValidator()
@@ -180,7 +180,7 @@ func DeleteQIntValidator(this *QIntValidator) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:100
+// /usr/include/qt/QtGui/qvalidator.h:102
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
@@ -198,7 +198,7 @@ func (this *QIntValidator) Validate(arg0 string, arg1 int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:101
+// /usr/include/qt/QtGui/qvalidator.h:103
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fixup(QString &) const
@@ -215,7 +215,7 @@ func (this *QIntValidator) Fixup(input string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:103
+// /usr/include/qt/QtGui/qvalidator.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBottom(int)
@@ -228,7 +228,7 @@ func (this *QIntValidator) SetBottom(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:104
+// /usr/include/qt/QtGui/qvalidator.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTop(int)
@@ -241,7 +241,7 @@ func (this *QIntValidator) SetTop(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:105
+// /usr/include/qt/QtGui/qvalidator.h:107
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRange(int, int)
@@ -254,7 +254,7 @@ func (this *QIntValidator) SetRange(bottom int, top int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:107
+// /usr/include/qt/QtGui/qvalidator.h:109
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int bottom() const
@@ -268,7 +268,7 @@ func (this *QIntValidator) Bottom() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:108
+// /usr/include/qt/QtGui/qvalidator.h:110
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int top() const
@@ -282,7 +282,7 @@ func (this *QIntValidator) Top() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:110
+// /usr/include/qt/QtGui/qvalidator.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void bottomChanged(int)
@@ -295,7 +295,7 @@ func (this *QIntValidator) BottomChanged(bottom int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qvalidator.h:111
+// /usr/include/qt/QtGui/qvalidator.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void topChanged(int)

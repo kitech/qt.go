@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qdnslookup.h
@@ -65,7 +67,7 @@ func (*QDnsDomainNameRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsDomainNam
 	return NewQDnsDomainNameRecordFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:63
+// /usr/include/qt/QtNetwork/qdnslookup.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsDomainNameRecord()
@@ -84,7 +86,7 @@ func NewQDnsDomainNameRecord() *QDnsDomainNameRecord {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:66
+// /usr/include/qt/QtNetwork/qdnslookup.h:68
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDnsDomainNameRecord & operator=(QDnsDomainNameRecord &&)
@@ -100,7 +102,7 @@ func (this *QDnsDomainNameRecord) Operator_equal(other unsafe.Pointer /*333*/) *
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:68
+// /usr/include/qt/QtNetwork/qdnslookup.h:70
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QDnsDomainNameRecord & operator=(const QDnsDomainNameRecord &)
@@ -120,7 +122,7 @@ func (this *QDnsDomainNameRecord) Operator_equal1(other QDnsDomainNameRecord_ITF
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:69
+// /usr/include/qt/QtNetwork/qdnslookup.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDnsDomainNameRecord()
@@ -135,7 +137,7 @@ func DeleteQDnsDomainNameRecord(this *QDnsDomainNameRecord) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:71
+// /usr/include/qt/QtNetwork/qdnslookup.h:73
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsDomainNameRecord &)
@@ -152,7 +154,7 @@ func (this *QDnsDomainNameRecord) Swap(other QDnsDomainNameRecord_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:73
+// /usr/include/qt/QtNetwork/qdnslookup.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
@@ -169,7 +171,7 @@ func (this *QDnsDomainNameRecord) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:74
+// /usr/include/qt/QtNetwork/qdnslookup.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] quint32 timeToLive() const
@@ -183,7 +185,7 @@ func (this *QDnsDomainNameRecord) TimeToLive() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:75
+// /usr/include/qt/QtNetwork/qdnslookup.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString value() const

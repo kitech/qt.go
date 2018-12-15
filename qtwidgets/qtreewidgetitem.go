@@ -553,7 +553,7 @@ func (this *QTreeWidgetItem) IsSelected() bool {
 
 // /usr/include/qt/QtWidgets/qtreewidget.h:85
 // index:0
-// Public inline Visibility=Default Availability=Available
+// Public Visibility=Default Availability=Available
 // [-2] void setHidden(bool)
 
 /*
@@ -566,7 +566,7 @@ func (this *QTreeWidgetItem) SetHidden(hide bool) {
 
 // /usr/include/qt/QtWidgets/qtreewidget.h:86
 // index:0
-// Public inline Visibility=Default Availability=Available
+// Public Visibility=Default Availability=Available
 // [1] bool isHidden() const
 
 /*

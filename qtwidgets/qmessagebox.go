@@ -468,8 +468,6 @@ func (this *QMessageBox) RemoveButton(button QAbstractButton_ITF /*777 QAbstract
 // [-2] void open(QObject *, const char *)
 
 /*
-This is an overloaded function.
-
 Opens the dialog and connects its finished() or buttonClicked() signal to the slot specified by receiver and member. If the slot in member has a pointer for its first parameter the connection is to buttonClicked(), otherwise the connection is to finished().
 
 The signal will be disconnected from the slot when the dialog is closed.
@@ -580,7 +578,7 @@ func (this *QMessageBox) Button(which int) *QAbstractButton /*777 QAbstractButto
 // [8] QPushButton * defaultButton() const
 
 /*
-Returns the button that should be the message box's default button. Returns 0 if no default button was set.
+Returns the button that should be the message box's default button. Returns nullptr if no default button was set.
 
 This function was introduced in  Qt 4.2.
 
@@ -692,7 +690,7 @@ func (this *QMessageBox) SetEscapeButton1(button int) {
 /*
 Returns the button that was clicked by the user, or 0 if the user hit the Esc key and no escape button was set.
 
-If exec() hasn't been called yet, returns 0.
+If exec() hasn't been called yet, returns nullptr.
 
 Example:
 
@@ -3062,7 +3060,7 @@ func (this *QMessageBox) ButtonClicked(button QAbstractButton_ITF /*777 QAbstrac
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QWidget::event().
 */
 func (this *QMessageBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -3080,7 +3078,7 @@ func (this *QMessageBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 // [-2] void resizeEvent(QResizeEvent *)
 
 /*
-Reimplemented from QWidget::resizeEvent().
+Reimplemented from QDialog::resizeEvent().
 */
 func (this *QMessageBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -3097,7 +3095,7 @@ func (this *QMessageBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeE
 // [-2] void showEvent(QShowEvent *)
 
 /*
-Reimplemented from QWidget::showEvent().
+Reimplemented from QDialog::showEvent().
 */
 func (this *QMessageBox) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -3114,7 +3112,7 @@ func (this *QMessageBox) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEvent *
 // [-2] void closeEvent(QCloseEvent *)
 
 /*
-Reimplemented from QWidget::closeEvent().
+Reimplemented from QDialog::closeEvent().
 */
 func (this *QMessageBox) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -3131,7 +3129,7 @@ func (this *QMessageBox) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEven
 // [-2] void keyPressEvent(QKeyEvent *)
 
 /*
-Reimplemented from QWidget::keyPressEvent().
+Reimplemented from QDialog::keyPressEvent().
 */
 func (this *QMessageBox) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -3190,43 +3188,39 @@ func QMessageBox_IconItemName(val int) string {
 }
 
 /*
-This enum describes the roles that can be used to describe buttons in the button box. Combinations of these roles are as flags used to describe different aspects of their behavior.
 
 
-
-See also StandardButton.
-
-*/
+ */
 type QMessageBox__ButtonRole = int
 
 //
 const QMessageBox__InvalidRole QMessageBox__ButtonRole = -1
 
-// Clicking the button causes the dialog to be accepted (e.g. OK).
+//
 const QMessageBox__AcceptRole QMessageBox__ButtonRole = 0
 
-// Clicking the button causes the dialog to be rejected (e.g. Cancel).
+//
 const QMessageBox__RejectRole QMessageBox__ButtonRole = 1
 
-// Clicking the button causes a destructive change (e.g. for Discarding Changes) and closes the dialog.
+//
 const QMessageBox__DestructiveRole QMessageBox__ButtonRole = 2
 
-// Clicking the button causes changes to the elements within the dialog.
+//
 const QMessageBox__ActionRole QMessageBox__ButtonRole = 3
 
-// The button can be clicked to request help.
+//
 const QMessageBox__HelpRole QMessageBox__ButtonRole = 4
 
-// The button is a "Yes"-like button.
+//
 const QMessageBox__YesRole QMessageBox__ButtonRole = 5
 
-// The button is a "No"-like button.
+//
 const QMessageBox__NoRole QMessageBox__ButtonRole = 6
 
-// The button resets the dialog's fields to default values.
+//
 const QMessageBox__ResetRole QMessageBox__ButtonRole = 7
 
-// The button applies current changes.
+//
 const QMessageBox__ApplyRole QMessageBox__ButtonRole = 8
 
 //

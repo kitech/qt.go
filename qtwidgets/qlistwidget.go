@@ -55,8 +55,8 @@ func (this *QListWidget) InheritSupportedDropActions(f func() int) {
 	qtrt.SetAllInheritCallback(this, "supportedDropActions", f)
 }
 
-// QModelIndex indexFromItem(QListWidgetItem *)
-func (this *QListWidget) InheritIndexFromItem(f func(item *QListWidgetItem /*777 QListWidgetItem **/) unsafe.Pointer) {
+// QModelIndex indexFromItem(const QListWidgetItem *)
+func (this *QListWidget) InheritIndexFromItem(f func(item *QListWidgetItem /*777 const QListWidgetItem **/) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "indexFromItem", f)
 }
 
@@ -790,7 +790,7 @@ func (this *QListWidget) SetItemHidden(item QListWidgetItem_ITF /*777 const QLis
 // [-2] void dropEvent(QDropEvent *)
 
 /*
-Reimplemented from QWidget::dropEvent().
+Reimplemented from QListView::dropEvent().
 */
 func (this *QListWidget) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -949,7 +949,7 @@ func (this *QListWidget) ItemEntered(item QListWidgetItem_ITF /*777 QListWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:272
+// /usr/include/qt/QtWidgets/qlistwidget.h:273
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemChanged(QListWidgetItem *)
@@ -966,7 +966,7 @@ func (this *QListWidget) ItemChanged(item QListWidgetItem_ITF /*777 QListWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:274
+// /usr/include/qt/QtWidgets/qlistwidget.h:275
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentItemChanged(QListWidgetItem *, QListWidgetItem *)
@@ -989,7 +989,7 @@ func (this *QListWidget) CurrentItemChanged(current QListWidgetItem_ITF /*777 QL
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:275
+// /usr/include/qt/QtWidgets/qlistwidget.h:276
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentTextChanged(const QString &)
@@ -1006,7 +1006,7 @@ func (this *QListWidget) CurrentTextChanged(currentText string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:276
+// /usr/include/qt/QtWidgets/qlistwidget.h:277
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentRowChanged(int)
@@ -1023,7 +1023,7 @@ func (this *QListWidget) CurrentRowChanged(currentRow int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:278
+// /usr/include/qt/QtWidgets/qlistwidget.h:279
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemSelectionChanged()
@@ -1038,13 +1038,13 @@ func (this *QListWidget) ItemSelectionChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:281
+// /usr/include/qt/QtWidgets/qlistwidget.h:282
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QListView::event().
 */
 func (this *QListWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -1056,7 +1056,7 @@ func (this *QListWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:282
+// /usr/include/qt/QtWidgets/qlistwidget.h:283
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
@@ -1074,7 +1074,7 @@ func (this *QListWidget) MimeTypes() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:289
+// /usr/include/qt/QtWidgets/qlistwidget.h:290
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(int, const QMimeData *, Qt::DropAction)
@@ -1094,7 +1094,7 @@ func (this *QListWidget) DropMimeData(index int, data qtcore.QMimeData_ITF /*777
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:290
+// /usr/include/qt/QtWidgets/qlistwidget.h:291
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
@@ -1110,15 +1110,39 @@ func (this *QListWidget) SupportedDropActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:300
+// /usr/include/qt/QtWidgets/qlistwidget.h:301
 // index:0
+// Protected Visibility=Default Availability=Available
+// [24] QModelIndex indexFromItem(const QListWidgetItem *) const
+
+/*
+Returns the QModelIndex associated with the given item.
+
+Note: In Qt versions prior to 5.10, this function took a non-const item.
+*/
+func (this *QListWidget) IndexFromItem(item QListWidgetItem_ITF /*777 const QListWidgetItem **/) *qtcore.QModelIndex /*123*/ {
+	var convArg0 unsafe.Pointer
+	if item != nil && item.QListWidgetItem_PTR() != nil {
+		convArg0 = item.QListWidgetItem_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget13indexFromItemEPK15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qlistwidget.h:303
+// index:1
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(QListWidgetItem *) const
 
 /*
 Returns the QModelIndex associated with the given item.
+
+Note: In Qt versions prior to 5.10, this function took a non-const item.
 */
-func (this *QListWidget) IndexFromItem(item QListWidgetItem_ITF /*777 QListWidgetItem **/) *qtcore.QModelIndex /*123*/ {
+func (this *QListWidget) IndexFromItem1(item QListWidgetItem_ITF /*777 QListWidgetItem **/) *qtcore.QModelIndex /*123*/ {
 	var convArg0 unsafe.Pointer
 	if item != nil && item.QListWidgetItem_PTR() != nil {
 		convArg0 = item.QListWidgetItem_PTR().GetCthis()
@@ -1130,7 +1154,7 @@ func (this *QListWidget) IndexFromItem(item QListWidgetItem_ITF /*777 QListWidge
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:301
+// /usr/include/qt/QtWidgets/qlistwidget.h:305
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QListWidgetItem * itemFromIndex(const QModelIndex &) const

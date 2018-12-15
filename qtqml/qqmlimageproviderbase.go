@@ -18,7 +18,7 @@ package qtqml
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 17
 */
 // import "C"
 import "unsafe"
@@ -66,7 +66,7 @@ func (*QQmlImageProviderBase) NewFromPointer(cthis unsafe.Pointer) *QQmlImagePro
 	return NewQQmlImageProviderBaseFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:72
+// /usr/include/qt/QtQml/qqmlengine.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlImageProviderBase()
@@ -81,7 +81,7 @@ func DeleteQQmlImageProviderBase(this *QQmlImageProviderBase) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:74
+// /usr/include/qt/QtQml/qqmlengine.h:73
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QQmlImageProviderBase::ImageType imageType() const
@@ -95,7 +95,7 @@ func (this *QQmlImageProviderBase) ImageType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:75
+// /usr/include/qt/QtQml/qqmlengine.h:74
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QQmlImageProviderBase::Flags flags() const

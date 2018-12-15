@@ -73,7 +73,7 @@ func (*QPlainTextDocumentLayout) NewFromPointer(cthis unsafe.Pointer) *QPlainTex
 	return NewQPlainTextDocumentLayoutFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:297
+// /usr/include/qt/QtWidgets/qplaintextedit.h:298
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -87,7 +87,7 @@ func (this *QPlainTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 con
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:302
+// /usr/include/qt/QtWidgets/qplaintextedit.h:303
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPlainTextDocumentLayout(QTextDocument *)
@@ -110,7 +110,7 @@ func NewQPlainTextDocumentLayout(document qtgui.QTextDocument_ITF /*777 QTextDoc
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:303
+// /usr/include/qt/QtWidgets/qplaintextedit.h:304
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPlainTextDocumentLayout()
@@ -125,7 +125,7 @@ func DeleteQPlainTextDocumentLayout(this *QPlainTextDocumentLayout) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:306
+// /usr/include/qt/QtWidgets/qplaintextedit.h:307
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int hitTest(const QPointF &, Qt::HitTestAccuracy) const
@@ -143,7 +143,7 @@ func (this *QPlainTextDocumentLayout) HitTest(arg0 qtcore.QPointF_ITF, arg1 int)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:308
+// /usr/include/qt/QtWidgets/qplaintextedit.h:309
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int pageCount() const
@@ -157,7 +157,7 @@ func (this *QPlainTextDocumentLayout) PageCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:309
+// /usr/include/qt/QtWidgets/qplaintextedit.h:310
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QSizeF documentSize() const
@@ -173,7 +173,7 @@ func (this *QPlainTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:311
+// /usr/include/qt/QtWidgets/qplaintextedit.h:312
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF frameBoundingRect(QTextFrame *) const
@@ -193,7 +193,7 @@ func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 qtgui.QTextFrame_IT
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:312
+// /usr/include/qt/QtWidgets/qplaintextedit.h:313
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF blockBoundingRect(const QTextBlock &) const
@@ -215,7 +215,7 @@ func (this *QPlainTextDocumentLayout) BlockBoundingRect(block qtgui.QTextBlock_I
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:314
+// /usr/include/qt/QtWidgets/qplaintextedit.h:315
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureBlockLayout(const QTextBlock &) const
@@ -232,7 +232,7 @@ func (this *QPlainTextDocumentLayout) EnsureBlockLayout(block qtgui.QTextBlock_I
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:316
+// /usr/include/qt/QtWidgets/qplaintextedit.h:317
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCursorWidth(int)
@@ -245,7 +245,7 @@ func (this *QPlainTextDocumentLayout) SetCursorWidth(width int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:317
+// /usr/include/qt/QtWidgets/qplaintextedit.h:318
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int cursorWidth() const
@@ -259,7 +259,7 @@ func (this *QPlainTextDocumentLayout) CursorWidth() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:319
+// /usr/include/qt/QtWidgets/qplaintextedit.h:320
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void requestUpdate()
@@ -272,7 +272,7 @@ func (this *QPlainTextDocumentLayout) RequestUpdate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:322
+// /usr/include/qt/QtWidgets/qplaintextedit.h:323
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void documentChanged(int, int, int)

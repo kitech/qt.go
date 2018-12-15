@@ -64,7 +64,7 @@ func (*QGenericArgument) NewFromPointer(cthis unsafe.Pointer) *QGenericArgument 
 	return NewQGenericArgumentFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:297
+// /usr/include/qt/QtCore/qobjectdefs.h:292
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericArgument(const char *, const void *)
@@ -85,7 +85,7 @@ func NewQGenericArgument(aName string, aData unsafe.Pointer /*666*/) *QGenericAr
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:297
+// /usr/include/qt/QtCore/qobjectdefs.h:292
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericArgument(const char *, const void *)
@@ -108,7 +108,7 @@ func NewQGenericArgumentp() *QGenericArgument {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:297
+// /usr/include/qt/QtCore/qobjectdefs.h:292
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QGenericArgument(const char *, const void *)
@@ -131,7 +131,7 @@ func NewQGenericArgumentp1(aName string) *QGenericArgument {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:299
+// /usr/include/qt/QtCore/qobjectdefs.h:294
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] void * data() const
@@ -145,7 +145,7 @@ func (this *QGenericArgument) Data() unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:300
+// /usr/include/qt/QtCore/qobjectdefs.h:295
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const char * name() const

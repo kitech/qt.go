@@ -534,6 +534,8 @@ func (this *QGeoRectangle) Contains(rectangle QGeoRectangle_ITF) bool {
 Returns whether the geo rectangle rectangle intersects this geo rectangle.
 
 If the top or bottom edges of both geo rectangles are at one of the poles the geo rectangles are considered to be intersecting, since the longitude is irrelevant when the edges are at the pole.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoRectangle) Intersects(rectangle QGeoRectangle_ITF) bool {
 	var convArg0 unsafe.Pointer
@@ -556,6 +558,8 @@ Translates this geo rectangle by degreesLatitude northwards and degreesLongitude
 Negative values of degreesLatitude and degreesLongitude correspond to southward and westward translation respectively.
 
 If the translation would have caused the geo rectangle to cross a pole the geo rectangle will be translated until the top or bottom edge of the geo rectangle touches the pole but not further.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoRectangle) Translate(degreesLatitude float64, degreesLongitude float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGeoRectangle9translateEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), degreesLatitude, degreesLongitude)
@@ -571,6 +575,8 @@ func (this *QGeoRectangle) Translate(degreesLatitude float64, degreesLongitude f
 Returns a copy of this geo rectangle translated by degreesLatitude northwards and degreesLongitude eastwards.
 
 Negative values of degreesLatitude and degreesLongitude correspond to southward and westward translation respectively.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 
 See also translate().
 */
@@ -591,6 +597,8 @@ func (this *QGeoRectangle) Translated(degreesLatitude float64, degreesLongitude 
 Extends the geo rectangle to also cover the coordinate coordinate
 
 This function was introduced in  Qt 5.9.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoRectangle) ExtendRectangle(coordinate QGeoCoordinate_ITF) {
 	var convArg0 unsafe.Pointer
@@ -610,6 +618,8 @@ func (this *QGeoRectangle) ExtendRectangle(coordinate QGeoCoordinate_ITF) {
 Returns the smallest geo rectangle which contains both this geo rectangle and rectangle.
 
 If the centers of the two geo rectangles are separated by exactly 180.0 degrees then the width is set to 360.0 degrees with the leftmost longitude set to -180.0 degrees and the rightmost longitude set to 180.0 degrees. This is done to ensure that the result is independent of the order of the operands.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoRectangle) United(rectangle QGeoRectangle_ITF) *QGeoRectangle /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -672,6 +682,8 @@ func (this *QGeoRectangle) Operator_or_equal(rectangle QGeoRectangle_ITF) *QGeoR
 Returns the geo rectangle properties as a string.
 
 This function was introduced in  Qt 5.5.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoRectangle) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGeoRectangle8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

@@ -65,7 +65,7 @@ func (*QApplicationStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAppl
 	return NewQApplicationStateChangeEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:1052
+// /usr/include/qt/QtGui/qevent.h:1057
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QApplicationStateChangeEvent(Qt::ApplicationState)
@@ -84,7 +84,7 @@ func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:1053
+// /usr/include/qt/QtGui/qevent.h:1058
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ApplicationState applicationState() const

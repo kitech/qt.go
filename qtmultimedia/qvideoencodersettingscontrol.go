@@ -172,8 +172,8 @@ func (this *QVideoEncoderSettingsControl) SupportedVideoCodecs() *qtcore.QString
 /*
 Returns a description of a video codec.
 */
-func (this *QVideoEncoderSettingsControl) VideoCodecDescription(codecName string) string {
-	var tmpArg0 = qtcore.NewQString5(codecName)
+func (this *QVideoEncoderSettingsControl) VideoCodecDescription(codec string) string {
+	var tmpArg0 = qtcore.NewQString5(codec)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QVideoEncoderSettingsControl21videoCodecDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

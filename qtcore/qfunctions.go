@@ -18,7 +18,7 @@ func init() {
 //  header block end
 
 //  body block begin
-// /usr/include/qt/QtCore/qglobal.h:360
+// /usr/include/qt/QtCore/qglobal.h:406
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] const char * qVersion()
@@ -72,7 +72,7 @@ func Operator_add1(margins QMargins_ITF) *QMargins /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qpoint.h:378
+// /usr/include/qt/QtCore/qpoint.h:385
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QPointF operator+(const QPointF &)
@@ -132,15 +132,57 @@ func Operator_add4(lhs int, rhs QMargins_ITF) *QMargins /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qmargins.h:403
+// /usr/include/qt/QtCore/qfloat16.h:202
 // index:5
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator+(int, qfloat16)
+
+/*
+
+ */
+func Operator_add5(lhs int, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zpli8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:6
+// Invalid inline Visibility=Default Availability=Available
+// [4] float operator+(float, qfloat16)
+
+/*
+
+ */
+func Operator_add6(lhs float32, rhs unsafe.Pointer /*444*/) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_Zplf8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
+// index:7
+// Invalid inline Visibility=Default Availability=Available
+// [16] long double operator+(long double, qfloat16)
+
+/*
+
+ */
+func Operator_add7(lhs float64, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zple8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qmargins.h:403
+// index:8
 // Invalid inline Visibility=Default Availability=Available
 // [32] QMarginsF operator+(qreal, const QMarginsF &)
 
 /*
 
  */
-func Operator_add5(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
+func Operator_add8(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QMarginsF_PTR() != nil {
 		convArg1 = rhs.QMarginsF_PTR().GetCthis()
@@ -152,15 +194,29 @@ func Operator_add5(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1344
-// index:6
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:9
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator+(double, qfloat16)
+
+/*
+
+ */
+func Operator_add9(lhs float64, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zpld8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qstring.h:1360
+// index:10
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QString operator+(char, const QString &)
 
 /*
 
  */
-func Operator_add6(c byte, s string) string {
+func Operator_add10(c byte, s string) string {
 	var tmpArg1 = NewQString5(s)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZplcRK7QString", qtrt.FFI_TYPE_POINTER, c, convArg1)
@@ -171,15 +227,15 @@ func Operator_add6(c byte, s string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:648
-// index:7
+// /usr/include/qt/QtCore/qbytearray.h:665
+// index:11
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QByteArray operator+(char, const QByteArray &)
 
 /*
 
  */
-func Operator_add7(a1 byte, a2 QByteArray_ITF) *QByteArray /*123*/ {
+func Operator_add11(a1 byte, a2 QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg1 unsafe.Pointer
 	if a2 != nil && a2.QByteArray_PTR() != nil {
 		convArg1 = a2.QByteArray_PTR().GetCthis()
@@ -192,14 +248,14 @@ func Operator_add7(a1 byte, a2 QByteArray_ITF) *QByteArray /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:397
-// index:8
+// index:12
 // Invalid inline Visibility=Default Availability=Available
 // [32] QMarginsF operator+(const QMarginsF &, qreal)
 
 /*
 
  */
-func Operator_add8(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
+func Operator_add12(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -212,14 +268,14 @@ func Operator_add8(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:385
-// index:9
+// index:13
 // Invalid inline Visibility=Default Availability=Available
 // [32] QMarginsF operator+(const QMarginsF &, const QMarginsF &)
 
 /*
 
  */
-func Operator_add9(lhs QMarginsF_ITF, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
+func Operator_add13(lhs QMarginsF_ITF, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -236,14 +292,14 @@ func Operator_add9(lhs QMarginsF_ITF, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qrect.h:882
-// index:10
+// index:14
 // Invalid inline Visibility=Default Availability=Available
 // [32] QRectF operator+(const QMarginsF &, const QRectF &)
 
 /*
 
  */
-func Operator_add10(lhs QMarginsF_ITF, rhs QRectF_ITF) *QRectF /*123*/ {
+func Operator_add14(lhs QMarginsF_ITF, rhs QRectF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -260,14 +316,14 @@ func Operator_add10(lhs QMarginsF_ITF, rhs QRectF_ITF) *QRectF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:165
-// index:11
+// index:15
 // Invalid inline Visibility=Default Availability=Available
 // [16] QMargins operator+(const QMargins &, int)
 
 /*
 
  */
-func Operator_add11(lhs QMargins_ITF, rhs int) *QMargins /*123*/ {
+func Operator_add15(lhs QMargins_ITF, rhs int) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMargins_PTR() != nil {
 		convArg0 = lhs.QMargins_PTR().GetCthis()
@@ -280,14 +336,14 @@ func Operator_add11(lhs QMargins_ITF, rhs int) *QMargins /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:153
-// index:12
+// index:16
 // Invalid inline Visibility=Default Availability=Available
 // [16] QMargins operator+(const QMargins &, const QMargins &)
 
 /*
 
  */
-func Operator_add12(m1 QMargins_ITF, m2 QMargins_ITF) *QMargins /*123*/ {
+func Operator_add16(m1 QMargins_ITF, m2 QMargins_ITF) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMargins_PTR() != nil {
 		convArg0 = m1.QMargins_PTR().GetCthis()
@@ -304,14 +360,14 @@ func Operator_add12(m1 QMargins_ITF, m2 QMargins_ITF) *QMargins /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qrect.h:470
-// index:13
+// index:17
 // Invalid inline Visibility=Default Availability=Available
 // [16] QRect operator+(const QMargins &, const QRect &)
 
 /*
 
  */
-func Operator_add13(margins QMargins_ITF, rectangle QRect_ITF) *QRect /*123*/ {
+func Operator_add17(margins QMargins_ITF, rectangle QRect_ITF) *QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -327,15 +383,15 @@ func Operator_add13(margins QMargins_ITF, rectangle QRect_ITF) *QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1346
-// index:14
+// /usr/include/qt/QtCore/qstring.h:1362
+// index:18
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QString operator+(const QString &, char)
 
 /*
 
  */
-func Operator_add14(s string, c byte) string {
+func Operator_add18(s string, c byte) string {
 	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZplRK7QStringc", qtrt.FFI_TYPE_POINTER, convArg0, c)
@@ -346,15 +402,15 @@ func Operator_add14(s string, c byte) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1333
-// index:15
+// /usr/include/qt/QtCore/qstring.h:1349
+// index:19
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QString operator+(const QString &, const QString &)
 
 /*
 
  */
-func Operator_add15(s1 string, s2 string) string {
+func Operator_add19(s1 string, s2 string) string {
 	var tmpArg0 = NewQString5(s1)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString5(s2)
@@ -367,15 +423,15 @@ func Operator_add15(s1 string, s2 string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1825
-// index:16
+// /usr/include/qt/QtCore/qstring.h:1845
+// index:20
 // Invalid inline Visibility=Default Availability=Available
 // [8] QString operator+(const QString &, const QStringRef &)
 
 /*
 
  */
-func Operator_add16(s1 string, s2 QStringRef_ITF) string {
+func Operator_add20(s1 string, s2 QStringRef_ITF) string {
 	var tmpArg0 = NewQString5(s1)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
@@ -390,15 +446,15 @@ func Operator_add16(s1 string, s2 QStringRef_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1350
-// index:17
+// /usr/include/qt/QtCore/qstring.h:1366
+// index:21
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QString operator+(const QString &, const QByteArray &)
 
 /*
 
  */
-func Operator_add17(s string, ba QByteArray_ITF) string {
+func Operator_add21(s string, ba QByteArray_ITF) string {
 	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
@@ -413,15 +469,15 @@ func Operator_add17(s string, ba QByteArray_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1340
-// index:18
+// /usr/include/qt/QtCore/qstring.h:1356
+// index:22
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QString operator+(const QString &, const char *)
 
 /*
 
  */
-func Operator_add18(s1 string, s2 string) string {
+func Operator_add22(s1 string, s2 string) string {
 	var tmpArg0 = NewQString5(s1)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = qtrt.CString(s2)
@@ -434,15 +490,15 @@ func Operator_add18(s1 string, s2 string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1335
-// index:19
+// /usr/include/qt/QtCore/qstring.h:1351
+// index:23
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QString operator+(const QString &, QChar)
 
 /*
 
  */
-func Operator_add19(s1 string, s2 QChar_ITF /*123*/) string {
+func Operator_add23(s1 string, s2 QChar_ITF /*123*/) string {
 	var tmpArg0 = NewQString5(s1)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
@@ -457,15 +513,15 @@ func Operator_add19(s1 string, s2 QChar_ITF /*123*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qpoint.h:358
-// index:20
+// /usr/include/qt/QtCore/qpoint.h:365
+// index:24
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QPointF operator+(const QPointF &, const QPointF &)
 
 /*
 
  */
-func Operator_add20(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
+func Operator_add24(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPointF_PTR() != nil {
 		convArg0 = p1.QPointF_PTR().GetCthis()
@@ -482,14 +538,14 @@ func Operator_add20(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qsize.h:345
-// index:21
+// index:25
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QSizeF operator+(const QSizeF &, const QSizeF &)
 
 /*
 
  */
-func Operator_add21(s1 QSizeF_ITF, s2 QSizeF_ITF) *QSizeF /*123*/ {
+func Operator_add25(s1 QSizeF_ITF, s2 QSizeF_ITF) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSizeF_PTR() != nil {
 		convArg0 = s1.QSizeF_PTR().GetCthis()
@@ -506,14 +562,14 @@ func Operator_add21(s1 QSizeF_ITF, s2 QSizeF_ITF) *QSizeF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qrect.h:876
-// index:22
+// index:26
 // Invalid inline Visibility=Default Availability=Available
 // [32] QRectF operator+(const QRectF &, const QMarginsF &)
 
 /*
 
  */
-func Operator_add22(lhs QRectF_ITF, rhs QMarginsF_ITF) *QRectF /*123*/ {
+func Operator_add26(lhs QRectF_ITF, rhs QMarginsF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QRectF_PTR() != nil {
 		convArg0 = lhs.QRectF_PTR().GetCthis()
@@ -530,14 +586,14 @@ func Operator_add22(lhs QRectF_ITF, rhs QMarginsF_ITF) *QRectF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:169
-// index:23
+// index:27
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QPoint operator+(const QPoint &, const QPoint &)
 
 /*
 
  */
-func Operator_add23(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
+func Operator_add27(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPoint_PTR() != nil {
 		convArg0 = p1.QPoint_PTR().GetCthis()
@@ -554,14 +610,14 @@ func Operator_add23(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qsize.h:175
-// index:24
+// index:28
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QSize operator+(const QSize &, const QSize &)
 
 /*
 
  */
-func Operator_add24(s1 QSize_ITF, s2 QSize_ITF) *QSize /*123*/ {
+func Operator_add28(s1 QSize_ITF, s2 QSize_ITF) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSize_PTR() != nil {
 		convArg0 = s1.QSize_PTR().GetCthis()
@@ -578,14 +634,14 @@ func Operator_add24(s1 QSize_ITF, s2 QSize_ITF) *QSize /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qrect.h:464
-// index:25
+// index:29
 // Invalid inline Visibility=Default Availability=Available
 // [16] QRect operator+(const QRect &, const QMargins &)
 
 /*
 
  */
-func Operator_add25(rectangle QRect_ITF, margins QMargins_ITF) *QRect /*123*/ {
+func Operator_add29(rectangle QRect_ITF, margins QMargins_ITF) *QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if rectangle != nil && rectangle.QRect_PTR() != nil {
 		convArg0 = rectangle.QRect_PTR().GetCthis()
@@ -601,15 +657,15 @@ func Operator_add25(rectangle QRect_ITF, margins QMargins_ITF) *QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1833
-// index:26
+// /usr/include/qt/QtCore/qstring.h:1853
+// index:30
 // Invalid inline Visibility=Default Availability=Available
 // [8] QString operator+(const QStringRef &, const QStringRef &)
 
 /*
 
  */
-func Operator_add26(s1 QStringRef_ITF, s2 QStringRef_ITF) string {
+func Operator_add30(s1 QStringRef_ITF, s2 QStringRef_ITF) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -626,15 +682,15 @@ func Operator_add26(s1 QStringRef_ITF, s2 QStringRef_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1827
-// index:27
+// /usr/include/qt/QtCore/qstring.h:1847
+// index:31
 // Invalid inline Visibility=Default Availability=Available
 // [8] QString operator+(const QStringRef &, const QString &)
 
 /*
 
  */
-func Operator_add27(s1 QStringRef_ITF, s2 string) string {
+func Operator_add31(s1 QStringRef_ITF, s2 string) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -649,15 +705,15 @@ func Operator_add27(s1 QStringRef_ITF, s2 string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1835
-// index:28
+// /usr/include/qt/QtCore/qstring.h:1855
+// index:32
 // Invalid inline Visibility=Default Availability=Available
 // [8] QString operator+(const QStringRef &, QChar)
 
 /*
 
  */
-func Operator_add28(s1 QStringRef_ITF, s2 QChar_ITF /*123*/) string {
+func Operator_add32(s1 QStringRef_ITF, s2 QChar_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -674,15 +730,15 @@ func Operator_add28(s1 QStringRef_ITF, s2 QChar_ITF /*123*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1829
-// index:29
+// /usr/include/qt/QtCore/qstring.h:1849
+// index:33
 // Invalid inline Visibility=Default Availability=Available
 // [8] QString operator+(const QStringRef &, QLatin1String)
 
 /*
 
  */
-func Operator_add29(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/) string {
+func Operator_add33(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -699,15 +755,15 @@ func Operator_add29(s1 QStringRef_ITF, s2 QLatin1String_ITF /*123*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:644
-// index:30
+// /usr/include/qt/QtCore/qbytearray.h:661
+// index:34
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QByteArray operator+(const QByteArray &, char)
 
 /*
 
  */
-func Operator_add30(a1 QByteArray_ITF, a2 byte) *QByteArray /*123*/ {
+func Operator_add34(a1 QByteArray_ITF, a2 byte) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -719,15 +775,15 @@ func Operator_add30(a1 QByteArray_ITF, a2 byte) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:640
-// index:31
+// /usr/include/qt/QtCore/qbytearray.h:657
+// index:35
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QByteArray operator+(const QByteArray &, const QByteArray &)
 
 /*
 
  */
-func Operator_add31(a1 QByteArray_ITF, a2 QByteArray_ITF) *QByteArray /*123*/ {
+func Operator_add35(a1 QByteArray_ITF, a2 QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -743,15 +799,15 @@ func Operator_add31(a1 QByteArray_ITF, a2 QByteArray_ITF) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1348
-// index:32
+// /usr/include/qt/QtCore/qstring.h:1364
+// index:36
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QString operator+(const QByteArray &, const QString &)
 
 /*
 
  */
-func Operator_add32(ba QByteArray_ITF, s string) string {
+func Operator_add36(ba QByteArray_ITF, s string) string {
 	var convArg0 unsafe.Pointer
 	if ba != nil && ba.QByteArray_PTR() != nil {
 		convArg0 = ba.QByteArray_PTR().GetCthis()
@@ -766,15 +822,15 @@ func Operator_add32(ba QByteArray_ITF, s string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:642
-// index:33
+// /usr/include/qt/QtCore/qbytearray.h:659
+// index:37
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QByteArray operator+(const QByteArray &, const char *)
 
 /*
 
  */
-func Operator_add33(a1 QByteArray_ITF, a2 string) *QByteArray /*123*/ {
+func Operator_add37(a1 QByteArray_ITF, a2 string) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -788,15 +844,15 @@ func Operator_add33(a1 QByteArray_ITF, a2 string) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1342
-// index:34
+// /usr/include/qt/QtCore/qstring.h:1358
+// index:38
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QString operator+(const char *, const QString &)
 
 /*
 
  */
-func Operator_add34(s1 string, s2 string) string {
+func Operator_add38(s1 string, s2 string) string {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
 	var tmpArg1 = NewQString5(s2)
@@ -809,15 +865,15 @@ func Operator_add34(s1 string, s2 string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:646
-// index:35
+// /usr/include/qt/QtCore/qbytearray.h:663
+// index:39
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QByteArray operator+(const char *, const QByteArray &)
 
 /*
 
  */
-func Operator_add35(a1 string, a2 QByteArray_ITF) *QByteArray /*123*/ {
+func Operator_add39(a1 string, a2 QByteArray_ITF) *QByteArray /*123*/ {
 	var convArg0 = qtrt.CString(a1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -831,15 +887,85 @@ func Operator_add35(a1 string, a2 QByteArray_ITF) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1337
-// index:36
+// /usr/include/qt/QtCore/qfloat16.h:202
+// index:40
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator+(qfloat16, int)
+
+/*
+
+ */
+func Operator_add40(lhs unsafe.Pointer /*444*/, rhs int) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zpl8qfloat16i", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:41
+// Invalid inline Visibility=Default Availability=Available
+// [4] float operator+(qfloat16, float)
+
+/*
+
+ */
+func Operator_add41(lhs unsafe.Pointer /*444*/, rhs float32) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_Zpl8qfloat16f", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
+// index:42
+// Invalid inline Visibility=Default Availability=Available
+// [16] long double operator+(qfloat16, long double)
+
+/*
+
+ */
+func Operator_add42(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zpl8qfloat16e", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:43
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator+(qfloat16, double)
+
+/*
+
+ */
+func Operator_add43(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zpl8qfloat16d", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:173
+// index:44
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 operator+(qfloat16, qfloat16)
+
+/*
+
+ */
+func Operator_add44(a unsafe.Pointer /*444*/, b unsafe.Pointer /*444*/) unsafe.Pointer /*444*/ {
+	rv, err := qtrt.InvokeQtFunc6("_Zpl8qfloat16S_", qtrt.FFI_TYPE_POINTER, a, b)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qstring.h:1353
+// index:45
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QString operator+(QChar, const QString &)
 
 /*
 
  */
-func Operator_add36(s1 QChar_ITF /*123*/, s2 string) string {
+func Operator_add45(s1 QChar_ITF /*123*/, s2 string) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QChar_PTR() != nil {
 		convArg0 = s1.QChar_PTR().GetCthis()
@@ -854,15 +980,15 @@ func Operator_add36(s1 QChar_ITF /*123*/, s2 string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1837
-// index:37
+// /usr/include/qt/QtCore/qstring.h:1857
+// index:46
 // Invalid inline Visibility=Default Availability=Available
 // [8] QString operator+(QChar, const QStringRef &)
 
 /*
 
  */
-func Operator_add37(s1 QChar_ITF /*123*/, s2 QStringRef_ITF) string {
+func Operator_add46(s1 QChar_ITF /*123*/, s2 QStringRef_ITF) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QChar_PTR() != nil {
 		convArg0 = s1.QChar_PTR().GetCthis()
@@ -879,15 +1005,15 @@ func Operator_add37(s1 QChar_ITF /*123*/, s2 QStringRef_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:1831
-// index:38
+// /usr/include/qt/QtCore/qstring.h:1851
+// index:47
 // Invalid inline Visibility=Default Availability=Available
 // [8] QString operator+(QLatin1String, const QStringRef &)
 
 /*
 
  */
-func Operator_add38(s1 QLatin1String_ITF /*123*/, s2 QStringRef_ITF) string {
+func Operator_add47(s1 QLatin1String_ITF /*123*/, s2 QStringRef_ITF) string {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QLatin1String_PTR() != nil {
 		convArg0 = s1.QLatin1String_PTR().GetCthis()
@@ -904,7 +1030,49 @@ func Operator_add38(s1 QLatin1String_ITF /*123*/, s2 QStringRef_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qbitarray.h:116
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:0
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator+=(qfloat16 &, float)
+
+/*
+
+ */
+func Operator_add_equal(lhs unsafe.Pointer /*555*/, rhs float32) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZpLR8qfloat16f", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator+=(qfloat16 &, long double)
+
+/*
+
+ */
+func Operator_add_equal1(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZpLR8qfloat16e", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator+=(qfloat16 &, double)
+
+/*
+
+ */
+func Operator_add_equal2(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZpLR8qfloat16d", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:119
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QBitArray operator|(const QBitArray &, const QBitArray &)
@@ -928,7 +1096,7 @@ func Operator_or(arg0 QBitArray_ITF, arg1 QBitArray_ITF) *QBitArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qmetatype.h:727
+// /usr/include/qt/QtCore/qmetatype.h:765
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QMetaType::TypeFlags::enum_type, int)
@@ -944,7 +1112,7 @@ func Operator_or1(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:183
+// /usr/include/qt/QtCore/qiodevice.h:185
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QIODevice::OpenMode::enum_type, int)
@@ -976,7 +1144,7 @@ func Operator_or3(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:1404
+// /usr/include/qt/QtCore/qstring.h:1420
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QString::SectionFlags::enum_type, int)
@@ -992,7 +1160,7 @@ func Operator_or4(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1096
+// /usr/include/qt/QtCore/qlocale.h:1099
 // index:5
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QLocale::NumberOptions::enum_type, int)
@@ -1156,335 +1324,15 @@ func Operator_or15(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1783
-// index:16
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::MatchFlags::enum_type, int)
-
-/*
-
- */
-func Operator_or16(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt9MatchFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1782
-// index:17
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::ItemFlags::enum_type, int)
-
-/*
-
- */
-func Operator_or17(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt8ItemFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1775
-// index:18
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::Edges::enum_type, int)
-
-/*
-
- */
-func Operator_or18(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt4EdgeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1784
-// index:19
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::TextInteractionFlags::enum_type, int)
-
-/*
-
- */
-func Operator_or19(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt19TextInteractionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1776
-// index:20
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::ImageConversionFlags::enum_type, int)
-
-/*
-
- */
-func Operator_or20(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt19ImageConversionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1780
-// index:21
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::ScreenOrientations::enum_type, int)
-
-/*
-
- */
-func Operator_or21(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt17ScreenOrientationEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1772
-// index:22
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::KeyboardModifiers::enum_type, int)
-
-/*
-
- */
-func Operator_or22(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt16KeyboardModifierEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1785
-// index:23
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::InputMethodQueries::enum_type, int)
-
-/*
-
- */
-func Operator_or23(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt16InputMethodQueryEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1787
-// index:24
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::TouchPointStates::enum_type, int)
-
-/*
-
- */
-func Operator_or24(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt15TouchPointStateEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1786
-// index:25
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::InputMethodHints::enum_type, int)
-
-/*
-
- */
-func Operator_or25(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt15InputMethodHintEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1788
-// index:26
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::MouseEventFlags::enum_type, int)
-
-/*
-
- */
-func Operator_or26(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt14MouseEventFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1777
-// index:27
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::DockWidgetAreas::enum_type, int)
-
-/*
-
- */
-func Operator_or27(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt14DockWidgetAreaEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1774
-// index:28
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::Alignment::enum_type, int)
-
-/*
-
- */
-func Operator_or28(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt13AlignmentFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1779
-// index:29
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::WindowStates::enum_type, int)
-
-/*
-
- */
-func Operator_or29(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt11WindowStateEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1778
-// index:30
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::ToolBarAreas::enum_type, int)
-
-/*
-
- */
-func Operator_or30(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt11ToolBarAreaEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1771
-// index:31
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::Orientations::enum_type, int)
-
-/*
-
- */
-func Operator_or31(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt11OrientationEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1770
-// index:32
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::MouseButtons::enum_type, int)
-
-/*
-
- */
-func Operator_or32(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt11MouseButtonEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1790
-// index:33
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::GestureFlags::enum_type, int)
-
-/*
-
- */
-func Operator_or33(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt11GestureFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1773
-// index:34
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::WindowFlags::enum_type, int)
-
-/*
-
- */
-func Operator_or34(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt10WindowTypeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qnamespace.h:1781
-// index:35
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(Qt::DropActions::enum_type, int)
-
-/*
-
- */
-func Operator_or35(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN2Qt10DropActionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:106
-// index:36
+// index:16
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QTextBoundaryFinder::BoundaryReasons::enum_type, int)
 
 /*
 
  */
-func Operator_or36(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or16(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN19QTextBoundaryFinder14BoundaryReasonEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1492,15 +1340,15 @@ func Operator_or36(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:224
-// index:37
+// /usr/include/qt/QtCore/qitemselectionmodel.h:226
+// index:17
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QItemSelectionModel::SelectionFlags::enum_type, int)
 
 /*
 
  */
-func Operator_or37(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or17(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN19QItemSelectionModel13SelectionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1508,15 +1356,15 @@ func Operator_or37(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:160
-// index:38
+// /usr/include/qt/QtCore/qregularexpression.h:167
+// index:18
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QRegularExpression::PatternOptions::enum_type, int)
 
 /*
 
  */
-func Operator_or38(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or18(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN18QRegularExpression13PatternOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1524,15 +1372,15 @@ func Operator_or38(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:161
-// index:39
+// /usr/include/qt/QtCore/qregularexpression.h:168
+// index:19
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QRegularExpression::MatchOptions::enum_type, int)
 
 /*
 
  */
-func Operator_or39(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or19(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN18QRegularExpression11MatchOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1541,14 +1389,14 @@ func Operator_or39(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:109
-// index:40
+// index:20
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QCommandLineOption::Flags::enum_type, int)
 
 /*
 
  */
-func Operator_or40(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or20(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN18QCommandLineOption4FlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1556,15 +1404,31 @@ func Operator_or40(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qabstractitemmodel.h:364
+// index:21
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(QAbstractItemModel::CheckIndexOptions::enum_type, int)
+
+/*
+
+ */
+func Operator_or21(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZorN18QAbstractItemModel16CheckIndexOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qstandardpaths.h:111
-// index:41
+// index:22
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QStandardPaths::LocateOptions::enum_type, int)
 
 /*
 
  */
-func Operator_or41(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or22(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN14QStandardPaths12LocateOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1573,14 +1437,14 @@ func Operator_or41(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qdiriterator.h:86
-// index:42
+// index:23
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QDirIterator::IteratorFlags::enum_type, int)
 
 /*
 
  */
-func Operator_or42(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or23(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN12QDirIterator12IteratorFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1588,15 +1452,15 @@ func Operator_or42(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:201
-// index:43
+// /usr/include/qt/QtCore/qtextstream.h:202
+// index:24
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QTextStream::NumberFlags::enum_type, int)
 
 /*
 
  */
-func Operator_or43(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or24(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QTextStream10NumberFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1605,14 +1469,14 @@ func Operator_or43(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qfiledevice.h:150
-// index:44
+// index:25
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QFileDevice::Permissions::enum_type, int)
 
 /*
 
  */
-func Operator_or44(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or25(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QFileDevice10PermissionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1621,14 +1485,14 @@ func Operator_or44(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:136
-// index:45
+// index:26
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QTextCodec::ConversionFlags::enum_type, int)
 
 /*
 
  */
-func Operator_or45(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or26(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN10QTextCodec14ConversionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1637,14 +1501,14 @@ func Operator_or45(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qeventloop.h:85
-// index:46
+// index:27
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QEventLoop::ProcessEventsFlags::enum_type, int)
 
 /*
 
  */
-func Operator_or46(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or27(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN10QEventLoop17ProcessEventsFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1652,15 +1516,15 @@ func Operator_or46(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:466
-// index:47
+// /usr/include/qt/QtCore/qbytearray.h:473
+// index:28
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QByteArray::Base64Options::enum_type, int)
 
 /*
 
  */
-func Operator_or47(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or28(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN10QByteArray12Base64OptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1669,14 +1533,14 @@ func Operator_or47(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qarraydata.h:126
-// index:48
+// index:29
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QArrayData::AllocationOptions::enum_type, int)
 
 /*
 
  */
-func Operator_or48(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+func Operator_or29(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN10QArrayData16AllocationOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1685,42 +1549,42 @@ func Operator_or48(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qurl.h:396
-// index:49
+// index:30
 // Invalid inline Visibility=Default Availability=Available
 // [4] QUrl::FormattingOptions operator|(QUrl::ComponentFormattingOptions, QUrl::UrlFormattingOption)
 
 /*
 
  */
-func Operator_or49(f int, i int) int {
+func Operator_or30(f int, i int) int {
 	rv, err := qtrt.InvokeQtFunc6("_Zor6QFlagsIN4QUrl25ComponentFormattingOptionEENS0_19UrlFormattingOptionE", qtrt.FFI_TYPE_POINTER, f, i)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qurl.h:402
-// index:50
+// index:31
 // Invalid inline Visibility=Default Availability=Available
 // [4] QUrl::FormattingOptions operator|(QUrl::ComponentFormattingOptions, QUrl::FormattingOptions)
 
 /*
 
  */
-func Operator_or50(f int, i int) int {
+func Operator_or31(f int, i int) int {
 	rv, err := qtrt.InvokeQtFunc6("_Zor6QFlagsIN4QUrl25ComponentFormattingOptionEE12QUrlTwoFlagsINS0_19UrlFormattingOptionES1_E", qtrt.FFI_TYPE_POINTER, f, i)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
 }
 
 // /usr/include/qt/QtCore/qurl.h:398
-// index:51
+// index:32
 // Invalid inline Visibility=Default Availability=Available
 // [4] QUrl::FormattingOptions operator|(QUrl::FormattingOptions, QUrl::ComponentFormattingOptions)
 
 /*
 
  */
-func Operator_or51(i int, f int) int {
+func Operator_or32(i int, f int) int {
 	rv, err := qtrt.InvokeQtFunc6("_Zor12QUrlTwoFlagsIN4QUrl19UrlFormattingOptionENS0_25ComponentFormattingOptionEE6QFlagsIS2_E", qtrt.FFI_TYPE_POINTER, i, f)
 	qtrt.ErrPrint(err, rv)
 	return int(rv)
@@ -1788,7 +1652,7 @@ func Operator_minus1(margins QMargins_ITF) *QMargins /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qpoint.h:383
+// /usr/include/qt/QtCore/qpoint.h:390
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QPointF operator-(const QPointF &)
@@ -1832,15 +1696,85 @@ func Operator_minus3(p QPoint_ITF) *QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qmargins.h:380
+// /usr/include/qt/QtCore/qfloat16.h:166
+// index:4
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 operator-(qfloat16)
+
+/*
+
+ */
+func Operator_minus4(a unsafe.Pointer /*444*/) unsafe.Pointer /*444*/ {
+	rv, err := qtrt.InvokeQtFunc6("_Zng8qfloat16", qtrt.FFI_TYPE_POINTER, a)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:243
 // index:1
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator!=(int, qfloat16)
+
+/*
+
+ */
+func Operator_not_equal1(a int, b unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Znei8qfloat16", qtrt.FFI_TYPE_POINTER, a, b)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:231
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator!=(float, qfloat16)
+
+/*
+
+ */
+func Operator_not_equal2(lhs float32, rhs unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Znef8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:229
+// index:3
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator!=(long double, qfloat16)
+
+/*
+
+ */
+func Operator_not_equal3(lhs float64, rhs unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Znee8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:230
+// index:4
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator!=(double, qfloat16)
+
+/*
+
+ */
+func Operator_not_equal4(lhs float64, rhs unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zned8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qmargins.h:380
+// index:5
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QMarginsF &, const QMarginsF &)
 
 /*
 
  */
-func Operator_not_equal1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
+func Operator_not_equal5(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -1854,15 +1788,15 @@ func Operator_not_equal1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:572
-// index:2
+// /usr/include/qt/QtCore/qvariant.h:595
+// index:6
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QVariant &, const QVariantComparisonHelper &)
 
 /*
 
  */
-func Operator_not_equal2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
+func Operator_not_equal6(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if v1 != nil && v1.QVariant_PTR() != nil {
 		convArg0 = v1.QVariant_PTR().GetCthis()
@@ -1877,14 +1811,14 @@ func Operator_not_equal2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool 
 }
 
 // /usr/include/qt/QtCore/qmargins.h:144
-// index:3
+// index:7
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QMargins &, const QMargins &)
 
 /*
 
  */
-func Operator_not_equal3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
+func Operator_not_equal7(m1 QMargins_ITF, m2 QMargins_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMargins_PTR() != nil {
 		convArg0 = m1.QMargins_PTR().GetCthis()
@@ -1898,15 +1832,15 @@ func Operator_not_equal3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1615
-// index:4
+// /usr/include/qt/QtCore/qstring.h:1631
+// index:8
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QString &, const QStringRef &)
 
 /*
 
  */
-func Operator_not_equal4(lhs string, rhs QStringRef_ITF) bool {
+func Operator_not_equal8(lhs string, rhs QStringRef_ITF) bool {
 	var tmpArg0 = NewQString5(lhs)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
@@ -1918,15 +1852,15 @@ func Operator_not_equal4(lhs string, rhs QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1187
-// index:5
+// /usr/include/qt/QtCore/qstring.h:1203
+// index:9
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QString &, QString::Null)
 
 /*
 
  */
-func Operator_not_equal5(s string, arg1 int) bool {
+func Operator_not_equal9(s string, arg1 int) bool {
 	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZneRK7QStringNS_4NullE", qtrt.FFI_TYPE_POINTER, convArg0, arg1)
@@ -1934,15 +1868,15 @@ func Operator_not_equal5(s string, arg1 int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1673
-// index:6
+// /usr/include/qt/QtCore/qstring.h:1693
+// index:10
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QString &, QChar)
 
 /*
 
  */
-func Operator_not_equal6(lhs string, rhs QChar_ITF /*123*/) bool {
+func Operator_not_equal10(lhs string, rhs QChar_ITF /*123*/) bool {
 	var tmpArg0 = NewQString5(lhs)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
@@ -1954,15 +1888,15 @@ func Operator_not_equal6(lhs string, rhs QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qpoint.h:353
-// index:7
+// /usr/include/qt/QtCore/qpoint.h:358
+// index:11
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QPointF &, const QPointF &)
 
 /*
 
  */
-func Operator_not_equal7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
+func Operator_not_equal11(p1 QPointF_ITF, p2 QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPointF_PTR() != nil {
 		convArg0 = p1.QPointF_PTR().GetCthis()
@@ -1977,14 +1911,14 @@ func Operator_not_equal7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qsize.h:342
-// index:8
+// index:12
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QSizeF &, const QSizeF &)
 
 /*
 
  */
-func Operator_not_equal8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
+func Operator_not_equal12(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSizeF_PTR() != nil {
 		convArg0 = s1.QSizeF_PTR().GetCthis()
@@ -1999,14 +1933,14 @@ func Operator_not_equal8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qrect.h:865
-// index:9
+// index:13
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QRectF &, const QRectF &)
 
 /*
 
  */
-func Operator_not_equal9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
+func Operator_not_equal13(r1 QRectF_ITF, r2 QRectF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r1 != nil && r1.QRectF_PTR() != nil {
 		convArg0 = r1.QRectF_PTR().GetCthis()
@@ -2021,14 +1955,14 @@ func Operator_not_equal9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:166
-// index:10
+// index:14
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QPoint &, const QPoint &)
 
 /*
 
  */
-func Operator_not_equal10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
+func Operator_not_equal14(p1 QPoint_ITF, p2 QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPoint_PTR() != nil {
 		convArg0 = p1.QPoint_PTR().GetCthis()
@@ -2043,14 +1977,14 @@ func Operator_not_equal10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qsize.h:172
-// index:11
+// index:15
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QSize &, const QSize &)
 
 /*
 
  */
-func Operator_not_equal11(s1 QSize_ITF, s2 QSize_ITF) bool {
+func Operator_not_equal15(s1 QSize_ITF, s2 QSize_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSize_PTR() != nil {
 		convArg0 = s1.QSize_PTR().GetCthis()
@@ -2065,14 +1999,14 @@ func Operator_not_equal11(s1 QSize_ITF, s2 QSize_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qrect.h:459
-// index:12
+// index:16
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QRect &, const QRect &)
 
 /*
 
  */
-func Operator_not_equal12(r1 QRect_ITF, r2 QRect_ITF) bool {
+func Operator_not_equal16(r1 QRect_ITF, r2 QRect_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r1 != nil && r1.QRect_PTR() != nil {
 		convArg0 = r1.QRect_PTR().GetCthis()
@@ -2087,14 +2021,14 @@ func Operator_not_equal12(r1 QRect_ITF, r2 QRect_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qversionnumber.h:317
-// index:13
+// index:17
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QVersionNumber &, const QVersionNumber &)
 
 /*
 
  */
-func Operator_not_equal13(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
+func Operator_not_equal17(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QVersionNumber_PTR() != nil {
 		convArg0 = lhs.QVersionNumber_PTR().GetCthis()
@@ -2109,14 +2043,14 @@ func Operator_not_equal13(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:110
-// index:14
+// index:18
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStorageInfo &, const QStorageInfo &)
 
 /*
 
  */
-func Operator_not_equal14(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
+func Operator_not_equal18(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if first != nil && first.QStorageInfo_PTR() != nil {
 		convArg0 = first.QStorageInfo_PTR().GetCthis()
@@ -2131,14 +2065,14 @@ func Operator_not_equal14(first QStorageInfo_ITF, second QStorageInfo_ITF) bool 
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:203
-// index:15
+// index:19
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QMetaMethod &, const QMetaMethod &)
 
 /*
 
  */
-func Operator_not_equal15(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
+func Operator_not_equal19(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMetaMethod_PTR() != nil {
 		convArg0 = m1.QMetaMethod_PTR().GetCthis()
@@ -2152,15 +2086,15 @@ func Operator_not_equal15(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1603
-// index:16
+// /usr/include/qt/QtCore/qstring.h:1619
+// index:20
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStringRef &, const QStringRef &)
 
 /*
 
  */
-func Operator_not_equal16(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
+func Operator_not_equal20(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -2174,15 +2108,15 @@ func Operator_not_equal16(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1622
-// index:17
+// /usr/include/qt/QtCore/qstring.h:1638
+// index:21
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStringRef &, const QString &)
 
 /*
 
  */
-func Operator_not_equal17(lhs QStringRef_ITF, rhs string) bool {
+func Operator_not_equal21(lhs QStringRef_ITF, rhs string) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -2194,15 +2128,15 @@ func Operator_not_equal17(lhs QStringRef_ITF, rhs string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1758
-// index:18
+// /usr/include/qt/QtCore/qstring.h:1778
+// index:22
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStringRef &, const QByteArray &)
 
 /*
 
  */
-func Operator_not_equal18(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
+func Operator_not_equal22(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -2216,15 +2150,15 @@ func Operator_not_equal18(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1692
-// index:19
+// /usr/include/qt/QtCore/qstring.h:1712
+// index:23
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStringRef &, QChar)
 
 /*
 
  */
-func Operator_not_equal19(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
+func Operator_not_equal23(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -2238,15 +2172,15 @@ func Operator_not_equal19(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1654
-// index:20
+// /usr/include/qt/QtCore/qstring.h:1674
+// index:24
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStringRef &, QLatin1String)
 
 /*
 
  */
-func Operator_not_equal20(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_not_equal24(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -2260,15 +2194,15 @@ func Operator_not_equal20(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) boo
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:609
-// index:21
+// /usr/include/qt/QtCore/qbytearray.h:626
+// index:25
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QByteArray &, const QByteArray &)
 
 /*
 
  */
-func Operator_not_equal21(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
+func Operator_not_equal25(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -2282,15 +2216,15 @@ func Operator_not_equal21(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1765
-// index:22
+// /usr/include/qt/QtCore/qstring.h:1785
+// index:26
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QByteArray &, const QStringRef &)
 
 /*
 
  */
-func Operator_not_equal22(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
+func Operator_not_equal26(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QByteArray_PTR() != nil {
 		convArg0 = lhs.QByteArray_PTR().GetCthis()
@@ -2304,15 +2238,15 @@ func Operator_not_equal22(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:611
-// index:23
+// /usr/include/qt/QtCore/qbytearray.h:628
+// index:27
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QByteArray &, const char *)
 
 /*
 
  */
-func Operator_not_equal23(a1 QByteArray_ITF, a2 string) bool {
+func Operator_not_equal27(a1 QByteArray_ITF, a2 string) bool {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -2324,15 +2258,15 @@ func Operator_not_equal23(a1 QByteArray_ITF, a2 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1236
-// index:24
+// /usr/include/qt/QtCore/qstring.h:1252
+// index:28
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const char *, const QString &)
 
 /*
 
  */
-func Operator_not_equal24(s1 string, s2 string) bool {
+func Operator_not_equal28(s1 string, s2 string) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
 	var tmpArg1 = NewQString5(s2)
@@ -2342,15 +2276,15 @@ func Operator_not_equal24(s1 string, s2 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1787
-// index:25
+// /usr/include/qt/QtCore/qstring.h:1807
+// index:29
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const char *, const QStringRef &)
 
 /*
 
  */
-func Operator_not_equal25(s1 string, s2 QStringRef_ITF) bool {
+func Operator_not_equal29(s1 string, s2 QStringRef_ITF) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -2362,15 +2296,15 @@ func Operator_not_equal25(s1 string, s2 QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:613
-// index:26
+// /usr/include/qt/QtCore/qbytearray.h:630
+// index:30
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const char *, const QByteArray &)
 
 /*
 
  */
-func Operator_not_equal26(a1 string, a2 QByteArray_ITF) bool {
+func Operator_not_equal30(a1 string, a2 QByteArray_ITF) bool {
 	var convArg0 = qtrt.CString(a1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -2382,15 +2316,15 @@ func Operator_not_equal26(a1 string, a2 QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1249
-// index:27
+// /usr/include/qt/QtCore/qstring.h:1265
+// index:31
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const char *, QLatin1String)
 
 /*
 
  */
-func Operator_not_equal27(s1 string, s2 QLatin1String_ITF /*123*/) bool {
+func Operator_not_equal31(s1 string, s2 QLatin1String_ITF /*123*/) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -2402,29 +2336,29 @@ func Operator_not_equal27(s1 string, s2 QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1183
-// index:28
+// /usr/include/qt/QtCore/qstring.h:1199
+// index:32
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QString::Null, QString::Null)
 
 /*
 
  */
-func Operator_not_equal28(arg0 int, arg1 int) bool {
+func Operator_not_equal32(arg0 int, arg1 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZneN7QString4NullES0_", qtrt.FFI_TYPE_POINTER, arg0, arg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1185
-// index:29
+// /usr/include/qt/QtCore/qstring.h:1201
+// index:33
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QString::Null, const QString &)
 
 /*
 
  */
-func Operator_not_equal29(arg0 int, s string) bool {
+func Operator_not_equal33(arg0 int, s string) bool {
 	var tmpArg1 = NewQString5(s)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZneN7QString4NullERKS_", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
@@ -2432,15 +2366,15 @@ func Operator_not_equal29(arg0 int, s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:599
-// index:30
+// /usr/include/qt/QtCore/qchar.h:619
+// index:34
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(std::nullptr_t, QChar)
 
 /*
 
  */
-func Operator_not_equal30(arg0 int, rhs QChar_ITF /*123*/) bool {
+func Operator_not_equal34(arg0 int, rhs QChar_ITF /*123*/) bool {
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QChar_PTR() != nil {
 		convArg1 = rhs.QChar_PTR().GetCthis()
@@ -2450,15 +2384,99 @@ func Operator_not_equal30(arg0 int, rhs QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:583
-// index:31
+// /usr/include/qt/QtCore/qfloat16.h:243
+// index:35
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator!=(qfloat16, int)
+
+/*
+
+ */
+func Operator_not_equal35(a unsafe.Pointer /*444*/, b int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zne8qfloat16i", qtrt.FFI_TYPE_POINTER, a, b)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:231
+// index:36
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator!=(qfloat16, float)
+
+/*
+
+ */
+func Operator_not_equal36(lhs unsafe.Pointer /*444*/, rhs float32) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zne8qfloat16f", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:229
+// index:37
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator!=(qfloat16, long double)
+
+/*
+
+ */
+func Operator_not_equal37(lhs unsafe.Pointer /*444*/, rhs float64) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zne8qfloat16e", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:230
+// index:38
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator!=(qfloat16, double)
+
+/*
+
+ */
+func Operator_not_equal38(lhs unsafe.Pointer /*444*/, rhs float64) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zne8qfloat16d", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:217
+// index:39
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator!=(qfloat16, qfloat16)
+
+/*
+
+ */
+func Operator_not_equal39(a unsafe.Pointer /*444*/, b unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zne8qfloat16S_", qtrt.FFI_TYPE_POINTER, a, b)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qcborcommon.h:96
+// index:40
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator!=(QCborTag, QCborKnownTags)
+
+/*
+
+ */
+func Operator_not_equal40(t int, kt int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zne8QCborTag14QCborKnownTags", qtrt.FFI_TYPE_POINTER, t, kt)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qchar.h:603
+// index:41
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, QChar)
 
 /*
 
  */
-func Operator_not_equal31(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
+func Operator_not_equal41(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c1 != nil && c1.QChar_PTR() != nil {
 		convArg0 = c1.QChar_PTR().GetCthis()
@@ -2472,15 +2490,15 @@ func Operator_not_equal31(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1668
-// index:32
+// /usr/include/qt/QtCore/qstring.h:1688
+// index:42
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, const QString &)
 
 /*
 
  */
-func Operator_not_equal32(lhs QChar_ITF /*123*/, rhs string) bool {
+func Operator_not_equal42(lhs QChar_ITF /*123*/, rhs string) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2492,15 +2510,15 @@ func Operator_not_equal32(lhs QChar_ITF /*123*/, rhs string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1687
-// index:33
+// /usr/include/qt/QtCore/qstring.h:1707
+// index:43
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, const QStringRef &)
 
 /*
 
  */
-func Operator_not_equal33(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
+func Operator_not_equal43(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2514,15 +2532,15 @@ func Operator_not_equal33(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:594
-// index:34
+// /usr/include/qt/QtCore/qchar.h:614
+// index:44
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, std::nullptr_t)
 
 /*
 
  */
-func Operator_not_equal34(lhs QChar_ITF /*123*/, arg1 int) bool {
+func Operator_not_equal44(lhs QChar_ITF /*123*/, arg1 int) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2532,15 +2550,15 @@ func Operator_not_equal34(lhs QChar_ITF /*123*/, arg1 int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1706
-// index:35
+// /usr/include/qt/QtCore/qstring.h:1726
+// index:45
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, QLatin1String)
 
 /*
 
  */
-func Operator_not_equal35(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_not_equal45(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2554,15 +2572,15 @@ func Operator_not_equal35(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*/) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1734
-// index:36
+// /usr/include/qt/QtCore/qstring.h:1754
+// index:46
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, QStringView)
 
 /*
 
  */
-func Operator_not_equal36(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_not_equal46(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2576,15 +2594,29 @@ func Operator_not_equal36(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/) bo
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1192
-// index:37
+// /usr/include/qt/QtCore/qcborcommon.h:97
+// index:47
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator!=(QCborKnownTags, QCborTag)
+
+/*
+
+ */
+func Operator_not_equal47(kt int, t int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zne14QCborKnownTags8QCborTag", qtrt.FFI_TYPE_POINTER, kt, t)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:1208
+// index:48
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QLatin1String, QLatin1String)
 
 /*
 
  */
-func Operator_not_equal37(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF /*123*/) bool {
+func Operator_not_equal48(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QLatin1String_PTR() != nil {
 		convArg0 = s1.QLatin1String_PTR().GetCthis()
@@ -2598,15 +2630,15 @@ func Operator_not_equal37(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF /*1
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1647
-// index:38
+// /usr/include/qt/QtCore/qstring.h:1667
+// index:49
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QLatin1String, const QStringRef &)
 
 /*
 
  */
-func Operator_not_equal38(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) bool {
+func Operator_not_equal49(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -2620,15 +2652,15 @@ func Operator_not_equal38(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) boo
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1711
-// index:39
+// /usr/include/qt/QtCore/qstring.h:1731
+// index:50
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QLatin1String, QChar)
 
 /*
 
  */
-func Operator_not_equal39(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
+func Operator_not_equal50(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -2642,15 +2674,15 @@ func Operator_not_equal39(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*/) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1749
-// index:40
+// /usr/include/qt/QtCore/qstring.h:1769
+// index:51
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QLatin1String, QStringView)
 
 /*
 
  */
-func Operator_not_equal40(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_not_equal51(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -2664,15 +2696,15 @@ func Operator_not_equal40(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*1
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1719
-// index:41
+// /usr/include/qt/QtCore/qstring.h:1739
+// index:52
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QStringView, QStringView)
 
 /*
 
  */
-func Operator_not_equal41(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_not_equal52(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -2686,15 +2718,15 @@ func Operator_not_equal41(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1727
-// index:42
+// /usr/include/qt/QtCore/qstring.h:1747
+// index:53
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QStringView, QChar)
 
 /*
 
  */
-func Operator_not_equal42(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
+func Operator_not_equal53(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -2708,15 +2740,15 @@ func Operator_not_equal42(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/) bo
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1742
-// index:43
+// /usr/include/qt/QtCore/qstring.h:1762
+// index:54
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QStringView, QLatin1String)
 
 /*
 
  */
-func Operator_not_equal43(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_not_equal54(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -2770,15 +2802,29 @@ func Operator_mul1(factor int, p QPoint_ITF) *QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qpoint.h:184
+// /usr/include/qt/QtCore/qfloat16.h:204
 // index:2
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator*(int, qfloat16)
+
+/*
+
+ */
+func Operator_mul2(lhs int, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmli8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qpoint.h:184
+// index:3
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QPoint operator*(float, const QPoint &)
 
 /*
 
  */
-func Operator_mul2(factor float32, p QPoint_ITF) *QPoint /*123*/ {
+func Operator_mul3(factor float32, p QPoint_ITF) *QPoint /*123*/ {
 	var convArg1 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg1 = p.QPoint_PTR().GetCthis()
@@ -2790,15 +2836,43 @@ func Operator_mul2(factor float32, p QPoint_ITF) *QPoint /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:4
+// Invalid inline Visibility=Default Availability=Available
+// [4] float operator*(float, qfloat16)
+
+/*
+
+ */
+func Operator_mul4(lhs float32, rhs unsafe.Pointer /*444*/) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmlf8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
+// index:5
+// Invalid inline Visibility=Default Availability=Available
+// [16] long double operator*(long double, qfloat16)
+
+/*
+
+ */
+func Operator_mul5(lhs float64, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmle8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
 // /usr/include/qt/QtCore/qmargins.h:421
-// index:3
+// index:6
 // Invalid inline Visibility=Default Availability=Available
 // [32] QMarginsF operator*(qreal, const QMarginsF &)
 
 /*
 
  */
-func Operator_mul3(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
+func Operator_mul6(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QMarginsF_PTR() != nil {
 		convArg1 = rhs.QMarginsF_PTR().GetCthis()
@@ -2811,14 +2885,14 @@ func Operator_mul3(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:201
-// index:4
+// index:7
 // Invalid inline Visibility=Default Availability=Available
 // [16] QMargins operator*(qreal, const QMargins &)
 
 /*
 
  */
-func Operator_mul4(factor float64, margins QMargins_ITF) *QMargins /*123*/ {
+func Operator_mul7(factor float64, margins QMargins_ITF) *QMargins /*123*/ {
 	var convArg1 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg1 = margins.QMargins_PTR().GetCthis()
@@ -2830,15 +2904,15 @@ func Operator_mul4(factor float64, margins QMargins_ITF) *QMargins /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qpoint.h:373
-// index:5
+// /usr/include/qt/QtCore/qpoint.h:380
+// index:8
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QPointF operator*(qreal, const QPointF &)
 
 /*
 
  */
-func Operator_mul5(c float64, p QPointF_ITF) *QPointF /*123*/ {
+func Operator_mul8(c float64, p QPointF_ITF) *QPointF /*123*/ {
 	var convArg1 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg1 = p.QPointF_PTR().GetCthis()
@@ -2851,14 +2925,14 @@ func Operator_mul5(c float64, p QPointF_ITF) *QPointF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qsize.h:354
-// index:6
+// index:9
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QSizeF operator*(qreal, const QSizeF &)
 
 /*
 
  */
-func Operator_mul6(c float64, s QSizeF_ITF) *QSizeF /*123*/ {
+func Operator_mul9(c float64, s QSizeF_ITF) *QSizeF /*123*/ {
 	var convArg1 unsafe.Pointer
 	if s != nil && s.QSizeF_PTR() != nil {
 		convArg1 = s.QSizeF_PTR().GetCthis()
@@ -2871,14 +2945,14 @@ func Operator_mul6(c float64, s QSizeF_ITF) *QSizeF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:187
-// index:7
+// index:10
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QPoint operator*(double, const QPoint &)
 
 /*
 
  */
-func Operator_mul7(factor float64, p QPoint_ITF) *QPoint /*123*/ {
+func Operator_mul10(factor float64, p QPoint_ITF) *QPoint /*123*/ {
 	var convArg1 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg1 = p.QPoint_PTR().GetCthis()
@@ -2891,14 +2965,14 @@ func Operator_mul7(factor float64, p QPoint_ITF) *QPoint /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qsize.h:184
-// index:8
+// index:11
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QSize operator*(qreal, const QSize &)
 
 /*
 
  */
-func Operator_mul8(c float64, s QSize_ITF) *QSize /*123*/ {
+func Operator_mul11(c float64, s QSize_ITF) *QSize /*123*/ {
 	var convArg1 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg1 = s.QSize_PTR().GetCthis()
@@ -2910,15 +2984,29 @@ func Operator_mul8(c float64, s QSize_ITF) *QSize /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:12
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator*(double, qfloat16)
+
+/*
+
+ */
+func Operator_mul12(lhs float64, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmld8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
 // /usr/include/qt/QtCore/qmargins.h:415
-// index:9
+// index:13
 // Invalid inline Visibility=Default Availability=Available
 // [32] QMarginsF operator*(const QMarginsF &, qreal)
 
 /*
 
  */
-func Operator_mul9(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
+func Operator_mul13(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -2931,14 +3019,14 @@ func Operator_mul9(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:183
-// index:10
+// index:14
 // Invalid inline Visibility=Default Availability=Available
 // [16] QMargins operator*(const QMargins &, int)
 
 /*
 
  */
-func Operator_mul10(margins QMargins_ITF, factor int) *QMargins /*123*/ {
+func Operator_mul14(margins QMargins_ITF, factor int) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -2951,14 +3039,14 @@ func Operator_mul10(margins QMargins_ITF, factor int) *QMargins /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:195
-// index:11
+// index:15
 // Invalid inline Visibility=Default Availability=Available
 // [16] QMargins operator*(const QMargins &, qreal)
 
 /*
 
  */
-func Operator_mul11(margins QMargins_ITF, factor float64) *QMargins /*123*/ {
+func Operator_mul15(margins QMargins_ITF, factor float64) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -2970,15 +3058,15 @@ func Operator_mul11(margins QMargins_ITF, factor float64) *QMargins /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qpoint.h:368
-// index:12
+// /usr/include/qt/QtCore/qpoint.h:375
+// index:16
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QPointF operator*(const QPointF &, qreal)
 
 /*
 
  */
-func Operator_mul12(p QPointF_ITF, c float64) *QPointF /*123*/ {
+func Operator_mul16(p QPointF_ITF, c float64) *QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -2991,14 +3079,14 @@ func Operator_mul12(p QPointF_ITF, c float64) *QPointF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qsize.h:351
-// index:13
+// index:17
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QSizeF operator*(const QSizeF &, qreal)
 
 /*
 
  */
-func Operator_mul13(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
+func Operator_mul17(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSizeF_PTR() != nil {
 		convArg0 = s.QSizeF_PTR().GetCthis()
@@ -3011,14 +3099,14 @@ func Operator_mul13(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:181
-// index:14
+// index:18
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QPoint operator*(const QPoint &, int)
 
 /*
 
  */
-func Operator_mul14(p QPoint_ITF, factor int) *QPoint /*123*/ {
+func Operator_mul18(p QPoint_ITF, factor int) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -3031,14 +3119,14 @@ func Operator_mul14(p QPoint_ITF, factor int) *QPoint /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:175
-// index:15
+// index:19
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QPoint operator*(const QPoint &, float)
 
 /*
 
  */
-func Operator_mul15(p QPoint_ITF, factor float32) *QPoint /*123*/ {
+func Operator_mul19(p QPoint_ITF, factor float32) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -3051,14 +3139,14 @@ func Operator_mul15(p QPoint_ITF, factor float32) *QPoint /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:178
-// index:16
+// index:20
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QPoint operator*(const QPoint &, double)
 
 /*
 
  */
-func Operator_mul16(p QPoint_ITF, factor float64) *QPoint /*123*/ {
+func Operator_mul20(p QPoint_ITF, factor float64) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -3071,14 +3159,14 @@ func Operator_mul16(p QPoint_ITF, factor float64) *QPoint /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qsize.h:181
-// index:17
+// index:21
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QSize operator*(const QSize &, qreal)
 
 /*
 
  */
-func Operator_mul17(s QSize_ITF, c float64) *QSize /*123*/ {
+func Operator_mul21(s QSize_ITF, c float64) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
@@ -3090,8 +3178,134 @@ func Operator_mul17(s QSize_ITF, c float64) *QSize /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qfloat16.h:204
+// index:22
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator*(qfloat16, int)
+
+/*
+
+ */
+func Operator_mul22(lhs unsafe.Pointer /*444*/, rhs int) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zml8qfloat16i", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:23
+// Invalid inline Visibility=Default Availability=Available
+// [4] float operator*(qfloat16, float)
+
+/*
+
+ */
+func Operator_mul23(lhs unsafe.Pointer /*444*/, rhs float32) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_Zml8qfloat16f", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
+// index:24
+// Invalid inline Visibility=Default Availability=Available
+// [16] long double operator*(qfloat16, long double)
+
+/*
+
+ */
+func Operator_mul24(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zml8qfloat16e", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:25
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator*(qfloat16, double)
+
+/*
+
+ */
+func Operator_mul25(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zml8qfloat16d", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:175
+// index:26
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 operator*(qfloat16, qfloat16)
+
+/*
+
+ */
+func Operator_mul26(a unsafe.Pointer /*444*/, b unsafe.Pointer /*444*/) unsafe.Pointer /*444*/ {
+	rv, err := qtrt.InvokeQtFunc6("_Zml8qfloat16S_", qtrt.FFI_TYPE_POINTER, a, b)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:203
+// index:5
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator-(int, qfloat16)
+
+/*
+
+ */
+func Operator_minus5(lhs int, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmii8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:6
+// Invalid inline Visibility=Default Availability=Available
+// [4] float operator-(float, qfloat16)
+
+/*
+
+ */
+func Operator_minus6(lhs float32, rhs unsafe.Pointer /*444*/) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmif8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
+// index:7
+// Invalid inline Visibility=Default Availability=Available
+// [16] long double operator-(long double, qfloat16)
+
+/*
+
+ */
+func Operator_minus7(lhs float64, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmie8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:8
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator-(double, qfloat16)
+
+/*
+
+ */
+func Operator_minus8(lhs float64, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmid8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
 // /usr/include/qt/QtCore/qmargins.h:409
-// index:4
+// index:9
 // Invalid inline Visibility=Default Availability=Available
 // [32] QMarginsF operator-(const QMarginsF &, qreal)
 
@@ -3102,7 +3316,7 @@ This function was introduced in  Qt 5.1.
 
 See also QMargins::operator+=() and QMargins::operator-=().
 */
-func Operator_minus4(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
+func Operator_minus9(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -3115,7 +3329,7 @@ func Operator_minus4(lhs QMarginsF_ITF, rhs float64) *QMarginsF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:391
-// index:5
+// index:10
 // Invalid inline Visibility=Default Availability=Available
 // [32] QMarginsF operator-(const QMarginsF &, const QMarginsF &)
 
@@ -3126,7 +3340,7 @@ This function was introduced in  Qt 5.1.
 
 See also QMargins::operator+=() and QMargins::operator-=().
 */
-func Operator_minus5(lhs QMarginsF_ITF, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
+func Operator_minus10(lhs QMarginsF_ITF, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -3143,7 +3357,7 @@ func Operator_minus5(lhs QMarginsF_ITF, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:177
-// index:6
+// index:11
 // Invalid inline Visibility=Default Availability=Available
 // [16] QMargins operator-(const QMargins &, int)
 
@@ -3154,7 +3368,7 @@ This function was introduced in  Qt 5.1.
 
 See also QMargins::operator+=() and QMargins::operator-=().
 */
-func Operator_minus6(lhs QMargins_ITF, rhs int) *QMargins /*123*/ {
+func Operator_minus11(lhs QMargins_ITF, rhs int) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMargins_PTR() != nil {
 		convArg0 = lhs.QMargins_PTR().GetCthis()
@@ -3167,7 +3381,7 @@ func Operator_minus6(lhs QMargins_ITF, rhs int) *QMargins /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:159
-// index:7
+// index:12
 // Invalid inline Visibility=Default Availability=Available
 // [16] QMargins operator-(const QMargins &, const QMargins &)
 
@@ -3178,7 +3392,7 @@ This function was introduced in  Qt 5.1.
 
 See also QMargins::operator+=() and QMargins::operator-=().
 */
-func Operator_minus7(m1 QMargins_ITF, m2 QMargins_ITF) *QMargins /*123*/ {
+func Operator_minus12(m1 QMargins_ITF, m2 QMargins_ITF) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMargins_PTR() != nil {
 		convArg0 = m1.QMargins_PTR().GetCthis()
@@ -3194,8 +3408,8 @@ func Operator_minus7(m1 QMargins_ITF, m2 QMargins_ITF) *QMargins /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qpoint.h:363
-// index:8
+// /usr/include/qt/QtCore/qpoint.h:370
+// index:13
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QPointF operator-(const QPointF &, const QPointF &)
 
@@ -3204,7 +3418,7 @@ Returns a QPoint object that is formed by subtracting p2 from p1; each component
 
 See also QPoint::operator-=().
 */
-func Operator_minus8(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
+func Operator_minus13(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPointF_PTR() != nil {
 		convArg0 = p1.QPointF_PTR().GetCthis()
@@ -3221,14 +3435,14 @@ func Operator_minus8(p1 QPointF_ITF, p2 QPointF_ITF) *QPointF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qsize.h:348
-// index:9
+// index:14
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QSizeF operator-(const QSizeF &, const QSizeF &)
 
 /*
 Returns s2 subtracted from s1; each component is subtracted separately.
 */
-func Operator_minus9(s1 QSizeF_ITF, s2 QSizeF_ITF) *QSizeF /*123*/ {
+func Operator_minus14(s1 QSizeF_ITF, s2 QSizeF_ITF) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSizeF_PTR() != nil {
 		convArg0 = s1.QSizeF_PTR().GetCthis()
@@ -3245,7 +3459,7 @@ func Operator_minus9(s1 QSizeF_ITF, s2 QSizeF_ITF) *QSizeF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qrect.h:888
-// index:10
+// index:15
 // Invalid inline Visibility=Default Availability=Available
 // [32] QRectF operator-(const QRectF &, const QMarginsF &)
 
@@ -3254,7 +3468,7 @@ Returns the lhs rectangle shrunken by the rhs margins.
 
 This function was introduced in  Qt 5.3.
 */
-func Operator_minus10(lhs QRectF_ITF, rhs QMarginsF_ITF) *QRectF /*123*/ {
+func Operator_minus15(lhs QRectF_ITF, rhs QMarginsF_ITF) *QRectF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QRectF_PTR() != nil {
 		convArg0 = lhs.QRectF_PTR().GetCthis()
@@ -3271,7 +3485,7 @@ func Operator_minus10(lhs QRectF_ITF, rhs QMarginsF_ITF) *QRectF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:172
-// index:11
+// index:16
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QPoint operator-(const QPoint &, const QPoint &)
 
@@ -3280,7 +3494,7 @@ Returns a QPoint object that is formed by subtracting p2 from p1; each component
 
 See also QPoint::operator-=().
 */
-func Operator_minus11(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
+func Operator_minus16(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPoint_PTR() != nil {
 		convArg0 = p1.QPoint_PTR().GetCthis()
@@ -3297,14 +3511,14 @@ func Operator_minus11(p1 QPoint_ITF, p2 QPoint_ITF) *QPoint /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qsize.h:178
-// index:12
+// index:17
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QSize operator-(const QSize &, const QSize &)
 
 /*
 Returns s2 subtracted from s1; each component is subtracted separately.
 */
-func Operator_minus12(s1 QSize_ITF, s2 QSize_ITF) *QSize /*123*/ {
+func Operator_minus17(s1 QSize_ITF, s2 QSize_ITF) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSize_PTR() != nil {
 		convArg0 = s1.QSize_PTR().GetCthis()
@@ -3321,7 +3535,7 @@ func Operator_minus12(s1 QSize_ITF, s2 QSize_ITF) *QSize /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qrect.h:476
-// index:13
+// index:18
 // Invalid inline Visibility=Default Availability=Available
 // [16] QRect operator-(const QRect &, const QMargins &)
 
@@ -3330,7 +3544,7 @@ Returns the lhs rectangle shrunken by the rhs margins.
 
 This function was introduced in  Qt 5.3.
 */
-func Operator_minus13(lhs QRect_ITF, rhs QMargins_ITF) *QRect /*123*/ {
+func Operator_minus18(lhs QRect_ITF, rhs QMargins_ITF) *QRect /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QRect_PTR() != nil {
 		convArg0 = lhs.QRect_PTR().GetCthis()
@@ -3346,15 +3560,225 @@ func Operator_minus13(lhs QRect_ITF, rhs QMargins_ITF) *QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qmargins.h:372
+// /usr/include/qt/QtCore/qfloat16.h:203
+// index:19
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator-(qfloat16, int)
+
+/*
+
+ */
+func Operator_minus19(lhs unsafe.Pointer /*444*/, rhs int) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmi8qfloat16i", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:20
+// Invalid inline Visibility=Default Availability=Available
+// [4] float operator-(qfloat16, float)
+
+/*
+
+ */
+func Operator_minus20(lhs unsafe.Pointer /*444*/, rhs float32) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmi8qfloat16f", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
+// index:21
+// Invalid inline Visibility=Default Availability=Available
+// [16] long double operator-(qfloat16, long double)
+
+/*
+
+ */
+func Operator_minus21(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmi8qfloat16e", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:22
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator-(qfloat16, double)
+
+/*
+
+ */
+func Operator_minus22(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zmi8qfloat16d", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:174
+// index:23
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 operator-(qfloat16, qfloat16)
+
+/*
+
+ */
+func Operator_minus23(a unsafe.Pointer /*444*/, b unsafe.Pointer /*444*/) unsafe.Pointer /*444*/ {
+	rv, err := qtrt.InvokeQtFunc6("_Zmi8qfloat16S_", qtrt.FFI_TYPE_POINTER, a, b)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:0
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator*=(qfloat16 &, float)
+
+/*
+
+ */
+func Operator_mul_equal(lhs unsafe.Pointer /*555*/, rhs float32) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZmLR8qfloat16f", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
 // index:1
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator*=(qfloat16 &, long double)
+
+/*
+
+ */
+func Operator_mul_equal1(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZmLR8qfloat16e", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator*=(qfloat16 &, double)
+
+/*
+
+ */
+func Operator_mul_equal2(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZmLR8qfloat16d", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:0
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator-=(qfloat16 &, float)
+
+/*
+
+ */
+func Operator_minus_equal(lhs unsafe.Pointer /*555*/, rhs float32) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZmIR8qfloat16f", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator-=(qfloat16 &, long double)
+
+/*
+
+ */
+func Operator_minus_equal1(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZmIR8qfloat16e", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator-=(qfloat16 &, double)
+
+/*
+
+ */
+func Operator_minus_equal2(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZmIR8qfloat16d", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:242
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator==(int, qfloat16)
+
+/*
+
+ */
+func Operator_equal_equal1(a int, b unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zeqi8qfloat16", qtrt.FFI_TYPE_POINTER, a, b)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:231
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator==(float, qfloat16)
+
+/*
+
+ */
+func Operator_equal_equal2(lhs float32, rhs unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zeqf8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:229
+// index:3
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator==(long double, qfloat16)
+
+/*
+
+ */
+func Operator_equal_equal3(lhs float64, rhs unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zeqe8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:230
+// index:4
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator==(double, qfloat16)
+
+/*
+
+ */
+func Operator_equal_equal4(lhs float64, rhs unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zeqd8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qmargins.h:372
+// index:5
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QMarginsF &, const QMarginsF &)
 
 /*
 
  */
-func Operator_equal_equal1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
+func Operator_equal_equal5(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -3368,15 +3792,15 @@ func Operator_equal_equal1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qvariant.h:567
-// index:2
+// /usr/include/qt/QtCore/qvariant.h:590
+// index:6
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QVariant &, const QVariantComparisonHelper &)
 
 /*
 
  */
-func Operator_equal_equal2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
+func Operator_equal_equal6(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if v1 != nil && v1.QVariant_PTR() != nil {
 		convArg0 = v1.QVariant_PTR().GetCthis()
@@ -3391,14 +3815,14 @@ func Operator_equal_equal2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) boo
 }
 
 // /usr/include/qt/QtCore/qmargins.h:135
-// index:3
+// index:7
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QMargins &, const QMargins &)
 
 /*
 
  */
-func Operator_equal_equal3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
+func Operator_equal_equal7(m1 QMargins_ITF, m2 QMargins_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMargins_PTR() != nil {
 		convArg0 = m1.QMargins_PTR().GetCthis()
@@ -3412,15 +3836,15 @@ func Operator_equal_equal3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1614
-// index:4
+// /usr/include/qt/QtCore/qstring.h:1630
+// index:8
 // Invalid Visibility=Default Availability=Available
 // [1] bool operator==(const QString &, const QStringRef &)
 
 /*
 
  */
-func Operator_equal_equal4(lhs string, rhs QStringRef_ITF) bool {
+func Operator_equal_equal8(lhs string, rhs QStringRef_ITF) bool {
 	var tmpArg0 = NewQString5(lhs)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
@@ -3432,15 +3856,15 @@ func Operator_equal_equal4(lhs string, rhs QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1182
-// index:5
+// /usr/include/qt/QtCore/qstring.h:1198
+// index:9
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QString &, QString::Null)
 
 /*
 
  */
-func Operator_equal_equal5(s string, arg1 int) bool {
+func Operator_equal_equal9(s string, arg1 int) bool {
 	var tmpArg0 = NewQString5(s)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZeqRK7QStringNS_4NullE", qtrt.FFI_TYPE_POINTER, convArg0, arg1)
@@ -3448,15 +3872,15 @@ func Operator_equal_equal5(s string, arg1 int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1672
-// index:6
+// /usr/include/qt/QtCore/qstring.h:1692
+// index:10
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QString &, QChar)
 
 /*
 
  */
-func Operator_equal_equal6(lhs string, rhs QChar_ITF /*123*/) bool {
+func Operator_equal_equal10(lhs string, rhs QChar_ITF /*123*/) bool {
 	var tmpArg0 = NewQString5(lhs)
 	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 unsafe.Pointer
@@ -3468,15 +3892,15 @@ func Operator_equal_equal6(lhs string, rhs QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qpoint.h:348
-// index:7
+// /usr/include/qt/QtCore/qpoint.h:352
+// index:11
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QPointF &, const QPointF &)
 
 /*
 
  */
-func Operator_equal_equal7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
+func Operator_equal_equal11(p1 QPointF_ITF, p2 QPointF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPointF_PTR() != nil {
 		convArg0 = p1.QPointF_PTR().GetCthis()
@@ -3491,14 +3915,14 @@ func Operator_equal_equal7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qsize.h:339
-// index:8
+// index:12
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QSizeF &, const QSizeF &)
 
 /*
 
  */
-func Operator_equal_equal8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
+func Operator_equal_equal12(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSizeF_PTR() != nil {
 		convArg0 = s1.QSizeF_PTR().GetCthis()
@@ -3513,14 +3937,14 @@ func Operator_equal_equal8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qrect.h:859
-// index:9
+// index:13
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QRectF &, const QRectF &)
 
 /*
 
  */
-func Operator_equal_equal9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
+func Operator_equal_equal13(r1 QRectF_ITF, r2 QRectF_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r1 != nil && r1.QRectF_PTR() != nil {
 		convArg0 = r1.QRectF_PTR().GetCthis()
@@ -3535,14 +3959,14 @@ func Operator_equal_equal9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:163
-// index:10
+// index:14
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QPoint &, const QPoint &)
 
 /*
 
  */
-func Operator_equal_equal10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
+func Operator_equal_equal14(p1 QPoint_ITF, p2 QPoint_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if p1 != nil && p1.QPoint_PTR() != nil {
 		convArg0 = p1.QPoint_PTR().GetCthis()
@@ -3557,14 +3981,14 @@ func Operator_equal_equal10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qsize.h:169
-// index:11
+// index:15
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QSize &, const QSize &)
 
 /*
 
  */
-func Operator_equal_equal11(s1 QSize_ITF, s2 QSize_ITF) bool {
+func Operator_equal_equal15(s1 QSize_ITF, s2 QSize_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QSize_PTR() != nil {
 		convArg0 = s1.QSize_PTR().GetCthis()
@@ -3579,14 +4003,14 @@ func Operator_equal_equal11(s1 QSize_ITF, s2 QSize_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qrect.h:454
-// index:12
+// index:16
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QRect &, const QRect &)
 
 /*
 
  */
-func Operator_equal_equal12(r1 QRect_ITF, r2 QRect_ITF) bool {
+func Operator_equal_equal16(r1 QRect_ITF, r2 QRect_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if r1 != nil && r1.QRect_PTR() != nil {
 		convArg0 = r1.QRect_PTR().GetCthis()
@@ -3601,14 +4025,14 @@ func Operator_equal_equal12(r1 QRect_ITF, r2 QRect_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qhash.h:141
-// index:13
+// index:17
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QHashDummyValue &, const QHashDummyValue &)
 
 /*
 
  */
-func Operator_equal_equal13(arg0 QHashDummyValue_ITF, arg1 QHashDummyValue_ITF) bool {
+func Operator_equal_equal17(arg0 QHashDummyValue_ITF, arg1 QHashDummyValue_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QHashDummyValue_PTR() != nil {
 		convArg0 = arg0.QHashDummyValue_PTR().GetCthis()
@@ -3623,14 +4047,14 @@ func Operator_equal_equal13(arg0 QHashDummyValue_ITF, arg1 QHashDummyValue_ITF) 
 }
 
 // /usr/include/qt/QtCore/qversionnumber.h:314
-// index:14
+// index:18
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QVersionNumber &, const QVersionNumber &)
 
 /*
 
  */
-func Operator_equal_equal14(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
+func Operator_equal_equal18(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QVersionNumber_PTR() != nil {
 		convArg0 = lhs.QVersionNumber_PTR().GetCthis()
@@ -3645,14 +4069,14 @@ func Operator_equal_equal14(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:103
-// index:15
+// index:19
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QStorageInfo &, const QStorageInfo &)
 
 /*
 
  */
-func Operator_equal_equal15(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
+func Operator_equal_equal19(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if first != nil && first.QStorageInfo_PTR() != nil {
 		convArg0 = first.QStorageInfo_PTR().GetCthis()
@@ -3667,14 +4091,14 @@ func Operator_equal_equal15(first QStorageInfo_ITF, second QStorageInfo_ITF) boo
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:201
-// index:16
+// index:20
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QMetaMethod &, const QMetaMethod &)
 
 /*
 
  */
-func Operator_equal_equal16(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
+func Operator_equal_equal20(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if m1 != nil && m1.QMetaMethod_PTR() != nil {
 		convArg0 = m1.QMetaMethod_PTR().GetCthis()
@@ -3688,15 +4112,15 @@ func Operator_equal_equal16(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1602
-// index:17
+// /usr/include/qt/QtCore/qstring.h:1618
+// index:21
 // Invalid Visibility=Default Availability=Available
 // [1] bool operator==(const QStringRef &, const QStringRef &)
 
 /*
 
  */
-func Operator_equal_equal17(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
+func Operator_equal_equal21(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QStringRef_PTR() != nil {
 		convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -3710,15 +4134,15 @@ func Operator_equal_equal17(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1621
-// index:18
+// /usr/include/qt/QtCore/qstring.h:1637
+// index:22
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QStringRef &, const QString &)
 
 /*
 
  */
-func Operator_equal_equal18(lhs QStringRef_ITF, rhs string) bool {
+func Operator_equal_equal22(lhs QStringRef_ITF, rhs string) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -3730,15 +4154,15 @@ func Operator_equal_equal18(lhs QStringRef_ITF, rhs string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1757
-// index:19
+// /usr/include/qt/QtCore/qstring.h:1777
+// index:23
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QStringRef &, const QByteArray &)
 
 /*
 
  */
-func Operator_equal_equal19(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
+func Operator_equal_equal23(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -3752,15 +4176,15 @@ func Operator_equal_equal19(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1691
-// index:20
+// /usr/include/qt/QtCore/qstring.h:1711
+// index:24
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QStringRef &, QChar)
 
 /*
 
  */
-func Operator_equal_equal20(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
+func Operator_equal_equal24(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -3774,15 +4198,15 @@ func Operator_equal_equal20(lhs QStringRef_ITF, rhs QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1653
-// index:21
+// /usr/include/qt/QtCore/qstring.h:1673
+// index:25
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QStringRef &, QLatin1String)
 
 /*
 
  */
-func Operator_equal_equal21(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_equal_equal25(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringRef_PTR() != nil {
 		convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -3796,15 +4220,15 @@ func Operator_equal_equal21(lhs QStringRef_ITF, rhs QLatin1String_ITF /*123*/) b
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:603
-// index:22
+// /usr/include/qt/QtCore/qbytearray.h:620
+// index:26
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QByteArray &, const QByteArray &)
 
 /*
 
  */
-func Operator_equal_equal22(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
+func Operator_equal_equal26(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -3818,15 +4242,15 @@ func Operator_equal_equal22(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1764
-// index:23
+// /usr/include/qt/QtCore/qstring.h:1784
+// index:27
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QByteArray &, const QStringRef &)
 
 /*
 
  */
-func Operator_equal_equal23(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
+func Operator_equal_equal27(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QByteArray_PTR() != nil {
 		convArg0 = lhs.QByteArray_PTR().GetCthis()
@@ -3840,15 +4264,15 @@ func Operator_equal_equal23(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:605
-// index:24
+// /usr/include/qt/QtCore/qbytearray.h:622
+// index:28
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QByteArray &, const char *)
 
 /*
 
  */
-func Operator_equal_equal24(a1 QByteArray_ITF, a2 string) bool {
+func Operator_equal_equal28(a1 QByteArray_ITF, a2 string) bool {
 	var convArg0 unsafe.Pointer
 	if a1 != nil && a1.QByteArray_PTR() != nil {
 		convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -3860,15 +4284,15 @@ func Operator_equal_equal24(a1 QByteArray_ITF, a2 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1234
-// index:25
+// /usr/include/qt/QtCore/qstring.h:1250
+// index:29
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const char *, const QString &)
 
 /*
 
  */
-func Operator_equal_equal25(s1 string, s2 string) bool {
+func Operator_equal_equal29(s1 string, s2 string) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
 	var tmpArg1 = NewQString5(s2)
@@ -3878,15 +4302,15 @@ func Operator_equal_equal25(s1 string, s2 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1785
-// index:26
+// /usr/include/qt/QtCore/qstring.h:1805
+// index:30
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const char *, const QStringRef &)
 
 /*
 
  */
-func Operator_equal_equal26(s1 string, s2 QStringRef_ITF) bool {
+func Operator_equal_equal30(s1 string, s2 QStringRef_ITF) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -3898,15 +4322,15 @@ func Operator_equal_equal26(s1 string, s2 QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:607
-// index:27
+// /usr/include/qt/QtCore/qbytearray.h:624
+// index:31
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const char *, const QByteArray &)
 
 /*
 
  */
-func Operator_equal_equal27(a1 string, a2 QByteArray_ITF) bool {
+func Operator_equal_equal31(a1 string, a2 QByteArray_ITF) bool {
 	var convArg0 = qtrt.CString(a1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -3918,15 +4342,15 @@ func Operator_equal_equal27(a1 string, a2 QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1247
-// index:28
+// /usr/include/qt/QtCore/qstring.h:1263
+// index:32
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const char *, QLatin1String)
 
 /*
 
  */
-func Operator_equal_equal28(s1 string, s2 QLatin1String_ITF /*123*/) bool {
+func Operator_equal_equal32(s1 string, s2 QLatin1String_ITF /*123*/) bool {
 	var convArg0 = qtrt.CString(s1)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 unsafe.Pointer
@@ -3938,29 +4362,29 @@ func Operator_equal_equal28(s1 string, s2 QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1178
-// index:29
+// /usr/include/qt/QtCore/qstring.h:1194
+// index:33
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QString::Null, QString::Null)
 
 /*
 
  */
-func Operator_equal_equal29(arg0 int, arg1 int) bool {
+func Operator_equal_equal33(arg0 int, arg1 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZeqN7QString4NullES0_", qtrt.FFI_TYPE_POINTER, arg0, arg1)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1180
-// index:30
+// /usr/include/qt/QtCore/qstring.h:1196
+// index:34
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QString::Null, const QString &)
 
 /*
 
  */
-func Operator_equal_equal30(arg0 int, s string) bool {
+func Operator_equal_equal34(arg0 int, s string) bool {
 	var tmpArg1 = NewQString5(s)
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZeqN7QString4NullERKS_", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
@@ -3968,15 +4392,15 @@ func Operator_equal_equal30(arg0 int, s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:591
-// index:31
+// /usr/include/qt/QtCore/qchar.h:611
+// index:35
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(std::nullptr_t, QChar)
 
 /*
 
  */
-func Operator_equal_equal31(arg0 int, rhs QChar_ITF /*123*/) bool {
+func Operator_equal_equal35(arg0 int, rhs QChar_ITF /*123*/) bool {
 	var convArg1 unsafe.Pointer
 	if rhs != nil && rhs.QChar_PTR() != nil {
 		convArg1 = rhs.QChar_PTR().GetCthis()
@@ -3986,15 +4410,99 @@ func Operator_equal_equal31(arg0 int, rhs QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:580
-// index:32
+// /usr/include/qt/QtCore/qfloat16.h:242
+// index:36
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator==(qfloat16, int)
+
+/*
+
+ */
+func Operator_equal_equal36(a unsafe.Pointer /*444*/, b int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zeq8qfloat16i", qtrt.FFI_TYPE_POINTER, a, b)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:231
+// index:37
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator==(qfloat16, float)
+
+/*
+
+ */
+func Operator_equal_equal37(lhs unsafe.Pointer /*444*/, rhs float32) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zeq8qfloat16f", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:229
+// index:38
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator==(qfloat16, long double)
+
+/*
+
+ */
+func Operator_equal_equal38(lhs unsafe.Pointer /*444*/, rhs float64) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zeq8qfloat16e", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:230
+// index:39
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator==(qfloat16, double)
+
+/*
+
+ */
+func Operator_equal_equal39(lhs unsafe.Pointer /*444*/, rhs float64) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zeq8qfloat16d", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:216
+// index:40
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator==(qfloat16, qfloat16)
+
+/*
+
+ */
+func Operator_equal_equal40(a unsafe.Pointer /*444*/, b unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zeq8qfloat16S_", qtrt.FFI_TYPE_POINTER, a, b)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qcborcommon.h:94
+// index:41
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator==(QCborTag, QCborKnownTags)
+
+/*
+
+ */
+func Operator_equal_equal41(t int, kt int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zeq8QCborTag14QCborKnownTags", qtrt.FFI_TYPE_POINTER, t, kt)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qchar.h:600
+// index:42
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, QChar)
 
 /*
 
  */
-func Operator_equal_equal32(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
+func Operator_equal_equal42(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c1 != nil && c1.QChar_PTR() != nil {
 		convArg0 = c1.QChar_PTR().GetCthis()
@@ -4008,15 +4516,15 @@ func Operator_equal_equal32(c1 QChar_ITF /*123*/, c2 QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1661
-// index:33
+// /usr/include/qt/QtCore/qstring.h:1681
+// index:43
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, const QString &)
 
 /*
 
  */
-func Operator_equal_equal33(lhs QChar_ITF /*123*/, rhs string) bool {
+func Operator_equal_equal43(lhs QChar_ITF /*123*/, rhs string) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4028,15 +4536,15 @@ func Operator_equal_equal33(lhs QChar_ITF /*123*/, rhs string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1680
-// index:34
+// /usr/include/qt/QtCore/qstring.h:1700
+// index:44
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, const QStringRef &)
 
 /*
 
  */
-func Operator_equal_equal34(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
+func Operator_equal_equal44(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4050,15 +4558,15 @@ func Operator_equal_equal34(lhs QChar_ITF /*123*/, rhs QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:589
-// index:35
+// /usr/include/qt/QtCore/qchar.h:609
+// index:45
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, std::nullptr_t)
 
 /*
 
  */
-func Operator_equal_equal35(lhs QChar_ITF /*123*/, arg1 int) bool {
+func Operator_equal_equal45(lhs QChar_ITF /*123*/, arg1 int) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4068,15 +4576,15 @@ func Operator_equal_equal35(lhs QChar_ITF /*123*/, arg1 int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1699
-// index:36
+// /usr/include/qt/QtCore/qstring.h:1719
+// index:46
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, QLatin1String)
 
 /*
 
  */
-func Operator_equal_equal36(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_equal_equal46(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4090,15 +4598,15 @@ func Operator_equal_equal36(lhs QChar_ITF /*123*/, rhs QLatin1String_ITF /*123*/
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1733
-// index:37
+// /usr/include/qt/QtCore/qstring.h:1753
+// index:47
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, QStringView)
 
 /*
 
  */
-func Operator_equal_equal37(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_equal_equal47(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QChar_PTR() != nil {
 		convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4112,15 +4620,29 @@ func Operator_equal_equal37(lhs QChar_ITF /*123*/, rhs QStringView_ITF /*123*/) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1190
-// index:38
+// /usr/include/qt/QtCore/qcborcommon.h:95
+// index:48
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool operator==(QCborKnownTags, QCborTag)
+
+/*
+
+ */
+func Operator_equal_equal48(kt int, t int) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Zeq14QCborKnownTags8QCborTag", qtrt.FFI_TYPE_POINTER, kt, t)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:1206
+// index:49
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QLatin1String, QLatin1String)
 
 /*
 
  */
-func Operator_equal_equal38(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF /*123*/) bool {
+func Operator_equal_equal49(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s1 != nil && s1.QLatin1String_PTR() != nil {
 		convArg0 = s1.QLatin1String_PTR().GetCthis()
@@ -4134,15 +4656,15 @@ func Operator_equal_equal38(s1 QLatin1String_ITF /*123*/, s2 QLatin1String_ITF /
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1646
-// index:39
+// /usr/include/qt/QtCore/qstring.h:1666
+// index:50
 // Invalid Visibility=Default Availability=Available
 // [1] bool operator==(QLatin1String, const QStringRef &)
 
 /*
 
  */
-func Operator_equal_equal39(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) bool {
+func Operator_equal_equal50(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -4156,15 +4678,15 @@ func Operator_equal_equal39(lhs QLatin1String_ITF /*123*/, rhs QStringRef_ITF) b
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1710
-// index:40
+// /usr/include/qt/QtCore/qstring.h:1730
+// index:51
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QLatin1String, QChar)
 
 /*
 
  */
-func Operator_equal_equal40(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
+func Operator_equal_equal51(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -4178,15 +4700,15 @@ func Operator_equal_equal40(lhs QLatin1String_ITF /*123*/, rhs QChar_ITF /*123*/
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1748
-// index:41
+// /usr/include/qt/QtCore/qstring.h:1768
+// index:52
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QLatin1String, QStringView)
 
 /*
 
  */
-func Operator_equal_equal41(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_equal_equal52(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QLatin1String_PTR() != nil {
 		convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -4200,15 +4722,15 @@ func Operator_equal_equal41(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1718
-// index:42
+// /usr/include/qt/QtCore/qstring.h:1738
+// index:53
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QStringView, QStringView)
 
 /*
 
  */
-func Operator_equal_equal42(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
+func Operator_equal_equal53(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -4222,15 +4744,15 @@ func Operator_equal_equal42(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*1
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1726
-// index:43
+// /usr/include/qt/QtCore/qstring.h:1746
+// index:54
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QStringView, QChar)
 
 /*
 
  */
-func Operator_equal_equal43(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
+func Operator_equal_equal54(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -4244,15 +4766,15 @@ func Operator_equal_equal43(lhs QStringView_ITF /*123*/, rhs QChar_ITF /*123*/) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:1741
-// index:44
+// /usr/include/qt/QtCore/qstring.h:1761
+// index:55
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QStringView, QLatin1String)
 
 /*
 
  */
-func Operator_equal_equal44(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
+func Operator_equal_equal55(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QStringView_PTR() != nil {
 		convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -4266,7 +4788,7 @@ func Operator_equal_equal44(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbitarray.h:117
+// /usr/include/qt/QtCore/qbitarray.h:120
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QBitArray operator^(const QBitArray &, const QBitArray &)
@@ -4290,15 +4812,71 @@ func Operator_caret(arg0 QBitArray_ITF, arg1 QBitArray_ITF) *QBitArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qmargins.h:427
+// /usr/include/qt/QtCore/qfloat16.h:205
 // index:0
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator/(int, qfloat16)
+
+/*
+
+ */
+func Operator_div(lhs int, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zdvi8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [4] float operator/(float, qfloat16)
+
+/*
+
+ */
+func Operator_div1(lhs float32, rhs unsafe.Pointer /*444*/) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_Zdvf8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [16] long double operator/(long double, qfloat16)
+
+/*
+
+ */
+func Operator_div2(lhs float64, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zdve8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:3
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator/(double, qfloat16)
+
+/*
+
+ */
+func Operator_div3(lhs float64, rhs unsafe.Pointer /*444*/) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zdvd8qfloat16", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qmargins.h:427
+// index:4
 // Invalid inline Visibility=Default Availability=Available
 // [32] QMarginsF operator/(const QMarginsF &, qreal)
 
 /*
 
  */
-func Operator_div(lhs QMarginsF_ITF, divisor float64) *QMarginsF /*123*/ {
+func Operator_div4(lhs QMarginsF_ITF, divisor float64) *QMarginsF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QMarginsF_PTR() != nil {
 		convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -4311,14 +4889,14 @@ func Operator_div(lhs QMarginsF_ITF, divisor float64) *QMarginsF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:207
-// index:1
+// index:5
 // Invalid inline Visibility=Default Availability=Available
 // [16] QMargins operator/(const QMargins &, int)
 
 /*
 
  */
-func Operator_div1(margins QMargins_ITF, divisor int) *QMargins /*123*/ {
+func Operator_div5(margins QMargins_ITF, divisor int) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -4331,14 +4909,14 @@ func Operator_div1(margins QMargins_ITF, divisor int) *QMargins /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:213
-// index:2
+// index:6
 // Invalid inline Visibility=Default Availability=Available
 // [16] QMargins operator/(const QMargins &, qreal)
 
 /*
 
  */
-func Operator_div2(margins QMargins_ITF, divisor float64) *QMargins /*123*/ {
+func Operator_div6(margins QMargins_ITF, divisor float64) *QMargins /*123*/ {
 	var convArg0 unsafe.Pointer
 	if margins != nil && margins.QMargins_PTR() != nil {
 		convArg0 = margins.QMargins_PTR().GetCthis()
@@ -4350,15 +4928,15 @@ func Operator_div2(margins QMargins_ITF, divisor float64) *QMargins /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qpoint.h:395
-// index:3
+// /usr/include/qt/QtCore/qpoint.h:402
+// index:7
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QPointF operator/(const QPointF &, qreal)
 
 /*
 
  */
-func Operator_div3(p QPointF_ITF, divisor float64) *QPointF /*123*/ {
+func Operator_div7(p QPointF_ITF, divisor float64) *QPointF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPointF_PTR() != nil {
 		convArg0 = p.QPointF_PTR().GetCthis()
@@ -4371,14 +4949,14 @@ func Operator_div3(p QPointF_ITF, divisor float64) *QPointF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qsize.h:364
-// index:4
+// index:8
 // Invalid inline Visibility=Default Availability=Available
 // [16] const QSizeF operator/(const QSizeF &, qreal)
 
 /*
 
  */
-func Operator_div4(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
+func Operator_div8(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSizeF_PTR() != nil {
 		convArg0 = s.QSizeF_PTR().GetCthis()
@@ -4391,14 +4969,14 @@ func Operator_div4(s QSizeF_ITF, c float64) *QSizeF /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:206
-// index:5
+// index:9
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QPoint operator/(const QPoint &, qreal)
 
 /*
 
  */
-func Operator_div5(p QPoint_ITF, c float64) *QPoint /*123*/ {
+func Operator_div9(p QPoint_ITF, c float64) *QPoint /*123*/ {
 	var convArg0 unsafe.Pointer
 	if p != nil && p.QPoint_PTR() != nil {
 		convArg0 = p.QPoint_PTR().GetCthis()
@@ -4411,14 +4989,14 @@ func Operator_div5(p QPoint_ITF, c float64) *QPoint /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qsize.h:194
-// index:6
+// index:10
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QSize operator/(const QSize &, qreal)
 
 /*
 
  */
-func Operator_div6(s QSize_ITF, c float64) *QSize /*123*/ {
+func Operator_div10(s QSize_ITF, c float64) *QSize /*123*/ {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QSize_PTR() != nil {
 		convArg0 = s.QSize_PTR().GetCthis()
@@ -4430,7 +5008,119 @@ func Operator_div6(s QSize_ITF, c float64) *QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbitarray.h:115
+// /usr/include/qt/QtCore/qfloat16.h:205
+// index:11
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator/(qfloat16, int)
+
+/*
+
+ */
+func Operator_div11(lhs unsafe.Pointer /*444*/, rhs int) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zdv8qfloat16i", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:12
+// Invalid inline Visibility=Default Availability=Available
+// [4] float operator/(qfloat16, float)
+
+/*
+
+ */
+func Operator_div12(lhs unsafe.Pointer /*444*/, rhs float32) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_Zdv8qfloat16f", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
+// index:13
+// Invalid inline Visibility=Default Availability=Available
+// [16] long double operator/(qfloat16, long double)
+
+/*
+
+ */
+func Operator_div13(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zdv8qfloat16e", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:14
+// Invalid inline Visibility=Default Availability=Available
+// [8] double operator/(qfloat16, double)
+
+/*
+
+ */
+func Operator_div14(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Zdv8qfloat16d", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:176
+// index:15
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 operator/(qfloat16, qfloat16)
+
+/*
+
+ */
+func Operator_div15(a unsafe.Pointer /*444*/, b unsafe.Pointer /*444*/) unsafe.Pointer /*444*/ {
+	rv, err := qtrt.InvokeQtFunc6("_Zdv8qfloat16S_", qtrt.FFI_TYPE_POINTER, a, b)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:195
+// index:0
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator/=(qfloat16 &, float)
+
+/*
+
+ */
+func Operator_div_equal(lhs unsafe.Pointer /*555*/, rhs float32) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZdVR8qfloat16f", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:193
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator/=(qfloat16 &, long double)
+
+/*
+
+ */
+func Operator_div_equal1(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZdVR8qfloat16e", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:194
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 & operator/=(qfloat16 &, double)
+
+/*
+
+ */
+func Operator_div_equal2(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZdVR8qfloat16d", qtrt.FFI_TYPE_POINTER, lhs, rhs)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:118
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QBitArray operator&(const QBitArray &, const QBitArray &)
@@ -4454,7 +5144,79 @@ func Operator_and(arg0 QBitArray_ITF, arg1 QBitArray_ITF) *QBitArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:74
+// /usr/include/qt/QtCore/qstringalgorithms.h:59
+// index:0
+// Invalid Visibility=Default Availability=Available
+// [8] const ushort * qustrchr(QStringView, ushort)
+
+/*
+
+ */
+func Qustrchr(str QStringView_ITF /*123*/, ch uint16) unsafe.Pointer /*666*/ {
+	var convArg0 unsafe.Pointer
+	if str != nil && str.QStringView_PTR() != nil {
+		convArg0 = str.QStringView_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate8qustrchrE11QStringViewt", qtrt.FFI_TYPE_POINTER, convArg0, ch)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
+// /usr/include/qt/QtCore/qstringalgorithms.h:88
+// index:0
+// Invalid Visibility=Default Availability=Available
+// [1] bool isLatin1(QLatin1String)
+
+/*
+
+ */
+func IsLatin1(s QLatin1String_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate8isLatin1E13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstring.h:207
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool isLatin1(QLatin1String)
+
+/*
+
+ */
+func IsLatin11(arg0 QLatin1String_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QLatin1String_PTR() != nil {
+		convArg0 = arg0.QLatin1String_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate8isLatin1E13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstringalgorithms.h:89
+// index:2
+// Invalid Visibility=Default Availability=Available
+// [1] bool isLatin1(QStringView)
+
+/*
+
+ */
+func IsLatin12(s QStringView_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringView_PTR() != nil {
+		convArg0 = s.QStringView_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate8isLatin1E11QStringView", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstringalgorithms.h:75
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, QLatin1String, Qt::CaseSensitivity)
@@ -4476,7 +5238,7 @@ func EndsWith(haystack QLatin1String_ITF /*123*/, needle QLatin1String_ITF /*123
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:73
+// /usr/include/qt/QtCore/qstringalgorithms.h:74
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, QStringView, Qt::CaseSensitivity)
@@ -4498,7 +5260,7 @@ func EndsWith1(haystack QLatin1String_ITF /*123*/, needle QStringView_ITF /*123*
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:71
+// /usr/include/qt/QtCore/qstringalgorithms.h:72
 // index:2
 // Invalid Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, QStringView, Qt::CaseSensitivity)
@@ -4520,7 +5282,7 @@ func EndsWith2(haystack QStringView_ITF /*123*/, needle QStringView_ITF /*123*/,
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:72
+// /usr/include/qt/QtCore/qstringalgorithms.h:73
 // index:3
 // Invalid Visibility=Default Availability=Available
 // [1] bool endsWith(QStringView, QLatin1String, Qt::CaseSensitivity)
@@ -4542,7 +5304,40 @@ func EndsWith3(haystack QStringView_ITF /*123*/, needle QLatin1String_ITF /*123*
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:77
+// /usr/include/qt/QtCore/qstring.h:1871
+// index:0
+// Invalid inline Visibility=Default Availability=Available
+// [8] const QString & asString(const QString &)
+
+/*
+
+ */
+func AsString(s string) string {
+	var tmpArg0 = NewQString5(s)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate8asStringERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qstring.h:1872
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [8] QString && asString(QString &&)
+
+/*
+
+ */
+func AsString1(s unsafe.Pointer /*333*/) unsafe.Pointer /*333*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate8asStringEO7QString", qtrt.FFI_TYPE_POINTER, s)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv)) //777
+}
+
+// /usr/include/qt/QtCore/qstringalgorithms.h:78
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QLatin1String trimmed(QLatin1String)
@@ -4562,7 +5357,7 @@ func Trimmed(s QLatin1String_ITF /*123*/) *QLatin1String /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:76
+// /usr/include/qt/QtCore/qstringalgorithms.h:77
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [16] QStringView trimmed(QStringView)
@@ -4582,7 +5377,43 @@ func Trimmed1(s QStringView_ITF /*123*/) *QStringView /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:170
+// /usr/include/qt/QtCore/qstringalgorithms.h:86
+// index:0
+// Invalid Visibility=Default Availability=Available
+// [1] bool isAscii(QLatin1String)
+
+/*
+
+ */
+func IsAscii(s QLatin1String_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QLatin1String_PTR() != nil {
+		convArg0 = s.QLatin1String_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate7isAsciiE13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstringalgorithms.h:87
+// index:1
+// Invalid Visibility=Default Availability=Available
+// [1] bool isAscii(QStringView)
+
+/*
+
+ */
+func IsAscii1(s QStringView_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if s != nil && s.QStringView_PTR() != nil {
+		convArg0 = s.QStringView_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate7isAsciiE11QStringView", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstringlist.h:172
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void QStringList_replaceInStrings(QStringList *, const QString &, const QString &, Qt::CaseSensitivity)
@@ -4603,7 +5434,7 @@ func QStringList_replaceInStrings(that QStringList_ITF /*777 QStringList **/, be
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:174
+// /usr/include/qt/QtCore/qstringlist.h:176
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [-2] void QStringList_replaceInStrings(QStringList *, const QRegExp &, const QString &)
@@ -4626,7 +5457,7 @@ func QStringList_replaceInStrings1(that QStringList_ITF /*777 QStringList **/, r
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:184
+// /usr/include/qt/QtCore/qstringlist.h:185
 // index:2
 // Invalid Visibility=Default Availability=Available
 // [-2] void QStringList_replaceInStrings(QStringList *, const QRegularExpression &, const QString &)
@@ -4649,7 +5480,7 @@ func QStringList_replaceInStrings2(that QStringList_ITF /*777 QStringList **/, r
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:162
+// /usr/include/qt/QtCore/qstringlist.h:161
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int QStringList_removeDuplicates(QStringList *)
@@ -4667,7 +5498,7 @@ func QStringList_removeDuplicates(that QStringList_ITF /*777 QStringList **/) in
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:177
+// /usr/include/qt/QtCore/qstringlist.h:179
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int QStringList_lastIndexOf(const QStringList *, const QRegExp &, int)
@@ -4689,7 +5520,7 @@ func QStringList_lastIndexOf(that QStringList_ITF /*777 const QStringList **/, r
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:187
+// /usr/include/qt/QtCore/qstringlist.h:188
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [4] int QStringList_lastIndexOf(const QStringList *, const QRegularExpression &, int)
@@ -4711,7 +5542,7 @@ func QStringList_lastIndexOf1(that QStringList_ITF /*777 const QStringList **/, 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:179
+// /usr/include/qt/QtCore/qstringlist.h:181
 // index:2
 // Invalid Visibility=Default Availability=Available
 // [4] int QStringList_lastIndexOf(const QStringList *, QRegExp &, int)
@@ -4733,7 +5564,7 @@ func QStringList_lastIndexOf2(that QStringList_ITF /*777 const QStringList **/, 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobject.h:623
+// /usr/include/qt/QtCore/qobject.h:612
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [16] QObject & deref_for_methodcall(QObject &)
@@ -4753,7 +5584,7 @@ func Deref_for_methodcall(o QObject_ITF) *QObject {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qobject.h:624
+// /usr/include/qt/QtCore/qobject.h:613
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [16] QObject & deref_for_methodcall(QObject *)
@@ -4793,7 +5624,7 @@ func QStringList_contains(that QStringList_ITF /*777 const QStringList **/, str 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:169
+// /usr/include/qt/QtCore/qstringlist.h:171
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [1] bool QStringList_contains(const QStringList *, QLatin1String, Qt::CaseSensitivity)
@@ -4815,7 +5646,29 @@ func QStringList_contains1(that QStringList_ITF /*777 const QStringList **/, str
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:176
+// /usr/include/qt/QtCore/qstringlist.h:170
+// index:2
+// Invalid Visibility=Default Availability=Available
+// [1] bool QStringList_contains(const QStringList *, QStringView, Qt::CaseSensitivity)
+
+/*
+
+ */
+func QStringList_contains2(that QStringList_ITF /*777 const QStringList **/, str QStringView_ITF /*123*/, cs int) bool {
+	var convArg0 unsafe.Pointer
+	if that != nil && that.QStringList_PTR() != nil {
+		convArg0 = that.QStringList_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if str != nil && str.QStringView_PTR() != nil {
+		convArg1 = str.QStringView_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate20QStringList_containsEPK11QStringList11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, cs)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qstringlist.h:178
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int QStringList_indexOf(const QStringList *, const QRegExp &, int)
@@ -4837,7 +5690,7 @@ func QStringList_indexOf(that QStringList_ITF /*777 const QStringList **/, rx QR
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:186
+// /usr/include/qt/QtCore/qstringlist.h:187
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [4] int QStringList_indexOf(const QStringList *, const QRegularExpression &, int)
@@ -4859,7 +5712,7 @@ func QStringList_indexOf1(that QStringList_ITF /*777 const QStringList **/, re Q
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:178
+// /usr/include/qt/QtCore/qstringlist.h:180
 // index:2
 // Invalid Visibility=Default Availability=Available
 // [4] int QStringList_indexOf(const QStringList *, QRegExp &, int)
@@ -4903,7 +5756,7 @@ func QByteArrayList_join(that QByteArrayList_ITF /*777 const QByteArrayList **/,
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:81
+// /usr/include/qt/QtCore/qstringalgorithms.h:82
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QByteArray convertToLocal8Bit(QStringView)
@@ -4923,7 +5776,7 @@ func ConvertToLocal8Bit(str QStringView_ITF /*123*/) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:165
+// /usr/include/qt/QtCore/qstringlist.h:164
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QStringList QStringList_filter(const QStringList *, const QString &, Qt::CaseSensitivity)
@@ -4945,7 +5798,7 @@ func QStringList_filter(that QStringList_ITF /*777 const QStringList **/, str st
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:175
+// /usr/include/qt/QtCore/qstringlist.h:177
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [8] QStringList QStringList_filter(const QStringList *, const QRegExp &)
@@ -4969,7 +5822,7 @@ func QStringList_filter1(that QStringList_ITF /*777 const QStringList **/, re QR
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:185
+// /usr/include/qt/QtCore/qstringlist.h:186
 // index:2
 // Invalid Visibility=Default Availability=Available
 // [8] QStringList QStringList_filter(const QStringList *, const QRegularExpression &)
@@ -4993,7 +5846,7 @@ func QStringList_filter2(that QStringList_ITF /*777 const QStringList **/, re QR
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:161
+// /usr/include/qt/QtCore/qstringlist.h:160
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void QStringList_sort(QStringList *, Qt::CaseSensitivity)
@@ -5010,7 +5863,7 @@ func QStringList_sort(that QStringList_ITF /*777 QStringList **/, cs int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:164
+// /usr/include/qt/QtCore/qstringlist.h:163
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString QStringList_join(const QStringList &, QLatin1String)
@@ -5035,7 +5888,7 @@ func QStringList_join(list QStringList_ITF, sep QLatin1String_ITF /*123*/) strin
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:163
+// /usr/include/qt/QtCore/qstringlist.h:162
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [8] QString QStringList_join(const QStringList *, const QChar *, int)
@@ -5060,7 +5913,7 @@ func QStringList_join1(that QStringList_ITF /*777 const QStringList **/, sep QCh
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:79
+// /usr/include/qt/QtCore/qstringalgorithms.h:80
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QByteArray convertToLatin1(QStringView)
@@ -5080,7 +5933,7 @@ func ConvertToLatin1(str QStringView_ITF /*123*/) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:63
+// /usr/include/qt/QtCore/qstringalgorithms.h:64
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int compareStrings(QLatin1String, QLatin1String, Qt::CaseSensitivity)
@@ -5102,7 +5955,7 @@ func CompareStrings(lhs QLatin1String_ITF /*123*/, rhs QLatin1String_ITF /*123*/
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:62
+// /usr/include/qt/QtCore/qstringalgorithms.h:63
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [4] int compareStrings(QLatin1String, QStringView, Qt::CaseSensitivity)
@@ -5124,7 +5977,7 @@ func CompareStrings1(lhs QLatin1String_ITF /*123*/, rhs QStringView_ITF /*123*/,
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:60
+// /usr/include/qt/QtCore/qstringalgorithms.h:61
 // index:2
 // Invalid Visibility=Default Availability=Available
 // [4] int compareStrings(QStringView, QStringView, Qt::CaseSensitivity)
@@ -5146,7 +5999,7 @@ func CompareStrings2(lhs QStringView_ITF /*123*/, rhs QStringView_ITF /*123*/, c
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:61
+// /usr/include/qt/QtCore/qstringalgorithms.h:62
 // index:3
 // Invalid Visibility=Default Availability=Available
 // [4] int compareStrings(QStringView, QLatin1String, Qt::CaseSensitivity)
@@ -5168,7 +6021,25 @@ func CompareStrings3(lhs QStringView_ITF /*123*/, rhs QLatin1String_ITF /*123*/,
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qmetatype.h:1594
+// /usr/include/qt/QtCore/qstringalgorithms.h:84
+// index:0
+// Invalid Visibility=Default Availability=Available
+// [1] bool isRightToLeft(QStringView)
+
+/*
+
+ */
+func IsRightToLeft(string QStringView_ITF /*123*/) bool {
+	var convArg0 unsafe.Pointer
+	if string != nil && string.QStringView_PTR() != nil {
+		convArg0 = string.QStringView_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate13isRightToLeftE11QStringView", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qmetatype.h:1638
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool isBuiltinType(const QByteArray &)
@@ -5186,7 +6057,7 @@ func IsBuiltinType(type_ QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:80
+// /usr/include/qt/QtCore/qstringalgorithms.h:81
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QByteArray convertToUtf8(QStringView)
@@ -5206,7 +6077,7 @@ func ConvertToUtf8(str QStringView_ITF /*123*/) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:69
+// /usr/include/qt/QtCore/qstringalgorithms.h:70
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, QLatin1String, Qt::CaseSensitivity)
@@ -5228,7 +6099,7 @@ func StartsWith(haystack QLatin1String_ITF /*123*/, needle QLatin1String_ITF /*1
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:68
+// /usr/include/qt/QtCore/qstringalgorithms.h:69
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, QStringView, Qt::CaseSensitivity)
@@ -5250,7 +6121,7 @@ func StartsWith1(haystack QLatin1String_ITF /*123*/, needle QStringView_ITF /*12
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:66
+// /usr/include/qt/QtCore/qstringalgorithms.h:67
 // index:2
 // Invalid Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, QStringView, Qt::CaseSensitivity)
@@ -5272,7 +6143,7 @@ func StartsWith2(haystack QStringView_ITF /*123*/, needle QStringView_ITF /*123*
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstringalgorithms.h:67
+// /usr/include/qt/QtCore/qstringalgorithms.h:68
 // index:3
 // Invalid Visibility=Default Availability=Available
 // [1] bool startsWith(QStringView, QLatin1String, Qt::CaseSensitivity)
@@ -5294,7 +6165,327 @@ func StartsWith3(haystack QStringView_ITF /*123*/, needle QLatin1String_ITF /*12
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1754
+// /usr/include/qt/QtCore/qnamespace.h:1559
+// index:33
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(MatchFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or33(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_9MatchFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1544
+// index:34
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(ItemFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or34(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_8ItemFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1300
+// index:35
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(Edges::enum_type, int)
+
+/*
+
+ */
+func Operator_or35(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_4EdgeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1584
+// index:36
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(TextInteractionFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or36(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_19TextInteractionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:565
+// index:37
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(ImageConversionFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or37(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_19ImageConversionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:346
+// index:38
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(ScreenOrientations::enum_type, int)
+
+/*
+
+ */
+func Operator_or38(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_17ScreenOrientationEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:110
+// index:39
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(KeyboardModifiers::enum_type, int)
+
+/*
+
+ */
+func Operator_or39(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_16KeyboardModifierEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1403
+// index:40
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(InputMethodQueries::enum_type, int)
+
+/*
+
+ */
+func Operator_or40(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_16InputMethodQueryEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1636
+// index:41
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(TouchPointStates::enum_type, int)
+
+/*
+
+ */
+func Operator_or41(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_15TouchPointStateEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1438
+// index:42
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(InputMethodHints::enum_type, int)
+
+/*
+
+ */
+func Operator_or42(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_15InputMethodHintEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1723
+// index:43
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(MouseEventFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or43(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_14MouseEventFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1223
+// index:44
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(DockWidgetAreas::enum_type, int)
+
+/*
+
+ */
+func Operator_or44(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_14DockWidgetAreaEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:231
+// index:45
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(Alignment::enum_type, int)
+
+/*
+
+ */
+func Operator_or45(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_13AlignmentFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:326
+// index:46
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(WindowStates::enum_type, int)
+
+/*
+
+ */
+func Operator_or46(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_11WindowStateEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1241
+// index:47
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(ToolBarAreas::enum_type, int)
+
+/*
+
+ */
+func Operator_or47(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_11ToolBarAreaEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:175
+// index:48
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(Orientations::enum_type, int)
+
+/*
+
+ */
+func Operator_or48(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_11OrientationEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:167
+// index:49
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(MouseButtons::enum_type, int)
+
+/*
+
+ */
+func Operator_or49(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_11MouseButtonEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1668
+// index:50
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(GestureFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or50(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_11GestureFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:315
+// index:51
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(WindowFlags::enum_type, int)
+
+/*
+
+ */
+func Operator_or51(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_10WindowTypeEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1489
+// index:52
+// Invalid inline Visibility=Default Availability=Available
+// [4] QIncompatibleFlag operator|(DropActions::enum_type, int)
+
+/*
+
+ */
+func Operator_or52(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN2QtorENS_10DropActionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qnamespace.h:1810
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TimerType)
@@ -5308,7 +6499,7 @@ func Qt_getEnumMetaObject(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1725
+// /usr/include/qt/QtCore/qnamespace.h:1781
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::SortOrder)
@@ -5322,7 +6513,7 @@ func Qt_getEnumMetaObject1(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1710
+// /usr/include/qt/QtCore/qnamespace.h:1766
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::DayOfWeek)
@@ -5336,7 +6527,7 @@ func Qt_getEnumMetaObject2(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1679
+// /usr/include/qt/QtCore/qnamespace.h:1735
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ArrowType)
@@ -5350,7 +6541,7 @@ func Qt_getEnumMetaObject3(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1709
+// /usr/include/qt/QtCore/qnamespace.h:1765
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TimeSpec)
@@ -5364,7 +6555,7 @@ func Qt_getEnumMetaObject4(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1698
+// /usr/include/qt/QtCore/qnamespace.h:1754
 // index:5
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TextFlag)
@@ -5378,7 +6569,7 @@ func Qt_getEnumMetaObject5(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1689
+// /usr/include/qt/QtCore/qnamespace.h:1745
 // index:6
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::SizeMode)
@@ -5392,7 +6583,7 @@ func Qt_getEnumMetaObject6(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1694
+// /usr/include/qt/QtCore/qnamespace.h:1750
 // index:7
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::SizeHint)
@@ -5406,7 +6597,7 @@ func Qt_getEnumMetaObject7(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1681
+// /usr/include/qt/QtCore/qnamespace.h:1737
 // index:8
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::PenStyle)
@@ -5420,7 +6611,7 @@ func Qt_getEnumMetaObject8(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1686
+// /usr/include/qt/QtCore/qnamespace.h:1742
 // index:9
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::MaskMode)
@@ -5434,7 +6625,7 @@ func Qt_getEnumMetaObject9(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1685
+// /usr/include/qt/QtCore/qnamespace.h:1741
 // index:10
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::FillRule)
@@ -5448,7 +6639,7 @@ func Qt_getEnumMetaObject10(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1691
+// /usr/include/qt/QtCore/qnamespace.h:1747
 // index:11
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::Corner)
@@ -5462,7 +6653,7 @@ func Qt_getEnumMetaObject11(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1687
+// /usr/include/qt/QtCore/qnamespace.h:1743
 // index:12
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::BGMode)
@@ -5476,7 +6667,7 @@ func Qt_getEnumMetaObject12(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1692
+// /usr/include/qt/QtCore/qnamespace.h:1748
 // index:13
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::Edge)
@@ -5490,7 +6681,7 @@ func Qt_getEnumMetaObject13(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1690
+// /usr/include/qt/QtCore/qnamespace.h:1746
 // index:14
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::Axis)
@@ -5504,7 +6695,7 @@ func Qt_getEnumMetaObject14(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1716
+// /usr/include/qt/QtCore/qnamespace.h:1772
 // index:15
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::Key)
@@ -5518,7 +6709,7 @@ func Qt_getEnumMetaObject15(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1721
+// /usr/include/qt/QtCore/qnamespace.h:1777
 // index:16
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ItemSelectionOperation)
@@ -5532,7 +6723,7 @@ func Qt_getEnumMetaObject16(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1734
+// /usr/include/qt/QtCore/qnamespace.h:1790
 // index:17
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ApplicationAttribute)
@@ -5546,7 +6737,7 @@ func Qt_getEnumMetaObject17(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1718
+// /usr/include/qt/QtCore/qnamespace.h:1774
 // index:18
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TextInteractionFlag)
@@ -5560,7 +6751,7 @@ func Qt_getEnumMetaObject18(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1714
+// /usr/include/qt/QtCore/qnamespace.h:1770
 // index:19
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TransformationMode)
@@ -5574,7 +6765,7 @@ func Qt_getEnumMetaObject19(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1744
+// /usr/include/qt/QtCore/qnamespace.h:1800
 // index:20
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ScreenOrientation)
@@ -5588,7 +6779,7 @@ func Qt_getEnumMetaObject20(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1751
+// /usr/include/qt/QtCore/qnamespace.h:1807
 // index:21
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::NativeGestureType)
@@ -5602,7 +6793,7 @@ func Qt_getEnumMetaObject21(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1720
+// /usr/include/qt/QtCore/qnamespace.h:1776
 // index:22
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ItemSelectionMode)
@@ -5616,7 +6807,7 @@ func Qt_getEnumMetaObject22(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1678
+// /usr/include/qt/QtCore/qnamespace.h:1734
 // index:23
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ContextMenuPolicy)
@@ -5630,7 +6821,7 @@ func Qt_getEnumMetaObject23(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1759
+// /usr/include/qt/QtCore/qnamespace.h:1815
 // index:24
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TabFocusBehavior)
@@ -5644,7 +6835,7 @@ func Qt_getEnumMetaObject24(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1756
+// /usr/include/qt/QtCore/qnamespace.h:1812
 // index:25
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::MouseEventSource)
@@ -5658,7 +6849,7 @@ func Qt_getEnumMetaObject25(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1739
+// /usr/include/qt/QtCore/qnamespace.h:1795
 // index:26
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::InputMethodQuery)
@@ -5672,7 +6863,7 @@ func Qt_getEnumMetaObject26(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1747
+// /usr/include/qt/QtCore/qnamespace.h:1803
 // index:27
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ApplicationState)
@@ -5686,7 +6877,7 @@ func Qt_getEnumMetaObject27(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1733
+// /usr/include/qt/QtCore/qnamespace.h:1789
 // index:28
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::WidgetAttribute)
@@ -5700,7 +6891,7 @@ func Qt_getEnumMetaObject28(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1680
+// /usr/include/qt/QtCore/qnamespace.h:1736
 // index:29
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ToolButtonStyle)
@@ -5714,7 +6905,7 @@ func Qt_getEnumMetaObject29(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1717
+// /usr/include/qt/QtCore/qnamespace.h:1773
 // index:30
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ShortcutContext)
@@ -5728,7 +6919,7 @@ func Qt_getEnumMetaObject30(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1676
+// /usr/include/qt/QtCore/qnamespace.h:1732
 // index:31
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ScrollBarPolicy)
@@ -5742,7 +6933,7 @@ func Qt_getEnumMetaObject31(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1693
+// /usr/include/qt/QtCore/qnamespace.h:1749
 // index:32
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::LayoutDirection)
@@ -5756,7 +6947,7 @@ func Qt_getEnumMetaObject32(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1738
+// /usr/include/qt/QtCore/qnamespace.h:1794
 // index:33
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::InputMethodHint)
@@ -5770,7 +6961,7 @@ func Qt_getEnumMetaObject33(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1753
+// /usr/include/qt/QtCore/qnamespace.h:1809
 // index:34
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::CursorMoveStyle)
@@ -5784,7 +6975,7 @@ func Qt_getEnumMetaObject34(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1726
+// /usr/include/qt/QtCore/qnamespace.h:1782
 // index:35
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::CaseSensitivity)
@@ -5798,7 +6989,7 @@ func Qt_getEnumMetaObject35(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1713
+// /usr/include/qt/QtCore/qnamespace.h:1769
 // index:36
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::AspectRatioMode)
@@ -5812,7 +7003,7 @@ func Qt_getEnumMetaObject36(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1732
+// /usr/include/qt/QtCore/qnamespace.h:1788
 // index:37
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::WindowModality)
@@ -5826,7 +7017,7 @@ func Qt_getEnumMetaObject37(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1757
+// /usr/include/qt/QtCore/qnamespace.h:1813
 // index:38
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::MouseEventFlag)
@@ -5840,7 +7031,7 @@ func Qt_getEnumMetaObject38(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1704
+// /usr/include/qt/QtCore/qnamespace.h:1760
 // index:39
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::DockWidgetArea)
@@ -5854,7 +7045,7 @@ func Qt_getEnumMetaObject39(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1746
+// /usr/include/qt/QtCore/qnamespace.h:1802
 // index:40
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ConnectionType)
@@ -5868,7 +7059,7 @@ func Qt_getEnumMetaObject40(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1707
+// /usr/include/qt/QtCore/qnamespace.h:1763
 // index:41
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TextElideMode)
@@ -5882,7 +7073,7 @@ func Qt_getEnumMetaObject41(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1688
+// /usr/include/qt/QtCore/qnamespace.h:1744
 // index:42
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ClipOperation)
@@ -5896,7 +7087,7 @@ func Qt_getEnumMetaObject42(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1683
+// /usr/include/qt/QtCore/qnamespace.h:1739
 // index:43
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::PenJoinStyle)
@@ -5910,7 +7101,7 @@ func Qt_getEnumMetaObject43(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1724
+// /usr/include/qt/QtCore/qnamespace.h:1780
 // index:44
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ItemDataRole)
@@ -5924,7 +7115,7 @@ func Qt_getEnumMetaObject44(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1749
+// /usr/include/qt/QtCore/qnamespace.h:1805
 // index:45
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::GestureState)
@@ -5938,7 +7129,7 @@ func Qt_getEnumMetaObject45(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1741
+// /usr/include/qt/QtCore/qnamespace.h:1797
 // index:46
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::EnterKeyType)
@@ -5952,7 +7143,7 @@ func Qt_getEnumMetaObject46(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1758
+// /usr/include/qt/QtCore/qnamespace.h:1814
 // index:47
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ChecksumType)
@@ -5966,7 +7157,7 @@ func Qt_getEnumMetaObject47(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1731
+// /usr/include/qt/QtCore/qnamespace.h:1787
 // index:48
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::WindowState)
@@ -5980,7 +7171,7 @@ func Qt_getEnumMetaObject48(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1705
+// /usr/include/qt/QtCore/qnamespace.h:1761
 // index:49
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ToolBarArea)
@@ -5994,7 +7185,7 @@ func Qt_getEnumMetaObject49(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1755
+// /usr/include/qt/QtCore/qnamespace.h:1811
 // index:50
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ScrollPhase)
@@ -6008,7 +7199,7 @@ func Qt_getEnumMetaObject50(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1682
+// /usr/include/qt/QtCore/qnamespace.h:1738
 // index:51
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::PenCapStyle)
@@ -6022,7 +7213,7 @@ func Qt_getEnumMetaObject51(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1695
+// /usr/include/qt/QtCore/qnamespace.h:1751
 // index:52
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::Orientation)
@@ -6036,7 +7227,7 @@ func Qt_getEnumMetaObject52(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1712
+// /usr/include/qt/QtCore/qnamespace.h:1768
 // index:53
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::GlobalColor)
@@ -6050,7 +7241,7 @@ func Qt_getEnumMetaObject53(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1750
+// /usr/include/qt/QtCore/qnamespace.h:1806
 // index:54
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::GestureType)
@@ -6064,7 +7255,7 @@ func Qt_getEnumMetaObject54(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1737
+// /usr/include/qt/QtCore/qnamespace.h:1793
 // index:55
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::FocusReason)
@@ -6078,7 +7269,7 @@ func Qt_getEnumMetaObject55(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1677
+// /usr/include/qt/QtCore/qnamespace.h:1733
 // index:56
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::FocusPolicy)
@@ -6092,7 +7283,7 @@ func Qt_getEnumMetaObject56(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1711
+// /usr/include/qt/QtCore/qnamespace.h:1767
 // index:57
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::CursorShape)
@@ -6106,7 +7297,7 @@ func Qt_getEnumMetaObject57(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1730
+// /usr/include/qt/QtCore/qnamespace.h:1786
 // index:58
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::WindowType)
@@ -6120,7 +7311,7 @@ func Qt_getEnumMetaObject58(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1706
+// /usr/include/qt/QtCore/qnamespace.h:1762
 // index:59
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TextFormat)
@@ -6134,7 +7325,7 @@ func Qt_getEnumMetaObject59(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1696
+// /usr/include/qt/QtCore/qnamespace.h:1752
 // index:60
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::DropAction)
@@ -6148,7 +7339,7 @@ func Qt_getEnumMetaObject60(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1708
+// /usr/include/qt/QtCore/qnamespace.h:1764
 // index:61
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::DateFormat)
@@ -6162,7 +7353,7 @@ func Qt_getEnumMetaObject61(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1723
+// /usr/include/qt/QtCore/qnamespace.h:1779
 // index:62
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::CheckState)
@@ -6176,7 +7367,7 @@ func Qt_getEnumMetaObject62(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1684
+// /usr/include/qt/QtCore/qnamespace.h:1740
 // index:63
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::BrushStyle)
@@ -6190,7 +7381,7 @@ func Qt_getEnumMetaObject63(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1727
+// /usr/include/qt/QtCore/qnamespace.h:1783
 // index:64
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::MatchFlags)
@@ -6204,7 +7395,7 @@ func Qt_getEnumMetaObject64(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1722
+// /usr/include/qt/QtCore/qnamespace.h:1778
 // index:65
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ItemFlags)
@@ -6218,7 +7409,7 @@ func Qt_getEnumMetaObject65(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1701
+// /usr/include/qt/QtCore/qnamespace.h:1757
 // index:66
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::Edges)
@@ -6232,7 +7423,7 @@ func Qt_getEnumMetaObject66(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1719
+// /usr/include/qt/QtCore/qnamespace.h:1775
 // index:67
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TextInteractionFlags)
@@ -6246,7 +7437,7 @@ func Qt_getEnumMetaObject67(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1715
+// /usr/include/qt/QtCore/qnamespace.h:1771
 // index:68
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ImageConversionFlags)
@@ -6260,7 +7451,7 @@ func Qt_getEnumMetaObject68(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1745
+// /usr/include/qt/QtCore/qnamespace.h:1801
 // index:69
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ScreenOrientations)
@@ -6274,7 +7465,7 @@ func Qt_getEnumMetaObject69(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1728
+// /usr/include/qt/QtCore/qnamespace.h:1784
 // index:70
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::KeyboardModifiers)
@@ -6288,7 +7479,7 @@ func Qt_getEnumMetaObject70(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1742
+// /usr/include/qt/QtCore/qnamespace.h:1798
 // index:71
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::InputMethodQueries)
@@ -6302,7 +7493,7 @@ func Qt_getEnumMetaObject71(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1743
+// /usr/include/qt/QtCore/qnamespace.h:1799
 // index:72
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::TouchPointStates)
@@ -6316,7 +7507,7 @@ func Qt_getEnumMetaObject72(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1740
+// /usr/include/qt/QtCore/qnamespace.h:1796
 // index:73
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::InputMethodHints)
@@ -6330,7 +7521,7 @@ func Qt_getEnumMetaObject73(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1702
+// /usr/include/qt/QtCore/qnamespace.h:1758
 // index:74
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::DockWidgetAreas)
@@ -6344,7 +7535,7 @@ func Qt_getEnumMetaObject74(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1697
+// /usr/include/qt/QtCore/qnamespace.h:1753
 // index:75
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::Alignment)
@@ -6358,7 +7549,7 @@ func Qt_getEnumMetaObject75(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1736
+// /usr/include/qt/QtCore/qnamespace.h:1792
 // index:76
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::WindowStates)
@@ -6372,7 +7563,7 @@ func Qt_getEnumMetaObject76(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1703
+// /usr/include/qt/QtCore/qnamespace.h:1759
 // index:77
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::ToolBarAreas)
@@ -6386,7 +7577,7 @@ func Qt_getEnumMetaObject77(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1699
+// /usr/include/qt/QtCore/qnamespace.h:1755
 // index:78
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::Orientations)
@@ -6400,7 +7591,7 @@ func Qt_getEnumMetaObject78(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1729
+// /usr/include/qt/QtCore/qnamespace.h:1785
 // index:79
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::MouseButtons)
@@ -6414,7 +7605,7 @@ func Qt_getEnumMetaObject79(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1735
+// /usr/include/qt/QtCore/qnamespace.h:1791
 // index:80
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::WindowFlags)
@@ -6428,7 +7619,7 @@ func Qt_getEnumMetaObject80(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1700
+// /usr/include/qt/QtCore/qnamespace.h:1756
 // index:81
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getEnumMetaObject(Qt::DropActions)
@@ -6442,7 +7633,7 @@ func Qt_getEnumMetaObject81(arg0 int) *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1754
+// /usr/include/qt/QtCore/qnamespace.h:1810
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TimerType)
@@ -6456,7 +7647,7 @@ func Qt_getEnumName(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1725
+// /usr/include/qt/QtCore/qnamespace.h:1781
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::SortOrder)
@@ -6470,7 +7661,7 @@ func Qt_getEnumName1(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1710
+// /usr/include/qt/QtCore/qnamespace.h:1766
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::DayOfWeek)
@@ -6484,7 +7675,7 @@ func Qt_getEnumName2(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1679
+// /usr/include/qt/QtCore/qnamespace.h:1735
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ArrowType)
@@ -6498,7 +7689,7 @@ func Qt_getEnumName3(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1709
+// /usr/include/qt/QtCore/qnamespace.h:1765
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TimeSpec)
@@ -6512,7 +7703,7 @@ func Qt_getEnumName4(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1698
+// /usr/include/qt/QtCore/qnamespace.h:1754
 // index:5
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TextFlag)
@@ -6526,7 +7717,7 @@ func Qt_getEnumName5(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1689
+// /usr/include/qt/QtCore/qnamespace.h:1745
 // index:6
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::SizeMode)
@@ -6540,7 +7731,7 @@ func Qt_getEnumName6(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1694
+// /usr/include/qt/QtCore/qnamespace.h:1750
 // index:7
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::SizeHint)
@@ -6554,7 +7745,7 @@ func Qt_getEnumName7(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1681
+// /usr/include/qt/QtCore/qnamespace.h:1737
 // index:8
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::PenStyle)
@@ -6568,7 +7759,7 @@ func Qt_getEnumName8(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1686
+// /usr/include/qt/QtCore/qnamespace.h:1742
 // index:9
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::MaskMode)
@@ -6582,7 +7773,7 @@ func Qt_getEnumName9(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1685
+// /usr/include/qt/QtCore/qnamespace.h:1741
 // index:10
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::FillRule)
@@ -6596,7 +7787,7 @@ func Qt_getEnumName10(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1691
+// /usr/include/qt/QtCore/qnamespace.h:1747
 // index:11
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::Corner)
@@ -6610,7 +7801,7 @@ func Qt_getEnumName11(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1687
+// /usr/include/qt/QtCore/qnamespace.h:1743
 // index:12
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::BGMode)
@@ -6624,7 +7815,7 @@ func Qt_getEnumName12(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1692
+// /usr/include/qt/QtCore/qnamespace.h:1748
 // index:13
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::Edge)
@@ -6638,7 +7829,7 @@ func Qt_getEnumName13(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1690
+// /usr/include/qt/QtCore/qnamespace.h:1746
 // index:14
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::Axis)
@@ -6652,7 +7843,7 @@ func Qt_getEnumName14(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1716
+// /usr/include/qt/QtCore/qnamespace.h:1772
 // index:15
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::Key)
@@ -6666,7 +7857,7 @@ func Qt_getEnumName15(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1721
+// /usr/include/qt/QtCore/qnamespace.h:1777
 // index:16
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ItemSelectionOperation)
@@ -6680,7 +7871,7 @@ func Qt_getEnumName16(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1734
+// /usr/include/qt/QtCore/qnamespace.h:1790
 // index:17
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ApplicationAttribute)
@@ -6694,7 +7885,7 @@ func Qt_getEnumName17(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1718
+// /usr/include/qt/QtCore/qnamespace.h:1774
 // index:18
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TextInteractionFlag)
@@ -6708,7 +7899,7 @@ func Qt_getEnumName18(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1714
+// /usr/include/qt/QtCore/qnamespace.h:1770
 // index:19
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TransformationMode)
@@ -6722,7 +7913,7 @@ func Qt_getEnumName19(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1744
+// /usr/include/qt/QtCore/qnamespace.h:1800
 // index:20
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ScreenOrientation)
@@ -6736,7 +7927,7 @@ func Qt_getEnumName20(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1751
+// /usr/include/qt/QtCore/qnamespace.h:1807
 // index:21
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::NativeGestureType)
@@ -6750,7 +7941,7 @@ func Qt_getEnumName21(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1720
+// /usr/include/qt/QtCore/qnamespace.h:1776
 // index:22
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ItemSelectionMode)
@@ -6764,7 +7955,7 @@ func Qt_getEnumName22(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1678
+// /usr/include/qt/QtCore/qnamespace.h:1734
 // index:23
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ContextMenuPolicy)
@@ -6778,7 +7969,7 @@ func Qt_getEnumName23(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1759
+// /usr/include/qt/QtCore/qnamespace.h:1815
 // index:24
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TabFocusBehavior)
@@ -6792,7 +7983,7 @@ func Qt_getEnumName24(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1756
+// /usr/include/qt/QtCore/qnamespace.h:1812
 // index:25
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::MouseEventSource)
@@ -6806,7 +7997,7 @@ func Qt_getEnumName25(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1739
+// /usr/include/qt/QtCore/qnamespace.h:1795
 // index:26
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::InputMethodQuery)
@@ -6820,7 +8011,7 @@ func Qt_getEnumName26(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1747
+// /usr/include/qt/QtCore/qnamespace.h:1803
 // index:27
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ApplicationState)
@@ -6834,7 +8025,7 @@ func Qt_getEnumName27(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1733
+// /usr/include/qt/QtCore/qnamespace.h:1789
 // index:28
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::WidgetAttribute)
@@ -6848,7 +8039,7 @@ func Qt_getEnumName28(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1680
+// /usr/include/qt/QtCore/qnamespace.h:1736
 // index:29
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ToolButtonStyle)
@@ -6862,7 +8053,7 @@ func Qt_getEnumName29(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1717
+// /usr/include/qt/QtCore/qnamespace.h:1773
 // index:30
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ShortcutContext)
@@ -6876,7 +8067,7 @@ func Qt_getEnumName30(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1676
+// /usr/include/qt/QtCore/qnamespace.h:1732
 // index:31
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ScrollBarPolicy)
@@ -6890,7 +8081,7 @@ func Qt_getEnumName31(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1693
+// /usr/include/qt/QtCore/qnamespace.h:1749
 // index:32
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::LayoutDirection)
@@ -6904,7 +8095,7 @@ func Qt_getEnumName32(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1738
+// /usr/include/qt/QtCore/qnamespace.h:1794
 // index:33
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::InputMethodHint)
@@ -6918,7 +8109,7 @@ func Qt_getEnumName33(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1753
+// /usr/include/qt/QtCore/qnamespace.h:1809
 // index:34
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::CursorMoveStyle)
@@ -6932,7 +8123,7 @@ func Qt_getEnumName34(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1726
+// /usr/include/qt/QtCore/qnamespace.h:1782
 // index:35
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::CaseSensitivity)
@@ -6946,7 +8137,7 @@ func Qt_getEnumName35(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1713
+// /usr/include/qt/QtCore/qnamespace.h:1769
 // index:36
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::AspectRatioMode)
@@ -6960,7 +8151,7 @@ func Qt_getEnumName36(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1732
+// /usr/include/qt/QtCore/qnamespace.h:1788
 // index:37
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::WindowModality)
@@ -6974,7 +8165,7 @@ func Qt_getEnumName37(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1757
+// /usr/include/qt/QtCore/qnamespace.h:1813
 // index:38
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::MouseEventFlag)
@@ -6988,7 +8179,7 @@ func Qt_getEnumName38(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1704
+// /usr/include/qt/QtCore/qnamespace.h:1760
 // index:39
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::DockWidgetArea)
@@ -7002,7 +8193,7 @@ func Qt_getEnumName39(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1746
+// /usr/include/qt/QtCore/qnamespace.h:1802
 // index:40
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ConnectionType)
@@ -7016,7 +8207,7 @@ func Qt_getEnumName40(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1707
+// /usr/include/qt/QtCore/qnamespace.h:1763
 // index:41
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TextElideMode)
@@ -7030,7 +8221,7 @@ func Qt_getEnumName41(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1688
+// /usr/include/qt/QtCore/qnamespace.h:1744
 // index:42
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ClipOperation)
@@ -7044,7 +8235,7 @@ func Qt_getEnumName42(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1683
+// /usr/include/qt/QtCore/qnamespace.h:1739
 // index:43
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::PenJoinStyle)
@@ -7058,7 +8249,7 @@ func Qt_getEnumName43(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1724
+// /usr/include/qt/QtCore/qnamespace.h:1780
 // index:44
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ItemDataRole)
@@ -7072,7 +8263,7 @@ func Qt_getEnumName44(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1749
+// /usr/include/qt/QtCore/qnamespace.h:1805
 // index:45
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::GestureState)
@@ -7086,7 +8277,7 @@ func Qt_getEnumName45(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1741
+// /usr/include/qt/QtCore/qnamespace.h:1797
 // index:46
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::EnterKeyType)
@@ -7100,7 +8291,7 @@ func Qt_getEnumName46(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1758
+// /usr/include/qt/QtCore/qnamespace.h:1814
 // index:47
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ChecksumType)
@@ -7114,7 +8305,7 @@ func Qt_getEnumName47(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1731
+// /usr/include/qt/QtCore/qnamespace.h:1787
 // index:48
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::WindowState)
@@ -7128,7 +8319,7 @@ func Qt_getEnumName48(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1705
+// /usr/include/qt/QtCore/qnamespace.h:1761
 // index:49
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ToolBarArea)
@@ -7142,7 +8333,7 @@ func Qt_getEnumName49(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1755
+// /usr/include/qt/QtCore/qnamespace.h:1811
 // index:50
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ScrollPhase)
@@ -7156,7 +8347,7 @@ func Qt_getEnumName50(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1682
+// /usr/include/qt/QtCore/qnamespace.h:1738
 // index:51
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::PenCapStyle)
@@ -7170,7 +8361,7 @@ func Qt_getEnumName51(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1695
+// /usr/include/qt/QtCore/qnamespace.h:1751
 // index:52
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::Orientation)
@@ -7184,7 +8375,7 @@ func Qt_getEnumName52(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1712
+// /usr/include/qt/QtCore/qnamespace.h:1768
 // index:53
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::GlobalColor)
@@ -7198,7 +8389,7 @@ func Qt_getEnumName53(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1750
+// /usr/include/qt/QtCore/qnamespace.h:1806
 // index:54
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::GestureType)
@@ -7212,7 +8403,7 @@ func Qt_getEnumName54(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1737
+// /usr/include/qt/QtCore/qnamespace.h:1793
 // index:55
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::FocusReason)
@@ -7226,7 +8417,7 @@ func Qt_getEnumName55(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1677
+// /usr/include/qt/QtCore/qnamespace.h:1733
 // index:56
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::FocusPolicy)
@@ -7240,7 +8431,7 @@ func Qt_getEnumName56(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1711
+// /usr/include/qt/QtCore/qnamespace.h:1767
 // index:57
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::CursorShape)
@@ -7254,7 +8445,7 @@ func Qt_getEnumName57(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1730
+// /usr/include/qt/QtCore/qnamespace.h:1786
 // index:58
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::WindowType)
@@ -7268,7 +8459,7 @@ func Qt_getEnumName58(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1706
+// /usr/include/qt/QtCore/qnamespace.h:1762
 // index:59
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TextFormat)
@@ -7282,7 +8473,7 @@ func Qt_getEnumName59(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1696
+// /usr/include/qt/QtCore/qnamespace.h:1752
 // index:60
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::DropAction)
@@ -7296,7 +8487,7 @@ func Qt_getEnumName60(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1708
+// /usr/include/qt/QtCore/qnamespace.h:1764
 // index:61
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::DateFormat)
@@ -7310,7 +8501,7 @@ func Qt_getEnumName61(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1723
+// /usr/include/qt/QtCore/qnamespace.h:1779
 // index:62
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::CheckState)
@@ -7324,7 +8515,7 @@ func Qt_getEnumName62(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1684
+// /usr/include/qt/QtCore/qnamespace.h:1740
 // index:63
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::BrushStyle)
@@ -7338,7 +8529,7 @@ func Qt_getEnumName63(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1727
+// /usr/include/qt/QtCore/qnamespace.h:1783
 // index:64
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::MatchFlags)
@@ -7352,7 +8543,7 @@ func Qt_getEnumName64(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1722
+// /usr/include/qt/QtCore/qnamespace.h:1778
 // index:65
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ItemFlags)
@@ -7366,7 +8557,7 @@ func Qt_getEnumName65(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1701
+// /usr/include/qt/QtCore/qnamespace.h:1757
 // index:66
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::Edges)
@@ -7380,7 +8571,7 @@ func Qt_getEnumName66(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1719
+// /usr/include/qt/QtCore/qnamespace.h:1775
 // index:67
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TextInteractionFlags)
@@ -7394,7 +8585,7 @@ func Qt_getEnumName67(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1715
+// /usr/include/qt/QtCore/qnamespace.h:1771
 // index:68
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ImageConversionFlags)
@@ -7408,7 +8599,7 @@ func Qt_getEnumName68(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1745
+// /usr/include/qt/QtCore/qnamespace.h:1801
 // index:69
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ScreenOrientations)
@@ -7422,7 +8613,7 @@ func Qt_getEnumName69(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1728
+// /usr/include/qt/QtCore/qnamespace.h:1784
 // index:70
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::KeyboardModifiers)
@@ -7436,7 +8627,7 @@ func Qt_getEnumName70(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1742
+// /usr/include/qt/QtCore/qnamespace.h:1798
 // index:71
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::InputMethodQueries)
@@ -7450,7 +8641,7 @@ func Qt_getEnumName71(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1743
+// /usr/include/qt/QtCore/qnamespace.h:1799
 // index:72
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::TouchPointStates)
@@ -7464,7 +8655,7 @@ func Qt_getEnumName72(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1740
+// /usr/include/qt/QtCore/qnamespace.h:1796
 // index:73
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::InputMethodHints)
@@ -7478,7 +8669,7 @@ func Qt_getEnumName73(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1702
+// /usr/include/qt/QtCore/qnamespace.h:1758
 // index:74
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::DockWidgetAreas)
@@ -7492,7 +8683,7 @@ func Qt_getEnumName74(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1697
+// /usr/include/qt/QtCore/qnamespace.h:1753
 // index:75
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::Alignment)
@@ -7506,7 +8697,7 @@ func Qt_getEnumName75(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1736
+// /usr/include/qt/QtCore/qnamespace.h:1792
 // index:76
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::WindowStates)
@@ -7520,7 +8711,7 @@ func Qt_getEnumName76(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1703
+// /usr/include/qt/QtCore/qnamespace.h:1759
 // index:77
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::ToolBarAreas)
@@ -7534,7 +8725,7 @@ func Qt_getEnumName77(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1699
+// /usr/include/qt/QtCore/qnamespace.h:1755
 // index:78
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::Orientations)
@@ -7548,7 +8739,7 @@ func Qt_getEnumName78(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1729
+// /usr/include/qt/QtCore/qnamespace.h:1785
 // index:79
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::MouseButtons)
@@ -7562,7 +8753,7 @@ func Qt_getEnumName79(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1735
+// /usr/include/qt/QtCore/qnamespace.h:1791
 // index:80
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::WindowFlags)
@@ -7576,7 +8767,7 @@ func Qt_getEnumName80(arg0 int) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:1700
+// /usr/include/qt/QtCore/qnamespace.h:1756
 // index:81
 // Invalid inline Visibility=Default Availability=Available
 // [8] const char * qt_getEnumName(Qt::DropActions)
@@ -7626,11 +8817,11 @@ A safe strcmp() function.
 
 Compares str1 and str2. Returns a negative value if str1 is less than str2, 0 if str1 is equal to str2 or a positive value if str1 is greater than str2.
 
-Special case 1: Returns 0 if str1 and str2 are both 0.
+Special case 1: Returns 0 if str1 and str2 are both nullptr.
 
-Special case 2: Returns an arbitrary non-zero value if str1 is 0 or str2 is 0 (but not both).
+Special case 2: Returns an arbitrary non-zero value if str1 is nullptr or str2 is nullptr (but not both).
 
-See also qstrncmp(), qstricmp(), qstrnicmp(), and 8-bit Character Comparisons.
+See also qstrncmp(), qstricmp(), qstrnicmp(), 8-bit Character Comparisons, and QByteArray::compare().
 */
 func Qstrcmp(str1 string, str2 QByteArray_ITF) int {
 	var convArg0 = qtrt.CString(str1)
@@ -7644,7 +8835,7 @@ func Qstrcmp(str1 string, str2 QByteArray_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:843
+// /usr/include/qt/QtCore/qglobal.h:868
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qIsNull(float)
@@ -7658,7 +8849,7 @@ func QIsNull(f float32) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:827
+// /usr/include/qt/QtCore/qglobal.h:852
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qIsNull(double)
@@ -7672,7 +8863,7 @@ func QIsNull1(d float64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:807
+// /usr/include/qt/QtCore/qglobal.h:832
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qFuzzyCompare(float, float)
@@ -7686,7 +8877,7 @@ func QFuzzyCompare(p1 float32, p2 float32) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:802
+// /usr/include/qt/QtCore/qglobal.h:827
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qFuzzyCompare(double, double)
@@ -7700,7 +8891,7 @@ func QFuzzyCompare1(p1 float64, p2 float64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:817
+// /usr/include/qt/QtCore/qglobal.h:842
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qFuzzyIsNull(float)
@@ -7714,7 +8905,7 @@ func QFuzzyIsNull(f float32) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:812
+// /usr/include/qt/QtCore/qglobal.h:837
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qFuzzyIsNull(double)
@@ -7728,7 +8919,7 @@ func QFuzzyIsNull1(d float64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1143
+// /usr/include/qt/QtCore/qglobal.h:1162
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qunsetenv(const char *)
@@ -7744,7 +8935,7 @@ func Qunsetenv(varName string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:732
+// /usr/include/qt/QtCore/qglobal.h:776
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qt_assert(const char *, const char *, int)
@@ -7761,8 +8952,36 @@ func Qt_assert(assertion string, file string, line int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:101
+// /usr/include/qt/QtCore/qbytearray.h:102
 // index:0
+// Invalid Visibility=Default Availability=Available
+// [4] int qstrnicmp(const char *, qsizetype, const char *, qsizetype)
+
+/*
+A safe strnicmp() function.
+
+Compares at most len bytes of str1 and str2 ignoring the case of the characters. The encoding of the strings is assumed to be Latin-1.
+
+Returns a negative value if str1 is less than str2, 0 if str1 is equal to str2 or a positive value if str1 is greater than str2.
+
+Special case 1: Returns 0 if str1 and str2 are both nullptr.
+
+Special case 2: Returns a random non-zero value if str1 is nullptr or str2 is nullptr (but not both).
+
+See also qstrcmp(), qstrncmp(), qstricmp(), 8-bit Character Comparisons, and QByteArray::compare().
+*/
+func Qstrnicmp(arg0 string, arg1 int64, arg2 string, arg3 int64) int {
+	var convArg0 = qtrt.CString(arg0)
+	defer qtrt.FreeMem(convArg0)
+	var convArg2 = qtrt.CString(arg2)
+	defer qtrt.FreeMem(convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_Z9qstrnicmpPKcxS0_x", qtrt.FFI_TYPE_POINTER, convArg0, arg1, convArg2, arg3)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:101
+// index:1
 // Invalid Visibility=Default Availability=Available
 // [4] int qstrnicmp(const char *, const char *, uint)
 
@@ -7773,13 +8992,13 @@ Compares at most len bytes of str1 and str2 ignoring the case of the characters.
 
 Returns a negative value if str1 is less than str2, 0 if str1 is equal to str2 or a positive value if str1 is greater than str2.
 
-Special case 1: Returns 0 if str1 and str2 are both 0.
+Special case 1: Returns 0 if str1 and str2 are both nullptr.
 
-Special case 2: Returns a random non-zero value if str1 is 0 or str2 is 0 (but not both).
+Special case 2: Returns a random non-zero value if str1 is nullptr or str2 is nullptr (but not both).
 
-See also qstrcmp(), qstrncmp(), qstricmp(), and 8-bit Character Comparisons.
+See also qstrcmp(), qstrncmp(), qstricmp(), 8-bit Character Comparisons, and QByteArray::compare().
 */
-func Qstrnicmp(arg0 string, arg1 string, len_ uint) int {
+func Qstrnicmp1(arg0 string, arg1 string, len_ uint) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(arg1)
@@ -7817,6 +9036,22 @@ func QIsFinite1(d float64) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qfloat16.h:96
+// index:2
+// Invalid Visibility=Default Availability=Available
+// [1] bool qIsFinite(qfloat16)
+
+/*
+Returns true if the qfloat16 f is a finite number.
+
+See also qIsFinite.
+*/
+func QIsFinite2(f unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Z9qIsFinite8qfloat16", qtrt.FFI_TYPE_POINTER, f)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qhashfunctions.h:70
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -7831,7 +9066,7 @@ func QHashBits(p unsafe.Pointer /*666*/, size uint, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:685
+// /usr/include/qt/QtCore/qbytearray.h:702
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [8] QByteArray qCompress(const QByteArray &, int)
@@ -7853,7 +9088,7 @@ func QCompress(data QByteArray_ITF, compressionLevel int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:683
+// /usr/include/qt/QtCore/qbytearray.h:700
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [8] QByteArray qCompress(const uchar *, int, int)
@@ -7871,7 +9106,7 @@ func QCompress1(data unsafe.Pointer /*666*/, nbytes int, compressionLevel int) *
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:109
+// /usr/include/qt/QtCore/qbytearray.h:110
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [2] quint16 qChecksum(const char *, uint, Qt::ChecksumType)
@@ -7891,7 +9126,7 @@ func QChecksum(s string, len_ uint, standard int) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:108
+// /usr/include/qt/QtCore/qbytearray.h:109
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [2] quint16 qChecksum(const char *, uint)
@@ -7911,7 +9146,7 @@ func QChecksum1(s string, len_ uint) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qglobal.h:781
+// /usr/include/qt/QtCore/qglobal.h:806
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qBadAlloc()
@@ -7924,7 +9159,7 @@ func QBadAlloc() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:241
+// /usr/include/qt/QtCore/qtextstream.h:242
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & forcesign(QTextStream &)
@@ -7946,7 +9181,7 @@ func Forcesign(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:240
+// /usr/include/qt/QtCore/qtextstream.h:241
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & showbase(QTextStream &)
@@ -7976,7 +9211,7 @@ func Showbase(s QTextStream_ITF) *QTextStream {
 /*
 A safe strnlen() function.
 
-Returns the number of characters that precede the terminating '\0', but at most maxlen. If str is 0, returns 0.
+Returns the number of characters that precede the terminating '\0', but at most maxlen. If str is nullptr, returns 0.
 
 This function was introduced in  Qt 4.2.
 
@@ -7998,9 +9233,11 @@ func Qstrnlen(str string, maxlen uint) uint {
 /*
 A safe strncpy() function.
 
-Copies at most len bytes from src (stopping at len or the terminating '\0' whichever comes first) into dst and returns a pointer to dst. Guarantees that dst is '\0'-terminated. If src or dst is 0, returns 0 immediately.
+Copies at most len bytes from src (stopping at len or the terminating '\0' whichever comes first) into dst and returns a pointer to dst. Guarantees that dst is '\0'-terminated. If src or dst is nullptr, returns nullptr immediately.
 
 This function assumes that dst is at least len characters long.
+
+Note: If dst and src overlap, the behavior is undefined.
 
 Note: When compiling with Visual C++ compiler version 14.00 (Visual C++ 2005) or later, internally the function strncpy_s will be used.
 
@@ -8028,11 +9265,11 @@ Compares at most len bytes of str1 and str2.
 
 Returns a negative value if str1 is less than str2, 0 if str1 is equal to str2 or a positive value if str1 is greater than str2.
 
-Special case 1: Returns 0 if str1 and str2 are both 0.
+Special case 1: Returns 0 if str1 and str2 are both nullptr.
 
-Special case 2: Returns a random non-zero value if str1 is 0 or str2 is 0 (but not both).
+Special case 2: Returns a random non-zero value if str1 is nullptr or str2 is nullptr (but not both).
 
-See also qstrcmp(), qstricmp(), qstrnicmp(), and 8-bit Character Comparisons.
+See also qstrcmp(), qstricmp(), qstrnicmp(), 8-bit Character Comparisons, and QByteArray::compare().
 */
 func Qstrncmp(str1 string, str2 string, len_ uint) int {
 	var convArg0 = qtrt.CString(str1)
@@ -8056,11 +9293,11 @@ Compares str1 and str2 ignoring the case of the characters. The encoding of the 
 
 Returns a negative value if str1 is less than str2, 0 if str1 is equal to str2 or a positive value if str1 is greater than str2.
 
-Special case 1: Returns 0 if str1 and str2 are both 0.
+Special case 1: Returns 0 if str1 and str2 are both nullptr.
 
-Special case 2: Returns a random non-zero value if str1 is 0 or str2 is 0 (but not both).
+Special case 2: Returns a random non-zero value if str1 is nullptr or str2 is nullptr (but not both).
 
-See also qstrcmp(), qstrncmp(), qstrnicmp(), and 8-bit Character Comparisons.
+See also qstrcmp(), qstrncmp(), qstrnicmp(), 8-bit Character Comparisons, and QByteArray::compare().
 */
 func Qstricmp(arg0 string, arg1 string) int {
 	var convArg0 = qtrt.CString(arg0)
@@ -8072,7 +9309,7 @@ func Qstricmp(arg0 string, arg1 string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:544
+// /usr/include/qt/QtCore/qglobal.h:590
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [8] qint64 qRound64(float)
@@ -8086,7 +9323,7 @@ func QRound64(d float32) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qglobal.h:542
+// /usr/include/qt/QtCore/qglobal.h:588
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [8] qint64 qRound64(double)
@@ -8100,7 +9337,23 @@ func QRound641(d float64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1150
+// /usr/include/qt/QtCore/qfloat16.h:102
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [8] qint64 qRound64(qfloat16)
+
+/*
+Rounds value to the nearest 64-bit integer.
+
+See also qRound64.
+*/
+func QRound642(d unsafe.Pointer /*444*/) int64 {
+	rv, err := qtrt.InvokeQtFunc6("_Z8qRound648qfloat16", qtrt.FFI_TYPE_POINTER, d)
+	qtrt.ErrPrint(err, rv)
+	return int64(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qglobal.h:1169
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qIntCast(float)
@@ -8114,7 +9367,7 @@ func QIntCast(f float32) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1149
+// /usr/include/qt/QtCore/qglobal.h:1168
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qIntCast(double)
@@ -8124,6 +9377,20 @@ func QIntCast(f float32) int {
  */
 func QIntCast1(f float64) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z8qIntCastd", qtrt.FFI_TYPE_POINTER, f)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:123
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [4] int qIntCast(qfloat16)
+
+/*
+
+ */
+func QIntCast2(f unsafe.Pointer /*444*/) int {
+	rv, err := qtrt.InvokeQtFunc6("_Z8qIntCast8qfloat16", qtrt.FFI_TYPE_POINTER, f)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -8156,7 +9423,7 @@ func QFastCos(x float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qcoreapplication.h:261
+// /usr/include/qt/QtCore/qcoreapplication.h:253
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qAppName()
@@ -8173,7 +9440,7 @@ func QAppName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qglobal.h:647
+// /usr/include/qt/QtCore/qglobal.h:693
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void qt_noop()
@@ -8212,7 +9479,7 @@ func Qt_hash(key QStringView_ITF /*123*/, chained uint) uint {
 /*
 A safe strlen() function.
 
-Returns the number of characters that precede the terminating '\0', or 0 if str is 0.
+Returns the number of characters that precede the terminating '\0', or 0 if str is nullptr.
 
 See also qstrnlen().
 */
@@ -8232,7 +9499,7 @@ func Qstrlen(str string) uint {
 /*
 Returns a duplicate string.
 
-Allocates space for a copy of src, copies it, and returns a pointer to the copy. If src is 0, it immediately returns 0.
+Allocates space for a copy of src, copies it, and returns a pointer to the copy. If src is nullptr, it immediately returns nullptr.
 
 Ownership is passed to the caller, so the returned string must be deleted using delete[].
 */
@@ -8250,9 +9517,11 @@ func Qstrdup(arg0 string) string {
 // [8] char * qstrcpy(char *, const char *)
 
 /*
-Copies all the characters up to and including the '\0' from src into dst and returns a pointer to dst. If src is 0, it immediately returns 0.
+Copies all the characters up to and including the '\0' from src into dst and returns a pointer to dst. If src is nullptr, it immediately returns nullptr.
 
 This function assumes that dst is large enough to hold the contents of src.
+
+Note: If dst and src overlap, the behavior is undefined.
 
 See also qstrncpy().
 */
@@ -8276,11 +9545,11 @@ A safe strcmp() function.
 
 Compares str1 and str2. Returns a negative value if str1 is less than str2, 0 if str1 is equal to str2 or a positive value if str1 is greater than str2.
 
-Special case 1: Returns 0 if str1 and str2 are both 0.
+Special case 1: Returns 0 if str1 and str2 are both nullptr.
 
-Special case 2: Returns an arbitrary non-zero value if str1 is 0 or str2 is 0 (but not both).
+Special case 2: Returns an arbitrary non-zero value if str1 is nullptr or str2 is nullptr (but not both).
 
-See also qstrncmp(), qstricmp(), qstrnicmp(), and 8-bit Character Comparisons.
+See also qstrncmp(), qstricmp(), qstrnicmp(), 8-bit Character Comparisons, and QByteArray::compare().
 */
 func Qstrcmp1(str1 QByteArray_ITF, str2 QByteArray_ITF) int {
 	var convArg0 unsafe.Pointer
@@ -8306,11 +9575,11 @@ A safe strcmp() function.
 
 Compares str1 and str2. Returns a negative value if str1 is less than str2, 0 if str1 is equal to str2 or a positive value if str1 is greater than str2.
 
-Special case 1: Returns 0 if str1 and str2 are both 0.
+Special case 1: Returns 0 if str1 and str2 are both nullptr.
 
-Special case 2: Returns an arbitrary non-zero value if str1 is 0 or str2 is 0 (but not both).
+Special case 2: Returns an arbitrary non-zero value if str1 is nullptr or str2 is nullptr (but not both).
 
-See also qstrncmp(), qstricmp(), qstrnicmp(), and 8-bit Character Comparisons.
+See also qstrncmp(), qstricmp(), qstrnicmp(), 8-bit Character Comparisons, and QByteArray::compare().
 */
 func Qstrcmp2(str1 QByteArray_ITF, str2 string) int {
 	var convArg0 unsafe.Pointer
@@ -8334,11 +9603,11 @@ A safe strcmp() function.
 
 Compares str1 and str2. Returns a negative value if str1 is less than str2, 0 if str1 is equal to str2 or a positive value if str1 is greater than str2.
 
-Special case 1: Returns 0 if str1 and str2 are both 0.
+Special case 1: Returns 0 if str1 and str2 are both nullptr.
 
-Special case 2: Returns an arbitrary non-zero value if str1 is 0 or str2 is 0 (but not both).
+Special case 2: Returns an arbitrary non-zero value if str1 is nullptr or str2 is nullptr (but not both).
 
-See also qstrncmp(), qstricmp(), qstrnicmp(), and 8-bit Character Comparisons.
+See also qstrncmp(), qstricmp(), qstrnicmp(), 8-bit Character Comparisons, and QByteArray::compare().
 */
 func Qstrcmp3(str1 string, str2 string) int {
 	var convArg0 = qtrt.CString(str1)
@@ -8350,7 +9619,7 @@ func Qstrcmp3(str1 string, str2 string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1142
+// /usr/include/qt/QtCore/qglobal.h:1161
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qputenv(const char *, const QByteArray &)
@@ -8370,7 +9639,7 @@ func Qputenv(varName string, value QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1134
+// /usr/include/qt/QtCore/qglobal.h:1157
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QByteArray qgetenv(const char *)
@@ -8388,7 +9657,21 @@ func Qgetenv(varName string) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1051
+// /usr/include/qt/QtCore/qfloat16.h:118
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool qIsNull(qfloat16)
+
+/*
+
+ */
+func QIsNull2(f unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Z7qIsNull8qfloat16", qtrt.FFI_TYPE_POINTER, f)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qglobal.h:1074
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qtTrId(const char *, int)
@@ -8407,7 +9690,7 @@ func QtTrId(id string, n int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1155
+// /usr/include/qt/QtCore/qglobal.h:1174
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qsrand(uint)
@@ -8420,7 +9703,7 @@ func Qsrand(seed uint) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qglobal.h:539
+// /usr/include/qt/QtCore/qglobal.h:585
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qRound(float)
@@ -8434,7 +9717,7 @@ func QRound(d float32) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:537
+// /usr/include/qt/QtCore/qglobal.h:583
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] int qRound(double)
@@ -8444,6 +9727,22 @@ func QRound(d float32) int {
  */
 func QRound1(d float64) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qRoundd", qtrt.FFI_TYPE_POINTER, d)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:99
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [4] int qRound(qfloat16)
+
+/*
+Rounds value to the nearest integer.
+
+See also qRound.
+*/
+func QRound2(d unsafe.Pointer /*444*/) int {
+	rv, err := qtrt.InvokeQtFunc6("_Z6qRound8qfloat16", qtrt.FFI_TYPE_POINTER, d)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -8476,6 +9775,22 @@ func QIsNaN1(d float64) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qfloat16.h:95
+// index:2
+// Invalid Visibility=Default Availability=Available
+// [1] bool qIsNaN(qfloat16)
+
+/*
+Returns true if the qfloat16 f is not a number (NaN).
+
+See also qIsNaN.
+*/
+func QIsNaN2(f unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Z6qIsNaN8qfloat16", qtrt.FFI_TYPE_POINTER, f)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qnumeric.h:51
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -8500,6 +9815,22 @@ func QIsInf(f float32) bool {
  */
 func QIsInf1(d float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qIsInfd", qtrt.FFI_TYPE_POINTER, d)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:94
+// index:2
+// Invalid Visibility=Default Availability=Available
+// [1] bool qIsInf(qfloat16)
+
+/*
+Returns true if the qfloat16 f is equivalent to infinity.
+
+See also qIsInf.
+*/
+func QIsInf2(f unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Z6qIsInf8qfloat16", qtrt.FFI_TYPE_POINTER, f)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
@@ -8532,7 +9863,7 @@ func QAtan2(y float64, x float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:257
+// /usr/include/qt/QtCore/qtextstream.h:258
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & center(QTextStream &)
@@ -8554,7 +9885,7 @@ func Center(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:256
+// /usr/include/qt/QtCore/qtextstream.h:257
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & right(QTextStream &)
@@ -8576,7 +9907,7 @@ func Right(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:261
+// /usr/include/qt/QtCore/qtextstream.h:262
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & reset(QTextStream &)
@@ -8596,7 +9927,7 @@ func Reset(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1156
+// /usr/include/qt/QtCore/qglobal.h:1175
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int qrand()
@@ -8924,15 +10255,33 @@ func QHash17(key QBitArray_ITF, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qhashfunctions.h:99
+// /usr/include/qt/QtCore/qcbormap.h:349
 // index:18
+// Invalid Visibility=Default Availability=Available
+// [4] uint qHash(const QCborMap &, uint)
+
+/*
+
+ */
+func QHash18(map_ QCborMap_ITF, seed uint) uint {
+	var convArg0 unsafe.Pointer
+	if map_ != nil && map_.QCborMap_PTR() != nil {
+		convArg0 = map_.QCborMap_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK8QCborMapj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qhashfunctions.h:99
+// index:19
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QString &, uint)
 
 /*
 
  */
-func QHash18(key string, seed uint) uint {
+func QHash19(key string, seed uint) uint {
 	var tmpArg0 = NewQString5(key)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK7QStringj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
@@ -8941,7 +10290,7 @@ func QHash18(key string, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qregexp.h:56
-// index:19
+// index:20
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QRegExp &, uint)
 
@@ -8950,7 +10299,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash19(key QRegExp_ITF, seed uint) uint {
+func QHash20(key QRegExp_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QRegExp_PTR() != nil {
 		convArg0 = key.QRegExp_PTR().GetCthis()
@@ -8961,7 +10310,7 @@ func QHash19(key QRegExp_ITF, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qlocale.h:62
-// index:20
+// index:21
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QLocale &, uint)
 
@@ -8970,7 +10319,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash20(key QLocale_ITF, seed uint) uint {
+func QHash21(key QLocale_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLocale_PTR() != nil {
 		convArg0 = key.QLocale_PTR().GetCthis()
@@ -8980,8 +10329,8 @@ func QHash20(key QLocale_ITF, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/quuid.h:235
-// index:21
+// /usr/include/qt/QtCore/quuid.h:246
+// index:22
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QUuid &, uint)
 
@@ -8990,7 +10339,7 @@ Returns a hash of the UUID uuid, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.0.
 */
-func QHash21(uuid QUuid_ITF, seed uint) uint {
+func QHash22(uuid QUuid_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if uuid != nil && uuid.QUuid_PTR() != nil {
 		convArg0 = uuid.QUuid_PTR().GetCthis()
@@ -9001,14 +10350,14 @@ func QHash21(uuid QUuid_ITF, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:414
-// index:22
+// index:23
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QTime &, uint)
 
 /*
 
  */
-func QHash22(key QTime_ITF, seed uint) uint {
+func QHash23(key QTime_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QTime_PTR() != nil {
 		convArg0 = key.QTime_PTR().GetCthis()
@@ -9019,14 +10368,14 @@ func QHash22(key QTime_ITF, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:413
-// index:23
+// index:24
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QDate &, uint)
 
 /*
 
  */
-func QHash23(key QDate_ITF, seed uint) uint {
+func QHash24(key QDate_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QDate_PTR() != nil {
 		convArg0 = key.QDate_PTR().GetCthis()
@@ -9037,14 +10386,14 @@ func QHash23(key QDate_ITF, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qurl.h:122
-// index:24
+// index:25
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QUrl &, uint)
 
 /*
 
  */
-func QHash24(url QUrl_ITF, seed uint) uint {
+func QHash25(url QUrl_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
@@ -9054,27 +10403,9 @@ func QHash24(url QUrl_ITF, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:102
-// index:25
-// Invalid Visibility=Default Availability=Available
-// [4] uint qHash(const QPersistentModelIndex &, uint)
-
-/*
-
- */
-func QHash25(index QPersistentModelIndex_ITF, seed uint) uint {
-	var convArg0 unsafe.Pointer
-	if index != nil && index.QPersistentModelIndex_PTR() != nil {
-		convArg0 = index.QPersistentModelIndex_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	qtrt.ErrPrint(err, rv)
-	return uint(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qabstractitemmodel.h:149
+// /usr/include/qt/QtCore/qabstractitemmodel.h:106
 // index:26
-// Invalid inline Visibility=Default Availability=Available
+// Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QPersistentModelIndex &, uint)
 
 /*
@@ -9090,15 +10421,33 @@ func QHash26(index QPersistentModelIndex_ITF, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:227
+// /usr/include/qt/QtCore/qabstractitemmodel.h:153
 // index:27
+// Invalid inline Visibility=Default Availability=Available
+// [4] uint qHash(const QPersistentModelIndex &, uint)
+
+/*
+
+ */
+func QHash27(index QPersistentModelIndex_ITF, seed uint) uint {
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QPersistentModelIndex_PTR() != nil {
+		convArg0 = index.QPersistentModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:229
+// index:28
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QItemSelectionRange &)
 
 /*
 
  */
-func QHash27(arg0 QItemSelectionRange_ITF) uint {
+func QHash28(arg0 QItemSelectionRange_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QItemSelectionRange_PTR() != nil {
 		convArg0 = arg0.QItemSelectionRange_PTR().GetCthis()
@@ -9109,7 +10458,7 @@ func QHash27(arg0 QItemSelectionRange_ITF) uint {
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:62
-// index:28
+// index:29
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QRegularExpression &, uint)
 
@@ -9118,7 +10467,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash28(key QRegularExpression_ITF, seed uint) uint {
+func QHash29(key QRegularExpression_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QRegularExpression_PTR() != nil {
 		convArg0 = key.QRegularExpression_PTR().GetCthis()
@@ -9129,14 +10478,14 @@ func QHash28(key QRegularExpression_ITF, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qversionnumber.h:54
-// index:29
+// index:30
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QVersionNumber &, uint)
 
 /*
 
  */
-func QHash29(key QVersionNumber_ITF, seed uint) uint {
+func QHash30(key QVersionNumber_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QVersionNumber_PTR() != nil {
 		convArg0 = key.QVersionNumber_PTR().GetCthis()
@@ -9146,15 +10495,15 @@ func QHash29(key QVersionNumber_ITF, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:437
-// index:30
+// /usr/include/qt/QtCore/qabstractitemmodel.h:463
+// index:31
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QModelIndex &)
 
 /*
 
  */
-func QHash30(index QModelIndex_ITF) uint {
+func QHash31(index QModelIndex_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
@@ -9164,15 +10513,33 @@ func QHash30(index QModelIndex_ITF) uint {
 	return uint(rv) // 222
 }
 
+// /usr/include/qt/QtCore/qjsonobject.h:265
+// index:32
+// Invalid Visibility=Default Availability=Available
+// [4] uint qHash(const QJsonObject &, uint)
+
+/*
+
+ */
+func QHash32(object QJsonObject_ITF, seed uint) uint {
+	var convArg0 unsafe.Pointer
+	if object != nil && object.QJsonObject_PTR() != nil {
+		convArg0 = object.QJsonObject_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK11QJsonObjectj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
 // /usr/include/qt/QtCore/qhashfunctions.h:100
-// index:31
+// index:33
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QStringRef &, uint)
 
 /*
 
  */
-func QHash31(key QStringRef_ITF, seed uint) uint {
+func QHash33(key QStringRef_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QStringRef_PTR() != nil {
 		convArg0 = key.QStringRef_PTR().GetCthis()
@@ -9182,15 +10549,87 @@ func QHash31(key QStringRef_ITF, seed uint) uint {
 	return uint(rv) // 222
 }
 
+// /usr/include/qt/QtCore/qjsonvalue.h:250
+// index:34
+// Invalid Visibility=Default Availability=Available
+// [4] uint qHash(const QJsonValue &, uint)
+
+/*
+
+ */
+func QHash34(value QJsonValue_ITF, seed uint) uint {
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QJsonValue_PTR() != nil {
+		convArg0 = value.QJsonValue_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK10QJsonValuej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qjsonarray.h:268
+// index:35
+// Invalid Visibility=Default Availability=Available
+// [4] uint qHash(const QJsonArray &, uint)
+
+/*
+
+ */
+func QHash35(array QJsonArray_ITF, seed uint) uint {
+	var convArg0 unsafe.Pointer
+	if array != nil && array.QJsonArray_PTR() != nil {
+		convArg0 = array.QJsonArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK10QJsonArrayj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qcborvalue.h:454
+// index:36
+// Invalid Visibility=Default Availability=Available
+// [4] uint qHash(const QCborValue &, uint)
+
+/*
+
+ */
+func QHash36(value QCborValue_ITF, seed uint) uint {
+	var convArg0 unsafe.Pointer
+	if value != nil && value.QCborValue_PTR() != nil {
+		convArg0 = value.QCborValue_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK10QCborValuej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qcborarray.h:295
+// index:37
+// Invalid Visibility=Default Availability=Available
+// [4] uint qHash(const QCborArray &, uint)
+
+/*
+
+ */
+func QHash37(array QCborArray_ITF, seed uint) uint {
+	var convArg0 unsafe.Pointer
+	if array != nil && array.QCborArray_PTR() != nil {
+		convArg0 = array.QCborArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK10QCborArrayj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
 // /usr/include/qt/QtCore/qhashfunctions.h:97
-// index:32
+// index:38
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QByteArray &, uint)
 
 /*
 
  */
-func QHash32(key QByteArray_ITF, seed uint) uint {
+func QHash38(key QByteArray_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QByteArray_PTR() != nil {
 		convArg0 = key.QByteArray_PTR().GetCthis()
@@ -9200,15 +10639,29 @@ func QHash32(key QByteArray_ITF, seed uint) uint {
 	return uint(rv) // 222
 }
 
+// /usr/include/qt/QtCore/qhashfunctions.h:107
+// index:39
+// Invalid inline Visibility=Default Availability=Available
+// [4] uint qHash(std::nullptr_t, uint)
+
+/*
+
+ */
+func QHash39(arg0 int, seed uint) uint {
+	rv, err := qtrt.InvokeQtFunc6("_Z5qHashDnj", qtrt.FFI_TYPE_POINTER, arg0, seed)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
 // /usr/include/qt/QtCore/qhashfunctions.h:96
-// index:33
+// index:40
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QChar, uint)
 
 /*
 
  */
-func QHash33(key QChar_ITF /*123*/, seed uint) uint {
+func QHash40(key QChar_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QChar_PTR() != nil {
 		convArg0 = key.QChar_PTR().GetCthis()
@@ -9219,14 +10672,14 @@ func QHash33(key QChar_ITF /*123*/, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:104
-// index:34
+// index:41
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(QLatin1String, uint)
 
 /*
 
  */
-func QHash34(key QLatin1String_ITF /*123*/, seed uint) uint {
+func QHash41(key QLatin1String_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
 		convArg0 = key.QLatin1String_PTR().GetCthis()
@@ -9237,14 +10690,14 @@ func QHash34(key QLatin1String_ITF /*123*/, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:102
-// index:35
+// index:42
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(QStringView, uint)
 
 /*
 
  */
-func QHash35(key QStringView_ITF /*123*/, seed uint) uint {
+func QHash42(key QStringView_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QStringView_PTR() != nil {
 		convArg0 = key.QStringView_PTR().GetCthis()
@@ -9324,7 +10777,7 @@ func QAcos(v float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:260
+// /usr/include/qt/QtCore/qtextstream.h:261
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & flush(QTextStream &)
@@ -9346,7 +10799,7 @@ func Flush(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:252
+// /usr/include/qt/QtCore/qtextstream.h:253
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & fixed(QTextStream &)
@@ -9502,7 +10955,7 @@ func Swap5(value1 QCollator_ITF, value2 QCollator_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbitarray.h:172
+// /usr/include/qt/QtCore/qbitarray.h:175
 // index:6
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QBitArray &, QBitArray &)
@@ -9525,7 +10978,7 @@ func Swap6(value1 QBitArray_ITF, value2 QBitArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qvariant.h:577
+// /usr/include/qt/QtCore/qvariant.h:600
 // index:7
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QVariant &, QVariant &)
@@ -9548,8 +11001,29 @@ func Swap7(value1 QVariant_ITF, value2 QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:1403
+// /usr/include/qt/QtCore/qcbormap.h:332
 // index:8
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void swap(QCborMap &, QCborMap &)
+
+/*
+Swaps the contents of this map and other.
+*/
+func Swap8(value1 QCborMap_ITF, value2 QCborMap_ITF) {
+	var convArg0 unsafe.Pointer
+	if value1 != nil && value1.QCborMap_PTR() != nil {
+		convArg0 = value1.QCborMap_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if value2 != nil && value2.QCborMap_PTR() != nil {
+		convArg1 = value2.QCborMap_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_Z4swapR8QCborMapS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qstring.h:1419
+// index:9
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QString &, QString &)
 
@@ -9558,7 +11032,7 @@ Swaps string other with this string. This operation is very fast and never fails
 
 This function was introduced in  Qt 4.8.
 */
-func Swap8(value1 string, value2 string) {
+func Swap9(value1 string, value2 string) {
 	var tmpArg0 = NewQString5(value1)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString5(value2)
@@ -9567,8 +11041,8 @@ func Swap8(value1 string, value2 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1095
-// index:9
+// /usr/include/qt/QtCore/qlocale.h:1098
+// index:10
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QLocale &, QLocale &)
 
@@ -9577,7 +11051,7 @@ Swaps locale other with this locale. This operation is very fast and never fails
 
 This function was introduced in  Qt 5.6.
 */
-func Swap9(value1 QLocale_ITF, value2 QLocale_ITF) {
+func Swap10(value1 QLocale_ITF, value2 QLocale_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QLocale_PTR() != nil {
 		convArg0 = value1.QLocale_PTR().GetCthis()
@@ -9591,7 +11065,7 @@ func Swap9(value1 QLocale_ITF, value2 QLocale_ITF) {
 }
 
 // /usr/include/qt/QtCore/qurl.h:375
-// index:10
+// index:11
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QUrl &, QUrl &)
 
@@ -9600,7 +11074,7 @@ Swaps URL other with this URL. This operation is very fast and never fails.
 
 This function was introduced in  Qt 4.8.
 */
-func Swap10(value1 QUrl_ITF, value2 QUrl_ITF) {
+func Swap11(value1 QUrl_ITF, value2 QUrl_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QUrl_PTR() != nil {
 		convArg0 = value1.QUrl_PTR().GetCthis()
@@ -9614,7 +11088,7 @@ func Swap10(value1 QUrl_ITF, value2 QUrl_ITF) {
 }
 
 // /usr/include/qt/QtCore/qdir.h:233
-// index:11
+// index:12
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QDir &, QDir &)
 
@@ -9623,7 +11097,7 @@ Swaps this QDir instance with other. This function is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap11(value1 QDir_ITF, value2 QDir_ITF) {
+func Swap12(value1 QDir_ITF, value2 QDir_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QDir_PTR() != nil {
 		convArg0 = value1.QDir_PTR().GetCthis()
@@ -9636,15 +11110,15 @@ func Swap11(value1 QDir_ITF, value2 QDir_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:276
-// index:12
+// /usr/include/qt/QtCore/qregularexpression.h:283
+// index:13
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QRegularExpressionMatchIterator &, QRegularExpressionMatchIterator &)
 
 /*
 Swaps the regular expression other with this regular expression. This operation is very fast and never fails.
 */
-func Swap12(value1 QRegularExpressionMatchIterator_ITF, value2 QRegularExpressionMatchIterator_ITF) {
+func Swap13(value1 QRegularExpressionMatchIterator_ITF, value2 QRegularExpressionMatchIterator_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QRegularExpressionMatchIterator_PTR() != nil {
 		convArg0 = value1.QRegularExpressionMatchIterator_PTR().GetCthis()
@@ -9657,15 +11131,15 @@ func Swap12(value1 QRegularExpressionMatchIterator_ITF, value2 QRegularExpressio
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:238
-// index:13
+// /usr/include/qt/QtCore/qregularexpression.h:245
+// index:14
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QRegularExpressionMatch &, QRegularExpressionMatch &)
 
 /*
 Swaps the regular expression other with this regular expression. This operation is very fast and never fails.
 */
-func Swap13(value1 QRegularExpressionMatch_ITF, value2 QRegularExpressionMatch_ITF) {
+func Swap14(value1 QRegularExpressionMatch_ITF, value2 QRegularExpressionMatch_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QRegularExpressionMatch_PTR() != nil {
 		convArg0 = value1.QRegularExpressionMatch_PTR().GetCthis()
@@ -9678,15 +11152,15 @@ func Swap13(value1 QRegularExpressionMatch_ITF, value2 QRegularExpressionMatch_I
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:147
-// index:14
+// /usr/include/qt/QtCore/qabstractitemmodel.h:151
+// index:15
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QPersistentModelIndex &, QPersistentModelIndex &)
 
 /*
 
  */
-func Swap14(value1 QPersistentModelIndex_ITF, value2 QPersistentModelIndex_ITF) {
+func Swap15(value1 QPersistentModelIndex_ITF, value2 QPersistentModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QPersistentModelIndex_PTR() != nil {
 		convArg0 = value1.QPersistentModelIndex_PTR().GetCthis()
@@ -9700,14 +11174,14 @@ func Swap14(value1 QPersistentModelIndex_ITF, value2 QPersistentModelIndex_ITF) 
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:95
-// index:15
+// index:16
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QXmlStreamStringRef &, QXmlStreamStringRef &)
 
 /*
 
  */
-func Swap15(value1 QXmlStreamStringRef_ITF, value2 QXmlStreamStringRef_ITF) {
+func Swap16(value1 QXmlStreamStringRef_ITF, value2 QXmlStreamStringRef_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QXmlStreamStringRef_PTR() != nil {
 		convArg0 = value1.QXmlStreamStringRef_PTR().GetCthis()
@@ -9721,14 +11195,14 @@ func Swap15(value1 QXmlStreamStringRef_ITF, value2 QXmlStreamStringRef_ITF) {
 }
 
 // /usr/include/qt/QtCore/qprocess.h:106
-// index:16
+// index:17
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QProcessEnvironment &, QProcessEnvironment &)
 
 /*
 
  */
-func Swap16(value1 QProcessEnvironment_ITF, value2 QProcessEnvironment_ITF) {
+func Swap17(value1 QProcessEnvironment_ITF, value2 QProcessEnvironment_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QProcessEnvironment_PTR() != nil {
 		convArg0 = value1.QProcessEnvironment_PTR().GetCthis()
@@ -9741,15 +11215,15 @@ func Swap16(value1 QProcessEnvironment_ITF, value2 QProcessEnvironment_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:159
-// index:17
+// /usr/include/qt/QtCore/qregularexpression.h:166
+// index:18
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QRegularExpression &, QRegularExpression &)
 
 /*
 Swaps the regular expression other with this regular expression. This operation is very fast and never fails.
 */
-func Swap17(value1 QRegularExpression_ITF, value2 QRegularExpression_ITF) {
+func Swap18(value1 QRegularExpression_ITF, value2 QRegularExpression_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QRegularExpression_PTR() != nil {
 		convArg0 = value1.QRegularExpression_PTR().GetCthis()
@@ -9763,14 +11237,14 @@ func Swap17(value1 QRegularExpression_ITF, value2 QRegularExpression_ITF) {
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:108
-// index:18
+// index:19
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QCommandLineOption &, QCommandLineOption &)
 
 /*
 Swaps option other with this option. This operation is very fast and never fails.
 */
-func Swap18(value1 QCommandLineOption_ITF, value2 QCommandLineOption_ITF) {
+func Swap19(value1 QCommandLineOption_ITF, value2 QCommandLineOption_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QCommandLineOption_PTR() != nil {
 		convArg0 = value1.QCommandLineOption_PTR().GetCthis()
@@ -9784,14 +11258,14 @@ func Swap18(value1 QCommandLineOption_ITF, value2 QCommandLineOption_ITF) {
 }
 
 // /usr/include/qt/QtCore/qcollator.h:127
-// index:19
+// index:20
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QCollatorSortKey &, QCollatorSortKey &)
 
 /*
 Swaps this collator with other. This function is very fast and never fails.
 */
-func Swap19(value1 QCollatorSortKey_ITF, value2 QCollatorSortKey_ITF) {
+func Swap20(value1 QCollatorSortKey_ITF, value2 QCollatorSortKey_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QCollatorSortKey_PTR() != nil {
 		convArg0 = value1.QCollatorSortKey_PTR().GetCthis()
@@ -9804,15 +11278,15 @@ func Swap19(value1 QCollatorSortKey_ITF, value2 QCollatorSortKey_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:263
-// index:20
+// /usr/include/qt/QtCore/qitemselectionmodel.h:265
+// index:21
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QItemSelection &, QItemSelection &)
 
 /*
 
  */
-func Swap20(value1 QItemSelection_ITF, value2 QItemSelection_ITF) {
+func Swap21(value1 QItemSelection_ITF, value2 QItemSelection_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QItemSelection_PTR() != nil {
 		convArg0 = value1.QItemSelection_PTR().GetCthis()
@@ -9825,15 +11299,15 @@ func Swap20(value1 QItemSelection_ITF, value2 QItemSelection_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdeadlinetimer.h:191
-// index:21
+// /usr/include/qt/QtCore/qdeadlinetimer.h:196
+// index:22
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QDeadlineTimer &, QDeadlineTimer &)
 
 /*
 Swaps this deadline timer with the other deadline timer.
 */
-func Swap21(value1 QDeadlineTimer_ITF, value2 QDeadlineTimer_ITF) {
+func Swap22(value1 QDeadlineTimer_ITF, value2 QDeadlineTimer_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QDeadlineTimer_PTR() != nil {
 		convArg0 = value1.QDeadlineTimer_PTR().GetCthis()
@@ -9846,8 +11320,8 @@ func Swap21(value1 QDeadlineTimer_ITF, value2 QDeadlineTimer_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsondocument.h:171
-// index:22
+// /usr/include/qt/QtCore/qjsondocument.h:169
+// index:23
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QJsonDocument &, QJsonDocument &)
 
@@ -9856,7 +11330,7 @@ Swaps the document other with this. This operation is very fast and never fails.
 
 This function was introduced in  Qt 5.10.
 */
-func Swap22(value1 QJsonDocument_ITF, value2 QJsonDocument_ITF) {
+func Swap23(value1 QJsonDocument_ITF, value2 QJsonDocument_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QJsonDocument_PTR() != nil {
 		convArg0 = value1.QJsonDocument_PTR().GetCthis()
@@ -9870,14 +11344,14 @@ func Swap22(value1 QJsonDocument_ITF, value2 QJsonDocument_ITF) {
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:118
-// index:23
+// index:24
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QStorageInfo &, QStorageInfo &)
 
 /*
 Swaps this volume info with other. This function is very fast and never fails.
 */
-func Swap23(value1 QStorageInfo_ITF, value2 QStorageInfo_ITF) {
+func Swap24(value1 QStorageInfo_ITF, value2 QStorageInfo_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QStorageInfo_PTR() != nil {
 		convArg0 = value1.QStorageInfo_PTR().GetCthis()
@@ -9891,7 +11365,7 @@ func Swap23(value1 QStorageInfo_ITF, value2 QStorageInfo_ITF) {
 }
 
 // /usr/include/qt/QtCore/qeasingcurve.h:128
-// index:24
+// index:25
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QEasingCurve &, QEasingCurve &)
 
@@ -9900,7 +11374,7 @@ Swaps curve other with this curve. This operation is very fast and never fails.
 
 This function was introduced in  Qt 5.0.
 */
-func Swap24(value1 QEasingCurve_ITF, value2 QEasingCurve_ITF) {
+func Swap25(value1 QEasingCurve_ITF, value2 QEasingCurve_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QEasingCurve_PTR() != nil {
 		convArg0 = value1.QEasingCurve_PTR().GetCthis()
@@ -9914,7 +11388,7 @@ func Swap24(value1 QEasingCurve_ITF, value2 QEasingCurve_ITF) {
 }
 
 // /usr/include/qt/QtCore/qjsonobject.h:263
-// index:25
+// index:26
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QJsonObject &, QJsonObject &)
 
@@ -9923,7 +11397,7 @@ Swaps the object other with this. This operation is very fast and never fails.
 
 This function was introduced in  Qt 5.10.
 */
-func Swap25(value1 QJsonObject_ITF, value2 QJsonObject_ITF) {
+func Swap26(value1 QJsonObject_ITF, value2 QJsonObject_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QJsonObject_PTR() != nil {
 		convArg0 = value1.QJsonObject_PTR().GetCthis()
@@ -9936,8 +11410,8 @@ func Swap25(value1 QJsonObject_ITF, value2 QJsonObject_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:247
-// index:26
+// /usr/include/qt/QtCore/qjsonvalue.h:248
+// index:27
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QJsonValue &, QJsonValue &)
 
@@ -9946,7 +11420,7 @@ Swaps the value other with this. This operation is very fast and never fails.
 
 This function was introduced in  Qt 5.10.
 */
-func Swap26(value1 QJsonValue_ITF, value2 QJsonValue_ITF) {
+func Swap27(value1 QJsonValue_ITF, value2 QJsonValue_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QJsonValue_PTR() != nil {
 		convArg0 = value1.QJsonValue_PTR().GetCthis()
@@ -9960,7 +11434,7 @@ func Swap26(value1 QJsonValue_ITF, value2 QJsonValue_ITF) {
 }
 
 // /usr/include/qt/QtCore/qjsonarray.h:266
-// index:27
+// index:28
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QJsonArray &, QJsonArray &)
 
@@ -9969,7 +11443,7 @@ Swaps the array other with this. This operation is very fast and never fails.
 
 This function was introduced in  Qt 5.10.
 */
-func Swap27(value1 QJsonArray_ITF, value2 QJsonArray_ITF) {
+func Swap28(value1 QJsonArray_ITF, value2 QJsonArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QJsonArray_PTR() != nil {
 		convArg0 = value1.QJsonArray_PTR().GetCthis()
@@ -9982,8 +11456,50 @@ func Swap27(value1 QJsonArray_ITF, value2 QJsonArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:691
-// index:28
+// /usr/include/qt/QtCore/qcborvalue.h:319
+// index:29
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void swap(QCborValue &, QCborValue &)
+
+/*
+Swaps the contents of this QCborValue object and other.
+*/
+func Swap29(value1 QCborValue_ITF, value2 QCborValue_ITF) {
+	var convArg0 unsafe.Pointer
+	if value1 != nil && value1.QCborValue_PTR() != nil {
+		convArg0 = value1.QCborValue_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if value2 != nil && value2.QCborValue_PTR() != nil {
+		convArg1 = value2.QCborValue_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_Z4swapR10QCborValueS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qcborarray.h:278
+// index:30
+// Invalid inline Visibility=Default Availability=Available
+// [-2] void swap(QCborArray &, QCborArray &)
+
+/*
+Swaps the contents of this object and other.
+*/
+func Swap30(value1 QCborArray_ITF, value2 QCborArray_ITF) {
+	var convArg0 unsafe.Pointer
+	if value1 != nil && value1.QCborArray_PTR() != nil {
+		convArg0 = value1.QCborArray_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if value2 != nil && value2.QCborArray_PTR() != nil {
+		convArg1 = value2.QCborArray_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_Z4swapR10QCborArrayS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:708
+// index:31
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QByteArray &, QByteArray &)
 
@@ -9992,7 +11508,7 @@ Swaps byte array other with this byte array. This operation is very fast and nev
 
 This function was introduced in  Qt 4.8.
 */
-func Swap28(value1 QByteArray_ITF, value2 QByteArray_ITF) {
+func Swap31(value1 QByteArray_ITF, value2 QByteArray_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QByteArray_PTR() != nil {
 		convArg0 = value1.QByteArray_PTR().GetCthis()
@@ -10089,7 +11605,7 @@ func QCos(v float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:255
+// /usr/include/qt/QtCore/qtextstream.h:256
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & left(QTextStream &)
@@ -10111,7 +11627,7 @@ func Left(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:259
+// /usr/include/qt/QtCore/qtextstream.h:260
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & endl(QTextStream &)
@@ -10156,7 +11672,7 @@ func QLn(v float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:236
+// /usr/include/qt/QtCore/qtextstream.h:237
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & oct(QTextStream &)
@@ -10178,7 +11694,7 @@ func Oct(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:238
+// /usr/include/qt/QtCore/qtextstream.h:239
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & hex(QTextStream &)
@@ -10202,7 +11718,7 @@ func Hex(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:237
+// /usr/include/qt/QtCore/qtextstream.h:238
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & dec(QTextStream &)
@@ -10224,7 +11740,7 @@ func Dec(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:263
+// /usr/include/qt/QtCore/qtextstream.h:264
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & bom(QTextStream &)
@@ -10246,7 +11762,7 @@ func Bom(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:235
+// /usr/include/qt/QtCore/qtextstream.h:236
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & bin(QTextStream &)
@@ -10268,7 +11784,7 @@ func Bin(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:265
+// /usr/include/qt/QtCore/qtextstream.h:266
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & ws(QTextStream &)
@@ -10290,7 +11806,7 @@ func Ws(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qplugin.h:78
+// /usr/include/qt/QtCore/qplugin.h:93
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qRegisterStaticPluginFunction(QStaticPlugin)
@@ -10307,7 +11823,7 @@ func QRegisterStaticPluginFunction(staticPlugin QStaticPlugin_ITF /*123*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1147
+// /usr/include/qt/QtCore/qglobal.h:1166
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int qEnvironmentVariableIntValue(const char *, bool *)
@@ -10323,7 +11839,7 @@ func QEnvironmentVariableIntValue(varName string, ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1145
+// /usr/include/qt/QtCore/qglobal.h:1164
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qEnvironmentVariableIsEmpty(const char *)
@@ -10339,7 +11855,7 @@ func QEnvironmentVariableIsEmpty(varName string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1146
+// /usr/include/qt/QtCore/qglobal.h:1165
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qEnvironmentVariableIsSet(const char *)
@@ -10369,7 +11885,7 @@ func QUnregisterResourceData(arg0 int, arg1 unsafe.Pointer /*666*/, arg2 unsafe.
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:279
+// /usr/include/qt/QtCore/qtextstream.h:280
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [40] QTextStreamManipulator qSetRealNumberPrecision(int)
@@ -10385,7 +11901,21 @@ func QSetRealNumberPrecision(precision int) *QTextStreamManipulator /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlogging.h:191
+// /usr/include/qt/QtCore/qplugin.h:58
+// index:0
+// Invalid inline Visibility=Default Availability=Available
+// [1] unsigned char qPluginArchRequirements()
+
+/*
+
+ */
+func QPluginArchRequirements() byte {
+	rv, err := qtrt.InvokeQtFunc6("_Z23qPluginArchRequirementsv", qtrt.FFI_TYPE_POINTER)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("byte", rv).(byte) // 1111
+}
+
+// /usr/include/qt/QtCore/qlogging.h:198
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QtMessageHandler qInstallMessageHandler(QtMessageHandler)
@@ -10399,7 +11929,7 @@ func QInstallMessageHandler(arg0 unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ 
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:791
+// /usr/include/qt/QtCore/qalgorithms.h:796
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qCountTrailingZeroBits(quint64)
@@ -10413,7 +11943,7 @@ func QCountTrailingZeroBits(v uint64) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:775
+// /usr/include/qt/QtCore/qalgorithms.h:780
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qCountTrailingZeroBits(quint16)
@@ -10427,7 +11957,7 @@ func QCountTrailingZeroBits1(v uint16) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:802
+// /usr/include/qt/QtCore/qalgorithms.h:807
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qCountTrailingZeroBits(unsigned long)
@@ -10441,7 +11971,7 @@ func QCountTrailingZeroBits2(v uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:742
+// /usr/include/qt/QtCore/qalgorithms.h:747
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qCountTrailingZeroBits(quint32)
@@ -10455,7 +11985,7 @@ func QCountTrailingZeroBits3(v uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:760
+// /usr/include/qt/QtCore/qalgorithms.h:765
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qCountTrailingZeroBits(quint8)
@@ -10483,7 +12013,7 @@ func QRegisterResourceData(arg0 int, arg1 unsafe.Pointer /*666*/, arg2 unsafe.Po
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:847
+// /usr/include/qt/QtCore/qalgorithms.h:852
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qCountLeadingZeroBits(quint64)
@@ -10497,7 +12027,7 @@ func QCountLeadingZeroBits(v uint64) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:834
+// /usr/include/qt/QtCore/qalgorithms.h:839
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qCountLeadingZeroBits(quint16)
@@ -10511,7 +12041,7 @@ func QCountLeadingZeroBits1(v uint16) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:862
+// /usr/include/qt/QtCore/qalgorithms.h:867
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qCountLeadingZeroBits(unsigned long)
@@ -10525,7 +12055,7 @@ func QCountLeadingZeroBits2(v uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:807
+// /usr/include/qt/QtCore/qalgorithms.h:812
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qCountLeadingZeroBits(quint32)
@@ -10539,7 +12069,7 @@ func QCountLeadingZeroBits3(v uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:822
+// /usr/include/qt/QtCore/qalgorithms.h:827
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qCountLeadingZeroBits(quint8)
@@ -10577,7 +12107,7 @@ func Qt_qFindChild_helper(parent QObject_ITF /*777 const QObject **/, name strin
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1140
+// /usr/include/qt/QtCore/qglobal.h:1160
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qEnvironmentVariable(const char *, const QString &)
@@ -10598,7 +12128,7 @@ func QEnvironmentVariable(varName string, defaultValue string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qglobal.h:1139
+// /usr/include/qt/QtCore/qglobal.h:1159
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [8] QString qEnvironmentVariable(const char *)
@@ -10630,7 +12160,7 @@ func QSetGlobalQHashSeed(newSeed int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:473
+// /usr/include/qt/QtCore/qobject.h:467
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getQtMetaObject()
@@ -10658,7 +12188,7 @@ func Qt_getQtMetaObject1() *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qlogging.h:193
+// /usr/include/qt/QtCore/qlogging.h:200
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qSetMessagePattern(const QString &)
@@ -10673,7 +12203,7 @@ func QSetMessagePattern(messagePattern string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qcoreapplication.h:260
+// /usr/include/qt/QtCore/qcoreapplication.h:252
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qRemovePostRoutine(QtCleanUpFunction)
@@ -10694,7 +12224,7 @@ func QRemovePostRoutine(arg0 unsafe.Pointer /*666*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qlogging.h:179
+// /usr/include/qt/QtCore/qlogging.h:186
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qt_message_output(QtMsgType, const QMessageLogContext &, const QString &)
@@ -10741,7 +12271,7 @@ func QRadiansToDegrees1(radians float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qlogging.h:194
+// /usr/include/qt/QtCore/qlogging.h:201
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qFormatLogMessage(QtMsgType, const QMessageLogContext &, const QString &)
@@ -10762,6 +12292,21 @@ func QFormatLogMessage(type_ int, context QMessageLogContext_ITF, buf string) st
 	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
+}
+
+// /usr/include/qt/QtCore/qfloat16.h:92
+// index:0
+// Invalid Visibility=Default Availability=Available
+// [-2] void qFloatFromFloat16(float *, const qfloat16 *, qsizetype)
+
+/*
+Converts len qfloat16 from in to floats and stores them in out. Both in and out must have len allocated entries.
+
+This function was introduced in  Qt 5.11.
+*/
+func QFloatFromFloat16(arg0 unsafe.Pointer /*666*/, arg1 unsafe.Pointer /*666*/, length int64) {
+	rv, err := qtrt.InvokeQtFunc6("_Z17qFloatFromFloat16PfPK8qfloat16x", qtrt.FFI_TYPE_POINTER, arg0, arg1, length)
+	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qmath.h:226
@@ -10792,7 +12337,7 @@ func QDegreesToRadians1(degrees float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qglobal.h:780
+// /usr/include/qt/QtCore/qglobal.h:804
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qt_check_pointer(const char *, int)
@@ -10807,7 +12352,7 @@ func Qt_check_pointer(arg0 string, arg1 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:717
+// /usr/include/qt/QtCore/qalgorithms.h:722
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qPopulationCount(quint64)
@@ -10821,7 +12366,7 @@ func QPopulationCount(v uint64) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:706
+// /usr/include/qt/QtCore/qalgorithms.h:711
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qPopulationCount(quint16)
@@ -10835,7 +12380,7 @@ func QPopulationCount1(v uint16) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:732
+// /usr/include/qt/QtCore/qalgorithms.h:737
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qPopulationCount(unsigned long)
@@ -10849,7 +12394,7 @@ func QPopulationCount2(v uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:683
+// /usr/include/qt/QtCore/qalgorithms.h:688
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qPopulationCount(quint32)
@@ -10863,7 +12408,7 @@ func QPopulationCount3(v uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qalgorithms.h:696
+// /usr/include/qt/QtCore/qalgorithms.h:701
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qPopulationCount(quint8)
@@ -10891,7 +12436,7 @@ func QGlobalQHashSeed() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:248
+// /usr/include/qt/QtCore/qtextstream.h:249
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & uppercasedigits(QTextStream &)
@@ -10913,7 +12458,7 @@ func Uppercasedigits(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qglobal.h:727
+// /usr/include/qt/QtCore/qglobal.h:770
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qt_error_string(int)
@@ -10930,7 +12475,7 @@ func Qt_error_string(errorCode int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qglobal.h:901
+// /usr/include/qt/QtCore/qglobal.h:926
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] void * qReallocAligned(void *, size_t, size_t, size_t)
@@ -11000,7 +12545,22 @@ func QNextPowerOfTwo3(v int) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qcoreapplication.h:259
+// /usr/include/qt/QtCore/qfloat16.h:91
+// index:0
+// Invalid Visibility=Default Availability=Available
+// [-2] void qFloatToFloat16(qfloat16 *, const float *, qsizetype)
+
+/*
+Converts len floats from in to qfloat16 and stores them in out. Both in and out must have len allocated entries.
+
+This function was introduced in  Qt 5.11.
+*/
+func QFloatToFloat16(arg0 unsafe.Pointer /*666*/, arg1 unsafe.Pointer /*666*/, length int64) {
+	rv, err := qtrt.InvokeQtFunc6("_Z15qFloatToFloat16P8qfloat16PKfx", qtrt.FFI_TYPE_POINTER, arg0, arg1, length)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qcoreapplication.h:251
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qAddPostRoutine(QtCleanUpFunction)
@@ -11074,7 +12634,7 @@ func QAddPostRoutine(arg0 unsafe.Pointer /*666*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:250
+// /usr/include/qt/QtCore/qtextstream.h:251
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & lowercasedigits(QTextStream &)
@@ -11096,7 +12656,7 @@ func Lowercasedigits(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:267
+// /usr/include/qt/QtCore/qtextstream.h:268
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [40] QTextStreamManipulator qSetFieldWidth(int)
@@ -11112,7 +12672,7 @@ func QSetFieldWidth(width int) *QTextStreamManipulator /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qglobal.h:900
+// /usr/include/qt/QtCore/qglobal.h:925
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] void * qMallocAligned(size_t, size_t)
@@ -11154,7 +12714,7 @@ func QFloatDistance1(a float64, b float64) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qcoreapplication.h:258
+// /usr/include/qt/QtCore/qcoreapplication.h:250
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qAddPreRoutine(QtStartUpFunction)
@@ -11167,7 +12727,7 @@ func QAddPreRoutine(arg0 unsafe.Pointer /*666*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:247
+// /usr/include/qt/QtCore/qtextstream.h:248
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & uppercasebase(QTextStream &)
@@ -11189,7 +12749,23 @@ func Uppercasebase(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:261
+// /usr/include/qt/QtCore/qfloat16.h:105
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool qFuzzyCompare(qfloat16, qfloat16)
+
+/*
+Compares the floating point value p1 and p2 and returns true if they are considered equal, otherwise false.
+
+The two numbers are compared in a relative way, where the exactness is stronger the smaller the numbers are.
+*/
+func QFuzzyCompare2(p1 unsafe.Pointer /*444*/, p2 unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Z13qFuzzyCompare8qfloat16S_", qtrt.FFI_TYPE_POINTER, p1, p2)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qobjectdefs.h:256
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] const char * qFlagLocation(const char *)
@@ -11205,7 +12781,7 @@ func QFlagLocation(method string) string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:249
+// /usr/include/qt/QtCore/qtextstream.h:250
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & lowercasebase(QTextStream &)
@@ -11227,7 +12803,7 @@ func Lowercasebase(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qglobal.h:687
+// /usr/include/qt/QtCore/qglobal.h:733
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [1] bool qSharedBuild()
@@ -11241,7 +12817,21 @@ func QSharedBuild() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qglobal.h:902
+// /usr/include/qt/QtCore/qfloat16.h:251
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [1] bool qFuzzyIsNull(qfloat16)
+
+/*
+
+ */
+func QFuzzyIsNull2(f unsafe.Pointer /*444*/) bool {
+	rv, err := qtrt.InvokeQtFunc6("_Z12qFuzzyIsNull8qfloat16", qtrt.FFI_TYPE_POINTER, f)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qglobal.h:927
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qFreeAligned(void *)
@@ -11254,7 +12844,7 @@ func QFreeAligned(ptr unsafe.Pointer /*666*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:245
+// /usr/include/qt/QtCore/qtextstream.h:246
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & noforcepoint(QTextStream &)
@@ -11276,7 +12866,7 @@ func Noforcepoint(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qglobal.h:749
+// /usr/include/qt/QtCore/qglobal.h:794
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qt_assert_x(const char *, const char *, const char *, int)
@@ -11295,7 +12885,7 @@ func Qt_assert_x(where string, what string, file string, line int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:687
+// /usr/include/qt/QtCore/qbytearray.h:704
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [8] QByteArray qUncompress(const QByteArray &)
@@ -11317,7 +12907,7 @@ func QUncompress(data QByteArray_ITF) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:684
+// /usr/include/qt/QtCore/qbytearray.h:701
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [8] QByteArray qUncompress(const uchar *, int)
@@ -11335,7 +12925,7 @@ func QUncompress1(data unsafe.Pointer /*666*/, nbytes int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:273
+// /usr/include/qt/QtCore/qtextstream.h:274
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [40] QTextStreamManipulator qSetPadChar(QChar)
@@ -11355,7 +12945,7 @@ func QSetPadChar(ch QChar_ITF /*123*/) *QTextStreamManipulator /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:244
+// /usr/include/qt/QtCore/qtextstream.h:245
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & noforcesign(QTextStream &)
@@ -11377,7 +12967,7 @@ func Noforcesign(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:253
+// /usr/include/qt/QtCore/qtextstream.h:254
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & scientific(QTextStream &)
@@ -11399,7 +12989,7 @@ func Scientific(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:243
+// /usr/include/qt/QtCore/qtextstream.h:244
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & noshowbase(QTextStream &)
@@ -11421,7 +13011,7 @@ func Noshowbase(s QTextStream_ITF) *QTextStream {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:242
+// /usr/include/qt/QtCore/qtextstream.h:243
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QTextStream & forcepoint(QTextStream &)

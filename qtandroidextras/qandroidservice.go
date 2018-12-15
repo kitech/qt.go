@@ -63,13 +63,15 @@ func (*QAndroidService) NewFromPointer(cthis unsafe.Pointer) *QAndroidService {
 	return NewQAndroidServiceFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidservice.h:54
+// /usr/include/qt/QtAndroidExtras/qandroidservice.h:55
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidService(int &, char **, int)
 
 /*
-Default constructs an instance of QAndroidService.
+Creates a new Android service, passing argc and argv as parameters.
+
+See also QCoreApplication.
 */
 func (*QAndroidService) NewForInherit(argc int, argv []string, flags int) *QAndroidService {
 	return NewQAndroidService(argc, argv, flags)
@@ -83,13 +85,15 @@ func NewQAndroidService(argc int, argv []string, flags int) *QAndroidService {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidservice.h:54
+// /usr/include/qt/QtAndroidExtras/qandroidservice.h:55
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidService(int &, char **, int)
 
 /*
-Default constructs an instance of QAndroidService.
+Creates a new Android service, passing argc and argv as parameters.
+
+See also QCoreApplication.
 */
 func (*QAndroidService) NewForInheritp(argc int, argv []string) *QAndroidService {
 	return NewQAndroidServicep(argc, argv)
@@ -105,7 +109,7 @@ func NewQAndroidServicep(argc int, argv []string) *QAndroidService {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidservice.h:59
+// /usr/include/qt/QtAndroidExtras/qandroidservice.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAndroidService()
@@ -120,7 +124,7 @@ func DeleteQAndroidService(this *QAndroidService) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidservice.h:61
+// /usr/include/qt/QtAndroidExtras/qandroidservice.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAndroidBinder * onBind(const QAndroidIntent &)

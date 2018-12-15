@@ -65,7 +65,7 @@ func (*QNetworkRequest) NewFromPointer(cthis unsafe.Pointer) *QNetworkRequest {
 	return NewQNetworkRequestFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:124
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkRequest(const QUrl &)
@@ -90,7 +90,7 @@ func NewQNetworkRequest(url qtcore.QUrl_ITF) *QNetworkRequest {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:124
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkRequest(const QUrl &)
@@ -113,7 +113,7 @@ func NewQNetworkRequestp() *QNetworkRequest {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:126
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QNetworkRequest()
@@ -128,7 +128,7 @@ func DeleteQNetworkRequest(this *QNetworkRequest) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:128
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:134
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QNetworkRequest & operator=(QNetworkRequest &&)
@@ -144,7 +144,7 @@ func (this *QNetworkRequest) Operator_equal(other unsafe.Pointer /*333*/) *QNetw
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:130
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:136
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QNetworkRequest & operator=(const QNetworkRequest &)
@@ -164,7 +164,7 @@ func (this *QNetworkRequest) Operator_equal1(other QNetworkRequest_ITF) *QNetwor
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:132
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:138
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkRequest &)
@@ -183,7 +183,7 @@ func (this *QNetworkRequest) Swap(other QNetworkRequest_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:134
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QNetworkRequest &) const
@@ -201,7 +201,7 @@ func (this *QNetworkRequest) Operator_equal_equal(other QNetworkRequest_ITF) boo
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:135
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:141
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QNetworkRequest &) const
@@ -219,7 +219,7 @@ func (this *QNetworkRequest) Operator_not_equal(other QNetworkRequest_ITF) bool 
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:138
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl url() const
@@ -237,7 +237,7 @@ func (this *QNetworkRequest) Url() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:139
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUrl(const QUrl &)
@@ -256,7 +256,7 @@ func (this *QNetworkRequest) SetUrl(url qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:142
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant header(QNetworkRequest::KnownHeaders) const
@@ -274,7 +274,7 @@ func (this *QNetworkRequest) Header(header int) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:143
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
@@ -293,7 +293,7 @@ func (this *QNetworkRequest) SetHeader(header int, value qtcore.QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:146
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasRawHeader(const QByteArray &) const
@@ -313,7 +313,7 @@ func (this *QNetworkRequest) HasRawHeader(headerName qtcore.QByteArray_ITF) bool
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:148
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray rawHeader(const QByteArray &) const
@@ -337,7 +337,7 @@ func (this *QNetworkRequest) RawHeader(headerName qtcore.QByteArray_ITF) *qtcore
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:149
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRawHeader(const QByteArray &, const QByteArray &)
@@ -371,7 +371,7 @@ func (this *QNetworkRequest) SetRawHeader(headerName qtcore.QByteArray_ITF, valu
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:152
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant attribute(QNetworkRequest::Attribute, const QVariant &) const
@@ -395,7 +395,7 @@ func (this *QNetworkRequest) Attribute(code int, defaultValue qtcore.QVariant_IT
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:152
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant attribute(QNetworkRequest::Attribute, const QVariant &) const
@@ -417,7 +417,7 @@ func (this *QNetworkRequest) Attributep(code int) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:153
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAttribute(QNetworkRequest::Attribute, const QVariant &)
@@ -436,15 +436,15 @@ func (this *QNetworkRequest) SetAttribute(code int, value qtcore.QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:156
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSslConfiguration sslConfiguration() const
 
 /*
-Returns this network request's SSL configuration. By default, no SSL settings are specified.
+Returns this network request's SSL configuration. By default this is the same as QSslConfiguration::defaultConfiguration().
 
-See also setSslConfiguration().
+See also setSslConfiguration() and QSslConfiguration::defaultConfiguration().
 */
 func (this *QNetworkRequest) SslConfiguration() *QSslConfiguration /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest16sslConfigurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -454,15 +454,13 @@ func (this *QNetworkRequest) SslConfiguration() *QSslConfiguration /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:157
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSslConfiguration(const QSslConfiguration &)
 
 /*
 Sets this network request's SSL configuration to be config. The settings that apply are the private key, the local certificate, the SSL protocol (SSLv2, SSLv3, TLSv1.0 where applicable), the CA certificates and the ciphers that the SSL backend is allowed to use.
-
-By default, no SSL configuration is set, which allows the backends to choose freely what configuration is best for them.
 
 See also sslConfiguration() and QSslConfiguration::defaultConfiguration().
 */
@@ -475,7 +473,7 @@ func (this *QNetworkRequest) SetSslConfiguration(configuration QSslConfiguration
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:160
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOriginatingObject(QObject *)
@@ -498,7 +496,7 @@ func (this *QNetworkRequest) SetOriginatingObject(object qtcore.QObject_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:161
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * originatingObject() const
@@ -516,7 +514,7 @@ func (this *QNetworkRequest) OriginatingObject() *qtcore.QObject /*777 QObject *
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:163
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QNetworkRequest::Priority priority() const
@@ -534,7 +532,7 @@ func (this *QNetworkRequest) Priority() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:164
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPriority(QNetworkRequest::Priority)
@@ -553,7 +551,7 @@ func (this *QNetworkRequest) SetPriority(priority int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:167
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maximumRedirectsAllowed() const
@@ -571,7 +569,7 @@ func (this *QNetworkRequest) MaximumRedirectsAllowed() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtNetwork/qnetworkrequest.h:168
+// /usr/include/qt/QtNetwork/qnetworkrequest.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumRedirectsAllowed(int)
@@ -625,6 +623,18 @@ const QNetworkRequest__UserAgentHeader QNetworkRequest__KnownHeaders = 7
 // The Server header received by HTTP clients.
 const QNetworkRequest__ServerHeader QNetworkRequest__KnownHeaders = 8
 
+//
+const QNetworkRequest__IfModifiedSinceHeader QNetworkRequest__KnownHeaders = 9
+
+//
+const QNetworkRequest__ETagHeader QNetworkRequest__KnownHeaders = 10
+
+//
+const QNetworkRequest__IfMatchHeader QNetworkRequest__KnownHeaders = 11
+
+//
+const QNetworkRequest__IfNoneMatchHeader QNetworkRequest__KnownHeaders = 12
+
 func (this *QNetworkRequest) KnownHeadersItemName(val int) string {
 	switch val {
 	case QNetworkRequest__ContentTypeHeader: // 0
@@ -645,6 +655,14 @@ func (this *QNetworkRequest) KnownHeadersItemName(val int) string {
 		return "UserAgentHeader"
 	case QNetworkRequest__ServerHeader: // 8
 		return "ServerHeader"
+	case QNetworkRequest__IfModifiedSinceHeader: // 9
+		return "IfModifiedSinceHeader"
+	case QNetworkRequest__ETagHeader: // 10
+		return "ETagHeader"
+	case QNetworkRequest__IfMatchHeader: // 11
+		return "IfMatchHeader"
+	case QNetworkRequest__IfNoneMatchHeader: // 12
+		return "IfNoneMatchHeader"
 	default:
 		return fmt.Sprintf("%d", val)
 	}
@@ -747,6 +765,12 @@ const QNetworkRequest__OriginalContentLengthAttribute QNetworkRequest__Attribute
 const QNetworkRequest__RedirectPolicyAttribute QNetworkRequest__Attribute = 25
 
 //
+const QNetworkRequest__Http2DirectAttribute QNetworkRequest__Attribute = 26
+
+//
+const QNetworkRequest__ResourceTypeAttribute QNetworkRequest__Attribute = 27
+
+//
 const QNetworkRequest__User QNetworkRequest__Attribute = 1000
 
 //
@@ -806,6 +830,10 @@ func (this *QNetworkRequest) AttributeItemName(val int) string {
 		return "OriginalContentLengthAttribute"
 	case QNetworkRequest__RedirectPolicyAttribute: // 25
 		return "RedirectPolicyAttribute"
+	case QNetworkRequest__Http2DirectAttribute: // 26
+		return "Http2DirectAttribute"
+	case QNetworkRequest__ResourceTypeAttribute: // 27
+		return "ResourceTypeAttribute"
 	case QNetworkRequest__User: // 1000
 		return "User"
 	case QNetworkRequest__UserMax: // 32767

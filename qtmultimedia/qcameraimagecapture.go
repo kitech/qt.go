@@ -569,8 +569,8 @@ Signals that a camera's ready for capture state has changed.
 
 Note: Notifier signal for property readyForCapture.
 */
-func (this *QCameraImageCapture) ReadyForCaptureChanged(arg0 bool) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraImageCapture22readyForCaptureChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QCameraImageCapture) ReadyForCaptureChanged(ready bool) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraImageCapture22readyForCaptureChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ready)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -582,8 +582,8 @@ func (this *QCameraImageCapture) ReadyForCaptureChanged(arg0 bool) {
 /*
 Signal emitted when the buffer format for the buffer image capture has changed.
 */
-func (this *QCameraImageCapture) BufferFormatChanged(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraImageCapture19bufferFormatChangedEN11QVideoFrame11PixelFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QCameraImageCapture) BufferFormatChanged(format int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraImageCapture19bufferFormatChangedEN11QVideoFrame11PixelFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -595,8 +595,8 @@ func (this *QCameraImageCapture) BufferFormatChanged(arg0 int) {
 /*
 Signal emitted when the capture destination has changed.
 */
-func (this *QCameraImageCapture) CaptureDestinationChanged(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraImageCapture25captureDestinationChangedE6QFlagsINS_18CaptureDestinationEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+func (this *QCameraImageCapture) CaptureDestinationChanged(destination int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraImageCapture25captureDestinationChangedE6QFlagsINS_18CaptureDestinationEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), destination)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -657,12 +657,12 @@ func (this *QCameraImageCapture) ImageMetadataAvailable(id int, key string, valu
 // [-2] void imageAvailable(int, const QVideoFrame &)
 
 /*
-Signal emitted when the frame with request id is available as buffer.
+Signal emitted when the frame with request id is available.
 */
-func (this *QCameraImageCapture) ImageAvailable(id int, image QVideoFrame_ITF) {
+func (this *QCameraImageCapture) ImageAvailable(id int, frame QVideoFrame_ITF) {
 	var convArg1 unsafe.Pointer
-	if image != nil && image.QVideoFrame_PTR() != nil {
-		convArg1 = image.QVideoFrame_PTR().GetCthis()
+	if frame != nil && frame.QVideoFrame_PTR() != nil {
+		convArg1 = frame.QVideoFrame_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QCameraImageCapture14imageAvailableEiRK11QVideoFrame", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
 	qtrt.ErrPrint(err, rv)

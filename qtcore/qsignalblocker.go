@@ -64,7 +64,7 @@ func (*QSignalBlocker) NewFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
 	return NewQSignalBlockerFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qobject.h:548
+// /usr/include/qt/QtCore/qobject.h:537
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSignalBlocker(QObject *)
@@ -87,7 +87,7 @@ func NewQSignalBlocker(o QObject_ITF /*777 QObject **/) *QSignalBlocker {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qobject.h:549
+// /usr/include/qt/QtCore/qobject.h:538
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSignalBlocker(QObject &)
@@ -110,7 +110,7 @@ func NewQSignalBlocker1(o QObject_ITF) *QSignalBlocker {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qobject.h:550
+// /usr/include/qt/QtCore/qobject.h:539
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QSignalBlocker()
@@ -125,7 +125,7 @@ func DeleteQSignalBlocker(this *QSignalBlocker) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qobject.h:557
+// /usr/include/qt/QtCore/qobject.h:546
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void reblock()
@@ -138,7 +138,7 @@ func (this *QSignalBlocker) Reblock() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:558
+// /usr/include/qt/QtCore/qobject.h:547
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void unblock()

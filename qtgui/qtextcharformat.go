@@ -63,7 +63,7 @@ func (*QTextCharFormat) NewFromPointer(cthis unsafe.Pointer) *QTextCharFormat {
 	return NewQTextCharFormatFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:412
+// /usr/include/qt/QtGui/qtextformat.h:414
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextCharFormat()
@@ -82,7 +82,7 @@ func NewQTextCharFormat() *QTextCharFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:557
+// /usr/include/qt/QtGui/qtextformat.h:559
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextCharFormat(const QTextFormat &)
@@ -105,7 +105,7 @@ func NewQTextCharFormat1(fmt_ QTextFormat_ITF) *QTextCharFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:414
+// /usr/include/qt/QtGui/qtextformat.h:416
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -119,7 +119,7 @@ func (this *QTextCharFormat) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:420
+// /usr/include/qt/QtGui/qtextformat.h:422
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &, QTextCharFormat::FontPropertiesInheritanceBehavior)
@@ -136,7 +136,7 @@ func (this *QTextCharFormat) SetFont(font QFont_ITF, behavior int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:421
+// /usr/include/qt/QtGui/qtextformat.h:423
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
@@ -153,7 +153,7 @@ func (this *QTextCharFormat) SetFont1(font QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:422
+// /usr/include/qt/QtGui/qtextformat.h:424
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont font() const
@@ -169,7 +169,7 @@ func (this *QTextCharFormat) Font() *QFont /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:424
+// /usr/include/qt/QtGui/qtextformat.h:426
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontFamily(const QString &)
@@ -184,7 +184,7 @@ func (this *QTextCharFormat) SetFontFamily(family string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:426
+// /usr/include/qt/QtGui/qtextformat.h:428
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString fontFamily() const
@@ -201,7 +201,7 @@ func (this *QTextCharFormat) FontFamily() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:429
+// /usr/include/qt/QtGui/qtextformat.h:431
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontPointSize(qreal)
@@ -214,7 +214,7 @@ func (this *QTextCharFormat) SetFontPointSize(size float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:431
+// /usr/include/qt/QtGui/qtextformat.h:433
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal fontPointSize() const
@@ -228,7 +228,7 @@ func (this *QTextCharFormat) FontPointSize() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:434
+// /usr/include/qt/QtGui/qtextformat.h:436
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontWeight(int)
@@ -241,7 +241,7 @@ func (this *QTextCharFormat) SetFontWeight(weight int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:436
+// /usr/include/qt/QtGui/qtextformat.h:438
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int fontWeight() const
@@ -255,7 +255,7 @@ func (this *QTextCharFormat) FontWeight() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:438
+// /usr/include/qt/QtGui/qtextformat.h:440
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontItalic(bool)
@@ -268,7 +268,7 @@ func (this *QTextCharFormat) SetFontItalic(italic bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:440
+// /usr/include/qt/QtGui/qtextformat.h:442
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool fontItalic() const
@@ -282,7 +282,7 @@ func (this *QTextCharFormat) FontItalic() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:442
+// /usr/include/qt/QtGui/qtextformat.h:444
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontCapitalization(QFont::Capitalization)
@@ -295,7 +295,7 @@ func (this *QTextCharFormat) SetFontCapitalization(capitalization int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:444
+// /usr/include/qt/QtGui/qtextformat.h:446
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QFont::Capitalization fontCapitalization() const
@@ -309,7 +309,7 @@ func (this *QTextCharFormat) FontCapitalization() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:446
+// /usr/include/qt/QtGui/qtextformat.h:448
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontLetterSpacingType(QFont::SpacingType)
@@ -322,7 +322,7 @@ func (this *QTextCharFormat) SetFontLetterSpacingType(letterSpacingType int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:448
+// /usr/include/qt/QtGui/qtextformat.h:450
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QFont::SpacingType fontLetterSpacingType() const
@@ -336,7 +336,7 @@ func (this *QTextCharFormat) FontLetterSpacingType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:450
+// /usr/include/qt/QtGui/qtextformat.h:452
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontLetterSpacing(qreal)
@@ -349,7 +349,7 @@ func (this *QTextCharFormat) SetFontLetterSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:452
+// /usr/include/qt/QtGui/qtextformat.h:454
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal fontLetterSpacing() const
@@ -363,7 +363,7 @@ func (this *QTextCharFormat) FontLetterSpacing() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:454
+// /usr/include/qt/QtGui/qtextformat.h:456
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontWordSpacing(qreal)
@@ -376,7 +376,7 @@ func (this *QTextCharFormat) SetFontWordSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:456
+// /usr/include/qt/QtGui/qtextformat.h:458
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal fontWordSpacing() const
@@ -390,7 +390,7 @@ func (this *QTextCharFormat) FontWordSpacing() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:459
+// /usr/include/qt/QtGui/qtextformat.h:461
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontUnderline(bool)
@@ -403,7 +403,7 @@ func (this *QTextCharFormat) SetFontUnderline(underline bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:461
+// /usr/include/qt/QtGui/qtextformat.h:463
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool fontUnderline() const
@@ -417,7 +417,7 @@ func (this *QTextCharFormat) FontUnderline() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:463
+// /usr/include/qt/QtGui/qtextformat.h:465
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontOverline(bool)
@@ -430,7 +430,7 @@ func (this *QTextCharFormat) SetFontOverline(overline bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:465
+// /usr/include/qt/QtGui/qtextformat.h:467
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool fontOverline() const
@@ -444,7 +444,7 @@ func (this *QTextCharFormat) FontOverline() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:468
+// /usr/include/qt/QtGui/qtextformat.h:470
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontStrikeOut(bool)
@@ -457,7 +457,7 @@ func (this *QTextCharFormat) SetFontStrikeOut(strikeOut bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:470
+// /usr/include/qt/QtGui/qtextformat.h:472
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool fontStrikeOut() const
@@ -471,7 +471,7 @@ func (this *QTextCharFormat) FontStrikeOut() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:473
+// /usr/include/qt/QtGui/qtextformat.h:475
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setUnderlineColor(const QColor &)
@@ -488,7 +488,7 @@ func (this *QTextCharFormat) SetUnderlineColor(color QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:475
+// /usr/include/qt/QtGui/qtextformat.h:477
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QColor underlineColor() const
@@ -504,7 +504,7 @@ func (this *QTextCharFormat) UnderlineColor() *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:478
+// /usr/include/qt/QtGui/qtextformat.h:480
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontFixedPitch(bool)
@@ -517,7 +517,7 @@ func (this *QTextCharFormat) SetFontFixedPitch(fixedPitch bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:480
+// /usr/include/qt/QtGui/qtextformat.h:482
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool fontFixedPitch() const
@@ -531,7 +531,7 @@ func (this *QTextCharFormat) FontFixedPitch() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:483
+// /usr/include/qt/QtGui/qtextformat.h:485
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontStretch(int)
@@ -544,7 +544,7 @@ func (this *QTextCharFormat) SetFontStretch(factor int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:485
+// /usr/include/qt/QtGui/qtextformat.h:487
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int fontStretch() const
@@ -558,7 +558,7 @@ func (this *QTextCharFormat) FontStretch() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:488
+// /usr/include/qt/QtGui/qtextformat.h:490
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontStyleHint(QFont::StyleHint, QFont::StyleStrategy)
@@ -571,7 +571,7 @@ func (this *QTextCharFormat) SetFontStyleHint(hint int, strategy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:488
+// /usr/include/qt/QtGui/qtextformat.h:490
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontStyleHint(QFont::StyleHint, QFont::StyleStrategy)
@@ -586,7 +586,7 @@ func (this *QTextCharFormat) SetFontStyleHintp(hint int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:490
+// /usr/include/qt/QtGui/qtextformat.h:492
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontStyleStrategy(QFont::StyleStrategy)
@@ -599,7 +599,7 @@ func (this *QTextCharFormat) SetFontStyleStrategy(strategy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:492
+// /usr/include/qt/QtGui/qtextformat.h:494
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QFont::StyleHint fontStyleHint() const
@@ -613,7 +613,7 @@ func (this *QTextCharFormat) FontStyleHint() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:494
+// /usr/include/qt/QtGui/qtextformat.h:496
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QFont::StyleStrategy fontStyleStrategy() const
@@ -627,7 +627,7 @@ func (this *QTextCharFormat) FontStyleStrategy() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:497
+// /usr/include/qt/QtGui/qtextformat.h:499
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontHintingPreference(QFont::HintingPreference)
@@ -640,7 +640,7 @@ func (this *QTextCharFormat) SetFontHintingPreference(hintingPreference int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:502
+// /usr/include/qt/QtGui/qtextformat.h:504
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QFont::HintingPreference fontHintingPreference() const
@@ -654,7 +654,7 @@ func (this *QTextCharFormat) FontHintingPreference() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:507
+// /usr/include/qt/QtGui/qtextformat.h:509
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontKerning(bool)
@@ -667,7 +667,7 @@ func (this *QTextCharFormat) SetFontKerning(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:509
+// /usr/include/qt/QtGui/qtextformat.h:511
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool fontKerning() const
@@ -681,7 +681,7 @@ func (this *QTextCharFormat) FontKerning() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:512
+// /usr/include/qt/QtGui/qtextformat.h:514
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUnderlineStyle(QTextCharFormat::UnderlineStyle)
@@ -694,7 +694,7 @@ func (this *QTextCharFormat) SetUnderlineStyle(style int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:513
+// /usr/include/qt/QtGui/qtextformat.h:515
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QTextCharFormat::UnderlineStyle underlineStyle() const
@@ -708,7 +708,7 @@ func (this *QTextCharFormat) UnderlineStyle() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:516
+// /usr/include/qt/QtGui/qtextformat.h:518
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setVerticalAlignment(QTextCharFormat::VerticalAlignment)
@@ -721,7 +721,7 @@ func (this *QTextCharFormat) SetVerticalAlignment(alignment int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:518
+// /usr/include/qt/QtGui/qtextformat.h:520
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QTextCharFormat::VerticalAlignment verticalAlignment() const
@@ -735,7 +735,7 @@ func (this *QTextCharFormat) VerticalAlignment() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:521
+// /usr/include/qt/QtGui/qtextformat.h:523
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextOutline(const QPen &)
@@ -752,7 +752,7 @@ func (this *QTextCharFormat) SetTextOutline(pen QPen_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:523
+// /usr/include/qt/QtGui/qtextformat.h:525
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPen textOutline() const
@@ -768,7 +768,7 @@ func (this *QTextCharFormat) TextOutline() *QPen /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:526
+// /usr/include/qt/QtGui/qtextformat.h:528
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
@@ -783,7 +783,7 @@ func (this *QTextCharFormat) SetToolTip(tip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:528
+// /usr/include/qt/QtGui/qtextformat.h:530
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toolTip() const
@@ -800,7 +800,7 @@ func (this *QTextCharFormat) ToolTip() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:531
+// /usr/include/qt/QtGui/qtextformat.h:533
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAnchor(bool)
@@ -813,7 +813,7 @@ func (this *QTextCharFormat) SetAnchor(anchor bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:533
+// /usr/include/qt/QtGui/qtextformat.h:535
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isAnchor() const
@@ -827,7 +827,7 @@ func (this *QTextCharFormat) IsAnchor() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:536
+// /usr/include/qt/QtGui/qtextformat.h:538
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAnchorHref(const QString &)
@@ -842,7 +842,7 @@ func (this *QTextCharFormat) SetAnchorHref(value string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:538
+// /usr/include/qt/QtGui/qtextformat.h:540
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString anchorHref() const
@@ -859,7 +859,7 @@ func (this *QTextCharFormat) AnchorHref() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:541
+// /usr/include/qt/QtGui/qtextformat.h:543
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAnchorName(const QString &)
@@ -874,7 +874,7 @@ func (this *QTextCharFormat) SetAnchorName(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:543
+// /usr/include/qt/QtGui/qtextformat.h:545
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString anchorName() const
@@ -891,7 +891,7 @@ func (this *QTextCharFormat) AnchorName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:545
+// /usr/include/qt/QtGui/qtextformat.h:547
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAnchorNames(const QStringList &)
@@ -908,7 +908,7 @@ func (this *QTextCharFormat) SetAnchorNames(names qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:547
+// /usr/include/qt/QtGui/qtextformat.h:549
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList anchorNames() const
@@ -924,7 +924,7 @@ func (this *QTextCharFormat) AnchorNames() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:549
+// /usr/include/qt/QtGui/qtextformat.h:551
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTableCellRowSpan(int)
@@ -937,7 +937,7 @@ func (this *QTextCharFormat) SetTableCellRowSpan(tableCellRowSpan int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:550
+// /usr/include/qt/QtGui/qtextformat.h:552
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int tableCellRowSpan() const
@@ -951,7 +951,7 @@ func (this *QTextCharFormat) TableCellRowSpan() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:552
+// /usr/include/qt/QtGui/qtextformat.h:554
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTableCellColumnSpan(int)
@@ -964,7 +964,7 @@ func (this *QTextCharFormat) SetTableCellColumnSpan(tableCellColumnSpan int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextformat.h:553
+// /usr/include/qt/QtGui/qtextformat.h:555
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int tableCellColumnSpan() const

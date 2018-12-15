@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 79
+// extern C begin: 80
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func (*QTextStreamManipulator) NewFromPointer(cthis unsafe.Pointer) *QTextStream
 	return NewQTextStreamManipulatorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qtextstream.h:217
+// /usr/include/qt/QtCore/qtextstream.h:218
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void exec(QTextStream &)

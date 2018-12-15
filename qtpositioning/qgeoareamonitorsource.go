@@ -18,7 +18,7 @@ package qtpositioning
 
 /*
 #include <stdlib.h>
-// extern C begin: 21
+// extern C begin: 22
 */
 // import "C"
 import "unsafe"

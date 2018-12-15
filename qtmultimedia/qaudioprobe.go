@@ -210,10 +210,10 @@ func (this *QAudioProbe) IsActive() bool {
 /*
 This signal should be emitted when an audio buffer is processed in the media service.
 */
-func (this *QAudioProbe) AudioBufferProbed(audioBuffer QAudioBuffer_ITF) {
+func (this *QAudioProbe) AudioBufferProbed(buffer QAudioBuffer_ITF) {
 	var convArg0 unsafe.Pointer
-	if audioBuffer != nil && audioBuffer.QAudioBuffer_PTR() != nil {
-		convArg0 = audioBuffer.QAudioBuffer_PTR().GetCthis()
+	if buffer != nil && buffer.QAudioBuffer_PTR() != nil {
+		convArg0 = buffer.QAudioBuffer_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QAudioProbe17audioBufferProbedERK12QAudioBuffer", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qabstractanimation.h
@@ -82,7 +84,7 @@ func (*QAbstractAnimation) NewFromPointer(cthis unsafe.Pointer) *QAbstractAnimat
 	return NewQAbstractAnimationFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:57
+// /usr/include/qt/QtCore/qabstractanimation.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -96,7 +98,7 @@ func (this *QAbstractAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:85
+// /usr/include/qt/QtCore/qabstractanimation.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractAnimation(QObject *)
@@ -121,7 +123,7 @@ func NewQAbstractAnimation(parent QObject_ITF /*777 QObject **/) *QAbstractAnima
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:85
+// /usr/include/qt/QtCore/qabstractanimation.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractAnimation(QObject *)
@@ -144,7 +146,7 @@ func NewQAbstractAnimationp() *QAbstractAnimation {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:86
+// /usr/include/qt/QtCore/qabstractanimation.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractAnimation()
@@ -159,7 +161,7 @@ func DeleteQAbstractAnimation(this *QAbstractAnimation) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:88
+// /usr/include/qt/QtCore/qabstractanimation.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractAnimation::State state() const
@@ -173,7 +175,7 @@ func (this *QAbstractAnimation) State() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:90
+// /usr/include/qt/QtCore/qabstractanimation.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAnimationGroup * group() const
@@ -189,7 +191,7 @@ func (this *QAbstractAnimation) Group() *QAnimationGroup /*777 QAnimationGroup *
 	return /*==*/ NewQAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:92
+// /usr/include/qt/QtCore/qabstractanimation.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractAnimation::Direction direction() const
@@ -203,7 +205,7 @@ func (this *QAbstractAnimation) Direction() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:93
+// /usr/include/qt/QtCore/qabstractanimation.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDirection(QAbstractAnimation::Direction)
@@ -216,7 +218,7 @@ func (this *QAbstractAnimation) SetDirection(direction int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:95
+// /usr/include/qt/QtCore/qabstractanimation.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentTime() const
@@ -230,7 +232,7 @@ func (this *QAbstractAnimation) CurrentTime() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:96
+// /usr/include/qt/QtCore/qabstractanimation.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentLoopTime() const
@@ -246,7 +248,7 @@ func (this *QAbstractAnimation) CurrentLoopTime() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:98
+// /usr/include/qt/QtCore/qabstractanimation.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int loopCount() const
@@ -260,7 +262,7 @@ func (this *QAbstractAnimation) LoopCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:99
+// /usr/include/qt/QtCore/qabstractanimation.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLoopCount(int)
@@ -273,7 +275,7 @@ func (this *QAbstractAnimation) SetLoopCount(loopCount int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:100
+// /usr/include/qt/QtCore/qabstractanimation.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentLoop() const
@@ -287,7 +289,7 @@ func (this *QAbstractAnimation) CurrentLoop() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:102
+// /usr/include/qt/QtCore/qabstractanimation.h:101
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int duration() const
@@ -309,7 +311,7 @@ func (this *QAbstractAnimation) Duration() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:103
+// /usr/include/qt/QtCore/qabstractanimation.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int totalDuration() const
@@ -325,7 +327,7 @@ func (this *QAbstractAnimation) TotalDuration() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:106
+// /usr/include/qt/QtCore/qabstractanimation.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void finished()
@@ -342,7 +344,7 @@ func (this *QAbstractAnimation) Finished() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:107
+// /usr/include/qt/QtCore/qabstractanimation.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stateChanged(QAbstractAnimation::State, QAbstractAnimation::State)
@@ -359,7 +361,7 @@ func (this *QAbstractAnimation) StateChanged(newState int, oldState int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:108
+// /usr/include/qt/QtCore/qabstractanimation.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentLoopChanged(int)
@@ -376,7 +378,7 @@ func (this *QAbstractAnimation) CurrentLoopChanged(currentLoop int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:109
+// /usr/include/qt/QtCore/qabstractanimation.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void directionChanged(QAbstractAnimation::Direction)
@@ -393,7 +395,7 @@ func (this *QAbstractAnimation) DirectionChanged(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:112
+// /usr/include/qt/QtCore/qabstractanimation.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start(QAbstractAnimation::DeletionPolicy)
@@ -412,7 +414,7 @@ func (this *QAbstractAnimation) Start(policy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:112
+// /usr/include/qt/QtCore/qabstractanimation.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start(QAbstractAnimation::DeletionPolicy)
@@ -433,7 +435,7 @@ func (this *QAbstractAnimation) Startp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:113
+// /usr/include/qt/QtCore/qabstractanimation.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void pause()
@@ -448,7 +450,7 @@ func (this *QAbstractAnimation) Pause() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:114
+// /usr/include/qt/QtCore/qabstractanimation.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resume()
@@ -463,7 +465,7 @@ func (this *QAbstractAnimation) Resume() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:115
+// /usr/include/qt/QtCore/qabstractanimation.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPaused(bool)
@@ -478,7 +480,7 @@ func (this *QAbstractAnimation) SetPaused(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:116
+// /usr/include/qt/QtCore/qabstractanimation.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stop()
@@ -495,7 +497,7 @@ func (this *QAbstractAnimation) Stop() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:117
+// /usr/include/qt/QtCore/qabstractanimation.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentTime(int)
@@ -508,7 +510,7 @@ func (this *QAbstractAnimation) SetCurrentTime(msecs int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:121
+// /usr/include/qt/QtCore/qabstractanimation.h:120
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -526,7 +528,7 @@ func (this *QAbstractAnimation) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:123
+// /usr/include/qt/QtCore/qabstractanimation.h:122
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentTime(int)
@@ -541,7 +543,7 @@ func (this *QAbstractAnimation) UpdateCurrentTime(currentTime int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:124
+// /usr/include/qt/QtCore/qabstractanimation.h:123
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
@@ -556,7 +558,7 @@ func (this *QAbstractAnimation) UpdateState(newState int, oldState int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qabstractanimation.h:125
+// /usr/include/qt/QtCore/qabstractanimation.h:124
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateDirection(QAbstractAnimation::Direction)

@@ -438,7 +438,7 @@ func (this *QRgba64) Premultiplied() *QRgba64 /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qrgba64.h:137
+// /usr/include/qt/QtGui/qrgba64.h:141
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QRgba64 unpremultiplied() const
@@ -456,7 +456,7 @@ func (this *QRgba64) Unpremultiplied() *QRgba64 /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qrgba64.h:151
+// /usr/include/qt/QtGui/qrgba64.h:155
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QRgba64 operator=(quint64)

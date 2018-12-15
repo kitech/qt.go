@@ -360,6 +360,49 @@ func (this *QBitmap) FromImagep(image QImage_ITF) *QBitmap /*123*/ {
 }
 
 // /usr/include/qt/QtGui/qbitmap.h:75
+// index:1
+// Public static Visibility=Default Availability=Available
+// [32] QBitmap fromImage(QImage &&, Qt::ImageConversionFlags)
+
+/*
+Returns a copy of the given image converted to a bitmap using the specified image conversion flags.
+
+See also fromData().
+*/
+func (this *QBitmap) FromImage1(image unsafe.Pointer /*333*/, flags int) *QBitmap /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmap9fromImageEO6QImage6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, image, flags)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBitmap)
+	return rv2
+}
+func QBitmap_FromImage1(image unsafe.Pointer /*333*/, flags int) *QBitmap /*123*/ {
+	var nilthis *QBitmap
+	rv := nilthis.FromImage1(image, flags)
+	return rv
+}
+
+// /usr/include/qt/QtGui/qbitmap.h:75
+// index:1
+// Public static Visibility=Default Availability=Available
+// [32] QBitmap fromImage(QImage &&, Qt::ImageConversionFlags)
+
+/*
+Returns a copy of the given image converted to a bitmap using the specified image conversion flags.
+
+See also fromData().
+*/
+func (this *QBitmap) FromImage1p(image unsafe.Pointer /*333*/) *QBitmap /*123*/ {
+	// arg: 1, Qt::ImageConversionFlags=Elaborated, Qt::ImageConversionFlags=Typedef, QFlags<Qt::ImageConversionFlag>, Unexposed
+	flags := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmap9fromImageEO6QImage6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, image, flags)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBitmap)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qbitmap.h:76
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QBitmap fromData(const QSize &, const uchar *, QImage::Format)
@@ -388,7 +431,7 @@ func QBitmap_FromData(size qtcore.QSize_ITF, bits unsafe.Pointer /*666*/, monoFo
 	return rv
 }
 
-// /usr/include/qt/QtGui/qbitmap.h:75
+// /usr/include/qt/QtGui/qbitmap.h:76
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QBitmap fromData(const QSize &, const uchar *, QImage::Format)
@@ -414,7 +457,7 @@ func (this *QBitmap) FromDatap(size qtcore.QSize_ITF, bits unsafe.Pointer /*666*
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qbitmap.h:78
+// /usr/include/qt/QtGui/qbitmap.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QBitmap transformed(const QMatrix &) const
@@ -436,7 +479,7 @@ func (this *QBitmap) Transformed(arg0 QMatrix_ITF) *QBitmap /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qbitmap.h:79
+// /usr/include/qt/QtGui/qbitmap.h:80
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QBitmap transformed(const QTransform &) const

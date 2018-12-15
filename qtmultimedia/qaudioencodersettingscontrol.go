@@ -118,7 +118,7 @@ func (this *QAudioEncoderSettingsControl) SupportedAudioCodecs() *qtcore.QString
 // [8] QString codecDescription(const QString &) const
 
 /*
-Returns description of audio codec.
+Returns the description of audio codec codecName.
 */
 func (this *QAudioEncoderSettingsControl) CodecDescription(codecName string) string {
 	var tmpArg0 = qtcore.NewQString5(codecName)
@@ -161,10 +161,10 @@ Sets the selected audio settings.
 
 See also audioSettings().
 */
-func (this *QAudioEncoderSettingsControl) SetAudioSettings(arg0 QAudioEncoderSettings_ITF) {
+func (this *QAudioEncoderSettingsControl) SetAudioSettings(settings QAudioEncoderSettings_ITF) {
 	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QAudioEncoderSettings_PTR() != nil {
-		convArg0 = arg0.QAudioEncoderSettings_PTR().GetCthis()
+	if settings != nil && settings.QAudioEncoderSettings_PTR() != nil {
+		convArg0 = settings.QAudioEncoderSettings_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN28QAudioEncoderSettingsControl16setAudioSettingsERK21QAudioEncoderSettings", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

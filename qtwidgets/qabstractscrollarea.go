@@ -557,7 +557,7 @@ func (this *QAbstractScrollArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QFrame::sizeHint().
 
 Returns the sizeHint property of the scroll area. The size is determined by using viewportSizeHint() plus some extra space for scroll bars, if needed.
 */
@@ -705,7 +705,7 @@ func (this *QAbstractScrollArea) EventFilter(arg0 qtcore.QObject_ITF /*777 QObje
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QFrame::event().
 
 This is the main event handler for the QAbstractScrollArea widget (not the scrolling area viewport()). The specified event is a general event object that may need to be cast to the appropriate class depending on its type.
 
@@ -774,7 +774,7 @@ func (this *QAbstractScrollArea) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 Q
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QFrame::paintEvent().
 
 This event handler can be reimplemented in a subclass to receive paint events (passed in event), for the viewport() widget.
 

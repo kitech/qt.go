@@ -222,8 +222,8 @@ Note: Signal selectedDeviceChanged is overloaded in this class. To connect to th
   connect(videoDeviceSelectorControl, QOverload<int>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged),
       [=](int index){ /-* ... *-/ });
 */
-func (this *QVideoDeviceSelectorControl) SelectedDeviceChanged1(deviceName string) {
-	var tmpArg0 = qtcore.NewQString5(deviceName)
+func (this *QVideoDeviceSelectorControl) SelectedDeviceChanged1(name string) {
+	var tmpArg0 = qtcore.NewQString5(name)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN27QVideoDeviceSelectorControl21selectedDeviceChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)

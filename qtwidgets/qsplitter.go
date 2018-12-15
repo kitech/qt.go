@@ -455,7 +455,7 @@ func (this *QSplitter) Refresh() {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QFrame::sizeHint().
 */
 func (this *QSplitter) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSplitter8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -572,7 +572,7 @@ func (this *QSplitter) SetHandleWidth(arg0 int) {
 // [4] int indexOf(QWidget *) const
 
 /*
-Returns the index in the splitter's layout of the specified widget. This also works for handles.
+Returns the index in the splitter's layout of the specified widget, or -1 if widget is not found. This also works for handles.
 
 Handles are numbered from 0. There are as many handles as there are child widgets, but the handle at position 0 is always hidden.
 
@@ -594,7 +594,7 @@ func (this *QSplitter) IndexOf(w QWidget_ITF /*777 QWidget **/) int {
 // [8] QWidget * widget(int) const
 
 /*
-Returns the widget at the given index in the splitter's layout.
+Returns the widget at the given index in the splitter's layout, or nullptr if there is no such widget.
 
 See also count(), handle(), indexOf(), and insertWidget().
 */
@@ -639,7 +639,7 @@ func (this *QSplitter) GetRange(index int, arg1 unsafe.Pointer /*666*/, arg2 uns
 // [8] QSplitterHandle * handle(int) const
 
 /*
-Returns the handle to the left (or above) for the item in the splitter's layout at the given index. The handle at index 0 is always hidden.
+Returns the handle to the left of (or above) the item in the splitter's layout at the given index, or nullptr if there is no such item. The handle at index 0 is always hidden.
 
 For right-to-left languages such as Arabic and Hebrew, the layout of horizontal splitters is reversed. The handle will be to the right of the widget at index.
 
@@ -741,7 +741,7 @@ func (this *QSplitter) ChildEvent(arg0 qtcore.QChildEvent_ITF /*777 QChildEvent 
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QFrame::event().
 */
 func (this *QSplitter) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -776,7 +776,7 @@ func (this *QSplitter) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEven
 // [-2] void changeEvent(QEvent *)
 
 /*
-Reimplemented from QWidget::changeEvent().
+Reimplemented from QFrame::changeEvent().
 */
 func (this *QSplitter) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	var convArg0 unsafe.Pointer

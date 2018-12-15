@@ -63,7 +63,7 @@ func (*QScrollEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollEvent {
 	return NewQScrollEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:1022
+// /usr/include/qt/QtGui/qevent.h:1027
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollEvent(const QPointF &, const QPointF &, QScrollEvent::ScrollState)
@@ -90,7 +90,7 @@ func NewQScrollEvent(contentPos qtcore.QPointF_ITF, overshoot qtcore.QPointF_ITF
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:1023
+// /usr/include/qt/QtGui/qevent.h:1028
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScrollEvent()
@@ -105,7 +105,7 @@ func DeleteQScrollEvent(this *QScrollEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:1025
+// /usr/include/qt/QtGui/qevent.h:1030
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF contentPos() const
@@ -121,7 +121,7 @@ func (this *QScrollEvent) ContentPos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:1026
+// /usr/include/qt/QtGui/qevent.h:1031
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF overshootDistance() const
@@ -137,7 +137,7 @@ func (this *QScrollEvent) OvershootDistance() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:1027
+// /usr/include/qt/QtGui/qevent.h:1032
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QScrollEvent::ScrollState scrollState() const

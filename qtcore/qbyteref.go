@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 147
+// extern C begin: 151
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func (*QByteRef) NewFromPointer(cthis unsafe.Pointer) *QByteRef {
 	return NewQByteRefFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:535
+// /usr/include/qt/QtCore/qbytearray.h:542
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QByteRef & operator=(char)
@@ -80,7 +80,7 @@ func (this *QByteRef) Operator_equal(c byte) *QByteRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:538
+// /usr/include/qt/QtCore/qbytearray.h:545
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QByteRef & operator=(const QByteRef &)
@@ -100,7 +100,7 @@ func (this *QByteRef) Operator_equal1(c QByteRef_ITF) *QByteRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:541
+// /usr/include/qt/QtCore/qbytearray.h:548
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(char) const
@@ -114,7 +114,7 @@ func (this *QByteRef) Operator_equal_equal(c byte) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:543
+// /usr/include/qt/QtCore/qbytearray.h:550
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(char) const
@@ -128,7 +128,7 @@ func (this *QByteRef) Operator_not_equal(c byte) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:545
+// /usr/include/qt/QtCore/qbytearray.h:552
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(char) const
@@ -142,7 +142,7 @@ func (this *QByteRef) Operator_greater_than(c byte) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:547
+// /usr/include/qt/QtCore/qbytearray.h:554
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(char) const
@@ -156,7 +156,7 @@ func (this *QByteRef) Operator_greater_than_equal(c byte) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:549
+// /usr/include/qt/QtCore/qbytearray.h:556
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(char) const
@@ -170,7 +170,7 @@ func (this *QByteRef) Operator_less_than(c byte) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:551
+// /usr/include/qt/QtCore/qbytearray.h:558
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(char) const

@@ -349,6 +349,8 @@ Returns the distance (in meters) from this coordinate to the coordinate specifie
 This calculation returns the great-circle distance between the two coordinates, with an assumption that the Earth is spherical for the purpose of this calculation.
 
 Returns 0 if the type of this coordinate or the type of other is QGeoCoordinate::InvalidCoordinate.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoCoordinate) DistanceTo(other QGeoCoordinate_ITF) float64 {
 	var convArg0 unsafe.Pointer
@@ -371,6 +373,8 @@ Returns the azimuth (or bearing) in degrees from this coordinate to the coordina
 The bearing returned is the bearing from the origin to other along the great-circle between the two coordinates. There is an assumption that the Earth is spherical for the purpose of this calculation.
 
 Returns 0 if the type of this coordinate or the type of other is QGeoCoordinate::InvalidCoordinate.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoCoordinate) AzimuthTo(other QGeoCoordinate_ITF) float64 {
 	var convArg0 unsafe.Pointer
@@ -393,6 +397,8 @@ Returns the coordinate that is reached by traveling distance meters from the cur
 The altitude will have distanceUp added to it.
 
 Returns an invalid coordinate if this coordinate is invalid.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoCoordinate) AtDistanceAndAzimuth(distance float64, azimuth float64, distanceUp float64) *QGeoCoordinate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGeoCoordinate20atDistanceAndAzimuthEddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), distance, azimuth, distanceUp)
@@ -413,6 +419,8 @@ Returns the coordinate that is reached by traveling distance meters from the cur
 The altitude will have distanceUp added to it.
 
 Returns an invalid coordinate if this coordinate is invalid.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoCoordinate) AtDistanceAndAzimuthp(distance float64, azimuth float64) *QGeoCoordinate /*123*/ {
 	// arg: 2, qreal=Typedef, qreal=Typedef, double, Double
@@ -447,6 +455,8 @@ DegreesMinutesSecondsWithHemisphere27° 28' 3.2" S, 153° 1' 40.4" E, 28.1m
 The altitude field is omitted if no altitude is set.
 
 If the coordinate is invalid, an empty string is returned.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoCoordinate) ToString(format int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGeoCoordinate8toStringENS_16CoordinateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
@@ -480,6 +490,8 @@ DegreesMinutesSecondsWithHemisphere27° 28' 3.2" S, 153° 1' 40.4" E, 28.1m
 The altitude field is omitted if no altitude is set.
 
 If the coordinate is invalid, an empty string is returned.
+
+Note: This function can be invoked via the meta-object system and from QML. See Q_INVOKABLE.
 */
 func (this *QGeoCoordinate) ToStringp() string {
 	// arg: 0, QGeoCoordinate::CoordinateFormat=Enum, QGeoCoordinate::CoordinateFormat=Enum, , Invalid

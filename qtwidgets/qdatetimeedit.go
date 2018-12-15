@@ -1126,7 +1126,7 @@ func (this *QDateTimeEdit) SetTimeSpec(spec int) {
 // [8] QSize sizeHint() const
 
 /*
-Reimplemented from QWidget::sizeHint().
+Reimplemented from QAbstractSpinBox::sizeHint().
 */
 func (this *QDateTimeEdit) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QDateTimeEdit8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1168,7 +1168,7 @@ func (this *QDateTimeEdit) StepBy(steps int) {
 // [1] bool event(QEvent *)
 
 /*
-Reimplemented from QObject::event().
+Reimplemented from QAbstractSpinBox::event().
 */
 func (this *QDateTimeEdit) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	var convArg0 unsafe.Pointer
@@ -1294,7 +1294,7 @@ func (this *QDateTimeEdit) SetTime(time qtcore.QTime_ITF) {
 // [-2] void keyPressEvent(QKeyEvent *)
 
 /*
-Reimplemented from QWidget::keyPressEvent().
+Reimplemented from QAbstractSpinBox::keyPressEvent().
 */
 func (this *QDateTimeEdit) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1311,7 +1311,7 @@ func (this *QDateTimeEdit) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEve
 // [-2] void wheelEvent(QWheelEvent *)
 
 /*
-Reimplemented from QWidget::wheelEvent().
+Reimplemented from QAbstractSpinBox::wheelEvent().
 */
 func (this *QDateTimeEdit) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1328,7 +1328,7 @@ func (this *QDateTimeEdit) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEv
 // [-2] void focusInEvent(QFocusEvent *)
 
 /*
-Reimplemented from QWidget::focusInEvent().
+Reimplemented from QAbstractSpinBox::focusInEvent().
 */
 func (this *QDateTimeEdit) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1451,7 +1451,7 @@ func (this *QDateTimeEdit) StepEnabled() int {
 // [-2] void mousePressEvent(QMouseEvent *)
 
 /*
-Reimplemented from QWidget::mousePressEvent().
+Reimplemented from QAbstractSpinBox::mousePressEvent().
 */
 func (this *QDateTimeEdit) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEvent **/) {
 	var convArg0 unsafe.Pointer
@@ -1468,7 +1468,7 @@ func (this *QDateTimeEdit) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMo
 // [-2] void paintEvent(QPaintEvent *)
 
 /*
-Reimplemented from QWidget::paintEvent().
+Reimplemented from QAbstractSpinBox::paintEvent().
 */
 func (this *QDateTimeEdit) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	var convArg0 unsafe.Pointer

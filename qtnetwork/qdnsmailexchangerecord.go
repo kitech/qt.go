@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qdnslookup.h
@@ -65,7 +67,7 @@ func (*QDnsMailExchangeRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsMailExc
 	return NewQDnsMailExchangeRecordFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:111
+// /usr/include/qt/QtNetwork/qdnslookup.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsMailExchangeRecord()
@@ -84,7 +86,7 @@ func NewQDnsMailExchangeRecord() *QDnsMailExchangeRecord {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:114
+// /usr/include/qt/QtNetwork/qdnslookup.h:116
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDnsMailExchangeRecord & operator=(QDnsMailExchangeRecord &&)
@@ -100,7 +102,7 @@ func (this *QDnsMailExchangeRecord) Operator_equal(other unsafe.Pointer /*333*/)
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:116
+// /usr/include/qt/QtNetwork/qdnslookup.h:118
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QDnsMailExchangeRecord & operator=(const QDnsMailExchangeRecord &)
@@ -120,7 +122,7 @@ func (this *QDnsMailExchangeRecord) Operator_equal1(other QDnsMailExchangeRecord
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:117
+// /usr/include/qt/QtNetwork/qdnslookup.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDnsMailExchangeRecord()
@@ -135,7 +137,7 @@ func DeleteQDnsMailExchangeRecord(this *QDnsMailExchangeRecord) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:119
+// /usr/include/qt/QtNetwork/qdnslookup.h:121
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDnsMailExchangeRecord &)
@@ -152,7 +154,7 @@ func (this *QDnsMailExchangeRecord) Swap(other QDnsMailExchangeRecord_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:121
+// /usr/include/qt/QtNetwork/qdnslookup.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString exchange() const
@@ -169,7 +171,7 @@ func (this *QDnsMailExchangeRecord) Exchange() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:122
+// /usr/include/qt/QtNetwork/qdnslookup.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
@@ -186,7 +188,7 @@ func (this *QDnsMailExchangeRecord) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:123
+// /usr/include/qt/QtNetwork/qdnslookup.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] quint16 preference() const
@@ -200,7 +202,7 @@ func (this *QDnsMailExchangeRecord) Preference() uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:124
+// /usr/include/qt/QtNetwork/qdnslookup.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] quint32 timeToLive() const

@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qfutureinterface.h
@@ -74,7 +76,7 @@ func (*QFutureInterfaceBase) NewFromPointer(cthis unsafe.Pointer) *QFutureInterf
 	return NewQFutureInterfaceBaseFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:73
+// /usr/include/qt/QtCore/qfutureinterface.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFutureInterfaceBase(QFutureInterfaceBase::State)
@@ -93,7 +95,7 @@ func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:73
+// /usr/include/qt/QtCore/qfutureinterface.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFutureInterfaceBase(QFutureInterfaceBase::State)
@@ -114,7 +116,7 @@ func NewQFutureInterfaceBasep() *QFutureInterfaceBase {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:75
+// /usr/include/qt/QtCore/qfutureinterface.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFutureInterfaceBase()
@@ -129,7 +131,7 @@ func DeleteQFutureInterfaceBase(this *QFutureInterfaceBase) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:78
+// /usr/include/qt/QtCore/qfutureinterface.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reportStarted()
@@ -142,7 +144,7 @@ func (this *QFutureInterfaceBase) ReportStarted() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:79
+// /usr/include/qt/QtCore/qfutureinterface.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reportFinished()
@@ -155,7 +157,7 @@ func (this *QFutureInterfaceBase) ReportFinished() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:80
+// /usr/include/qt/QtCore/qfutureinterface.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reportCanceled()
@@ -168,7 +170,7 @@ func (this *QFutureInterfaceBase) ReportCanceled() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:84
+// /usr/include/qt/QtCore/qfutureinterface.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reportResultsReady(int, int)
@@ -181,7 +183,7 @@ func (this *QFutureInterfaceBase) ReportResultsReady(beginIndex int, endIndex in
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:86
+// /usr/include/qt/QtCore/qfutureinterface.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRunnable(QRunnable *)
@@ -198,7 +200,7 @@ func (this *QFutureInterfaceBase) SetRunnable(runnable QRunnable_ITF /*777 QRunn
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:87
+// /usr/include/qt/QtCore/qfutureinterface.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setThreadPool(QThreadPool *)
@@ -215,7 +217,7 @@ func (this *QFutureInterfaceBase) SetThreadPool(pool QThreadPool_ITF /*777 QThre
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:88
+// /usr/include/qt/QtCore/qfutureinterface.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilterMode(bool)
@@ -228,7 +230,7 @@ func (this *QFutureInterfaceBase) SetFilterMode(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:89
+// /usr/include/qt/QtCore/qfutureinterface.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProgressRange(int, int)
@@ -241,7 +243,7 @@ func (this *QFutureInterfaceBase) SetProgressRange(minimum int, maximum int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:90
+// /usr/include/qt/QtCore/qfutureinterface.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int progressMinimum() const
@@ -255,7 +257,7 @@ func (this *QFutureInterfaceBase) ProgressMinimum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:91
+// /usr/include/qt/QtCore/qfutureinterface.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int progressMaximum() const
@@ -269,7 +271,7 @@ func (this *QFutureInterfaceBase) ProgressMaximum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:92
+// /usr/include/qt/QtCore/qfutureinterface.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isProgressUpdateNeeded() const
@@ -283,7 +285,7 @@ func (this *QFutureInterfaceBase) IsProgressUpdateNeeded() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:93
+// /usr/include/qt/QtCore/qfutureinterface.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProgressValue(int)
@@ -296,7 +298,7 @@ func (this *QFutureInterfaceBase) SetProgressValue(progressValue int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:94
+// /usr/include/qt/QtCore/qfutureinterface.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int progressValue() const
@@ -310,7 +312,7 @@ func (this *QFutureInterfaceBase) ProgressValue() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:95
+// /usr/include/qt/QtCore/qfutureinterface.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProgressValueAndText(int, const QString &)
@@ -325,7 +327,7 @@ func (this *QFutureInterfaceBase) SetProgressValueAndText(progressValue int, pro
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:96
+// /usr/include/qt/QtCore/qfutureinterface.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString progressText() const
@@ -342,7 +344,7 @@ func (this *QFutureInterfaceBase) ProgressText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:98
+// /usr/include/qt/QtCore/qfutureinterface.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExpectedResultCount(int)
@@ -355,7 +357,7 @@ func (this *QFutureInterfaceBase) SetExpectedResultCount(resultCount int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:99
+// /usr/include/qt/QtCore/qfutureinterface.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int expectedResultCount()
@@ -369,7 +371,7 @@ func (this *QFutureInterfaceBase) ExpectedResultCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:100
+// /usr/include/qt/QtCore/qfutureinterface.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int resultCount() const
@@ -383,7 +385,7 @@ func (this *QFutureInterfaceBase) ResultCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:102
+// /usr/include/qt/QtCore/qfutureinterface.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool queryState(QFutureInterfaceBase::State) const
@@ -397,7 +399,7 @@ func (this *QFutureInterfaceBase) QueryState(state int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:103
+// /usr/include/qt/QtCore/qfutureinterface.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRunning() const
@@ -411,7 +413,7 @@ func (this *QFutureInterfaceBase) IsRunning() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:104
+// /usr/include/qt/QtCore/qfutureinterface.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isStarted() const
@@ -425,7 +427,7 @@ func (this *QFutureInterfaceBase) IsStarted() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:105
+// /usr/include/qt/QtCore/qfutureinterface.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCanceled() const
@@ -439,7 +441,7 @@ func (this *QFutureInterfaceBase) IsCanceled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:106
+// /usr/include/qt/QtCore/qfutureinterface.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFinished() const
@@ -453,7 +455,7 @@ func (this *QFutureInterfaceBase) IsFinished() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:107
+// /usr/include/qt/QtCore/qfutureinterface.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isPaused() const
@@ -467,7 +469,7 @@ func (this *QFutureInterfaceBase) IsPaused() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:108
+// /usr/include/qt/QtCore/qfutureinterface.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isThrottled() const
@@ -481,7 +483,7 @@ func (this *QFutureInterfaceBase) IsThrottled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:109
+// /usr/include/qt/QtCore/qfutureinterface.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isResultReadyAt(int) const
@@ -495,7 +497,7 @@ func (this *QFutureInterfaceBase) IsResultReadyAt(index int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:111
+// /usr/include/qt/QtCore/qfutureinterface.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cancel()
@@ -508,7 +510,7 @@ func (this *QFutureInterfaceBase) Cancel() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:112
+// /usr/include/qt/QtCore/qfutureinterface.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPaused(bool)
@@ -521,7 +523,7 @@ func (this *QFutureInterfaceBase) SetPaused(paused bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:113
+// /usr/include/qt/QtCore/qfutureinterface.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void togglePaused()
@@ -534,7 +536,7 @@ func (this *QFutureInterfaceBase) TogglePaused() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:114
+// /usr/include/qt/QtCore/qfutureinterface.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setThrottled(bool)
@@ -547,7 +549,7 @@ func (this *QFutureInterfaceBase) SetThrottled(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:116
+// /usr/include/qt/QtCore/qfutureinterface.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void waitForFinished()
@@ -560,7 +562,7 @@ func (this *QFutureInterfaceBase) WaitForFinished() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:117
+// /usr/include/qt/QtCore/qfutureinterface.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForNextResult()
@@ -574,7 +576,7 @@ func (this *QFutureInterfaceBase) WaitForNextResult() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:118
+// /usr/include/qt/QtCore/qfutureinterface.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void waitForResult(int)
@@ -587,7 +589,7 @@ func (this *QFutureInterfaceBase) WaitForResult(resultIndex int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:119
+// /usr/include/qt/QtCore/qfutureinterface.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void waitForResume()
@@ -600,7 +602,7 @@ func (this *QFutureInterfaceBase) WaitForResume() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:121
+// /usr/include/qt/QtCore/qfutureinterface.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMutex * mutex() const
@@ -614,7 +616,7 @@ func (this *QFutureInterfaceBase) Mutex() *QMutex /*777 QMutex **/ {
 	return /*==*/ NewQMutexFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:122
+// /usr/include/qt/QtCore/qfutureinterface.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] QtPrivate::ExceptionStore & exceptionStore()
@@ -628,7 +630,7 @@ func (this *QFutureInterfaceBase) ExceptionStore() int {
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:123
+// /usr/include/qt/QtCore/qfutureinterface.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [48] QtPrivate::ResultStoreBase & resultStoreBase()
@@ -642,7 +644,7 @@ func (this *QFutureInterfaceBase) ResultStoreBase() int {
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:124
+// /usr/include/qt/QtCore/qfutureinterface.h:123
 // index:1
 // Public Visibility=Default Availability=Available
 // [48] const QtPrivate::ResultStoreBase & resultStoreBase() const
@@ -656,7 +658,7 @@ func (this *QFutureInterfaceBase) ResultStoreBase1() int {
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:126
+// /usr/include/qt/QtCore/qfutureinterface.h:125
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QFutureInterfaceBase &) const
@@ -674,7 +676,7 @@ func (this *QFutureInterfaceBase) Operator_equal_equal(other QFutureInterfaceBas
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:127
+// /usr/include/qt/QtCore/qfutureinterface.h:126
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QFutureInterfaceBase &) const
@@ -692,7 +694,7 @@ func (this *QFutureInterfaceBase) Operator_not_equal(other QFutureInterfaceBase_
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:128
+// /usr/include/qt/QtCore/qfutureinterface.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFutureInterfaceBase & operator=(const QFutureInterfaceBase &)
@@ -712,7 +714,7 @@ func (this *QFutureInterfaceBase) Operator_equal(other QFutureInterfaceBase_ITF)
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:131
+// /usr/include/qt/QtCore/qfutureinterface.h:130
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool refT() const
@@ -726,7 +728,7 @@ func (this *QFutureInterfaceBase) RefT() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfutureinterface.h:132
+// /usr/include/qt/QtCore/qfutureinterface.h:131
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool derefT() const

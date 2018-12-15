@@ -258,7 +258,7 @@ func (this *QLayoutItem) HasHeightForWidth() bool {
 // [4] int heightForWidth(int) const
 
 /*
-Returns the preferred height for this layout item, given the width w.
+Returns the preferred height for this layout item, given the width, which is not used in this default implementation.
 
 The default implementation returns -1, indicating that the preferred height is independent of the width of the item. Using the function hasHeightForWidth() will typically be much faster than calling this function and testing for -1.
 
